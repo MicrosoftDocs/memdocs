@@ -154,7 +154,18 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 ## Performance and scale
 
-For more information on CMG scale, see [Size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md#bkmk_cmg).
+> [!NOTE]
+> Sizing guidance for management points and software update points doesn't change whether they service on-premises or internet-based clients. For more information, see [Size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md).
+
+### Size and scale for cloud management gateway
+
+[!INCLUDE [Size and scale for cloud management gateway](../../../plan-design/configs/includes/scale-cmg.md)]
+
+### Size and scale for cloud management gateway connection point
+
+[!INCLUDE [Size and scale for cloud management gateway connection point](../../../plan-design/configs/includes/scale-cmgcp.md)]
+
+### Improve CMG performance
 
 The following recommendations can help you improve CMG performance:
 
@@ -165,8 +176,6 @@ The following recommendations can help you improve CMG performance:
 - Scale the CMG to support more clients by adding more VM instances. The Azure load balancer controls client connections to the service.
 
 - Create more CMG connection points to distribute the load among them. The CMG distributes the traffic to its connecting CMG connection points in a round-robin fashion.
-
-- When the CMG is under high load with more than the supported number of clients, it still handles requests, but there may be delay.
 
 > [!NOTE]
 > While Configuration Manager has no hard limit on the number of clients for a CMG connection point, Windows Server has a default maximum TCP dynamic port range of 16,384. If a Configuration Manager site manages more than 16,384 clients with a single CMG connection point, increase the Windows Server limit. All clients maintain a channel for client notifications, which holds a port open on the CMG connection point. For more information on how to increase this limit, see [Microsoft Support article 929851](https://support.microsoft.com/help/929851).

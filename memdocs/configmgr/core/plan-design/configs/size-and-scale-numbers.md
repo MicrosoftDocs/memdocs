@@ -73,27 +73,15 @@ These support numbers are based on using the recommended hardware for Configurat
 
 ### <a name="bkmk_cmg"></a> Cloud management gateway
 
-- You can install multiple instances of the cloud management gateway (CMG) at primary sites, or the central administration site.  
-
-    > [!Tip]  
-    > In a hierarchy, create the CMG at the central administration site.  
-
-  - One CMG supports one to 16 virtual machine (VM) instances in the Azure cloud service.  
-
-  - Each CMG VM instance supports 6,000 simultaneous client connections. When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.  
+[!INCLUDE [Size and scale for cloud management gateway](includes/scale-cmg.md)]
 
 For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
 
 ### Cloud management gateway connection point
 
-- You can install multiple instances of the CMG connection point at primary sites.  
-
-- One CMG connection point can support a CMG with up to four VM instances. If the CMG has more than four VM instances, add a second CMG connection point for load balancing. A CMG with 16 VM instances should be linked with four CMG connection points.
+[!INCLUDE [Size and scale for cloud management gateway connection point](includes/scale-cmgcp.md)]
 
 For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
-
-> [!NOTE]
-> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](recommended-hardware.md#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
 
 ### Distribution point  
 
