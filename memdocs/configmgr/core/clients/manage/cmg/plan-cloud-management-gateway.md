@@ -64,6 +64,12 @@ Deployment and operation of the CMG includes the following components:
 
 - A content-enabled CMG or a [**cloud distribution point**](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) provides content to internet-based clients, as needed. Using a content-enabled CMG reduces the required certificates and Azure costs.
 
+> [!TIP]
+> To clarify some Azure terminology:
+>
+> - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+
 ### Azure Resource Manager
 
 <!-- 1324735 -->
