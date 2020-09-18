@@ -2,7 +2,7 @@
 title: PowerShell scripts for Proactive remediations
 titleSuffix: Configuration Manager
 description: PoserShell script reference for Proactive remediations in Endpoint analytics.
-ms.date: 06/25/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
@@ -13,11 +13,6 @@ manager: dougeby
 ---
 
 # PowerShell scripts for Proactive remediations
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 Use the following information to create script packages for [Proactive remediations](proactive-remediations.md).
 

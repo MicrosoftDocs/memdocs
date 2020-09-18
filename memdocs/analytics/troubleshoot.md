@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 07/28/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -15,11 +15,6 @@ manager: dougeby
 
 
 # <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 The sections below can be used to assist in troubleshooting issues you may come across.
 

@@ -2,7 +2,7 @@
 title: Endpoint analytics settings
 titleSuffix: Configuration Manager
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 07/27/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
@@ -14,11 +14,6 @@ manager: dougeby
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
 
@@ -74,3 +69,6 @@ You can compare your current scores and subscores to others by setting a baselin
    [![Endpoint analytics baseline settings page](media/settings-baseline.png)](media/settings-baseline.png#lightbox)
 
 ## Next steps
+
+- [Enroll Intune devices](enroll-intune.md)
+- [Enroll Configuration Manager devices](enroll-configmgr.md)

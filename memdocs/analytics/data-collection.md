@@ -2,7 +2,7 @@
 title: Endpoint analytics data collection
 titleSuffix: Configuration Manager
 description: Data collection information for Endpoint analytics.
-ms.date: 08/26/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
@@ -14,11 +14,6 @@ manager: dougeby
 ---
 
 # Endpoint analytics data collection
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement).
 

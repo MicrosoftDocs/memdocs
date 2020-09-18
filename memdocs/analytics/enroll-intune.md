@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 07/16/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -15,11 +15,6 @@ manager: dougeby
 ---
 
 # Quickstart: Enroll Intune devices into Endpoint analytics
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 This quickstart outlines prerequisites and instructions for enrolling Intune managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](#bkmk_prereq) below, we recommend using the instructions in this quickstart to enroll them to Endpoint analytics via Intune. Note that you do not need to move any co-management workloads to Intune to enroll eligible devices via Intune.
 
