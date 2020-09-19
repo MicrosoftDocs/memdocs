@@ -115,7 +115,7 @@
         href: encryption-monitor.md
   - name: Microsoft Tunnel
     items:
-    -name: Microsoft Tunnel overview
+    - name: Microsoft Tunnel overview
      href: ms-tunnel-overview.md
     -name: Configure Microsoft Tunnel
      href: ms-tunnel-configure.md
