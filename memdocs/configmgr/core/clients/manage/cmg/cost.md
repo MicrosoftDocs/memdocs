@@ -80,6 +80,8 @@ To help determine potential costs, use the following Azure resources:
 
 Each cloud service has a dynamic IP address. Each distinct CMG uses a new dynamic IP address. Adding additional VMs per CMG doesn't increase these addresses.
 
+If you get a CMG server authentication certificate from a public provider, there's generally a cost associated with this certificate. For more information, see [CMG server authentication certificate](server-auth-cert.md).
+
 ## Next steps
 
 Now that you have your CMG design, understand the supported configurations and cost, you're ready to set up the CMG:

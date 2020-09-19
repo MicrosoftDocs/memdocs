@@ -42,9 +42,9 @@ The following terms are used in the context of setting up a CMG. They're defined
 
 - Azure AD _subscription_: A subscription separates billing, resources, and services. It's associated with a single tenant.
 
-- CMG _service name_: The common name of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.Contoso.Com`.
+- CMG _service name_: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.Contoso.Com` or `GraniteFalls.CloudApp.Net`.
 
-- CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.CloudApp.Net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure.
+- CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.CloudApp.Net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
 
 ## Checklist
 

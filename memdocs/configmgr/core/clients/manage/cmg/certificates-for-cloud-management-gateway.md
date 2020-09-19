@@ -1,12 +1,12 @@
 ---
-title: CMG Certificates
+title: Certificates for CMG
 titleSuffix: Configuration Manager
-description: Learn about the different digital certificates to use with the cloud management gateway.
+description: Learn about the different digital certificates to use with the cloud management gateway (CMG).
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/10/2020
-ms.topic: conceptual
+ms.date: 09/18/2020
+ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
@@ -18,10 +18,7 @@ ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 
 Depending upon the scenario you use to manage clients on the internet with the cloud management gateway (CMG), you need one or more of the following digital certificates:  
 
-- [CMG server authentication certificate](#bkmk_serverauth)  
-  - [CMG trusted root certificate to clients](#bkmk_cmgroot)  
-  - [Server authentication certificate issued by public provider](#bkmk_serverauthpublic)  
-  - [Server authentication certificate issued from enterprise PKI](#bkmk_serverauthpki)  
+- [CMG server authentication certificate](server-auth-cert.md)
 
 - [Client authentication certificate](#bkmk_clientauth)
   - [CMG connection point](#bkmk_cmgcp)
@@ -29,14 +26,12 @@ Depending upon the scenario you use to manage clients on the internet with the c
 
 - [Enable management point for HTTPS](#bkmk_mphttps)  
 
-- [Azure management certificate](#bkmk_azuremgmt)  
-
-For more information about the different scenarios, see [plan for cloud management gateway](plan-cloud-management-gateway.md).
+For more information about the different scenarios, see [Overview of CMG](overview.md).
 
 ## General information
 
 <!--SCCMDocs issue #779-->
-Certificates for the cloud management gateway support the following configurations:  
+Certificates for the CMG support the following configurations:  
 
 - 2048-bit or 4096-bit key length
 
@@ -50,78 +45,7 @@ Certificates for the cloud management gateway support the following configuratio
 
 *This certificate is required in all scenarios.*
 
-You supply this certificate when creating the CMG in the Configuration Manager console.
-
-The CMG creates an HTTPS service to which internet-based clients connect. The server requires a server authentication certificate to build the secure channel. Acquire a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG trusted root certificate to clients](#bkmk_cmgroot).
-
-> [!NOTE]
-> The CMG server authentication certificate supports wildcards. Some certificate authorities issue certificates using a wildcard character for the hostname. For example, `*.contoso.com`. Some organizations use wildcard certificates to simplify their PKI and reduce maintenance costs.<!--491233-->  
->
-> For more information on how to use a wildcard certificate with a CMG, see [Set up a CMG](setup-cloud-management-gateway.md#set-up-a-cmg).<!--SCCMDocs issue #565-->  
-
-This certificate requires a globally unique name to identify the service in Azure. Before requesting a certificate, confirm that the Azure domain name you want is unique. For example, *GraniteFalls.CloudApp.Net*.
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Select **All resources**, and then select **Add**.
-1. Search for **Cloud service**. Select **Create**.
-1. In the **DNS name** field, type the prefix you want, for example *GraniteFalls*. The interface reflects whether the domain name is available or already in use by another service.
-
-    > [!Important]  
-    > Don't create the service in the portal, just use this process to check the name availability.
-
-If you also enable the CMG for content, confirm that the CMG service name is also a unique Azure storage account name. If the CMG cloud service name is unique, but the storage account name isn't, Configuration Manager fails to provision the service in Azure. Repeat the above process in the Azure portal with the following changes:
-
-- Search for **Storage account**
-- Test your name in the **Storage account name** field
-
-The DNS name prefix, for example *GraniteFalls*, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a dash (`-`).<!-- SCCMDocs#1080 -->
-
-### <a name="bkmk_cmgroot"></a> CMG trusted root certificate to clients
-
-Clients must trust the CMG server authentication certificate. There are two methods to accomplish this trust:
-
-- Use a certificate from a public and globally trusted certificate provider. For example, but not limited to, DigiCert, Thawte, or VeriSign. Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it.  
-
-- Use a certificate issued by an enterprise CA from your public key infrastructure (PKI). Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to internet-based clients.  
-
-  - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).
-
-  - If you plan to [install the Configuration Manager client from Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more information, see [Configure a certificate profile](../../../../../intune/protect/certificates-configure.md).
-
-### <a name="bkmk_serverauthpublic"></a> Server authentication certificate issued by public provider
-
-A third-party certificate provider can't create a certificate for CloudApp.net, as that domain is owned by Microsoft. You can only get a certificate issued for a domain you own. The main reason for acquiring a certificate from a third-party provider is that your clients already trust that provider's root certificate.
-
-Use the following process to create a DNS alias:
-
-1. Create a canonical name record (CNAME) in your organization's public DNS. This record creates an alias for the CMG to a friendly name that you use in the public certificate.
-
-    For example, Contoso names their CMG **GraniteFalls**. This name becomes **GraniteFalls.CloudApp.Net** in Azure. In Contoso's public DNS contoso.com namespace, the DNS administrator creates a new CNAME record for **GraniteFalls.Contoso.com** for the real host name, **GraniteFalls.CloudApp.net**.  
-
-2. Request a server authentication certificate from a public provider using the Common Name (CN) of the CNAME alias.
-For example, Contoso uses **GraniteFalls.Contoso.com** for the certificate CN.  
-
-3. Create the CMG in the Configuration Manager console using this certificate. On the **Settings** page of the Create Cloud Management Gateway Wizard:  
-
-    - When you add the server certificate for this cloud service (from **Certificate file**), the wizard extracts the hostname from the certificate CN as the service name.  
-
-    - It then appends that hostname to **cloudapp.net**, or **usgovcloudapp.net** for the Azure US Government cloud, as the Service FQDN to create the service in Azure.  
-
-    - For example, when Contoso creates the CMG, Configuration Manager extracts the hostname **GraniteFalls** from the certificate CN. Azure creates the actual service as **GraniteFalls.CloudApp.net**.  
-
-When you create the CMG instance in Configuration Manager, while the certificate has GraniteFalls.Contoso.com, Configuration Manager only extracts the hostname, for example: GraniteFalls. It appends this hostname to CloudApp.net, which Azure requires when creating a cloud service. The CNAME alias in the DNS namespace for your domain, Contoso.com, maps together these two FQDNs. Configuration Manager gives clients a policy to access this CMG, the DNS mapping ties it together so that they can securely access the service in Azure.<!--SCCMDocs issue #565-->  
-
-### <a name="bkmk_serverauthpki"></a> Server authentication certificate issued from enterprise PKI
-
-Create a custom SSL certificate for the CMG the same as for a cloud distribution point. Follow the instructions for [Deploying the service certificate for cloud-based distribution points](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012) but do the following things differently:
-
-- When requesting the custom web server certificate, provide an FQDN for the certificate's common name. This name can be a public domain name you own or you may use the cloudapp.net domain. If using your own public domain, refer to the process above for creating a DNS alias in your organization's public DNS.  
-
-- When using the cloudapp.net public domain for the CMG web server certificate:  
-
-  - On the Azure public cloud, use a name that ends in **cloudapp.net**  
-
-  - Use a name that ends in **usgovcloudapp.net** for the Azure US Government cloud  
+For more information, see [CMG server authentication certificate](server-auth-cert.md).
 
 ## <a name="bkmk_clientauth"></a> Client authentication certificate
 
@@ -164,9 +88,7 @@ You supply this certificate when creating the CMG in the Configuration Manager c
 The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. Make sure to add all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, add both the intermediate and root CA certificates.
 
 > [!NOTE]  
-> When you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure AD for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
->
-> In version 1902 and earlier, you can only add two trusted root CAs and four intermediate (subordinate) CAs.
+> When you create a CMG, you don't have to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure AD for client authentication. If you're using PKI client authentication certificates, then you still need to add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 
 #### Export the client certificate's trusted root
 
@@ -217,7 +139,7 @@ When you enable Enhanced HTTP, the site server generates a self-signed certifica
 
 These tables summarize whether the management point requires HTTP or HTTPS, depending upon the type of client and site version.
 
-#### For internet-based clients communicating with the cloud management gateway
+#### For internet-based clients communicating with the CMG
 
 Configure an on-premises management point to allow connections from the CMG with the following client connection mode:
 
@@ -258,36 +180,3 @@ Configure an on-premises management point with the following client connection m
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**.
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**.
 - *E-HTTP*: On the site properties, **Communication Security** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).
-
-    > [!Note]
-    > In version 1902 and earlier, this tab is called **Client Computer Communication**.<!-- SCCMDocs#1645 -->
-
-## <a name="bkmk_azuremgmt"></a> Azure management certificate
-
-*This certificate is required for classic service deployments. It's not required for Azure Resource Manager deployments.*
-
-> [!Important]  
-> Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](plan-cloud-management-gateway.md#azure-resource-manager).
->
-> Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
-
-You supply this certificate in the Azure portal, and when creating the CMG in the Configuration Manager console.
-
-To create the CMG in Azure, the Configuration Manager service connection point needs to first authenticate to your Azure subscription. When using a classic service deployment, it uses the Azure management certificate for this authentication. An Azure administrator uploads this certificate to your subscription. When you create the CMG in the Configuration Manager console, provide this certificate.
-
-For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
-
-- [Cloud services and management certificates](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
-
-- [Upload an Azure Service Management Certificate](/azure/azure-api-management-certs)  
-
-> [!IMPORTANT]
-> Make sure to copy the subscription ID associated with the management certificate. You use it for creating the CMG in the Configuration Manager console.
-
-## Next steps
-
-- [Set up cloud management gateway](setup-cloud-management-gateway.md)  
-
-- [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)  
-
-- [Security and privacy for cloud management gateway](security-and-privacy-for-cloud-management-gateway.md)
