@@ -320,4 +320,4 @@ The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers
   
 ## Next steps
 
-[Install and configure Microsoft Tunnel](ms-tunnel-overview.md)
+[Install and configure Microsoft Tunnel](ms-tunnel-configure.md)
