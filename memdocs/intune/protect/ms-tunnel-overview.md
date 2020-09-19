@@ -31,7 +31,7 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune. The tunnel allo
 
 *Microsoft Tunnel is in public preview*.
 
-When you have your prerequisite configurations in place and are ready to install the tunnel, see [Configure the Microsoft Tunnel](../protect/tunnel-configure.md).
+When you have your prerequisite configurations in place and are ready to install the tunnel, see [Configure the Microsoft Tunnel](../protect/ms-tunnel-configure.md).
 
 ## Overview of Microsoft Tunnel
 
@@ -243,7 +243,7 @@ To use the readiness tool:
 
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error. 
 
-For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel) in the Reference for Microsoft Tunnel article. 
+For more information about this tool, see [Reference for mst-cli](../protect/ms-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel) in the reference article for Microsoft Tunnel article.
 
 ## Use Conditional Access with the Microsoft Tunnel
 
@@ -252,7 +252,7 @@ When you use Conditional Access with Intune, you can create policies to gate dev
 ### Provision your tenant
 
 Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. To enable your tenant, you run a PowerShell script that modifies your tenant to add **Microsoft Tunnel Gateway** as a cloud app that you can then select as part of a Conditional Access policy.  This process requires the use of the Azure Active Directory PowerShell module.
-1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0) the **AzureAD PowerShell module**.
+1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
 2. Download the PowerShell script named **mst-CA-provisioning.ps1** from **aka.ms/mst-ca-provisioning**.
 

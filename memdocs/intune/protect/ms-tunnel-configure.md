@@ -36,7 +36,7 @@ To use Microsoft Tunnel, you’ll need at least one Linux server with Docker ins
 Before you start installation be sure to complete the following tasks:
 
 - Review and [Configure prerequisites for Microsoft Tunnel](../protect/ms-tunnel-configure.md).
-- Run the Microsoft Tunnel [readiness tool](../protect/ms-tunnel-configure.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
+- Run the Microsoft Tunnel [readiness tool](../protect/ms-tunnel-overview.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
 After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
 
@@ -83,7 +83,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
 ## Install Microsoft Tunnel
 
-Before installing the Microsoft Tunnel on a Linux server, configure your tenant with at least one [Server configuration](#create-a-server-configuration), and then create a [Site](create-a-tunnel-site). Later, you’ll specify the Site that a server joins when you install the tunnel on that server.
+Before installing the Microsoft Tunnel on a Linux server, configure your tenant with at least one [Server configuration](#create-a-server-configuration), and then create a [Site](#create-a-site). Later, you’ll specify the Site that a server joins when you install the tunnel on that server.
 
 ### Use the script to install Microsoft Tunnel
 
