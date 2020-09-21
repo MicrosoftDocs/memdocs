@@ -244,7 +244,7 @@ To use the readiness tool:
 
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
 
-For more information about this tool, see [Reference for mst-cli](../protect/ms-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel) in the reference article for Microsoft Tunnel article.
+For more information about this tool, see [Reference for mst-cli](../protect/ms-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 
 ## Use Conditional Access with the Microsoft Tunnel
 
