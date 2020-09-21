@@ -27,7 +27,9 @@
   - name: Create and deploy endpoint security Antivirus policy
     href: deploy-antivirus-policy.md
   - name: Settings for Microsoft Defender Antivirus policy
-    href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json    
+    href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Settings for Windows Security experience Antivirus policy
+    href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions
@@ -42,3 +44,4 @@
     href: troubleshoot-resource-explorer.md
   - name: CMPivot (preview)
     href: troubleshoot-cmpivot.md
+
