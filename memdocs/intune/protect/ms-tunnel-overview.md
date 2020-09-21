@@ -1,6 +1,6 @@
 ---
 title: Use the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
-description: Learn about the configure the Microsoft Tunnel VPN server on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
+description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -35,18 +35,19 @@ When you have your prerequisite configurations in place and are ready to install
 
 ## Overview of Microsoft Tunnel
 
-The Microsoft Tunnel VPN gateway solution installs to a Docker container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment, or a virtual machine that runs on-premises or in the cloud. After the tunnel installs, you use Intune VPN profiles for iOS or Android to direct your devices to use the tunnel for connections to your corporate network and resources. When the tunnel is hosted in the cloud, you’ll need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud. The tunnel doesn’t support co-managed or tenant attached devices.
+Microsoft Tunnel Gateway installs to a Docker container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment, or a virtual machine that runs on-premises or in the cloud. After the tunnel installs, you use Intune VPN profiles for iOS or Android to direct your devices to use the tunnel for connections to your corporate network and resources. When the tunnel is hosted in the cloud, you’ll need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud.
 
 Through the Microsoft Endpoint Manager admin center, you’ll:
 
-- Download the Tunnel installation script that you’ll run on the Linux servers.
-- Configure aspects of the Microsoft Tunnel like IP addresses, DNS servers, and ports.
+- Download the Microsoft Tunnel installation script that you’ll run on the Linux servers.
+- Configure aspects of Microsoft Tunnel Gateway like IP addresses, DNS servers, and ports.
 - Deploy VPN profiles to devices to direct them to use the tunnel.
+- Deploy the Microsoft Tunnel apps to your devices.
 
-Through the VPN client, devices:
+Through the Microsoft Tunnel app, iOS/iPadOS and Android Enterprise devices:
 
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
-- Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server.
+- Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
 To connect to the tunnel, devices use the Microsoft Tunnel app, which is available from the iOS/iPadOS or Android app stores.
 
@@ -58,17 +59,17 @@ Features of the VPN profiles for the tunnel include:
 
 - A friendly name for the VPN connection that your end users will see.
 - The Site that the VPN client connects to.
-- Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define.
+- Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - Proxy support (iOS/iPadOS, Android 10+)
 
 Server configurations include:
 
-- IP address range – The IP addresses that are assigned to devices that connect to your tunnel gateway server.
+- IP address range – The IP addresses that are assigned to devices that connect to a Microsoft Tunnel.
 - DNS servers – The DNS server devices should use when they connect to the server.
 - DNS suffix search.
 - Split tunneling rules – Up to 500 rules shared across include and exclude routes. For example, if you create 300 include rules, you can then have up to 200 exclude rules.
-- Port – The port that the tunnel gateway server listens on.
+- Port – The port that Microsoft Tunnel Gateway listens on.
 
 Site configuration includes:
 
@@ -88,7 +89,7 @@ The following sections detail prerequisites for the Linux server that hosts the 
 
 ### Linux server
 
-Set up a Linux based virtual machine or a physical box on which the Microsoft Tunnel Gateway will install. 
+Set up a Linux based virtual machine or a physical server on which Microsoft Tunnel Gateway will install.
 
 - **Linux distribution** - The following are supported:
 
@@ -108,7 +109,7 @@ Set up a Linux based virtual machine or a physical box on which the Microsoft Tu
   | 20,000   | 8      | 8         | 4         | 1       | 30            |
   | 40,000   | 8      | 8         | 8         | 1       | 30            |
 
-  Support scales linearly. While each tunnel server supports up to 64,000 concurrent connections, individual devices can open multiple connections.
+  Support scales linearly. While each Microsoft Tunnel supports up to 64,000 concurrent connections, individual devices can open multiple connections.
 
 - **CPU**: 64-bit AMD/Intel processor.
 
@@ -132,7 +133,7 @@ Set up a Linux based virtual machine or a physical box on which the Microsoft Tu
 
   - During installation of the Tunnel Gateway server, you must copy the entire trusted certificate chain to your Linux server. The installation script provides the location where you copy the certificate files and prompts you to do so.
 
-  - If you use a TLS certificate that's not publicly trusted, you must push the entire trust chain to devices using an Intune *trusted certificate* profile.
+  - If you use a TLS certificate that's not publicly trusted, you must push the entire trust chain to devices using an Intune *Trusted certificate* profile.
 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
@@ -156,7 +157,7 @@ By default, the Microsoft Tunnel and server use the following ports:
 
 - TCP 443 – Required by Microsoft Tunnel.
 - UDP 443 – Required by Microsoft Tunnel.
-- TCP 22 – Optional. Used for SSH/SCP.
+- TCP 22 – Optional. Used for SSH/SCP to the Linux server.
 
 **Outbound ports**:
 
@@ -198,7 +199,7 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 ### Platforms
 
-The following device platforms are supported with Microsoft Tunnel, for devices enrolled with Intune:
+Only devices that are enrolled to Intune are supported with Microsoft Tunnel. The following device platforms are supported:
 
 - Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile)
 - iOS/iPadOS
@@ -206,7 +207,7 @@ The following device platforms are supported with Microsoft Tunnel, for devices 
 The following functionality is supported by all platforms:
 
 - Azure Active Directory (Azure AD) authentication to the Tunnel using either username and password, or certificates.
-- Per-App support.
+- Per-app support.
 - Manual full-device tunnel through a Tunnel app, where the user launches VPN and selects *Connect*.
 - Split tunneling. However, on iOS split tunneling rules are ignored when your VPN profile uses *per app VPN*.
 
@@ -220,7 +221,7 @@ Support for a Proxy is limited to the following platforms:
 Before you start a server install, we recommend you download and run the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.  
-- Validates that the Azure Active Directory (Azure AD) account you’ll use to install the tunnel server has the required roles to complete enrollment. 
+- Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment. 
 
 The mst-readiness tool has a dependency on **jq**, a command-lie JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
 
@@ -236,22 +237,23 @@ To use the readiness tool:
 2. To validate your network configuration, run the script as **root** and use the following command line: `./mst-readiness network`
 
    The script runs the following actions and reports on success or error for both:
-   - Tries to connect to each Microsoft endpoint the tunnel will use. 
+   - Tries to connect to each Microsoft endpoint the tunnel will use.
    - Checks that the required ports are open in your firewall.
 
-3. To validate that the account you’ll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account` 
+3. To validate that the account you’ll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
-   The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error. 
+   The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/ms-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel) in the reference article for Microsoft Tunnel article.
 
 ## Use Conditional Access with the Microsoft Tunnel
 
-When you use Conditional Access with Intune, you can create policies to gate device access to the Microsoft Tunnel. 
+When you use Conditional Access with Intune, you can create policies to gate device access to Microsoft Tunnel Gateway.
 
 ### Provision your tenant
 
 Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. To enable your tenant, you run a PowerShell script that modifies your tenant to add **Microsoft Tunnel Gateway** as a cloud app that you can then select as part of a Conditional Access policy.  This process requires the use of the Azure Active Directory PowerShell module.
+
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
 2. Download the PowerShell script named **mst-CA-provisioning.ps1** from **aka.ms/mst-ca-provisioning**.
@@ -268,7 +270,7 @@ To create policies for Conditional Access, see [Create a device-based Conditiona
 
 ### Create Conditional Access policy to limit access to Microsoft Tunnel
 
-If you choose to configure Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the tunnel, but before you install the Tunnel Gateway.
+If you choose to configure Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional access** > **New policy**.
 2. Specify a name for this policy.
@@ -300,15 +302,15 @@ The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers
 - **I** – Public internet.
 
 **Actions**:  
-- **1** - Intune administrator configures *Sites* and defines *Server configurations*.  
-- **2** - Authentication plugin authenticates Microsoft Tunnel Gateway with Azure AD.  
+- **1** - Intune administrator configures *Server configurations* and *Sites*, Server configurations are associated with Sites.
+- **2** - Intune administrator installs Microsoft Tunnel Gateway and the authentication plugin authenticates Microsoft Tunnel Gateway with Azure AD. Microsoft Tunnel Gateway server is assigned to a site.
 - **3** - Management Agent communicates to Intune to retrieve your server configuration policies, and to send telemetry logs to Intune.  
 - **4** - Intune administrator creates and deploys VPN profiles and the Tunnel app to devices.  
 - **5** - Device authenticates to Azure AD. Conditional Access policies are evaluated.  
 - **6** - With split tunnel:  
   - **6a** - Some traffic goes directly to the public internet.  
   - **6b** - Some traffic goes to your public facing IP address for the Tunnel.  
-- **7** - The Tunnel routes traffic to your internal proxy and your corporate network.
+- **7** - The Tunnel routes traffic to your internal proxy (optional) and your corporate network.
 
 **Additional details**:
 
@@ -316,7 +318,7 @@ The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers
 
 - The Management Agent is authorized against Azure AD using Azure app ID/secret keys.
 
-- The VPN server uses NAT to provide addresses to VPN clients that are connecting to the corporate network.
+- The Tunnel Gateway server uses NAT to provide addresses to VPN clients that are connecting to the corporate network.
   
 ## Next steps
 

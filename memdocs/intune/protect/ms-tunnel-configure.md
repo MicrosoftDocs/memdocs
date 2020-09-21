@@ -1,6 +1,6 @@
 ---
 title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
-description: Install and configure the Microsoft Tunnel VPN server on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
+description: Install and configure the Microsoft Tunnel Gateway, a VPN server that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -31,7 +31,7 @@ This article can help you install the Microsoft Tunnel VPN gateway for Microsoft
 
 *Microsoft Tunnel is in public preview*.
 
-To use Microsoft Tunnel, you’ll need at least one Linux server with Docker installed, which runs either on-premises or in the cloud. Depending on your environment and infrastructure, additional configurations and software like Azure ExpressRoute might be needed.
+To Install Microsoft Tunnel Gateway, you’ll need at least one Linux server with Docker installed, which runs either on-premises or in the cloud. Depending on your environment and infrastructure, additional configurations and software like Azure ExpressRoute might be needed.
 
 Before you start installation be sure to complete the following tasks:
 
@@ -40,7 +40,7 @@ Before you start installation be sure to complete the following tasks:
 
 After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
 
-When you install a tunnel server, it pulls down information about the tunnel Sites you’ve defined for your tenant. This information includes the Server configurations for those Sites. Therefore, you must configure at least one Site and one Server configuration before you install the tunnel gateway server on a Linux server.
+When you install Microsoft Tunnel, it pulls down information about the tunnel Sites you’ve defined for your tenant. This information includes the Server configurations for those Sites. Therefore, you must configure at least one Site and one Server configuration before you install Microsoft Tunnel on a Linux server.
 
 ## Create a Server configuration
 
@@ -81,9 +81,9 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
 3. Select **Create** to save the Site.
 
-## Install Microsoft Tunnel
+## Install Microsoft Tunnel Gateway
 
-Before installing the Microsoft Tunnel on a Linux server, configure your tenant with at least one [Server configuration](#create-a-server-configuration), and then create a [Site](#create-a-site). Later, you’ll specify the Site that a server joins when you install the tunnel on that server.
+Before installing Microsoft Tunnel Gateway on a Linux server, configure your tenant with at least one [Server configuration](#create-a-server-configuration), and then create a [Site](#create-a-site). Later, you’ll specify the Site that a server joins when you install the tunnel on that server.
 
 ### Use the script to install Microsoft Tunnel
 
@@ -129,18 +129,18 @@ Before installing the Microsoft Tunnel on a Linux server, configure your tenant 
 
        Alternatively, create a link to the private key file in **/etc/mstunnel/private/site.key**. For example: `ln -s [full path to key file] /etc/mstunnel/private/site.key` This key shouldn't be encrypted with a password.
 
-6. After setup installs the certificate and creates the Tunnel Gateway services, you’re prompted to sign in and authenticate with Intune. Use your Intune admin or Global Admin credentials. The account you use to complete the authentication must have an Intune license, or you must turn off the requirement for admin accounts to need licenses.
+6. After setup installs the certificate and creates the Tunnel Gateway services, you’re prompted to sign in and authenticate with Intune. The user account must have either the Intune Administrator or Global Administrator roles assigned. The account you use to complete the authentication must have an Intune license, or you must turn off the requirement for admin accounts to need licenses. The credentials of this account are not saved and are only used for initial sign-in to Azure Active Directory. After successful authentication, Azure app IDs/secret keys are used for authentication between the Tunnel Gateway and Azure Active Directory.
 
    > [!TIP]  
    > To turn off the requirement for admin licenses, in the Microsoft Endpoint Manager admin center navigate to **Tenant Administration** > **Roles** > **Administrator Licensing** and disable administrator licensing.
 
-   This authentication registers a connector to join the Tunnel Gateway with Microsoft Endpoint Manager and your Intune tenant.
+   This authentication registers Tunnel Gateway with Microsoft Endpoint Manager and your Intune tenant.
 
-   1. Use a separate device with a web browser. Navigate to https://Microsoft.com/devicelogin and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
+   1. From a web browser. navigate to https://Microsoft.com/devicelogin and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
 
-   2. After the connector registers, the script gets information about your Sites and Server configurations from Intune. The script then prompts you to enter the GUID of the tunnel Site you want this server to join. The script presents you with a list of your available sites.
+   2. After Microsoft Tunnel Gateway registers with Intune, the script gets information about your Sites and Server configurations from Intune. The script then prompts you to enter the GUID of the tunnel Site you want this server to join. The script presents you with a list of your available sites.
 
-   3. After you select a Site, setup pulls down the Server configuration for that Site and applies it to your new tunnel server to complete the server installation.
+   3. After you select a Site, setup pulls down the Server configuration for that Site and applies it to your new server to complete the Microsoft Tunnel installation.
 
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
@@ -173,7 +173,7 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - To enable a per-app VPN, select **Add** and then browse to apps you’ve imported to Intune. These can be custom or public apps.
    - **Always-on VPN**:  
-     - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected.
+     - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If per-app VPN is enabled, only traffic from apps you select will go through the tunnel.
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
@@ -202,13 +202,13 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
 ## Upgrade Microsoft Tunnel
 
-When there are updates for Microsoft Tunnel, the upgrade of your existing tunnel servers is managed automatically by Intune in a rolling upgrade:
+When there are updates for Microsoft Tunnel, upgrade of your installed Microsoft Tunnels is managed automatically by Intune in a rolling upgrade:
 
-- Intune upgrades the tunnel servers in a Site one server at a time.
+- Intune upgrades the Microsoft Tunnel servers in a Site one server at a time.
 
 - After a successful upgrade of a server, Intune waits a short period of time before starting the upgrade of the next server.
 
-- This process continues until all servers in a Site have updated to the new version.  
+- This process continues until all servers in a Site have updated to the new version.
 
 ## Uninstall the Microsoft Tunnel
 

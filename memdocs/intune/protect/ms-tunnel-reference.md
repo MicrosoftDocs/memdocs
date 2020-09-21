@@ -1,6 +1,6 @@
 ---
-title: File and command reference for the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
-description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel VPN server that runs on a Linux server. 
+title: File and command reference for Microsoft Tunnel Gateway, a VPN solution for Microsoft Intune - Azure | Microsoft Docs
+description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel Gateway, a VPN server that runs on Linux.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -25,13 +25,13 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Reference for Microsoft Tunnel
+# Reference for Microsoft Tunnel Gateway
 
-The information in this reference for Microsoft Tunnel is provided to support installation and maintenance of the tunnel installation in your environment.
+The information in this reference for Microsoft Tunnel Gateway is provided to support installation and maintenance of the tunnel installation in your environment.
 
-## mst-cli command-line tool for Microsoft Tunnel
+## mst-cli command-line tool for Microsoft Tunnel Gateway
 
-**Mst-cli** is a command-line tool for use with Microsoft Tunnel. This tool is available on the Linux server after the tunnel completes installation and is found at **/usr/sbin/mst-cli**.   Some tasks you can use this tool to complete include:
+**Mst-cli** is a command-line tool for use with Microsoft Tunnel Gateway. This tool is available on the Linux server after the tunnel completes installation and is found at **/usr/sbin/mst-cli**. Some tasks you can use this tool to complete include:
 
 - Get information about the tunnel server.
 - Set or update the configuration of the tunnel server.
@@ -123,7 +123,7 @@ The following are common command line uses of the tool.
 
 ## Environment variables
 
-Following are environment variables you might want to configure when you install the Microsoft Tunnel software on the Linux server. These variables are found in the environment file **/etc/mstunnel/env.sh**:
+Following are environment variables you might want to configure when you install the Microsoft Tunnel Gateway software on the Linux server. These variables are found in the environment file **/etc/mstunnel/env.sh**:
 
 - **http_proxy**=[address] - The HTTP address for your proxy server.
 - **https_proxy**=[address] - The HTTPs address for your proxy server. 
