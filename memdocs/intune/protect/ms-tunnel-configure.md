@@ -53,10 +53,10 @@ Use of a *Server configuration* lets you set up a configuration one time and hav
 2. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
 3. On the **Settings** tab, configure the following items:
-   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway.
+   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
-   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway.
+   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for 255.255.0.0* or *192.168.0.0/16*.
 
      Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
 
