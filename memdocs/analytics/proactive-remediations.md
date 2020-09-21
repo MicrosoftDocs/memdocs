@@ -31,7 +31,7 @@ In this tutorial, you learn how to:
 
 Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -78,7 +78,7 @@ To assign the script package:
 1. From the **Proactive remediations** node, select one of the built-in script packages.
 1. Select **Properties**, then next the **Assignments** heading, select **Edit**.
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
-1. If you would like to change the schedule, click the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
+1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.
 
 ## <a name="bkmk_prs_ps1"></a> Create and deploy custom script packages
@@ -97,12 +97,12 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 Proactive remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them.
 
 1. Go to the **Proactive remediations** node in the console.
-1. Click the **Create script package** button to create a script package.
+1. Choose the **Create script package** button to create a script package.
      [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
-1. On the **Settings** step, upload both the **Detection script file** and the **Remediation script file** by doing the following:
+1. On the **Settings** step, upload both the **Detection script file** and the **Remediation script file** by doing the following steps:
    1. Select the folder icon.
-   1. Browse to the .ps1 file.
+   1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
@@ -122,7 +122,7 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
 1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
        [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
-1. Click on **Device status** to get status details for each device in your deployment.
+1. Select **Device status** to get status details for each device in your deployment.
        [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
 
 ## Next steps
