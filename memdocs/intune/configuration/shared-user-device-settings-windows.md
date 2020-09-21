@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ For more information on this feature in Intune, see [Control access, accounts, a
 
 ## Before your begin
 
-[Create the profile](shared-user-device-settings.md).
+Create a [Windows 10 shared multi-user device configuration profile](shared-user-device-settings.md).
 
 ## Shared multi-user device settings
 

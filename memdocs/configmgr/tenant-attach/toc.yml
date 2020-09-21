@@ -12,6 +12,8 @@
     href: timeline.md
   - name: Resource explorer (preview)
     href: resource-explorer.md
+  - name: Run scripts (preview)
+    href: scripts.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: Launch CMPivot (preview)
@@ -30,6 +32,10 @@
     href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
   - name: Settings for Windows Security experience Antivirus policy
     href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Reference
+  items:
+  - name: Tenant attach data collection
+    href: data-collection.md
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions
@@ -42,6 +48,8 @@
     href: troubleshoot-timeline.md
   - name: Resource explorer (preview)
     href: troubleshoot-resource-explorer.md
+  - name: Run scripts (preview)
+    href: troubleshoot-scripts.md
   - name: CMPivot (preview)
     href: troubleshoot-cmpivot.md
 

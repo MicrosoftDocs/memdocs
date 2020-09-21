@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a macOS extensions configuration profile](kernel-extensions-overview-macos.md).
+Create a [macOS extensions device configuration profile](kernel-extensions-overview-macos.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
