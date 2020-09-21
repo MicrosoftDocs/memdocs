@@ -15,9 +15,8 @@
 
   For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
-- Windows 10 Mobile
+
 - Windows 10 IoT Enterprise (x86, x64)
-- Windows 10 IoT Mobile Enterprise
 - Windows Holographic for Business
 
   For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md).

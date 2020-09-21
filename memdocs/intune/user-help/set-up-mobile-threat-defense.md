@@ -58,7 +58,7 @@ The following MTD apps are commonly used on Android devices. Select an app to op
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143413)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
-* [SEP Mobile (Symantec Endpoint Protection)(https://go.microsoft.com/fwlink/?linkid=2139454)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139454)
 * [Sophos Intercept X for Mobile](https://go.microsoft.com/fwlink/?linkid=2143273)
 * [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
 * [Zimperium Mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  

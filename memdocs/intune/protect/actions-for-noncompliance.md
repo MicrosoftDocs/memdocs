@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -155,7 +155,9 @@ To send email to your users, create a notification message template. When a devi
 
 Notifications that have been created are available in the *Compliance policies* > *Notifications* page. From the page you can select a notification to view its configuration and:
 
-- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune. 
+- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune.
+
+  To successfully send the preview email, your account must have permissions equal to those of the following Azure AD groups or Intune roles: *Azure AD Global Administrator*, Intune *Administrator* (Intune Azure AD Intune Service Administrator), or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 ## Add actions for noncompliance
