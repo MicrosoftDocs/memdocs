@@ -52,6 +52,21 @@ Once connected, you can [choose which devices you'd like to target](enroll-confi
 > [!NOTE] 
 > Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
 
+### <a name="bkmk_consent"></a> Consent to share data
+
+By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights like Startup performance or Recommended software. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
+
+To revoke consent for Intune managed devices:
+
+1. On the Endpoint analytics settings page, clear the checkbox that states **I consent to share anonymized and aggregate metrics to see updated Endpoint analytics scores and insights**.
+1. Select **Yes** to confirm the action.
+1. Clear the **Boot performance** scope from the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up.
+
+To revoke consent for Configuration Manager managed devices:
+
+1. On the Endpoint analytics settings page, clear the checkbox that states **I consent to share anonymized and aggregate metrics to see updated Endpoint analytics scores and insights**.
+1. Select **Yes** to confirm the action.
+1. From Configuration Manager, disable both the data upload and the Endpoint analytics data collection. For more information on disabling these two options see [Stop gathering data](data-collection.md#bkmk_stop).
 
 ## <a name="bkmk_baselines"></a> Baseline management
 
