@@ -154,12 +154,12 @@
             "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
             "redirect_url": "/mem/autopilot/software-requirements",
             "redirect_document_id": false
-        }
+        },
         {
             "source_path": "memdocs/intune/protect/security-baseline-settings-mdm-all.md",
             "redirect_url": "/memdocs/intune/protect/security-baseline-settings-mdm",
             "redirect_document_id": false
-        }
+        },
         {
             "source_path": "memdocs/intune/protect/security-baseline-settings-mdm-all.md",
             "redirect_url": "/memdocs/intune/protect/security-baseline-settings-mdm-archive",
