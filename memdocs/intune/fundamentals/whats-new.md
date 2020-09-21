@@ -216,7 +216,7 @@ You can now view additional details for devices as part of a devices *Endpoint s
 For more information, see [Resolve conflicts for security baselines](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines).
 
 #### Expanded RBAC permissions for the Endpoint Security role<!--7312374    -->
-The **Endpoint Security Manager** role for Intune has additional [role-based access control (RBAC) permissions for **remote tasks**](../protect/endpoint-security#permissions-granted-by-the-endpoint-security-manager-role).
+The **Endpoint Security Manager** role for Intune has additional [role-based access control (RBAC) permissions for **remote tasks**](../protect/endpoint-security.md#permissions-granted-by-the-endpoint-security-manager-role).
  
 This role grants access to the Microsoft Endpoint Manager admin center and can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender Advanced Threat Protection.
  
@@ -271,7 +271,7 @@ After the trusted root certificate is manually installed on a device, you can us
 - If the trusted root certificate is on the device, the SCEP certificate profile can install successfully. 
 - If the trusted certificate can't be found on the device, the SCEP certificate profile will fail.
 
-For more information, see [Trusted certificate profiles for Android device administrator](..protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
+For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
 
 
 #### Tri-state options for more settings in Endpoint Security Firewall policy<!-- 6586159  -->
@@ -303,7 +303,7 @@ Specifically, when you select a baseline, select *Version*, and the select an in
 
 #### New setting for Password complexity for Android 10 and later for device administrator enrolled devices<!-- 7992114 -->
 
-To support new options for Android 10 and later on devices enrolled as Android device administrator, we’ve added a new setting called **Password complexity** to both [*Device compliance*](../protect/compliance-policy-create-android.md#password) policy and [*Device restriction*](../intune/configuration/device-restrictions-android.md#password) policy.  You use this new setting to manage a *measure* of the password strength that factors in the password type, length, and quality. 
+To support new options for Android 10 and later on devices enrolled as Android device administrator, we’ve added a new setting called **Password complexity** to both [*Device compliance*](../protect/compliance-policy-create-android.md#password) policy and [*Device restriction*](../configuration/device-restrictions-android.md#password) policy.  You use this new setting to manage a *measure* of the password strength that factors in the password type, length, and quality. 
  
 Password Complexity doesn’t apply to Samsung Knox devices. On these devices, password length and type settings override Password complexity.
 
@@ -339,7 +339,7 @@ We're adding four new reports for Microsoft Defender Antivirus on Windows 10 in 
 For more information, see [Intune reports](../fundamentals/reports.md) and [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md).
 
 #### New Windows 10 feature update failures report<!-- 6473121   -->
-The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Feature update failures report](../fundamentals/reports.md#feature-upate-failures-report-operational) and [Validation and reporting for Windows 10 updates](../protect/windows-update-for-business-configure.md#validation-and-reporting-for-windows-10-updates).
+The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Feature update failures report](../fundamentals/reports.md#feature-update-failures-report-operational) and [Validation and reporting for Windows 10 updates](../protect/windows-update-for-business-configure.md#validation-and-reporting-for-windows-10-updates).
 
 #### New Windows 10 feature update report<!-- 6473128  -->
 The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information see [Windows 10 feature updates](../fundamentals/reports.md#windows-10-feature-updates-organizational).
