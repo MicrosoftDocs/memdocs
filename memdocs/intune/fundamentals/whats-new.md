@@ -259,7 +259,7 @@ When you configure a *SCEP certificate* profile for iOS/iPadOS or macOS devices,
  
 Intune supports 4096-bit keys for the following platforms: 
 - iOS 14 and later
-- MacOS 11 and later    
+- macOS 11 and later    
  
 To configure SCEP certificate profiles, see [Create a SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
 
