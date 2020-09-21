@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,10 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 
 ## Before you begin
 
-[Create a device profile](wi-fi-settings-configure.md).
+Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings-configure.md):
+
+- Fully managed, dedicated, and corporate-owned work profile
+- Work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 

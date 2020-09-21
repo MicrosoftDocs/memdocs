@@ -34,6 +34,7 @@ The **Rename device** action lets you rename a device that is enrolled in Intune
 
 You can rename the following types of devices:
 - corporate-owned Windows 
+- corporate-owned co-managed devices that are Azure AD joined 
 - iOS/iPadOS supervised
 - corporate-owned MacOS 10
 

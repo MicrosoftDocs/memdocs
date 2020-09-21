@@ -55,8 +55,10 @@ For Android devices, this means that device level passcode reset is only support
 | Platform | Supported? |
 | ---- | ---- |
 | Android enterprise devices enrolled with a work profile and running version 8.0 and later | Yes |
+| Android enterprise corporate-owned devices with a work profile | Yes |
 | Android enterprise devices enrolled with a work profile and running version 7.x and earlier | No |
 | Android devices running version 7.x and earlier | No |
+
 
 To create a new work profile passcode, use the Reset Passcode action. This action prompts a passcode reset and creates a new, temporary passcode for the work profile only. 
 
