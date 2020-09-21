@@ -156,13 +156,13 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "mem/intune/protect/security-baseline-settings-mdm-all.md",
-            "redirect_url": "/mem/intune/protect/security-baseline-settings-mdm",
+            "source_path": "/mem/intune/protect/security-baseline-settings-mdm.md",
+            "redirect_url": "mem/intune/protect/security-baseline-settings-mdm-all",
             "redirect_document_id": false
         },
         {
-            "source_path": "mem/intune/protect/security-baseline-settings-mdm-all.md",
-            "redirect_url": "/mem/intune/protect/security-baseline-settings-mdm-archive",
+            "source_path": "mem/intune/protect/security-baseline-settings-mdm-archive.md",
+            "redirect_url": "/mem/intune/protect/security-baseline-settings-mdm-all",
             "redirect_document_id": false
         }
     ]
