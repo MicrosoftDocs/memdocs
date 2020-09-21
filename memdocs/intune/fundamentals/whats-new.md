@@ -40,7 +40,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 > - Day 3: North America
 > - Day 4+: Intune for Government
 >
-> Some features may roll out over several weeks and might not be available to all customers in the first week.
+> Some features may roll out over several weeks and might not be available to all customers in the first week. 
 >
 > Check the [In development page](in-development.md) for a list of upcoming features in a release.
 
