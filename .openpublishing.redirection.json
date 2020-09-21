@@ -159,11 +159,6 @@
             "source_path": "memdocs/intune/protect/security-baseline-settings-mdm-all.md",
             "redirect_url": "/memdocs/intune/protect/security-baseline-settings-mdm",
             "redirect_document_id": false
-        },
-        {
-            "source_path": "memdocs/intune/protect/security-baseline-settings-mdm-all.md",
-            "redirect_url": "/memdocs/intune/protect/security-baseline-settings-mdm-archive",
-            "redirect_document_id": false
         }
     ]
 }
