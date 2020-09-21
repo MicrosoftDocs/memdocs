@@ -81,15 +81,9 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
    :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
 ### <a name="bkmk_onboard"></a> Onboard in the Endpoint analytics portal
-Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
+Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices. For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 
-1. Go to `https://aka.ms/endpointanalytics`
-1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
-
-> [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
-
-   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
+[!INCLUDE [Endpoint analytics overview page information](includes/onboard.md)]
 
 ### <a name="bkmk_cm_enable"></a> Configure Endpoint analytics data collection in Configuration Manager
 

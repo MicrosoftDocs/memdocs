@@ -70,11 +70,7 @@ Rollback transaction: XXXX
 
 ### Script requirements for Proactive remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
-- Encoded in UTF-8 not UTF-8 BOM
-- Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](/visualstudio/ide/encodings-and-line-breaks?view=vs-2019&preserve-view=true).
-   - Currently, the encoding and line breaks are a known issue.
+If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
