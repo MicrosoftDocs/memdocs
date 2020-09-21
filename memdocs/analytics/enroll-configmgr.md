@@ -68,7 +68,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 ## Limitations
 
 - Not all Endpoint analytics insights are available for devices running Windows Server editions. For instance, the **To responsive desktop** metric wouldn't be applicable to Windows Server Core.
-- Using multiple Configuration Manager hierarchies with a single endpoint analytics instance is expected to work but isn't currently fully supported.
+- Using multiple Configuration Manager hierarchies with a single Endpoint analytics instance is not currently supported.
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
