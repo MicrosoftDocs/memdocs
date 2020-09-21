@@ -27,6 +27,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 2. On the **Package** page, use the following information to help you configure the update:
 
    -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a file hash. The hash and file name are then used in the update metadata for the update that you are creating.
+   
 
    -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path is not required.
 
@@ -45,6 +46,9 @@ Because these two wizards have a similar workflow, the procedure to create an up
        -   Windows installer files and patches (.MSI and .MSP files) automatically set these values. For these file types the arguments must be specified as **\[name\]=\[value\]**. In addition, all options that start with a **/** (like **/qn**) are not supported for .MSI or .MSP software updates.
 
        -   For .EXE updates, all arguments are valid.
+
+>[!NOTE] 
+> Updates Publisher only supports creation of packages smaller than 2GB, import options will be disabled if the software update package is too large.
 
 3. On the **Information** page, specify details about the update that are included when the update is published or exported. Details include localized properties like the updates name (title) and description. Then, you specify more general details such as the classification, vendor, product, and where to learn more about the update.
 
