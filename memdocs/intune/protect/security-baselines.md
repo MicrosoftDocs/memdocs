@@ -175,10 +175,12 @@ Common tasks when you work with security baselines include:
 
 ### Change the baseline version for a profile
 
-When a new version for a baseline is released, plan to update your existing profiles to the new version.
+When a new version for a baseline is released, plan to update your existing profiles to the new version:
 
 - Existing profiles don’t upgrade to new versions automatically.
-- Baseline profiles that don’t’ use the new version become read-only. You can continue to use the profiles that use an older version of the baseline, but you won’t be able to edit them until after they update to the most recent baseline version  
+- Baseline profiles that don’t use the new version become read-only. You can continue to use the profiles that use an older version of the baseline, but you won’t be able to edit them until after they update to the most recent baseline version  
+
+We recommend you [test the version](#test-the-conversion-and-updated0-baseline) update on a copy of your existing profiles before you update your live profiles.
 
 When you change the profile version:
 
@@ -203,7 +205,7 @@ After the conversion to the new baseline version is complete:
 - The baseline immediately redeploys to assigned groups.
 - You can edit the baseline to change individual settings.
 
-**Test the conversion and updated baseline**:
+#### Test the conversion and updated baseline
 
 Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See [Duplicate a security baseline](#duplicate-a-security-baseline) later in this article.
 
@@ -211,6 +213,8 @@ Before you update a baseline profile to a new version, create a copy of it so yo
 - After you update the profile to the latest version, you can edit it. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
 
 #### To change the baseline version for a profile
+
+Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated0-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
