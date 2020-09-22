@@ -43,7 +43,7 @@ Currently, Intune supports Windows Virtual Desktop VMs that are:
 - Enrolled in Intune in one of the following methods: 
     - Configure [Active Directory group policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
     - [Configuration Manager co-management](https://docs.microsoft.com/configmgr/comanage/overview).
-    - [User self-enrollment via Azure AD Join](windows-enrollment-methods.md#user-self-enrollment-in-intune).
+    - [User self-enrollment via Azure AD Join](../enrollment/windows-enrollment-methods.md#user-self-enrollment-in-intune).
 
 For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview#requirements).
 
