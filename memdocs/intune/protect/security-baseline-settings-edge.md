@@ -52,6 +52,15 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
+**Microsoft Edge baseline for April 2020 (Edge version 80)**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
 
 ::: zone-end
