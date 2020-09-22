@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -72,6 +72,13 @@ If you see your work or school account listed in the Settings app, your device a
 1. From your device toolbar or settings, select the **Network status** globe icon.
 2. Select a Wi-Fi network > **Connect**.  
 3. Try to connect your account again.  
+
+### Your device is already being managed by an organization.  
+
+**Cause**: Your device has already been enrolled in Intune or another mobile device management (MDM) provider.    
+
+#### Resolution  
+Contact your IT support person to find out how they want you to proceed.    
 
 
 ## Next steps  
