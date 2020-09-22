@@ -49,6 +49,8 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 > [!NOTE]
 > The Microsoft Edge baseline for October 2019 is in Public Preview.
 
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
@@ -61,7 +63,7 @@ This version of the security baseline replaces previous versions. Profiles that 
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"
