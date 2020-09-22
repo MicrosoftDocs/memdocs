@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -67,7 +67,7 @@ Use the steps in this article as a template to allow or deny specific apps from 
 This example uses Windows PowerShell to create a Windows Defender Application Control (WDAC) policy. The policy prevents specific apps from opening. Then, use Intune to deploy the policy to HoloLens 2 devices.
 
 1. On your desktop computer, open the **Windows PowerShell** app.
-2. Get information about the installed application package on your desktop computer:
+2. Get information about the installed application package on your desktop computer and HoloLens:
 
     ```powershell
     $package1 = Get-AppxPackage -name *<applicationname>*
@@ -76,7 +76,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     For example, enter:
 
     ```powershell
-    $package1 = Get-AppxPackage -name *cortana*
+    $package1 = Get-AppxPackage -name Microsoft.MicrosoftEdge
     ```
 
     Next, confirm the package has application attributes:
@@ -88,16 +88,16 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     You'll see attributes similar to the following app details:
 
     ```powershell
-    Name              : Microsoft.Windows.Cortana
-    Publisher         : CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Name              : Microsoft.MicrosoftEdge
+    Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Architecture      : Neutral
-    ResourceId        : neutral
-    Version           : 1.13.0.18362
-    PackageFullName   : Microsoft.Windows.Cortana_1.13.0.18362_neutral_neutral_cw5n1h2txyewy
-    InstallLocation   : C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy
+    ResourceId        :
+    Version           : 44.20190.1000.0
+    PackageFullName   : Microsoft.MicrosoftEdge_44.20190.1000.0_neutral__8wekyb3d8bbwe
+    InstallLocation   : C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe
     IsFramework       : False
-    PackageFamilyName : Microsoft.Windows.Cortana_cw5n1h2txyewy
-    PublisherId       : cw5n1h2txyewy
+    PackageFamilyName : Microsoft.MicrosoftEdge_8wekyb3d8bbwe
+    PublisherId       : 8wekyb3d8bbwe
     IsResourcePackage : False
     IsBundle          : False
     IsDevelopmentMode : False
@@ -177,11 +177,13 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
     2. When you create the profile, enter the following settings:
 
-      - **OMA-URI**: Enter `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>`. Replace `<PolicyGUID>` with the PolicyTypeID node in the **mergedPolicy.xml** file you created in step 6.
+      - **OMA-URI**: Enter `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>/Policy`. Replace `<PolicyGUID>` with the PolicyTypeID node in the **mergedPolicy.xml** file you created in step 6.
 
-        Using our example, enter `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076`.
+        Using our example, enter `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076/Policy`.
 
         The policy GUID **must match** the PolicyTypeID node in the **mergedPolicy.xml** file (created in step 6).
+
+        The OMA-URI uses the [ApplicationControl CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp). For more information on the nodes in this CSP, go to [ApplicationControl CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp).
 
       - **Data type**: Set to **Base64 file**. It automatically converts the file from bin to base64.
       - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 9).

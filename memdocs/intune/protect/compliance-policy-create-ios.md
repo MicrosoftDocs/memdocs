@@ -154,6 +154,9 @@ For details about email profiles, see [configure access to organization email us
 
   - **App name** - Enter a user-friendly name to help you identify the bundle ID.
   - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider. To find the bundle ID, see [Bundle IDs for native iOS and iPadOS apps](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) at Support.apple.com, or contact the software vendor of the app.
+  
+  > [!NOTE]
+  > The *Restricted apps* setting applies to un-managed applications that are installed outside of management context.
 
 ## Next steps
 
