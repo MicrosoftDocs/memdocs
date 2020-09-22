@@ -60,7 +60,7 @@ To revoke consent:
 
 1. On the Endpoint analytics settings page, clear the checkbox that states **I consent to share anonymized and aggregate metrics to see updated Endpoint analytics scores and insights**.
 1. Select **Yes** to confirm the action.
-1. Optionally, [Stop gathering data](data-collection.md#bkmk_stop).
+1. Optionally, [stop gathering data](data-collection.md#bkmk_stop).
 
 ## <a name="bkmk_baselines"></a> Baseline management
 
