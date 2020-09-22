@@ -205,7 +205,7 @@ After the conversion to the new baseline version is complete:
 
 **Test the conversion and updated baseline**:
 
-Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See Duplicate a security baseline later in this article.
+Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See [Duplicate a security baseline](#duplicate-a-security-baseline) later in this article.
 
 - When you create a copy, group assignments are not included. This means your baseline copy won’t deploy to any devices at the time you make a copy, or at the time you update it to a new version.
 - After you update the profile to the latest version, you can edit it. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
