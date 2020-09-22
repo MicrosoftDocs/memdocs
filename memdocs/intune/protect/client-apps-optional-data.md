@@ -43,7 +43,7 @@ Intune collects various optional data to detect, diagnose, and fix problems from
 - Android Mobile App Management (MAM)
 
 The optional data collected from clients aren't required to successful run Intune services. The data collected helps:
-- Provides enhanced information to help us protactively detect, diagnose, and fix issues.
+- Provides enhanced information to help us proactively detect, diagnose, and fix issues.
 - Makes product and service improvements.
 
 
