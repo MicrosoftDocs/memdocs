@@ -63,7 +63,7 @@ The following security baseline instances are available for use with Intune. Use
 
 - **Microsoft Defender ATP baseline**
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))*.
-  - [Microsoft Defender ATP baseline for September 2020 - version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
+  - [Microsoft Defender ATP baseline for August 2020 - version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
   - [Microsoft Defender ATP baseline for April 2020 - version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Microsoft Defender ATP baseline for March 2020 - version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 

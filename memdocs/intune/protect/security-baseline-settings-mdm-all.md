@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 View the MDM security baseline settings that Microsoft Intune supports for devices that run Windows 10 or later. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- The most recent baseline version is **MDM Security Baseline for September 2020**
+- The most recent baseline version is **MDM Security Baseline for August 2020**
 
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
 
@@ -44,7 +44,7 @@ Be sure to select the version of the baseline that you want to view.
 
 ::: zone pivot="mdm-sept-2020"
 
-**MDM Security Baseline for September 2020**  
+**MDM Security Baseline for August 2020**  
 This version of the security baseline replaces the previous baseline, the *MDM Security Baseline for May 2019*. Profiles that were created prior to the availability of this baseline won't update to reflect the new settings or values.  Although you can't create new profiles based on the previous baseline version, you can edit and continue to use profiles you previously created that are based on a previous version.
 
 To learn about what's changed in this version of the baseline from the previous version, see [What's changed in the new template](#whats-changed-in-the-new-template).
