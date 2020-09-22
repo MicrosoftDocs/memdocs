@@ -180,7 +180,7 @@ When a new version for a baseline is released, plan to update your existing prof
 - Existing profiles don’t upgrade to new versions automatically.
 - Baseline profiles that don’t use the new version become read-only. You can continue to use the profiles that use an older version of the baseline, but you won’t be able to edit them until after they update to the most recent baseline version  
 
-We recommend you [test the version](#test-the-conversion-and-updated0-baseline) update on a copy of your existing profiles before you update your live profiles.
+We recommend you [test the version](#test-the-conversion-and-updated-baseline) update on a copy of your existing profiles before you update your live profiles.
 
 When you change the profile version:
 
@@ -214,9 +214,9 @@ Before you update a baseline profile to a new version, create a copy of it so yo
 
 #### To change the baseline version for a profile
 
-Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated0-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
+Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
