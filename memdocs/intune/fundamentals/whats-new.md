@@ -205,8 +205,13 @@ You can now rename a co-managed device that is Azure AD joined. For more informa
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
+#### Microsoft Tunnel Gateway VPN solution in preview<!-- 7843124  -->
+You can now deploy [Microsoft Tunnel Gateway](../protect/microsoft-tunnel-overview.md) to provide remote access to on-premises resources on iOS and Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile) devices.
+
+Microsoft Tunnel supports per-app and full device VPN, split tunneling, and conditional access capabilities using modern authentication.  Tunnel can support multiple gateway servers for high availability for production readiness.
+
 #### Additional biometric authentication support for Android devices<!-- 5706213  -->
-New Android devices are making use of a more diverse set of biometrics beyond fingerprints. When OEMs implement support for non-fingerprint biometrics, end users have the potential to use this capability for secure access and a better experience. With the 2009 release of Intune, you can allow your end users to use fingerprint or Face Unlock, depending on what the Android device supports. You can configure whether all biometric types can be used to authenticate, fingerprints will only be accepted, or biometrics will not be accepted. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
+New Android devices are making use of a more diverse set of biometrics beyond fingerprints. When OEMs implement support for non-fingerprint biometrics, end users have the potential to use this capability for secure access and a better experience. With the 2009 release of Intune, you can allow your end users to use fingerprint or Face Unlock, depending on what the Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
 
 #### New details in the Endpoint security configuration for a device<!-- 7745029     -->
 You can now view additional details for devices as part of a devices *Endpoint security configuration*. When you drill-in to view status details about policies you've deployed to devices, you’ll now find the following:
@@ -259,7 +264,7 @@ When you configure a *SCEP certificate* profile for iOS/iPadOS or macOS devices,
  
 Intune supports 4096-bit keys for the following platforms: 
 - iOS 14 and later
-- macOS 11 and later    
+- macOS 11 and later  
  
 To configure SCEP certificate profiles, see [Create a SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
 
