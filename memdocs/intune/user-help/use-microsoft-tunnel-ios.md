@@ -98,7 +98,7 @@ Send app logs to IT support to get help with an app or connection problem.
 5. In the body of the email, describe the problem you experienced so that the support team has an idea of what to look for. 
 6. Send the email.  
 
-# About Microsoft Tunnel
+## About Microsoft Tunnel  
 Select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.  
 
 
