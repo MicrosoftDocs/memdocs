@@ -125,6 +125,8 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     $package2 = Get-AppxPackage -name *windowsstore*
     $rule += New-CIPolicyRule -Package $package<2..n>  -Deny
     ```
+> [NOTE]
+> If you wish to block an app that is not on your Windows 10 PC, but is only on HoloLens please refer here on [package family names for apps on HoloLens](https://docs.microsoft.com/hololens/windows-defender-application-control-wdac#package-family-names-for-apps-on-hololens).
 
 5. Convert the WDAC policy to **newPolicy.xml**:
 
