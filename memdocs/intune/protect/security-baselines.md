@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,7 @@ Security baselines can help you to have an end-to-end secure workflow when worki
 The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
 
 - **MDM Security Baseline**
-  - [MDM Security Baseline for September 2019](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
+  - [MDM Security Baseline for August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
   - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
@@ -76,7 +76,7 @@ The following security baseline instances are available for use with Intune. Use
 
 You can continue to use and edit profiles that you previously created based on a preview template, even when that preview template is no longer available for creating new profiles.
 
-When you're ready to move to a more recent version of a baseline you use, see [Change the baseline version for a profile](#change-the-baseline-version-for-a-profile) in this article. 
+When you're ready to move to a more recent version of a baseline you use, see [Change the baseline version for a profile](#change-the-baseline-version-for-a-profile) in this article.
 
 ## About baseline versions and instances
 
@@ -175,23 +175,48 @@ Common tasks when you work with security baselines include:
 
 ### Change the baseline version for a profile
 
-You can change the version of the baseline instance that in use with a profile.  When you change the version, you select an available instance of the same baseline. You can't change between two different baseline types, such as changing a profile from using a baseline for Defender ATP to using the MDM security baseline.
+When a new version for a baseline is released, plan to update your existing profiles to the new version:
 
-While configuring a change of the baseline version, you can download a CSV file that lists the changes between the two baseline versions involved. You also have the choice to keep all your customizations from the original baseline version, or implement the new version using all of its default values. You don't have the option to make changes to individual settings when you change the version of a baseline for a profile.
+- Existing profiles don’t upgrade to new versions automatically.
+- Baseline profiles that don’t use the new version become read-only. You can continue to use the profiles that use an older version of the baseline, but you won’t be able to edit them until after they update to the most recent baseline version  
 
-Upon saving, after the conversion is complete, the baseline is immediately redeployed to assigned groups.
+We recommend you [test the version](#test-the-conversion-and-updated-baseline) update on a copy of your existing profiles before you update your live profiles.
 
-**During conversion**:
+When you change the profile version:
 
-- New settings that weren't in the original version you were using are added and set to use the default values.
+- You select the latest instance of the same baseline. You can't change between two different baseline types, such as changing a profile from using a baseline for Defender ATP to using the MDM security baseline.
+- You have the option to download a CSV file that lists the changes between the two baseline versions involved.
+- You must choose how to update the profile:
+  - You can keep all your customizations from the original baseline version.
+  - You can choose to use the default values for all settings in the new baseline version.
+
+  You don't have the option to change only some settings in a profile during the update.
+
+During conversion:
+
+- New settings that weren't in the older version you were using are added. Any new settings from the new version will use their default values.
 
 - Settings that aren't in the new baseline version you select are removed and no longer enforced by this security baseline profile.
 
   When a setting is no longer managed by a baseline profile, that setting isn't reset on the device. Instead, the setting on the device remains set to its last configuration until some other process manages the setting to change it. Examples of processes that can change a setting after you stop managing it include a different baseline profile, a group policy setting, or manual configuration that's made on the device.
 
+After the conversion to the new baseline version is complete:
+
+- The baseline immediately redeploys to assigned groups.
+- You can edit the baseline to change individual settings.
+
+#### Test the conversion and updated baseline
+
+Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See [Duplicate a security baseline](#duplicate-a-security-baseline) later in this article.
+
+- When you create a copy, group assignments are not included. This means your baseline copy won’t deploy to any devices at the time you make a copy, or at the time you update it to a new version.
+- After you update the profile to the latest version, you can edit it. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
+
 #### To change the baseline version for a profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
