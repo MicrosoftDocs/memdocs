@@ -35,8 +35,8 @@ To Install Microsoft Tunnel Gateway, you’ll need at least one Linux server wit
 
 Before you start installation be sure to complete the following tasks:
 
-- Review and [Configure prerequisites for Microsoft Tunnel](../protect/ms-tunnel-configure.md).
-- Run the Microsoft Tunnel [readiness tool](../protect/ms-tunnel-overview.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
+- Review and [Configure prerequisites for Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
+- Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-overview.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
 After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
 
@@ -93,7 +93,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
 
-     ![Screen capture for download of installation script](./media/ms-tunnel-configure/download-installation-script.png)
+     ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
 
    - Use a Linux command to get the readiness tool directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunneldownload.
 
@@ -110,24 +110,29 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 4. Review and configure variables in the following files to support your environment.
 
-   - Environment file: **/etc/mstunnel/env.sh**. For more information on these variables, see [Environment variables](../protect/ms-tunnel-reference.md#environment-variables) in the reference for Microsoft Tunnel article.
+   - Environment file: **/etc/mstunnel/env.sh**. For more information on these variables, see [Environment variables](../protect/microsoft-tunnel-reference.md#environment-variables) in the reference for Microsoft Tunnel article.
 
 5. When prompted, copy the full chain of your TLS certificate file to the Linux server. The script displays the correct location to use on the Linux server.
 
    The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the IP address or FQDN of the Tunnel Gateway server in its SAN.
 
+   The private key will remain available on the machine where you create the certificate signing request for the TLS certificate. This file must be exported with a name of **site.key**.
+
    Install the TLS certificate and private key. Use the following guidance that matches your file format:
 
    - **PFX**:
-     - Copy the certificate file to **/etc/mstunnel/private/site.pfx**.
+     - The certificate file name must be **site.pfx**. Copy the certificate file to **/etc/mstunnel/private/site.pfx**.
+
    - **PEM**:
-     - Copy the full chain certificate into **/etc/mstunnel/certs/site.crt**. For example: `cp [full path to cert] /etc/mstunnel/certs/site.crt`
+     - The full chain (root, intermediate, end-entity) must be in a single file named **site.crt**. If your using a certificate issued by a public provider like Digicert, you have the option of downloading the complete chain as a single .pem file.
+
+     - The certificate file name must be **site.crt*. Copy the full chain certificate into **/etc/mstunnel/certs/site.crt**. For example: `cp [full path to cert] /etc/mstunnel/certs/site.crt`
 
        Alternatively, create a link to the full chain cert in **/etc/mstunnel/certs/site.crt**. For example: `ln -s [full path to cert] /etc/mstunnel/certs/site.crt`
 
      - Copy the private key file into **/etc/mstunnel/private/site.key**. For example: `cp [full path to key] /etc/mstunnel/private/site.key`
 
-       Alternatively, create a link to the private key file in **/etc/mstunnel/private/site.key**. For example: `ln -s [full path to key file] /etc/mstunnel/private/site.key` This key shouldn't be encrypted with a password.
+       Alternatively, create a link to the private key file in **/etc/mstunnel/private/site.key**. For example: `ln -s [full path to key file] /etc/mstunnel/private/site.key` This key shouldn't be encrypted with a password. The private key file name must be **site.key**.
 
 6. After setup installs the certificate and creates the Tunnel Gateway services, you’re prompted to sign in and authenticate with Intune. The user account must have either the Intune Administrator or Global Administrator roles assigned. The account you use to complete the authentication must have an Intune license, or you must turn off the requirement for admin accounts to need licenses. The credentials of this account are not saved and are only used for initial sign-in to Azure Active Directory. After successful authentication, Azure app IDs/secret keys are used for authentication between the Tunnel Gateway and Azure Active Directory.
 
@@ -216,4 +221,4 @@ To uninstall the product, run **./mst-cli uninstall** from the Linux server as r
 
 ## Next steps
 
-[Monitor Microsoft Tunnel](ms-tunnel-monitor.md)
+[Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)

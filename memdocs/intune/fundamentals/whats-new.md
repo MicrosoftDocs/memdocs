@@ -206,7 +206,7 @@ You can now rename a co-managed device that is Azure AD joined. For more informa
 ### Device security
 
 #### Microsoft Tunnel Gateway VPN solution in preview<!-- 7843124  -->
-You can now deploy [Microsoft Tunnel Gateway](../protect/ms-tunnel-overview.md) to provide remote access to on-premises resources on iOS and Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile) devices.
+You can now deploy [Microsoft Tunnel Gateway](../protect/microsoft-tunnel-overview.md) to provide remote access to on-premises resources on iOS and Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile) devices.
 
 Microsoft Tunnel supports per-app and full device VPN, split tunneling, and conditional access capabilities using modern authentication.  Tunnel can support multiple gateway servers for high availability for production readiness.
 
@@ -264,7 +264,7 @@ When you configure a *SCEP certificate* profile for iOS/iPadOS or macOS devices,
  
 Intune supports 4096-bit keys for the following platforms: 
 - iOS 14 and later
-- MacOS 11 and later    
+- macOS 11 and later  
  
 To configure SCEP certificate profiles, see [Create a SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
 

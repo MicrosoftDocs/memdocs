@@ -231,4 +231,4 @@ The following are common Linux commands you might use with a tunnel server.
 
 - `curl <URL>` – Checks access to a website. For example: `curl https://microsoft.com`
 
-- `./<filename`>` -  Run a script.
+- `./<filename>` -  Run a script.

@@ -31,7 +31,7 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune. The tunnel allo
 
 *Microsoft Tunnel is in public preview*.
 
-When you have your prerequisite configurations in place and are ready to install the tunnel, see [Configure the Microsoft Tunnel](../protect/ms-tunnel-configure.md).
+When you have your prerequisite configurations in place and are ready to install the tunnel, see [Configure the Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
 
 ## Overview of Microsoft Tunnel
 
@@ -244,7 +244,7 @@ To use the readiness tool:
 
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
 
-For more information about this tool, see [Reference for mst-cli](../protect/ms-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
+For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 
 ## Use Conditional Access with the Microsoft Tunnel
 
@@ -285,7 +285,7 @@ If you choose to configure Conditional Access policy to limit user access, we re
 
 The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers.  
 
-![Drawing of the Microsoft Tunnel Gateway architecture](./media/ms-tunnel-overview/tunnel-architecture.png)
+![Drawing of the Microsoft Tunnel Gateway architecture](./media/microsoft-tunnel-overview/tunnel-architecture.png)
   
 **Components**:  
 - **A** – Microsoft Intune.
@@ -322,4 +322,4 @@ The Microsoft Tunnel Gateway runs in Docker containers that run on Linux servers
   
 ## Next steps
 
-[Install and configure Microsoft Tunnel](ms-tunnel-configure.md)
+[Install and configure Microsoft Tunnel](microsoft-tunnel-configure.md)
