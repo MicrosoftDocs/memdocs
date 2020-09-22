@@ -41,7 +41,7 @@ _ You rooted the device. Reverse the root (commonly done with PC software or app
 
 ## Why your access is blocked
 
-A rooted device has had some part of its software changed to enable capabilities that aren't otherwise available.  These changes can make the device prone to unauthorized access and malicious software. So that's why rooted devices are often blocked from accessing company email or files.  
+Rooting a device involves changing its software. These changes make the device more prone to unauthorized access and malicious attacks. So that's why rooted devices are often blocked from accessing company email or files.  
 
 ## Next steps  
 
