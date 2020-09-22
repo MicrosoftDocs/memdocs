@@ -37,7 +37,7 @@ Your device will be blocked from accessing corporate resources if:
 
 - Your device manufacturer installed software on your device that the root detection software thinks is a security risk. Contact your IT support person for help. For contact information, go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-_ You rooted the device. Reverse the root (commonly done with PC software or apps) and restore the device back to its previous state. Make sure to back up your device before you begin. 
+- You rooted the device. Reverse the root (commonly done with PC software or apps) and restore the device back to its previous state. Make sure to back up your device before you begin. 
 
 ## Why your access is blocked
 
