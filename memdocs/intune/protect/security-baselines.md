@@ -57,7 +57,7 @@ Security baselines can help you to have an end-to-end secure workflow when worki
 The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
 
 - **MDM Security Baseline**
-  - [MDM Security Baseline for September 2019](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
+  - [MDM Security Baseline for August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
   - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
