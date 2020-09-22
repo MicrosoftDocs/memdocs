@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 07/28/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -15,11 +15,6 @@ manager: dougeby
 
 
 # <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 The sections below can be used to assist in troubleshooting issues you may come across.
 
@@ -55,38 +50,6 @@ This issue impacts some Windows Server devices that are managed by Configuration
 **Mitigation:**
 This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
 
-### Startup processes data not available for some devices
-
-Startup processes data, which power the "time to responsive desktop" insights, may not be available for some devices that are enrolled via Configuration Manager.
-
-**Impacted devices:** 
-If a device is enrolled in Endpoint analytics via Configuration Manager and machine local time is set to a time zone "behind" UTC (such as UTC-7), startup processes will not be available for that device. Co-managed devices and devices enrolled via Intune are not impacted by this issue.
-
-**Mitigation:**
-This issue is resolved in the Configuration Manager version 2002 update rollup (available around mid-July).
-
-### Device suddenly stops showing boot or logon events
-
-Devices enrolled via Configuration Manager may stop sending boot and logon events to Endpoint analytics if the device's event log is cleared. This can occur when a user manually triggers the action or after certain events, such as a Windows feature update.
-
-**Impacted devices:** 
-Only devices enrolled via Configuration Manager are impacted. 
-
-**Mitigation:**
-This issue is resolved in the Configuration Manager version 2002 update rollup (available around mid-July).
-
-### OS Version is not appearing for some devices
-
-Some devices may not show a value for OS Version in the [**All devices** blade of the Microsoft Endpoint Manager admin console](../configmgr/tenant-attach/device-sync-actions.md#perform-device-actions). 
-
-**Impacted devices:**
-Devices enrolled via Configuration Manager that contained null values for certain OS version properties at the time of onboarded are impacted.
-
-**Mitigation:**
-While some devices may not show OS Version data in the **All devices** view, up-to-date OS version information is available for any individual device in the **User experience** blade for that device. This is accessible from the **Startup performance** report in Endpoint Analytics by selecting the **Device performance** tab and then clicking on any device name.
-
-The fix for this issue is available in the Configuration Manager version 2002 update rollup (available around mid-July).
-
 ### Error code -2016281112 (Remediation failed)
 
 There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
@@ -107,11 +70,7 @@ Rollback transaction: XXXX
 
 ### Script requirements for Proactive remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
-- Encoded in UTF-8 not UTF-8 BOM
-- Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
-   - Currently, the encoding and line breaks are a known issue.
+If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 

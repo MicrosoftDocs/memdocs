@@ -1,12 +1,12 @@
 ### YamlMime:Landing
-title: Endpoint analytics (preview) documentation
-summary: "Official product documentation for Endpoint analytics (preview) in Microsoft Endpoint Manager"
+title: Endpoint analytics documentation
+summary: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
  
 
 metadata:
-  title: Endpoint analytics (preview) documentation
+  title: Endpoint analytics documentation
   titleSuffix: Configuration Manager
-  description: "Official product documentation for Endpoint analytics (preview) in Microsoft Endpoint Manager"
+  description: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
   ms.product: configuration-manager
   ms.technology: configmgr-analytics
   ms.topic: landing-page
@@ -17,11 +17,11 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-  - title: About Endpoint analytics (preview)
+  - title: About Endpoint analytics
     linkLists:
       - linkListType: overview
         links:
-          - text: Endpoint analytics (preview) overview
+          - text: Endpoint analytics overview
             url: overview.md
       - linkListType: whats-new
         links:

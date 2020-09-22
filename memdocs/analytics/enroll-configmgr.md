@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 07/31/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -16,12 +16,7 @@ manager: dougeby
 
 # Quickstart: Enroll Configuration Manager devices into Endpoint analytics
 
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
-
-This quickstart outlines prerequisites and instructions for enrolling Configuration Manager managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](enroll-intune.md#intune-device-requirements), we recommend [using Intune to enroll them into Endpoint analytics](enroll-intune.md) instead of following the instructions in this quickstart. You do not need to move any co-mangement workloads to Intune to enroll a co-managed device to Endpoint analytics via Intune.
+This quickstart outlines prerequisites and instructions for enrolling Configuration Manager managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](enroll-intune.md#intune-device-requirements), we recommend [using Intune to enroll them into Endpoint analytics](enroll-intune.md) instead of following the instructions in this quickstart. You do not need to move any co-management workloads to Intune to enroll a co-managed device to Endpoint analytics via Intune.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -29,8 +24,8 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Configuration Manager requirements
 
-- Configuration Manager version 2002 or newer
-- Clients upgraded to version 2002 or newer
+- A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
+- The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
 > [!Important]  
@@ -86,15 +81,9 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
    :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
 ### <a name="bkmk_onboard"></a> Onboard in the Endpoint analytics portal
-Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
+Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices. For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 
-1. Go to `https://aka.ms/endpointanalytics`
-1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
-
-> [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
-
-   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
+[!INCLUDE [Endpoint analytics overview page information](includes/onboard.md)]
 
 ### <a name="bkmk_cm_enable"></a> Configure Endpoint analytics data collection in Configuration Manager
 
