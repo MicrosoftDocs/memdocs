@@ -32,7 +32,7 @@ ms.collection:
 
 # Using Microsoft Tunnel for iOS  
 
-The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they've already configured a VPN connection for your work account; so all you need to do to connect is install the app and sign in.   
+The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they already configured a VPN connection for your work account. To connect to the VPN, simply install the app and sign in with your work account. 
 
 ## Install Microsoft Tunnel  
 
