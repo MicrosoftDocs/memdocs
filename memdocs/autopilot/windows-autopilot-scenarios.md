@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot scenarios and capabilities
-description: Follow along with several typical  Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
+description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
@@ -23,13 +23,16 @@ ms.topic: article
 
 ## Scenarios
 
-Windows Autopilot includes support for a growing list of scenarios, designed to support common organization needs. These needs can vary based on the type of organization, and their progress moving to Windows 10 and [transitioning to modern management](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
+Windows Autopilot supports a growing list of scenarios that organizations commonly need. These needs vary based on:
+- Organization type.
+- Progress moving to Windows 10.
+- How far they've [transitioned to modern management](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 The following Windows Autopilot scenarios are described in this guide:
 
 | Scenario | More information |
 | --- | --- |
-| Deploy devices to be set up by a member of the organization and configured for that person | [Windows Autopilot user-driven mode](user-driven.md) |
+| Deploy and configure devices so that an end user can set it up for themselves | [Windows Autopilot user-driven mode](user-driven.md) |
 | Deploy devices to be automatically configured for shared use, as a kiosk, or as a digital signage device.| [Windows Autopilot self-deploying mode](self-deploying.md) |
 | Redeploy a device in a business-ready state.| [Windows Autopilot Reset](windows-autopilot-reset.md) |
 | Preprovision a device with up-to-date applications, policies, and settings.| [White glove](white-glove.md) |
@@ -45,19 +48,23 @@ These scenarios are summarized in the following video.
 
 ### Windows Autopilot is self-updating during OOBE
 
-Starting with the Windows 10, version 1903, Autopilot functional and critical updates will begin downloading automatically during OOBE after a device is connected to a network, and the [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) have completed. The user or IT admin cannot opt out of these Autopilot updates because they are required for Windows Autopilot deployment to operate properly.  Windows will alert the user that the device is checking for, downloading, and installing the updates.
+For Windows 10, version 1903 and later devices, Autopilot functional and critical updates  automatically download during OOBE after both:
+- The device is connected to a network.
+- The [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) complete.
 
-See [Windows Autopilot update](autopilot-update.md) for more information.
+You can't opt out of these Autopilot updates because they're required for Windows Autopilot deployment. Windows alerts the user that the device is checking for, downloading, and installing the updates.
+
+For more information, see [Windows Autopilot update](autopilot-update.md).
 
 ### Cortana voiceover and speech recognition during OOBE
 
-In Windows 10, version 1903 and later Cortana voiceover and speech recognition during OOBE is DISABLED by default for all Windows 10 Pro, Education, and Enterprise SKUs.
+In Windows 10, version 1903 and later, Cortana voiceover and speech recognition during OOBE is DISABLED by default. This default applies to all Windows 10 Pro, Education, and Enterprise SKUs.
 
-You can also enable Cortana voiceover and speech recognition during OOBE by creating the following registry key. This key does not exist by default:
+You can also enable Cortana voiceover and speech recognition during OOBE by creating the following registry key. This key doesn't exist by default:
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-The key value is a DWORD with  **0** = disabled and **1** = enabled.
+The key value is a DWORD with **0** = disabled and **1** = enabled.
 
 | Value | Description |
 | --- | --- |
