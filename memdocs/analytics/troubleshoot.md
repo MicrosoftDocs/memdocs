@@ -211,6 +211,10 @@ The scripts exit with a code of 1 to signal to Intune that remediation should oc
 
 0x87D00321 is a script execution timeout error. This error typically occurs with machines that are connected remotely. A potential mitigation might be to only deploy to a dynamic collection of machines that have internal network connectivity.
 
+### What is the output size limit for proactive remediation scripts?
+
+The maximum allowed output size limit for proactive remediation scripts is 2048 characters.
+
 ## Next steps
 
 For more information on changes to Endpoint analytics, see [What's new](whats-new.md).
