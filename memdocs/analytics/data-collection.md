@@ -76,21 +76,22 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 
-- If you're enrolling Intune managed devices only, unselect the **Boot performance** scope from  the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up.
+- If you're enrolling Intune managed devices only, unselect the **Boot performance** scope from  the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up. Optionally, [revoke consent](settings.md#bkmk_consent) to share anonymized and aggregate metrics for seeing updated Endpoint analytics scores and insights.
 
 - If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
 
    1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
    1. Select **CoMgmtSettingsProd** then click **Properties**.
    1. On the **Configure upload** tab, uncheck the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**.
+   1. Optionally, [revoke consent](settings.md#bkmk_consent) to share anonymized and aggregate metrics for seeing updated Endpoint analytics scores and insights.
 
 - Disable Endpoint analytics data collection in Configuration Manager (optional):
 
    1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
    1. Right-click and select **Properties** then select the **Computer Agent** settings.
    1. Set **Enable Endpoint analytics data collection** to **No**.
-   > [!Important]
-   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
+  > [!Important]
+  > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
 
 ## Resources
 
