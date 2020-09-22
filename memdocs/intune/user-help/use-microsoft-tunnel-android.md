@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the Microsoft Tunnel app for Android  | Microsoft Intune
+title: Use the Microsoft Tunnel app for Android - Microsoft Intune  | Microsoft Docs
 description: Learn how to connect over VPN using Microsoft Tunnel for Android.  
 keywords:
 author: lenewsad
@@ -32,11 +32,11 @@ ms.collection:
 
 # Using Microsoft Tunnel for Android
 
-The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they've already configured a VPN connection for your work account. All you need to do to connect is install the app and sign in.
+The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they've already configured a VPN connection for your work account; so all you need to do to connect is install the app and sign in.
 
 ## Install Microsoft Tunnel  
 
-Tunnel is available in Google Play. Before heading there, check your device to see if it's already installed.   
+Tunnel is available in the Google Play store. Before heading there, check your device to see if it's already installed.   
 
 If you can’t find Tunnel in the Play store, contact your IT support person for help.  
 
@@ -44,11 +44,11 @@ If you can’t find Tunnel in the Play store, contact your IT support person for
 
 1. Open Microsoft Tunnel. 
 3. Sign in with your work account if prompted.  
-3. On the **Connect** screen, flip the **Status** to connect or disconnect from the VPN. 
+3. On the **Connect** screen, turn the **Status** toggle on or off to connect or disconnect from the VPN. 
 
-Your organization might require you to stay connected to Tunnel. This is known as an *always-on* connection. If this is the case, the status switch will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet. 
+Your organization might require you to stay connected to Tunnel. This is known as an *always-on* connection. If this is the case, the Status toggle will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet. 
 
-If the switch is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article.  
+If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article.  
 
 
 ## Connection details    
@@ -76,7 +76,7 @@ Tap **Details** to see the following information:
 From the **Connect** screen, select the **Settings** gear icon to:
 
 * Allow/block Microsoft from collecting usage and performance data. 
-* Enable/disable verbose logging.  
+* Turn verbose logging on/off.  
 
 ## Get help in the app  
 Select **Help** from the menu at the bottom of the screen to:  

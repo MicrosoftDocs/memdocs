@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the Microsoft Tunnel app for iOS  | Microsoft Intune
+title: Use the Microsoft Tunnel app for iOS - Microsoft Intune  | Microsoft Docs
 description: Learn how to connect over VPN using Microsoft Tunnel for iOS.
 keywords:
 author: lenewsad
@@ -32,7 +32,7 @@ ms.collection:
 
 # Using Microsoft Tunnel for iOS  
 
-The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they've already configured a VPN connection for your work account. All you need to do to connect is install the app and sign in.   
+The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they've already configured a VPN connection for your work account; so all you need to do to connect is install the app and sign in.   
 
 ## Install Microsoft Tunnel  
 
@@ -45,11 +45,11 @@ If you can’t find Tunnel in the App Store, contact your IT support person for 
 
 1. Open Microsoft Tunnel. 
 2. Sign in with your work account if prompted.
-3. On the **Connect** screen, flip the **Status** to connect or disconnect from the VPN. 
+3. On the **Connect** screen, turn the **Status** toggle on or off to connect or disconnect from the VPN. 
  
-An absent **Status** switch means that Tunnel is configured to connect automatically when certain apps are in use. To turn this functionality off, go to **Details** and turn off **Connect on demand**.    
+An absent **Status** toggle means that Tunnel is configured to connect automatically when certain apps are in use. To turn this functionality off, go to **Details** and turn off **Connect on demand**.    
 
-If the switch is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-ios.md#send-logs) section in this article. 
+If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-ios.md#send-logs) section in this article. 
 
 
 ## Connection details    
@@ -79,7 +79,7 @@ Tap **Details** to see the following information:
 To configure how Tunnel collects and logs data, open the **Settings** app on your device. Select **Microsoft Tunnel** to:  
 
 * Allow/block Microsoft from collecting usage and performance data. 
-* Enable/disable verbose logging. 
+* Turn verbose logging on/off.   
 
 
 ## Get help in the app  
