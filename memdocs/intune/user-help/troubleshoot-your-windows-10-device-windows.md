@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -38,7 +38,7 @@ This article describes how to resolve access issues for an enrolled Windows 10 d
 A connection to Wi-Fi is required to access work or school resources. Verify that you're connected to Wi-Fi and then try accessing the resources again.  
 
 ## Add work or school account in Settings app  
-These steps are the same you'd use to enroll your device. However, if your account isn't appearing in the **Settings** app, you many need to run through these steps again.  
+These steps are the same you'd use to enroll your device. However, if your account isn't appearing in the **Settings** app, you may need to run through these steps again.  
 
 1. Open the **Settings** app. 
 2. Select **Accounts**.
@@ -61,7 +61,7 @@ If you see your work or school account listed in the Settings app, your device a
 
 #### Resolution
 1. Re-enter your username and password. 
-2. If it still doesn't work, contact your IT support person to get the correct URL (example: www.yourcompany.onmicrosoft.com). 
+2. If it still doesn't work, contact your IT support person to get the correct URL (example: <code>www.yourcompany.onmicrosoft.com</code>). 
 3. When prompted, enter the provided URL. 
 
 ### It looks like you're not connected. Make sure you're connected to the network.
@@ -72,6 +72,13 @@ If you see your work or school account listed in the Settings app, your device a
 1. From your device toolbar or settings, select the **Network status** globe icon.
 2. Select a Wi-Fi network > **Connect**.  
 3. Try to connect your account again.  
+
+### Your device is already being managed by an organization.  
+
+**Cause**: Your device has already been enrolled in Intune or another mobile device management (MDM) provider.    
+
+#### Resolution  
+Contact your IT support person to find out how they want you to proceed.    
 
 
 ## Next steps  

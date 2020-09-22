@@ -5,7 +5,7 @@ description: "Primary sites require a software update point on the central admin
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -67,7 +67,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ### Configure SSL communications to WSUS  
  You can configure SSL communication on the **General** page of the wizard or on the **General** tab in the properties of the software update point.  
 
- For more information about how to use SSL, see [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ For more information about how to use SSL, see [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) and [Configure a software update point to use TLS/SSL with a PKI certificate](../get-started/software-update-point-ssl.md).  
 
 ### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you don't configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  

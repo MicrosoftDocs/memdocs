@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/06/2020
+ms.date: 09/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -341,6 +341,9 @@ Intune app protection policies for access will be applied in a specific order on
 When dealing with different types of settings, an Intune SDK version requirement would take precedence, then an app version requirement, followed by the iOS/iPadOS operating system version requirement. Then, any warnings for all types of settings in the same order are checked. We recommend the Intune SDK version requirement be configured only upon guidance from the Intune product team for essential blocking scenarios.
 
 ## App protection experience for Android devices
+
+### Device biometric authentication
+For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types can be used to authenticate, fingerprints will only be accepted, or biometrics will not be accepted. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.
 
 ### Company Portal app and Intune app protection
 Much of app protection functionality is built into the Company Portal app. Device enrollment is _not required_ even though the Company Portal app is always required. For mobile application management without enrollment (MAM-WE), the end user just needs to have the Company Portal app installed on the device.

@@ -2,7 +2,7 @@
 title: Monitor clients
 titleSuffix: Configuration Manager
 description: Get detailed guidance on how to monitor clients in Configuration Manager
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to monitor clients in Configuration Manager
@@ -73,11 +71,11 @@ Configuration Manager provides the following types of information as client stat
 <!--3599209-->
 You deploy software updates and other apps to help secure your environment, but these deployments only reach healthy clients. Unhealthy Configuration Manager clients adversely effect overall compliance. Determining client health can be challenging depending upon the denominator: how many total devices should be in your scope of management? For example, if you discover all systems from Active Directory, even if some of those records are for retired machines, this process increases your denominator.
 
-Starting in version 1902, view a dashboard with information about the health of Configuration Manager clients in your environment. View your client health, scenario health, and common errors. Filter the view by several attributes to see any potential issues by OS and client versions.
+Configuration Manager provides a dashboard with information about the health of clients in your environment. View your client health, scenario health, and common errors. Filter the view by several attributes to see any potential issues by OS and client versions.
 
 In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Client status**, and select the **Client health dashboard** node.
 
-![Client health dashboard screenshot](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="Client health dashboard screenshot" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > There are no changes to ccmeval.  
@@ -88,18 +86,18 @@ By default, the client health dashboard shows online clients, and clients active
 
 At the top of the dashboard, there's a set of filters to adjust the data displayed in the dashboard.
 
-- **Collection**: By default, the dashboard displays devices in the **All Systems** collection. Select a device collection from the list to scope the view to a subset of devices in a specific collection.  
+- **Client health for clients in the following collections**: By default, the dashboard displays devices in the **All Systems** collection. Select a device collection to scope the view to a subset of devices in a specific collection.  
 
-- **Online/offline**: By default, the dashboard displays only online clients. This state comes from the client notification channel that update a client's status every five minutes. For more information, see [About client status](monitor-clients.md#bkmk_about).  
+- **Client active in last number of days**: By default, the dashboard displays clients that are active in the last three days.  
 
-- **Active \# days**: By default, the dashboard displays clients that are active in the last three days.  
+- **Include client health for offline clients**: By default, the dashboard displays only online clients. This state comes from the client notification channel that update a client's status every five minutes. For more information, see [About client status](monitor-clients.md#bkmk_about).  
 
-- **Failure only**: Scope the view to only devices that are reporting a client health failure.  
+- **Only show unhealth client details**: Scope the view to only devices that are reporting a client health failure.  
 
     > [!Tip]  
     > Use this filter along with the client version and OS version tiles. For more information, see [Version tiles](#version-tiles).
 
-### Client health percentage
+### Overall client health
 
 This tile shows the overall client health in your hierarchy.
 
