@@ -124,6 +124,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Override biometric instead of PIN for access  | Require  | iOS/iPadOS, Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access  | Allow  | iOS/iPadOS  |   |
+| Biometrics instead of PIN for access  | Allow  | Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
 | App PIN when device PIN is set  | Require  | iOS/iPadOS, Android  | If the device is enrolled in Intune, administrators can consider setting this to "Not required" if they are enforcing a strong device PIN via a device compliance policy.  |
 | Work or school account credentials for access  | Not required  | iOS/iPadOS, Android  |   |
