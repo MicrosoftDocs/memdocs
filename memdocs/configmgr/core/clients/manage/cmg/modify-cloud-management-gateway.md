@@ -62,38 +62,62 @@ Always keep at least one active CMG for internet-based clients to receive update
 
 Clients refresh policy by default every 24 hours. Before you delete the old CMG, wait at least one day after you create a new one. If clients are turned off or without an internet connection, you may need to wait longer.
 
-### Replace a classic Azure Service Manager deployment
+If you have an existing CMG from Configuration Manager version 1810 or earlier, it uses the Azure Service Manager deployment method with an Azure management certificate. Redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753-->
 
-If you have an existing CMG on the Azure Service Manager deployment method with an Azure management certificate, you have to redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753--> There are two options:  
+The process to redeploy the service depends upon your service name and whether you want to reuse it.
 
-- If you want to reuse the same service name:
+### Replace a CMG and reuse the same service name
 
-    1. First, delete the classic CMG. Take into account the above guidance to always have at least one active CMG for internet-based clients.
+<!--
+You can reuse the same service name and CMG server authentication certificate, but the process depends upon the service name.
 
-    1. Create a new CMG using a Resource Manager deployment. Reuse the same server authentication certificate.
+- If you issue the CMG server authentication certificate for your own domain name (`GraniteFalls.contoso.com`):
 
-    1. Reconfigure the CMG connection point to use the new CMG instance.
+    1. Create a new CMG with the same CMG server authentication certificate.
 
-- If you want to use a new service name:
+    1. When you're ready to switch the service:
 
-    1. Create a new CMG using a Resource Manager deployment. Use a new server authentication certificate.
+        1. Update the CNAME record in DNS to use the new deployment name. For example, change the CNAME mapping for `GraniteFalls.contoso.com` to `GraniteFalls.EastUS.CloudApp.Azure.Com`.
 
-    1. Create a new CMG connection point and link with the new CMG.
+        1. Reconfigure the CMG connection point to use the new CMG.
 
-    1. Wait at least one day for internet-based clients to receive policy about the new CMG.
+        1. Delete the old CMG.
 
-    1. Delete the classic CMG.
+- If you issue the CMG server authentication certification from your PKI for `cloudapp.net`:
+ -->
 
-> [!TIP]
-> To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
->
-> 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
->
-> 1. Select the CMG instance.  
->
-> 1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
->
-> You can also add the **Deployment Model** attribute as a column to the list view.  
+> [!IMPORTANT]
+> This process assumes that you already have at least two CMG services, and are replacing one of them at a time. You need to have at least one active CMG for internet-based clients.
+
+1. Delete the old CMG.
+
+1. Create a new CMG with the same server authentication certificate.
+
+1. Reconfigure the CMG connection point to use the new CMG.
+
+### Replace a CMG with a new service name
+
+1. Get a new server authentication certificate.
+
+1. Create a new CMG.
+
+1. Create a new CMG connection point and link it with the new CMG.
+
+1. Wait at least one day for internet-based clients to receive policy about the new CMG. If clients are turned off or without an internet connection, you may need to wait longer.
+
+1. Delete the old CMG and associated CMG connection point.
+
+## Determine deployment model
+
+To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
+
+1. Select the CMG instance.  
+
+1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
+
+You can also add the **Deployment Model** attribute as a column to the list view.  
 
 ## Modifications in the Azure portal
 
