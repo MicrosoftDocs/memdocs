@@ -2245,65 +2245,6 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
-## Windows Hello for Business
-
-- **Block Windows Hello for Business**  
-  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards. If you disable or don't configure this policy setting, the device provisions Windows Hello for Business. If you enable this policy setting, the device doesn't provision Windows Hello for Business for any user.
-
-  **Default**: Enabled
-  
-  When set to *Disabled*, you can configure the following settings:
-
-  - **Minimum PIN length**  
-    Minimum PIN length must be between 4 and 127.
-
-    **Default**: Not configured
-
-  - **Enable to use enhanced anti-spoofing, when available**  
-    [Anti-spoofing protection](https://go.microsoft.com/fwlink/?linkid=2067192)
-
-    If enabled, devices will use enhanced anti-spoofing, when available. If not configured, the client configuration for anti-spoofing will be honored.
-
-    **Default**: Not configured
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-  - **Lowercase letters in PIN**:  
-    If required, user PIN must include at least one lowercase letter.
-
-    **Default**: Not allowed
-
-  - **Special characters in PIN**:  
-    If required, user PIN must include at least one special character.
-
-    **Default**: Not allowed
-
-  - **Uppercase letters in PIN**:  
-    If required, user PIN must include at least one uppercase letter.
-
-    **Default**: Not allowed
-
-::: zone-end
-::: zone pivot="mdm-sept-2020"
-
-  - **Lowercase letters in PIN**:  
-    If required, user PIN must include at least one lowercase letter.
-
-    **Default**: Not configured
-
-  - **Special characters in PIN**:  
-    If required, user PIN must include at least one special character.
-
-    **Default**: Not configured
-
-  - **Uppercase letters in PIN**:  
-    If required, user PIN must include at least one uppercase letter.
-
-    **Default**: Not configured
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## Windows Ink Workspace
 
