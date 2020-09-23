@@ -149,6 +149,6 @@ You can't renew a bulk registration token. Once a bulk registration token expire
 
 ## See also
 
-- [Plan for the cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md)
+- [Overview of cloud management gateway](../manage/cmg/overview.md)
 
 - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md)

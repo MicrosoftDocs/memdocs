@@ -382,7 +382,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Client**  
 
-- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/overview.md)  
 
 - [Manage cloud domain-joined devices](../../clients/deploy/deploy-clients-cmg-azure.md)  
 

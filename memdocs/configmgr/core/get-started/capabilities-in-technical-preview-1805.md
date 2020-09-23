@@ -188,7 +188,7 @@ This feature also includes the **CMG connection analyzer** for real-time verific
 
 
 ### Prerequisites
-- An active [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) used by internet-based clients.  
+- An active [cloud management gateway](../clients/manage/cmg/overview.md) used by internet-based clients.  
 
 - The site onboarded to [Azure services](../servers/deploy/configure/azure-services-wizard.md) for cloud management.  
 

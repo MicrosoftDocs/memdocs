@@ -68,9 +68,9 @@ Use the following checklist to make sure you have the necessary information and 
 
   - A **Subscription Owner** needs to sign in to deploy the CMG.
 
-- A globally unique name for the service. This name is from the [CMG server authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
+- A globally unique name for the service. This name is from the [CMG server authentication certificate](server-auth-cert.md).  
 
-- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_serverauth).
+- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](server-auth-cert.md).
 
 ## Next steps
 

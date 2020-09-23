@@ -30,7 +30,7 @@ Configure the following Azure services using this wizard:
 
   - [Configure Azure AD User Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/overview.md)  
 
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 

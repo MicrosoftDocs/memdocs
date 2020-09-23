@@ -208,11 +208,11 @@ For more information, see [How to prepare internet-based devices for co-manageme
 <!--1358651-->
 Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
 
-For more information, see [Modify a CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg).
+For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
 #### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
 
 
 

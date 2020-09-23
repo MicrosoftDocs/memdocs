@@ -70,7 +70,7 @@ An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/c
 
 The following Configuration Manager features support or require enhanced HTTP:
 
-- [Cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
+- [Cloud management gateway](../../clients/manage/cmg/overview.md)
 - [OS deployment without a network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#enhanced-http)
 - [Enable co-management for new internet-based Windows 10 devices](../../../comanage/tutorial-co-manage-new-devices.md)
 - [App approvals via email](../../../apps/deploy-use/app-approval.md#bkmk_email-approve)

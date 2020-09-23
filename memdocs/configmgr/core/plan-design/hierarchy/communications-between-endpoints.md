@@ -99,7 +99,7 @@ When a client communicates with a distribution point, it only needs to authentic
 
 For more information, see the following articles:
 
-- [Plan for cloud management gateway](../..//clients/manage/cmg/plan-cloud-management-gateway.md)
+- [Overview of cloud management gateway](../..//clients/manage/cmg/overview.md)
 
 - [Plan for internet-based client management](../../clients/manage/plan-internet-based-client-management.md)
 

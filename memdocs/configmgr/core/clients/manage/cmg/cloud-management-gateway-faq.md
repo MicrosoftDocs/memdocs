@@ -6,7 +6,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 06/10/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
@@ -16,7 +16,7 @@ ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 
 *Applies to: Configuration Manager (current branch)*
 
-This article answers your frequently asked questions about the cloud management gateway. For more information, see [plan for cloud management gateway](plan-cloud-management-gateway.md).
+This article answers your frequently asked questions about the cloud management gateway. For more information, see [Overview of cloud management gateway](overview.md).
 
 ## Frequently asked questions
 
@@ -26,7 +26,7 @@ For more detailed information, see [certificates for cloud management gateway](c
 
 ### Do I need Azure ExpressRoute?
 
-No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud management gateway. The design of the cloud management gateway allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md)
+No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud management gateway. The design of the cloud management gateway allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Overview of cloud management gateway](overview.md)
 
 <!-- SCCMDocs#1659 -->
 
@@ -92,11 +92,3 @@ If you manage traditional Windows clients with Active Directory domain-joined id
 You can also manage Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
 
 Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
-
-## Next steps
-
-- [Plan for cloud management gateway](plan-cloud-management-gateway.md)
-- [Set up cloud management gateway](setup-cloud-management-gateway.md)
-- [Certificates for cloud management gateway](certificates-for-cloud-management-gateway.md)
-- [Security and privacy for cloud management gateway](security-and-privacy-for-cloud-management-gateway.md)
-- [Cloud management gateway size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md#bkmk_cmg)

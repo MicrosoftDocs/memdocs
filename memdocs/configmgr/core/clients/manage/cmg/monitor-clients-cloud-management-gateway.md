@@ -83,7 +83,7 @@ To aid troubleshooting, use the CMG connection analyzer for real-time verificati
 Configuration Manager can stop a CMG service when the total data transfer goes over your limit. Use [alerts](#set-up-outbound-traffic-alerts) to trigger notifications when the usage reaches warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this option turns off the cloud service.
 
 > [!IMPORTANT]
-> Even if the service isn't running, there are still costs associated with the cloud service. Stopping the service doesn't eliminate all associated Azure costs. To remove all cost for the cloud service, [remove the CMG](setup-cloud-management-gateway.md#modify-a-cmg).<!-- CHANGE THIS LINK -->
+> Even if the service isn't running, there are still costs associated with the cloud service. Stopping the service doesn't eliminate all associated Azure costs. To remove all cost for the cloud service, [delete the CMG](modify-cloud-management-gateway.md#delete-the-service).
 >
 > When you stop the CMG service, internet-based clients can't communicate with Configuration Manager.
 

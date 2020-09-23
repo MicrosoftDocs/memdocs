@@ -19,7 +19,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
-> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg).
+> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 >
 > You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
@@ -79,7 +79,7 @@ Deployment and operation of the cloud distribution point includes the following 
 
     - On-premises clients typically use an on-premises management point.  
 
-    - Internet-based clients either use a [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), or an [internet-based management point](../../clients/manage/plan-internet-based-client-management.md).  
+    - Internet-based clients either use a [cloud management gateway](../../clients/manage/cmg/overview.md), or an [internet-based management point](../../clients/manage/plan-internet-based-client-management.md).  
 
 - The cloud distribution point uses a **certificate-based HTTPS** web service to help secure network communication with clients. Clients must trust this certificate.  
 
@@ -108,7 +108,7 @@ Where you create the cloud distribution point depends upon which clients need to
 
 - Classic service deployment: Create this type only at a primary site.  
 
-- The cloud management gateway can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Plan for cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).<!--1358651-->  
+- The cloud management gateway can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Overview of cloud management gateway](../../clients/manage/cmg/overview.md).<!--1358651-->  
 
 To determine whether to include cloud distribution points in boundary groups, consider the following behaviors:  
 
@@ -212,7 +212,7 @@ Configuration Manager includes the following options to help control costs and m
 A cloud distribution point uses the following Azure components, which incur charges to the Azure subscription account:  
 
 > [!Tip]  
-> Starting in version 1806, the cloud management gateway can also serve content to clients. This functionality reduces the cost by consolidating the Azure VMs. For more information, see [Cost for cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#cost).  
+> The cloud management gateway can also serve content to clients. This functionality reduces the cost by consolidating the Azure VMs. For more information, see [Cost for cloud management gateway](../../clients/manage/cmg/cost.md).  
 
 #### Virtual machine
 
@@ -326,7 +326,7 @@ Certificates for cloud distribution points support the following configurations:
 
 *This certificate is required for all cloud distribution point deployments.*
 
-For more information, see [CMG server authentication certificate](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_serverauth), and the following subsections, as necessary:  
+For more information, see [CMG server authentication certificate](../../clients/manage/cmg/server-auth-cert.md), and the following subsections, as necessary:  
 
 - CMG trusted root certificate to clients
 - Server authentication certificate issued by public provider

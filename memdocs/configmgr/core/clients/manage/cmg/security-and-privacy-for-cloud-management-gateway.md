@@ -16,7 +16,7 @@ ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 
 *Applies to: Configuration Manager (current branch)*
 
-This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md).
+This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Overview of cloud management gateway](overview.md).
 
 ## CMG security details
 
@@ -107,10 +107,3 @@ Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only ap
 ### Use token-based authentication
 
 Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure AD, and don't have a method to install a PKI-issued certificate. The site automatically issues tokens for devices that register on the internal network. You can create a bulk registration token for internet-based devices. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).<!-- SCCMDocs#2331 -->
-
-## Next steps
-
-- [Plan for cloud management gateway](plan-cloud-management-gateway.md)
-- [Set up cloud management gateway](setup-cloud-management-gateway.md)
-- [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)
-- [Certificates for cloud management gateway](certificates-for-cloud-management-gateway.md)

@@ -41,7 +41,7 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
 - Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
-- Optionally set up a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
+- Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 
 > [!TIP]
 > Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).

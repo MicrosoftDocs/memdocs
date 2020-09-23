@@ -225,7 +225,7 @@ For more information, see [Use bootable media to deploy Windows over the network
 
 This release includes the following improvements to deploy task sequences to devices that communicate via a cloud management gateway (CMG):
 
-- Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Plan for CMG - Specifications](../../clients/manage/cmg/plan-cloud-management-gateway.md#specifications).
+- Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Supported configurations for CMG](../../clients/manage/cmg/supported-configurations.md).
 
 - This release fixes the two [known issues](../../servers/deploy/install/release-notes.md#task-sequences-cant-run-over-cmg) from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
 
@@ -280,7 +280,7 @@ This release includes the following additional improvements to OS deployment:
 
 While the cloud management gateway (CMG) has supported endpoint protection policies, devices required access to on-premises domain controllers. Starting in this release, clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.
 
-For more information, see [CMG support for Configuration Manager features](../../clients/manage/cmg/plan-cloud-management-gateway.md#support-for-configuration-manager-features).
+For more information, see [Supported configurations for CMG](../../clients/manage/cmg/supported-configurations.md).
 
 ### BitLocker management support for hierarchies
 

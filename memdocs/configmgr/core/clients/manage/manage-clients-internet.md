@@ -47,7 +47,7 @@ The cloud management gateway provides management of internet-based clients. It u
 
 - Management data sent through cloud service.  
 
-For more information, see [Plan for cloud management gateway](cmg/plan-cloud-management-gateway.md).  
+For more information, see [Overview of cloud management gateway](cmg/overview.md).  
 
 ## Internet-based client management
 
