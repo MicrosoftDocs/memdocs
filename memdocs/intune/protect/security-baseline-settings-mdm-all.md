@@ -75,7 +75,7 @@ To update a security baseline profile to the latest version of that baseline, se
 
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## Above Lock
 
@@ -88,7 +88,7 @@ For more information, see [Policy CSP - AboveLock](/windows/client-management/md
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 - **Voice activate apps from locked screen**:  
   **Default**: Disabled
@@ -418,8 +418,8 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
 
   When *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements* is selected, you can configure the *Hardened UNC path list*.
 
-  - **Hardened UNC path list**:  
-    Select **Add** to specify additional security flags and server paths.
+- **Hardened UNC path list**:  
+  Select **Add** to specify additional security flags and server paths.
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
@@ -2243,7 +2243,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 ## Windows Hello for Business
 
@@ -2266,9 +2266,6 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
 
     **Default**: Not configured
 
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
   - **Lowercase letters in PIN**:  
     If required, user PIN must include at least one lowercase letter.
 
@@ -2283,9 +2280,6 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
     If required, user PIN must include at least one uppercase letter.
 
     **Default**: Not allowed
-
-::: zone-end
-::: zone pivot="mdm-sept-2020"
 
   - **Lowercase letters in PIN**:  
     If required, user PIN must include at least one lowercase letter.
