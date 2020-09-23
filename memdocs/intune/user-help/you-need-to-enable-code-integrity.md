@@ -33,11 +33,11 @@ ms.collection:
 
 If you receive a message that you need to enable code integrity, contact your IT support person. Your support person will help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
 
-If you consider yourself an advanced PC user and want to try the steps on your own, see [Re-enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
+If you're using a PC and consider yourself an advanced user, you can enable Secure Boot through the PC BIOS menu. For instructions, see [Re-enable Secure Boot](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
 
 
 ## What is code integrity? 
-Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For code integrity to work on your device, another security feature called [*Secure Boot*](/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) must be enabled.  
+Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For code integrity to work on your device, another security feature called Secure Boot must be enabled.  
 
 
 ## Additional resources for IT administrators  
