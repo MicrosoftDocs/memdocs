@@ -34,11 +34,11 @@ ms.collection: M365-identity-device-management
 
 Intune collects various optional data to detect, diagnose, and fix problems from users through various Intune client apps.  These optional diagnostic data we collect help to proactively detect problems in your organization so they can be addressed before they become an issue. Intune client apps include:
 - iOS/iPadOS Company Portal
-- MacOS Company Portal
+- macOS Company Portal
 - Windows Company Portal
 - Android Company Portal
 - Android Intune app
-- Microsoft Intune Management Agent for MacOS
+- Microsoft Intune Management Agent for macOS
 - Microsoft Intune Management Extension
 - Android Mobile App Management (MAM)
 
