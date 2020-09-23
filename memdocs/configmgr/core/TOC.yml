@@ -886,6 +886,7 @@
       - name: 4. Set up CMG
         href: clients/manage/cmg/setup-cloud-management-gateway.md
       - name: 5. Configure clients for CMG
+        href: clients/manage/cmg/configure-clients.md
     - name: Manage
       items:
       - name: Monitor clients on CMG
