@@ -70,7 +70,7 @@ Bring the power of the Configuration Manager on-premises [Run scripts](../../con
 
 ### App management
 
-#### App SDK exposes incoming data sharing policy to applications<!-- 4176693 -->
+#### App protection policies allow administrators to configure incoming Org data locations<!-- 4176693 -->
 You can now control which trusted data sources are allowed to open into organization documents. Similar to the existing **Save copies of org data** app protection policy option, you can define which incoming data locations are trusted. This functionality relates to the following app protection policy settings:
 - **Save copies of org data**
 - **Open data into org documents**
