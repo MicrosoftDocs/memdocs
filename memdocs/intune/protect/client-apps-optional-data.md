@@ -98,7 +98,7 @@ The data do not include any customer information, like:
 
 ## Turn off data collection
 We think there are compelling reasons for people to share this optional data. All optional diagnostic data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services is pseudonymized as defined in the ISO/IEC 19944:2017 (section 8.3.3) standard. 
-Users can [turn off usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) for their individual devices from the Settings page.
+Users can [turn off usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) for their individual devices.
 
 
 ## Next steps
