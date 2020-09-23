@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: You need to enable Secure Boot | Microsoft Docs
-description: You need to enable Secure Boot.
+title: Enable Secure Boot for Windows 10 - Microsoft Intune | Microsoft Docs
+description: Learn how to make your device compliant again by enabling Secure Boot.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
