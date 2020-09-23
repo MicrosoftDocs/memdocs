@@ -10,8 +10,6 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Optimize Windows 10 update delivery with Configuration Manager
@@ -109,7 +107,7 @@ Selecting the right peer caching technology for express installation files depen
 | Cache size on disk control | Yes | Yes | Yes |
 | Discovery of a peer source | Automatic | Manual (client agent setting) | Automatic |
 | Peer discovery | Via Delivery Optimization cloud service (requires internet access) | Via management point (based on client boundary groups) | Multicast |
-| Reporting | Yes (using Desktop Analytics) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
+| Reporting | [Update Compliance](/windows/deployment/update/update-compliance-get-started) | ConfigMgr client data sources dashboard | ConfigMgr client data sources dashboard |
 | WAN usage control | Yes (native, can be controlled via group policy settings) | Boundary groups | Subnet support only |
 | Management through ConfigMgr | Partial (client agent setting) | Yes (client agent setting) | Yes (client agent setting) |
 
