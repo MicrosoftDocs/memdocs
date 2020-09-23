@@ -338,22 +338,6 @@ Unless you use a wildcard certificate, don't reuse the same certificate. Each in
 
 For more information on creating this certificate from a PKI, see [Deploy the service certificate for cloud distribution points](../network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012).  
 
-### Azure management certificate
-
-*This certificate is required for classic service deployments. It isn't required for Azure Resource Manager deployments.*
-
-> [!Important]  
-> Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
->
-> The classic deployment method is deprecated as of version 1810.  
->
-> Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point. This certificate isn't required in Configuration Manager version 1902 or later.<!-- 3605704 -->
-
-If using the Azure classic deployment method with Configuration Manager version 1810 or earlier, you need an **Azure management certificate**. For more information, see the [Azure management certificate](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_azuremgmt) section of the cloud management gateway certificates article. The Configuration Manager site server uses this certificate to authenticate with Azure to create and manage the classic deployment.  
-
-To reduce complexity, use the same Azure management certificate for all classic deployments of cloud distribution points and cloud management gateways, across all Azure subscriptions and all Configuration Manager sites.
-
-
 ## <a name="bkmk_faq"></a> Frequently asked questions (FAQ)
 
 ### Does a client need a certificate to download content from a cloud distribution point?
