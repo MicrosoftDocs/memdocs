@@ -31,7 +31,7 @@ ms.collection:
 
 # Turn off Microsoft data collection on Android device  
 
-To prevent Microsoft from collecting data about your Microsoft Intune or Company Portal usage:  
+This article describes how to prevent Microsoft from collecting data about your Microsoft Intune or Company Portal usage. To turn off data collection in these apps:  
 
 1. Open the Intune or Company Portal app.  
 2. Select the menu button > **Settings**.
