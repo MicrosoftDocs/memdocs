@@ -81,9 +81,9 @@ The TPM attestation process requires access to a set of HTTPS URLs (unique for e
  
 Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, don't include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. For more information, see <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a>. 
 
-For each firmware TPM provider, make sure that these URLs are accessible so that certificates can be successfully requested: 
+For each firmware TPM provider, make sure that the appropriate URL is accessible so that certificates can be successfully requested. For example:
 
- <br>Intel- <code>https://ekop.intel.com/ekcertservice</code>
+ Intel- <code>https://ekop.intel.com/ekcertservice</code>
  <br>Qualcomm- <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
  <br>AMD- <code>https://ftpm.amd.com/pki/aia</code>
 
