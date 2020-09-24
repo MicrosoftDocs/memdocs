@@ -33,7 +33,7 @@ ms.collection:
 
 # Turn off Microsoft data collection on iOS device  
 
-To prevent Microsoft from collecting data about your Intune Company Portal usage:  
+This article describes how to prevent Microsoft from collecting data about your Intune Company Portal usage. To turn off data collection in Company Portal:  
 
 1. Open the **Settings** app.  
 2. Tap **Company Portal**.  
