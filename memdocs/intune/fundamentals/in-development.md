@@ -297,7 +297,7 @@ Soon, Microsoft Defender ATP can raise an Endpoint Manager Security task (**Endp
 For more information on security tasks, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender ATP](../protect/atp-manage-vulnerabilities.md).
 
 ### Endpoint security Firewall policies for tenant attached devices <!--  7323417     -->
-As a public preview, you’ll soon be able to use Endpoint security in Intune to manage Firewall settings on your tenant attached devices. (**Endpoint security** > **Firewall** > **Create Policy** > **Windows 10 and Windows Server (configMgr)**.  Use of endpoint security policies from Intune with tenant attached devices requires you to first configure Configuration Manager tenant attach. For more information, see [Tenant attach](../intune/protect/tenant-attach-intune.md) in the Intune documentation.
+As a public preview, you’ll soon be able to use Endpoint security in Intune to manage Firewall settings on your tenant attached devices. (**Endpoint security** > **Firewall** > **Create Policy** > **Windows 10 and Windows Server (configMgr)**.  Use of endpoint security policies from Intune with tenant attached devices requires you to first configure Configuration Manager tenant attach. For more information, see [Tenant attach](../protect/tenant-attach-intune.md) in the Intune documentation.
 
 ### Tri-state options for settings are coming to Endpoint Security Antivirus Security Experience policy<!-- 8082161  -->
 We’re adding a third state of configuration for settings in Endpoint security Antivirus Security Experience policies, where the platform (Windows or macOS) can support the additional option (**Endpoint security** > **Antivirus Security Experience**).
