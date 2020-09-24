@@ -68,7 +68,7 @@ You can choose to install the **Company Portal (Offline)** app using the steps b
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
 2. Select **Apps** > **Windows**.
 3. From the list of Windows apps, select **Company Portal (Offline)**.
-4. [Assign](apps-deploy.md) the Company Portal app as a required app to your selected autopilot device groups.
+4. To [Assign](apps-deploy.md) the Company Portal app as a required app to your selected autopilot device groups, select Properties, Assignments, Edit, Add Group (below Required) and then select a device Group to assign the app to. As this is an Offline app, be sure to change the 'License Type' to Device licensing before continuing to the 'Review + save' button
 
 ## Next steps
 
