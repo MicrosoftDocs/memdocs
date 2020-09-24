@@ -2,7 +2,7 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 06/02/2020
+ms.date: 09/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -83,12 +83,12 @@ The server is now ready for the Configuration Manager restore procedure.
 #### Clean an existing server for full recovery
 
 1. Back up the site database. Also back up any other supporting databases, like WSUS.
-2. Make a copy of the content library
-3. Manually delete the site database from the SQL Server
-4. Uninstall the Configuration Manager site
-5. Manually delete the Configuration Manager installation folder, and any other Configuration Manager folders
-6. Restart the server
-7. Restore the content library and other databases like WSUS
+1. Make a copy of the content library
+1. Uninstall the Configuration Manager site
+1. Manually delete the site database from the SQL Server
+1. Manually delete the Configuration Manager installation folder, and any other Configuration Manager folders
+1. Restart the server
+1. Restore the content library and other databases like WSUS
 
 The server is now ready for the Configuration Manager restore procedure.
 
