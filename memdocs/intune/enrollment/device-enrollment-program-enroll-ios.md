@@ -282,6 +282,13 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 19. To save the profile, choose **Create**.
 
+> [!NOTE]
+> If you need to re-enroll your Automated Device Enrolled device, you must first [add the IMEI number of that device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting an issue, like the device not receiving policy. In this case, you would:
+> 1. Retire the device from the Intune console.
+> 2. Add the device's serial number as a corporate device identifier.
+> 3. Re-enroll the device by downloading the Company Portal and going through device enrollment.
+
+
 ### Dynamic groups in Azure Active Directory
 
 You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory. For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
