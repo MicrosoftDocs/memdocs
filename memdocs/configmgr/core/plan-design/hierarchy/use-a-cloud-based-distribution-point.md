@@ -2,7 +2,7 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 04/21/2020
+ms.date: 09/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -182,6 +182,8 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 - You can't use a cloud distribution point for PXE or multicast-enabled deployments.  
 
 - A cloud distribution point doesn't support App-V streaming applications.  
+
+- A cloud distribution point doesn't support content for Microsoft 365 Apps updates. <!--7366753-->
 
 - You can't [prestage content](manage-network-bandwidth.md#BKMK_PrestagingContent) on a cloud distribution point. The distribution manager of the primary site that manages the cloud distribution point transfers all content.  
 
