@@ -21,7 +21,7 @@ How to manually create the AAD app
 
 ## Next steps
 
-Continue your CMG setup by configuring Azure Active Directory:
+Continue your CMG setup by deciding which type of client authentication to use:
   
 > [!div class="nextstepaction"]
-> [Set up CMG](setup-cloud-management-gateway.md)
+> [Configure client authentication](configure-authentication.md)

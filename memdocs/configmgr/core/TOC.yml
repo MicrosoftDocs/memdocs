@@ -879,10 +879,10 @@
         href: clients/manage/cmg/set-up-checklist.md
       - name: 1. Server authentication certificate
         href: clients/manage/cmg/server-auth-cert.md
-      - name: 2. Configure authentication
-        href: clients/manage/cmg/configure-authentication.md
-      - name: 3. Configure Azure Active Directory
+      - name: 2. Configure Azure Active Directory
         href: clients/manage/cmg/configure-azure-ad.md
+      - name: 3. Configure client authentication
+        href: clients/manage/cmg/configure-authentication.md
       - name: 4. Set up CMG
         href: clients/manage/cmg/setup-cloud-management-gateway.md
       - name: 5. Configure clients for CMG

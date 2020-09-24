@@ -151,7 +151,7 @@ The Configuration Manager client policy includes the CMG service name, `GraniteF
 
 ## Next steps
 
-Continue your CMG setup by deciding which type of authentication to use:
+Continue your CMG setup by configuring Azure Active Directory (Azure AD):
   
 > [!div class="nextstepaction"]
-> [Configure CMG authentication](configure-authentication.md)
+> [Configure Azure AD](configure-azure-ad.md)
