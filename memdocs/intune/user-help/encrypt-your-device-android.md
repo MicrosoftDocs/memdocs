@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/22/2020
+ms.date: 09/23/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -57,17 +57,18 @@ Follow these steps to encrypt your device. Your device may restart several times
 
 ## Enable secure startup
 
-Your organization may require you to enable *secure startup*. Secure startup protects your device by requiring a password or PIN each time the device is turned on. There could be other authentication options available for you to use, depending on what your organization allows. 
+Secure startup protects your device by requiring a password or PIN each time the device is turned on. 
 
-The name and location of the secure startup option will also vary depending on your device manufacturer and Android version. On some devices, this setting is called **Strong protection**. 
+The name and location of the secure startup option can vary depending on your device manufacturer and Android version. 
 
 1. Open the **Settings** app.
-2. Type **secure startup** in the app's search bar.
-3. Tap **Secure startup** > **Require PIN when device turns on**.
+2. Type **secure startup** in the app's search bar. 
+    a. If that doesn't bring up a matching result, try searching for **Strong protection**. 
+3. Tap **Secure startup** > **Require PIN when device turns on**.  
 4. When prompted, enter your device PIN.   
-5. To recheck settings, open the Company Portal or Microsoft Intune app.
-    * Company Portal users: Select your device and tap **Check device settings**. 
-    * Microsoft Intune users: You'll have to wait until the page updates, but when it does, your encryption status should change to compliant.  
+5. If you're going through device setup/enrollment, return to the app and select **CONTINUE**. If you received this message outside or after enrollment:  
+   * Company Portal app users: Open the app, select your device, and then tap **Check device settings**. 
+   * Microsoft Intune app users: Open the app, wait until the screen loads, and then your encryption status should change to compliant.  
 
 
 ## Set startup passcode   
