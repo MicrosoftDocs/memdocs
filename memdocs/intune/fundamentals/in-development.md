@@ -225,7 +225,7 @@ Administrators can use this report to:
 For more information on monitoring and reporting, see [Monitor device compliance policies](../protect/compliance-policy-monitor.md) and [Intune reports](../fundamentals/reports.md).
 
 ### Manage allowed or blocked hardware devices with endpoint security Attack surface reduction policy<!-- 7339038   -->
-We’re adding two new settings to the *Device control* profile for the endpoint security Attack surface reduction policy. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > *for Platform select Windows 10 and later* > **Device control**).
+We’re adding two new settings to the *Device control* profile for the endpoint security Attack surface reduction policy. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Platform** select *Windows 10 and later* > **Device control**).
 
 The new settings:
 
