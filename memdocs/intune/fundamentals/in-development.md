@@ -136,7 +136,7 @@ New settings are available when you create a macOS password profile (**Devices**
 - **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, from 2-11. Set this value to a higher number. Setting this value to `2` or '3' isn't recommended, as mistakes are common. Applies to all enrollment types.
 - **Lockout duration**: Choose how long the lockout lasts, in minutes. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout durations ends, user can sign in again. To use this setting, configure the **Maximum allowed sign-in attempts** setting. Applies to macOS 10.10 and newer, and all enrollment types.
 
-For see the current password settings, see [macOS password device restrictions](../configuration/device-restrictions-macos.md#password).
+For the current password settings, see [macOS password device restrictions](../configuration/device-restrictions-macos.md#password).
 
 Applies to:
 - macOS
