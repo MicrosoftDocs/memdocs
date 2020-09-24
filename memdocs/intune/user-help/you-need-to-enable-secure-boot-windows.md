@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 09/24/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -51,7 +51,7 @@ To check the status of Secure Boot on your PC:
 1. Go to Start.
 2. In the search bar, type **msinfo32** and press enter. 
 3. **System Information** opens. Select **System Summary**. 
-    * On the right-side of the screen, look at **BIOS Mode** and **Secure Boot State**. If Bios Mode shows **UEFI**, and Secure Boot State shows **Off**, then Secure Boot is disabled.  
+4. On the right-side of the screen, look at **BIOS Mode** and **Secure Boot State**. If Bios Mode shows **UEFI**, and Secure Boot State shows **Off**, then Secure Boot is disabled.  
 
 ## Next steps  
 
