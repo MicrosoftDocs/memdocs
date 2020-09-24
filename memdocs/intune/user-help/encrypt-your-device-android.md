@@ -67,10 +67,8 @@ The name and location of the secure startup option can vary depending on your de
 3. Tap **Secure startup** > **Require PIN when device turns on**.  
 4. When prompted, enter your device PIN.   
 5. If you're going through device setup/enrollment, return to the app and select **CONTINUE**. If you received this message outside or after enrollment:  
-    1. Open the Company Portal or Microsoft Intune app.
-    2. In the app:  
-        a. Company Portal: Select your device and tap **Check device settings**. 
-        b. Microsoft Intune: Wait until the screen loads. Then your encryption status should change to compliant.  
+   * Company Portal app users: Open the app, select your device, and then tap **Check device settings**. 
+   * Microsoft Intune app users: Open the app, wait until the screen loads, and then your encryption status should change to compliant.  
 
 
 ## Set startup passcode   
