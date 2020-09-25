@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
  
 # Manage security baseline profiles in Microsoft Intune
 
-Configure profiles for security baselines to help secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that represent the recommended security posture from the relevant security teams. You can deploy a default (unmodified) baseline or create a customized profile to enforce the settings you require for your environment.
+Manage profiles for security baselines to help secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that represent the recommended security posture from the relevant security teams. You can deploy a default (unmodified) baseline or create a customized profile to enforce the settings you require for your environment.
 
 When you create a security baseline profile in Intune, you're creating a template that consists of multiple *device configuration* settings.
 
@@ -39,14 +39,13 @@ This feature applies to:
 
 - Windows 10 version 1809 and later
 
-See the list of [available security baselines](../protect/security-baselines.md#use-security-baselines-to-configure-windows-10-devices-in-intune).
+See the list of [available security baselines](../protect/security-baselines.md#available-security-baselines).
 
 Common tasks when working with security baselines include:
 
 - [Create a profile](#create-the-profile) – Configure the settings you want to use and assign the baseline to groups.
 - [Change the version](#change-the-baseline-version-for-a-profile) – Change the baseline version in use by a profile.
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
-
 
 ## Prerequisites
 
