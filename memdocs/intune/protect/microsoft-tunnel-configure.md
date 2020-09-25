@@ -97,6 +97,8 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    - Use a Linux command to get the readiness tool directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunneldownload.
 
+      For example, to use **wget** and preserve the file name during the download, run `wget https://aka.ms/microsofttunneldownload -o mstunnel-setup`
+
 2. To start the server installation, run the script as **root** with the following command line: `./mstunnel-setup`
 
    > [!TIP]  
