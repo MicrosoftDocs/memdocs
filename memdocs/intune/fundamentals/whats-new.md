@@ -334,7 +334,14 @@ Password complexity supports the following options:
   - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 8
   - Alphabetic, length at least 6
   - Alphanumeric, length at least 6
- 
+
+This new setting remains a work in progress. In a future update, new changes to Password complexity will take effect. If you set *Password complexity* to something other than *None*, you must also configure an additional setting to ensure that end users who use a password that doesn’t meet your complexity requirements will receive a warning to update their password.
+
+- Device compliance: Set **Require a password to unlock mobile devices** to **Require**.
+- Device restriction: Set **Password** to **Require**
+
+If you don’t set the additional setting to Require, users with weak passwords won’t receive the warning.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
