@@ -2,7 +2,7 @@
 title: Desktop Analytics data privacy
 titleSuffix: Configuration Manager
 description: Desktop Analytics is committed to customer data privacy
-ms.date: 12/12/2019
+ms.date: 09/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -50,11 +50,11 @@ The following illustration shows how diagnostic data flows from individual devic
 
     4. You deploy compatibility updates to all target devices.  
 
-3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. All diagnostic data is encrypted over HTTPS and uses certificate pinning during transfer from the device to this service. The Microsoft Data Management Service is hosted in the United States. See [How Microsoft handles diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#how-microsoft-handles-diagnostic-data)
+3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. All diagnostic data is encrypted over HTTPS and uses certificate pinning during transfer from the device to this service. The Microsoft Data Management Service is hosted in the United States. For more information, see [How Microsoft handles diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#how-microsoft-handles-diagnostic-data).
 
       - Application faults, kernel faults, unresponsive applications, and other application specific problems use the Windows Error Reporting API to send application-specific problem reports to Microsoft. See [Using WER](/windows/win32/wer/using-wer) for specific details about this dataflow.
       
-4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States with a 28 days retention period. All data is sent over an SSL (HTTPS) encrypted channel. The snapshots are segregated by commercial ID.  
+4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States with a 28-day retention period. All data is sent over an SSL (HTTPS) encrypted channel. The snapshots are segregated by commercial ID.  
 
 5. The snapshots are then copied to your Azure Log Analytics workspace. This data transfer happens over HTTPS through the webhook ingestion protocol, which is a feature of Log Analytics. Desktop Analytics doesn't have any read or write permissions to your Log Analytics storage. Desktop Analytics calls the webhook API with a shared access signature (SAS) URI. Then Log Analytics gets the data from the storage tables over HTTPS.
 
