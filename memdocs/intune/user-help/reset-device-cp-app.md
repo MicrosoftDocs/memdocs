@@ -30,28 +30,22 @@ ms.collection:
 ---
 
 
-# Reset device from the Company Portal app  
+# Reset device from Company Portal app for Windows  
 
-Reset a used, lost, or stolen device to its factory settings from the Company Portal app.  
+Reset a used, lost, or stolen device to its factory settings via the Company Portal app. A reset deletes all apps, settings, and personal data on the device, and restores it back to its original, out-of-box settings. The device will no longer appear in Company Portal. 
 
-After you reset a device, it will no longer appear in Company Portal. Its existing apps and files will be erased, and it will be restored to its out-of-box settings.  
+ You can reset a Windows 10, Android, iOS, or macOS device from the Company Portal for Windows app. However, the reset option may not be available for all devices if your organization has blocked this setting.   
 
 
-1. Open Company Portal.  
-2. Under **My Devices**, select the device you want to reset.   
+## Reset device   
 
-    ![Example screenshot of Company Portal app, Home screen, highlighting My Devices section.](./media/1802-cp-app-windows-home.png)  
+1. Open the Company Portal app and sign in with your work or school account.
+2. Select **DEVICES**. 
+3. Select the device you want to reset.
+4. Select the menu button > **Factory Reset**.  
+5. Select **RESET** to start the reset.  
 
-3. On the **Device details** screen, select the **See more** menu.  
 
-    ![Example screenshot of Company Portal app, Device details screen, highlighting See more menu.](./media/1802-cp-app-windows-device-details.png)  
-
-4. Select **Reset**.  
-
-     ![Example screenshot of Company Portal app, Device details screen, highlighting Reset action. ](./media/1802-cp-app-windows-device-details-reset.png)  
-
-5. When prompted to confirm, select **Reset**. The device will reset itself.  
-
-     ![Example screenshot of Company Portal app, Reset confirmation message, highlighting Reset button. ](./media/1802-cp-app-windows-reset-confirm.png)  
+## Next steps  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
