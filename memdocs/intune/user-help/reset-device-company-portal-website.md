@@ -34,7 +34,7 @@ ms.collection:
 
 Use the Company Portal website to reset a used, lost, or stolen device back to factory settings. All apps, settings, and personal data on the device will be deleted and the device will no longer appear in Company Portal.  
 
-Device reset isn't available for all iOS devices. Your organization can also choose to hide the option. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe).  
+Device reset isn't available for all iOS devices. Your organization can also choose to hide the option. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
 ## Reset device  
 To reset a device to its original, out-of-box settings: 
@@ -55,6 +55,6 @@ To reset a device to its original, out-of-box settings:
 
 ## Next steps  
 
-* You can also reset a device from the Company Portal app for [Android](reset-device-company-portal-android) and [Windows](reset-device-company-portal-windows).  
+* You can also reset a device from the Company Portal app for [Android](reset-device-company-portal-android.md) and [Windows](reset-device-company-portal-windows.md).  
 
 * Need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

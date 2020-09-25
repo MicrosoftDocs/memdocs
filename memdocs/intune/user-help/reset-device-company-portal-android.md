@@ -67,7 +67,7 @@ To remove work-related data from a Knox-enrolled device:
 
 ## Next steps  
 
-* You can also [reset a device from the Company Portal website](reset-device-company-portal-website).  
+* You can also [reset a device from the Company Portal website](reset-device-company-portal-website.md).  
 
 * * If you just want to remove your device from Company Portal, see [Remove your Windows device from management](unenroll-your-device-from-intune-android.md). Removing the device effectively removes it from Intune and may cause you to lose access to the work-related content on your device. 
 

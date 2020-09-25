@@ -66,7 +66,7 @@ Alternatively, you can go to **Settings** > **Apps** > **Company Portal** > **Un
 
 As a last resort, you can remove your device and uninstall the app by removing Company Portal as device administrator. 
 
-For example, if you declined the Microsoft terms of use while initially trying to sign in to the Company Portal app, all subsequent sign-in attempts will be blocked. These steps will help you bypass the Company Portal to remove your device from management and start over.  
+For example, if you declined the Microsoft terms of use while initially trying to sign in to the Company Portal app, all subsequent sign-in attempts will be blocked. These steps will help you bypass the Company Portal to remove your device from management.    
 
 The actual names of each setting might vary on your Android device.  
 

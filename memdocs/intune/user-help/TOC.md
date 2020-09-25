@@ -10,23 +10,28 @@
 
 ## [Install mobile threat defense app](set-up-mobile-threat-defense.md)  
 
-## Using your Android device
-### [Why enroll your Android device](why-enroll-android-device.md)
-### [Install Company Portal app in China](install-company-portal-android-china.md)
-### Enroll your device
-#### [Enroll your Android device](enroll-device-android-company-portal.md)  
+## Using your Android device 
+### Android device enrollment   
+#### [About Intune enrollment](why-enroll-android-device.md)  
+#### [Enroll Android device (standard)](enroll-device-android-company-portal.md)  
 #### [Enroll with Android work profile](enroll-device-android-work-profile.md)
 #### [Enroll with Microsoft Intune app](enroll-device-android-microsoft-intune-app.md)
 #### Enroll with derived credentials
 ##### [Enroll with Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Enroll with Intercede](enroll-android-device-intercede.md)
 ##### [Enroll with DISA Purebred](enroll-android-device-disa-purebred.md)
-### [Move to new device management setup](move-to-new-device-management-setup.md)
-### [Unenroll Android device](unenroll-your-device-from-intune-android.md)
-### [What happens if you unenroll your device from Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
-### [Use Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
-### [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
+
+#### [What happens if you unenroll your device from Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+#### [Unenroll Android device](unenroll-your-device-from-intune-android.md)
+
+### Android apps   
+### [Install Company Portal app in China](install-company-portal-android-china.md)  
+#### [Get work or school apps](use-managed-apps-on-your-device-android.md)
+#### [Use Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
+
+
 ### Update device settings 
+#### [Move to new device management setup](move-to-new-device-management-setup.md)
 #### [Encrypt your device](encrypt-your-device-android.md)
 #### [Set your PIN or password](set-your-pin-or-password-android.md)
 #### [Set lock time](set-the-amount-of-time-before-your-device-is-locked-android.md)
@@ -41,19 +46,19 @@
 #### [Turn on scanning for security threats](you-need-to-turn-on-scanning-for-security-threats-android.md)
 #### [Unsupported security patch](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Devices with encryption errors](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
+
 ### Company Portal app for Android  
 #### [Check device compliance](check-compliance-on-your-device-android.md)
 #### [Report problem to IT support](send-logs-to-your-it-admin-by-email-android.md)
 #### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 #### [Share logs with Microsoft](send-logs-to-microsoft-android.md)  
-#### [Turn off Microsoft usage data collection](turn-off-microsoft-usage-data-collection-android.md)
+#### [Turn off Microsoft data collection](turn-off-microsoft-usage-data-collection-android.md)
 #### [Reset used, lost, stolen device](reset-device-company-portal-android.md)
 
 
 ### Troubleshooting 
 #### [Samsung Knox errors](samsung-knox-errors-android.md)
-#### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
-
+#### [Send logs via USB cable](send-logs-to-your-it-admin-using-cable-android.md) 
 
 ### Resolve a threat in MTD app  
 #### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
@@ -63,9 +68,9 @@
 
 
 ## Using your iOS device
-### Enroll your device
+### iOS device enrollment  
 #### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
-#### [Enroll organization-provided iOS device](enroll-your-device-dep-ios.md)
+#### [Enroll org-provided iOS device](enroll-your-device-dep-ios.md)
 #### Enroll with derived credentials
 ##### [Enroll with Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [Enroll with Intercede](enroll-ios-device-intercede.md)
