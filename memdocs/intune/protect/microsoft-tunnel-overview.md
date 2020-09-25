@@ -232,6 +232,8 @@ To use the readiness tool:
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.  
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunnelready.
 
+      For example, to use **wget** and preserve the file name during the download, run `wget https://aka.ms/microsofttunnelready -o mst-readiness`
+
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
 2. To validate your network configuration, run the script as **root** and use the following command line: `./mst-readiness network`
