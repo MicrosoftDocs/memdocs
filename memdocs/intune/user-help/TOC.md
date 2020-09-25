@@ -22,36 +22,16 @@
 ##### [Enroll with Intercede](enroll-android-device-intercede.md)
 ##### [Enroll with DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Move to new device management setup](move-to-new-device-management-setup.md)
+### [Unenroll Android device](unenroll-your-device-from-intune-android.md)
+### [What happens if you unenroll your device from Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 ### [Use Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
 ### [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
-### [Encrypt your device](encrypt-your-device-android.md)
-### [Set your PIN or password](set-your-pin-or-password-android.md)
-### [What happens when I reset my device?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
-### [Set lock time](set-the-amount-of-time-before-your-device-is-locked-android.md)
-### [Install VPN](install-your-companys-virtual-private-network-VPN-android.md)
-### [Turn off Microsoft usage data collection](turn-off-microsoft-usage-data-collection-android.md)
-### [What happens if you unenroll your device from Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
-#### [Unenroll your device](unenroll-your-device-from-intune-android.md)
-#### [Unenroll your device if you declined Terms of Use](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
-
-### Fix common issues with Android
-#### [Checking device compliance](check-compliance-on-your-device-android.md)
-#### [Fixing common issues with Samsung Knox](samsung-knox-errors-android.md)
+### Update device settings 
+#### [Encrypt your device](encrypt-your-device-android.md)
+#### [Set your PIN or password](set-your-pin-or-password-android.md)
+#### [Set lock time](set-the-amount-of-time-before-your-device-is-locked-android.md)
+#### [Install VPN](install-your-companys-virtual-private-network-VPN-android.md)
 #### [Update your device to install Outlook](update-device-outlook-android.md)
-
-### Logging
-#### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-#### [Upload and email logs](send-logs-to-your-it-admin-by-email-android.md)
-#### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
-#### [Send errors to Microsoft](send-logs-to-microsoft-android.md)
-
-### Resolve a threat in MTD app  
-#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
-#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
-#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)	
-#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
-
-### Operating system questions
 #### [Update your device](you-need-to-update-your-android-device.md)
 #### [Unsupported version](your-android-version-isnt-yet-supported.md)
 #### [Device rooted and can't connect](your-device-is-rooted-and-you-cant-connect-android.md)
@@ -61,6 +41,25 @@
 #### [Turn on scanning for security threats](you-need-to-turn-on-scanning-for-security-threats-android.md)
 #### [Unsupported security patch](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Devices with encryption errors](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
+### Company Portal app for Android  
+#### [Check device compliance](check-compliance-on-your-device-android.md)
+#### [Report problem to IT support](send-logs-to-your-it-admin-by-email-android.md)
+#### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+#### [Share logs with Microsoft](send-logs-to-microsoft-android.md)  
+#### [Turn off Microsoft usage data collection](turn-off-microsoft-usage-data-collection-android.md)
+#### [Reset used, lost, stolen device](reset-device-company-portal-android.md)
+
+
+### Troubleshooting 
+#### [Samsung Knox errors](samsung-knox-errors-android.md)
+#### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
+
+
+### Resolve a threat in MTD app  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)	
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)  
 
 
 ## [Using your iOS device](using-your-iOS-device-with-intune.md)
@@ -77,7 +76,7 @@
 ### [Use managed apps on your device](use-managed-apps-on-your-device-ios.md)
 ### [Set or change your passcode](set-or-change-your-passcode-ios.md)
 ### [What happens if you reset your device using the Company Portal?](effects-of-device-reset-company-portal-ios.md)
-### [Unenroll your device](unenroll-your-device-from-intune-ios.md)
+### [Unenroll iOS device](unenroll-your-device-from-intune-ios.md)
 #### [What happens if you unenroll your device?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Manually sync iOS device](sync-your-device-manually-ios.md)
 
@@ -106,7 +105,7 @@
 ### [What happens when you enroll a macOS device?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Enroll your macOS device](enroll-your-device-in-intune-macos-cp.md)
 ### [Enroll your organization-provided macOS device](enroll-company-device-macos.md)  
-### [Unenrolling your macOS device](unenroll-your-device-from-intune-macos.md)  
+### [Unenroll macOS device](unenroll-your-device-from-intune-macos.md)  
 ### [Manually sync macOS device](sync-your-device-manually-macos.md)
 ### [Fixing common issues with macOS](troubleshoot-your-device-macos.md)
 #### [My version of macOS isn't yet supported](your-macos-version-isnt-yet-supported.md)
@@ -129,9 +128,9 @@
 #### [Enroll Windows 8.1 or Windows RT 8.1 device](enroll-your-w81-or-rt81-windows.md)
 ### [Encrypt your device](encrypt-your-device-windows.md)
 ### [Set or change device password](set-or-change-your-password-windows.md)
-### [Remove your device from Intune](unenroll-your-device-from-intune-windows.md)
+### [Unenroll Windows device](unenroll-your-device-from-intune-windows.md)
 ### [What happens if you unenroll your device?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
-### [What happens if you reset your device?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
+### [Reset used, lost, stolen device](reset-device-company-portal-windows.md)
 ### [Turn off Microsoft usage data collection](turn-off-microsoft-usage-data-collection-windows.md)
 ### [Sync your device manually](sync-your-device-manually-windows.md)
 ### [Get help and support](help-support-windows-cpapp.md)
@@ -158,7 +157,7 @@
 ### [Install apps](install-apps-cpapp-windows.md) 
 ### [Remote lock device](remote-lock-your-device-cp-app.md)   
 ### [Rename device](rename-your-device-cpapp.md) 
-### [Reset device](reset-device-cp-app.md)
+### [Reset used, lost, stolen device](reset-device-company-portal-windows.md)
 
 ## [Using the Intune Company Portal website](using-the-intune-company-portal-website.md)
 ### [Manage apps](manage-apps-cpweb.md)  
@@ -168,4 +167,4 @@
 ### [Rename device](rename-your-device-cpwebsite.md)  
 ### [Remove device](remove-your-device-cpwebsite.md)  
 ### [Reset device passcode](reset-your-passcode-cpwebsite.md)  
-### [Reset device](reset-erase-your-device-cpwebsite.md)  
+### [Reset used, lost, stolen device](reset-device-company-portal-website.md)  

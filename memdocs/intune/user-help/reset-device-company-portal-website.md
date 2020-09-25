@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Reset your device from the Company Portal website | Microsoft Docs
-description: Learn how to reset your device to its factory settings from the Company Portal website.
+title: Reset a device from the Intune Company Portal website | Microsoft Docs
+description: Learn how to factory reset a device from the Intune Company Portal website.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 09/24/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,14 +32,12 @@ ms.collection:
 
 # Reset device from Company Portal website
 
-Reset a used, lost, or stolen device to factory default settings from the Company Portal website.  
+Use the Company Portal website to reset a used, lost, or stolen device back to factory settings. All apps, settings, and personal data on the device will be deleted and the device will no longer appear in Company Portal.  
 
-After you reset a device, it no longer appears in the Company Portal. Previously existing apps and files are erased and the device is restored to its factory default settings. 
+Device reset isn't available for all iOS devices. Your organization can also choose to hide the option. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe).  
 
-Device reset in the Company Portal isn't available for all iOS devices. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/devices-wipe).  
-
-> [!Note]
-> You can also perform these steps from another device that you've enrolled. Open the Company Portal app and complete the steps for a similar reset experience. 
+## Reset device  
+To reset a device to its original, out-of-box settings: 
 
 1. Open the Company Portal website and select the __Menu__ button > __Devices__.  
 

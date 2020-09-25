@@ -1,5 +1,25 @@
 {
     "redirections": [
+                {
+            "source_path": "memdocs/intune/user-help/unenroll-your-device-from-intune-if-you-decline-terms-of-use-android.md",
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/reset-erase-your-device-cpwebsite.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-website",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/reset-device-cp-app.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-windows",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-reset-your-device-using-the-company-portal-android.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-android",
+            "redirect_document_id": true
+        },
         {
             "source_path": "memdocs/intune/user-help/install-company-portal-app-android.md",
             "redirect_url": "/mem/intune/user-help/enroll-device-android-company-portal",
