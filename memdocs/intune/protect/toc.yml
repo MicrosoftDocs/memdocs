@@ -71,7 +71,7 @@
       href: endpoint-security-manage-devices.md
     - name: Security baselines
       items: 
-      - name: Security baselines 
+      - name: Security baselines overview
         href: security-baselines.md
       - name: Manage security baselines 
         href: security-baselines-configure.md  
