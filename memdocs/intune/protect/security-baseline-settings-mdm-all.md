@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ This version of the security baseline replaces previous versions. Profiles that 
 
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -61,7 +61,7 @@ This version of the security baseline replaces previous versions. Profiles that 
 
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -70,9 +70,7 @@ To update a security baseline profile to the latest version of that baseline, se
 > [!NOTE]
 > This is the preview version of the MDM security baseline, released in October of 2018. This preview baseline was replaced in June of 2019 by the release of the *MDM Security Baseline for May 2019* template, which is generally available (not in preview). Profiles that were created prior to the availability of the *MDM Security Baseline for May 2019* baseline won't update to reflect the settings and values that are in the MDM Security Baseline for May 2019 version. Although you can't create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
 
-
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
-
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview"

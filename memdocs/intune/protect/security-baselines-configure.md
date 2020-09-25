@@ -29,7 +29,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
  
-## Manage security baseline profiles in Microsoft Intune
+# Manage security baseline profiles in Microsoft Intune
 
 Configure profiles for security baselines to help secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that represent the recommended security posture from the relevant security teams. You can deploy a default (unmodified) baseline or create a customized profile to enforce the settings you require for your environment.
 
@@ -48,13 +48,13 @@ Common tasks when working with security baselines include:
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
 
-### Prerequisites
+## Prerequisites
 
 - To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
 
 - Use of some baselines might require you to have an active subscription to additional services, like Microsoft Defender ATP.
 
-### Create the profile
+## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -97,7 +97,7 @@ Common tasks when working with security baselines include:
 
 9. After you create a profile, edit it by going to **Endpoint security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs, and select **Review + save** to commit your changes.
 
-### Change the baseline version for a profile
+## Change the baseline version for a profile
 
 When a new version for a baseline is released, plan to update your existing profiles to the new version:
 
@@ -129,14 +129,14 @@ After the conversion to the new baseline version is complete:
 - The baseline immediately redeploys to assigned groups.
 - You can edit the baseline to change individual settings.
 
-#### Test the conversion and updated baseline
+### Test the conversion and updated baseline
 
 Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See [Duplicate a security baseline](#duplicate-a-security-baseline) later in this article.
 
 - When you create a copy, group assignments are not included. This means your baseline copy won’t deploy to any devices at the time you make a copy, or at the time you update it to a new version.
 - After you update the profile to the latest version, you can edit it. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
 
-#### To change the baseline version for a profile
+### To change the baseline version for a profile
 
 Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
 
@@ -162,13 +162,13 @@ Before you update the version of a profile that's assigned to groups, [test the 
 
 7. Select **Submit**. The profile updates to the selected baseline version and after the conversion is complete, the baseline immediately redeploys to assigned groups.
 
-### Remove a security baseline assignment
+## Remove a security baseline assignment
 
 When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device don't revert to a pre-managed configuration. Instead, the previously managed settings on the device keep their last configurations as received from the baseline until some other process updates those settings on the device.
 
 Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
-### Duplicate a security baseline
+## Duplicate a security baseline
 
 You can create duplicates of your security baselines. Duplicating a baseline can be useful when you want to assign a similar but distinct baseline to a subset of devices. By creating a duplicate, you won't need to manually recreate the entire baseline. Instead, you can duplicate any of your current baselines and then introduce only the changes the new instance requires. You might only change a specific setting and the group the baseline is assigned to.
 
@@ -178,7 +178,7 @@ All security baselines support creating a duplicate.
 
 After you duplicate a baseline, review and edit the new instance to make changes to its configuration.
 
-#### To duplicate a baseline
+### To duplicate a baseline
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Endpoint security** > **Security baselines**, select the type of baseline you want to duplicate, and then select **Profiles**.
@@ -187,7 +187,7 @@ After you duplicate a baseline, review and edit the new instance to make changes
 
 After a *Refresh*, the new baseline profile appears in the admin center.
 
-#### To edit a baseline
+### To edit a baseline
 
 1. Select the baseline, and then select **Properties**.
 2. Select **Settings** to expand the list of settings categories in the baseline. You can’t modify the settings from this view, but you can review how they're configured.
@@ -198,7 +198,7 @@ After a *Refresh*, the new baseline profile appears in the admin center.
    - Configuration settings
 4. After you’ve made changes, select **Save** to save your edits.  You save edits to one category before you can introduce edits to additional categories.
 
-### Older baseline versions
+## Older baseline versions
 
 Microsoft Endpoint Manager updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
 
@@ -211,7 +211,6 @@ If you have a profile associated with an older baseline, that older baseline wil
 Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
 
 When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
-
 
 ## Next steps
 
