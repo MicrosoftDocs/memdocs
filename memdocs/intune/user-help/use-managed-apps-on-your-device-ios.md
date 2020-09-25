@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get work or school apps for iOS- Microsoft Intune | Microsoft Docs
-description: Learn how Intune-managed apps protect your data while also helping you stay productive at school or work.  
+description: Learn how to get Intune-managed apps for iOS, which protect your data while also helping you stay productive at school or work.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Get work or school apps for iOS
+# Work or school apps for iOS
 Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These type of restrictions prevent proprietary information from being shared outside of the app or org. 
 
 To maximize data protection, your organization might configure several of these apps to work together. For example:  

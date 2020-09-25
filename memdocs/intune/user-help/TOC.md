@@ -24,9 +24,9 @@
 #### [What happens if you unenroll your device from Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 #### [Unenroll Android device](unenroll-your-device-from-intune-android.md)
 
-### Android apps   
-### [Install Company Portal app in China](install-company-portal-android-china.md)  
-#### [Get work or school apps](use-managed-apps-on-your-device-android.md)
+### Android apps  
+#### [Get work or school apps](use-managed-apps-on-your-device-android.md)  
+#### [Install Company Portal app in China](install-company-portal-android-china.md)  
 #### [Use Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
 
 
@@ -49,16 +49,14 @@
 
 ### Company Portal app for Android  
 #### [Check device compliance](check-compliance-on-your-device-android.md)
-#### [Report problem to IT support](send-logs-to-your-it-admin-by-email-android.md)
-#### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-#### [Share logs with Microsoft](send-logs-to-microsoft-android.md)  
+#### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) 
 #### [Turn off Microsoft data collection](turn-off-microsoft-usage-data-collection-android.md)
 #### [Reset used, lost, stolen device](reset-device-company-portal-android.md)
-
-
-### Troubleshooting 
-#### [Samsung Knox errors](samsung-knox-errors-android.md)
-#### [Send logs via USB cable](send-logs-to-your-it-admin-using-cable-android.md) 
+#### Get help   
+#### [Report problem to IT support](send-logs-to-your-it-admin-by-email-android.md)
+#### [Share logs with Microsoft developers](send-logs-to-microsoft-android.md) 
+##### [Send logs via USB cable](send-logs-to-your-it-admin-using-cable-android.md) 
+##### [Samsung Knox errors](samsung-knox-errors-android.md)  
 
 ### Resolve a threat in MTD app  
 #### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
