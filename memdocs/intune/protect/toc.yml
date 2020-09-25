@@ -73,6 +73,8 @@
       items: 
       - name: Security baselines 
         href: security-baselines.md
+      - name: Manage security baselines 
+        href: security-baselines-configure.md  
       - name: Monitor your baselines
         href: security-baselines-monitor.md
     - name: Security tasks
