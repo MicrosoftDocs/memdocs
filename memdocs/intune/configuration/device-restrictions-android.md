@@ -103,7 +103,9 @@ These settings apply to:
   - Android 10 and newer, but not on Samsung Knox.
 
   > [!IMPORTANT]
-  > The new **Password complexity** setting remains work in progress. In a future update, new changes to **Password complexity** will take effect. If you set *Password complexity* to something other than *None*, you must also set **Password** (from the settings for *Android 9 and earlier*) to **Require** to ensure that end users who use a password that doesn’t meet your complexity requirements receive a warning to update their password. If you don’t set *Password* to *Require*, users with weak passwords won’t receive the warning.
+  > The new **Password complexity** setting remains a work in in progress. In late October 2020, *Password complexity* will take effect on devices.
+  >
+  > If you set *Password complexity* to something other than *None*, you must also set **Password** (from the settings for *Android 9 and earlier*) to **Require** to ensure that end users who use a password that doesn’t meet your complexity requirements receive a warning to update their password. If you don’t set *Password* to *Require*, users with weak passwords won’t receive the warning.
 
 ### Android 9 and earlier or Samsung Knox
 

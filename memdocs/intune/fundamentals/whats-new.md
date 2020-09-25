@@ -335,7 +335,9 @@ Password complexity supports the following options:
   - Alphabetic, length at least 6
   - Alphanumeric, length at least 6
 
-This new setting remains a work in progress. In a future update, new changes to Password complexity will take effect. If you set *Password complexity* to something other than *None*, you must also configure an additional setting to ensure that end users who use a password that doesn’t meet your complexity requirements will receive a warning to update their password.
+This new setting remains a work in progress. In late October 2020, Password complexity will take effect on devices.
+
+If you set *Password complexity* to something other than *None*, you must also configure an additional setting to ensure that end users who use a password that doesn’t meet your complexity requirements will receive a warning to update their password.
 
 - Device compliance: Set **Require a password to unlock mobile devices** to **Require**.
 - Device restriction: Set **Password** to **Require**
