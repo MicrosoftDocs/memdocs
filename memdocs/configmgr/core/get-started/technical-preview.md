@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/14/2020
+ms.date: 10/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -112,21 +112,25 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2010.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2009
+### Technical preview version 2010
 
-- [Cloud management gateway with virtual machine scale set](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
-- [Improvements to remote control](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
-- [Deploy an OS over CMG using boot media](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
-- [View collection relationships](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
-- [Wake machine at deployment deadline using peer wakeup](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
-- [Improvements to in-console notifications](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
-- [Notifications for devices no longer receiving updates](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
-- [Improved Windows Server restart experience for non-administrator accounts](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
-- [Improvements to OS deployment](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
+- [6107649](2020/technical-preview-2010.md) <!--6107649-->
+- [6979223](2020/technical-preview-2010.md) <!--6979223-->
+- [6979470](2020/technical-preview-2010.md) <!--6979470-->
+- [7137169](2020/technical-preview-2010.md) <!--7137169-->
+- [7699511](2020/technical-preview-2010.md) <!--7699511-->
+- [7752243](2020/technical-preview-2010.md) <!--7752243-->
+- [7898885](2020/technical-preview-2010.md) <!--7898885-->
+- [7964912](2020/technical-preview-2010.md) <!--7964912-->
+- [7979972](2020/technical-preview-2010.md) <!--7979972-->
+- [8018255](2020/technical-preview-2010.md) <!--8018255-->
+- [8232705](2020/technical-preview-2010.md) <!--8232705-->
+- [8379199](2020/technical-preview-2010.md) <!--8379199-->
+- [8227649](2020/technical-preview-2010.md) <!--8227649-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -143,6 +147,18 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2009
+
+- [Cloud management gateway with virtual machine scale set](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Improvements to remote control](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Deploy an OS over CMG using boot media](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [View collection relationships](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Wake machine at deployment deadline using peer wakeup](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Improvements to in-console notifications](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Notifications for devices no longer receiving updates](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Improved Windows Server restart experience for non-administrator accounts](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Improvements to OS deployment](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 ### Technical preview version 2008
 
