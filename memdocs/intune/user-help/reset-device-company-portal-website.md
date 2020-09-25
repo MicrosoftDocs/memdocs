@@ -53,4 +53,8 @@ To reset a device to its original, out-of-box settings:
 
 4. A message warns you that you're about to erase all content on your device. Tap **Reset** to confirm.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Next steps  
+
+* You can also reset a device from the Company Portal app for [Android](reset-device-company-portal-android) and [Windows](reset-device-company-portal-windows).  
+
+* Need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

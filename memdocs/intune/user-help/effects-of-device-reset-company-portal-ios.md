@@ -30,7 +30,7 @@ ms.collection:
 ---
 
 
-# Effects of Company Portal iOS device reset 
+# Reset device in Company Portal app for iOS  
 
 Resetting your iPhone or iPad through Company Portal might delete some apps and settings, including personal data. This behavior depends on how your device was enrolled or set up in your organization. The following information describes what happens after a device reset.  
 

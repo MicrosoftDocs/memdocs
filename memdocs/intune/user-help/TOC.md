@@ -62,8 +62,7 @@
 #### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)  
 
 
-## [Using your iOS device](using-your-iOS-device-with-intune.md)
-### [Effects of iOS device reset](effects-of-device-reset-company-portal-ios.md)
+## Using your iOS device
 ### Enroll your device
 #### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
 #### [Enroll organization-provided iOS device](enroll-your-device-dep-ios.md)
@@ -71,13 +70,14 @@
 ##### [Enroll with Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [Enroll with Intercede](enroll-ios-device-intercede.md)
 ##### [Enroll with DISA Purebred](enroll-ios-device-disa-purebred.md)
-### [Use Microsoft Tunnel for iOS](use-microsoft-tunnel-iOS.md)
+### [Use Microsoft Tunnel for iOS](use-microsoft-tunnel-iOS.md)  
+
 
 ### [Use managed apps on your device](use-managed-apps-on-your-device-ios.md)
 ### [Set or change your passcode](set-or-change-your-passcode-ios.md)
-### [What happens if you reset your device using the Company Portal?](effects-of-device-reset-company-portal-ios.md)
 ### [Unenroll iOS device](unenroll-your-device-from-intune-ios.md)
-#### [What happens if you unenroll your device?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
+### [What happens if you unenroll your device?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
+### [Resetting an iOS device](effects-of-device-reset-company-portal-ios.md)
 ### [Manually sync iOS device](sync-your-device-manually-ios.md)
 
 ### [Fixing common issues with iOS](troubleshoot-your-device-iOS.md)
@@ -93,6 +93,8 @@
 #### [Updating your iOS device](you-need-to-update-your-ios-device.md)
 #### [Update your device to install Outlook](update-device-outlook-ios.md)
 #### [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
+#### [Getting started in Intune](using-your-iOS-device-with-intune.md)
+
 
 ### Resolve a threat in MTD app  
 #### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)	
