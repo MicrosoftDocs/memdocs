@@ -158,7 +158,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 4. Select **Next: Device Management Settings**.
 
 5. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If you're using ADFS and you're using Setup Assistant to authenticate, [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) is required.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If you're using ADFS and you're using Setup Assistant to authenticate, [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true) is required.
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this option for devices that don't access local user data. To enable an end user to sign in to the iOS Company Portal and establish themself as the primary user of the device, send the `IntuneUDAUserlessDevice` key to iOS Company Portal in an app configuration policy for managed devices. Note that only the first user signing in is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
@@ -282,6 +282,13 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 19. To save the profile, choose **Create**.
 
+> [!NOTE]
+> If you need to re-enroll your Automated Device Enrolled device, you must first [add the IMEI number of that device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting an issue, like the device not receiving policy. In this case, you would:
+> 1. Retire the device from the Intune console.
+> 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
+> 3. Re-enroll the device by downloading the Company Portal and going through device enrollment.
+
+
 ### Dynamic groups in Azure Active Directory
 
 You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory. For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
@@ -348,7 +355,7 @@ See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program]
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 7. Choose **Renew token** and enter the Apple ID used to create the original token (if not automatically populated).  
-    ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
+    ![Screenshot of generate a new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 8. Upload the newly downloaded token.
 
