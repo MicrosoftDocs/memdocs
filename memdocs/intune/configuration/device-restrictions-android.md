@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 09/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -71,9 +71,7 @@ Create an [Android device administrator device restrictions configuration profil
 
 ### All Android devices
 
-These settings apply to:  
-- Android 4.0 and newer
-- Knox 4.0 and newer
+These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
 
 - **Maximum minutes of inactivity until screen locks**: Enter the length of time a device must be idle before the screen is automatically locked. For example, enter `5` to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -81,6 +79,10 @@ These settings apply to:
 
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before devices are wiped, from 4-11. `0` (zero) might disable device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
+- **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
+
+    > [!NOTE]
+    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
 
 ### Android 10 and later
 
@@ -103,20 +105,11 @@ These settings apply to:
   - Android 10 and newer, but not on Samsung Knox.
 
   > [!IMPORTANT]
-  > The new **Password complexity** setting remains a work in in progress. In late October 2020, *Password complexity* will take effect on devices.
+  > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
   >
-  > If you set *Password complexity* to something other than *None*, you must also set **Password** (from the settings for *Android 9 and earlier*) to **Require** to ensure that end users who use a password that doesn’t meet your complexity requirements receive a warning to update their password. If you don’t set *Password* to *Require*, users with weak passwords won’t receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
 
-### Android 9 and earlier or Samsung Knox
-
-These settings apply to:  
-- Android 9.0 and earlier
-- Any version of Samsung Knox
-
-- **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
-
-    > [!NOTE]
-    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
+### Android 9 and earlier, or Samsung Knox (any version)
 
 - **Minimum password length**: Enter the minimum number of characters required, from 4-16. For example, enter `6` to require at least six numbers or characters in the password length.
 
@@ -146,7 +139,7 @@ These settings apply to:
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
   This setting applies to:  
-  - Samsung KNOX Standard 5.0+
+  - Samsung KNOX Standard 5.0 and newer
 
 ## Google Play Store
 
@@ -154,18 +147,20 @@ These settings apply to:
 
 ## Restricted apps
 
-Use these settings to allow or prevent specific apps on devices. This feature is supported on Android and Samsung Knox Standard devices.
+This feature is supported on Android and Samsung Knox Standard devices.
 
-- **Not configured** (default): Intune doesn't change or update this 
-setting.
-- **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. If a user installs an app from this list, you're notified by Intune.
-- **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps.  Apps that are managed by Intune are automatically allowed, including the Company Portal app.
+- **Type of restricted apps list**: Create a list of apps to allow or block on devices. This feature is supported on Android and Samsung Knox Standard devices. Your options:
+
+  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. If a user installs an app from this list, you're notified by Intune.
+  - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps.  Apps that are managed by Intune are automatically allowed, including the Company Portal app.
+
 - **Apps list**: **Add** your app:
-  - **App bundle ID**: Enter the app bundle ID.
+
   - **App store URL**: Enter the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
     To find the URL of an app, open the [Google Play store](https://play.google.com/store/apps), and search for the app. For example, search for `Microsoft Remote Desktop Play Store` or `Microsoft Planner`. Select the app, and copy the URL.
-  
+  - **App bundle ID**: Enter the app bundle ID.
   - **App name**: Enter the name you want. This name is shown to users.
   - **Publisher** (optional): Enter the publisher of the app, such as `Microsoft`.
 
