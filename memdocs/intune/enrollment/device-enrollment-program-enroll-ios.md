@@ -285,7 +285,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 > [!NOTE]
 > If you need to re-enroll your Automated Device Enrolled device, you must first [add the IMEI number of that device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting an issue, like the device not receiving policy. In this case, you would:
 > 1. Retire the device from the Intune console.
-> 2. Add the device's serial number as a corporate device identifier.
+> 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
 > 3. Re-enroll the device by downloading the Company Portal and going through device enrollment.
 
 
