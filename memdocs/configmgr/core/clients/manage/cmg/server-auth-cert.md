@@ -20,12 +20,14 @@ The first step when you set up a cloud management gateway (CMG) is to get the se
 
 When you create the CMG in the Configuration Manager console, you provide this certificate. The common name (CN) of this certificate defines the service name of the CMG.
 
-> [!TIP]
-> A reminder of some CMG terminology:
->
-> - **Service name**: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`.
->
-> - **Deployment name**: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.cloudapp.net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
+> [!NOTE]
+> You may need additional certificates for clients and management points. These certificates are covered in the third step of the CMG setup process, [Configure client authentication](configure-authentication.md).
+
+A reminder of some CMG terminology that's used in this article:
+
+- **Service name**: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`.
+
+- **Deployment name**: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.cloudapp.net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
 
 ## Choose the certificate type
 

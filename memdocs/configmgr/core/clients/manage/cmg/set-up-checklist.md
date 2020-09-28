@@ -24,9 +24,9 @@ The overall CMG setup process is divided into the following five main parts:
 
 1. _Get the CMG server authentication certificate_: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
 
-1. _Configure CMG authentication_: Because clients communicate across the internet, Configuration Manager requires additional security for this channel. You can use Azure Active Directory (Azure AD), PKI certificates, or token-based authentication from the site server.
+1. _Configure Azure Active Directory (Azure AD)_: Configuration Manager requires app registrations in Azure AD. You can let Configuration Manager create them, or an Azure administrator can pre-create the registrations.
 
-1. _Configure Azure AD_: Configuration Manager requires app registrations in Azure AD. You can let Configuration Manager create them, or an Azure administrator can pre-create the registrations.
+1. _Configure client authentication_: Because clients communicate across the internet, Configuration Manager requires additional security for this channel. You can use Azure Active Directory (Azure AD), PKI certificates, or token-based authentication from the site server.
 
 1. _Set up the CMG_: This step also includes configuring the site, and adding the CMG connection point site system role.
 
@@ -58,7 +58,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - How many VM instances you need for scale and redundancy.
 
-- You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](certificates-for-cloud-management-gateway.md).  
+- You need one or more certificates for CMG, depending upon your design.
 
 - You need the following requirements for an [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) deployment of CMG:  
 

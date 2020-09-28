@@ -16,13 +16,21 @@ ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 
 *Applies to: Configuration Manager (current branch)*
 
-This article answers your frequently asked questions about the cloud management gateway. For more information, see [Overview of cloud management gateway](overview.md).
+This article answers your frequently asked questions about the cloud management gateway (CMG). For more information, see [Overview of cloud management gateway](overview.md).
 
 ## Frequently asked questions
 
-### What certificates do I need?
+### Do I need any certificates?
 
-For more detailed information, see [certificates for cloud management gateway](certificates-for-cloud-management-gateway.md).
+Yes, at least one, and possibly others depending upon your design.
+
+- **Server authentication certificate**: The CMG creates an HTTPS service to which internet-based clients connect. The service requires a server authentication certificate to build the secure channel. You can acquire a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG server authentication certificate](server-auth-cert.md).
+
+- **Client authentication certificate**: Depending upon your environment and CMG design, you can use PKI certificates for client authentication. This authentication method doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10. For more information, see [Configure client authentication for CMG: PKI certificate](configure-authentication.md#pki-certificate).
+
+    When you use this client authentication method, you also need to export the client certificate's trusted root chain. You then use this chain of certificates when you create the CMG and on the CMG connection point.
+
+- **HTTPS-enabled the management point**: Depending upon how you configure the site, and which client authentication method you choose, you may need to configure your internet-enabled management points to support HTTPS. For more information, see [Configure client authentication for CMG: Enable management point for HTTPS](configure-authentication.md#bkmk_mphttps).
 
 ### Do I need Azure ExpressRoute?
 
@@ -73,7 +81,9 @@ If the user and device identities are in one tenant, but the CMG's subscription 
 
 ### How does CMG affect my clients connected via VPN?
 
-Roaming clients that connect to your environment via a VPN are commonly detected as intranet-facing. They attempt to connect to your on-premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN. Starting in version 1902, associate the CMG with a boundary group. This action forces these clients to not use the on-premises site systems. For more information, see [Configure boundary groups](setup-cloud-management-gateway.md#configure-boundary-groups).
+Roaming clients that connect to your environment via a VPN are commonly detected as intranet-facing. They attempt to connect to your on-premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN.
+
+You can also associate the CMG with a boundary group. This action forces these clients to not use the on-premises site systems. For more information, see [Configure boundary groups](setup-cloud-management-gateway.md#configure-boundary-groups).
 
 ### If I enable a CMG, will my clients only connect to the CMG-enabled management point when they're connected to the intranet?
 
@@ -85,10 +95,12 @@ If you use Enhanced HTTP, you don't need to configure this setting. Clients cont
 
 ### What are the differences with client authentication between Azure AD and certificates?
 <!-- MEMDocs#277 -->
-You can use Azure AD or a [client authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_clientauth) for devices to authenticate to the CMG service.
+You can use Azure AD or a client authentication certificate for devices to authenticate to the CMG service. Starting in version 2002, you can also use Configuration Manager site-issued tokens for authentication.
 
 If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include Windows 8.1 and Windows 10. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or with version 2002 or later, use token authentication.
 
 You can also manage Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
 
-Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
+Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
+
+For more information, see [Configure client authentication](configure-authentication.md).

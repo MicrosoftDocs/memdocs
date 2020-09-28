@@ -210,7 +210,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
 
      1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged on to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
-     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_clientauth).  
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](../clients/manage/cmg/configure-authentication.md#pki-certificate).  
 
 4. Click **Start** to start the analysis. The results are displayed in the analyzer window. Select an entry to see more details in the Description field.  
 
@@ -282,7 +282,7 @@ The following scenarios benefit from these improvements:
 [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
 
 #### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
 <!--1358228-->

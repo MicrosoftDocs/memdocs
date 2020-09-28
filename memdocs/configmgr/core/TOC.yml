@@ -857,9 +857,9 @@
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Upgrade Mac clients
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-- name: Manage clients on the internet
+- name: Manage clients over the internet
   items:
-  - name: Manage clients on the internet overview
+  - name: Manage clients over the internet overview
     href: clients/manage/manage-clients-internet.md
   - name: Cloud management gateway (CMG)
     items:
@@ -899,8 +899,6 @@
         href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
       - name: FAQ for CMG
         href: clients/manage/cmg/cloud-management-gateway-faq.md
-      - name: Certificates for CMG
-        href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
       - name: Ports and data flow
         href: clients/manage/cmg/data-flow.md
   - name: Plan for internet-based client management

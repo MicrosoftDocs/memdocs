@@ -154,6 +154,11 @@
             "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
             "redirect_url": "/mem/autopilot/software-requirements",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway.md",
+            "redirect_url": "/mem/configmgr/core/clients/manage/cmg/server-auth-cert",
+            "redirect_document_id": false
         }
     ]
 }

@@ -144,7 +144,7 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 - A [**server authentication certificate**](server-auth-cert.md) for the CMG.
 
-- **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [CMG certificates](certificates-for-cloud-management-gateway.md).
+- **Other certificates** may be required, depending upon your client OS version and authentication model.
 
     When you use the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 

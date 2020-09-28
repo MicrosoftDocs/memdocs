@@ -91,7 +91,7 @@ Configuration Manager starts to set up the service. After you close the wizard, 
 
 ## Configure primary site for client certificate authentication
 
-If you're using [client authentication certificates](certificates-for-cloud-management-gateway.md#bkmk_clientauth) for clients to authenticate with the CMG, follow this procedure to configure each primary site.
+If you're using [client authentication certificates](configure-authentication.md#pki-certificate) for clients to authenticate with the CMG, follow this procedure to configure each primary site.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**.
 
@@ -106,7 +106,7 @@ If you're using [client authentication certificates](certificates-for-cloud-mana
 The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG.
 
 > [!IMPORTANT]
-> If you're using client authentication certificates, the CMG connection point needs this certificate. For more information, see [client authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_clientauth).
+> If you're using client authentication certificates, the CMG connection point needs this certificate. For more information, see [client authentication certificate](configure-authentication.md#pki-certificate).
 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
@@ -120,7 +120,7 @@ Configure the management point and software update point site systems to accept 
 
 1. In the Management point properties sheet, under Client Connections select **Allow Configuration Manager cloud management gateway traffic**.
 
-    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](certificates-for-cloud-management-gateway.md#bkmk_mphttps).
+    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](configure-authentication.md#bkmk_mphttps).
 
 1. Select **OK** to close the management point properties window.
 
