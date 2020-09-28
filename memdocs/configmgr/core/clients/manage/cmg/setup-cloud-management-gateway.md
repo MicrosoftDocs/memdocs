@@ -129,7 +129,7 @@ Repeat these steps for additional management points as needed, and for any softw
 ## Configure boundary groups
 
 <!--3640932-->
-You can associate a CMG with a boundary group. This configuration allows clients to use the CMG for client communication according to boundary group relationships.
+You can associate a CMG with a boundary group. This configuration allows clients to use the CMG for client communication according to boundary group relationships. This configuration is beneficial for VPN or branch office clients where it might be better to manage them via a CMG than over the VPN or WAN connection.
 
 For more information on boundary groups, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md).
 

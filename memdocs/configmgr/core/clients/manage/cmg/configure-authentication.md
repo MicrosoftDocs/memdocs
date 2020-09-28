@@ -172,7 +172,7 @@ If your environment has multiple management points, you don't have to HTTPS-enab
 
 These tables summarize whether the management point requires HTTP or HTTPS, depending upon the type of client. They use the following terms:
 
-- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#bkmk_clientauth).
+- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#pki-certificate).
 - *AD domain-joined*: You join the device to an on-premises Active Directory domain.
 - *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure AD tenant. For more information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join).
 - *Hybrid-joined*: You join the device to your on-premises Active Directory and register it with your Azure AD. For more information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
@@ -194,7 +194,7 @@ Configure an on-premises management point to allow connections from the CMG with
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **Note 1**: This configuration requires the client has a [client authentication certificate](#bkmk_clientauth), and only supports device-centric scenarios.  
+> **Note 1**: This configuration requires the client has a [client authentication certificate](#pki-certificate), and only supports device-centric scenarios.  
 
 ##### For on-premises clients communicating with the on-premises management point
 
