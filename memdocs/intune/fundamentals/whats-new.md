@@ -76,7 +76,7 @@ In preview, we’ve added a new profile to Intune endpoint security Antivirus po
 
 The new profile is found under the *Windows 10 and Windows Server (ConfigMgr)* platform when you create a new Antivirus policy.
 
-Before you can use Intune endpoint security policies with tenant attached devices, you’ll need configure Configuration Manager [tenant attach](.. /intune/protect/tenant-attach-intune.md) and synchronize devices with Intune.
+Before you can use Intune endpoint security policies with tenant attached devices, you’ll need configure Configuration Manager [tenant attach](../protect/tenant-attach-intune.md) and synchronize devices with Intune.
 
 Also be aware of the specific [prerequisites](../protect/endpoint-security-antivirus-policy.md#prerequisites-for-tamper-protection) that are required to use and support tamper protection with Intune policy.
 
