@@ -125,7 +125,6 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > - OneNote for iOS (2.41 and later)
    > - Outlook for iOS (2.99.0 and later)
    > - Teams for iOS (2.0.15 and later)
-   > - Office, Word, Excel, PowerPoint for iOS (2.41 and later)
    
 
 ## Enter XML data
