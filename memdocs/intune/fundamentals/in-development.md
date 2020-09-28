@@ -209,9 +209,6 @@ The Company Portal app will store, as well as display, push notifications sent t
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
-### Power BI compliance report template V2.0<!-- 636958  -->
-Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that are being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
-
 ### Noncompliant policies report to troubleshoot devices in error or noncompliant<!-- 6471368  -->
 There's a new operational report to help troubleshoot errors and conflicts for compliance policies targeting devices. The "Noncompliant policies" report will show the list of compliance policies and the number of devices in an error or noncompliant state.
 
