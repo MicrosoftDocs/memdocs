@@ -71,10 +71,7 @@ Create an [Android device administrator device restrictions configuration profil
 
 ### All Android devices
 
-These settings apply to:
-
-- Android 4.0 and newer
-- Knox 4.0 and newer
+These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
 
 - **Maximum minutes of inactivity until screen locks**: Enter the length of time a device must be idle before the screen is automatically locked. For example, enter `5` to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -110,7 +107,7 @@ These settings apply to:
   > [!IMPORTANT]
   > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
   >
-  > If you set **Password complexity** to something other than **None**, then also set **Password** to **Require**. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set **Password** to **Require**, users with weak passwords won’t receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
 
 ### Android 9 and earlier, or Samsung Knox (any version)
 
