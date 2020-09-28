@@ -60,7 +60,7 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
 
-   Depending on your version of Android, you might see an additional screen that explains the type of apps you need to use now that your work profile is set up. If you see this screen, wait a few moments and you'll be redirected and signed in to the Company Portal app.  
+   Depending on your version of Android, you might see an additional screen that explains the type of apps you need to use. Wait a few moments and you'll be redirected and signed in to the Company Portal app.  
 
     ![Screenshot of Company Portal redirection and badged app information, includes two links.](./media/intune-company-portal-work-profile-redirect-2009.png)  
 
