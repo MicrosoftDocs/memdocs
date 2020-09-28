@@ -54,7 +54,7 @@ Intune supports two methods to integrate Jamf Pro, which you configure separatel
 3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. **Jamf integration with Intune doesn't support compliance policy that targets device groups.**
 
    > [!NOTE]
-   > Jamf integration with Intune only supports AAD user groups. Device compliance policies that are targeted to device groups will not apply.
+   > Jamf integration with Intune only supports Azure AD user groups. Device compliance policies that are targeted to device groups will not apply.
 
 4. When you select **Save**, the policy deploys to the users.
 
