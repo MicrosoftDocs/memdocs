@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,17 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
+
+<!-- ########################## -->
+## Week of September 28, 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### App management  
+#### Improved work profile messaging in Company Portal for Android  
+The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
+
+
 <!-- ########################## -->
 ## Week of September 21, 2020
 
@@ -64,7 +75,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ### Device management
 
-### Tenant attach: Run scripts from the admin center
+#### Tenant attach: Run scripts from the admin center
 <!--7220536, CM6234688-->
 Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
 
