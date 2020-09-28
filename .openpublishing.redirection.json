@@ -164,6 +164,11 @@
             "source_path": "memdocs/intune/protect/security-baseline-settings-mdm-archive.md",
             "redirect_url": "/mem/intune/protect/security-baseline-settings-mdm-all",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/white-glove.md",
+            "redirect_url": "/mem/autopilot/pre-provisioning",
+            "redirect_document_id": false
         }
     ]
 }

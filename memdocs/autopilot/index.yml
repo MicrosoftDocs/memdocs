@@ -49,8 +49,8 @@ landingContent:
         url: self-deploying.md
       - text: Windows Autopilot Reset
         url: windows-autopilot-reset.md
-      - text: White glove
-        url: white-glove.md
+      - text: Pre-provisioning
+        url: pre-provisioning.md
       - text: Support for existing devices
         url: existing-devices.md
 

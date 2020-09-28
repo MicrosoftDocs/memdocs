@@ -38,7 +38,7 @@ If you configure the language settings in the Autopilot profile and the device i
 
 ## New in Windows 10, version 1903
 
-[Windows Autopilot for white glove deployment](white-glove.md) is new in Windows 10, version 1903. See the following video:
+[Windows Autopilot pre-provisioning](pre-provisioning.md) is new in Windows 10, version 1903. See the following video:
 
 <br>
 

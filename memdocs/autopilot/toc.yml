@@ -22,8 +22,8 @@
       href: self-deploying.md
     - name: Windows Autopilot Reset
       href: windows-autopilot-reset.md
-    - name: White glove
-      href: white-glove.md
+    - name: Pre-provisioning
+      href: pre-provisioning.md
     - name: Support for existing devices
       href: existing-devices.md
     - name: Requirements

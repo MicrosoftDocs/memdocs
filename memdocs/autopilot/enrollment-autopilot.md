@@ -36,7 +36,7 @@ Windows Autopilot simplifies enrolling devices in Intune. Building and maintaini
 There are four types of Autopilot deployment:
 
 - [Self Deploying Mode](self-deploying.md) for kiosks, digital signage, or a shared device
-- [White Glove](white-glove.md) enables partners or IT staff to pre-provision a Windows 10 PC so that it's fully configured and business-ready
+- [Pre-provisioning](pre-provisioning.md) enables partners or IT staff to pre-provision a Windows 10 PC so that it's fully configured and business-ready
 - [Autopilot for existing devices](existing-devices.md) enables you to easily deploy the latest version of Windows 10 to your existing devices
 - [User Driven Mode](user-driven.md) for traditional users.
 
@@ -129,9 +129,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
  
     - **Hide change account options (requires Windows 10, version 1809 or later)**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
     - **User account type**: Choose the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
-    - **Allow White Glove OOBE** (requires Windows 10, version 1903 or later; [additional physical requirements](white-glove.md#prerequisites)): Choose **Yes** to allow white glove support.
+    - **Allow pre-provisioning OOBE** (requires Windows 10, version 1903 or later; [additional physical requirements](pre-provisioning.md#prerequisites)): Choose **Yes** to allow pre-provisioning support.
     > [!NOTE]
-    > When setting this to No (blocking White Glove), be aware that it will still be possible to press the Windows key five times during OOBE to invoke White Glove and progress down that path. However, Intune will subsequently enforce this setting and you will encounter a red screen indicating pre-provisioning failure with error code 0x80180005.
+    > The **white glove** feature has been renamed to **pre-provisioned** deployment. References to 'white glove' refer to the Autopilot [pre-provisioning](pre-provisioning.md) process. <br>When setting this to **No** (blocking pre-provisioning), be aware that it will still be possible to press the Windows key five times during OOBE to invoke pre-provisioning and progress down that path. However, Intune will subsequently enforce this setting and you will encounter a red screen indicating pre-provisioning failure with error code 0x80180005.
 
     - **Apply device name template** (requires Windows 10, version 1809 or later, and Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
     - **Language (Region)**\*: Choose the language to use for the device. This option is only available if you chose **Self-deploying** for **Deployment mode**.
@@ -189,7 +189,7 @@ You can see details on each device deployed through Windows Autopilot.
 To see the report, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 The data is available for 30 days after deployment.
 
-This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment won't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot White glove.
+This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment won't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
 
 ## Assign a user to a specific Autopilot device
 

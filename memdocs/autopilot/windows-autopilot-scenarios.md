@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
+keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, white glove, pre-provision
 ms.reviewer: mniehaus
 manager: laurawi
 ms.prod: w10
@@ -35,7 +35,7 @@ The following Windows Autopilot scenarios are described in this guide:
 | Deploy and configure devices so that an end user can set it up for themselves | [Windows Autopilot user-driven mode](user-driven.md) |
 | Deploy devices to be automatically configured for shared use, as a kiosk, or as a digital signage device.| [Windows Autopilot self-deploying mode](self-deploying.md) |
 | Redeploy a device in a business-ready state.| [Windows Autopilot Reset](windows-autopilot-reset.md) |
-| Preprovision a device with up-to-date applications, policies, and settings.| [White glove](white-glove.md) |
+| Pre-provision a device with up-to-date applications, policies, and settings.| [Pre-provisioning](pre-provisioning.md) |
 | Deploy Windows 10 on an existing Windows 7 or 8.1 device | [Windows Autopilot for existing devices](existing-devices.md) |
 
 These scenarios are summarized in the following video.
