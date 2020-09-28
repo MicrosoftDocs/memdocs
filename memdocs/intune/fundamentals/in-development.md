@@ -123,7 +123,7 @@ The **Required password type** setting default is changing from **Numeric** to *
 
 Existing profiles aren't impacted. New profiles will automatically use **Device default**. 
 
-Most devices don't have a default passcode policy. So if you don't create a profile, and configure the **Required password type** setting, then there may not be a passcode policy on the device.
+Most devices don't require a password when **Device default** is selected. If you want to require your users to set up a passcode on their devices, configure the **Required password type** setting to something more secure than **Device default**.
 
 To see the settings you can restrict, go to [Android Enterprise device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md).
 
