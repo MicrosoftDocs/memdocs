@@ -67,12 +67,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Improved work profile messaging in Company Portal for Android  
 The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
 
-
-<!-- ########################## -->
-## Week of September 28, 2020
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Device management
 <!-- ########################## -->
 
