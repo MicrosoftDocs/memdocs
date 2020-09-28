@@ -36,9 +36,9 @@ You might have to backup and restore an Intune Automated Device Enrollment (ADE)
 - A user receives a new device and wants to migrate the data from the old device. 
 
 To backup and restore an iOS/iPadOS device, you must follow the Apple instructions:
-•	To backup your device, see [How to back up your iPhone, iPad and iPod touch](https://support.apple.com/HT203977).
-•	To restore you device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
-•	To transfer data to a new device, see [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad or iPod touch](https://support.apple.com/HT210217) or [Use Quick Start to transfer data to a new iPhone, iPad or iPod touch](https://support.apple.com/HT210216).
+- To backup your device, see [How to back up your iPhone, iPad and iPod touch](https://support.apple.com/HT203977).
+- To restore you device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
+- To transfer data to a new device, see [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad or iPod touch](https://support.apple.com/HT210217) or [Use Quick Start to transfer data to a new iPhone, iPad or iPod touch](https://support.apple.com/HT210216).
 
 For more information about restoring Apple devices from backup, see [Get started using Apple Business Manager or Apple School Manager with Mobile Device Management](https://support.apple.com/HT207516).
 
