@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 09/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -101,7 +101,7 @@ Common tasks when working with security baselines include:
 When a new version for a baseline is released, plan to update your existing profiles to the new version:
 
 - Existing profiles don’t upgrade to new versions automatically.
-- Baseline profiles that don’t use the new version become read-only. You can still use the profiles that use an older version of the baseline, but you won’t be able to edit them until after they update to the most recent baseline version  
+- Settings in baseline profiles that don’t use the latest version become read-only. You can continue using those older profiles, including editing their name, description and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
 
 We recommend you [test the version](#test-the-conversion-and-updated-baseline) update on a copy of your existing profiles before you update your live profiles.
 
@@ -133,7 +133,7 @@ After the conversion to the new baseline version is complete:
 Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See [Duplicate a security baseline](#duplicate-a-security-baseline) later in this article.
 
 - When you create a copy, group assignments are not included. This means your baseline copy won’t deploy to any devices at the time you make a copy, or at the time you update it to a new version.
-- After you update the profile to the latest version, you can edit it. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
+- After you update the profile to the latest version, you can edit its settings. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
 
 ### To change the baseline version for a profile
 
@@ -189,13 +189,16 @@ After a *Refresh*, the new baseline profile appears in the admin center.
 ### To edit a baseline
 
 1. Select the baseline, and then select **Properties**.
-2. Select **Settings** to expand the list of settings categories in the baseline. You can’t modify the settings from this view, but you can review how they're configured.
-3. To modify the settings, select **Edit** for each category where you want to make a change:
+2. From this view you can select **Edit** for the following categories to modify the profile: 
+
    - Basics
    - Assignments
    - Scope tags
    - Configuration settings
-4. After you’ve made changes, select **Save** to save your edits.  You save edits to one category before you can introduce edits to additional categories.
+
+   You can *Edit* a profiles *Configuration settings* only when that profile uses the latest version of that security baseline. For profiles that use older versions, you can expand **Settings** to view the configuration of settings in the profile you can't modify them. After a profile is updated to the most recent baseline version, you'll be able to edit the profiles settings.
+
+3. After you’ve made changes, select **Save** to save your edits. You save edits to one category before you can introduce edits to additional categories.
 
 ## Older baseline versions
 
