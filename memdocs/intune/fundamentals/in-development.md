@@ -111,7 +111,7 @@ These changes help Intune accommodate changes in Android version 10 and later, t
 - Settings will be reorganized into sections that are based on which devices they apply to.
 - Additional updates to labels and example text.
 
-These changes apply to the UI for settings, and won’t affect existing profiles. 
+These changes apply to the UI for settings, and won’t affect existing profiles.
 
 Applies to:
 - Android device administrator
