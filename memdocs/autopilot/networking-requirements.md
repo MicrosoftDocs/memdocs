@@ -40,7 +40,7 @@ Additional configuration may be required to grant access to required services in
 For additional details about each of these services and their specific requirements, review the following details:
 
 <table><th>Service<th>Information
-<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com. <br>
+<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com, and https://login.live.com.<br>
 
 <tr><td><b>Windows Activation<b><td>Windows Autopilot requires Windows Activation services. For details about the URLs that need to be accessible for the activation services, see <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows activation or validation fails with error code 0x8004FE33</a>.<br>
 
