@@ -196,7 +196,7 @@ After a *Refresh*, the new baseline profile appears in the admin center.
    - Scope tags
    - Configuration settings
 
-   You can *Edit* a profiles *Configuration settings* only when that profile uses the latest version of that security baseline. For profiles that use older versions, you can expand **Settings** to view the configuration of settings in the profile you can't modify them. After a profile is updated to the most recent baseline version, you'll be able to edit the profiles settings.
+   You can *Edit* a profiles *Configuration settings* only when that profile uses the latest version of that security baseline. For profiles that use older versions, you can expand **Settings** to view the configuration of settings in the profile, but you can't modify them. After a profile is updated to the most recent baseline version, you'll be able to edit the profiles settings.
 
 3. After you’ve made changes, select **Save** to save your edits. You save edits to one category before you can introduce edits to additional categories.
 
