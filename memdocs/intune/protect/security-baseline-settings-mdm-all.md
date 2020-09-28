@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,27 +36,32 @@ ms.collection: M365-identity-device-management
 View the MDM security baseline settings that Microsoft Intune supports for devices that run Windows 10 or later. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- The most recent baseline version is **MDM Security Baseline for September 2020**
-
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
-
-Be sure to select the version of the baseline that you want to view.
+- The most recent baseline version is **MDM Security Baseline for August 2020**
 
 ::: zone pivot="mdm-sept-2020"
 
-**MDM Security Baseline for September 2020**  
-This version of the security baseline replaces the previous baseline, the *MDM Security Baseline for May 2019*. Profiles that were created prior to the availability of this baseline won't update to reflect the new settings or values.  Although you can't create new profiles based on the previous baseline version, you can edit and continue to use profiles you previously created that are based on a previous version.
+**MDM Security Baseline for August 2020**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
-To learn about what's changed in this version of the baseline from the previous version, see [What's changed in the new template](#whats-changed-in-the-new-template).
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **MDM Security Baseline for May 2019**:  
-> [!NOTE]
-> In June of 2019, the *MDM Security Baseline for May 2019* template was released as generally available (not in preview). This version of the security baseline replaces the previous baseline, the *MDM Security Baseline for October 2018*.  Profiles that were created prior to the availability of the May 2019 baseline won't update to reflect the settings and values that are in the May 2019 version.  Although you can't create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
-To learn about what's changed in this version of the baseline from the previous version, see [What's changed in the new template](#whats-changed-in-the-new-template).
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -65,8 +70,10 @@ To learn about what's changed in this version of the baseline from the previous 
 > [!NOTE]
 > This is the preview version of the MDM security baseline, released in October of 2018. This preview baseline was replaced in June of 2019 by the release of the *MDM Security Baseline for May 2019* template, which is generally available (not in preview). Profiles that were created prior to the availability of the *MDM Security Baseline for May 2019* baseline won't update to reflect the settings and values that are in the MDM Security Baseline for May 2019 version. Although you can't create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
 
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## Above Lock
 
@@ -79,7 +86,7 @@ For more information, see [Policy CSP - AboveLock](/windows/client-management/md
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 - **Voice activate apps from locked screen**:  
   **Default**: Disabled
@@ -409,8 +416,8 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
 
   When *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements* is selected, you can configure the *Hardened UNC path list*.
 
-  - **Hardened UNC path list**:  
-    Select **Add** to specify additional security flags and server paths.
+- **Hardened UNC path list**:  
+  Select **Add** to specify additional security flags and server paths.
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
@@ -2234,7 +2241,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 ## Windows Hello for Business
 
@@ -2257,9 +2264,6 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
 
     **Default**: Not configured
 
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
   - **Lowercase letters in PIN**:  
     If required, user PIN must include at least one lowercase letter.
 
@@ -2274,9 +2278,6 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
     If required, user PIN must include at least one uppercase letter.
 
     **Default**: Not allowed
-
-::: zone-end
-::: zone pivot="mdm-sept-2020"
 
   - **Lowercase letters in PIN**:  
     If required, user PIN must include at least one lowercase letter.

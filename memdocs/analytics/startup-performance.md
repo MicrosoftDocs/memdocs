@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Configuration Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 09/14/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -14,11 +14,6 @@ manager: dougeby
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
