@@ -30,6 +30,12 @@ The following [Windows Autopilot updates](autopilot-update.md) are available. **
 
 No updates are available yet. Check back here later for more information.
 
+## Feature name change
+
+September, 2020
+
+The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in our documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in [this article](pre-provisioning.md).
+
 ## New in Windows 10, version 2004
 
 With this release, you can configure Windows Autopilot [user-driven](user-driven.md) Hybrid Azure Active Directory join with VPN support. This support is also backported to Windows 10, version 1909 and 1903.
