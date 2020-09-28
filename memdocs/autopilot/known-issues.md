@@ -79,7 +79,7 @@ This issue happens because Windows 10, version 1903 and 1909 deletes the Autopil
 <tr><td>White glove gives a red screen<td>White glove isn't supported on a VM.
 <tr><td>Error importing Windows Autopilot devices from a .csv file<td>Ensure that you haven't edited the .csv file in Microsoft Excel or an editor other than Notepad. Some of these editors can introduce extra characters causing the file format to be invalid. 
 <tr><td>Windows Autopilot for existing devices doesn't follow the Autopilot OOBE experience.<td>Ensure that the JSON profile file is saved in <b>ANSI/ASCII</b> format, not Unicode or UTF-8.
-<tr><td><b>Something went wrong</b> is displayed page during OOBE.<td>The client is likely unable to access all the required Azure AD/MSA-related URLs. For more information, see [Networking requirements](networking-requirements.md).
+<tr><td><b>Something went wrong</b> is displayed page during OOBE.<td>The client is likely unable to access all the required Azure AD/MSA-related URLs. For more information, see <a href="networking-requirements.md">Networking requirements</a>.
 <tr><td>Using a provisioning package in combination with Windows Autopilot can cause issues, especially if the PPKG contains join, enrollment, or device name information.<td>Using PPKGs in combination with Windows Autopilot isn't recommended.
 </table>
 
