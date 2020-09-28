@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,9 @@ When you integrate Jamf Pro with Intune, you can use Conditional Access policies
 - Create Conditional Access policies.
 - Configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf.
 - Configure devices to register with Azure AD when the device user signs in to the Company Portal app they start from within the Jamf Self Service app. Device registration establishes an identity in Azure AD that allows the device to be evaluated by Conditional Access policies for access to company resources.  
- 
+
+Device users first learn about Jamf Pro and Intune integration through either a communication from your IT department about how to register a device, or by discovering the Intune Company Portal app that you deploy through *Jamf Pro Self Service*. After device registration completes, inventory data collected by Jamf Pro for that device is shared with Intune. Information is shared for only those Mac devices that have completed.
+
 The procedures in this article require access to both the Intune and Jamf Pro consoles.
 Intune supports two methods to integrate Jamf Pro, which you configure separately from the procedures in this article:
 
