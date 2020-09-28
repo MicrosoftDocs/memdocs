@@ -46,7 +46,7 @@ For more information about restoring Apple devices from backup, see [Get started
 
 ## Restore a new device
 
-When a user receives a new device they often want to restore data from the old device. All of the following scenarios have been tested with the new device completing the assigned Intune ADE enrollment profile:
+When a user receives a new device, they often want to restore data from the old device. All of the following scenarios have been tested with the new device completing the assigned Intune ADE enrollment profile:
 
 | Old device enrolled with | New device enrolled with | Restore test completed |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ If the management certificate has expired since the last backup, upon restore th
 | --- | --- |
 | Intune BYOD, non-supervised | Prior management profile. |
 | Non-MDM | ADE |
-| 3rd party MDM or other Intune tenant (BYOD or ADE) | ADE |
+| Third party MDM or other Intune tenant (BYOD or ADE) | ADE |
 
 But what If you want to reset devices, let users restore them, and want them ADE enrolled? In this case, you should give them new devices. That way, they’ll be restoring to a different serial number from the backup. So, they’ll be restoring to a new device and will see the behavior stated in that section above.
 
