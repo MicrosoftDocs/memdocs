@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020  
+ms.date: 09/28/2020  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -60,9 +60,9 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
 
-   Depending on your version of Android, you might see an additional screen. It will indicate that you're halfway through setup. If you see this screen, wait a few moments until you're redirected and signed in to the Company Portal app.  
+   Depending on your version of Android, you might see an additional screen that explains the type of apps you need to use now that your work profile is set up. If you see this screen, wait a few moments and you'll be redirected and signed in to the Company Portal app.  
 
-    ![Screenshot of "You're halfway there" screen with redirection message.](./media/android-wp-05b-1908.png)  
+    ![Screenshot of Company Portal redirection and badged app information, includes two links.](./media/intune-company-portal-work-profile-redirect-2009.png)  
 
 6. On the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
 
