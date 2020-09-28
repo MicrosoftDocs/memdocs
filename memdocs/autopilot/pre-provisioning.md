@@ -22,7 +22,7 @@ ms.topic: article
 **Applies to: Windows 10, version 1903** 
 
 >[!IMPORTANT]
->The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in this documentation to the **white glove** process have been replaced with: **pre-provisioning** process.  References might still exist to Autopilot **white glove** in blogs and other online articles. These references correspond to the pre-provisioning process for Windows Autopilot devices that is described in this article.
+>The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in this documentation to the **white glove** process have been replaced with: **pre-provisioning** process.  References might still exist to Autopilot **white glove** in blogs and other online articles. These references correspond to the pre-provisioning process described in this article.
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This lets end users get their devices business-ready by using a simple process.
 
