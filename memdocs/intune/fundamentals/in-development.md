@@ -133,7 +133,7 @@ Applies to:
 ### New lockout password settings on macOS devices<!-- 7780272  -->
 New settings are available when you create a macOS password profile (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device restrictions** for profile > **Password**):
 
-- **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, from 2-11. Set this value to a higher number. Setting this value to `2` or '3' isn't recommended, as mistakes are common. Applies to all enrollment types.
+- **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, from 2-11. Set this value to a higher number. Setting this value to `2` or `3` isn't recommended, as mistakes are common. Applies to all enrollment types.
 - **Lockout duration**: Choose how long the lockout lasts, in minutes. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout durations ends, user can sign in again. To use this setting, configure the **Maximum allowed sign-in attempts** setting. Applies to macOS 10.10 and newer, and all enrollment types.
 
 For the current password settings, see [macOS password device restrictions](../configuration/device-restrictions-macos.md#password).
@@ -253,7 +253,7 @@ Improvements include:
 - Option to *select all* when clearing entries from an IP address list.
 
 ### Use Microsoft Defender for Endpoint in compliance policies for iOS<!-- 7895451  -->
-As a public preview, you’ll soon be able to use Intune device compliance policy to onboard iOS devices to Microsoft Defender for Advanced Threat Protection. (**Devices > **Compliance policies** > **Create Policy** > *for Platform select iOS/iPad OS*)
+As a public preview, you’ll soon be able to use Intune device compliance policy to onboard iOS devices to Microsoft Defender for Advanced Threat Protection. (**Devices** > **Compliance policies** > **Create Policy** > *for Platform select iOS/iPad OS*)
  
 After you onboard your enrolled devices, your compliance polices for iOS will be able to use the *threat level* signals from Microsoft Defender. These are the same signals that you can use today for Android and Windows 10 devices. The Defender for iOS app is moving from public preview to generally availability by the end of the year.
 
