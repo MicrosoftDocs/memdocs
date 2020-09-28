@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 09/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -221,9 +221,9 @@ Support for a Proxy is limited to the following platforms:
 Before you start a server install, we recommend you download and run the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.  
-- Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment. 
+- Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment.
 
-The mst-readiness tool has a dependency on **jq**, a command-lie JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
+The mst-readiness tool has a dependency on **jq**, a command-line JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
 
 To use the readiness tool:
 
@@ -260,7 +260,15 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 2. Download the PowerShell script named **mst-CA-readiness.ps1** from [aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
 
-3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant. The script modifies your tenant by creating a service principle with the following details:
+3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
+
+   > [!CAUTION]
+   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7) in the PowerShell documentation.
+   >
+   > In a future update, *mst-CA-readiness.ps1* will be signed, which will remove the need to set ExecutionPolicy to *Unrestricted*.
+
+
+   The script modifies your tenant by creating a service principle with the following details:
 
    - App ID: 3678c9e9-9681-447a-974d-d19f668fcd88
    - Name: Microsoft Tunnel Gateway
