@@ -306,7 +306,7 @@ After the trusted root certificate is manually installed on a device, you can us
 - If the trusted root certificate is on the device, the SCEP certificate profile can install successfully. 
 - If the trusted certificate can't be found on the device, the SCEP certificate profile will fail.
 
-For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
+For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 
 #### Tri-state options for more settings in Endpoint Security Firewall policy<!-- 6586159  -->
