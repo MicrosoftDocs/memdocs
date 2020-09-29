@@ -35,7 +35,7 @@ The following Windows Autopilot scenarios are described in this guide:
 | Deploy and configure devices so that an end user can set it up for themselves | [Windows Autopilot user-driven mode](user-driven.md) |
 | Deploy devices to be automatically configured for shared use, as a kiosk, or as a digital signage device.| [Windows Autopilot self-deploying mode](self-deploying.md) |
 | Redeploy a device in a business-ready state.| [Windows Autopilot Reset](windows-autopilot-reset.md) |
-| Pre-provision a device with up-to-date applications, policies, and settings.| [Pre-provisioning](pre-provisioning.md) |
+| Pre-provision a device with up-to-date applications, policies, and settings.| [Pre-provisioning](pre-provision.md) |
 | Deploy Windows 10 on an existing Windows 7 or 8.1 device | [Windows Autopilot for existing devices](existing-devices.md) |
 
 These scenarios are summarized in the following video.

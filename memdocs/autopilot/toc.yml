@@ -23,7 +23,7 @@
     - name: Windows Autopilot Reset
       href: windows-autopilot-reset.md
     - name: Pre-provisioning
-      href: pre-provisioning.md
+      href: pre-provision.md
     - name: Support for existing devices
       href: existing-devices.md
     - name: Requirements

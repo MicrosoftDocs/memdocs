@@ -167,7 +167,7 @@
         },
         {
             "source_path": "memdocs/autopilot/white-glove.md",
-            "redirect_url": "/mem/autopilot/pre-provisioning",
+            "redirect_url": "/mem/autopilot/pre-provision",
             "redirect_document_id": true
         }
     ]

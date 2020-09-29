@@ -50,7 +50,7 @@ landingContent:
       - text: Windows Autopilot Reset
         url: windows-autopilot-reset.md
       - text: Pre-provisioning
-        url: pre-provisioning.md
+        url: pre-provision.md
       - text: Support for existing devices
         url: existing-devices.md
 
