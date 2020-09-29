@@ -221,7 +221,7 @@ This issue occurs if the computer that hosts the Intune NDES Connector can't loc
 
 **Resolution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps&preserve-view=true) PowerShell cmdlet.
 
 ### The submission is pending
 

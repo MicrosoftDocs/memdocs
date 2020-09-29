@@ -118,7 +118,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 You use [Microsoft Graph](/graph) to import your users PFX certificates into Intune. The helper [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) provides you with cmdlets to do the operations with ease.
 
-If you prefer to use your own custom solution using Graph, use the [userPFXCertificate resource type](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
+If you prefer to use your own custom solution using Graph, use the [userPFXCertificate resource type](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta&preserve-view=true).
 
 ### Build 'PFXImport PowerShell Project' cmdlets
 
