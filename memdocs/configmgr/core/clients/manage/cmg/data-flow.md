@@ -39,6 +39,8 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 For more information when you store content in Azure, see [Use a cloud-based distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).
 
+For more information when you integrate with Azure Active Directory (Azure AD), see [Configure Azure services: Cloud management data flow](../../../servers/deploy/configure/azure-services-wizard.md#cloud-management-data-flow).
+
 ## Required ports
 
 This table lists the required network ports and protocols. The *Client* is the device that starts the connection, requiring an outbound port. The *Server* is the device that accepts the connection, requiring an inbound port.
