@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2020
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -215,7 +215,7 @@ This task list provides an overview. For more specific information, see [Apple C
   1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
   2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices) --> **PM/Engineering question**: Does this link even apply to Configurator enrollment? This link states "deploy the policy to groups of devices that are already DEP enrolled". Does it also apply to already Configurator-enrolled devices? ??
   3. Deploy the app configuration policy to the same device group as the enrollment profile.
-  4. When devices check in with the Intune service, they receives your profile, and the Company Portal app installs.
+  4. When devices check in with the Intune service, they receive your profile, and the Company Portal app installs.
 
   This option:
 
@@ -242,23 +242,22 @@ The tasks depend on the option you configured in the enrollment profile.
 
 - **Enroll with user affinity + Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`. Once entered, the Company Portal app is automatically installed from your profile. It can take some time for the Company Portal app to auto-install.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`. Once entered, the Company Portal app is automatically installed from the app store. It can take some time for the Company Portal app to auto-install.
   2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When users sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
   Users may have to enter more information. For more specific steps, see [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
 
 - **Enroll with user affinity + Setup Assistant + Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`.
-  2. The Setup Assistant prompts the user for information.
-  3. The Company Portal app automatically opens, and should lock the device in a kiosk-style mode. It can take some time for the Company Portal app to open. Users sign in with their organization credentials (`user@contoso.com`), and enroll the device in Intune. This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their organization credentials (`user@contoso.com`). This step enrolls the device in Intune.
+  2. The Setup Assistant prompts the user for information, including the Apple ID, such as `user@iCloud.com` or `user@gmail.com`.
+  3. The Company Portal app automatically from the app store. Users open the app, sign in with their organization credentials (`user@contoso.com`). This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
 
 - **Enroll with user affinity + Setup Assistant - Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`.
-  2. The Setup Assistant prompts the user for information, and enrolls the device in Intune. The device isn't registered in Azure AD.
-
-  If you don't install CP app, there's no CA, or Azure AD registrations. Recommended to install CP app. Admin should use app config, and push CP app to devices. Users should not install CP app from the Apple app store. Then, users sign in, and are locked into CP app. They sign in with the organization account (`user@contoso.com`), and device is unlocked for users.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their organization credentials (`user@contoso.com`). This step enrolls the device in Intune.
+  2. The Setup Assistant prompts the user for information, including the Apple ID, such as `user@iCloud.com` or `user@gmail.com`. This step pushes the Intune management profile to the device.
+  3. Users install the management profile. The profile checks-in with the Intune service, and enrolls the device. The device isn't registered in Azure AD.
 
 - **Enroll without user affinity**: You're using Direct enrollment. No actions. Be sure they don't install the Company Portal app from the Apple app store.
 

@@ -246,7 +246,7 @@ With these goals in mind, create a baseline of your policies. If you have multip
 
 - Be prepared to create new policies and profiles in Intune. Intune includes several features that cover scenarios that may interest you. Some examples:
 
-  - On Windows 10 devices, [Endpoint Security configuration](../protect/security-baselines.md) are security settings that are pre-configured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at Endpoint Security configuration.
+  - On Windows 10 devices, [Security baselines](../protect/security-baselines.md) are security settings that are pre-configured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at Security Baselines.
   - On Windows 10 devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in AD group policy, but are 100% cloud-based in Intune.
   - [Guided scenarios](guided-scenarios-overview.md) are a customized series of steps focused on end-to-end use cases. These scenarios automatically include policies, apps, assignments, and other management configurations.
 
