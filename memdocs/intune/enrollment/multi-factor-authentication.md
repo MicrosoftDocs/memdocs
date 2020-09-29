@@ -64,7 +64,7 @@ To require MFA when a device is enrolled, follow these steps:
 7. On the **Include** tab of **Cloud apps**, choose **Select apps**, then choose **Select** > **Microsoft Intune Enrollment**, and then choose **Done**. By choosing **Microsoft Intune Enrollment**, conditional access MFA is applied only to the enrollment of the device (one-time MFA prompt).
 8. In the **Assignments** section, for **Conditions** you don't need to configure any settings for MFA.
 9. In the **Access controls** section, choose **Grant**.
-10. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication**. Do not select **Require device to be marked as compliant** because a device can't be evaluated for compliance until it's enrolled. Then choose **Select**.
+10. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication**. Don't select **Require device to be marked as compliant** because a device can't be evaluated for compliance until it's enrolled. Then choose **Select**.
 11. In **New policy**, choose **Enable policy** > **On**, and then choose **Create**.
 
 > [!NOTE]
