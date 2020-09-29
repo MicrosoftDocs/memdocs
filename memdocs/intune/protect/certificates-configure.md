@@ -124,7 +124,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 - PKCS imported certificates require you to [install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
 
 - Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+  - [Trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
   - SCEP certificate profiles
   - PKCS certificate profiles *(only supported with the [Digicert PKI Platform](certificates-digicert-configure.md))*
   - PKCS imported certificate profiles
@@ -143,7 +143,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
 | Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 
-- ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](#trusted-certificate-profiles-for-android-device-administrator).
+- ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 ## Additional resources
 

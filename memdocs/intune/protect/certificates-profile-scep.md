@@ -30,12 +30,12 @@ ms.collection: M365-identity-device-management
 
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
-For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-configure.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
+For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
 >
-> For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
+> For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 ## Create a SCEP certificate profile
 
@@ -231,9 +231,9 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
    - **Root Certificate**:
 
-     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-configure.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. If you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that validates the Issuing Certification Authority.
+     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. If you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that validates the Issuing Certification Authority.
      > [!NOTE]
-     > On iOS/iPadOS devices, if you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that validates the root Certification Authority. 
+     > On iOS/iPadOS devices, if you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that validates the root Certification Authority.
 
    - **Extended key usage**:
 
