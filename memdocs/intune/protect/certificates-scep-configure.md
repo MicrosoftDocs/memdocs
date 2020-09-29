@@ -33,7 +33,7 @@ Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [aut
 The information in this article can help you configure your infrastructure to support SCEP when using Active Directory Certificate Services. After your infrastructure is configured, you can [create and deploy SCEP certificate profiles](certificates-profile-scep.md) with Intune.
 
 > [!TIP]
-> Intune also supports use of [Public Key Cryptography Standards #12 certificates](certficates-pfx-configure.md).
+> Intune also supports use of [Public Key Cryptography Standards #12 certificates](certificates-pfx-configure.md).
 
 ## Prerequisites for using SCEP for certificates
 
