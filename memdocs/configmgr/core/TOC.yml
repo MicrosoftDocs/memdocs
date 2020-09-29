@@ -895,6 +895,8 @@
         href: clients/manage/cmg/modify-cloud-management-gateway.md
     - name: Reference
       items:
+      - name: Manually register Azure AD apps for CMG
+        href: clients/manage/cmg/manually-register-azure-ad-apps.md
       - name: Security and privacy for CMG
         href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
       - name: FAQ for CMG
