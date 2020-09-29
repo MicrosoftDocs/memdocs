@@ -326,8 +326,10 @@
         href: antivirus-microsoft-defender-settings-macos.md
       - name: Windows 10 Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows.md
-      - name: Tenant attach Defender Antivirus settings 
+      - name: Tenant attach Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
+      - name: Tenant attach Windows Security settings
+        href: antivirus-windows-security-settings-windows-tenant-attach.md
       - name: Windows Security experience settings
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
