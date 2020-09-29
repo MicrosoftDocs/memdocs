@@ -128,7 +128,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
 5. Convert the WDAC policy to **newPolicy.xml**:
 
-    > [NOTE]
+    > [!NOTE]
     > You can block apps that are only installed on HoloLens devices. For more information, see [package family names for apps on HoloLens](https://docs.microsoft.com/hololens/windows-defender-application-control-wdac#package-family-names-for-apps-on-hololens). 
 
     ```powershell
