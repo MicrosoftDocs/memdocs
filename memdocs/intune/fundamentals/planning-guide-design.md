@@ -171,7 +171,7 @@ Learn more about:
 
 - [How to configure the certificate infrastructure for SCEP](../protect/certificates-scep-configure.md)
 
-- [How to configure the certificate infrastructure for PFX](../protect/certficates-pfx-configure.md)
+- [How to configure the certificate infrastructure for PFX](../protect/certificates-pfx-configure.md)
 
 
 
