@@ -169,6 +169,10 @@
             "source_path": "memdocs/intune/protect/certficates-pfx-configure.md",
             "redirect_url": "/mem/intune/protect/certificates-pfx-configure",
             "redirect_document_id": false
+    ....},
+            "source_path": "memdocs/autopilot/white-glove.md",
+            "redirect_url": "/mem/autopilot/pre-provision",
+            "redirect_document_id": true
         }
     ]
 }
