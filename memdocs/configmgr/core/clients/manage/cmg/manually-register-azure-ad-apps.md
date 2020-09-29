@@ -138,7 +138,7 @@ The native (client) app for CMG is now registered in Azure AD. This step also co
 
 ## Import the apps to Configuration Manager
 
-After you manually register the two apps in the Azure portal, use the process in the article to [Configure Azure AD for CMG](configure-azure-ad.md#the-azure-services-wizard), but select the option to **Import** each of the apps.
+After you manually register the two apps in the Azure portal, use the process in the article to [Configure Azure AD for CMG](configure-azure-ad.md#start-the-azure-services-wizard), but select the option to **Import** each of the apps.
 
 These processes import metadata about the Azure AD apps into Configuration Manager. You don't require any Azure AD permissions to import these apps.
 
