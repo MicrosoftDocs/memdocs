@@ -109,6 +109,15 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 
 When the wizard closes, you'll see the new connection in the **Azure Services** node. You can also view the tenant and app registrations in the **Azure Active Directory Tenants** node of the Configuration Manager console.
 
+## Configure Azure resource providers
+
+The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+
+- **Microsoft.ClassicCompute**
+- **Microsoft.Storage**
+
+For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+
 ## Next steps
 
 Continue your CMG setup by deciding which type of client authentication to use:

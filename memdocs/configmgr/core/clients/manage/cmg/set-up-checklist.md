@@ -58,19 +58,11 @@ Use the following checklist to make sure you have the necessary information and 
 
 - How many VM instances you need for scale and redundancy.
 
-- You need one or more certificates for CMG, depending upon your design.
+- An Azure **global administrator** role to register apps in Azure AD.
 
-- You need the following requirements for an [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) deployment of CMG:  
+- An Azure **subscription owner** role for when you create the CMG in Azure.
 
-  - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required. To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**.
-
-  - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
-
-  - A **Subscription Owner** needs to sign in to deploy the CMG.
-
-- A globally unique name for the service. This name is from the [CMG server authentication certificate](server-auth-cert.md).  
-
-- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](server-auth-cert.md).
+You'll set up other prerequisite components during the next steps in the process.
 
 ## Next steps
 

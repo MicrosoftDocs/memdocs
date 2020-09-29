@@ -35,16 +35,13 @@ For more foundational knowledge of CMG scenarios and use cases, see [Overview of
 
 Deployment and operation of the CMG includes the following components:
 
-- The **CMG cloud service** in Azure authenticates and forwards Configuration Manager client requests to the CMG connection point.
+- The **CMG cloud service** in Azure authenticates and forwards Configuration Manager client requests over the internet to the on-premises CMG connection point.
 
-- The **CMG connection point** site system role enables a consistent and high-performance connection from the on-premises network to the CMG service in Azure. It also publishes settings to the CMG including connection information and security settings. The CMG connection point forwards client requests from the CMG to on-premises roles according to URL mappings.
+- The **CMG connection point** site system role enables a consistent and high-performance connection from the on-premises network to the CMG service in Azure. It also publishes settings to the CMG including connection information and security settings. The CMG connection point forwards client requests from the CMG to on-premises roles according to URL mappings. For example, the management point and software update point.
 
 - The [**service connection point**](../../../servers/deploy/configure/about-the-service-connection-point.md) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure Active Directory (Azure AD). Make sure your service connection point is in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).
 
 - The **management point** and **software update point** site system roles service client requests per normal.
-
-    > [!NOTE]
-    > Sizing guidance for management points and software update points doesn't change whether they service on-premises or internet-based clients. For more information, see [Size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - The CMG uses a **certificate-based HTTPS** web service to help secure network communication with clients.
 
@@ -55,12 +52,6 @@ Deployment and operation of the CMG includes the following components:
   - Configuration Manager site-issued tokens
 
 - A content-enabled CMG or a [**cloud distribution point**](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) provides content to internet-based clients, as needed. Using a content-enabled CMG reduces the required certificates and Azure costs.
-
-> [!TIP]
-> To clarify some Azure terminology:
->
-> - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
-> - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
 
 ### Azure Resource Manager
 
@@ -124,6 +115,12 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 ## Requirements
 
+> [!TIP]
+> To clarify some Azure terminology:
+>
+> - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+
 - An **Azure subscription** to host the CMG.
 
     > [!IMPORTANT]
@@ -131,22 +128,21 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
-- An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona can be the same as the Configuration Manager administrator, or separate. If separate, they don't require permissions in Configuration Manager.
+- An **Azure administrator** needs to participate in the initial creation of certain components. This persona can be the same as the Configuration Manager administrator, or separate. If separate, they don't require permissions in Configuration Manager.
 
-  - To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**.
-  - To deploy the CMG, you need a **Subscription Owner**.
+  - When you integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
+
+  - When you create the CMG, you need a **Subscription Owner**.
 
 - At least one on-premises Windows server to host the **CMG connection point**. You can colocate this role with other Configuration Manager site system roles.
 
 - The **service connection point** must be in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).
 
-- Integration with **Azure AD** for deploying the service with Azure Resource Manager. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md).
-
 - A [**server authentication certificate**](server-auth-cert.md) for the CMG.
 
-- **Other certificates** may be required, depending upon your client OS version and authentication model.
+- Integrate the site with **Azure AD** to deploy the service with Azure Resource Manager. For more information, see [Configure Azure AD for CMG](configure-azure-ad.md).
 
-    When you use the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
+- **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [Configure client authentication](configure-authentication.md).
 
 - Clients must use **IPv4**.
 
