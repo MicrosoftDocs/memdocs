@@ -52,6 +52,7 @@ You can now create Microsoft Defender antivirus policies in the Microsoft Endpoi
 - [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
 - [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
+- [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->

@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 09/28/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -74,7 +74,7 @@ The following security baseline instances are available for use with Intune. Use
   - [Microsoft Edge baseline for April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
   - [Preview: Microsoft Edge baseline for October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
 
-After a new version for a profile releases, profiles based on the older versions become read-only. You can continue using those older profiles but you won't be able to edit them or create new profiles based on the older versions.
+After a new version for a profile releases, settings in profiles based on the older versions become read-only. You can continue using those older profiles, including editing their name, description and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
 
 When you're ready to use the more recent version of a baseline, you can create new profiles or update your existing profiles to the new version. See [Change the baseline version for a profile](security-baselines-configure.md#change-the-baseline-version-for-a-profile) in the *Manage security baseline profiles* article.
 
@@ -94,7 +94,7 @@ You can choose to [change of the version](security-baselines-configure.md#change
 
 ### Compare baseline versions
 
-On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline.  You can continue to use and edit profiles that you previously created that use an earlier baseline version, including baselines created using a Preview version.
+On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline. You can continue using profiles based on older versions, including editing their name, description and assignments, but you won't be able to edit settings for those older profile versions.
 
 To understand what's changed between versions, select the checkboxes for two different versions, and then select **Compare baselines**. You're then prompted to download a CSV file that details those differences.
 
