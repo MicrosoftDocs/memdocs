@@ -78,7 +78,7 @@ You can create PKCS certificate profiles to deploy certificates to Android Enter
 
 Soon you'll be able to create PKCS certificate profiles for Android Enterprise Fully Managed devices. The Intune PFX certificate connector is required. If you don't use SCEP, and only use PKCS, you can remove the NDES connector after you install the new PFX connector. The new PFX connector imports PFX files, and deploys PKCS certificates to all platforms.
 
-For more information on PKCS certificates, see [Configure and use PKCS certificates with Intune](../protect/certficates-pfx-configure.md).
+For more information on PKCS certificates, see [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md).
 
 Applies to:
 - Android Enterprise fully managed (COBO)
