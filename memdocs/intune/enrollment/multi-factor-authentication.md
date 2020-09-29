@@ -67,6 +67,12 @@ To require MFA when a device is enrolled, follow these steps:
 10. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication**. Do not select **Require device to be marked as compliant** because a device cannot be evaluated for compliance until it is enrolled. Then choose **Select**.
 11. In **New policy**, choose **Enable policy** > **On**, and then choose **Create**.
 
+> [!NOTE]
+> A second device is required to complete the MFA challenge for corporate devices like the following:
+> - Android Enterprise Fully Managed.
+> - Android Enterprise Corporate Owned Work Profile.
+> - iOS/iPadOS Automated Device Enrollment.
+> The second device is required because the primary device can't receive calls or text messages during the provisioing process.
 
 
 ## Next steps
