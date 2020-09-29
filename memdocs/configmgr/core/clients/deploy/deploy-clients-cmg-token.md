@@ -35,6 +35,8 @@ The Configuration Manager client together with the management point manage this 
 >
 > Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
+Make sure to **Enable clients to use a cloud management gateway** in the **Cloud services** group of client settings. Even with a site token, clients can't communicate with a CMG if client settings don't allow it. For more information, see [About client settings: Cloud services](about-client-settings.md#cloud-services).<!-- MEMDocs #540 -->
+
 ## Internal network registration
 
 This method requires the client to first register with the management point on the internal network. Client registration typically happens right after installation. The management point gives the client a unique token that shows it's using a self-signed certificate. When the client roams onto the internet, to communicate with the CMG it pairs its self-signed certificate with the management point-issued token.
