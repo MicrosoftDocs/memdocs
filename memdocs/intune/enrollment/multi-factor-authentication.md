@@ -72,6 +72,7 @@ To require MFA when a device is enrolled, follow these steps:
 > - Android Enterprise Fully Managed.
 > - Android Enterprise Corporate Owned Work Profile.
 > - iOS/iPadOS Automated Device Enrollment.
+>
 > The second device is required because the primary device can't receive calls or text messages during the provisioning process.
 
 
