@@ -17,7 +17,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--1101764-->
-The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients on the internet. You deploy CMG as a cloud service in Microsoft Azure. Then manage clients that roam on the internet without additional on-premises infrastructure. You also don't need to expose your on-premises infrastructure to the internet.
+The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. You deploy CMG as a cloud service in Microsoft Azure. Then manage clients that roam on the internet without additional on-premises infrastructure. You also don't need to expose your on-premises infrastructure to the internet.
 
 :::image type="content" source="media/cmg-basic-architecture.png" alt-text="Diagram of cloud management gateway basic architecture":::
 
