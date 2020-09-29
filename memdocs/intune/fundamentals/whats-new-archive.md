@@ -946,7 +946,7 @@ You can now use PKCS certificate profiles to issue certificates to *devices* tha
 > [!NOTE]
 > PKCS certificate profiles are not supported with Wi-Fi profiles. Instead, use SCEP certificate profiles when you use an [EAP type](../configuration/wi-fi-settings-windows.md#enterprise-profile).
 
-To use a device-based certificate, while [creating a PKCS certificate profile](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) for the supported platforms, select **Settings**. You'll now see the setting for **Certificate type**, which supports the options for Device, or User.
+To use a device-based certificate, while [creating a PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) for the supported platforms, select **Settings**. You'll now see the setting for **Certificate type**, which supports the options for Device, or User.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -1281,7 +1281,7 @@ A new report to the Devices overview page displays how many Android devices have
 We've added a security baseline Preview for [Microsoft Edge settings](../protect/security-baseline-settings-edge.md). 
 
 #### PKCS certificates for macOS<!-- 1333650       -->
-You can now [use PKCS certificates with macOS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile). You can select the PKCS certificate as a profile type for macOS, and deploy user and device certificates that have [customized subject and subject alternative name fields](../protect/certficates-pfx-configure.md#subject-name-format).  
+You can now [use PKCS certificates with macOS](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile). You can select the PKCS certificate as a profile type for macOS, and deploy user and device certificates that have [customized subject and subject alternative name fields](../protect/certificates-pfx-configure.md#subject-name-format).  
 
 PKCS certificate for macOS also support a new setting, _Allow All Apps Access_. With this setting you can enable all associated apps access to the private key of the certificate.  For more information about this setting, see the Apple documentation at https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.
 
@@ -1642,7 +1642,7 @@ When you don't' configure *deadlines*, devices continue to use their *engaged re
 Plan to use *deadlines* for all your Windows 10 devices. After settings for *deadlines* are in place, you can change your Intune configurations for *engaged restart* to be Not configured. When set to Not configured, Intune stops managing those settings on devices but doesn't remove the last configurations for the setting from the device. Therefore, the last configurations that were set for *engaged restart* remain active and in use on devices until those settings are modified by a method other than Intune. Later, when the devices version of Windows changes or when Intune support for *deadlines* expands to the devices Windows version, the device will begin to use the new settings, which are already in place.
 
 #### Support for multiple Microsoft Intune Certificate Connectors<!--   4704642      -->
-Intune now supports install and use of multiple [Microsoft Intune Certificate Connectors for PKCS operations](../protect/certficates-pfx-configure.md). This change supports load balancing and high availability of the connector. Each connector instance can process certificate requests from Intune.  If one connector is unavailable, other connectors continue to process requests.
+Intune now supports install and use of multiple [Microsoft Intune Certificate Connectors for PKCS operations](../protect/certificates-pfx-configure.md). This change supports load balancing and high availability of the connector. Each connector instance can process certificate requests from Intune.  If one connector is unavailable, other connectors continue to process requests.
 
 To use multiple connectors, you don't need to upgrade to the latest version of the connector software.  
 
@@ -3574,7 +3574,7 @@ This update also includes:
 - The NDES Certificate connector requires .NET 4.5 Framework, which is automatically included with Windows Server 2016 and Windows Server 2012 R2. Previously, .NET 3.5 Framework was the minimum required version.
 - TLS 1.2 support is included with the NDES Certificate connector. So if the server with NDES Certificate connector installed supports TLS 1.2, then TLS 1.2 is used. If the server doesn't support TLS 1.2, then TLS 1.1 is used. Currently, TLS 1.1 is used for authentication between the devices and server.
 
-For more information, see [Configure and use SCEP certificates](../protect/certificates-scep-configure.md) and [Configure and use PKCS certificates](../protect/certficates-pfx-configure.md).
+For more information, see [Configure and use SCEP certificates](../protect/certificates-scep-configure.md) and [Configure and use PKCS certificates](../protect/certificates-pfx-configure.md).
 
 #### Support for Palo Alto Networks GlobalProtect VPN profiles<!-- 1333680 ! -->
 With this update, you can choose Palo Alto Networks GlobalProtect as a VPN connection type for VPN profiles in Intune (**Device configuration** > **Profiles** > **Create profile** > **Profile type** > **VPN**). In this release, the following platforms are supported: 
@@ -5229,7 +5229,7 @@ We've added new [Windows device restriction settings](../configuration/device-re
 #### Updates to certificate configuration<!-- 918991 and 823198 -->
 When creating a SCEP certificate profile, for <strong>Subject name format</strong>, the <strong>Custom</strong> option is available for iOS, Android, and Windows devices. Before this update, the <strong>Custom</strong> field was available for iOS devices only. For more information, see [Create a SCEP certificate profile](../protect/certificates-profile-scep.md).
 
-When creating a PKCS certificate profile, for **Subject alternative name**, the **Custom Azure AD attribute** is available. The **Department** option is available when you select **Custom Azure AD attribute**. For more information, see [create a PKCS certificate profile](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile).
+When creating a PKCS certificate profile, for **Subject alternative name**, the **Custom Azure AD attribute** is available. The **Department** option is available when you select **Custom Azure AD attribute**. For more information, see [create a PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile).
 
 #### Configure multiple apps that can run when an Android device is in kiosk mode<!-- 662059 -->
 When an Android device is in kiosk mode, you could previously only configure one app that was allowed to run. You can now configure multiple apps using the app ID, store URL, or by selecting an Android app you already manage. For more information, see [Kiosk mode settings](../configuration/device-restrictions-android.md#kiosk).
