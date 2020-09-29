@@ -67,12 +67,23 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Improved work profile messaging in Company Portal for Android  
 The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
 
-
+### Device management
 <!-- ########################## -->
+
+#### Tamper Protection policy for Tenant Attached devices in preview<!-- 7303958  -->
+
+In preview, we’ve added a new profile to Intune endpoint security Antivirus policy that you can use to [manage Tamper Protection on tenant attached devices](../protect/endpoint-security-antivirus-policy.md#devices-managed-by-configuration-manager): **Windows Security experience (preview)**.
+
+The new profile is found under the *Windows 10 and Windows Server (ConfigMgr)* platform when you create a new Antivirus policy.
+
+Before you can use Intune endpoint security policies with tenant attached devices, you’ll need configure Configuration Manager [tenant attach](../protect/tenant-attach-intune.md) and synchronize devices with Intune.
+
+Also be aware of the specific [prerequisites](../protect/endpoint-security-antivirus-policy.md#prerequisites-for-tamper-protection) that are required to use and support tamper protection with Intune policy.
+
+
 ## Week of September 21, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Device management
 
 #### Tenant attach: Run scripts from the admin center
