@@ -221,7 +221,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
      - Not configured
      - 1024
      - 2048
-     - 4096 *(supported with iOS/iPadOS 14 and later, and MacOS 11 and later)*
+     - 4096 *(supported with iOS/iPadOS 14 and later, and macOS 11 and later)*
 
    - **Hash algorithm**:
 
