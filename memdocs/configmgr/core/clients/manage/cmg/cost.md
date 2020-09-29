@@ -2,7 +2,7 @@
 title: Cost of cloud management gateway
 titleSuffix: Configuration Manager
 description: Understand the costs of operating the cloud management gateway (CMG) service in Microsoft Azure.
-ms.date: 09/17/2020
+ms.date: 09/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

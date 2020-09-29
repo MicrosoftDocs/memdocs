@@ -5,7 +5,7 @@ description: Use this article to answer frequently asked questions regarding the
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 09/28/2020
 ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-client

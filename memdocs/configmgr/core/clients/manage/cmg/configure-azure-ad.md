@@ -2,7 +2,7 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 09/18/2020
+ms.date: 09/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to

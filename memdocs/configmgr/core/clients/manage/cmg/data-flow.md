@@ -2,7 +2,7 @@
 title: Data flow for cloud management gateway
 titleSuffix: Configuration Manager
 description: Understand how data flows between components of the cloud management gateway (CMG), including network ports and internet endpoints.
-ms.date: 09/17/2020
+ms.date: 09/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference

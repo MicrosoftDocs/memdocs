@@ -2,7 +2,7 @@
 title: Manually register Azure AD apps
 titleSuffix: Configuration Manager
 description: Manually create the required apps in Azure Active Directory to integrate the Configuration Manager site to support the cloud management gateway.
-ms.date: 09/18/2020
+ms.date: 09/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
