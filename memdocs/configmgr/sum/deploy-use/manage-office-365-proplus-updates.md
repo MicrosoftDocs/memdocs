@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Microsoft 365 Apps client updat
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -27,8 +27,7 @@ Configuration Manager lets you manage Microsoft 365 Apps in the following ways:
 
 - [Deploy Microsoft 365 Apps updates](#bkmk_update): You can manage Microsoft 365 Apps client updates by using the software update management workflow. When Microsoft publishes a new Microsoft 365 Apps update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Microsoft 365 Apps updates from the WSUS catalog to the site server, the update is available to deploy to clients.
 
-   > [!NOTE]
-   > Starting in Configuration Manager version 2002, you can import Microsoft 365 Apps updates into disconnected environments. For more information, see [Synchronize Microsoft 365 Apps updates from a disconnected software update point](../get-started/synchronize-office-updates-disconnected.md).   
+  - Starting in Configuration Manager version 2002, you can import Microsoft 365 Apps updates into disconnected environments. For more information, see [Synchronize Microsoft 365 Apps updates from a disconnected software update point](../get-started/synchronize-office-updates-disconnected.md).
 
 - [Add languages for Microsoft 365 Apps update downloads](#bkmk_o365_lang): You can add support for Configuration Manager to download updates for any languages supported by Microsoft 365 Apps. Meaning Configuration Manager doesn't have to support the language as long as Microsoft 365 Apps does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Microsoft 365 Apps clients.
 
@@ -51,6 +50,10 @@ For previous Configuration Manager versions, you must take the following steps t
 - If you receive a 404 download error, copy the following files to the user %temp% folder:
   - [releasehistory.xml](https://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](https://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+
+### Limitations
+
+- Cloud distribution points don't support content for Microsoft 365 Apps updates. <!--7366753-->
 
 ### Deploy Microsoft 365 Apps using Configuration Manager version 1806 or higher: 
 Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149-->

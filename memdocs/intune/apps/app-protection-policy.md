@@ -153,8 +153,6 @@ Any app that has been integrated with the [Intune SDK](../developer/app-sdk.md) 
 
 The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
-The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authentication capabilities from the[Azure Active Directory Authentication Libraries](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) for both the 1st party and the 3rd party versions of the SDK. As such, [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) (MSAL) does not work well with many of our core scenarios such as authentication into the Intune App Protection service and conditional launch. Given that the overall guidance from Microsoft's Identity team is to switch to MSAL for all of the Microsoft Office apps, the [Intune SDK](../developer/app-sdk.md) will eventually need to support it, but there are no plans today.
-
 ## End-user requirements to use app protection policies
 
 The following list provides the end-user requirements to use app protection policies on an Intune-managed app:
@@ -343,7 +341,7 @@ When dealing with different types of settings, an Intune SDK version requirement
 ## App protection experience for Android devices
 
 ### Device biometric authentication
-For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types can be used to authenticate, fingerprints will only be accepted, or biometrics will not be accepted. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.
+For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.
 
 ### Company Portal app and Intune app protection
 Much of app protection functionality is built into the Company Portal app. Device enrollment is _not required_ even though the Company Portal app is always required. For mobile application management without enrollment (MAM-WE), the end user just needs to have the Company Portal app installed on the device.

@@ -39,9 +39,9 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## Prerequisites
 
-- You will need a Mac OS computer that runs OS X 10.12.6 or later, and also has Xcode 9 or later installed.
+- You will need a Mac OS computer which has Xcode 11 or later installed.
 
-- Your app must be targeted for iOS 11 or above.
+- Your app must be targeted for iOS 12 or above.
 
 - Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
 
@@ -49,7 +49,7 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## What's in the SDK Repository
 
-The following files are relevant to apps/extensions that contain no Swift code, or are compiled with a version of Xcode prior to 10.2:
+The following files are relevant to apps/extensions that contain no Swift code:
 
 * **IntuneMAM.framework**: The Intune App SDK framework. It is recommended that you link this framework to your app/extensions to enable Intune client application management. However some developers may prefer the performance benefits of the static library. See the following.
 
@@ -57,7 +57,7 @@ The following files are relevant to apps/extensions that contain no Swift code, 
 
 * **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the static library (libIntuneMAM.a).
 
-The following files are relevant to apps/extensions that contain Swift code, and are compiled with Xcode 10.2+:
+The following files are relevant to apps/extensions that contain Swift code:
 
 * **IntuneMAMSwift.framework**: The Intune App SDK Swift framework. This framework contains all the headers for APIs that your app will call. Link this framework to your app/extensions to enable Intune client application management.
 
@@ -105,14 +105,14 @@ The objective of the Intune App SDK for iOS is to add management capabilities to
 
 To enable the Intune App SDK, follow these steps:
 
-1. **Option 1 - Framework (recommended)**: If you're using Xcode 10.2+ and your app/extension contains Swift code, link `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to your target: Drag `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to the **Embedded Binaries** list of the project target.
+1. **Option 1 - Framework (recommended)**: If your app/extension contains Swift code, link `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to your target: Drag `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to the **Embedded Binaries** list of the project target.
 
     Otherwise, link `IntuneMAM.framework` to your target: Drag `IntuneMAM.framework` to the **Embedded Binaries** list of the project target.
 
    > [!NOTE]
    > If you use the framework, you must manually strip out the simulator architectures from the universal framework before you submit your app to the App Store. See [Submit your app to the App Store](#submit-your-app-to-the-app-store) for more details.
 
-   **Option 2 - Static Library**: This option is only available for apps/extensions that contain no Swift code, or were built with Xcode < 10.2. Link to the `libIntuneMAM.a` library. Drag the `libIntuneMAM.a` library to the **Linked Frameworks and Libraries** list of the project target.
+   **Option 2 - Static Library**: This option is only available for apps/extensions that contain no Swift code. Link to the `libIntuneMAM.a` library. Drag the `libIntuneMAM.a` library to the **Linked Frameworks and Libraries** list of the project target.
 
     ![Intune App SDK iOS: linked frameworks and libraries](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -170,7 +170,7 @@ To enable the Intune App SDK, follow these steps:
       > [!NOTE]
       > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
 
-5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. Be sure to save your changes before proceeding to the next step.
+5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. For each protocol listed in this array, a copy of the protocol appended with `-intunemam` also needs to be added to the array. Additionally, `http-intunemam`, `https-intunemam`, `microsoft-edge-http-intunemam`, `microsoft-edge-https-intunemam`,  `smart-ns`,  `zips`,  `lacoonsecurity`,  `wandera`,  `lookoutwork-ase`,  `skycure`,  `betteractiveshield` and  `smsec` should be added to the array. If your app uses the mailto: protocol, `ms-outlook-intunemam` should be added to the array as well. Be sure to save your changes before proceeding to the next step.
 
 6. If your app does not use FaceID already, ensure the [NSFaceIDUsageDescription Info.plist key](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) is configured with a default message. This is required so iOS can let the user know how the app intends to use FaceID. An Intune app protection policy setting allows for FaceID to be used as a method for app access when configured by the IT admin.
 
@@ -239,7 +239,7 @@ As previously mentioned, the Intune App SDK uses the [Microsoft Authentication L
 
 ### Special considerations when using MSAL 
 
-1. **Check your Webview** - It is recommended that applications do not use SFSafariViewController, SFAuthSession or ASWebAuthSession as their webview for any app-initiated MSAL interactive auth operations. If for some reason your app must use one of these webviews for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. WARNING: This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application should not show corporate data in any of those webview types.
+1. **Check your Webview** - It is recommended that applications do not use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](https://docs.microsoft.com/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request). If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. WARNING: This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application should not show corporate data in any of those webview types.
 2. **Linking both ADAL and MSAL** - Developers must opt in if they want Intune to prefer MSAL over ADAL in this scenario. By default, Intune will prefer supported ADAL versions to supported MSAL versions, if both are linked at runtime. Intune will only prefer a supported MSAL version when, at the time of Intune's first authentication operation, `IntuneMAMUseMSALOnNextLaunch` is `true` in `NSUserDefaults`. If `IntuneMAMUseMSALOnNextLaunch` is `false` or not set, Intune will fall back to the default behavior. As the name suggests, a change to `IntuneMAMUseMSALOnNextLaunch` will take effect on the next launch.
 
 

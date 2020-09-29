@@ -13,7 +13,7 @@ groups:
   prompt: Choose a version
   pivots:
     - id: mdm-sept-2020
-      title: September 2020
+      title: August 2020
     - id: mdm-may-2019
       title: May 2019
     - id: mdm-preview

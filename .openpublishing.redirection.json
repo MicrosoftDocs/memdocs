@@ -156,6 +156,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/intune/protect/security-baseline-settings-mdm.md",
+            "redirect_url": "/mem/intune/protect/security-baseline-settings-mdm-all",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/security-baseline-settings-mdm-archive.md",
+            "redirect_url": "/mem/intune/protect/security-baseline-settings-mdm-all",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway.md",
             "redirect_url": "/mem/configmgr/core/clients/manage/cmg/server-auth-cert",
             "redirect_document_id": false

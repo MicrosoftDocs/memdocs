@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,17 +61,42 @@ View the Microsoft Defender Advanced Threat Protection baseline settings that ar
 
 ::: zone pivot="atp-sept-2020"
 
-The details in this article apply to version 54 of the Microsoft Defender ATP baseline, which released on September 21, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+**Microsoft Defender ATP baseline for September 2020 - version 5**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-april-2020"
 
-The details in this article apply to version 4 of the Microsoft Defender ATP baseline, which released on April 21, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+**Microsoft Defender ATP baseline for April 2020 - version 4**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
-The details in this article apply to version 3 of the Microsoft Defender ATP baseline, which released on March 1, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+**Microsoft Defender ATP baseline for March 2020 - version 3**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"

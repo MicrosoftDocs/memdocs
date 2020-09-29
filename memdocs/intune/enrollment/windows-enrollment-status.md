@@ -163,7 +163,7 @@ For account setup, the Enrollment Status Page tracks the following items if they
 
 The following are known issues related to the Enrollment Status Page.
 
-- Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. You must deploy OMA-URI to disable the ESP. See above for instructions on how to disable ESP using OMA-URI. 
+- Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
 - Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration defined in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. This delay gives time for the on-prem AD connector to create the new device record to Azure AD. 
