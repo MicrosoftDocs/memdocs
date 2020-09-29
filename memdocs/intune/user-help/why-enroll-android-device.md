@@ -89,7 +89,7 @@ When you're ready to enroll your Android device in Intune, select one of the fol
 
 * [Intune Company Portal enrollment](enroll-device-android-company-portal.md)
 * [Android work profile enrollment](enroll-device-android-work-profile.md)
-* [Microsoft Intune app enrollemnt](enroll-device-android-microsoft-intune-app.md)
+* [Microsoft Intune app enrollment](enroll-device-android-microsoft-intune-app.md)
 * Derived credentials enrollment:  
     * [Entrust datacard](enroll-android-device-entrust-datacard.md)  
     * [Intercede](enroll-android-device-intercede.md)  
