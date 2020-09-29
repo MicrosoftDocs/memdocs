@@ -240,7 +240,7 @@
     - name: PKCS
       items:
       - name: PKCS
-        href: certficates-pfx-configure.md
+        href: certificates-pfx-configure.md
         displayName: ksp
       - name: Imported PKCS
         href: certificates-imported-pfx-configure.md
