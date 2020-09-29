@@ -37,7 +37,7 @@ Use certificates with Intune to authenticate your users to applications and corp
 Certificates provide authenticated access without delay through the following two phases:
 
 - Authentication phase: The user’s authenticity is checked to confirm the user is who they claim to be.
-- Authorization Phase: The user is subjected to conditions for which a determination is made on whether the user should be given access.
+- Authorization phase: The user is subjected to conditions for which a determination is made on whether the user should be given access.
 
 Typical use scenarios for certificates include:
 
