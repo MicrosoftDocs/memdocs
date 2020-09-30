@@ -64,11 +64,11 @@ If the management certificate has expired since the last backup, upon restore th
 
 | Device enrolled with | Restore to same device includes |
 | --- | --- |
-| Intune BYOD, non-supervised | Prior management profile. |
-| Non-MDM | ADE |
-| Third party MDM or other Intune tenant (BYOD or ADE) | ADE |
+| Intune BYOD, non-supervised | Prior supervised state. |
+| Non-MDM | Prior supervised state. |
+| Third party MDM or other Intune tenant (BYOD or ADE) | Prior management profile/supervised state. |
 
-But what If you want to reset devices, let users restore them, and want them ADE enrolled? In this case, you should give them new devices. That way, they’ll be restoring to a different serial number from the backup. So, they’ll be restoring to a new device and will see the behavior stated in that section above.
+If you decide to factory reset an existing device, enrol it into ADE and restore data from a previous backup. This way, the previous supervised state is restored. If the device was previously unsupervised, the unsupervised state will be restored.
 
 ## Next steps
 
