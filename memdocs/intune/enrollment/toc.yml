@@ -106,7 +106,7 @@
     - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-ios.md
       displayName: dep; ade; bulk enroll
-    - name: Backup and restore
+    - name: Back up and restore
       href: backup-restore-ios.md      
     - name: User and Device enrollment
       items:

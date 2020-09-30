@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Backup and restore iOS/iPadOS
+title: Back up and restore iOS/iPadOS
 titleSuffix: Microsoft Intune
 description: Learn about backup and restore scenarios for iOS/iPadOS devices.
 keywords:
