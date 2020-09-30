@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2006
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2006.
-ms.date: 08/11/2020
+ms.date: 09/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -147,6 +147,8 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - ***[New]*** Site health check configuration and status
 
+- ***[New]*** Summarized count of Endpoint Analytics event
+
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
 For Configuration Manager version 2006, this level includes the following data:
@@ -273,7 +275,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - OS age in months  
 
-- ***[Updated]*** - ***[New]***  software inventory rules, file collection rules, and overall health status
+- ***[Updated]*** Number of hardware inventory classes, software inventory rules, and file collection rules and overall health status
 
 - Statistics for device health attestation: most common error codes, number of on-premises servers, and counts of devices in various states  
 
@@ -284,8 +286,6 @@ For Configuration Manager version 2006, this level includes the following data:
 - Count of Microsoft Surface devices by model  
 
 - Count of client health check failures by issue type
-
-- ***[New]*** Summarized count of Endpoint Analytics event
 
 ### Cloud Services  
 
