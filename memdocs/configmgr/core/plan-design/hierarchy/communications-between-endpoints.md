@@ -84,7 +84,7 @@ Use the following table to understand how this process works:
 | HTTPS    | Using one of the following methods:<br> - PKI certificate<br> - Windows-integrated authentication<br> - Azure AD *user* or *device* token | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - PKI certificate<br> - Azure AD *user* or *device* token<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Azure AD *user* token |
 
 > [!Tip]  
-> For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
 
 ### <a name="bkmk_client2dp"></a> Client to distribution point communication
 
@@ -99,7 +99,7 @@ When a client communicates with a distribution point, it only needs to authentic
 
 For more information, see the following articles:
 
-- [Plan for cloud management gateway](../..//clients/manage/cmg/plan-cloud-management-gateway.md)
+- [Overview of cloud management gateway](../..//clients/manage/cmg/overview.md)
 
 - [Plan for internet-based client management](../../clients/manage/plan-internet-based-client-management.md)
 

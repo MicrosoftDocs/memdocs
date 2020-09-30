@@ -128,7 +128,7 @@ This setting applies to users when their computer is on either the intranet or t
 
 Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
 
-- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md).  
+- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/overview.md).  
 
 - The **Enable user policy on clients** setting is **Yes**.  
 
@@ -166,7 +166,7 @@ When you configure Azure Active Directory to support hybrid join, Configuration 
 
 ### Enable clients to use a cloud management gateway
 
-By default, all internet-roaming clients use any available [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
+By default, all internet-roaming clients use any available [cloud management gateway](../manage/cmg/overview.md). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
 
 
 

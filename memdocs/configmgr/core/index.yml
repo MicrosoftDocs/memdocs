@@ -69,8 +69,8 @@ landingContent:
             url: plan-design/security/enable-tls-1-2.md
           - text: CMPivot
             url: servers/manage/cmpivot.md
-          - text: Plan for CMG
-            url: clients/manage/cmg/plan-cloud-management-gateway.md
+          - text: Overview of cloud management gateway (CMG)
+            url: clients/manage/cmg/overview.md
           - text: Enhanced HTTP
             url: plan-design/hierarchy/enhanced-http.md
       - linkListType: reference
