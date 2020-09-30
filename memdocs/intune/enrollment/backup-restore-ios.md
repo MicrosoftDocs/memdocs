@@ -52,7 +52,7 @@ When a user receives a new device, they often want to restore data from the old 
 | --- | --- | --- |
 | Intune BYOD | ADE | Yes |
 | Non-Intune BYOD | ADE | Yes |
-| Third party MDM or other Intune tenant (BYOD or ADE) | ADE | Yes |
+| Third-party MDM or other Intune tenant (BYOD or ADE) | ADE | Yes |
 
 ## Restore to the same device
 
@@ -66,9 +66,9 @@ If the management certificate has expired since the last backup, upon restore th
 | --- | --- |
 | Intune BYOD, non-supervised | Prior supervised state. |
 | Non-MDM | Prior supervised state. |
-| Third party MDM or other Intune tenant (BYOD or ADE) | Prior management profile/supervised state. |
+| Third-party MDM or other Intune tenant (BYOD or ADE) | Prior management profile/supervised state. |
 
-If you decide to factory reset an existing device, enrol it into ADE and restore data from a previous backup. This way, the previous supervised state is restored. If the device was previously unsupervised, the unsupervised state will be restored.
+If you decide to factory reset an existing device, enroll it into ADE and restore data from a previous backup. This way, the previous supervised state is restored. If the device was previously unsupervised, the unsupervised state will be restored.
 
 ## Next steps
 
