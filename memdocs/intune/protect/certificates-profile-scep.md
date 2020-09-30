@@ -83,7 +83,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
  
    - **Subject name format**:
 
-     Select how Intune automatically creates the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
+     Enter text to tell Intune how to automatically create the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
 
      > [!NOTE]
      > There is a [known issue](#avoid-certificate-signing-requests-with-escaped-special-characters) for using SCEP to get certificates when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
@@ -94,15 +94,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
      - **User certificate type**
 
-       Format options for the *Subject name format* include:
-
-       - **Not configured**
-       - **Common name**
-       - **Common name including email**
-       - **Common name as email**
-       - **IMEI (International Mobile Equipment Identity)**
-       - **Serial number**
-       - **Custom**: When you select this option, a **Custom** text box is also shown. Use this field to enter a custom subject name format, including variables. Custom format supports two variables: **Common Name (CN)** and **Email (E)**. **Common Name (CN)** can be set to any of the following variables:
+       Use the text box to enter a custom subject name format, including variables. Two variables are supported: **Common Name (CN)** and **Email (E)**. **Common Name (CN)** can be set to any of the following variables:
 
          - **CN={{UserName}}**: The user name of the user, such as janedoe.
          - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.\*
@@ -147,32 +139,32 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
         > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Subject alternative name**:  
-     Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. Options for the SAN depend on the Certificate type you selected; either **User** or **Device**.
-
-     You can use variables or static text for the SAN of both certificate types. Use of a variable is not required.
-
-      - **User certificate type**
-
-        Select from the available attributes:
+     Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you may select from four SAN attributes and enter a text value for that attribute. The text values can contain variables and/or static text for the attribute. 
+     
+     Select from the available SAN attributes:
 
         - **Email address**
         - **User principal name (UPN)**
+        - **DNS**
+        - **Uniform Resource Identifier (URI)**
+
+     Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
+     
+        - **User certificate type**
+
+        With the *User* certificate type, you can use the following user certificate variables for the value:
+
+        - **{{EmailAddress}}**
+        - **{{UserName}}**
+        - **{{UserPrincipalName}}**
 
         For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.
 
       - **Device certificate type**
 
-        Use the **Attribute** dropdown and select an attribute, assign a **Value**, and **Add** that to the certificate profile. You can add multiple values by selecting additional attributes.
-
-        Available attributes include:
-
-        - **Email address**
-        - **User principal name (UPN)**
-        - **DNS**
-
         With the *Device* certificate type, you can use the following device certificate variables for the value:
 
-        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId​}}** - Either variable can be used to identify a device by its Azure AD ID.
+        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{SerialNumber}}**
