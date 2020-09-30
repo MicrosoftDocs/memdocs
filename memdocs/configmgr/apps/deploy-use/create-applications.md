@@ -234,7 +234,10 @@ On the **Content** page, specify the following information:
     > [!IMPORTANT]  
     > The System account of the site server computer must have permissions to the specified content location.  
 
-  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.  
+  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.
+
+    > [!TIP]
+    > This option persists the specific version of content that the client installs. If you update the content for this app, the client doesn't automatically cache this content again. Once an action happens that requires the new content, the client downloads the new content version.<!-- MEMDocs#684 -->
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
