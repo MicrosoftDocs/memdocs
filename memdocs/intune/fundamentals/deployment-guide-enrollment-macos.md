@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer:
+ms.reviewer: auherrin, dregan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,6 +56,9 @@ For an overview, including any Intune-specific prerequisites, see [Deployment gu
 
 Use for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled.
 
+https://msit.microsoftstream.com/video/eddfa3ff-0400-a521-3ef3-f1eac74a25be?referrer=https:%2F%2Fstatics.teams.cdn.office.net%2Fevergreen-assets%2Fsafelinks%2F1%2Fatp-safelinks.html
+
+
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
@@ -87,12 +90,9 @@ This task list provides an overview.
 Your users must do the following steps. For more specific information on the end user steps, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 1. Download and run [the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
-2. Open the Company Portal app, and sign in with their organization account (`user@contoso.com`). Once they sign in, they must approve the enrollment profile. When users approve, the device is enrolled, and considered managed. If they don't approve, then they're not enrolled, and won't receive your policy and profiles.
+2. Open the Company Portal app, and sign in with their organization account (`user@contoso.com`). Once they sign in, they must approve the enrollment profile (System preferences). When users approve, the device is enrolled, and considered managed. If they don't approve, then they're not enrolled, and won't receive your policy and profiles.
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
-
-User: opens co portal app, goto system pref > profiles and approve profile --> Applies to macOS only for device enrollment.
-
 
 ## Automated Device Enrollment (ADE) (supervised)
 
@@ -123,17 +123,21 @@ This task list provides an overview. For more specific information, see [Automat
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (.p7m) is active. For more specific information, see [Get an Apple ADE token](../enrollment/device-enrollment-program-enroll-macos.md#get-an-apple-ade-token).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll macOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices):
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
 
-  - **Enroll with user affinity**: When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`. The Setup Assistant authenticates the user, and enrolls the device. You can continue to use Setup Assistant for authentication. The device is enrolled, and ready to receive your policies and profiles. Setup Assistant uses the Apple token (.p7m) to know the user is a work account.  ??Are the accounts I listed for Setup Assistant correct? Does Setup Assistant add the user, the device, or both to Azure AD??
+  CONTINUE HERE
 
-    ??Is the following correct??
+  - **Enroll with user affinity**: This option uses Setup Assistant to authenticate the user, and enroll the device. When you create the profile, also choose if users can delete the management profile, called **Locked enrollment**.
 
-    After the device is enrolled, you can also install the Company Portal app, and use it for authentication, instead of Setup Assistant. To install the Company Portal app on devices, add the Company Portal app [using one of the options](../apps/apps-company-portal-macos.md). Set the Company Portal app as a required app.
+    Once enrolled, it's ready to receive your policies and profiles.
+
+    You can continue to use Setup Assistant for authentication. Or, after the device is enrolled, you can also install the Company Portal app, and use it for authentication, instead of Setup Assistant. To install the Company Portal app on devices, [add the Company Portal app](../apps/apps-company-portal-macos.md). Set the Company Portal app as a required app.
 
     Once installed, users open the Company Portal app, and sign in with their organization account (`user@contoso.com`). When they sign-in, they are authenticated, and ready to receive your policies and profiles.
 
-  - **Enroll without user affinity**: Setup Assistant authenticates the user, and enrolls the user in Intune. The Company Portal app isn't used, needed, or supported on enrollments without user affinity.
+    When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`. The Setup Assistant authenticates the user, and enrolls the device. You can continue to use Setup Assistant for authentication. The device is enrolled, and ready to receive your policies and profiles. Setup Assistant uses the Apple token (.p7m) to know the user is a work account.  ??Are the accounts I listed for Setup Assistant correct? Does Setup Assistant add the user, the device, or both to Azure AD??
+
+  - **Enroll without user affinity**: Setup Assistant authenticates the user, and enrolls the user in Intune. Also choose if users can delete the management profile, called **Locked enrollment**. The Company Portal app isn't used, needed, or supported on enrollments without user affinity.
 
   > [!NOTE]
   > For all organization-owned macOS devices, Setup Assistant is always and automatically used, even if you don't see "Setup Assistant" text in Endpoint Manager.

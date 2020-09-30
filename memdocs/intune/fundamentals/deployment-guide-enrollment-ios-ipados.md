@@ -2,12 +2,12 @@
 # required metadata
 
 title: iOS/iPadOS device enrollment guide for  Microsoft Intune - Azure | Microsoft Docs
-description: Enroll iOS and iPadOS devices using user and device enrollment, automated device enrollment (DEP), and Apple Configurator enrollment options in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
+description: Enroll iOS and iPadOS devices using user and device enrollment, automated device enrollment (DEP), and Apple Configurator in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/29/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer:
+ms.reviewer: auherrin, dregan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,7 +36,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 
 - [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
 - [Apple Configurator](#apple-configurator-enrollment)
-- [User and Device enrollment](#user-and-device-enrollment)
+- [BYOD: User and Device enrollment](#byod-user-and-device-enrollment)
 
 This article provides recommendations on the iOS/iPadOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll macOS devices](../enrollment/ios-enroll.md).
 
@@ -56,7 +56,7 @@ For more specific information on this enrollment type, see:
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
-| You want supervised mode, which includes deploying software updates, restricting features, allowing and blocking apps, and more. | ✔️ |
+| You want supervised mode. | ✔️ <br/><br/> Supervised mode deploys software updates, restricts features, allows and blocks apps, and more.|
 | Devices are owned by the organization or school. | ✔️ |
 | You have new devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -64,7 +64,7 @@ For more specific information on this enrollment type, see:
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using MAM-WE, or User and Device enrollment. |
 | You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using Apple Configurator. |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -77,10 +77,11 @@ This task list provides an overview. For more specific information, see [Apple B
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (.p7m) is active. For more specific information, see [Get an Apple ADE token](../enrollment/device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. It's recommended to use the Company Portal app.
+- Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. We recommended using the Company Portal app.
 
   - Select the **Company Portal** app when:
 
+    - You want to wipe the device.
     - You want to use multi-factor authentication (MFA).
     - You want to prompt users to update their expired password when they first sign in.
     - You want to prompt users to reset their expired passwords during enrollment.
@@ -89,21 +90,20 @@ This task list provides an overview. For more specific information, see [Apple B
 
   - Select the **Setup Assistant** when:
 
-    - You don't want to use modern authentication features, such as MFA.
     - You want to wipe the device.
-    - You want to import serial numbers.
+    - You don't want to use modern authentication features, such as MFA.
     - You don't want to register devices in Azure AD. Setup Assistant authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Azure AD, then you don't need to install the Company Portal app. Keep using the Setup Assistant.
 
-      If you want devices registered in Azure AD, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant, you have a choice to install or not install the Company Portal app. It's recommended to install the **Company Portal** app during enrollment.
+      If you want devices registered in Azure AD, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant, you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
 
 - If you use the Company Portal app, then decide how the Company Portal app will be installed on the devices. Make this decision before you create the enrollment profile.
 
   > [!NOTE]
-  > The Volume Purchase Program (VPP) is required when using the Company Portal app to authenticate.
+  > The Volume Purchase Program (VPP) is preferred when using the Company Portal app to authenticate. It's a better end user experience.
 
-  Devices enrolled using ADE aren't compatible with the Company Portal app version in the Apple app store. Do not install this app store version. Instead, install the Company Portal app using the following VPP options:
+  Don't install the Company Portal app from the app store directly on ADE-enrolled devices. Instead, install the Company Portal app using the following options:
 
-  - **VPP + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**. No additional steps are needed.
+  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**. No additional steps are needed.
 
     This option:
 
@@ -111,7 +111,11 @@ This task list provides an overview. For more specific information, see [Apple B
     - You don't have to create another policy to deploy the Company Portal app to devices.
     - The Company Portal app must be updated manually by you, or your users.
 
-  - **VPP + Already enrolled devices**: If you have VPP, and devices are already enrolled, then:
+  - **No VPP token + Enrolling new devices**: No administrator tasks. Make sure users enter their Apple ID in Setup Assistant.
+
+    When Setup Assistant completes, the Company Portal app tries to automatically install. If users don't enter their Apple ID (`user@iCloud.com` or `user@gmail.com`), then they're continually prompted to enter their Apple ID. Users must enter their Apple ID to get the Company Portal app on their devices. When the Company Portal app installs, users open it, and enter their organization credentials (`user@contoso.com`). When they authenticate, users can install and use apps used by your organization, including LOB apps.
+
+  - **Already enrolled devices**: If devices are already enrolled, if you have VPP or not, then use an app configuration policy:
 
     1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
     2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
@@ -121,7 +125,7 @@ This task list provides an overview. For more specific information, see [Apple B
     This option:
 
     - Includes the correct Company Portal app version.
-    - Requires you to create an enrollment profile, and create an app configuration policy. In your app configuration policy, make it a required app so you know it's deployed to all your devices.
+    - Requires you to create an enrollment profile, and create an app configuration policy. In your app configuration policy, make it a required app so you know the app deploys to all your devices.
     - The Company Portal app can be automatically updated by changing your existing app configuration policy.
 
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile:
@@ -133,24 +137,24 @@ This task list provides an overview. For more specific information, see [Apple B
 
 ### ADE end user tasks
 
-When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (with user affinity), or have shared devices (without user affinity). The specific steps depend on how you configured the enrollment profile.
+When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment profile.
 
 - **Enroll with user affinity + Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`. Once entered, the Company Portal app is automatically installed from your profile. It can take some time for the Company Portal app to auto-install.
-  2. User open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When they sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from your profile. It can take some time for the Company Portal app to auto-install.
+  2. UserS open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When they sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
   Users may have to enter more information. For more specific steps, see [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
 
 - **Enroll with user affinity + Setup Assistant + Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`).
   2. The Setup Assistant prompts the user for information.
   3. The Company Portal app automatically opens, and should lock the device in a kiosk-style mode. It can take some time for the Company Portal app to open. Users sign in with their organization credentials (`user@contoso.com`), and enroll the device in Intune. This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
 
 - **Enroll with user affinity + Setup Assistant - Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`).
   2. The Setup Assistant prompts the user for information, and enrolls the device in Intune. The device isn't registered in Azure AD.
 
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
@@ -175,7 +179,7 @@ For more specific information on this enrollment type, see [Apple Configurator e
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using MAM-WE, or User and Device enrollment. |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -187,7 +191,7 @@ This task list provides an overview. For more specific information, see [Apple C
 - Requires access to a Mac computer with a USB port.
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. It's recommended to use the Company Portal app.
+- Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. We recommend using the Company Portal app.
 
   - Select the **Company Portal** app when:
 
@@ -204,24 +208,28 @@ This task list provides an overview. For more specific information, see [Apple C
     - You want to import serial numbers.
     - You don't want to register devices in Azure AD. Setup Assistant authenticates the user with the exported enrollment profile that you copy to the device. If it's acceptable to not register devices in Azure AD, then you don't need to install the Company Portal app. Keep using the Setup Assistant.
 
-      If you want devices registered in Azure AD, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant, you have a choice to install or not install the Company Portal app. It's recommended to install the **Company Portal** app during enrollment.
+      If you want devices registered in Azure AD, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant, you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
 
-- If you use the Company Portal app, then the Company Portal app must be installed on devices using an app configuration policy. It's recommended to create this policy before you create the enrollment profile.
+- If you use the Company Portal app, then the Company Portal app must be installed on devices using an app configuration policy. We recommend creating this policy before you create the enrollment profile.
 
-  Devices enrolled using Apple Configurator aren't compatible with the Company Portal app version in the Apple app store. Do not install this app store version. Instead, install the Company Portal app using the following steps:
+  Don't install the Company Portal app from the app store directly on Apple Configurator-enrolled devices. Instead, install the Company Portal app using the following options:
 
-  **PM/Engineering question**: For Apple Configurator enrollment, how is the Company Portal app deployed to devices? ADE/DEP enrollment specifically lists "VPP" in the Intune UI. Configurator enrollment doesn't mention VPP at all. Does Apple Configurator require VPP, and getting the CP app from VPP? The following text is my understanding/assumption since the Intune UI doesn't specifically state "VPP" for Configurator enrollment. The steps are missing guidance on how Intune admins get the CP app. ??
+  - **Enroll new devices**: No administrator tasks. Make sure users enter their Apple ID in Setup Assistant.
 
-  1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
-  2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices) --> **PM/Engineering question**: Does this link even apply to Configurator enrollment? This link states "deploy the policy to groups of devices that are already DEP enrolled". Does it also apply to already Configurator-enrolled devices? ??
-  3. Deploy the app configuration policy to the same device group as the enrollment profile.
-  4. When devices check in with the Intune service, they receive your profile, and the Company Portal app installs.
+    When Setup Assistant completes, the Company Portal app tries to automatically install. If users don't enter their Apple ID (`user@iCloud.com` or `user@gmail.com`), then they're continually prompted to enter their Apple ID. Users must enter their Apple ID to get the Company Portal app on their devices. When the Company Portal app installs, users open it, and enter their organization credentials (`user@contoso.com`). When they authenticate, users can install and use apps used by your organization, including LOB apps.
 
-  This option:
+  - **Already enrolled devices**: If devices are already enrolled, then use an app configuration policy:
 
-  - Includes the correct Company Portal app version.
-  - Requires you to create an enrollment profile, and create an app configuration policy. In your app configuration policy, make it a required app so you know it's deployed to all your devices.
-  - The Company Portal app can be automatically updated by changing your existing app configuration policy.
+    1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
+    2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
+    3. Deploy the app configuration policy to the same device group as the enrollment profile.
+    4. When devices check in with the Intune service, it receives your profile, and the Company Portal app installs.
+
+    This option:
+
+    - Includes the correct Company Portal app version.
+    - Requires you to create an enrollment profile, and create an app configuration policy. In your app configuration policy, make it a required app so you know the app deploys to all your devices.
+    - The Company Portal app can be automatically updated by changing your existing app configuration policy.
 
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile:
 
@@ -242,7 +250,7 @@ The tasks depend on the option you configured in the enrollment profile.
 
 - **Enroll with user affinity + Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID, such as `user@iCloud.com` or `user@gmail.com`. Once entered, the Company Portal app is automatically installed from the app store. It can take some time for the Company Portal app to auto-install.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from the app store. It can take some time for the Company Portal app to auto-install.
   2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When users sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
   Users may have to enter more information. For more specific steps, see [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
@@ -250,20 +258,20 @@ The tasks depend on the option you configured in the enrollment profile.
 - **Enroll with user affinity + Setup Assistant + Company Portal app**:
 
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their organization credentials (`user@contoso.com`). This step enrolls the device in Intune.
-  2. The Setup Assistant prompts the user for information, including the Apple ID, such as `user@iCloud.com` or `user@gmail.com`.
-  3. The Company Portal app automatically from the app store. Users open the app, sign in with their organization credentials (`user@contoso.com`). This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
+  2. The Setup Assistant prompts the user for information, including the Apple ID (`user@iCloud.com` or `user@gmail.com`).
+  3. The Company Portal app automatically installs from the app store. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
 
 - **Enroll with user affinity + Setup Assistant - Company Portal app**:
 
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their organization credentials (`user@contoso.com`). This step enrolls the device in Intune.
-  2. The Setup Assistant prompts the user for information, including the Apple ID, such as `user@iCloud.com` or `user@gmail.com`. This step pushes the Intune management profile to the device.
+  2. The Setup Assistant prompts the user for information, including the Apple ID (`user@iCloud.com` or `user@gmail.com`). This step pushes the Intune management profile to the device.
   3. Users install the management profile. The profile checks-in with the Intune service, and enrolls the device. The device isn't registered in Azure AD.
 
 - **Enroll without user affinity**: You're using Direct enrollment. No actions. Be sure they don't install the Company Portal app from the Apple app store.
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
-## User and Device enrollment
+## BYOD: User and Device enrollment
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access organization email, apps, and other data. Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices.
 
@@ -274,12 +282,12 @@ For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
-| You want to help protect a specific feature on the device, such as per-app VPN. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |
+| You want to help protect a specific feature on the device, such as per-app VPN. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
-| Devices are managed by another MDM provider. | ✔️ |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
 | You use the device enrollment manager (DEM) account. | ✔️ |
 | Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 | Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
@@ -294,17 +302,28 @@ This task list provides an overview. For more specific information, see [Set up 
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment profile. When you create the enrollment profile, you have the following options:
 
-  - **User enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, such as password, per-app VPN, Wi-Fi, and Siri. If you use this enrollment method, to help secure apps and their data, it's recommended to also use app protection policies. User enrollment is considered friendlier to end users, but may not provide the feature set and security features administrators need.
+  - **Device enrollment**: This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
+
+    - You can deploy certificates that apply to the whole device.
+    - Users must install updates. Only devices enrolled using Automated Device Enrollment (ADE) can receive updates using MDM policies or profiles.
+    - A user must be associated with the device. This user can be a device enrollment manager (DEM) account.
+
+  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.
+
+  - **User enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, such as password, per-app VPN, Wi-Fi, and Siri. If you use User enrollment, and to help secure apps and their data, then we recommend also using app protection policies.
 
     For the complete list of what you can and can't do, see [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
 
-    In some scenarios, user enrollment may not be the best option. Consider the following scenarios:
+    > [!NOTE]
+    > BYOD can become organization-owned devices. To make these devices corporate, see [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).
+
+    User enrollment is considered friendlier to end users, but may not provide the feature set and security features administrators need. In some scenarios, user enrollment may not be the best option. Consider the following scenarios:
 
     - User enrollment creates a work partition on the devices. The features and security you configure in the user enrollment profile only exist in the work partition. They don't exist in the user partition. Users can't factory reset the work partition. Administrators can. Users can factory reset the personal partition. Administrators can't.
 
     - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../developer/app-sdk.md), then users should download these apps from the Apple app store. Then, use app protection policies to protect these apps. In this scenario, you don't need user enrollment.
 
-    - For line of business (LOB) apps, user enrollment might be an option, as it will deploy these apps to the work partition. MAM doesn't support LOB apps. So if you need LOB apps, then use User Enrollment.
+    - For line of business (LOB) apps, user enrollment might be an option, as it will deploy these apps to the work partition. Application management (MAM) doesn't support LOB apps. So if you need LOB apps, then use User Enrollment.
 
     - When devices are enrolled using user enrollment, you can't switch to device enrollment. With user enrollment, you can't move an app from unmanaged to managed. Users must unenroll from user enrollment, and then re-enroll to device enrollment.
 
@@ -314,15 +333,7 @@ This task list provides an overview. For more specific information, see [Set up 
 
       Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 
-      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you may have to create an app configuration policy to deploy Outlook, make it a required app, and then deploy an app protection policy to secure the app and its data.
-
-  - **Device enrollment**: This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
-
-    - You can deploy certificates that apply to the whole device.
-    - Users must install updates. Only devices enrolled using Automated Device Enrollment (ADE) can receive updates using MDM policies or profiles.
-    - A user must be associated with the device. This user can be a device enrollment manager (DEM) account.
-
-  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.
+      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you may have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.
 
 - Assign the enrollment profile to user groups. Don't assign to device groups.
 
