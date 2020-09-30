@@ -204,7 +204,7 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 1. Go to [business.apple.com](http://apple.business.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.
 2. Choose **Settings** > under **MDM Servers** choose your MDM server associated with the token file that you want to renew > **Download Token**.
-    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-ios/download-token.png)
+    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-macos/download-token.png)
 3. Choose **Download Server Token**.
 4. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
