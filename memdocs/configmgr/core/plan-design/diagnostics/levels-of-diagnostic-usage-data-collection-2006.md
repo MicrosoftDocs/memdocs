@@ -275,7 +275,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - OS age in months  
 
-- ***[Updated]*** Number of hardware inventory classes, software inventory rules, and file collection rules and overall health status
+- ***[Updated]*** Number of hardware inventory classes, software inventory rules, file collection rules, and overall health status
 
 - Statistics for device health attestation: most common error codes, number of on-premises servers, and counts of devices in various states  
 
