@@ -130,7 +130,7 @@ After you expand the site, you need to reconfigure the following Azure services 
 
 - [Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
-- [Cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
+- [Cloud management gateway](../../../clients/manage/cmg/overview.md)
 
 The easiest method is to renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 

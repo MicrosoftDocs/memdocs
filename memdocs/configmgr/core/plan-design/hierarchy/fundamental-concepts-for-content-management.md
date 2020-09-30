@@ -204,7 +204,7 @@ The following are locations that clients access content from:
 
     - Can use a cloud distribution point or cloud management gateway (CMG).  
 
-        Starting in version 1806, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md).
+        A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
 - **Workgroup**:  
 

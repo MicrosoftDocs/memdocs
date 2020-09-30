@@ -208,7 +208,7 @@ Administrators can configure email notifications for application approval reques
 To approve application requests outside of the internal network, additional settings are required:
 
 1. Enable Allow Configuration Manager cloud management gateway traffic in **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider** > **Properties**.
-1. Configure the [Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+1. Configure the [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 1. Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 1. Configure the following settings for this native app (client app) in Azure AD. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
    - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.
