@@ -202,21 +202,18 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 ## Renew an ADE token
 
-1. Go to deploy.apple.com.  
-2. Under **Manage Servers**, choose your MDM server associated with the token file that you want to renew.
-3. Choose **Generate New Token**.
-
-    ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-macos/generatenewtoken.png)
-
-4. Choose **Your Server Token**.  
-5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
+1. Go to [business.apple.com](http://apple.business.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.
+2. Choose **Settings** > under **MDM Servers** choose your MDM server associated with the token file that you want to renew > **Download Token**.
+    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-ios/downloadtoken.png)
+3. Choose **Download Server Token**.
+4. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Choose **Renew token** and enter the Apple ID used to create the original token.  
+5. Choose **Renew token** and enter the Apple ID used to create the original token.  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Upload the newly downloaded token.  
-8. Choose **Renew token**. You'll see the confirmation that the token was renewed.
+6. Upload the newly downloaded token.  
+7. Choose **Renew token**. You'll see the confirmation that the token was renewed.
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-macos/confirmation.png)
 
 ## Next steps
