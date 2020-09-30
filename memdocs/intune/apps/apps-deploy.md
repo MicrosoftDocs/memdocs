@@ -132,8 +132,8 @@ Steps to assign a Managed Google Play app to unmanaged devices:
 4. Assign an App Protection Policy to the user group.
 5. The next time the end user opens the Company Portal app and completes the log in process, they will see a message indicating in the Apps section that there are apps available for them. The user can select this notification to navigate to the Play Store.
 
-> [!NOTE]
-> You can configure [device enrollment setting options](https://docs.microsoft.com/mem/intune/apps/company-portal-app#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting will prevent user from unintentionally enrolling their device or receiving notifications to enroll their device after they logged in to the Company Portal.
+   > [!NOTE]
+   > You can configure [device enrollment setting options](https://docs.microsoft.com/mem/intune/apps/company-portal-app#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting will prevent user from unintentionally enrolling their device or receiving notifications to enroll their device after they logged in to the Company Portal.
 
 6. The end user can expand the context menu within the Play Store app and switch between their personal Google account (where they see their personal apps), and their work account (where they will see store and LOB apps targeted to them). End users install the apps by tapping Install in the Play Store app.
 
