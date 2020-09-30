@@ -26,7 +26,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-modern-desktop
+- M365initiative-CoreDeploy
+- M365-identity-device-management
 ---
 
 # Enroll Windows devices in Intune by using Windows Autopilot
