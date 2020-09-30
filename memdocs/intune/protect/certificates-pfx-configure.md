@@ -147,7 +147,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    > [!WARNING]
    > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Office 365.
 
-6. Select the **CA Account** tab, and then enter credentials for an account that has the Issue and Manage Certificates permission on your issuing Certificate Authority. These credentials are used to issue certificates and for certificate revocation on the Certificate Authority.
+6. Select the **CA Account** tab, and then enter credentials for an account that has the Issue and Manage Certificates permission on your issuing Certificate Authority. These credentials will be used to perform certificate revocation on the Certificate Authority.
 
     **Apply** your changes.
 
