@@ -122,7 +122,7 @@ Now that you've installed your token, you can create an enrollment profile for d
 5. Select **Next** to go to the **Management Settings** page.
 
 6. For **User Affinity**, choose whether or not devices with this profile must enroll with or without an assigned user.
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal app for services like installing apps. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).Multifactor authentication is not supported for macOS ADE devices with user affinity.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal app for services like installing apps. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).Multifactor authentication is not supported for macOS ADE devices with user affinity.
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
@@ -204,7 +204,7 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 1. Go to [business.apple.com](http://apple.business.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.
 2. Choose **Settings** > under **MDM Servers** choose your MDM server associated with the token file that you want to renew > **Download Token**.
-    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-ios/downloadtoken.png)
+    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-ios/download-token.png)
 3. Choose **Download Server Token**.
 4. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
