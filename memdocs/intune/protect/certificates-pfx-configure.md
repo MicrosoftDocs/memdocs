@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/30/2020
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,8 +63,12 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   For information about the PFX Certificate connector, including prerequisites and release versions, see [Certificate connectors](certificate-connectors.md).
 
   > [!IMPORTANT]
-  > Beginning with the release of the PFX Certificate Connector, version 6.2008.60.607, the Microsoft Intune Connector is no longer required for PKCS certificate profiles. 
-  
+  > Beginning with the release of the PFX Certificate Connector, version 6.2008.60.607, the *Microsoft Intune Connector* is no longer required for PKCS certificate profiles. The *PFX Certificate Connector* supports issuing PKCS certificates to all device platforms. This includes the following platforms which aren’t supported by the Microsoft Intune Connector:
+  >
+  > - Android Enterprise – Fully Managed
+  > - Android Enterprise – Dedicated
+  > - Android Enterprise – Corporate Owned Work Profile
+
 ## Export the root certificate from the Enterprise CA
 
 To authenticate a device with VPN, WiFi, or other resources, a device needs a root or intermediate CA certificate. The following steps explain how to get the required certificate from your Enterprise CA.
@@ -100,7 +104,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
     > [!NOTE]
     > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
-    > It is required that the certificate template allows the private key to be exported, so that the certificate connector is able to export the PFX certificate and send it to the device. 
+    > It is required that the certificate template allows the private key to be exported, so that the certificate connector is able to export the PFX certificate and send it to the device.
     >
     > However, please note that the certificates are installed on the device itself with the private key marked as not exportable.
 
@@ -130,7 +134,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
 
-3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
+3. Select *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
 
    ![Microsoft Intune Connector download](./media/certificates-pfx-configure/download-connector.png)
 
@@ -143,7 +147,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    > [!WARNING]
    > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Office 365.
 
-6. Select the **CA Account** tab, and then enter credentials for an account that has the Issue and Manage Certificates permission on your issuing Certificate Authority. These credentials will be used to perform certificate revocation on the Certificate Authority. 
+6. Select the **CA Account** tab, and then enter credentials for an account that has the Issue and Manage Certificates permission on your issuing Certificate Authority. These credentials are used to issue certificates and for certificate revocation on the Certificate Authority.
 
     **Apply** your changes.
 
@@ -233,7 +237,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    |**Certificate template name**    |<ul><li>All         |Lists the name of your certificate template. |
    |**Certificate type**             |<ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later|Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </il><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate.​ Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. |
    |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br> For most platforms, use the **Common name** option unless otherwise required. <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later</li></ul>  <p>  |
-   |**Subject alternative name**     |<ul><li>All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then click **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable is not required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
+   |**Subject alternative name**     |<ul><li>All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then select **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable isn't required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
    |**Extended key usage**           |<ul><li> Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) </li><li>Windows 10 |Certificates usually require *Client Authentication* so that the user or device can authenticate to a server. |
    |**Allow all apps access to private key** |<ul><li>macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificates private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Root Certificate**             |<ul><li>Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) |Select a root CA certificate profile that was previously assigned. |
