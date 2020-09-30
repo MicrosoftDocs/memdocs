@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/30/2020
+ms.date: 09/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -130,8 +130,11 @@ Steps to assign a Managed Google Play app to unmanaged devices:
 2. Add apps from managed Google Play to your Intune console.
 3. Target managed Google Play apps as **Available with or without enrollment** to the desired user group. **Required** and **Uninstall** app targeting are not supported for non-enrolled devices.
 4. Assign an App Protection Policy to the user group.
-5. The next time the end user opens the Company Portal app and completes log in, they will see a message indicating in Apps section that there are apps available for them in the Play Store app.  The user can tap this notification to be brought directly to the Play app to see corporate apps, or they can navigate to the Play Store app separately.
-It is important to configure [Device enrollment setting options](https://docs.microsoft.com/en-us/mem/intune/apps/company-portal-app#device-enrollment-setting-options) to 'Unavailable' or 'Available without prompt'. This will prevent user from enrolling their device unintentionally or receive notifications to enroll their device after they logged in the Company Portal.
+5. The next time the end user opens the Company Portal app and completes the log in process, they will see a message indicating in the Apps section that there are apps available for them. The user can select this notification to navigate to the Play Store.
+
+> [!NOTE]
+> You can configure [device enrollment setting options](https://docs.microsoft.com/mem/intune/apps/company-portal-app#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting will prevent user from unintentionally enrolling their device or receiving notifications to enroll their device after they logged in to the Company Portal.
+
 6. The end user can expand the context menu within the Play Store app and switch between their personal Google account (where they see their personal apps), and their work account (where they will see store and LOB apps targeted to them). End users install the apps by tapping Install in the Play Store app.
 
 When an APP selective wipe is issued in the Intune console, the work account will be automatically removed from the Play Store app and the end user will from that point no longer see work apps in the Play Store app catalog. When the work account is removed from a device, apps installed from the Play Store will remain installed on the device and will not uninstall. 
