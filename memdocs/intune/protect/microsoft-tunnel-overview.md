@@ -285,11 +285,12 @@ If you choose to configure Conditional Access policy to limit user access, we re
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional access** > **New policy**.
 2. Specify a name for this policy.
 3. To configure user and group access, below *Assignments*, select **Users and groups**.
-   1. Select **Include** > **All users**.  
-   2. Next, select **Exclude** and configure the groups you want to *grant access to*, and then save the user and Group configuration.
-4. Below *Access controls*, select **Grant**, select **Block access**, and then save the configuration.  
-5. Set **Enable policy** to **On**.
-6. Select **Create**.
+   a. Select **Include** > **All users**.  
+   b. Next, select **Exclude** and configure the groups you want to *grant access to*, and then save the user and Group configuration.
+4. Under **Cloud apps or actions** > **Select apps**, select the **Microsoft Tunnel Gateway app**.
+5. Below *Access controls*, select **Grant**, select **Block access**, and then save the configuration.  
+6. Set **Enable policy** to **On**.
+7. Select **Create**.
 
 ## Architecture
 
