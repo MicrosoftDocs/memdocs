@@ -28,7 +28,7 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: 
 - M365-modern-desktop
-- M365initiative-CoreDeploy
+- M365initiative-coredeploy
 - M365-identity-device-management
 ---
 
