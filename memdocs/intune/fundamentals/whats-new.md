@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,21 +57,51 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
+
 <!-- ########################## -->
+## Week of September 28, 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### App management  
+#### Improved work profile messaging in Company Portal for Android  
+The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
+
+### Device management
+<!-- ########################## -->
+
+#### Tamper Protection policy for Tenant Attached devices in preview<!-- 7303958  -->
+
+In preview, we’ve added a new profile to Intune endpoint security Antivirus policy that you can use to [manage Tamper Protection on tenant attached devices](../protect/endpoint-security-antivirus-policy.md#devices-managed-by-configuration-manager): **Windows Security experience (preview)**.
+
+The new profile is found under the *Windows 10 and Windows Server (ConfigMgr)* platform when you create a new Antivirus policy.
+
+Before you can use Intune endpoint security policies with tenant attached devices, you’ll need configure Configuration Manager [tenant attach](../protect/tenant-attach-intune.md) and synchronize devices with Intune.
+
+Also be aware of the specific [prerequisites](../protect/endpoint-security-antivirus-policy.md#prerequisites-for-tamper-protection) that are required to use and support tamper protection with Intune policy.
+
+
 ## Week of September 21, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Device management
 
-### Tenant attach: Run scripts from the admin center
+#### Tenant attach: Run scripts from the admin center
 <!--7220536, CM6234688-->
 Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
 
 ### App management
 
-#### New app categories to target app protection policies more easily<!-- 4802581  -->
-With the 2009 release of Intune, we have improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically apply to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+#### Windows Company Portal app descriptions with rich text<!-- 5146060 -->
+Using markdown, you can now display app descriptions using rich text in the Windows Company Portal. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+#### App protection policies allow administrators to configure incoming Org data locations<!-- 4176693 -->
+You can now control which trusted data sources are allowed to open into organization documents. Similar to the existing **Save copies of org data** app protection policy option, you can define which incoming data locations are trusted. This functionality relates to the following app protection policy settings:
+- **Save copies of org data**
+- **Open data into org documents**
+- **Allow users to open data from selected services**
+
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create policy**. To use this functionality, Intune policy managed applications must implement support for this control. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -205,8 +235,13 @@ You can now rename a co-managed device that is Azure AD joined. For more informa
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
+#### Microsoft Tunnel Gateway VPN solution in preview<!-- 7843124  -->
+You can now deploy [Microsoft Tunnel Gateway](../protect/microsoft-tunnel-overview.md) to provide remote access to on-premises resources on iOS and Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile) devices.
+
+Microsoft Tunnel supports per-app and full device VPN, split tunneling, and conditional access capabilities using modern authentication.  Tunnel can support multiple gateway servers for high availability for production readiness.
+
 #### Additional biometric authentication support for Android devices<!-- 5706213  -->
-New Android devices are making use of a more diverse set of biometrics beyond fingerprints. When OEMs implement support for non-fingerprint biometrics, end users have the potential to use this capability for secure access and a better experience. With the 2009 release of Intune, you can allow your end users to use fingerprint or Face Unlock, depending on what the Android device supports. You can configure whether all biometric types can be used to authenticate, fingerprints will only be accepted, or biometrics will not be accepted. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
+New Android devices are making use of a more diverse set of biometrics beyond fingerprints. When OEMs implement support for non-fingerprint biometrics, end users have the potential to use this capability for secure access and a better experience. With the 2009 release of Intune, you can allow your end users to use fingerprint or Face Unlock, depending on what the Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
 
 #### New details in the Endpoint security configuration for a device<!-- 7745029     -->
 You can now view additional details for devices as part of a devices *Endpoint security configuration*. When you drill-in to view status details about policies you've deployed to devices, you’ll now find the following:
@@ -259,7 +294,7 @@ When you configure a *SCEP certificate* profile for iOS/iPadOS or macOS devices,
  
 Intune supports 4096-bit keys for the following platforms: 
 - iOS 14 and later
-- macOS 11 and later    
+- macOS 11 and later  
  
 To configure SCEP certificate profiles, see [Create a SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
 
@@ -271,7 +306,7 @@ After the trusted root certificate is manually installed on a device, you can us
 - If the trusted root certificate is on the device, the SCEP certificate profile can install successfully. 
 - If the trusted certificate can't be found on the device, the SCEP certificate profile will fail.
 
-For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
+For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 
 #### Tri-state options for more settings in Endpoint Security Firewall policy<!-- 6586159  -->
@@ -321,9 +356,22 @@ Password complexity supports the following options:
   - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 8
   - Alphabetic, length at least 6
   - Alphanumeric, length at least 6
- 
+
+This new setting remains a work in progress. In late October 2020, Password complexity will take effect on devices.
+
+If you set *Password complexity* to something other than *None*, you must also configure an additional setting to ensure that end users who use a password that doesn’t meet your complexity requirements will receive a warning to update their password.
+
+- Device compliance: Set **Require a password to unlock mobile devices** to **Require**.
+- Device restriction: Set **Password** to **Require**
+
+If you don’t set the additional setting to Require, users with weak passwords won’t receive the warning.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
+
+#### Endpoint analytics is generally available
+<!--8048029-->
+Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. These insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics](../../analytics/overview.md).
 
 #### Bulk actions for devices listed in operational report<!-- 8218481  -->
 As part of the new antivirus reports coming out under Microsoft Endpoint Manager security, the **Windows 10 detected malware** operational report provides bulk actions that are applicable to the devices selected within the report. Actions include **Restart**, **Quick scan**, and **Full scan**. For more information, see [Windows 10 detected malware report](../fundamentals/reports.md#windows-10-detected-malware-report-operational).

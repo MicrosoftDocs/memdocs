@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 09/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,7 +53,7 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
   - **Guest and domain**: Creates a guest account locally on the device, and in Azure Active Directory (AD).
 - **Account management**: Choose if accounts are automatically deleted. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
-  - **Enabled**: Accounts created by guests, and accounts in AD and Azure AD are automatically deleted. When a user signs off the device, or when system maintenance runs, these accounts are deleted.
+  - **Enabled**: Accounts created by guests, and accounts in AD and Azure AD are automatically deleted from the devices. When a user signs off the device, or when system maintenance runs, these accounts are removed from the devices.
 
     Also enter:
 

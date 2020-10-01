@@ -135,6 +135,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 > [!NOTE]
 > Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](/azure/azure-monitor/platform/manage-cost-storage).
+>
+> If you use another Azure solution that uses the same Log Analytics workspace, you may be charged for devices. For example, Azure Security Center. To make sure you’re not billed for Desktop Analytics devices, use a separate Log Analytics workspace for these other billed solutions.<!-- MEMDocs #590 -->
 
 ## Next steps
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 09/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,7 +68,7 @@ For devices that run Android, you can use Intune policy to modify the configurat
 
 To use Microsoft Defender ATP with Intune, be sure you have the following configured, and ready for use:
 
-- Licensed tenant for Enterprise Mobility + Security E3 and Windows E5 (or Microsoft 365 Enterprise E5)
+- Licensed tenant for Enterprise Mobility + Security E3 and Windows E5 (or Microsoft 365 Business Premium)
 - Microsoft Intune environment, with [Intune managed](../enrollment/windows-enroll.md) Windows 10, or Android devices that are also Azure AD joined
 - [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) environment which will give you access to the Microsoft Defender Security Center (ATP portal)
 

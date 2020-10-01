@@ -22,6 +22,7 @@
 ##### [Enroll with Intercede](enroll-android-device-intercede.md)
 ##### [Enroll with DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Move to new device management setup](move-to-new-device-management-setup.md)
+### [Use Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
 ### [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
 ### [Encrypt your device](encrypt-your-device-android.md)
 ### [Set your PIN or password](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [Enroll with Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [Enroll with Intercede](enroll-ios-device-intercede.md)
 ##### [Enroll with DISA Purebred](enroll-ios-device-disa-purebred.md)
-
+### [Use Microsoft Tunnel for iOS](use-microsoft-tunnel-iOS.md)
 
 ### [Use managed apps on your device](use-managed-apps-on-your-device-ios.md)
 ### [Set or change your passcode](set-or-change-your-passcode-ios.md)

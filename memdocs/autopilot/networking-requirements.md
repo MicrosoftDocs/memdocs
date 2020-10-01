@@ -40,7 +40,7 @@ Additional configuration may be required to grant access to required services in
 For additional details about each of these services and their specific requirements, review the following details:
 
 <table><th>Service<th>Information
-<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com. <br>
+<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com, and https://login.live.com.<br>
 
 <tr><td><b>Windows Activation<b><td>Windows Autopilot requires Windows Activation services. For details about the URLs that need to be accessible for the activation services, see <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows activation or validation fails with error code 0x8004FE33</a>.<br>
 
@@ -76,12 +76,14 @@ If the Microsoft Store isn't accessible, the Autopilot process will still contin
 <tr><td><b>Microsoft 365<b><td>As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 URLs and IP address ranges</a>. This article includes all Office services, DNS names, IP addresses. It also includes Azure AD and other services that may overlap with the services listed above.
 <tr><td><b>Certificate revocation lists (CRLs)<b><td>Some of these services will also need to check certificate revocation lists (CRLs) for certificates used in the services.  For a full list, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">Office 365 URLs and IP address ranges</a> and <a href="https://aka.ms/o365chains">Office 365 Certificate Chains</a>.
 <tr><td><b>Hybrid Azure AD join<b><td>The device can be hybrid Azure AD joined. The computer should be on corporate network for hybrid Azure AD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>
-<tr><td><b>Autopilot Self-Deploying mode and Autopilot White Glove<b><td>
-The TPM attestation process requires access to a set of HTTPS URLs (unique for each TPM provider).  Ensure access to this URL pattern: *.microsoftaik.azure.net
+<tr><td><a href="" id="tpm"></a><b>Autopilot self-Deploying mode and Autopilot pre-provisioning<b><td>
+The TPM attestation process requires access to a set of HTTPS URLs (unique for each TPM provider).  Ensure access to this URL pattern: *.microsoftaik.azure.net.<br><br>
  
-Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, don't include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. For more information, see <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a>. For each firmware TPM provider, make sure that these URLs are accessible so that certificates can be successfully requested: 
+Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, don't include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. For more information, see <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a>. 
 
- <br>Intel- <code>https://ekop.intel.com/ekcertservice</code>
+For each firmware TPM provider, make sure that the appropriate URL is accessible so that certificates can be successfully requested. For example:
+
+ Intel- <code>https://ekop.intel.com/ekcertservice</code>
  <br>Qualcomm- <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
  <br>AMD- <code>https://ftpm.amd.com/pki/aia</code>
 

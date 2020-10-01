@@ -271,7 +271,7 @@ If you deploy applications as available to users, they can browse and install th
 
 - To support internet-based clients:  
 
-  - [Cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG)
+  - [Cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG)
 
   - Distribute any application content to a content-enabled CMG or a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 

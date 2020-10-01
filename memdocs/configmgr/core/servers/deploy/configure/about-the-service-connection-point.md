@@ -24,7 +24,7 @@ The service connection point is a site system role that provides several importa
 
 - Upload usage data from your Configuration Manager infrastructure. You can control the level or amount of detail that you upload. For more information, see [Usage data levels and settings](../install/setup-reference.md#bkmk_usage).
 
-- Deploy a [cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md) in Azure
+- Deploy a [cloud management gateway](../../../clients/manage/cmg/overview.md) in Azure
 
 - Synchronize apps from the [Microsoft Store for Business and Education](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 
