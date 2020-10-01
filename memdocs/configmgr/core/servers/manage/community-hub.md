@@ -15,12 +15,12 @@ manager: dougeby
 # Community hub and GitHub
 <!--3555935, 3555936-->
 
-The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Configuration Manager Community hub** where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager Console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft. In the future, IT Admins will be able to upload content on their own, using their own GitHub account.
+The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Configuration Manager Community hub** where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the community hub will leverage those tools directly in the Configuration Manager Console as foundational pieces for driving this new community. For the initial release, the content made available in the community hub will be uploaded only by Microsoft. In the future, IT Admins will be able to upload content on their own, using their own GitHub account.
 
 > [!Note]  
-> Community hub is an optional cloud-based feature. It was first introduced in June 2020. For information on how to opt into Community hub, see [Optional features](install-in-console-updates.md#bkmk_options).
+> Community hub is an optional cloud-based feature. It was first introduced in June 2020. For information on how to opt into **Community hub**, see [Optional features](install-in-console-updates.md#bkmk_options).
 
-## About Community hub
+## About community hub
 
 Community hub supports the following objects:
 
@@ -33,7 +33,7 @@ Community hub supports the following objects:
 
 ## Prerequisites
 
-- The device running the Configuration Manager console used to access the Community hub needs the following items:
+- The device running the Configuration Manager console used to access the community hub needs the following items:
    - .NET Framework version 4.6 or higher
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
@@ -54,7 +54,7 @@ Community hub supports the following objects:
 - To import a script: **Create** permission for **SMS_Scripts** class.
 - To import a report: Full Administrator security role.
 
-## Use the Community hub
+## Use the community hub
 
 1. Go to the **Community hub** node in the **Community** workspace.
 1. Select an item to download.
@@ -66,13 +66,13 @@ Community hub supports the following objects:
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
-## Join the Community hub to contribute content
+## Join the community hub to contribute content
 
 1. Go to the **Community hub** node in the **Community** workspace.
 1. Select **Your hub** and you'll be prompted to sign into GitHub. If you don't have an account, you'll be redirected to GitHub where you can create one. A GitHub account is only required to contribute and share content from the **Your hub** page.
-1. Once you've signed into GitHub, select the **Join** button to join the Community hub.
+1. Once you've signed into GitHub, select the **Join** button to join the community hub.
 
-   ![Join Configuration Manager's Community hub](./media/3555935-join-community-hub.png)
+   ![Join Configuration Manager's community hub](./media/3555935-join-community-hub.png)
 
 1. After joining, you'll see your membership request is pending. Your account needs approval by the Configuration Manager Content Curation team. Approvals are done once a day, so it may take up to one business day for your approval to be granted.
 1. Once you're granted access, you'll get an email from GitHub. Open the link in the email to accept the invitation.
@@ -83,7 +83,7 @@ Once you've accepted the invitation, you can contribute content.
 
 1. Go to **Community** > **Community hub** > **Your hub**.
 1. Select **Add an Item** to open the contribution wizard.
-      ![Join Configuration Manager's Community hub](./media/3555935-add-community-hub.png)
+      ![Join Configuration Manager's community hub](./media/3555935-add-community-hub.png)
 1. Specify the **Type** of object you want to share from the drop-down menu. The following object types are available:
      - Configuration item
      - CMPivot query
@@ -100,17 +100,17 @@ Once you've accepted the invitation, you can contribute content.
 1. Once the contribution is complete, you'll see the GitHub pull request (PR) link. The link is also emailed to you. You can paste the link into a browser to view the PR. Your PR will go though the standard GitHub merge process.
    - PRs should be submitted through the Configuration Manager console, not directly to the GitHub repository.
 1. Choose **Close** to exit the contribution wizard.
-1. Once the PR has been completed and merged, the new item will show up on the Community hub home page for others to see.
+1. Once the PR has been completed and merged, the new item will show up on the community hub home page for others to see.
 
-## <a name="bkmk_deeplink"></a> Direct links to Community hub items
+## <a name="bkmk_deeplink"></a> Direct links to community hub items
 <!--4224406-->
 *(Introduced in version 2006)*
-You can easily navigate to and reference items in the Configuration Manager console Community hub node with a direct link. The intention for this feature is for easier collaboration and being able to share links to Community hub items with your colleagues. These deep links are currently only for items in the Community hub node of the console.
+You can easily navigate to and reference items in the Configuration Manager console **Community hub** node with a direct link. The intention for this feature is for easier collaboration and being able to share links to community hub items with your colleagues. These deep links are currently only for items in the **Community hub** node of the console.
 
 ### Prerequisites for direct links
 
 - Configuration Manager console version 2006 or later
-- You can't use the local built-in administrator account when following a Community hub link.
+- You can't use the local built-in administrator account when following a community hub link.
 
 ### Sharing and opening direct links
 
@@ -122,12 +122,12 @@ To open a shared link:
 1. Click the link from a machine that has the Configuration Manager console installed.
    - For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
 1. Select **Launch the Community hub** when prompted.
-1. The console opens directly to the script in the Community hub.
+1. The console opens directly to the script in the **Community hub** node.
 
 
 ## <a name="bkmk_known"></a> Known issues
 
-### Unable to access Community hub node when running console as a different user
+### Unable to access community hub node when running console as a different user
 <!--7826897-->
 If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.
 
