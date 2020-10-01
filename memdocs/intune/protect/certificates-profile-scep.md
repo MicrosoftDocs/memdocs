@@ -96,7 +96,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
        Use the text box to enter a custom subject name format, including static text and variables. Two variable options are supported: **Common Name (CN)** and **Email (E)**. 
        
-       **Email (E)** would usually be set with the {{EmailAddress}} variablel. For example: **E={{EmailAddress}}**
+       **Email (E)** would usually be set with the {{EmailAddress}} variable. For example: **E={{EmailAddress}}**
        
        **Common Name (CN)** can be set to any of the following variables:
 
