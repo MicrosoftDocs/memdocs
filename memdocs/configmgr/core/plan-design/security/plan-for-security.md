@@ -68,7 +68,8 @@ Using HTTPS communication is recommended for all Configuration Manager communica
 ### <a name="bkmk_plan-cmgcdp"></a> Certificates for CMG and CDP
 
 Managing clients on the internet via the cloud management gateway (CMG) and cloud distribution point (CDP) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios. For more information, see the following articles:
-- [Certificates for the cloud management gateway](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
+
+- [CMG set up checklist](../../clients/manage/cmg/set-up-checklist.md)
 - [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
@@ -382,7 +383,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Client**  
 
-- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/overview.md)  
 
 - [Manage cloud domain-joined devices](../../clients/deploy/deploy-clients-cmg-azure.md)  
 

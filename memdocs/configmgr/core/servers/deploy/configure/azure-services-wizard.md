@@ -30,7 +30,7 @@ Configure the following Azure services using this wizard:
 
   - [Configure Azure AD User Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/overview.md)  
 
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
@@ -152,9 +152,6 @@ When you select **Import** from the Server app dialog or the App page of the Azu
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to either the [App page](#azure-app-properties) of the Azure Services Wizard, or the [Server app dialog](#server-app-dialog).
 
-> [!TIP]
-> When you register the app in Azure AD, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
-
 #### Create Server Application dialog
 
 When you select **Create** from the Server app dialog, it opens the Create Server Application dialog. This page automates the creation of a web app in Azure AD. Specify the following information:
@@ -199,6 +196,9 @@ When you select **Import** from the Client App dialog, it opens the Import apps 
 - **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to the [Client App dialog](#client-app-dialog).
+
+> [!TIP]
+> When you register the app in Azure AD, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
 
 #### Create Client Application dialog
 

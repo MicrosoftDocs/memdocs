@@ -602,7 +602,7 @@ If you ignore this prerequisite warning, Configuration Manager setup automatical
 
 *Applies to: Cloud management gateway*
 
-With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Plan for cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md).
+With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Overview of cloud management gateway](../../../clients/manage/cmg/overview.md).
 
 ### Configuration for SQL Server memory usage
 
