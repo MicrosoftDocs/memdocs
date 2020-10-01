@@ -66,6 +66,21 @@ This feature applies to:
 
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
 
+  > [!TIP]
+  > You can also get the Team ID from a mac where the application is installed
+  >We are assuming that the Volume name is "Macintosh HD", if not adapt the below command with the proper one.
+  > You must have root access and be able to run a SUDO command on the device.
+  > 
+  > In the Terminal, run:
+  >
+  > `sudo  /Volumes/Macintosh\ HD/usr/bin/sqlite3 /Volumes/Macintosh\ HD/var/db/SystemPolicyConfiguration/KextPolicy "SELECT * from kext_policy"`
+  >
+  > and note the output:
+  >
+  > E.g. `PXPZ95SK77|com.paloaltonetworks.kext.pangpd|1|Palo Alto Networks|5`
+  >
+  > The first entry is the Team ID you need. `PXPZ95SK77` in our example
+
 - **Allowed Kernel Extensions**: Use this setting to allow specific kernel extensions. Only the kernel extensions you enter are allowed or trusted.
 
   **Add** the bundle identifier and team identifier of a kernel extension to load. For unsigned legacy kernel extensions, use an empty team identifier. You can add multiple kernel extensions. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `com.contoso.appname.macos` for **Bundle ID**, and `ABCDE12345` for **Team identifier**.
@@ -100,6 +115,19 @@ This feature applies to:
   After you add a team identifier, it can also be deleted.
 
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
+
+  > [!TIP]
+  > You can also get the Team ID from a mac where the application is installed
+  > 
+  > In the Terminal, run:
+  >
+  > `systemextensionsctl list`
+  >
+  > and note the output:
+  >
+  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender ATP Network Extension`
+  >
+  > The first entry is the Team ID you need. `UBF8T346G9` in our example
 
 - **Allowed system extensions**: Use this setting to always allow specific system extensions. Only the system extensions you enter are allowed or trusted.
 
