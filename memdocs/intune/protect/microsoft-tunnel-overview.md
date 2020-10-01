@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 10/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -120,8 +120,12 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   For information about installing and configuring Docker, see:
 
   - [Install Docker Engine on CentOS]( https://docs.docker.com/engine/install/centos/)
-  - [Using Docker on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.0_release_notes/sect-red_hat_enterprise_linux-7.0_release_notes-linux_containers_with_docker_format-using_docker)
+  - [Install Docker Engine on Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
+    > [!NOTE]
+    > The current version of Docker that’s available for download for Red Hat Enterprise Linux 7 is not supported with Microsoft Tunnel. Therefore, the preceding link directs you to the CentOS download and installation instructions. The CentOS distribution and installation instructions for Docker are supported on Red Hat Enterprise Linux 7 for Microsoft Tunnel and should be used until an updated distribution for Red Hat Enterprise Linux 7 is available.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+  
+<!-- RHEL 7 distro isn't a supported Docker version at this time:  [Using Docker on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.0_release_notes/sect-red_hat_enterprise_linux-7.0_release_notes-linux_containers_with_docker_format-using_docker) -->
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -168,7 +172,7 @@ When you create a Server configuration for the tunnel, you can specify a differe
 
 **Additional requirements**:
 
-- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, as noted above.
+- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
 - Configure firewall rules to support the configurations detailed in  [Microsoft Container Registry (MCR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/master/client-firewall-rules.md).
 
