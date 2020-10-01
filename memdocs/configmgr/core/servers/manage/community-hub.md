@@ -83,7 +83,7 @@ Once you've accepted the invitation, you can contribute content.
 
 1. Go to **Community** > **Community hub** > **Your hub**.
 1. Select **Add an Item** to open the contribution wizard.
-      ![Join Configuration Manager's community hub](./media/3555935-add-community-hub.png)
+      ![Add an item to the community hub](./media/3555935-add-community-hub.png)
 1. Specify the **Type** of object you want to share from the drop-down menu. The following object types are available:
      - Configuration item
      - CMPivot query
