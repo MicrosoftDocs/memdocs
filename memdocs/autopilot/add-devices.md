@@ -15,7 +15,7 @@ ms.author: greglin
 ms.topic: article
 ms.collection: 
 - M365-modern-desktop
-- M365initiative-doredeploy
+- M365initiative-coredeploy
 ---
 
 
