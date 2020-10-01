@@ -64,11 +64,11 @@ If you connect multiple Configuration Manager hierarchies to the same Desktop An
 
   - CEO office (20 devices)
 
-- In the **Global pilot** settings, you include the **All Windows 10 clients** collections. You exclude the **CEO office** collection.
+- In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
 
-- You create a deployment plan, and select **All IT devices** collection as your **Target group**. You intend this deployment plan only for devices in the IT department.
+- You create a deployment plan, and select **All Windows 10 clients** collection as your **Target group**. You intend this deployment plan for all Windows 10 devices.
 
-- The **Pilot devices included** list contains the subset of devices that are in both your **Target group**: **All IT devices** and the Global Pilot *inclusion* list: **All Windows 10 clients**. 150 devices are in this list, because only 150 devices in the **All IT devices** collection run Windows 10.
+- The **Pilot devices included** list contains the subset of devices that are in both your **Target group**: **All Windows 10 clients** and the Global Pilot *inclusion* list: **All IT devices**. 150 devices are in this list, because only 150 devices in the **All IT devices** collection run Windows 10.
 
 - The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets. Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**.
 
