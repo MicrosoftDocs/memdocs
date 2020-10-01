@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 03/12/2020
+ms.date: 10/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -54,21 +54,23 @@ If you connect multiple Configuration Manager hierarchies to the same Desktop An
 
 ### Example
 
-- You configure the Desktop Analytics connection in Configuration Manager to target the **All Systems** collection. This action enrolls all clients to the service.
+- You configure the Desktop Analytics connection in Configuration Manager to target the **All Windows 10 clients** collection. This action enrolls all clients to the service.
 
 - You also configure additional collections to sync with Desktop Analytics:
 
-  - All Windows 10 clients (3,000 devices)
+  - All North America Windows 10 clients (3,000 devices)
 
-  - All IT devices (200 total devices, 150 of which run Windows 10)
+  - All Europe Windows 10 clients (3,000 devices)
+
+  - All dogfood devices (200 total devices, 150 of which are also in the All North America Windows 10 clients collection)
 
   - CEO office (20 devices)
 
-- In the **Global pilot** settings, you include the **All IT devices** collections. You exclude the **CEO office** collection.
+- In the **Global pilot** settings, you include the **All dogfood devices** collections. You exclude the **CEO office** collection.
 
-- You create a deployment plan, and select **All Windows 10 clients** collection as your **Target group**. You intend this deployment plan for all Windows 10 devices.
+- You create a deployment plan, and select **All North America Windows 10 clients** collection as your **Target group**. You intend this deployment plan to be for all Windows 10 devices in North America.
 
-- The **Pilot devices included** list contains the subset of devices that are in both your **Target group**: **All Windows 10 clients** and the Global Pilot *inclusion* list: **All IT devices**. 150 devices are in this list, because only 150 devices in the **All IT devices** collection run Windows 10.
+- The **Pilot devices included** list contains the subset of devices that are in both your **Target group**: **All North America Windows 10 clients** and the Global Pilot *inclusion* list: **All dogfood devices**. 150 devices are in this list, because only 150 devices in the **All dogfood devices** collection run Windows 10.
 
 - The **Additional Recommended Devices** lists contains a set of devices from your **Target group** that provide maximum coverage and redundancy for your important assets. Desktop Analytics excludes from this list any devices in your global pilot *exclusion* list: **CEO office**.
 
