@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -28,9 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune
-
-> [!WARNING]
-> THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling iOS/iPadOS devices:
 
@@ -238,7 +235,7 @@ This task list provides an overview. For more specific information, see [Apple C
   - If you choose **Enroll without user affinity**, then you're automatically using **Direct enrollment**. Remember:
 
     - You're using the settings from an existing macOS enrollment profile.
-    - Users can't use apps that require a user, including the Company Portal app. Be sure users don't install the Company Portal app from the Apple app store.
+    - Users can't use apps that require a user, including the Company Portal app. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure users don't install the Company Portal app from the Apple app store.
 
 - When the enrollment profile is ready, USB connect the devices to the Mac, and open the **Apple Configurator** app. When the app opens, it detects the USB connected device, and deploys the Intune enrollment profile you created.
 
