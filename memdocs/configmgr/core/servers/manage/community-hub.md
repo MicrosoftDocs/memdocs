@@ -43,11 +43,16 @@ Community hub supports the following objects:
 
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
+
+- A GitHub account
+  - A GitHub account is only required to contribute and share content from the **Your hub** page.
+  - If you don't wish to share, you can use contributions from others without having a GitHub account.
+  - If you don't already have a GitHub account, you can create one before you join.
+
 ## Permissions
 
 - To import a script: **Create** permission for **SMS_Scripts** class.
 - To import a report: Full Administrator security role.
-
 
 ## Use the Community hub
 
@@ -61,6 +66,41 @@ Community hub supports the following objects:
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+## Join the Community hub to contribute content
+
+1. Go to the **Community hub** node in the **Community** workspace.
+1. Select **Your hub** and you'll be prompted to sign into GitHub. If you don't have an account, you'll be redirected to GitHub where you can create one. A GitHub account is only required to contribute and share content from the **Your hub** page.
+1. Once you've signed into GitHub, select the **Join** button to join the Community hub.
+
+   ![Join Configuration Manager's Community hub](./media/3555935-join-community-hub.png)
+
+1. After joining, you'll see your membership request is pending. Your account needs approval by the Configuration Manager Content Curation team. Approvals are done once a day, so it may take up to one business day for your approval to be granted.
+1. Once you're granted access, you'll get an email from GitHub. Open the link in the email to accept the invitation.
+
+## Contribute content
+
+Once you've accepted the invitation, you can contribute content.
+
+1. Go to **Community** > **Community hub** > **Your hub**.
+1. Select **Add an Item** to open the contribution wizard.
+      ![Join Configuration Manager's Community hub](./media/3555935-add-community-hub.png)
+1. Specify the **Type** of object you want to share from the drop-down menu. The following object types are available:
+     - Configuration item
+     - CMPivot query
+     - Report
+     - PowerShell Script
+     - Task sequence
+     - Application
+
+1. Select **Browse** to load your environment's object list for the selected type. The object's **Name** and **Description** (if available) will automatically load in the contribution wizard.
+1. Edit the following information to reflect what the community should see for your contribution:
+   - **Name:** Name of your object
+   - **Description:** The description of the object you're contributing.
+1. Select **Next** to submit the contribution.
+1. Once the contribution is complete, you'll see the GitHub pull request (PR) link. The link is also emailed to you. You can paste the link into a browser to view the PR. Your PR will go though the standard GitHub merge process.
+   - PRs should be submitted through the Configuration Manager console, not directly to the GitHub repository.
+1. Choose **Close** to exit the contribution wizard.
+1. Once the PR has been completed and merged, the new item will show up on the Community hub home page for others to see.
 
 ## <a name="bkmk_deeplink"></a> Direct links to Community hub items
 <!--4224406-->
@@ -83,6 +123,7 @@ To open a shared link:
    - For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
 1. Select **Launch the Community hub** when prompted.
 1. The console opens directly to the script in the Community hub.
+
 
 ## <a name="bkmk_known"></a> Known issues
 
