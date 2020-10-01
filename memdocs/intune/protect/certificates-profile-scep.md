@@ -114,11 +114,11 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
          - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign in name format is: *DomainName\testUser*, or only *testUser*.
 
             To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
-         - **CN={{SearchableDeviceKey}}**
+         - **CN={{SearchableDeviceKey}}**: The Intune unique identifier for the device
 
          All device variables listed below in the Device certificate type section can also be used in user certificate subject names.
          
-         By using a combination of one or many of these variables and static strings, you can create a custom subject name format, such as:  
+         By using a combination of one or many of these variables and static text strings, you can create a custom subject name format, such as:  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
@@ -170,6 +170,9 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
         With the *Device* certificate type, you can use any of the variables described above in the Device certificate type section under Subject Name. 
 
         To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.
+
+      By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as:  
+      - **{{UserName}}-Home**
 
         > [!IMPORTANT]
         > - When using a device certificate variable, enclose the variable name in double curly brackets {{ }}.
