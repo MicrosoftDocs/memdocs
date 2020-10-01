@@ -60,7 +60,7 @@ After a successful pilot, you're ready to start a full production rollout, targe
 
 - **Departments** <br/>Each department can be a rollout phase. You target an entire department at a time. In this type of rollout, users in each department tend to use the mobile device in the same way and access the same applications. Users will likely have the same types of policies.
 
-- **Geography** <br/>In this approach, you deploy to all users in a specific geography whether it's the same continent, country/region, or same company's building. This type of phased deployment lets you focus on the specific location of users. This could let you provide more of a  [white glove](#user-assisted-enrollment) approach because the number of locations deploying Intune at the same time is reduced. Because there are chances of different departments or use cases being at the same location, different use cases might be deployed at the same time.
+- **Geography** <br/>In this approach, you deploy to all users in a specific geography whether it's the same continent, country/region, or same company's building. This type of phased deployment lets you focus on the specific location of users. This could let you provide more of a  [pre-provisioned](#user-assisted-enrollment) approach because the number of locations deploying Intune at the same time is reduced. Because there are chances of different departments or use cases being at the same location, different use cases might be deployed at the same time.
 
 - **Platform** <br/>This type of deployment consists of deploying similar platforms at the same time. An example might be all iOS/iPadOS devices the first month, followed by Android, followed by Windows. This type of phased deployment helps simplify helpdesk support because helpdesk would only have to support a single platform at a time.
 
@@ -88,7 +88,7 @@ In this case, the user is responsible for enrolling their own device, usually fo
 
 ### User-assisted enrollment
 
-This is known as a "white glove" approach. An IT team member helps the user through the enrollment process, in person or with Skype. This approach is commonly used with executive staff and other groups that might need more assistance during the enrollment process.
+This is known as a "pre-provisioned" approach. An IT team member helps the user through the enrollment process, in person or with Skype. This approach is commonly used with executive staff and other groups that might need more assistance during the enrollment process.
 
 ### IT tech fair
 
@@ -102,14 +102,14 @@ Here's an updated example of the above Intune rollout plan to include enrollment
 | Self-service | IT |  |  |  |
 | Expanded Pilot |  |  |  |  |
 | Self-service | IT |  |  |  |
-| White glove | IT Executives |  |  |  |
+| Pre-provisioned | IT Executives |  |  |  |
 | Production rollout phase 1 |  | Sales, Marketing |  |  |
 | Self-service |  | Sales and Marketing |  |  |
 | Production rollout phase 2 |  |  | Retail |  |
 | Self-service |  |  | Retail |  |
 | Production rollout phase 3 |  |  |  | Executives, HR, Finance |
 | Self-service |  |  |  | HR, Finance |
-| White glove |  |  |  | Executives |
+| Pre-provisioned |  |  |  | Executives |
 
 ## Next steps
 
