@@ -84,8 +84,9 @@ Impacted configuration settings:
 - For newly enrolled devices, newly assigned settings, and updated settings, the impacted configuration settings will not be enforced (but all other configuration settings will still be enforced).
 
 Impacted compliance settings:
-- For already enrolled devices that already had the settings applied, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page, the device will be out of compliance, and the password requirements will still be enforced in the Settings app.
-- For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page and the device will be out of compliance, but stricter password requirements will not be enforced in the Settings app.
+- For already enrolled devices that already had the settings applied, the impacted compliance settings will still be enforced in the Settings app and the user will still be compliant. The Microsoft Endpoint Manager console will report these impacted settings on these devices as Not Applicable. 
+- For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance will not be sent down to the device, so they will not be enforced in the Settings app and the user will still be compliant. The Microsoft Endpoint Manager console will report these impacted settings on these devices as Not Applicable.
+
 
 Additional user experience change for Wi-Fi profiles
 - Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.  
