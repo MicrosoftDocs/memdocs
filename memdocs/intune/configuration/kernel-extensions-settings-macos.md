@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 10/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -67,19 +67,18 @@ This feature applies to:
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
 
   > [!TIP]
-  > You can also get the Team ID from a mac where the application is installed
-  >We are assuming that the Volume name is "Macintosh HD", if not adapt the below command with the proper one.
-  > You must have root access and be able to run a SUDO command on the device.
+  > You can get the Team ID using the `SUDO` command from a macOS device that has the same app installed:
+  >
+  > 1. On the macOS device, open the Terminal app, and run the following script:
+  >
+  >     `sudo /Volumes/Macintosh\ HD/usr/bin/sqlite3 /Volumes/Macintosh\ HD/var/db/SystemPolicyConfiguration/KextPolicy "SELECT * from kext_policy"`
+  >
+  >     - In our example, the volume name is **Macintosh HD**. Update the script with your volume name.
+  >     - Be sure you have root access, and can run a `SUDO` command on the device.
+  >
+  > 2. Review the output. The first entry is the Team ID. In our example, the Team ID is `PXPZ95SK77`:
   > 
-  > In the Terminal, run:
-  >
-  > `sudo  /Volumes/Macintosh\ HD/usr/bin/sqlite3 /Volumes/Macintosh\ HD/var/db/SystemPolicyConfiguration/KextPolicy "SELECT * from kext_policy"`
-  >
-  > and note the output:
-  >
-  > E.g. `PXPZ95SK77|com.paloaltonetworks.kext.pangpd|1|Palo Alto Networks|5`
-  >
-  > The first entry is the Team ID you need. `PXPZ95SK77` in our example
+  >     `PXPZ95SK77|com.paloaltonetworks.kext.pangpd|1|Palo Alto Networks|5`
 
 - **Allowed Kernel Extensions**: Use this setting to allow specific kernel extensions. Only the kernel extensions you enter are allowed or trusted.
 
