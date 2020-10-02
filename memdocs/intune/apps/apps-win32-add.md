@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -175,7 +175,7 @@ On the **Detection rules** page, configure the rules to detect the presence of t
   > [!NOTE]
   > On the **Detection rules** pane, you can choose to add multiple rules. The conditions for *all* rules must be met to detect the app.
   >
-  > If Intune detects that the app is not present on the device, Intune will offer the app again after 24 hours. This will occur only for apps targeted with the required intent.
+  > If Intune detects that the app is not present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
 
 - **Manually configure detection rules**: You can select one of the following rule types:
     - **MSI**: Verify based on an MSI version check. This option can be added only once. When you choose this rule type, you have two settings:
