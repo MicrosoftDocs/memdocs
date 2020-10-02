@@ -56,10 +56,10 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
-
+ 
 <!-- ########################## -->
 ## Week of October 5, 2020
-
+ 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 ### Device configuration
 
@@ -67,7 +67,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 We’ve released a new version of the PFX Certificate Connector, version **6.2008.60.612**. This new connector version:
  
-- Fixes an issue with PKCS certificate delivery to Android Enterprise Fully Managed devices. The issue required the cryptography Key Storage Provider (KSP) be a legacy provider. You can now use a Next Generation (CNG) Key Storage Provider as well.
+- Fixes an issue with PKCS certificate delivery to Android Enterprise Fully Managed devices. The issue required the cryptography Key Storage Provider (KSP) be a legacy provider. You can now use a Cryptographic Next Generation (CNG) Key Storage Provider as well.
 - Changes to *CA Account* tab of the PFX Certificate Connector: The Username and password (credentials) that you specify are now used to issue certificates and to revoke certificates. Previously these credentials were used only for certificate revocation.
 
 For more information about certificate connectors, including a list of connector releases for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md).
