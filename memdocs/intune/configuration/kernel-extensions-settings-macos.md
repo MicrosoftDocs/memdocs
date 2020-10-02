@@ -67,7 +67,7 @@ This feature applies to:
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
 
   > [!TIP]
-  > You can get the Team ID using the `SUDO` command from a macOS device that has the same app installed:
+  > The Team ID is stored on the local KextPolicy database and you can get it by using the `sqlite3` command from a macOS device that has the same app installed:
   >
   > 1. On the macOS device, open the Terminal app, and run the following script:
   >
