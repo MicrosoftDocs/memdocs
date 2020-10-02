@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 10/01/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,6 +50,7 @@ The compliance state is then evaluated by conditional access policies, the same 
 In public preview:
 
 - VMware Workspace ONE UEM (formerly AirWatch)
+- JAMF Pro
 
 ## Prerequisites
 

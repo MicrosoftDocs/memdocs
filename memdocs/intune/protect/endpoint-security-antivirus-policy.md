@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ Antivirus policy includes several profiles. Each profile contains only the setti
 
 You'll find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Antivirus policies include the same settings that are found in *endpoint protection* or *device restriction* profiles for [device configuration](../configuration/device-profile-create.md) policy and are similar to settings from [device compliance](../protect/device-compliance-get-started.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
+Antivirus policies include the same settings as *endpoint protection* or *device restriction* profiles for [device configuration](../configuration/device-profile-create.md) policy and are similar to settings from [device compliance](../protect/device-compliance-get-started.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
 ## Prerequisites for antivirus policy
 
@@ -49,14 +49,45 @@ Antivirus policies include the same settings that are found in *endpoint protect
 - **Windows 10 and later**
   - No additional prerequisites are required.
 
-**Support for Configuration Manager clients** (*preview*)
+**Support for Configuration Manager clients**:
 
 *This scenario is in preview and requires use of Configuration Manager current branch version 2006 or later*.
-<!--*This scenario is in preview and requires use of Configuration Manager Technical Preview version 2007 or later*.-->
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying antivirus policy to devices managed by Configuration Manager, configure *tenant attach*. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+
+### Prerequisites for tamper protection
+
+You can use Intune policy to manage tamper protection on Windows devices. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
+
+### Intune managed devices
+
+Prerequisites to support tamper protection for devices managed by Intune:
+
+- Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
+
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Intune](#devices-managed-by-intune):
+
+- Platform: **Windows 10 later**
+  - Profile: **Windows Security experience**  
+
+You can also use the [Endpoint protection](../protect/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
+
+### Configuration Manager clients managed through the tenant attach scenario 
+
+Prerequisites to support managing tamper protection with these profiles:
+
+- Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
+- You must use Configuration Manager current branch 2006 or later.
+- You must configure tenant attach to support endpoint protection policies. This includes configuring Configuration Manager device collections for synchronization with Intune.
+
+ Profiles for *Antivirus* policy that support tamper protection for [devices managed by Configuration Manager](#devices-managed-by-configuration-manager):
+
+- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+  - Profile: **Windows Security experience (preview)**
+
+ 
 
 ## Antivirus profiles
 
@@ -98,7 +129,9 @@ The following profiles are supported for devices you manage with Intune:
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
-### Devices managed by Configuration Manager *(In preview)*
+### Devices managed by Configuration Manager
+
+*Support for devices managed by Configuration Manager is in Preview.*
 
 [!INCLUDE [Profiles for Configuration Manager tenant attached devices](includes/configmgr-antivirus-profiles.md)]
 

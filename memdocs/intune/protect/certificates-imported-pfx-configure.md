@@ -36,7 +36,7 @@ S/MIME encryption is challenging because email is encrypted with a specific cert
 - Before a certificate on a device expires, you should import a new certificate so devices can continue to decrypt new email. Renewal of these certificates isn't supported.
 - Encryption certificates are renewed regularly, which means that you might want to keep past certificate on your devices, to ensure that older email can continue to be decrypted.  
 
-Because the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certficates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
+Because the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certificates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
 
 For more information about using S/MIME with Intune, [Use S/MIME to encrypt email](certificates-s-mime-encryption-sign.md).
 
@@ -118,7 +118,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 You use [Microsoft Graph](/graph) to import your users PFX certificates into Intune. The helper [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) provides you with cmdlets to do the operations with ease.
 
-If you prefer to use your own custom solution using Graph, use the [userPFXCertificate resource type](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
+If you prefer to use your own custom solution using Graph, use the [userPFXCertificate resource type](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta&preserve-view=true).
 
 ### Build 'PFXImport PowerShell Project' cmdlets
 

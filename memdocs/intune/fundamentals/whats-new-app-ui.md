@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/06/2020 
+ms.date: 09/28/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,16 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Update your organization's documentation or helpdesk procedures.  
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
+
+## Week of September 28, 2020  
+
+### Improved work profile messaging in Company Portal for Android  
+The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
+
+|Updated|Previous|   
+|---|---|   
+|![Example image of updated Company Portal work profile screen.](./media/whats-new-app-ui/intune-company-portal-after-work-profile-2009.png)|![Example image of previous Company Portal work profile screen.](./media/whats-new-app-ui/intune-company-portal-before-work-profile-2009.png)| 
+
 
 ## Week of August 10, 2020
 

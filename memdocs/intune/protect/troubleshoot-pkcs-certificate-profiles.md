@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot PKCS certificate deployment in Microsoft Intune
 
-The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you’ve completed the following tasks as found in [Configure and use PKCS certificates with Intune](../protect/certficates-pfx-configure.md#export-the-root-certificate-from-the-enterprise-ca):
+The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you’ve completed the following tasks as found in [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md#export-the-root-certificate-from-the-enterprise-ca):
 
-- Review the [requirements for using PKCS certificate profiles](../protect/certficates-pfx-configure.md#requirements)
+- Review the [requirements for using PKCS certificate profiles](../protect/certificates-pfx-configure.md#requirements)
 - Export the root certificate from the Enterprise Certification Authority (CA)
 - Configure certificate templates on the certification authority
 - Install and configure the Intune Certificate Connector
@@ -221,7 +221,7 @@ This issue occurs if the computer that hosts the Intune NDES Connector can't loc
 
 **Resolution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps&preserve-view=true) PowerShell cmdlet.
 
 ### The submission is pending
 
@@ -271,7 +271,7 @@ Verify the following configurations for the PKCS profile, and then wait for the 
 - Assigned to the correct user group
 - Users in the group have valid email addresses
 
-For more information, see [Configure and use PKCS certificates with Intune](../protect/certficates-pfx-configure.md).
+For more information, see [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md).
 
 ### Denied by Policy Module
 
@@ -298,7 +298,7 @@ This issue occurs when the Computer Account of the server that hosts the Intune 
 6. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**.
 7. Select the template that you modified, and then click **OK**.
 
-For more information, see [Configure certificate templates on the CA](../protect/certficates-pfx-configure.md#configure-certificate-templates-on-the-ca).
+For more information, see [Configure certificate templates on the CA](../protect/certificates-pfx-configure.md#configure-certificate-templates-on-the-ca).
 
 ### Certificate profile stuck as Pending
 
@@ -362,6 +362,6 @@ If you still need a solution or you’re looking for more information about Intu
 To open a support request with the Microsoft Intune product support team, see [How to get support for Microsoft Intune](../fundamentals/get-support.md).
 For more information about PKCS certificate deployment, see the following articles:
 
-- [Configure and use PKCS certificates with Intune](../protect/certficates-pfx-configure.md)
+- [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)
 - [Configure a certificate profile for your devices in Microsoft Intune](../protect/certificates-configure.md)
 - [Remove SCEP and PKCS certificates in Microsoft Intune](../protect/remove-certificates.md)

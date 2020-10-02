@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 10/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -120,8 +120,12 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   For information about installing and configuring Docker, see:
 
   - [Install Docker Engine on CentOS]( https://docs.docker.com/engine/install/centos/)
-  - [Using Docker on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.0_release_notes/sect-red_hat_enterprise_linux-7.0_release_notes-linux_containers_with_docker_format-using_docker)
+  - [Install Docker Engine on Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
+    > [!NOTE]
+    > The current version of Docker that’s available for download for Red Hat Enterprise Linux 7 is not supported with Microsoft Tunnel. Therefore, the preceding link directs you to the CentOS download and installation instructions. The CentOS distribution and installation instructions for Docker are supported on Red Hat Enterprise Linux 7 for Microsoft Tunnel and should be used until an updated distribution for Red Hat Enterprise Linux 7 is available.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+  
+<!-- RHEL 7 distro isn't a supported Docker version at this time:  [Using Docker on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.0_release_notes/sect-red_hat_enterprise_linux-7.0_release_notes-linux_containers_with_docker_format-using_docker) -->
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -168,7 +172,7 @@ When you create a Server configuration for the tunnel, you can specify a differe
 
 **Additional requirements**:
 
-- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, as noted above.
+- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
 - Configure firewall rules to support the configurations detailed in  [Microsoft Container Registry (MCR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/master/client-firewall-rules.md).
 
@@ -221,9 +225,9 @@ Support for a Proxy is limited to the following platforms:
 Before you start a server install, we recommend you download and run the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.  
-- Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment. 
+- Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment.
 
-The mst-readiness tool has a dependency on **jq**, a command-lie JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
+The mst-readiness tool has a dependency on **jq**, a command-line JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
 
 To use the readiness tool:
 
@@ -231,6 +235,8 @@ To use the readiness tool:
    - Download the tool directly by using a web browser.  Go to https://aka.ms/microsofttunnelready to download a file named **mst-readiness**.
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.  
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunnelready.
+
+      For example, to use **wget** and preserve the file name during the download, run `wget https://aka.ms/microsofttunnelready -o mst-readiness`
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
@@ -256,9 +262,17 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
-2. Download the PowerShell script named **mst-CA-provisioning.ps1** from **aka.ms/mst-ca-provisioning**.
+2. Download the PowerShell script named **mst-CA-readiness.ps1** from [aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
 
-3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant. The script modifies your tenant by creating a service principle with the following details:
+3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
+
+   > [!CAUTION]
+   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7&preserve-view=true) in the PowerShell documentation.
+   >
+   > In a future update, *mst-CA-readiness.ps1* will be signed, which will remove the need to set ExecutionPolicy to *Unrestricted*.
+
+
+   The script modifies your tenant by creating a service principle with the following details:
 
    - App ID: 3678c9e9-9681-447a-974d-d19f668fcd88
    - Name: Microsoft Tunnel Gateway
@@ -277,9 +291,10 @@ If you choose to configure Conditional Access policy to limit user access, we re
 3. To configure user and group access, below *Assignments*, select **Users and groups**.
    1. Select **Include** > **All users**.  
    2. Next, select **Exclude** and configure the groups you want to *grant access to*, and then save the user and Group configuration.
-4. Below *Access controls*, select **Grant**, select **Block access**, and then save the configuration.  
-5. Set **Enable policy** to **On**.
-6. Select **Create**.
+4. Under **Cloud apps or actions** > **Select apps**, select the **Microsoft Tunnel Gateway app**.
+5. Below *Access controls*, select **Grant**, select **Block access**, and then save the configuration.  
+6. Set **Enable policy** to **On**.
+7. Select **Create**.
 
 ## Architecture
 

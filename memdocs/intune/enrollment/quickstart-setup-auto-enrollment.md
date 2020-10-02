@@ -10,7 +10,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 01/17/2020
+ms.date: 09/22/2020
 ms.author: erikje
 
 # optional metadata

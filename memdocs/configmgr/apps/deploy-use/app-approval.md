@@ -127,7 +127,7 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - The SMS Provider requires **.NET 4.5.2** or later.  
 
-- Set up a [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+- Set up a [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 

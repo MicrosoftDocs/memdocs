@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,14 +57,36 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
+
 <!-- ########################## -->
+## Week of September 28, 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### App management  
+#### Improved work profile messaging in Company Portal for Android  
+The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
+
+### Device management
+<!-- ########################## -->
+
+#### Tamper Protection policy for Tenant Attached devices in preview<!-- 7303958  -->
+
+In preview, we’ve added a new profile to Intune endpoint security Antivirus policy that you can use to [manage Tamper Protection on tenant attached devices](../protect/endpoint-security-antivirus-policy.md#devices-managed-by-configuration-manager): **Windows Security experience (preview)**.
+
+The new profile is found under the *Windows 10 and Windows Server (ConfigMgr)* platform when you create a new Antivirus policy.
+
+Before you can use Intune endpoint security policies with tenant attached devices, you’ll need configure Configuration Manager [tenant attach](../protect/tenant-attach-intune.md) and synchronize devices with Intune.
+
+Also be aware of the specific [prerequisites](../protect/endpoint-security-antivirus-policy.md#prerequisites-for-tamper-protection) that are required to use and support tamper protection with Intune policy.
+
+
 ## Week of September 21, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Device management
 
-### Tenant attach: Run scripts from the admin center
+#### Tenant attach: Run scripts from the admin center
 <!--7220536, CM6234688-->
 Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
 
@@ -284,7 +306,7 @@ After the trusted root certificate is manually installed on a device, you can us
 - If the trusted root certificate is on the device, the SCEP certificate profile can install successfully. 
 - If the trusted certificate can't be found on the device, the SCEP certificate profile will fail.
 
-For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
+For more information, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 
 #### Tri-state options for more settings in Endpoint Security Firewall policy<!-- 6586159  -->
@@ -334,7 +356,16 @@ Password complexity supports the following options:
   - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 8
   - Alphabetic, length at least 6
   - Alphanumeric, length at least 6
- 
+
+This new setting remains a work in progress. In late October 2020, Password complexity will take effect on devices.
+
+If you set *Password complexity* to something other than *None*, you must also configure an additional setting to ensure that end users who use a password that doesn’t meet your complexity requirements will receive a warning to update their password.
+
+- Device compliance: Set **Require a password to unlock mobile devices** to **Require**.
+- Device restriction: Set **Password** to **Require**
+
+If you don’t set the additional setting to Require, users with weak passwords won’t receive the warning.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
