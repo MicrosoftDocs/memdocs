@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/01/2020
+ms.date: 10/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,19 +118,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2010
 
-- [6107649](2020/technical-preview-2010.md) <!--6107649-->
-- [6979223](2020/technical-preview-2010.md) <!--6979223-->
-- [6979470](2020/technical-preview-2010.md) <!--6979470-->
-- [7137169](2020/technical-preview-2010.md) <!--7137169-->
-- [7699511](2020/technical-preview-2010.md) <!--7699511-->
-- [7752243](2020/technical-preview-2010.md) <!--7752243-->
-- [7898885](2020/technical-preview-2010.md) <!--7898885-->
-- [7964912](2020/technical-preview-2010.md) <!--7964912-->
-- [7979972](2020/technical-preview-2010.md) <!--7979972-->
-- [8018255](2020/technical-preview-2010.md) <!--8018255-->
-- [8232705](2020/technical-preview-2010.md) <!--8232705-->
-- [8379199](2020/technical-preview-2010.md) <!--8379199-->
-- [8227649](2020/technical-preview-2010.md) <!--8227649-->
+- [Desktop Analytics support for Windows 10 Enterprise LTSC](2020/technical-preview-2010.md#bkmk_daltsc) <!--6107649-->
+- [Improvements to scenario health](2020/technical-preview-2010.md#bkmk_health) <!--7699511-->
+- [Expanded Windows Defender Application Control management](2020/technical-preview-2010.md#bkmk_wdac) <!--7752243-->
+- [Syntax highlighting for scripting languages](2020/technical-preview-2010.md#bkmk_syntax) <!--7964912-->
+- [Deploy a task sequence to a user](2020/technical-preview-2010.md#bkmk_tsdt) <!--8018255-->
+- [Shortcuts to status messages](2020/technical-preview-2010.md#bkmk_status) <!--8232705-->
+- [Enable user proxy for software update scans](2020/technical-preview-2010.md#bkmk_sum) <!--8379199-->
+- [Improvements to task sequence performance for power plans](2020/technical-preview-2010.md#bkmk_osd) <!--7721999-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.

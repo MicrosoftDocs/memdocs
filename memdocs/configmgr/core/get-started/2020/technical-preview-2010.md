@@ -2,7 +2,7 @@
 title: Technical preview 2010
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2010.
-ms.date: 10/01/2020
+ms.date: 10/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,20 +24,14 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2010/1234567.md)] -->
 
-[!INCLUDE [6107649](includes/2010/6107649.md)]
-[!INCLUDE [6979223](includes/2010/6979223.md)]
-[!INCLUDE [6979470](includes/2010/6979470.md)]
-[!INCLUDE [7137169](includes/2010/7137169.md)]
-[!INCLUDE [7699511](includes/2010/7699511.md)]
-[!INCLUDE [7752243](includes/2010/7752243.md)]
-[!INCLUDE [7898885](includes/2010/7898885.md)]
-[!INCLUDE [7964912](includes/2010/7964912.md)]
-[!INCLUDE [7979972](includes/2010/7979972.md)]
-[!INCLUDE [8018255](includes/2010/8018255.md)]
-[!INCLUDE [8232705](includes/2010/8232705.md)]
-[!INCLUDE [8379199](includes/2010/8379199.md)]
-[!INCLUDE [8227649](includes/2010/8227649.md)]
-[!INCLUDE [7721999](includes/2010/7721999.md)]
+[!INCLUDE [Desktop Analytics support for Windows 10 Enterprise LTSC](includes/2010/6107649.md)]
+[!INCLUDE [Improvements to scenario health](includes/2010/7699511.md)]
+[!INCLUDE [Expanded Windows Defender Application Control management](includes/2010/7752243.md)]
+[!INCLUDE [Syntax highlighting for scripting languages](includes/2010/7964912.md)]
+[!INCLUDE [Deploy a task sequence to a user](includes/2010/8018255.md)]
+[!INCLUDE [Shortcuts to status messages](includes/2010/8232705.md)]
+[!INCLUDE [Enable user proxy for software update scans](includes/2010/8379199.md)]
+[!INCLUDE [Improvements to task sequence performance for power plans](includes/2010/7721999.md)]
 
 <!--
 ## General known issues
