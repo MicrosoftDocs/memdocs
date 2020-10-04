@@ -14,7 +14,10 @@ manager: dougeby
 
 # How to enable co-management in Configuration Manager
 
-When you enable co-management, you can gain immediate value. Then once you're ready, you can start transitioning workloads as needed in your environment.
+When you enable co-management, you can gain immediate value. Then once you're ready, you can start transitioning workloads as needed and if desired in your environment.
+
+> [!Note]  
+> Although the word "pilot" is used throughout the co-management feature and configuration dialogs, you can use the word "some" in its place. Which managed clients that you transition workloads to Intune on is up to you as is when or if you do this at all.
 
 Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites).
 
