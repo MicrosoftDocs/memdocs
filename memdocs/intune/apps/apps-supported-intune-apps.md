@@ -47,6 +47,8 @@ Apps are capable of supporting advanced App Protection Policy and App Configurat
 - [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Open data into Org documents (open from)
 - [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Save copies of org data (save as)
 
+For more information on Conditional Access support see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
+
 <table>
 <thead>
   <tr class="header">
@@ -616,6 +618,7 @@ Apps are capable of supporting advanced App Protection Policy and App Configurat
 </table>
 
 ## Partner apps 
+Apps are capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
 
 | App   title | App description | App store links for supported   platform(s) | 
 |-------------------------------------------------|-------------------------|---------------------------------------------|
