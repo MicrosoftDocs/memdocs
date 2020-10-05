@@ -375,7 +375,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Power Automate</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Google Play</a></td>
-    <td>Not supported</td>
+    <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -385,7 +385,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825">App Store</a></td>
-    <td>Supported</td>
+    <td>N/A</td>
     <td>Not supported</td>
     <td>Supported</td>
     <td>N/A</td>
