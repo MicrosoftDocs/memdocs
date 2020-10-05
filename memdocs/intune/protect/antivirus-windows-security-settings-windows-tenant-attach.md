@@ -37,7 +37,7 @@ The profile is available when you configure [Intune Endpoint security Antivirus 
 **Windows Security**  
 
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
-  [Learn about Tamper Protection](./h/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection)  
+  [Learn about Tamper Protection](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection)  
 
   By default, no value is configured, and you must select an option: 
   - **Not configured** (*default*) - When the *Enable* or *Disable* state exists on a client, deploying *Not configured* has no impact on the setting.
