@@ -84,16 +84,6 @@ You'll be able to enable Outlook S/MIME emails to be always signed or encrypted 
 <!-- ***********************************************-->
 ## Device configuration
 
-### Create PKCS certificate profiles for Android Enterprise Fully Managed devices (COBO)<!-- 4839686 -->
-You can create PKCS certificate profiles to deploy certificates to Android Enterprise Device owner and Work profile devices (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise > Device owner only**, or **Android Enterprise > Work profile only** for platform > **PKCS** for profile).
-
-Soon you'll be able to create PKCS certificate profiles for Android Enterprise Fully Managed devices. The Intune PFX certificate connector is required. If you don't use SCEP, and only use PKCS, you can remove the NDES connector after you install the new PFX connector. The new PFX connector imports PFX files, and deploys PKCS certificates to all platforms.
-
-For more information on PKCS certificates, see [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md).
-
-Applies to:
-- Android Enterprise fully managed (COBO)
-
 ### Use NetMotion as a VPN connection type for Android Enterprise work profile devices<!-- 7764263 -->
 When you create a VPN profile, NetMotion is available as a VPN connection type (**Devices** > **Device configuration** > **Create profile** > **Android Enterprise work profile** for platform > **VPN** for profile > **NetMotion** for connection type).
 
