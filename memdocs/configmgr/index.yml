@@ -32,8 +32,8 @@ conceptualContent:
         - text: Microsoft Endpoint Manager tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
-        - text: Plan for the cloud management gateway
-          url: ./core/clients/manage/cmg/plan-cloud-management-gateway.md
+        - text: Overview of cloud management gateway (CMG)
+          url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
           url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
@@ -208,7 +208,7 @@ additionalContent:
      items:
         - title: Develop
           links:
-            - url: /powershell/sccm/overview?view=sccm-ps
+            - url: /powershell/sccm/overview
               text: PowerShell
             - url: ./develop/index.yml
               text: Software development kit (SDK)

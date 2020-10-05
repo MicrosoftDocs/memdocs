@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 08/09/2019
+ms.date: 09/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
@@ -205,11 +203,13 @@ When you have more than one Configuration Manager site in a hierarchy, each site
 
 Configuration Manager supports the in-place upgrade of SQL Server to the following versions:
 
-- SQL Server 2017  
+- SQL Server 2019
 
-- SQL Server 2016  
+- SQL Server 2017
 
-- SQL Server 2014  
+- SQL Server 2016
+
+- SQL Server 2014
 
 This includes the upgrade of SQL Server Express to a newer version of SQL Server Express at secondary sites.
 
@@ -221,33 +221,15 @@ When you upgrade the version of SQL Server that hosts the site database, you mus
 
 3. Upgrade parent primary sites last. These sites include both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.  
 
-### SQL Server cardinality estimation level
-
-When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by SQL Server.
-
-The following table identifies the recommended compatibility levels for Configuration Manager site databases:
-
-|SQL Server version | Supported compatibility levels | Recommended level |
-|----------------|--------------------|--------|
-| SQL Server 2017 | 140, 130, 120, 110  | 140 |
-| SQL Server 2016 | 130, 120, 110  | 130 |
-| SQL Server 2014 | 120, 110      | 110 |
-
-To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:  
-
-```SQL
-SELECT name, compatibility_level FROM sys.databases
-```
-
-For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. If you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server. For more information, see [Supported SQL Server versions: Database compatibility level](../../plan-design/configs/support-for-sql-server-versions.md#database-compatibility-level).
 
 For more information about upgrading SQL Server, see the following SQL Server articles:  
 
+- [Upgrade to SQL Server 2019](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15)  
+
 - [Upgrade to SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Upgrade to SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
-
-- [Upgrade to SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade to SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### To upgrade SQL Server on the site database server  
 

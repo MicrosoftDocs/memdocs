@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 06/24/2020
+ms.date: 09/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -86,7 +86,7 @@ There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relatio
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -182,7 +182,26 @@ Configuration Manager supports two exceptions to this collation for the China GB
 
 ### Database compatibility level
 
-Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version. For instance, beginning with version 1702, you need to have a [database compatibility level](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) greater than or equal to 110. <!-- SMS.506266-->
+Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
+
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
+
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
+| SQL Server 2017 | 140, 130, 120, 110 | 140 |
+| SQL Server 2016 | 130, 120, 110 | 130 |
+| SQL Server 2014 | 120, 110 | 110 |
+
+To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:  
+
+```SQL
+SELECT name, compatibility_level FROM sys.databases
+```
+
+For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 

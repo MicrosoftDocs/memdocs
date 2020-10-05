@@ -104,7 +104,7 @@ landingContent:
           - text: SCEP certificate profiles
             url: certificates-scep-configure.md
           - text: PKCS certificate profiles
-            url: certficates-pfx-configure.md
+            url: certificates-pfx-configure.md
           - text: Imported PFX Certificates
             url: certificates-imported-pfx-configure.md
 #         - text: Derived Credentials (TBD or 1910)

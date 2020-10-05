@@ -1,5 +1,5 @@
 ---
-title: Manage clients on the internet
+title: Manage clients over the internet
 titleSuffix: Configuration Manager
 description: Learn about managing clients with cloud management gateway and internet-based client management in Configuration Manager.
 ms.date: 06/10/2020
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Manage clients on the internet with Configuration Manager
+# Manage clients over the internet with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -47,7 +47,7 @@ The cloud management gateway provides management of internet-based clients. It u
 
 - Management data sent through cloud service.  
 
-For more information, see [Plan for cloud management gateway](cmg/plan-cloud-management-gateway.md).  
+For more information, see [Overview of cloud management gateway](cmg/overview.md).  
 
 ## Internet-based client management
 

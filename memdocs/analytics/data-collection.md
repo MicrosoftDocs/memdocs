@@ -2,7 +2,7 @@
 title: Endpoint analytics data collection
 titleSuffix: Configuration Manager
 description: Data collection information for Endpoint analytics.
-ms.date: 08/26/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
@@ -14,11 +14,6 @@ manager: dougeby
 ---
 
 # Endpoint analytics data collection
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement).
 
@@ -40,16 +35,16 @@ Endpoint analytics is available in all Intune locations in global Azure. The fol
 
     - For Configuration Manager-managed devices, data flows to Microsoft Endpoint Management through the ConfigMgr connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the Configuration Manager connector sends data to the Gateway Service every hour.
 
-1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta). The maximum latency end to end is 25 hours and is gated by the time it takes to do the daily processing of insights and recommendations.
+1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 25 hours and is gated by the time it takes to do the daily processing of insights and recommendations.
   
 > [!Note]  
 > When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the admin console.
 
 ## <a name="bkmk_datacollection"></a> Data collection
 
-Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](../intune/protect/privacy-data-collect.md#identified-data) and [pseudonymized](../intune/protect/privacy-data-collect.md#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main data points currently being collected are:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [required](../intune/protect/privacy-data-collect.md#required-data) and [optional](../intune/protect/privacy-data-collect.md#optional-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main data points currently being collected are:
 
-### Identified data
+### Required data
 
 - Hardware inventory information
   - **make:** Device manufacturer
@@ -59,9 +54,6 @@ Currently, the basic functionality of Endpoint analytics collects information as
 - Application inventory, like
   - **name:** Windows
   - **ver:** The version of the current OS.
-  
-### Pseudonymized data
-
 - Diagnostic, performance, and usage data tied to a user and/or device
   - **logOnId**
   - **bootId:** The system boot ID
@@ -74,7 +66,8 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
 - Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
   - **ID:** Unique device ID used by Windows Update
-  - **localId:** A locally defined unique ID for the device. This ID isn't the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **localId:** A locally defined unique ID for the device. This ID isn't the human-readable device name. 
+  Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
   - **orgId:** Unique GUID representing the Microsoft 365 Tenant
   
@@ -83,21 +76,22 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 
-- If you're enrolling Intune managed devices only, unselect the **Boot performance** scope from  the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up.
+- If you're enrolling Intune managed devices only, unselect the **Boot performance** scope from  the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up. Optionally, [revoke consent](settings.md#bkmk_consent) to share anonymized and aggregate metrics for seeing updated Endpoint analytics scores and insights.
 
 - If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
 
    1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
    1. Select **CoMgmtSettingsProd** then click **Properties**.
    1. On the **Configure upload** tab, uncheck the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**.
+   1. Optionally, [revoke consent](settings.md#bkmk_consent) to share anonymized and aggregate metrics for seeing updated Endpoint analytics scores and insights.
 
 - Disable Endpoint analytics data collection in Configuration Manager (optional):
 
    1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
    1. Right-click and select **Properties** then select the **Computer Agent** settings.
    1. Set **Enable Endpoint analytics data collection** to **No**.
-   > [!Important]
-   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
+  > [!Important]
+  > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
 
 ## Resources
 

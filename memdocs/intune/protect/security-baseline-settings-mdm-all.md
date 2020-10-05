@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,27 +36,41 @@ ms.collection: M365-identity-device-management
 View the MDM security baseline settings that Microsoft Intune supports for devices that run Windows 10 or later. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- The most recent baseline version is **MDM Security Baseline for May 2019**
+- The most recent baseline version is **MDM Security Baseline for August 2020**
 
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+::: zone pivot="mdm-sept-2020"
 
-Be sure to select the version of the baseline that you want to view.
-<!-- Cookies might be required to enable some browsers to display the zone options -->
+**MDM Security Baseline for August 2020**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+
+::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **MDM Security Baseline for May 2019**:  
-> [!NOTE]
-> In June of 2019, the *MDM Security Baseline for May 2019* template was released as generally available (not in preview). This version of the security baseline replaces the previous baseline, the *MDM Security Baseline for October 2018*.  Profiles that were created prior to the availability of the May 2019 baseline won't update to reflect the settings and values that are in the May 2019 version.  Although you cannot create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
-To learn about what's changed in this version of the baseline from the previous version, see [What's changed in the new template](#whats-changed-in-the-new-template).
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
 
 **Preview - MDM Security Baseline for October 2018**:  
 > [!NOTE]
-> This is the preview version of the MDM security baseline, released in October of 2018. This preview baseline was replaced in June of 2019 by the release of the *MDM Security Baseline for May 2019* template, which is generally available (not in preview). Profiles that were created prior to the availability of the *MDM Security Baseline for May 2019* baseline won't update to reflect the settings and values that are in the MDM Security Baseline for May 2019 version. Although you cannot create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
+> This is the preview version of the MDM security baseline, released in October of 2018. This preview baseline was replaced in June of 2019 by the release of the *MDM Security Baseline for May 2019* template, which is generally available (not in preview). Profiles that were created prior to the availability of the *MDM Security Baseline for May 2019* baseline won't update to reflect the settings and values that are in the MDM Security Baseline for May 2019 version. Although you can't create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview"
@@ -78,7 +92,7 @@ For more information, see [Policy CSP - AboveLock](/windows/client-management/md
   **Default**: Disabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## App Runtime
 
@@ -95,10 +109,31 @@ For more information, see [Policy CSP - AppRuntime](/windows/client-management/m
 For more information, see [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) in the Windows documentation.
 
 ::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+- **Block app installations with elevated privileges**:
+  This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system. If you enable this policy setting, privileges are extended to all programs. This enables users to install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067134)
+
+  **Default**: Yes.
+
+- **Block user control over installations**:  
+  This policy prevents users from changing the installation options typically reserved for system administrators, such as entering the directory to install the files. When set to Not configured (default), Intune doesn't change or update this setting. By default, Windows Installer might prevent users from changing these installation options, and some of the Windows Installer security features are bypassed.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067060)
+
+  **Default**: Yes
+
+- **Block game DVR (desktop only)**:  
+  Configures whether recording and broadcasting of games is allowed.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067056)
+
+  **Default**: Yes
+
+::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Block user control over installations**:  
-  This policy setting permits users to change installation options that typically are available only to system administrators. If you enable this policy setting, some of the security features of Windows Installer are bypassed. It permits installations to complete that otherwise would be halted because of a security violation. If you disable or don't configure this policy setting, the security features of Windows Installer prevent users from changing installation options typically reserved for system administrators, such as specifying the directory to which files are installed. If Windows Installer detects that an installation package has permitted the user to change a protected option, it stops the installation and displays a message. These security features operate only when the installation program is running in a privileged security context in which it has access to directories denied to the user. This policy setting is designed for less restrictive environments. It can be used to circumvent errors in an installation program that prevents software from being installed.  
+  This policy prevents users from changing the installation options typically reserved for system administrators, such as entering the directory to install the files. When set to Not configured (default), Intune doesn't change or update this setting. By default, Windows Installer might prevent users from changing these installation options, and some of the Windows Installer security features are bypassed.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067060)
 
   **Default**: Yes
@@ -108,7 +143,7 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
 
   - *If you enable this policy setting*, privileges are extended to all programs. Typically, these privileges are reserved for programs that are assigned to the user (offered on the desktop), assigned to the computer (installed automatically), or are available in Add or Remove Programs in Control Panel. This profile setting lets users install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.
 
-  - *If you disable or do not configure this policy setting*, the system applies the current user's permissions when it installs programs that a system administrator doesn't distribute or offer. Note: This policy setting appears both in the Computer Configuration and User Configuration folders. To make this policy setting effective, you must enable it in both folders. Caution: Skilled users can take advantage of the permissions this policy setting grants to change their privileges and gain permanent access to restricted files and folders. The User Configuration version of this policy setting is not guaranteed to be secure.  
+  - *If you disable or don't configure this policy setting*, the system applies the current user's permissions when it installs programs that a system administrator doesn't distribute or offer. Note: This policy setting appears both in the Computer Configuration and User Configuration folders. To make this policy setting effective, you must enable it in both folders. Caution: Skilled users can take advantage of the permissions this policy setting grants to change their privileges and gain permanent access to restricted files and folders. The User Configuration version of this policy setting isn't guaranteed to be secure.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Default**: Yes
@@ -121,6 +156,133 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067056)
 
   **Default**: Yes
+
+::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+## Audit
+
+- **Account Logon Audit Credential Validation (Device)**:  
+  This policy setting allows you to audit events generated by validation tests on user account logon credentials. Events in this subcategory occur only on the computer that is authoritative for those credentials. For domain accounts, the domain controller is authoritative. For local accounts, the local computer is authoritative.
+
+  **Default**: Success and Failure
+
+- **Account Logon Audit Kerberos Authentication Service (Device)**:  
+  This policy setting allows you to audit events generated by Kerberos authentication ticket-granting ticket (TGT) requests. If you configure this policy setting, an audit event is generated after a Kerberos authentication TGT request. Success audits record successful requests and Failure audits record unsuccessful requests. If you don't configure this policy setting, no audit event is generated after a Kerberos authentication TGT request.
+
+  **Default**: None
+
+- **Account Logon Logoff Audit Account Lockout (Device)**:  
+
+  **Default**: Failure
+
+- **Account Logon Logoff Audit Group Membership (Device)**:  
+  This policy allows you to audit the group membership information in the user's logon token. Events in this subcategory are generated on the computer on which a logon session is created. For an interactive logon, the security audit event is generated on the computer that the user logged on to. For a network logon, such as accessing a shared folder on the network, the security audit event is generated on the computer hosting the resource. When this setting is configured, one or more security audit events are generated for each successful logon. You must also enable the Audit Logon setting under Advanced Audit Policy Configuration\System Audit Policies\Logon/Logoff. Multiple events are generated if the group membership information can't fit in a single security audit event.
+
+  **Default**: Success
+
+- **Account Logon Logoff Audit Logon (Device)**:  
+  This policy setting allows you to audit events generated by user account logon attempts on the computer. Events in this subcategory are related to the creation of logon sessions and occur on the computer that was accessed. For an interactive logon, the security audit event is generated on the computer that the user account logged on to. For a network logon, such as accessing a shared folder on the network, the security audit event is generated on the computer hosting the resource. The following events are included: Successful logon attempts. Failed logon attempts. Logon attempts using explicit credentials. This event is generated when a process attempts to log on an account by explicitly specifying that accounts credentials. This most commonly occurs in batch logon configurations, such as scheduled tasks or when using the RUNAS command. Security identifiers (SIDs) were filtered and not allowed to log on.
+
+  **Default**: Success and Failure
+
+- **Audit Other Logon Logoff Events (Device)**:  
+  This policy setting allows you to audit other events related to logon/logoff, that aren't covered in the *Logon/Logoff* policy setting such as the following: Terminal Services session disconnections. New Terminal Services sessions. Locking and unlocking a workstation. Invoking a screen saver. Dismissal of a screen saver. Detection of a Kerberos replay attack, in which a Kerberos request was received twice with identical information. This condition could be caused by network misconfiguration. Access to a wireless network granted to a user or computer account. Access to a wired 802.1x network granted to a user or computer account.
+
+  **Default**: Success and Failure
+
+- **Audit Special Logon (Device)**:  
+  This policy setting allows you to audit events generated by special logons such as the following: The use of a special logon, which is a logon that has administrator-equivalent privileges and can be used to elevate a process to a higher level. A logon by a member of a Special Group. Special Groups enable you to audit events generated when a member of a certain group has logged on to your network. You can configure a list of group security identifiers (SIDs) in the registry. If any of those SIDs are added to a token during logon and the subcategory is enabled, an event is logged. For more information about this feature, see article 947223 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=121697).
+
+  **Default**: Success
+
+- **Audit Security Group Management (Device)**:  
+  This policy setting allows you to audit events generated by changes to security groups such as the following: Security group is created, changed, or deleted. Member is added or removed from a security group. Group type is changed. If you configure this policy setting, an audit event is generated when an attempt to change a security group is made. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated when a security group changes.
+
+  **Default**: Success
+
+- **Audit User Account Management (Device)**:  
+  This policy setting allows you to audit changes to user accounts. Events include the following: A user account is created, changed, deleted; renamed, disabled, enabled, locked out, or unlocked. A user account???s password is set or changed. A security identifier (SID) is added to the SID History of a user account. The Directory Services Restore Mode password is configured. Permissions on administrative user accounts are changed. Credential Manager credentials are backed up or restored. If you configure this policy setting, an audit event is generated when an attempt to change a user account is made. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated when a user account changes.
+
+  **Default**: Success and Failure
+
+- **Detailed Tracking Audit PNP Activity (Device)**:  
+  This policy setting allows you to audit when plug and play detects an external device. If you configure this policy setting, an audit event is generated whenever plug and play detects an external device. Only Success audits are recorded for this category. If you don't configure this policy setting, no audit event is generated when an external device is detected by plug and play.
+
+  **Default**: Success
+
+- **Detailed Tracking Audit Process Creation (Device)**:  
+  This policy setting allows you to audit events generated when a process is created or starts. The name of the application or user that created the process is also audited. If you configure this policy setting, an audit event is generated when a process is created. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated when a process is created.
+
+  **Default**: Success
+
+- **Object Access Audit Detailed File Share (Device)**:  
+  This policy setting allows you to audit attempts to access files and folders on a shared folder. The Detailed File Share setting logs an event every time a file or folder is accessed, whereas the File Share setting only records one event for any connection established between a client and file share. Detailed File Share audit events include detailed information about the permissions or other criteria used to grant or deny access. If you configure this policy setting, an audit event is generated when an attempt is made to access a file or folder on a share. The administrator can specify whether to audit only successes, only failures, or both successes and failures. Note: There are no system access control lists (SACLs) for shared folders. If this policy setting is enabled, access to all shared files and folders on the system is audited.
+
+  **Default**: Failure
+
+- **Audit File Share Access (Device)**:  
+  This policy setting allows you to audit attempts to access a shared folder. If you configure this policy setting, an audit event is generated when an attempt is made to access a shared folder. If this policy setting is defined, the administrator can specify whether to audit only successes, only failures, or both successes and failures. Note: There are no system access control lists (SACLs) for shared folders. If this policy setting is enabled, access to all shared folders on the system is audited.
+
+  **Default**: Success and Failure
+
+- **Object Access Audit Other Object Access Events (Device)**:  
+  This policy setting allows you to audit events generated by the management of task scheduler jobs or COM+ objects. For scheduler jobs, the following are audited: Job created. Job deleted. Job enabled. Job disabled. Job updated. For COM+ objects, the following are audited: Catalog object added. Catalog object updated. Catalog object deleted.
+
+  **Default**: Success and Failure
+
+- **Object Access Audit Removable Storage (Device)**:  
+  This policy setting allows you to audit user attempts to access file system objects on a removable storage device. A security audit event is generated only for all objects for all types of access requested. If you configure this policy setting, an audit event is generated each time an account accesses a file system object on a removable storage. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated when an account accesses a file system object on a removable storage.
+
+  **Default**: Success and Failure
+
+- **Audit Authentication Policy Change (Device)**:  
+  This policy setting allows you to audit events generated by changes to the authentication policy such as the following: Creation of forest and domain trusts. Modification of forest and domain trusts. Removal of forest and domain trusts. Changes to Kerberos policy under Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy. Granting of any of the following user rights to a user or group: Access This Computer From the Network. Allow Logon Locally. Allow Logon Through Terminal Services. Logon as a Batch Job. Logon a Service. Namespace collision. For example, when a new trust has the same name as an existing namespace name. If you configure this policy setting, an audit event is generated when an attempt to change the authentication policy is made. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated when the authentication policy is changed. Note: The security audit event is logged when the group policy is applied. It doesn't occur at the time when the settings are modified.
+
+  **Default**: Success
+
+- **Policy Change Audit MPSSVC Rule Level Policy Change (Device)**:  
+  This policy setting allows you to audit events generated by changes in policy rules used by the Microsoft Protection Service (MPSSVC). This service is used by Windows Firewall. Events include the following: Reporting of active policies when Windows Firewall service starts. Changes to Windows Firewall rules. Changes to Windows Firewall exception list. Changes to Windows Firewall settings. Rules ignored or not applied by Windows Firewall Service. Changes to Windows Firewall Group Policy settings. If you configure this policy setting, an audit event is generated by attempts to change policy rules used by the MPSSVC. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated by changes in policy rules used by the MPSSVC.
+
+  **Default**: Success and Failure
+
+- **Policy Change Audit Other Policy Change Events (Device)**:  
+  This policy setting allows you to audit events generated by other security policy changes that aren't audited in the policy change category, such as the following: Trusted Platform Module (TPM) configuration changes. Kernel-mode cryptographic self tests. Cryptographic provider operations. Cryptographic context operations or modifications. Applied Central Access Policies (CAPs) changes. Boot Configuration Data (BCD) modifications.
+
+  **Default**: Failure
+
+- **Audit Changes to Audit Policy (Device)**:  
+  This policy setting allows you to audit changes in the security audit policy settings such as the following: Settings permissions and audit settings on the Audit Policy object. Changes to the system audit policy. Registration of security event sources. De-registration of security event sources. Changes to the per-user audit settings. Changes to the value of CrashOnAuditFail. Changes to the system access control list on a file system or registry object. Changes to the Special Groups list. Note: System access control list (SACL) change auditing is done when a SACL for an object changes and the policy change category is enabled. Discretionary access control list (DACL) and ownership changes are audited when object access auditing is enabled and the object's SACL is configured for auditing of DACL/Owner change.
+
+  **Default**: Success
+
+- **Privilege Use Audit Sensitive Privilege Use (Device)**:  
+  This policy setting allows you to audit events generated when sensitive privileges (user rights) are used such as the following: A privileged service is called. One of the following privileges are called: Act as part of the operating system. Back up files and directories. Create a token object. Debug programs. Enable computer and user accounts to be trusted for delegation. Generate security audits. Impersonate a client after authentication. Load and unload device drivers. Manage auditing and security log. Modify firmware environment values. Replace a process-level token. Restore files and directories. Take ownership of files or other objects. If you configure this policy setting, an audit event is generated when sensitive privilege requests are made. Success audits record successful requests and Failure audits record unsuccessful requests. If you don't configure this policy setting, no audit event is generated when sensitive privilege requests are made.
+
+  **Default**: Success and Failure
+
+- **System Audit Other System Events (Device)**:  
+  This policy setting allows you to audit any of the following events: Startup and shutdown of the Windows Firewall service and driver. Security policy processing by the Windows Firewall Service. Cryptography key file and migration operations.
+
+  **Default**: Success and Failure
+
+- **System Audit Security State Change (Device)**:  
+  This policy setting allows you to audit any of the following events: Startup and shutdown of the Windows Firewall service and driver. Security policy processing by the Windows Firewall Service. Cryptography key file and migration operations.
+
+  **Default**: Success
+
+- **Audit Security System Extension (Device)**:  
+  This policy setting allows you to audit events related to security system extensions or services such as the following: A security system extension, such as an authentication, notification, or security package is loaded and is registered with the Local Security Authority (LSA). It is used to authenticate logon attempts, submit logon requests, and any account or password changes. Examples of security system extensions are Kerberos and NTLM. A service is installed and registered with the Service Control Manager. The audit log contains information about the service name, binary, type, start type, and service account. If you configure this policy setting, an audit event is generated when an attempt is made to load a security system extension. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you don't configure this policy setting, no audit event is generated when an attempt is made to load a security system extension.
+
+  **Default**: Success
+
+- **System Audit System Integrity (Device)**:  
+  This policy setting allows you to audit events that violate the integrity of the security subsystem, such as the following: Events that could not be written to the event log because of a problem with the auditing system. A process that uses a local procedure call (LPC) port that isn't valid in an attempt to impersonate a client by replying, reading, or writing to or from a client address space. The detection of a Remote Procedure Call (RPC) that compromises system integrity. The detection of a hash value of an executable file that isn't valid as determined by Code Integrity. Cryptographic operations that compromise system integrity.
+
+  **Default**: Success and Failure
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## Auto Play
 
@@ -152,10 +314,12 @@ For more information, see [Policy CSP - BitLocker](/windows/client-management/md
   This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067140)
 
+  **Default**: Configure
+
   For BitLocker removable drive policy, configure the following setting:
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
   - **Block write access to removable data-drives not protected by BitLocker**:  
     **Default**: Yes
@@ -195,7 +359,7 @@ For more information, see [Policy CSP - BitLocker](/windows/client-management/md
     **Default**: AES 256bit XTS
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## Browser
 
@@ -242,7 +406,7 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Configure secure access to UNC paths**:  
   This policy setting configures secure access to UNC paths. If you enable this policy, Windows only allows access to the specified UNC paths after fulfilling additional security requirements.  
@@ -252,11 +416,11 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
 
   When *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements* is selected, you can configure the *Hardened UNC path list*.
 
-  - **Hardened UNC path list**:  
-    Select **Add** to specify additional security flags and server paths.
+- **Hardened UNC path list**:  
+  Select **Add** to specify additional security flags and server paths.
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Block downloading of print drivers over HTTP**:  
   This policy setting specifies whether to allow this client to download print driver packages over HTTP. To set up HTTP printing, non-inbox drivers need to be downloaded over HTTP. Note: This policy setting doesn't prevent the client from printing to printers on the Intranet or the Internet over HTTP. It only prohibits downloading drivers that aren't already installed locally. If you enable this policy setting, print drivers can't be downloaded over HTTP. If you disable or don't configure this policy setting, users can download print drivers over HTTP.  
@@ -305,13 +469,15 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
   **Default**: Enable with UEFI lock
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Virtualization based security**:  
+  Turns on virtualization-based security (VBS) at the next reboot. Virtualization based security uses the Windows Hypervisor to provide support for security services.
+
   **Default**: Enable VBS with secure boot
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Enable virtualization based security**:  
   Turns on virtualization-based security (VBS) at the next reboot. Virtualization-based security uses the Windows Hypervisor to provide support for security services.  
@@ -320,6 +486,8 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
   **Default**: Yes
 
 - **Launch system guard**:  
+  Enables Secure Launch if supported by hardware.
+
   **Default**: Enabled
 
 ## Device Installation
@@ -366,12 +534,6 @@ For more information, see [Policy CSP - DeviceInstallation](/windows/client-mana
 
 For more information, see [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.
 
-- **Prevent use of camera**:  
-  Disables the lock screen camera toggle switch in PC Settings and prevents a camera from being invoked on the lock screen. By default, users can enable invocation of an available camera on the lock screen. If you enable this setting, users can't enable or disable lock screen camera access in PC Settings, and the camera can't be invoked on the lock screen.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067052)
-
-  **Default**: Enabled
-
 - **Require password**:  
   Specifies whether device lock is enabled.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067049)  
@@ -380,17 +542,11 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
   
   When *Require password* is set to *Yes*, the following settings are available.
 
-  - **Password minimum character set count**:  
-    The number of complex element types (uppercase and lowercase letters, numbers, and punctuation) required for a strong PIN or password. PIN enforces the following behavior for desktop and mobile devices: 1 - Digits only 2 - Digits and lowercase letters are required 3 - Digits, lowercase letters, and uppercase letters are required. Not supported in desktop Microsoft accounts and domain accounts. 4 - Digits, lowercase letters, uppercase letters, and special characters are required. Not supported in desktop.  
-    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067055)
+  - **Required password**:  
+    Determines the type of PIN or password required.  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067027)
 
-    **Default**: 3
-
-  - **Number of sign-in failures before wiping device**:  
-    The number of authentication failures allowed before the device is wiped. A value of 0 disables device wipe functionality.  
-    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067030)
-
-    **Default**: 10  
+    **Default**: Alphanumeric
 
   - **Password expiration (days)**:  
     The Maximum password age policy setting determines how long (in days) that a password can be used before the system requires the user to change it. You can set passwords to expire after a number of days between 1 and 999, or you can specify that passwords never expire by setting the number of days to 0. If Maximum password age is between 1 and 999 days, the minimum password age must be less than the maximum password age. If Maximum password age is set to 0, Minimum password age can be any value between 0 and 998 days.  
@@ -398,17 +554,30 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
 
     **Default**: 60
 
-  - **Required password**:  
-    Determines the type of PIN or password required.  
-    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067027)
+  - **Password minimum character set count**:  
+    The number of complex element types (uppercase and lowercase letters, numbers, and punctuation) required for a strong PIN or password. PIN enforces the following behavior for desktop and mobile devices: 1 - Digits only 2 - Digits and lowercase letters are required 3 - Digits, lowercase letters, and uppercase letters are required. Not supported in desktop Microsoft accounts and domain accounts. 4 - Digits, lowercase letters, uppercase letters, and special characters are required. Not supported in desktop.  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067055)
 
-    **Default**: Alphanumeric
+    **Default**: 3
+
+  - **Prevent reuse of previous passwords**:  
+    Specifies how many passwords are stored in the history that can't be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=2066795)
+
+    **Default**: 24
 
   - **Minimum password length**:  
     The Minimum password length policy setting determines the least number of characters that can make up a password for a user account. You can set a value of between 1 and 14 characters, or you can establish that no password is required by setting the number of characters to 0.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067024)
 
     **Default**: 8
+
+
+  - **Number of sign-in failures before wiping device**:  
+    The number of authentication failures allowed before the device is wiped. A value of 0 disables device wipe functionality.  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=2067030)
+
+    **Default**: 10
 
   - **Block simple passwords**:  
     Specifies whether PINs or passwords such as "1111" or "1234" are allowed. For the desktop, it also controls the use of picture passwords.  
@@ -417,28 +586,26 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
     **Default**: Yes  
     *A setting of Yes prevents use of simple passwords.*
 
-  - **Prevent reuse of previous passwords**:  
-    Specifies how many passwords are stored in the history that can't be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.  
-    [Learn more](https://go.microsoft.com/fwlink/?linkid=2066795)
-
-    **Default**: 24
-
-- **Prevent slide show**:  
-  Disables the lock screen slide show settings in PC Settings and prevents a slide show from playing on the lock screen. By default, users can enable a slide show that will run after they lock the machine. If you enable this setting, users can't modify slide show settings in PC Settings, and no slide show can start.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067105)
-
-  **Default**: Enabled  
-
-  *A setting of Enabled prevents slide shows from running.*
-
 - **Password minimum age in days**:  
   The Minimum password age policy setting determines the how long (in days) that a password must be used before the user can change it. You can set a value between 1 and 998 days, or you can allow password changes immediately by setting the number of days to 0. The minimum password age must be less than the Maximum password age, unless the maximum password age is set to 0, indicating that passwords will never expire. If the maximum password age is set to 0, the minimum password age can be set to any value between 0 and 998.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067022)
 
   **Default**: 1
 
+- **Prevent use of camera**:  
+  Disables the lock screen camera toggle switch in PC Settings and prevents a camera from being invoked on the lock screen. By default, users can enable invocation of an available camera on the lock screen. If you enable this setting, users can't enable or disable lock screen camera access in PC Settings, and the camera can't be invoked on the lock screen.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067052)
+
+  **Default**: Enabled
+
+- **Prevent slide show**:  
+  Disables the lock screen slide show settings in PC Settings and prevents a slide show from playing on the lock screen. By default, users can enable a slide show that will run after they lock the machine. If you enable this setting, users can't modify slide show settings in PC Settings, and no slide show can start.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067105)
+
+  **Default**: Enabled *A setting of Enabled prevents slide shows from running.*
+
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## DMA Guard
 
@@ -451,11 +618,17 @@ For more information, see [Policy CSP - DmaGuard](/windows/client-management/mdm
   **Default**: Block all
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## Event Log Service
 
 For more information, see [Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) in the Windows documentation.
+
+- **Application log maximum file size in KB**:  
+  This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1024 kilobytes) and 2 terabytes (2147483647 kilobytes) in kilobyte increments. If you disable or don't configure this policy setting, the maximum size of the log file is set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067125)
+
+  **Default**: 32768
 
 - **Security log maximum file size in KB**:  
   This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1024 kilobytes) and 2 terabytes (2147483647 kilobytes) in kilobyte increments. If you disable or don't configure this policy setting, the maximum size of the log file is set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.  
@@ -466,12 +639,6 @@ For more information, see [Policy CSP - EventLogService](/windows/client-managem
 - **System log maximum file size in KB**:  
   This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1024 kilobytes) and 2 terabytes (2147483647 kilobytes) in kilobyte increments. If you disable or don't configure this policy setting, the maximum size of the log file is set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2066798)
-
-  **Default**: 32768
-
-- **Application log maximum file size in KB**:  
-  This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1024 kilobytes) and 2 terabytes (2147483647 kilobytes) in kilobyte increments. If you disable or don't configure this policy setting, the maximum size of the log file is set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067125)
 
   **Default**: 32768
 
@@ -591,14 +758,14 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   This policy setting allows you to manage whether a script is allowed to update the status bar within the zone.
 
   - *If you enable this policy setting*, scripts are allowed to update the status bar.
-  - *If you disable or do not configure this policy setting*, scripts aren't allowed to update the status bar.
+  - *If you disable or don't configure this policy setting*, scripts aren't allowed to update the status bar.
 
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067074)
 
   **Default**: Disabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer internet zone drag and drop or copy and paste files**:  
   This policy setting allows you to manage whether users can drag files or copy and paste files from a source within the zone. If you enable this policy setting, users can drag files or copy and paste files from this zone automatically. If you select Prompt in the drop-down box, users are queried to choose whether to drag or copy files from this zone. If you disable this policy setting, users are prevented from dragging files or copying and pasting files from this zone. If you don't configure this policy setting, users can drag files or copy and paste files from this zone automatically.  
@@ -619,7 +786,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Disabled
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer internet zone access to data sources**:  
   This policy setting allows you to manage whether Internet Explorer can access data from another security zone using the Microsoft XML Parser (MSXML) or ActiveX Data Objects (ADO). If you enable this policy setting, users can load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you select Prompt in the drop-down box, users are queried to choose whether to allow a page to load in the zone that uses MSXML or ADO to access data from another site in the zone. If you disable this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you don't configure this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone.  
@@ -694,7 +861,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Disable
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer internet zone automatic prompt for file downloads**:  
   This policy setting determines whether users are prompted for non user-initiated file downloads. Regardless of this setting, users will receive file download dialogs for user-initiated downloads. If you enable this setting, users will receive a file download dialog for automatic download attempts. If you disable or don't configure this setting, file downloads that aren't user-initiated are blocked, and users will see the Notification bar instead of the file download dialog. Users can then click the Notification bar to allow the file download prompt.  
@@ -712,7 +879,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer restricted zone security warning for potentially unsafe files**:  
   This policy setting controls if the "Open File - Security Warning" message appears when the user tries to open executable files or other potentially unsafe files (from an intranet file share by using File Explorer, for example). If you enable this policy setting and set the drop-down box to Enable, these files open without a security warning. If you set the drop-down box to Prompt, a security warning appears before the files open. If you disable this policy setting, these files don't open. If you don't configure this policy setting, the user can configure how the computer handles these files. By default, these files are blocked in the Restricted zone, enabled in the Intranet and Local Computer zones, and set to prompt in the Internet and Trusted zones.  
@@ -733,7 +900,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: No sites
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer encryption support**:  
   This policy setting allows you to turn off support for Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0, or SSL 3.0 in the browser. TLS and SSL are protocols that help protect communication between the browser and the target server. When the browser attempts to set up a protected communication with the target server, the browser and server negotiate which protocol and version to use. The browser and server attempt to match each other's list of supported protocols and versions, and they select the most preferred match. If you enable this policy setting, the browser negotiates or doesn't negotiate an encryption tunnel by using the encryption methods that you select from the drop-down list. If you disable or don't configure this policy setting, the user can select which encryption method the browser supports.  
@@ -743,7 +910,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   *Select the down arrow to display options that you can select for this setting.*
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer locked down internet zone smart screen**:  
   This policy setting controls whether SmartScreen Filter scans pages in this zone for malicious content. If you enable this policy setting, SmartScreen Filter scans pages in this zone for malicious content. If you disable this policy setting, SmartScreen Filter doesn't scan pages in this zone for malicious content. If you don't configure this policy setting, the user can choose whether SmartScreen Filter scans pages in this zone for malicious content. Note: In Internet Explorer 7, this policy setting controls whether Phishing Filter scans pages in this zone for malicious content.  
@@ -1557,7 +1724,7 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](/windows/c
 For more information, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Block Adobe Reader from creating child processes**:  
 This rule prevents attacks by blocking Adobe Reader from creating additional processes. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader. By blocking child processes from being generated by Adobe Reader, malware attempting to use it as a vector are prevented from spreading.
@@ -1565,7 +1732,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default**: Enable
 
-- **Office communication apps launch in a child process**:  
+- **Block Office communication apps launch in a child process**:  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Default**: Enable
@@ -1578,38 +1745,64 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: 4
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-sept-2020"
+
+- **Scan type**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
+
+  Specify the scan type to use for a schedule scan
+
+  **Default** Quick scan
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Defender schedule scan day**:  
   Defender schedule scan day.
 
   **Default**: Everyday
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
 - **Turn on cloud-delivered protection**:  
   CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
   
-  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default which enables the feature but allows the user to disable it.
+  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default, which enables the feature but allows the user to disable it.
 
   **Default**:  Yes  
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Cloud-delivered protection**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Specify the level of protection for Potentially Unwanted Applications (PUAs). Selecting *Not configured* will configure the client to the default, which turns off PUA protection. Disable will turn off PUA protection and not protect against unwanted applications. Selecting Enable will turn on PUA protection and will block detected items. Audit mode allows PUA to detect potentially unwanted applications, but takes no action. [Learn more](https://go.microsoft.com/fwlink/?linkid=2113937).
+
+  **Default**:  Not configured
+  
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  When this setting is set to Yes, real-time monitoring will be enforced and the user cannot disable it. When set to Not configured, the setting is returned to client default which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
+  When this setting is set to Yes, real-time monitoring will be enforced and the user can't disable it. When set to Not configured, the setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
   **Default**:  Yes  
 
 - **Scan archive files**:  
   CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
   
-  When set to Yes, archive files such as ZIP or CAB file scanning will be enforced. When set to Not configured, the setting will be returned back to client default which is to scan archived files, however the user may disable this.
+  When set to Yes, archive files such as ZIP or CAB file scanning will be enforced. When set to Not configured, the setting will be returned back to client default, which is to scan archived files, however the user may disable this.
 
   **Default**: Yes
 
 - **Turn on behavior monitoring**:  
   CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
-  When this setting is set to Yes, behavior monitoring will be enforced and the user cannot disable it. When set to Not configured, the setting is returned to client default which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
+  When this setting is set to Yes, behavior monitoring will be enforced and the user can't disable it. When set to Not configured, the setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
   **Default**: Yes
 
@@ -1623,13 +1816,13 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Scan removable drives during a full scan**:  
   CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  When set to Yes, during a full scan removable drives (e.g. USB flash drives) will be scanned. When set to Not Configured, the setting will return to client default which scans removable drives, however the user can disable this.
+  When set to Yes, during a full scan removable drives (for example, USB flash drives) will be scanned. When set to Not Configured, the setting will return to client default, which scans removable drives, however the user can disable this.
   **Default**: Yes  
 
 - **Block Office applications from injecting code into other processes**:  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872974)
 
-  When set to Yes, Office applications will be blocked from injecting code into other processes. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  When set to Yes, Office applications will be blocked from injecting code into other processes. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This Attack Surface Reduction (ASR) rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Default**:  Block
 
@@ -1661,12 +1854,28 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   
   **Default**: Block
 
-- **Email content execution type**:    
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Email content execution type**:  
   [Block executable content download from email and webmail clients](https://go.microsoft.com/fwlink/?linkid=872980)
 
   When set to Yes, executable content downloaded from email and webmail clients will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off.
 
   **Default**: Block
+
+::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+- **Block executable content download from email and webmail clients**:   
+  [Block executable content download from email and webmail clients](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  When set to Yes, executable content downloaded from email and webmail clients will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off.
+
+  **Default**: Block
+
+::: zone-end
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Prevent credential stealing type**:  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
@@ -1689,10 +1898,10 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default**: Block
 
-- **Network protection**:  
+- **Enable network protection**:  
   [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
-  When set to Yes, network protection will be enabled for all users on the system. Network protection protects employees from accessing phishing scams, and malicious content on the Internet. This includes third-party browsers. Setting this to Audit only, users will not be blocked from dangerous domains however Windows events will be raised instead. Setting this to Not COnfigured will return the setting to Windows default, which is disabled.
+  When set to Yes, network protection will be enabled for all users on the system. Network protection protects employees from accessing phishing scams, and malicious content on the Internet. This includes third-party browsers. Setting this to Audit only, users will not be blocked from dangerous domains however Windows events will be raised instead. Setting this to Not Configured will return the setting to Windows default, which is disabled.
 
   **Default**: Enable
 
@@ -1717,7 +1926,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   When set to Yes, Defender will block JavaScript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
 
 ## MS Security Guide
 
@@ -1801,7 +2010,7 @@ For more information, see [Policy CSP - Power](/windows/client-management/mdm/po
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## Remote Assistance
 
@@ -1814,31 +2023,15 @@ For more information, see [Policy CSP - RemoteAssistance](/windows/client-manage
 
   - *If you disable this policy setting*, users on this computer can't use email or file transfer to ask someone for help. Also, users can't use instant messaging programs to allow connections to this computer.
 
-  - *If you do not configure this policy setting*, users can turn on or turn off Solicited (Ask for) Remote Assistance themselves in System Properties in Control Panel. Users can also configure Remote Assistance settings.
+  - *If you don't configure this policy setting*, users can turn on or turn off Solicited (Ask for) Remote Assistance themselves in System Properties in Control Panel. Users can also configure Remote Assistance settings.
 
   If you enable this policy setting, you have two ways to allow helpers to provide Remote Assistance: "Allow helpers to only view the computer" or "Allow helpers to remotely control the computer." The "Maximum ticket time" policy setting sets a limit on the amount of time that a Remote Assistance invitation created by using email or file transfer can remain open. The "Select the method for sending email invitations" setting specifies which email standard to use to send Remote Assistance invitations. Depending on your email program, you can use either the *Mailto* standard (the invitation recipient connects through an Internet link) or the SMAPI (Simple MAPI) standard (the invitation is attached to your email message). This policy setting isn't available in Windows Vista because SMAPI is the only method supported. If you enable this policy setting, you should also enable appropriate firewall exceptions to allow Remote Assistance communications.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067198)
 
   **Default**: Disable Remote Assistance
 
-<!-- These settings are not available: 
-  When set to *Enable Remote Assistance*, configure the following additional settings:
-
-  - **Remote Assistance solicited permission**:  
-    **Default**: View
-
-  - **Maximum ticket time value**:  
-    **Default**: *Not configured*
-
-  - **Maximum ticket time period**:  
-    **Default**: Minutes
-
-  - **E-Mail invitation method**:  
-    **Default**: Simple MAPI
--->
-
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## Remote Desktop Services
 
@@ -1974,26 +2167,26 @@ For more information, see [Policy CSP - SmartScreen](/windows/client-management/
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
 
-  Setting this to Yes will enforce the use of SmartScreen for all users. Setting this to Not configured will return the setting to Windows default which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
+  Setting this to Yes will enforce the use of SmartScreen for all users. Setting this to Not configured will return the setting to Windows default, which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
 
   **Default**: Yes
 
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  When set to Yes, SmartScreen is enabled and users cannot bypass warnings for files or malicious apps. When set to Not configured, users can ignore SmartScreen warnings for files and malicious apps.  
+  When set to Yes, SmartScreen is enabled and users can't bypass warnings for files or malicious apps. When set to Not configured, users can ignore SmartScreen warnings for files and malicious apps.  
 
   This setting requires the 'Turn on Windows SmartScreen' setting be set to Yes.
 
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## System
 
@@ -2019,15 +2212,15 @@ For more information, see [Policy CSP - System](/windows/client-management/mdm/p
 
 For more information, see [Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi) in the Windows documentation.
 
-- **Block Internet sharing**:  
-  Specifies whether internet sharing is possible on the device.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067327)
-
-  **Default**: Yes
-
 - **Block Automatically connecting to Wi-Fi hotspots**:  
   Allow or disallow the device to automatically connect to Wi-Fi hotspots.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067320)
+
+  **Default**: Yes
+
+- **Block Internet sharing**:  
+  Specifies whether internet sharing is possible on the device.  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067327)
 
   **Default**: Yes
 
@@ -2040,7 +2233,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
 
   - *Automatic connection attempts* - When the computer is already connected to a domain-based network, all automatic connection attempts to non-domain networks are blocked. When the computer is already connected to a non-domain based network, automatic connection attempts to domain-based networks are blocked.
 
-  - *Manual connection attempts* - When the computer is already connected to either a non-domain based network or a domain-based network over media other than Ethernet, and a user attempts to create a manual connection to an additional network in violation of this policy setting, the existing network connection disconnects and the manual connection is allowed. When the computer is already connected to either a non-domain based network or a domain-based network over Ethernet, and a user attempts to create a manual connection to an additional network in violation of this policy setting, the existing Ethernet connection is maintained and the manual connection attempt is blocked.
+  - *Manual connection attempts* - When the computer is already connected to either a non-domain based network or a domain-based network over media other than Ethernet, and a user attempts to create a manual connection to an additional network in violation of this policy setting, the existing network connection disconnects, and the manual connection is allowed. When the computer is already connected to either a non-domain based network or a domain-based network over Ethernet, and a user attempts to create a manual connection to an additional network in violation of this policy setting, the existing Ethernet connection is maintained and the manual connection attempt is blocked.
 
   If this policy setting isn't configured or is disabled, computers are allowed to connect simultaneously to both domain and non-domain networks.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067323)
@@ -2053,7 +2246,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
 ## Windows Hello for Business
 
 - **Block Windows Hello for Business**  
-  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards. If you disable or do not configure this policy setting, the device provisions Windows Hello for Business. If you enable this policy setting, the device does not provision Windows Hello for Business for any user.
+  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards. If you disable or don't configure this policy setting, the device provisions Windows Hello for Business. If you enable this policy setting, the device doesn't provision Windows Hello for Business for any user.
 
   **Default**: Enabled
   
@@ -2062,7 +2255,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
   - **Minimum PIN length**  
     Minimum PIN length must be between 4 and 127.
 
-    **Default**: *Not configured*
+    **Default**: Not configured
 
   - **Enable to use enhanced anti-spoofing, when available**  
     [Anti-spoofing protection](https://go.microsoft.com/fwlink/?linkid=2067192)
@@ -2080,15 +2273,29 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
     If required, user PIN must include at least one special character.
 
     **Default**: Not allowed
- 
 
   - **Uppercase letters in PIN**:  
     If required, user PIN must include at least one uppercase letter.
 
     **Default**: Not allowed
 
+  - **Lowercase letters in PIN**:  
+    If required, user PIN must include at least one lowercase letter.
+
+    **Default**: Not configured
+
+  - **Special characters in PIN**:  
+    If required, user PIN must include at least one special character.
+
+    **Default**: Not configured
+
+  - **Uppercase letters in PIN**:  
+    If required, user PIN must include at least one uppercase letter.
+
+    **Default**: Not configured
+
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## Windows Ink Workspace
 
@@ -2121,6 +2328,8 @@ For more information, see [Policy CSP - WindowsPowerShell](/windows/client-manag
 ::: zone pivot="mdm-may-2019"
 
 ## What's changed in the new template
+
+<!-- This section is deprecated from future baseline updates. Use the Compare feature to identify changes -->
 
 The *MDM Security Baseline for May 2019* template has the following changes from the *preview* template.
 
@@ -2212,6 +2421,8 @@ The following settings are either:
 - **Require special characters in PIN**
 - **Minimum PIN length**
 - **Require uppercase letters in PIN**
+
+<!-- END OF DEPRECATED SECTION -->
 
 ::: zone-end
 

@@ -31,7 +31,7 @@ Use the email profile settings to configure the Mail app on your devices running
 
 ## Before you begin
 
-[Create the profile](email-settings-configure.md).
+Create a [Windows 10 Email device configuration profile](email-settings-configure.md).
 
 ## Email settings
 

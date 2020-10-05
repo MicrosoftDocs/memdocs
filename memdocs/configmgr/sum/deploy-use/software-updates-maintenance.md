@@ -126,11 +126,11 @@ The addition of non-clustered indexes improves the WSUS cleanup performance that
 
 When the WSUS database is on a remote SQL server, you might need to add permissions in SQL to create indexes. The account used to connect to the WSUS database and create the indexes can vary. If you specify a [WSUS Server Connection Account in the software update point properties](../get-started/install-a-software-update-point.md#wsus-server-connection-account), then ensure the connection account has the SQL permissions. If you don't specify a WSUS Server Connection Account, then the site server's computer account needs the SQL permissions.
 
-- Creating an index requires `ALTER` permission on the table or view. The account must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles. For more information about creating and index and permissions, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- The `CONNECT SQL` server permission must be granted to the account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Creating an index requires `ALTER` permission on the table or view. The account must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles. For more information about creating and index and permissions, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql#permissions).
+- The `CONNECT SQL` server permission must be granted to the account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
->  If the WSUS database is on a remote SQL server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
+>  If the WSUS database is on a remote SQL server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
 
 ### Remove obsolete updates from the WSUS database
 
@@ -146,8 +146,8 @@ Obsolete updates are unused updates and update revisions in the WSUS database. G
 
 When the WSUS database is on a remote SQL server, the site server's computer account needs the following SQL permissions:
 
-- The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+- The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 #### WSUS cleanup wizard
 

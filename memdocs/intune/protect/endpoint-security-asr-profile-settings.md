@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -194,7 +194,7 @@ Supported platforms and profiles:
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Not configured** (*default*) - Users can ignore SmartScreen warnings for files and malicious apps.
-  - **Yes** - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.
+  - **Yes** - SmartScreen is enabled and users can't bypass warnings for files or malicious apps.
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -398,7 +398,7 @@ Supported platforms and profiles:
   This policy setting is only enforced when BitLocker or device encryption is enabled.
 
   - **Not configured** (*default*)
-  - **Yes** - block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. After a user logs in, Windows enumerates the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices which were already enumerated when the machine was unlocked will continue to function until unplugged.
+  - **Yes** - block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. After a user logs in, Windows enumerates the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices that were already enumerated when the machine was unlocked will continue to function until unplugged.
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
   CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
@@ -437,7 +437,7 @@ Supported platforms and profiles:
 
 - **Block bluetooth proximal connections**  
   CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
-Block users from using Swift Pair and other proximity-based scenarios
+  Block users from using Swift Pair and other proximity-based scenarios
 
   - **Not configured** (*default*)
   - **Yes** - Prevents a device user from using Swift Pair and other proximity-based scenarios.  
@@ -450,6 +450,18 @@ Block users from using Swift Pair and other proximity-based scenarios
 
   - **Add** - Specify allowed Bluetooth services and profiles as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
   - **Import** - Import a .csv file that contains a list of bluetooth services and profiles, as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+
+- **Removable storage**  
+  CSP: [Storage/RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess) 
+
+  - **Block** (*default*) - Prevent users from using external storage devices, like SD cards with the device.
+  - **Not configured**
+
+- **USB connections (HoloLens only)**  
+  CSP: [Connectivity/AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
+  - **Block** - Prevent use of a USB connection between the device and a computer to sync files, or to use developer tools to deploy or debug applications. USB charging isn't affected.
+  - **Not configured** (*default*)
 
 ## Exploit protection profile
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,7 +52,7 @@ This article shows you how to create a custom profile for Android Enterprise dev
     - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android Enterprise custom profile**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Custom**.
+    - **Profile type**: Select **Work profile** > **Custom**.
 
 4. In **Custom OMA-URI Settings**, select **Add**. Enter the following settings:
 
@@ -87,7 +87,7 @@ In this example, you create a custom profile that restricts copy and paste actio
     - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, enter **android ent block copy paste custom profile**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Custom**.
+    - **Profile type**: Select **Work profile** > **Custom**.
 
 4. In **Custom OMA-URI Settings**, select **Add**. Enter the following settings:
 

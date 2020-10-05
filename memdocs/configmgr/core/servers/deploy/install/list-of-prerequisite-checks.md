@@ -602,7 +602,7 @@ If you ignore this prerequisite warning, Configuration Manager setup automatical
 
 *Applies to: Cloud management gateway*
 
-With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Plan for cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md).
+With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Overview of cloud management gateway](../../../clients/manage/cmg/overview.md).
 
 ### Configuration for SQL Server memory usage
 
@@ -736,7 +736,7 @@ The account that you configured to run the SQL Server service for the site datab
 
 Starting in version 1810, check if the site database has a backlog of SQL change tracking data.<!--SCCMDocs-pr issue 3023-->  
 
-Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
+Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
 
 In a dedicated administrator connection query window, run the following commands:
 

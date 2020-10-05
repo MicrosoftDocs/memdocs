@@ -173,6 +173,8 @@
         href: network-bandwidth-use.md
       - name: Using Windows 10 VMs with Intune
         href: windows-10-virtual-machines.md
+      - name: Using Windows Virtual Desktop with Intune
+        href: windows-virtual-desktop.md
       - name: Intune endpoints
         href: intune-endpoints.md
       - name: Intune US government endpoints
@@ -238,6 +240,8 @@
     items:
     - name: Intune reports
       href: reports.md
+    - name: Export reports using Graph
+      href: reports-export-graph-apis.md
     - name: Audit logs for Intune activities
       href: monitor-audit-logs.md
     - name: Review logs with Azure Monitor
