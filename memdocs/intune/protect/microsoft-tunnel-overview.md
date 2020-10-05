@@ -141,6 +141,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
+- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fallback to use TLS 1.2.
+
 ### Network
 
 We recommend using two Network Interface controllers (NICs) per Linux server to improve performance, though use of two is optional.
