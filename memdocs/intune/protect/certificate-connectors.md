@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -176,6 +176,13 @@ Updates for the two certificate connectors are released periodically. When we up
 ### PFX Certificate Connector release history
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
+
+#### October 2, 2020
+
+**Version 6.2008.60.612** - Changes in this release:
+
+- Fixed an issue with PKCS certificate delivery to Android Enterprise Fully Managed devices. The issue required the cryptography Key Storage Provider (KSP) be a legacy provider. You can now use a Cryptographic Next Generation (CNG) Key Storage Provider as well.
+- Changes to *CA Account* tab of the PFX Certificate Connector: The Username and password (credentials) that you specify are now used to issue certificates and to revoke certificates. Previously these credentials were used only for certificate revocation.
 
 #### August 26, 2020
 
