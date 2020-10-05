@@ -256,7 +256,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 2. The interface provides further information about using the tool. 
      - You can manually enter query strings at the top, or click the links in the in-line documentation.
      - Click one of the **Entities** to add it to the query string. 
-     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the same query language as [Azure Log Analytics](/azure/kusto/query/).
 
 
 
@@ -458,4 +458,4 @@ In this release, use [CNG certificates](../plan-design/network/cng-certificates-
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).

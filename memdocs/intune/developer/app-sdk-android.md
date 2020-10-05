@@ -545,7 +545,7 @@ The Intune App SDK requires three [Android system permissions](https://developer
 
 * `android.permission.USE_CREDENTIALS`
 
-The Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) requires these permissions to perform brokered authentication. If these permissions are not granted to the app or are revoked by the user, authentication flows that require the broker (the Company Portal app) will be disabled.
+The Azure Active Directory Authentication Library ([ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries)) requires these permissions to perform brokered authentication. If these permissions are not granted to the app or are revoked by the user, authentication flows that require the broker (the Company Portal app) will be disabled.
 
 ## Logging
 
@@ -1111,12 +1111,12 @@ Once your app's receiver returns, it will no longer have access to encryption ke
 
 > [!NOTE]
 > Starting June 30th 2020, we will not longer add new features to Active Directory Authentication Library (ADAL). We will continue to provide technical support and security updates but we will not longer provide feature update. Applications will need to be upgraded to Microsoft Authentication Library (MSAL) and Microsoft Graph. 
-> Additional information can be found in the [ADAL to MSAL migration guide for Android](https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal) document
+> Additional information can be found in the [ADAL to MSAL migration guide for Android](/azure/active-directory/develop/migrate-android-adal-msal) document
 
 
 First, please read the ADAL integration guidelines found in the [ADAL repository on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
-The SDK relies on [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) for its [authentication](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). The configuration values are communicated to the SDK via AndroidManifest metadata.
+The SDK relies on [ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis). The configuration values are communicated to the SDK via AndroidManifest metadata.
 
 To configure your app and enable proper authentication, add the following to the app node in AndroidManifest.xml. Some of these configurations are only required if your app uses ADAL for authentication in general; in that case, you will need the specific values your app uses to register itself with AAD. This is done to ensure that the end user does not get prompted for authentication twice, due to AAD recognizing two separate registration values: one from the app and one from the SDK.
 
@@ -1176,7 +1176,7 @@ ADAL metadata **must not** be present in the manifest.
 Authority may be specified if necessary.
 
 You must register your app with Azure AD and give your app access to the app protection policy service:
-* See [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) for information about registering an application with Azure AD.
+* See [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/active-directory-integrating-applications) for information about registering an application with Azure AD.
 * Ensure the steps to give your Android app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](../developer/app-sdk-get-started.md#next-steps-after-integration) under "Give your app access to the Intune app protection service (optional)". 
 
 Also see the requirements for [Conditional Access](#conditional-access) below.
@@ -1194,7 +1194,7 @@ Authority and NonBrokerRedirectURI may be specified if necessary.
 
 ### Conditional Access
 Conditional Access (CA) is an Azure Active Directory
-[feature](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer)
+[feature](/azure/active-directory/develop/active-directory-conditional-access-developer)
 which can be used to control access to AAD resources. [Intune
 administrators can define CA rules](../protect/conditional-access.md)
 which allow resource access only from devices or apps which are
@@ -1205,13 +1205,13 @@ only resources which cannot be CA-protected, you may skip these steps.
 
 1. Follow [ADAL integration guidelines](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    See especially Step 11 for Broker usage.
-2. [Register your application with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). 
+2. [Register your application with Azure Active Directory](/azure/active-directory/active-directory-app-registration). 
    The redirect URI can be found in the ADAL integration guidelines above.
 3. Set the manifest meta-data parameters per [Common ADAL configurations](#common-adal-configurations), item 2, above.
 4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
     - That sign in to your app prompts for installation and enrollment of the Intune Company Portal
     - That after enrollment, sign in to your app completes successfully.
-5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
+5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
 6. Once your app has been added to the approved list, validate by [Configuring app-based CA](../protect/app-based-conditional-access-intune-create.md) and ensuring that sign-in to your app completes successfully.
 
 ## App protection policy without device enrollment
@@ -2355,7 +2355,7 @@ App config adds a new notification type:
 ### Further Reading
 For more information about how to create a MAM targeted app configuration policy in Android, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-managed-app.md).
 
-App config can also be configured using the Graph API. For information, see the [Graph API docs for MAM Targeted Config](https://docs.microsoft.com/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
+App config can also be configured using the Graph API. For information, see the [Graph API docs for MAM Targeted Config](/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
 
 ## Custom Themes (optional)
 A custom theme can be provided to the MAM SDK which will be applied to all MAM screens and dialogs. If a theme is not provided, a default MAM theme will be used.

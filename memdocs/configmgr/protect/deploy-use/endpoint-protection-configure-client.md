@@ -134,7 +134,7 @@ Perform the following steps to prepare the Endpoint Protection client for imagin
 
 1. On the reference computer, sign in as an administrator.  
 
-2. Download and install **PsExec** from [Windows SysInternals](https://docs.microsoft.com/sysinternals/downloads/psexec).  
+2. Download and install **PsExec** from [Windows SysInternals](/sysinternals/downloads/psexec).  
 
 3. Run a command prompt as an administrator, change directory to the folder where you installed PsTools, and then type the following command:  
 
@@ -169,4 +169,3 @@ When you deploy an OS image that contains the Endpoint Protection client, it aut
 ## See also
 
 For more information about OS deployment in Configuration Manager, see [Manage OS images](../../osd/get-started/manage-operating-system-images.md).
-

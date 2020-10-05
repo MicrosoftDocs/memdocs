@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top-level export API. You must use the Microsoft Graph API to make the HTTP call. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. 
 
 > [!NOTE]
-> For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](https://docs.microsoft.com/graph/use-the-api).
+> For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
 Microsoft Endpoint Manager will export reports based on the following Microsoft Graph API endpoint:
 
@@ -488,5 +488,5 @@ You can choose to filter the `ActiveMalware` and `Malware` report's output based
 
 ## Next steps
 
-- [Microsoft Graph documentation](https://docs.microsoft.com/graph/)
-- [Intune reports](https://docs.microsoft.com/mem/intune/fundamentals/reports)
+- [Microsoft Graph documentation](/graph/)
+- [Intune reports](./reports.md)
