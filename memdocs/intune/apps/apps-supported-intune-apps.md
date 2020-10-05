@@ -176,7 +176,7 @@ For more information on Conditional Access support see [App protection policy re
     <td rowspan="2">Microsoft Edge</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx">Google Play</a></td>
     <td>Supported</td>
-    <td>Supported, see <a href="http://aka.ms/edgeappconfig">Edge app config</a></td>
+    <td>Supported, see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
     <td>Supported</td>
     <td>N/A</td>
     <td>Not supported</td>
@@ -186,7 +186,7 @@ For more information on Conditional Access support see [App protection policy re
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-edge/id1288723196">App Store</a></td>
     <td>Supported</td>
-    <td>Supported, see <a href="http://aka.ms/edgeappconfig">Edge app config</a></td>
+    <td>Supported, see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
     <td>Supported</td>
     <td>N/A</td>
     <td>Not supported</td>
@@ -313,7 +313,7 @@ For more information on Conditional Access support see [App protection policy re
     <td rowspan="2">Microsoft Outlook</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook">Google Play</a></td>
     <td>Supported</td>
-    <td>Supported, see <a href="http://aka.ms/omappconfig">Outlook app config</a></td>
+    <td>Supported, see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
     <td>Supported</td>
     <td>Supported</td>
     <td>Supported</td>
@@ -323,7 +323,7 @@ For more information on Conditional Access support see [App protection policy re
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-outlook/id951937596">App Store</a></td>
     <td>Supported</td>
-    <td>Supported, see <a href="http://aka.ms/omappconfig">Outlook app config</a></td>
+    <td>Supported, see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
     <td>Supported</td>
     <td>Supported</td>
     <td>Supported</td>
