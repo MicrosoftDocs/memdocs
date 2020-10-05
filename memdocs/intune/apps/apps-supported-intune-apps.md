@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 10/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,38 +37,583 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune.
 
 ## Microsoft apps
+Apps are capable of supporting advanced App Protection Policy and App Configuration Policy settings. The below table identifies the capabilities of each app. For more information, see:
 
-| App   title | App description and information | App store links for supported   platform(s) |
-|-------------------------------------------------|-------------------------|---------------------------------------------|
-| **Field Service Mobile**<p><img alt="Microsoft app - Field Service Mobile icon" src="./media/apps-supported-intune-apps/icon-m-field-service-mobile.png" width="100"> | Dynamics 365 for Field Service provides the cross-platform, multi-device Field Service Mobile application that is specifically crafted to the field service worker's needs. Robust offline capabilities allow field service workers to continue accessing and interacting with the data that they need when visiting remote destinations without internet connectivity. Field service workers can keep the back-office informed of work being performed in the field by periodically synchronizing data up to the server so that the proper actions can be taken or kick-started as appropriate. The mobile application is entirely customizable and extensible, allowing any organization to brand the application as its own, define what types of data field service workers can access, and much more. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile), [App Store link (iOS)](https://apps.apple.com/us/app/field-service-mobile/id1414669075) |
-| **Microsoft Azure Information Protection Viewer**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Securely collaborate with others using the AIP Viewer App. View protected files (rights protected email messages, PDF files, pictures, text files) that someone has shared with you. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer), [App Store link (iOS)](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) |
-| **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings is an appointment scheduling app that helps you keep track of your bookings, your staff, and your customers. You'll never miss an appointment, and you'll have fewer no-shows.<p>With the Bookings app you can:<br><ul><li>View and manage your calendar</li><li>Create bookings or make changes to existing ones on-the-go</li><li>See real-time availability of your staff members</li><li>Respond to customers quickly and easily</li><li>Quickly get directions to where your next booking is</li><li>Manage your customer list</li></ul> | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
-| **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Fast, easy and fun to stay on top of work & life with your personal assistant Cortana. Bring your smart digital assistant to your phone to help keep track of the important stuff wherever you are, across your devices. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[App Store link (iOS)](https://apps.apple.com/us/app/cortana/id1054501703)
-| **Microsoft Dynamics CRM**<p><img alt="Microsoft app - Microsoft Dynamics CRM icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-dynamics-crm.png" width="100"> | Engage your customers while staying productive at work and on the go with Microsoft Dynamics CRM. Arrive prepared for every appointment and update notes, tasks, contacts, accounts, cases, and leads while the details are still fresh. Allows salespeople to manage their sales data, guided by contextual business process, while on the go. Gives agents and supervisors freedom of mobility with the full scope of case management. Get a seamless user experience in a 'configure once, deploy everywhere' model. Available for iOS/iPadOS and Android. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone),<br>[App Store link (iOS)](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8) |  
-| **Microsoft Edge**<p><img alt="Microsoft app - Microsoft Edge icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-edge.png" width="100"> | Microsoft Edge creates one continuous browsing experience for Windows 10 users across their devices. Content and data sync seamlessly in the background, so users can browse across devices, without skipping a beat. Familiar Microsoft Edge features like the Hub allow users to organize the web in a way that cuts through the clutter, making it easier to find, view and manage their content on-the-go. Microsoft Edge is designed for Windows 10 users to browse the web how they need to, wherever they are, without disrupting their flow. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-edge/id1288723196?mt=8) |  
-| **Microsoft Excel**<p><img alt="Microsoft app - Microsoft Excel icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-excel.png" width="100"> | Make Excel spreadsheets look better than ever on your tablet and phone. Be confident that when you edit or create spreadsheets, they'll look exactly how you want across computers, Macs, tablets, and phones. Be up and running in no time with a familiar Office look and feel, along with an intuitive touch experience.<p><p>This app can be used as a multi-identity app for Android and iOS/iPadOS. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.excel),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) |  
-| **Power Automate**<p><img alt="Microsoft Flow icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-flow.png" width="100"> | Carry the full power of Power Automate in your pocket. With Power Automate, you can create automated workflows between your favorite apps and services to streamline your business, save time, and work more efficiently.| [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.flow),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-flow/id1094928825) |  
-| **Microsoft Kaizala**<p><img alt="Microsoft app - Microsoft Kaizala icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-kiazala.png" width="100"> | Microsoft Kaizala is a mobile app and service designed for large group communications and work management. Kaizala makes it easy to connect and coordinate work with your entire value chain, including field employees, vendors, partners, and customers wherever they are. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer),<br>[App Store link (iOS)](https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399) |  
-| **Microsoft Launcher**<p><img alt="Microsoft app - Microsoft Launcher icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-launcher.png" width="100"> | Microsoft Launcher (formerly known as Arrow Launcher) can personalize your Android device to match your style with wallpapers, theme colors, icon packs, and more. With a Microsoft account or work/school account, you can access your calendar, documents, and recent activities in your personalized feed. You can even open photos, docs and webpages on your Windows PC, to be productive across all your devices. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.launcher) |  
-| **Microsoft Office**<p><img alt="Microsoft app - Microsoft Office icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-office.png" width="100"> | The Microsoft Office app combines the Word, Excel, and PowerPoint apps you know and rely on with new capabilities that create a simpler, yet more powerful Office experience on the go. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow),<br>[App Store link (iOS)](https://apps.apple.com/app/microsoft-office/id541164041) |  
-| **Microsoft OneDrive**<p><img alt="Microsoft app - Microsoft OneDrive for Business icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-onedrive-for-business.png" width="100"> | Get online storage for your work files to share and collaborate on them with other people at your work or school. Plus, easily access your personal and work files when you're on the go.<p><p>This app can be used as a multi-identity app for Android and iOS/iPadOS. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.skydrive),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/onedrive-cloud-storage-for/id477537958?mt=8) |  
-| **Microsoft OneNote**<p><img alt="Microsoft app - Microsoft OneNote icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-onenote.png" width="100"> | Capture your thoughts, discoveries, and ideas with OneNote, your very own digital notebook. Seize that moment of inspiration, take your class notes, or track that list of errands that are too important to forget. Whether you're at home, in the office, or on the go, your notes are available to you on all your devices.<p><p>This app can be used as a multi-identity app for Android and iOS/iPadOS. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-onenote-for-iphone/id410395246?mt=8) |  
-| **Microsoft Outlook**<p><img alt="Microsoft app - Microsoft Outlook icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-outlook.png" width="100"> | Get more done from anywhere with one unified view of your email, calendar, contacts, and attachments using this free email app. Automatically extract your most important messages—across all your email accounts. Easily view your calendar, share available times, schedule meetings, and attach files from email, OneDrive, or Dropbox with just a few taps.<p><p>This app can be used as a multi-identity app for Android and iOS/iPadOS.| [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-outlook/id951937596?mt=8) |  
-| **Microsoft Planner**<p><img alt="Microsoft app - Microsoft Planner icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-planner.png" width="100"> | Take the chaos out of teamwork and get more done. Microsoft Planner makes it easy for your team to create new plans, organize and assign tasks, share files, chat about what you're working on, and get updates on progress. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.planner),<br>[App Store link (iOS/iPadOS)](https://itunes.apple.com/us/app/microsoft-planner/id1219301037?mt=8) |  
-| **Microsoft PowerApps**<p><img alt="Microsoft app - Microsoft PowerApps icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-powerapps.png" width="100"> | PowerApps is a service that lets you build business apps that run in a browser or on a phone or tablet, and no coding experience is required.| [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.msapps),<br>[App Store link (iOS/iPadOS)](https://itunes.apple.com/us/app/powerapps/id1047318566) |  
-| **Microsoft Power BI**<p><img alt="Microsoft app - Microsoft Power BI icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-powerbi.png" width="100"> | Get live mobile access to your important business information with the Microsoft Power BI app. Easily view and interact with your dashboards and reports for all your business data. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.powerbim),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-power-bi/id929738808?mt=8) |  
-| **Microsoft PowerPoint**<p><img alt="Microsoft app - Microsoft PowerPoint icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-powerpoint.png" width="100"> | Make PowerPoint presentations look great on your tablet and phone. Be confident that when you edit or create presentations, they'll look exactly how you want across computers, Macs, tablets, and phones. Be up and running in no time with a familiar Office look and feel, along with an intuitive touch experience.<p><p>This app can be used as a multi-identity app for Android and iOS/iPadOS. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-powerpoint/id586449534?mt=8) |  
-| **Microsoft SharePoint**<p><img alt="Microsoft app - Microsoft SharePoint icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-sharepoint.png" width="100"> | Bring your company intranet in your pocket with on-the-go-access from the SharePoint mobile app. Get quick access to your team sites, organization portals and resources, and the people you work with—both on-premises or online in Microsoft 365. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-sharepoint/id1091505266?ls=1&mt=8) |  
-| **Microsoft To-Do**<p><img alt="Microsoft app - Microsoft To-Do icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-to-do.png" width="100"> | Microsoft To-Do is a simple and intelligent to-do list that makes it easy to plan your day. Whether it's for work, school or home, To-Do will help you to increase your productivity and decrease your stress levels. It combines intelligent technology and beautiful design to empower you to create a simple daily workflow. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.todos),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-to-do/id1212616790) |  
-| **Microsoft Skype for Business**<p><img alt="Microsoft app - Microsoft Skype for Business icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-skype-for-business.png" width="100"> | Get a single easy-to-use interface for any mobile device to access your favorite Skype features: voice and video over wireless, rich presence, instant messaging, conferencing, and calling. Available for iOS/iPadOS and Android.| [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15),<br>[App Store link (iOS)](https://itunes.apple.com/app/skype-for-business-formerly/id605841731?mt=8) |  
-| **Microsoft StaffHub**<p><img alt="Microsoft app - Microsoft StaffHub icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-staffhub.png" width="100"> | Microsoft StaffHub is a cloud-based platform that slips work (and the tools to manage it) into everyone's back pocket. With Microsoft StaffHub, Firstline Workers can view schedules, swap shifts, and request time off. Managers can create schedules, approve requests, and share information. On mobile or web, it's the one-stop app for scheduling, sharing, and communicating. Microsoft StaffHub gives everyone the freedom to manage work. | [Google Play link (Android)](https://play.google.com/store/apps/),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-staffhub/id1122181468?mt=8) |  
-| **Microsoft Stream**<p><img alt="Microsoft app - Microsoft Stream icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-stream.png" width="100"> | Microsoft Stream is your central destination for enterprise video content with built-in intelligence features, deep integration across Microsoft 365, and IT management and security capabilities that businesses of all sizes require.<p>With the Microsoft Stream mobile app you can:<ul><li>Find and engage with videos you need fast with smart search tools</li><li>Watch videos at your own convenience by saving content for offline viewing</li><li>Enjoy the best experience for consuming Stream videos by deep-linking into the app</li><li>Get the enterprise-level security and compliance features you expect from Office 365</li></ul><p>This app requires an appropriate commercial Microsoft 365 subscription. If you are not sure about your organization's subscription or the services you have access to, please contact your IT department. To learn more about managing Microsoft Stream with Intune, visit [aka.ms/streamintune](https://aka.ms/streamintune).<p>By downloading this app, you agree to the license terms (see [aka.ms/eulastreamios](https://aka.ms/eulastreamios)) and privacy terms (see [aka.ms/privacy](https://aka.ms/privacy)).<p>To learn more, please visit [aka.ms/microsoftstreamdocs](https://aka.ms/microsoftstreamdocs).<br>For support or feedback, email us at streamiosstore@microsoft.com. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.stream),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-stream/id1401013624?mt=8) |  
-| **Microsoft Teams**<p><img alt="Microsoft app - Microsoft Teams icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-teams.png" width="100"> | Microsoft Teams is your chat-centered workspace in Microsoft 365. Instantly access all your team's content from a single place where messages, files, people and tools live together. Take it with you on your favorite mobile device.| [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.teams),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-teams/id1113153706?mt=8) |  
-| **Microsoft Visio Viewer**<p><img alt="Microsoft app - Microsoft Visio Viewer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-visio-viewer.png" width="100"> | You can view and interact with Visio diagrams on iPhone on the go for free. Sign in with your Microsoft Account or open a Visio attachment from email, and enjoy the amazing view of Visio diagrams on any iPhone running iOS 9.0 or later. You can also share the diagrams with anyone who can then view Visio diagrams on their iPhone or in a web browser even they don't have Visio installed on their Windows desktop.| [App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983?mt=8) | 
-| **Microsoft Whiteboard**<p><img alt="Microsoft app - Microsoft Whiteboard icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-whiteboard.png" width="100"> | Microsoft Whiteboard app provides a freeform intelligent canvas where teams can ideate, create, and collaborate visually via the cloud. It enhances teamwork by allowing all team members to edit and comment directly on the canvas in real time, no matter where they are. And all your work stays safe in the cloud, ready to be picked back up from any device. | [App Store link (iOS)](https://apps.apple.com/app/microsoft-whiteboard/id1352499399) |   
-| **Microsoft Word**<p><img alt="Microsoft app - Microsoft Word icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-word.png" width="100"> | Make Word documents look better than ever on your tablet and phone. Be confident that when you edit or create documents, they'll look exactly how you want across computers, Macs, tablets, and phones. Be up and running in no time with a familiar Office look and feel, along with an intuitive touch experience.<p><p>This app can be used as a multi-identity app for Android and iOS/iPadOS. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.word),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/microsoft-word/id586447913?mt=8) |  
-| **Microsoft Work Folders**<p><img alt="Microsoft app - Microsoft Work Folders icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-work-folders.png" width="100"> | Allow individual employees to securely access their files from both inside and outside the corporate environment using Work Folders, a Windows Server feature. | [App Store link (iOS)](https://itunes.apple.com/us/app/work-folders/id950878067?mt=8) | 
-| **Yammer**<p><img alt="Microsoft app - Yammer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-yammer.png" width="100"> | Break down organizational silos and facilitate team collaboration with Yammer. Connect to the right people in your organization, share and search for information across teams, and organize around projects and ideas so you can do more. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.yammer.v1),<br>[App Store link (iOS)](https://itunes.apple.com/us/app/yammer/id289559439?mt=8) |  
+- [Multi-identity](app-protection-policy.md#multi-identity)
+- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
+- [iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps) and [Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps) Allow only configured organization accounts in multi-identity apps
+- [iOS](app-protection-policy-settings-ios.md#functionality) and [Android](app-protection-policy-settings-android.md#functionality) Sync policy managed app data with native apps
+- [iOS](app-protection-policy-settings-ios.md#functionality) and [Android](app-protection-policy-settings-android.md#functionality) Org data notifications
+- [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Open data into Org documents (open from)
+- [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Save copies of org data (save as)
+
+<table>
+<thead>
+  <tr class="header">
+    <th rowspan="2">App</th>
+    <th rowspan="2">Platform</th>
+    <th colspan="7">App Configuration and Protection Policy feature support</th>
+  </tr>
+  <tr>
+    <td><b>Multi-identity</b></td>
+    <td><b>App configuration</b></td>
+    <td><b>Org allowed accounts</b></td>
+    <td><b>Sync org data with native apps</b></td>
+    <td><b>Org data notifications</b></td>
+    <td><b>Org <i>open from</i> locations</b></td>
+    <td><b>Org <i>save as</i> locations</b></td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Field Service Mobile</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://apps.apple.com/us/app/field-service-mobile/id1414669075">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Azure Information Protection Viewer</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/rms-sharing/id689516635">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Bookings</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-bookings/id1065657468">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Cortana</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.cortana">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://apps.apple.com/us/app/cortana/id1054501703">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Dynamics CRM</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Edge</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx">Google Play</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="http://aka.ms/edgeappconfig">Edge app config</a></td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-edge/id1288723196">App Store</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="http://aka.ms/edgeappconfig">Edge app config</a></td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Excel</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.excel">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-excel/id586683407">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Kaizala</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer">Google Play</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399">App Store</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>Microsoft Launcher</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.launcher">Google Play</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="https://docs.microsoft.com/mem/intune/apps/configure-microsoft-launcher">Launcher app config</a></td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Office</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow">Google Play</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://apps.apple.com/app/microsoft-office/id541164041">App Store</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft OneDrive</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.skydrive">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/onedrive-cloud-storage-for/id477537958">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft OneNote</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.onenote">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-onenote-for-iphone/id410395246">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Outlook</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook">Google Play</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="http://aka.ms/omappconfig">Outlook app config</a></td>
+    <td>Supported</td>
+    <td>Supported</td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-outlook/id951937596">App Store</a></td>
+    <td>Supported</td>
+    <td>Supported, see <a href="http://aka.ms/omappconfig">Outlook app config</a></td>
+    <td>Supported</td>
+    <td>Supported</td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Planner</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.planner">Google Play</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-planner/id1219301037">App Store</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft PowerApps</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.msapps">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/powerapps/id1047318566">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Power Automate</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Google Play</a></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Power BI</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.powerbim">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-power-bi/id929738808">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft PowerPoint</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-powerpoint/id586449534">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft SharePoint</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.sharepoint">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-sharepoint/id1091505266">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Skype for Business</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.lync15">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/app/skype-for-business-formerly/id605841731">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft StaffHub</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=ols.microsoft.com.shiftr">Google Play</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-staffhub/id1122181468?mt=8">App Store</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Stream</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Google Play</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-stream/id1401013624">App Store</a></td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Teams</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.teams">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-teams/id1113153706">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft To-Do</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.todos">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-to-do/id1212616790">App Store</a></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>Microsoft Visio</td>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Word</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">Google Play</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-word/id586447913">App Store</a></td>
+    <td>Supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>Supported</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Yammer</td>
+    <td>Android - <a href="https://play.google.com/store/apps/details?id=com.yammer.v1">Google Play</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+  <tr>
+    <td>iOS - <a href="https://itunes.apple.com/us/app/yammer/id289559439">App Store</a></td>
+    <td><font color="red">UNKNOWN</font></td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td>N/A</td>
+    <td>Not supported</td>
+    <td>Not supported</td>
+    <td><font color="red">UNKNOWN</font></td>
+  </tr>
+</tbody>
+</table>
 
 ## Partner apps 
 
