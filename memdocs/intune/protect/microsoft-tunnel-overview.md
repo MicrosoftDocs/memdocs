@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/01/2020
+ms.date: 10/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -236,11 +236,11 @@ To use the readiness tool:
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.  
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunnelready.
 
-      For example, to use **wget** and preserve the file name during the download, run `wget https://aka.ms/microsofttunnelready -o mst-readiness`
+      For example, to use **wget** and log details to *mst-readiness* during the download, run `wget --output-document=mst-readiness https://aka.ms/microsofttunnelready`
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
-2. To validate your network configuration, run the script as **root** and use the following command line: `./mst-readiness network`
+2. To validate your network configuration, run the script as **root**. For example, you might use the following command line: `sudo chmod +x ./mst-readiness network`
 
    The script runs the following actions and reports on success or error for both:
    - Tries to connect to each Microsoft endpoint the tunnel will use.
