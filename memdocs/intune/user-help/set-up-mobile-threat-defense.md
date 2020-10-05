@@ -42,6 +42,7 @@ If you don't have the required MTD app, you'll be blocked from signing in to pro
 The following MTD apps are commonly used on iOS devices. Select an app to open its listing in the App Store.   
 
 * [ActiveShield](https://go.microsoft.com/fwlink/?linkid=2143345)
+* [Defender for iOS](https://aka.ms/defenderios)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143272)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
@@ -55,6 +56,7 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
 * [Active Shield Enterprise](https://go.microsoft.com/fwlink/?linkid=2143507) 
+* [Defender for Android](https://go.microsoft.com/fwlink/?linkid=2144546)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143413)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
@@ -62,7 +64,6 @@ The following MTD apps are commonly used on Android devices. Select an app to op
 * [Sophos Intercept X for Mobile](https://go.microsoft.com/fwlink/?linkid=2143273)
 * [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
 * [Zimperium Mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142) 
-* [Defender for Android](https://go.microsoft.com/fwlink/?linkid=2144546)
 
 
 ## Information your organization can see   
