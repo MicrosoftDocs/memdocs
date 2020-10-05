@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 10/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -107,7 +107,7 @@ These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
   > [!IMPORTANT]
   > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
   >
-  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
 
 ### Android 9 and earlier, or Samsung Knox (any version)
 
