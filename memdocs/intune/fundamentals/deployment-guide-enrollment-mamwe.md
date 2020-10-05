@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -53,7 +53,7 @@ For an overview, including any Intune-specific prerequisites, see [Deployment gu
 Use for personal or bring your own devices (BYOD). Or, use on organization-owned devices that need specific app configuration, or additional app security.
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | You want to configure specifics apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |

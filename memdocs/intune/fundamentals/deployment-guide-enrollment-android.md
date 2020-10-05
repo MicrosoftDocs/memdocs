@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,47 +32,46 @@ ms.collection: M365-identity-device-management
 > [!WARNING]
 > THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
 
-Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android and Android Enterprise devices:
+Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
-- [Android Enterprise personal with work profile (profile owner)](#android-enterprise-personal-with-work-profile)
-- [Android Enterprise corporate-owned dedicated devices (COSU)](#android-enterprise-dedicated-devices)
-- [Android Enterprise corporate-owned fully managed (COBO)](#android-enterprise-fully-managed)
-- [Android Enterprise corporate-owned with personal profile (COPE)](#android-enterprise-corporate-with-personal-profile)
+- [Android Enterprise personally-owned work profile](#android-enterprise-personally-owned-work-profile)
+- [Android Enterprise corporate-owned dedicated devices](#android-enterprise-dedicated-devices)
+- [Android Enterprise corporate-owned fully managed](#android-enterprise-fully-managed)
+- [Android Enterprise corporate-owned with personal profile](#android-enterprise-corporate-with-personal-profile)
 - [Android device administrator](#android-device-administrator)
 
-This article provides recommendations on the Android and Android Enterprise enrollment methods to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
+This article provides recommendations on the Android enrollment methods to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
 
 ## Before you begin
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-## Android Enterprise personal with work profile
+## Android Enterprise personally-owned work profile
 
 These devices are personal or BYOD (bring your own device) Android devices that access organization email, apps, and other data.
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- | 
-| Devices are personal or BYOD. | ✔️ |
+| Devices are personal or BYOD. | ✔️ <br/><br/> You can mark these devices as corporate or personal. |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
-|Devices are managed by another MDM provider. | ✔️ |
-| You use the device enrollment manager (DEM) account. | ✔️ |
+| You use the optional device enrollment manager (DEM) account. | ✔️ |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
 | Devices are owned by the organization or school. | ❌ <br/><br/>Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Android Enterprise fully managed. |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> User-less or shared devices should be organization-owned. These devices should be enrolled using Android Enterprise dedicated devices. |
 
 ---
 
-### Android Enterprise personal with work profile administrator tasks
+### Android Enterprise personally-owned work profile administrator tasks
 
 This task list provides an overview. For more specific information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an [enrollment restriction](../enrollment/enrollment-restrictions-set.md), and **allow** devices that support Android Enterprise work profiles. For the specific steps, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
 
-### Android Enterprise personal with work profile end user tasks
+### Android Enterprise personally-owned work profile end user tasks
 
 Your users must do the following steps. For the specific user experience, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
 
@@ -85,20 +84,18 @@ Your users must do the following steps. For the specific user experience, see [e
 
 ## Android Enterprise dedicated devices
 
-These devices are organization-owned, with the only purpose of being a kiosk-style device. They're commonly referred to as COSU (corporate-owned, single-use) devices.
-
-They're often shared devices, and aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more. 
+These devices are organization-owned, and supported by Google’s Zero Touch. The only purpose is to be a kiosk-style device. They're aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ |
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise work profile.|
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally-owned work profile.|
 | Devices are associated with a single user. | ❌ <br/><br/> Not recommended. These devices should be enrolled using Android Enterprise fully managed. |
-| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+| You use the optional device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 
 ---
@@ -109,7 +106,7 @@ This task list provides an overview. For more specific information, see [Set up 
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Factory reset the devices. This step is required.
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Intune app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile, and have your dedicated device group(s) ready. For the specific steps, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 - Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
 
@@ -121,21 +118,19 @@ It's not recommended for users to enroll Android Enterprise dedicated devices. T
 
 ## Android Enterprise fully managed
 
-These devices are organization-owned, and have one user. They're commonly referred to as COBO (corporate-owned, business only) devices.
-
-They're used exclusively for organization work; not personal use.
+These devices are organization-owned, and have one user. They're used exclusively for organization work; not personal use.
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
-| Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../configuration/device-restrictions-android-for-work.md#device-experience) profile, and assign this profile to this device. |
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personal with work profile.|
+| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> User-less devices should be enrolled using Android Enterprise dedicated devices.|
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally-owned work profile.|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
-| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+| You use the optional device enrollment manager (DEM) account | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
 
@@ -149,9 +144,9 @@ This task list provides an overview. For more specific information, see [Set up 
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), enable fully managed user devices. For the specific steps, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
 - Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
 
-  On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
+- Communicate to your users how they should enroll: Near Field Communication (NFC), Token, QR Code, Google Zero Touch, or Samsung Knox Mobile Enrollment (KME).
 
-- Communicate to your users how they should enroll: Near Field Communication (NFC), Token, QR Code, or Google Zero Touch.
+  Using Samsung Knox Mobile Enrollment (KME), you can automatically enroll a large number of Android Enterprise Samsung Knox devices. For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
 
 ### Android Enterprise fully managed end user tasks
 
@@ -166,21 +161,19 @@ The specific steps depend on how you configured the enrollment profile. For the 
 
 ## Android Enterprise corporate with personal profile
 
-These devices are organization-owned, and have one user. They're commonly referred to as COPE (corporate-owned, personally enabled) devices.
-
-They're used for organization work, and allow personal use.
+These devices are organization-owned, and have one user. They're used for organization work, and allow personal use.
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../configuration/device-restrictions-android-for-work.md#device-experience) profile, and assign this profile to this device. |
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise work profile.|
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally-owned work profile.|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
-| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+| You use the optional device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
 
@@ -193,8 +186,9 @@ This task list provides an overview. For more specific information, see [Set up 
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), enable corporate-owned personal profile devices. For the specific steps, see [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md)..
 - Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
+- Communicate to your users how they should enroll: Near Field Communication (NFC), Token, QR Code, Google Zero Touch, or Samsung Knox Mobile Enrollment (KME).
 
-  On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
+  Using Samsung Knox Mobile Enrollment (KME), you can automatically enroll a large number of Android Enterprise Samsung's Knox devices. For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
 
 ### Android Enterprise corporate with personal profile end user tasks
 
@@ -209,14 +203,15 @@ The specific steps depend on how you configured the enrollment profile. For the 
 
 ## Android device administrator
 
-These Android devices are personal or BYOD (bring your own device) devices that can access organization email, apps, and other data.
+These Android devices are corporate, or personal/BYOD (bring your own device) devices that can access organization email, apps, and other data.
 
 Google is reducing device administrator support in new Android releases. To avoid reduced functionality, Microsoft recommends:
 
-- Enroll new devices using [Android Enterprise work profiles](#android-enterprise-personal-with-work-profile) (in this article). Don't enroll new devices using Android device administrator.
+- Enroll new devices using [Android Enterprise work profiles](#android-enterprise-personally-owned-work-profile) (in this article). Don't enroll new devices using Android device administrator.
 - Create a device enrollment restriction to block device administrator enrollment. Android devices may try to enroll using device administrator before trying other enrollment methods. So, create the restriction to prevent this behavior. For more information, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
 - If devices will update to Android 10, then migrate devices off device administrator management.
 - Move existing Android device administrator devices to Android Enterprise work profiles. For more information, see [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
+- By default, device administrator enrollment is blocked on new tenants.
 
 <!-- MandiA 9.10.2020: Commenting out this section.
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -56,7 +56,7 @@ Use for personal/BYOD and organization-owned devices running Windows 10 and newe
 You can also use this enrollment method to automatically bulk enroll devices with the Windows Configuration Designer app.
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | You have Azure AD Premium | ✔️ <br/><br/> This enrollment method requires Azure AD Premium. If you don't have Azure AD Premium, or aren't planning to get it, then use User enrollment. |
 | You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md). | ✔️ On Windows 10 1803 and newer, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
@@ -98,7 +98,7 @@ Use for personal/BYOD and organization-owned devices running all supported Windo
 Users open the account settings on the device, and sign in with their organization account. They're prompted for specific information that you must give them, including the Intune server name or CNAME record (`EnterpriseEnrollment.contoso.com`).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are personal or BYOD. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ |
@@ -141,7 +141,7 @@ Use on organization-owned devices running Windows 10 and newer. Windows Autopilo
 For more information on Windows Autopilot, see [Windows Autopilot overview](/mem/autopilot/windows-autopilot) or [Tutorial: Use Autopilot to enroll Windows devices](../enrollment/tutorial-use-autopilot-enroll-devices.md).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program. | ✔️ |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
@@ -204,7 +204,7 @@ You create a group policy on your local AD. When a group policy refresh occurs o
 For more specific information, see [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
 | You have Azure AD Premium. | ✔️ <br/><br/> Group policy enrollment requires Azure AD Premium. |
@@ -242,7 +242,7 @@ If you use Configuration Manager, and want to continue to use Configuration Mana
 For more specific information on co-management, see [What is co-management?](../../configmgr/comanage/overview.md).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | You use Configuration Manager. | ✔️ |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |

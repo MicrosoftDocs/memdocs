@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/01/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -51,7 +51,7 @@ For more specific information on this enrollment type, see:
 - [Apple School Manager enrollment](../enrollment/apple-school-manager-set-up-ios.md): For more information on Apple School Manager, see [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | You want supervised mode. | ✔️ <br/><br/> Supervised mode deploys software updates, restricts features, allows and blocks apps, and more.|
 | Devices are owned by the organization or school. | ✔️ |
@@ -165,7 +165,7 @@ Use on devices owned by your organization, and includes [Direct Enrollment](../e
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | You need a wired connection, or are having a network issue. | ✔️ |
 | Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
@@ -277,14 +277,14 @@ When you create the enrollment profile, you're asked to choose **User enrollment
 For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User or Device enrollment](../enrollment/ios-user-enrollment.md).
 
 ---
-| Feature | Use this enrollment option |
+| Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are personal or BYOD. | ✔️ |
 | You want to help protect a specific feature on the device, such as per-app VPN. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
 | You use the device enrollment manager (DEM) account. | ✔️ |
 | Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 | Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
