@@ -66,7 +66,7 @@ To switch from your current endpoint protection application to Microsoft Intune 
 ## Configure Microsoft Intune Endpoint Protection
 Use the following steps to help you configure Endpoint Protection for Microsoft Intune.
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Policy** > **Add Policy**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Policy** > **Add Policy**.
 
 2. Expand **Computer Management**, and then select **Microsoft Intune Agent Settings**. Select **Create and Deploy a Custom Policy** to specify a policy for Endpoint Protection settings. Then choose the **Create Policy** button.
 
@@ -166,7 +166,7 @@ The following tasks help you to carry out various management tasks on managed co
 You can view the status of a remote task by choosing the **Remote Tasks** link in the bottom right corner of the Intune console. The **Remote Task Status** dialog box lists current remote tasks, task status, device name, and any reported errors. It also provides a link to troubleshooting information, if appropriate.
 
 ## Monitor Endpoint Protection
-You monitor the status of malware on your computers by using the **Protection** workspace of the [Microsoft Intune administration console](https://manage.microsoft.com/). This workspace contains two pages:
+You monitor the status of malware on your computers by using the **Protection** workspace of the [Microsoft Intune administration console](https://admin.manage.microsoft.com/). This workspace contains two pages:
 - **Protection Overview** -Displays important issues as links that you can choose for more information. Issues that might be displayed include:
   - **Malware instances that need follow-up** – Click the link to see a list of malware issues, including the follow-up action that needs to be taken to resolve the issue. You can further explore this list to see which computers are affected.
   - **Computers with malware that need follow-up** – Click the link to see all computers with unresolved malware issues, as well as the follow-up action that needs to be taken to resolve the issue.
@@ -184,7 +184,7 @@ You monitor the status of malware on your computers by using the **Protection** 
 ### How to view Recent Detection Paths for malware on computers
 Intune can display the paths of up to 10 of the most recently detected instances of malware on a device. The **Recent Detection Path** is disabled by default. To enable this view:
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Groups** > **All Devices** > **All Computers**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Groups** > **All Devices** > **All Computers**.
 2. Right-click the computer whose recent detection paths you want to see and select **Properties**.
 3. Select **Malware** from the tabs across the top.
 
@@ -194,7 +194,7 @@ Intune can display the paths of up to 10 of the most recently detected instances
 ## Run a malware scan or update malware definitions on a computer
 Intune can run either a full or quick malware scan by using Endpoint Protection or Microsoft Defender on a remotely managed PC that has the Intune client installed.
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), go to **Groups** > **Overview** > **All Devices** > **All Computers**, and then select the computer that you want to target.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), go to **Groups** > **Overview** > **All Devices** > **All Computers**, and then select the computer that you want to target.
 
 2. Choose the **Remote Tasks** drop-down list, and then select the task to run on the remote computer.
 
