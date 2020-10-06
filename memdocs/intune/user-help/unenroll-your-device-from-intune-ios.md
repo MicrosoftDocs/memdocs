@@ -48,7 +48,7 @@ When you unenroll your iOS or macOS device:
 
 ## Remove device via Company Portal  
 
-You can remove, or uneroll, your device from Intune via the Company Portal.   
+You can remove, or unenroll, your device from Intune via the Company Portal.   
 
 
 1. In the Company Portal app, tap **Devices** and select the device you want to unenroll. If you only have one device, when you tap **Devices**, you will go directly to the device details screen.

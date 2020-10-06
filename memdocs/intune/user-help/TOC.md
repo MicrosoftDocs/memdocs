@@ -124,7 +124,8 @@
 ### Update device settings  
 #### [My version of macOS isn't yet supported](your-macos-version-isnt-yet-supported.md)
 #### [Update operating system version ](you-need-to-update-your-macos-device.md)
-#### [Device assigned to someone else](unable-to-get-macOS-device-managed.md)#### [Locate your serial number](how-do-i-find-the-serial-number-on-my-device-macos.md)
+#### [Device assigned to someone else](unable-to-get-macOS-device-managed.md)
+#### [Locate your serial number](how-do-i-find-the-serial-number-on-my-device-macos.md)
 #### [Identify your device](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 #### [Device limit has been reached](device-limit-wpj-macos.md)
 #### [Trouble getting macOS VM managed](unable-to-get-macOS-device-managed.md) 

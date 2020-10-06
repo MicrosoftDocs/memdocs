@@ -31,7 +31,7 @@ ms.collection:
 
 
 # Work or school apps for Android  
-Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These type of restrictions prevent proprietary information from being shared outside of the app or org. 
+Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These types of restrictions prevent proprietary information from being shared outside of the app or org. 
 
 To maximize data protection, your organization might configure several of these apps to work together. For example:  
 1. You connect to your organization's network in a managed browser app, such as Microsoft Edge.  

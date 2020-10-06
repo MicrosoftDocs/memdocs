@@ -2,7 +2,7 @@
 # required metadata
 
 title: My macOS version isn't yet supported | Microsoft Docs
-description:
+description: Explains why you're receiving a message that your macOS version isn't supported by Intune. 
 keywords:
 author: lenewsad
 

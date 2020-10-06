@@ -37,7 +37,7 @@ The Company Portal app enables you to securely access work or school from anywhe
 ## What happens on all devices after enrollment  
 After you enroll any Windows device (mobile or desktop) in Intune:  
 
-- You get access you org's network, email, and work files.  
+- You can access your org's network, email, and work files.  
 
 - You can install work or school apps from the Company Portal website and app. (__Note__: for Windows 7 and Windows Vista, you can only get these apps from the Company Portal website.)
 
@@ -47,7 +47,7 @@ After you enroll any Windows device (mobile or desktop) in Intune:
 
 
 ### What happens on Windows PCs after enrollment   
-In addition to everything under [What happens on all devices after enrollmet](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md#what-happens-on-all-device-after-enrollment), after you enroll a Windows PC in Intune:   
+In addition to everything under [What happens on all devices after enrollment](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md#what-happens-on-all-devices-after-enrollment), after you enroll a Windows PC in Intune:   
 
 - Software is installed on the computer so that IT support can manage the computer. IT support can automatically update this software.  
 

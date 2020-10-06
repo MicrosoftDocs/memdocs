@@ -30,7 +30,7 @@ ms.collection:
 ---
 
 # Work or school apps for iOS
-Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These type of restrictions prevent proprietary information from being shared outside of the app or org. 
+Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These types of restrictions prevent proprietary information from being shared outside of the app or org. 
 
 To maximize data protection, your organization might configure several of these apps to work together. For example:  
 1. You connect to your organization's network in a managed browser app, such as Microsoft Edge.  
@@ -51,7 +51,7 @@ There are four ways to get these apps:
 * You install an app from the iOS App Store, and then sign in to the app with your work or school account.    
 * Your organization makes managed apps available to you in Company Portal. Go to the Company Portal app or website to search, view, and install available apps. For more information about these apps, see the next section, [Available apps](#available-apps).  
 
-### Apple Volume Purchase Pogram agreement  
+### Apple Volume Purchase Program agreement  
 Organizations often purchase iOS app licenses in bulk to accommodate the number of students or employees they have. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you should accept it. If you don't accept it, you won't be able to install the app.  
 
 ## Available apps   
@@ -60,7 +60,7 @@ Organizations often purchase iOS app licenses in bulk to accommodate the number 
  Apps are also made available to you based on your device type. For example, if you're using the Company Portal app for iOS, you'll have access to iOS apps, but not Android apps.   
 
 ## Request an app for work or school   
- IIf there's an app you need, but don't see in Company Portal, you can request it. You'll find contact details for your IT support person in the Company Portal **Support** tab. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ If there's an app you need, but don't see in Company Portal, you can request it. You'll find contact details for your IT support person in the Company Portal **Support** tab. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
  
 
 ## What can my org manage in an app?  

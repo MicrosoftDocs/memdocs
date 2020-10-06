@@ -39,13 +39,13 @@ After you unregister the device, you'll lose device access to school or work res
 * Windows 8.1 computer
 * Windows 8.1 phone
  
-Make sure to read [What happens if I remove my device from Intune?](unenroll-your-device-from-intune-windows.md#what-happens-if-i-remove-my-device-from-intune?) before unenrolling your device.  
+Make sure to read [What happens if you remove device from Intune](unenroll-your-device-from-intune-windows.md#what-happens-if-you-remove-device-from-intune) before unenrolling your device.  
 
-## What happens if I remove my device from Intune?  
+## What happens if you remove device from Intune  
 This section describes how your device and access to work or school will change after you remove your device from Intune. 
 
 ### Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
-After you uneroll a device running Windows 10, Windows 8.1, Windows 7 or Windows Vista:  
+After you unenroll a device running Windows 10, Windows 8.1, Windows 7 or Windows Vista:  
 
 - Your device is removed from Company Portal.
 - You can't install apps from the Company Portal.  

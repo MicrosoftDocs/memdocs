@@ -63,7 +63,7 @@
                 {
             "source_path": "memdocs/intune/user-help/unenroll-your-device-from-intune-if-you-decline-terms-of-use-android.md",
             "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "memdocs/intune/user-help/reset-erase-your-device-cpwebsite.md",
