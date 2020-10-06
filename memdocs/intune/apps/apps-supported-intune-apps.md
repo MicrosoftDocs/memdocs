@@ -37,21 +37,11 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune.
 
 ## Microsoft apps
-The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. 
 
 > [!NOTE]
 > For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
-For more information on the columns within the **Advanced App Configuration and Protection Policy feature support** section, see:
-
-- [Multi-identity](app-protection-policy.md#multi-identity)
-- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
-- [iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps) and [Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps) Allow only configured organization accounts in multi-identity apps
-- [iOS](app-protection-policy-settings-ios.md#functionality) and [Android](app-protection-policy-settings-android.md#functionality) Sync policy managed app data with native apps
-- [iOS](app-protection-policy-settings-ios.md#functionality) and [Android](app-protection-policy-settings-android.md#functionality) Org data notifications
-- [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Open data into Org documents (open from)
-- [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Save copies of org data (save as)
-
+The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. 
 
 <table>
 <thead>
@@ -62,12 +52,12 @@ For more information on the columns within the **Advanced App Configuration and 
     <th colspan="6">Advanced App Configuration and Protection Policy feature support</th>
   </tr>
   <tr>
-    <td><b>App configuration</b></td>
-    <td><b>Org allowed accounts</b></td>
-    <td><b>Sync org data with native apps</b></td>
-    <td><b>Org data notifications</b></td>
-    <td><b>Org <i>open from</i> locations</b></td>
-    <td><b>Org <i>save as</i> locations</b></td>
+    <td><b><a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-overview">App configuration</a></b></td>
+    <td><b>Org allowed accounts (<a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps">Android</a>)</b></td>
+    <td><b>Sync org data with native apps (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
+    <td><b>Org data notifications (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
+    <td><b>Org <i>open from</i> locations (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
+    <td><b>Org <i>save as</i> locations (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
   </tr>
 </thead>
 <tbody>
