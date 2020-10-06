@@ -63,7 +63,7 @@ These are the keys to migrating successfully from a third-party MDM provider to 
 
     - Mobile app protections are enforced.
 
-When you are satisfied with the first phase of migrations, repeat the [migration cycle](migration-guide-cycle.md) for the next phase.
+When you are satisfied with the first phase of migrations, repeat the migration cycle for the next phase.
 
 - Repeat phased cycles until all users are migrated to Intune.
 
