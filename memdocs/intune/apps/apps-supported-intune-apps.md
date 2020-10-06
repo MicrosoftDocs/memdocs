@@ -42,7 +42,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
 > [!NOTE]
 > For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
-For more information on the columns within the **Advanced App Protection Policy feature support** section, see:
+For more information on the columns within the **Advanced App Configuration and Protection Policy feature support** section, see:
 
 - [Multi-identity](app-protection-policy.md#multi-identity)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
@@ -59,10 +59,10 @@ For more information on the columns within the **Advanced App Protection Policy 
     <th rowspan="2">App</th>
     <th rowspan="2">Platform</th>
     <th rowspan="2">App Protection Policy</th>
-    <th rowspan="2">App Configuration Policy</th>
-    <th colspan="5">Advanced App Protection Policy feature support</th>
+    <th colspan="6">Advanced App Configuration and Protection Policy feature support</th>
   </tr>
   <tr>
+    <td><b>App configuration</b></td>
     <td><b>Org allowed accounts</b></td>
     <td><b>Sync org data with native apps</b></td>
     <td><b>Org data notifications</b></td>
