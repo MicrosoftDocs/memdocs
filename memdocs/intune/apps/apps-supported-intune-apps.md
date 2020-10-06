@@ -22,14 +22,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Intune protected apps  
 
-The apps listed in this topic are supported partner and Microsoft apps that are commonly used with Microsoft Intune. Intune protected apps are enabled with a rich set of mobile application protection policies. These apps allow you to:
-
-- Restrict data transfer and copy-and-paste functions
-- Configure web links to open inside a managed browser, like Microsoft Edge
-- Enforce access policy requirements
-- Apply data loss prevention policies without managing the user's device
-- Enable app protection without requiring enrollment
-- Enable app protection on devices managed with 3rd party EMM tools
+The apps listed in this topic are supported partner and Microsoft apps that are commonly used with Microsoft Intune. Intune protected apps are enabled with a rich set of mobile application protection policies.
 
 > [!NOTE]
 > For your client line-of-business apps, you can incorporate mobile app management using the [Intune App Software Development Kit](../developer/app-sdk.md) (SDK), or the [App Wrapping Tool for iOS](../developer/app-wrapper-prepare-ios.md) and the [App Wrapping Tool for Android](../developer/app-wrapper-prepare-android.md).
@@ -41,14 +34,127 @@ The following tables provide details of supported partner and Microsoft apps tha
 > [!NOTE]
 > For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
-The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings as defined in the **Advacnced App Configuration and Protection Policy feature support** columns. 
+The below apps support core Intune App Protection Policy settings. The core Intune App Protection settings are defined as:
+
+- Protect work or school account data while leaving personal data untouched in apps that support multi-identity
+- Restrict data transfer and copy-and-paste functions
+- Encrypt work or school account data
+- Configure work or school account web links to open inside a managed browser, like Microsoft Edge
+- Enforce access requirements to access work or school account data
+- Enforce conditional launch behaviors to protect the work or school account data
+- Apply data loss prevention policies without managing the user's device
+- Enable app protection without requiring enrollment
+- Enable app protection on devices managed with third-party Unified Endpoint Management solutions
 
 <table>
 <thead>
   <tr class="header">
     <th rowspan="2">App</th>
     <th rowspan="2">Platform</th>
-    <th rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">App Protection Policy</a></th>
+    <th rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">Core App Protection Policy settings</a></th>
+    <th rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-overview">App configuration</a></b></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Field Service Mobile</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://apps.apple.com/us/app/field-service-mobile/id1414669075">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Bookings</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/us/app/microsoft-bookings/id1065657468">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Dynamics CRM</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Kaizala</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft PowerApps</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.msapps">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/us/app/powerapps/id1047318566">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Power Automate</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Skype for Business</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.lync15">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/app/skype-for-business-formerly/id605841731">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Microsoft Stream</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://itunes.apple.com/us/app/microsoft-stream/id1401013624">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+</tbody>
+</table>
+
+In addition to supporting the core Intune App Protection Policy settings, the following apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings as defined in the **Advacnced App Configuration and Protection Policy feature support** columns. 
+
+<table>
+<thead>
+  <tr class="header">
+    <th rowspan="2">App</th>
+    <th rowspan="2">Platform</th>
+    <th rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">Core App Protection Policy settings</a></th>
     <th colspan="6">Advanced App Configuration and Protection Policy feature support</th>
   </tr>
   <tr>
@@ -62,27 +168,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
 </thead>
 <tbody>
   <tr>
-    <td rowspan="2">Field Service Mobile</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/field-service-mobile/id1414669075">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-  </tr>
-  <tr>
     <td rowspan="2">Microsoft Azure Information Protection Viewer</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer">Android</a></td>
     <td align="center">✔</td>
@@ -95,27 +180,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/rms-sharing/id689516635">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Bookings</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/us/app/microsoft-bookings/id1065657468">iOS</a></td>
     <td align="center">✔</td>
     <td>No settings</td>
     <td align="center">✖</td>
@@ -143,27 +207,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td align="center">N/A</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Dynamics CRM</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
     <td align="center">N/A</td>
   </tr>
   <tr>
@@ -207,27 +250,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td align="center">✖</td>
     <td align="center">✖</td>
     <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Kaizala</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
   </tr>
   <tr>
     <td>Microsoft Launcher</td>
@@ -346,48 +368,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td align="center">N/A</td>
   </tr>
   <tr>
-    <td rowspan="2">Microsoft PowerApps</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.msapps">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/us/app/powerapps/id1047318566">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Power Automate</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
     <td rowspan="2">Microsoft Power BI</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.powerbim">Android</a></td>
     <td align="center">✔</td>
@@ -442,48 +422,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-sharepoint/id1091505266">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Skype for Business</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.lync15">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/app/skype-for-business-formerly/id605841731">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Stream</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/us/app/microsoft-stream/id1401013624">iOS</a></td>
     <td align="center">✔</td>
     <td>No settings</td>
     <td align="center">✖</td>
