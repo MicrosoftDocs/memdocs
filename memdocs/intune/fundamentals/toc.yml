@@ -65,36 +65,12 @@
     href: manage-os-versions.md
   - name: Manage Windows Holographic
     href: windows-holographic-for-business.md
-
 - name: How-to guides
   items:
   - name: Plan deployment
     items:
-    - name: NEW planning guide
-      href: intune-planning-guide.md
     - name: Planning guide
-      href: planning-guide.md
-      items:
-      - name: Determine goals and objectives
-        href: planning-guide-deployment-goals.md
-      - name: Identify scenarios
-        href: planning-guide-scenarios.md
-      - name: Determine requirements
-        href: planning-guide-requirements.md
-      - name: Develop a rollout plan
-        href: planning-guide-rollout-plan.md
-      - name: Develop a communication plan
-        href: planning-guide-communication-plan.md
-      - name: Develop a support plan
-        href: planning-guide-support-plan.md
-      - name: Design
-        href: planning-guide-design.md
-      - name: Implement
-        href: planning-guide-onboarding.md
-      - name: Test and validate
-        href: planning-guide-test-validation.md
-      - name: Additional resources
-        href: planning-guide-resources.md
+      href: intune-planning-guide.md
     - name: NEW deployment guides
       items:
       - name: Set up Intune
@@ -116,16 +92,11 @@
       href: migration-guide.md
       items:
       - name: Prepare Intune
-        href: migration-guide-prepare.md
         items:
-        - name: Basic setup
-          href: migration-guide-setup.md
         - name: Configure device and app management policies
           href: migration-guide-configure-policies.md
         - name: Configure app protection policies
           href: migration-guide-app-protection-policies.md
-        - name: Migration considerations
-          href: migration-guide-considerations.md
       - name: Migration campaign
         href: migration-guide-campaign.md
         items:
@@ -137,7 +108,9 @@
           href: migration-guide-cycle.md
     - name: Plan communications
       href: migration-guide-communication-plan.md
-    - name: Educate users
+
+
+      - name: Educate users
       items:
       - name: How to educate your end users
         href: end-user-educate.md    
