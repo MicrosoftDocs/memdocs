@@ -37,7 +37,7 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune.
 
 ## Microsoft apps
-Apps are capable of supporting advanced App Protection Policy and App Configuration Policy settings. The below table identifies the capabilities of each app. For more information on the columns within the **App Configuration and Protection Policy feature support** section, see:
+The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. The below table identifies the capabilities of each app. For more information on the columns within the **Advanced App Configuration and Protection Policy feature support** section, see:
 
 - [Multi-identity](app-protection-policy.md#multi-identity)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
@@ -47,17 +47,18 @@ Apps are capable of supporting advanced App Protection Policy and App Configurat
 - [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Open data into Org documents (open from)
 - [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Save copies of org data (save as)
 
-For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
+> [!NOTE]
+> For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
 <table>
 <thead>
   <tr class="header">
     <th rowspan="2">App</th>
     <th rowspan="2">Platform</th>
-    <th colspan="7">App Configuration and Protection Policy feature support</th>
+    <th rowspan="2">App Protection Policy</th>
+    <th colspan="6">Advanced App Configuration and Protection Policy feature support</th>
   </tr>
   <tr>
-    <td><b>Multi-identity</b></td>
     <td><b>App configuration</b></td>
     <td><b>Org allowed accounts</b></td>
     <td><b>Sync org data with native apps</b></td>
@@ -70,7 +71,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Field Service Mobile</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -80,7 +81,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://apps.apple.com/us/app/field-service-mobile/id1414669075">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -91,7 +92,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Azure Information Protection Viewer</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -101,8 +102,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/rms-sharing/id689516635">App Store</a></td>
-    <td>N/A</td>
-    <td>Not supported</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>N/A</td>
     <td>Not supported</td>
@@ -112,7 +112,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Bookings</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -122,7 +122,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-bookings/id1065657468">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -133,7 +133,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Cortana</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.cortana">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -143,7 +143,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://apps.apple.com/us/app/cortana/id1054501703">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -154,7 +154,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Dynamics CRM</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -164,7 +164,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -217,7 +217,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Kaizala</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer">Google Play</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td><font color="red">UNKNOWN</font></td>
@@ -227,7 +227,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399">App Store</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td><font color="red">UNKNOWN</font></td>
@@ -333,7 +333,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Planner</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.planner">Google Play</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -343,7 +343,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-planner/id1219301037">App Store</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -354,7 +354,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft PowerApps</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.msapps">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -364,7 +364,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/powerapps/id1047318566">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -375,7 +375,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Power Automate</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -385,7 +385,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Supported</td>
     <td>N/A</td>
@@ -396,7 +396,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Power BI</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.powerbim">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -406,7 +406,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-power-bi/id929738808">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -438,7 +438,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft SharePoint</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.sharepoint">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -448,7 +448,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-sharepoint/id1091505266">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -459,7 +459,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Skype for Business</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.lync15">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -469,7 +469,6 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/app/skype-for-business-formerly/id605841731">App Store</a></td>
-    <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -480,7 +479,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft StaffHub</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=ols.microsoft.com.shiftr">Google Play</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td><font color="red">UNKNOWN</font></td>
@@ -490,7 +489,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-staffhub/id1122181468?mt=8">App Store</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td><font color="red">UNKNOWN</font></td>
@@ -501,7 +500,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Stream</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Google Play</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -511,7 +510,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-stream/id1401013624">App Store</a></td>
-    <td>N/A</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -553,7 +552,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-to-do/id1212616790">App Store</a></td>
-    <td>Not supported</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -575,7 +574,6 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Word</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">Google Play</a></td>
-    <td>Supported</td>
     <td>Not supported</td>
     <td>Supported</td>
     <td>N/A</td>
@@ -596,7 +594,7 @@ For more information on Conditional Access support, see [App protection policy r
   <tr>
     <td rowspan="2">Microsoft Yammer</td>
     <td>Android - <a href="https://play.google.com/store/apps/details?id=com.yammer.v1">Google Play</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
@@ -606,7 +604,7 @@ For more information on Conditional Access support, see [App protection policy r
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/yammer/id289559439">App Store</a></td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>Not supported</td>
     <td>N/A</td>
