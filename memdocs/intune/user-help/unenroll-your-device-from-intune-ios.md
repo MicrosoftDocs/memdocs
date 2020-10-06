@@ -33,10 +33,7 @@ ms.collection:
 
 # Remove your iOS device from Intune
 
-When you remove your iOS device from Intune, your device will no longer be able to access company resources and will no longer be managed by Intune. 
-
-
-When you unenroll your iOS or macOS device:  
+Remove an enrolled iOS device so that it's no longer managed by your organization. After you remove the device:
 
 - The device is removed from Company Portal.    
 - You lose access to internal file shares and websites from your device.  
@@ -69,6 +66,9 @@ There are three places the Company Portal stores local data on your device.
 - **Apple analytics**: standard app crash activity data that Apple collects. This information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.
 
 - **Keychain**: your device stores your passwords and other information used for sign-ins in your Keychain. Microsoft apps share your sign-in information across any Microsoft-developed apps that you have on your device, including Microsoft Outlook and Microsoft Authenticator. Like Apple analytics, this information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.
+
+
+##  Next steps 
 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -55,6 +55,6 @@ To reset a device to its original, out-of-box settings:
 
 ## Next steps  
 
-* You can also reset a device from the Company Portal app for [Android](reset-device-company-portal-android.md) and [Windows](reset-device-company-portal-windows.md).  
+* You can also reset a device from the Company Portal app for [Android](reset-device-company-portal-android.md), [Windows](reset-device-company-portal-windows.md), and [iOS](effects-of-device-reset-company-portal-ios.md).  
 
 * Need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

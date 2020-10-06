@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 10/04/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,11 +29,11 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Remove your Android device from management  
+# Remove Android device from Intune 
 
 Remove an enrolled Android device so that it's no longer managed by your organization. After you remove the device:  
 
-* The device loses access to your organization's protected data and resources.
+* The device loses access to your organization's internal apps and websites.  
 * The device no longer appears in Company Portal.
 * You can't install apps from Company Portal.
 * Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.  

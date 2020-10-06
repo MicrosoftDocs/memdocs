@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2019
+ms.date: 10/05/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -47,7 +47,7 @@ To reset a device to its original, out-of-box settings:
 5. Select **RESET** to start wiping the device.   
 
 
-## Remove work content and access on Samsung Knox 
+## Remove work content and access on Knox device 
 If you're on a Samsung Knox device, you can use the device removal option to remove all work-related content from your device. This option deletes:  
 
 - School or work-related apps connected to your organization. 
@@ -69,6 +69,6 @@ To remove work-related data from a Knox-enrolled device:
 
 * You can also [reset a device from the Company Portal website](reset-device-company-portal-website.md).  
 
-* * If you just want to remove your device from Company Portal, see [Remove your Windows device from management](unenroll-your-device-from-intune-android.md). Removing the device effectively removes it from Intune and may cause you to lose access to the work-related content on your device. 
+* If you want to unenroll your device from Company Portal so that it's no longer managed by your organization, see [Remove Android device from Intune](unenroll-your-device-from-intune-android.md). Removing the device effectively removes it from Intune and may cause you to lose access to the work-related content on your device. 
 
 * Need additional help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
