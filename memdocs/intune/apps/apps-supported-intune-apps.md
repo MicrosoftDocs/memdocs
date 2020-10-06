@@ -54,10 +54,10 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
   <tr>
     <td><b><a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-overview">App configuration</a></b></td>
     <td><b>Org allowed accounts (<a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps">Android</a>)</b></td>
-    <td><b>Sync org data with native apps (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
+    <td><b>Sync policy managed app data with native apps (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
     <td><b>Org data notifications (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
-    <td><b>Org <i>open from</i> locations (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
-    <td><b>Org <i>save as</i> locations (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
+    <td><b>Open data into Org documents (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
+    <td><b>Save copies of org data (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
   </tr>
 </thead>
 <tbody>
