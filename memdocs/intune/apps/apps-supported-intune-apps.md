@@ -37,7 +37,12 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune.
 
 ## Microsoft apps
-The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. The below table identifies the capabilities of each app. For more information on the columns within the **Advanced App Configuration and Protection Policy feature support** section, see:
+The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. The below table identifies the capabilities of each app. 
+
+> [!NOTE]
+> For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
+
+For more information on the columns within the **Advanced App Configuration and Protection Policy feature support** section, see:
 
 - [Multi-identity](app-protection-policy.md#multi-identity)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
@@ -47,8 +52,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
 - [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Open data into Org documents (open from)
 - [iOS](app-protection-policy-settings-ios.md#data-transfer) and [Android](app-protection-policy-settings-android.md#data-transfer) Save copies of org data (save as)
 
-> [!NOTE]
-> For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
 <table>
 <thead>
