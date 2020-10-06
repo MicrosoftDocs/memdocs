@@ -64,549 +64,549 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
   <tr>
     <td rowspan="2">Field Service Mobile</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
   </tr>
   <tr>
     <td><a href="https://apps.apple.com/us/app/field-service-mobile/id1414669075">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Azure Information Protection Viewer</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/rms-sharing/id689516635">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Bookings</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-bookings/id1065657468">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Cortana</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.cortana">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://apps.apple.com/us/app/cortana/id1054501703">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Dynamics CRM</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Edge</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-edge/id1288723196">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Excel</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.excel">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-excel/id586683407">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Kaizala</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
   </tr>
   <tr>
     <td>Microsoft Launcher</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.launcher">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/configure-microsoft-launcher">Launcher app config</a></td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Office</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td><a href="https://apps.apple.com/app/microsoft-office/id541164041">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft OneDrive</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.skydrive">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✔</td>
-    <td>N/A</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/onedrive-cloud-storage-for/id477537958">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✔</td>
-    <td>N/A</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft OneNote</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.onenote">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-onenote-for-iphone/id410395246">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Outlook</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
-    <td>✔</td>
-    <td>✔</td>
-    <td>✔</td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✔</td>
+    <td align="center">✔</td>
+    <td align="center">✔</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-outlook/id951937596">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
-    <td>✔</td>
-    <td>✔</td>
-    <td>✔</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">✔</td>
+    <td align="center">✔</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Planner</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.planner">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-planner/id1219301037">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft PowerApps</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.msapps">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/powerapps/id1047318566">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Power Automate</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-flow/id1094928825">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Power BI</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.powerbim">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-power-bi/id929738808">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft PowerPoint</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-powerpoint/id586449534">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft SharePoint</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.sharepoint">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-sharepoint/id1091505266">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Skype for Business</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.lync15">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/app/skype-for-business-formerly/id605841731">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft StaffHub</td>
     <td><a href="https://play.google.com/store/apps/details?id=ols.microsoft.com.shiftr">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-staffhub/id1122181468?mt=8">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
     <td><font color="red">UNKNOWN</font></td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Stream</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-stream/id1401013624">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Teams</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.teams">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✔</td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✔</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-teams/id1113153706">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✔</td>
-    <td>✖</td>
-    <td>✖</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✔</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft To-Do</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.todos">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-to-do/id1212616790">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td>Microsoft Visio</td>
     <td><a href="https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Word</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-word/id586447913">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✔</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>✔</td>
+    <td align="center">✔</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">✔</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft Yammer</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.yammer.v1">Android</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
   <tr>
     <td><a href="https://itunes.apple.com/us/app/yammer/id289559439">iOS</a></td>
-    <td>✔</td>
+    <td align="center">✔</td>
     <td>No settings</td>
-    <td>✖</td>
-    <td>N/A</td>
-    <td>✖</td>
-    <td>✖</td>
-    <td>N/A</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
+    <td align="center">✖</td>
+    <td align="center">✖</td>
+    <td align="center">N/A</td>
   </tr>
 </tbody>
 </table>
