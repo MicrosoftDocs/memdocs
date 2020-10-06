@@ -634,7 +634,7 @@ To add apps, you can:
 
 ## Autonomous single app mode (ASAM)
 
-Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When ASAP is configured, and users start one of the configured apps, then the device is locked to that app. App/task switching is disabled until users exit the allowed app.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When ASAM is configured, and users start one of the configured apps, then the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
 For the ASAM configuration to apply, users must manually open the specific app. This task also applies to the Company Portal app.
 

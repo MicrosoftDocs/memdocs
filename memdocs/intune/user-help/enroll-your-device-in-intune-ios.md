@@ -62,9 +62,11 @@ To learn more about enrollment, see [What happens when I install the Company Por
 
 ## Prerequisites    
 
+* Device running iOS 11.0 and later.   
 * Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.
+
 
 ## Enroll your iOS device  
 
