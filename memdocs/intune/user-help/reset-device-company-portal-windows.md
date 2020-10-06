@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -46,6 +46,15 @@ To reset a device to its original, out-of-box settings:
 4. Select **Actions** > **Reset**.    
 5. Select **Reset** to start wiping the device.   
 
+## Reset limitations  
+Company Portal device resets aren't supported on all devices. The feasibility of a reset depends on the Windows version and how your organization configured their policies. This table lists the expected outcomes for various Windows devices and configurations.       
+
+
+|Device configuration and management|Device type|
+|---------------------------------------|---------------|
+|Your company support manages your mobile device|**Windows 10 and Windows Phone 8.1**</br>Your device won't appear in the company portal anymore, and the company portal tries to reset the device back to the manufacturer's default settings. Your personal data, apps, and settings will be removed. <br /><br />**Windows 10 Mobile**</br>The only way to unenroll your device is to reset it.|
+|Your device can access company email only|**Windows Phone 8.1**<br />Your device won't appear in the company portal anymore, and your company email account and unsaved email will be deleted.<br /><br />**Windows 7 or Windows Vista**<br />You cannot reset a computer that's running Windows 7 or earlier that's used for email only.<br /><br />**Windows 8.1 and Windows 8**<br />Your device won't appear in the company portal anymore, and your company email account and unsaved email will be deleted.|
+|PCs and laptops|**Windows 8.1 and Windows 8**<br />You cannot reset a computer that's running Windows 8 or Windows 8.1 unless it's used for email only.<br /><br />**Windows 7 or Windows Vista**<br />You cannot reset a computer that's running Windows 7 or earlier.|  
 
 ## Next steps 
 

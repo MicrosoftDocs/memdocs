@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Your iOS version isn't yet supported | Microsoft Docs
+title: My macOS version isn't yet supported | Microsoft Docs
 description:
 keywords:
 author: lenewsad

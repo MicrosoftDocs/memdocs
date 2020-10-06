@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: You need to update your iOS device | Microsoft Docs
+title: Update macOS operating system version - Microsoft Intune  | Microsoft Docs
 description:
 keywords:
 author: lenewsad

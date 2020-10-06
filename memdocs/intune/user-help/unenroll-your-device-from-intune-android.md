@@ -31,12 +31,13 @@ ms.collection:
 
 # Remove your Android device from management  
 
-Remove an enrolled Android device so that it's no longer managed by your organization. This article describes how to remove the device from the Company Portal app. After you remove the device:  
+Remove an enrolled Android device so that it's no longer managed by your organization. After you remove the device:  
 
 * The device loses access to your organization's protected data and resources.
 * The device no longer appears in Company Portal.
 * You can't install apps from Company Portal.
 * Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.  
+* If your device was set up just so you can receive work emails, your device won't appear in the Company Portal anymore.
 
 > [!NOTE]
 > You can't unenroll or remove your corporate-owned device from the 
