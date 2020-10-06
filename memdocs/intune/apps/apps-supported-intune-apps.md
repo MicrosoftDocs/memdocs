@@ -173,7 +173,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <th valign="middle" rowspan="2">App</th>
     <th valign="middle" rowspan="2">Platform</th>
     <th valign="middle" rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">Core App Protection Policy settings</a></th>
-    <th colspan="6">Advanced App Configuration and Protection Policy feature support</th>
+    <th align="center" colspan="6">Advanced App Configuration and Protection Policy feature support</th>
   </tr>
   <tr>
     <td><b><a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-overview">App configuration</a></b></td>
