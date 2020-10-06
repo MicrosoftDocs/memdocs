@@ -472,27 +472,6 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td align="center">N/A</td>
   </tr>
   <tr>
-    <td rowspan="2">Microsoft StaffHub</td>
-    <td><a href="https://play.google.com/store/apps/details?id=ols.microsoft.com.shiftr">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-  </tr>
-  <tr>
-    <td><a href="https://itunes.apple.com/us/app/microsoft-staffhub/id1122181468?mt=8">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td><font color="red">UNKNOWN</font></td>
-  </tr>
-  <tr>
     <td rowspan="2">Microsoft Stream</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Android</a></td>
     <td align="center">✔</td>
@@ -612,7 +591,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
 </table>
 
 ## Partner apps 
-Apps are capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
+The following apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
 
 | App   title | App description | App store links for supported   platform(s) | 
 |-------------------------------------------------|-------------------------|---------------------------------------------|
