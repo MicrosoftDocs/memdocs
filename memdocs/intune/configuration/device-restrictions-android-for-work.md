@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,19 +33,22 @@ This article lists and describes the different settings you can control on Andro
 
 ## Before you begin
 
-[Create a device configuration profile](device-restrictions-configure.md).
+Create an [Android Enterprise device restrictions profile](device-restrictions-configure.md):
+
+- Fully managed, dedicated, and corporate-owned work profile
+- Work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
-Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates which enrollment types can use that setting.
+Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates the enrollment types that can use the setting.
 
-![Setting headers.](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="See the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune and Endpoint Manager.":::
 
-Some settings only apply at the work profile level for corporate-owned devices with a work profile. These settings still apply device-wide for fully managed and dedicated devices. These settings are marked with *(work profile-level)* descriptor in the user interface.
+Some settings only apply at the work profile level for corporate-owned devices with a work profile. For fully managed and dedicated devices, these settings apply device-wide. These settings are marked with *(work profile-level)* text in the user interface.
 
-![Setting headers.](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise Applications settings that apply at the work profile level in Microsoft Intune and Endpoint Manager.":::
 
 
 ### General
@@ -61,7 +64,7 @@ Some settings only apply at the work profile level for corporate-owned devices w
   - **Auto grant**: Permissions are automatically granted.
   - **Auto deny**: Permissions are automatically denied.
 - **Date and Time changes**: **Block** prevents users from manually setting the date and time. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to the set date and time on the device.
-- **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the master volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
+- **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
 - **Factory reset**: **Block** prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device.
 - **Safe boot**: **Block** prevents users from rebooting the device into safe mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to reboot the device in safe mode.
 - **Status bar**: **Block** prevents access to the status bar, including notifications and quick settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users access to the status bar.
@@ -104,7 +107,7 @@ Some settings only apply at the work profile level for corporate-owned devices w
 
 Use these settings to configure a kiosk-style experience on your dedicated devices, or to customize the home screen experiences on your fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
 
-**Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or Microsoft Managed Home Screen on your devices. Your options:
+**Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 
 - **Not configured**: Intune doesn't change or update this setting. By default, users might see the device's default home screen experience.
 - **Dedicated device**: Configure a kiosk-style experience on your dedicated devices. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md) and [assign](../apps/apps-deploy.md) the apps you want on the devices.
@@ -167,11 +170,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Leave kiosk mode**: **Enable** allows Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
   
-        1. Continues to select the back button until the **Exit kiosk** button is shown. 
+        1. Continues to select the back button until the **Exit kiosk** button shows.
         2. Selects the **Exit kiosk** button, and enters the **Leave kiosk mode code** PIN.
         3. When finished, select the **Managed Home Screen** app. This step relocks the device into multi-app kiosk mode.
 
-        When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent administrators from pausing kiosk mode. If the administrator continues to select the back button, and selects the **Exit kiosk** button, then a message states that a passcode is required.
+        When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent administrators from pausing kiosk mode. If the administrator keeps selecting the back button, and selects the **Exit kiosk** button, then a message states that a passcode is required.
 
       - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
 
@@ -243,7 +246,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 - **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+  - **Configure custom wallpaper**: In the Microsoft Launcher app, **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
     - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
     - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
   - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
@@ -262,11 +265,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Bottom**: Search bar is shown at the bottom of devices.
     - **Hide**: Search bar is hidden.
 
-<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
+<!-- MandiA (7.16.2020) The following setting may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 End of comment -->
 
-### Password
+### Device password
 
 - **Disable lock screen**: Choose **Disable** to prevent users from using Keyguard lock screen feature on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use the Keyguard features.
 - **Disabled lock screen features**: When keyguard is enabled on the device, choose which features to disable. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
@@ -300,7 +303,7 @@ End of comment -->
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
   > [!NOTE]
-  > Fully managed, dedicated, and corporate-owned work profile devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
+  > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
 
 ### Power settings
 
@@ -381,6 +384,43 @@ End of comment -->
 
   For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
 
+### Work profile password
+
+- **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
+  - **Device default**
+  - **Password required, no restrictions**
+  - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **Numeric**: Password must only be numbers, such as `123456789`. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. Also enter:
+
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+    - **Number of characters required**: Enter the number of characters the password must have, between 0 and 16 characters.
+    - **Number of lowercase characters required**: Enter the number of lowercase characters the password must have, between 0 and 16 characters.
+    - **Number of uppercase characters required**: Enter the number of uppercase characters the password must have, between 0 and 16 characters.
+    - **Number of non-letter characters required**: Enter the number of non-letters (anything other than letters in the alphabet) the password must have, between 0 and 16 characters.
+    - **Number of numeric characters required**: Enter the number of numeric characters (`1`, `2`, `3`, and so on) the password must have, between 0 and 16 characters.
+    - **Number of symbol characters required**: Enter the number of symbol characters (`&`, `#`, `%`, and so on) the password must have, between 0 and 16 characters.
+
+- **Number of days until password expires**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
+- **Number of passwords required before user can reuse a password**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+
+  > [!NOTE]
+  > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
+
+### Personal profile
+
+- **Camera**: **Block** prevents access to the camera during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the camera in the personal profile.
+- **Screen capture**: **Block** prevents screen captures during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
+- **Allow users to enable app installation from unknown sources in the personal profile**: Select **Allow** so users can install apps from unknown sources in the personal profile. It allows users to install apps from sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from installing apps from unknown sources in the personal profile.
+
 ## Work profile only
 
 These settings apply to Android Enterprise enrollment types where Intune controls only the Work Profile, such as Android Enterprise Work profile enrollment on a personal or bring-your-own device (BYOD).
@@ -439,29 +479,33 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
   - Android 7.0 and newer with the work profile enabled
 
-- **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-- **Maximum minutes of inactivity until work profile locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
+  Also configure:
 
-  On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
+  - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Maximum minutes of inactivity until work profile locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+    On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
-- **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default**
-  - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-  - **Required**
-  - **At least numeric**: Includes numeric characters, such as `123456789`.
-  - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
-  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
-  - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
-  - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+  - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
-- **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Fingerprint unlock**: **Block** prevents users from using the device fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
-- **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
+  - **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
+  - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
+    - **Device default**
+    - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+    - **Required**
+    - **At least numeric**: Includes numeric characters, such as `123456789`.
+    - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
+    - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
+    - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
+    - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting.
+  - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+  - **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
+  - **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+  - **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
+  - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
+
+    When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 ### Password
 
@@ -472,7 +516,7 @@ These password settings apply to personal profiles on devices that use a work pr
 
   On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 - **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
   - **Device default**
@@ -485,7 +529,9 @@ These password settings apply to personal profiles on devices that use a work pr
   - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
 - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Fingerprint unlock**: **Block** prevents users from using the device fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+- **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+- **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
+- **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
 - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -523,7 +569,7 @@ These password settings apply to personal profiles on devices that use a work pr
   > [!IMPORTANT]
   > - The VPN client you choose must be installed on the device, and it must support per-app VPN in work profiles. Otherwise, an error occurs.
   > - You do need to approve the VPN client app in the **Managed Google Play Store**, sync the app to Intune, and deploy the app to the device. After you do this, then the app is installed in the user's work profile.
-  > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. See [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) for more information.
+  > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. For more information, see [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Lockdown mode**: **Enable** forces all network traffic to use the VPN tunnel. If a connection to the VPN isn't established, then the device won't have network access.
 

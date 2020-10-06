@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153e
 author: aczechowski
 ms.author: aaroncz
@@ -69,8 +69,9 @@ Class CCM_Policy_Expression : CCM_Policy_Config
 
  Type that determines how the expression is evaluated. Possible values are:  
 
-|||  
-|-|-|  
+
+| Value | Description |
+| ----- | ----------- |
 |Once|The expression is evaluated only once.|  
 |Until-true|The expression continues to be re-evaluated until evaluation returns `true`.|  
 |Continuous|The expression is always re-evaluated.|  

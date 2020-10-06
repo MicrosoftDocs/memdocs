@@ -35,13 +35,13 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
   - The signed in user must be an Azure AD identity.
 
-  - If the user is a federated or synchronized identity, configure both Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+  - If the user is a federated or synchronized identity, configure both Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 - In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
 
-- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/configure-authentication.md#bkmk_mphttps).
 
-- Optionally set up a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
+- Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 
 > [!TIP]
 > Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
@@ -65,13 +65,13 @@ These client settings help configure Windows 10 devices to be hybrid-joined. The
     - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows 10, version 1709.
 
         > [!TIP]
-        > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Azure AD. For more information, see [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
+        > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Azure AD. For more information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
 
     - **Enable clients to use a cloud management gateway**: Set to **Yes** (default), or **No**.  
 
 2. Deploy the client settings to the required collection of devices. Don't deploy these settings to user collections.
 
-To confirm the device is hybrid-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+To confirm the device is hybrid-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ## Install and register the client using Azure AD identity
 

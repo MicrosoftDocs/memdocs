@@ -1,10 +1,10 @@
 ---
-title: "SetEnforcement Method"
+title: SetEnforcement method in class SMS_ConfigurationItem
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 56815dfb-89f5-4e32-bbb7-d654daa044df
 author: aczechowski
 ms.author: aaroncz

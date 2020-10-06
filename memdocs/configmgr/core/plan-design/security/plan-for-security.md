@@ -68,7 +68,8 @@ Using HTTPS communication is recommended for all Configuration Manager communica
 ### <a name="bkmk_plan-cmgcdp"></a> Certificates for CMG and CDP
 
 Managing clients on the internet via the cloud management gateway (CMG) and cloud distribution point (CDP) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios. For more information, see the following articles:
-- [Certificates for the cloud management gateway](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
+
+- [CMG set up checklist](../../clients/manage/cmg/set-up-checklist.md)
 - [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
@@ -106,7 +107,7 @@ When you use PKI certificates with Configuration Manager, plan for use of a cert
 
 IIS always checks the CRL for client certificates, and you can't change this configuration in Configuration Manager. By default, Configuration Manager clients always check the CRL for site systems. Disable this setting by specifying a site property and by specifying a CCMSetup property.  
 
-Computers that use certificate revocation checking but can't locate the CRL behave as if all certificates in the certification chain are revoked. This behavior is due to the fact that they can't verify if the certificates are in the certificate revocation list. In this scenario, all connections fail that require certificates and include CRL checking. When validating that your CRL is accessible by browsing to its http location, it is important to note that the Configuration Manager client runs as LOCAL SYSTEM. Therefore, testing CRL accessibility with a web browser running under user context may succeed, however the computer account may be blocked when attempting to make an http connection to the same CRL URL due to the internal web filtering solution. Whitelisting the CRL URL on any web filtering solutions may be necessary in this situation.
+Computers that use certificate revocation checking but can't locate the CRL behave as if all certificates in the certification chain are revoked. This behavior is due to the fact that they can't verify if the certificates are in the certificate revocation list. In this scenario, all connections fail that require certificates and include CRL checking. When validating that your CRL is accessible by browsing to its http location, it is important to note that the Configuration Manager client runs as LOCAL SYSTEM. Therefore, testing CRL accessibility with a web browser running under user context may succeed, however the computer account may be blocked when attempting to make an http connection to the same CRL URL due to the internal web filtering solution. Adding the CRL URL to the approved list on any web filtering solutions may be necessary in this situation.
 
 Checking the CRL every time that a certificate is used offers more security against using a certificate that's revoked. Although it introduces a connection delay and additional processing on the client. Your organization may require this additional security check for clients on the internet or an untrusted network.  
 
@@ -157,9 +158,11 @@ In many cases, the default configuration and behavior is sufficient. The Configu
 
 3.  The certificate is valid, not revoked, and not expired. The validity check also verifies that the private key is accessible.  
 
-4.  The certificate has client authentication capability, or it's issued to the computer name.  
+4.  The certificate has client authentication capability.
 
-5.  The certificate has the longest validity period.  
+5.  The certificate Subject Name contains the local computer name as a substring.  
+
+6.  The certificate has the longest validity period.  
 
 Configure clients to use the certificate issuers list by using the following mechanisms:  
 
@@ -205,7 +208,10 @@ The following table shows the attribute values that Configuration Manager suppor
 |2.5.4.12|T or Title|Title|  
 |2.5.4.42|G or GN or GivenName|Given name|  
 |2.5.4.43|I or Initials|Initials|  
-|2.5.29.17|(no value)|Subject Alternative Name|  
+|2.5.29.17|(no value)|Subject Alternative Name| 
+
+  > [!NOTE]
+  > If you configure either of the above alternate certificate selection methods, the certificate Subject Name does not need to contain the local computer name.
 
 If more than one appropriate certificate is located after the selection criteria are applied, you can override the default configuration to select the certificate that has the longest validity period and instead, specify that no certificate is selected. In this scenario, the client won't be able to communicate with IIS site systems with a PKI certificate. The client sends an error message to its assigned fallback status point to alert you to the certificate selection failure so that you can change or refine your certificate selection criteria. The client behavior then depends on whether the failed connection was over HTTPS or HTTP:  
 
@@ -377,13 +383,13 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Client**  
 
-- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/overview.md)  
 
 - [Manage cloud domain-joined devices](../../clients/deploy/deploy-clients-cmg-azure.md)  
 
 - [Co-management](../../../comanage/overview.md)  
 
-- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)  
+- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)
 
 - [Microsoft Store for Business online apps](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 
@@ -396,7 +402,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -408,7 +414,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 For more information on connecting your site to Azure AD, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md).
 
 
-For more information about Azure AD, see [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/).
+For more information about Azure AD, see [Azure Active Directory documentation](/azure/active-directory/).
 
 
 
@@ -440,5 +446,4 @@ For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-
 
 - [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)  
 
-- [PKI certificate requirements](../network/pki-certificate-requirements.md)  
-
+- [PKI certificate requirements](../network/pki-certificate-requirements.md)

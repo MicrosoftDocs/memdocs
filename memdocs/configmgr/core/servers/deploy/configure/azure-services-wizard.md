@@ -2,10 +2,10 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
@@ -30,14 +30,14 @@ Configure the following Azure services using this wizard:
 
   - [Configure Azure AD User Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/overview.md)  
 
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics Connector**: [Connect to Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
+- **Log Analytics Connector**: [Connect to Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
     > [!Note]  
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
+    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](/azure/azure-monitor/terminology#log-analytics).  
 
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
 
@@ -73,10 +73,10 @@ For more information about the required app permissions and configurations for e
 
 For more information about Azure apps, start with the following articles:
 
-- [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview)
+- [Web Apps overview](/azure/app-service-web/app-service-web-overview)
 - [Basics of Registering an Application in Azure AD](/azure/active-directory/develop/authentication-scenarios)  
-- [Register your application with your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Register your application with your Azure Active Directory tenant](/azure/active-directory/active-directory-app-registration)
 
 ## Before you begin
 
@@ -88,7 +88,7 @@ After you decide the service to which you want to connect, refer to the table in
 
 Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com).
 
-When configuring the Log Analytics Connector, give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
+When configuring the Log Analytics Connector, give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
 
 ## Start the Azure Services wizard
 
@@ -152,9 +152,6 @@ When you select **Import** from the Server app dialog or the App page of the Azu
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to either the [App page](#azure-app-properties) of the Azure Services Wizard, or the [Server app dialog](#server-app-dialog).
 
-> [!TIP]
-> When you register the app in Azure AD, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
-
 #### Create Server Application dialog
 
 When you select **Create** from the Server app dialog, it opens the Create Server Application dialog. This page automates the creation of a web app in Azure AD. Specify the following information:
@@ -169,7 +166,7 @@ Select **Sign in** to authenticate to Azure as an administrative user. These cre
 Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. This action returns to the [Server app dialog](#server-app-dialog).
 
 > [!NOTE]
-> If you have an Azure AD Conditional Access policy defined and applies to **All Cloud apps** - you must exclude the created Server Application from this policy. For more information on how to exclude specific apps, see [Azure AD Conditional Access Documentation](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> If you have an Azure AD Conditional Access policy defined and applies to **All Cloud apps** - you must exclude the created Server Application from this policy. For more information on how to exclude specific apps, see [Azure AD Conditional Access Documentation](/azure/active-directory/conditional-access/).
 
 ### Native Client app
 
@@ -200,6 +197,9 @@ When you select **Import** from the Client App dialog, it opens the Import apps 
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to the [Client App dialog](#client-app-dialog).
 
+> [!TIP]
+> When you register the app in Azure AD, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
+
 #### Create Client Application dialog
 
 When you select **Create** from the Client App dialog, it opens the Create Client Application dialog. This page automates the creation of a native app in Azure AD. Specify the following information:
@@ -217,13 +217,24 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
-- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
 ## <a name="bkmk_renew"></a> Renew secret key
+
+You need to renew the Azure AD app's secret key before the end of its validity period. If you let the key expire, Configuration Manager can't authenticate with Azure AD, which will cause your connected Azure services to stop working.
+
+Starting in version 2006, the Configuration Manager console displays notifications for the following circumstances:<!--6386392-->
+
+- One or more Azure AD app secret keys will expire soon
+- One or more Azure AD app secret keys have expired
+
+To mitigate both cases, renew the secret key.
+
+For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
 
 ### Renew key for created app
 

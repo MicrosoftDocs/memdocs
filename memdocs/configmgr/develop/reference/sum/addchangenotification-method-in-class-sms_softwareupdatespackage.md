@@ -1,10 +1,10 @@
 ---
-title: "AddChangeNotification Method"
+title: AddChangeNotification method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4b9442b1-d1c0-4d46-9bd8-f1a169a21360
 author: aczechowski
 ms.author: aaroncz

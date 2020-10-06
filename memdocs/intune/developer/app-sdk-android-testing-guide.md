@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -75,7 +75,6 @@ Use of intents and content providers are affected by these policies.
     - Opening from an unmanaged app into your app functions correctly.
     - Sharing content between your app and managed apps is allowed.
     - Sharing from your app to non-managed apps (for example, Chrome) is blocked.
-
 
 #### Restrict receiving data from other apps
 

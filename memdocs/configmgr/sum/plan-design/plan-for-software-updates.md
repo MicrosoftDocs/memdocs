@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -68,7 +68,7 @@ The client randomly selects a software update point from the list. It prioritize
 ###  <a name="BKMK_SUPSwitching"></a> Software update point switching  
 
 > [!NOTE]  
-> Clients use boundary groups to find a new software update point. If their current software update point is no longer accessible, they also use boundary groups to fallback and find a new one. Add individual software update points to different boundary groups to control which servers a client can find. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Clients use boundary groups to find a new software update point. If their current software update point is no longer accessible, they also use boundary groups to fallback and find a new one. Add individual software update points to different boundary groups to control which servers a client can find. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 If you have multiple software update points at a site, and one fails or becomes unavailable, clients will connect to a different software update point. With this new server, clients continue to scan for the latest software updates. When a client is first assigned a software update point, it stays assigned to that software update point unless it fails to scan.  
 
@@ -108,7 +108,7 @@ Switch Configuration Manager clients to a new software update point when there a
 > [!IMPORTANT]    
 > When you switch devices to use a new server, the devices use fallback to find that new server. Clients switch to the new software update point during their next software updates scan cycle.<!-- SCCMDocs#1537 -->
 >
-> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 >
 > Switching to a new software update point generates additional network traffic. The amount of traffic depends on your WSUS configuration settings, for example, the synchronized classifications and products, or use of a shared WSUS database. If you plan to switch multiple devices, consider doing so during maintenance windows. This timing reduces the impact to your network when clients scan with the new software update point.  
 
@@ -148,7 +148,7 @@ When you need to manage devices that roam off your network onto the internet, de
 #### Cloud management gateway
 Create a cloud management gateway in Microsoft Azure and enable at least one on-premises software update point to allow traffic from internet-based clients. As clients roam onto the internet, they continue to scan against your software update points. All internet-based clients always get content from the Microsoft Update cloud service. 
 
-For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+For more information, see [Overview of cloud management gateway](../../core/clients/manage/cmg/overview.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### Internet-based client management
 Place a software update point in an internet-facing network and enable it to allow traffic from internet-based clients. As clients roam onto the internet, they switch to this software update point for scanning. All internet-based clients always get content from the Microsoft Update cloud service.
@@ -217,7 +217,7 @@ This section provides information about the steps to take to successfully plan a
 
 Install the software update point role on a site system that meets the minimum requirements for WSUS and the supported configurations for Configuration Manager site systems.  
 
--   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -232,7 +232,7 @@ When you use WSUS on Windows Server 2012 or later, configure additional permissi
 
 -   Add the **NT AUTHORITY\SYSTEM** account as a user for the WSUS database (SUSDB). Configure a minimum of the webService database role membership.  
   
-For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](software-updates-best-practices.md#bkmk_shared-susdb).  
 
@@ -257,10 +257,10 @@ When a WSUS server is configured as a software update point, you're no longer ab
 When you add the software update point role on a primary site server, you can't use a WSUS server that's configured as a replica. When the WSUS server is configured as a replica, Configuration Manager fails to configure the WSUS server, and the WSUS synchronization fails. The first software update point that you install at a primary site is the default software update point. Additional software update points at the site are configured as replicas of the default software update point.  
 
 ####  <a name="BKMK_WSUSandSSL"></a> Decide whether to configure WSUS to use SSL  
-Use the SSL protocol to help secure the software update point. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt software update metadata. When you choose to secure WSUS with SSL, prepare the WSUS server before you install the software update point. For more information, see the [Configure SSL on the WSUS server](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) article in the documentation for WSUS. 
 
-When you install and configure the software update point, select the option to **Enable SSL communications for the WSUS Server**. Otherwise, Configuration Manager configures WSUS not to use SSL. When you enable SSL on a software update point, also configure any software update points at child sites to use SSL.  
+Using the SSL protocol to help secure the software update point is highly recommended. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt software update metadata. When you choose to secure WSUS with SSL, prepare the WSUS server before you install the software update point.
 
+When you install and configure the software update point, select the option to **Enable SSL communications for the WSUS Server**. Otherwise, Configuration Manager configures WSUS not to use SSL. When you enable SSL on a software update point, also configure any software update points at child sites to use SSL. For more information, see the [Configure a software update point to use TLS/SSL with a PKI certificate tutorial](../get-started/software-update-point-ssl.md).
 
 ###  <a name="BKMK_ConfigureFirewalls"></a> Configure firewalls  
 
@@ -369,7 +369,7 @@ Typically, a software update that supersedes another software update does one or
 
 -   Improves the efficiency of the superseded update file package, which is installed on clients if the update is approved for installation. For example, the superseded update might contain files that are no longer relevant to the fix or to the operating systems that are supported by the new update. Those files aren't included in the superseding  file package of the update.  
 
--   Updates newer versions of a product. In other words, it updates versions that are no longer applicable to older versions or configurations of a product. Updates can also supersede other updates if modifications were made to expand language support. For example, a later revision of a product update for Microsoft Office might remove the support for an older OS, but it might add additional support for new languages in the initial update release.  
+-   Updates newer versions of a product. In other words, it updates versions that are no longer applicable to older versions or configurations of a product. Updates can also supersede other updates if modifications were made to expand language support. For example, a later revision of a product update for Microsoft 365 Apps might remove the support for an older OS, but it might add additional support for new languages in the initial update release.  
 
 In the properties for the software update point, specify that the superseded software updates are immediately expired. This setting prevents them from being included in new deployments. It also flags the existing deployments to indicate that they contain one or more expired software updates. Or specify a period of time before the superseded software updates are expired. This action allows you to continue to deploy them. 
 
@@ -458,7 +458,8 @@ When there's a pending restart for a Configuration Manager software update, the 
 
 ## <a name="bkmk_ssu"></a> Evaluate software updates after a servicing stack update
 <!--4639943-->
-Starting in version 2002, Configuration Manager detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
+Starting in version 2002, Configuration Manager detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first. Installation of SSUs first isn't available for Windows Server operating systems when using Configuration Manager version 2002. <!--7813007-->This functionality was added in Configuration Manager version 2006 for Windows Server operating systems.
+
 
 
 ## Next steps

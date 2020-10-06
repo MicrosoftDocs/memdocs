@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b0720303-628d-4da2-a98f-74c160816ba7
 author: aczechowski
 ms.author: aaroncz
@@ -264,8 +264,8 @@ Class SMS_AuthorizationList : SMS_ConfigurationItemBaseClass
 
  Execution context that the configuration item should be evaluated under.  
 
-|||  
-|-|-|  
+| Value | Configuration item |  
+| ----- | ------------------ |  
 |0|System|  
 |1|User|  
 

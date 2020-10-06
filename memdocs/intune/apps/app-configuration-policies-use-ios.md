@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,8 +57,8 @@ Once you have selected the included groups for your application configuration po
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the Microsoft Endpoint Manager admin center.
+    - **Description** - The description of the profile that appears in the Microsoft Endpoint Manager admin center.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **iOS/iPadOS** as the **Platform**.
 5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
@@ -120,9 +120,12 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
    > - Edge for iOS (44.8.7 and later)
+   > - Office, Word, Excel, PowerPoint for iOS (2.41 and later)
    > - OneDrive for iOS (10.34 and later)
+   > - OneNote for iOS (2.41 and later)
    > - Outlook for iOS (2.99.0 and later)
    > - Teams for iOS (2.0.15 and later)
+   
 
 ## Enter XML data
 
@@ -227,11 +230,11 @@ DEP (Apple's Device Enrollment Program) enrollments are not compatible with the 
 5. Tell end users to sign into the Company Portal app when it is automatically installed.
 
 ## Monitor iOS/iPadOS  app configuration status per device 
-Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the Azure portal, select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
+Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
 
 ## Additional information
 
-- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps
 

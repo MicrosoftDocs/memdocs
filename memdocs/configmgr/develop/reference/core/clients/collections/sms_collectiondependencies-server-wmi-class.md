@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 88924960-781a-4b8e-800f-6caeb75f1c80
 author: aczechowski
 ms.author: aaroncz
@@ -50,8 +50,8 @@ Class SMS_CollectionDependencies : SMS_BaseClass
 
  Dependency relationship, how the dependent collection uses the source.  
 
-|||  
-|-|-|  
+| Value | Relationship type |
+| ----- | ----------------- |
 |1|LIMITING|  
 |2|INCLUDE|  
 |3|EXCLUDE|  

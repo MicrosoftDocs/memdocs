@@ -60,7 +60,7 @@ Client log files provide more detailed information for troubleshooting. The log 
     > [!NOTE]  
     > When it uses client push to install the Configuration Manager client, the site server creates a remote connection to the client. Starting in version 1806, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client.  
     >
-    > Depending on your security policies, your environment might already prefer or require Kerberos over the older NTLM authentication. For more information on the security considerations of these authentication protocols, read about the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
+    > Depending on your security policies, your environment might already prefer or require Kerberos over the older NTLM authentication. For more information on the security considerations of these authentication protocols, read about the [Windows security policy setting to restrict NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
     >
     > To use this feature, clients must be in a trusted Active Directory forest. Kerberos in Windows relies on Active Directory for mutual authentication.  
 
@@ -323,7 +323,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
     > [!NOTE]  
     > For an example of a command to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
 
-3. [Assign the app](https://docs.microsoft.com/mem/intune/apps/apps-deploy) to a group of the enrolled Windows computers.  
+3. [Assign the app](../../../../intune/apps/apps-deploy.md) to a group of the enrolled Windows computers.  
 
 ## <a name="BKMK_ClientImage"></a> OS image installation
 
@@ -405,7 +405,7 @@ This example requires the client to be on a network location that's configured i
 ## <a name="BKMK_ClientInternet"></a> Internet-based client management  
 
 > [!NOTE]  
-> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
+> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/overview.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
 
 When the Configuration Manager site supports [internet-based client management](../manage/plan-internet-based-client-management.md) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
 
@@ -540,4 +540,4 @@ A group policy administrative template named `ConfigMgrInstallation.adm` is supp
 
 4. In the **CCMSetup** box, enter the required CCMSetup command-line properties. For a list of all CCMSetup command-line properties and examples of their use, see [About client installation parameters and properties](about-client-installation-properties.md).  
 
-5. Assign the GPO to the computers that you want to provision with Configuration Manager client installation properties.  
+5. Assign the GPO to the computers that you want to provision with Configuration Manager client installation properties.

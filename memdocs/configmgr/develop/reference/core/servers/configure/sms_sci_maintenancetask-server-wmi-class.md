@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: fbeffc66-0ae1-4bb8-bc44-5209d5e9287a
 author: aczechowski
 ms.author: aaroncz
@@ -68,7 +68,7 @@ Class SMS_SCI_MaintenanceTask : SMS_SiteControlItem
 
  Days of the week on which the maintenance task executes. Possible values are listed below. The default value is SUNDAY (0).  
 
-|||  
+|Value|Maintenance task day|  
 |-|-|  
 |0|SUNDAY|  
 |1|MONDAY|  

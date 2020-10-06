@@ -1,10 +1,10 @@
 ---
-title: "AddDistributionPoints Method"
+title: AddDistributionPoints method in class SMS_DeviceSettingPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 088452fb-874b-48b9-8294-a416d41febb7
 author: aczechowski
 ms.author: aaroncz

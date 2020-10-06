@@ -36,19 +36,19 @@ After you assess your environment, it's time to set up Microsoft Intune.
 
 ### Identity
 
-Intune requires Azure Active Directory (AAD) as the identity and user grouping provider. Learn more about:
+Intune requires Azure Active Directory (Azure AD) as the identity and user grouping provider. Learn more about:
 
-- [Identity requirements](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Identity requirements](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
-- [Directory synchronization requirements](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Directory synchronization requirements](/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [Multi-factor authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [Planning your user and device groups](users-add.md)
 
 - [How to create user and device groups](groups-get-started.md)
 
-If your organization is already using Office 365, Intune must use the same Azure Active Directory environment.
+If your organization is already using Microsoft 365, Intune must use the same Azure Active Directory environment.
 
 ### PKI (optional)
 
@@ -56,7 +56,7 @@ If you're planning to use certificate-based authentication for VPN, Wi-Fi, or e-
 
 - [How to configure the certificate infrastructure for SCEP](/intune/certificates-scep-configure)
 
-- [How to configure the certificate infrastructure for PFX](/intune/certficates-pfx-configure).
+- [How to configure the certificate infrastructure for PFX](/intune/certificates-pfx-configure).
 
 ## Task list for an Intune setup
 
@@ -68,7 +68,7 @@ Before you can migrate to Intune, you first need an [Intune subscription](accoun
 
 - Learn [how to assign Intune user licenses](licenses-assign.md).
 
-- If you have created a new Azure Active Directory tenant, learn [how to create new users or sync user from your on-premises Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- If you have created a new Azure Active Directory tenant, learn [how to create new users or sync user from your on-premises Active Directory (AD).](/azure/active-directory/connect/active-directory-aadconnect)
 
 ### Task 3: Set your MDM authority to Intune
 

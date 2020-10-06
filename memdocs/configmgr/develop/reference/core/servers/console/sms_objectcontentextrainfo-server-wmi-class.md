@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 48828bbd-5c57-4bdf-8511-71d548039e81
 author: aczechowski
 ms.author: aaroncz
@@ -136,8 +136,8 @@ Class SMS_ObjectContentExtraInfo : SMS_BaseClass
 
  Object type. Possible values are listed below.  
 
-|||  
-|-|-|  
+| Value | Object type |
+| ----- | ----------- |
 |0|PKG_TYPE_REGULAR|  
 |3|PKG_TYPE_DRIVER|  
 |4|PKG_TYPE_TASK_SEQUENCE|  
@@ -158,8 +158,8 @@ Class SMS_ObjectContentExtraInfo : SMS_BaseClass
 
  Secured object class ID. Possible values are listed below.  
 
-|||  
-|-|-|  
+| Value | Object type ID |
+| ----- | -------------- |
 |2|SMS_Package|  
 |14|SMS_OperatingSystemInstallPackage|  
 |18|SMS_ImagePackage|  

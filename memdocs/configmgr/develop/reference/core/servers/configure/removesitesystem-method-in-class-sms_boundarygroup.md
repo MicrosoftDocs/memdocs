@@ -1,10 +1,10 @@
 ---
-title: "RemoveSiteSystem Method"
+title: RemoveSiteSystem method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 82637714-bd3a-43a4-8584-cc443e0e8c09
 author: aczechowski
 ms.author: aaroncz

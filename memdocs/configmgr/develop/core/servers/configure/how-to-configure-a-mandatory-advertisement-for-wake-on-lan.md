@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4cf2d556-eda8-42c1-9ad2-2e1229798e98
 author: aczechowski
 ms.author: aaroncz
@@ -113,7 +113,7 @@ public void SetWOLOnAdvertisment(WqlConnectionManager connection,
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingAdvertisementID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the advertisment.|  
 
 ## Compiling the Code  

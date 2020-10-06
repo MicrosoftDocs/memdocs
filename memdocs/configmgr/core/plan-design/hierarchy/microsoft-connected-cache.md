@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,7 +18,7 @@ manager: dougeby
 
 <!--3555764-->
 
-Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
+Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature that can help to protect WAN links.
 
 > [!NOTE]
 > Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
@@ -56,7 +56,7 @@ When you configure clients to use the Connected Cache server, they no longer req
 
   - The default web site enabled on port 80
 
-  - Don't preinstall the IIS [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
+  - Don't preinstall the IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
   - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
 
@@ -127,11 +127,11 @@ When clients download cloud-managed content, they use Delivery Optimization from
 - If you enable [Windows Update for Business policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows 10 feature and quality updates
 - For [co-management workloads](../../../comanage/workloads.md):
   - Windows Update for Business: Windows 10 feature and quality updates
-  - Office Click-to-Run apps: Office apps and updates
+  - Office Click-to-Run apps: Microsoft 365 Apps and updates
   - Client apps: Microsoft Store apps and updates
   - Endpoint Protection: Windows Defender definition updates
 
-On Windows 10 version 1809 or later, verify this behavior with the **Get-DeliveryOptimizationStatus** Windows PowerShell cmdlet. In the cmdlet output, review the **BytesFromCacheServer** value. For more information, see [Monitor Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
+On Windows 10 version 1809 or later, verify this behavior with the **Get-DeliveryOptimizationStatus** Windows PowerShell cmdlet. In the cmdlet output, review the **BytesFromCacheServer** value. For more information, see [Monitor Delivery Optimization](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
 
 If the cache server returns any HTTP failure, the Delivery Optimization client falls back to the original cloud source.
 
@@ -179,7 +179,7 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 - This feature only supports the Intune Win32 app type.
 
-  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Intune Win32 app management](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Intune Win32 app management](/intune/apps/apps-win32-app-management).
 
   - The app needs to be at least 100 MB in size.
   

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e64823ec-48c0-4001-ba00-9ba5906a7336
 author: aczechowski
 ms.author: aaroncz
@@ -172,7 +172,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Enforce preference. Possible values are:   
 
-|||  
+|Value|Enforce preference|  
 |-|-|  
 |0|Immediate|  
 |1|NonBusinessHours|  

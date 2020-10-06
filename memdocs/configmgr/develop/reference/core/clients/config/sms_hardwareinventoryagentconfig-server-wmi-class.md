@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: df1b1aa3-66c8-45d4-bf8e-e6382ebb25b4
 author: aczechowski
 ms.author: aaroncz
@@ -64,7 +64,7 @@ Class SMS_HardwareInventoryAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Identifies the type of inventory report.  
 
-|||  
+|Value|Inventory type|  
 |-|-|  
 |Hardware Inventory|{00000000-0000-0000-0000-000000000001}|  
 |Software Inventory|{00000000-0000-0000-0000-000000000002}|  
@@ -97,7 +97,7 @@ Class SMS_HardwareInventoryAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  MIF files to collect.  
 
-|||  
+|Value|MIF files to collect|  
 |-|-|  
 |0|None|  
 |0x08|Collect IDMIF files|  

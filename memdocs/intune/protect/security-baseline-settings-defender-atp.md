@@ -7,14 +7,13 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 09/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
-
 
 # optional metadata
 
@@ -32,41 +31,179 @@ zone_pivot_groups: atp-baseline-versions
 ---
 
 <!-- Pivots in use: 
-::: zone pivot="atp-april-2020"
+
+September 2020 v5
+::: zone pivot="atp-sept-2020"
 ::: zone-end
 
-::: zone pivot="atp-march-2020"
+::: zone pivot="atp-april-2020,atp-sept-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone-end
+
+April 2020 v4
+::: zone pivot="atp-april-2020"
 ::: zone-end
 
 ::: zone pivot="atp-march-2020,atp-april-2020"
 ::: zone-end
+
+March 2020 v3
+::: zone pivot="atp-march-2020"
+::: zone-end
+
 -->
 
 # Microsoft Defender Advanced Threat Protection baseline settings for Intune
 
 View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
 
+::: zone pivot="atp-sept-2020"
+
+**Microsoft Defender ATP baseline for September 2020 - version 5**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+
+::: zone-end
 ::: zone pivot="atp-april-2020"
 
-The details in this article apply to version 4 of the Microsoft Defender ATP baseline, which released on April 21, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+**Microsoft Defender ATP baseline for April 2020 - version 4**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
-The details in this article apply to version 3 of the Microsoft Defender ATP baseline, which released on March 1, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+**Microsoft Defender ATP baseline for March 2020 - version 3**  
+This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
+
+
+- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+
+To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
+The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
+
+This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+## Attack Surface Reduction Rules
+
+- **Block Office communication apps from creating child processes**  
+  ASR rule: [26190899-1602-49e8-8b27-eb1d0a1ce869](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  - **Enable** *(default)* - Office communication applications are blocked from creating child processes.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **User defined**
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Adobe Reader from creating child processes**  
+  ASR rule: [7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c](https://go.microsoft.com/fwlink/?linkid=853979)
+
+  - **Enable** *(default)* - Adobe Reader is blocked from creating child processes.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **User defined**
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Office applications from injecting code into other processes**  
+  ASR rule: [75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  - **Block** *(default)* - Office applications are blocked from injecting code into other processes.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Office applications from creating executable content**  
+  ASR rule: [3B576869-A4EC-4529-8536-B80A7769E899](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  - **Block** *(default)* - Office applications aren't allowed to create executable content.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block JavaScript or VBScript from launching downloaded executable content**  
+  ASR rule: [D3E037E1-3EB8-44C8-A917-57927947596D](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  - **Block** *(default)*
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Enable network protection**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=3D872618)
+
+  - **Enable** *(default)*
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **User defined**
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block untrusted and unsigned processes that run from USB**  
+  ASR rule: [b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4](https://go.microsoft.com/fwlink/?linkid=)
+
+  - **Block** *(default)* - Untrusted/unsigned processes executing from a USB drive are blocked.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
+  ASR rule: [9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  - **Enable** *(default)* - Attempts to steal credentials via lsass.exe are blocked.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **User defined**
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block executable content download from email and webmail clients**  
+  ASR rule: [BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **Block** *(default)* - Executable content downloaded from email and webmail clients is blocked. 
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block all Office applications from creating child processes**  
+  ASR rule: [D4F940AB-401B-4EFC-AADC-AD5F3C50688A](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  - **Block** *(default)* - Office apps are blocked from creating child processes. Blocked apps include Word, Excel, PowerPoint, OneNote, and Access.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
+  ASR rule: [5BEB7EFE-FD9A-4556-801D-275E5FFC04CC](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  - **Block** *(default)* - Defender blocks execution of obfuscated scripts.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Win32 API calls from Office macro**  
+  ASR rule: [92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  - **Block** *(default)* - Office macro's are blocked from using Win32 API calls.
+  - **Not configured** - Return the setting to Windows default, which is off.
+  - **Audit mode** - Windows events are raised instead of blocking.
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
 
-
-The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
-
-This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
-
-
 ## Application Guard
 
-For more information, see [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
+For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
 
 While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
 
@@ -95,7 +232,7 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
     - **Allow copy and paste between PC and browser** - No block for content exists.
 
 - **Windows network isolation policy**  
-  CSP: [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP: [Policy CSP - NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   Specify a list of *Network domains*, which are Enterprise resources that are hosted in the cloud that Application Guard treats as enterprise sites
   - **Configure** (*default*)
@@ -106,9 +243,15 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
   - **Network domains**  
     Select **Add** and specify domains, IP address ranges, and network boundaries. By default, *securitycenter.windows.com* is configured.
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## BitLocker
 
-For more information, [BitLocker Group Policy settings](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.
+For more information, [BitLocker Group Policy settings](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Require storage cards to be encrypted (mobile only)**  
   CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -116,6 +259,31 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   This setting only applies to Windows Mobile and Mobile Enterprise SKU devices.
   - **Yes** (*default*) - Encryption on storage cards is required for mobile devices.
   - **Not configured** - The setting returns to the OS default, which is to not require storage card encryption.
+
+  > [!NOTE]
+  > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Standby states when sleeping while on battery**
+  CSP: [Power/StandbyTimeoutOnBattery](https://go.microsoft.com/fwlink/?linkid=2067195)
+
+  This policy setting manages whether or not Windows can use standby states when putting the computer in a sleep state.
+  - **Disabled** *(default)* - Standby states (S1-S3) aren't allowed.
+  - **Enabled** - Windows uses standby states to put the computer in a sleep state.
+  - **Not configured** - Same behavior as *Enabled*.
+
+- **Standby states when sleeping while plugged in**  
+  CSP: [Power/StandbyTimeoutPluggedIn](https://go.microsoft.com/fwlink/?linkid=2067196)
+
+  This policy setting manages if Windows can use standby states when putting the computer in a sleep state.
+  - **Disabled** *(default)* - Standby states (S1-S3) aren't allowed.
+  - **Enabled** - Windows uses standby states to put the computer in a sleep state.
+  - **Not configured** - Same behavior as *Enabled*.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Enable full disk encryption for OS and fixed data drives**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
@@ -133,7 +301,44 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   - **Configure** (*default*)
   - **Not configured**
 
-  When set to *Configure*, you can then configure *Configure encryption method for Operating System drives*.
+  When set to *Configure*, you can then configure the following settings:
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Startup authentication required**  
+  CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
+
+  - **Yes** *(default)* - You can configure the additional authentication requirements at system startup, including utilizing the use of Trusted Platform Module (TPM) or startup PIN requirements:
+  - **Not configured**
+
+    - **Compatible TPM startup PIN**  
+      CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
+      This setting is available when *Startup authentication required* is set to *Yes*.
+
+      - **Blocked** - Block the use of a PIN. 
+      - **Required** - Require BitLocker have a PIN and TPM present to return success. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that PIN is disabled where silent enablement of BitLocker is required.
+      - **Allowed** *(default)* - Enable BitLocker using the TPM if present, and allow a startup PIN be configured by the user.
+      - **Not configured**
+
+    - **Compatible TPM startup key**  
+      CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
+      This setting is available when *Startup authentication required* is set to *Yes*.
+
+      - **Blocked** - Block the use of startup keys.
+      - **Required** *(default)* - Require BitLocker have a startup key and TPM present to enable BitLocker. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that startup keys be disabled where silent enablement of BitLocker is required.
+      - **Allowed** - Enable BitLocker using the TPM if present, and allow a startup key (such as a USB drive) be present to unlock the drives.
+      - **Not configured** *(default)*
+
+    - **Disable BitLocker on devices where TPM is incompatible**  
+      CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
+      This setting is available when *Startup authentication required* is set to *Yes*.
+
+      - **Yes** *(default)* - Disable BitLocker from being configured without a compatible TPM chip. This setting may be helpful for testing, but it isn't suggested to enable BitLocker without a TPM. If no TPM is present, BitLocker will require a password or USB drive for startup. This setting only applies when first enabling BitLocker. If BitLocker is already enabled before applying this setting, it will have no effect.
+      - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
   - **Configure encryption method for Operating System drives**  
     CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
@@ -159,8 +364,8 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
     CSP: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
     This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
-    - **Not configured** (*default*) - Data can be written to non-encrypted fixed drives.
-    - **Yes** - Windows will not allow any data to be written to fixed drives that are not BitLocker protected. If a fixed drive is not encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
+    - **Not configured** - Data can be written to non-encrypted fixed drives.
+    - **Yes** (*default*) - Windows won't allow any data to be written to fixed drives that aren't BitLocker protected. If a fixed drive isn't encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
 
   - **Configure encryption method for fixed data-drives**  
     CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
@@ -168,10 +373,10 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 
     Configure the encryption method and cipher strength for fixed data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
-    - **Not configured** (*default*)
+    - **Not configured**
     - **AES 128bit CBC**
     - **AES 256bit CBC**
-    - **AES 128bit XTS**
+    - **AES 128bit XTS** (*default*)
     - **AES 256bit XTS**
 
 - **BitLocker removable drive policy**  
@@ -189,8 +394,8 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
     Configure the encryption method and cipher strength for removable data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
     - **Not configured**
-    - **AES 128bit CBC**
-    - **AES 256bit CBC** (*default*)
+    - **AES 128bit CBC** (*default*)
+    - **AES 256bit CBC**
     - **AES 128bit XTS**
     - **AES 256bit XTS**
 
@@ -199,7 +404,10 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
     This setting is available when *BitLocker removable drive policy* is set to *Configure*.
 
     - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.  
-    - **Yes** - Windows will not allow any data to be written to removable drives that are not BitLocker protected. If a removable drive is not encrypted, the user must complete the BitLocker setup wizard for the drive before write access is granted.
+    - **Yes** - Windows won't allow any data to be written to removable drives that are not BitLocker protected. If a removable drive isn't encrypted, the user must complete the BitLocker setup wizard for the drive before write access is granted.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 ## Browser
 
@@ -231,6 +439,9 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   - **Yes** (*default*) - Block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. After a user logs in, Windows enumerates the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices that were already enumerated when the machine was unlocked will continue to function until unplugged.
   - **Not configured**
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## Device Guard  
 
 - **Turn on credential guard**  
@@ -238,15 +449,19 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 
   Credential Guard uses Windows Hypervisor to provide protections, which requires Secure Boot and DMA protections to function, which requires that hardware requirements are met.
 
-  - **Not configured** - Disable the use of Credential Guard, which is the Windows default.
+  - **Not configured**
   - **Enable with UEFI lock** (*default*) - Enable Credential Guard and not allow it to be disabled remotely, as the UEFI persisted configuration must be manually cleared.
   - **Enable without UEFI lock** - Enable Credential Guard and allow it to be turned off without physical access to the machine.
+  - **Disable** - Disable the use of Credential Guard, which is the Windows default.
 
 ## Device Installation
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 - **Hardware device installation by device identifiers**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
-  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)
+
   This policy setting allows you to specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device.  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
 
   - **Not configured**
@@ -258,14 +473,17 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   - **Remove matching hardware devices**
 
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
-    - **Yes**
+    - **Yes** *(default)*
     - **Not configured**
 
   - **Hardware device identifiers that are blocked**  
-    
+
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
 
     Select **Add**, and then specify the hardware device identifier you want to block.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Hardware device installation by setup classes**  
   CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
@@ -282,7 +500,7 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
     - **Yes**
-    - **Not configured**
+    - **Not configured** *(default)*
 
   - **Hardware device identifiers that are blocked**
 
@@ -293,11 +511,21 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 ## DMA Guard
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   This policy can provide additional security against external DMA capable devices. It allows for more control over the enumeration of external DMA capable devices incompatible with DMA Remapping/device memory isolation and sandboxing.
-  
+
   This policy only takes effect when Kernel DMA Protection is supported and enabled by the system firmware. Kernel DMA Protection is a platform feature that must be supported by the system at the time of manufacturing. To check if the system supports Kernel DMA Protection, check the Kernel DMA Protection field in the Summary page of MSINFO32.exe.
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+  - **Not configured**  
+  - **Block all** *(defulat)*
+  - **Allow all**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
   - **Not configured** - (*default*)
   - **Block all**
@@ -305,36 +533,40 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 
 ## Endpoint Detection and Response
 
-For more information about the following settings, see [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in the Windows documentation.
+For more information about the following settings, see [WindowsAdvancedThreatProtection](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in the Windows documentation.
 
 - **Sample sharing for all files**  
-  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
+  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
   
   - **Yes** (*default*)
   - **Not configured**
 
 - **Expedite telemetry reporting frequency**  
-  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.  
 
   - **Yes** (*default*)
   - **Not configured**
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## Firewall
 
-For more information, see [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) in the Windows documentation.
+For more information, see [Firewall CSP](/windows/client-management/mdm/firewall-csp) in the Windows documentation.
 
-- **Disable stateful File Transfer Protocol (FTP)**  
+- **Stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-  - **Yes** (*default*)
-  - **Not configured** - The firewall will use FTP to inspect and filter secondary network connections, which could cause your firewall rules to be ignored.
+  - **Disabled** (*default*) - Stateful FTP is disabled.
+  - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections. Disabled
+  - **Not configured**
 
 - **Number of seconds a security association can be idle before it's deleted**  
-CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
+  CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
   Specify how long the security associations are kept after network traffic is no longer seen. When not configured, the system deletes a security association after it's been idle for *300* seconds (the default).
   
@@ -390,12 +622,6 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     - **Yes** (*default*)
     - **Not configured**
 
-  - **Stealth mode required**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Yes** (*default*)
-    - **Not configured**
-
   - **Outbound connections required**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
@@ -410,12 +636,6 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   - **Global port rules from group policy merged**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
-
-    - **Yes** (*default*)
-    - **Not configured**
-
-  - **Stealth mode blocked**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Yes** (*default*)
     - **Not configured**
@@ -450,6 +670,18 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
     - **Yes** (*default*)
     - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Firewall profile public**  
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
@@ -471,12 +703,6 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     - **Yes** (*default*)
     - **Not configured**
 
-  - **Stealth mode required**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Yes** (*default*)
-    - **Not configured**
-
   - **Outbound connections required**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
@@ -497,12 +723,6 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   - **Global port rules from group policy merged**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
-
-    - **Yes** (*default*)
-    - **Not configured**
-
-  - **Stealth mode blocked**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Yes** (*default*)
     - **Not configured**
@@ -531,6 +751,18 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
     - **Yes** (*default*)
     - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Firewall profile domain**  
   CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
@@ -556,12 +788,6 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     - **Yes** (*default*)
     - **Not configured**
 
-  - **Stealth mode blocked**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Yes** (*default*)
-    - **Not configured**
-
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -581,7 +807,91 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     - **Yes** (*default*)
     - **Not configured**
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## Microsoft Defender
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Turn on real-time protection**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **Yes** (*default*) - Real-time monitoring is enforced and the user can't disable it.
+  - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
+
+- **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
+  CSP: [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 additional seconds to this timeout.  By default, the timeout is set to zero (**0**).
+
+- **Scan all downloaded files and attachments**  
+  CSP: [Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **Yes** (*default*) - All downloaded files and attachments are scanned. The setting is returned to client default, which is on, but the user can change it. To disable this setting, use a custom URI.
+  - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable this setting, use a custom URI.
+
+- **Scan type**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **User defined**
+  - **Disabled**
+  - **Quick scan** (*default*)
+  - **Full scan**
+
+- **Defender sample submission consent**  
+  CSP: [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI launches to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
+
+  - **Send safe samples automatically** (*default*)
+  - **Always prompt**
+  - **Never send**
+  - **Send all samples automatically**
+
+- **Cloud-delivered protection level**  
+  CSP: [CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
+  - **Not configured** - Default Defender blocking level.
+  - **High** *(default)* - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
+  - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
+  - **Zero tolerance** - Block all unknown executable files.
+
+- **Scan removable drives during full scan**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **Yes** (*default*) - During a full scan, removable drives (like USB flash drives) are scanned.
+  - **Not configured** - The setting returns to client default, which scans removable drives, however the user can disable this scan.
+
+- **Defender potentially unwanted app action**  
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
+  - **Device default**
+  - **Block** (*default*) - Detected items are blocked, and show in history along with other threats.
+  - **Audit** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
+
+- **Turn on cloud-delivered protection**  
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+
+  - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
+  - **Not configured**  - The setting is restored to the system default.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Run daily quick scan at**  
   CSP: [Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
@@ -590,10 +900,10 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
 - **Scheduled scan start time**  
   
-  By default, this is set to **2 AM**.
+  By default, the start time is set to **2 AM**.
 
 - **Configure low CPU priority for scheduled scans**  
-  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Yes** (*default*)
   - **Not configured**
@@ -624,7 +934,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
 
-  - **Yes** (*default*) - Real-time monitoring is enforced and the user cannot disable it.
+  - **Yes** (*default*) - Real-time monitoring is enforced and the user can't disable it.
   - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
 - **Number of days (0-90) to keep quarantined malware**  
@@ -633,7 +943,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Configure the number of days items should be kept in the quarantine folder before being removed. The default is zero (**0**), which results in quarantined files never being removed.
 
 - **Defender system scan schedule**  
-  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Schedule on which day Defender scans devices. By default the scan is **User defined** but can be set to *Everyday*, any day of the week, or to have *No scheduled scan*.
 
@@ -684,7 +994,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Scan browser scripts**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
 
-  - **Yes** (*default*) - The Microsoft Defender Script Scanning functionality is enforced and the user cannot turn them off.
+  - **Yes** (*default*) - The Microsoft Defender Script Scanning functionality is enforced and the user can't turn them off.
   - **Not configured** -  The setting is returned to client default, which is to enable script scanning, however the user can turn it off.
 
 - **Block user access to Microsoft Defender app**  
@@ -717,7 +1027,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Defender sample submission consent**  
   CSP: [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
 
-  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI launches to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
 
   - **Send safe samples automatically** (*default*)
   - **Always prompt**
@@ -742,7 +1052,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Turn on behavior monitoring**  
   CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
 
-  - **Yes** (*default*) - Behavior monitoring is enforced and the user cannot disable it.
+  - **Yes** (*default*) - Behavior monitoring is enforced and the user can't disable it.
   - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
   
 - **Scan removable drives during full scan**  
@@ -756,9 +1066,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   - **Yes** (*default*) - Microsoft Defender scans network files.
   - **Not configured** - The client returns to its default, which disables scanning of network files.
-  
+
 - **Defender potentially unwanted app action**  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
   - **Device default**
@@ -766,7 +1076,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Audit** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Turn on cloud-delivered protection**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
@@ -861,13 +1171,85 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Yes** (*default*) -  Prevent users from making changes to the exploit protection settings area in the Microsoft Defender Security Center.
   - **Not configured** - Local users can make changes in the exploit protection settings area.
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## Smart Screen
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
 
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
    This setting requires the 'Turn on Windows SmartScreen' setting be set to Yes.
-  - **Yes** (*default*) - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.
+  - **Yes** (*default*) - SmartScreen is enabled and users can't bypass warnings for files or malicious apps.
+  - **Not configured** - Users can ignore SmartScreen warnings for files and malicious apps.
+
+- **Turn on Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **Yes** (*default*) - Enforce the use of SmartScreen for all users.
+  - **Not configured** - Return the setting to Windows default, which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
+
+- **Require SmartScreen for Microsoft Edge**  
+  CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
+
+  - **Yes** (*default*) - Enable Microsoft Edge SmartScreen for accessing site and file downloads.
+  - **Not configured**
+
+- **Block malicious site access**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
+
+  - **Yes** (*default*) - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
+  - **Not configured**
+
+- **Block unverified file download**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
+
+  - **Yes** (*default*) - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
+  - **Not configured**
+
+- **Configure Microsoft Defender SmartScreen**  
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain; or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+
+  Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
+
+  - **Enabled** *(default)* - Microsoft Defender SmartScreen is turned on and users can't turn it off.
+  - **Disabled** - Microsoft Defender SmartScreen is turned off and users can't turn it on.
+  - **Not configured** -  Users can choose whether to use Microsoft Defender SmartScreen.
+
+- **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
+  This policy setting lets you decide whether users can override the Microsoft Defender SmartScreen warnings about potentially malicious websites.
+
+  - **Enabled** *(default)* - If you enable this setting, users can't ignore Microsoft Defender SmartScreen warnings and they are blocked from continuing to the site.
+  - **Disabled** - Users can ignore Microsoft Defender SmartScreen warnings and continue to the site.
+  - **Not configured** - Same behavior as *Disabled*.
+
+- **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
+  This policy lets you determine whether users can override Microsoft Defender SmartScreen warnings about unverified downloads.
+
+  - **Enabled** *(default)* - Users in your organization can't ignore Microsoft Defender SmartScreen warnings, and they're prevented from completing the unverified downloads.
+  - **Disabled** - Users can ignore Microsoft Defender SmartScreen warnings and complete unverified downloads.
+  - **Not configured** - Same behavior as *Disabled*.
+
+- **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
+  This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain; or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+
+  This policy setting lets you configure whether to turn on blocking for potentially unwanted apps in Microsoft Defender SmartScreen. Potentially unwanted app blocking in Microsoft Defender SmartScreen provides warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned off by default.
+
+  - **Enabled** *(default)* - Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned on.
+  - **Disabled** - Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned off.
+  - **Not configured** - If you don't configure this setting, users can choose whether to use potentially unwanted app blocking in Microsoft Defender SmartScreen.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+- **Block users from ignoring SmartScreen warnings**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   This setting requires the 'Turn on Windows SmartScreen' setting be set to Yes.
+  - **Yes** (*default*) - SmartScreen is enabled and users can't bypass warnings for files or malicious apps.
   - **Not configured** - Users can ignore SmartScreen warnings for files and malicious apps.
 
 - **Require apps from store only**  
@@ -883,7 +1265,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
 ## Windows Hello for Business
 
-For more information, see [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
+For more information, see [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
 
 - **Block Windows Hello for Business**  
 
@@ -891,7 +1273,7 @@ For more information, see [PassportForWork CSP](https://docs.microsoft.com/windo
 
   - **Not configured** - Devices device provision Windows Hello for Business, which is the Windows default.
   - **Disabled** (*default*) - Devices provision Windows Hello for Business.
-  - **Enabled** - Devices do not provision Windows Hello for Business for any user.
+  - **Enabled** - Devices don't provision Windows Hello for Business for any user.
 
   When set to *Disabled*, you can configure the following settings:
 

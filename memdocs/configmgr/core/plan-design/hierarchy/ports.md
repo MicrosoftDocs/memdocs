@@ -138,7 +138,7 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |-----------------|---------|---------|  
 |HTTPS|--|443|  
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsClient-DP"></a> Client --> Distribution point, both standard and pull  
 
@@ -208,7 +208,7 @@ A Configuration Manager client doesn't contact a global catalog server when it's
 
 ### <a name="bkmk_cmgcp-cmg"></a> CMG connection point --> CMG cloud service  
 
-Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
+Configuration Manager uses these connections to build the CMG channel. For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -222,7 +222,7 @@ Configuration Manager uses these connections to build the CMG channel. For more 
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="bkmk_cmgcp-sup"></a> CMG connection point --> Software update point  
 
@@ -233,7 +233,7 @@ The specific port depends upon the software update point configuration.
 |HTTPS|--|443|
 |HTTP|--|80|  
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsConsole-Client"></a> Configuration Manager console --> Client  
 
@@ -391,7 +391,7 @@ A distribution point communicates to the management point in the following scena
 |-----------------|---------|---------|  
 |HTTPS for CMG service deployment|--|443|
 
-For more information, see [CMG Ports and data flow](../../clients/manage/cmg/plan-cloud-management-gateway.md#ports-and-data-flow).
+For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
 ### <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site server &lt;--> Application Catalog web service point  
 
@@ -754,7 +754,7 @@ When a SQL Server hosts a database from more than one site, each database must u
 
 If you enable a host-based firewall on the SQL server, configure it to allow the correct ports. Also configure network firewalls in between computers that communicate with the SQL server.  
 
-For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ### <a name="bkmk_discovery"> </a> Discovery and publishing
 

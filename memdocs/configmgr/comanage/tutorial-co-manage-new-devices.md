@@ -5,7 +5,7 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 10/05/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -120,7 +120,9 @@ Request a version 2 key provider type when you generate a CSR. Only version 2 ce
 > [!TIP]  
 > When we deploy the CMG, we will also install a cloud distribution point (CDP) at the same time. By default, when you deploy a CMG, the option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** is selected. Co-locating the CDP on the server with the CMG removes the need for separate certificates and configurations to support the CDP. Even though the CDP isn't required to use co-management, it is useful in most environments.  
 >
-> If you will use additional cloud distribution points for co-management, you'll need to request separate certificates for each additional server. To request a public certificate for the CDP, use the same details as for the cloud management gateway CSR. You need only change the common name so that it is unique for each CDP.  
+> If you use any additional, separate CDPs, you need to request separate certificates for each additional CDP. To request a public certificate for a CDP, use the same details as for the cloud management gateway CSR. You need to only change the common name so that it is unique for each CDP.
+>
+> Using an additional, separate CDP is deprecated and no longer recommended. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### Details for the cloud management gateway CSR
 
@@ -354,19 +356,17 @@ Use Client Settings to configure Configuration Manager clients to communicate wi
 
 With the Azure configurations, site system roles, and client settings in place, you can configure Configuration Manager to enable co-management. However, you'll still need to make a few configurations in Intune after you enable co-management before this tutorial is complete. One of those tasks is to configure Intune to deploy the Configuration Manager client. That task is made easier by saving the command line for client deployment that is available from within the Co-management Configuration Wizard. That is why we enable co-management now, before we complete the configurations for Intune.
 
+The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices.
+
 > [!TIP]
 > - When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.
 > - Starting in Configuration Manager version 1906, you may need multiple collections since you can assign a different *Pilot group* for each workload.
 
 ### Enable co-management starting in version 1906
 
-To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### Enable co-management in version 1902 and earlier
-
-To enable co-management for Configuration Manager version 1902 and earlier, follow the instructions below:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
@@ -409,7 +409,7 @@ The following procedure deploys the app for installing the Configuration Manager
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). Select **Apps** > **All Apps** and then select **ConfigMgr Client Setup Bootstrap**, the app you created to deploy the Configuration Manager client.  
 
-2. Click **Properties** then **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure Active Directory (AD) groups that have users and devices that you want to participate in co-management.  
+2. Select **Properties** then **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure Active Directory (AD) groups that have users and devices that you want to participate in co-management.  
 
 3. Select **Review + save** and then **Save** the configuration.
 The app is now required by users and devices you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.

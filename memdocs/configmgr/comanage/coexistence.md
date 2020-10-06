@@ -20,12 +20,12 @@ When you concurrently manage Windows 10 devices with both Configuration Manager 
 
 The Configuration Manager client can coexist with a third-party MDM service on a device running Windows 10 version 1709 or later, and that's joined to Azure Active Directory. The device can be either of the following types:
 
-- [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")  
+- [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")  
 
-- [Hybrid domain-joined](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.  
+- [Hybrid domain-joined](/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.  
 
 > [!Note]  
-> It doesn't support [personally-owned devices](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
+> It doesn't support [personally-owned devices](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
 
 When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically deactivates certain workloads in Configuration Manager. This behavior allows the MDM service to take over these functions. It also prevents conflicting settings on the client that could adversely impact the device and user experience. The following workloads in Configuration Manager are deactivated in this case:
 

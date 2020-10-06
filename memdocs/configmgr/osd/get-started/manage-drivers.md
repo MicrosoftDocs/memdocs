@@ -5,13 +5,11 @@ description: Use the Configuration Manager driver catalog to import device drive
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage drivers in Configuration Manager

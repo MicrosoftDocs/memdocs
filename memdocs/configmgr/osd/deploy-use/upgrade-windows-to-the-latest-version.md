@@ -5,13 +5,11 @@ description: Learn how to use Configuration Manager to upgrade an OS from Window
 ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Upgrade Windows to the latest version with Configuration Manager
@@ -29,7 +27,7 @@ This article provides the steps in Configuration Manager to upgrade the OS on a 
 - Is faster and more resilient than traditional OS deployments
 
 > [!Note]  
-> The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
+> The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
 
 
 ## Supported versions
@@ -52,7 +50,7 @@ Devices must run one of the following OS versions to target an OS upgrade task s
 - Windows 8.1
 - An earlier version of Windows 10. For example, you can upgrade Windows 10, version 1809 to Windows 10, version 1903.  
 
-For more information, see [Windows 10 upgrade paths](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
+For more information, see [Windows 10 upgrade paths](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 #### Windows Server
 
@@ -61,7 +59,7 @@ For more information, see [Windows 10 upgrade paths](https://docs.microsoft.com/
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 
-For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
+For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
 
 
 ## <a name="BKMK_Plan"></a> Plan  
@@ -122,4 +120,4 @@ To deploy the OS, use one of the following deployment methods:
 
 ## Monitor  
 
-To monitor the task sequence deployment to upgrade the OS, see [Monitor OS deployments](monitor-operating-system-deployments.md).  
+To monitor the task sequence deployment to upgrade the OS, see [Monitor OS deployments](monitor-operating-system-deployments.md).

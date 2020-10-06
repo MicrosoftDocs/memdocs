@@ -44,11 +44,11 @@ Add the **Windows BranchCache** feature to the site system server that's configu
 - The clients that can support BranchCache must be configured for BranchCache distributed cache mode.  
 - The OS setting for BITS client settings must be enabled to support BranchCache.  
 
-For information, see [configure clients for BranchCache](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) in the Windows documentation.
+For information, see [configure clients for BranchCache](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) in the Windows documentation.
 
 All Configuration Manager supported versions of Windows support BranchCache by default.
 
-For more information, see [BranchCache for Windows](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) in the Windows Server documentation.  
+For more information, see [BranchCache for Windows](/windows-server/networking/branchcache/branchcache) in the Windows Server documentation.  
 
 ## <a name="bkmk_Workgroups"></a> Computers in workgroups  
 
@@ -70,7 +70,7 @@ For more information, see the following posts:
 
 - [Configuration Manager distribution points and Windows Server 2012 data deduplication](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385) on the Configuration Manager team blog
 
-- [Data deduplication overview](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview) in the Windows Server documentation
+- [Data deduplication overview](/windows-server/storage/data-deduplication/overview) in the Windows Server documentation
 
 ## <a name="bkmk_DA"></a> DirectAccess  
 
@@ -124,4 +124,4 @@ Site server roles require NTFS, so that Configuration Manager can set directory 
 
      Additionally, the cache of a Configuration Manager client isn't supported on a SIS-enabled volume.  
 
-- **Removable disk drive**: Configuration Manager doesn't support the installation of Configuration Manager site systems or clients on a removable disk drive.  
+- **Removable disk drive**: Configuration Manager doesn't support the installation of Configuration Manager site systems or clients on a removable disk drive.

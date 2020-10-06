@@ -145,7 +145,7 @@ In the System EventLog, SChannel EventID 36874 may be logged with the following 
 
 ## Additional resources
 
-- [Transport layer security (TLS) best practices with the .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [Transport layer security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 - [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 
@@ -153,4 +153,3 @@ In the System EventLog, SChannel EventID 36874 may be logged with the following 
 
 - [Enable TLS 1.2 on clients](enable-tls-1-2-client.md)
 - [Enable TLS 1.2 on the site servers and remote site systems](enable-tls-1-2-server.md)
-

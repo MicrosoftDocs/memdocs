@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,12 +77,13 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
 The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-firewall-policy.md).
 
-- **Disable stateful File Transfer Protocol (FTP)**  
+- **Stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)
 
-  - **Not configured** (*default*) - The firewall uses FTP to inspect and filter secondary network connections, which could cause your firewall rules to be ignored.
-  - **Yes**
-  
+  - **Not configured** (*default*)
+  - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections. 
+  - **Disabled** - Stateful FTP is disabled.
+
 - **Number of seconds a security association can be idle before it's deleted**  
   CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
@@ -99,35 +100,39 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **None**
   - **UTF8**
 
-- **Firewall IP sec exemptions allow neighbor discovery**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+- **No exemptions for Firewall IP sec**  
+  - **Not configured** (*default*) - When not configured, you'll have access to the following IP sec exemption settings that you can configure individually.
+  - **Yes** - Turn off all Firewall IP sec exemptions. The following settings aren't available to configure.
 
-  - **Not configured** (*default*)
-  - **Yes** - Firewall IPsec exemptions allow neighbor discovery.
+  - **Firewall IP sec exemptions allow neighbor discovery**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Firewall IP sec exemptions allow ICMP**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Not configured** (*default*)
+    - **Yes** - Firewall IPsec exemptions allow neighbor discovery.
 
-  - **Not configured** (*default*)
-  - **Yes** - Firewall IPsec exemptions allow ICMP.
+  - **Firewall IP sec exemptions allow ICMP**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Firewall IP sec exemptions allow router discovery**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Not configured** (*default*)
+    - **Yes** - Firewall IPsec exemptions allow ICMP.
 
-  - **Not configured** (*default*)
-  - **Yes** - Firewall IPsec exemptions allow router discovery.
+  - **Firewall IP sec exemptions allow router discovery**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Firewall IP sec exemptions allow DHCP**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Not configured** (*default*)
+    - **Yes** - Firewall IPsec exemptions allow router discovery.
 
-  - **Not configured** (*default*)
-  - **Yes** - Firewall IP sec exemptions allow DHCP
+  - **Firewall IP sec exemptions allow DHCP**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+
+    - **Not configured** (*default*)
+    - **Yes** - Firewall IP sec exemptions allow DHCP
 
 - **Certificate revocation list (CRL) verification**  
   CSP: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
    Specify how certificate revocation list (CRL) verification is enforced.
-  - **Not configured** (*default*) - The client default is to disable CRL verification.
+  - **Not configured** (*default*) - Use the client default, which is to disable CRL verification.
   - **None**
   - **Attempt**
   - **Require**
@@ -136,13 +141,14 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](https://go.microsoft.com/fwlink/?linkid=872550)
 
   - **Not configured** (*default*)
-  - **Yes** - Keying modules ignore unsupported authentication suites.
+  - **Disabled**
+  - **Enabled** - Keying modules ignore unsupported authentication suites.
 
 - **Packet queuing**  
   CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
   Specify how to enable scaling for the software on the receive side for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This ensures the packet order is preserved.
-  - **Not configured** (*default*) - Packet queuing will be returned back to client default, which is disabled.
+  - **Not configured** (*default*) - Packet queuing is returned to the client default, which is disabled.
   - **Disabled**
   - **Queue Inbound**
   - **Queue Outbound**
@@ -151,25 +157,251 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 - **Turn on Microsoft Defender Firewall for domain networks**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-  - **Not configured** (*default*) - The client returns to default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **domain** is turned on and enforced.
+  - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
+  - **Yes** - The Microsoft Defender Firewall for the network type of **domain** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
+
+  Additional settings for this network, when set to *Yes*:
+
+  - **Block stealth mode**  
+    CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run. Disabling stealth mode can make devices vulnerable to attack.
+    - **Not configured** *(default)*
+    - **Yes**
+    - **No**
+
+  - **Enable shielded mode**  
+    CSP: [Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Not configured** *(default)* - Use the client default, which is to disable shielded mode.
+    - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
+    - **No**
+
+  - **Block unicast responses to multicast broadcasts**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
+    - **Yes** - Unicast responses to multicast broadcasts are blocked.
+    - **No** - Enforce the client default, which is to allow unicast responses.
+
+  - **Disable inbound notifications**  
+    CSP [DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow the user notification.
+    - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
+    - **No** - User notifications are allowed.
+
+  - **Block outbound connections**  
+
+    *This setting applies to Windows version 1809 and later*.
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    This rule is evaluated at the very end of the rule list.
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow connections.
+    - **Yes** - All outbound connections that don't match an outbound rule are blocked.
+    - **No** - All connections that don't match an outbound rule are allowed.
+
+  - **Block inbound connections**  
+    CSP: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    This rule is evaluated at the very end of the rule list.
+    - **Not configured** *(default)* - The setting returns to the client default, which is to block connections.
+    - **Yes** - All inbound connections that don't match an inbound rule are blocked.
+    - **No** - All connections that don't match an inbound rule are allowed.
+
+  - **Ignore authorized application firewall rules**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - Authorized application firewall rules in the local store are ignored.
+    - **No** -  Authorized application firewall rules are honored.
+
+  - **Ignore global port firewall rules**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - Global port firewall rules in the local store are ignored.
+    - **No** - The global port firewall rules are honored.
+
+  - **Ignore all local firewall rules**  
+    CSP: [IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - All firewall rules in the local store are ignored.
+    - **No** - The firewall rules in the local store are honored.
+
+  - **Ignore connection security rules**
+    CSP: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - IPsec firewall rules in the local store are ignored.
+    - **No** - IPsec firewall rules in the local store are honored.
 
 - **Turn on Microsoft Defender Firewall for private networks**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-  - **Not configured** (*default*) - The client returns to default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **private** is turned on and enforced.
+  - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
+  - **Yes** - The Microsoft Defender Firewall for the network type of **private** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
+
+  Additional settings for this network, when set to *Yes*:
+
+  - **Block stealth mode**  
+    CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run. Disabling stealth mode can make devices vulnerable to attack.
+    - **Not configured** *(default)*
+    - **Yes**
+    - **No**
+
+  - **Enable shielded mode**  
+    CSP: [Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Not configured** *(default)* - Use the client default, which is to disable shielded mode.
+    - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
+    - **No**
+
+  - **Block unicast responses to multicast broadcasts**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
+    - **Yes** - Unicast responses to multicast broadcasts are blocked.
+    - **No** - Enforce the client default, which is to allow unicast responses.
+
+  - **Disable inbound notifications**  
+    CSP [DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow the user notification.
+    - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
+    - **No** - User notifications are allowed.
+
+  - **Block outbound connections**  
+
+    *This setting applies to Windows version 1809 and later*.
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    This rule is evaluated at the very end of the rule list.
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow connections.
+    - **Yes** - All outbound connections that don't match an outbound rule are blocked.
+    - **No** - All connections that don't match an outbound rule are allowed.
+
+  - **Block inbound connections**  
+    CSP: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    This rule is evaluated at the very end of the rule list.
+    - **Not configured** *(default)* - The setting returns to the client default, which is to block connections.
+    - **Yes** - All inbound connections that don't match an inbound rule are blocked.
+    - **No** - All connections that don't match an inbound rule are allowed.
+
+  - **Ignore authorized application firewall rules**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - Authorized application firewall rules in the local store are ignored.
+    - **No** -  Authorized application firewall rules are honored.
+
+  - **Ignore global port firewall rules**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - Global port firewall rules in the local store are ignored.
+    - **No** - The global port firewall rules are honored.
+
+  - **Ignore all local firewall rules**  
+    CSP: [IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - All firewall rules in the local store are ignored.
+    - **No** - The firewall rules in the local store are honored.
+
+  - **Ignore connection security rules**
+    CSP: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - IPsec firewall rules in the local store are ignored.
+    - **No** - IPsec firewall rules in the local store are honored.
 
 - **Turn on Microsoft Defender Firewall for public networks**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-  - **Not configured** (*default*) - The client returns to default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced.
+  - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
+  - **Yes** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
-<!-- Microsoft Defender Firewall rules added in 2005  -->
+  Additional settings for this network, when set to *Yes*:
+
+  - **Block stealth mode**  
+    CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run. Disabling stealth mode can make devices vulnerable to attack.
+    - **Not configured** *(default)*
+    - **Yes**
+    - **No**
+
+  - **Enable shielded mode**  
+    CSP: [Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Not configured** *(default)* - Use the client default, which is to disable shielded mode.
+    - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
+    - **No**
+
+  - **Block unicast responses to multicast broadcasts**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
+    - **Yes** - Unicast responses to multicast broadcasts are blocked.
+    - **No** - Enforce the client default, which is to allow unicast responses.
+
+  - **Disable inbound notifications**  
+    CSP [DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow the user notification.
+    - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
+    - **No** - User notifications are allowed.
+
+  - **Block outbound connections**  
+
+    *This setting applies to Windows version 1809 and later*.
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    This rule is evaluated at the very end of the rule list.
+    - **Not configured** *(default)* - The setting returns to the client default, which is to allow connections.
+    - **Yes** - All outbound connections that don't match an outbound rule are blocked.
+    - **No** - All connections that don't match an outbound rule are allowed.
+
+  - **Block inbound connections**  
+    CSP: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    This rule is evaluated at the very end of the rule list.
+    - **Not configured** *(default)* - The setting returns to the client default, which is to block connections.
+    - **Yes** - All inbound connections that don't match an inbound rule are blocked.
+    - **No** - All connections that don't match an inbound rule are allowed.
+
+  - **Ignore authorized application firewall rules**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - Authorized application firewall rules in the local store are ignored.
+    - **No** -  Authorized application firewall rules are honored.
+
+  - **Ignore global port firewall rules**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - Global port firewall rules in the local store are ignored.
+    - **No** - The global port firewall rules are honored.
+
+  - **Ignore all local firewall rules**  
+    CSP: [IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - All firewall rules in the local store are ignored.
+    - **No** - The firewall rules in the local store are honored.
+
+  - **Ignore connection security rules**
+    CSP: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
+    - **Yes** - IPsec firewall rules in the local store are ignored.
+    - **No** - IPsec firewall rules in the local store are honored.
 
 ### Microsoft Defender Firewall rules
 
@@ -203,22 +435,22 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Not configured**
 
 - **Package family name**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Package family names can be retrieved by running the Get-AppxPackage command from PowerShell.
 
 - **File path**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe` or `%WINDIR%\Notepad.exe`
 
 - **Service name**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Use a Windows service short name when a service, not an application, is sending or receiving traffic. Service short names are retrieved by running the `Get-Service` command from PowerShell.
 
 - **Protocol**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Specify the protocol for this port rule.
   - Transport layer protocols like *TCP(6)* and *UDP(17)* allow you to specify ports or port ranges.
@@ -233,7 +465,7 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Not configured**
 
 - **Authorized users**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if *Service name* in this policy is set as a Windows service. If no authorized user is specified, the default is *all users*.
 
@@ -242,9 +474,14 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Yes** - Support any local address and don't configure an address range.
 
 - **Local address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Add one or more addresses as a comma-separated list of local addresses that are covered by the rule. Valid entries (tokens) include the following options:
+  Manage local address ranges for this rule. You can:
+  - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
+  - **Import** a .csv file that contains a list of addresses to use as local address ranges.
+  - **Export** your current list of local address ranges as a .csv file.
+
+  Valid entries (tokens) include the following options:
   - **An asterisk** - An asterisk (\*) indicates any local address. If present, the asterisk must be the only token included.
   - **A subnet** - Specify subnets by using the subnet mask or network prefix notation. If a subnet mask or network prefix isn't specified, the subnet mask defaults to 255.255.255.255.​​
   - **A valid IPv6 address**
@@ -258,9 +495,14 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Yes** - Support any remote address and don't configure an address range.
 
 - **Remote address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Valid entries (tokens) include the following and aren't case-sensitive:
+  Manage remote address ranges for this rule. You can:
+  - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.
+  - **Import** a .csv file that contains a list of addresses to use as remote address ranges.
+  - **Export** your current list of remote address ranges as a .csv file.
+
+  Valid entries (tokens) include the following and aren't case-sensitive:
   - **An asterisk** - An asterisk (\*) indicates any remote address. If present, the asterisk must be the only token included.
   - **Defaultgateway**
   - **DHCP**

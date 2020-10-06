@@ -1,10 +1,10 @@
 ---
-title: "SetSourceSite Method"
+title: SetSourceSite method in class SMS_Advertisement
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: cf608c26-85b1-4ea8-bd06-c066693a9a17
 author: aczechowski
 ms.author: aaroncz

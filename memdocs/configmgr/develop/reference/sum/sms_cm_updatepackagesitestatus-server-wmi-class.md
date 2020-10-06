@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8183768c-9786-4dfa-9bc4-f3198a9dd594
 author: aczechowski
 ms.author: aaroncz
@@ -80,8 +80,8 @@ Class SMS_CM_UpdatePackageSiteStatus : SMS_BaseClass
 
  Prerequisite flag. Possible values are: bits:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0x1|Prereq only|  
 |0x2|CONTINUE_ON_PREREQ_WARNING|  
 

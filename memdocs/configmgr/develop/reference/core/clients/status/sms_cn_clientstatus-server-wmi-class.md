@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3d52902c-630b-4450-8cf5-3f58852c057c
 author: aczechowski
 ms.author: aaroncz
@@ -47,7 +47,7 @@ Class SMS_CN_ClientStatus : SMS_BaseClass
 
  Channel type. Possible values are:  
 
-|||  
+|Value|Channel type|  
 |-|-|  
 |0|TCP|  
 |1|HTTP|  
@@ -70,7 +70,7 @@ Class SMS_CN_ClientStatus : SMS_BaseClass
 
  Online status. Possible values are:  
 
-|||  
+|Value|Online status|  
 |-|-|  
 |0|Offline|  
 |1|Online|  

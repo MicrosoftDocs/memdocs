@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 33723e8b-cc0c-4b1d-a2f5-a4629b32eab3
 author: aczechowski
 ms.author: aaroncz
@@ -33,7 +33,7 @@ SInt32 DeleteDiscoveryData(
 
  Delete discovered data. Possible values are:  
 
-|||  
+|Value|Delete data|  
 |-|-|  
 |0|Delete all discovered data excluding forest name and forest properties information.|  
 |1|Delete all data including forest name and forest properties information.|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3410a7c8-03b1-4c9e-874a-05324fcb569e
 author: aczechowski
 ms.author: aaroncz
@@ -81,10 +81,9 @@ public void AddOSInstallPackage(
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|Name for the new operating system image package.|  
 |`description`|-   Managed: `String`<br />-   VBScript: `String`|Description for the operating system image package.|  
 |`path`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Universal Naming Convention (UNC) path to the image Windows Image (WIM) file.|  

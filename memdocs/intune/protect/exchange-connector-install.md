@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/05/2020
 
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -35,14 +35,14 @@ ms.collection: M365-identity-device-management
 > [!IMPORTANT]
 > The information in this article applies to customers who are supported to use an Exchange Connector.
 >
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
+> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, your Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
 >
 >Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
 
 To help protect access to Exchange, Intune relies on an on-premises component that's known as the Microsoft Intune Exchange connector. This connector is also called the *Exchange ActiveSync on-premises connector* in some locations of the Intune console.
 
 > [!IMPORTANT]
-> Intune will be removing support for the Exchange On-Premises Connector feature from the Intune service beginning in the 2007 (July) release. Existing customers with an active connector will be able to continue with the current functionality at this time. New customers and existing customers that do not have an active connector will no longer be able to create new connectors or manage Exchange ActiveSync (EAS) devices from Intune. For those tenants, Microsoft recommends the use of Exchange [hybrid modern authentication (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) to protect access to Exchange on-premises. HMA enables both Intune App Protection Policies (also known as MAM) and Conditional Access through Outlook Mobile for Exchange on-premises.
+> Intune will be removing support for the Exchange On-Premises Connector feature from the Intune service beginning in the 2007 (July) release. Existing customers with an active connector will be able to continue with the current functionality at this time. New customers and existing customers that do not have an active connector will no longer be able to create new connectors or manage Exchange ActiveSync (EAS) devices from Intune. For those tenants, Microsoft recommends the use of Exchange [hybrid modern authentication (HMA)](/office365/enterprise/hybrid-modern-auth-overview) to protect access to Exchange on-premises. HMA enables both Intune App Protection Policies (also known as MAM) and Conditional Access through Outlook Mobile for Exchange on-premises.
 
 The information in this article can help you install and monitor the Intune Exchange connector. You can use the connector with your [conditional access policies](conditional-access-exchange-create.md) to allow or block access to your Exchange on-premises mailboxes.
 
@@ -159,7 +159,7 @@ Follow these steps to install the Intune Exchange connector. If you have multipl
 
    For a hosted Exchange server, provide the Exchange server address. To find the hosted Exchange server URL:
 
-   1. Open Outlook for Office 365.
+   1. Open Outlook for Microsoft 365.
 
    2. Choose the **?** icon in the upper-left corner, and then select **About**.
 
@@ -179,7 +179,7 @@ Follow these steps to install the Intune Exchange connector. If you have multipl
 
 5. Provide credentials to send notifications to a user's Exchange Server mailbox. This user can be dedicated to just notifications. The notifications user needs an Exchange mailbox to send notifications by email. You can configure these notifications by using conditional access policies in Intune.
 
-   Make sure the Autodiscover service and Exchange Web Services are configured on the Exchange CAS. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
+   Make sure the Autodiscover service and Exchange Web Services are configured on the Exchange CAS. For more information, see [Client Access server](/Exchange/architecture/client-access/client-access?view=exchserver-2019).
 
 6. In the **Password** field, provide the password for this account to enable Intune to access the Exchange server.
 

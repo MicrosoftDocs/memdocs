@@ -1,25 +1,26 @@
 ---
-title: "SMS_UserMachineRelationship Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_UserMachineRelationship class
+titleSuffix: Configuration Manager
+description: Use this server WMI class to manage user device affinity.
+ms.date: 08/26/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 97f57654-c1d1-4a2f-b05f-9f16b22372b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# SMS_UserMachineRelationship Server WMI Class
+# SMS_UserMachineRelationship server WMI class
 
-The `SMS_UserMachineRelationship` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
+The `SMS_UserMachineRelationship` WMI class contains relationships between a device and its primary users.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
-```  
+```
 Class SMS_UserMachineRelationship : SMS_BaseClass  
 {  
     DateTime CreationTime;  
@@ -34,18 +35,20 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 };  
 ```  
 
-## Methods  
- The `SMS_UserMachineRelationship` class defines the following methods.  
+## Methods
+
+The `SMS_UserMachineRelationship` class defines the following methods.  
 
 |Method|Description|  
 |------------|-----------------|  
-|[AddSource Method in Class SMS_UserMachineRelationship](../../../../../develop/reference/core/clients/manage/addsource-method-in-class-sms_usermachinerelationship.md)|Adds a source for the relationship between the user and the device.|  
-|[AddType Method in Class SMS_UserMachineRelationship](../../../../../develop/reference/core/clients/manage/addtype-method-in-class-sms_usermachinerelationship.md)|Adds a type of the relationship between a user and a device.|  
-|[CreateRelationship Method in Class SMS_UserMachineRelationship](../../../../../develop/reference/core/clients/manage/createrelationship-method-in-class-sms_usermachinerelationship.md)|Creates a relationship between a user and a device.|  
-|[RemoveSource Method in Class SMS_UserMachineRelationship](../../../../../develop/reference/core/clients/manage/removesource-method-in-class-sms_usermachinerelationship.md)|Removes a source for the relationship between a user and a device.|  
-|[RemoveType Method in Class SMS_UserMachineRelationship](../../../../../develop/reference/core/clients/manage/removetype-method-in-class-sms_usermachinerelationship.md)|Removes a type of the relationship between a user and a device.|  
+|[AddSource Method in Class SMS_UserMachineRelationship](addsource-method-in-class-sms_usermachinerelationship.md)|Adds a source for the relationship between the user and the device.|  
+|[AddType Method in Class SMS_UserMachineRelationship](addtype-method-in-class-sms_usermachinerelationship.md)|Adds a type of the relationship between a user and a device.|  
+|[CreateRelationship Method in Class SMS_UserMachineRelationship](createrelationship-method-in-class-sms_usermachinerelationship.md)|Creates a relationship between a user and a device.|  
+|[RemoveSource Method in Class SMS_UserMachineRelationship](removesource-method-in-class-sms_usermachinerelationship.md)|Removes a source for the relationship between a user and a device.|  
+|[RemoveType Method in Class SMS_UserMachineRelationship](removetype-method-in-class-sms_usermachinerelationship.md)|Removes a type of the relationship between a user and a device.|  
 
-## Properties  
+## Properties
+
  `CreationTime`  
  Data type: `DateTime`  
 
@@ -53,7 +56,7 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [read]  
 
- CreationTime.   
+ The time that the relationship was created.
 
  `IsActive`  
  Data type: `Boolean`  
@@ -62,7 +65,7 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [read]  
 
- IsActive.   
+ **TRUE** if the relationship is active.
 
  `RelationshipResourceID`  
  Data type: `UInt32`  
@@ -71,7 +74,7 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [read]  
 
- RelationshipResourceID.   
+ The unique identifier for this relationship.
 
  `ResourceClientType`  
  Data type: `UInt32`  
@@ -89,7 +92,7 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [key, read]  
 
- Resource ID for machine.  
+ The resource ID of the device.
 
  `ResourceName`  
  Data type: `String`  
@@ -98,7 +101,7 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Resource Name for machine.  
+ The resource name of the device.
 
  `Sources`  
  Data type: `UInt32` Array  
@@ -107,7 +110,18 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Sources.   
+An array of sources for this relationship, with one of the following values:
+
+|Value|Name|Description|  
+|-|-|-|
+|`1`|Self-service portal|The end user enabled the relationship by selecting the option in Software Center.|  
+|`2`|Administrator|An administrator created the relationship manually in the console.|  
+|`3`|User|Unused/deprecated.|  
+|`4`|Usage agent|The threshold of activity triggered a relationship to be created.|  
+|`5`|Device management|The user and device were tied together during on-prem MDM enrollment.|  
+|`6`|OSD|The user and device were tied together as part of an OS deployment task sequence.|  
+|`7`|Fast install|The user/device were tied together temporarily to enable an on-demand install from the catalog if no UDA relationship installed before the Install was triggered.|  
+|`8`|Exchange Server connector|The device was provisioned through Exchange ActiveSync.|  
 
  `Types`  
  Data type: `UInt32` Array  
@@ -116,7 +130,7 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Types.    
+ An array of types for this relationship. For a value of `1`, the **UniqueUserName** is the primary user. If the value is null, they aren't the primary user.
 
  `UniqueUserName`  
  Data type: `String`  
@@ -125,14 +139,16 @@ Class SMS_UserMachineRelationship : SMS_BaseClass
 
  Qualifiers: [key, read]  
 
- User name in domain\user format.  
+ User name in domain\user format.
 
 ## Remarks  
 
 ## Requirements  
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
+For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+
+### Development requirements
+
+For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

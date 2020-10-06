@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b6be1a0c-58ba-4949-a78a-d09ab322293c
 author: aczechowski
 ms.author: aaroncz
@@ -70,10 +70,9 @@ public void RemoveObjectScope(WqlConnectionManager connection, string scopeId, s
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeId`|`String`|The identifier of the security scope.|  
 |objectKey|`String`|The key property value of the object.|  
 |objectTypeId|`Integer`|The type identifier of the object referenced in the `objectKey` parameter.|  

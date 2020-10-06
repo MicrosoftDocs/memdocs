@@ -57,9 +57,9 @@ This article:
 
 To learn more, see:
 
-- [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Getting start with Azure AD authentication](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Understand OAuth 2.0](https://oauth.net/2/)
 
 ## Register apps to use the Microsoft Graph API
@@ -84,7 +84,7 @@ To register an app to use Microsoft Graph API:
 
     2. The **Application type** and **Redirect URI** values.
 
-        These vary according to your requirements. For example, if you're using an Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), set **Application Type** to `Native` and **Redirect URI** to `urn:ietf:wg:oauth:2.0:oob`.
+        These vary according to your requirements. For example, if you're using an Azure AD [Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), set **Application Type** to `Native` and **Redirect URI** to `urn:ietf:wg:oauth:2.0:oob`.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -92,7 +92,7 @@ To register an app to use Microsoft Graph API:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        To learn more, see [Authentication Scenarios for Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+        To learn more, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. From the application blade:
 
@@ -110,7 +110,7 @@ To register an app to use Microsoft Graph API:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 
     For best results, choose the fewest roles needed to implement your application.
 
@@ -145,8 +145,8 @@ Azure AD and Microsoft Graph use permission scopes to control access to corporat
 Permission scopes (also called the _OAuth scopes_) control access to specific Intune entities and their properties. This section summarizes the permission scopes for Intune API features.
 
 To learn more:
-- [Azure AD authentication](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Application permission scopes](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Azure AD authentication](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Application permission scopes](/azure/active-directory/develop/active-directory-v2-scopes)
 
 When you grant permission to Microsoft Graph, you can specify the following scopes to control access to Intune features:
 The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the Azure portal and the second column provides the permission scope name.
@@ -313,7 +313,7 @@ In each example, you'll need to specify an application ID that has at least the 
 
 When testing either example, you may receive HTTP status 403 (Forbidden) errors similar to the following:
 
-``` javascript
+```json
 {
   "error": {
     "code": "Forbidden",
@@ -344,23 +344,22 @@ If this happens, verify that:
 
 This example shows how to use C# to retrieve a list of devices associated with your Intune account.
 
+ > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 1. Start Visual Studio and then create a new Visual C# Console app (.NET Framework) project.
 
 2. Enter a name for your project and provide other details as desired.
 
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3. Use the Solution Explorer to add the Microsoft ADAL NuGet package to the project.
+3. Use the Solution Explorer to add the Microsoft ADAL NuGet package to the project:
 
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+    1. Right-click the Solution Explorer.
+    1. Choose **Manage NuGet Packages…** &gt; **Browse**.
+    1. Select `Microsoft.IdentityModel.Clients.ActiveDirectory` and then choose **Install**.
 
-
-   1. Right-click the Solution Explorer.
-   2. Choose **Manage NuGet Packages…** &gt; **Browse**.
-   3. Select `Microsoft.IdentityModel.Clients.ActiveDirectory` and then choose **Install**.
-
-   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Add the following statements to the top of **Program.cs**:
 

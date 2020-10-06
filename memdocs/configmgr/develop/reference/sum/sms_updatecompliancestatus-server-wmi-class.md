@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4f
 author: aczechowski
 ms.author: aaroncz
@@ -81,8 +81,8 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
  Source of the compliance enforcement action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Source |  
+| ----- | ------ |  
 |0|NONE|  
 |1|SMS|  
 |2|USER|  
@@ -186,8 +186,8 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
  The status of the target computer.  Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |  
+| ----- | ------ |  
 |0|Detection state unknown|  
 |1|Update is not required|  
 |2|Update is required|  

@@ -48,7 +48,7 @@ Before running the tool, review [Security considerations for running the App Wra
 
 - The app must be developed by or for your company. You cannot use this tool on apps downloaded from the Google Play Store.
 
-- To run the App Wrapping Tool, you must install the latest version of the [Java Runtime Environment](https://java.com/download/) and then ensure that the Java path variable has been set to C:\ProgramData\Oracle\Java\javapath in your Windows environment variables. For more help, see the [Java documentation](https://java.com/download/help/).
+- To run the App Wrapping Tool, you must install the latest version of the [Java Runtime Environment](https://java.com/download/) and then ensure that the Java path variable has been set to C:\ProgramData\Oracle\Java\javapath in your Windows environment variables. For more help, see the [Java documentation](https://java.com/en/download/help/index.html).
 
     > [!NOTE]
     > In some cases, the 32-bit version of Java may result in memory issues. It's a good idea to install the 64-bit version.
@@ -103,7 +103,7 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 | **&lt;CommonParameters&gt;** | (Optional) The command supports common PowerShell parameters like verbose and debug. |
 
 
-- For a list of common parameters, see the [Microsoft Script Center](https://technet.microsoft.com/library/hh847884.aspx).
+- For a list of common parameters, see the [Microsoft Script Center](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 - To see detailed usage information for the tool, enter the command:
 

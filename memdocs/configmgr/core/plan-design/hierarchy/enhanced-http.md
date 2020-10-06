@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Enhanced HTTP
@@ -53,7 +51,7 @@ The following scenarios benefit from these improvements:
 [Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) and devices with a [Configuration Manager issued token](../../clients/deploy/deploy-clients-cmg-token.md) can communicate with a management point configured for HTTP if you enable enhanced HTTP for the site. With enhanced HTTP enabled, the site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
 > [!Note]  
-> This scenario does not require using an HTTPS-enabled management point but it is supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> This scenario does not require using an HTTPS-enabled management point but it is supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
 
 ### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
 
@@ -72,7 +70,7 @@ An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/c
 
 The following Configuration Manager features support or require enhanced HTTP:
 
-- [Cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
+- [Cloud management gateway](../../clients/manage/cmg/overview.md)
 - [OS deployment without a network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#enhanced-http)
 - [Enable co-management for new internet-based Windows 10 devices](../../../comanage/tutorial-co-manage-new-devices.md)
 - [App approvals via email](../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
@@ -115,6 +113,11 @@ You can see these certificates in the Configuration Manager console. Go to the *
 
 For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## Validate the certificate
+
+When you enable enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**. This certificate is issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS default web site bound to port 443.
+
+To see the status of the configuration, review **mpcontrol.log**.
 
 ## See also
 

@@ -40,9 +40,9 @@ Version 1706 drops support for the following products:
 
 ## Site infrastructure
 
-### Client Peer Cache support for express installation files for Windows 10 and Office 365  
+### Client Peer Cache support for express installation files for Windows 10 and Microsoft 365  
 <!-- 1352486 -->
-Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required to support this change.
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Microsoft 365. No additional configurations are required to support this change.
 
 ### Updates for the data warehouse
 <!-- 1277922 -->
@@ -74,7 +74,7 @@ This release includes improvements for how software update points work with boun
 - Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 - After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point. This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
-For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#software-update-points) in the Boundary Groups topic for the Current Branch.
+For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in the Boundary Groups topic for the Current Branch.
 
 ### Azure AD integration with Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -213,7 +213,7 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 
 #### Prerequisites
 - All software update points must run Windows Server 2016.    
-- This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+- This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### To manage Surface driver updates
 
@@ -227,8 +227,8 @@ You can now configure deferral policies for Windows 10 Feature Updates or Qualit
 
 For details, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### Improved user notifications for Office 365 updates
-Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Office 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
+### Improved user notifications for Microsoft 365 updates
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs a Microsoft 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## Reporting
 

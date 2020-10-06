@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 06/24/2020
+ms.date: 09/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -58,9 +58,9 @@ In a hierarchy with multiple sites, different sites can use different versions o
 
 - Configuration Manager supports the versions of SQL Server that you use.
 - The SQL Server versions you use remain in support by Microsoft.
-- SQL Server supports replication between the two versions of SQL Server. For more information, see [SQL Server replication backward compatibility](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
+- SQL Server supports replication between the two versions of SQL Server. For more information, see [SQL Server replication backward compatibility](/sql/relational-databases/replication/replication-backward-compatibility).
 
-For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) as they become available.
+For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) as they become available.
 
 Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.
 
@@ -69,7 +69,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 ### SQL Server 2019: Standard, Enterprise
 
-Starting with Configuration Manager version 1910, you can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
+Starting with Configuration Manager version 1910, you can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
 This version of SQL can be used for the following sites:
 
@@ -80,13 +80,13 @@ This version of SQL can be used for the following sites:
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -182,7 +182,26 @@ Configuration Manager supports two exceptions to this collation for the China GB
 
 ### Database compatibility level
 
-Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version. For instance, beginning with version 1702, you need to have a [database compatibility level](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) greater than or equal to 110. <!-- SMS.506266-->
+Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
+
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
+
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
+| SQL Server 2017 | 140, 130, 120, 110 | 140 |
+| SQL Server 2016 | 130, 120, 110 | 130 |
+| SQL Server 2014 | 120, 110 | 110 |
+
+To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:  
+
+```SQL
+SELECT name, compatibility_level FROM sys.databases
+```
+
+For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 
@@ -200,7 +219,7 @@ Use a dedicated instance of SQL Server for each site. The instance can be a **na
 
 ### SQL Server memory
 
-Reserve memory for SQL Server by using SQL Server Management Studio. Set the **Minimum server memory** setting under **Server Memory Options**. For more information about how to configure this setting, see [SQL Server memory server configuration options](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
+Reserve memory for SQL Server by using SQL Server Management Studio. Set the **Minimum server memory** setting under **Server Memory Options**. For more information about how to configure this setting, see [SQL Server memory server configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
 - **For a database server that you install on the same computer as the site server**: Limit the memory for SQL Server to 50 to 80 percent of the available addressable system memory.  
 
@@ -214,11 +233,11 @@ Reserve memory for SQL Server by using SQL Server Management Studio. Set the **M
 
 ### SQL nested triggers
 
-SQL nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+SQL nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
 
 ### SQL Server CLR integration
 
-The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
+The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
 ### SQL Server Service Broker (SSB)
 
@@ -226,7 +245,7 @@ The SQL Server Service Broker is required both for intersite replication as well
 
 ### TRUSTWORTHY setting
 
-Configuration Manager automatically enables the SQL [TRUSTWORTHY database property](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property). This property is required by Configuration Manager to be **ON**.
+Configuration Manager automatically enables the SQL [TRUSTWORTHY database property](/sql/relational-databases/security/trustworthy-database-property). This property is required by Configuration Manager to be **ON**.
 
 ## <a name="bkmk_optional"></a> Optional configurations for SQL Server
 
@@ -250,7 +269,7 @@ When the computer running SQL Server doesn't use its local system account to run
 
 For information about SPNs for the site database, see [Manage the SPN for the site database server](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).  
 
-For information about how to change the account that is used by the SQL Server service, see [SCM Services - Change the service startup account](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
+For information about how to change the account that is used by the SQL Server service, see [SCM Services - Change the service startup account](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
 ### SQL Server Reporting Services
 
@@ -285,7 +304,7 @@ When a computer running SQL Server hosts a database from more than one site, eac
 
 If you have a firewall enabled on the computer that is running SQL Server, make sure that it's configured to allow the ports that are being used by your deployment and at any locations on the network between computers that communicate with the SQL Server.  
 
-For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ## Upgrade options for SQL Server
 

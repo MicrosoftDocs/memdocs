@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1d0c07a0-dbab-4279-9fa1-114a3d992a24
 author: aczechowski
 ms.author: aaroncz
@@ -221,7 +221,7 @@ public void AddSupportedPlatform(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`driver`<br /><br /> `objDriver`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|-   A valid [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md).|  
+|`driver`<br /><br /> `objDriver`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](/windows/win32/wmisdk/swbemobject)|-   A valid [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md).|  
 |`displayName`<br /><br /> `sDisplayName`|-   Managed: `String`<br />-   VBScript: `String`|The display name for the condition shown in the Configuration Manager console.|  
 |`maxVersion`<br /><br /> `sMaxVersion`|-   Managed: `String`<br />-   VBScript: `String`|The maximum supported version.|  
 |`minVersion`<br /><br /> `sMinVersion`|-   Managed: `String`<br />-   VBScript: `String`|The minimum supported version.|  

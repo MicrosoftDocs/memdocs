@@ -2,10 +2,10 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
@@ -368,6 +368,13 @@ A read-only variable for whether the **AC power plugged in** check returned true
 
 A read-only variable for whether the **Network adapter connected** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
+### <a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*Starting in version 2006* <!--6452769-->
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Computer is in UEFI mode** returned BIOS (`0`) or UEFI (`1`). If you don't enable the check, the value of this read-only variable is blank.
+
 ### <a name="TSCRWIRED"></a> _TS_CRWIRED
 
 *Starting in version 2002* <!--6005561-->  
@@ -567,6 +574,12 @@ If there are multiple device drivers in the driver catalog that are compatible w
 (input)
 
 A comma-delimited list of the driver catalog category unique IDs. The **Auto Apply Driver** step only considers the drivers in at least one of the specified categories. This value is optional, and it's not set by default. Obtain the available category IDs by enumerating the list of **SMS_CategoryInstance** objects on the site.
+
+### <a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+
+Specify the PIN for BitLocker encryption. This variable is only valid if the BitLocker mode is **TPM and PIN**.
 
 ### <a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -791,7 +804,7 @@ Specifies additional options to add to the DISM command line when applying a dri
 
 To use this variable, enable the setting, **Install driver package via running DISM with recurse option**, on the **Apply Driver Package** step.
 
-For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+For more information, see [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
 ### <a name="OSDJoinAccount"></a> OSDJoinAccount
 
@@ -1633,7 +1646,9 @@ Use this variable to temporarily persist content in the task sequence cache. Thi
 
 ### <a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifies a command that's run after the task sequence completes. For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
+Specifies a command that's run after the task sequence completes. Just before exiting the task sequence, the TSManager process spawns the specified post action. It doesn't wait or record any status, just exits after calling that command.<!-- MEMDocs #719 -->
+
+For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
 
 ### <a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

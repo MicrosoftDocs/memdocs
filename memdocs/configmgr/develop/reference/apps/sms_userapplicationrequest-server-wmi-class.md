@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 74290916-947a-432f-ab33-cbf7358ee126
 author: aczechowski
 ms.author: aaroncz
@@ -81,7 +81,7 @@ Class SMS_UserApplicationRequest :
 
  Current state of the application request. Possible values are:  
 
-|||  
+|Value|Current state|  
 |-|-|  
 |1|Requested|  
 |2|Canceled|  

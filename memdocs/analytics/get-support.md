@@ -2,7 +2,7 @@
 title: Get support for Endpoint analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Endpoint analytics
-ms.date: 06/25/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
@@ -14,11 +14,6 @@ manager: dougeby
 
 # Get support for Endpoint analytics
 
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
-
 Microsoft provides global technical, pre-sales, billing, and subscription support for Endpoint analytics. Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
 Before contacting Microsoft Support, first review the following articles:
@@ -29,7 +24,7 @@ Before contacting Microsoft Support, first review the following articles:
 
 ## Help and support
 
-To request help for Endpoint analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Endpoint analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [administrator roles in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+To request help for Endpoint analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Endpoint analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [administrator roles in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
 If the issue is more broadly for Intune than just Endpoint analytics, follow the instructions in the [How to get support for Microsoft Intune](../intune/fundamentals/get-support.md#create-an-online-support-ticket) article to open a new support request. For an issue that is more broadly for Configuration Manager than just Endpoint analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request.
 

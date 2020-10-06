@@ -5,9 +5,7 @@ description: How to use the BitLocker administration and monitoring website (hel
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
@@ -45,7 +43,7 @@ To access specific areas of the administration and monitoring website, your user
 
 If a user enters the incorrect PIN too many times, they can lockout the TPM. The number of times that a user can enter an incorrect PIN before the TPM locks varies from manufacturer to manufacturer. From the **Manage TPM** area of the administration and monitoring website, access the centralized key recovery data system.
 
-For more information about TPM ownership, see [Configure MBAM to escrow the TPM and store OwnerAuth passwords](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
+For more information about TPM ownership, see [Configure MBAM to escrow the TPM and store OwnerAuth passwords](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > Starting with Windows 10, version 1607, Windows doesn't keep the TPM owner password when provisioning the TPM.
@@ -156,7 +154,7 @@ To recover a moved drive, use the **Drive recovery** area of the administration 
 
 If you configured the moved drive to use a TPM chip on the original computer, complete the following steps. Otherwise, the recovery process is complete.
 
-1. After you unlock the drive, start the computer in WinRE mode. Open a command prompt in WinRE, and use the `manage-bde` command to decrypt the drive. This tool is the only way to remove the **TPM + PIN** protector without the original TPM chip. For more information about this command, see [Manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
+1. After you unlock the drive, start the computer in WinRE mode. Open a command prompt in WinRE, and use the `manage-bde` command to decrypt the drive. This tool is the only way to remove the **TPM + PIN** protector without the original TPM chip. For more information about this command, see [Manage-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
 
 1. When it's complete, start the computer normally. Configuration Manager will enforce the BitLocker policy to encrypt the drive with the new computer's TPM plus PIN.
 
@@ -181,7 +179,7 @@ Use the recovery key ID to get a recovery key package from the administration an
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-For more information about this command, see [Repair-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
+For more information about this command, see [Repair-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
 
 ## Reports
 

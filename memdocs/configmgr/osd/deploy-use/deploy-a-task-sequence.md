@@ -2,12 +2,10 @@
 title: Deploy a task sequence
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to the computers in a collection.  
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
@@ -143,9 +141,21 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later. When you deploy a task sequence to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
 
-    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that require a boot media, such as the installation of an OS, aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that run operations in the standard OS.  
+    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client.
 
-        - This setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        This setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway (CMG). For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).
+
+        Starting in version 2006, you can deploy a task sequence with a boot image to a device that communicates through the CMG. The user needs to start the task sequence from Software Center.<!--6997525-->
+
+        > [!NOTE]
+        > When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+        >
+        > When you run an OS deployment task sequence on an internet-based client, that's either Azure AD-joined or uses token-based authentication, you need to specify the **CCMHOSTNAME** property in the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step.
+
+        In version 2002 and earlier, operations that require a boot media aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that run operations in the standard OS.
+
+        > [!NOTE]
+        > For all internet-based task sequence scenarios, start the task sequence from Software Center. They don't support Windows PE, PXE, or task sequence media.
 
 8. On the **Alerts** page, specify the alert settings that you want for this task sequence deployment.  
 
@@ -224,9 +234,9 @@ You create a task sequence that only has several **Install Package** steps for t
 ## Deploy Windows 10 in-place upgrade via CMG
 
 <!-- 1357149 -->
-The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
 
-Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. (Enable the [CMG setting](../../core/clients/manage/cmg/setup-cloud-management-gateway.md#settings): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.) You can also use a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices can't run the task sequence.
+Make sure all of the content referenced by the in-place upgrade task sequence is distributed to a content-enabled CMG. (Enable the [CMG setting](../../core/clients/manage/cmg/modify-cloud-management-gateway.md#settings-tab): **Allow CMG to function as a cloud distribution point and serve content from Azure storage**.) You can also use a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices can't run the task sequence.
 
 When you deploy an upgrade task sequence, use the following settings:
 

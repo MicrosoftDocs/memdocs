@@ -92,7 +92,7 @@ The updates and issue described in this section only apply to WSUS running on Wi
 
 ### Historical information about KB 3095113
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) was [released as a hotfix](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) in October 2015 to add support for Windows 10 upgrades to WSUS. The update enables WSUS to synchronize and distribute updates in the **Upgrades** classification for Windows 10.
+ [KB 3095113](https://support.microsoft.com/kb/3095113) was [released as a hotfix](/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) in October 2015 to add support for Windows 10 upgrades to WSUS. The update enables WSUS to synchronize and distribute updates in the **Upgrades** classification for Windows 10.
 
 If you synchronize any upgrades without having first installed [KB 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Windows 10 upgrades in this state can't be downloaded by using the Download Software Updates Wizard.
 
@@ -112,13 +112,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-Historically, when these errors occurred, they would be resolved by doing a modified version of the [resolution steps for WSUS](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus). Because these steps are similar to the resolution for not doing the manual steps required after KB 3159706 installation, we've combined both sets of steps into a single resolution in the section below:
+Historically, when these errors occurred, they would be resolved by doing a modified version of the [resolution steps for WSUS](/archive/blogs/wsus/how-to-delete-upgrades-in-wsus). Because these steps are similar to the resolution for not doing the manual steps required after KB 3159706 installation, we've combined both sets of steps into a single resolution in the section below:
 
 - [To recover from synchronizing the upgrades before you install KB 3095113 or KB 3159706](#bkmk_fix-upgrades).
 
 ### Historical information about KB 3159706
 
-KB 3148812 was initially released in April 2016 to enable WSUS to natively decrypt the .esd files used for upgrading Windows 10 packages. [KB 3148812 caused problems for some customers](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) and was replaced with [KB 3159706](https://support.microsoft.com/help/3159706). KB 3159706 needs to be installed on all your software update points and site servers before you can service Windows 10 Version 1607 and later devices. However, problems can arise if you don't realize the KB requires the following manual steps after installation:
+KB 3148812 was initially released in April 2016 to enable WSUS to natively decrypt the .esd files used for upgrading Windows 10 packages. [KB 3148812 caused problems for some customers](/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) and was replaced with [KB 3159706](https://support.microsoft.com/help/3159706). KB 3159706 needs to be installed on all your software update points and site servers before you can service Windows 10 Version 1607 and later devices. However, problems can arise if you don't realize the KB requires the following manual steps after installation:
 
 1. From an elevated command prompt run `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
 1. Restart the WSUS service on all of the WSUS servers.
@@ -135,13 +135,13 @@ Follow the steps below to resolve both the 0xc1800118 error and "Error: Invalid 
 1. Disable the **Upgrades** classification in both WSUS and Configuration Manager. You don't want a synchronization to occur until you're directed to by these instructions.  
    - Uncheck the **Upgrades** classification in the software update point component properties on the top-level site.
      - For more information, see [Configure classifications and products](../get-started/configure-classifications-and-products.md).
-   - Uncheck the **Upgrades** classification from WSUS under **Products and Classifications** on the [**Options** page](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations), or use the PowerShell ISE running as administrator.
+   - Uncheck the **Upgrades** classification from WSUS under **Products and Classifications** on the [**Options** page](/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations), or use the PowerShell ISE running as administrator.
       ```PowerShell
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - If you share the WSUS database between multiple WSUS servers, you only need to uncheck **Upgrades** once for each database.  
 1. On each WSUS server, from an elevated command prompt run: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`. Then, restart the WSUS service on all of the WSUS servers.
-   -  WSUS places the database into [single user mode](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode) before it checks to see if servicing is needed. The servicing either runs or doesn't run based on the results of the check. Then, the database is put back into multi-user mode. 
+   -  WSUS places the database into [single user mode](/sql/relational-databases/databases/set-a-database-to-single-user-mode) before it checks to see if servicing is needed. The servicing either runs or doesn't run based on the results of the check. Then, the database is put back into multi-user mode. 
    - If you share the WSUS database between multiple WSUS servers, you only need to do this servicing once for each database.
 1. Delete all of the Windows 10 upgrades from each WSUS database using the PowerShell ISE running as administrator.
    ```PowerShell

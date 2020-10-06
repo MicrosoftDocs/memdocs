@@ -34,7 +34,7 @@ Configuration Manager uses SQL Server Reporting Services as its primary reportin
 
 - Exports reports in different kinds of popular formats.  
 
-For more information, see [What is SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+For more information, see [What is SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)
 
 ## Power BI Report Server
 
@@ -42,7 +42,7 @@ For more information, see [What is SQL Server Reporting Services (SSRS)?](https:
 
 Starting in version 2002, integrate Power BI Report Server with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).
 
-Power BI Report Server is an on-premises report server with a web portal in which you display and manage reports. It includes tools to create Power BI reports, paginated reports, mobile reports, and KPIs. For more information, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
+Power BI Report Server is an on-premises report server with a web portal in which you display and manage reports. It includes tools to create Power BI reports, paginated reports, mobile reports, and KPIs. For more information, see [What is Power BI Report Server?](/power-bi/report-server/get-started).
 
 ## Reporting services point
 
@@ -119,7 +119,7 @@ For Reporting Services-based reports, Configuration Manager uses Microsoft SQL S
 
  The Report Builder installation adds support for over 20 languages. When you run Report Builder, it displays data in the language of the local computer's OS. If Report Builder doesn't support the language, it displays the data in English. Report Builder supports the full capabilities of SQL Server Reporting Services, which includes the following capabilities:
 
-- Delivers an intuitive report authoring environment with an appearance similar to Microsoft Office.  
+- Delivers an intuitive report authoring environment with an appearance similar to Microsoft 365 Apps.  
 
 - Offers the flexible report layout of SQL Server report definition language (RDL).  
 

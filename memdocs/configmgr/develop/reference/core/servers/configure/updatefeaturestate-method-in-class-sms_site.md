@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04077212-ba47-4e6b-8e98-80f99051c1d8
 author: aczechowski
 ms.author: aaroncz
@@ -42,7 +42,7 @@ SInt32 UpdateFeatureState (
 
  Feature identifier. Possible values are:  
 
-|||  
+|Value|Feature identifier|  
 |-|-|  
 |1|SleepServer|  
 

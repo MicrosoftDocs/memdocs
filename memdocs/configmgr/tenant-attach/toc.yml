@@ -6,15 +6,50 @@
     href: device-sync-actions.md
   - name: Client details (preview)
     href: client-details.md
+  - name: Install applications (preview)
+    href: applications.md
+  - name: Device timeline (preview)
+    href: timeline.md
+  - name: Resource explorer (preview)
+    href: resource-explorer.md
+  - name: Run scripts (preview)
+    href: scripts.md
 - name: CMPivot for tenant attached devices (preview)
   items:
-  - name: CMPivot overview
+  - name: Launch CMPivot (preview)
+    href: cmpivot-start.md
+  - name: CMPivot usage overview
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
+- name: Endpoint security for tenant attached devices (preview)
+  items:
+  - name: Enable endpoint security
+    href: atp-onboard.md
+  - name: Create and deploy endpoint security Antivirus policy
+    href: deploy-antivirus-policy.md
+  - name: Settings for Microsoft Defender Antivirus policy
+    href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Settings for Windows Security experience Antivirus policy
+    href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Reference
+  items:
+  - name: Tenant attach data collection
+    href: data-collection.md
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions
     href: troubleshoot.md
   - name: Client details (preview)
     href: troubleshoot-client-details.md
+  - name: Application installation (preview)
+    href: troubleshoot-applications.md
+  - name: Timeline (preview)
+    href: troubleshoot-timeline.md
+  - name: Resource explorer (preview)
+    href: troubleshoot-resource-explorer.md
+  - name: Run scripts (preview)
+    href: troubleshoot-scripts.md
+  - name: CMPivot (preview)
+    href: troubleshoot-cmpivot.md
+

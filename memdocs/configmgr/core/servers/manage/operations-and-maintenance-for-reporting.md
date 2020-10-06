@@ -28,7 +28,7 @@ Configuration Manager stores its reports in SQL Server Reporting Services. The r
 When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode)
+> Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Use the following procedures to run a Configuration Manager report.
 
@@ -256,7 +256,7 @@ Use the following procedure to create a report subscription to deliver a report 
 When you create a report subscription to deliver a report by email, Reporting Services sends an email to the recipients that you configure. The email includes the report as an attachment. The report server doesn't validate email addresses or get them from an email server. You can email reports to any valid email account within or outside of your organization.
 
 > [!NOTE]
-> To enable the **Email** subscription option, you need to configure the email settings in Reporting Services. For more information, see [Email delivery in reporting services](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
+> To enable the **Email** subscription option, you need to configure the email settings in Reporting Services. For more information, see [Email delivery in reporting services](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
 
 You can select one or both of the following email delivery options:
 

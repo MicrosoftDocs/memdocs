@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ea92b17f-06f1-4f96-a99d-551d5422092d
 author: aczechowski
 ms.author: aaroncz
@@ -137,7 +137,7 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the collection.|  
 
 ## Compiling the Code  

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,6 +48,8 @@ After you configure integration, you'll then [configure Jamf and Intune to enfor
 You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
+- Microsoft Intune and Microsoft AAD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
+- A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
 

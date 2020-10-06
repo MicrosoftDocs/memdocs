@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9d14b0d3-1b61-4b17-9d36-855ddd1a9f82
 author: aczechowski
 ms.author: aaroncz
@@ -32,7 +32,7 @@ typedef enum
 
 ## Members  
 
-|||  
+|Priority flag|Description|  
 |-|-|  
 |CCM_DTS_PRIORITY_FOREGROUND|The highest priority.|  
 |CCM_DTS_PRIORITY_HIGH|High priority.|  

@@ -17,7 +17,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
-> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg).
+> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../../clients/manage/cmg/modify-cloud-management-gateway.md).
 >
 > You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
@@ -86,7 +86,7 @@ To enable a cloud distribution point to use Windows BranchCache, install the Bra
 
 - If the site server has an on-premises distribution point site system role, configure the option in that role's properties to **Enable and configure BranchCache**. For more information, see [Configure a distribution point](install-and-configure-distribution-points.md#bkmk_config-general).
 
-- If the site server doesn't have a distribution point role, install the BranchCache feature in Windows. For more information, see [Install the BranchCache feature](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+- If the site server doesn't have a distribution point role, install the BranchCache feature in Windows. For more information, see [Install the BranchCache feature](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
 If you've already distributed content to a cloud distribution point, and then decide to enable BranchCache, first install the feature. Then redistribute the content to the cloud distribution point.
 
@@ -229,7 +229,7 @@ Configure thresholds for the amount of data that you want to store on the cloud 
 Specify thresholds for each cloud distribution point during installation, or use the **Alerts** tab of the cloud distribution point properties.  
 
 > [!NOTE]  
-> Alerts for a cloud distribution point depend on usage statistics from Azure, which can take up to 24 hours to become available. For more information about Storage Analytics for Azure, see [Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
+> Alerts for a cloud distribution point depend on usage statistics from Azure, which can take up to 24 hours to become available. For more information about Storage Analytics for Azure, see [Storage Analytics](/rest/api/storageservices/storage-analytics).  
 
 In an hourly cycle, the primary site that monitors the cloud distribution point downloads transaction data from Azure. It stores this transaction data in the `CloudDP-<ServiceName>.log` file on the site server. Configuration Manager then evaluates this information against the storage and transfer quotas for each cloud distribution point. When the transfer of data reaches or exceeds the specified volume for either warnings or critical alerts, Configuration Manager generates the appropriate alert.  
 
@@ -340,7 +340,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-The following sample is an example **diagnostics.wadcfgx** file as referenced in the **public_config** variable in the above PowerShell script. For more information, see [Azure Diagnostics extension configuration schema](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+The following sample is an example **diagnostics.wadcfgx** file as referenced in the **public_config** variable in the above PowerShell script. For more information, see [Azure Diagnostics extension configuration schema](/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

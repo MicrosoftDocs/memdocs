@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
 author: aczechowski
 ms.author: aaroncz
@@ -36,8 +36,8 @@ UInt32 SetGlobalLoggingConfiguration(
 
  The level of detail that the log will capture. Possible values are shown below. The default value is 1.  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|Verbose logging|  
 |1|Normal logging|  
 |2|No logging|  

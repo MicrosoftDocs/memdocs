@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb7a44f9-409d-4c6b-9902-ef94de634fd8
 author: aczechowski
 ms.author: aaroncz
@@ -80,8 +80,8 @@ Class SMS_SummarizerStatus : SMS_BaseClass
 
  Value indicating the health of the data associated with the registered summarizer. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |
+| ----- | ------ |
 |GREEN(0)|OK. There are no warning or error messages.|  
 |YELLOW(1)|Warning. Warning messages were generated, but error messages were not generated. This status also indicates that the storage objects are approaching their threshold.|  
 |RED(2)|Critical. There are error messages, or the storage objects have exceeded their thresholds.|  

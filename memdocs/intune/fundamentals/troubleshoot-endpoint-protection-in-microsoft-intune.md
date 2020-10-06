@@ -34,7 +34,7 @@ This article lists and describes potential causes and solutions for some errors 
 
 ## Microsoft Defender error codes
 
-Review event logs and error codes to [troubleshoot issues with Microsoft Defender AV](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Review event logs and error codes to [troubleshoot issues with Microsoft Defender AV](/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
 
 ## Common Intune errors and possible resolutions
 

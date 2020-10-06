@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3d13ea8d-dd55-4b85-bb54-596b677366c5
 author: aczechowski
 ms.author: aaroncz
@@ -46,8 +46,8 @@ Class SMS_InstalledSoftwareMS
 
  The procurement channel for the product. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|Full Packaged Product|  
 |1|Compliance Checked Product|  
 |2|OEM|  

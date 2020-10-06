@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 56f1a21f-3f6d-47b9-924a-ebb47ff49bd5
 author: aczechowski
 ms.author: aaroncz
@@ -65,7 +65,7 @@ Qualifiers: none
 
 Method used by the policy agent to download policy files. Possible values are listed below. This value can only be NULL if PolicyRequestTarget is NULL. This value shouldn't be changed.  
 
-|||  
+|Value|Policy download method|  
 |-|-|  
 |FILECOPY|Copy policy files using standard file copy operations. Policy paths must be local or Universal Naming Convention (UNC) file paths. This value is intended for testing only.|  
 |HTTP|Download policy files synchronously by using direct HTTP. Policy paths must be HTTP URLs.|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c8e1830a-2963-4a56-abdc-ab09cf63e3a1
 author: aczechowski
 ms.author: aaroncz
@@ -48,7 +48,7 @@ Class SMS_SiteControlDaySchedule
 
  Array containing 24 elements, one for each hour of the day. This property specifies the type of usage for each hour. Possible values are:  
 
-|||  
+|Value|Usage type|  
 |-|-|  
 |1|ALL_PRIORITY|  
 |2|ALL_BUT_LOW|  

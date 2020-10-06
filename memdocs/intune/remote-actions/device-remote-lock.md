@@ -45,8 +45,6 @@ The **Remote lock** device action locks the device. To unlock the device, the de
 - Android Enterprise corporate-owned with work profile devices
 - iOS
 - macOS
-- Windows 10 Mobile
-- Windows Phone 8.1 and later
 
 **Remote lock** isn't supported for:
 - Windows 10 desktop

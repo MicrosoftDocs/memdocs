@@ -153,7 +153,7 @@ Some settings on Windows 10 devices may show as "Not Applicable". When this happ
 - The setting is only available for newer versions of Windows, and not the current operating system (OS) version on the device.
 - The setting is only available for specific Windows editions or specific SKUs, such as Home, Professional, Enterprise, and Education.
 
-To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## Next steps
 

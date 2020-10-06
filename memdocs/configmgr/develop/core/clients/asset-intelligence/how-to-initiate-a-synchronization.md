@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6b484801-89a1-4707-ac9f-46da72365fdf
 author: aczechowski
 ms.author: aaroncz
@@ -71,7 +71,7 @@ public void InitiateSync(WqlConnectionManager connection, string serverName)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|connection|Managed: `WqlConnectionManager`<br /><br /> VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the provider.|  
+|connection|Managed: `WqlConnectionManager`<br /><br /> VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the provider.|  
 |serverName|Managed: `String`<br /><br /> VBScript: `String`|Name of the server to run the refresh on. This name maps to the `ProxyName` property of an `SMS_AIProxy` instance.|  
 
 ## Compiling the Code  
