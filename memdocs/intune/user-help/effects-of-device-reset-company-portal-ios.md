@@ -54,6 +54,6 @@ To reset a device to its original, out-of-box settings:
 
 * You can also [reset a device from the Company Portal website](reset-device-company-portal-website.md).  
 
-* If you want to unenroll your device from Company Portal so that it's no longer managed by your organization, see [Remove iOS evice from Intune](unenroll-your-device-from-intune-ios.md). Removing the device effectively removes it from Intune and may cause you to lose access to the work-related content on your device. 
+* If you want to unenroll your device from Company Portal so that it's no longer managed by your organization, see [Remove iOS device from Intune](unenroll-your-device-from-intune-ios.md). Removing the device effectively removes it from Intune and may cause you to lose access to the work-related content on your device. 
 
 * Need additional help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
