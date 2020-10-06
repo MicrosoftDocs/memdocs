@@ -108,7 +108,7 @@
           href: migration-guide-cycle.md
     - name: Plan communications
       href: migration-guide-communication-plan.md
-      - name: Educate users
+    - name: Educate users
       items:
       - name: How to educate your end users
         href: end-user-educate.md    
