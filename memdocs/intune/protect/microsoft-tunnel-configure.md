@@ -165,8 +165,7 @@ For more information on deploying apps with Intune, see  Add apps to Microsoft I
 After the Microsoft Tunnel installs on a server, and devices have installed the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with a connection type of Microsoft Tunnel.
 
 - The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
-- The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you configure a per-app VPN for iOS, your split tunneling rules are ignored.
-
+- The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
 
 ### Android
 
