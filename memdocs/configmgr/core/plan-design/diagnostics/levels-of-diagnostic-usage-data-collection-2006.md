@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2006
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2006.
-ms.date: 09/30/2020
+ms.date: 10/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -148,6 +148,8 @@ For Configuration Manager version 2006, this level includes the following data:
 - ***[New]*** Site health check configuration and status
 
 - ***[New]*** Summarized count of Endpoint Analytics event
+
+- ***[Moved]*** Aggregated statistics on Desktop Analytics enrollment errors and usage
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
@@ -581,11 +583,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Count of crashes for unique non-Configuration Manager processes on the site server, and Watson signature ID, if available  
 
-- Aggregated statistics on Desktop Analytics enrollment errors and usage
-
 - Aggregated system boot time statistics by OS, form-factor, and drive type
-
-- Aggregated statistics on the use of Desktop Analytics
 
 - Usage of the Azure migration tool
 

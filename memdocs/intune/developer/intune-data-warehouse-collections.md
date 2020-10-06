@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/08/2020
+ms.date: 10/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -54,6 +54,10 @@ The **appRevision** entity lists all the versions of apps.
 
 ## appTypes
 The **appType** entity lists the installation source of an app.
+
+> [!NOTE]
+> Win32 apps are not included in the Intune Data Warehouse.
+
 
 |   Property  |        Description        |
 |-------------|---------------------------|
