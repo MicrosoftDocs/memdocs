@@ -53,10 +53,6 @@ This guide breaks down the migration into two phases, both of which include task
 
   - [Drive end-user adoption with Conditional Access](migration-guide-drive-adoption.md)
 
-  - [Typical migration cycle](migration-guide-cycle.md)
-    - [Monitoring migration](migration-guide-cycle.md#monitoring-migration)
-    - [Post migration](migration-guide-cycle.md#post-migration)
-
 ## Assumptions
 
 - You've already evaluated Intune in a proof of concept (PoC) environment, and have decided to use it as the MDM solution in your organization.

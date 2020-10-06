@@ -1,6 +1,10 @@
 {
     "redirections": [
-
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-cycle.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": true
+        },  
         {
             "source_path": "memdocs/intune/fundamentals/migration-guide-setup.md",
             "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",

@@ -67,11 +67,12 @@
     href: windows-holographic-for-business.md
 - name: How-to guides
   items:
-  - name: Plan deployment
+  - name: Plan and Deploy
     items:
     - name: Planning guide
       href: intune-planning-guide.md
-    - name: NEW deployment guides
+    - name: Deployment guides
+      href: migration-guide.md
       items:
       - name: Set up Intune
         href: deployment-guide-intune-setup.md
@@ -88,26 +89,17 @@
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
-    - name: Migration guide
-      href: migration-guide.md
-      items:
-      - name: Prepare Intune
-        items:
-        - name: Configure device and app management policies
-          href: migration-guide-configure-policies.md
-        - name: Configure app protection policies
-          href: migration-guide-app-protection-policies.md
-      - name: Migration campaign
+      - name: Configure device and app management policies
+        href: migration-guide-configure-policies.md
+      - name: Configure app protection policies
+        href: migration-guide-app-protection-policies.md
+      - name: Migration guidance
         href: migration-guide-campaign.md
         items:
         - name: Plan communications
           href: migration-guide-communication-plan.md
-        - name: Drive adoption
+        - name: Use conditional access
           href: migration-guide-drive-adoption.md
-        - name: Typical migration cycle
-          href: migration-guide-cycle.md
-    - name: Plan communications
-      href: migration-guide-communication-plan.md
     - name: Educate users
       items:
       - name: How to educate your end users
