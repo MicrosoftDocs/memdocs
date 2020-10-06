@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,7 +56,7 @@ Use of a *Server configuration* lets you set up a configuration one time and hav
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
-   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for 255.255.0.0* or *192.168.0.0/16*.
+   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
 
      Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
 
@@ -164,6 +164,9 @@ For more information on deploying apps with Intune, see  Add apps to Microsoft I
 
 After the Microsoft Tunnel installs on a server, and devices have installed the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with a connection type of Microsoft Tunnel.
 
+- The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
+- The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
+
 ### Android
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
@@ -179,6 +182,7 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
    - **Per-app VPN**:  
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - To enable a per-app VPN, select **Add** and then browse to apps you’ve imported to Intune. These can be custom or public apps.
+
    - **Always-on VPN**:  
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If per-app VPN is enabled, only traffic from apps you select will go through the tunnel.
    - **Proxy**:  
@@ -203,9 +207,12 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.  
    - **Per-app VPN**:  
-     - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
-     - **Proxy**:  
-       - Configure proxy server details for your environment.  
+     - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
+
+        For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
+
+    - **Proxy**:  
+      - Configure proxy server details for your environment.  
 
 ## Upgrade Microsoft Tunnel
 
