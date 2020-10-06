@@ -106,6 +106,7 @@ For more information on the columns within the **Advanced App Configuration and 
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/rms-sharing/id689516635">App Store</a></td>
     <td>Supported</td>
+    <td>Supported</td>
     <td>Not supported</td>
     <td>N/A</td>
     <td>Not supported</td>
