@@ -26,7 +26,7 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 
 - Restrict data transfer and copy-and-paste functions
 - Configure web links to open inside a managed browser, like Microsoft Edge
-- Enable multi-identity use and app-level Conditional Access
+- Enforce access policy requirements
 - Apply data loss prevention policies without managing the user's device
 - Enable app protection without requiring enrollment
 - Enable app protection on devices managed with 3rd party EMM tools
@@ -41,14 +41,14 @@ The following tables provide details of supported partner and Microsoft apps tha
 > [!NOTE]
 > For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
-The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. 
+The below apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings as defined in the **Advacnced App Configuration and Protection Policy feature support** columns. 
 
 <table>
 <thead>
   <tr class="header">
     <th rowspan="2">App</th>
     <th rowspan="2">Platform</th>
-    <th rowspan="2">App Protection Policy</th>
+    <th rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">App Protection Policy</a></th>
     <th colspan="6">Advanced App Configuration and Protection Policy feature support</th>
   </tr>
   <tr>
@@ -333,7 +333,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-planner/id1219301037">App Store</a></td>
@@ -343,7 +343,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft PowerApps</td>
@@ -396,7 +396,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-power-bi/id929738808">App Store</a></td>
@@ -406,7 +406,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td rowspan="2">Microsoft PowerPoint</td>
@@ -543,7 +543,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/microsoft-to-do/id1212616790">App Store</a></td>
@@ -553,7 +553,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>Microsoft Visio</td>
@@ -596,7 +596,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
   <tr>
     <td>iOS - <a href="https://itunes.apple.com/us/app/yammer/id289559439">App Store</a></td>
@@ -606,7 +606,7 @@ The below apps support Intune App Protection Policies. Apps are also capable of 
     <td>N/A</td>
     <td>Not supported</td>
     <td>Not supported</td>
-    <td><font color="red">UNKNOWN</font></td>
+    <td>N/A</td>
   </tr>
 </tbody>
 </table>
