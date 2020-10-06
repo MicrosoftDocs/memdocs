@@ -79,6 +79,17 @@ The below apps support core Intune App Protection Policy settings.
     <td>No settings</td>
   </tr>
   <tr>
+    <td rowspan="2">Microsoft Cortana</td>
+    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.cortana">Android</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
+    <td><a href="https://apps.apple.com/us/app/cortana/id1054501703">iOS</a></td>
+    <td align="center">✔</td>
+    <td>No settings</td>
+  </tr>
+  <tr>
     <td rowspan="2">Microsoft Dynamics CRM</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Android</a></td>
     <td align="center">✔</td>
@@ -193,27 +204,6 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td align="center">N/A</td>
     <td align="center">✖</td>
     <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Cortana</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.cortana">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/cortana/id1054501703">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
     <td align="center">N/A</td>
   </tr>
   <tr>
