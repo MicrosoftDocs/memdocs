@@ -160,7 +160,6 @@
 
 
 ### Company Portal app for Windows 
-#### [Company Portal for Windows (Windows 10 and later)](about-cp-app-for-windows-10.md)  
 #### [Install apps from Company Portal](install-apps-cpapp-windows.md) 
 #### [Sync your device manually](sync-your-device-manually-windows.md)
 #### [Check device access](check-device-access-windows-cpapp.md)

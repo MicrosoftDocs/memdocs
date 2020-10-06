@@ -8,7 +8,7 @@
         {
             "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-android.md",
             "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "memdocs/intune/user-help/what-happens-if-you-reset-your-device-using-the-company-portal-windows.md",
