@@ -2,13 +2,13 @@
 # required metadata
 
 title: Remove your iOS device from Intune | Microsoft Docs
-description: "Describes how to remove an iOS device from Intune"
+description: Describes how to remove an iOS device from Intune and how to delete stored data.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 
-ms.date: 04/02/2018
+ms.date: 10/05/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,15 +33,22 @@ ms.collection:
 
 # Remove your iOS device from Intune
 
-When you remove your iOS device from Intune, your device will no longer be able to access company resources and will no longer be managed by Intune.
+Remove an enrolled iOS device so that it's no longer managed by your organization. After you remove the device:
+
+- The device is removed from Company Portal.    
+- You lose access to internal file shares and websites from your device.  
+- You lose access to school or work apps from your device.    
+- You might not be able to connect to your org's network via Wi-Fi or virtual private network (VPN).  
+- Work or school email profiles are removed from the device.  
+- You can't install apps from the Company Portal anymore.   
+- Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.   
+
+## Remove device via Company Portal  
+
+You can remove, or unenroll, your device from Intune via the Company Portal.   
 
 
-## Removing the device from My Devices
-
-To remove your device from Intune, use these steps or watch this video:
-
-
-1. In the Company Portal app, tap **Devices.** and select the device you want to unenroll. If you only have one device, when you tap **Devices**, you will go directly to the device details screen.
+1. In the Company Portal app, tap **Devices** and select the device you want to unenroll. If you only have one device, when you tap **Devices**, you will go directly to the device details screen.
 
 2. Next to **RENAME** tap the ellipses button > **Remove Device** > **Remove**.  
 
@@ -50,27 +57,7 @@ To remove your device from Intune, use these steps or watch this video:
     |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)|
 
 
-    When you unenroll your device from Intune, here's what happens:
-
-    - Your device won't appear in the Company Portal anymore.
-
-    - You can't install apps from the Company Portal anymore.
-
-    - Any settings that were changed on your device when you added it (for example, disabling the camera, or requiring a certain password length) will no longer apply.
-
-    - You might not have access to some company resources, such as file shares or internal web sites, on your device anymore.
-
-    - You can't use company apps and company data on your device anymore.
-
-    - You might not be able to connect to your company network using Wi-Fi or a virtual private network (VPN) anymore.
-
-    - Company email profiles are removed from the device.
-
-    - Devices that are configured for email only won't appear in the Company Portal app or website anymore.
-
-    - Apps are uninstalled. Company app data is removed.
-
-## Removing data collected by the Company Portal app
+## Remove data collected by the Company Portal app
 
 There are three places the Company Portal stores local data on your device.
 
@@ -79,6 +66,9 @@ There are three places the Company Portal stores local data on your device.
 - **Apple analytics**: standard app crash activity data that Apple collects. This information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.
 
 - **Keychain**: your device stores your passwords and other information used for sign-ins in your Keychain. Microsoft apps share your sign-in information across any Microsoft-developed apps that you have on your device, including Microsoft Outlook and Microsoft Authenticator. Like Apple analytics, this information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.
+
+
+##  Next steps 
 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
