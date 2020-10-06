@@ -39,7 +39,7 @@ For more information about a device's primary user, see [Find primary user](../r
 
 To link a user to a PC:
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC you want to link to a user).
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC you want to link to a user).
 
 2. Select the PC that you want to link a user, and then choose **Link User**.
 
