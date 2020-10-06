@@ -111,7 +111,6 @@ Client computers in Configuration Manager that run Windows Firewall often requir
 |Hypertext Transfer Protocol (HTTP) from the client computer to a fallback status point, when a fallback status point is assigned to the client.|--|80 (See note 1, **Alternate Port Available**)|  
 
 ### Ports that are used with client push installation  
- In addition to the ports listed in the following table, client push installation also uses Internet Control Message Protocol (ICMP) echo request messages from the site server to the client computer to confirm whether the client computer is available on the network. ICMP is sometimes referred to as TCP/IP ping commands. ICMP does not have a UDP or TCP protocol number, and so it is not listed in the following table. However, any intervening network devices, such as firewalls, must permit ICMP traffic for client push installation to succeed.  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  

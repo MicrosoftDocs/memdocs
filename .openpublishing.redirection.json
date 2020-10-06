@@ -75,6 +75,86 @@
             "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
             "redirect_document_id": false
         },  
+        {      
+            "source_path": "memdocs/intune/user-help/about-cp-app-for-windows-10.md",
+            "redirect_url": "/mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-android.md",
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-reset-your-device-using-the-company-portal-windows.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-website",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/windows-enrollment-company.md",  
+            "redirect_url": "/mem/intune/user-help/using-your-windows-device-with-intune",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-windows.md",  
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-windows",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/install-office-windows.md",  
+            "redirect_url": "/mem/intune/user-help/install-apps-cpapp-windows",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/troubleshoot-your-device-windows.md",  
+            "redirect_url": "/mem/intune/user-help/help-support-windows-cpapp",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/troubleshoot-your-device-macos.md",  
+            "redirect_url": "/mem/intune/user-help/send-errors-macos",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-get-an-error-while-using-the-company-portal-app-ios.md",  
+            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/using-your-iOS-device-with-intune.md",  
+            "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",  
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-ios.md",  
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-ios",  
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/troubleshoot-your-device-iOS.md",  
+            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_document_id": true
+        },
+                {
+            "source_path": "memdocs/intune/user-help/unenroll-your-device-from-intune-if-you-decline-terms-of-use-android.md",
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/reset-erase-your-device-cpwebsite.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-website",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/reset-device-cp-app.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-windows",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-reset-your-device-using-the-company-portal-android.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-android",
+            "redirect_document_id": true
+        },
         {
             "source_path": "memdocs/intune/user-help/install-company-portal-app-android.md",
             "redirect_url": "/mem/intune/user-help/enroll-device-android-company-portal",
