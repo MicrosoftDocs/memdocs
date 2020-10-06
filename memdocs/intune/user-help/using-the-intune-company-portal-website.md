@@ -40,7 +40,7 @@ From the Company Portal website, you can take any of the following actions:
 
 - [Remove your device](remove-your-device-cpwebsite.md)
 
-- [Reset your device](reset-erase-your-device-cpwebsite.md)
+- [Reset your device](reset-device-company-portal-website.md)
 
 - [Reset your device passcode](reset-your-passcode-cpwebsite.md)
 
