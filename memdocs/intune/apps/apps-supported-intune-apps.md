@@ -27,14 +27,7 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 > [!NOTE]
 > For your client line-of-business apps, you can incorporate mobile app management using the [Intune App Software Development Kit](../developer/app-sdk.md) (SDK), or the [App Wrapping Tool for iOS](../developer/app-wrapper-prepare-ios.md) and the [App Wrapping Tool for Android](../developer/app-wrapper-prepare-android.md).
 
-The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune.
-
-## Microsoft apps
-
-> [!NOTE]
-> For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
-
-The below apps support core Intune App Protection Policy settings. The core Intune App Protection settings are defined as:
+The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune. These apps support the core Intune App Protection settings which are defined as:
 
 - Protect work or school account data while leaving personal data untouched in apps that support multi-identity
 - Restrict data transfer and copy-and-paste functions
@@ -45,6 +38,13 @@ The below apps support core Intune App Protection Policy settings. The core Intu
 - Apply data loss prevention policies without managing the user's device
 - Enable app protection without requiring enrollment
 - Enable app protection on devices managed with third-party Unified Endpoint Management solutions
+
+## Microsoft apps
+
+> [!NOTE]
+> For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
+
+The below apps support core Intune App Protection Policy settings.
 
 <table>
 <thead>
@@ -536,7 +536,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
 </table>
 
 ## Partner apps 
-The following apps support Intune App Protection Policies. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
+The following apps support the core Intune App Protection Policy settings. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
 
 | App   title | App description | App store links for supported   platform(s) | 
 |-------------------------------------------------|-------------------------|---------------------------------------------|
