@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -210,7 +210,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Edge</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
+    <td>✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -220,7 +220,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-edge/id1288723196">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
+    <td>✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -263,7 +263,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Office</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
+    <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -273,7 +273,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://apps.apple.com/app/microsoft-office/id541164041">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
+    <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -326,7 +326,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Outlook</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
+    <td>✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
     <td align="center">✔</td>
     <td align="center">✔</td>
     <td align="center">✔</td>
@@ -336,7 +336,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-outlook/id951937596">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
+    <td>✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
     <td align="center">✔</td>
     <td align="center">✔</td>
     <td align="center">✔</td>
