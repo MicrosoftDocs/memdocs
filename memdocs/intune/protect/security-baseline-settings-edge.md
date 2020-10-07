@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 10/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -36,7 +36,13 @@ ms.collection: M365-identity-device-management
 ::: zone pivot="edge-april-2020"
 ::: zone-end
 
+::: zone pivot=edge-sept-2020
+::: zone-end
+
 ::: zone pivot="edge-october-2019,edge-april-2020"
+::: zone-end
+
+::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
 ::: zone-end
 -->
 
@@ -55,6 +61,15 @@ To update a security baseline profile to the latest version of that baseline, se
 ::: zone pivot="edge-april-2020"
 
 **Microsoft Edge baseline for April 2020 (Edge version 80)**  
+
+::: zone-end
+::: zone pivot="edge-sept-2020"
+
+**Microsoft Edge baseline for April 2020 (Edge version 85)**  
+
+::: zone-end
+::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
+
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
@@ -66,7 +81,7 @@ To update a security baseline profile to the latest version of that baseline, se
 
 
 ::: zone-end
-::: zone pivot="edge-october-2019,edge-april-2020"
+::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
 
 ## Microsoft Edge
 
@@ -322,6 +337,26 @@ To update a security baseline profile to the latest version of that baseline, se
   - If you disable this policy, Microsoft Edge will only use native messaging hosts installed on the system level. By default, if you don't configure this policy, Microsoft Edge will allow usage of user-level native messaging hosts.
 
 ::: zone-end
+::: zone pivot="edge-sept-2020"
+
+- **Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)**  
+  **Default**: Disabled
+
+  DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+
+  By default, Microsoft Edge forbids certificates signed using SHA-1 as allowing SHA-1 chains is not a secure configuration.
+This policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect. Further, this policy is intended as a temporary workaround to give Enterprises more time to move away from SHA-1.
+
+  This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10 Pro or Enterprise instances enrolled for device management.
+
+  This policy will be removed in Microsoft Edge 92 releasing in mid-2021.
+
+  - **Enabled** - Microsoft Edge allows connections secured by SHA-1 signed certificates so long as the certificate chains to a locally installed root certificate and is otherwise valid.
+  - **Disabled** (default) – When set it to *Disabled*, or the SHA-1 certificate chains to a publicly trusted certificate root, then Microsoft Edge won't allow certificates signed by SHA-1.
+  - **Not configured** - Same as behavior as *Disabled*.
+
+::: zone-end
+::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
 
 ## Next steps
 
