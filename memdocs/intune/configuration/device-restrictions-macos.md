@@ -140,7 +140,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 ## Password
 
-[Passcode on Apple's web site](https://developer.apple.com/documentation/devicemanagement/passcode)
+These settings use the [Passcode payload](https://developer.apple.com/documentation/devicemanagement/passcode) (opens Apple's web site).
 
 ### Settings apply to: All enrollment types
 

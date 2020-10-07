@@ -87,7 +87,7 @@ This setting applies to:
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
-[AssociatedDomains.ConfigurationItem on Apple's web site](https://developer.apple.com/documentation/devicemanagement/associateddomains/configurationitem)
+These settings use the [AssociatedDomains.ConfigurationItem payload](https://developer.apple.com/documentation/devicemanagement/associateddomains/configurationitem) (opens Apple's web site).
 
 - **Associated domains**: **Add** an association between your domain and an app. This feature shares sign on credentials between a Contoso app and a Contoso website. Also enter:
 
