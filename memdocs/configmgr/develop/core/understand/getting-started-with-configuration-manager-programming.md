@@ -39,7 +39,7 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 
 #### Forums
 
-- [Configuration Manager forums](https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc)  
+- [Configuration Manager on Microsoft Q&A](/answers/products/mem)
 
 - [windows-noob.com: Configuration Manager 2012](https://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 
