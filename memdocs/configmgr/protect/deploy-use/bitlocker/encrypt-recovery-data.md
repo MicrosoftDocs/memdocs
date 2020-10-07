@@ -2,7 +2,7 @@
 title: Encrypt recovery data
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes across the network and in the Configuration Manager database.
-ms.date: 08/11/2020
+ms.date: 10/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -20,8 +20,8 @@ manager: dougeby
 
 When you create a BitLocker management policy, Configuration Manager deploys the recovery service to a management point. On the **Client Management** page of the BitLocker management policy, when you **Configure BitLocker Management Services**, the client backs up key recovery information to the site database. This information includes BitLocker recovery keys, recovery packages, and TPM password hashes. When users are locked out of their protected device, you can use this information to help them recover access to the device.
 
-  > [!NOTE]
-  > The key recovery information entries backed up to the site database are never trimmed, and each encrypted volume would take about 9KB of data. 
+> [!NOTE]
+> Configuration Manager never removes or deletes recovery information for devices from the database, even if the client is inactive or deleted. This behavior is for security reasons. It helps with scenarios where a device is stolen but later recovered. For large environments, the impact to the database size is about 9KB of data per encrypted volume.
 
 Given the sensitive nature of this information, you need to protect it in the following circumstances:
 
