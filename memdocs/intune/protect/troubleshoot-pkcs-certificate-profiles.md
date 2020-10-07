@@ -357,7 +357,7 @@ Edit the template to resolve the configuration issue:
 
 ## Next steps
 
-If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
+If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
 
 To open a support request with the Microsoft Intune product support team, see [How to get support for Microsoft Intune](../fundamentals/get-support.md).
 For more information about PKCS certificate deployment, see the following articles:

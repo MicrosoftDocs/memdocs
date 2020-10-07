@@ -130,7 +130,7 @@ We primarily tested this build of MDT with the configuration listed above. Unles
 
 Use one of the following methods to get help with MDT (in prioritized order):
 
-1. Post to the [MDT forum](https://social.technet.microsoft.com/Forums/en/home?forum=mdt). MVPs and others in the community watch and respond to posts there. This method is probably the most efficient way to get help.  
+1. Post to the [MDT forum](/answers/topics/mem-mdt.html). MVPs and others in the community watch and respond to posts there. This method is probably the most efficient way to get help.  
 
 2. Contact Microsoft Support. Open a support case and get some professional help.  
 

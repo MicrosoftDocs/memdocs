@@ -79,7 +79,7 @@ Use GitHub Issues to submit the following types of feedback:
 If you create an issue for non-doc-related topics, Microsoft will close the issues. For example:
 
 - [Product feedback](find-help.md#product-feedback)
-- [Product questions](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)
+- [Product questions](/answers/products/mem)
 - [Support requests](https://aka.ms/cmcbsupport)
 
 To share feedback on the fundamental docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
