@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 10/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,7 +49,6 @@ Some settings are not supported by all enrollment types. To see which settings a
 Some settings only apply at the work profile level for corporate-owned devices with a work profile. For fully managed and dedicated devices, these settings apply device-wide. These settings are marked with *(work profile-level)* text in the user interface.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise Applications settings that apply at the work profile level in Microsoft Intune and Endpoint Manager.":::
-
 
 ### General
 
@@ -271,13 +270,15 @@ End of comment -->
 
 ### Device password
 
+#### Fully managed, dedicated, and corporate-owned work profile devices
+
 - **Disable lock screen**: Choose **Disable** to prevent users from using Keyguard lock screen feature on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use the Keyguard features.
 - **Disabled lock screen features**: When keyguard is enabled on the device, choose which features to disable. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
 
   These features are available to users when the device is locked. Users won't see or access features that are checked.
 
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default**
+  - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to something more secure than **Device default**.
   - **Password required, no restrictions**
   - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Numeric**: Password must only be numbers, such as `123456789`. Also enter:
@@ -304,6 +305,17 @@ End of comment -->
 
   > [!NOTE]
   > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
+
+- **Disabled lock screen features**: When the device is locked, choose the features that can't be used.
+
+  - On corporate-owned work profile devices, only **Unredacted notifications**, **Trust agents**, and **Fingerprint unlock** can be disabled.
+  - If users turn off the **Use one lock** setting on their device, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the work profile-level. If users turn on the **Use one lock** setting, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the device-level.
+
+#### Fully managed and dedicated devices
+
+- **Disable lock screen**: **Disable** prevents each lock screen feature from being disabled. All lock screen features are blocked.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the lock screen features, such as camera, fingerprint unlock, and more.
 
 ### Power settings
 
@@ -542,7 +554,7 @@ These password settings apply to personal profiles on devices that use a work pr
 
   This setting applies to:
 
-  - Android 8 (Oreo) and above
+  - Android 8 (Oreo) and newer
 
 - **Prevent app installations from unknown sources in the personal profile**: By design, Android Enterprise work profile devices can't install apps from sources other than the Play Store. This setting allows administrators more control of app installations from unknown sources. **Block** prevents app installations from sources other than the Google Play Store in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow app installations from unknown sources in the personal profile. By nature, work profile devices are intended to be dual-profile:
 
