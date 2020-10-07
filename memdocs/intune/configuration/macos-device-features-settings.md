@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 10/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -274,6 +274,8 @@ This feature applies to:
   - **Microsoft Azure AD**: 
 
     > [!IMPORTANT]
+    > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
+    >
     > The Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. Don't use **Microsoft Azure AD** for the SSO app extension type.
 
     Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple’s Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
