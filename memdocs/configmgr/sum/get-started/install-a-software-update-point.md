@@ -90,6 +90,11 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
     > [!NOTE]  
     >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
+    
+        > [!NOTE]  
+    > A note about WSUS shared database:
+      If you are sharing database of WSUS with others, Please be aware that ConfigMgr chooses the software update point randomly between
+      shared WSUS. Please make sure that all the internet access requirements are met for every single shared WSUS. If not, then sync failures can occur if Parent WSUS/SUP has    shared database. Also you may see different software update points syncing with Microsoft each time and that is by design.
 
 -   **<a name="BKMK_wsussync"></a>Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as `https://WSUSServer:8531`, where 8531 is the port that is used to connect to the WSUS server.  
 
