@@ -40,7 +40,7 @@ We recommend that you use [Mobile Device Management (MDM) to manage your Windows
 
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
-The Intune PC Client management workflows use the [Silverlight-based Intune Admin Console](https://manage.microsoft.com/), which has the following consequences:
+The Intune PC Client management workflows use the [Silverlight-based Intune Admin Console](https://admin.manage.microsoft.com/), which has the following consequences:
 
 - For all non-grouping management tasks using the Intune PC Client, you must use the Silverlight console.
 - When managing groups, you must use the [Intune on Azure portal](https://portal.azure.com/). This requirement exists because Intune now uses Azure AD Groups instead of legacy Intune Groups. 

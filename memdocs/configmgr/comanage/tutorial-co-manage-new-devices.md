@@ -5,7 +5,7 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 10/05/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -355,6 +355,8 @@ Use Client Settings to configure Configuration Manager clients to communicate wi
 ## Enable co-management in Configuration Manager
 
 With the Azure configurations, site system roles, and client settings in place, you can configure Configuration Manager to enable co-management. However, you'll still need to make a few configurations in Intune after you enable co-management before this tutorial is complete. One of those tasks is to configure Intune to deploy the Configuration Manager client. That task is made easier by saving the command line for client deployment that is available from within the Co-management Configuration Wizard. That is why we enable co-management now, before we complete the configurations for Intune.
+
+The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices.
 
 > [!TIP]
 > - When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.

@@ -45,7 +45,7 @@ You can allow users to control app installs. If enabled, installations that may 
 ## Add the app
 You use the Intune Software Publisher to configure the properties of the app and upload it to your cloud storage space by using the following procedure:
 
-1. In the [Microsoft Intune administrator console](https://manage.microsoft.com), choose **Apps** &gt; **Add Apps** to start the Intune Software Publisher.
+1. In the [Microsoft Intune administrator console](https://admin.manage.microsoft.com), choose **Apps** &gt; **Add Apps** to start the Intune Software Publisher.
 
    > [!TIP]
    > You might need to enter your Intune user name and password before the publisher starts.
