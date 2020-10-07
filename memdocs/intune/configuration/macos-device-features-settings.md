@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/06/2020
+ms.date: 10/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kakyker; annovich
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid:
 #ms.tgt_pltfrm:
@@ -81,11 +81,13 @@ In Intune, you can:
 - Add many app-to-domain associations.
 - Associate many domains with the same app.
 
-This feature applies to:
+This setting applies to:
 
 - macOS 10.15 and newer
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
+
+These settings use the [AssociatedDomains.ConfigurationItem payload](https://developer.apple.com/documentation/devicemanagement/associateddomains/configurationitem) (opens Apple's web site).
 
 - **Associated domains**: **Add** an association between your domain and an app. This feature shares sign on credentials between a Contoso app and a Contoso website. Also enter:
 
@@ -97,7 +99,7 @@ This feature applies to:
 
     `osascript -e 'id of app "ExampleApp"'`
 
-  - **Domain**: Enter the website domain to associate with an app. The domain includes a service type and fully qualified hostname, such as `webcredentials:www.contoso.com`.
+  - **Domains**: Enter the website domain to associate with an app. The domain includes a service type and fully qualified hostname, such as `webcredentials:www.contoso.com`.
 
     You can match all subdomains of an associated domain by entering `*.` (an asterisk wildcard and a period) before the beginning of the domain. The period is required. Exact domains have a higher priority than wildcard domains. So, patterns from parent domains are matched *if* a match isn't found at the fully qualified subdomain.
 
@@ -106,6 +108,12 @@ This feature applies to:
     - **authsrv**: Single sign-on app extension
     - **applink**: Universal link
     - **webcredentials**: Password autofill
+
+  - **Enable direct download**: **Yes** downloads the domain data directly from the device, instead of going through Apple's content delivery network (CDN). When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might download data through Apple's CDN dedicated to Associated Domains.
+
+    This setting applies to:
+
+    - macOS 11 and newer
 
 > [!TIP]
 > To troubleshoot, on your macOS device, open **System Preferences** > **Profiles**. Confirm the profile you created is in the device profiles list. If it's listed, be sure the **Associated Domains Configuration** is in the profile, and it includes the correct app ID and domains.
@@ -119,7 +127,7 @@ Content caching saves a local copy of content. This information can be retrieved
 >
 > For more information on monitoring content caching, see [View content caching logs and statistics](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (opens Apple's web site).
 
-This feature applies to:
+This setting applies to:
 
 - macOS 10.13.4 and newer
 
@@ -147,7 +155,7 @@ For more information on these settings, see [Content Caching payload settings](h
 
 - **Enable internet connection sharing**: Also known as tethered caching. **Yes** allows Internet connection sharing, and allows sharing cached content with iOS/iPadOS devices USB-connected to their Mac. Users can't disable this feature. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn this off.
 
-  This feature applies to:
+  This setting applies to:
 
   - macOS 10.15.4 and newer
 
@@ -155,19 +163,19 @@ For more information on these settings, see [Content Caching payload settings](h
 
 - **Always keep content from the cache, even when the system needs disk space for other apps**: **Yes** keeps the cache content, and makes sure nothing is deleted, even when disk space is low. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might purge content from the cache automatically when it needs storage space for other apps.
 
-  This feature applies to:
+  This setting applies to:
 
   - macOS 10.15 and newer
 
 - **Show status alerts**: **Yes** shows as alerts as system notifications. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show these alerts as system notifications.
 
-  This feature applies to:
+  This setting applies to:
 
   - macOS 10.15 and newer
 
 - **Prevent the device from sleeping while caching is turned on**: **Yes** prevents the computer from going to sleep when caching is on. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to sleep.
 
-  This feature applies to:
+  This setting applies to:
 
   - macOS 10.15 and newer
 
@@ -189,7 +197,7 @@ For more information on these settings, see [Content Caching payload settings](h
   - A parent IP address, if any are configured
   
     OR,
-    
+
   - From Apple through the Internet
 
   When more than one content cache is available, devices automatically select the right content cache. 
@@ -244,15 +252,15 @@ For more information on these settings, see [Content Caching payload settings](h
 
   Also enter:
 
-  - **Hide local users**: **Yes** doesn't show the local user accounts in the user list, which may include the standard and admin accounts. Only the network and system user accounts are shown. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the local user accounts in the user list.
-  - **Hide mobile accounts**: **Yes** doesn't show mobile accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the mobile accounts in the user list. Some mobile accounts may show as network users.
+  - **Hide local users**: **Yes** hides the local user accounts in the user list, which may include the standard and admin accounts. Only the network and system user accounts are shown. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the local user accounts in the user list.
+  - **Hide mobile accounts**: **Yes** hides mobile accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the mobile accounts in the user list. Some mobile accounts may show as network users.
   - **Show network users**: Select **Yes** to list the network users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the network user accounts in the user list.
-  - **Hide computer's administrators**: **Yes** doesn't show the administrator user accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the administrator user accounts in the user list.
+  - **Hide computer's administrators**: **Yes** hides the administrator user accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the administrator user accounts in the user list.
   - **Show other users**: Select **Yes** to list **Other...** users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the other user accounts in the user list.
 
-- **Hide shut down button**: **Yes** doesn't show the shutdown button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the shutdown button.
-- **Hide restart button**: **Yes** doesn't show the restart button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the restart button.
-- **Hide sleep button**: **Yes** doesn't show the sleep button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the sleep button.
+- **Hide shut down button**: **Yes** hides the shutdown button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the shutdown button.
+- **Hide restart button**: **Yes** hides the restart button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the restart button.
+- **Hide sleep button**: **Yes** hides the sleep button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the sleep button.
 - **Disable user login from Console**: **Yes** hides the macOS command line used to sign in. For typical users, set this setting to **Yes**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.
 - **Disable Shut Down while logged in**: **Yes** prevents users from selecting the **Shutdown** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Shutdown** menu item on devices.
 - **Disable Restart while logged in**: **Yes** prevents users from selecting the **Restart** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Restart** menu item on devices.
@@ -262,7 +270,7 @@ For more information on these settings, see [Content Caching payload settings](h
 
 ## Single sign-on app extension
 
-This feature applies to:
+This setting applies to:
 
 - macOS 10.15 and newer
 
@@ -336,7 +344,7 @@ This feature applies to:
 - **Password changes** (Kerberos only): **Block** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.  
 - **Password sync** (Kerberos only): Choose **Enable** to sync your users' local passwords to Azure AD. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
 - **Windows Server Active Directory password complexity** (Kerberos only): Choose **Require** to force user passwords to meet Active Directory's password complexity requirements. For more information, see [Password must meet complexity requirements](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
-- **Minimum password length** (Kerberos only): Enter the minimum number of characters that can make up users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
+- **Minimum password length** (Kerberos only): Enter the minimum number of characters that can be in users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
 - **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that are used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
 - **Minimum password age** (Kerberos only): Enter the number of days that a password is used on the domain before users can change it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum age of passwords before they can be changed.
 - **Password expiration notification** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might use `15` days.
