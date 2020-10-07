@@ -29,15 +29,15 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 
 The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune. These apps support the core Intune App Protection settings which are defined as:
 
-- Protect work or school account data while leaving personal data untouched in apps that support multi-identity
-- Restrict data transfer and copy-and-paste functions
-- Encrypt work or school account data
-- Configure work or school account web links to open inside a managed browser, like Microsoft Edge
-- Enforce access requirements to access work or school account data
-- Enforce conditional launch behaviors to protect the work or school account data
-- Apply data loss prevention policies without managing the user's device
-- Enable app protection without requiring enrollment
-- Enable app protection on devices managed with third-party Unified Endpoint Management solutions
+- Protecting work or school account data while leaving personal data untouched in apps that support multi-identity
+- Restricting data transfer and copy-and-paste functions
+- Encrypting work or school account data
+- Configuring work or school account web links to open inside a managed browser, like Microsoft Edge
+- Enforcing access requirements to access work or school account data
+- Enforcing conditional launch behaviors to protect the work or school account data
+- Applying data loss prevention policies without managing the user's device
+- Enabling app protection without requiring enrollment
+- Enabling app protection on devices managed with third-party Unified Endpoint Management solutions
 
 ## Microsoft apps
 
