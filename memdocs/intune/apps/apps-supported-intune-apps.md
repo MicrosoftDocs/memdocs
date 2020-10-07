@@ -158,7 +158,7 @@ The below apps support core Intune App Protection Policy settings.
 </tbody>
 </table>
 
-In addition to supporting the core Intune App Protection Policy settings, the following apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. These settings require app investment and include:
+In addition to supporting the core Intune App Protection Policy settings, the following apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. These settings require app investment:
 
 - App Configuration Policies can be used by apps to customize app behavior and/or App Protection Policy settings.
 - On enrolled devices, managed apps can leverage *org allowed accounts mode* to require sign-in with a specific identity and disable multi-identity functionality.
@@ -189,7 +189,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Azure Information Protection Viewer</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -199,7 +199,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/rms-sharing/id689516635">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -231,7 +231,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Excel</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.excel">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -241,7 +241,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-excel/id586683407">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -284,7 +284,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft OneDrive</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.skydrive">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -294,7 +294,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/onedrive-cloud-storage-for/id477537958">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -305,7 +305,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft OneNote</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.onenote">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -315,7 +315,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-onenote-for-iphone/id410395246">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -347,7 +347,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Planner</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.planner">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -357,7 +357,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-planner/id1219301037">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -368,7 +368,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Power BI</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.powerbim">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -378,7 +378,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-power-bi/id929738808">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -389,7 +389,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft PowerPoint</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -399,7 +399,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-powerpoint/id586449534">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -410,7 +410,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft SharePoint</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.sharepoint">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -420,7 +420,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-sharepoint/id1091505266">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -431,7 +431,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Teams</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.teams">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✔</td>
@@ -441,7 +441,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-teams/id1113153706">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✔</td>
@@ -452,7 +452,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft To-Do</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.todos">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -462,7 +462,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-to-do/id1212616790">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -473,7 +473,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td>Microsoft Visio Viewer</td>
     <td><a href="https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -484,7 +484,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Word</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -494,7 +494,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/microsoft-word/id586447913">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✔</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -505,7 +505,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
     <td rowspan="2">Microsoft Yammer</td>
     <td><a href="https://play.google.com/store/apps/details?id=com.yammer.v1">Android</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
@@ -515,7 +515,7 @@ In addition to supporting the core Intune App Protection Policy settings, the fo
   <tr>
     <td><a href="https://itunes.apple.com/us/app/yammer/id289559439">iOS</a></td>
     <td align="center">✔</td>
-    <td align="center">No settings</td>
+    <td>No settings</td>
     <td align="center">✖</td>
     <td align="center">N/A</td>
     <td align="center">✖</td>
