@@ -86,7 +86,7 @@ To update a security baseline profile to the latest version of that baseline, se
 ## Microsoft Edge
 
 ::: zone-end
-::: zone pivot="edge-april-2020"
+::: zone pivot="edge-april-2020,edge-sept-2020"
 
 - **Supported authentication schemes**  
   Specifies which HTTP authentication schemes are supported. You can configure the policy by using these values: *basic*, *digest*, *ntlm*, and *negotiate*. Separate multiple values with commas. If you don't configure this policy, all four schemes are used.
