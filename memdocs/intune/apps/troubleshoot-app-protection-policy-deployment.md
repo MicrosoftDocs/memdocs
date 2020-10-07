@@ -191,7 +191,7 @@ For more information, see [How to manage data transfer between iOS apps in Micro
 
 ## References
 
-If you're still looking for a solution to a related problem, or for more information about Intune, post a question in our [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of our development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
+If you're still looking for a solution to a related problem, or for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
 
 To open a support request for the Microsoft Intune product support team, see [How to get support for Microsoft Intune](../fundamentals/get-support.md).
 
