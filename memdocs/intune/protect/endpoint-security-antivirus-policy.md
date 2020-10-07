@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 10/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -133,7 +133,19 @@ The following profiles are supported for devices you manage with Intune:
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
+The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
+
+- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+  - Profile: **Microsoft Defender Antivirus Policy (preview)** - Manage [Antivirus policy settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+
+    This profile is supported with devices that are tenant attached and run the following platforms:
+    - Windows 10 and later (x86, x64, ARM64)
+    - Windows Server 2019 and later (x64)
+    - Windows server 2016 (x64)
+
+<!-- 
 [!INCLUDE [Profiles for Configuration Manager tenant attached devices](includes/configmgr-antivirus-profiles.md)]
+-->
 
 ## Policy merge for settings
 
