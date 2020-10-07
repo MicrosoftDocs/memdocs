@@ -71,7 +71,7 @@ Prerequisites for device compliance policy with MTD:
 7. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 > [!IMPORTANT]
-> If you create Conditional Access policies for Microsoft 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device.
+> If you create Conditional Access policies for Microsoft 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device and reported to Intune via the chosen MTD vendor.
 
 ## To assign an MTD device compliance policy
 
