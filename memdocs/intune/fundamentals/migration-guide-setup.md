@@ -56,7 +56,7 @@ If you're planning to use certificate-based authentication for VPN, Wi-Fi, or e-
 
 - [How to configure the certificate infrastructure for SCEP](/intune/certificates-scep-configure)
 
-- [How to configure the certificate infrastructure for PFX](/intune/certificates-pfx-configure).
+- [How to configure the certificate infrastructure for PFX](/mem/intune/protect/certificates-imported-pfx-configure).
 
 ## Task list for an Intune setup
 
