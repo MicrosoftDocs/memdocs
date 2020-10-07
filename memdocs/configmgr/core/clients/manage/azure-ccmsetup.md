@@ -32,7 +32,7 @@ In this workflow sample, you installed the Configuration Manager client on a Win
 
 ### 1. Azure AD info request from ccmsetup
 
-Clients installed from internet need specific command-line properties to use Azure AD authentication. You can include these properties in the command line for [internet ccmsetup](../../../comanage/how-to-prepare-win10.md#install-the-configuration-manager-client>), but they aren't required. When you don't use Azure AD properties, ccmsetup requests the **AADCLIENTAPPID** and **AADRESOURCEURI** properties from the cloud management gateway (CMG). It uses the device's Azure AD TenantID as a reference. If you haven't onboarded the client's TenantID in Configuration Manager, the CMG doesn't give the required properties to ccmsetup to continue client installation.
+Clients installed from internet need specific command-line properties to use Azure AD authentication. You can include these properties in the command line for [internet ccmsetup](../../../comanage/how-to-prepare-win10.md#install-the-configuration-manager-client), but they aren't required. When you don't use Azure AD properties, ccmsetup requests the **AADCLIENTAPPID** and **AADRESOURCEURI** properties from the cloud management gateway (CMG). It uses the device's Azure AD TenantID as a reference. If you haven't onboarded the client's TenantID in Configuration Manager, the CMG doesn't give the required properties to ccmsetup to continue client installation.
 
 The following entries are logged in **ccmsetup.log** of the client:
 
