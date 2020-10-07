@@ -59,9 +59,9 @@ Antivirus policies include the same settings as *endpoint protection* or *device
 
 ### Prerequisites for tamper protection
 
-You can use Intune policy to manage tamper protection on Windows devices. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
+You can use Intune to manage tamper protection on Windows devices as part of Antivirus policy. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
 
-### Intune managed devices
+#### Intune managed devices
 
 Prerequisites to support tamper protection for devices managed by Intune:
 
@@ -74,7 +74,7 @@ Profiles for *Antivirus* policy that support tamper protection for [devices mana
 
 You can also use the [Endpoint protection](../protect/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
 
-### Configuration Manager clients managed through the tenant attach scenario 
+#### Configuration Manager clients managed through the tenant attach scenario
 
 Prerequisites to support managing tamper protection with these profiles:
 
@@ -86,8 +86,6 @@ Prerequisites to support managing tamper protection with these profiles:
 
 - Platform: **Windows 10 and Windows Server (ConfigMgr)**
   - Profile: **Windows Security experience (preview)**
-
- 
 
 ## Antivirus profiles
 
