@@ -194,7 +194,7 @@ additionalContent:
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
         summary: Ask technical questions in the product forums
-        url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+        url: /answers/products/mem
       - title: UserVoice product feedback
         summary: Share product ideas with the engineering team
         url: https://configurationmanager.uservoice.com/forums/300492-ideas
