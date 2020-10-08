@@ -10,36 +10,38 @@ ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # How to remotely administer a Windows client computer by using Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 Configuration Manager allows you to connect to client computers using **Configuration Manager Remote Control**. Before you begin to use remote control, ensure that you review the information in the following articles:  
 
--   [Prerequisites for remote control](prerequisites-for-remote-control.md)  
+- [Prerequisites for remote control](prerequisites-for-remote-control.md)  
 
--   [Configuring remote control](configuring-remote-control.md)  
+- [Configuring remote control](configuring-remote-control.md)  
 
 Here are three ways to start the remote control viewer:  
 
--   In the Configuration Manager console.  
+- In the Configuration Manager console.  
 
--   In a Windows command prompt.  
+- In a Windows command prompt.  
 
--   From the Windows **Start** menu, on a computer that runs the Configuration Manager console, in the **Microsoft System Center** program group.  
+- From the Windows **Start** menu, on a computer that runs the Configuration Manager console, in the **Microsoft Endpoint Manager** program group.  
+
+    > [!NOTE]
+    > The above Start menu path is for versions from November 2019 (version 1910) or later. In earlier versions, the folder name is **Microsoft System Center**.
 
 ## To remotely administer a client computer from the Configuration Manager console  
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices** or **Device Collections**.  
+1. In the Configuration Manager console, choose **Assets and Compliance** > **Devices** or **Device Collections**.  
 
-3.  Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, choose **Start** > **Remote Control**.  
+1. Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, choose **Start** > **Remote Control**.  
 
     > [!IMPORTANT]  
     >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control](configuring-remote-control.md).  
 
-4.  After the **Configuration Manager Remote Control** window opens, you can remotely administer the client computer. Use the following options to configure the connection.  
+1. After the **Configuration Manager Remote Control** window opens, you can remotely administer the client computer. Use the following options to configure the connection.  
 
     > [!NOTE]  
     >  If the computer that you connect to has multiple monitors, the display from all the monitors is shown in the remote control window.  
@@ -76,7 +78,7 @@ Here are three ways to start the remote control viewer:
     -   **Help**
         - **About Remote Control** - Displays the current version of the viewer.  
 
-5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager **Remote Control** icon. The icon is in the Windows notification area or the icon on the remote control session bar.  
+1. Users at the remote computer can view more information about the remote control session when they click the Configuration Manager **Remote Control** icon. The icon is in the Windows notification area or the icon on the remote control session bar.  
 
 ## To start the remote control viewer from the Windows command line  
 

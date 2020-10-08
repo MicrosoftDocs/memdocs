@@ -19,7 +19,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--1357489-->
-Starting in version 1810, use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools.
+Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools.
 
 
 ## About
@@ -49,7 +49,7 @@ Starting in version 1906, **OneTrace** is a new log viewer with Support Center. 
 
 ### PowerShell cmdlets
 
-Support Center also includes [PowerShell cmdlets](/powershell/sccm/overview). Use these cmdlets to create a remote connection to another Configuration Manager client, to configure the data collection options, and to start data collection.
+Support Center also includes PowerShell cmdlets. Use these cmdlets to create a remote connection to another Configuration Manager client, to configure the data collection options, and to start data collection.
 
 
 ## Prerequisites
@@ -65,12 +65,14 @@ Install the following components on the server or client computer on which you i
 
 Find the Support Center installer on the site server at the following path: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
 
-After you install it, find the following items on the Start menu in the **Microsoft System Center** group:  
+After you install it, find the following items on the Start menu in the **Microsoft Endpoint Manager** group:  
 
 - Support Center (ConfigMgrSupportCenter.exe)  
 - Support Center Log File Viewer (CMLogViewer.exe)  
 - Support Center Viewer (ConfigMgrSupportCenterViewer.exe)  
 
+> [!NOTE]
+> The above Start menu path is for versions from November 2019 (version 1910) or later. In earlier versions, the folder name is **Microsoft System Center**.
 
 ## Known issues
 
