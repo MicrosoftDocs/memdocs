@@ -238,7 +238,7 @@ After clients receive the deployment, the following behavior applies:
 
 - If you deployed the application as **Available**, and a user tries to install it, the client prompts the user to close the specified running executable files before proceeding with the installation.  
 
-- If you deployed the application as **Required**, and specified to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the client displays a notification. It informs the user that the specified executable files are automatically closed when the application installation deadline is reached. If the user tries to install the application before the deadline is reached it will fail and notify the user that the installation could not be completed because the executables you specified on the install behavioir tab were running.
+- If you deployed the application as **Required**, and specified to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the client displays a notification. It informs the user that the specified executable files are automatically closed when the application installation deadline is reached. If the user tries to install the application before the deadline, the deployment will fail. It notifies the user that the installation couldn't complete because the specified executables are running.
 
   - Schedule these dialogs in the **Computer Agent** group of client settings. For more information, see [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
