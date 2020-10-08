@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 10/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -434,6 +434,10 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Public**
   - **Not configured**
 
+#### Aplication settings
+
+Applications targeted with this rule:
+
 - **Package family name**  
   [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
@@ -448,6 +452,10 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Use a Windows service short name when a service, not an application, is sending or receiving traffic. Service short names are retrieved by running the `Get-Service` command from PowerShell.
+
+#### Port and protocol settings
+
+Specify the local and remote ports to which this rule applies:
 
 - **Protocol**  
   CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
@@ -468,6 +476,10 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if *Service name* in this policy is set as a Windows service. If no authorized user is specified, the default is *all users*.
+
+#### IP address settings
+
+Specifies the local and remote addresses to which this rule applies:
 
 - **Any local address**  
   **Not configured** (*default*) - Use the following setting, *Local address ranges** to configure a range of addresses to support.
