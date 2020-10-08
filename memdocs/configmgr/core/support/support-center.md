@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 07/26/2019
+ms.date: 10/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Support Center for Configuration Manager
@@ -20,7 +18,6 @@ manager: dougeby
 
 <!--1357489-->
 Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools.
-
 
 ## About
 
@@ -45,12 +42,11 @@ Support Center includes a modern log viewer. This tool replaces CMTrace and prov
 ### Support Center OneTrace (Preview)
 
 <!--3555962-->
-Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](support-center-onetrace.md).
+**OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](support-center-onetrace.md).
 
 ### PowerShell cmdlets
 
 Support Center also includes PowerShell cmdlets. Use these cmdlets to create a remote connection to another Configuration Manager client, to configure the data collection options, and to start data collection.
-
 
 ## Prerequisites
 
@@ -59,7 +55,6 @@ Install the following components on the server or client computer on which you i
 - An OS version supported by Configuration Manager. For more information, see [Supported OS versions for clients](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md). Support Center doesn't support mobile devices.  
 
 - .NET Framework 4.5.2 is required on the computer where you run Support Center and its components.  
-
 
 ## Install
 
@@ -76,13 +71,6 @@ After you install it, find the following items on the Start menu in the **Micros
 
 ## Known issues
 
-### You can't install the latest version if an older version is already installed
-
-<!--SCCMDocs-pr issue #3090-->
-*Applies to versions 1810 and 1902*
-
-If you already have an older version of Support Center installed, the new installer fails. This issue is due to how the files are versioned between the original version and the latest version. To work around this issue, uninstall the older version of Support Center first. Then install the latest version.
-
 ### Remote connections must include computer name or domain as part of the user name
 
 If you connect to a remote client from Support Center, you must provide the machine name or domain name for the user account when establishing the connection. If you use a shorthand computer name or domain name (such as `.\administrator`), the connection succeeds, but Support Center doesn't collect data from the client.
@@ -97,14 +85,6 @@ To avoid this issue, use the following user name formats to connect to a remote 
 When connecting to remote clients using the [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) PowerShell cmdlet, Support Center creates a server message block (SMB) connection to each remote client. It retains those connections after you complete data collection. To avoid exceeding the maximum number of remote connections for Windows, use the `net use` command to see the currently active set of remote connections. Then disable any unneeded connections by using the following command:
 `net use <connection_name> /d`
 where `<connection_name>` is the name of the remote connection.
-
-### Application deployment evaluation cycle request isn't sent correctly to remote machines
-
-<!--2849356-->
-*Applies to version 1810*
-
-In Support Center, if you select **Application deployment evaluation** from the **Invoke trigger** action on the **Content** tab, this action starts a task that evaluates deployed applications. If you're connected to a local client, it evaluates both machine and user application deployments. However, if you're connected to a remote client, it only evaluates machine application deployments.
-
 
 ## Next steps
 
