@@ -56,7 +56,7 @@ On a Windows 10 Azure AD domain-joined device, ccmsetup uses the Azure AD proper
 Getting AAD (device) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8b, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
 ```
 
-If you haven't enabled device tokens for the web application registration from the **Azure Active Directory Tenants** node in the Configuration Manager console, the device token request fails. Ccmsetup falls back to try requesting an Azure AD user token. If the device can't get either an Azure AD device or user token, ccmsetup doesn't continue.
+If the device token request fails, ccmsetup falls back to try requesting an Azure AD user token. If the device can't get either an Azure AD device or user token, ccmsetup doesn't continue.
 
 > [!NOTE]
 > If the device has a valid PKI client authentication certificate, ccmsetup always prefers the certificate. In this case, the client installs as a PKI client and doesn't use Azure AD authentication.
@@ -265,8 +265,6 @@ Message '{BD03DEED-D09A-4E63-ADAD-596376FFB0DA}' got reply message '{36EE3A78-8F
 - CRL check is enabled: Publish the CRL on the internet. As an alternative, use the **/NoCRLCheck** parameter for ccmsetup. You can also disable the following option: **Clients check the certificate revocation list (CRL) for site systems**. Find this setting on the **Communication Security** tab of the site properties.
 
 - The WPJ certificate isn't found: Make sure the device is Azure AD-joined. Use [dsregcmd.exe](/azure/active-directory/devices/troubleshoot-device-dsregcmd). For example, `dsergcmd /status` and look at the **Device State** section.
-
-- Device token isn't enabled and logged on user isn't a valid Azure AD user: Enable device token for web server application registration. Sign in to the device as a valid Azure AD user.
 
 > [!TIP]
 >
