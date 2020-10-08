@@ -8,7 +8,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 10/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -41,27 +41,17 @@ This guide walks you through the various details involved in migrating from a th
 
 This guide breaks down the migration into two phases, both of which include tasks, strategies, and tactical guidance that will help you step through the end-to-end process of migrating to Intune MDM.
 
-- [Phase 1: Prepare Intune for mobile device management](migration-guide-prepare.md)
-
-  - [Assess your MDM migration requirements](migration-guide-prepare.md#assess-mdm-requirements)
-
-  - [Basic setup](migration-guide-setup.md)
+- Phase 1: Prepare Intune for mobile device management
 
   - [Configure device and app management policies](migration-guide-configure-policies.md)
 
   - [Configure app protection policies](../apps/app-protection-policies.md)
-
-  - [Special migration considerations](migration-guide-considerations.md)
 
 - [Phase 2: Migration campaign](migration-guide-campaign.md)
 
   - [Communication plan](migration-guide-communication-plan.md)
 
   - [Drive end-user adoption with Conditional Access](migration-guide-drive-adoption.md)
-
-  - [Typical migration cycle](migration-guide-cycle.md)
-    - [Monitoring migration](migration-guide-cycle.md#monitoring-migration)
-    - [Post migration](migration-guide-cycle.md#post-migration)
 
 ## Assumptions
 
@@ -77,4 +67,4 @@ It's important to recognize that your new Intune deployment might be different f
 
 ## Next steps
 
-[Phase 1: Prepare Intune for mobile device management](migration-guide-prepare.md)
+[Setup Intune](deployment-guide-intune-setup.md)
