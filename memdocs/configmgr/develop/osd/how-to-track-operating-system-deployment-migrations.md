@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 08466d8e-e837-429d-a30b-2d90701a765e
 author: aczechowski
 ms.author: aaroncz
@@ -127,7 +127,7 @@ public void MigrationState(WqlConnectionManager connection)
 
 |Parameter|Type|Description|
 |-|-|-|
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

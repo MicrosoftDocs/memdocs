@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 005b6456-fbfd-49b3-b701-bf549ff611ce
 author: aczechowski
 ms.author: aaroncz
@@ -185,7 +185,7 @@ public void ObjectReady(object sender, EventArrivedEventArgs e)
  System.Management  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](https://docs.microsoft.com/dotnet/api/system.management.managementexception).  
+ The exception that can be raised is [System.Management.ManagementException](/dotnet/api/system.management.managementexception).  
 
 ## See Also  
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   

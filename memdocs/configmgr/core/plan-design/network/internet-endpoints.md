@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 08/11/2020
+ms.date: 09/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -84,11 +84,11 @@ For more information on this function, see [Configure Azure services for use wit
 
 ## Co-management
 
-If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
 
 ## Microsoft Store for Business
 
-If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## Delivery optimization
 
@@ -98,7 +98,7 @@ Distribution points that support Microsoft Connected Cache also require these en
 
 For more information, see the following articles:
 
-- [Delivery optimization FAQ](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Delivery optimization FAQ](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Fundamental concepts for content management in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
@@ -106,73 +106,9 @@ For more information, see the following articles:
 
 <!-- SCCMDocs-pr #3402 -->
 
-This section covers the following features:
+For more information on the cloud management gateway (CMG), see [Plan for CMG](../../clients/manage/cmg/data-flow.md).
 
-- Cloud management gateway (CMG)
-- Cloud distribution point (CDP)
-- Azure Active Directory (Azure AD) integration
-- Azure AD-based discovery
-
-For more information on the CMG, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
-
-The following sections list the endpoints by role. Some endpoints refer to a service by `<name>`, which is the cloud service name of the CMG or CDP. For example, if your CMG is `GraniteFalls.CloudApp.Net`, then the actual storage endpoint is `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
-
-### Service connection point
-
-For CMG/CDP service deployment, the service connection point needs access to:
-
-- Specific Azure endpoints are different per environment depending upon the configuration. Configuration Manager stores these endpoints in the site database. Query the **AzureEnvironments** table in SQL Server for the list of Azure endpoints.
-
-- [Azure services](#azure-services)
-
-- For Azure AD user discovery:
-
-  - Version 1902 and later: Microsoft Graph endpoint `https://graph.microsoft.com/`
-
-  - Version 1810 and earlier: Azure AD Graph endpoint `https://graph.windows.net/`  
-
-### CMG connection point
-
-The CMG connection point needs access to the following service endpoints:
-
-- Cloud service name (for CMG or CDP):
-  - `<name>.cloudapp.net` (Azure public cloud)
-  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
-
-- Service Management endpoint: `https://management.core.windows.net/`  
-
-- Storage endpoint (for content-enabled CMG or CDP):
-  - `<name>.blob.core.windows.net` (Azure public cloud)
-  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
-<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
-
-The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
-
-### Configuration Manager client
-
-- Cloud service name (for CMG or CDP):
-  - `<name>.cloudapp.net` (Azure public cloud)
-  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
-
-- Storage endpoint (for content-enabled CMG or CDP):
-  - `<name>.blob.core.windows.net` (Azure public cloud)
-  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
-
-- For Azure AD token retrieval, the Azure AD endpoint:
-  - `login.microsoftonline.com` (Azure public cloud)
-  - `login.microsoftonline.us` (Azure US Government cloud)
-
-### Configuration Manager console
-
-- For Azure AD token retrieval, the Azure AD endpoint:
-
-  - Azure public cloud
-    - `login.microsoftonline.com`
-    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
-    - `aadcdn.msftauth.net`
-
-  - Azure US Government cloud
-    - `login.microsoftonline.us`
+[!INCLUDE [Internet endpoints for cloud services](includes/internet-endpoints-cloud-services.md)]
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -220,7 +156,7 @@ You might need to add endpoints to a firewall that's between two site systems in
 ## Manage Microsoft 365 Apps
 
 > [!NOTE]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 If you use Configuration Manager to deploy and update Microsoft 365 Apps for enterprise, allow the following endpoints:
 
@@ -259,12 +195,6 @@ For more information on this feature, see [Community hub](../../servers/manage/c
 - `https://github.com`
 
 - `https://communityhub.microsoft.com`
-
-### Monitoring workspace, Site Hierarchy node
-
-If you use the **Geographical View**, allow access to the following endpoint:
-
-- `http://maps.bing.com`
 
 ## Desktop Analytics
 

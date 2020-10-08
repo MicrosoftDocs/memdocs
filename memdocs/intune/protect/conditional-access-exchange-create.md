@@ -38,7 +38,7 @@ If you have an Exchange Online Dedicated environment and need to find out whethe
 > [!IMPORTANT]
 > The information in this article applies to customers who are supported to use an Exchange Connector.
 >
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
+> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
 >
 > Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
 
@@ -63,7 +63,7 @@ Before you can configure Conditional Access, verify the following configurations
   - Either **enrolled** with Intune or is a domain joined PC.
   - **Registered in Azure Active Directory**. Additionally, the client Exchange ActiveSync ID must be registered with Azure Active Directory.
 
-- Azure AD Device Registration Service (DRS) is activated automatically for Intune and Office 365 customers. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **This does not apply to Windows PCs and Windows Phone devices**.
+- Azure AD Device Registration Service (DRS) is activated automatically for Intune and Microsoft 365 customers. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **This does not apply to Windows PCs and devices**.
 
 - **Compliant** with device compliance policies deployed to that device.
 
@@ -73,7 +73,6 @@ Before you can configure Conditional Access, verify the following configurations
 
 ### Support for mobile devices
 
-- **Windows Phone** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
@@ -91,16 +90,16 @@ Before you can configure Conditional Access, verify the following configurations
 
   4. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.
 
-  5. Configure the [email profile settings](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+  5. Configure the [email profile settings](/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
   6. When you're done, select **OK** > **Create** to save your changes.
 
-  7. After you create the email profile, [assign it to groups](https://docs.microsoft.com/intune/device-profile-assign).
+  7. After you create the email profile, [assign it to groups](/intune/device-profile-assign).
 
-  8. Set up [device-based conditional access](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+  8. Set up [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
-> Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### Support for PCs
 

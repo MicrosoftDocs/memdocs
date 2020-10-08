@@ -22,7 +22,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 
 ## Prerequisites
 
-- An account that is a *Global Administrator* for signing  in when applying this change. For more information, see [Azure Active Directory (Azure AD) administrator roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- An account that is a *Global Administrator* for signing  in when applying this change. For more information, see [Azure Active Directory (Azure AD) administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
 - An Azure public cloud environment.
 - The user accounts triggering device actions have the following prerequisites:
@@ -113,13 +113,13 @@ Using a previously created application during onboarding to tenant attach requir
    - CmCollectionData.write
 
 - Microsoft Graph permissions:
-   - Directory.Read.All [Applications permission](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory.Read.All [Delegated directory permission](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Directory.Read.All [Applications permission](/graph/permissions-reference#application-permissions)
+   - Directory.Read.All [Delegated directory permission](/graph/permissions-reference#directory-permissions)
 
-- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](/azure/active-directory/manage-apps/grant-admin-consent).
 
 - The imported application needs to be configured as follows:
-   - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
    -  Has a valid application ID URI and secret
 
 

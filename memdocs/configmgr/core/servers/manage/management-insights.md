@@ -124,9 +124,9 @@ Helps you integrate with many cloud services, which enable modern management of 
 
 - **Devices not uploaded to Azure AD**: Starting in version 2002, this insight lists devices that the site hasn't uploaded to Azure Active Directory (Azure AD) because you haven't configured it for HTTPS.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 609F03D4-D9B4-4D0D-A67F-9E365F6C0DD0 -->
 
-- **Enable cloud management gateway**: The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. By deploying the CMG as a cloud service in Microsoft Azure, you can continue to manage and serve content to clients that roam onto the internet. With CMG, you don't need any additional on-premises infrastructure exposed to the internet. For more information, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
+- **Enable cloud management gateway**: The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. By deploying the CMG as a cloud service in Microsoft Azure, you can continue to manage and serve content to clients that roam onto the internet. With CMG, you don't need any additional on-premises infrastructure exposed to the internet. For more information, see [Overview of CMG](../../clients/manage/cmg/overview.md).<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials, and make sure devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials, and make sure devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - **Sites that don't have proper HTTPS configuration**: Starting in version 2002, this insight lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Azure AD groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Azure AD sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -157,7 +157,7 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
 <!--3607758-->
 
-Starting in version 2002, this group is courtesy of Microsoft Premier Field Engineering. These insights are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments).
+Starting in version 2002, this group is courtesy of Microsoft Premier Field Engineering. These insights are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](/services-hub/health/getting_started_with_on_demand_assessments).
 
 - **Active Directory Security Group Discovery is configured to run too frequently**: You typically don't need to configure Active Directory Security Group Discovery to occur more frequently than every three hours. A more frequent configuration can have a negative performance impact on Active Directory, the network, and Configuration Manager. Enable incremental synchronization instead of using a full sync schedule. For more information, see [Active Directory group discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -177,7 +177,7 @@ Starting in version 2002, this group is courtesy of Microsoft Premier Field Engi
 
 - **Update all sites to the same version**: Use the same version of Configuration Manager in a hierarchy. This configuration makes sure all sites provide the same functionality. Sites of different versions in the same hierarchy introduce interoperability scenarios. Later versions of Configuration Manager include new features and resolve known issues. For more information, see [Interoperability between different versions](../../plan-design/hierarchy/interoperability-between-different-versions.md).<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-For more information on these insights, see [Remediation steps for Configuration Manager management insights](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
+For more information on these insights, see [Remediation steps for Configuration Manager management insights](/services-hub/health/remediation-steps-configmgr).
 
 > [!TIP]
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -77,7 +77,7 @@ Then, choose the profile type. Depending on the platform you choose, the setting
 - [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
-- [PKCS certificate](../protect/certficates-pfx-configure.md)
+- [PKCS certificate](../protect/certificates-pfx-configure.md)
 - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
 - [Preference file (macOS)](preference-file-settings-macos.md)
 - [SCEP certificate](../protect/certificates-scep-configure.md)

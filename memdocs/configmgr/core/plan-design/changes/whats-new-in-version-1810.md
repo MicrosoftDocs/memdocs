@@ -232,7 +232,7 @@ For more information, see [Create applications](../../../apps/deploy-use/create-
 ### Task sequence support of Windows Autopilot for existing devices
 
 <!--3607717, fka 1358333-->
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
+[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
 For more information, see [Windows Autopilot for existing devices](../../../../autopilot/existing-devices.md).
 
@@ -423,7 +423,7 @@ The on-premises MDM prerequisite to configure a Microsoft Intune subscription is
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1810 release notes](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1810 release notes](/powershell/sccm/1810-release-notes).
 
 The following update rollup (4488598) is available in the console starting on 25 March 2019: [Update rollup 2 for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598). This replaces the prior update rollup, KB 4486457.
 

@@ -64,16 +64,16 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
 |**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Yes |Yes |No | [More information](enrollment-autopilot.md)
+|**Autopilot** |Yes |Yes |No | [More information](../../autopilot/enrollment-autopilot.md)
 |**Bulk enroll** |No |No |No | [More information](windows-bulk-enroll.md) |
-|**Co-management** |No |Yes |No | [More information](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |No |Yes |No | [More information](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Co-management** |No |Yes |No | [More information](/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |No |Yes |No | [More information](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## Android enrollment methods
 
 | **Personal** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](../user-help/enroll-device-android-company-portal.md)|
 |**Android Enterprise Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
 
 

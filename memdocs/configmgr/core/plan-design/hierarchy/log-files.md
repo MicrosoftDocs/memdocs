@@ -563,23 +563,7 @@ The following table lists the log files that contain information related to clie
 
 ### Cloud management gateway
 
-The following table lists the log files that contain information related to the cloud management gateway.
-
-|Log name|Description|Computer with log file|
-|--------------|-----------------|----------------------------|  
-|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service. To configure the logging level, edit the **Logging level** value in the following registry key: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|The *installdir* folder on the primary site server or CAS.|
-|CMGSetup.log <sup>[Note 1](#bkmk_note1)</sup>|Records details about the second phase of the cloud management gateway deployment (local deployment in Azure). To configure the logging level, use the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|CMGService.log <sup>[Note 1](#bkmk_note1)</sup>|Records details about the cloud management gateway service core component in Azure. To configure the logging level, use the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|SMS_Cloud_ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
-|CMGContentService.log <sup>[Note 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->When you enable a CMG to also serve content from Azure storage, this log records the details of that service.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-
-- For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
-- For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
-- For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**.
-
-#### <a name="bkmk_note1"></a> Note 1: Logs synchronized from Azure
-
-These are local Configuration Manager log files that cloud service manager syncs from Azure storage every five minutes. The cloud management gateway pushes logs to Azure storage every five minutes. So the maximum delay is 10 minutes. Verbose switches affect both local and remote logs. The actual file names include the service name and role instance identifier. For example, CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
+[!INCLUDE [Logs for cloud management gateway](includes/logs-cmg.md)]
 
 ### <a name="BKMK_CompSettingsLog"></a> Compliance settings and company resource access
 
@@ -779,7 +763,7 @@ The following table lists the log files that contain information related to OS d
 |MP_ClientIDManager.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
-|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
+|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Records details about Windows Sysprep and setup logs.|Client|  
 |Setuperr.log|Records details about Windows Sysprep and setup logs.|Client|  
 |smpisapi.log|Records details about the client state capture and restore actions, and threshold information.|Client|  
@@ -889,7 +873,7 @@ Servicing uses the same infrastructure and process as software updates. For othe
 |DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
 
-For more information, see [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+For more information, see [Online Servicing-Related Log Files](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ### <a name="BKMK_WULog"></a> Windows Update Agent
 
@@ -899,7 +883,7 @@ The following table lists the log files that contain information related to the 
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment, and whether there are updates to the agent components.|Client|  
 
-For more information, see [Windows Update log files](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+For more information, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 ### <a name="BKMK_WSUSLog"></a> WSUS server
 

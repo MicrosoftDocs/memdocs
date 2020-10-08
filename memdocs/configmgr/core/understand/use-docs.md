@@ -56,7 +56,7 @@ Use the following search tips to help you find the information that you need:
 
 ## <a name="bkmk_docfeedback"></a> Feedback
 
-Select the **Feedback** link in the upper right of any article to go to the Feedback section at the bottom. This section integrates with GitHub Issues. For more information about integration with GitHub Issues, see the [docs platform blog post](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+Select the **Feedback** link in the upper right of any article to go to the Feedback section at the bottom. This section integrates with GitHub Issues. For more information about integration with GitHub Issues, see the [docs platform blog post](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 To share feedback on the Configuration Manager product itself, select **Product feedback**. For more information, see [Product feedback](find-help.md#product-feedback).
 
@@ -79,7 +79,7 @@ Use GitHub Issues to submit the following types of feedback:
 If you create an issue for non-doc-related topics, Microsoft will close the issues. For example:
 
 - [Product feedback](find-help.md#product-feedback)
-- [Product questions](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)
+- [Product questions](/answers/products/mem)
 - [Support requests](https://aka.ms/cmcbsupport)
 
 To share feedback on the fundamental docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
@@ -88,11 +88,11 @@ To share feedback on the fundamental docs.microsoft.com platform, see [Docs feed
 
 To receive notifications when content changes in the documentation library, use the following steps:
 
-1. Use the [docs search](https://docs.microsoft.com/search/index?scope=ConfigMgr) to find an article or set of articles. For example:
+1. Use the [docs search](/search/index?scope=ConfigMgr) to find an article or set of articles. For example:
 
-    - Search for a single article by title, ["Log files for troubleshooting - Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)
+    - Search for a single article by title, ["Log files for troubleshooting - Configuration Manager"](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22)
 
-    - Search for any article about [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr)
+    - Search for any article about [SQL](/search/index?scope=ConfigMgr&search=SQL)
 
 2. In the upper right corner, select the **RSS** link.
 
@@ -103,7 +103,7 @@ To receive notifications when content changes in the documentation library, use 
 
 ## <a name="bkmk_contribute"></a> Contribute
 
-The Configuration Manager documentation library, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](https://docs.microsoft.com/contribute). The only prerequisite is to create a [GitHub account](https://github.com/join).
+The Configuration Manager documentation library, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](/contribute). The only prerequisite is to create a [GitHub account](https://github.com/join).
 
 ### Basic steps to contribute to SCCMdocs
 
@@ -111,7 +111,7 @@ The Configuration Manager documentation library, like most content on docs.micro
 
 2. To edit the source file, select the pencil icon.
 
-3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference).
+3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](/contribute/markdown-reference).
 
 4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then select **Propose file change**.
 
@@ -143,7 +143,7 @@ Follow these general guidelines when you contribute to Configuration Manager doc
 
 - Don't surprise us with large pull requests. Instead, [file an issue](#bkmk_docfeedback) and start a discussion. Then we can agree on a direction before you invest a large amount of time.
 
-- Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).
+- Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice).
 
 - Use the [pull request template](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) as the starting point of your work.
 
@@ -155,7 +155,7 @@ Follow these general guidelines when you contribute to Configuration Manager doc
 
 ## Consolidation of documentation for Microsoft Endpoint Manager
 
-To better support combined scenarios for Intune and Configuration Manager, their documentation libraries are consolidated on the [Microsoft Endpoint Manager site](https://docs.microsoft.com/mem). The Intune documentation is now at [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune), and the Configuration Manager documentation is now at [docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). If you still use an old URL, it will automatically redirect, so you don't need to make any changes for reading this content.
+To better support combined scenarios for Intune and Configuration Manager, their documentation libraries are consolidated on the [Microsoft Endpoint Manager site](/mem). The Intune documentation is now at [docs.microsoft.com/mem/intune](../../../intune/index.yml), and the Configuration Manager documentation is now at [docs.microsoft.com/mem/configmgr](../../index.yml). If you still use an old URL, it will automatically redirect, so you don't need to make any changes for reading this content.
 
 If you provide feedback or contribute to articles, some changes will be necessary:
 

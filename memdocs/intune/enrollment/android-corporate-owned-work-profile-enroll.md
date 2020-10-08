@@ -87,7 +87,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in AAD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.
 
 ### Revoke tokens

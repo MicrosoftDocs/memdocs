@@ -32,8 +32,8 @@ conceptualContent:
         - text: Microsoft Endpoint Manager tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
-        - text: Plan for the cloud management gateway
-          url: ./core/clients/manage/cmg/plan-cloud-management-gateway.md
+        - text: Overview of cloud management gateway (CMG)
+          url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
           url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
@@ -74,7 +74,7 @@ conceptualContent:
         - text: Set up Desktop Analytics
           url: ./desktop-analytics/set-up.md
           itemType: how-to-guide
-        - text: Office 365 dashboard
+        - text: Microsoft 365 dashboard
           url: ./sum/deploy-use/office-365-dashboard.md
           itemType: learn
       footerLink:
@@ -147,7 +147,7 @@ conceptualContent:
         - text: Optimize Windows 10 updates
           url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
           itemType: learn
-        - text: Update Office 365
+        - text: Update Microsoft 365
           url: ./sum/deploy-use/manage-office-365-proplus-updates.md
           itemType: how-to-guide
       footerLink:
@@ -194,7 +194,7 @@ additionalContent:
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
         summary: Ask technical questions in the product forums
-        url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+        url: /answers/products/mem
       - title: UserVoice product feedback
         summary: Share product ideas with the engineering team
         url: https://configurationmanager.uservoice.com/forums/300492-ideas
@@ -203,12 +203,12 @@ additionalContent:
         url: https://aka.ms/cmcbsupport
       - title: System Center 2012 R2 Configuration Manager
         summary: Documentation for the previous version of Configuration Manager
-        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+        url: /previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
    - title: Other content
      items:
         - title: Develop
           links:
-            - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+            - url: /powershell/sccm/overview
               text: PowerShell
             - url: ./develop/index.yml
               text: Software development kit (SDK)

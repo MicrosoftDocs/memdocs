@@ -2,13 +2,13 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune - Azure | Microsoft Docs
-description: Overview of the different Microsoft Intune device profiles. Get info on features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,11 +44,11 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates
+## Administrative templates and Group policy
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
 
-These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
 
 This feature supports:
 
@@ -145,7 +145,7 @@ This feature supports:
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
@@ -164,7 +164,7 @@ This feature supports:
 
 [Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
 
-To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 

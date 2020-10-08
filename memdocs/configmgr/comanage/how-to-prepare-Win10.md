@@ -22,7 +22,7 @@ For new Windows 10 devices, you can use the Autopilot service to configure the o
 
 For more information, see [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md).
 
-To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
+To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).  
 
 ### Gather information from Configuration Manager
 
@@ -36,7 +36,7 @@ Use Configuration Manager to collect and report the device information required 
 
 4. After saving the file, upload the data to Intune.  
 
-For more information, see [Add devices in Intune](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices).
+For more information, see [Add devices in Intune](/intune/enrollment-autopilot#add-devices).
 
 ### Autopilot for existing devices
 <!--1358333-->
@@ -50,7 +50,7 @@ For more information, see [Windows Autopilot for existing devices task sequence]
 For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 devices that aren't already Configuration Manager clients.
 
 > [!NOTE]
-> Before you assign this app to devices in Intune, make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG trusted root certificate to clients](../core/clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_cmgroot). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
+> Before you assign this app to devices in Intune, make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG server authentication certificate](../core/clients/manage/cmg/server-auth-cert.md). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
 
 ### Get the command line from Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows 10 devices with Configuration Manager.
-ms.date: 03/12/2020
+ms.date: 10/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: tutorial
@@ -45,7 +45,7 @@ Use this tutorial when:
 
 If not already present in your environment, during this tutorial you'll:
 
-- Configure [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
+- Configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
 
 > [!TIP]
 > You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
@@ -73,10 +73,10 @@ When you set up a hybrid Azure AD, you're really setting up integration of an on
 >
 > For more information about hybrid Azure AD, start with the following articles in the Azure Active Directory documentation:
 >
-> - [Plan your Azure AD join implementation](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [Plan your hybrid Azure AD join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [Control the hybrid Azure AD join of your devices](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [Configure hybrid Azure AD join for federated domains](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan)
+> - [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [Control the hybrid Azure AD join of your devices](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [Configure hybrid Azure AD join for federated domains](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### Set up Azure AD Connect
 
@@ -87,7 +87,7 @@ Beginning with version 1.1.819.0, Azure AD Connect provides you with a wizard to
 To configure Azure AD Connect, you need credentials of a global administrator for Azure AD.  
 
 > [!TIP]  
-> The following procedure should not be considered authoritative for set up of Azure AD Connect but is provided here to help streamline configuration of co-management between Intune and Configuration Manager. For the authoritative content on this and related procedures for set up of Azure AD, see [Configure hybrid Azure AD join for managed domains](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) in the Azure AD documentation.  
+> The following procedure should not be considered authoritative for set up of Azure AD Connect but is provided here to help streamline configuration of co-management between Intune and Configuration Manager. For the authoritative content on this and related procedures for set up of Azure AD, see [Configure hybrid Azure AD join for managed domains](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) in the Azure AD documentation.  
 
 #### Configure a hybrid Azure AD join using Azure AD Connect
 
@@ -102,7 +102,7 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
    You can select the option to support Windows downlevel domain-joined devices, but keep in mind that co-management of devices is only supported for Windows 10.
 8. On the **SCP** page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select **Next**:  
    1. Select the forest.  
-   2. Select the authentication service.  If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+   2. Select the authentication service.  If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Click **Add** to enter the enterprise administrator credentials.  
 9. If you have a managed domain, skip this step.  
 
@@ -110,7 +110,7 @@ To configure Azure AD Connect, you need credentials of a global administrator fo
 10. On the **Ready to configure** page, select **Configure**.
 11. On the **Configuration complete** page, select **Exit**.
 
-If you experience issues with completing hybrid Azure AD join for domain joined Windows devices, see [Troubleshooting hybrid Azure AD join for Windows current devices](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+If you experience issues with completing hybrid Azure AD join for domain joined Windows devices, see [Troubleshooting hybrid Azure AD join for Windows current devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 ## Configure Client Settings to direct clients to register with Azure AD
 
@@ -150,13 +150,13 @@ Automatic enrollment also lets users enroll their Windows 10 devices to Intune. 
     > [!NOTE]
     > Some tenants may not have these options to configure.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](/intune/enrollment/multi-factor-authentication).
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
 ## Enable co-management in Configuration Manager
 
-With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 devices.  
+With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 devices. The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices. 
 
 > [!TIP]
 > - When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so.

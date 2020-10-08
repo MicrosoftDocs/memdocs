@@ -53,7 +53,7 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 
     -   The site database must **publish** the database replica, and each remote database replica server must **subscribe** to the published data.  
 
-    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
+    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).  
 
 -   **Self-signed certificate:** To configure a database replica, you must create a self-signed certificate on the database replica server and make this certificate available to each management point that will use that database replica server.  
 
@@ -170,7 +170,7 @@ Use the following procedure as an example of how to configure a database replica
         -   If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.  
 
         > [!IMPORTANT]  
-        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
+        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](/sql/relational-databases/replication/distribution-agent-security).  
 
       - For **Connect to the Distributor**, select **By impersonating the process account**.  
 
@@ -455,7 +455,7 @@ To support client notification with a database replica for a management point, y
 -   For each subsequent  database replica you use this script to configure, update the Friendly name for the certificate.  To do so, edit the line **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** and replace **ConfigMgr SQL Server Identification Certificate** with a new name, like  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="BKMK_DBReplicaOps"></a> Manage database replica configurations  
- When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
+ When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](/sql/relational-databases/replication/publish/delete-a-publication).  
 
 > [!NOTE]  
 >  After you restore a site database that was configured for database replicas, before you can use the database replicas you must reconfigure each database replica, recreating both the publications and subscriptions.  
@@ -503,4 +503,4 @@ To support client notification with a database replica for a management point, y
 
 4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
 
-5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.  
+5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.

@@ -173,13 +173,13 @@ You can configure Intune to automatically delete devices that appear to be inact
 4. Choose **Save**.
 
 > [!NOTE]
-> Device cleanup rules aren't available for Android Enterprise scenarios like [Fully Managed](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [Dedicated](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll), and [Corporate-Owned with Work Profile](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
+> Device cleanup rules aren't available for Jamf-managed devices and Android Enterprise scenarios like [Fully Managed](../enrollment/android-fully-managed-enroll.md), [Dedicated](../enrollment/android-kiosk-enroll.md), and [Corporate-Owned with Work Profile](../enrollment/android-corporate-owned-work-profile-enroll.md).
 
 ## Delete devices from the Azure Active Directory portal
 
 You might need to delete devices from Azure AD due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
 
-1. Sign in to [Azure Active Directory in the Azure portal](https://aka.ms/accessaad) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Azure AD**.
+1. Sign in to [Azure Active Directory in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Azure AD**.
 2. Create an Azure subscription if you don't have one. This shouldn't require a credit card or payment if you have a paid account (select the **Register your free Azure Active Directory** subscription link).
 3. Select **Azure Active Directory**, and then select your organization.
 4. Select the **Users** tab.
@@ -211,4 +211,3 @@ Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-st
 ## Next steps
 
 If you want to reenroll a deleted device, see [Enrollment options](../enrollment/enrollment-options.md).
-

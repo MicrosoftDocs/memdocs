@@ -125,7 +125,7 @@ For more information about support for Windows Insider in Configuration Manager,
 ### Prerequisites
 
 - Configuration Manager version 1906 or higher, configured for [software update management](../plan-design/plan-for-software-updates.md).
-- Windows 10 devices running [Windows Insider Preview build](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started).
+- Windows 10 devices running [Windows Insider Preview build](/windows-insider/at-work-pro/wip-4-biz-get-started).
 - A collection containing the Windows Insider devices.
 
 ### Enable Windows Insider upgrades and updates
@@ -156,7 +156,7 @@ Deploy Feature Updates for Windows Insider to your target collection just like a
 - There are license terms, your deployment must accept the terms in order to install.
 - Consider using the [thread priority in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority).
 - Dynamic Update automatically installs critical updates, including the latest Cumulative Update, directly from Microsoft Update. This behavior started with Feature Updates for Windows 10 version 1903. 
-  - You can explicitly [disable Dynamic Update in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_du) or with a [setupconfig.ini file](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - You can explicitly [disable Dynamic Update in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_du) or with a [setupconfig.ini file](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - For more information, see the [Windows 10 Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) blog post.
 
 For more information on how to deploy upgrades, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).

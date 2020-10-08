@@ -108,8 +108,8 @@ The following files are in the `%Program Files%\Microsoft System Center 2012 R2 
 >
 > For more information, see the following articles:
 >
-> - [Management point interface](https://docs.microsoft.com/previous-versions/system-center/developer/cc142947(v=msdn.10))
-> - [About management point interface messages](https://docs.microsoft.com/previous-versions/system-center/developer/cc145217(v=msdn.10))
+> - [Management point interface](/previous-versions/system-center/developer/cc142947(v=msdn.10))
+> - [About management point interface messages](/previous-versions/system-center/developer/cc145217(v=msdn.10))
 
 ## OS deployment
 
@@ -129,4 +129,4 @@ The following samples are in the `%Program Files%\Microsoft System Center 2012 R
 |------------|-----------------|  
 |Gadget|Sidebar gadget that tracks the compliance status of all deployed software updates on a specified site.|  
 |SUMCreateGroup|An example command-line utility that creates a software update group.|  
-|SUMAssignGroup|An example command-line utility that assigns a software update group to a collection.|  
+|SUMAssignGroup|An example command-line utility that assigns a software update group to a collection.|

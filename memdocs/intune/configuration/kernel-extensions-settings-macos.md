@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 10/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a macOS extensions configuration profile](kernel-extensions-overview-macos.md).
+Create a [macOS extensions device configuration profile](kernel-extensions-overview-macos.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
@@ -65,6 +65,20 @@ This feature applies to:
   After you add a team identifier, it can also be deleted.
 
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
+
+  > [!TIP]
+  > The Team ID is stored on the local KextPolicy database. You can get the Team ID using the `sqlite3` command from a macOS device that has the same app installed:
+  >
+  > 1. On the macOS device, open the Terminal app, and run the following script:
+  >
+  >     `sudo /Volumes/Macintosh\ HD/usr/bin/sqlite3 /Volumes/Macintosh\ HD/var/db/SystemPolicyConfiguration/KextPolicy "SELECT * from kext_policy"`
+  >
+  >     - In our example, the volume name is **Macintosh HD**. Update the script with your volume name.
+  >     - Be sure you have root access, and can run a `SUDO` command on the device.
+  >
+  > 2. Review the output. The first entry is the Team ID. In our example, the Team ID is `PXPZ95SK77`:
+  > 
+  >     `PXPZ95SK77|com.paloaltonetworks.kext.pangpd|1|Palo Alto Networks|5`
 
 - **Allowed Kernel Extensions**: Use this setting to allow specific kernel extensions. Only the kernel extensions you enter are allowed or trusted.
 
@@ -100,6 +114,19 @@ This feature applies to:
   After you add a team identifier, it can also be deleted.
 
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
+
+  > [!TIP]
+  > You can also get the Team ID from a mac where the application is installed
+  > 
+  > In the Terminal, run:
+  >
+  > `systemextensionsctl list`
+  >
+  > and note the output:
+  >
+  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender ATP Network Extension`
+  >
+  > The first entry is the Team ID you need. `UBF8T346G9` in our example
 
 - **Allowed system extensions**: Use this setting to always allow specific system extensions. Only the system extensions you enter are allowed or trusted.
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5dc3adf6-88e4-4fd1-bd33-ca868a586019
 author: aczechowski
 ms.author: aaroncz
@@ -75,7 +75,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPDF_ID`|-   VBScript: `Integer`|ID of the package definition file.|  
 |`newPackageSourceFlag`|-   VBScript: `Integer`|The package source.|  
 |`newPackageSourcePath`|-   VBScript: `String`|The path to the package source.|  

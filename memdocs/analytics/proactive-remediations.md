@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Configuration Manager
 description: A tutorial on using Proactive remediations to enhance the user 
-ms.date: 06/30/2019
+ms.date: 09/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -15,11 +15,6 @@ manager: dougeby
 ---
 
 # Tutorial: Proactive remediations
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](enroll-intune.md#bkmk_view).
 
@@ -36,7 +31,7 @@ In this tutorial, you learn how to:
 
 Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your Endpoint analytics preview contact if you have any feedback on the script packages.
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -60,19 +55,18 @@ Proactive remediations also requires the [licensing for Endpoint analytics](enro
 
 - For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category. Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
 
-- An [Intune Service Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
+- An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
 
-- The PowerShell execution policy on the device can't be set to **Restricted** or **AllSigned**. For more information, see [PowerShell execution policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
+### <a name="bkmk_requirements"></a> Script requirements
 
+- Ensure the scripts are encoded in UTF-8.
 
-### Script requirements
+- The maximum allowed output size limit is 2048 characters.
 
-If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
-- Encoded in UTF-8 not UTF-8 BOM
-- Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
-   - Currently, the encoding and line breaks are a known issue.
-
+- If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
+   - Scripts built into Proactive remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
+   - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
+  - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
 
 ## <a name="bkmk_prs_deploy"></a> Deploy built-in script packages
 
@@ -86,7 +80,7 @@ To assign the script package:
 1. From the **Proactive remediations** node, select one of the built-in script packages.
 1. Select **Properties**, then next the **Assignments** heading, select **Edit**.
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
-1. If you would like to change the schedule, click the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
+1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.
 
 ## <a name="bkmk_prs_ps1"></a> Create and deploy custom script packages
@@ -98,22 +92,29 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 1. Copy the scripts from the [PowerShell scripts](powershell-scripts.md#bkmk_ps_scripts) article.
     - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
     - For a description of the scripts, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
-1. Save each script using the provided name. The name is also in the comments at the top of each script.
+1. Save each script using the provided name. The name is also in the comments at the top of each script. Ensure the saved scripts are encoded in UTF-8.
     - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 
 ### Deploy the script packages
+Proactive remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them.
 
 1. Go to the **Proactive remediations** node in the console.
-1. Click the **Create script package** button to create a script package.
+1. Choose the **Create script package** button to create a script package.
      [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
-1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited.
-1. On the **Settings** step, copy the text from the provided scripts or put your own scripts into the **Detection script** and **Remediation script** fields.
-   - You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
+1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
+1. On the **Settings** step, upload both the **Detection script file** and the **Remediation script file** by doing the following steps:
+   1. Select the folder icon.
+   1. Browse to the `.ps1` file.
+   1. Choose the file and select **Open** to upload it.
+
+   You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
    - **Enforce script signature check**: No
    - **Run script in 64-bit PowerShell**: No
+
+   For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. Complete the **Review + Create** step for your deployment.
@@ -123,11 +124,12 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
        [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
-1. Click on **Device status** to get status details for each device in your deployment.
+1. Select **Device status** to get status details for each device in your deployment.
        [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
 
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
 - View [Recommended software](recommended-software.md).
-- View [Startup performance](startup-performance.md)
+- View [Startup performance](startup-performance.md).
+- Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).

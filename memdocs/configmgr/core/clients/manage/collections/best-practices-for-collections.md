@@ -93,7 +93,7 @@ Exclude:
 
 ## Use CEViewer to monitor collection evaluation
 
-You can use the [Collection Evaluation Viewer (CEViewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) to monitor how many collections are being evaluated and how long each collection is taking to update. The CEViewer is in the *CD.Latest* folder on the site server.
+You can use the [Collection Evaluation Viewer (CEViewer)](../../../support/ceviewer.md) to monitor how many collections are being evaluated and how long each collection is taking to update. The CEViewer is in the *CD.Latest* folder on the site server.
 
 To manually perform a similar check with SQL, you can use the following query:
 
@@ -108,5 +108,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

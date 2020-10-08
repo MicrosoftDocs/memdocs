@@ -67,7 +67,7 @@ The **deviceTypes** entity represents the device type referenced by other data w
 | 10 |IPod |iPod device |
 | 11 |Android |Android device-managed using Device Administrator |
 | 12 |ISocConsumer |iSoc Consumer device |
-| 14 |MacMDM |Mac OS X device managed with the built-in MDM agent |
+| 14 |MacMDM |OS X device managed with the built-in MDM agent |
 | 15 |HoloLens |HoloLens device |
 | 16 |SurfaceHub |Surface Hub device |
 | 17 |AndroidForWork |Android device-managed using Android Profile Owner |
@@ -172,7 +172,7 @@ The **enrollmentType** entity indicates whether a device is corporate, personall
 | ownerTypeName |Represents the owner type of the devices:  <br>Corporate - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Corporate Personal Unknown |
 
 > [!Note]  
-> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## managementStates
 
@@ -268,7 +268,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
+| office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
 
 
 ## devicePropertyHistories
@@ -290,4 +290,3 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | deviceCategoryKey          | Key of device category attribute for this device. 
 | physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
-

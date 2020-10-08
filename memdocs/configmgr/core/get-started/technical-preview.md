@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 10/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -112,19 +112,20 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2010.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2008
+### Technical preview version 2010
 
-- [Collection query preview](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [Analyze SetupDiag errors for feature updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Monitor scenario health](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Collection evaluation view](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [See task sequence size in the console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Delete Aged Collected Diagnostic Files task](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Import objects to current folder](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [Desktop Analytics support for Windows 10 Enterprise LTSC](2020/technical-preview-2010.md#bkmk_daltsc) <!--6107649-->
+- [Improvements to scenario health](2020/technical-preview-2010.md#bkmk_health) <!--7699511-->
+- [Expanded Windows Defender Application Control management](2020/technical-preview-2010.md#bkmk_wdac) <!--7752243-->
+- [Syntax highlighting for scripting languages](2020/technical-preview-2010.md#bkmk_syntax) <!--7964912-->
+- [Deploy a task sequence to a user](2020/technical-preview-2010.md#bkmk_tsdt) <!--8018255-->
+- [Shortcuts to status messages](2020/technical-preview-2010.md#bkmk_status) <!--8232705-->
+- [Enable user proxy for software update scans](2020/technical-preview-2010.md#bkmk_sum) <!--8379199-->
+- [Improvements to task sequence performance for power plans](2020/technical-preview-2010.md#bkmk_osd) <!--7721999-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -141,6 +142,28 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2009
+
+- [Cloud management gateway with virtual machine scale set](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Improvements to remote control](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Deploy an OS over CMG using boot media](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [View collection relationships](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Wake machine at deployment deadline using peer wakeup](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Improvements to in-console notifications](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Notifications for devices no longer receiving updates](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Improved Windows Server restart experience for non-administrator accounts](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Improvements to OS deployment](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
+
+### Technical preview version 2008
+
+- [Collection query preview](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analyze SetupDiag errors for feature updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Monitor scenario health](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Collection evaluation view](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [See task sequence size in the console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Delete Aged Collected Diagnostic Files task](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Import objects to current folder](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### Technical preview version 2007
 
@@ -162,12 +185,7 @@ The following features were released with previous versions of the Configuration
 
 | Feature        | Technical preview version |
 |----------------|---------------------------|
-| Use the Company Portal app on co-managed devices <!--3601237--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | Improvements to available apps via CMG <!--7033501--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center <!--7518897--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
-| Tenant attach: Device timeline in the admin center <!--7141381--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Tenant attach: Install an application from the admin center <!--6024389--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
-| Tenant attach: CMPivot from the admin center <!--6024392--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Tenant attach: Run Scripts from the admin center <!--6234688--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Improvements to cloud management gateway cmdlets <!--6978300--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Report setup and upgrade failures to Microsoft <!--5622909--> | [Tech preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

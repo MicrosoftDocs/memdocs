@@ -100,7 +100,7 @@ To install a passive mode site server, you use the **Create Site System Server W
 
 - The computer that will run the passive mode site server:
 
-    - Must meet the [prerequisites for installing a primary site](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    - Must meet the [prerequisites for installing a primary site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
     - Installs using source files that match the version of the active mode site server.
 
@@ -257,7 +257,7 @@ The prerequisites for a connection to Upgrade Readiness are unchanged from those
 
 **Prerequisites**
 - In order to add the connection, your Configuration Manager environment must first configure a [service connection point](../servers/deploy/configure/about-the-service-connection-point.md) in an [online mode](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
-- Register Configuration Manager as a "Web Application and/or Web API" management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Register Configuration Manager as a "Web Application and/or Web API" management tool, and get the [client ID from this registration](/azure/active-directory/develop/quickstart-register-app).
 - Create a client key for the registered management tool in Azure Active Directory.
 - In the Azure portal, provide the registered web app with permission to access OMS.
 

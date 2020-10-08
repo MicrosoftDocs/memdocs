@@ -39,7 +39,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
@@ -57,7 +57,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 #### Error code 500 with an unexpected error occurred message
 
-1. If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) discovered by [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN. An empty UPN value is also acceptable as it means the Active Directory discovered domain name is used. If you see cloud-only UPN (example: onmicrosoft.com) that's not valid domain UPN (contoso.com), you have an issue and may need to go [set the UPN suffix in Active Directory](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+1. If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) discovered by [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN. An empty UPN value is also acceptable as it means the Active Directory discovered domain name is used. If you see cloud-only UPN (example: onmicrosoft.com) that's not valid domain UPN (contoso.com), you have an issue and may need to go [set the UPN suffix in Active Directory](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
 1. Install [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782) if you see the below error in the **AdminService.log**:
    ```log 
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
@@ -83,7 +83,7 @@ Unexpected errors are typically caused by either [service connection point](../c
 **Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
 
 **Possible causes:**
-- This error typically occurs when newly onboarding to tenant attach. Wait 15 minutes for the information to synchronize.
+- This error typically occurs when newly onboarding to tenant attach. Wait up to an hour for the information to synchronize.
 - This error may also appear if the central administration site has been upgraded to a new Configuration Manager version but some child primary sites haven't been upgraded yet.
 
 ### <a name="bkmk_installed"></a> Application shows as installed after creating a new deployment

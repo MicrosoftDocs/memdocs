@@ -2,7 +2,7 @@
 title: What's new in version 2006
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2006 of Configuration Manager current branch.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -22,13 +22,37 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
+
+### Scripts from the admin center
+<!--IN7220536, CM6234688  -->
+Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Scripts from the admin center](../../../tenant-attach/scripts.md).
+
+### <a name="bkmk_timeline"></a> Device timeline in the admin center
+<!--7220536, CM7141381-->
+When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../../tenant-attach/timeline.md).
+
+### <a name="bkmk_hinv"></a> Resource explorer in the admin center
+<!--6479284-->
+From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../../tenant-attach/resource-explorer.md).
+
+### <a name="bkmk_cmpivot"></a> CMPivot from the admin center
+<!--6024392-->
+Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+
+For more information about CMPivot from the admin center, see [Tenant attach: Launch CMPivot from the admin center](../../../tenant-attach/cmpivot-start.md), [CMPivot overview](../../../tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../../tenant-attach/cmpivot-samples-attached.md).
+
+### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
+<!--4812909-->
+You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
+- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
+- [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
+- [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->
@@ -86,6 +110,14 @@ For more information on Configuration Manager's support for Windows Virtual Desk
 Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
+
+### Use the Company Portal app on co-managed devices
+
+<!--CMADO-3601237,INADO-4297660-->
+
+The Company Portal is now the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices.
+
+For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 
 ### Use Microsoft Azure China 21Vianet for co-management
 <!--7133238-->
@@ -194,7 +226,7 @@ For more information, see [Use bootable media to deploy Windows over the network
 
 This release includes the following improvements to deploy task sequences to devices that communicate via a cloud management gateway (CMG):
 
-- Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Plan for CMG - Specifications](../../clients/manage/cmg/plan-cloud-management-gateway.md#specifications).
+- Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Supported configurations for CMG](../../clients/manage/cmg/supported-configurations.md).
 
 - This release fixes the two [known issues](../../servers/deploy/install/release-notes.md#task-sequences-cant-run-over-cmg) from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
 
@@ -249,7 +281,7 @@ This release includes the following additional improvements to OS deployment:
 
 While the cloud management gateway (CMG) has supported endpoint protection policies, devices required access to on-premises domain controllers. Starting in this release, clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.
 
-For more information, see [CMG support for Configuration Manager features](../../clients/manage/cmg/plan-cloud-management-gateway.md#support-for-configuration-manager-features).
+For more information, see [Supported configurations for CMG](../../clients/manage/cmg/supported-configurations.md).
 
 ### BitLocker management support for hierarchies
 
@@ -319,36 +351,36 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2006 release notes](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2006 release notes](/powershell/sccm/2006-release-notes).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2006).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830).
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
 
-<!--
+
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
-
+| [4580678](https://support.microsoft.com/help/4580678) | Tenant attach rollup for Configuration Manager current branch, version 2006 | September 18, 2020 | Yes |
+| [4584759](https://support.microsoft.com/help/4584759) | Clients report Desktop Analytics configuration errors in Configuration Manager, version 2006 | October 2, 2020 | Yes |
+<!--
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
 ## Next steps
 
-At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring).
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+As of August 31, 2020, version 2006 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2006](../../servers/manage/checklist-for-installing-update-2006.md).
 

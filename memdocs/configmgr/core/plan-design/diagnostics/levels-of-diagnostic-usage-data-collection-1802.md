@@ -138,7 +138,7 @@ For Configuration Manager version 1802, this level includes the following data:
 
 - Count of distinct branding for application catalog
 
-- Count of Office 365 applications created using dashboard
+- Count of Microsoft 365 applications created using dashboard
 
 - Count of packages by type  
 
@@ -381,7 +381,7 @@ For Configuration Manager version 1802, this level includes the following data:
 
 - Configurations that are used for active Windows 10 servicing plans  
 
-- Count of deployed Office 365 updates  
+- Count of deployed Microsoft 365 updates  
 
 - Count of Microsoft Surface drivers synced
 

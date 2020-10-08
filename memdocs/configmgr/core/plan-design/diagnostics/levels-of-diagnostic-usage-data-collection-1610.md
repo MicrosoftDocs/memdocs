@@ -331,7 +331,7 @@ For Configuration Manager version 1610, this level includes the following:
 
     -   Cluster patching statistics  
 
-    -   Count of deployed Office 365 updates  
+    -   Count of deployed Microsoft 365 updates  
 
     -   Classifications that are synced by Software Update Point
 

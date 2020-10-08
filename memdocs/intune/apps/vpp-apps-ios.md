@@ -54,7 +54,7 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 |------- | -----------------| ---------------|
 | App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
 | Device   configuration blocking access to App Store | Apps can be installed and updated using Company Portal. | The invitation to join Apple VPP requires access to App   Store. If you have set a policy to disable App Store, user licensing for VPP   apps will not work. |
-| Automatic   app update | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available   for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. | As configured by end user in personal App Store settings. This cannot be managed by the Intune admin. |
+| Automatic   app update | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. |
 | User   Enrollment | Not supported. | Supported using Managed Apple IDs. |
 | Books | Not supported. | Supported. |
 | Licenses   used | 1 license per device. The license is associated with the   device. | 1 license for up to 5 devices using the same personal   Apple ID. The license is associated with the user.<p>An end user   associated with a personal Apple ID and a Managed Apple ID in Intune consumes   2 app licenses. |
@@ -179,7 +179,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 
 ## Deleting VPP tokens
 <!-- 820879 -->  
-You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. However, deleting a token does not revoke app licenses or uninstall apps. 
+You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. Deleting a token revokes associated app licenses but doesn't uninstall the apps.  
 
 >[!NOTE]
 >Intune cannot revoke app licenses after a token has been deleted. 

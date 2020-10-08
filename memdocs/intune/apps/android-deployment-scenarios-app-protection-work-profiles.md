@@ -112,7 +112,7 @@ Office applications, such as Outlook and OneDrive, have "multi-identity" behavio
 
 When using work profiles, you may want to disable this multi-identity behavior. When you disable it, badged instances of the app in the work profile can only be configured with an organization identity. Use the Allowed Accounts app configuration setting for supporting Office Android apps.
 
-For more information, see [deploy Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+For more information, see [deploy Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## When to use Intune APP
 

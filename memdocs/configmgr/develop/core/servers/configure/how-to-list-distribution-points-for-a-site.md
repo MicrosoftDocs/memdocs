@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f70395dc-3266-4406-8189-2d741c746528
 author: aczechowski
 ms.author: aaroncz
@@ -90,7 +90,7 @@ public void ListDistributionPointsForSite(WqlConnectionManager connection, strin
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the site that supports the distribution points.|  
 
 ## Compiling the Code  
