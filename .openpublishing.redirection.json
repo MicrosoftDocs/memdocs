@@ -91,7 +91,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/intune/user-help/windows-enrollment-company.md",  
+            "source_path": "memdocs/intune/user-help/windows-enrollment-company-portal.md",  
             "redirect_url": "/mem/intune/user-help/using-your-windows-device-with-intune",  
             "redirect_document_id": true 
         },

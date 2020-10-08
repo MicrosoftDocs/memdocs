@@ -83,4 +83,4 @@ Users who have email accounts automatically configured can't send pictures or im
 
 ## Next steps
 
-Get [support help from Microsoft](../fundamentals/get-support.md), or use the [community forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
+Get [support help from Microsoft](../fundamentals/get-support.md), or use the [community forums](/answers/products/mem).
