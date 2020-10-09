@@ -51,8 +51,6 @@ The following scenarios currently aren't supported:
 
 - Software Center doesn't display applications and packages as available that are deployed to user or user group collections.
 
-- Using CNG certificates to create a cloud distribution point.
-
 ## To use CNG certificates
 
 To use CNG v3 certificates, your certification authority (CA) needs to provide CNG certificate templates for target machines. Template details vary according to the scenario; however, the following properties are required:
