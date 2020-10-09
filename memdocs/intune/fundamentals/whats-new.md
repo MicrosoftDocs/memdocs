@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,18 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
  
+<!-- ########################## -->
+## Week of October 12, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New Microsoft Tunnel version<!-- 8504252 -->
+We’ve released a [new version](../protect/protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway. The following changes are included in the new version:
+
+- Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the journal format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journlctrl -t* command-line on the tunnel server. 
+- Various bug fixes.
+
 <!-- ########################## -->
 ## Week of October 5, 2020
  
