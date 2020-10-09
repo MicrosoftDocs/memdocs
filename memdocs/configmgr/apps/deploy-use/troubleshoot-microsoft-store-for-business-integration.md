@@ -2,7 +2,7 @@
 title: Troubleshoot MSfB integration
 titleSuffix: Configuration Manager
 description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
-ms.date: 04/24/2020
+ms.date: 10/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -79,6 +79,7 @@ Then look at one of the following sections for common issues:
 - [Content location doesn't exist or incorrect permissions](#bkmk_fail-symptom4)
 - [Error occurred making http request calling 'GET' method](#bkmk_fail-symptom5)
 - [Cannot write more bytes to the buffer](#bkmk_fail-symptom6)
+- [Online application download fails with 0x8024500c](#bkmk_fail-symptom7)
 
 ### <a name="bkmk_fail-symptom1"></a> Authorization error
 
@@ -222,6 +223,15 @@ Confirm the following details on the final **Import Information** page:
 - **License file:** Specifies the `.bin` file. This license file is required for offline apps.
 - **Windows app dependencies:** Verify that all of the required dependencies are downloaded for this package.
 
+### <a name="bkmk_fail-symptom7"></a> Online application download fails with 0x8024500c
+
+#### Cause
+
+An 0x8024500c error during download is typically caused by the **Do not connect to any Windows Update Internet locations** group policy that blocks Windows Update access.
+
+#### Workaround
+
+Don't enable the **Do not connect to any Windows Update Internet locations** group policy object.
 
 ## Sync doesn't run
 
