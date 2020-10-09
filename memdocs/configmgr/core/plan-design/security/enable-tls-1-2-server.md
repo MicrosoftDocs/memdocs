@@ -47,7 +47,7 @@ Secondary site servers need to use at least SQL Server 2016 Express with Service
 > [!NOTE]
 > [KB 3135244](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) also describes requirements for SQL Server client components.
 
-Make sure to also update the SQL Server Native Client to at least version SQL 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
+Make sure to also update the SQL Server Native Client to at least version SQL Server 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:
 

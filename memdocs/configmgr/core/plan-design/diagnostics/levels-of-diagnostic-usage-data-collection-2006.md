@@ -77,7 +77,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
   - Version of post-upgrade script  
 
-- SQL version, service pack level, edition, collation ID, and character set  
+- SQL Server version, service pack level, edition, collation ID, and character set  
 
 - Diagnostics and usage data statistics: when run, runtime, errors  
 
@@ -117,7 +117,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Status and health of the administration service
 
-- Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
+- Hash of key site attributes (site ID, SQL Server broker ID, and site exchange key)
 
 - Count of Microsoft Edge installations
 
@@ -141,7 +141,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - ***[Moved]*** Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics  
 
-- ***[Moved]*** SQL AlwaysOn replica information, usage, and health status  
+- ***[Moved]*** SQL Server Always On availability group replica information, usage, and health status  
 
 - ***[New]*** Admin console notification configuration and status
 
@@ -551,9 +551,9 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Discovery types, enabled, and schedule (full, incremental)  
 
-- SQL change tracking performance issues, retention period, and autocleanup state  
+- SQL Server change tracking performance issues, retention period, and autocleanup state  
 
-- SQL change tracking retention period  
+- SQL Server change tracking retention period  
 
 - State and status message performance statistics including most common and most expensive message types  
 
@@ -563,7 +563,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Aggregated performance statistics of calls made to Software Center endpoints on the management point
 
-- SQL maintenance task configuration and status
+- SQL Server maintenance task configuration and status
 
 - Status of recent re-initialization requests
 
