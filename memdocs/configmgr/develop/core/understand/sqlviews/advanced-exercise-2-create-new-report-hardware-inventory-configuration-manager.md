@@ -6,8 +6,6 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
 ms.assetid: d7e964d3-5c1a-42c5-81fd-57fc833cb55a
 author: aczechowski
 ms.author: aaroncz
@@ -27,11 +25,11 @@ Use the following report requirements to create the new report.
 
 ## SQL Server views in the SQL statement
 
-Use the following Configuration Manager SQL views when creating the report SQL statement:
+Use the following Configuration Manager SQL Server views when creating the report SQL statement:
 
-- **v_GS_WORKSTATION_STATUS**: This SQL view contains the date and time of the last scan for hardware inventory reported by client computers. For more information about this SQL view, see [Hardware Inventory Views in Configuration Manager](hardware-inventory-views-configuration-manager.md).
-- **v_R_System**: This SQL view contains all of the discovered system resources. For more information about this SQL view, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
-- **v_RA_System_SMSInstalledSites**: This SQL view contains the installed site for all client computers. For more information about this SQL view, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
+- **v_GS_WORKSTATION_STATUS**: This SQL Server view contains the date and time of the last scan for hardware inventory reported by client computers. For more information about this SQL Server view, see [Hardware Inventory Views in Configuration Manager](hardware-inventory-views-configuration-manager.md).
+- **v_R_System**: This SQL Server view contains all of the discovered system resources. For more information about this SQL Server view, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
+- **v_RA_System_SMSInstalledSites**: This SQL Server view contains the installed site for all client computers. For more information about this SQL Server view, see [Discovery Views in Configuration Manager](discovery-views-configuration-manager.md).
 
 ## JOINS in the SQL statement
 
@@ -50,7 +48,7 @@ Use the following report columns, in the order listed:
 1.  **DATEDIFF(day, v_GS_WORKSTATION_STATUS.LastHWScan, GETDATE())** AS **[Days Since Last HWScan]**
 
 > [!NOTE]
-> This report integrates two SQL functions to determine the difference between the last hardware scan date and the current date. To display this column, you can copy the whole line into the SQL statement, or you can copy **DATEDIFF(day, v_GS_WORKSTATION_STATUS.LastHWScan, GETDATE())** into the **Column** column and **Days Since Last HWScan** into the **Alias** column in Query Designer.
+> This report integrates two SQL Server functions to determine the difference between the last hardware scan date and the current date. To display this column, you can copy the whole line into the SQL statement, or you can copy **DATEDIFF(day, v_GS_WORKSTATION_STATUS.LastHWScan, GETDATE())** into the **Column** column and **Days Since Last HWScan** into the **Alias** column in Query Designer.
 
 Sort the data in descending order, using the **LastHWScan** column.
 

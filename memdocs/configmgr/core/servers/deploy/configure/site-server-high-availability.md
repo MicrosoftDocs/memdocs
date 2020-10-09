@@ -51,8 +51,8 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > [!NOTE]
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
-    >   - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
-    >   - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
+    > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
+    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
 
 - Both site servers must be joined to the same Active Directory domain.  
 
@@ -60,9 +60,9 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - Both site servers must use the same site database.  
 
-  - The database can be remote from each site server. Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
+  - The database can be remote from each site server. The Configuration Manager setup process doesn't blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
 
-  - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](use-a-sql-server-cluster-for-the-site-database.md), or a [SQL Server Always On availability group](sql-server-alwayson-for-a-highly-available-site-database.md).  
+  - The SQL Server that hosts the site database can use a default instance, named instance, [failover cluster instance](use-a-sql-server-cluster-for-the-site-database.md), or an [availability group](sql-server-alwayson-for-a-highly-available-site-database.md).
 
   - Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
 

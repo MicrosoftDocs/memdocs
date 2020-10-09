@@ -293,70 +293,70 @@ Starting in version 1906, the following permissions have been added to Configura
 
 ### <a name="bkmk_standalone"></a> CMPivot standalone
 
-[!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)] 
+[!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)]
 
 ## <a name="bkmk_cmpivot1902"></a> CMPivot changes for version 1902
 <!--3610960-->
-Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+Starting in Configuration Manager version 1902, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL Server replication between sites.
 
-Running CMPivot on the CAS will require additional permissions when SQL or the provider aren't on the same machine or in the case of SQL Always On configuration. With these remote configurations, you have a "double hop scenario" for CMPivot.
+Running CMPivot on the CAS will require additional permissions when SQL Server or the SMS Provider aren't on the same machine or in the case of SQL Server Always On availability group configuration. With these remote configurations, you have a "double hop scenario" for CMPivot.
 
-To get CMPivot to work on the CAS in such a "double hop scenario", you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. Kerberos needs to work through all of the hops between the machines.<!--5746133--> If you have more than one remote configuration such as SQL or SMS Provider being colocated with the CAS or not, or multiple trusted forests, you may require a combination of permission settings. Below are the steps that you may need to take:
+To get CMPivot to work on the CAS in such a "double hop scenario", you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. Kerberos needs to work through all of the hops between the machines.<!--5746133--> If you have more than one remote configuration such as SQL Server or SMS Provider being colocated with the CAS or not, or multiple trusted forests, you may require a combination of permission settings. Below are the steps that you may need to take:
 
-### CAS has a remote SQL server
+### CAS has a remote SQL Server
 
-1. Go to each primary site's SQL server.
-   1. Add the CAS remote SQL server and the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
-   ![Configmgr_DviewAccess group on a primary site's SQL server](media/cmpivot-dviewaccess-group.png)
+1. Go to each primary site's SQL Server.
+   1. Add the CAS remote SQL Server and the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
+   ![Configmgr_DviewAccess group on a primary site's SQL Server](media/cmpivot-dviewaccess-group.png)
 1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
-      1. Add the CAS's SQL server service with port and instance.
+      1. Add the CAS's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
    1. For the CAS site, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
-      1. Add each primary site's SQL server service with port and instance.
+      1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
 
    ![CMPivot AD delegation example for double hops](media/cmpivot-ad-delegation.png)
 
 ### CAS has a remote provider
 
-1. Go to each primary site's SQL server.
+1. Go to each primary site's SQL Server.
    1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
 1. Go to Active Directory Users and Computers.
    1. Select the CAS provider machine, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
-      1. Add each primary site's SQL server service with port and instance.
+      1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
    1. Select the CAS site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
-      1. Add each primary site's SQL server service with port and instance.
+      1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
 1. Restart the CAS remote provider machine.
 
-### SQL Always On
+### SQL Server Always On availability groups
 
-1. Go to each primary site's SQL server.
+1. Go to each primary site's SQL Server.
    1. Add the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
 1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
-      1. Add the CAS's SQL server service accounts for the SQL nodes with port and instance.
+      1. Add the CAS's SQL Server service accounts for the SQL Server nodes with port and instance.
       1. Make sure these changes align with your company security policy!
    1. Select the CAS site server, right click and select **Properties**.
       1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
       1. Choose **Use Kerberos only**.
-      1. Add each primary site's SQL server service with port and instance.
+      1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
-1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) for the CAS SQL listener name and each primary SQL listener name.
-1. Restart the primary SQL servers.
-1. Restart the CAS site server and the CAS SQL servers.
+1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) for the CAS listener name and each primary listener name.
+1. Restart the primary SQL Server nodes.
+1. Restart the CAS site server and the CAS SQL Server nodes.
 
 
 ## <a name="bkmk_cmpivot"></a> CMPivot changes for version 1810

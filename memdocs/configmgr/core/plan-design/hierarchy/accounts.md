@@ -1,7 +1,7 @@
 ---
 title: Accounts used
 titleSuffix: Configuration Manager
-description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
+description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
 ms.date: 05/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
+Use the following information to identify the Windows groups, accounts, and SQL Server objects that are used in Configuration Manager, how they are used, and any requirements.  
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)  
   - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
@@ -446,16 +446,15 @@ You don't have to add the network access account as a package access account, be
     > [!NOTE]  
     > When you add a user name for the account, and Configuration Manager finds both a local user account and a domain user account with that name, Configuration Manager sets access rights for the domain user account.  
 
-
 ### Reporting services point account  
- 
+
 SQL Server Reporting Services uses the **Reporting services point account** to retrieve the data for Configuration Manager reports from the site database. The Windows user account and password that you specify are encrypted and stored in the SQL Server Reporting Services database.  
 
 > [!NOTE]  
-> The account you specify must have **Log on locally** permissions on the computer hosting the SQL Reporting Services database.
+> The account you specify must have **Log on locally** permissions on the computer hosting the SQL Server Reporting Services database.
 
 > [!NOTE]  
-> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the Configuration Manager database.
+> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Server Database Role on the Configuration Manager database.
 
 For more information, see [Introduction to reporting](../../servers/manage/introduction-to-reporting.md).
 
@@ -614,8 +613,7 @@ Set up the account to have the minimum permissions required to run the command l
 >   
 > If the command line requires administrative access on the computer, consider creating a local administrator account solely for this account on all computers that run the task sequence. Delete the account once you no longer need it.  
 
-
-## <a name="bkmk_sqlusers"></a> User objects that Configuration Manager uses in SQL 
+## <a name="bkmk_sqlusers"></a> User objects that Configuration Manager uses in SQL Server
 <!--SCCMDocs issue #1160-->
 Configuration Manager automatically creates and maintains the following user objects in SQL.  These objects are located within the Configuration Manager database under Security/Users.  
 
@@ -635,7 +633,7 @@ This object is used to provide permissions for dynamic SQL statements.
 
 ### smsdbuser_ReportSchema
 
-This object is used to run SQL Reporting Executions.  The following stored procedure is used with this function: spSRExecQuery.
+This object is used to run SQL Server Reporting Executions. The following stored procedure is used with this function: spSRExecQuery.
 
 
 ## <a name="bkmk_sqlroles"></a>Database roles that Configuration Manager uses in SQL
@@ -745,13 +743,13 @@ Configuration Manager requires some accounts to have elevated permissions for on
 
   - Local Administrator rights on all site system servers. This permission is to manage, install, and remove system services. The site server also updates local groups on the site system when you add or remove roles.
 
-  - Sysadmin access to the SQL instance for the site database. This permission is to configure and manage SQL for the site. Configuration Manager tightly integrates with SQL, it's not just a database.
+  - Sysadmin access to the SQL Server instance for the site database. This permission is to configure and manage SQL Server for the site. Configuration Manager tightly integrates with SQL, it's not just a database.
 
 - User accounts in the Full Administrator role require:
 
   - Local Administrator rights on all site servers. This permission is to view, edit, remove, and install system services, registry keys and values, and WMI objects.
 
-  - Sysadmin access to the SQL instance for the site database. This permission is to install and update the database during setup or recovery. It's also required for SQL maintenance and operations. For example, reindexing and updating statistics.
+  - Sysadmin access to the SQL Server instance for the site database. This permission is to install and update the database during setup or recovery. It's also required for SQL Server maintenance and operations. For example, reindexing and updating statistics.
 
     > [!NOTE]
     > Some organizations may choose to remove sysadmin access and only grant it when it is required. This behavior is sometimes referred to as "just-in-time (JIT) access." In this case, users with the Full Administrator role should still have access to read, update, and execute stored procedures on the Configuration Manager database. These permissions allow them to troubleshoot most issues without full sysadmin access.

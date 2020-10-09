@@ -1,26 +1,24 @@
 ---
-title: SQL performance
+title: SQL Server performance
 titleSuffix: Configuration Manager
-description: Use this diagram to start troubleshooting SQL performance for Configuration Manager
+description: Use this diagram to start troubleshooting SQL Server performance for Configuration Manager
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: 9930a8a4-4d7f-47a4-bf6b-4c36d0ed5528
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# SQL performance
+# SQL Server performance
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
+In a multi-site hierarchy, Configuration Manager uses SQL Server replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
-Use the following diagram to start troubleshooting SQL performance that can impact replication status:
+Use the following diagram to start troubleshooting SQL Server performance that can impact replication status:
 
-![Diagram to troubleshoot SQL performance](media/sql-performance.png)
+![Diagram to troubleshoot SQL Server performance](media/sql-performance.png)
 
 <!-- PNG used instead of SVG because the SQL statements wrap weird in the SVG. The SVG file exists in the same location. -->
 
@@ -28,7 +26,7 @@ Use the following diagram to start troubleshooting SQL performance that can impa
 
 This diagram uses the following queries:
 
-### Make sure SQL change tracking table is cleaned up
+### Make sure SQL Server change tracking table is cleaned up
 
 ```sql
 DECLARE @RetentionUnit INT = 0;
@@ -55,7 +53,7 @@ IF @CTMinTime < @CTCutOffTime
     PRINT 'there is change tracking backlog, please contact Microsoft support'
 ```
 
-### Change current sessions that handle SQL service broker messages are blocked
+### Change current sessions that handle SQL Server service broker messages are blocked
 
 ```sql
 select
@@ -91,4 +89,4 @@ ORDER BY count (*) DESC
 
 ## See also
 
-[SQL configuration](sql-configuration.md)
+[SQL Server configuration](sql-configuration.md)
