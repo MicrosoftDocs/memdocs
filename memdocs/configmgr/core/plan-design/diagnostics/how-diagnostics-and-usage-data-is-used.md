@@ -22,7 +22,7 @@ Diagnostic and usage data that Configuration Manager collects provides Microsoft
 
 - Installed language packs
 
-- The delta of the SQL schema against the product default
+- The delta of the SQL Server schema against the product default
 
 This data helps the engineering team plan future tests to make sure you have the best experience with the most common configurations. This data is crucial to quickly adjust and adapt with a frequent release cycle.
 

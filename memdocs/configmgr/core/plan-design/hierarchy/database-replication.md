@@ -118,7 +118,7 @@ Distributed views provide the following benefits:
 
 - Reduce the disk space used by the CAS database
 
-Consider using distributed views when a primary site is closely located to the CAS on the network, the two sites are always on, and always connected. Distributed views replace the replication of the selected data between the sites with direct connections between the SQL servers at each site. The CAS makes a direct connection each time you request this data.
+Consider using distributed views when a primary site is closely located to the CAS on the network, the two sites are always on, and always connected. Distributed views replace the replication of the selected data between the sites with direct connections between the site database servers at each site. The CAS makes a direct connection each time you request this data.
 
 The site requests distributed view data in the following example scenarios:
 
@@ -147,13 +147,11 @@ If a replication link has a type of data enabled for distributed views, the chil
 
 - The CAS must use SQL Server Enterprise edition. The primary site doesn't have this requirement.
 
-- The CAS can have only one instance of the SMS Provider. Install that single instance on the site database server. This configuration supports Kerberos authentication. The SQL server at the CAS requires Kerberos to access the SQL server at the child primary site. There are no limitations on the SMS Provider at the child primary site.
+- The CAS can have only one instance of the SMS Provider. Install that single instance on the site database server. This configuration supports Kerberos authentication. The SQL Server at the CAS requires Kerberos to access the SQL Server at the child primary site. There are no limitations on the SMS Provider at the child primary site.
 
-- You can only install one reporting services point at the CAS. Install SQL Server Reporting Services on the site database server. This configuration supports Kerberos authentication. The SQL server at the CAS requires Kerberos to access the SQL server at the child primary site.
+- You can only install one reporting services point at the CAS. Install SQL Server Reporting Services on the site database server. This configuration supports Kerberos authentication. The SQL Server at the CAS requires Kerberos to access the SQL Server at the child primary site.
 
-- You can't host the site database on a [SQL Server cluster](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
-
-- In version 1902 and earlier, you can't host the site database on a [SQL Server Always On availability group](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md). To support this configuration, update to version 1906 or later.<!-- SCCMDocs-pr#3792 -->
+- You can't host the site database on a [SQL Server Always On failover cluster instance](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
 
 - The computer account of the CAS database server requires **Read** permissions on the primary site database.
 
@@ -220,4 +218,4 @@ To change the settings for the replication controls for a site database, in the 
 
 [Monitor replication](../../servers/manage/monitor-replication.md)
 
-[Troubleshoot SQL replication](../../servers/manage/replication/overview.md)
+[Troubleshoot SQL Server replication](../../servers/manage/replication/overview.md)

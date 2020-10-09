@@ -173,22 +173,22 @@ Run Configuration Manager setup on the site server, and select the option **Perf
 
 If you move the site database, also review the following configurations:
 
-- When you move the site database to a new computer, add the computer account of the site server to the local **Administrators** group on the computer that runs SQL Server. If you use a SQL Server cluster for the site database, add the computer account to the local **Administrators** group of each Windows Server cluster node computer.
+- When you move the site database to a new computer, add the computer account of the site server to the local **Administrators** group on the computer that runs SQL Server. If you use a SQL Server Always On failover cluster instance for the site database, add the computer account to the local **Administrators** group of each Windows Server cluster node computer.
 
 - When you move the database to a new instance on SQL Server, or to a new SQL Server computer, enable common language runtime (CLR) integration. Use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database. Then run the following stored procedure as a query: `sp_configure 'clr enabled',1; reconfigure`
 
-- Make sure the new SQL Server has access to the backup location. When you use a UNC for storing your site database backup, after moving the database to a new server, make sure the computer account of the new SQL Server has **write** permissions to the UNC location. This configuration includes when you move to a SQL Server AlwaysOn availability group or a SQL Server cluster.
+- Make sure the new SQL Server has access to the backup location. When you use a UNC for storing your site database backup, after moving the database to a new server, make sure the computer account of the new SQL Server has **write** permissions to the UNC location. This configuration includes when you move to a SQL Server Always On availability group or a failover cluster instance.
 
 > [!IMPORTANT]
 > Before you move a database that has one or more database replicas for management points, first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
 ## <a name="bkmk_SPN"></a> Manage the SPN for the site database server
 
-You can choose the account that runs SQL services for the site database:
+You can choose the account that runs SQL Server services for the site database:
 
 - When the services run with the computers system account, it automatically registers the service principal name (SPN) for you.
 
-- When the services run with a domain local user account, manually register the SPN. The SPN allows SQL clients and other site systems to authenticate with Kerberos. Without Kerberos authentication, communication to the database might fail.
+- When the services run with a domain local user account, manually register the SPN. The SPN allows SQL Server clients and other site systems to authenticate with Kerberos. Without Kerberos authentication, communication to the database might fail.
 
 For more information about SPNs and Kerberos connections, see [Register a service principal name for Kerberos connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
@@ -203,7 +203,7 @@ The following procedures are examples of how to manage the SPN for the SQL Serve
 1. Enter a valid command to create the SPN for both the NetBIOS name and the FQDN:
 
     > [!IMPORTANT]
-    > When you create an SPN for a clustered SQL Server, specify the virtual name of the SQL Server cluster as the SQL Server computer name.
+    > When you create an SPN for a SQL Server Always On failover cluster instance, specify the virtual name of the failover cluster instance as the SQL Server computer name.
 
     - NetBIOS name: `setspn -A MSSQLSvc/<SQL Server computer name>:<port> <Domain\Account>`
 
@@ -220,7 +220,7 @@ The following procedures are examples of how to manage the SPN for the SQL Serve
 
 1. Open a command prompt as an administrator.
 
-1. Enter the following command: `setspn -L <domain\SQL service account>`
+1. Enter the following command: `setspn -L <domain\SQL Server service account>`
 
     For example: `setspn -L contoso\sqlservice`
 
