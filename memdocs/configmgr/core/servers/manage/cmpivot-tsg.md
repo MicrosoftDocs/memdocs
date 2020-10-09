@@ -24,7 +24,7 @@ Occasionally, you might need to troubleshoot CMPivot. For example, if a state me
 
 In Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
 
-When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
+When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL Server replication between sites. If your SQL Server instance or your SMS provider is remote, or if you use a SQL Server Always On availability group, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
 > When troubleshooting CMPivot, enable verbose logging on your management points (MPs) and on the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. Also, if the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
@@ -54,7 +54,7 @@ Find the `TaskID` from the ClientAction table. The `TaskID` corresponds to the `
 select * from ClientAction where ClientOperationId=<id>
 ```
 
-In `BgbServer.log`, look for the `TaskID` you gathered from SQL and note the `PushID`. The     `TaskID` is labeled `TaskGUID`. For example:
+In `BgbServer.log`, look for the `TaskID` you gathered from SQL Server and note the `PushID`. The     `TaskID` is labeled `TaskGUID`. For example:
 
 <pre><code lang="Log">Starting to send push task (<b>PushID: 9</b> TaskID: 12 <b>TaskGUID: 9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b> TaskType: 15 TaskParam: PFNjcmlwdENvbnRlbnQgU2NyaXB0R3VpZD0nN0RDNkI2RjEtRTdGNi00M0MxL (truncated log entry)
 Finished sending push task (<b>PushID: 9</b> TaskID: 12) to 2 clients
@@ -110,7 +110,7 @@ In `BgbServer.log`, look for the `PushID` to see the number of clients that repo
 <pre><code lang="Log">Generated BGB task status report c:\ConfigMgr\inboxes\bgb.box\Bgb5c1db.BTS at 09/16/2019 16:46:39. (<b>PushID: 9</b> ReportedClients: 2 FailedClients: 0)
 </code></pre>
 
-Check the monitoring view for CMPivot from SQL by using the `TaskID`.
+Check the monitoring view for CMPivot from SQL Server by using the `TaskID`.
 
 ``` SQL
 select * from vSMS_CMPivotStatus where TaskID='{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}'
@@ -204,7 +204,7 @@ If the message hasn't been processed, check the state message inbox. The default
 - Corrupted
 - Process
 
-Check the monitoring view for CMPivot from SQL using the `TaskID`.
+Check the monitoring view for CMPivot via the following SQL query using the `TaskID`:
 
 ``` SQL
 select * from vSMS_CMPivotStatus where TaskID='{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}'

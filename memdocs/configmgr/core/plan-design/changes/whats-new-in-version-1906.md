@@ -66,7 +66,7 @@ For more information, see [Maintenance tasks](../../servers/manage/maintenance-t
 When applying a Configuration Manager update, you can now see the state of the **Upgrade ConfigMgr database** task in the  installation status window.
 
 - If the database upgrade is blocked, then you'll be given the warning, **In progress, needs attention**.
-   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+   - The cmupdate.log will log the program name and sessionid from SQL Server that is blocking the database upgrade.
 - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
    - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
@@ -81,23 +81,24 @@ Management insights includes a new rule that detects if you enabled the less sec
 
 For more information, see [Management insights](../../servers/manage/management-insights.md#security).
 
-### Improvements to support for SQL Always On
+### Improvements to support for SQL Server Always On availability groups
 
-- Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing SQL Always On availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure SQL Server Always On availability groups](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
+- Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure an availability group](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
 - Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
 
-- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
+- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on an availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
-    > [!Note]  
-    > This change doesn't apply to SQL Server clusters.
+    > [!NOTE]
+    > This change doesn't apply to SQL Server Always On failover cluster instances.
 
-- Site Recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery can recreate the database on an availability group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
 - New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
 
-    - SQL availability group replicas must all have the same seeding mode
-    - SQL availability group replicas must be healthy
+  - Availability group replicas must all have the same seeding mode
+
+  - Availability group replicas must be healthy
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
