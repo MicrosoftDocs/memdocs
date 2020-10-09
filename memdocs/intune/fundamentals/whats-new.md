@@ -64,6 +64,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Device security
 
 #### New Microsoft Tunnel version<!-- 8504252 -->
+
 We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway. The following changes are included in the new version:
 
 - Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the journal format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journlctrl -t* command-line on the tunnel server. 
