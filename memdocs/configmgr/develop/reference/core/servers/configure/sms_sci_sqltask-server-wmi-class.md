@@ -1,19 +1,20 @@
 ---
-title: "SMS_SCI_SQLTask Class"
-titleSuffix: "Configuration Manager"
-ms.date: "04/07/2020"
-ms.prod: "configuration-manager"
+title: SMS_SCI_SQLTask class
+titleSuffix: Configuration Manager
+description: The technical details of the SMS_SCI_SQLTask server WMI class.
+ms.date: 04/07/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # SMS_SCI_SQLTask Server WMI Class
-The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL Server task to be run periodically.  
+
+The `SMS_SCI_SQLTask` WMI class is an SMS Provider server class in Configuration Manager that defines a SQL Server task to be run periodically.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

@@ -1,19 +1,20 @@
 ---
-title: "SMS_ExtendedStatus Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ExtendedStatus class
+titleSuffix: Configuration Manager
+description: The technical details of the SMS_ExtendedStatus server WMI class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ab4e741a-2a0a-4b08-aa47-42bfb9dd94ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_ExtendedStatus Server WMI Class
-The `SMS_ExtendedStatus` Windows Management Instrumentation (WMI) class, in Configuration Manager, supports an error object that supplies the cause and nature of the current error.  
+
+SMS_ExtendedStatus Server WMI Class
+
+The `SMS_ExtendedStatus` WMI class in Configuration Manager supports an error object that supplies the cause and nature of the current error.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
