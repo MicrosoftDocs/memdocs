@@ -19,7 +19,8 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.suite: ems
+ms.ms.reviewer: mikedano
+suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
