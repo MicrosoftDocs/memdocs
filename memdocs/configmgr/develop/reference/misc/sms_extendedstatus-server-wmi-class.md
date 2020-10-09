@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-SMS_ExtendedStatus Server WMI Class
+# SMS_ExtendedStatus Server WMI Class
 
 The `SMS_ExtendedStatus` WMI class in Configuration Manager supports an error object that supplies the cause and nature of the current error.  
 
