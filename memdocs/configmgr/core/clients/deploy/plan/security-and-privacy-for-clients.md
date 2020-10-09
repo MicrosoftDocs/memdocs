@@ -340,7 +340,7 @@ For example, you configure the domain policy for **Account lockout threshold** t
 
 When you deploy the Configuration Manager client, you enable client settings for Configuration Manager features. The settings that you use to configure the features can apply to all clients in the Configuration Manager hierarchy. This behavior is the same whether they're directly connected to the internal network, connected through a remote session, or connected to the internet.  
 
-Client information is stored in the Configuration Manager database in your SQL server, and isn't sent to Microsoft. Information is retained in the database until it's deleted by the site maintenance tasks **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval. 
+Client information is stored in the Configuration Manager database in your SQL Server, and isn't sent to Microsoft. Information is retained in the database until it's deleted by the site maintenance tasks **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval. 
 
 Some summarized or aggregate diagnostics and usage data is sent to Microsoft. For more information, see [Diagnostics and usage data](../../../plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
@@ -352,16 +352,16 @@ You can learn more about Microsoft's data collection and use in the [Microsoft P
 
 Configuration Manager monitors the activity of clients. It periodically evaluates the Configuration Manager client and can remediate issues with the client and its dependencies. Client status is enabled by default. It uses server-side metrics for the client activity checks. Client status uses client-side actions for self-checks, remediation, and for sending client status information to the site. The client runs the self-checks according to a schedule that you configure. The client sends the results of the checks to the Configuration Manager site. This information is encrypted during transfer.  
 
-Client status information is stored in the Configuration Manager database in your SQL server, and isn't sent to Microsoft. The information isn't stored in encrypted format in the site database. This information is retained in the database until it's deleted according to the value configured for the **Retain client status history for the following number of days** client status setting. The default value for this setting is every 31 days.  
+Client status information is stored in the Configuration Manager database in your SQL Server, and isn't sent to Microsoft. The information isn't stored in encrypted format in the site database. This information is retained in the database until it's deleted according to the value configured for the **Retain client status history for the following number of days** client status setting. The default value for this setting is every 31 days.  
 
 Before you install the Configuration Manager client with client status checking, consider your privacy requirements.  
 
 
 ## <a name="BKMK_Privacy_ExchangeConnector"></a> Privacy information for mobile devices that are managed with the Exchange Server Connector  
 
-The Exchange Server Connector finds and manages devices that connect to an on-premises or hosted Exchange Server by using the ActiveSync protocol. The records found by the Exchange Server Connector are stored in the Configuration Manager database in your SQL server. The information is collected from the Exchange Server. It doesn't contain any additional information from what the mobile devices send to Exchange Server.  
+The Exchange Server Connector finds and manages devices that connect to an on-premises or hosted Exchange Server by using the ActiveSync protocol. The records found by the Exchange Server Connector are stored in the Configuration Manager database in your SQL Server. The information is collected from the Exchange Server. It doesn't contain any additional information from what the mobile devices send to Exchange Server.  
 
-The mobile device information isn't sent to Microsoft. The mobile device information is stored in the Configuration Manager database in your SQL server. Information is retained in the database until it's deleted by the site maintenance task **Delete Aged Discovery Data** every 90 days. You configure the deletion interval.  
+The mobile device information isn't sent to Microsoft. The mobile device information is stored in the Configuration Manager database in your SQL Server. Information is retained in the database until it's deleted by the site maintenance task **Delete Aged Discovery Data** every 90 days. You configure the deletion interval.  
 
 Before you install and configure the Exchange Server connector, consider your privacy requirements.  
 

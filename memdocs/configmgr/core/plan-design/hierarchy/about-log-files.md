@@ -158,11 +158,11 @@ Configure these values under the following Windows Registry key:
 
 |Name  |Values  |Type  |Description
 |---------|---------|---------|---------|
-|SqlEnabled| `1`: enable SQL tracing<br> `0`: disable SQL tracing |REG_DWORD|Add SQL trace logging to all site server logs.|
+|SqlEnabled| `1`: enable SQL Server tracing<br> `0`: disable SQL Server tracing |REG_DWORD|Add SQL Server trace logging to all site server logs.|
 |ArchiveEnabled| `1`: enable log archives<br> `0`: disable log archives | REG_DWORD |Archive site server logs to a separate location for historical preservation.|
 |ArchivePath| A valid folder path, for example `C:\Logs\Archive` | REG_SZ |The path to archive site server logs.|
 
-Only enable SQL tracing for troubleshooting purposes. Avoid using it in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
+Only enable SQL Server tracing for troubleshooting purposes. Avoid using it in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
 
 > [!Note]  
 > Don't change other values that may exist in this registry key.

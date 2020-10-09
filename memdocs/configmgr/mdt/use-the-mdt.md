@@ -10869,7 +10869,7 @@ ParameterCondition=OR
 
 - The columns that you will add to the table  
 
-- The SQL data type for each column you will add to the table  
+- The SQL Server data type for each column you will add to the table  
 
 - If the new column allows Null values  
 

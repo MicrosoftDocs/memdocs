@@ -1,13 +1,11 @@
 ---
 title: Reinit missing message
 titleSuffix: Configuration Manager
-description: Use this diagram to start troubleshooting a missing message with SQL replication reinit in Configuration Manager
+description: Use this diagram to start troubleshooting a missing message with SQL Server replication reinit in Configuration Manager
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: 39a3001e-2df5-4b36-bd83-4f1d21dda335
 author: aczechowski
 ms.author: aaroncz
@@ -16,9 +14,9 @@ manager: dougeby
 
 # Reinit missing message
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
+In a multi-site hierarchy, Configuration Manager uses SQL Server replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
-Use the following diagram to start troubleshooting a missing message with SQL replication reinitialization (reinit):
+Use the following diagram to start troubleshooting a missing message with SQL Server replication reinitialization (reinit):
 
 ![Diagram to troubleshoot reinit missing message](media/reinit-missing-message.svg)
 
@@ -85,4 +83,4 @@ Invoke-WmiMethod â€“Namespace "root\sms\site_CAS" -Class SMS_ReplicationGroup â€
 
 ## Next steps
 
-- [SQL replication reinitialization (reinit)](sql-replication-reinit.md)
+- [SQL Server replication reinitialization (reinit)](sql-replication-reinit.md)

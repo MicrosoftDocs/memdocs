@@ -43,7 +43,7 @@ To enable TLS 1.2 for components that Configuration Manager depends on for secur
 
 - [Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level](enable-tls-1-2-server.md#bkmk_protocol)
 - [Update and configure the .NET Framework to support TLS 1.2](enable-tls-1-2-server.md#bkmk_net)
-- [Update SQL Server and the SQL Native Client](enable-tls-1-2-server.md#bkmk_sql)
+- [Update SQL Server and the SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql)
 - [Update Windows Server Update Services (WSUS)](enable-tls-1-2-server.md#bkmk_wsus)
 
 
@@ -55,9 +55,9 @@ This section describes the dependencies for specific Configuration Manager featu
 |--- |--- |
 |Site servers (central, primary, or secondary)| - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net)<br/> - Verify strong cryptography settings|
 |Site database server|[Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql)|
-|Secondary site servers|[Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql) to a compliant version of SQL Express|
+|Secondary site servers|[Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql) to a compliant version of SQL Server Express|
 |Site system roles| - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net) and verify strong cryptography settings <br/> - [Update SQL Server and its client components](enable-tls-1-2-server.md#bkmk_sql) on roles that require it, including the [SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql-client)|
-|Reporting services point|- [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net) on the site server, the SQL Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
+|Reporting services point|- [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net) on the site server, the SQL Server Reporting Services servers, and any computer with the console<br/> - Restart the SMS_Executive service as necessary|
 |Software update point|[Update WSUS](enable-tls-1-2-server.md#bkmk_wsus)|
 |Cloud management gateway|[Enforce TLS 1.2](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
 |Configuration Manager console| - [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> - Verify strong cryptography settings|
@@ -76,9 +76,9 @@ TLS 1.2 is more secure than the previous cryptographic protocols such as SSL 2.0
 There are basically five areas that Configuration Manager uses encryption protocols like TLS 1.2:
 
 - Client communications to IIS-based site server roles when the role is configured to use HTTPS. Examples of these roles include distribution points, software update points, and management points.
-- Management point, SMS Executive, and SMS Provider communications with SQL. Configuration Manager always encrypts SQL communications.
+- Management point, SMS Executive, and SMS Provider communications with SQL. Configuration Manager always encrypts SQL Server communications.
 - Site Server to WSUS communications if WSUS is configured to use HTTPS.
-- The Configuration Manager console to SQL Reporting Services (SSRS) if SSRS is configured to use HTTPS.
+- The Configuration Manager console to SQL Server Reporting Services (SSRS) if SSRS is configured to use HTTPS.
 - Any connections to internet-based services. Examples include the cloud management gateway (CMG), the service connection point sync, and sync of update metadata from Microsoft Update.
 
 ### What determines which encryption protocol is used?

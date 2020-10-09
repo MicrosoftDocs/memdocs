@@ -164,17 +164,17 @@ If you're installing a central administration site as part of a site expansion s
 
         If you use a custom port, add that port to the FQDN of the SQL Server. Follow the FQDN of the SQL Server with a comma and then the port number. For example, for server *SQLServer1.fabrikam.com*, use the following to specify port *1551*: `SQLServer1.fabrikam.com,1551`  
 
-    - **Instance name**: By default, this value is blank. It uses the default instance of SQL on the site server computer.  
+    - **Instance name**: By default, this value is blank. It uses the default instance of SQL Server on the site server computer.  
 
     - **Database name**: By default, this value is set to `CM_<Sitecode>`. You can customize this value.  
 
-    - **Service Broker Port**: By default, this value is set to use the default SQL Server Service Broker (SSB) port of 4022. SQL uses it to communicate directly to the site database at other sites.  
+    - **Service Broker Port**: By default, this value is set to use the default SQL Server Service Broker (SSB) port of 4022. SQL Server uses it to communicate directly to the site database at other sites.  
 
 13. On the second **Database Information** page, you can specify custom locations for the SQL Server data file and the SQL Server log file for the site database:  
 
     - By default, it uses the default file locations for SQL Server.  
 
-    - When you use a SQL Server cluster, the option to specify custom file locations isn't available.  
+    - When you use a SQL Server Always On failover cluster instance, the option to specify custom file locations isn't available.  
 
     - The prerequisite checker doesn't run a check for free disk space for custom file locations.  
 

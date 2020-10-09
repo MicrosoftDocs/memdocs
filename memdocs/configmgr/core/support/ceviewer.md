@@ -83,11 +83,11 @@ Run **CEViewer.exe**. The main menu of the tool contains the following tabs:
 
 ### <a name="bkmk_connect"></a> Connect tab
 
-This tab allows you to establish the initial connection to the primary site server. The tool also establishes a connection to the SQL server that hosts the site database.
+This tab allows you to establish the initial connection to the primary site server. The tool also establishes a connection to the SQL Server that hosts the site database.
 
-The connections to both primary site server and SQL servers use the current signed-in user credential. Connections to the central administration site or a secondary site aren't supported. No collection evaluation process runs on those sites.
+The connections to both primary site server and SQL Servers use the current signed-in user credential. Connections to the central administration site or a secondary site aren't supported. No collection evaluation process runs on those sites.
 
-Once the tool successfully establishes a connection, see a notification at the bottom of the Collection Evaluation Viewer that confirms the tool's connection to the SQL server. 
+Once the tool successfully establishes a connection, see a notification at the bottom of the Collection Evaluation Viewer that confirms the tool's connection to the SQL Server.
 
 
 ### <a name="bkmk_full-eval"></a> Full Evaluation tab
