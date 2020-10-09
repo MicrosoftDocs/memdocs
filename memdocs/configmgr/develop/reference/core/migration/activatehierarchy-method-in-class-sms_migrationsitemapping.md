@@ -49,7 +49,7 @@ SInt32 ActivateHierarchy (
 
  Qualifiers: [in]  
 
- The account name to access SQL server on the source site.  
+ The account name to access SQL Server on the source site.  
 
  `destinationSiteCode`  
  Data type: `String` Array  

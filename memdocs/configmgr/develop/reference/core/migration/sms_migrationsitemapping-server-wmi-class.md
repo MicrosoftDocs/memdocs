@@ -81,7 +81,7 @@ Class SMS_MigrationSiteMapping : SMS_BaseClass
 
  Qualifiers: none  
 
- SQL Account used for migration.  
+ SQL Server account used for migration.  
 
  `ContentDestination`  
  Data type: `String`  

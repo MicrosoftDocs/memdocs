@@ -59,7 +59,7 @@ When the site system role installs, it installs and configures the data warehous
 
   - SQL Server Always On availability group
 
-  - SQL Server failover cluster
+  - SQL Server Always On failover cluster instance
 
 - If you use [distributed views](../../plan-design/hierarchy/database-replication.md#bkmk_distviews), install the data warehouse service point on the same server that hosts the CAS's database.
 
@@ -83,7 +83,7 @@ When you install the role, Configuration Manager creates the data warehouse data
 
 - **SQL Server instance name, if applicable**: If you don't use a default instance of SQL Server, specify the named instance.
 
-- **Database name**: Specify a name for the data warehouse database. Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager uses that database.
+- **Database name**: Specify a name for the data warehouse database. Configuration Manager creates the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL Server, Configuration Manager uses that database.
 
 - **SQL Server port used for connection**: Specify the TCP/IP port number used by the SQL Server that hosts the data warehouse database. The data warehouse synchronization service uses this port to connect to the data warehouse database. By default, it uses SQL Server port **1433** for communication.
 
@@ -207,7 +207,7 @@ To work around this issue, use the following steps to configure certificates:
 
         1. Under **SQL Server Network Configuration**, right-click to select **Properties** under **Protocols for MSSQLSERVER**. Switch to the **Certificate** tab, select **Data Warehouse SQL Server Identification Certificate** as the certificate, and then save the changes.
 
-        1. Under **SQL Server Services**, restart the **SQL Server service**. If SQL Reporting Services is also installed on the server that hosts the data warehouse database, restart **Reporting Service** services as well.
+        1. Under **SQL Server Services**, restart the **SQL Server service**. If SQL Server Reporting Services is also installed on the server that hosts the data warehouse database, restart **Reporting Service** services as well.
 
 1. On the server that hosts SQL Server Reporting Services, open the MMC, and add the **Certificates** snap-in. Select **Computer account**. Under the **Trusted Root Certificate Authorities** folder, import the **Data Warehouse SQL Server Identification Certificate**.
 

@@ -40,9 +40,9 @@ Tests should use the *upper average* of the objects that large enterprises tend 
 Tests should also run on greater than standard *average day* loads, by performing simulations that generate peak usage demands on the system. One example is simulating Patch Tuesday rollouts, to make sure the system can return update compliance data promptly during these days of peak activity. Another example is simulating site activity during a widespread malware outbreak, to ensure timely notification and response are possible. Although deployed machines of the recommended size may be underused on any given day, more extreme situations require some processing buffer.
 
 ### Configurations
-Run testing on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equally or better than older supported server operating systems. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL produce even better performance. 
+Run testing on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Newer server operating systems tend to perform equally or better than older supported server operating systems. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL Server produce even better performance. 
 
-The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL should I run?](../../understand/site-size-performance-faq.md#what-version-of-sql-should-i-run). 
+The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL Server should I run?](../../understand/site-size-performance-faq.md#what-version-of-sql-should-i-run). 
 
 ## Key performance determinants
 
@@ -83,27 +83,27 @@ Discovery data is global data. A common performance-related problem is to miscon
 
 Based on the preceding [performance test methodology](#performance-test-methodology), the following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients. These values should allow most customers with the specified number of clients to process objects fast enough to administer the specified site. Computing power continues to decrease in price every year, and some of the requirements below are small in terms of modern server hardware configurations. Hardware that exceeds the following guidelines proportionally increases performance for sites that require additional processing power, or have special product usage patterns.
 
-| Desktop clients | Site type/role | Cores <sup>[Note 1](#bkmk_note1)</sup> | Memory (GB) | SQL memory allocation <sup>[Note 2](#bkmk_note2)</sup> | IOPS: Inboxes <sup>[Note 3](#bkmk_note3)</sup> | IOPS: SQL <sup>[Note 3](#bkmk_note3)</sup> | Storage space required (GB) <sup>[Note 4](#bkmk_note4)</sup> |
+| Desktop clients | Site type/role | Cores <sup>[Note 1](#bkmk_note1)</sup> | Memory (GB) | SQL Server memory allocation <sup>[Note 2](#bkmk_note2)</sup> | IOPS: Inboxes <sup>[Note 3](#bkmk_note3)</sup> | IOPS: SQL Server <sup>[Note 3](#bkmk_note3)</sup> | Storage space required (GB) <sup>[Note 4](#bkmk_note4)</sup> |
 |------|-------------------------------------------------------------|-----|-----|-----|------|------|------|
 | 25k  | Primary or CAS with database site role on the same server   | 6   | 24  | 65% | 600  | 1700 | 350  |
 | 25k  | Primary or CAS                                              | 4   | 8   |     | 600  |      | 100  |
-|      | Remote SQL                                                  | 4   | 16  | 70% |      | 1700 | 250  |
+|      | Remote SQL Server                                           | 4   | 16  | 70% |      | 1700 | 250  |
 |      |                                                             |     |     |     |      |      |      |
 | 50k  | Primary or CAS with database site role on the same server   | 8   | 32  | 70% | 1200 | 2800 | 600  |
 | 50k  | Primary or CAS                                              | 4   | 8   |     | 1200 |      | 200  |
-|      | Remote SQL                                                  | 8   | 24  | 70% |      | 2800 | 400  |
+|      | Remote SQL Server                                           | 8   | 24  | 70% |      | 2800 | 400  |
 |      |                                                             |     |     |     |      |      |      |
 | 100k | Primary or CAS with database site role on the same server   | 12  | 64  | 70% | 1200 | 5000 | 1100 |
 | 100k | Primary or CAS                                              | 6   | 12  |     | 1200 |      | 300  |
-|      | Remote SQL                                                  | 12  | 48  | 80% |      | 5000 | 800  |
+|      | Remote SQL Server                                           | 12  | 48  | 80% |      | 5000 | 800  |
 |      |                                                             |     |     |     |      |      |      |
 | 150k | Primary or CAS with database site role on the same server   | 16  | 96  | 70% | 1800 | 7400 | 1600 |
 | 150k | Primary or CAS                                   | 8   | 16   |     | 1800  |         | 400   |
-|      | Remote SQL                                       | 16  | 72   | 90% |       | 7400    | 1200  |
+|      | Remote SQL Server                                | 16  | 72   | 90% |       | 7400    | 1200  |
 |      |                                                             |     |     |     |      |      |      |
 | 700k | CAS with database site role on the same server   | 20+ | 128+ | 80% | 1800+ | 9000+   | 5000+ |
 | 700k | CAS                                              | 8+  | 16+  |     | 1800+ |         | 500+  |
-|      | Remote SQL                                       | 16+ | 96+  | 90% |       | 9000+   | 4500+ |
+|      | Remote SQL Server                                | 16+ | 96+  | 90% |       | 9000+   | 4500+ |
 |      |                                                             |     |     |     |      |      |      |
 | 5k   | Secondary Site                                   | 4   | 8    |     | 500   | -       | 200   |
 | 15k  | Secondary Site                                   | 8   | 16   |     | 500   | -       | 300   |
@@ -114,24 +114,24 @@ Based on the preceding [performance test methodology](#performance-test-methodol
 
 Configuration Manager performs many simultaneous processes, so needs a certain minimum number of CPU cores for various site sizes. While cores get faster each year, it's important to ensure that a certain minimum number of cores work in parallel. In general, any server-level CPU produced after 2015 meets the basic performance needs for the cores specified in the table. Configuration Manager takes advantage of additional cores beyond the recommendations, but generally, once you have the minimum suggested cores, you should prioritize CPU resource investment to increase the speed of existing cores, not add more, slower cores. For example, Configuration Manager will perform better on key processing tasks with 16 fast cores than with 24 slower cores, assuming enough other system resources like disk IOPS are available.
 
-The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL servers. You need more RAM per core when SQL is colocated with the site server components.
+The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL Servers. You need more RAM per core when SQL Server is colocated with the site server components.
 
 > [!NOTE]
 > All testing sets machine power plans to allow maximum CPU power consumption and performance.
 
 #### <a name="bkmk_note2"></a> Note 2: IOPS: Inboxes and IOPS: SQL
 
-These values refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
+These values refer to the IOPS needs for the Configuration Manager and SQL Server logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL Server files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL Server disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
 
 Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
 
-#### <a name="bkmk_note3"></a> Note 3: SQL memory allocation
+#### <a name="bkmk_note3"></a> Note 3: SQL Server memory allocation
 
 <!-- MEMDocs#570 -->
 
 Use this value to configure the **Maximum server memory (in MB)** in the properties of the SQL Server. It's the percentage of the total amount of memory available on the server.
 
-Don't configure the minimum and maximum values the same. This guidance is specifically for the maximum memory that you should allow SQL to allocate.
+Don't configure the minimum and maximum values the same. This guidance is specifically for the maximum memory that you should allow SQL Server to allocate.
 
 #### <a name="bkmk_note4"></a> Note 4: Storage space required
 

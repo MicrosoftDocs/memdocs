@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # Configuration Manager Schema View Mapping
-In Configuration Manager, the names of views and columns are designed to be as close to the SMS Provider Windows Management Instrumentation (WMI) schema as possible. Because the views names and view column names must be valid SQL identifiers, there are some discrepancies between WMI and SQL names. However, in the majority of cases the following rules can be applied to convert a WMI class name to its corresponding SQL Server view:  
+In Configuration Manager, the names of views and columns are designed to be as close to the SMS Provider Windows Management Instrumentation (WMI) schema as possible. Because the views names and view column names must be valid SQL Server identifiers, there are some discrepancies between WMI and SQL Server names. However, in the majority of cases the following rules can be applied to convert a WMI class name to its corresponding SQL Server view:  
 
 - Replace SMS_ with v_ for the start of the view name.  
 

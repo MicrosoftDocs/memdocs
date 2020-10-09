@@ -93,20 +93,20 @@ The high level process to configure and use availability groups includes:
 
 -   You cannot successfully add a new replica member to an Availability Group that is already in use as a site database. Instead, you must reinstall the site after the new replica member is added.  
 
--   For this scenario  you might need to install the **SQL Server 2012 native client** ([from the SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065)) on the management point server. This prevents SQL connection errors (which are logged in the **mp_getauth.log** on the management point server).  
+-   For this scenario  you might need to install the **SQL Server 2012 native client** ([from the SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065)) on the management point server. This prevents SQL Server connection errors (which are logged in the **mp_getauth.log** on the management point server).  
 
 ### Try it out!  
 Try to complete the following tasks and then use the feedback information near the top of this topic to let us know how they worked:  
 
--   I can install a primary site that uses a database server configured for SQL AlwaysOn Availability Groups  
+-   I can install a primary site that uses a database server configured for SQL Server Always On availability groups  
 
--   I was able to failover my SQL AlwaysOn Availability Group to a new replica in the group and the primary site is still operational  
+-   I was able to failover my SQL Server Always On availability group to a new replica in the group and the primary site is still operational  
 
-### Configuring SQL Server AlwaysOn for Configuration Manager  
+### Configuring availability groups for Configuration Manager  
  Use the following procedures to first create and configure the availability group, and then install a new Configuration Manager site that uses the availability group.  
 
-#### To create a SQL Server AlwaysOn availability group  
-The process to [create a SQL Server availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
+#### To create an availability group  
+The process to [create an availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
 
 -   A maximum of three members:  
 

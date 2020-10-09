@@ -5,7 +5,7 @@ description: Learn about the required and customizable network ports that Config
 ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
@@ -655,7 +655,7 @@ After installation, you can change the port. You don't have to use the same port
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.
 
-- The site server makes a connection to the SQL server hosting the SUSDB when you enable the following options for WSUS cleanup:
+- The site server makes a connection to the SQL Server hosting the SUSDB when you enable the following options for WSUS cleanup:
   - Add non-clustered indexes to the WSUS database to improve WSUS cleanup performance
   - Remove obsolete updates from the WSUS database
   
@@ -703,7 +703,7 @@ Clients use Server Message Block (SMB) whenever they connect to UNC shares. For 
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
 
-### <a name="BKMK_SQLPorts"></a> Connections to Microsoft SQL Server
+### <a name="BKMK_SQLPorts"></a> Connections to SQL Server
 
 For communication to the SQL Server database engine and for intersite replication, you can use the default SQL Server port or specify custom ports:  
 
@@ -715,7 +715,7 @@ For communication to the SQL Server database engine and for intersite replicatio
 
 - Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles defaults to port TCP 1433.  
 
-- Configuration Manager uses the same ports and protocols to communicate with each SQL Availability Group replica that hosts the site database as if the replica was a standalone SQL Server instance.
+- Configuration Manager uses the same ports and protocols to communicate with each SQL Server Always On availability group replica that hosts the site database as if the replica was a standalone SQL Server instance.
 
 When you use Azure and the site database is behind an internal or external load balancer, configure the following components:
 
@@ -752,7 +752,7 @@ The following site system roles communicate directly with the SQL Server databas
 
 When a SQL Server hosts a database from more than one site, each database must use a separate instance of SQL Server. Configure each instance with a unique set of ports.  
 
-If you enable a host-based firewall on the SQL server, configure it to allow the correct ports. Also configure network firewalls in between computers that communicate with the SQL server.  
+If you enable a host-based firewall on the SQL Server, configure it to allow the correct ports. Also configure network firewalls in between computers that communicate with the SQL Server.  
 
 For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
@@ -816,7 +816,7 @@ Application and package installations on distribution points require the followi
 Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe). Use the tool to configure a limited range of ports for these RPC packets. For more information, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 
 > [!IMPORTANT]
-> Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard), remote SQL servers, and the Application Catalog.
+> Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship. For example, the remote registry service is used on servers running site systems such as distribution points (both pull and standard), remote SQL Servers, and the Application Catalog.
 
 ### <a name="BKMK_PortsClientInstall"></a> Ports used by Configuration Manager client installation
 

@@ -42,10 +42,10 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 
  To upgrade a server, use the Windows Server 2012 R2 upgrade procedures. You do not need to run a Configuration Manager site server restore after the upgrade. For upgrade procedures, see [Upgrade Options for Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in the Windows Server documentation.  
 
-###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn availability groups  
- Use SQL Server AlwaysOn availability groups to host the site database at primary sites, and the central administration site as a high-availability and disaster-recovery solution.  
+###  <a name="bkmk_AOAG"></a> SQL Server Always On availability groups
+ Use SQL Server Always On availability groups to host the site database at primary sites, and the central administration site as a high-availability and disaster-recovery solution.  
 
- For details, see [SQL Server AlwaysOn for a highly available site database for Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
+ For details, see [Prepare to use a SQL Server Always On availability group with Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
 
 ## Operating system deployment  
 

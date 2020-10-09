@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # SMS_SCI_SQLTask Server WMI Class
-The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL task to be run periodically.  
+The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL Server task to be run periodically.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -49,7 +49,7 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Qualifiers: None  
 
- Beginning time for execution of the SQL task. The default value is "00000000000000.000000+***". Only the hours and minutes of this property are used.  
+ Beginning time for execution of the SQL Server task. The default value is "00000000000000.000000+***". Only the hours and minutes of this property are used.  
 
  `DaysOfWeek`  
  Data type: `UInt32`  
@@ -58,9 +58,9 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Qualifiers: [bits]  
 
- Days of the week on which the SQL task executes. Possible values are listed below. Take the sum of the values for tasks that execute on multiple days. For example, if all days are selected this property would have a value of 127.  
+ Days of the week on which the SQL Server task executes. Possible values are listed below. Take the sum of the values for tasks that execute on multiple days. For example, if all days are selected this property would have a value of 127.  
 
-|Value|SQL task day|  
+|Value|SQL Server task day|  
 |-|-|  
 |1|SUNDAY|  
 |2|MONDAY|  

@@ -75,8 +75,8 @@ For database replication, you can use the Replication Link Analyzer to help reso
 
 For more information, see   [Database replicas for management points for Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
-**Set SQL Server AlwaysOn availability groups to manual failover:**  
-Before installing updates, such as version 1606, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information, see [SQL Server AlwaysOn for a site database](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+**Set SQL Server Always On availability groups to manual failover:**  
+Before installing updates, such as version 1606, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information, see [Prepare to use an availability group](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 

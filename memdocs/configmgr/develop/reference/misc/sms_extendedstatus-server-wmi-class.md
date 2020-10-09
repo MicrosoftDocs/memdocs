@@ -138,7 +138,7 @@ Class SMS_ExtendedStatus : __ExtendedStatus
 
  Qualifiers: None  
 
- Error message text of the last SQL error. This property is set to `null` if no SQL error is present.  
+ Error message text of the last SQL Server error. This property is set to `null` if no SQL Server error is present.  
 
  `SQLSeverity`  
  Data type: `UInt32`  
@@ -147,7 +147,7 @@ Class SMS_ExtendedStatus : __ExtendedStatus
 
  Qualifiers: None  
 
- Severity code of the last SQL error. This property is set to `null` if no SQL error is present.  
+ Severity code of the last SQL Server error. This property is set to `null` if no SQL Server error is present.  
 
  `SQLStatus`  
  Data type: `UInt32`  
@@ -156,7 +156,7 @@ Class SMS_ExtendedStatus : __ExtendedStatus
 
  Qualifiers: None  
 
- Error code of the last SQL error. This property is set to `null` if no SQL error is present.  
+ Error code of the last SQL Server error. This property is set to `null` if no SQL Server error is present.  
 
  `StatusCode`  
  Data type: `UInt32`  
