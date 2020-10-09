@@ -79,11 +79,11 @@ For baseline performance testing, run server-based discovery methods once a week
 
 Discovery data is global data. A common performance-related problem is to misconfigure server-based discovery methods in a hierarchy, causing duplicate discovery of the same resources from multiple primary sites. Carefully configure discovery methods to optimize communication with the target service, such as Active Directory domain controllers, while avoiding duplication of the same discovery scope on multiple primary sites.
 
-## General sizing guidelines 
+## General sizing guidelines
 
-Based on the preceding [performance test methodology](#performance-test-methodology), the following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients. These values should allow most customers with the specified number of clients to process objects fast enough to administer the specified site. Computing power continues to decrease in price every year, and some of the requirements below are small in terms of modern server hardware configurations. Hardware that exceeds the following guidelines proportionally increases performance for sites that require additional processing power, or have special product usage patterns. 
+Based on the preceding [performance test methodology](#performance-test-methodology), the following table gives general *minimum* hardware requirement guidelines for specific numbers of managed clients. These values should allow most customers with the specified number of clients to process objects fast enough to administer the specified site. Computing power continues to decrease in price every year, and some of the requirements below are small in terms of modern server hardware configurations. Hardware that exceeds the following guidelines proportionally increases performance for sites that require additional processing power, or have special product usage patterns.
 
-| Desktop clients  | Site type/role  | Cores<sup>1</sup>   | Memory (GB)   | SQL memory allocation  | IOPS:  Inboxes<sup>2</sup>  | IOPS: SQL<sup>2</sup>   | Storage space required (GB)<sup>3</sup>   |
+| Desktop clients | Site type/role | Cores <sup>[Note 1](#bkmk_note1)</sup> | Memory (GB) | SQL memory allocation <sup>[Note 2](#bkmk_note2)</sup> | IOPS: Inboxes <sup>[Note 3](#bkmk_note3)</sup> | IOPS: SQL <sup>[Note 3](#bkmk_note3)</sup> | Storage space required (GB) <sup>[Note 4](#bkmk_note4)</sup> |
 |------|-------------------------------------------------------------|-----|-----|-----|------|------|------|
 | 25k  | Primary or CAS with database site role on the same server   | 6   | 24  | 65% | 600  | 1700 | 350  |
 | 25k  | Primary or CAS                                              | 4   | 8   |     | 600  |      | 100  |
@@ -108,22 +108,36 @@ Based on the preceding [performance test methodology](#performance-test-methodol
 | 5k   | Secondary Site                                   | 4   | 8    |     | 500   | -       | 200   |
 | 15k  | Secondary Site                                   | 8   | 16   |     | 500   | -       | 300   |
 
-**Notes**
+### Notes on general sizing guidelines
 
-1. **Cores**: Configuration Manager performs many simultaneous processes, so needs a certain minimum number of CPU cores for various site sizes. While cores get faster each year, it's important to ensure that a certain minimum number of cores work in parallel. In general, any server-level CPU produced after 2015 meets the basic performance needs for the cores specified in the table. Configuration Manager takes advantage of additional cores beyond the recommendations, but generally, once you have the minimum suggested cores, you should prioritize CPU resource investment to increase the speed of existing cores, not add more, slower cores. For example, Configuration Manager will perform better on key processing tasks with 16 fast cores than with 24 slower cores, assuming enough other system resources like disk IOPS are available.
-   
-   The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL servers. You need more RAM per core when SQL is colocated with the site server components.
-   
-   > [!NOTE]
-   > All testing sets machine power plans to allow maximum CPU power consumption and performance.
-   
-2. **IOPS: Inboxes and IOPS: SQL** refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
-   
-   Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
-   
-3.  **Storage space required:** These real-world values may differ from other documented recommendations. We provide these numbers only as a general guideline; individual requirements could vary widely. Carefully plan for disk space needs before site installation. Assume that some amount of this storage remains as free disk space most of the time. You may use this buffer space in a recovery scenario, or for upgrade scenarios that need free disk space for setup package expansion. Your site may require additional storage for large amounts of data collection, longer periods of data retention, and large amounts of software distribution content. You can also store these items on separate, lower-throughput volumes.
+#### <a name="bkmk_note1"></a> Note 1: Cores
 
-## How to measure disk performance 
+Configuration Manager performs many simultaneous processes, so needs a certain minimum number of CPU cores for various site sizes. While cores get faster each year, it's important to ensure that a certain minimum number of cores work in parallel. In general, any server-level CPU produced after 2015 meets the basic performance needs for the cores specified in the table. Configuration Manager takes advantage of additional cores beyond the recommendations, but generally, once you have the minimum suggested cores, you should prioritize CPU resource investment to increase the speed of existing cores, not add more, slower cores. For example, Configuration Manager will perform better on key processing tasks with 16 fast cores than with 24 slower cores, assuming enough other system resources like disk IOPS are available.
+
+The relationship between cores and memory is also important. In general, having less than 3-4 GB of RAM per core reduces the total processing capability on your SQL servers. You need more RAM per core when SQL is colocated with the site server components.
+
+> [!NOTE]
+> All testing sets machine power plans to allow maximum CPU power consumption and performance.
+
+#### <a name="bkmk_note2"></a> Note 2: IOPS: Inboxes and IOPS: SQL
+
+These values refer to the IOPS needs for the Configuration Manager and SQL logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
+
+Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
+
+#### <a name="bkmk_note3"></a> Note 3: SQL memory allocation
+
+<!-- MEMDocs#570 -->
+
+Use this value to configure the **Maximum server memory (in MB)** in the properties of the SQL Server. It's the percentage of the total amount of memory available on the server.
+
+Don't configure the minimum and maximum values the same. This guidance is specifically for the maximum memory that you should allow SQL to allocate.
+
+#### <a name="bkmk_note4"></a> Note 4: Storage space required
+
+These real-world values may differ from other documented recommendations. We provide these numbers only as a general guideline; individual requirements could vary widely. Carefully plan for disk space needs before site installation. Assume that some amount of this storage remains as free disk space most of the time. You may use this buffer space in a recovery scenario, or for upgrade scenarios that need free disk space for setup package expansion. Your site may require additional storage for large amounts of data collection, longer periods of data retention, and large amounts of software distribution content. You can also store these items on separate, lower-throughput volumes.
+
+## How to measure disk performance
 
 You can use the industry-standard tool *Diskspd* to provide standardized suggestions for the IOPS that various-sized Configuration Manager environments require. While not exhaustive, the following test steps and command lines provide a simple and reproducible way to estimate your servers' disk subsystem throughput. You can compare your results to the minimum recommended IOPS in the [general sizing guidelines](#general-sizing-guidelines) table. 
 
