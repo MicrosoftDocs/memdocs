@@ -254,9 +254,10 @@ When the distribution point isn't enabled for prestaged content or when the dist
 You have the following options for managing content:
 
 - [Update content](#update-content)
+- [Update content on schedule](#update-content-on-schedule)
 - [Redistribute content](#redistribute-content)
 - [Remove content](#remove-content)
-- [validate content](#validate-content)
+- [Validate content](#validate-content)
 
 ### Update content
 
@@ -280,6 +281,24 @@ When you update the source file location for a deployment by adding new files or
     To update content for applications: Select the **Deployment Types** tab in the details pane. Choose the deployment type. On the **Deployment Type** tab of the ribbon, select **Update Content**. Then select **OK** to confirm that you want to refresh the content.
 
     When you update content for boot images: The **Update Distribution Points** action opens the Manage Distribution Point Wizard. For more information, see [Update distribution points with the boot image](../../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
+
+### Update content on schedule
+
+<!-- SCCMDocs#2132 -->
+
+You can create a schedule for when the site updates the content for the object. Use this option for an object whose content changes frequently.
+
+1. In the Configuration Manager console, go to the **Software Library** workspace.
+
+1. Select the [content type](#bkmk_types) that you want to update.
+
+1. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
+
+1. Switch to the **Data source** tab. Select the option to **Update distribution points on a schedule**.
+
+1. Select **Schedule** and specify a custom schedule. You can also set a recurrence pattern.
+
+If the source content hasn't changed, then this action doesn't do anything. To redistribute all content, use the [distribute](#bkmk_distribute) or [redistribute](#redistribute-content) actions.
 
 ### Redistribute content
 
