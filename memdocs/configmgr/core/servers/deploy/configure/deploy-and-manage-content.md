@@ -143,7 +143,7 @@ Use the following procedure to assign the content in the prestaged content file 
 
 1. In the Configuration Manager console, go to the  **Software Library** workspace.
 
-1. Select the same [content type](#bkmk_types) that you selected when you [created the prestaged content file](BKMK_CreatePrestagedContentFile).
+1. Select the same [content type](#bkmk_types) that you selected when you [created the prestaged content file](#BKMK_CreatePrestagedContentFile).
 
 1. On the **Home** tab, in the **Deployment** group, select **Distribute Content**.
 
