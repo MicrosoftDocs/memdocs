@@ -68,7 +68,7 @@ The CA uses the web server certificate template to issue certificates for the se
 1. In the **Duplicate Template** window, select **Windows 2003 Server, Enterprise Edition** or **Windows 2008 Server, Enterprise Edition**, and then select **OK**.
 
     > [!TIP]
-    > Configuration Manager supports Windows 2008 Server certificate templates, also known as V3 or Cryptography: Next Generation (CNG) certificates. For more information, see [CNG certificates overview](../../core/plan-design/network/cng-certificates-overview.md).
+    > Configuration Manager supports Windows 2008 Server certificate templates, also known as V3 or Cryptography: Next Generation (CNG) certificates. For more information, see [CNG v3 certificates overview](../../core/plan-design/network/cng-certificates-overview.md).
 
     If your CA runs on Windows Server 2012 or later, this window doesn't show the option for certificate template version. After you duplicate the template, select the version on the **Compatibility** tab of the template properties.
 
