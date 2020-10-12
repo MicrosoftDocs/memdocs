@@ -55,8 +55,6 @@ For more information on this function, see [Updates and servicing for Configurat
 
 - `go.microsoft.com`  
 
-- `*.blob.core.windows.net`  
-
 - `download.microsoft.com`  
 
 - `download.windowsupdate.com`  
@@ -64,6 +62,22 @@ For more information on this function, see [Updates and servicing for Configurat
 - `sccmconnected-a01.cloudapp.net`  
 
 - `configmgrbits.azureedge.net`  
+
+- `ceuswatcab01.blob.core.windows.net`
+
+- `ceuswatcab02.blob.core.windows.net`
+
+- `eaus2watcab01.blob.core.windows.net`
+
+- `eaus2watcab02.blob.core.windows.net`
+
+- `weus2watcab01.blob.core.windows.net`
+
+- `weus2watcab02.blob.core.windows.net`
+
+- `umwatsonc.events.data.microsoft.com`
+
+- `*-umwatsonc.events.data.microsoft.com`
 
 ### Windows 10 servicing
 
