@@ -136,7 +136,9 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
    > [!Note]
-   > For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
+   > - For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
+   > - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender ATP online service. <!--8538605-->
+
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
    - **None**
    - **All file types**  
