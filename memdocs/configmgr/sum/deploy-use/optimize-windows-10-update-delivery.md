@@ -66,7 +66,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verify your [Delivery Optimization client settings](../../core/clients/deploy/about-client-settings.md#delivery-optimization) when changing your [software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) for delta content.
 
-### Limitations
+#### Limitations
 
 - Delivery Optimization can't be used for Microsoft 365 Apps client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Microsoft 365 Apps clients. You can deregister Office COM to allow the use of Delivery Optimization for Microsoft 365 Apps updates. When Office COM is disabled, software updates for Microsoft 365 Apps are managed by the default Office Automatic Updates 2.0 scheduled task. This means that Configuration Manager doesn't dictate or monitor the installation process for Microsoft 365 Apps updates. Configuration Manager will continue to collect information from hardware inventory to populate Office 365 Client Management Dashboard in the console. For information about how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 
