@@ -216,7 +216,7 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
 ## Upgrade Microsoft Tunnel
 
-When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrade of your installed Microsoft Tunnels is managed automatically by Intune in a rolling upgrade:
+When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrade of your installed Microsoft Tunnel is managed automatically by Intune in a rolling upgrade:
 
 - Intune upgrades the Microsoft Tunnel servers in a Site one server at a time. During upgrade, the Microsoft Tunnel on the server isn't available for use.
 
@@ -236,6 +236,8 @@ To uninstall the product, run **./mst-cli uninstall** from the Linux server as r
 
 Updates for the Microsoft Tunnel are released periodically. When we update the tunnel version, you can read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version is released, you shouldn’t have to take action to benefit from the new version.
 
+After an update releases, it rolls out to tenants over the following days. Therefore, your tunnel servers might not start the process to update for a few days.
+
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
 ### October 12, 2020
@@ -248,7 +250,7 @@ Image hash values:
 
 Changes in this release:
 
-- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the system journal format.
+- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the *syslog* format.
 - Various bug fixes.
 
 ### September 23, 2020
