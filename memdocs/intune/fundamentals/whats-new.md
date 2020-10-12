@@ -67,7 +67,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway. The following changes are included in the new version:
 
-- Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the journal format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journlctrl -t* command-line on the tunnel server. 
+- Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the system journal format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journalctl -t* command-line on the tunnel server. 
 - Various bug fixes.
 
 <!-- ########################## -->
@@ -79,7 +79,7 @@ We’ve released a [new version](../protect/microsoft-tunnel-configure.md#micros
 #### New version of the PFX Certificate Connector<!-- 8476079 -->
 
 We’ve released a new version of the PFX Certificate Connector, version **6.2008.60.612**. This new connector version:
- 
+
 - Fixes an issue with PKCS certificate delivery to Android Enterprise Fully Managed devices. The issue required the cryptography Key Storage Provider (KSP) be a legacy provider. You can now use a Cryptographic Next Generation (CNG) Key Storage Provider as well.
 - Changes to *CA Account* tab of the PFX Certificate Connector: The Username and password (credentials) that you specify are now used to issue certificates and to revoke certificates. Previously these credentials were used only for certificate revocation.
 

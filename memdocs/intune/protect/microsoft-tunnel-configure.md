@@ -89,7 +89,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 1. Download the Microsoft Tunnel installation script by using one of the following methods:
 
-   - Download the tool directly by using a web browser.  Go to https://aka.ms/microsofttunneldownload to download the file **mstunnel-setup**.
+   - Download the tool directly by using a web browser. Go to https://aka.ms/microsofttunneldownload to download the file **mstunnel-setup**.
 
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
 
@@ -99,7 +99,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
-2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`
+2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always downloads and installs the tunnel server using the [most recent version](#microsoft-tunnel-updates) of Microsoft Tunnel.
 
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.
@@ -218,7 +218,9 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
 When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrade of your installed Microsoft Tunnels is managed automatically by Intune in a rolling upgrade:
 
-- Intune upgrades the Microsoft Tunnel servers in a Site one server at a time.
+- Intune upgrades the Microsoft Tunnel servers in a Site one server at a time. During upgrade, the tunnel server is not available for use by devices.
+
+- Intune starts updating the first server in a Site as soon as 10 minutes after the release becomes available, or after the server is turned on if it has been off.
 
 - After a successful upgrade of a server, Intune waits a short period of time before starting the upgrade of the next server.
 
@@ -246,7 +248,7 @@ Image hash values:
 
 Changes in this release:
 
-- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the journal format.
+- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the system journal format.
 - Various bug fixes.
 
 ### September 23, 2020
