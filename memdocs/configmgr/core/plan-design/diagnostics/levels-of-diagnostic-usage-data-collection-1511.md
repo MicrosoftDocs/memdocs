@@ -222,7 +222,7 @@ Beginning with Configuration Manager version 1511, this level includes the follo
 
     -   Count of largest database tables  
 
-    -   SQL Always-On replica information  
+    -   SQL Server Always On availability group replica information  
 
     -   Count of collections by type  
 

@@ -133,7 +133,7 @@ You can also open Report Builder directly from SQL Server Reporting Services.
 
 ## Report models in SQL Server Reporting Services
 
-SQL Reporting Services uses report models to help you select items from the Configuration Manager database to include in model-based reports. When you build a report, report models expose only specified views and items to choose from. To create model-based reports, at least one report model has to be available.
+SQL Server Reporting Services uses report models to help you select items from the Configuration Manager database to include in model-based reports. When you build a report, report models expose only specified views and items to choose from. To create model-based reports, at least one report model has to be available.
 
 Report models have the following features:
 

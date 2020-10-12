@@ -201,7 +201,7 @@ Use the following steps to monitor progress:
 > Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
 >
 > - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
->   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+>   - The cmupdate.log will log the program name and sessionid from SQL Server that is blocking the database upgrade.
 > - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
 >   - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 

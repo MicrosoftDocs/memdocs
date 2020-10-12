@@ -261,7 +261,7 @@ additionalContent:
         # Card
         - title: Intune technical forums
           summary: Ask technical questions in the product forums
-          url: https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc
+          url: /answers/products/mem
         # Card
         - title: UserVoice product feedback
           summary: Share product ideas with the engineering team

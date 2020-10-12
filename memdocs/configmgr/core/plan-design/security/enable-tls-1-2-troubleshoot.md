@@ -40,7 +40,7 @@ If SQL Server communication fails and returns an **SslSecurityError** error, ver
 
 - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net), and enable strong cryptography on each machine
 - [Update SQL Server](enable-tls-1-2-server.md#bkmk_sql) on the host server
-- [Update SQL client components](enable-tls-1-2-server.md#bkmk_sql-client) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
+- [Update SQL Server client components](enable-tls-1-2-server.md#bkmk_sql-client) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
 
 ## Configuration Manager client communication failures
 

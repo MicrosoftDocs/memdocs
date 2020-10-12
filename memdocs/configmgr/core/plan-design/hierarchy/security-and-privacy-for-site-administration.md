@@ -209,7 +209,7 @@ When you increase the access to the Configuration Manager site database server, 
 
 ### Configure SQL Server to use Windows authentication
 
-Although Configuration Manager accesses the site database by using a Windows account and Windows authentication, it's still possible to configure SQL Server to use SQL Server mixed mode. SQL Server mixed mode allows additional SQL sign-ins to access the database. This configuration isn't required and increases the attack surface.  
+Although Configuration Manager accesses the site database by using a Windows account and Windows authentication, it's still possible to configure SQL Server to use SQL Server mixed mode. SQL Server mixed mode allows additional SQL Server sign-ins to access the database. This configuration isn't required and increases the attack surface.  
 
 ### Update SQL Server Express at secondary sites
 
@@ -225,7 +225,7 @@ Periodically run Windows Update for all installed versions of SQL Server. This p
 
 Identify and follow the general guidance for your version of SQL Server. However, take into consideration the following requirements for Configuration Manager:  
 
-- The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision administrator principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Users group.  
+- The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision administrator principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Server Users group.  
 
 - If you install SQL Server by using a domain user account, make sure that the site server computer account is configured for a Service Principal Name (SPN) that's published to Active Directory Domain Services. Without the SPN, Kerberos authentication fails and Configuration Manager setup fails.  
 

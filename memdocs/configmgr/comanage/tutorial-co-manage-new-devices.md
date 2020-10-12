@@ -399,7 +399,7 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
      ```
 
      > [!TIP]  
-     > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line.
+     > If you do not have the command line available, you can view the properties of *CoMgmtSettingsProd* in the Configuration Manager console to get a copy of the command line. The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.
 
 5. Select **OK > Add**.  The app is created and becomes available in the Intune console. After the app is available, you can use the following section to configure Intune to assign it to Windows 10 devices.
 

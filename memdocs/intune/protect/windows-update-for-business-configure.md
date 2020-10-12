@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 10/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: dudeso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -205,7 +205,15 @@ When a device receives a Windows 10 feature updates policy:
 
 - The device will update to the version of Windows specified in the policy. A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable for the duration of the policy.
 
-- While the installed version of Windows remains set, devices can still receive and install quality and security updates for their Windows version for the duration of support for that version, which helps you to keep devices current and secure.
+  > [!NOTE]
+  > A device won't install an update when it has a *safeguard hold* for that Windows version. When a device evaluates applicability of an update version, Windows creates the temporary safeguard hold if an unresolved known issue exists. Once the issue is resolved, the hold is removed and the device can then update.
+  >
+  > - Learn more about [safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) in the Windows documentation for *Feature Update Status*.
+  > - To learn about known issues that can result in a safeguard hold, see [Windows 10 release information](/windows/release-information/) and then reference the relevant Windows version from the table of contents for that page.
+  >
+  >   For example, for Windows version 2004, open [Windows 10 release information](/windows/release-information/), and then from the left-hand pane, select *Version 2004* and then *Known issues and notifications*. The [resultant page](/windows/release-information/status-windows-10-2004) details known issues for that Windows version that might result in safeguard hold.
+  >
+  > While safeguard holds are not visible in Intune today, a future release will add the ability to report on them.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
@@ -226,7 +234,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 - Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
-- While Windows 10 feature updates remains in public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
+- While Windows 10 feature updates remain in public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
 
 ### Create and assign Windows 10 feature updates
 

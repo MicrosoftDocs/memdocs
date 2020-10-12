@@ -183,6 +183,8 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
      For example, if the certificate validity period in the certificate template is two years, you can enter a value of one year, but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA's certificate.
 
+     Plan to use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
+
    - **Key storage provider (KSP)**:
 
      *(Applies to:  Windows 8.1 and later, and Windows 10 and later)*

@@ -1,19 +1,20 @@
 ---
-title: "ActivateHierarchy Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ActivateHierarchy method
+titleSuffix: Configuration Manager
+description: The technical details of the ActivateHierarchy method in the SMS_MigrationSiteMapping WMI class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 51a21352-8184-4f0f-9fe0-365608ab1433
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # ActivateHierarchy Method in Class SMS_MigrationSiteMapping
-The `ActivateHierarchy` Windows Management Instrumentation (WMI) class method, in Configuration Manager, activates the hierarchy.  
+
+The `ActivateHierarchy` WMI class method in Configuration Manager activates the hierarchy.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -49,7 +50,7 @@ SInt32 ActivateHierarchy (
 
  Qualifiers: [in]  
 
- The account name to access SQL server on the source site.  
+ The account name to access SQL Server on the source site.  
 
  `destinationSiteCode`  
  Data type: `String` Array  
