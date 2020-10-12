@@ -72,7 +72,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
  - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
  
-- Download of [feature updates](../get-started/configure-classifications-and-products.md#to) for Windows 10 may take a long time depending on the network and if additional content is determined to be needed for installation. This additional download time may also cause the installation to fail because it exceed the [maximum runtime](../get-started/manage-settings-for-software-updates.md#BKMK_SetMaxRunTime) for the installation. <!--7328656-->
+- Download of [feature updates](../get-started/configure-classifications-and-products.md) for Windows 10 may take a long time depending on the network and if additional content is determined to be needed for installation. This additional download time may also cause the installation to fail because it exceed the [maximum runtime](../get-started/manage-settings-for-software-updates.md#BKMK_SetMaxRunTime) for the installation. <!--7328656-->
 
 #### Configuration recommendations for clients downloading delta content
 <!--7913814-->
