@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
-ms.date: 06/17/2020
+ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -99,7 +99,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
 1. Supply the **Workspace key** and **Workspace ID** then click **Next**.
-
+   - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender ATP online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender ATP Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
@@ -164,7 +164,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
-1. Provide the **Workspace key** and **Workspace ID**.
+1. Provide the **Workspace key** and **Workspace ID**. Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender ATP online service. <!--8538605-->
    > [!Note]
    > - For Configuration Manager version 2002, you'll need the configuration file even if you're onboarding only down-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 10** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188--> 
    > - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
