@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -359,7 +359,7 @@ Before you start:
 - Microsoft apps must have an app protection policy that has **Restrict web content transfer with other apps** data transfer setting set to **Microsoft Edge**.
 
 > [!NOTE]
-> Updated Application Proxy redirection data can take up to 24 hours to take effect in Edge for iOS and Android.
+> Edge for iOS and Android updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
 
 Target Edge for iOS with the following key/value pair, to enable Application Proxy:
 
