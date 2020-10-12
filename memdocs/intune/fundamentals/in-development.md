@@ -85,12 +85,12 @@ You'll be able to enable Outlook S/MIME emails to be always signed or encrypted 
 ## Device configuration
 
 ### Use NetMotion as a VPN connection type for Android Enterprise devices<!-- 7764263 -->
-When you create a VPN profile, NetMotion is available as a VPN connection type (**Devices** > **Device configuration** > **Create profile** > **Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile** or **Android Enterprise work profile** for platform > **VPN** for profile > **NetMotion** for connection type).
+When you create a VPN profile, NetMotion is available as a VPN connection type (**Devices** > **Device configuration** > **Create profile** > **Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile** or **Android Enterprise Work Profile** for platform > **VPN** for profile > **NetMotion** for connection type).
 
 For more information on VPN profiles in Intune, see [Create VPN profiles to connect to VPN servers](../configuration/vpn-settings-configure.md).
 
 Applies to:
-- Android Enterprise work profile
+- Android Enterprise Work Profile
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 ### Changes for Password settings in Device restriction profiles for Android device administrator<!-- 7662279   --> 
