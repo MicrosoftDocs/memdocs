@@ -64,7 +64,7 @@ You only need to enable Microsoft Defender ATP a single time per tenant.
    - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**
    - Set **Connect Android devices of version 6.0.0 and above to Microsoft Defender ATP** to **On**
   
-   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for the purpose of compliance. 
+   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for the purpose of compliance.
 
 5. Select **Save**.
 
