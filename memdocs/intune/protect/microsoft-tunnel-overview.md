@@ -229,6 +229,9 @@ Before you start a server install, we recommend you download and run the **mst-r
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.  
 - Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment.
 
+> [!IMPORTANT]
+> The readiness tool doesn't validate inbound ports, which is a common misconfiguration. After the readiness tool runs, review the [firewall prerequisites](#firewall) and manually validate your firewalls pass inbound traffic.
+
 The mst-readiness tool has a dependency on **jq**, a command-line JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
 
 To use the readiness tool:
