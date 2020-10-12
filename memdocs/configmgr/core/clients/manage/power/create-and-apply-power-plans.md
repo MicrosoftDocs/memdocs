@@ -26,8 +26,10 @@ You can only apply Configuration Manager power plans to device collections. If a
 
 To display all computers that have multiple power plans applied to them, use the **Computers with Multiple Power Plans** report. This report can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management](monitor-and-plan-for-power-management.md).
 
+Make sure to review any power settings that you apply from group policy. Power settings configured by using group policy will override settings configured by Configuration Manager power management.
+
 > [!IMPORTANT]
-> Power settings configured by using Windows Group Policy will override settings configured by Configuration Manager power management.
+> Systems that you enable for **Modern Standby** (S0) won't apply Configuration Manager power policies. You'll see a message similar to the following in the PwrProvider.log: `The "Required idleness to sleep" setting (<738eddaa-52e2-467f-b453-821ef2884d47>) is not supported on this operating system. This setting will be ignored.`<!-- SCCMDocs#2177 -->
 
 ## Create and apply a power plan
 
