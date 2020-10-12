@@ -84,7 +84,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
    For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. After you apply the package, the device will automatically restart in one minute.
-   ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
+   ![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
 
 4. When the device restarts, it connects to the Azure Active Directory and enrolls in Microsoft Intune.
 
