@@ -83,7 +83,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
 |User approved enrollment|If **Yes**, then the device has user approved enrollment that lets admins manage certain security settings on the device.|Windows, iOS|
 |Operating system|The operating system used on the device.|Windows, iOS, Android|
-|Operating system version|The version of the operating system on the device.|Windows, iOS, Andorid|
+|Operating system version|The version of the operating system on the device.|Windows, iOS, Android|
 |Operating system language|The language set for the operating system on the device.|Windows, iOS,Android|
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
