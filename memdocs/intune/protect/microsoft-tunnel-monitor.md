@@ -43,7 +43,7 @@ For more information and command-line examples, see [mst-cli command-line tool f
 
 ## View Microsoft Tunnel logs
 
-Beginning in October 2020, Microsoft Tunnel logs information to the Linux server logs. You can view the log entries by using the **jouralctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:
+Beginning in October 2020, Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. You can view the log entries by using the **jouralctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:
 
 - **ocserv** -  Display server logs.
 - **mstunnel-agent**: Display agent logs.
