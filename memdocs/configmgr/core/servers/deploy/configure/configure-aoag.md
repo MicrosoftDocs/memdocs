@@ -77,9 +77,10 @@ Use this procedure to create an availability group for Configuration Manager. Th
 
 ## <a name="bkmk_configure"></a> Configure a site to use the availability group
 
-After you [create and configure the availability group](#bkmk_create), use Configuration Manager site maintenance to configure the site to use the database that the availability group hosts.
+When installing a new site, after you have [created and configured the availability group](#bkmk_create), direct setup to use the FQDN of the availability group listener. If you used a custom port and named instance, leave the instance name empty in the setup wizard and use the format *FQDN of listener, port number*. For example, use `listener.contoso.com, 1445` for a named instance that doesn't use the default port of 1433.
 
-It's not supported to install a new site with its database in an availability group. For example, if you use baseline media, install the site using a single instance of SQL Server. After the site installs, then move the site database to the availability group.
+If you moved an existing site database to an availability group you [created and configured](#bkmk_create), use Configuration Manager site maintenance to change the configuration with the below instructions:
+
 
 1. Run **Configuration Manager Setup**: `\BIN\X64\setup.exe` from the Configuration Manager site installation folder.
 
