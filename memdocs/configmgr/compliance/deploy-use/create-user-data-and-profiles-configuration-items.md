@@ -28,6 +28,9 @@ Unlike other configuration items in Configuration Manager, you don't add user da
 
 You can only deploy user data and profiles configuration items to user collections.
 
+> [!IMPORTANT]
+> If you deploy this policy, it restricts folder redirection group policy on the same devices. For more information, see [Folder Redirection group policy is not applied in Windows 8, Windows 8.1, or Windows 10](/troubleshoot/windows-server/group-policy/folder-redirection-group-policy-not-applied).<!-- SCCMDocs#2315 -->
+
 ## Enable user data and profiles for compliance settings
 
 Use the following procedure to configure the default client setting for user data and profiles compliance settings, which will apply to all computers in your hierarchy. If you want this setting to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers for which you want to use user data and profiles compliance settings. For more information about how to create custom device settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
