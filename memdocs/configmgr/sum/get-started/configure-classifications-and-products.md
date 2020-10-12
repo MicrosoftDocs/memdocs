@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -42,7 +42,7 @@ Software updates metadata is retrieved during the synchronization process in Con
      - **Tools**: Specifies a utility or feature that helps to complete one or more tasks.  
      - **Update Rollups**: Specifies a tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. An update rollup generally addresses a specific area, such as a security or product component.  
      - **Updates**: Specifies a widely released fix for a specific problem. An update addresses a non-critical, non-security-related bug.  
-     - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
+     - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. These updates are also known as feature updates for operatiing systems. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
     
     > [!NOTE]
     > You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 or later to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports. For more information, see [Manage Surface drivers with Configuration Manager](../deploy-use/surface-drivers.md).
