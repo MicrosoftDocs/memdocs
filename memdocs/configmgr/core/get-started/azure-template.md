@@ -31,7 +31,7 @@ For more information, see [Configuration Manager on Azure](../understand/configu
 
 This process requires an Azure subscription in which you can create the following objects: 
 - Two Standard_B2s virtual machines for domain controller, management point, and distribution point.
-- One Standard_B2ms virtual machine for the primary site server and the SQL database server.
+- One Standard_B2ms virtual machine for the primary site server and the SQL Server database server.
 - Standard_LRS storage account
 
 > [!Tip]  

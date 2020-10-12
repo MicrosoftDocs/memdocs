@@ -1168,7 +1168,7 @@ Home_page=https://www.microsoft.com/NewComputer
 ```  
 
 ## Calling Web Services in MDT  
- In earlier versions of MDT, rules processing was supported through CustomSettings.ini and databases, from which you could retrieve values from the local computer—typically using WMI—to make decisions on what needed to be done on each computer during deployment. In addition, you could make SQL queries and stored procedure calls to retrieve additional information from external databases. There were challenges with that approach, though—especially with making secure SQL connections.  
+ In earlier versions of MDT, rules processing was supported through CustomSettings.ini and databases, from which you could retrieve values from the local computer—typically using WMI—to make decisions on what needed to be done on each computer during deployment. In addition, you could make SQL queries and stored procedure calls to retrieve additional information from external databases. There were challenges with that approach, though—especially with making secure SQL Server connections.  
 
  To help with this problem, MDT has the ability to make web service calls based on simple rules defined in CustomSettings.ini. These web service requests do not require any special security context and can use whatever TCP/IP port is needed to simplify firewall configurations.  
 

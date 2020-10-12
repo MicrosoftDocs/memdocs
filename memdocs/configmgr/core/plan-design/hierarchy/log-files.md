@@ -128,7 +128,7 @@ The following table lists the log files located on the Configuration Manager cli
 |Ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|  
 |CcmRestart.log|Records client service restart activity.|  
 |CCMSDKProvider.log|Records activities for the client SDK interfaces.|  
-|ccmsqlce.log|Records activities for the SQL Compact Edition that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
+|ccmsqlce.log|Records activities for the SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
 |CertificateMaintenance.log|Maintains certificates for Active Directory Domain Services and management points.|  
 |CIDownloader.log|Records details about configuration item definition downloads.|  
 |CITaskMgr.log|Records tasks for each application and deployment type, such as content download and install or uninstall actions.|  
@@ -425,7 +425,7 @@ The following table lists the log files that contain information related to the 
 |Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
 |Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
 |hman.log|Records information about message forwarding.|Site server|  
-|MSfBSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
+|WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
 |outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
@@ -474,7 +474,7 @@ The following table lists the log files that contain information related to appl
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
 |ConfigMgrSoftwareCatalog.log|Records the activity of the Application Catalog, which includes its use of Silverlight.|Client|  
-|MSfBSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
+|WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |NotiCtrl.log|Application request notifications.|Site server|  
 |portlctl.log|Records the monitoring activities for the Application Catalog website point site system role.|Site system server|  
 |portlwebMSI.log|Records the MSI installation activity for the Application Catalog website role.|Site system server|  

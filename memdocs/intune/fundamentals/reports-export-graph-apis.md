@@ -7,7 +7,7 @@ keywords:
 ms.author: erikre
 author: Erikre
 manager: dougeby
-ms.date: 09/15/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -306,7 +306,7 @@ The following table contains the possible output when calling the `Devices` repo
 | JailBroken  |
 | EasActivationStatusString        |
 
-You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
+You can choose to filter the `Devices` report's output based on the following columns:
 - `OwnerType`
 - `DeviceType` 
 - `ManagementAgents`
