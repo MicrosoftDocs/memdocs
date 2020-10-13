@@ -115,11 +115,11 @@ The following table provides enrollment-specific configuration details:
 > 
 > The following settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device has been configured for KME and device enrollment is set to Unavailable, the device will not be able to enroll during the out of box flow.
 
-|    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App details status    (of an app that   requires enrollment)    |
+|    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App visibility (for an app that requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Available, with prompts    |    The default experience with prompts to enroll in all   possible locations.    |    Yes    |    Yes    |    Yes    |    Yes    |
 |    Available, no prompts    |    User can enroll via the status in device details for   their current device or from apps that require enrollment.    |    No    |    No    |    Yes    |    Yes    |
-|    Unavailable    |    There is no way for users to enroll.    |    No    |    No    |    No    |    No    |
+|    Unavailable    |    There is no way for users to enroll. Apps requiring enrollment will be hidden.    |    No    |    No    |    No    |    No    |
 
 ### Privacy
 
