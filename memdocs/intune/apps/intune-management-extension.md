@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 10/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,6 +37,8 @@ This feature applies to:
 
 > [!NOTE]
 > Once the Intune management extension prerequisites are met, the Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device. For more information, see Intune Management Extensions [prerequisites](../apps/intune-management-extension.md#prerequisites).
+> 
+> PowerShell scripts support Azure AD registered devices in Intune. However, this functionality does not support devices running Windows 10 Home edition. 
 
 ## Move to modern management
 
