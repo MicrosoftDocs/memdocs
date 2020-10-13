@@ -65,7 +65,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Configure the macOS Microsoft Enterprise SSO plug-in<!-- 5627576 8278906-->
 
 > [!IMPORTANT]
-> On macOS, the Microsoft Azure AD SSO extension listed in the Intune user interface, but wasn't working as expected. This feature is now working, and is available to use in public preview.
+> On macOS, the Microsoft Azure AD SSO extension is listed in the Intune user interface, but wasn't working as expected. This feature is now working, and is available to use in public preview.
 
 The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension. This app extension allows macOS 10.15+ users to access Microsoft apps, organization apps, and websites that support Apple's SSO feature. It authenticates using Azure AD, with one sign-on.
 
