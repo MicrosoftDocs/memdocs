@@ -44,7 +44,8 @@ You must enroll new Windows 10 devices in Intune MDM instead of using the PC sof
 5. Unenroll devices with the Intune PC client and re-enroll the devices using Intune MDM. We strongly recommend you update to the latest version of Windows 10. As of January 14, 2020, Intune no longer supports Windows 7.
 6. Add apps to Intune MDM. For details, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
-   > [!note] If you currently have Intune storage add-on licensing, it is not required with Intune MDM to manage your Windows 10 PC's.
+   > [!note]
+   > If you currently have Intune storage add-on licensing, it is not required with Intune MDM to manage your Windows 10 PC's.
 
 ## Uninstall the Intune PC client software
 
@@ -61,14 +62,14 @@ To unenroll the software client by using the [Microsoft Intune administration co
 
 Using an elevated command prompt, run one of the following commands.
 
-**Method 1**:
+#### Method 1
 
 ```cmd
 "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
 ```
 
-**Method 2** 
-> [!note] All of the following agents are installed on every SKU of Windows
+#### Method 2
+The following agents are installed on every SKU of Windows:
 
 ```cmd
 wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
