@@ -53,26 +53,15 @@ You must enroll new Windows 10 devices in Intune MDM instead of using the Intune
 
 ## Uninstall the Intune PC client software
 
-There are two ways to unenroll the legacy Intune PC client software:
+Using an elevated command prompt on the device to unenroll, run one of the following commands.
 
-- From the Microsoft Intune administration console (recommended method)
-- From a command prompt on the device
-
-### Unenroll by using the Microsoft Intune administration console
-
-To unenroll the Intune PC client by using the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), go to **Groups** > **All Computers** > **Devices**. Right-click the device, and select **Retire/Wipe**.
-
-### Unenroll by using a command prompt on the device
-
-Using an elevated command prompt, run one of the following commands.
-
-#### Method 1
+### Method 1
 
 ```cmd
 "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
 ```
 
-#### Method 2
+### Method 2
 The following agents are installed on every SKU of Windows:
 
 ```cmd
