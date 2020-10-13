@@ -196,7 +196,17 @@ For more information about exporting collections, see [How to manage collections
 
 1. Complete the wizard to import the collection. The new collection is displayed in the **User Collections** or **Device Collections** node of the **Assets and Compliance** workspace. Refresh or reload the Configuration Manager console to see the collection members for the newly imported collection.
 
-## <a name="bkmk_aadcollsync"></a> Synchronize collection membership results to Azure Active Directory groups
+## <a name="bkmk_powershell"></a> Use PowerShell
+
+You can use PowerShell to create and import collections. For more information, see the following cmdlet articles:
+
+- [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+
+- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
+
+- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
+
+## <a name="bkmk_aadcollsync"></a> Synchronize members to Azure AD groups
 
 <!--3607475-->
 > [!TIP]
@@ -250,9 +260,7 @@ The Azure AD synchronization happens every five minutes. It's a one-way process 
 
 1. If necessary, change the **Tenant** to where you created the Azure AD group.
 
-1. Type in your search criteria in the **Name starts with** field, then select **Search**. If you leave the criteria blank, the search returns all groups from the tenant.
-
-    - If it prompts you to sign in, use the identity you specified as the owner for the Azure AD group.
+1. Type in your search criteria in the **Name starts with** field, then select **Search**. If you leave the criteria blank, the search returns all groups from the tenant. If it prompts you to sign in, use the identity you specified as the owner for the Azure AD group.
 
 1. Choose the target group, and then select **OK** to add the group. Select **OK** again to exit the collection's properties.
 
@@ -266,19 +274,9 @@ Wait about five to seven minutes before you can verify the group memberships in 
 
 1. Find the group you created and select **Members**.
 
-1. Confirm that the members reflect those in the Configuration Manager collection. Only devices with Azure AD identity show in the group.
+1. Confirm that the members reflect the resources in the Configuration Manager collection. Only resources with Azure AD identity show in the group.
 
 ![Synchronize collections to Azure AD](media/3607475-sync-collection-to-azuread.png)
-
-## <a name="bkmk_powershell"></a> Use PowerShell
-
-You can use PowerShell to create and import collections. For more information, see the following cmdlet articles:
-
-- [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
-
-- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
-
-- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
 
 ## Next steps
 
