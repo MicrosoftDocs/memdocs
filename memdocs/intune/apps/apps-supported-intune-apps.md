@@ -55,469 +55,66 @@ In addition to supporting the core App Protection Policy settings, apps are also
 
 The below apps support the Core Intune App Protection Policy settings and are also capable of supporting advanced App Protection Policy and App Configuration Policy settings:
 
-<table>
-<thead>
-  <tr class="header">
-    <th valign="middle" rowspan="2">App</th>
-    <th valign="middle" rowspan="2">Platform</th>
-    <th valign="middle" rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">Core App Protection Policy settings</a></th>
-    <th align="center" colspan="6">Advanced App Configuration and Protection Policy feature support</th>
-  </tr>
-  <tr>
-    <td><b><a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-overview">App configuration</a></b></td>
-    <td><b>Org allowed accounts (<a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps">Android</a>)</b></td>
-    <td><b>Sync policy managed app data with native apps (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
-    <td><b>Org data notifications (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#functionality">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#functionality">Android</a>)</b></td>
-    <td><b>Open data into Org documents (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
-    <td><b>Save copies of org data (<a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-ios#data-transfer">iOS</a>, <a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy-settings-android#data-transfer">Android</a>)</b></td>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Microsoft Edge</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx">Android</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-edge/id1288723196">iOS</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://aka.ms/edgeappconfig">Edge app config</a></td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Excel</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.excel">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-excel/id586683407">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td>Microsoft Launcher</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.launcher">Android</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/configure-microsoft-launcher">Launcher app config</a></td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Office</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow">Android</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/app/microsoft-office/id541164041">iOS</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://docs.microsoft.com/mem/intune/apps/manage-microsoft-office">Office app config</a></td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft OneDrive</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.skydrive">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft OneNote</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.onenote">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Outlook</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook">Android</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
-    <td align="center">✔</td>
-    <td align="center">✔</td>
-    <td align="center">✔</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-outlook/id951937596">iOS</a></td>
-    <td align="center">✔</td>
-    <td>✔ see <a href="https://aka.ms/omappconfig">Outlook app config</a></td>
-    <td align="center">✔</td>
-    <td align="center">✔</td>
-    <td align="center">✔</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Planner</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.planner">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-planner/id1219301037">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft PowerPoint</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-powerpoint/id586449534">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft SharePoint</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.sharepoint">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Teams</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.teams">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✔</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-teams/id1113153706">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✔</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft To-Do</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.todos">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-to-do/id1212616790">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Word</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-word/id586447913">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✔</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">✔</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Yammer</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.yammer.v1">Android</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/yammer/id289559439">iOS</a></td>
-    <td align="center">✔</td>
-    <td>No settings</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-    <td align="center">✖</td>
-    <td align="center">✖</td>
-    <td align="center">N/A</td>
-  </tr>
-</tbody>
-</table>
+|App|Platform|[Core App Protection Policy settings](app-protection-policy.md)|[App configuration](app-configuration-policies-overview.md)|Org allowed accounts ([iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps), [Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps))|Sync policy managed app data with native apps ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Org data notifications ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Open data into Org documents ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|Save copies of org data ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|
+|--- |--- |--- |--- |--- |--- |--- |--- |--- |
+|Microsoft Edge|[Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|✖|✖|N/A|
+|Microsoft Edge|[iOS](https://apps.apple.com/us/app/microsoft-edge/id1288723196)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|✖|✖|N/A|
+|Microsoft Excel|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)|✔|No settings|✔|N/A|✖|✖|✔|
+|Microsoft Excel|[iOS](https://apps.apple.com/us/app/microsoft-excel/id586683407)|✔|No settings|✔|N/A|✖|✖|✔|
+|Microsoft Launcher|[Android](https://play.google.com/store/apps/details?id=com.microsoft.launcher)|✔|✔ see [Launcher app config](configure-microsoft-launcher.md)|✖|N/A|✖|✖|N/A|
+|Microsoft Office|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
+|Microsoft Office|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
+|Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|
+|Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|
+|Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft OneNote|[iOS](https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246)|✔|No settings|✔|N/A|✖|✖|N/A|
+|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](https://aka.ms/omappconfig)|✔|✔|✔|✖|✖|
+|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](https://aka.ms/omappconfig)|✔|✔|✔|✖|✔|
+|Microsoft Planner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.planner)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|
+|Microsoft PowerPoint|[iOS](https://apps.apple.com/us/app/microsoft-powerpoint/id586449534)|✔|No settings|✔|N/A|✖|✖|✔|
+|Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✖|✖|
+|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔|✖|✖|
+|Microsoft To-Do|[Android](https://play.google.com/store/apps/details?id=com.microsoft.todos)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft To-Do|[iOS](https://apps.apple.com/us/app/microsoft-to-do/id1212616790)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft Word|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word)|✔|No settings|✔|N/A|✖|✖|✔|
+|Microsoft Word|[iOS](https://apps.apple.com/us/app/microsoft-word/id586447913)|✔|No settings|✔|N/A|✖|✖|✔|
+|Microsoft Yammer|[Android](https://play.google.com/store/apps/details?id=com.yammer.v1)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft Yammer|[iOS](https://apps.apple.com/us/app/yammer/id289559439)|✔|No settings|✖|N/A|✖|✖|N/A|
 
 The below apps support the core Intune App Protection Policy settings.
 
-<table>
-<thead>
-  <tr class="header">
-    <th rowspan="2">App</th>
-    <th rowspan="2">Platform</th>
-    <th align="center" rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-protection-policy">Core App Protection Policy settings</a></th>
-    <th align="center" rowspan="2"><a href="https://docs.microsoft.com/mem/intune/apps/app-configuration-policies-overview">App configuration</a></b></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Field Service Mobile</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/app/field-service-mobile/id1414669075">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft 365 Admin</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.ms.office365admin">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/app/microsoft-365-admin/id761397963">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>  
-  <tr>
-    <td rowspan="2">Microsoft Azure Information Protection Viewer</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.ipviewer">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/rms-sharing/id689516635">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>  
-  <tr>
-    <td rowspan="2">Microsoft Bookings</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-bookings/id1065657468">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Cortana</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.cortana">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/app/cortana/id1054501703">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Dynamics CRM</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/app/microsoft-dynamics-crm/id678800460">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Kaizala</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/in/app/microsoft-kaizala/id1112208399">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft PowerApps</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.msapps">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/powerapps/id1047318566">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Power Automate</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.flow">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-flow/id1094928825">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Power BI</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.powerbim">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-power-bi/id929738808">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Skype for Business</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.lync15">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/app/skype-for-business-formerly/id605841731">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Microsoft Stream</td>
-    <td><a href="https://play.google.com/store/apps/details?id=com.microsoft.stream">Android</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td><a href="https://apps.apple.com/us/app/microsoft-stream/id1401013624">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td>Microsoft Visio Viewer</td>
-    <td><a href="https://apps.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-  <tr>
-    <td>Microsoft Whiteboard</td>
-    <td><a href="https://apps.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983">iOS</a></td>
-    <td align="center">✔</td>
-    <td align="center">No settings</td>
-  </tr>
-</tbody>
-</table>
+|App|Platform|[Core App Protection Policy settings](app-protection-policy.md)|[App configuration](app-configuration-policies-overview.md)|
+|--- |--- |--- |--- |
+|Field Service Mobile|[Android](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile)|✔|No settings|
+|Field Service Mobile|[iOS](https://apps.apple.com/app/field-service-mobile/id1414669075)|✔|No settings|
+|Microsoft 365 Admin|[Android](https://play.google.com/store/apps/details?id=com.ms.office365admin)|✔|No settings|
+|Microsoft 365 Admin|[iOS](https://apps.apple.com/app/microsoft-365-admin/id761397963)|✔|No settings|
+|Microsoft Azure Information Protection Viewer|[Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)|✔|No settings|
+|Microsoft Azure Information Protection Viewer|[iOS](https://apps.apple.com/us/app/rms-sharing/id689516635)|✔|No settings|
+|Microsoft Bookings|[Android](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings)|✔|No settings|
+|Microsoft Bookings|[iOS](https://apps.apple.com/us/app/microsoft-bookings/id1065657468)|✔|No settings|
+|Microsoft Cortana|[Android](https://play.google.com/store/apps/details?id=com.microsoft.cortana)|✔|No settings|
+|Microsoft Cortana|[iOS](https://apps.apple.com/app/cortana/id1054501703)|✔|No settings|
+|Microsoft Dynamics CRM|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
+|Microsoft Dynamics CRM|[iOS](https://apps.apple.com/app/microsoft-dynamics-crm/id678800460)|✔|No settings|
+|Microsoft Kaizala|[Android](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)|✔|No settings|
+|Microsoft Kaizala|[iOS](https://apps.apple.com/in/app/microsoft-kaizala/id1112208399)|✔|No settings|
+|Microsoft PowerApps|[Android](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|✔|No settings|
+|Microsoft PowerApps|[iOS](https://apps.apple.com/us/app/powerapps/id1047318566)|✔|No settings|
+|Microsoft Power Automate|[Android](https://play.google.com/store/apps/details?id=com.microsoft.flow)|✔|No settings|
+|Microsoft Power Automate|[iOS](https://apps.apple.com/us/app/microsoft-flow/id1094928825)|✔|No settings|
+|Microsoft Power BI|[Android](https://play.google.com/store/apps/details?id=com.microsoft.powerbim)|✔|No settings|
+|Microsoft Power BI|[iOS](https://apps.apple.com/us/app/microsoft-power-bi/id929738808)|✔|No settings|
+|Microsoft Skype for Business|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.lync15)|✔|No settings|
+|Microsoft Skype for Business|[iOS](https://apps.apple.com/app/skype-for-business-formerly/id605841731)|✔|No settings|
+|Microsoft Stream|[Android](https://play.google.com/store/apps/details?id=com.microsoft.stream)|✔|No settings|
+|Microsoft Stream|[iOS](https://apps.apple.com/us/app/microsoft-stream/id1401013624)|✔|No settings|
+|Microsoft Visio Viewer|[iOS](https://apps.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983)|✔|No settings|
+|Microsoft Whiteboard|[iOS](https://apps.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983)|✔|No settings|
 
 ## Partner apps 
 The following apps support the core Intune App Protection Policy settings. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
