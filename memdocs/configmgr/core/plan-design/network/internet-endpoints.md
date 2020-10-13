@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 09/17/2020
+ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -221,6 +221,10 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 
 - `https://sc.microsoft.com`
 - `https://ssu2.manage.microsoft.com`
+
+## Deploy Microsoft Edge
+
+[!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
 
 ## Microsoft public IP addresses
 
