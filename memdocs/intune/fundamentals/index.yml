@@ -56,7 +56,7 @@ landingContent:
       - text: Plan communications
         url: migration-guide-communication-plan.md
       - text: Planning guide
-        url: planning-guide.md
+        url: intune-planning-guide.md
       - text: Migration guide
         url: migration-guide.md
       - text: Intune Adoption Kit

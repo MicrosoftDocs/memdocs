@@ -61,4 +61,4 @@ As you disable Conditional Access in the old MDM provider, users can still be pr
 
 ## Next steps
 
-[Special migration considerations](migration-guide-considerations.md)
+[Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
