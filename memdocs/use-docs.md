@@ -59,7 +59,7 @@ Use the following search tips to help you find the information that you need:
 
     :::image type="content" source="media/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter":::
 
-Having problems finding something? [File feedback!](#feedback) When you file an issue regarding search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
+Having problems finding something? [File feedback!](#about-feedback) When you file an issue regarding search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
 
 ## About feedback
 
@@ -161,7 +161,7 @@ If you want to contribute, but don't know where to start, see the following sugg
 
 Follow these general guidelines when you contribute:
 
-- Don't surprise us with large pull requests. Instead, [file an issue](#feedback) and start a discussion. Then we can agree on a direction before you invest a large amount of time.
+- Don't surprise us with large pull requests. Instead, [file an issue](#about-feedback) and start a discussion. Then we can agree on a direction before you invest a large amount of time.
 
 - Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice).
 
