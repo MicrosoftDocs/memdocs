@@ -32,6 +32,9 @@ ms.collection: M365-identity-device-management
 > [!warning]
 > Legacy PC management is no longer supported as of October 16, 2020. Upgrade devices to Windows 10 and reenroll them in Intune MDM to keep them managed by Intune. Devices managed with the PC software client will stop receiving security updates and apps, and you will no longer be able to configure them.
 
+## Deprecation announcement
+To review the original deprecation announcement, see the [Intune Support Blog](https://techcommunity.microsoft.com/t5/intune-customer-success/take-action-microsoft-intune-ending-support-for-the-silverlight/ba-p/916249).
+
 ## Use Intune MDM for all Windows 10 devices
 
 You must enroll new Windows 10 devices in Intune MDM instead of using the PC software client. For existing PC software client devices, you’ll want to remove the PC software client and enroll the device in Intune MDM instead.
