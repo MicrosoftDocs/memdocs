@@ -255,44 +255,9 @@
         href: education-settings-configure-ios-shared.md
     - name: Legacy Intune PC client
       href: intune-legacy-pc-client.md
-    - name: Manage PCs with software agent
-      href: manage-windows-pcs-with-microsoft-intune.md
-      items:
-      - name: Compare PC management
-        href: pc-management-comparison.md
-      - name: Install the PC client
-        href: install-the-windows-pc-client-with-microsoft-intune.md
-      - name: Common PC management tasks
-        href: common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md
-        items:
-        - name: PC policies
-          href: use-policies-to-simplify-windows-pc-management.md
-        - name: View inventory
-          href: view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md
-        - name: Retire PCs
-          href: retire-a-windows-pc-with-microsoft-intune.md
-        - name: Link PCs to users
-          href: manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md
-        - name: Remote assistance
-          href: request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md
-      - name: Policies to protect Windows PCs
-        href: policies-to-protect-windows-pcs-in-microsoft-intune.md
-        items:
-        - name: Software updates
-          href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
-        - name: Windows Firewall
-          href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
-        - name: Endpoint Protection
-          href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
-      - name: Add apps for Intune client PCs
-        href: add-apps-for-windows-pcs-in-microsoft-intune.md
-      - name: Manage license agreements
-        href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
-      - name: Resolve policy conflicts
-        href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
-      - name: Troubleshoot software updates
-        href: troubleshoot-software-updates-in-microsoft-intune.md
-      - name: Endpoint protection common errors 
-        href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-  - name: Intune end-user documentation  
+    - name: Troubleshoot software updates
+      href: troubleshoot-software-updates-in-microsoft-intune.md
+    - name: Endpoint protection common errors
+      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+  - name: Intune end-user documentation
     href: ../user-help/use-managed-devices-to-get-work-done.md
