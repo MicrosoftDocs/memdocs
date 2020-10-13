@@ -75,7 +75,7 @@ New restriction capabilities are added to the Azure portal only.
 ## Where did my Conditional Access policies go?
 After your tenant migrates to the Azure portal, your tenant's Conditional Access policies continue to be enforced. However, you are not able to view or modify them from Intune in the Azure portal.
 
-If you would like to view and make changes to Conditional Access policies from the Azure portal, you will need to remove the old policies from the classic portal. Then recreate them in the Azure portal. For more information about migrating Conditional Access policies, see [Migrate classic policies in the Azure Portal](/azure/active-directory/active-directory-conditional-access-migration). 
+If you would like to view and make changes to Conditional Access policies from the Azure portal, you will need to remove the old policies from the classic portal. Then recreate them in the Azure portal. For more information about migrating Conditional Access policies, see [Migrate classic policies in the Azure Portal](/azure/active-directory/active-directory-conditional-access-migration).
 
 ## Where did my compliance policies go?
 After your tenant migrates to the Azure portal, your tenant's compliance policies continue to be enforced. However, you are not able to view or modify them from Intune in the Azure portal.
@@ -83,7 +83,7 @@ After your tenant migrates to the Azure portal, your tenant's compliance policie
 If you would like to view and make changes to compliance policies from the Azure portal, you will need to remove the old policies from the classic portal. Then recreate them in the Azure portal. For more information about device compliance policies, see [Get started with device compliance policies in Intune](../protect/device-compliance-get-started.md). 
 
 ## Where did Apple DEP go?
-In the classic portal, you could set up Intune to integrate with Apple’s Device Enrollment Program and manually request synchronization with Apple's service:
+In the classic portal, you could set up Intune to integrate with Apple's Device Enrollment Program and manually request synchronization with Apple's service:
 
 ![Image of classic DEP token](./media/ui-changes/06-classic-dep-token.png)
 
