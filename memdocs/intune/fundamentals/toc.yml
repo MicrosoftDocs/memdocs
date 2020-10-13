@@ -69,16 +69,18 @@
   items:
   - name: Plan and Deploy
     items:
+    - name: Planning and deployment guides
+      href: migration-guide.md
     - name: Planning guide
       href: intune-planning-guide.md
-    - name: Deployment guides
-      href: migration-guide.md
+    - name: Deployment/Migration guides
       items:
       - name: Set up Intune
         href: deployment-guide-intune-setup.md
       - name: Enroll devices
-        href: deployment-guide-enrollment.md
         items:
+        - name: Overview
+          href: deployment-guide-enrollment.md
         - name: MAM-WE 
           href: deployment-guide-enrollment-mamwe.md
         - name: Android, Android Enterprise
@@ -89,9 +91,9 @@
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
-      - name: Configure device and app management policies
+      - name: Device and app management
         href: migration-guide-configure-policies.md
-      - name: Configure app protection policies
+      - name: App protection
         href: migration-guide-app-protection-policies.md
       - name: Migration guidance
         href: migration-guide-campaign.md

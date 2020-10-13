@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -246,10 +246,10 @@ With these goals in mind, create a baseline of your policies. If you have multip
 
 - Be prepared to create new policies and profiles in Intune. Intune includes several features that cover scenarios that may interest you. Some examples:
 
-  - On Windows 10 devices, [Security baselines](../protect/security-baselines.md) are security settings that are pre-configured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at Security Baselines.
-  - On Windows 10 devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in AD group policy, but are 100% cloud-based in Intune.
-  - Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
-  - [Guided scenarios](guided-scenarios-overview.md) are a customized series of steps focused on end-to-end use cases. These scenarios automatically include policies, apps, assignments, and other management configurations.
+  - **Security baselines**: On Windows 10 devices, [Security baselines](../protect/security-baselines.md) are security settings that are pre-configured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at Security Baselines.
+  - **Administrative templates**: On Windows 10 devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in AD group policy, but are 100% cloud-based in Intune.
+  - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
+  - **Guided scenarios**: [Guided scenarios](guided-scenarios-overview.md) are a customized series of steps focused on end-to-end use cases. These scenarios automatically include policies, apps, assignments, and other management configurations.
 
 - Create a policy baseline that includes the minimum of your goals. For example:
 
@@ -435,8 +435,8 @@ Include your IT support and helpdesk in the early stages of Intune deployment pl
   - Tools and resources
   - Q & A
 
-The [Intune documentation](../index.yml), community-based [Intune forum](https://social.technet.microsoft.com/Forums/home), and [end-user documentation](https://docs.microsoft.com/intune-user-help/use-managed-devices-to-get-work-done) are also great resources.
+The [educate your end users documentation](end-user-educate.md), community-based [Intune forum](https://social.technet.microsoft.com/Forums/home), and [end-user documentation](https://docs.microsoft.com/intune-user-help/use-managed-devices-to-get-work-done) are also great resources.
 
 ## Next steps
 
-Start the migration.
+Create [your app and device policies](migration-guide-configure-policies.md), and [enroll your devices](deployment-guide-enrollment.md).
