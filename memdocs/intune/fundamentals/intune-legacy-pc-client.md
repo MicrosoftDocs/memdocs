@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Legacy Intune PC client and Intune on Azure
+title: Legacy Intune PC client
 description: Considerations when using Intune on Azure to manage your organization's Windows devices.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 10/16/2020
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -26,48 +26,104 @@ ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 
-# Intune on Azure console and legacy Intune PC client
+# What happened to the Intune PC client?
 
-Intune uses an Azure-based SaaS application service architecture. Azure provides significant improvements in scale, capacity, and performance. This offers enhanced Intune admin experiences and optimized workflows in the Azure portal. 
+> [!warning]
+> Legacy PC management is no longer supported as of October 16, 2020. Upgrade devices to Windows 10 and reenroll them in Intune MDM to keep them managed by Intune. Devices managed with the PC software client will stop receiving security updates and apps, and you will no longer be able to configure them.
 
-When using Intune on Azure to manage your organization's Windows devices, consider the following points:
+## Use Intune MDM for all Windows 10 devices
 
-## Manage Windows 10 devices by using MDM
+You must enroll new Windows 10 devices in Intune MDM instead of using the PC software client. For existing PC software client devices, you’ll want to remove the PC software client and enroll the device in Intune MDM instead.
 
-We recommend that you use [Mobile Device Management (MDM) to manage your Windows 10 devices](../configuration/device-restrictions-windows-10.md) instead of using the legacy Intune PC client. The ability to manage Windows 10 via MDM is available in the Intune on Azure portal. Windows 10 MDM provides many new management and security capabilities that are not available via the legacy Intune PC client.
+### General steps to use Intune MDM instead of the Intune PC client
 
-## Legacy PC Client features are only available in the Silverlight console
+1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+2. Recreate your existing Windows 10 policies as MDM policies. Note that many device management policies were migrated several years ago as part of the admin console migration. Check device management in Azure before you create new policies.
+3. Review reporting in the Microsoft Intune administration console to find the devices that are managed by the PC software client.
+4. Determine the right modern enrollment method that's right for your organization. For details, see [Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md).
+5. Unenroll devices with the Intune PC client and re-enroll the devices using Intune MDM. We strongly recommend you update to the latest version of Windows 10. As of January 14, 2020, Intune no longer supports Windows 7.
+6. Add apps to Intune MDM. For details, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
-[!INCLUDE [classic-portal](../includes/classic-portal.md)]
+   > [!note] If you currently have Intune storage add-on licensing, it is not required with Intune MDM to manage your Windows 10 PC's.
 
-The Intune PC Client management workflows use the [Silverlight-based Intune Admin Console](https://admin.manage.microsoft.com/), which has the following consequences:
+## Uninstall the Intune PC client software
 
-- For all non-grouping management tasks using the Intune PC Client, you must use the Silverlight console.
-- When managing groups, you must use the [Intune on Azure portal](https://portal.azure.com/). This requirement exists because Intune now uses Azure AD Groups instead of legacy Intune Groups. 
+There are two ways to unenroll the legacy Intune PC client software:
 
-Because of the switch to Azure AD Groups, "group-based" filtering in the Silverlight console dashboard views has changed slightly. To filter in the updated Silverlight UI, follow these steps:
+- From the Microsoft Intune administration console (recommended method)
+- From a command prompt on the device
 
-1. Select a view.
-2. In the **Filters** box, enter the name of the group that you want to filter by and press enter. This will filter the list view to the devices in that particular group.
+### Unenroll by using the Microsoft Intune administration console
 
-   ![Filters dropdown input with None selected](./media/intune-legacy-pc-client/image01.png)
+To unenroll the software client by using the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), go to **Groups** > **All Computers** > **Devices**. Right-click the device, and select **Retire/Wipe**.
 
+### Unenroll by using a command prompt on the device
 
-## Continue to manage Windows 7 by using Intune PC Client
+Using an elevated command prompt, run one of the following commands.
 
-For Windows 7, which can't be managed by using MDM, we will continue to support existing Intune PC Client capabilities in the Silverlight console only. Consider migrating to MDM management when you upgrade to Windows 10.
+**Method 1**:
 
-## MDM Capabilities
+```cmd
+"C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```
 
-For a detailed comparison between PC Client and MDM capabilities, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md). MDM updates will continue to bring new management capabilities to MDM-enrolled, Windows 10 devices, inclusive of evaluating options for Win 32 apps. View the [What's New](whats-new.md) for the latest release additions to the service.
+**Method 2** 
+> [!note] All of the following agents are installed on every SKU of Windows
 
-## Switch from PC Client to MDM
+```cmd
+wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
+wmic product where name="Microsoft Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Microsoft Online Management Policy Agent" call uninstall
+wmic product where name="Microsoft Policy Platform" call uninstall
+wmic product where name="Microsoft Security Client" call uninstall
+wmic product where name="Microsoft Online Management Client" call uninstall
+wmic product where name="Microsoft Online Management Client Service" call uninstall
+wmic product where name="Microsoft Easy Assist v2" call uninstall
+wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Microsoft Intune Center" call uninstall
+wmic product where name="Microsoft Online Management Update Manager" call uninstall
+wmic product where name="Microsoft Online Management Agent Installer" call uninstall
+wmic product where name="Microsoft Intune" call uninstall
+wmic product where name="Windows Endpoint Protection Management Components" call uninstall
+wmic product where name="Windows Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Windows Online Management Policy Agent" call uninstall
+wmic product where name="Windows Policy Platform" call uninstall
+wmic product where name="Windows Security Client" call uninstall
+wmic product where name="Windows Online Management Client" call uninstall
+wmic product where name="Windows Online Management Client Service" call uninstall
+wmic product where name="Windows Easy Assist v2" call uninstall
+wmic product where name="Windows Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Windows Intune Center" call uninstall
+wmic product where name="Windows Online Management Update Manager" call uninstall
+wmic product where name="Windows Online Management Agent Installer" call uninstall
+wmic product where name="Windows Intune" call uninstall
+```
 
-To switch from managing Windows 10 devices with the Intune PC Client to managing with MDM, follow these steps:
+> [!TIP]
+> Client unenrollment leaves a stale server-side record for the affected client. The unenrollment process is asynchronous, and there are nine agents to uninstall, so it may take up to 30 mins to complete.
 
-1. In the Silverlight console, perform a **Selective wipe** to un-enroll the device from the PC Client.
-  ![Warning popup with the 'Selectively wipe the device` radio button selected](./media/intune-legacy-pc-client/image02.png)
-2. Re-enroll the device by using [MDM (and/or Azure AD Join)](../enrollment/windows-enroll.md).
+### Check the unenrollment status
+
+Check "%ProgramFiles%\Microsoft\OnlineManagement" and ensure that only the following directories are shown on the left:
+
+- AgentInstaller
+- Logs
+- Updates
+- Common
+
+### Remove the OnlineManagement folder
+
+The unenrollment process does not remove the OnlineManagement folder. Wait 30 minutes after the uninstall, and then run this command. If you run it too soon, the uninstall could be left in an unknown state. To remove the folder, start an elevated prompt and run:
+
+```cmd
+rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
+```
 
 ## Next steps
-[Enroll Windows devices](../enrollment/windows-enroll.md)
+[Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md)

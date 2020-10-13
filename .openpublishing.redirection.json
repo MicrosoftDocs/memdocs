@@ -259,6 +259,58 @@
             "source_path": "memdocs/autopilot/white-glove.md",
             "redirect_url": "/mem/autopilot/pre-provision",
             "redirect_document_id": true
-        }
+        },
+
+
+        {
+            "source_path": "memdocs/intune/fundamentals/ui-changes.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },                   
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },           
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        }                        
     ]
 }
