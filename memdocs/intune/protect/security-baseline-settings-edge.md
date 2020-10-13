@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 10/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -74,20 +74,21 @@ To update a security baseline profile to the latest version of that baseline, se
 ::: zone pivot="edge-april-2020"
 
 - **Supported authentication schemes**  
-  Specifies which HTTP authentication schemes are supported. You can configure the policy by using these values: *basic*, *digest*, *ntlm*, and *negotiate*. Separate multiple values with commas. If you don't configure this policy, all four schemes are used.
+  Use this setting to change the default behavior of Edge as to the HTTP authentication schemes that Edge can use. Edge supports and can use the following schemes: *basic*, *digest*, *ntlm*, and *negotiate*.
 
-  - **Enabled** (*default*) - Schemes you select are used.
+  - **Enabled** (*default*) - When set to *Enabled*, you can then configure the following setting where you specify which of the four HTTPS authentication schemes Edge can use.
   - **Disabled**
-  - **Not configured** - All four schemes are used.
-  
-  When set to *Enabled* you can configure the following setting where you select which authentication to use:
+  - **Not configured** - When set to *Not configured*, Edge will support all four schemes.
 
-  - **Supported authentication schemes**  
-    Select from the following options:
-    - **Basic**
-    - **Digest**
-    - **NTLM** *(Selected by default)*
-    - **Negotiate** *(Selected by default)*
+  **Supported authentication schemes** - To access this setting, the previous instance of *Supported authentication schemes* must be set to *Enabled*.
+
+  Select one or more HTTP authentication schemes for by Edge. By default, two are already selected:
+  - **Basic**
+  - **Digest**
+  - **NTLM** *(Selected by default)*
+  - **Negotiate** *(Selected by default)*
+
+  For more information, see [AuthSchemes](/deployedge/microsoft-edge-policies#authschemes) in the Microsoft Edge policies documentation, and [Understanding HTTP authentication](/dotnet/framework/wcf/feature-details/understanding-http-authentication) in the .NET Framework documentation.
 
 - **Default Adobe Flash setting**  
   CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash), and [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
@@ -268,16 +269,21 @@ To update a security baseline profile to the latest version of that baseline, se
   - If you use *Disabled* or *Not Configured*, a user can opt out of site isolation. (For example, by using "Disable site isolation" entry in edge://flags.) Disabling the policy or not configuring the policy doesn't turn off Site Isolation.
 
 - **Supported authentication schemes**  
-  **Default**: Enabled  
+  Use this setting to change the default behavior of Edge as to the HTTP authentication schemes that Edge can use. Edge supports and can use the following schemes: *basic*, *digest*, *ntlm*, and *negotiate*.
 
-  Specifies which HTTP authentication schemes are supported. You can configure the policy by using these values: 'basic', 'digest', 'ntlm', and 'negotiate'. Separate multiple values with commas. If you don't configure this policy, all four schemes are used.
+  - **Enabled** (*default*) - When set to *Enabled*, you can then configure the following setting where you specify which of the four HTTPS authentication schemes Edge can use.
+  - **Disabled**
+  - **Not configured** - When set to *Not configured*, Edge will support all four schemes.
 
-  - **Supported authentication schemes**  
-    Select from the following options:
-    - Basic
-    - Digest
-    - NTLM *(Selected by default)*
-    - Negotiate *(Selected by default)*
+  **Supported authentication schemes** - To access this setting, the previous instance of *Supported authentication schemes* must be set to *Enabled*.
+
+  Select one or more HTTP authentication schemes for by Edge. By default, two are already selected:
+  - **Basic**
+  - **Digest**
+  - **NTLM** *(Selected by default)*
+  - **Negotiate** *(Selected by default)*
+
+  For more information, see [AuthSchemes](/deployedge/microsoft-edge-policies#authschemes) in the Microsoft Edge policies documentation, and [Understanding HTTP authentication](/dotnet/framework/wcf/feature-details/understanding-http-authentication) in the .NET Framework documentation.
 
 - **Enable saving passwords to the password manager**  
   **Default**: Disabled  
