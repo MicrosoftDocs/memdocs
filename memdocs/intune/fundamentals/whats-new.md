@@ -56,9 +56,27 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
- 
+
 <!-- ########################## -->
 ## Week of October 12, 2020
+
+### Device configuration
+
+#### Configure the macOS Microsoft Enterprise SSO plug-in<!-- 5627576 8278906-->
+
+> [!IMPORTANT]
+> On macOS, the Microsoft Azure AD SSO extension is listed in the Intune user interface, but wasn't working as expected. This feature is now working, and is available to use in public preview.
+
+The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension. This app extension allows macOS 10.15+ users to access Microsoft apps, organization apps, and websites that support Apple's SSO feature. It authenticates using Azure AD, with one sign-on.
+
+With the Microsoft Enterprise SSO plug-in release, you can configure the SSO extension with the new Microsoft Azure AD app extension type in Intune (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile >  **Single sign-on app extension** > SSO app extension type > **Microsoft Azure AD**).
+
+To get SSO with the Microsoft Azure AD SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices.
+
+For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
+
+Applies to:
+- macOS 10.15 and newer
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -67,7 +85,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway. The following changes are included in the new version:
 
-- Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the *syslog* format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journalctl -t* command-line on the tunnel server. 
+- Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the *syslog* format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the `journalctl -t` command line on the tunnel server.
 - Various bug fixes.
 
 <!-- ########################## -->
@@ -103,7 +121,7 @@ In preview, we’ve added a new profile to Intune endpoint security Antivirus po
 
 The new profile is found under the *Windows 10 and Windows Server (ConfigMgr)* platform when you create a new Antivirus policy.
 
-Before you can use Intune endpoint security policies with tenant attached devices, you’ll need configure Configuration Manager [tenant attach](../protect/tenant-attach-intune.md) and synchronize devices with Intune.
+Before you can use Intune endpoint security policies with tenant attached devices, you need to configure Configuration Manager [tenant attach](../protect/tenant-attach-intune.md), and synchronize devices with Intune.
 
 Also be aware of the specific [prerequisites](../protect/endpoint-security-antivirus-policy.md#prerequisites-for-tamper-protection) that are required to use and support tamper protection with Intune policy.
 
@@ -115,7 +133,7 @@ Also be aware of the specific [prerequisites](../protect/endpoint-security-antiv
 
 #### Tenant attach: Run scripts from the admin center
 <!--7220536, CM6234688-->
-Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
+Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This feature gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
 
 ### App management
 
@@ -160,7 +178,7 @@ Applies to:
 To see all the settings you can configure, go to [Android Enterprise device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md).
 
 #### Analyze your on-premises GPOs using Group Policy analytics<!--7200950   -->
-In **Devices** > **Group Policy analytics (preview)**, you can import your group policy objects (GPOs) in the Endpoint Manager admin center. When you import, Intune automatically analyzes the GPO, and shows the policies that have equivalent settings in Intune. It also shows GPOs that are deprecated, or aren't supported anymore. For a deeper drill down, go to **Reports** >  **Group policy analytics (preview)** > Migration readiness report.
+In **Devices** > **Group Policy analytics (preview)**, you can import your group policy objects (GPOs) in the Endpoint Manager admin center. When you import, Intune automatically analyzes the GPO, and shows the policies that have equivalent settings in Intune. It also shows GPOs that are deprecated, or aren't supported anymore. For deeper information, go to **Reports** >  **Group policy analytics (preview)** > Migration readiness report.
 
 For more information on this feature, see [Group Policy analytics](../configuration/group-policy-analytics.md).
 
@@ -168,7 +186,7 @@ Applies to:
 - Windows 10 and newer
 
 #### Block App Clips on iOS/iPadOS, and Defer non-OS software updates on macOS devices<!-- 7518422   -->
-When you create a Device Restrictions profiles on iOS/iPadOS and macOS devices, there are some new settings:
+When you create a Device Restrictions profile on iOS/iPadOS and macOS devices, there are some new settings:
 
 **iOS/iPadOS 14.0+ Block App Clips**
 
@@ -274,9 +292,9 @@ Microsoft Tunnel supports per-app and full device VPN, split tunneling, and cond
 New Android devices are making use of a more diverse set of biometrics beyond fingerprints. When OEMs implement support for non-fingerprint biometrics, end users have the potential to use this capability for secure access and a better experience. With the 2009 release of Intune, you can allow your end users to use fingerprint or Face Unlock, depending on what the Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
 
 #### New details in the Endpoint security configuration for a device<!-- 7745029     -->
-You can now view additional details for devices as part of a devices *Endpoint security configuration*. When you drill-in to view status details about policies you've deployed to devices, you’ll now find the following:
+You can now view additional details for devices as part of a devices *Endpoint security configuration*. When you drill-in to view status details about policies you've deployed to devices, you’ll now find the following setting:
  
-- **UPN** (User Principle Name): The UPN identifies which endpoint security profile is assigned to a given user on the device. This is useful to help differentiate between multiple users on a device and multiple entries of a profile or baseline that’s assigned to the device. 
+- **UPN** (User Principle Name): The UPN identifies which endpoint security profile is assigned to a given user on the device. This information is useful to help differentiate between multiple users on a device and multiple entries of a profile or baseline that’s assigned to the device. 
 
 For more information, see [Resolve conflicts for security baselines](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines).
 
@@ -353,14 +371,14 @@ To deploy S/MIME certificates to supported Android devices, use a [PKCS imported
 
 #### Improved status details in security baseline reports<!-- 7221051 -->
 We’ve begun improving many of the [status details for Security baseline](../protect/security-baselines-monitor.md). You’ll now see more meaningful and detailed status when viewing information about the baseline Versions you’ve deployed.
- 
-Specifically, when you select a baseline, select *Version*, and the select an instance of that baseline, the initial Overview displays the following:
+
+Specifically, when you select a baseline, select *Version*, and the select an instance of that baseline, the initial Overview displays the following information:
  
 - **Security baseline posture** chart - This chart now displays the following status details:
   - **Matches default baseline** – This status replaces *Matches baseline* and identifies when a devices configuration matches the default (unmodified) baseline configuration.
-  - **Matches custom settings** – This identifies when a devices configuration matches the baseline that you’ve configured (customized) and deployed.
-  - **Misconfigured** – This is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, as detailed below.
-  - **Not applicable** - This represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
+  - **Matches custom settings** – This status identifies when a devices configuration matches the baseline that you’ve configured (customized) and deployed.
+  - **Misconfigured** – This status is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, as detailed below.
+  - **Not applicable** - This status represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
 - **Security baseline posture by category** - This is a list view that displays device status by category. The available columns mirror much of the *Security baseline posture* chart, but in place of *Misconfigured* you’ll see three columns for the status that make up Misconfigured:
   - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
   - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
@@ -417,7 +435,7 @@ We're adding four new reports for Microsoft Defender Antivirus on Windows 10 in 
 For more information, see [Intune reports](../fundamentals/reports.md) and [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md).
 
 #### New Windows 10 feature update report<!-- 6473128  -->
-The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information see [Windows 10 feature updates](../fundamentals/reports.md#windows-10-feature-updates-organizational).
+The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information, see [Windows 10 feature updates](../fundamentals/reports.md#windows-10-feature-updates-organizational).
 
 
 <!-- ########################## -->
@@ -493,20 +511,6 @@ To see the settings you can configure, go to [Add Wi-Fi settings for Windows 10 
 
 Applies to: 
 - Windows 10 and newer
-
-#### Configure the macOS Microsoft Enterprise SSO plug-in<!-- 5627576  idstaged -->
-
-> [!IMPORTANT]
-> On macOS, the Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. On macOS, don't use **Microsoft Azure AD** for the SSO app extension type.
-
-The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension to allow macOS 10.15+ users to gain access to Microsoft apps, organization apps, and websites that support Apple's SSO feature and authenticate using Azure AD, with one sign-on. With the Microsoft Enterprise SSO plug-in release, you can configure the SSO extension with the new Microsoft Azure AD app extension type (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile >  **Single sign-on app extension** > SSO app extension type > **Microsoft Azure AD**).
-
-To achieve SSO with the Microsoft Azure AD SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices. 
-
-For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
-
-Applies to:
-- macOS 10.15 and newer
 
 #### Prevent users from unlocking Android Enterprise work profile devices using face and iris scanning<!--6069759 idmiss -->
 You can now prevent users from using face or iris scanning to unlock their work profile managed devices, either at the device level or the work profile level. This can be set in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Work profile > Device restrictions** for profile > **Work profile settings** and **Password** sections.
@@ -658,7 +662,7 @@ On Android Enterprise devices, administrators can use device configuration profi
 
 Specifically, you can:
 
-- Customize icons, change the screen orientation , and show app notifications on badge icons <!--7414175-->
+- Customize icons, change the screen orientation, and show app notifications on badge icons <!--7414175-->
 - Hide the Managed Settings shortcut <!--7133328-->
 - Easier access to the debug menu <!--7133720-->
 - Create an allowed list of Wi-Fi networks <!-- 7134873-->
@@ -677,7 +681,7 @@ The ADMX settings available for Microsoft Edge have been updated. End users can 
 ### Device enrollment
 
 #### Corporate-owned, personally enabled devices (preview)<!--4442275  -->
-Intune now supports Android Enterprise corporate-owned devices with a work profile for OS versions Android 8 and above. Corporate-owned devices with a work profile is one of the corporate management scenarios in the Android Enterprise solution set. This scenario is for single user devices intended for corporate and personal use. This corporate-owned, personally-enabled (COPE) scenario offers:
+Intune now supports Android Enterprise corporate-owned devices with a work profile for OS versions Android 8 and above. Corporate-owned devices with a work profile is one of the corporate management scenarios in the Android Enterprise solution set. This scenario is for single user devices intended for corporate and personal use. This corporate-owned, personally enabled (COPE) scenario offers:
 
 - work and personal profile containerization
 - device-level control for admins
@@ -727,12 +731,12 @@ We've added two new settings to the *Updates* category of [endpoint security ant
 - *Define file shares for downloading definition updates*
 - *Define the order of sources for downloading definition updates*
 
-With the new settings you can add UNC file shares as download source locations for definition updates, and define the order in which different source locations are contacted.
+With the new settings, you can add UNC file shares as download source locations for definition updates, and define the order in which different source locations are contacted.
 
 #### Improved security baselines node<!-- 7433136    -->
-We've made some changes to improve the usability of the [security baseline node](../protect/security-baselines.md) in the Microsoft Endpoint Manager admin center. Now when you drill in to **Endpoint security** > **Security baselines** and then select a security baseline type like the MDM Security Baseline, your presented with the **Profiles** pane. On the Profiles pane you view the profiles you've created for that Baseline type.  Previously the console presented an Overview pane which included an aggregate data roll up that didn't always match the details found in the reports for individual profiles.
+We've made some changes to improve the usability of the [security baseline node](../protect/security-baselines.md) in the Microsoft Endpoint Manager admin center. Now when you drill in to **Endpoint security** > **Security baselines** and then select a security baseline type like the MDM Security Baseline, you're presented with the **Profiles** pane. On the Profiles pane, you view the profiles you've created for that Baseline type.  Previously the console presented an Overview pane which included an aggregate data roll up that didn't always match the details found in the reports for individual profiles.
 
-Unchanged, from the Profiles pane you can select a profile to drill-in to view that profiles properties as well as various reports that are available under *Monitor*.  Similarly, at the same level as Profiles you can still select **Versions** to view a the various versions of that profile type that you've deployed. When you drill-in to a version, you also gain access to reports, similar to the profile reports. 
+Unchanged, from the Profiles pane you can select a profile to drill-in to view that profiles properties as well as various reports that are available under *Monitor*.  Similarly, at the same level as Profiles you can still select **Versions** to view the various versions of that profile type that you've deployed. When you drill-in to a version, you also gain access to reports, similar to the profile reports. 
 
 #### Derived credentials support for Windows<!-- 4886090   -->
 You can now use derived credentials with your Windows devices. This will  expand on the existing support for iOS/iPadOS and Android, and will be available for the same derived credential providers:
@@ -772,7 +776,7 @@ The Intune DeviceComplianceOrg logs previously only had enumerations for Complia
 ### Role-based access control
 
 #### Assign profile and Update profile permission changes<!--7177586   -->
-Role-based access control permissions has changed for Assign profile and Update profile for the Automated Device Enrollment flow:
+Role-based access control permissions have changed for Assign profile and Update profile for the Automated Device Enrollment flow:
 
 Assign profile: Admins with this permission can also assign the profiles to tokens and assign a default profile to a token for Automated Device Enrollment.
 
@@ -844,7 +848,7 @@ You can create and run script packages on end user devices to proactively find a
 
 #### Use Microsoft Defender ATP in compliance policies for Android<!-- 4425686  -->
 
-You can now use Intune to [onboard Android devices to Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection-configure.md#onboard-devices) (MicrosoftDefender ATP). After your enrolled devices are onboarded, your compliance polices for Android can use the *threat level* signals from Microsoft Defender ATP. These are the same signals that you could previously use for Windows 10 devices.
+You can now use Intune to [onboard Android devices to Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection-configure.md#onboard-devices) (MicrosoftDefender ATP). After your enrolled devices are onboarded, your compliance policies for Android can use the *threat level* signals from Microsoft Defender ATP. These are the same signals that you could previously use for Windows 10 devices.
 
 #### Configure Defender ATP web protection for Android devices<!-- 6185563  -->
 
@@ -877,7 +881,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Improvements to Devices page of iOS/iPadOS and macOS Company Portals<!-- 6055001 -->
-We've made changes to the Company Portal **Devices** page to improve the app experience for iOS/iPadOS and Mac users. In addition to creating a more modern look and feel, we reorganized the device details under a a single column with defined section headers so that it's easier for users to see their device status. We also added clearer messaging and  troubleshooting steps for users whose devices fall out of compliance. For more information about Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md). To manually sync a device, see [Sync your iOS device manually](../user-help/sync-your-device-manually-ios.md).  
+We've made changes to the Company Portal **Devices** page to improve the app experience for iOS/iPadOS and Mac users. In addition to creating a more modern look and feel, we reorganized the device details under a single column with defined section headers so that it's easier for users to see their device status. We also added clearer messaging and  troubleshooting steps for users whose devices fall out of compliance. For more information about Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md). To manually sync a device, see [Sync your iOS device manually](../user-help/sync-your-device-manually-ios.md).  
 
 #### Cloud setting for iOS/iPadOS Company Portal app<!-- 7071303  -->
 A new **Cloud** setting for the iOS/iPadOS Company Portal allows users to redirect their authentication towards the appropriate cloud for your organization. By default, the setting is configured to **Automatic**, which directs authentication towards the cloud automatically detected by the user's device. If authentication for your organization must be redirected towards a cloud other than the cloud that is automatically detected (such as Public or Government), your users can manually select the appropriate cloud by selecting the **Settings** app > **Company Portal** > **Cloud**. Your users should only change the **Cloud** setting from **Automatic** if they are signing in from another device and the appropriate cloud is not automatically detected by their device. 
@@ -993,7 +997,6 @@ Requires: iPadOS 13.4 and later. This release added support for temporary sessio
 #### Updated user interface for Apple's Automated Device Enrollment<!--7430322 -->
 The user interface has been updated to replace Apple's Device Enrollment Program to Automated Device Enrollment to reflect Apple terminology.
 
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
@@ -1008,7 +1011,7 @@ This new feature automatically sets the owner property on newly-enrolled Hybrid 
 
 This is a change to the enrollment process and only applies to newly enrolled devices. For existing Hybrid Azure AD Joined devices, you must manually update the Azure AD Owner property. To do this, you can use the [Change primary user feature](../remote-actions/find-primary-user.md#change-a-devices-primary-user) or [a script](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
 
-When Windows 10 devices become Hybrid Azure Azure Directory Joined, the first user of the device becomes the primary user in Endpoint Manager.  Currently, the user isn't set on the corresponding Azure AD device object. This causes an inconsistency when comparing the *owner* property from an Azure AD portal with the *primary user* property in Microsoft Endpoint Manager admin center. The Azure AD owner property is used for securing access to BitLocker recovery keys. The property isn't populated on Hybrid Azure AD Joined devices. This limitation prevents set up of self-service of BitLocker recovery from Azure AD. This upcoming feature solves this limitation.
+When Windows 10 devices become Hybrid Azure Active Directory Joined, the first user of the device becomes the primary user in Endpoint Manager.  Currently, the user isn't set on the corresponding Azure AD device object. This causes an inconsistency when comparing the *owner* property from an Azure AD portal with the *primary user* property in Microsoft Endpoint Manager admin center. The Azure AD owner property is used for securing access to BitLocker recovery keys. The property isn't populated on Hybrid Azure AD Joined devices. This limitation prevents set up of self-service of BitLocker recovery from Azure AD. This upcoming feature solves this limitation.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

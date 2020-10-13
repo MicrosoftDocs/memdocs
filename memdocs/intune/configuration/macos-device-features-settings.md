@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/06/2020
+ms.date: 10/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -271,21 +271,18 @@ This feature applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
-  - **Microsoft Azure AD**: 
-
-    > [!IMPORTANT]
-    > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
-    >
-    > The Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. Don't use **Microsoft Azure AD** for the SSO app extension type.
-
-    Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple’s Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
+  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple’s Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
 
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements.
 
     > [!IMPORTANT]
-    > To achieve SSO with the Microsoft Azure AD SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
+    > - The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
     >
-    > For more information about the Company Portal app, see [What happens if you install the Company Portal app and enroll your macOS device in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md). [Download](https://go.microsoft.com/fwlink/?linkid=853070) the Company Portal app.
+    > - To achieve SSO with the Microsoft Azure AD SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
+    >
+    >   For more information about the Company Portal app, see [What happens if you install the Company Portal app and enroll your macOS device in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md). 
+    > 
+    >   You can also [download the Company Portal app](https://go.microsoft.com/fwlink/?linkid=853070).
 
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension and team ID for your organization's app extension.
   - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID and team ID for your organization's SSO app extension.  
