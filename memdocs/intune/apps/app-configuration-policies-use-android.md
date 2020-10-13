@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/03/2020
+ms.date: 10/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -119,6 +119,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > - Edge for Android (42.0.4.4048 and later)
    > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 and later)
    > - OneDrive for Android (5.28 and later)
+   > - OneNote for Android (16.0.13231.20222 or later)
    > - Outlook for Android (2.2.222 and later)
    > - Teams for Android (1416/1.0.0.2020073101 and later)
 
