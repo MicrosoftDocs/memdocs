@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 09/17/2020
+ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -55,8 +55,6 @@ For more information on this function, see [Updates and servicing for Configurat
 
 - `go.microsoft.com`  
 
-- `*.blob.core.windows.net`  
-
 - `download.microsoft.com`  
 
 - `download.windowsupdate.com`  
@@ -64,6 +62,22 @@ For more information on this function, see [Updates and servicing for Configurat
 - `sccmconnected-a01.cloudapp.net`  
 
 - `configmgrbits.azureedge.net`  
+
+- `ceuswatcab01.blob.core.windows.net`
+
+- `ceuswatcab02.blob.core.windows.net`
+
+- `eaus2watcab01.blob.core.windows.net`
+
+- `eaus2watcab02.blob.core.windows.net`
+
+- `weus2watcab01.blob.core.windows.net`
+
+- `weus2watcab02.blob.core.windows.net`
+
+- `umwatsonc.events.data.microsoft.com`
+
+- `*-umwatsonc.events.data.microsoft.com`
 
 ### Windows 10 servicing
 
@@ -221,6 +235,10 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 
 - `https://sc.microsoft.com`
 - `https://ssu2.manage.microsoft.com`
+
+## Deploy Microsoft Edge
+
+[!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
 
 ## Microsoft public IP addresses
 

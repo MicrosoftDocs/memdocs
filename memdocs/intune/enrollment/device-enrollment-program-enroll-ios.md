@@ -140,7 +140,7 @@ With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pu
 
 ## Create an Apple enrollment profile
 
-Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There is a limit of 100 enrollment profiles per ADE token.
+Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There is a limit of 1000 enrollment profiles per ADE token.
 
 > [!NOTE]
 > Devices will be blocked if there aren't enough Company Portal licenses for a VPP token, or if the token has expired. Intune will display an alert when a token is about to expire or licenses are running low.
