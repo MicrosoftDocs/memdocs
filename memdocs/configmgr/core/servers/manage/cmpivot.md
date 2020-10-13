@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 09/28/2020
+ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -48,8 +48,8 @@ The following components are required to use CMPivot:
 The following permissions are needed for CMPivot:
 
 - **Read** permission on the **SMS Scripts** object
-- **Run Script** permission on the **Collection**
-   - Starting in version 1906, the **Run CMPivot** permission was split out from the general **Run Script** permission as the new permission to be used on the **Collection**.
+- **Run CMPivot** permission on the **Collection**
+   - Starting in version 1906, the **Run CMPivot** permission was split out from the general **Run Script** permission as the new permission to be used on the **Collection**. Prior to version 1906, the **Run Script** permission is required.
 - **Read** permission on **Inventory Reports**
 - The default scope.
 
