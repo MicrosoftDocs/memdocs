@@ -13,6 +13,7 @@ ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.assetid: 1f104923-12df-453c-9c20-942ef65a0945
+ROBOTS: NOINDEX,NOFOLLOW
 
 # optional metadata
 
