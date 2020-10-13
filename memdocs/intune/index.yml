@@ -279,4 +279,4 @@ additionalContent:
           summary: Get help on the Intune Customer Success site  
           url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
 
-  footer: "Have feedback or want to contribute to docs? [See this resource](./fundamentals/use-docs.md)!"
+  footer: "Have feedback or want to contribute to docs? [See this resource](../use-docs.md)!"

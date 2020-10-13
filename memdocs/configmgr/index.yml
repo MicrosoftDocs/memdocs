@@ -232,4 +232,4 @@ additionalContent:
               text: ConfigMgr on Reddit
             - url: https://www.facebook.com/groups/ConfigMgr2012
               text: ConfigMgr Professionals Group on Facebook
-   footer: "Found a problem on our site? [Let us know](./core/understand/use-docs.md#bkmk_docfeedback)!"
+   footer: "Found a problem on our site? [Let us know](../use-docs.md#feedback)!"

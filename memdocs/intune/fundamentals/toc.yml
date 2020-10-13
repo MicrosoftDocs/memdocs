@@ -214,7 +214,7 @@
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
     - name: Using the Intune docs
-      href: use-docs.md 
+      href: ../../use-docs.md 
     - name: Get support
       href: get-support.md
   - name: Reports

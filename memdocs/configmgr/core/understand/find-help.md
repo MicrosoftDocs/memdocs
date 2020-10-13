@@ -38,7 +38,7 @@ To access the most current product documentation, start at the [library index](/
 
 <a name="BKMK_SearchTips"></a>  
 
-For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](use-docs.md).  
+For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](../../../use-docs.md).  
 
 
 
