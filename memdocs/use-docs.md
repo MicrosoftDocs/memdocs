@@ -61,7 +61,7 @@ Use the following search tips to help you find the information that you need:
 
 Having problems finding something? [File feedback!](#feedback) When you file an issue regarding search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
 
-## Feedback
+## About feedback
 
 Select the **Feedback** link in the upper right of any article to go to the Feedback section at the bottom. Feedback is integrated with GitHub Issues. For more information about this integration with GitHub Issues, see the [docs platform blog post](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
