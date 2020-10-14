@@ -23,7 +23,6 @@ Configuration Manager supports a robust system of tools and options to manage so
 
 The following sections are key concepts for content management. When a concept requires additional or complex information, links are provided to direct you to those details.
 
-
 ## Accounts used for content management
 
 The following accounts can be used with content management:  
@@ -34,7 +33,7 @@ Used by clients to connect to a distribution point and access content. By defaul
 
 This account is also used by pull-distribution points to download content from a source distribution point in a remote forest.  
 
-Starting in version 1806, some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Azure Active Directory authentication.<!--1358228-->
+Some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Azure Active Directory authentication.<!--1358228-->
 
 For more information, see [Network access account](accounts.md#network-access-account).
 
@@ -144,11 +143,10 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 Delivery Optimization is the recommended technology to optimize Windows 10 update delivery of express installation files for Windows 10 quality updates. Starting in Configuration Manager version 1910, Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimization can be used for all Windows updates. For more information, see [optimize Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
-
 ## Microsoft Connected Cache
 
 <!--3555764-->
-Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
+You can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
 
 > [!NOTE]
 > Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
@@ -159,24 +157,21 @@ This cache is separate from Configuration Manager's distribution point content. 
 
 For more information, see [Microsoft Connected Cache in Configuration Manager](microsoft-connected-cache.md).
 
-
 ## Peer cache
 
 Client peer cache helps you manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.
 
 First deploy client settings that enable peer cache to a collection. Then members of that collection can act as a peer content source for other clients in the same boundary group.
 
-Starting in version 1806, client peer cache sources can divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group.<!--1357346-->
+Client peer cache sources can divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group.<!--1357346-->
 
 For more information, see [Peer cache for Configuration Manager clients](client-peer-cache.md).
-
 
 ## Windows PE peer cache
 
 When you deploy a new OS with Configuration Manager, computers that run the task sequence can use Windows PE peer cache. They download content from a peer cache source instead of from a distribution point. This behavior helps minimize WAN traffic in branch office scenarios where there's no local distribution point.
 
 For more information, see [Windows PE peer cache](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).
-
 
 ## Windows LEDBAT
 
@@ -187,31 +182,29 @@ For more information on Windows LEDBAT in general, see the [New transport advanc
 
 For more information on how to use Windows LEDBAT with Configuration Manager distribution points, see the setting to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** when you [Configure the general settings of a distribution point](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-general).
 
-
 ## Client locations
 
 The following are locations that clients access content from:  
 
 - **Intranet** (on-premises):  
 
-    - Distribution points can use HTTP or HTTPs.  
+  - Distribution points can use HTTP or HTTPs.  
 
-    - Only use a cloud distribution point for fallback when on-premises distribution points aren't available.  
+  - Only use a cloud distribution point for fallback when on-premises distribution points aren't available.  
 
 - **Internet**:  
 
-    - Requires internet-facing distribution points to accept HTTPS.  
+  - Requires internet-facing distribution points to accept HTTPS.  
 
-    - Can use a cloud distribution point or cloud management gateway (CMG).  
+  - Can use a cloud distribution point or cloud management gateway (CMG).  
 
-        A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
+    A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
 - **Workgroup**:  
 
-    - Requires distribution points to accept HTTPS.  
+  - Requires distribution points to accept HTTPS.  
 
-    - Can use a cloud distribution point or CMG.  
-
+  - Can use a cloud distribution point or CMG.  
 
 ## Content source priority
 
@@ -230,8 +223,11 @@ The following list contains all of the possible content source locations that th
 9. An internet-facing distribution point
 10. A cloud distribution point in Azure
 
-> [!Note]  
-> <!-- SCCMDocs#1607 -->Delivery Optimization isn't applicable to this source prioritization. This list is how the Configuration Manager client finds content. The Windows Update Agent downloads content for Delivery Optimization. If the Windows Update Agent can't find the content, then the Configuration Manager client uses this list to search for it.
+Delivery Optimization isn't applicable to this source prioritization. This list is how the Configuration Manager client finds content. The Windows Update Agent downloads content for Delivery Optimization. If the Windows Update Agent can't find the content, then the Configuration Manager client uses this list to search for it.<!-- SCCMDocs#1607 -->
+
+BranchCache applies to this list only when you enable a distribution point for BranchCache. For example, if a client gets to option #3 in the prioritization list, it first asks the distribution point for BranchCache metadata. The BranchCache-enabled distribution point is what provides the client information for BranchCache peer discovery. The client will download content from a BranchCache peer if it can. If it can't download the content via BranchCache, it then tries the distribution point itself, before continuing down the list of content sources. This behavior applies at any point in the priority list where the client uses a BranchCache-enabled distribution point or cloud distribution point. <!-- 8287190 -->
+
+The configuration of [boundary group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions) can modify the sort order of this priority list.
 
 ## Content library
 
