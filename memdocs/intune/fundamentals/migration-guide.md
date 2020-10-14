@@ -33,8 +33,6 @@ ms.collection: M365-identity-device-management
 
 ![Microsoft Intune MDM migration guide art](./media/migration-guide/MDM-migration-guide-art.PNG)
 
-
-
 A successful migration to Microsoft Intune starts with a solid plan that factors in your current mobile device management (MDM) environment, business goals, and technical requirements. Additionally, you need to include the key stakeholders who will support and collaborate with your migration plan.
 
 This guide walks you through the various details involved in migrating from a third-party MDM provider to Intune.
@@ -67,15 +65,11 @@ These guide breaks down the migration into two phases. Both include tasks, strat
 
   - [Set up Intune](deployment-guide-intune-setup.md): Get an overview of setting up Intune. Also see some recommendations if using a third party or partner MDM solution.
   - [Enroll devices](deployment-guide-enrollment.md): Use these guides to determine the best enrollment method for your devices. Get an overview of the admin tasks, and the end user tasks. There are deployment enrollment guides for [MAM-WE](deployment-guide-enrollment-mamwe.md), [Android](deployment-guide-enrollment-android.md), [iOS/iPadOS](deployment-guide-enrollment-ios-ipados.md), [macOS](deployment-guide-enrollment-macos.md), and [Windows](deployment-guide-enrollment-windows.md).
-  - [Device and app management](migration-guide-configure-policies.md): 
-  - [App protection](../apps/app-protection-policies.md):
-
-
-- [Phase 2: Migration campaign](migration-guide-campaign.md)
-
-  - [Communication plan](migration-guide-communication-plan.md)
-
-  - [Drive end-user adoption with Conditional Access](migration-guide-drive-adoption.md)
+  - [Device and app management](migration-guide-configure-policies.md)
+  - [App protection](../apps/app-protection-policies.md)
+  - [Phase 2: Migration campaign](migration-guide-campaign.md)
+    - [Communication plan](migration-guide-communication-plan.md)
+    - [Drive end-user adoption with Conditional Access](migration-guide-drive-adoption.md)
 
 - **[Educate your users](end-user-educate.md)**: Get guidance on communicating with users about Company Portal app messages, getting apps, and the information Apple and Google send to Intune.
 
