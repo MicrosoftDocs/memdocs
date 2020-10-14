@@ -112,11 +112,6 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*) - Intune doesn't check for any of the Configuration Manager settings for compliance.
   - **Require** - Require all settings (configuration items) in Configuration Manager to be compliant.
 
-    For example, you require all software updates to be installed on devices. In Configuration Manager, this requirement has the "Installed" state. If any programs on the device are in an unknown state, then the device is non-compliant in Intune.
-
-  > [!NOTE]
-  > Only use **Require device compliance from Configuration Manager** when the Compliance workload for co-management is set to *Configuration Manager*. When you use this setting with the Compliance workload set to *Intune*, it can affect overall compliance evaluations.
-
 ## System Security
 
 ### Password
