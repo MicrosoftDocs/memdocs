@@ -129,7 +129,7 @@ Be aware of the following changes to compliance settings:
 
     - Windows 10 devices managed with the Configuration Manager client  
 
-    - ma OS X devices managed with the Configuration Manager client  
+    - mac OS X devices managed with the Configuration Manager client  
 
     - Windows desktop and server computers managed with the Configuration Manager client  
 
