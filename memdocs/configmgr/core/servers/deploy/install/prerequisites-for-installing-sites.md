@@ -37,7 +37,7 @@ If you're installing a CAS as part of a hierarchy expansion, see the section for
   - **Administrator** on the following servers:
 
     - The site server
-    - Each server that hosts the **site database**
+    - Each SQL Server that hosts the **site database**
     - Each instance of the **SMS Provider** for the site
 
   - **Sysadmin** on the instance of SQL Server that hosts the site database
@@ -51,7 +51,9 @@ If you're installing a CAS as part of a hierarchy expansion, see the section for
 
 - If you're installing a new child primary site below a CAS, you need the following additional permissions:
 
-  - **Administrator** on the server that hosts the CAS
+  - **Administrator** on the site server that hosts the CAS
+
+  - **Administrator** on the SQL Server that hosts the CAS site database
 
   - Role-based administration permissions within Configuration Manager that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**
 
