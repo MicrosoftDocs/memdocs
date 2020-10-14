@@ -23,8 +23,8 @@ Compliance settings in Configuration Manager let you create and deploy configura
 
 Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md). To learn some basics about compliance settings, read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites. In each scenario, you'll create a configuration item that does a specific task.
 
-- [How to create configuration items for Windows 10 devices managed with the Configuration Manager Client](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
-- [How to create configuration items for Mac OS X devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)
+- [How to create configuration items for Windows 10 devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
+- [How to create configuration items for macOS X devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)
 - [How to create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)
 
 ## Configuration items for devices managed with Intune
