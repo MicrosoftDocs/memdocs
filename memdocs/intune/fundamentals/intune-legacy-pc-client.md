@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 
 ## Deprecation announcement
 
-The following note is the original deprecation announcement:
+The following is information from the [original deprecation announcement](https://aka.ms/Intune_Silverlight_console) posted to the Intune Support Team blog:
 
 > [!important]
 > Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent) used for Windows PC management. In addition, Intune will end the Intune Storage Add-On licensing offer which was only used for app storage in Silverlight. Move your day-to-day Intune administration from Silverlight to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
