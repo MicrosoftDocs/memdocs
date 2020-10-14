@@ -82,7 +82,7 @@ On the *Help and support* pane, select a tile to focus support on the device man
 vChange requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  For more information, see [Support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/service-description/support.md?view=o365-worldwide).
+  For more information, see [Support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/service-description/support.md?view=o365-worldwide&preserve-view=true).
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
@@ -118,7 +118,7 @@ On the *Find solutions* pane, specify a few details about an issue in the provid
 - **View insights** – Find links to documentation that provide context and background for the product area or actions you’ve described.
 - **Recommended articles** – Follow links to troubleshooting and related content that focus on the issue you’ve described.
 
-For example, for Microsoft Intune you might enter **device enrolment failure**. With these criteria, your results include the option to run Run diagnostics for a user account:
+For example, for Microsoft Intune you might enter **device enrollment failure**. With these criteria, your results include the option to run Run diagnostics for a user account:
 
 ![View troubleshooting insights](./media/get-support/troubleshooting-insights.png)
 
