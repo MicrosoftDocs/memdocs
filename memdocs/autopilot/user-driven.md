@@ -161,3 +161,7 @@ Or, you can start Windows Update to install the latest updates:
 ### Step-by-step instructions
 
 See [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](/intune/windows-autopilot-hybrid).
+
+## Related topics
+
+[Trying Out Autopilot Hybrid Join Over VPN In Your Azure Lab](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/trying-out-autopilot-hybrid-join-over-vpn-in-your-azure-lab/ba-p/1606723)
