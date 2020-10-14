@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/19/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,6 +42,18 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 - Sign in as member of the **Global administrator** Azure AD group. To deploy Intune, sign in as the **Global administrator** or **Intune Service Administrator** Azure AD group.
 
+## Currently don't use anything
+
+If you currently don't use any MDM or MAM provider, then go straight to Intune. Next, [deploy Intune](#deploy-intune) (in this article).
+
+## Currently use a third party MDM provider
+
+Devices should only have one MDM provider. It's common to switch from another MDM provider, such as AirWatch, MobileIron, or MaaS360, to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+
+If you're moving from a partner MDM/MAM provider, note the tasks your running and the features you use. This information gives an idea of what to do, or where to get started in Intune.
+
+Next, [deploy Intune](#deploy-intune) (in this article).
+
 ## Currently use Configuration Manager
 
 Configuration Manager supports Windows and macOS devices. If you're using other platforms, you may need to reset the devices, and then enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
@@ -54,6 +66,8 @@ This option continues to use Configuration Manager for some workflows, and uses 
 
 1. In Configuration Manager, set up [co-management](https://docs.microsoft.com/configmgr/comanage/how-to-enable).
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
+
+Next, devices are ready to be enrolled, and receive your policies.
 
 Helpful information:
 
@@ -82,17 +96,17 @@ This option is more work for administrators, but can create a more seamless expe
 
     Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm).
 
+Next, devices are ready to be enrolled, and receive your policies.
+
 > [!IMPORTANT]
-> Hybrid Azure AD supports only Windows devices. Configuration Manager supports macOS devices. For macOS devices managed in Configuration Manager, you can:
+> Hybrid Azure AD supports only Windows devices. Configuration Manager supports Windows and macOS devices. For macOS devices managed in Configuration Manager, you can:
 >
 > 1. Uninstall the Configuration Manager client. When you uninstall, the devices aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune.
 > 2. Enroll the devices in Intune to receive policies.
 >
-> To help minimize vulnerabilities, move macOS devices after Intune is setup and your enrollment policies are ready to be deployed.
+> To help minimize vulnerabilities, move macOS devices after Intune is setup, and your enrollment policies are ready to be deployed.
 
 ### Option 3: Start from scratch with Microsoft 365 and Intune
-
-This option applies to
 
 1. [Deploy Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups.
 
@@ -104,6 +118,8 @@ This option applies to
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
 3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](https://docs.microsoft.com/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
 
+Next, devices are ready to be enrolled, and receive your policies.
+
 ## Currently use on-premises group policy
 
 In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When managing devices, Intune device configuration profiles replace on-premises GPO.
@@ -111,18 +127,6 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 When moving devices from group policy, you may want to reset these devices, and enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create.
 
 Next, [deploy Intune](#deploy-intune) (in this article).
-
-## Currently use a third party MDM provider
-
-Devices should only have one MDM provider. It's common to switch from another MDM provider, such as AirWatch, MobileIron, or MaaS360, to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
-
-If you're moving from a partner MDM/MAM provider, note the tasks your running and the features you use. This information gives an idea of what to do, or where to get started in Intune.
-
-Next, [deploy Intune](#deploy-intune) (in this article).
-
-## Currently don't use anything
-
-If you currently don't use any MDM or MAM provider, then go straight to Intune. Next, [deploy Intune](#deploy-intune) (in this article).
 
 ## Deploy Intune
 
@@ -172,4 +176,4 @@ In this section, add extra information provided by CSS and PFE teams.
 
 ## Next steps
 
-[Enrollment deployment guide](deployment-guide-enrollment.md)  
+See the [eEnrollment deployment guides](deployment-guide-enrollment.md).
