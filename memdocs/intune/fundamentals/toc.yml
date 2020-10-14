@@ -216,7 +216,7 @@
     - name: Using the Intune docs
       href: use-docs.md 
     - name: Get support
-      href: get-support.md
+      href: ./mem/get-support.md?toc=/intune/fundamentals/toc.ljson&bc=/mem/intune/fundamentals/bread/toc.json
   - name: Reports
     items:
     - name: Intune reports
