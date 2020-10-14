@@ -253,7 +253,7 @@
         href: education-settings-configure-ios.md
       - name: Shared iPads
         href: education-settings-configure-ios-shared.md
-    - name: Legacy Intune PC client
+    - name: Legacy Intune PC software client
       href: intune-legacy-pc-client.md
     - name: Troubleshoot software updates
       href: troubleshoot-software-updates-in-microsoft-intune.md

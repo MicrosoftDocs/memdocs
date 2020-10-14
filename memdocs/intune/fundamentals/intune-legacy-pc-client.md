@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Legacy Intune PC client
-description: Considerations when using Intune on Azure to manage your organization's Windows devices.
+title: Legacy Intune PC software client
+description: Learn about the deprecation for the Intune PC software client.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -27,31 +27,38 @@ ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 
-# What happened to the Intune PC client?
+# What happened to the Intune PC software client?
 
 > [!warning]
 > Legacy PC management is no longer supported as of October 16, 2020. Upgrade devices to Windows 10 and reenroll them in Intune MDM to keep them managed by Intune. Devices managed with the PC software client will stop receiving security updates and apps, and you will no longer be able to configure them.
 
 ## Deprecation announcement
-To review the original deprecation announcement, see the [Intune Support Blog](https://techcommunity.microsoft.com/t5/intune-customer-success/take-action-microsoft-intune-ending-support-for-the-silverlight/ba-p/916249).
 
-## Use Intune MDM for all Windows 10 devices
+The following note is the original deprecation announcement:
 
-You must enroll new Windows 10 devices in Intune MDM instead of using the Intune PC client. For existing devices with the Intune PC client, you’ll want to remove the Intune PC client and enroll the device in Intune MDM.
+> [!important]
+> Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent) used for Windows PC management. In addition, Intune will end the Intune Storage Add-On licensing offer which was only used for app storage in Silverlight. Move your day-to-day Intune administration from Silverlight to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+>
+>**How does this affect me?**
+>
+>Our telemetry indicates you have PC software client managed Windows devices that will need to be MDM enrolled in order to stay managed by Intune past the above-reference date.
+>
+>**What do I need to do?**
+>
+> 1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+> 2. Recreate your existing Windows 10 policies as MDM policies. Note that many device management policies were migrated several years ago as part of the admin console migration. Check device management in Azure before you create new policies.
+> 3. Review reporting in the Microsoft Intune administration console to find the devices that are managed by the Intune PC software client.
+> 4. Determine the right modern enrollment method that's right for your organization. For details, see [Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md).
+> 5. Unenroll devices with the Intune PC software client and re-enroll the devices using Intune MDM. We strongly recommend you update to the latest version of Windows 10. As of January 14, 2020, Intune no longer supports Windows 7.
+> 6. Add apps to Intune MDM. For details, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+>
+> **Please note**: If you currently have Intune storage add-on licensing, it is not required with Intune MDM to manage your Windows 10 PC's.
+>
+>This change will allow you to take advantage of the enhanced capabilities available through the MDM channel for Windows management. We encourage you to migrate as soon as possible, and no later than October 15, 2020. After that date, the Silverlight-based Intune console will no longer be accessible. PCs managed with the PC software client will stop receiving security updates and apps, and will no longer be able to be configured.
+>
+> Contact your partner of record or [support](https://aka.ms/IntuneSupport) if you need assistance.
 
-### General steps to use Intune MDM instead of the Intune PC client
-
-1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
-2. Recreate your existing Windows 10 policies as MDM policies. Note that many device management policies were migrated several years ago as part of the admin console migration. Check device management in Azure before you create new policies.
-3. Review reporting in the Microsoft Intune administration console to find the devices that are managed by the Intune PC client.
-4. Determine the right modern enrollment method that's right for your organization. For details, see [Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md).
-5. Unenroll devices with the Intune PC client and re-enroll the devices using Intune MDM. We strongly recommend you update to the latest version of Windows 10. As of January 14, 2020, Intune no longer supports Windows 7.
-6. Add apps to Intune MDM. For details, see [Add apps to Microsoft Intune](../apps/apps-add.md).
-
-   > [!note]
-   > If you currently have Intune storage add-on licensing, it is not required with Intune MDM to manage your Windows 10 PC's.
-
-## Uninstall the Intune PC client software
+## Uninstall the Intune PC software client software
 
 Using an elevated command prompt on the device to unenroll, run one of the following commands.
 
@@ -100,7 +107,7 @@ wmic product where name="Windows Intune" call uninstall
 ```
 
 > [!TIP]
-> When you unenroll the Intune PC client, a stale server-side record for the device remains. The unenrollment process is asynchronous, and there are nine agents to uninstall, so it may take up to 30 mins to complete.
+> When you unenroll the Intune PC software client, a stale server-side record for the device remains. The unenrollment process is asynchronous, and there are nine agents to uninstall, so it may take up to 30 mins to complete.
 
 ### Check the unenrollment status
 
@@ -118,6 +125,10 @@ The unenrollment process does not remove the OnlineManagement folder. Wait 30 mi
 ```cmd
 rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
 ```
+
+## Resources
+
+[Deprecation announcement on the Intune Support Blog](https://techcommunity.microsoft.com/t5/intune-customer-success/take-action-microsoft-intune-ending-support-for-the-silverlight/ba-p/916249).
 
 ## Next steps
 [Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md)

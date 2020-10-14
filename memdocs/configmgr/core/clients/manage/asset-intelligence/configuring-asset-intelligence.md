@@ -76,7 +76,7 @@ In addition to downloading new Asset Intelligence catalog information, the Asset
     -  For a **New site system server**: On the **Home** tab, in the **Create** group, choose **Create Site System Server** to start the wizard.   
 
         > [!NOTE]  
-        >  By default, when Configuration Manager installs a site system role, the installation files are installed on the first available NTFS-formatted hard disk drive that has the most available free hard disk space. To prevent Configuration Manager from installing on specific drives, create an empty file named No_sms_on_drive.sms and copy it to the root folder of the drive before you install the site system server.  
+        >  By default, when Configuration Manager installs a site system role, the installation files are installed on the first available NTFS-formatted hard disk drive that has the most available free hard disk space. To prevent Configuration Manager from installing on specific drives, create an empty file named no_sms_on_drive.sms and copy it to the root folder of the drive before you install the site system server.  
 
     -  For an **Existing site system server**: Choose the server on which you want to install the Asset Intelligence synchronization point site system role. When you choose a server, a list of the site system roles that are already installed on the server are displayed in the details pane.  
 

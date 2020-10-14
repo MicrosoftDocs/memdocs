@@ -2,10 +2,10 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 08/11/2020
+ms.date: 10/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
@@ -27,8 +27,6 @@ The following sections provide details about the different log files available t
   - [Client operations](#BKMK_ClientOpLogs)  
 
   - [Client installation](#BKMK_ClientInstallLog)  
-
-  - [Client for Linux and UNIX](#BKMK_LogFilesforLnU)  
 
   - [Client for Mac computers](#BKMK_LogfilesforMac)  
 
@@ -129,17 +127,29 @@ The following table lists the log files located on the Configuration Manager cli
 |CcmRestart.log|Records client service restart activity.|  
 |CCMSDKProvider.log|Records activities for the client SDK interfaces.|  
 |ccmsqlce.log|Records activities for the SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
+|CcmUsrCse.log|Records details during user sign on for folder redirection policies.|
+|CCMVDIProvider.log|Records information for clients in a virtual desktop infrastructure (VDI).|
+|CertEnrollAgent.log|Records information for Windows Hello for Business. Specifically communication with the Network Device Enrollment Service (NDES) for certificate requests using the Simple Certificate Enrollment Protocol (SCEP).|
 |CertificateMaintenance.log|Maintains certificates for Active Directory Domain Services and management points.|  
-|CIDownloader.log|Records details about configuration item definition downloads.|  
+|CIAgent.log|Records details about the process of remediation and compliance for compliance settings, software updates, and application management.|
+|CIDownloader.log|Records details about configuration item definition downloads.|
+|CIStateStore.log|Records changes in state for configuration items, such as compliance settings, software updates, and applications.|
+|CIStore.log|Records information about configuration items, such as compliance settings, software updates, and applications.|
 |CITaskMgr.log|Records tasks for each application and deployment type, such as content download and install or uninstall actions.|  
 |ClientAuth.log|Records signing and authentication activity for the client.|  
 |ClientIDManagerStartup.log|Creates and maintains the client GUID and identifies tasks during client registration and assignment.|  
-|ClientLocation.log|Records tasks that are related to client site assignment.|  
+|ClientLocation.log|Records tasks that are related to client site assignment.|
+|ClientServicing.log|Records information for client deployment state messages during auto-upgrade and client piloting.|
+|CMBITSManager.log|Records information for Background Intelligent Transfer Service (BITS) jobs on the device.|
 |CMHttpsReadiness.log|Records the results of running the Configuration Manager HTTPS Readiness Assessment Tool. This tool checks whether computers have a public key infrastructure (PKI) client authentication certificate that can be used with Configuration Manager.|  
 |CmRcService.log|Records information for the remote control service.|  
 |CoManagementHandler.log|Use to troubleshoot co-management on the client.|
+|ComplRelayAgent.log|Records information for the co-management workload for compliance policies.|
 |ContentTransferManager.log|Schedules the Background Intelligent Transfer Service (BITS) or Server Message Block (SMB) to download or access packages.|  
 |DataTransferService.log|Records all BITS communication for policy or package access.|  
+|DCMAgent.log|Records high-level information about the evaluation, conflict reporting, and remediation of configuration items and applications.|
+|DCMReporting.log|Records information about reporting policy platform results into state messages for configuration items.|
+|DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|
 |DeltaDownload.log|Records information about the download of express updates and updates downloaded using Delivery Optimization.|  
 |Diagnostics.log|Records the status of client diagnostic actions.|
 |EndpointProtectionAgent|Records information about the installation of the System Center Endpoint Protection client and the application of antimalware policy to that client.|  
@@ -150,7 +160,8 @@ The following table lists the log files located on the Configuration Manager cli
 |FileSystemFile.log|Records the activity of the Windows Management Instrumentation (WMI) provider for software inventory and file collection.|  
 |FSPStateMessage.log|Records the activity for state messages that are sent to the fallback status point by the client.|  
 |InternetProxy.log|Records the network proxy configuration and use activity for the client.|  
-|InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|  
+|InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.| 
+|InventoryProvider.log|More details about hardware inventory, software inventory, and heartbeat discovery actions on the client.|
 |LocationCache.log|Records the activity for location cache use and maintenance for the client.|  
 |LocationServices.log|Records the client activity for locating management points, software update points, and distribution points.|  
 |M365AHandler.log|Information about the Desktop Analytics settings policy|
@@ -174,11 +185,14 @@ The following table lists the log files located on the Configuration Manager cli
 |SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
 |SleepAgent_&lt;*domain*\>@SYSTEM_0.log|The main log file for wake-up proxy.|  
+|SmsClientMethodProvider.log|Records activity for sending client schedules. For example, with the Send Schedule tool or other programmatic methods.|
 |smscliui.log|Records use of the Configuration Manager client in Control Panel.|  
 |SrcUpdateMgr.log|Records activity for installed Windows Installer applications that are updated with current distribution point source locations.|  
+|StateMessageProvider.log|Records information for the component that sends state messages from the client to the site.|
 |StatusAgent.log|Records status messages that are created by the client components.|  
 |SWMTRReportGen.log|Generates a use data report that is collected by the metering agent. This data is logged in Mtrmgr.log.|  
-|UserAffinity.log|Records details about user device affinity.|  
+|UserAffinity.log|Records details about user device affinity.|
+|UserAffinityProvider.log|Technical details from the component that tracks user device affinity.|
 |VirtualApp.log|Records information specific to the evaluation of Application Virtualization (App-V) deployment types.|  
 |Wedmtrace.log|Records operations related to write filters on Windows Embedded clients.|  
 |wakeprxy-install.log|Records installation information when clients receive the client setting option to turn on wake-up proxy.|  
@@ -194,53 +208,7 @@ The following table lists the log files that contain information related to the 
 |ccmsetup-ccmeval.log|Records ccmsetup.exe tasks for client status and remediation.|  
 |CcmRepair.log|Records the repair activities of the client agent.|  
 |client.msi.log|Records setup tasks done by client.msi. Can be used to troubleshoot client installation or removal problems.|  
-
-### <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX
-
-> [!Important]  
-> Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients.
->
-> Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
-
-The Configuration Manager client for Linux and UNIX records information in the following log files:  
-
-> [!TIP]
-> Use CMTrace to view the log files for the client for Linux and UNIX.
-
-|Log name|Details|
-|-------------------|-----------------------------------------------------------------|
-|Scxcm.log| The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin. By default, this log file is located at **/var/opt/microsoft/scxcm.log**. To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You don't need to restart the client computer or service for the change to take effect. You can set the log level to one of four different settings. |
-| Scxcmprovider.log |The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin. This log is located at `/var/opt/microsoft/configmgr/scxcmprovider.log`. To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You don't need to restart the client computer or service for the change to take effect. You can set the log level to one of three settings.|
-
-Both log files support several levels of logging:  
-
-- **scxcm.log**. To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the  **MODULE** tag to the log level you want:  
-
-  - ERROR: Indicates problems that require attention  
-
-  - WARNING: Indicates possible problems for client operations  
-
-  - INFO: More detailed logging that indicates the status of various events on the client  
-
-  - TRACE: Verbose logging that typically is used to diagnose problems  
-
-- **scxcmprovider.log**. To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the **MODULE** tag to the log level you want:  
-
-  - ERROR: Indicates problems that require attention  
-
-  - WARNING: Indicates possible problems for client operations
-
-  - INFO: More detailed logging that indicates the status of various events on the client  
-
-Under normal operating conditions, use the ERROR log level. This log level creates the smallest log file. As the log level is increased from ERROR to WARNING, to INFO, and then to TRACE, a larger log file is created as more data is written to the file.  
-
-#### <a name="BKMK_ManageLinuxLogs"></a> Manage log files for the Linux and UNIX client
-
-The client for Linux and UNIX doesn't limit the maximum size of the client log files. It also doesn't automatically copy the contents of its .log files to another file, such as to a .lo_ file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
-
-For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the client log files. The Configuration Manager client for Linux and UNIX has an interface that enables **logrotate** to signal the client when the log rotation completes, so the client can resume logging to the log file.  
-
-For information about **logrotate**, see the documentation for the Linux and UNIX distributions that you use.  
+|ClientServicing.log|Records information for client deployment state messages during auto-upgrade and client piloting.|
 
 ### <a name="BKMK_LogfilesforMac"></a> Client for Mac computers
 
@@ -467,7 +435,7 @@ The following table lists the log files that contain information related to appl
 |AppIntentEval.log|Records details about the current and intended state of applications, their applicability, whether requirements were met, deployment types, and dependencies.|Client|  
 |AppDiscovery.log|Records details about the discovery or detection of applications on client computers.|Client|  
 |AppEnforce.log|Records details about enforcement actions (install and uninstall) taken for applications on the client.|Client|  
-|AppGroupHandler.log|Starting in version 1906, detection and enforcement information for application groups|Client|
+|AppGroupHandler.log|Records detection and enforcement information for application groups|Client|
 |awebsctl.log|Records monitoring activities for the Application Catalog web service point site system role.|Site system server|  
 |awebsvcMSI.log|Records detailed installation information for the Application Catalog web service point site system role.|Site system server|  
 |BusinessAppProcessWorker.log|Records processing for Microsoft Store for Business apps.|Site server|
@@ -529,6 +497,7 @@ The following table lists the Configuration Manager log files that contain infor
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
+|CertEnrollAgent.log|Records client communication with NDES for certificate requests using the Simple Certificate Enrollment Protocol (SCEP).|Windows Hello for Business client|
 |Crp.log|Records enrollment activities.|Certificate registration point|  
 |Crpctrl.log|Records the operational health of the certificate registration point.|Certificate registration point|  
 |Crpsetup.log|Records details about the installation and configuration of the certificate registration point.|Certificate registration point|  

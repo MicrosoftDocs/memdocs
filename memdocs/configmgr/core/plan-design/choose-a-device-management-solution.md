@@ -93,7 +93,7 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 |--------|----------------------------|---------------|-----------------------------------|--------|
 |Android| | |Yes| Yes |
 |iOS| | |Yes| Yes |
-|Mac OS X|Yes| |Yes| Yes |
+|macOS X|Yes| |Yes| Yes |
 |Windows 10|Yes|Yes|Yes| Yes |
 |Windows 10 Mobile| |Yes|Yes| Yes |
 |Windows (previous versions)|Yes| |Yes|  |
