@@ -56,7 +56,7 @@ After you've completed the prerequisites and assigned user licenses, users can d
 
 For organizations that buy devices for their users, Intune supports the following iOS/iPadOS company-owned device enrollment methods:
 
-- Apple's Automated Device Enrollment (ADE)
+- Apple's Automated Device Enrollment Program (DEP)
 - Apple School Manager
 - Apple Configurator Setup Assistant enrollment
 - Apple Configurator direct enrollment
