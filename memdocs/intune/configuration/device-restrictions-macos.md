@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 10/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -140,6 +140,11 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 - **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.
 
 ## Password
+
+> [!IMPORTANT]
+> On macOS devices running 10.14.2 to 11 (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced.
+>
+> Also, any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to Big Sur (macOS 11), users need to change the device password before they can sign in.
 
 ### Settings apply to: All enrollment types
 
