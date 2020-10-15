@@ -88,5 +88,5 @@ The following articles can help resolve common problems and specific errors:
 
 Seek assistance from support or the Intune community:
 
-- See [Get Support](./mem/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
+- See [Get Support](../../get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
 - Post your issue in the [Microsoft Intune forums](/answers/products/mem).  

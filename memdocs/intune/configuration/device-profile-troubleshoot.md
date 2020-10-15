@@ -157,4 +157,4 @@ To learn more about the version and SKU requirements for the different settings,
 
 ## Next steps
 
-Need extra help? See [How to get support in Microsoft Endpoint Manager](./mem/get-support.md).
+Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).

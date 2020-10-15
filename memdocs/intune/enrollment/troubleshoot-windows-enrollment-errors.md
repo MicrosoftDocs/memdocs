@@ -400,5 +400,5 @@ Try either of the following:
 - [Ask a question on the Intune forum](/answers/products/mem)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
-- [Get support in Microsoft Endpoint Manager](./mem/get-support.md)
+- [Get support in Microsoft Endpoint Manager](../../get-support.md)
 - [Find co-management enrollment errors](/configmgr/comanage/how-to-monitor#enrollment-errors)

@@ -359,7 +359,7 @@ Edit the template to resolve the configuration issue:
 
 If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
 
-To open a support request with the Microsoft Intune product support team, see [How to get support in Microsoft Endpoint Manager](./mem/get-support.md).
+To open a support request with the Microsoft Intune product support team, see [How to get support in Microsoft Endpoint Manager](../../get-support.md).
 For more information about PKCS certificate deployment, see the following articles:
 
 - [Configure and use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)

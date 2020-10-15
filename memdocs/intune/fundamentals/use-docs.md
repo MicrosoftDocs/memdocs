@@ -17,7 +17,7 @@ ms.collection: M365-identity-device-management
 
 This article provides information to help you search the Microsoft Intune docs for information, provide feedback for the Intune docs, and shows how you can quickly and easily contribute to the docs.
 
-For general help and support for Intune, see [Get support in Microsoft Endpoint Manager](./mem/get-support.md).
+For general help and support for Intune, see [Get support in Microsoft Endpoint Manager](../../get-support.md).
 
 ## Search the docs
 
@@ -63,7 +63,7 @@ Use GitHub Issues to submit the following types of feedback:
 - Localization: Feedback about content translation.
 - Search engine optimization (SEO): Feedback about problems searching for content. Include the search engine, keywords, and target article in the comments.
 
-If issues are raised for non-doc-related topics, such as [product feedback](https://microsoftintune.uservoice.com/forums/291681-ideas), [product questions](/answers/products/mem), or [support requests](./mem/get-support.md), these issues will be closed and the user redirected to the proper feedback channel.
+If issues are raised for non-doc-related topics, such as [product feedback](https://microsoftintune.uservoice.com/forums/291681-ideas), [product questions](/answers/products/mem), or [support requests](../../get-support.md), these issues will be closed and the user redirected to the proper feedback channel.
 
 To share feedback on the docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
 

@@ -83,4 +83,4 @@ Users who have email accounts automatically configured can't send pictures or im
 
 ## Next steps
 
-Get [support help from Microsoft](./mem/get-support.md), or use the [community forums](/answers/products/mem).
+Get [support help from Microsoft](../../get-support.md), or use the [community forums](/answers/products/mem).

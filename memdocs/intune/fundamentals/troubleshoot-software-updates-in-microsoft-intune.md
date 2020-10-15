@@ -55,4 +55,4 @@ If you're running Windows 7, be sure the following update is installed:[3050265 
 
 ## Next steps
 
-Get [support help from Microsoft](./mem/get-support.md), or use the [community forums](/answers/products/mem).
+Get [support help from Microsoft](../../get-support.md), or use the [community forums](/answers/products/mem).

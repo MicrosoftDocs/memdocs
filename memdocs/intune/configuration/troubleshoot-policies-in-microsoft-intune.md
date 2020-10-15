@@ -183,4 +183,4 @@ To resolve this issue, set the local system time as close as possible to Interne
 
 [Common issues and resolutions with email profiles](../configuration/troubleshoot-email-profiles-in-microsoft-intune.md)
 
-Get [support help from Microsoft](./mem/get-support.md), or use the [community forums](/answers/products/mem).
+Get [support help from Microsoft](../../get-support.md), or use the [community forums](/answers/products/mem).

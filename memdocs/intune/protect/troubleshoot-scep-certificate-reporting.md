@@ -71,4 +71,4 @@ Verify that the Intune Connector Service is started on the NDES server, and ther
 
 ## Next steps
 
-[How to get support in Microsoft Endpoint Manager](./mem/get-support.md)
+[How to get support in Microsoft Endpoint Manager](../../get-support.md)

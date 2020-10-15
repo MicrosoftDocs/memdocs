@@ -127,7 +127,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
     ![Screenshot of the Help and support pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-10.png)
 
-    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. For more information, see [How to get support in Microsoft Endpoint Manager](./mem/get-support.md).
+    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. For more information, see [How to get support in Microsoft Endpoint Manager](../../get-support.md).
 
 11. From [Intune](https://aka.ms/intuneportal), select **Tenant Status** to display details about your Intune tenant.
 

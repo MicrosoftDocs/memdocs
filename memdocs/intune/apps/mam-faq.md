@@ -230,4 +230,4 @@ When dealing with different types of settings, an Intune App SDK version require
 - [App protection policies policy refresh](../apps/app-protection-policy-delivery.md)
 - [Validate your app protection policies](../apps/app-protection-policy-delivery.md)
 - [Add app configuration policies for managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md)
-- [How to get support in Microsoft Endpiont Manager](./mem/get-support.md)
+- [How to get support in Microsoft Endpiont Manager](../../get-support.md)

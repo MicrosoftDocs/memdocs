@@ -279,7 +279,7 @@ Some additional recommendations:
 
 ## Need more help
 
-- Use the [Intune user forums](/answers/products/mem) or [get support from Microsoft](./mem/get-support.md).
+- Use the [Intune user forums](/answers/products/mem) or [get support from Microsoft](../../get-support.md).
 
 - For more information about Wi-Fi profiles in Microsoft Intune, see the following articles:
 

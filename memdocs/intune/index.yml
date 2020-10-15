@@ -183,7 +183,7 @@ conceptualContent:
         url: ./apps/index.yml            
     - title: Help and support
       links:
-        - url: ./mem/get-support.md
+        - url: ../get-support.md
           itemType: concept
           text: How to get support for Microsoft Intune?
         - url: ./fundamentals/help-desk-operators.md
