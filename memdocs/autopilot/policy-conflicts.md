@@ -47,7 +47,7 @@ This possible failure is especially true for kiosk scenarios where passwords are
 <tr><td width="50%">Group Policy Objects (GPOs) and registry keys that affect Windows Autopilot for pre-provisioned deployment.
 <td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\<a href="https://support.microsoft.com/help/324737/how-to-turn-on-automatic-logon-in-windows">Automatic logon</a>
 <br>&nbsp;
-<br>If the AutoAdminLogon registry key is set to 0 (disabled), this breaks Windows Autopilot pre-provisioning.<hr>
+<br>If the AutoAdminLogon registry key is set to 0 (disabled), this breaks Windows Autopilot pre-provisioning.<hr size="2"><br>
 Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 <br>&nbsp;
 <br><a href="https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/interactive-logon-message-text-for-users-attempting-to-log-on">Interactive logon: Message text for users attempting to log on</a>
