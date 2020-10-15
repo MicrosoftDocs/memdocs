@@ -125,7 +125,7 @@ These steps are an overview, and are only included for those users who want a 10
 - Register existing on-premises Active Directory Windows 10 devices as devices in Azure Active Directory (AD).
 - Move your existing on-premises Configuration Manager workflows to Intune.
 
-This option is more work for administrators, but can create a more seamless experience for existing Windows 10 devices. For new Windows 10 devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-3-start-from-scratch-with-microsoft-365-and-intune) (in this article).
+This option is more work for administrators, but can create a more seamless experience for existing Windows 10 devices. For new Windows 10 devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4-start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
 1. Set up [hybrid Active Directory and Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. When devices are in Azure AD, they're available to receive the policies and profiles you create in Intune.
 
