@@ -146,5 +146,5 @@ The following article can help resolve specific errors:
 - [Resolve common problems for the Intune Exchange Connector](troubleshoot-exchange-connector-common-problems.md).git 
 
 Seek assistance from support or the Intune community.
-- See [Get Support](../fundamentals/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
+- See [Get Support](./mem/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
 - Post your issue in the [Microsoft Intune forums](/answers/products/mem).

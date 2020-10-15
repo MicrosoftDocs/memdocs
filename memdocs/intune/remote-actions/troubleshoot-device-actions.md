@@ -112,4 +112,4 @@ To resolve this issue, use bootable media to re-install Windows 10 on the device
 
 ## Next steps
 
-Get [support help from Microsoft](../fundamentals/get-support.md), or use the [community forums](/answers/products/mem).
+Get [support help from Microsoft](./mem/get-support.md), or use the [community forums](/answers/products/mem).

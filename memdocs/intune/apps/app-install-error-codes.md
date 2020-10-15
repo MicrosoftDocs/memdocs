@@ -115,4 +115,4 @@ The following error messages and descriptions provide details about iOS/iPadOS i
 
 - For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../fundamentals/help-desk-operators.md). 
 - Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+- Need extra help? See [How to get support in Microsoft Endpoint Manager](./mem/get-support.md).

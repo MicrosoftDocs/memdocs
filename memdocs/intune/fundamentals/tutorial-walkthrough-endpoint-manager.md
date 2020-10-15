@@ -214,7 +214,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
-    For more information, see [How to get support for Microsoft Intune](get-support.md).
+    For more information, see [How to get support in Microsoft Endpoint Manager](./get-support.md).
 
 15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
 
@@ -234,7 +234,7 @@ Azure allows you to customize and configure the view of the portal.
 
 The **Dashboard** to display overall details about the devices and client apps in your Intune tenant. Dashboards provide a way for you to create a focused and organized view in the Microsoft Endpoint Manager admin center. Use dashboards as a workspace where you can quickly launch tasks for day-to-day operations and monitor resources. Build custom dashboards based on projects, tasks, or user roles, for example. The Microsoft Endpoint Manager admin center provides a default dashboard as a starting point. You can edit the default dashboard, create and customize additional dashboards, and publish and share dashboards to make them available to other users. 
 
-   ![Screenshot of the Microsoft Endpoint Manager admin center - Dashboard](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png)
+   ![Screenshot of the Dashboard in Microsoft Endpoint Manager admin center](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png)
 
 To modify your current dashboard, select **Edit**. If you don't want to change your default dashboard, you can also create a **New dashboard**. Creating a new dashboard gives you an empty, private dashboard with the **Tile Gallery**, which lets you add or rearrange tiles. You can find tiles by category or resource type. You can also search for particular tiles. Select **My Dashboard** to select any of your existing custom dashboards.
 

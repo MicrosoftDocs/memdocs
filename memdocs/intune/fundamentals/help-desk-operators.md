@@ -307,4 +307,4 @@ You can learn more about Role-based administration control (RBAC) to define role
 
 Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
-Learn how to create a support ticket a get help when you need it. [Get support](get-support.md).
+Learn how to create a support ticket a get help when you need it. [Get support](./mem/get-support.md).

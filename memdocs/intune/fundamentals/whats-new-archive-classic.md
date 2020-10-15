@@ -175,7 +175,7 @@ If you need to download and sideload the Windows 10 Company Portal app, you can 
 
 The iOS 10.3 release started rolling out on March 27, 2017 to iOS users. All existing Intune MDM and MAM scenarios are compatible with the latest version of Apple's OS. We anticipate all existing Intune features currently available for managing iOS devices will continue to work as your users upgrade their devices and apps to iOS 10.3.
 
-There are currently no known issues to share. If you run into any issues with iOS 10.3, please feel free to reach out to the [Intune support team](get-support.md).
+There are currently no known issues to share. If you run into any issues with iOS 10.3, please feel free to reach out to the [Intune support team](./mem/get-support.md).
 
 #### Improved support for Android users based in China <!--720444-->
 
@@ -306,7 +306,7 @@ In early calendar year 2017, we will be migrating our full admin experience onto
 The admin experience in the Azure portal will use the already announced new grouping and targeting functionality; when your existing tenant is migrated to the new grouping experience you will also be migrated to preview the new admin experience on your tenant. In the meantime, find out more about what we have in store for Microsoft Intune in the Azure portal in our [new documentation](what-is-intune.md).
 
 __Telecom expense management integration in public preview of Azure portal__ <!--747605-->
-We are now beginning to preview integration with third-party telecom expense management (TEM) services within the Azure portal. You can use Intune to enforce limits on domestic and roaming data usage. We are beginning these integrations with [Saaswedo](http://www.saaswedo.com/). To enable this feature in your trial tenant, please [contact Microsoft support](get-support.md).
+We are now beginning to preview integration with third-party telecom expense management (TEM) services within the Azure portal. You can use Intune to enforce limits on domestic and roaming data usage. We are beginning these integrations with [Saaswedo](http://www.saaswedo.com/). To enable this feature in your trial tenant, please [contact Microsoft support](./mem/get-support.md).
 
 ### New Capabilities
 

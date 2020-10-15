@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 This article lists common errors, status codes, descriptions, and possible solutions when accessing organization resources. Use this information to help troubleshoot access issues when using Microsoft Intune.
 
-If you need support help, see [get support for Microsoft Intune](get-support.md).
+If you need support help, see [get support in Microsoft Endpoint Manager](./mem/get-support.md).
 
 ## Status codes for MDM managed Windows devices
 
@@ -390,4 +390,4 @@ If you need support help, see [get support for Microsoft Intune](get-support.md)
 
 ## Next steps
 
-Contact Microsoft Support to [get support for Microsoft Intune](get-support.md).
+Contact Microsoft Support to [get support in Microsoft Endpoint Manager](./mem/get-support.md).

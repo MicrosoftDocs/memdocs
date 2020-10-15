@@ -69,13 +69,13 @@ On the *Help and support* pane, select a tile to focus support on the device man
   - Desktop Analytics
   - Endpoint analytics for Configuration Manager devices
   - Tenant attach for Configuration Manager devices
-  - [Co-management workloads](../mem/configmgr/comanage/workloads?WT.mc_id=Portal-Microsoft_Intune_DeviceSettings) with Configuration Manager as the management authority
+  - [Co-management workloads](./configmgr/comanage/workloads.md) with Configuration Manager as the management authority
 
-  For issues with **on-premises Configuration Manager**, open your case at [www.support.microsoft.com](www.support.microsoft.com).
+  For issues with **on-premises Configuration Manager**, open your case at [www.support.microsoft.com](https://support.microsoft.com).
 
 - **Co-management**:
   - Enabling co-management for Intune devices
-  - [Co-management workloads](../mem/configmgr/comanage/workloads.md?WT.mc_id=Portal-Microsoft_Intune_DeviceSettings) with Intune as the management authority
+  - [Co-management workloads](./configmgr/comanage/workloads.md) with Intune as the management authority
 
 - **Microsoft Managed Desktop**:
   - Information requests on the Microsoft Managed Desktop tenant or configuration
@@ -167,4 +167,4 @@ Selecting either a severity **A** or **Critical** issue limits you to a phone su
 
 - [Billing and subscription management support](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 - [Volume licensing](https://go.microsoft.com/fwlink/p/?LinkID=282015)
-- [Troubleshoot Intune issues](../mem/intune/fundamentals/help-desk-operators.md)
+- [Troubleshoot Intune issues](./intune/fundamentals/help-desk-operators.md)

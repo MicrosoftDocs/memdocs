@@ -51,7 +51,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **CertificateRegistrationPoint.svclog**:
 
-  ![Intune Certificate Connector log](../protect/media/troubleshoot-scep-certificate-reporting/certificate-registration-point-log.png)
+  ![Certificate registration point log](../protect/media/troubleshoot-scep-certificate-reporting/certificate-registration-point-log.png)
 
 - **NDESConnector.svclog**:
 
@@ -71,4 +71,4 @@ Verify that the Intune Connector Service is started on the NDES server, and ther
 
 ## Next steps
 
-[How to get support for Microsoft Intune](../fundamentals/get-support.md)
+[How to get support in Microsoft Endpoint Manager](./mem/get-support.md)

@@ -58,7 +58,7 @@ Review the following sections to troubleshoot email notification issues.
 
 ### Check the notification account that retrieves Autodiscover settings
 
-1. Make sure the Autodiscover service and EWS are configured on the Exchange Client Access services. For more information, see [Client Access services](/Exchange/architecture/client-access/client-access) and [Autodiscover service in Exchange Server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Make sure the Autodiscover service and EWS are configured on the Exchange Client Access services. For more information, see [Client Access services](/Exchange/architecture/client-access/client-access) and [Autodiscover service in Exchange Server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019&preserve-view=true).
 
 2. Verify that your notification account meets the following requirements:
 
@@ -100,5 +100,5 @@ For help with specific errors, try [Resolve common errors for the Intune Exchang
 
 To get support, or to get help from the Intune community:
 
-- See [Get support](../fundamentals/get-support.md) to use the Intune console to troubleshoot the issue or to open a support case with Microsoft.
+- See [Get support](./mem/get-support.md) to use the Intune console to troubleshoot the issue or to open a support case with Microsoft.
 - Post your issue in the [Microsoft Intune forums](/answers/products/mem).

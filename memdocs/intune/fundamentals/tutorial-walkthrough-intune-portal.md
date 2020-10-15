@@ -95,7 +95,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
 5. From [Intune](https://aka.ms/intuneportal), select **Devices** to display details about your Intune tenant's enrolled devices. If you are starting with a new Intune enlistment, you will not have any enrolled devices yet.
 
-    ![Screenshot of the device enrollment pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-05.png)
+    ![Screenshot of the device enrollment page](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-05.png)
 
     The **Devices** pane provides details about your tenant's enrolled devices. You can click **All devices** to display a list of devices for your Intune tenant.
 
@@ -127,7 +127,7 @@ Follow the steps below to better understand Intune in the Azure portal. Once you
 
     ![Screenshot of the Help and support pane](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-10.png)
 
-    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. For more information, see [How to get support for Microsoft Intune](get-support.md).
+    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**. For more information, see [How to get support in Microsoft Endpoint Manager](./mem/get-support.md).
 
 11. From [Intune](https://aka.ms/intuneportal), select **Tenant Status** to display details about your Intune tenant.
 

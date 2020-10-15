@@ -65,7 +65,7 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
 3. Next, users receive a notification to install the Wi-Fi profile:
 
     > [!div class="mx-imgBorder"]
-    > ![Sample Company Portal app notification on Android to install SCEP certificate profile](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
+    > ![Sample of a Company Portal app notification on Android to install SCEP certificate profile](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
 
 4. When complete, the Wi-Fi connection is shown as a saved network:
 
@@ -79,7 +79,7 @@ On Android, the **Omadmlog.log** file details the activities of the Wi-Fi profil
 In the following example, use [CMTrace](/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
 
 > [!div class="mx-imgBorder"]
-> ![Wi-Fi connection shows as a saved network](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
+> ![Image of a Wi-Fi connection that shows as a saved network](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
 
 The following log shows your search results, and shows the Wi-Fi profile successfully applied:
 
@@ -279,7 +279,7 @@ Some additional recommendations:
 
 ## Need more help
 
-- Use the [Intune user forums](/answers/products/mem) or [get support from Microsoft](../fundamentals/get-support.md).
+- Use the [Intune user forums](/answers/products/mem) or [get support from Microsoft](./mem/get-support.md).
 
 - For more information about Wi-Fi profiles in Microsoft Intune, see the following articles:
 

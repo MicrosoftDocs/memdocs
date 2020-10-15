@@ -91,7 +91,7 @@ The Intune App SDK can use the Microsoft Authentication Library for its authenti
 - The end user must have a [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Azure Active Directory account.
 
   >[!NOTE]
-  > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) and does not support Exchange in Office 365 Dedicated.
+  > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true) and does not support Exchange in Office 365 Dedicated.
 
 **What are the additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps?**
 
@@ -230,4 +230,4 @@ When dealing with different types of settings, an Intune App SDK version require
 - [App protection policies policy refresh](../apps/app-protection-policy-delivery.md)
 - [Validate your app protection policies](../apps/app-protection-policy-delivery.md)
 - [Add app configuration policies for managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md)
-- [How to get support for Microsoft Intune](../fundamentals/get-support.md)
+- [How to get support in Microsoft Endpiont Manager](./mem/get-support.md)

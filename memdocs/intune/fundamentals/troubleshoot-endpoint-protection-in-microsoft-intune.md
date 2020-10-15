@@ -87,4 +87,4 @@ Another endpoint protection application is running, and the device is healthy.
 
 ## Next steps
 
-Get [support help from Microsoft](get-support.md), or use the [community forums](/answers/products/mem).
+Get [support help from Microsoft](./mem/get-support.md), or use the [community forums](/answers/products/mem).

@@ -571,7 +571,7 @@ The following properties are now exposed via the [devicePropertyHistory](../deve
 For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 #### Help and support workflow update to support additional services<!-- 5654170   -->
-We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:
+We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](./mem/get-support.md). With this change you'll be able to select from the following management types:
 
 - Configuration Manager (includes Desktop Analytics)
 - Intune
@@ -1068,7 +1068,7 @@ You can edit the Group Tag value for Autopilot devices. For more information, se
 
 #### Updated support experience<!-- 5012398 -->
 
-Starting today, an updated and streamlined in-console experience for [getting help and support for Intune](get-support.md) is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
+Starting today, an updated and streamlined in-console experience for [getting help and support for Intune](./mem/get-support.md) is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
 
 We've improved the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
 
@@ -2826,7 +2826,7 @@ We are rolling out the new Help and Support experience to all tenants over the n
 The new experience lets you describe your problem in your own words and receive troubleshooting insight and web-based remediation content. These solutions are offered via a rule-based machine learning algorithm, driven by user inquires.
 In addition to issue-specific guidance, you use the new case creation workflow to open a support case by email or phone. 
 This new experience replaces the previous Help and Support experience of a static set of pre-selected options that are based on the area of the console you are in when you open Help and Support.
-For more information, see [How to get support for Microsoft Intune](get-support.md).
+For more information, see [How to get support for Microsoft Intune](./mem/get-support.md).
 
 #### New operational logs, and ability to send logs to Azure Monitor services<!-- 3762211  -->
 Intune has built-in audit logging that tracks events as changes are made. This update includes new logging features, including: 
@@ -3211,7 +3211,7 @@ For customers who are part of the rollout, this new experience replaces the curr
 
 *This new Help and Support experience is being rolled out to some but not all tenants and is available in the Device Management portal. Participants for this new experience are randomly selected from the available Intune tenants. New tenants will be added as we expand the rollout.*  
 
-For more information, see [Help and Support experience](get-support.md#help-and-support-experience) in How to get support for Microsoft Intune.  
+For more information, see [Help and Support experience](./mem/get-support.md) in How to get support for Microsoft Intune.  
 
 #### PowerShell module for Intune – Preview available<!-- 951068 -->
 A new PowerShell module, which provides support for the Intune API through Microsoft Graph, is now available for preview on [GitHub](https://aka.ms/intunepowershell). For details about how to use this module, see the README in that location.

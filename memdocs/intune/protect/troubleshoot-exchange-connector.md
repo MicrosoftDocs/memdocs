@@ -69,7 +69,7 @@ Review the [on-premises Exchange connector requirements](exchange-connector-inst
 
 - The computer that hosts the Intune Exchange Connector and the Exchange Client Access Server (CAS) should be domain-joined and on same LAN. Make sure that the required permissions are added for the account that's used by the Intune Exchange connector.
 
-- The notification account is used to retrieve *Autodiscover* settings. For more information about Autodisover in Exchange, see [Autodiscover service in Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- The notification account is used to retrieve *Autodiscover* settings. For more information about Autodisover in Exchange, see [Autodiscover service in Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016&preserve-view=true).
 
 - The Intune Exchange Connector sends a request to the EWS URL by using the notification account credentials to send notification email messages together with the *Get Started* link (to enroll in Intune). Use of the *Get Started* link to enroll is a requirement for Android non-Knox devices. Otherwise, these devices will be blocked by Conditional Access.
 
@@ -88,5 +88,5 @@ The following articles can help resolve common problems and specific errors:
 
 Seek assistance from support or the Intune community:
 
-- See [Get Support](../fundamentals/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
+- See [Get Support](./mem/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
 - Post your issue in the [Microsoft Intune forums](/answers/products/mem).  
