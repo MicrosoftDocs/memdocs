@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -81,6 +81,11 @@ Your users must do the following steps. For the specific user experience, see [e
     Users may have to enter more information. For more specific steps, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+
+> [!TIP]
+> There is a short, step-by-step video to help your users in enroll their devices in Intune:
+>
+> [Enroll your Android Work Profile device](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
 
 ## Android Enterprise dedicated devices
 

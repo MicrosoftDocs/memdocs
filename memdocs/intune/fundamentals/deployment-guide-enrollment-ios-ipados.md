@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -344,6 +344,11 @@ Your users must do the following steps. For the specific user experience, see [e
     Users may have to enter more information. For more specific steps, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+
+> [!TIP]
+> There is a short, step-by-step video to help your users in enroll their devices in Intune:
+>
+> [Enroll your iOS/iPadOS device](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 
 ## Next steps
 

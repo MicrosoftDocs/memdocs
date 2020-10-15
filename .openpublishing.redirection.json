@@ -1,5 +1,16 @@
 {
     "redirections": [
+
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-communication-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-campaign.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": false
+        },  
         {
             "source_path": "memdocs/intune/fundamentals/migration-guide-considerations.md",
             "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados",

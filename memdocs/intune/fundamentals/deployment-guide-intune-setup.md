@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,9 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Setup or move to Microsoft Intune
 
-In this guide, you sign up for Intune, add your domain name, configure Intune as the MDM authority, and more.
+This deployment guide includes information when moving to Intune, or adopting Intune as your MDM and MAM solution.
+
+In this guide, you sign up for Intune, add your domain name, configure Intune as the MDM authority, and more. Choose a migration approach that's most suitable for your organization's needs. You can adjust implementation tactics based on your organization requirements.
 
 ## Prerequisites
 
@@ -48,9 +50,39 @@ If you currently don't use any MDM or MAM provider, then go straight to Intune. 
 
 ## Currently use a third party MDM provider
 
-Devices should only have one MDM provider. It's common to switch from another MDM provider, such as AirWatch, MobileIron, or MaaS360, to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+Devices should only have one MDM provider. If you use another MDM provider, such as AirWatch, MobileIron, or MaaS360, then you can move to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune.
 
-If you're moving from a partner MDM/MAM provider, note the tasks your running and the features you use. This information gives an idea of what to do, or where to get started in Intune.
+> [!IMPORTANT]
+> Don't configure Intune and your existing third party MDM solution to apply access controls to resources, including Exchange or SharePoint Online.
+
+Recommendations:
+
+- If you're moving from a partner MDM/MAM provider, then note the tasks your running and the features you use. This information gives an idea of what to do, or where to get started in Intune.
+- When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune. When devices unenroll, we recommend [using conditional access](migration-guide-drive-adoption.md) to block devices until they enroll in Intune.
+
+  Be sure you have specific unenroll and enroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
+
+- Use a phased approach. Start with a small group of pilot users, and add more groups until you reach full scale deployment.
+- Monitor the helpdesk load and enrollment success of each phase. Leave time in the schedule to evaluate success criteria for each group before migrating the next group. Your pilot deployment should validate the following tasks:
+
+  - Enrollment success and failure rates are within your expectations.
+  - User productivity:
+
+    - Corporate resources are working, including VPN, Wi-Fi, email, and certificates.
+    - Deployed apps are accessible.
+
+  - Data security:
+
+    - Review compliance reports, and look for common issues and trends. Communicate issues, resolutions, and trends with your help desk.
+    - Mobile app protections are applied.
+
+- When you're satisfied with the first phase of migrations, repeat the migration cycle for the next phase.
+
+  - Repeat the phased cycles until all users are migrated to Intune.
+  - Confirm the helpdesk is ready to support end users throughout the migration. Run a voluntary migration until you can estimate the support call workload.
+  - Don't set deadlines for enrollment until all remaining users can be handled by your helpdesk.
+
+For enrollment guidance, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
 
 Next, [deploy Intune](#deploy-intune) (in this article).
 
@@ -122,9 +154,13 @@ Next, devices are ready to be enrolled, and receive your policies.
 
 ## Currently use on-premises group policy
 
-In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When managing devices, Intune device configuration profiles replace on-premises GPO.
+In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When managing devices, Intune device configuration profiles replace on-premises GPO. These profiles use settings exposed by Apple, Google, and Microsoft. Specifically:
 
-When moving devices from group policy, you may want to reset these devices, and enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create.
+- On Android devices, these profiles use the Android [Management API](https://developers.google.com/android/management/introduction) and [EMM API](https://developers.google.com/android/work/play/emm-api/v1).
+- On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
+- On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+
+When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Endpoint Manager, you import your GPOs, and see which policies are available (and not available) in Intune.
 
 Next, [deploy Intune](#deploy-intune) (in this article).
 
@@ -176,4 +212,4 @@ In this section, add extra information provided by CSS and PFE teams.
 
 ## Next steps
 
-See the [eEnrollment deployment guides](deployment-guide-enrollment.md).
+See the [enrollment deployment guides](deployment-guide-enrollment.md), [device and app management](migration-guide-configure-policies.md), and [app protection](migration-guide-app-protection-policies.md).
