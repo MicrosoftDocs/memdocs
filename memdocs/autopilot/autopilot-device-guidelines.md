@@ -13,7 +13,7 @@ audience: itpro
 author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: troubleshooting
 ---
 
 

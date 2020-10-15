@@ -13,7 +13,7 @@ ms.author: greglin
 ms.reviewer: 
 manager: laurawi
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: troubleshooting
 ---
 
 # Windows Autopilot support information
