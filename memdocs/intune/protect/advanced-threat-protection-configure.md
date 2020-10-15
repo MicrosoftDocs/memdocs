@@ -200,7 +200,6 @@ Conditional access policies can use data from Microsoft Defender ATP to block ac
 ## Next steps
 
 - [Configure Microsoft Defender ATP settings on Android](../protect/advanced-threat-protection-manage-android.md)
-- [Configure Microsoft Defender ATP settings on iOS/iPadOS](../protect/advanced-threat-protection-manage-ios)
 - [Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
 
 Learn more from the Intune documentation:
