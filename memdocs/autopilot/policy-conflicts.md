@@ -48,7 +48,7 @@ This possible failure is especially true for kiosk scenarios where passwords are
 <td><b>Registry key</b>:
 <br>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\<a href="https://support.microsoft.com/help/324737/how-to-turn-on-automatic-logon-in-windows">Automatic logon</a>
 <br>&nbsp;
-<br>If the AutoAdminLogon registry key is set to 0 (disabled), this breaks Windows Autopilot pre-provisioning.<hr size="2"><br>
+<br>If the AutoAdminLogon registry key is set to 0 (disabled), this breaks Windows Autopilot pre-provisioning.<br><hr size="3"><br>
 <b>GPO path</b>: 
 <br>Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options<br>
 <br><b>Policies</b>:
