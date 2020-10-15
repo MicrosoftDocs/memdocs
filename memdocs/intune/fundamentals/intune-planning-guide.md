@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,6 +31,9 @@ ms.collection: M365-identity-device-management
 # Microsoft Intune planning guide
 
 A successful Microsoft Intune deployment or migration starts with having a good plan. This guide steps you through common mobile device management (MDM) and mobile application management (MAM) objectives, inventorying your devices, licensing, reviewing current policies and infrastructure, creating a rollout plan, and more.
+
+> [!TIP]
+> The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, and more good information.
 
 ## Task 1: Determine your objectives
 
@@ -372,7 +375,11 @@ Change management relies on clear and helpful communications about upcoming chan
 - Choose how to communicate Intune rollout information to your targeted organizational groups and users. For example:
 
   - Create an organizational-wide in-person meeting, or use Microsoft Teams.
-  - Create an email for pre-enrollment, email for enrollment, and email for post-enrollment.
+  - Create an email for pre-enrollment, email for enrollment, and email for post-enrollment. For example:
+
+    - **Email 1**: Explain the benefits, expectations, and schedule. Take this opportunity to showcase any other services whose access is granted on devices managed by Intune.
+    - **Email 2**: Announce that services are now ready for access through Intune. Tell users to enroll now. Give users a timeline before their access is affected. Remind users of benefits and strategic reasons for migration.
+
   - Use an organization web site that explains the rollout phases, what users can expect, and who to contact for help.
   - Create posters, use organization social media platforms (such as Yammer), or distribute flyers to announce the pre-enrollment phase.
 
@@ -440,3 +447,5 @@ The [educate your end users documentation](end-user-educate.md), community-based
 ## Next steps
 
 Create [your app and device policies](migration-guide-configure-policies.md), and [enroll your devices](deployment-guide-enrollment.md).
+
+See the [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit).

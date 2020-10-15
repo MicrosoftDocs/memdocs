@@ -69,14 +69,18 @@
   items:
   - name: Plan and Deploy
     items:
-    - name: Planning and deployment guides
+    - name: Overview
       href: migration-guide.md
     - name: Planning guide
       href: intune-planning-guide.md
     - name: Deployment/Migration guides
       items:
-      - name: Set up Intune
-        href: deployment-guide-intune-setup.md
+      - name: Intune setup
+        items:
+        - name: Setup deployment guide
+          href: deployment-guide-intune-setup.md
+        - name: Use conditional access
+          href: migration-guide-drive-adoption.md
       - name: Enroll devices
         items:
         - name: Overview
@@ -95,13 +99,6 @@
         href: migration-guide-configure-policies.md
       - name: App protection
         href: migration-guide-app-protection-policies.md
-      - name: Migration guidance
-        href: migration-guide-campaign.md
-        items:
-        - name: Plan communications
-          href: migration-guide-communication-plan.md
-        - name: Use conditional access
-          href: migration-guide-drive-adoption.md
     - name: Educate users
       items:
       - name: How to educate your end users
