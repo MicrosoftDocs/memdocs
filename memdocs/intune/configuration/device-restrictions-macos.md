@@ -8,18 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2020
-ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.technology:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-ms.reviewer: annovich
+ms.reviewer: mikedano, kakyker; annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -140,7 +129,14 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 ## Password
 
+<<<<<<< HEAD
 These settings use the [Passcode payload](https://developer.apple.com/documentation/devicemanagement/passcode) (opens Apple's web site).
+=======
+> [!IMPORTANT]
+> On macOS devices running 10.14.2 to 11 (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced.
+>
+> Also, any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to Big Sur (macOS 11), users need to change the device password before they can sign in.
+>>>>>>> fd351fa097e040559d304d5019220436adb79ea7
 
 ### Settings apply to: All enrollment types
 

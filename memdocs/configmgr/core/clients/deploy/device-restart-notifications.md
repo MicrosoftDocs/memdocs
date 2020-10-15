@@ -174,6 +174,9 @@ Once the deployment reaches its deadline, Software Center follows the behavior t
 
 The following examples describe how to configure the client settings to achieve specific behaviors.
 
+> [!NOTE]
+> If the user puts the device to sleep, it doesn't pause or interrupt a countdown. For example, a restart countdown is halfway into a four-hour timer, and the user puts the device to sleep. 12 hours later the user wakes up the device. The device restarts, as it's past the deadline.<!-- SCCMDocs#2295 -->
+
 ### Reminders are off
 
 | Setting | Value |

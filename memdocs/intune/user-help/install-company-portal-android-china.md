@@ -35,6 +35,7 @@ ms.collection:
 Install the Intune Company Portal app to access school or work resources from your Android device. The app is available in the People's Republic of China and can be installed from the following app stores: 
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (not available everywhere)
+* [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)

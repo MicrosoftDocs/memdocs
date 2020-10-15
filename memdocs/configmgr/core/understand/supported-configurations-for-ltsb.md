@@ -125,8 +125,9 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Russian  
 -   Spanish (Spain)  
 
-### Mac computers  
- You can use the LTSB to manage Mac OS X computers with the Configuration Manager client for Mac.
+### Mac computers
+
+You can use the LTSB to manage macOS X computers with the Configuration Manager client for Mac.
 
 The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
 
@@ -134,10 +135,11 @@ Support for Mac operating systems is limited to those listed in this section. Su
 
 For more information, see [How to deploy clients to Macs](../clients/deploy/deploy-clients-to-macs.md).
 
-**Supported versions:**  
--   Mac OS X 10.9 (Mavericks)  
--   Mac OS X 10.10 (Yosemite)  
--   Mac OS X 10.11 (El Capitan)  
+#### Supported versions for macOS
+
+- macOS X 10.9 (Mavericks)
+- macOS X 10.10 (Yosemite)
+- macOS X 10.11 (El Capitan)
 
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
