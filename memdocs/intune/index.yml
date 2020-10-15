@@ -38,10 +38,19 @@ conceptualContent:
       links:
         - url: ./fundamentals/migration-guide.md
           itemType: concept
-          text: Intune planning and deployment guides
+          text: Overview
         - url: ./fundamentals/intune-planning-guide.md
           itemType: concept
-          text: Intune planning guide
+          text: Planning guide
+        - url: ./fundamentals/deployment-guide-enrollment-android.md
+          itemType: concept
+          text: Android enrollment guide
+        - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
+          itemType: concept
+          text: iOS/iPadOS enrollment guide
+        - url: ./fundamentals/deployment-guide-enrollment-windows.md
+          itemType: concept
+          text: Windows enrollment guide
       footerLink:
         text: See more
         url: ./fundamentals/index.yml          

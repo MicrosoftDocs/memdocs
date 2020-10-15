@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2020
+ms.date: 10/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -92,41 +92,51 @@ Configuration Manager supports Windows and macOS devices. If you're using other 
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
-### Option 1: Set up co-management
+### Option 1: Add tenant attach
 
-This option continues to use Configuration Manager for some workflows, and uses Intune for other workflows.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
-1. In Configuration Manager, set up [co-management](https://docs.microsoft.com/configmgr/comanage/how-to-enable).
+Tenant attach is included with your [Configuration Manager co-management license](/configmgr/core/understand/product-and-licensing-faq) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
+
+For more information, see [enable tenant attach](/configmgr/tenant-attach/device-sync-actions).
+
+### Option 2: Set up co-management
+
+This option uses Configuration Manager for some workflows, and uses Intune for other workflows.
+
+1. In Configuration Manager, set up [co-management](/configmgr/comanage/how-to-enable).
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
 
 Next, devices are ready to be enrolled, and receive your policies.
 
 Helpful information:
 
-- [What is co-management?](https://docs.microsoft.com/configmgr/comanage/overview)
-- [Co-management workloads](https://docs.microsoft.com/configmgr/comanage/workloads)
-- [Switch Configuration Manager workloads to Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
-- [Configuration Manager product and licensing FAQ](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq)
+- [What is co-management?](/configmgr/comanage/overview)
+- [Co-management workloads](/configmgr/comanage/workloads)
+- [Switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
+- [Configuration Manager product and licensing FAQ]/configmgr/core/understand/product-and-licensing-faq)
 
-### Option 2: Move from Configuration Manager to Intune
+### Option 3: Move from Configuration Manager to Intune
 
-This option:
+This scenario is rare. Most existing Configuration Manager customers want to keep using Configuration Manager. Microsoft wants you to continue using Configuration Manager. It includes services that are beneficial for on-premises devices, such as [Desktop Analytics](/configmgr/desktop-analytics/overview), and more.
 
-- Existing Windows 10 devices in on-premises Active Directory are registered as devices in Azure Active Directory (AD).
-- Moves your existing on-premises Configuration Manager workflows to Intune.
+These steps are an overview, and are only included for those users who want a 100% cloud solution. With this option, you:
 
-This option is more work for administrators, but can create a more seamless experience for existing Windows 10 devices. For new Windows 10 devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-3-start-from-scratch-with-microsoft-365-and-intune) (in this article).
+- Register existing on-premises Active Directory Windows 10 devices as devices in Azure Active Directory (AD).
+- Move your existing on-premises Configuration Manager workflows to Intune.
+
+This option is more work for administrators, but can create a more seamless experience for existing Windows 10 devices. For new Windows 10 devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4-start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
 1. Set up [hybrid Active Directory and Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. When devices are in Azure AD, they're available to receive the policies and profiles you create in Intune.
 
     Hybrid Azure AD support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your hybrid Azure AD join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-2. In Configuration Manager, set up [co-management](https://docs.microsoft.com/configmgr/comanage/how-to-enable).
+2. In Configuration Manager, set up [co-management](/configmgr/comanage/how-to-enable).
 3. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
-4. In Configuration Manager, [slide all the workflows from Configuration Manager to Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads).
-5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](https://docs.microsoft.com/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
+4. In Configuration Manager, [slide all the workflows from Configuration Manager to Intune](/configmgr/comanage/how-to-switch-workloads).
+5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
 
-    Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm).
+    Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm).
 
 Next, devices are ready to be enrolled, and receive your policies.
 
@@ -138,7 +148,9 @@ Next, devices are ready to be enrolled, and receive your policies.
 >
 > To help minimize vulnerabilities, move macOS devices after Intune is setup, and your enrollment policies are ready to be deployed.
 
-### Option 3: Start from scratch with Microsoft 365 and Intune
+### Option 4: Start from scratch with Microsoft 365 and Intune
+
+This option applies to Windows 10 and newer devices. If you use Windows Server OSs, such as Windows Server 2016, then don't use this option. Use Configuration Manager.
 
 1. [Deploy Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups.
 
@@ -148,7 +160,7 @@ Next, devices are ready to be enrolled, and receive your policies.
     - Set up [Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/set-up)
 
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
-3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](https://docs.microsoft.com/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
+3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
 
 Next, devices are ready to be enrolled, and receive your policies.
 
@@ -166,7 +178,7 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 
 ## Deploy Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
+1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
 
     For more information, see [Sign up, or sign in to Intune](account-sign-up.md).
 
