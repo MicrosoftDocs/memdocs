@@ -23,10 +23,6 @@
         - name: Fundamentals
           tocHref: /mem/intune/fundamentals/
           topicHref: /mem/intune/fundamentals/
-          items:
-          - name: Get support
-            tocHref: /mem/get-support
-            topicHref: /mem/intune/fundamentals
         - name: Enrollment
           tocHref: /mem/intune/enrollment/
           topicHref: /mem/intune/enrollment/
