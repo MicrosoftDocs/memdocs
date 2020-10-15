@@ -73,7 +73,7 @@ These guides break down the migration into two phases. Both include tasks, strat
     - [Android](deployment-guide-enrollment-android.md)
     - [iOS/iPadOS](deployment-guide-enrollment-ios-ipados.md)
     - [macOS](deployment-guide-enrollment-macos.md)
-    - [Windows](deployment-guide-enrollment-windows.md).
+    - [Windows](deployment-guide-enrollment-windows.md)
 
   - [Device and app management](migration-guide-configure-policies.md)
   - [App protection](../apps/app-protection-policies.md)

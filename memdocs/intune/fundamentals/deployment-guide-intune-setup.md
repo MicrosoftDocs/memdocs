@@ -53,12 +53,12 @@ If you currently don't use any MDM or MAM provider, then go straight to Intune. 
 Devices should only have one MDM provider. If you use another MDM provider, such as AirWatch, MobileIron, or MaaS360, then you can move to Intune. The biggest challenge is users must unenroll their devices from the current MDM provider, and then enroll in Intune.
 
 > [!IMPORTANT]
-> Do not configure both Intune and your existing third party MDM solution to apply access controls to resources such as Exchange or SharePoint Online.
+> Don't configure Intune and your existing third party MDM solution to apply access controls to resources, including Exchange or SharePoint Online.
 
 Recommendations:
 
 - If you're moving from a partner MDM/MAM provider, then note the tasks your running and the features you use. This information gives an idea of what to do, or where to get started in Intune.
-- When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune. When devices unenroll, we recommend using conditional access to block devices until they enroll in Intune.
+- When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune. When devices unenroll, we recommend [using conditional access](migration-guide-drive-adoption.md) to block devices until they enroll in Intune.
 
   Be sure you have specific unenroll and enroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
 
