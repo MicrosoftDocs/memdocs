@@ -14,7 +14,7 @@ audience: itpro
 author: mtniehaus
 ms.author: mniehaus
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: troubleshooting
 ---
 
 

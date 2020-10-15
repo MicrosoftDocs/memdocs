@@ -13,7 +13,7 @@ ms.sitesec: library
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.topic: article
+ms.topic: conceptual
 ---
 
 #  Windows Autopilot deployment process
