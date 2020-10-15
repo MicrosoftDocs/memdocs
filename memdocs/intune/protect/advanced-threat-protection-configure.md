@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 10/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 The information and procedures in this article will help you to configure integration of Microsoft Defender ATP with Intune. Configuration includes the following general steps:
 
 - Enable Microsoft Defender ATP for your tenant
-- Onboard devices that run Windows and Android
+- Onboard devices that run Android, iOS/iPadOS, and Windows 10
 - Use compliance policies to set device risk levels
 - Use conditional access policies to block devices that exceed your expected risk levels
 
@@ -61,10 +61,11 @@ You only need to enable Microsoft Defender ATP a single time per tenant.
    3. Select **Save preferences**.
 
 4. Return to **Microsoft Defender ATP** in the Microsoft Endpoint Manager admin center. Under **MDM Compliance Policy Settings**, depending on your organization's needs:
-   - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**
    - Set **Connect Android devices of version 6.0.0 and above to Microsoft Defender ATP** to **On**
-  
-   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for hte purpose of compliance.
+   - Set **Connect iOS devices version 8.0 and above to Microsoft Defender Advanced Threat Protection** to **On**
+   - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**
+
+   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for the purpose of compliance.
 
 5. Select **Save**.
 
@@ -130,9 +131,17 @@ Unlike for Windows devices, there isn't a configuration package for devices that
 
 For devices that run Android, you can also use Intune policy to modify Microsoft Defender ATP on Android. For more information, see [Microsoft Defender ATP web protection](../protect/advanced-threat-protection-manage-android.md).
 
+### Onboard iOS/iPadOS devices
+
+After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard iOS/iPadOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about the devices risk level. 
+
+Unlike for Windows devices, there isn't a configuration package for devices that run iOS/iPadOS. Instead, see [Overview of Microsoft Defender Advanced Threat Protection for iOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-ios) in the Microsoft Defender ATP documentation for prerequisites and onboarding instructions for iOS/iPadOS.
+
+You can also use Intune policy to modify Microsoft Defender ATP on iOS/iPadOS. For more information, see [Microsoft Defender ATP web protection for iOS/iPadOS](../protect/advanced-threat-protection-manage-android.md).
+
 ## Create and assign compliance policy to set device risk level
 
-For both Windows, and Android devices, the compliance policy determines the level of risk that you consider as acceptable for a device.
+For Android, iOS/iPadOS, and Windows devices, the compliance policy determines the level of risk that you consider as acceptable for a device.
 
 If you're not familiar with creating compliance policy, reference the [Create a policy](../protect/create-compliance-policy.md#create-the-policy) procedure from the *Create a compliance policy in Microsoft Intune* article. The following information is specific to configuring Microsoft Defender ATP as part of a compliance policy.
 
@@ -141,9 +150,10 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
 3. For **Platform**, use the drop-down box to select one of the following options:
-   - **Windows 10 and later**
    - **Android device administrator**
    - **Android Enterprise**
+   - **iOS/iPadOS**
+   - **Windows 10 and later**
 
    Next, select **Create** to open the **Create policy** configuration window.
 
@@ -159,7 +169,6 @@ If you're not familiar with creating compliance policy, reference the [Create a 
    - **High**: This level is the least secure and allows all threat levels. Devices with high, medium, or low threat levels are considered compliant.
 
 6. Complete the configuration of the policy, including assignment of the policy to applicable groups.
-
 
 ## Create a conditional access policy
 
@@ -191,6 +200,7 @@ Conditional access policies can use data from Microsoft Defender ATP to block ac
 ## Next steps
 
 - [Configure Microsoft Defender ATP settings on Android](../protect/advanced-threat-protection-manage-android.md)
+- [Configure Microsoft Defender ATP settings on iOS/iPadOS](../protect/advanced-threat-protection-manage-ios)
 - [Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
 
 Learn more from the Intune documentation:

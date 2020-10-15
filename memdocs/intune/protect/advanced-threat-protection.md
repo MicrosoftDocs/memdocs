@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Microsoft Defender ATP in Microsoft Intune - Azure | Microsoft Docs
-description: Use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Intune, including setup and configuration, onboarding of your Intune devices with ATP, and then use a devices ATP risk assessment with your Intune device compliance and conditional access policies to protect network resources.
+title: Use Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
+description: Use Microsoft Defender for Endpoint (formerly Microsoft Defender ATP) with Intune, including setup and configuration, onboarding of your Intune devices, and then use a devices Defender for Endpoint risk assessment with your Intune device compliance and conditional access policies to protect network resources.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,11 +28,14 @@ ms.collection: M365-identity-device-management
 ---
 
 
-# Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune
+# Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune
 
-You can integrate Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Microsoft Intune as a Mobile Threat Defense solution. Integration can help you prevent security breaches and limit the impact of breaches within an organization.
+You can integrate Microsoft Defender for Endpoint (formerly Microsoft Defender ATP) with Microsoft Intune as a Mobile Threat Defense solution. Integration can help you prevent security breaches and limit the impact of breaches within an organization.
 
-Microsoft Defender ATP works with devices that run Windows 10 or later, and with Android devices.
+Microsoft Defender for Endpoint works with devices that run:
+- Android
+- iOS/iPadOS
+- Windows 10 or later
 
 To be successful, you'll use the following configurations in concert:
 
@@ -69,11 +72,14 @@ For devices that run Android, you can use Intune policy to modify the configurat
 To use Microsoft Defender ATP with Intune, be sure you have the following configured, and ready for use:
 
 - Licensed tenant for Enterprise Mobility + Security E3 and Windows E5 (or Microsoft 365 Business Premium)
-- Microsoft Intune environment, with [Intune managed](../enrollment/windows-enroll.md) Windows 10, or Android devices that are also Azure AD joined
+- Microsoft Intune environment, with [Intune managed](../enrollment/windows-enroll.md) devices that are Azure AD joined and run:
+  - Android
+  - iOS/iPadOS
+  - Windows 10
 - [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) environment which will give you access to the Microsoft Defender Security Center (ATP portal)
 
 > [!NOTE]
-> Microsoft Defender ATP is not supported with iOS/iPadOS and Android Intune app protection policies.
+> Microsoft Defender ATP is not supported with Intune app protection policies.
 
 ## Next steps
 
