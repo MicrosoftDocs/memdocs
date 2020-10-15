@@ -28,7 +28,7 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: 
 - M365-modern-desktop
-- M365initiative-coredeploy
+- m365initiative-coredeploy
 - M365-identity-device-management
 ---
 
@@ -50,6 +50,9 @@ This article explains how to set up Autopilot for Windows PC. For more informati
 - [Intune subscription](../intune/fundamentals/licenses.md)
 - [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+
+> [!NOTE]
+> Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](/mem/intune/fundamentals/role-based-access-control) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
 
 ## How to get the CSV for Import in Intune
 

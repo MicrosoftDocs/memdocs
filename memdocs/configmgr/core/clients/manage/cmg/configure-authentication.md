@@ -69,7 +69,7 @@ The CMG client authentication certificate supports the following configurations:
 
 - 2048-bit or 4096-bit key length
 
-- This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG certificates overview](../../../plan-design/network/cng-certificates-overview.md).
+- This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG v3 certificates overview](../../../plan-design/network/cng-certificates-overview.md).
 
 ### <a name="bkmk_clientroot"></a> Export the client certificate's trusted root
 

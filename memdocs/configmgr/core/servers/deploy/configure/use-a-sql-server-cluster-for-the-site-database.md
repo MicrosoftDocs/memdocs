@@ -85,7 +85,7 @@ Here are the main tasks to complete to prepare your site database:
 
 - Create the failover cluster instance to host the site database on an existing Windows Server failover cluster environment. For specific steps to install and set up a failover cluster instance, see the documentation specific to your version of SQL Server. For more information, see [Create a new SQL Server Always On failover cluster instance](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup).
 
-- On each computer in the failover cluster instance, place a file in the root folder of each drive where you don't want Configuration Manager to install site components. Name the file `NO_SMS_ON_DRIVE.SMS`. By default, Configuration Manager installs some components on each physical node, to support operations such as backup.
+- On each computer in the failover cluster instance, place a file in the root folder of each drive where you don't want Configuration Manager to install site components. Name the file `no_sms_on_drive.sms`. By default, Configuration Manager installs some components on each physical node, to support operations such as backup.
 
 - Add the computer account of the site server to the local **Administrators** group of each Windows Server failover cluster node.
 

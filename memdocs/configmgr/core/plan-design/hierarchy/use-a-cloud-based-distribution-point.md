@@ -320,9 +320,9 @@ Certificates for cloud distribution points support the following configurations:
 
 - Version 3 certificates. For more information, see [CNG certificates overview](../network/cng-certificates-overview.md).  
 
-- Starting in version 1802, when you configure Windows with the following policy: **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**  
+- When you configure Windows with the following policy: **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**  
 
-- Starting in version 1802, support for TLS 1.2. For more information, see [Cryptographic controls technical reference](../security/cryptographic-controls-technical-reference.md#about-ssl-vulnerabilities).  
+- Support for TLS 1.2. For more information, see [Cryptographic controls technical reference](../security/cryptographic-controls-technical-reference.md#about-ssl-vulnerabilities).  
 
 ### Server authentication certificate
 
