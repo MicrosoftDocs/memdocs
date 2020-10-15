@@ -214,7 +214,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
-    For more information, see [How to get support in Microsoft Endpoint Manager](./get-support.md).
+    For more information, see [How to get support in Microsoft Endpoint Manager](../../get-support.md).
 
 15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
 
