@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 
 Use the following steps to retire desktops that you are managing as PCs by running the Intune software client on them. When you retire a PC, it removes it from Intune management. You cannot wipe a PC from Intune to set it back to its original factory settings.
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC you want to retire).
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com), choose **Groups** &gt; **All Devices** (or another group that contains the PC you want to retire).
 
 2. Select the devices you want to retire, and then choose **Retire/Wipe**.
 

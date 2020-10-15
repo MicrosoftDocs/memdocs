@@ -21,7 +21,7 @@ The public key infrastructure (PKI) certificates that you might require for Conf
 
 For more about Active Directory Certificate Services, see [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
-For information about using Cryptography API: Next Generation (CNG) certificates with Configuration Manager, see [CNG certificates overview](cng-certificates-overview.md).
+For information about using Cryptography API: Next Generation (CNG) v3 certificates with Configuration Manager, see [CNG v3 certificates overview](cng-certificates-overview.md).
 
 
 > [!IMPORTANT]  

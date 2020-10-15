@@ -57,13 +57,13 @@ Keep the following considerations in mind when you create and deploy application
 ###  Step 1: Prepare Mac applications for Configuration Manager  
  The process for creating and deploying Configuration Manager applications to Mac computers is similar to the deployment process for Windows computers. However, before you create Configuration Manager applications that contain Mac deployment types, you must prepare the applications by using the **CMAppUtil** tool. This tool is downloaded with the Mac client installation files. The **CMAppUtil** tool can gather information about the application, which includes detection data from the following Mac packages:  
 
--   Apple Disk Image (.dmg)  
+- Apple disk image (.dmg)
 
--   Meta Package File (.mpkg)  
+- Meta package file (.mpkg)
 
--   Mac OS X Installer Package (.pkg)  
+- macOS X installer package (.pkg)
 
--   Mac OS X Application (.app)  
+- macOS X application (.app)
 
 After it gathers application information, the **CMAppUtil** then creates a file with the extension **.cmmac**. This file contains the installation files for the Mac software and information about detection methods that can be used to evaluate whether the application is already installed. **CMAppUtil** can also process **.dmg** files that contain multiple Mac applications and create different deployment types for each application.  
 
