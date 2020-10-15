@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Setup or move to Microsoft Intune
 
-This deployment guide includes information when moving to Intune 
+This deployment guide includes information when moving to Intune, or adopting Intune as your MDM and MAM solution.
 
 In this guide, you sign up for Intune, add your domain name, configure Intune as the MDM authority, and more. Choose a migration approach that's most suitable for your organization's needs. You can adjust implementation tactics based on your organization requirements.
 
