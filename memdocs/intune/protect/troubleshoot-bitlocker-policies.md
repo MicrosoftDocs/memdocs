@@ -44,7 +44,7 @@ With Microsoft Intune, you have the following methods to manage BitLocker on Win
 
 - **Device Configuration policies** - Certain built-in policy options are available in Intune when you create a device configuration profile to manage endpoint protection. To find these options, [create a device profile for endpoint protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), selecting **Windows 10 and later** for the *Platform*, and then selecting the **Windows Encryption** category for *Settings*. 
 
-   You can read about the available options and features here: [Windows Encryption](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   You can read about the available options and features here: [Windows Encryption](/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Security baselines** - [Security baselines](security-baselines.md) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender ATP Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies. 
 
@@ -52,12 +52,12 @@ In addition to Intune, for hardware that is compliant with Modern Standby and HS
 
 It's also possible that BitLocker settings are managed by other means like Group Policy, or manually set by a device user.
 
-No matter how settings are applied to a device, BitLocker policies make use of the [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) to configure encryption on the device. The BitLocker CSP is built into Windows and when Intune deploys a BitLocker policy to an assigned device, it's the BitLocker CSP on the device that writes the appropriate values to the Windows registry so that settings from the policy can take effect.
+No matter how settings are applied to a device, BitLocker policies make use of the [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) to configure encryption on the device. The BitLocker CSP is built into Windows and when Intune deploys a BitLocker policy to an assigned device, it's the BitLocker CSP on the device that writes the appropriate values to the Windows registry so that settings from the policy can take effect.
 
 If you'd like to learn more about BitLocker, see the following resources:
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker Overview and Requirements FAQ](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker Overview and Requirements FAQ](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Now that you have a general understanding of what these policies do and how they work, look at how you can verify if the BitLocker settings successfully apply to a Windows client.
 
@@ -118,7 +118,7 @@ After BitLocker policy successfully deploys to a device, view the following regi
 
 ![BitLocker registry key](./media/troubleshooting-bitlocker-policies/registry.png)
 
-These values are configured by the BitLocker CSP. Verify that the values of the keys match the settings specified in the source of your Intune Windows Encryption policy. For more information on each of these settings, see [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+These values are configured by the BitLocker CSP. Verify that the values of the keys match the settings specified in the source of your Intune Windows Encryption policy. For more information on each of these settings, see [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp).
 
 > [!NOTE]
 > The Windows Event Viewer will also contain various information related to Bitlocker. There are too many to list here but searching for **Bitlocker API** will provide you with a lot of useful information.
@@ -145,7 +145,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-You can reference the [BitLocker CSP documentation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) to see what each value means. For this example, a snippet is shared in the following image.
+You can reference the [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp) to see what each value means. For this example, a snippet is shared in the following image.
 
 ![Purposes of values](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -171,10 +171,10 @@ You should now have a good idea how to confirm that the BitLocker policy success
 - **Does the deployment of the entire policy fail, or is it only certain settings that don't apply?** If you find yourself faced with a scenario where only some policy settings don't apply, check the following considerations:
 
   1. **Not all BitLocker settings are supported on all Windows versions**.
-     Policy comes down to a device as a single unit, so if some settings apply and others don't, you can be confident that the policy itself is received. In this scenario, it's possible that the version of Windows on the device doesn't support the problematic settings. See [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in the Windows documentation for details on version requirements for each setting.
+     Policy comes down to a device as a single unit, so if some settings apply and others don't, you can be confident that the policy itself is received. In this scenario, it's possible that the version of Windows on the device doesn't support the problematic settings. See [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation for details on version requirements for each setting.
 
   2. **BitLocker isn't supported on all hardware**.
-     Even if you have the right version of Windows, it's possible that the underlying device hardware doesn't meet the requirements for BitLocker encryption. You can find the [system requirements for BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) in the Windows documentation, but the main things to check are that the device has a compatible TPM chip (1.2 or later) and a Trusted Computing Group (TCG)-compliant BIOS or UEFI firmware.
+     Even if you have the right version of Windows, it's possible that the underlying device hardware doesn't meet the requirements for BitLocker encryption. You can find the [system requirements for BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) in the Windows documentation, but the main things to check are that the device has a compatible TPM chip (1.2 or later) and a Trusted Computing Group (TCG)-compliant BIOS or UEFI firmware.
      
 **Bitlocker Encryption is not performed silently** - You have configured an Endpoint Protection policy with the setting "Warning for other disk encryption" set to block and the encryption wizard still appears:
 
@@ -218,11 +218,11 @@ When you troubleshoot BitLocker policy issues with Intune and can confirm that p
 
 The following are more resources that might help when you work with BitLocker:
 
-- [BitLocker product documentation](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker system requirements](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [BitLocker frequently asked questions](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [BitLocker CSP documentation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Intune Windows Encryption policy settings](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [Hardware independent automatic BitLocker encryption using AAD/MDM](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [BitLocker product documentation](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker system requirements](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [BitLocker frequently asked questions](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp)
+- [Intune Windows Encryption policy settings](/intune/endpoint-protection-windows-10#windows-encryption)
+- [Hardware independent automatic BitLocker encryption using AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [CSP Policy for BitLocker Encryption on Auto-Pilot Devices](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Walkthrough creating and deploying BitLocker policy with Intune](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Walkthrough creating and deploying BitLocker policy with Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

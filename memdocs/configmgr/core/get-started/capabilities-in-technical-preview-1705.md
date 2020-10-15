@@ -117,12 +117,12 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
 
 - This release does not support failover to use the asynchronous commit replica as your site database.
   > [!CAUTION]  
-  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
 
 - You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
-To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) For more information, see [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) For more information, see [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### Use the asynchronous replica to recover your site
 Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -132,20 +132,20 @@ To stop the site, you can use the [hierarchy maintenance tool](../servers/manage
 Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
 
 
-## Improved user notifications for Office 365 updates
-Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. Prior to this release, when an Office 365 update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
+## Improved user notifications for Microsoft 365 updates
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs a Microsoft 365 update. This includes pop-up and in-app notifications, and a countdown experience. Prior to this release, when a Microsoft 365 update was sent to a client, Office applications that were open were automatically closed without warning. After this update, Office applications will no longer be closed unexpectedly.
 
 ### Prerequisites
-This update applies to Office 365 ProPlus clients.
+This update applies to Microsoft 365 Apps for enterprise clients.
 
 ### Known issues
-When a client evaluates an Office 365 update assignment for the first time and the update has a deadline scheduled in the past, scheduled immediately, or scheduled within 30 minutes, the Office 365 user experience can be inconsistent. For example, the client might receive a 30 minute countdown dialog for the update, but the actual enforcement could start before the end of the countdown. To avoid this behavior, consider the following:
-- Deploy the Office 365 update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
+When a client evaluates a Microsoft 365 update assignment for the first time and the update has a deadline scheduled in the past, scheduled immediately, or scheduled within 30 minutes, the Microsoft 365 user experience can be inconsistent. For example, the client might receive a 30 minute countdown dialog for the update, but the actual enforcement could start before the end of the countdown. To avoid this behavior, consider the following:
+- Deploy the Microsoft 365 update with a deadline that is scheduled for more than 60 minutes ahead of the current time.
 - Configure a maintenance window during non-business hours on the collection or configure an enforcement grace period on the deployment.
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-- Deploy to a client an Office 365 update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
+- Deploy to a client a Microsoft 365 update with a deadline set to a time at least 60 minutes ahead of the current time. Observe the new behavior on the client.
 
 
 ## Configure and deploy Windows Defender Application Guard policies

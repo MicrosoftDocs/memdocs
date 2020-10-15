@@ -2,7 +2,7 @@
 title: Endpoint analytics settings
 titleSuffix: Configuration Manager
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 07/27/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
@@ -14,11 +14,6 @@ manager: dougeby
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
 
@@ -32,19 +27,19 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 
 To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
 
+  - **Platform**: Select **Windows 10 and later**
+  
+  - **Profile**: Select **Windows Health monitoring**
+  
   - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
    
   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     
-  - **Platform**: Select **Windows 10 and later**
+  - In **Configuration Settings**:
    
-  - **Profile type**: Select **Windows Health monitoring**
-   
-  - Configure the **Settings**:
-   
-       - **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
+       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
     
-    - **Scope**: Select **Boot performance**
+       - **Scope**: Select **Boot performance**. Basic scope is not used by endpoint analytics.
 
   - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
@@ -57,6 +52,15 @@ Once connected, you can [choose which devices you'd like to target](enroll-confi
 > [!NOTE] 
 > Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
 
+### <a name="bkmk_consent"></a> Consent to share data
+
+By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights like Startup performance or Recommended software. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
+
+To revoke consent:
+
+1. On the Endpoint analytics settings page, clear the checkbox that states **I consent to share anonymized and aggregate metrics to see updated Endpoint analytics scores and insights**.
+1. Select **Yes** to confirm the action.
+1. Optionally, [stop gathering data](data-collection.md#bkmk_stop).
 
 ## <a name="bkmk_baselines"></a> Baseline management
 
@@ -74,3 +78,6 @@ You can compare your current scores and subscores to others by setting a baselin
    [![Endpoint analytics baseline settings page](media/settings-baseline.png)](media/settings-baseline.png#lightbox)
 
 ## Next steps
+
+- [Enroll Intune devices](enroll-intune.md)
+- [Enroll Configuration Manager devices](enroll-configmgr.md)

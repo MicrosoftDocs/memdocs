@@ -1,6 +1,7 @@
 ---
 title: Application approval process
 titleSuffix: Configuration Manager
+description: Learn about the application approval process. See scenarios with code examples and view known issues.
 ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
@@ -190,7 +191,7 @@ Administrators can configure email notifications for application approval reques
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration** -> **Sites**.
 1. Select the top-level site in your hierarchy and select **Configure Site Components** in the ribbon.
 1. Select **Email Notification** to open the **Properties** dialog.
-1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Office 365, you can use the [Office 365 SMTP server](/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
+1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Microsoft 365, you can use the [Microsoft 365 SMTP server](/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
 1. Enter the FQDN or IP address of the SMTP server.
 1. Select to **Specify an account**, select **Set**, then select **New Account**.
 1. Provide a username and password for the new account and click **OK**.
@@ -207,7 +208,7 @@ Administrators can configure email notifications for application approval reques
 To approve application requests outside of the internal network, additional settings are required:
 
 1. Enable Allow Configuration Manager cloud management gateway traffic in **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider** > **Properties**.
-1. Configure the [Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+1. Configure the [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 1. Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 1. Configure the following settings for this native app (client app) in Azure AD. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
    - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.

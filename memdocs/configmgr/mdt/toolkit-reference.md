@@ -12941,7 +12941,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
  This parameter specifies the SQL Server instance in which the new MDT DB database will be created. If this parameter is omitted, the MDT DB database is created in the default SQL Server instance.  
 
 > [!NOTE]
->  The SQL Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.  
+>  The SQL Server Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -12963,13 +12963,13 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |**Accept wildcard characters?**|**False**|  
 
 ##### -Netlib <String\>  
- This parameter specifies the SQL network library used in communication with the SQL Server instance specified in the *SQLServer* parameter. The parameter can be set to one of the following values:  
+ This parameter specifies the SQL Server network library used in communication with the SQL Server instance specified in the *SQLServer* parameter. The parameter can be set to one of the following values:  
 
 - **DBNMPNTW**, which is used to specify named pipes communication  
 
 - **DBSMSOCN**, which is used to specify TCP/IP sockets communication  
 
-  If this parameter is not provided, the named pipes SQL network library (DBNMPNTW) is used.  
+  If this parameter is not provided, the named pipes SQL Server network library (DBNMPNTW) is used.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -13491,7 +13491,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
  This parameter specifies the SQL Server instance on which the MDT DB database to be upgraded exists. If this parameter is omitted, then the MDT DB database is assumed to be in the default SQL Server instance.  
 
 > [!NOTE]
->  The SQL Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.  
+>  The SQL Server Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -13513,16 +13513,16 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |**Accept wildcard characters?**|**False**|  
 
 ##### -Netlib <String\>  
- This parameter specifies the SQL network library that is used in communication with the SQL Server instance specified in the *SQLServer* parameter. The parameter can be set to one of the following values:  
+ This parameter specifies the SQL Server network library that is used in communication with the SQL Server instance specified in the *SQLServer* parameter. The parameter can be set to one of the following values:  
 
 - **DBNMPNTW**, which is used to specify named pipes communication  
 
 - **DBSMSOCN**, which is used to specify TCP/IP sockets communication  
 
-  If this parameter is not provided, the named pipes SQL network library (**DBNMPNTW**) is used.  
+  If this parameter is not provided, the named pipes SQL Server network library (**DBNMPNTW**) is used.  
 
 > [!NOTE]
->  The Deployment Workbench does not provide the option for configuring the SQL network library. The Deployment Workbench always uses named pipes communication. However, the SQL network library can be configured in the CustomSettings.ini file.  
+>  The Deployment Workbench does not provide the option for configuring the SQL Server network library. The Deployment Workbench always uses named pipes communication. However, the SQL Server network library can be configured in the CustomSettings.ini file.  
 
 |**Parameter**|**Value**|  
 |-|-|  
@@ -13994,7 +13994,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:  
 
-- [Windows Presentation Foundation](/dotnet/framework/wpf/) version 4.0  
+- [Windows Presentation Foundation](/dotnet/desktop-wpf/) version 4.0  
 
 - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
@@ -14450,7 +14450,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
  Use this validator to require text in a field. The **Message** box allows you to enter a message that is displayed if the text field is empty.  
 
 #####  <a name="RegEx"></a> RegEx  
- This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp?view=vs-2019).  
+ This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp).  
 
 ###  <a name="UDIWizardPageReference"></a> UDI Wizard Page Reference  
  You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#UDIWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#UDIWizard).  

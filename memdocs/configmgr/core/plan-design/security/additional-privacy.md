@@ -32,7 +32,7 @@ For more information about collected information and how it's used, see [Usage d
 Configuration Manager collects diagnostics and usage data about itself, which Microsoft uses to improve the installation experience, quality, and security of future releases.
 Diagnostics and usage data is enabled for each Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.
 
-Configuration Manager collects data only from the site's SQL server database, and it doesn't collect data directly from clients or site servers.
+Configuration Manager collects data only from the site's SQL Server database, and it doesn't collect data directly from clients or site servers.
 
 Administrators can change the level of data that's collected by going to the **Usage Data** section of the Configuration Manager console.
 
@@ -85,6 +85,9 @@ For more information, see [Endpoint Protection](../../../protect/deploy-use/endp
 
 
 ## Site Hierarchy – Geographical View with Bing Maps
+
+> [!IMPORTANT]
+> Starting in August 2020, this feature is deprecated. Use the **Hierarchy Diagram** option.<!--8116777-->
 
 In the Configuration Manager console, go to the **Monitoring** workspace, select the **Site Hierarchy** node, and switch to the **Geographical View**. This view lets you use maps that Microsoft Bing Maps provides to view your Configuration Manager physical server topology. To enable this feature, location information that you provide is sent from your server to the Bing Maps Web service.
 

@@ -53,16 +53,16 @@ This issue happens because Windows 10, version 1903 and 1909 deletes the Autopil
 <tr><td>The following known issues are resolved by installing the August 30, 2019 KB4512941 update (OS Build 18362.329):
 
 - Windows Autopilot for existing devices feature doesn't properly suppress “Activities” page during OOBE. (Because of this issue, you’ll see that extra page during OOBE).
-- TPM attestation state isn't cleared by sysprep /generalize, causing TPM attestation failure during later OOBE flow. (This isn’t a particularly common issue, but you could run into it while testing if you're running sysprep /generalize and then rebooting or reimaging the device to go back through an Autopilot white glove or self-deploying scenario).
+- TPM attestation state isn't cleared by sysprep /generalize, causing TPM attestation failure during later OOBE flow. (This isn’t a particularly common issue, but you could run into it while testing if you're running sysprep /generalize and then rebooting or reimaging the device to go back through an Autopilot pre-provisioning or self-deploying scenario).
 - TPM attestation may fail if the device has a valid AIK cert but no EK cert. (This issue is related to the previous item).
-- If TPM attestation fails during the Windows Autopilot white glove process, the landing page appears to be hung. (Basically, the white glove landing page, where you click “Provision” to start the white glove process, isn’t reporting errors properly).
+- If TPM attestation fails during the Windows Autopilot pre-provisioning process, the landing page appears to be hung. (Basically, the pre-provisioning landing page, where you click “Provision” to start the pre-provisioning process, isn’t reporting errors properly).
 - TPM attestation fails on newer Infineon TPMs (firmware version > 7.69). (Before this fix, only a specific list of firmware versions was accepted).
 - Device naming templates may truncate the computer name at 14 characters instead of 15.
 - Assigned Access policies cause a reboot, which can interfere with the configuration of single-app kiosk devices.
 <td>Download and install the <a href="https://support.microsoft.com/help/4512941">KB4512941 update</a>. <br><br>See the section: <b>How to get this update</b> for information on specific release channels you can use to obtain the update.
 <tr><td>The following known issues are resolved by installing the July 26, 2019 KB4505903 update (OS Build 18362.267):
 
-- Windows Autopilot white glove doesn't work for a non-English OS and you see a red screen that says "Success."
+- Windows Autopilot pre-provisioning doesn't work for a non-English OS and you see a red screen that says "Success."
 - Windows Autopilot reports an AUTOPILOTUPDATE error during OOBE after sysprep, reset, or other variations. This issue typically happens if you reset the OS or used a custom sysprepped image.
 - BitLocker encryption isn't correctly configured. Ex: BitLocker didn’t get an expected notification after policies were applied to begin encryption.
 - You're unable to install UWP apps from the Microsoft Store, causing failures during Windows Autopilot. If you're deploying Company Portal as a blocking app during Windows Autopilot ESP, you’ve probably seen this error.
@@ -74,16 +74,16 @@ This issue happens because Windows 10, version 1903 and 1909 deletes the Autopil
 <tr><td>0x801c03ea<td>This error indicates that TPM attestation failed, causing a failure to join Azure Active Directory with a device token.
 <tr><td>0xc1036501<td>The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Azure AD. See <a href="https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/">Inside Windows Autopilot self-deploying mode</a>.
 </table>
-<tr><td>White glove gives a red screen and the <b>Microsoft-Windows-User Device Registration/Admin</b> event log displays <b>HResult error code 0x801C03F3</b><td>This issue can happen if Azure AD can’t find an Azure AD device object for the device that you're trying to deploy. This issue will occur if you manually delete the object. To fix it, remove the device from Azure AD, Intune, and Autopilot, then re-register it with Autopilot, which will recreate the Azure AD device object.<br> 
+<tr><td>Pre-provisioning gives a red screen and the <b>Microsoft-Windows-User Device Registration/Admin</b> event log displays <b>HResult error code 0x801C03F3</b><td>This issue can happen if Azure AD can’t find an Azure AD device object for the device that you're trying to deploy. This issue will occur if you manually delete the object. To fix it, remove the device from Azure AD, Intune, and Autopilot, then re-register it with Autopilot, which will recreate the Azure AD device object.<br> 
 <br>To obtain troubleshooting logs, use: <b>Mdmdiagnosticstool.exe -area Autopilot;TPM -cab c:\autopilot.cab</b>
-<tr><td>White glove gives a red screen<td>White glove isn't supported on a VM.
+<tr><td>Pre-provisioning gives a red screen<td>Pre-provisioning isn't supported on a VM.
 <tr><td>Error importing Windows Autopilot devices from a .csv file<td>Ensure that you haven't edited the .csv file in Microsoft Excel or an editor other than Notepad. Some of these editors can introduce extra characters causing the file format to be invalid. 
 <tr><td>Windows Autopilot for existing devices doesn't follow the Autopilot OOBE experience.<td>Ensure that the JSON profile file is saved in <b>ANSI/ASCII</b> format, not Unicode or UTF-8.
-<tr><td><b>Something went wrong</b> is displayed page during OOBE.<td>The client is likely unable to access all the required Azure AD/MSA-related URLs. For more information, see [Networking requirements](networking-requirements.md).
+<tr><td><b>Something went wrong</b> is displayed page during OOBE.<td>The client is likely unable to access all the required Azure AD/MSA-related URLs. For more information, see <a href="networking-requirements.md">Networking requirements</a>.
 <tr><td>Using a provisioning package in combination with Windows Autopilot can cause issues, especially if the PPKG contains join, enrollment, or device name information.<td>Using PPKGs in combination with Windows Autopilot isn't recommended.
 </table>
 
 ## Related topics
 
-[Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
 [Troubleshooting Windows Autopilot](troubleshooting.md)

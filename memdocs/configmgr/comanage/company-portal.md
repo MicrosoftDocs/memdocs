@@ -2,7 +2,7 @@
 title: Apps in Company Portal
 titleSuffix: Configuration Manager
 description: Provide a consistent user experience for co-managed devices to use the Company Portal app.
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -45,7 +45,9 @@ For more information, see the following articles:
 
 ## Prerequisites
 
-- Configuration Manager current branch version 2006 or later
+- Configuration Manager current branch version 2006 or later <sup>([See FAQ](#bkmk_ver-prereq))</sup>
+
+- Company Portal app version 11.0.8980.0 or later
 
 - Windows 10, version 1803 or later:
 
@@ -111,6 +113,15 @@ If you change the client setting for Company Portal, when a user selects a Confi
 To help troubleshoot issues with installation of Configuration Manager apps, go to the **Help & Support** section in Company Portal. When you use the **Get help** option, you can send Configuration Manager log files as part of the request.
 
 ## Frequently asked questions (FAQ)
+
+### <a name="bkmk_ver-prereq"></a> I'm using Configuration Manager version 2002, why is the new Company Portal showing Configuration Manager apps?
+
+Company Portal version 11.0.8980.0 or later shows Configuration Manager-deployed applications for all co-managed clients that use it. Configuration Manager version 2006 is the prerequisite because it adds the client setting to control notifications. If you install the Company Portal on a co-managed device of a earlier version or don't configure the client setting, it causes behavior that may be confusing to users. Notifications from Configuration Manager launch Software Center, while notifications from Intune launch the Company Portal.
+
+Microsoft recommends:
+
+- Use Company Portal version 11.0.8980.0 or later on co-managed clients running Configuration Manager version 2006 or later.
+- Configure the client setting **Select the user portal** to **Company Portal**
 
 ### Does Company Portal support applications deployed as software updates from Configuration Manager?
 

@@ -54,7 +54,7 @@ In these scenarios, you decide if it's more important to use device groups, or m
 
 ## Device already has an email profile installed
 
-If users create an email profile before enrolling in Intune or Office 365 MDM, the email profile deployed by Intune may not work as expected:
+If users create an email profile before enrolling in Intune or Microsoft 365 MDM, the email profile deployed by Intune may not work as expected:
 
 - **iOS/iPadOS**: Intune detects an existing, duplicate email profile based on hostname and email address. The user-created email profile blocks the deployment of the Intune-created profile. This scenario is a common problem as iOS/iPadOS users typically create an email profile, then enroll. The Company Portal app states that the user isn't compliant, and may prompt the user to remove the email profile.
 
@@ -83,4 +83,4 @@ Users who have email accounts automatically configured can't send pictures or im
 
 ## Next steps
 
-Get [support help from Microsoft](../fundamentals/get-support.md), or use the [community forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
+Get [support help from Microsoft](../fundamentals/get-support.md), or use the [community forums](/answers/products/mem).

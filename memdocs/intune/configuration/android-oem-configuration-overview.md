@@ -151,11 +151,11 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
 
 > [!NOTE]
-> The OEMConfig standard doesn't currently include status reporting. So, by default, profiles show a **Pending** status.
+> Intune currently shows the status of an OEMConfig policy based on OEMConfig app install status. For example, a **Success** status on an OEMConfig profile means that the corresponding OEMConfig app for that profile was successfully installed on the device.
 
 ## Supported OEMConfig apps
 
-Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must register their OEMConfig apps with Google. If you don't register, these features may not work as expected. Intune currently supports the following OEMConfig apps:
+Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must [register their OEMConfig apps with Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform). If you don't register, these features may not work as expected. Intune currently supports the following OEMConfig apps:
 
 -----------------
 
@@ -187,12 +187,12 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 
 -----------------
 
-If an OEMConfig application exists for your device, but it isn't in the table above, or isn't showing up in the Intune console, email `IntuneOEMConfig@microsoft.com`.
+If you represent an OEM, and an OEMConfig application exists for your devices, but isn't in the table above, email `IntuneOEMConfig@microsoft.com` for onboarding help. OEMs must also [register their OEMConfig apps with Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform).
 
 > [!NOTE]
-> OEMConfig apps must on-boarded by Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page.
+> OEMConfig apps must on-boarded by Google and Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page.
 >
-> If you experience an OEMConfig app behaving incorrectly, then contact the developers of the OEMConfig app. Intune isn't responsible for technical issues with the individual OEMConfig apps.
+> If you experience settings within an OEMConfig app behaving incorrectly, then contact the developers of the OEMConfig app. Intune isn't responsible for technical issues with the individual OEMConfig apps.
 
 ## Next steps
 

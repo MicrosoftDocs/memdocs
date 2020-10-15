@@ -32,7 +32,7 @@ ms.reviewer: shpate
 
 This article lists and describes the Windows Hello for Business settings you can control on Windows 10 devices in Intune. As an Intune administrator, you can configure and assign these settings to Windows 10 devices as part of your mobile device management (MDM) solution. 
 
-You can find additional information about these settings in [Configure Windows Hello for Business Policy settings](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), in the Windows Hello documentation.
+You can find additional information about these settings in [Configure Windows Hello for Business Policy settings](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), in the Windows Hello documentation.
 
 
 To learn more about Windows Hello for Business profiles in Intune, see [configure identity protection](identity-protection-configure.md).
@@ -130,7 +130,7 @@ To learn more about Windows Hello for Business profiles in Intune, see [configur
   - **Certificate for on-premise resources**  
 
     - **Enable** - Allows Windows Hello for Business to use certificates to authenticate to resources on-premises.
-    - **Not configured** - Prevents Windows Hello for Business from using certificates to authenticate to resources on-premises. Instead, devices use the default behavior of *key-trust on-premises authentication*. For more information, see [User certificate for on-premises authentication](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in the Windows Hello documentation.  
+    - **Not configured** - Prevents Windows Hello for Business from using certificates to authenticate to resources on-premises. Instead, devices use the default behavior of *key-trust on-premises authentication*. For more information, see [User certificate for on-premises authentication](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in the Windows Hello documentation.  
 
   **Default**: Not configured
 

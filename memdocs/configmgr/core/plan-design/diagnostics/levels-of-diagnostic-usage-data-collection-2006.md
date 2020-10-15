@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2006
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2006.
-ms.date: 08/11/2020
+ms.date: 10/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -77,7 +77,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
   - Version of post-upgrade script  
 
-- SQL version, service pack level, edition, collation ID, and character set  
+- SQL Server version, service pack level, edition, collation ID, and character set  
 
 - Diagnostics and usage data statistics: when run, runtime, errors  
 
@@ -117,7 +117,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Status and health of the administration service
 
-- Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
+- Hash of key site attributes (site ID, SQL Server broker ID, and site exchange key)
 
 - Count of Microsoft Edge installations
 
@@ -141,11 +141,15 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - ***[Moved]*** Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics  
 
-- ***[Moved]*** SQL AlwaysOn replica information, usage, and health status  
+- ***[Moved]*** SQL Server Always On availability group replica information, usage, and health status  
 
 - ***[New]*** Admin console notification configuration and status
 
 - ***[New]*** Site health check configuration and status
+
+- ***[New]*** Summarized count of Endpoint Analytics event
+
+- ***[Moved]*** Aggregated statistics on Desktop Analytics enrollment errors and usage
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
@@ -273,7 +277,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - OS age in months  
 
-- ***[Updated]*** - ***[New]***  software inventory rules, file collection rules, and overall health status
+- ***[Updated]*** Number of hardware inventory classes, software inventory rules, file collection rules, and overall health status
 
 - Statistics for device health attestation: most common error codes, number of on-premises servers, and counts of devices in various states  
 
@@ -284,8 +288,6 @@ For Configuration Manager version 2006, this level includes the following data:
 - Count of Microsoft Surface devices by model  
 
 - Count of client health check failures by issue type
-
-- ***[New]*** Summarized count of Endpoint Analytics event
 
 ### Cloud Services  
 
@@ -549,9 +551,9 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Discovery types, enabled, and schedule (full, incremental)  
 
-- SQL change tracking performance issues, retention period, and autocleanup state  
+- SQL Server change tracking performance issues, retention period, and autocleanup state  
 
-- SQL change tracking retention period  
+- SQL Server change tracking retention period  
 
 - State and status message performance statistics including most common and most expensive message types  
 
@@ -561,7 +563,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Aggregated performance statistics of calls made to Software Center endpoints on the management point
 
-- SQL maintenance task configuration and status
+- SQL Server maintenance task configuration and status
 
 - Status of recent re-initialization requests
 
@@ -581,11 +583,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Count of crashes for unique non-Configuration Manager processes on the site server, and Watson signature ID, if available  
 
-- Aggregated statistics on Desktop Analytics enrollment errors and usage
-
 - Aggregated system boot time statistics by OS, form-factor, and drive type
-
-- Aggregated statistics on the use of Desktop Analytics
 
 - Usage of the Azure migration tool
 

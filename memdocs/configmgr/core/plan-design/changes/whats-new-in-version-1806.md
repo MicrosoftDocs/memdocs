@@ -208,11 +208,11 @@ For more information, see [How to prepare internet-based devices for co-manageme
 <!--1358651-->
 Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
 
-For more information, see [Modify a CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg).
+For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
 #### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
 
 
 
@@ -230,7 +230,7 @@ The following workloads are now able to transition from Configuration Manager to
 
 - **Device configuration**<!--1357903-->: This workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications.  
 
-- **Office 365**<!--1357841-->: Devices don't install Office 365 deployments from Configuration Manager.  
+- **Office 365**<!--1357841-->: Devices don't install Microsoft 365 deployments from Configuration Manager.  
 
 - **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. This feature is a [pre-release feature](../../servers/manage/pre-release-features.md).  
 
@@ -289,9 +289,9 @@ For more information, see [Create Windows applications](../../../apps/get-starte
 
 ### Office Customization Tool integration with the Office 365 Installer
 <!--1358149-->
-The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Office 365. This integration allows you to take advantage of new manageability settings in Office 365 as soon as they're available. 
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Microsoft 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Microsoft 365. This integration allows you to take advantage of new manageability settings in Microsoft 365 as soon as they're available. 
 
-For more information, see [Deploy Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For more information, see [Deploy Microsoft 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### Support for new Windows app package formats
@@ -579,7 +579,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes).
 
 The following update rollup (4462978) is available in the console starting on 24 October 2018: [Update rollup for Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978).
 

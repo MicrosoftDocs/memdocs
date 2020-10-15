@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Add email settings to devices using Intune
 
-Microsoft Intune includes different email settings you can deploy to devices in your organization. An IT administrator creates email profiles with specific settings to connect to a mail server, such as Office 365 and Gmail. End users then connect, authenticate, and synchronize their organizational email accounts on their mobile devices. By creating and deploying an email profile, you can confirm settings are standard across many devices. And, help reduce support calls from end users who don't know the correct email settings.
+Microsoft Intune includes different email settings you can deploy to devices in your organization. An IT administrator creates email profiles with specific settings to connect to a mail server, such as Microsoft 365 and Gmail. End users then connect, authenticate, and synchronize their organizational email accounts on their mobile devices. By creating and deploying an email profile, you can confirm settings are standard across many devices. And, help reduce support calls from end users who don't know the correct email settings.
 
 You can use email profiles to configure the built-in email settings for the following devices:
 

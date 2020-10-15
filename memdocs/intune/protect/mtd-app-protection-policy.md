@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/28/2020
+ms.date: 10/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,6 +72,9 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
   - **Wipe data**
 
 - **Assignments**: Assign the policy to groups of users.  The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
+
+> [!IMPORTANT]
+> If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don’t meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
 
 ## Next steps
 

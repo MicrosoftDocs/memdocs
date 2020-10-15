@@ -173,14 +173,15 @@ Starting in this release when you [switch a co-management workload](../../comana
 
 
 
-## Transition Office 365 workload to Intune using co-management
+## Transition Microsoft 365 workload to Intune using co-management
 <!--1357841-->
-You can now transition the Office 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](../../comanage/overview.md).
+You can now transition the Microsoft 365 workload from Configuration Manager to Microsoft Intune after enabling co-management. To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to Pilot or All. For more information, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
-There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Office 365 deployed via Configuration Manager.
+There is also a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application, thus don't install Microsoft 365 deployed via Configuration Manager.
 
 ### Known issue
-- This workload transition currently only applies to Office 365 deployments. Configuration Manager continues to manage Office 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Office 365 client setting doesn't apply](../servers/deploy/install/release-notes.md).
+
+- This workload transition currently only applies to Microsoft 365 deployments. Configuration Manager continues to manage Microsoft 365 updates.<!--510876--> For more information including a possible workaround, see the Configuration Manager version 1802 release note [Changing Microsoft 365 client setting doesn't apply](../servers/deploy/install/release-notes.md).
 
 
 
@@ -237,7 +238,7 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Office 365 Client Management** node.
-2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Microsoft 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. On the **Office Setting** page, click **Go To Office Web Page**. Use the online Office Customization Tool to specify settings for this deployment. 
 4. Click **Submit** in the upper right corner when complete. Finish the Office 365 Client Installation Wizard.
 
@@ -272,7 +273,7 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 
 ### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
 
 > [!Important]  
 > If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.

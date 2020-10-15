@@ -233,7 +233,7 @@ Beginning with Configuration Manager version 1602, this level includes the follo
 
   -   Cluster patching statistics
 
-  -   Count of deployed Office 365 updates
+  -   Count of deployed Microsoft 365 updates
 
   -   ***[New]*** Classifications that are synced by Software Update Point
 
@@ -241,13 +241,13 @@ Beginning with Configuration Manager version 1602, this level includes the follo
 
   -   Count of largest database tables
 
-  -   SQL Always-On replica information
+  -   SQL Server Always On availability group replica information
 
   -   Count of collections by type
 
   -   ***[Updated]*** Collection evaluation statistics (query time, assigned versus unassigned counts, counts by type, ID rollover, and rule usage)
 
-  - ***[New]***   SQL change tracking retention period
+  - ***[New]*** SQL Server change tracking retention period
 
 - ***[New] Site updates:***
 

@@ -4,6 +4,7 @@ description: Learn how to handle issues as they arise during the Windows Autopil
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -38,9 +39,9 @@ For troubleshooting, key activities to perform are:
 
 - Configuration: Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
 - Network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
-- Autopilot out-of-box (OOBE) behavior: Were only the expected out-of-box experience screens displayed? Was the Azure AD credentials page customized with organization-specific details as expected?
-- Azure AD join issues: Was the device able to join Azure Active Directory?
-- MDM enrollment issues: Was the device able to enroll in Microsoft Intune (or an equivalent MDM service)?
+- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](#troubleshooting-autopilot-oobe-issues) screens displayed? Is the Azure AD credentials page customized with organization-specific details as expected?
+- Azure AD join issues: Is the device able to [join Azure Active Directory](#troubleshooting-azure-ad-join-issues)?
+- MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](#troubleshooting-intune-enrollment-issues) (or an equivalent MDM service)?
 
 ## Troubleshooting Autopilot Device Import
 
@@ -88,7 +89,7 @@ When OOBE includes unexpected Autopilot behavior, it's useful to check if the de
 
 ### Windows 10 version 1803 and above
 
-Windows 10 version 1803 and above adds event log entries. You can use the og entries to see details related to the Autopilot profile settings and OOBE flow. These entries can be viewed using Event Viewer. Review the information at **Application and Services Logs –> Microsoft –> Windows –> Provisioning-Diagnostics-Provider –> Autopilot** for versions before 1903. For version 1903 and later, see **Application and Services Logs –> Microsoft –> Windows –> ModernDeployment-Diagnostics-Provider –> Autopilot**. The following events may be recorded, depending on the scenario and profile configuration:
+Windows 10 version 1803 and above adds event log entries. You can use the log entries to see details related to the Autopilot profile settings and OOBE flow. These entries can be viewed using Event Viewer. Review the information at **Application and Services Logs –> Microsoft –> Windows –> Provisioning-Diagnostics-Provider –> Autopilot** for versions before 1903. For version 1903 and later, see **Application and Services Logs –> Microsoft –> Windows –> ModernDeployment-Diagnostics-Provider –> Autopilot**. The following events may be recorded, depending on the scenario and profile configuration:
 
 | Event ID | Type | Description |
 |----------|------|-------------| 
@@ -122,7 +123,7 @@ Autopilot profile settings received from the Autopilot deployment service are st
 
 ### Windows 10 semi-annual channel supported versions
 
-On devices running a [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel, you can use ETW tracing to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/).
+On devices running a [supported version](/windows/release-information/) of Windows 10 semi-annual channel, you can use ETW tracing to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
 ## Troubleshooting Azure AD Join issues
 
@@ -140,7 +141,7 @@ See [this knowledge base article](https://support.microsoft.com/help/4089533/tro
 
 Error code 80180018 will typically be reported on an error page titled "Something went wrong". This error means that the MDM enrollment failed.
 
-If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
+If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
 
 ## Profile download
 
@@ -158,9 +159,9 @@ If you need to reboot a computer during OOBE:
 - Press Shift-F10 to open a command prompt.
 - Enter **shutdown /r /t 0** to restart immediately, or **shutdown /s /t 0** to shut down immediately.
 
-For more information, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ## Related topics
 
 [Windows Autopilot - known issues](known-issues.md)<br>
-[Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

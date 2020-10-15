@@ -23,6 +23,8 @@
   - name: Privacy and personal data
     href: privacy-personal-data.md
     items:
+    - name: Optional diagnostic data in client apps
+      href: client-apps-optional-data.md
     - name: Data collection
       href: privacy-data-collect.md
     - name: Data storage and processing
@@ -69,8 +71,10 @@
       href: endpoint-security-manage-devices.md
     - name: Security baselines
       items: 
-      - name: Security baselines 
+      - name: Security baselines overview
         href: security-baselines.md
+      - name: Manage security baselines 
+        href: security-baselines-configure.md  
       - name: Monitor your baselines
         href: security-baselines-monitor.md
     - name: Security tasks
@@ -113,6 +117,14 @@
         href: encrypt-devices-filevault.md
       - name: Monitor disk encryption
         href: encryption-monitor.md
+  - name: Microsoft Tunnel
+    items:
+    - name: Microsoft Tunnel overview
+      href: microsoft-tunnel-overview.md
+    - name: Configure Microsoft Tunnel
+      href: microsoft-tunnel-configure.md
+    - name: Monitor Microsoft Tunnel
+      href: microsoft-tunnel-monitor.md
   - name: Identity protection
     items:
     - name: Windows Hello
@@ -214,6 +226,10 @@
     items: 
     - name: Use certificates for authentication
       href: certificates-configure.md
+    - name: Trusted certificate profiles
+      href: certificates-trusted-root.md
+    - name: Certificate connectors
+      href: certificate-connectors.md
     - name: SCEP  
       items:
       - name: SCEP infrastructure
@@ -226,7 +242,7 @@
     - name: PKCS
       items:
       - name: PKCS
-        href: certficates-pfx-configure.md
+        href: certificates-pfx-configure.md
         displayName: ksp
       - name: Imported PKCS
         href: certificates-imported-pfx-configure.md
@@ -312,8 +328,10 @@
         href: antivirus-microsoft-defender-settings-macos.md
       - name: Windows 10 Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows.md
-      - name: Tenant attach Defender Antivirus settings 
+      - name: Tenant attach Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
+      - name: Tenant attach Windows Security settings
+        href: antivirus-windows-security-settings-windows-tenant-attach.md
       - name: Windows Security experience settings
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
@@ -334,6 +352,8 @@
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
+  - name: Microsoft Tunnel command-line tools
+    href: microsoft-tunnel-reference.md
   - name: Windows update settings
     href: windows-update-settings.md
   - name: Error codes and descriptions

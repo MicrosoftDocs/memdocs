@@ -308,13 +308,13 @@ Configuration Manager now detects if a servicing stack update (SSU) is part of a
 
 For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### Office 365 updates for disconnected software update points
+### Microsoft 365 updates for disconnected software update points
 
 <!-- 4065163 -->
 
-You can use a new tool to import Office 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
+You can use a new tool to import Microsoft 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Microsoft 365 updates. Microsoft 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
-For more information, see [Synchronize Office 365 updates from a disconnected software update point](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+For more information, see [Synchronize Microsoft 365 updates from a disconnected software update point](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 
@@ -422,7 +422,7 @@ Starting with this version, the following features are no longer [pre-release](.
 - [CMPivot standalone](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](/powershell/sccm/2002-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](/powershell/sccm/2002-release-notes).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
@@ -439,7 +439,7 @@ The following additional hotfixes are available to address specific issues:
 | [4575339](https://support.microsoft.com/help/4575339) | Devices appear twice in Microsoft Endpoint Configuration Manager admin center | July 23, 2020 | No |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | July 24, 2020 | No |
 | [4576782](https://support.microsoft.com/help/4576782) | Application blade times out in Microsoft Endpoint Manager admin center | August 11, 2020 | No |
-
+| [4578123](https://support.microsoft.com/help/4578123) | CMPivot queries return unexpected results in Configuration Manager, version 2002 | August 24, 2020 | No |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

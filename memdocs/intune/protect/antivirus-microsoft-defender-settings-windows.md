@@ -41,7 +41,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Turn on cloud-delivered protection**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
@@ -50,7 +50,7 @@ These settings are available in the following profiles:
   - **Yes** - Cloud-delivered protection is turned on.  Device users can't change this setting.
 
 - **Cloud-delivered protection level**  
-  CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
   - **Not configured** (*default*) - Default Defender blocking level.
@@ -59,7 +59,7 @@ These settings are available in the following profiles:
   - **Zero tolerance** - Block all unknown executable files.
 
 - **Defender cloud extended timeout in seconds**  
-  CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender Antivirus automatically blocks suspicious files for 10 seconds while it scans them in the cloud to make sure they're safe. You can add up to 50 additional seconds to this timeout.
 
@@ -75,17 +75,17 @@ These settings are available in the following profiles:
 For each setting in this group, you can expand the setting, select **Add**, and then specify a value for the exclusion.
 
 - **Defender processes to exclude**  
-  CSP: [ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Specify a list of files opened by processes to ignore during a scan. The process itself isn't excluded from the scan.
 
 - **File extensions to exclude from scans and real-time protection**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Specify a list of file type extensions to ignore during a scan.
 
 - **Defender files and folders to exclude**  
-  CSP: [ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Specify a list of files and directory paths to ignore during a scan.
 
@@ -98,7 +98,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Turn on real-time protection**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Require Defender on Windows 10 desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
@@ -132,7 +132,7 @@ These settings are available in the following profiles:
   - **Yes** - Enforce use of real-time behavior monitoring. Device users can't change this setting.
 
 - **Turn on network protection**  
-  CSP: [EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   Protect device users using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. Protection includes preventing third-party browsers from connecting to dangerous sites.
 
@@ -326,14 +326,14 @@ These settings are available in the following profiles:
   Specify the interval from zero to 24 (in hours) that is used to check for signatures. A value of zero results in no check for new signatures. A value of 2 will check every two hours, and so on.
 
 - **Define file shares for downloading definition updates**  
-  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   Manage locations, like a UNC file share, as a download source location to get definition updates. Once definition updates have successfully downloaded from one specified source, the remaining sources in the list won't be contacted.
 
   You can **Add** individual locations, or **Import** a list of locations as a .csv file.
 
 - **Define the order of sources for downloading definition updates**  
-  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP: [SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   Specify in which order to contact source locations you've specified, to get definition updates. After definition updates have successfully downloaded from one specified source, the remaining sources in the list won't be contacted.
 
@@ -351,4 +351,3 @@ These settings are available in the following profiles:
   - **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
   - **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.
   - **Yes**
-

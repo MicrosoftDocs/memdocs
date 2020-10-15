@@ -47,7 +47,7 @@ Before you begin to establish and to respond to remote assistance requests, ensu
 
 ## Configure the TeamViewer Connector
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com), choose **Admin**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com), choose **Admin**.
 2. In the **Admin** workspace, choose **TeamViewer**.
 3. On the **TeamViewer** page, under **TeamViewer Connector**, choose **Enable**.
 4. In the **Enable TeamViewer** dialog box, view, then **Accept** the license terms. If you don't already own a TeamViewer license, choose **Purchase a TeamViewer license**.
@@ -83,7 +83,7 @@ From the **Actions** menu of the **TeamViewer** window, choose **End Session**.
 ## Remotely restart a Windows PC
 When helping your users with issues, you might need to remotely restart their PC from time to time. Use the following steps to remotely restart a Windows PC.
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC you want to restart).
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC you want to restart).
 
 2. Select one or more PCs, and then choose **Remote Tasks** &gt; **Restart Computer**.
 

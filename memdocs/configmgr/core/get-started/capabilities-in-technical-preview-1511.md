@@ -46,24 +46,24 @@ For computers connected via WUfB, Configuration Manager will not be able to repo
 
 5.  The computers that are managed via WUfB will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
 
-##  <a name="BKMK_Office365ProPlus"></a> Managing Office 365 ProPlus Client Update through Configuration Manager  
- Configuration Manager now has the ability to manage Office 365 desktop client updates using the Configuration Manager Software Update Management workflow.    
-When Microsoft publishes a new Office 365 desktop client update to Windows Server Updates Services (WSUS), Configuration Manager will be able to synchronize the update to its catalog if the Office 365 update is configured to be part of the catalog synchronization.  The Configuration Manager site server will download the Office 365 client updates and distribute the package to Configuration Manager distribution points.  The Configuration Manager client will then inform Office 365 desktop clients where to get the updates and when to start the update installation process.  
+##  <a name="BKMK_Office365ProPlus"></a> Managing Microsoft 365 Apps for enterprise Client Update through Configuration Manager  
+Configuration Manager now has the ability to manage Microsoft 365 desktop client updates using the Configuration Manager Software Update Management workflow.
+When Microsoft publishes a new Microsoft 365 desktop client update to Windows Server Updates Services (WSUS), Configuration Manager will be able to synchronize the update to its catalog if the Microsoft 365 update is configured to be part of the catalog synchronization.  The Configuration Manager site server will download the Microsoft 365 client updates and distribute the package to Configuration Manager distribution points.  The Configuration Manager client will then inform Microsoft 365 desktop clients where to get the updates and when to start the update installation process.  
 
 **Prerequisites for this scenario:**  
 
 ### Try it out!  
  Try to complete the following task and then use the feedback information near the top of this topic to let us know how it worked:  
 
-1. You can synchronize Office 365 updates to the Configuration Manager site server and view them from the Configuration Manager console.  
+1. You can synchronize Microsoft 365 updates to the Configuration Manager site server and view them from the Configuration Manager console.  
 
-2. You can approve and successfully deploy Office 365 updates.  
+2. You can approve and successfully deploy Microsoft 365 updates.  
 
-3. You can download and successfully Office 365 updates to clients.  
+3. You can download and successfully Microsoft 365 updates to clients.  
 
-4. You can verify compliance for Office 365 updates by using in-console monitoring or reports.  
+4. You can verify compliance for Microsoft 365 updates by using in-console monitoring or reports.  
 
-   For detailed steps, see [Manage Office 365 client updates with Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   For detailed steps, see [Manage Microsoft 365 client updates with Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="BKMK_AlwasyOn"></a> Support for SQL Server AlwaysOn for highly available databases  
  Configuration Manager now supports using a SQL Server AlwaysOn availability groups to host the site database.  When you install a new site, you can direct setup to use the availability group instead of a normal instance of SQL Server.  
@@ -93,20 +93,20 @@ The high level process to configure and use availability groups includes:
 
 -   You cannot successfully add a new replica member to an Availability Group that is already in use as a site database. Instead, you must reinstall the site after the new replica member is added.  
 
--   For this scenario  you might need to install the **SQL Server 2012 native client** ([from the SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065)) on the management point server. This prevents SQL connection errors (which are logged in the **mp_getauth.log** on the management point server).  
+-   For this scenario  you might need to install the **SQL Server 2012 native client** ([from the SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065)) on the management point server. This prevents SQL Server connection errors (which are logged in the **mp_getauth.log** on the management point server).  
 
 ### Try it out!  
 Try to complete the following tasks and then use the feedback information near the top of this topic to let us know how they worked:  
 
--   I can install a primary site that uses a database server configured for SQL AlwaysOn Availability Groups  
+-   I can install a primary site that uses a database server configured for SQL Server Always On availability groups  
 
--   I was able to failover my SQL AlwaysOn Availability Group to a new replica in the group and the primary site is still operational  
+-   I was able to failover my SQL Server Always On availability group to a new replica in the group and the primary site is still operational  
 
-### Configuring SQL Server AlwaysOn for Configuration Manager  
+### Configuring availability groups for Configuration Manager  
  Use the following procedures to first create and configure the availability group, and then install a new Configuration Manager site that uses the availability group.  
 
-#### To create a SQL Server AlwaysOn availability group  
-The process to [create a SQL Server availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
+#### To create an availability group  
+The process to [create an availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
 
 -   A maximum of three members:  
 

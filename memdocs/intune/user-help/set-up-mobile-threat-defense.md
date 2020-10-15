@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 10/12/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,7 +32,7 @@ ms.collection:
 # Install mobile threat defense app  
 
 > [!TIP]
-> There are a variety of MTD apps on the market. Your organization should tell you which one to use. If you're prompted to install an MTD app and you're not immediately redirected to set up or install the app, contact your IT support person for help.  
+> There are a variety of MTD apps on the market. Your organization should tell you which one to use. If you're prompted to install an MTD app and you're not immediately redirected to set up or install the app, contact your IT support person for help. This article also provides the links to store listings.   
 
 As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
@@ -41,19 +41,29 @@ If you don't have the required MTD app, you'll be blocked from signing in to pro
 ## MTD apps for iOS
 The following MTD apps are commonly used on iOS devices. Select an app to open its listing in the App Store.   
 
+* [ActiveShield](https://go.microsoft.com/fwlink/?linkid=2143345)
+* [Microsoft Defender ATP](https://go.microsoft.com/fwlink/?linkid=2145949)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
-* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
-* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143272)
+* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Sophos Intercept X for Mobile](https://go.microsoft.com/fwlink/?linkid=2143414)
+* [Wandera](https://go.microsoft.com/fwlink/?linkid=2143505)
 * [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
 
 
 ## MTD apps for Android 
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
+* [Active Shield Enterprise](https://go.microsoft.com/fwlink/?linkid=2143507) 
+* [Microsoft Defender ATP (Enterprise)](https://go.microsoft.com/fwlink/?linkid=2144546)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
-* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
-* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
-* [Zimperium mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  
+* [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143413)
+* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Sophos Intercept X for Mobile](https://go.microsoft.com/fwlink/?linkid=2143273)
+* [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
+* [Zimperium Mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142) 
 
 
 ## Information your organization can see   
@@ -76,7 +86,7 @@ If you're prompted to install an MTD app but aren't sure which one to install, c
 ### Device registration  
 Device registration is necessary to confirm your identity and connect your school or work account to your device. If your device isn't registered, you'll automatically be guided through those steps on screen, before you install the MTD app.   
 
-For more information about device registration, see [Register your personal device on your organization's network](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
+For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### iOS setup  
 These steps begin on the **Get access** screen, which appears after you sign in to a protected app.  
@@ -129,9 +139,9 @@ Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=20109
 
 ### Share app logs with IT support  
 You can also send your app logs to your IT support person to provide them with more context about a failed installation.  
-* Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
+* Android users: [Upload and email your logs](./send-logs-to-your-it-admin-by-email-android.md) from Company Portal.   
 
-* iOS device users: [Retrieve and send your logs](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) from Microsoft Edge for iOS.  
+* iOS device users: [Retrieve and send your logs](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) from Microsoft Edge for iOS.  
 
 
 ## Next steps  
@@ -142,4 +152,3 @@ See the following articles to learn more about how managed apps work, how to get
 * [Use managed apps on your iOS device](use-managed-apps-on-your-device-ios.md)  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
-

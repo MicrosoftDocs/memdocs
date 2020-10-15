@@ -148,8 +148,6 @@
       items:
       - name: Content management fundamentals
         href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
-      - name: Use a cloud-based distribution point
-        href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
       - name: Use a pull-distribution point
         href: plan-design/hierarchy/use-a-pull-distribution-point.md
       - name: The content library
@@ -198,7 +196,7 @@
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: CNG certificates overview
+    - name: CNG v3 certificates overview
       href: plan-design/network/cng-certificates-overview.md
     - name: PKI certificate requirements
       href: plan-design/network/pki-certificate-requirements.md
@@ -268,14 +266,14 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2010 features
+      href: get-started/2020/technical-preview-2010.md
+    - name: 2009 features
+      href: get-started/2020/technical-preview-2009.md
     - name: 2008 features
       href: get-started/2020/technical-preview-2008.md
     - name: 2007 features
       href: get-started/2020/technical-preview-2007.md
-    - name: 2006 features
-      href: get-started/2020/technical-preview-2006.md
-    - name: 2005 features
-      href: get-started/2020/technical-preview-2005.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -362,8 +360,6 @@
         href: servers/deploy/configure/add-site-system-roles.md
       - name: Install site system roles
         href: servers/deploy/configure/install-site-system-roles.md
-      - name: Install cloud-based distribution points
-        href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
       - name: About the service connection point
         href: servers/deploy/configure/about-the-service-connection-point.md
       - name: Configuration options for site system roles
@@ -420,11 +416,11 @@
         href: servers/deploy/configure/promote-site-server-flowchart.md
       - name: Flowchart - Promote site server (unplanned)
         href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
-      - name: Prepare to use SQL Server Always On
+      - name: Prepare to use an availability group
         href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
-      - name: Configure SQL Server Always On
+      - name: Configure an availability group
         href: servers/deploy/configure/configure-aoag.md
-      - name: Use a SQL Server cluster
+      - name: Use a failover cluster instance
         href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
     - name: Custom locations for database files
       href: servers/deploy/configure/custom-locations-for-site-database-files.md
@@ -554,17 +550,17 @@
       items:
       - name: Monitor replication
         href: servers/manage/monitor-replication.md
-      - name: Troubleshoot SQL replication
+      - name: Troubleshoot SQL Server replication
         items:
-        - name: Troubleshoot SQL replication
+        - name: Troubleshoot SQL Server replication
           href: servers/manage/replication/overview.md
-        - name: SQL replication
+        - name: SQL Server replication
           href: servers/manage/replication/sql-replication.md
-        - name: SQL configuration
+        - name: SQL Server configuration
           href: servers/manage/replication/sql-configuration.md
-        - name: SQL performance
+        - name: SQL Server performance
           href: servers/manage/replication/sql-performance.md
-        - name: SQL replication reinitialization (reinit)
+        - name: SQL Server replication reinitialization (reinit)
           href: servers/manage/replication/sql-replication-reinit.md
         - name: Global data reinit
           href: servers/manage/replication/global-data-reinit.md
@@ -709,10 +705,6 @@
       items:
       - name: How to deploy clients to Windows computers
         href: clients/deploy/deploy-clients-to-windows-computers.md
-      - name: Install clients using Azure AD
-        href: clients/deploy/deploy-clients-cmg-azure.md
-      - name: Token-based authentication for CMG
-        href: clients/deploy/deploy-clients-cmg-token.md
       - name: Client installation properties
         href: clients/deploy/about-client-installation-properties.md
       - name: Client installation properties published to AD
@@ -755,28 +747,6 @@
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard
       href: clients/manage/surface-device-dashboard.md
-  - name: Manage clients on the internet
-    items:
-    - name: Manage clients on the internet overview
-      href: clients/manage/manage-clients-internet.md
-    - name: Cloud management gateway
-      items:
-      - name: Plan for cloud management gateway
-        href: clients/manage/cmg/plan-cloud-management-gateway.md
-      - name: Security and privacy for cloud management gateway
-        href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
-      - name: FAQ for cloud management gateway
-        href: clients/manage/cmg/cloud-management-gateway-faq.md
-      - name: Certificates for cloud management gateway
-        href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
-      - name: Set up cloud management gateway
-        href: clients/manage/cmg/setup-cloud-management-gateway.md
-      - name: Monitor clients on cloud management gateway
-        href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
-    - name: Plan for internet-based client management
-      href: clients/manage/plan-internet-based-client-management.md
-    - name: Azure AD authentication workflow
-      href: clients/manage/azure-ccmsetup.md
   - name: Collections
     items:
     - name: Introduction to collections
@@ -887,3 +857,61 @@
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Upgrade Mac clients
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
+- name: Manage clients over the internet
+  items:
+  - name: Manage clients over the internet overview
+    href: clients/manage/manage-clients-internet.md
+  - name: Cloud management gateway (CMG)
+    items:
+    - name: Overview
+      href: clients/manage/cmg/overview.md
+    - name: Plan
+      items:
+      - name: Plan for CMG
+        href: clients/manage/cmg/plan-cloud-management-gateway.md
+      - name: Supported configurations for CMG
+        href: clients/manage/cmg/supported-configurations.md
+      - name: Cost
+        href: clients/manage/cmg/cost.md
+    - name: Set up
+      items:
+      - name: Set up checklist
+        href: clients/manage/cmg/set-up-checklist.md
+      - name: 1. Server authentication certificate
+        href: clients/manage/cmg/server-auth-cert.md
+      - name: 2. Configure Azure Active Directory
+        href: clients/manage/cmg/configure-azure-ad.md
+      - name: 3. Configure client authentication
+        href: clients/manage/cmg/configure-authentication.md
+      - name: 4. Set up CMG
+        href: clients/manage/cmg/setup-cloud-management-gateway.md
+      - name: 5. Configure clients for CMG
+        href: clients/manage/cmg/configure-clients.md
+    - name: Manage
+      items:
+      - name: Monitor clients on CMG
+        href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
+      - name: Modify a CMG
+        href: clients/manage/cmg/modify-cloud-management-gateway.md
+    - name: Reference
+      items:
+      - name: Manually register Azure AD apps for CMG
+        href: clients/manage/cmg/manually-register-azure-ad-apps.md
+      - name: Security and privacy for CMG
+        href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+      - name: FAQ for CMG
+        href: clients/manage/cmg/cloud-management-gateway-faq.md
+      - name: Ports and data flow
+        href: clients/manage/cmg/data-flow.md
+  - name: Plan for internet-based client management
+    href: clients/manage/plan-internet-based-client-management.md
+  - name: Install clients using Azure AD
+    href: clients/deploy/deploy-clients-cmg-azure.md
+  - name: Token-based authentication for CMG
+    href: clients/deploy/deploy-clients-cmg-token.md
+  - name: Azure AD authentication workflow
+    href: clients/manage/azure-ccmsetup.md
+  - name: Use a cloud-based distribution point
+    href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
+  - name: Install cloud-based distribution points
+    href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md

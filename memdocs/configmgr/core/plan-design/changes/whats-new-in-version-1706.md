@@ -40,24 +40,24 @@ Version 1706 drops support for the following products:
 
 ## Site infrastructure
 
-### Client Peer Cache support for express installation files for Windows 10 and Office 365  
+### Client Peer Cache support for express installation files for Windows 10 and Microsoft 365  
 <!-- 1352486 -->
-Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Office 365. No additional configurations are required to support this change.
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Microsoft 365. No additional configurations are required to support this change.
 
 ### Updates for the data warehouse
 <!-- 1277922 -->
-The data warehouse is no longer a pre-release feature. We have also updated the prerequisites to include support for the database on SQL Server Always on availability groups, and failover clusters. For more information, see [The Data Warehouse service point](../../servers/manage/data-warehouse.md).
+The data warehouse is no longer a pre-release feature. We have also updated the prerequisites to include support for the database on SQL Server Always On availability groups, and failover cluster instances. For more information, see [The Data Warehouse service point](../../servers/manage/data-warehouse.md).
 
 ### Accessibility improvements
 <!-- 1253000 -->
 We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](../../understand/accessibility-features.md).
 
-### Improvements  for SQL Server Always On Availability Groups
+### Improvements  for SQL Server Always On availability groups
 <!-- 1352094 -->
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
 - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](../../servers/manage/recover-sites.md#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
 - This release does not support failover to use the asynchronous commit replica as your site database.
-For more information, see [Prepare to use Always On Availability Groups](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+For more information, see [Prepare to use an availability group](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Update reset tool
 <!-- 1324589 -->
@@ -227,8 +227,8 @@ You can now configure deferral policies for Windows 10 Feature Updates or Qualit
 
 For details, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### Improved user notifications for Office 365 updates
-Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Office 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
+### Improved user notifications for Microsoft 365 updates
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs a Microsoft 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## Reporting
 

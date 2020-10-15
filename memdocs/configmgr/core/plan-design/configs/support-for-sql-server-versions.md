@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 06/24/2020
+ms.date: 09/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -32,9 +32,12 @@ SQL Server can be located on:
 The following instances are supported:  
 
 - The default or named instance of SQL Server.  
+
 - Multiple instance configurations.  
-- A SQL Server cluster. See [Use a SQL Server cluster to host the site database](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
-- A SQL Server AlwaysOn availability group. For more information, see [SQL Server AlwaysOn for a highly available site database](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+
+- A SQL Server Always On failover cluster instance. For more information, see [Use a SQL Server Always On failover cluster instance for the site database](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
+
+- A SQL Server Always On availability group. For more information, see [Prepare to use a SQL Server Always On availability group](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Secondary sites
 
@@ -46,8 +49,10 @@ SQL Server must be located on the site server computer.
 
 The following configurations aren't supported:
 
-- A SQL Server cluster in a Network Load Balancing (NLB) cluster configuration
-- A SQL Server cluster on a Cluster Shared Volume (CSV)
+- A failover cluster instance in a Network Load Balancing (NLB) cluster configuration
+
+- A failover cluster instance on a Cluster Shared Volume (CSV)
+
 - SQL Server database mirroring technology, and peer-to-peer replication
 
 SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](../../servers/deploy/configure/database-replicas-for-management-points.md).  
@@ -60,7 +65,7 @@ In a hierarchy with multiple sites, different sites can use different versions o
 - The SQL Server versions you use remain in support by Microsoft.
 - SQL Server supports replication between the two versions of SQL Server. For more information, see [SQL Server replication backward compatibility](/sql/relational-databases/replication/replication-backward-compatibility).
 
-For SQL Server 2016 and prior, support for each SQL version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) as they become available.
+For SQL Server 2016 and prior, support for each SQL Server version and service pack follows the [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle). Support for a specific SQL Server service pack includes cumulative updates unless they break backward compatibility to the base service pack version. Starting with SQL Server 2017, service packs won't be released since it follows a [modern servicing model](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). The SQL Server team recommends ongoing, [proactive installation of cumulative updates](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) as they become available.
 
 Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.
 
@@ -69,48 +74,17 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 ### SQL Server 2019: Standard, Enterprise
 
-Starting with Configuration Manager version 1910, you can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
+Starting with Configuration Manager version 1910, you can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL Server lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
-This version of SQL can be used for the following sites:
+You can use this version of SQL Server for the following sites:
 
 - A central administration site
 - A primary site
 - A secondary site
 
-<!--
-#### Known issue with SQL Server 2019
-
-There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
-```
-
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
-
-You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
-
-If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
-
-```hman.log
-*** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
-*** select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
-*** [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.
-Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
-```
-
-You may see similar errors in other logs, such as **SmsAdminUI.log**.
-
-SQL Server version 2019 logs the following error:
-
-`Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
-
-You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
--->
-
 ### SQL Server 2017: Standard, Enterprise
 
-You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -119,7 +93,7 @@ You can use this version with [cumulative update version 2](https://support.micr
 
 ### SQL Server 2016: Standard, Enterprise  
 <!--514985-->
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -127,7 +101,7 @@ You can use this version with the minimum service pack and cumulative update sup
 
 ### SQL Server 2014: Standard, Enterprise
 
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -135,7 +109,7 @@ You can use this version with the minimum service pack and cumulative update sup
 
 ### SQL Server 2012: Standard, Enterprise
 
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A central administration site  
 - A primary site  
@@ -143,26 +117,26 @@ You can use this version with the minimum service pack and cumulative update sup
 
 ### SQL Server 2017 Express
 
-You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A secondary site
 <!--SMS.498506-->
 
 ### SQL Server 2016 Express
 
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A secondary site
 
 ### SQL Server 2014 Express
 
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A secondary site  
 
 ### SQL Server 2012 Express
 
-You can use this version with the minimum service pack and cumulative update supported by the SQL lifecycle. This version of SQL can be used for the following sites:
+You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A secondary site  
 
@@ -182,7 +156,26 @@ Configuration Manager supports two exceptions to this collation for the China GB
 
 ### Database compatibility level
 
-Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version. For instance, beginning with version 1702, you need to have a [database compatibility level](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) greater than or equal to 110. <!-- SMS.506266-->
+Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
+
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
+
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
+| SQL Server 2017 | 140, 130, 120, 110 | 140 |
+| SQL Server 2016 | 130, 120, 110 | 130 |
+| SQL Server 2014 | 120, 110 | 110 |
+
+To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:  
+
+```SQL
+SELECT name, compatibility_level FROM sys.databases
+```
+
+For more information on SQL Server Compact Edition (CE) compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 
@@ -212,9 +205,9 @@ Reserve memory for SQL Server by using SQL Server Management Studio. Set the **M
   - For a primary site: Set a minimum of 8 GB.  
   - For a secondary site: Set a minimum of 4 GB.  
 
-### SQL nested triggers
+### SQL Server nested triggers
 
-SQL nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+SQL Server nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
 
 ### SQL Server CLR integration
 
@@ -295,4 +288,4 @@ If you need to upgrade your version of SQL Server, use one of the following meth
 
 - Install a new version of SQL Server on a new computer, and then [use the database move option](../../servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) of Configuration Manager setup to point your site server to the new SQL Server  
 
-- Use [backup and recovery](../../servers/manage/backup-and-recovery.md). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](../../servers/manage/recover-sites.md#considerations-before-recovering-a-site).
+- Use [backup and recovery](../../servers/manage/backup-and-recovery.md). Using backup and recovery for a SQL Server upgrade scenario is supported. You can ignore the SQL Server versioning requirement when reviewing [Considerations before recovering a site](../../servers/manage/recover-sites.md#considerations-before-recovering-a-site).

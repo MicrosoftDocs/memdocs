@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Configuration Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 07/01/2020
+ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -15,20 +15,17 @@ manager: dougeby
 
 # <a name="bkmk_bp"></a> Startup performance
 
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
-
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
-Startup performance insights are only available for:
+For devices enrolled via Intune, Startup performance insights are only available for:
 - Devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education
    - Windows 10 long-term servicing channel (LTSC), Home, and Pro editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
+
+For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
 ## <a name="bkmk_score"></a> Startup score
 
@@ -72,7 +69,10 @@ The **Startup performance** page has reporting tabs that provide support for the
 
 - **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
 - **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see its boot and sign-in history, which can help you identify if there was a recent regression
-- **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab (if visible; we've only flighted this tab to some customers) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant.  
+- **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab will show you which processes are impacting the sign-in "time to responsive desktop" phase, that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant. When reviewing startup processes, the following data calculations are displayed:
+   - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
+   - **Median delay**: The median delay time of the process for the counted devices.
+   - **Total delay**: The sum of the delays for all of the counted devices.
 
 ## Next steps
 

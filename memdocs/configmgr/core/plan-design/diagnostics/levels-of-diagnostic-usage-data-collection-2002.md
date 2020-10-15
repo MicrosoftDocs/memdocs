@@ -77,7 +77,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
   - Version of post-upgrade script  
 
-- SQL version, service pack level, edition, collation ID, and character set  
+- SQL Server version, service pack level, edition, collation ID, and character set  
 
 - Diagnostics and usage data statistics: when run, runtime, errors  
 
@@ -117,7 +117,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Status and health of the administration service
 
-- Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
+- Hash of key site attributes (site ID, SQL Server broker ID, and site exchange key)
 
 - Count of Microsoft Edge installations
 
@@ -171,7 +171,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of distinct branding for application catalog  
 
-- Count of Office 365 applications created using dashboard  
+- Count of Microsoft 365 applications created using dashboard  
 
 - Count of packages by type  
 
@@ -221,7 +221,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Aggregated statistics on the use of application groups
 
-- Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Office 365 ProPlus
+- Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Microsoft 365 Apps for enterprise
 
 - Aggregated statistics on Office add-in health
 
@@ -475,7 +475,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Configurations that are used for active Windows 10 servicing plans  
 
-- Count of deployed Office 365 updates  
+- Count of deployed Microsoft 365 updates  
 
 - Count of Microsoft Surface drivers synced  
 
@@ -539,11 +539,11 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Discovery types, enabled, and schedule (full, incremental)  
 
-- SQL AlwaysOn replica information, usage, and health status  
+- SQL Server Always On availability group replica information, usage, and health status  
 
-- SQL change tracking performance issues, retention period, and autocleanup state  
+- SQL Server change tracking performance issues, retention period, and autocleanup state  
 
-- SQL change tracking retention period  
+- SQL Server change tracking retention period  
 
 - State and status message performance statistics including most common and most expensive message types  
 
@@ -553,7 +553,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Aggregated performance statistics of calls made to Software Center endpoints on the management point
 
-- SQL maintenance task configuration and status
+- SQL Server maintenance task configuration and status
 
 - ***[New]*** Status of recent re-initialization requests
 

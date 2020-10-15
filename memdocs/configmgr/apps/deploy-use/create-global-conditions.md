@@ -145,8 +145,8 @@ In Configuration Manager, global conditions are rules that represent business or
 
      -   **SQL Server instance** – Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
 
-         > [!NOTE]  
-         >  The instance name must refer to a local instance of SQL Server. To refer to a clustered SQL server instance, you should use a script setting.  
+         > [!NOTE]
+         > The instance name must refer to a local instance of SQL Server. To refer to a SQL Server Always On failover cluster instance or availability group, you should use a script setting.  
 
      -   **Database** - Specify the name of the Microsoft SQL Server database for which the SQL query will be run.  
 

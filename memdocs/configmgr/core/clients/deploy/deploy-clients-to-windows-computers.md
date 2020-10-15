@@ -5,13 +5,11 @@ description: Learn how to deploy the Configuration Manager client to Windows com
 ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to deploy clients to Windows computers in Configuration Manager
@@ -405,7 +403,7 @@ This example requires the client to be on a network location that's configured i
 ## <a name="BKMK_ClientInternet"></a> Internet-based client management  
 
 > [!NOTE]  
-> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
+> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/overview.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
 
 When the Configuration Manager site supports [internet-based client management](../manage/plan-internet-based-client-management.md) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
 

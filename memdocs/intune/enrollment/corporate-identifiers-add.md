@@ -39,7 +39,7 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
 - Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS only)
 - [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS and Android)
-- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](https://docs.microsoft.com/azure/active-directory/devices/overview) will be marked as personal.
+- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 
 After enrollment, you can [change the ownership setting](#change-device-ownership) between **Personal** and **Corporate**.
@@ -56,9 +56,9 @@ This feature is supported for the following platforms:
 | iOS/macOS | Not supported (see Important below)  | Supported |
 | Device admin managed Android OS v10 | Not supported | Not supported |
 | Android Enterprise work profile | Not supported | Supported |
-| Android Enterprise fully managed | Not supported | Supported |
+| Android Enterprise fully managed | Not supported | Not Supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
-| Android Enterprise corporate-owned work profile | Not supported | Supported |
+| Android Enterprise corporate-owned work profile | Not supported | Not Supported |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 

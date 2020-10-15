@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 10/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ Antivirus policy includes several profiles. Each profile contains only the setti
 
 You'll find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Antivirus policies include the same settings that are found in *endpoint protection* or *device restriction* profiles for [device configuration](../configuration/device-profile-create.md) policy and are similar to settings from [device compliance](../protect/device-compliance-get-started.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
+Antivirus policies include the same settings as *endpoint protection* or *device restriction* profiles for [device configuration](../configuration/device-profile-create.md) policy and are similar to settings from [device compliance](../protect/device-compliance-get-started.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
 ## Prerequisites for antivirus policy
 
@@ -44,19 +44,48 @@ Antivirus policies include the same settings that are found in *endpoint protect
 
 - **macOS**
   - Any supported version of macOS
-  - For Intune to manage antivirus settings on a device, Microsoft Defender ATP must be installed on that device. See. [Microsoft Defender ATP for macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Microsoft Defender ATP documentation)
+  - For Intune to manage antivirus settings on a device, Microsoft Defender ATP must be installed on that device. See. [Microsoft Defender ATP for macOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Microsoft Defender ATP documentation)
 
 - **Windows 10 and later**
   - No additional prerequisites are required.
 
-**Support for Configuration Manager clients** (*preview*)
+**Support for Configuration Manager clients**:
 
 *This scenario is in preview and requires use of Configuration Manager current branch version 2006 or later*.
-<!--*This scenario is in preview and requires use of Configuration Manager Technical Preview version 2007 or later*.-->
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying antivirus policy to devices managed by Configuration Manager, configure *tenant attach*. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+
+### Prerequisites for tamper protection
+
+You can use Intune to manage tamper protection on Windows devices as part of Antivirus policy. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
+
+#### Intune managed devices
+
+Prerequisites to support tamper protection for devices managed by Intune:
+
+- Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
+
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Intune](#devices-managed-by-intune):
+
+- Platform: **Windows 10 later**
+  - Profile: **Windows Security experience**  
+
+You can also use the [Endpoint protection](../protect/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
+
+#### Configuration Manager clients managed through the tenant attach scenario
+
+Prerequisites to support managing tamper protection with these profiles:
+
+- Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
+- You must use Configuration Manager current branch 2006 or later.
+- You must configure tenant attach to support endpoint protection policies. This includes configuring Configuration Manager device collections for synchronization with Intune.
+
+ Profiles for *Antivirus* policy that support tamper protection for [devices managed by Configuration Manager](#devices-managed-by-configuration-manager):
+
+- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+  - Profile: **Windows Security experience (preview)**
 
 ## Antivirus profiles
 
@@ -70,7 +99,7 @@ The following profiles are supported for devices you manage with Intune:
 
   - Profile: **Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS.
 
-    When you use [Microsoft Defender ATP for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of `.plist` files.
+    When you use [Microsoft Defender ATP for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of `.plist` files.
 
 **Windows 10**:
 
@@ -82,7 +111,7 @@ The following profiles are supported for devices you manage with Intune:
 
     The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings that are found in the *Device Restriction profile* for Device Configuration policy.
   
-    Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
+    Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
   - Profile: **Microsoft Defender Antivirus exclusions** - Manage policy settings for only [Antivirus exclusions](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions).
   
@@ -98,9 +127,23 @@ The following profiles are supported for devices you manage with Intune:
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
-### Devices managed by Configuration Manager *(In preview)*
+### Devices managed by Configuration Manager
 
+*Support for devices managed by Configuration Manager is in Preview.*
+
+The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
+
+- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+  - Profile: **Microsoft Defender Antivirus Policy (preview)** - Manage [Antivirus policy settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+
+    This profile is supported with devices that are tenant attached and run the following platforms:
+    - Windows 10 and later (x86, x64, ARM64)
+    - Windows Server 2019 and later (x64)
+    - Windows server 2016 (x64)
+
+<!-- 
 [!INCLUDE [Profiles for Configuration Manager tenant attached devices](includes/configmgr-antivirus-profiles.md)]
+-->
 
 ## Policy merge for settings
 
@@ -122,9 +165,9 @@ The following settings support policy merge:
 
 [Microsoft Defender Antivirus policies](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Defender Processes To Exclude** - CSP: [Defender/ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **File extensions to exclude from scans and real-time protection** - CSP: [Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Defender Files And Folders To Exclude** - CSP: [Defender/ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Defender Processes To Exclude** - CSP: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **File extensions to exclude from scans and real-time protection** - CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Defender Files And Folders To Exclude** - CSP: [Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## Antivirus policy reports
 

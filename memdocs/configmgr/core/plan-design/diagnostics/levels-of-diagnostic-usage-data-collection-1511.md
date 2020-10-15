@@ -216,13 +216,13 @@ Beginning with Configuration Manager version 1511, this level includes the follo
 
     -   Cluster patching statistics  
 
-    -   Count of deployed Office 365 updates  
+    -   Count of deployed Microsoft 365 updates  
 
 -   **SQL/performance data:**  
 
     -   Count of largest database tables  
 
-    -   SQL Always-On replica information  
+    -   SQL Server Always On availability group replica information  
 
     -   Count of collections by type  
 

@@ -67,7 +67,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 - An active global Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
     > [!IMPORTANT]
-    > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
+    > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/microsoft-365/compliance/offering-home). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
 
     - **Workspace owner** permissions to **Set up your workspace**, and the following roles:  
 
@@ -135,6 +135,8 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 > [!NOTE]
 > Beyond the cost of these license subscriptions, there's no additional cost for using Desktop Analytics within Azure Log Analytics. The data types ingested by Desktop Analytics are free from any Log Analytics data ingestion and retention charges. As non-billable data types, this data is also not subject to any Log Analytics daily data ingestion cap. For more information, see [Log Analytics usage and costs](/azure/azure-monitor/platform/manage-cost-storage).
+>
+> If you use another Azure solution that uses the same Log Analytics workspace, you may be charged for devices. For example, Azure Security Center. To make sure you’re not billed for Desktop Analytics devices, use a separate Log Analytics workspace for these other billed solutions.<!-- MEMDocs #590 -->
 
 ## Next steps
 

@@ -66,7 +66,7 @@ For more information, see [Maintenance tasks](../../servers/manage/maintenance-t
 When applying a Configuration Manager update, you can now see the state of the **Upgrade ConfigMgr database** task in the  installation status window.
 
 - If the database upgrade is blocked, then you'll be given the warning, **In progress, needs attention**.
-   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+   - The cmupdate.log will log the program name and sessionid from SQL Server that is blocking the database upgrade.
 - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
    - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
@@ -81,23 +81,24 @@ Management insights includes a new rule that detects if you enabled the less sec
 
 For more information, see [Management insights](../../servers/manage/management-insights.md#security).
 
-### Improvements to support for SQL Always On
+### Improvements to support for SQL Server Always On availability groups
 
-- Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing SQL Always On availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure SQL Server Always On availability groups](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
+- Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure an availability group](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
 - Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
 
-- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
+- Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on an availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
-    > [!Note]  
-    > This change doesn't apply to SQL Server clusters.
+    > [!NOTE]
+    > This change doesn't apply to SQL Server Always On failover cluster instances.
 
-- Site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery can recreate the database on an availability group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
 - New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
 
-    - SQL availability group replicas must all have the same seeding mode
-    - SQL availability group replicas must be healthy
+  - Availability group replicas must all have the same seeding mode
+
+  - Availability group replicas must be healthy
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
@@ -503,7 +504,7 @@ The **View Required** hyperlink is available in the following locations:
    - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
-For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates), and [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates), and [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="bkmk_o365"></a> Office management
@@ -512,7 +513,7 @@ For more information, see [Monitor software updates](../../../sum/deploy-use/mon
 
 <!--4021125-->
 
-To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
+To help you determine which devices are ready to upgrade to Microsoft 365 Apps for enterprise, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
 
 For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
@@ -620,7 +621,7 @@ As of this version, the following features are no longer pre-release:
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](/powershell/sccm/1906-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](/powershell/sccm/1906-release-notes).
 
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 

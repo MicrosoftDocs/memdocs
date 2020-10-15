@@ -4,6 +4,7 @@ ms.reviewer:
 manager: laurawi
 description: Read news and resources about the latest updates and past versions of Windows Autopilot.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -21,13 +22,19 @@ ms.topic: article
 
 **Applies to**
 
--   Windows 10
+- Windows 10
 
 ## Windows Autopilot update history
 
 The following [Windows Autopilot updates](autopilot-update.md) are available. **Note**: Updates are automatically downloaded and applied during the Windows Autopilot deployment process. 
 
 No updates are available yet. Check back here later for more information.
+
+## Feature name change
+
+September, 2020
+
+The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in our documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in [this article](pre-provision.md).
 
 ## New in Windows 10, version 2004
 
@@ -37,7 +44,7 @@ If you configure the language settings in the Autopilot profile and the device i
 
 ## New in Windows 10, version 1903
 
-[Windows Autopilot for white glove deployment](white-glove.md) is new in Windows 10, version 1903. See the following video:
+[Windows Autopilot pre-provisioning](pre-provision.md) is new in Windows 10, version 1903. See the following video:
 
 <br>
 
@@ -47,18 +54,18 @@ Also new in this version of Windows:
 - The Intune enrollment status page (ESP) now tracks Intune Management Extensions.
 - [Cortana voiceover and speech recognition during OOBE](windows-autopilot-scenarios.md#cortana-voiceover-and-speech-recognition-during-oobe) is disabled by default for all Windows 10 Pro Education, and Enterprise SKUs.
 - [Windows Autopilot is self-updating during OOBE](windows-autopilot-scenarios.md#windows-autopilot-is-self-updating-during-oobe). Starting with the Windows 10, version 1903 Autopilot functional and critical updates will begin downloading automatically during OOBE.
-- Windows Autopilot will set the diagnostics data level to Full on Windows 10 version 1903 and later during OOBE. 
+- Windows Autopilot will set the diagnostics data level to Full during OOBE on devices running Windows 10 version 1903 or later. 
 
 ## New in Windows 10, version 1809
 
-Windows Autopilot [self-deploying mode](self-deploying.md) enables a zero touch device provisioning experience. Simply power on the device, plug it into the Ethernet, and the device is fully configured by Windows Autopilot. This self-deploying capability removes the current need to have an end user interact by pressing the “Next” button during the deployment process. 
+Windows Autopilot [self-deploying mode](self-deploying.md) is a zero touch device provisioning process. Simply power on the device, connect to Ethernet, and Autopilot automatically configures the device. End users don't have to press the "Next” button during the deployment process. 
 
-You can utilize Windows Autopilot self-deploying mode to register the device to an AAD tenant, enroll in your organization’s MDM provider, and provision policies and applications, all with no user authentication or user interaction required. 
+You can use Windows Autopilot self-deploying mode to register the device to an AAD tenant, enroll in your organization’s MDM provider, and provision policies and applications. No user authentication or user interaction is required.
 
 >[!NOTE]
 >Window 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809.
 
 ## Related topics
 
-[What's new in Microsoft Intune](https://docs.microsoft.com/intune/whats-new)<br>
-[What's new in Windows 10](https://docs.microsoft.com/windows/whats-new/)
+[What's new in Microsoft Intune](/intune/whats-new)<br>
+[What's new in Windows 10](/windows/whats-new/)

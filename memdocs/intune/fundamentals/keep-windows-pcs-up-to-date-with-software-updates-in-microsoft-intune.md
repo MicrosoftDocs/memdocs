@@ -52,7 +52,7 @@ Before you begin to create and approve software updates, configure and deploy po
 
 ### To configure update policy settings
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Policy** &gt; **Overview** &gt; **Add Policy**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Policy** &gt; **Overview** &gt; **Add Policy**.
 
 2. Configure and deploy a **Microsoft Intune Agent Settings** policy for the update settings. You can use recommended settings or customize the settings. If you need more information about how to create and deploy policies, see [Common Windows PC management tasks with the Microsoft Intune computer client](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
@@ -81,7 +81,7 @@ Use the following two procedures to help you get ready to use software updates:
 
 ### Configure the product categories and update classifications you want to make available to managed computers
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Admin** &gt; **Updates**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Admin** &gt; **Updates**.
 
 2. On the **Service Settings: Updates** page, in the **Product Category** list, select the update categories that you want to make available to computers. Note that the most common updates are selected by default.
 
@@ -94,7 +94,7 @@ Use the following two procedures to help you get ready to use software updates:
 
 ### To configure automatic approval rules for software updates
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Admin** &gt; **Updates**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Admin** &gt; **Updates**.
 
 2. In the **Automatic Approval Rules** section of the **Server Settings: Updates** page, choose **New**.
 
@@ -125,7 +125,7 @@ The new rule is shown in the **Automatic Approval Rules** section of the **Servi
 
 ### To edit, run, or delete an automatically approved update rule
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Admin** &gt; **Updates**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Admin** &gt; **Updates**.
 
 2. In the **Automatic Approval Rules** section, select a rule, and then do one of the following:
 
@@ -143,7 +143,7 @@ You can deploy updates for software that is not made by Microsoft. You do this b
 
 ### To upload and configure a third-party update
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Updates** &gt; **Overview** &gt; **Upload**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Updates** &gt; **Overview** &gt; **Upload**.
 
 2. On the **Update files** page, choose **Browse** to select the setup files that are required to install the update package. The file can be a Windows Installer (.msi) file, a Windows Installer patch (.msp) file, or a .exe program file. You can also include any additional files or folders that are in the same folder as the setup file.
 
@@ -219,7 +219,7 @@ When you select an update from the list, further commands are available that let
 
 ### To approve updates
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Updates** &gt; **Overview** &gt; **New updates to approve**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Updates** &gt; **Overview** &gt; **New updates to approve**.
 
     In the **Updates** workspace, choose **Overview** &gt; **New updates to approve**.
 

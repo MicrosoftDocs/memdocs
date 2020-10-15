@@ -50,7 +50,7 @@ One Intune license allows the installation of the Intune client software on up t
 
 All methods, except those in which users install the Intune client software themselves, require that IT admins download the software first so that it can be subsequently deployed to end users.
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), click **Admin** &gt; **Client Software Download**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), click **Admin** &gt; **Client Software Download**.
 
    ![Download the Intune PC client](./media/install-the-windows-pc-client-with-microsoft-intune/pc-sa-client-download.png)
 
@@ -85,7 +85,7 @@ On the computer(s) on which the client software is going to be installed, go to 
 
 3. Use Group Policy to deploy the software to computers on your network.
 
-    For more information about how to use Group Policy to automatically deploy software, see [Group Policy for Beginners](https://technet.microsoft.com/library/hh147307.aspx).
+    For more information about how to use Group Policy to automatically deploy software, see [Group Policy for Beginners](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
 ## Deploy the client software as part of an image
 You can deploy the Intune client software to computers as part of an operating system image by using the following procedure as a guide:
@@ -176,7 +176,7 @@ Use one of the following procedures to help you monitor and validate successful 
 
 ### To verify the installation of the client software from the Microsoft Intune administrator console
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), click **Groups** &gt; **All Devices** &gt; **All Computers**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), click **Groups** &gt; **All Devices** &gt; **All Computers**.
 
 2. In the list, find the computers that are communicating with Intune, or search for a specific managed computer by typing the computer name (or any part of the name) in the **Search devices** box.
 
@@ -184,7 +184,7 @@ Use one of the following procedures to help you monitor and validate successful 
 
 ### To create a computer inventory report to display all enrolled computers
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), click **Reports** &gt; **Computer Inventory Reports**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), click **Reports** &gt; **Computer Inventory Reports**.
 
 2. On the **Create New Report** page, leave the default values in all fields (unless you want to apply filters), and then click **View Report**.
 

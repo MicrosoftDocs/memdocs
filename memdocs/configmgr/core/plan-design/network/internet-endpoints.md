@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 08/11/2020
+ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -55,8 +55,6 @@ For more information on this function, see [Updates and servicing for Configurat
 
 - `go.microsoft.com`  
 
-- `*.blob.core.windows.net`  
-
 - `download.microsoft.com`  
 
 - `download.windowsupdate.com`  
@@ -64,6 +62,22 @@ For more information on this function, see [Updates and servicing for Configurat
 - `sccmconnected-a01.cloudapp.net`  
 
 - `configmgrbits.azureedge.net`  
+
+- `ceuswatcab01.blob.core.windows.net`
+
+- `ceuswatcab02.blob.core.windows.net`
+
+- `eaus2watcab01.blob.core.windows.net`
+
+- `eaus2watcab02.blob.core.windows.net`
+
+- `weus2watcab01.blob.core.windows.net`
+
+- `weus2watcab02.blob.core.windows.net`
+
+- `umwatsonc.events.data.microsoft.com`
+
+- `*-umwatsonc.events.data.microsoft.com`
 
 ### Windows 10 servicing
 
@@ -106,73 +120,9 @@ For more information, see the following articles:
 
 <!-- SCCMDocs-pr #3402 -->
 
-This section covers the following features:
+For more information on the cloud management gateway (CMG), see [Plan for CMG](../../clients/manage/cmg/data-flow.md).
 
-- Cloud management gateway (CMG)
-- Cloud distribution point (CDP)
-- Azure Active Directory (Azure AD) integration
-- Azure AD-based discovery
-
-For more information on the CMG, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
-
-The following sections list the endpoints by role. Some endpoints refer to a service by `<name>`, which is the cloud service name of the CMG or CDP. For example, if your CMG is `GraniteFalls.CloudApp.Net`, then the actual storage endpoint is `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
-
-### Service connection point
-
-For CMG/CDP service deployment, the service connection point needs access to:
-
-- Specific Azure endpoints are different per environment depending upon the configuration. Configuration Manager stores these endpoints in the site database. Query the **AzureEnvironments** table in SQL Server for the list of Azure endpoints.
-
-- [Azure services](#azure-services)
-
-- For Azure AD user discovery:
-
-  - Version 1902 and later: Microsoft Graph endpoint `https://graph.microsoft.com/`
-
-  - Version 1810 and earlier: Azure AD Graph endpoint `https://graph.windows.net/`  
-
-### CMG connection point
-
-The CMG connection point needs access to the following service endpoints:
-
-- Cloud service name (for CMG or CDP):
-  - `<name>.cloudapp.net` (Azure public cloud)
-  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
-
-- Service Management endpoint: `https://management.core.windows.net/`  
-
-- Storage endpoint (for content-enabled CMG or CDP):
-  - `<name>.blob.core.windows.net` (Azure public cloud)
-  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
-<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
-
-The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
-
-### Configuration Manager client
-
-- Cloud service name (for CMG or CDP):
-  - `<name>.cloudapp.net` (Azure public cloud)
-  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
-
-- Storage endpoint (for content-enabled CMG or CDP):
-  - `<name>.blob.core.windows.net` (Azure public cloud)
-  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
-
-- For Azure AD token retrieval, the Azure AD endpoint:
-  - `login.microsoftonline.com` (Azure public cloud)
-  - `login.microsoftonline.us` (Azure US Government cloud)
-
-### Configuration Manager console
-
-- For Azure AD token retrieval, the Azure AD endpoint:
-
-  - Azure public cloud
-    - `login.microsoftonline.com`
-    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
-    - `aadcdn.msftauth.net`
-
-  - Azure US Government cloud
-    - `login.microsoftonline.us`
+[!INCLUDE [Internet endpoints for cloud services](includes/internet-endpoints-cloud-services.md)]
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -260,12 +210,6 @@ For more information on this feature, see [Community hub](../../servers/manage/c
 
 - `https://communityhub.microsoft.com`
 
-### Monitoring workspace, Site Hierarchy node
-
-If you use the **Geographical View**, allow access to the following endpoint:
-
-- `http://maps.bing.com`
-
 ## Desktop Analytics
 
 For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
@@ -291,6 +235,10 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 
 - `https://sc.microsoft.com`
 - `https://ssu2.manage.microsoft.com`
+
+## Deploy Microsoft Edge
+
+[!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
 
 ## Microsoft public IP addresses
 

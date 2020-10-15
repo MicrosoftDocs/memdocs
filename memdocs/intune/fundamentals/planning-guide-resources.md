@@ -55,7 +55,7 @@ Here's a list of table templates for each section.
 
 Check out these resources for additional information that may be helpful during the Intune deployment planning, design, and implementation process.
 
-- [Microsoft Intune documentation](https://docs.microsoft.com/intune/) - The full set of Intune documentation.
+- [Microsoft Intune documentation](/intune/) - The full set of Intune documentation.
 
 - [Microsoft Trust Center](https://www.microsoft.com/TrustCenter) - Learn Microsoft's approach to security, privacy, compliance, and transparency in all Microsoft cloud products and services.
 

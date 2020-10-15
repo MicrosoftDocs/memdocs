@@ -35,7 +35,7 @@ Use Intune endpoint security policies for account protection to protect the iden
 - *Windows Hello for Business* replaces passwords with strong two-factor authentication on PCs and mobile devices.
 - *Credential Guard* helps protect credentials and secrets that you use with your devices.
 
-To learn more, see [Identity and access management](https://docs.microsoft.com/windows/security/identity-protection/) in the Windows identity and access management documentation.
+To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ For devices that don't meet your compliance policies or rules, you can add **Act
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Azure Active Directory (AD) [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Azure Active Directory (AD) [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
@@ -43,11 +43,13 @@ Not all actions are available for all platforms.
 
 ## Available actions for noncompliance
 
-Following are the available actions for noncompliance. Unless stated otherwise, each action is available for all platforms supported by Intune:
+Following are the available actions for noncompliance:
 
 - **Mark device non-compliant**: By default, this action is set for each compliance policy and has a schedule of zero (**0**) days, marking devices as noncompliant immediately.
 
   When you change the default schedule, you provide a grace period in which a user can remediate issues or become compliant without being marked as non-compliant.
+
+  This action is supported on all platforms supported by Intune.
 
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
@@ -55,7 +57,9 @@ When you enable this action:
   - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the subject, message body, and can include the company logo, company name, and additional contact information.
   - Choose to send the message to additional recipients by selecting one or more of your Azure AD Groups.
 
-When the email is sent, Intune includes details about the noncompliant device in the email notification.
+  When the email is sent, Intune includes details about the noncompliant device in the email notification.
+
+  This action is supported on all platforms supported by Intune.
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
@@ -111,7 +115,7 @@ When the email is sent, Intune includes details about the noncompliant device in
 
 You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add additional actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
 
-To use device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. See [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md) for guidance.
+To use device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. See [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md) for guidance.
 
 To create a device compliance policy, see the following platform-specific guidance:
 
@@ -151,7 +155,9 @@ To send email to your users, create a notification message template. When a devi
 
 Notifications that have been created are available in the *Compliance policies* > *Notifications* page. From the page you can select a notification to view its configuration and:
 
-- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune. 
+- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune.
+
+  To successfully send the preview email, your account must have permissions equal to those of the following Azure AD groups or Intune roles: *Azure AD Global Administrator*, Intune *Administrator* (Intune Azure AD Intune Service Administrator), or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 ## Add actions for noncompliance

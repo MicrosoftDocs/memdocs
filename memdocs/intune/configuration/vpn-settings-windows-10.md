@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,7 +42,7 @@ Depending on the settings you choose, not all values may be configurable.
 
 ## Before you begin
 
-[Create a VPN device configuration profile](vpn-settings-configure.md).
+Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
 
 ## Base VPN settings
 
@@ -86,14 +86,14 @@ Depending on the settings you choose, not all values may be configurable.
 
     - **Machine certificates** (IKEv2 only): Select an existing device client certificate profile to authenticate the device.
 
-      If you use [device tunnel connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select this option.
+      If you use [device tunnel connections](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select this option.
 
       To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
 
     - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
   - **Remember credentials at each logon**: Choose to cache the authentication credentials.
   - **Custom XML**: Enter any custom XML commands that configure the VPN connection.
-  - **EAP XML**: Enter any EAP XML commands that configure the VPN connection. For more information, see [EAP configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+  - **EAP XML**: Enter any EAP XML commands that configure the VPN connection. For more information, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
   - **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to PCs joined to Azure Active Directory (AD).
 
@@ -163,7 +163,7 @@ Example:
 ### Writing custom XML
 For more information about writing custom XML commands, see each manufacturer's VPN documentation.
 
-For more information about creating custom EAP XML, see [EAP configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+For more information about creating custom EAP XML, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
 ## Apps and Traffic Rules
 

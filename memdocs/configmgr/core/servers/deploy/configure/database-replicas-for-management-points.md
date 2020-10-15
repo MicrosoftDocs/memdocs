@@ -33,7 +33,7 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 
     -   A single database replica can be used by more than a one management point from the same site  
 
-    -   A SQL server can host multiple database replicas for use by different management points so long as each runs in a separate instance of SQL Server  
+    -   A SQL Server can host multiple database replicas for use by different management points so long as each runs in a separate instance of SQL Server  
 
 -   Replicas synchronize a copy of the site database on a fixed schedule  from data that is published by the sites database server for this purpose.  
 
@@ -53,7 +53,7 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 
     -   The site database must **publish** the database replica, and each remote database replica server must **subscribe** to the published data.  
 
-    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
+    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).  
 
 -   **Self-signed certificate:** To configure a database replica, you must create a self-signed certificate on the database replica server and make this certificate available to each management point that will use that database replica server.  
 
@@ -79,7 +79,7 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 
 -   **Multiple replicas on a single SQL Server:**  If you configure  a database replica server to host multiple database replicas for management points (each replica must be on a separate instance) you must use a modified configuration script (from Step 4 of the following section)  to prevent overwriting the self-signed certificate in use by previously configured database replicas on that server.  
 
-- User deployments in Software Center won't work against a management point using a SQL replica. <!--sccmdocs-1011-->
+- User deployments in Software Center won't work against a management point using a SQL Server replica. <!--sccmdocs-1011-->
 
 ##  <a name="BKMK_DBReplica_Config"></a> Configure database replicas  
 To use configure a database replica, the following steps are required:  
@@ -170,7 +170,7 @@ Use the following procedure as an example of how to configure a database replica
         -   If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.  
 
         > [!IMPORTANT]  
-        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
+        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](/sql/relational-databases/replication/distribution-agent-security).  
 
       - For **Connect to the Distributor**, select **By impersonating the process account**.  
 
@@ -252,7 +252,7 @@ In addition to configuring the management point to use the database replica serv
     # Get local computer name  
     $computerName = "$env:computername"  
 
-    # Get the sql server name  
+    # Get the SQL Server name  
     #$key="HKLM:\SOFTWARE\Microsoft\SMS\MP"  
     #$value="SQL Server Name"  
     #$sqlServerName= (Get-ItemProperty $key).$value  
@@ -349,21 +349,21 @@ In addition to configuring the management point to use the database replica serv
     }  
     $certHashCharArray = $certHashCharArray.Replace(' ', '0');  
 
-    # SQL needs the thumbprint in lower case  
+    # SQL Server needs the thumbprint in lower case  
     foreach($char in $certHashCharArray)  
     {  
         [System.String]$myString = $char;  
         $certThumbprint = $certThumbprint + $myString.ToLower();  
     }  
 
-    # Configure SQL to use this cert  
+    # Configure SQL Server to use this cert  
     $path = "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL"  
     $subKey = (Get-ItemProperty $path).$sqlInstanceName  
     $realPath = "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\" + $subKey + "\MSSQLServer\SuperSocketNetLib"  
     $certKeyName = "Certificate"  
     Set-ItemProperty -path $realPath -name $certKeyName -Type string -Value $certThumbprint  
 
-    # restart sql service  
+    # restart SQL Server service  
     Restart-Service $SQLServiceName -Force  
     ```  
 
@@ -455,7 +455,7 @@ To support client notification with a database replica for a management point, y
 -   For each subsequent  database replica you use this script to configure, update the Friendly name for the certificate.  To do so, edit the line **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** and replace **ConfigMgr SQL Server Identification Certificate** with a new name, like  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="BKMK_DBReplicaOps"></a> Manage database replica configurations  
- When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
+ When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](/sql/relational-databases/replication/publish/delete-a-publication).  
 
 > [!NOTE]  
 >  After you restore a site database that was configured for database replicas, before you can use the database replicas you must reconfigure each database replica, recreating both the publications and subscriptions.  

@@ -45,7 +45,7 @@ Intune collects detailed information about the hardware and software for desktop
 
 ## To display information about PCs you manage
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Reports** &gt; **Computer Inventory Reports**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Reports** &gt; **Computer Inventory Reports**.
 
 2. On the **Create New Report** page, accept the default values or customize them to filter the results that will be returned by the report. For example, you could select that only PCs that run Windows 8.1 are displayed in the report.
 
@@ -55,7 +55,7 @@ Intune collects detailed information about the hardware and software for desktop
 
 ## To display software installed on PCs you manage
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Reports** &gt; **Detected Software Reports**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Reports** &gt; **Detected Software Reports**.
 
 2. On the **Create New Report** page, accept the default values or customize them to filter the results that will be returned by the report. For example, you could select that only software published by Microsoft will be displayed in the report.
 
@@ -65,7 +65,7 @@ Intune collects detailed information about the hardware and software for desktop
 
 ## To refresh computer inventory to ensure it is current
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC for which you want to refresh inventory).
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com/), choose **Groups** &gt; **All Devices** (or another group that contains the PC for which you want to refresh inventory).
 
 2. Select a PC, or press and hold **Ctrl** to select multiple PCs.
 

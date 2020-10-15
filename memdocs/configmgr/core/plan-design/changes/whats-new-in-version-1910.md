@@ -132,7 +132,7 @@ For more information, see [Microsoft Connected Cache in Configuration Manager](.
 
 You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you can now use the **Evaluate this baseline as part of compliance policy assessment** option. When you add or edit a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
 
-For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Office 365 resources.
+For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Microsoft 365 resources.
 
 For more information, see [Include custom configuration baselines as part of compliance policy assessment](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
@@ -344,7 +344,7 @@ This release includes the following improvements to search in the Configuration 
 
 ## Other updates
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](/powershell/sccm/1910-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](/powershell/sccm/1910-release-notes).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

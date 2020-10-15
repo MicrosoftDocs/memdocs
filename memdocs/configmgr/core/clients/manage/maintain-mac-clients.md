@@ -83,7 +83,7 @@ Here are procedures for uninstalling Mac clients and for renewing their certific
 
     -   **Type:Mac OS X**  
 
-4.  On the **Supported Platforms** page, ensure that all Mac OS X versions are selected.  
+4.  On the **Supported Platforms** page, ensure that all macOS X versions are selected.  
 
 5.  On the **Settings** page, choose **New** and then, in the **Create Setting** dialog box, specify the following information:  
 

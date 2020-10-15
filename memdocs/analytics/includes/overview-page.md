@@ -4,10 +4,10 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 06/25/2020
+ms.date: 09/22/2020
 
 ---
-<!--Don't apply H2 in this include file since they are context driven by article-->
+<!--Don't apply H2 in this include file since they are context driven by article. Used in enroll-configmgr.md and enroll-intune.md files -->
 
 You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
 

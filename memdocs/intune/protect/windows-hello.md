@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -122,6 +122,10 @@ The remainder of this article focuses on creating a default Windows Hello for Bu
 
      If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Azure Active Directory joined, and the companion device must be configured with a Windows Hello for Business PIN.
 
+   - **Use security keys for sign-in**:
+
+     When set to **Enable**, this setting provides the capacity for remotely turning ON/OFF Windows Hello Security Keys for all computers in a customer's organization.
+
 ## Windows Holographic for Business support
 
 Windows Holographic for Business supports the following settings for Windows Hello for Business:
@@ -137,4 +141,4 @@ Windows Holographic for Business supports the following settings for Windows Hel
 
 ## Next steps
 
-For more information about Windows Hello for Business, see [the guide](https://technet.microsoft.com/library/mt589441.aspx) in the Windows 10 documentation.
+For more information about Windows Hello for Business, see [the guide](/windows/security/identity-protection/hello-for-business/hello-identity-verification) in the Windows 10 documentation.

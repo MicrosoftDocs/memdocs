@@ -48,7 +48,7 @@ Company Portal settings|Admin > Company Portal|**Manage** > Mobile apps<br> **Se
 
 
 ## Where do I manage groups?
-Intune in the Azure portal uses [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) to manage groups.
+Intune in the Azure portal uses [Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal) to manage groups.
 
 ## Where did enrollment rules go?
 In the classic portal, you could set rules governing the MDM enrollment of mobile and modern Windows and macOS devices.
@@ -76,7 +76,7 @@ New restriction capabilities are added to the Azure portal only.
 ## Where did my Conditional Access policies go?
 After your tenant migrates to the Azure portal, your tenant's Conditional Access policies continue to be enforced. However, you are not able to view or modify them from Intune in the Azure portal.
 
-If you would like to view and make changes to Conditional Access policies from the Azure portal, you will need to remove the old policies from the classic portal. Then recreate them in the Azure portal. For more information about migrating Conditional Access policies, see [Migrate classic policies in the Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
+If you would like to view and make changes to Conditional Access policies from the Azure portal, you will need to remove the old policies from the classic portal. Then recreate them in the Azure portal. For more information about migrating Conditional Access policies, see [Migrate classic policies in the Azure Portal](/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## Where did my compliance policies go?
 After your tenant migrates to the Azure portal, your tenant's compliance policies continue to be enforced. However, you are not able to view or modify them from Intune in the Azure portal.

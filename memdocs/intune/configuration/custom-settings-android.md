@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,7 +53,7 @@ This article shows you how to create a custom profile for Android devices.
 
     - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android custom profile**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android**.
+    - **Platform**: Select **Android device administrator**.
     - **Profile type**: Select **Custom**.
 
 4. In **Custom OMA-URI Settings**, select **Add**. Enter the following settings:

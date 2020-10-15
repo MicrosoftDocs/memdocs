@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an inform
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
 > [!NOTE]
-> Mobile Threat Defense integration with the Intune GCC High and DoD offering is currently *not* supported. Learn more about [Microsoft Intune for US Government GCC High support](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+> Mobile Threat Defense integration with the Intune GCC High and DoD offering is currently *not* supported. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## Protect corporate resources
 
@@ -84,13 +84,15 @@ Access is granted when the device is remediated:
 ## Sample scenarios for unenrolled devices using Intune app protection policies
 
 When a device is considered infected by the Mobile Threat Defense solution:<br>
-![Image showing a Mobile Threat Defense infected device](./media/mobile-threat-defense/MTD-image-3.png)
+![Image that shows a Mobile Threat Defense infected device](./media/mobile-threat-defense/MTD-image-3.png)
 
 Access is granted when the device is remediated:<br>
 ![Image showing a Mobile Threat Defense access granted](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> You can use multiple Mobile Defense vendors with a single Intune tenant. However, when two or more vendors are configured for use for the same platform, all devices that run that platform must install each MTD app and scan for threats. Failure to submit a scan from any configured app results in the device being marked as non-compliant. 
+> We recommend using one Mobile Threat Defense vendor per tenant per platform. 
+> 
+> For Device Compliance, you can use multiple Mobile Defense vendors with a single Intune tenant. However, when two or more vendors are configured for use for the same platform, all devices that run that platform must install each MTD app and scan for threats. Failure to submit a scan from any configured app results in the device being marked as non-compliant. 
 
 ## Mobile Threat Defense partners
 

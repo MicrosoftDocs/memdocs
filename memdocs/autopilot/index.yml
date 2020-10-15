@@ -49,8 +49,8 @@ landingContent:
         url: self-deploying.md
       - text: Windows Autopilot Reset
         url: windows-autopilot-reset.md
-      - text: White glove
-        url: white-glove.md
+      - text: Pre-provisioning
+        url: pre-provision.md
       - text: Support for existing devices
         url: existing-devices.md
 
@@ -118,8 +118,4 @@ landingContent:
       - text: Windows Autopilot @ Windows IT Pro Blog
         url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
       - text: Windows Autopilot and Surface devices
-        url: https://docs.microsoft.com/surface/windows-autopilot-and-surface-devices
-      - text: Out of Office Hours blog
-        url: https://oofhours.com/
-
-
+        url: /surface/windows-autopilot-and-surface-devices

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,6 +32,9 @@ ms.collection: M365-identity-device-management
 # How to customize the Intune Company Portal apps, Company Portal website, and Intune app
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department). Additionally, they allow users to securely access company resources. The end-user experience provides several different pages, such as Home, Apps, App details, Devices, and Device details. To quickly find apps within the Company Portal, you can filter the apps on the Apps page.
+
+> [!NOTE]
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal).
 
 ## Customizing the user experience
 
@@ -140,7 +143,7 @@ The following table provides notification-specific configuration details:
 You can choose which additional app sources will be shown in Company Portal.
 
 > [!NOTE]
-> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal).
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 The following table provides app source specific configuration details:
 
@@ -152,7 +155,7 @@ The following table provides app source specific configuration details:
 #### App source setting options
 
 > [!NOTE]
-> The Company Portal website will initially support the display of apps from other Microsoft services.
+> The display of apps from other Microsoft services is only supported in the Windows Company Portal and the Company Portal website.
 
 You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.azure.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 

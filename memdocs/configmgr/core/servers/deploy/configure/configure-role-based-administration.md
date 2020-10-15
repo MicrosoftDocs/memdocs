@@ -9,8 +9,7 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user
 ---
 
 # Configure role-based administration for Configuration Manager

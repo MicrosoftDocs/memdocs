@@ -201,7 +201,7 @@ Use the following steps to monitor progress:
 > Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
 >
 > - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
->   - The cmupdate.log will log the program name and sessionid from SQL that is blocking the database upgrade.
+>   - The cmupdate.log will log the program name and sessionid from SQL Server that is blocking the database upgrade.
 > - When the database upgrade is no longer blocked, the status will be reset to **In progress** or **Complete**.
 >   - When the database upgrade is blocked, a check is done every 5 minutes to see if it's still blocked.
 
@@ -404,7 +404,7 @@ The following features are optional in the latest version of Configuration Manag
 - [Approve application requests for users per device](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
 - [Surface driver updates](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
-- [Cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
+- [Cloud management gateway](../../clients/manage/cmg/overview.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [PFX create](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
 - [Azure Log Analytics connector](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender Exploit Guard policy](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->

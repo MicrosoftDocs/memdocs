@@ -83,7 +83,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
     -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 
-- ***[New]*** SQL version, service pack level, edition, collation ID, and character set
+- ***[New]*** SQL Server version, service pack level, edition, collation ID, and character set
 
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
@@ -319,7 +319,7 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
     -   Cluster patching statistics  
 
-    -   Count of deployed Office 365 updates  
+    -   Count of deployed Microsoft 365 updates  
 
     -   Classifications that are synced by Software Update Point
 
@@ -331,15 +331,15 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
     -   Count of largest database tables  
 
-    -   SQL Always-On replica information  
+    -   SQL Server Always On availability group replica information  
 
-    -  SQL change tracking retention period
+    -  SQL Server change tracking retention period
 
     - ***[New]*** Discovery types, enabled and schedule (full, incremental)
 
     - ***[New]*** Discovery operational statistics (count of objects found)
 
-    - ***[New]*** SQL change tracking performance issues, retention period, and auto-cleanup state
+    - ***[New]*** SQL Server change tracking performance issues, retention period, and auto-cleanup state
 
 
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/03/2020
+ms.date: 10/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -96,7 +96,7 @@ You can choose the following options if you choose variable as the value type:
 
 | Option | Example |
 |----|----|
-| AAD Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
+| Azure AD Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | Intune Device ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
 | Domain | contoso.com |
@@ -119,6 +119,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > - Edge for Android (42.0.4.4048 and later)
    > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 and later)
    > - OneDrive for Android (5.28 and later)
+   > - OneNote for Android (16.0.13231.20222 or later)
    > - Outlook for Android (2.2.222 and later)
    > - Teams for Android (1416/1.0.0.2020073101 and later)
 
@@ -160,7 +161,7 @@ For example, an app uses the device's microphone. The user is prompted to grant 
 ## Additional information
 
 - [Assigning a Managed Google Play app to Android Enterprise devices](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
-- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps
 

@@ -179,9 +179,9 @@ The dashboard displays charts for the following:
 - Number of Office 365 clients
 - Office 365 client versions
 - Office 365 client languages
-- Office 365 client channels     
+- Office 365 client channels
 
-For details, see [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## Task sequence steps to manage BIOS to UEFI conversion
 You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see  [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
@@ -245,7 +245,7 @@ For details, see [Configuration items for devices managed without the Configurat
 - **Minutes of inactivity before password is required**
 - **Remember password history**
 
-### New settings for Mac OS X devices
+### New settings for macOS X devices
 #### Password settings
 - **Number of complex characters required in password**
 - **Allow simple passwords**
