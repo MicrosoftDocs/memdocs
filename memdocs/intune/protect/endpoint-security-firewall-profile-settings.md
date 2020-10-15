@@ -434,7 +434,7 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Public**
   - **Not configured**
 
-#### Aplication settings
+#### Application settings
 
 Applications targeted with this rule:
 
