@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 10/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,6 +52,8 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
     :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
+
+Be sure the file is less than 1 MB. If it's greater than 1 MB, then include fewer GPOs when you save your report.
 
 ## Use Group Policy analytics
 
