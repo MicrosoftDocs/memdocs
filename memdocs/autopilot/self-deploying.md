@@ -2,7 +2,7 @@
 title: Windows Autopilot Self-Deploying mode
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows 10 as a kiosk, digital signage device, or a shared device.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
+ms.reviewer: greglin
 manager: laurawi
 ms.technology: windows
 ms.prod: w10
@@ -31,8 +31,8 @@ Self-deploying mode provides all the following:
 - Makes sure that all policies, applications, certificates, and networking profiles are provisioned on the device.
 - Uses the Enrollment Status Page to prevent access until the device is fully provisioned.
 
->[!NOTE]
->Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
+> [!NOTE]
+> Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
 
 Self-deploying mode lets you deploy a Windows 10 device as a kiosk, digital signage device, or a shared device.
 
@@ -42,8 +42,8 @@ You can completely automate device configuration by combining self-deploing mode
 - [Simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691).
 - [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
 
->[!NOTE]
->Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Azure AD and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
+> [!NOTE]
+> Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Azure AD and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
 
 ![The user experience with Windows Autopilot self-deploying mode](images/self-deploy-welcome.png)
 
@@ -82,6 +82,6 @@ When using Windows Autopilot to deploy in self-deploying mode, the following end
   -  Automatically sign in as a local account, for devices configured as a kiosk or digital signage.
 
 >[!NOTE]
->Deploying EAS policies using self-deploying mode for kiosk deployments will cause auto-logon functionality to fail. 
+>Deploying Exchange ActiveSync (EAS) policies using self-deploying mode for kiosk deployments will cause auto-logon functionality to fail. 
 
 In case the observed results don't match these expectations, consult the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
