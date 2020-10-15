@@ -5,3 +5,5 @@
   items:
   - name: Microsoft Endpoint Manager overview
     href: endpoint-manager-overview.md
+  - name: Get Support
+    href: get-support.md
