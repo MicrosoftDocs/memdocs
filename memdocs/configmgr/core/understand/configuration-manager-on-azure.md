@@ -72,8 +72,9 @@ Yes! Azure VM Availability sets can be used for redundant site system roles like
 
 You can also use them for the Configuration Manager site servers. For example, central administration sites and primary sites can all be in the same availability set which can help you ensure that they are not rebooted at the same time.
 
-### How can I make my database highly available? Can I use Azure SQL Database? Or do I have to use Microsoft SQL Server in a VM?
-You need to use Microsoft SQL Server in a VM. Configuration Manager does not support Azure SQL Server at this time. But you can use functionalities like AlwaysOn Availability Groups for your SQL server. [AlwaysOn Availability Groups](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) are recommended and are officially supported starting with version 1602 of Configuration Manager.
+### How can I make my database highly available? Can I use an Azure SQL Server database? Or do I have to use SQL Server in a VM?
+
+You need to use SQL Server in a VM. Configuration Manager doesn't support Azure SQL Server at this time. But you can use functionalities like SQL Server Always On availability groups. [Availability groups](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) are recommended and officially supported with Configuration Manager.
 
 ### Can I use Azure load balancers with site system roles like management points  or software update points?
 While Configuration Manager is not tested with Azure load balancers, if the functionality is transparent to the application, it should not have any adverse effects on normal operations.

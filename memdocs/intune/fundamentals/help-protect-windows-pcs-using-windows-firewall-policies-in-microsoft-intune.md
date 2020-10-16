@@ -57,7 +57,7 @@ The Windows Firewall policy lets you create and deploy settings that control Win
 
 ## Configure a Windows Firewall policy
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com/), choose **Policy** &gt; **Add Policy**.
+1. In the [Microsoft Intune administration console](https://admin.manage.microsoft.com), choose **Policy** &gt; **Add Policy**.
 
 2. Configure and deploy a **Windows Firewall Settings** policy. You can use the recommended settings or customize the settings. If you need more information about how to create and deploy policies, see [Common Windows PC management tasks with the Microsoft Intune computer client](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 

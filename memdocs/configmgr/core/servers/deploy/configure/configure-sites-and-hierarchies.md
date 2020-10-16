@@ -10,9 +10,8 @@ ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Configure sites and hierarchies for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -41,6 +40,6 @@ The following configuration notes apply to most deployments:
 | Create custom collections | Using information that the site discovers about devices and users, create custom collections of objects to simplify future management tasks. For more information, see [How to create collections](../../../clients/manage/collections/create-collections.md). |  
 | Configure settings to manage high-risk deployments | Configure settings at a site to warn administrators when they create a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../manage/settings-to-manage-high-risk-deployments.md). |  
 | Configure database replicas for management points | Configure a database replica to reduce the processor load that's placed on the site database server by management points as they service requests from clients. For more information, see [Database replicas for management points](database-replicas-for-management-points.md). |  
-| Configure a SQL Server Always On availability group | Configure availability groups as high-availability and disaster-recovery solutions for hosting the site database at primary sites and the central administration site. For more information, see [SQL Server AlwaysOn for a highly available site database](sql-server-alwayson-for-a-highly-available-site-database.md). |  
+| Configure a SQL Server Always On availability group | Configure availability groups as high-availability and disaster-recovery solutions for hosting the site database at primary sites and the central administration site. For more information, see [Prepare to use a SQL Server Always On availability group with Configuration Manager](sql-server-alwayson-for-a-highly-available-site-database.md). |  
 | Modify replication between sites | See [Data transfers between sites](../../../plan-design/hierarchy/data-transfers-between-sites.md) to learn about the following subjects:<br /><br /> Configure [file-based replication](../../../plan-design/hierarchy/file-based-replication.md) between secondary sites<br /><br /> Configure [database replication links](../../../plan-design/hierarchy/database-replication.md)<br /><br /> Configure [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) |  
 | Configure site servers in passive mode | Starting in version 1806, configure a site server in passive mode for each primary site and the central administration site. This feature provides a highly available site server. For more information, see [Site server high availability](site-server-high-availability.md). |  

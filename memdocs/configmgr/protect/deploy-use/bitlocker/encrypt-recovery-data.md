@@ -34,7 +34,7 @@ Given the sensitive nature of this information, you need to protect it in the fo
     > [!NOTE]
     > It currently doesn't support Enhanced HTTP.
 
-- Consider also encrypting this data when stored in the site database. If you install a SQL certificate, Configuration Manager encrypts your data in SQL.
+- Consider also encrypting this data when stored in the site database. If you install a SQL Server certificate, Configuration Manager encrypts your data in SQL.
 
     If you don't want to create a BitLocker management encryption certificate, opt-in to plain-text storage of the recovery data. When you create a BitLocker management policy, enable the option to **Allow recovery information to be stored in plain text**.
 
@@ -73,15 +73,15 @@ On the client, use the **BitLockerManagementHandler.log** to troubleshoot this c
 >
 > This recommendation applies to both options: enable the management point for HTTPS, or enable the IIS website that hosts the recovery service on the management point.
 
-### SQL encryption certificate
+### SQL Server encryption certificate
 
-Use this SQL certificate for Configuration Manager to encrypt BitLocker recovery data in the site database. You can use your own process to create and deploy the BitLocker management encryption certificate, as long as it meets the following requirements:
+Use this SQL Server certificate for Configuration Manager to encrypt BitLocker recovery data in the site database. You can use your own process to create and deploy the BitLocker management encryption certificate, as long as it meets the following requirements:
 
 - The name of the BitLocker management encryption certificate must be `BitLockerManagement_CERT`.
 
 - Encrypt this certificate with a database master key.
 
-- The following SQL users need **Control** permissions on the certificate:
+- The following SQL Server users need **Control** permissions on the certificate:
   - RecoveryAndHardwareCore
   - RecoveryAndHardwareRead
   - RecoveryAndHardwareWrite
@@ -181,7 +181,7 @@ END
 
 ### Verify certificate
 
-Use this SQL script to verify that SQL successfully created the certificate with the required permissions.
+Use this SQL script to verify that SQL Server successfully created the certificate with the required permissions.
 
 ``` SQL
 USE CM_ABC

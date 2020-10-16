@@ -1,22 +1,23 @@
 ---
-title: "Configuration Manager Status Messages"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: About status messages
+titleSuffix: Configuration Manager
+description: Learn about status messages in Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # About Configuration Manager Status Messages
 In Configuration Manager, status messages are the universal means for components to communicate information about their health to the Configuration Manager administrator. Status messages are similar to Windows NT Events; they have a severity, ID, description, and so on.  
 
  The Configuration Manager Status System is a fully-distributed, enterprise-wide aggregation and summarization system for status messages. Status messages flow from components to the Configuration Manager site servers and up the Configuration Manager site hierarchy.  
 
- The administrator configures how Configuration Manager processes the status messages at each site server in the hierarchy. This processing can include storing the status messages in a SQL database, replicating the messages to the parent Configuration Manager site, reporting the messages as Windows Events on the site server, and exporting the messages to another eventing or alerting application.  
+ The administrator configures how Configuration Manager processes the status messages at each site server in the hierarchy. This processing can include storing the status messages in a SQL Server database, replicating the messages to the parent Configuration Manager site, reporting the messages as Windows Events on the site server, and exporting the messages to another eventing or alerting application.  
 
  Certain kinds of status messages are automatically processed by Summarizer components that are running on the site servers. The Summarizers produce high-level data about the raw flows of status messages. Administrators monitor this data in the Configuration Manager console.  
 

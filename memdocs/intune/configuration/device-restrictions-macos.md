@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/07/2020
+ms.date: 10/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: annovich
+ms.reviewer: mikedano, kakyker; annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -142,6 +142,11 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 These settings use the [Passcode payload](https://developer.apple.com/documentation/devicemanagement/passcode) (opens Apple's web site).
 
+> [!IMPORTANT]
+> On macOS devices running 10.14.2 to 11 (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced.
+>
+> Also, any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to Big Sur (macOS 11), users need to change the device password before they can sign in.
+
 ### Settings apply to: All enrollment types
 
 - **Require password**: **Yes** requires users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require a password. It also doesn't force any restrictions, such as blocking simple passwords or setting a minimum length.
@@ -160,21 +165,19 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
   - **Maximum minutes after screen lock before password is required**: Enter the length of time devices must be inactive before a password is required to unlock it. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Password expiration (days)**: Enter the number of days until the device password must be changed, from 1-65535. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Prevent reuse of previous passwords**: Restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-  - **Maximum allowed sign-in attempts**: Enter the maximum number of times that users can consecutively try to sign in before the device locks users out, from 2-11. When this number is exceeded, the device is locked.
+  - **Maximum allowed sign-in attempts**: Enter the maximum number of times that users can consecutively try to sign in before the device locks users out, from 2-11. When this number is exceeded, the device is locked. We recommend not setting this value to a low number, such as `2` or `3`. It's common for users to enter the wrong password. We recommend setting to a higher value.
 
-    For example, enter `5` so users can enter the wrong password up to five times. After the fifth attempt, the device is locked. If you leave this value blank, or don't change it, then `11` is used by default.
-
-    We recommend not setting this value to a low number, such as `2`. It's common for users to enter the wrong password. We recommend setting to a higher value.
+    For example, enter `5` so users can enter the wrong password up to five times. After the fifth attempt, the device is locked. If you leave this value blank, or don't change it, then `11` is used by default.    
 
     After six failed attempts, macOS automatically forces a time delay before a passcode can be entered again. The delay increases with each attempt. Set the **Lockout duration** to add a delay before the next passcode can be entered.
 
-  - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
+    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
 
-    If you leave this value blank, or don't change it, then `30` minutes is used by default.
+      If you leave this value blank, or don't change it, then `30` minutes is used by default.
 
-    This setting applies to:
+      This setting applies to:
 
-    - macOS 10.10 and newer
+      - macOS 10.10 and newer
 
 - **Block user from modifying passcode**: **Yes** stops the passcode from being changed, added, or removed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
 

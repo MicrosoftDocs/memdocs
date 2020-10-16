@@ -24,7 +24,7 @@ This article introduces the features that are available in the Technical Preview
 
 **Known Issues in this Technical Preview:**   
 - ***Prerequisite status***: When you install version 1611, the overall status for prerequisites might show as passed with warnings, but does not list which prerequisites caused the warnings. This can be caused by the following two prerequisites:
-  - SQL Index Create Memory options
+  - SQL Server Index Create Memory options
   - Checks for supported SQL Server version  
 
   Because these are only warnings, they can be ignored.

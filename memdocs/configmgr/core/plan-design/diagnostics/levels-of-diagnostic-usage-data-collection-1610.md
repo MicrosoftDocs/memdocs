@@ -84,9 +84,9 @@ Beginning with version 1610, you change the data collection level from within th
 - Use of Network Discovery (enabled or disabled)
 - Admin Console:
 
-  - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
+  - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
 
-- SQL version, service pack level, edition, collation ID, and character set
+- SQL Server version, service pack level, edition, collation ID, and character set
 
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
@@ -346,15 +346,15 @@ For Configuration Manager version 1610, this level includes the following:
 
     -   Count of largest database tables  
 
-    -   ***[Updated]***  SQL AlwaysOn replica information, usage, and health status
+    -   ***[Updated]*** SQL Server Always On availability group replica information, usage, and health status
 
-    -  SQL change tracking retention period
+    -  SQL Server change tracking retention period
 
     - Discovery types, enabled and schedule (full, incremental)
 
     - Discovery operational statistics (count of objects found)
 
-    - SQL change tracking performance issues, retention period, and auto-cleanup state
+    - SQL Server change tracking performance issues, retention period, and auto-cleanup state
 
 
 

@@ -196,7 +196,7 @@
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: CNG certificates overview
+    - name: CNG v3 certificates overview
       href: plan-design/network/cng-certificates-overview.md
     - name: PKI certificate requirements
       href: plan-design/network/pki-certificate-requirements.md
@@ -416,11 +416,11 @@
         href: servers/deploy/configure/promote-site-server-flowchart.md
       - name: Flowchart - Promote site server (unplanned)
         href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
-      - name: Prepare to use SQL Server Always On
+      - name: Prepare to use an availability group
         href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
-      - name: Configure SQL Server Always On
+      - name: Configure an availability group
         href: servers/deploy/configure/configure-aoag.md
-      - name: Use a SQL Server cluster
+      - name: Use a failover cluster instance
         href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
     - name: Custom locations for database files
       href: servers/deploy/configure/custom-locations-for-site-database-files.md
@@ -550,17 +550,17 @@
       items:
       - name: Monitor replication
         href: servers/manage/monitor-replication.md
-      - name: Troubleshoot SQL replication
+      - name: Troubleshoot SQL Server replication
         items:
-        - name: Troubleshoot SQL replication
+        - name: Troubleshoot SQL Server replication
           href: servers/manage/replication/overview.md
-        - name: SQL replication
+        - name: SQL Server replication
           href: servers/manage/replication/sql-replication.md
-        - name: SQL configuration
+        - name: SQL Server configuration
           href: servers/manage/replication/sql-configuration.md
-        - name: SQL performance
+        - name: SQL Server performance
           href: servers/manage/replication/sql-performance.md
-        - name: SQL replication reinitialization (reinit)
+        - name: SQL Server replication reinitialization (reinit)
           href: servers/manage/replication/sql-replication-reinit.md
         - name: Global data reinit
           href: servers/manage/replication/global-data-reinit.md
