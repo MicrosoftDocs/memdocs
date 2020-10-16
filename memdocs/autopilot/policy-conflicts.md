@@ -45,9 +45,9 @@ This possible failure is especially true for kiosk scenarios where passwords are
 <td>Setting this policy to "disabled" will disable the Microsoft Sign-in Assistant service (wlidsvc). This service is required by Windows Autopilot to obtain the Windows Autopilot profile.</td>
 
 <tr><td colspan="2">
-<br><table border="0"><tr><td valign="top">Group Policy Objects (GPOs) and registry keys that affect Windows Autopilot for pre-provisioned deployment.<br><td><tr><td><b>Registry path</b>:
-<br>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\<a href="https://support.microsoft.com/help/324737/how-to-turn-on-automatic-logon-in-windows">Automatic logon</a><td><b>Registry key</b>:
-<br>If the <b>AutoAdminLogon</b> registry key is set to 0 (disabled), this breaks Windows Autopilot pre-provisioning.<br><br>
+<br><table border="0"><tr><td valign="top">Group Policy Objects (GPOs) and registry keys that affect Windows Autopilot for <a href="pre-provision.md">pre-provisioned deployment</a>.<br><td><tr><td><b>Registry path</b>:
+<br>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Automatic logon</a><td><b>Registry key</b>:
+<br>If the <a href="https://support.microsoft.com/help/324737/how-to-turn-on-automatic-logon-in-windows">AutoAdminLogon</a> registry key is set to 0 (disabled), this breaks Windows Autopilot pre-provisioning.<br><br>
 <tr colspan="2"><td valign="top"><b>GPO path</b>: 
 <br>Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options<br>
 <br><b>Policies</b>:
@@ -56,7 +56,7 @@ This possible failure is especially true for kiosk scenarios where passwords are
 <br><a href="https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/interactive-logon-require-smart-card">Interactive logon: Require Windows Hello for Business or smart card</a><br>
 <br><a href="https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode">User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode - Prompt for credentials on the secure desktop</a><br>
 <td>
-<br>Windows Autopilot pre-provisioning does not work when any of these GPO policy settings are enabled
+<br>Windows Autopilot pre-provisioning does not work when any of the four GPO policy settings listed here are enabled.
 </table>
 
 <br>
