@@ -48,7 +48,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
        -   For .EXE updates, all arguments are valid.
 
    >[!NOTE] 
-   > You can use Update Publisher to create only packages that are smaller than 2 GB. Import options are disabled if the software update package is too large.
+   > You can use Updates Publisher to create only packages that are smaller than 2 GB. Import options are disabled if the software update package is too large.
 
 3. On the **Information** page, specify details about the update that are included when the update is published or exported. Details include localized properties like the updates name (title) and description. Then, you specify more general details such as the classification, vendor, product, and where to learn more about the update.
 
