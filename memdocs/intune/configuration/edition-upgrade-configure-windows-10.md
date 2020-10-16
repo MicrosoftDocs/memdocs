@@ -55,7 +55,7 @@ Before you upgrade devices, be sure you have the following prerequisites:
 
 - A valid product key to install the updated Windows version on all devices that you target with the policy (for Windows 10 Desktop editions). You can use either Multiple Activation Keys (MAK) or Key Management Server (KMS) keys.
 - For Windows 10 Holographic editions, you can use a Microsoft license file. The license file includes the licensing information to install the updated edition on all devices that you target with the policy.
-- The Windows 10 devices you assign the policy are enrolled in Microsoft Intune. You can't use the edition upgrade policy with PCs that run the Intune PC client software.
+- The Windows 10 devices you assign the policy are enrolled in Microsoft Intune. You can't use the edition upgrade policy with PCs that run the Intune PC software client software.
 
 ## Supported upgrade paths
 
