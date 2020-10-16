@@ -107,6 +107,8 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 - There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager.  
 
+Updates can be managed using [Administrative Templates in Microsoft Endpoint Manager](/intune/configuration/administrative-templates-update-office) or [Software Update management in Microsoft Endpoint Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates).
+
 For more information on the Intune feature, see [Assign Microsoft 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365).
 
 ## Client apps
