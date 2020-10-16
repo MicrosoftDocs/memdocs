@@ -95,6 +95,6 @@ They can:
 
 ## Next steps  
 
-When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the doc links listed under [Why enroll your Android device](why-enroll-adnroid-device.md#why-enroll-your-android-device) for general step-by-step instructions.    
+When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the doc links listed under [Why enroll your Android device](why-enroll-android-device.md#why-enroll-your-android-device) for general step-by-step instructions.    
 
 Contact your IT support person or look at your organization's IT support page to find out which setup instructions you should use.  Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.  
