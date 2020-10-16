@@ -1783,6 +1783,12 @@ Specifies the primary users of the destination computer by using the following f
 
 `contoso\jqpublic, contoso\megb, contoso\janedoh`
 
+### <a name="SMSTSWaitCcmexecOperationalTimeout"></a> SMSTSWaitCcmexecOperationalTimeout
+
+(input)
+
+Starting in version 1910, use this variable to control the timeout period used in a task sequence to wait for complete startup of the SMS Agent Host service (ccmexec). This value is specified in seconds. The default timeout period is 30 minutes, or 1800 seconds.
+
 ### <a name="SMSTSWaitForSecondReboot"></a> SMSTSWaitForSecondReboot
 
 *Applies to the [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) step.*
