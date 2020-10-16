@@ -1510,9 +1510,11 @@ Specifies the number of seconds that the warning is displayed to the user before
 
 ### <a name="SMSTSWaitCcmexecOperationalTimeout"></a> SMSTSWaitCcmexecOperationalTimeout
 
-Specifies the number of seconds for the timeout period used in a task sequence to wait for complete startup of the SMS Agent Host service (ccmexec)
+Specifies the number of seconds for the timeout period used in a task sequence to wait for complete startup of the SMS Agent Host service (ccmexec).
+
 Variable can be configured with a value in seconds. The default value if nothing is specified is 30 minutes.
-Added in 1910
+
+Added in 1910.
 
 #### Examples
 
