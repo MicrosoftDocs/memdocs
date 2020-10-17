@@ -89,7 +89,9 @@ If you also enable the CMG for content, confirm that it's also a unique Azure st
 
 - Test your name in the **Storage account name** field.
 
-The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a dash (`-`).<!-- SCCMDocs#1080 -->
+> [!IMPORTANT]
+> The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a 
+> dash (`-`).<!-- SCCMDocs#1080 -->
 
 ## Issue the certificate
 

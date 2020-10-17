@@ -47,7 +47,7 @@ You can use the [Microsoft Endpoint Manager admin center](https://go.microsoft.c
 3. The user account now has the permissions needed to use the service and enroll devices into management.
 
 > [!NOTE]
-> Users will appear in the Classic Intune portal only after they have enrolled a device using the Intune PC client. Also, you can select a group of users to edit at once,  either selecting to add or replace a license for all selected users.
+> Users will appear in the Classic Intune portal only after they have enrolled a device using the Intune PC software client. Also, you can select a group of users to edit at once,  either selecting to add or replace a license for all selected users.
 
 ## Assign an Intune license by using Azure Active Directory
 
