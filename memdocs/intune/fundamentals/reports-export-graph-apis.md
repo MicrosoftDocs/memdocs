@@ -7,7 +7,7 @@ keywords:
 ms.author: erikre
 author: Erikre
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,8 +63,6 @@ The below request contains the HTTP method used on the request to Microsoft Grap
         "UPN", 
         "DeviceId" 
     ], 
-    "localization": "true", 
-    "ColumnName": "ui" 
 } 
 ```
 ### Response example
