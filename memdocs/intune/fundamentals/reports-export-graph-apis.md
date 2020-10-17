@@ -62,7 +62,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
         "LastContact", 
         "UPN", 
         "DeviceId" 
-    ], 
+    ]
 } 
 ```
 ### Response example
