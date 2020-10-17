@@ -1508,19 +1508,6 @@ Specifies the number of seconds that the warning is displayed to the user before
 - `0` (default): Don't display a reboot message  
 - `60`: Display the warning for one minute  
 
-### <a name="SMSTSWaitCcmexecOperationalTimeout"></a> SMSTSWaitCcmexecOperationalTimeout
-
-Specifies the number of seconds for the timeout period used in a task sequence to wait for complete startup of the SMS Agent Host service (ccmexec).
-
-Variable can be configured with a value in seconds. The default value if nothing is specified is 30 minutes.
-
-Added in 1910.
-
-#### Examples
-
-- `1800` (default): 30 minutes 
-- `300`  Waits for 5 minutes before timout reached  
-
 ### <a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
 
 The number of seconds to wait before the client attempts to download the policy since the last attempt that returned no policies. By default, the client waits **0** seconds before retrying.
@@ -1795,6 +1782,17 @@ Specifies the primary users of the destination computer by using the following f
 #### Example
 
 `contoso\jqpublic, contoso\megb, contoso\janedoh`
+
+### SMSTSWaitCcmexecOperationalTimeout
+
+(input)
+
+Starting in version 1910, use this variable to control the timeout period for the task sequence to wait for the SMS Agent Host service (ccmexec) to completely start. Specify this value in seconds. The default timeout period is 30 minutes, or 1800 seconds.
+
+#### Examples of SMSTSWaitCcmexecOperationalTimeout
+
+- `1800` (default): 30 minutes
+- `300`: The task sequence waits five minutes for ccmexec to start
 
 ### <a name="SMSTSWaitForSecondReboot"></a> SMSTSWaitForSecondReboot
 

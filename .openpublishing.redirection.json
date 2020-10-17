@@ -345,6 +345,88 @@
             "source_path": "memdocs/autopilot/white-glove.md",
             "redirect_url": "/mem/autopilot/pre-provision",
             "redirect_document_id": true
-        }
+        },
+
+
+        {
+            "source_path": "memdocs/intune/fundamentals/manage-windows-pcs-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/pc-management-comparison.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/install-the-windows-pc-client-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/use-policies-to-simplify-windows-pc-management.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/retire-a-windows-pc-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/policies-to-protect-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/add-apps-for-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/resolve-gpo-and-microsoft-intune-policy-conflicts.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        }                     
     ]
 }
