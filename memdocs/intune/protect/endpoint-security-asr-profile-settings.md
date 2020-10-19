@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 10/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -340,51 +340,70 @@ Supported platforms and profiles:
 
 ### Device Control
 
-- **Hardware device installation by device identifiers**  
-  [PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
-  
-  This setting allows you to specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device.  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+- **Allow hardware device installation by device identifiers**  
+  - **Not configured** *(default)*
+  - **Yes** - Windows can install or update any device whose Plug and Play hardware ID or compatible ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-  - **Not configured**
-  - **Allow hardware device installation** - Devices can be installed and updated as allowed or prevented by other policy settings.
-  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose hardware ID or compatible ID appears in a list you define.
+  When set to *Yes* you can configure the following options:
+  - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-  When set to *Block hardware device installation* you can configure the following settings:
+- **Block hardware device installation by device identifiers**  
+  CSP: [AllowInstallationOfMatchingDeviceIDs](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdeviceids)
 
-  - **Remove matching hardware devices**
+  - **Not configured** *(default)*
+  - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+  When set to *Yes* you can configure the following options:  
+  - **Remove matching hardware devices**  
     - **Yes**
     - **Not configured**
 
-  - **Hardware device identifiers that are blocked**  
+  - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+- **Allow hardware device installation by setup class**  
+  - **Not configured** *(default)*
+  - **Yes** - Windows can install or update device drivers whose device setup class GUIDs appear in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-    Select **Add**, and then specify the hardware device identifier you want to block.
+  When set to *Yes* you can configure the following options:
+  - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-- **Hardware device installation by setup classes**  
-  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
-  
-  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+- **Block hardware device installation by setup classes**  
+  CSP: [AllowInstallationOfMatchingDeviceSetupClasses](/windows/client-management/mdm/policy-csp-deviceinstallation.md#deviceinstallation-allowinstallationofmatchingdevicesetupclasses)
 
-  - **Not configured**
-  - **Allow hardware device installation** - Windows can install and update devices as allowed or prevented by other policy settings.
-  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose setup class GUIDs appear in a list you define.
+  - **Not configured** *(default)*
+  - **Yes** - Specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-  When set to *Block hardware device installation* you can configure *Remove matching hardware devices* and *Hardware device identifiers that are blocked*.
-
-  - **Remove matching hardware devices**
-
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+  When set to *Yes* you can configure the following options:  
+  - **Remove matching hardware devices**  
     - **Yes**
     - **Not configured**
 
-  - **Hardware device identifiers that are blocked**
+  - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+- **Allow hardware device installation by device instance identifiers**  
+  - **Not configured** *(default)*
+  - **Yes** - Windows is allowed to install or update any device whose Plug and Play device instance ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-    Select **Add**, and then specify the hardware device identifier you want to block.
+  When set to *Yes* you can configure the following options:
+  - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
+
+- **Block hardware device installation by device instance identifiers**  
+  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **Not configured** *(default)*
+  - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
+
+  When set to *Yes* you can configure the following options:  
+  - **Remove matching hardware devices**  
+    - **Yes**
+    - **Not configured**
+
+  - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
 - **Scan removable drives during full scan**  
   CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
