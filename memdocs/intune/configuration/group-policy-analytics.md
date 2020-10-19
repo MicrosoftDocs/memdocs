@@ -60,7 +60,7 @@ Be sure the file is less than 1 MB. If it's greater than 1 MB, then include fewe
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
-    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 1 MB. If a single GPO is larger than 1 MB, then the import will fail.
+    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 1 MB. If a single GPO is larger than 1 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
 3. After the analysis runs, the GPO you imported is listed with the following information:
 

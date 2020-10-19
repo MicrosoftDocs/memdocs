@@ -68,7 +68,7 @@ To see this recommendation in the Desktop Analytics portal:
 1. Select the **Apps** tab.
 1. Select an app, and then view the compatibility risk factors and recommendations in the side pane.
 
-[![Screenshot of asset recommendation in Desktop Analytics portal](media/3594545-app-removed.png)](media/3594545-app-removed.png#lightbox)
+:::image type="content" source="media/3594545-app-removed.png" alt-text="Screenshot of asset recommendation in Desktop Analytics portal" lightbox="media/3594545-app-removed.png":::
 
 ### Blocking upgrade
 
@@ -129,7 +129,7 @@ Windows compatibility data classifies some apps and drivers with a *safeguard*, 
 
 1. Compare the current published list against the list of assets in your environment. Remediate any potentially problematic apps or drivers by updating to a compatible version.
 
-[![Screenshot of the Safeguard app in Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+:::image type="content" source="media/5746559-safeguards.png" alt-text="Screenshot of the Safeguard app in Desktop Analytics" lightbox="media/5746559-safeguards.png":::
 
 ## Ready for Windows
 

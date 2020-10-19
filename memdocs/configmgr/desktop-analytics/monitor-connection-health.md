@@ -373,7 +373,7 @@ There's a different ID for the device. This registry key is used by group policy
 
 2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
 
-[![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)](media/commercial-id.png#lightbox)
+:::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal" lightbox="media/commercial-id.png":::
 
 > [!Important]  
 > Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](enroll-devices.md#device-enrollment). This process might result in loss of diagnostic data during the transition.  

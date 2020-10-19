@@ -94,15 +94,15 @@ When you configure clients to use the Connected Cache server, they no longer req
 
 ### <a name="bkmk_note1"></a> Note 1: About drive selection
 
-If you select **Automatic**, when Configuration Manager installs the Connected Cache component, it honors the **no_sms_on_drive.sms** file. For example, the distribution point has the file `C:\no_sms_on_drive.sms`. Even if the C: drive has the most free space, Configuration Manager configures Connected Cache to use another drive for its cache.
+If you select **Automatic**, when Configuration Manager installs the Connected Cache component, it honors the **NO_SMS_ON_DRIVE.SMS** file. For example, the distribution point has the file `C:\NO_SMS_ON_DRIVE.SMS`. Even if the C: drive has the most free space, Configuration Manager configures Connected Cache to use another drive for its cache.
 
-If you select a specific drive that already has the **no_sms_on_drive.sms** file, Configuration Manager ignores the file. Configuring Connected Cache to use that drive is an explicit intent. For example, the distribution point has the file `F:\no_sms_on_drive.sms`. When you explicitly configure the distribution point properties to use the **F:** drive, Configuration Manager configures Connected Cache to use the F: drive for its cache.
+If you select a specific drive that already has the **NO_SMS_ON_DRIVE.SMS** file, Configuration Manager ignores the file. Configuring Connected Cache to use that drive is an explicit intent. For example, the distribution point has the file `F:\NO_SMS_ON_DRIVE.SMS`. When you explicitly configure the distribution point properties to use the **F:** drive, Configuration Manager configures Connected Cache to use the F: drive for its cache.
 
 To change the drive after you install Connected Cache:
 
 - Manually configure the distribution point properties to use a specific drive letter.
 
-- If set to automatic, first create the **no_sms_on_drive.sms** file. Then make some change to the distribution point properties to trigger a configuration change.
+- If set to automatic, first create the **NO_SMS_ON_DRIVE.SMS** file. Then make some change to the distribution point properties to trigger a configuration change.
 
 ### Automation
 
