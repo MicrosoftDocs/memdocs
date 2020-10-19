@@ -126,7 +126,9 @@ A device must meet the following conditions to be eligible for silently enabling
 
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
 - If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
-- The device must be Azure AD Joined  
+- The device must be Azure AD Joined
+- Device must contains TPM (Trusted Platform Moduel) 2.0
+- The BIOS mode must be set to Native UEFI only. 
 
 **BitLocker policy configuration**:
 
