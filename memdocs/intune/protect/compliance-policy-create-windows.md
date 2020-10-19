@@ -264,6 +264,14 @@ Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are support
 
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
+**Special consideration for Surface Hub and Windows 10 Teams**:  
+
+Due to the secure nature and the default behavior of Windows 10 Teams, for Windows 10 Teams devices set the following two settings to their default of *Not configured*:
+
+- In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
+
+- In the category [Microsoft Defender ATP](#microsoft-defender-atp), set **Require the device to be at or under the machine risk score** to the default of *Not configured*.
+
 ## Next steps
 
 - [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
