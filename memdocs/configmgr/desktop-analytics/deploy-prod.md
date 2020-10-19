@@ -2,10 +2,10 @@
 title: How to deploy to production
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
-ms.date: 06/14/2019
+ms.date: 10/16/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
@@ -30,13 +30,11 @@ There are three main parts to accomplishing the deployment of updates to product
 > [!NOTE]  
 > When you're confident in the success of the pilot deployment, start the production deployment at any time. There's no requirement that all pilot devices reach the "completed" state first.  
 
-
-
 ## <a name="bkmk_review"></a> Review assets that need an upgrade decision
 
 Desktop Analytics guides you through the process of reviewing your assets for production deployment. In the Azure portal, go to **Deployment plans**, select a deployment plan, and then select **Prepare production** in the left menu.
 
-![Screenshot of Prepare Production view in Desktop Analytics](media/prepare-production.png)
+:::image type="content" source="media/prepare-production.png" alt-text="Screenshot of Prepare Production view in Desktop Analytics" lightbox="media/prepare-production.png":::
 
 Review the state of your apps. Use that information to set the upgrade decision for each of those assets.
 
@@ -58,14 +56,13 @@ To approve an asset for upgrade, select the name in the list, and then select on
 
 To set this value for multiple apps at once, use the first column to **Select this item**, and then choose **Set Upgrade Decision**.
 
-![Set Upgrade Decision option on multiple apps](media/prep-prod-set-upgrade-decision.png)
+:::image type="content" source="media/prep-prod-set-upgrade-decision.png" alt-text="Set Upgrade Decision option on multiple apps":::
 
 Select **No data** to view assets that couldn't be classified. These assets generally are assets that don't have enough coverage for Desktop Analytics to perform an analysis of the risk or health status. To improve the coverage, add additional devices with these assets to the pilot, or ask pilot users to try these assets.
 
 There might also be assets in the **Attention Needed** or **Mixed Results** state. These assets may require additional review before you make an upgrade decision for them.
 
 Review all apps. Once a given device has a positive upgrade decision for all assets, then its state changes to "ready for production." See the current count on the main page for the deployment plan by selecting the third deployment step, **Deploy**.
-
 
 ## <a name="bkmk_deploy"></a> Deploy to devices that are ready
 
@@ -77,7 +74,6 @@ If you configured the phased deployment to **Manually begin the second phase dep
 
 If you created a Desktop Analytics-integrated single deployment to the pilot collection, then you need to repeat that process to deploy to the production collection.
 
-
 ### Address deployment alerts
 
 As with the pilot deployment, Desktop Analytics advises you of any issues that need your attention during the production deployment. In Desktop Analytics, go to the deployment plan, and select **Deployment status** in the left menu. The deployment status view lists devices in the following categories:  
@@ -88,8 +84,7 @@ As with the pilot deployment, Desktop Analytics advises you of any issues that n
 - Needs attention - Devices (sorted by device name)
 - Needs attention - Issues (sorted by issue type)
 
-![Screenshot of Desktop Analytics production Deployment Status](media/prod-deployment-status.png)
-
+:::image type="content" source="media/prod-deployment-status.png" alt-text="Screenshot of Desktop Analytics production Deployment Status" lightbox="media/prod-deployment-status.png":::
 
 ## <a name="bkmk_monitor"></a> Monitor the health of updated devices
 

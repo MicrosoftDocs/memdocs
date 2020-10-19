@@ -29,7 +29,7 @@ Use Desktop Analytics with Configuration Manager to:
 
 - Deploy Windows 10 to pilot and production-managed devices  
 
-![Screenshot of the Desktop Analytics home page in the Azure portal](media/portal-home.png)
+:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center":::
 
 The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
