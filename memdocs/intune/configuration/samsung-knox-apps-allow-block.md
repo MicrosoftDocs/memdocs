@@ -61,7 +61,7 @@ These settings can only be used by devices that run Samsung Knox Standard.
     - **Description**: Enter a description that gives an overview of the setting, and any other relevant information to help you locate the profile. For example, enter **List of apps that are blocked from running**.
     - **OMA-URI** (case sensitive): Enter `./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages`.
     - **Data type**: Select **String**.
-    - **Value**: Enter a list of the app package names you want to allow. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
+    - **Value**: Enter a list of the app package names you want to block. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
 
     For a list of apps that users are allowed to install from the Google Play store while excluding all other apps:
 
