@@ -44,6 +44,17 @@ These scenarios are summarized in the following video.
 
 > [!video https://www.microsoft.com/videoplayer/embed/RE4Ci1b?autoplay=false]
 
+The following table shows which scenarios are supported:
+
+| Autopilot scenario | Active Directory Join | Azure AD Join | Hybrid Azure Ad Join |
+| --- | --- | --- | --- |
+| Self-deploying | No | Yes | No |
+| User-driven | No | Yes | Yes |
+| Autopilot reset | No | Yes | No |
+| Pre-provision | No | Yes | Yes |
+| Existing devices | No | Yes | Yes |
+
+
 ## Windows Autopilot capabilities
 
 ### Windows Autopilot is self-updating during OOBE
