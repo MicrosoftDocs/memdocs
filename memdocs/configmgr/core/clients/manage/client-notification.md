@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 04/01/2020
+ms.date: 10/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,7 +118,11 @@ Trigger clients to switch to the next available software update point. For more 
 
 ### Evaluate device health attestation
 
-Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).  
+Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
+
+### Check conditional access compliance
+
+Trigger clients to check compliance for conditional access policies. For more information, see [Conditional access](../../../comanage/quickstart-conditional-access.md).
 
 ### Wake Up
 
@@ -196,7 +200,13 @@ Trigger Endpoint Protection or Windows Defender to run a *quick* antimalware sca
 
 Trigger Endpoint Protection or Windows Defender to download the latest antimalware definitions.  
 
-## See also
+## Monitor client operations
+
+Monitor the operations sent to clients by using the **Client Operations** node under the **Monitoring** workspace. For some instances, you can cancel the operation by using the **Cancel** option in the ribbon. Use the **Delete** option to remove the operation from the console's view.
+
+:::image type="content" source="media/client-operations-node.png" alt-text="Client Operations node in the Monitoring workspace":::
+
+## Next steps
 
 - [How to manage clients](manage-clients.md)
 - [How to manage collections](collections/manage-collections.md)
