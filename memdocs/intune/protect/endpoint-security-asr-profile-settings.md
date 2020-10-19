@@ -358,7 +358,7 @@ Supported platforms and profiles:
   When set to *Yes* you can configure the following options:  
   - **Remove matching hardware devices**  
     - **Yes**
-    - **Not configured**
+    - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
@@ -380,7 +380,7 @@ Supported platforms and profiles:
   When set to *Yes* you can configure the following options:  
   - **Remove matching hardware devices**  
     - **Yes**
-    - **Not configured**
+    - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
@@ -401,7 +401,7 @@ Supported platforms and profiles:
   When set to *Yes* you can configure the following options:  
   - **Remove matching hardware devices**  
     - **Yes**
-    - **Not configured**
+    - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
