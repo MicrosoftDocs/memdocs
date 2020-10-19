@@ -17,7 +17,7 @@
     - name: Features in development
       href: in-development.md   
     - name: Important notices
-      href: whats-new.md#notices   
+      href: whats-new.md#notices
 - name: Quickstarts
   items:
   - name: Try Intune for free
