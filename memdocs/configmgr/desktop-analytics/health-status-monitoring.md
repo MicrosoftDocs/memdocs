@@ -19,7 +19,7 @@ As you [deploy an update to production](deploy-prod.md), use Desktop Analytics t
 
 For more information on how to use this feature, see [Monitor the health of updated devices](deploy-prod.md#bkmk_monitor).
 
-![Screenshot of the Monitor Health page of Desktop Analytics](media/monitor-health.png)
+:::image type="content" source="media/monitor-health.png" alt-text="Screenshot of the Monitor Health page of Desktop Analytics" lightbox="media/monitor-health.png":::
 
 > [!NOTE]  
 > Desktop Analytics only collects health data from devices that provide usage data it can use as a denominator. This means it doesn't include devices running Windows 7 and Windows 10 that aren't set to share diagnostic data at the Optional (limited) level. If more than 10% of devices running Windows 10 are set to share diagnostic data at levels other than Optional (limited), the **Monitor health** page displays a warning in the banner area.  
@@ -30,7 +30,7 @@ To view more information about a specific app, select it in the list.
 
 ### Health status factors
 
-![Health status factors for an app in Desktop Analytics](media/monitor-health-status-factors.png)
+:::image type="content" source="media/monitor-health-status-factors.png" alt-text="Health status factors for an app in Desktop Analytics":::
 
 Desktop Analytics monitors the following health status factors for apps:
 

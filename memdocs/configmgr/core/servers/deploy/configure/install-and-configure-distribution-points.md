@@ -374,7 +374,7 @@ Specify the drive settings for the distribution point. Configure up to two disk 
 - **Content locations**: Specify the locations for the content library and package share on this distribution point. By default, all content locations are set to **Automatic**. Configuration Manager copies content to the primary content location until the amount of free space reaches the value specified for **Drive space reserve (MB)**. When you select **Automatic**, Configuration Manager sets the primary content locations to the disk drive with the most disk space at installation. It sets the secondary locations to the disk drive with the second-most free disk space. When the primary and secondary locations reach the drive space reserve, Configuration Manager selects another available drive with the most free disk space to continue the copy process.  
 
 > [!Tip]  
-> To prevent Configuration Manager from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before you install the distribution point.  
+> To prevent Configuration Manager from installing on a specific drive, create an empty file named **NO_SMS_ON_DRIVE.SMS** and copy it to the root folder of the drive before you install the distribution point.  
 
 For more information, see [The content library](../../../plan-design/hierarchy/the-content-library.md).
 

@@ -26,7 +26,7 @@ In the Desktop Analytics portal, view the status of security and feature updates
 
 To review the current status of security updates, select **Security updates** in the **Monitor** section of Desktop Analytics:
 
-![Security updates node of Desktop Analytics](media/security-updates.png)
+:::image type="content" source="media/security-updates.png" alt-text="Security updates node of Desktop Analytics" lightbox="media/security-updates.png":::
 
 This view summarizes *security* updates for devices that are running Windows 10. Devices in the bar chart are categorized by the following labels:
 
@@ -65,7 +65,7 @@ To show devices with new information that the service is still processing, selec
 
 To review the current status of feature updates, select **Feature updates** in the **Monitor** section of Desktop Analytics:
 
-![Feature updates node of Desktop Analytics](media/feature-updates.png)
+:::image type="content" source="media/feature-updates.png" alt-text="Feature updates node of Desktop Analytics" lightbox="media/feature-updates.png":::
 
 This view summarizes *feature* updates for devices that are running Windows 10.
 

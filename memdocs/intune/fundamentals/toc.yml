@@ -8,7 +8,7 @@
     displayName: ems; emm; azure ad; active directory; ad
   - name: Device management overview
     href: what-is-device-management.md
-    displayName: teamviewer    
+    displayName: teamviewer 
   - name: What's new
     href: whats-new.md
     items:
@@ -234,7 +234,11 @@
         href: education-settings-configure-ios.md
       - name: Shared iPads
         href: education-settings-configure-ios-shared.md
-    - name: Legacy Intune PC client
+    - name: Legacy Intune PC software client
       href: intune-legacy-pc-client.md
-  - name: Intune end-user documentation  
+    - name: Troubleshoot software updates
+      href: troubleshoot-software-updates-in-microsoft-intune.md
+    - name: Endpoint protection common errors
+      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+  - name: Intune end-user documentation
     href: ../user-help/use-managed-devices-to-get-work-done.md
