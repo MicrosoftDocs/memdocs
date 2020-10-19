@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 10/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -264,9 +264,8 @@ Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are support
 
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
-**Special consideration for Surface Hub and Windows 10 Teams**:  
-
-Due to the secure nature and the default behavior of Windows 10 Teams, for Windows 10 Teams devices set the following two settings to their default of *Not configured*:
+**Special consideration for Surface Hubs running Windows 10 Team OS**:  
+Surface Hubs that run Windows 10 Team OS do not support the Microsoft Defender ATP and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10 Team OS set the following two settings to their default of *Not configured*:
 
 - In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
 
