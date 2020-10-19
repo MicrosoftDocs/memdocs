@@ -27,9 +27,10 @@ ms.custom: intune-azure
 
 ms.collection: M365-identity-device-management
 ---
+
 # Use custom policies in Microsoft Intune to allow and block apps for Samsung Knox Standard devices 
 
-Use the procedure in this article to create a Microsoft Intune custom policy that creates one of the following:
+Use the steps in this article to create a Microsoft Intune custom policy that creates one of the following lists:
 
 - A list of apps that are blocked from running on the device. Apps in this list are blocked from being run, even if they were already installed when the policy was applied.
 - A list of apps that users of the device are allowed to install from the Google Play store. Only the apps you list can be installed. No other apps can be installed from the store.
@@ -65,7 +66,7 @@ These settings can only be used by devices that run Samsung Knox Standard.
     For a list of apps that users are allowed to install from the Google Play store while excluding all other apps:
 
     - **Name**: Enter **AllowInstallPackages**.
-    - **Description**:Enter a description that gives an overview of the setting, and any other relevant information to help you locate the profile. For example, enter **List of apps that users can install from Google Play**.
+    - **Description**: Enter a description that gives an overview of the setting, and any other relevant information to help you locate the profile. For example, enter **List of apps that users can install from Google Play**.
     - **OMA-URI** (case sensitive): Enter `./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages`.
     - **Data type**: Select **String**.
     - **Value**: Enter a list of the app package names you want to allow. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
@@ -75,7 +76,7 @@ These settings can only be used by devices that run Samsung Knox Standard.
 
     Select **Next**.
 
-10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [What you need to know](#what-you-need-to-know) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
