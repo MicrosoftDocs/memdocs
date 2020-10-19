@@ -86,21 +86,7 @@ For more information on VPN profiles in Intune, see [Create VPN profiles to conn
 Applies to:
 - Android Enterprise Work Profile
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
-
-### Changes for Password settings in Device restriction profiles for Android device administrator<!-- 7662279   --> 
-
-We’re introducing a few changes for password settings for *Device restriction* and *compliance* policies for *Android device administrator*. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**) 
-
-These changes help Intune accommodate changes in Android version 10 and later, to ensure settings for passwords continue to apply to devices as expected. Changes include:
-
-- Settings will be reorganized into sections that are based on which devices they apply to.
-- Additional updates to labels and example text.
-
-These changes apply to the UI for settings, and won’t affect existing profiles.
-
-Applies to:
-- Android device administrator
-
+ 
 ### Required password type default setting is changing on Android Enterprise devices<!-- 8092655  -->
 On Android Enterprise devices, you can create a device password profile that sets the **Required password type** (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device restrictions** > **Device password**).
 
