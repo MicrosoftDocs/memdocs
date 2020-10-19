@@ -204,7 +204,7 @@ Trigger Endpoint Protection or Windows Defender to download the latest antimalwa
 
 Monitor the operations sent to clients by using the **Client Operations** node under the **Monitoring** workspace. For some instances, you can cancel the operation by using the **Cancel** option in the ribbon. Use the **Delete** option to remove the operation from the console's view.
 
-:::image type="content" source="media/client-operations-node.png" alt-text="Client Operations node in the Monitoring workspace":::
+:::image type="content" source="media/client-operations-node.png" alt-text="Client Operations node in the Monitoring workspace" lightbox="media/client-operations-node.png":::
 
 ## Next steps
 
