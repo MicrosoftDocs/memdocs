@@ -83,6 +83,7 @@ When you configure features on iOS/iPadOS devices, you can also add the built-in
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Watch        | Apple     |
 | com.apple.weather           | Weather      | Apple     |
+| cocom.apple.barcodesupport.qrcode| QR Code Reader | Apple |
 
 ## Next steps
 
