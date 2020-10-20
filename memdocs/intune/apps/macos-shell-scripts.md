@@ -141,7 +141,7 @@ You can create custom attribute profiles which enable you to collect custom prop
    - The result returned by the shell script must be 20KB or less.   
 
    > [!NOTE]
-   > When using Date type attributes, ensure that the shell script returns dates in ISO-8601 format. See the following examples.
+   > When using `Date` type attributes, ensure that the shell script returns dates in ISO-8601 format. See the examples below.
    >
    > **To print an ISO-8601-compliant date with time-zone:**
    > ``` Powershell
