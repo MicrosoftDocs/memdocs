@@ -64,6 +64,7 @@ The following table lists CMG support for Configuration Manager features:
 | Peer cache | ![Not supported](media/Red_X.png) |
 | On-premises MDM | ![Not supported](media/Red_X.png) |
 | BitLocker Management | ![Not supported](media/Red_X.png) |
+| Alternate content providers | ![Not supported](media/Red_X.png) |
 
 |Key|
 |--|
