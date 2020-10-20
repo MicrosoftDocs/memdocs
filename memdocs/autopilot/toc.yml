@@ -39,8 +39,6 @@
 
 - name: How-to guides
   items:
-    - name: Enrollment overview
-      href: enrollment-overview.md
     - name: Register devices
       href: add-devices.md
     - name: Enroll devices in Intune
