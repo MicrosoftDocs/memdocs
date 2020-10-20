@@ -64,7 +64,7 @@ The cloud distribution point provides the following additional benefits:
 
 - To meet changing demands for content requests by clients, manually scale the cloud service in Azure. This action doesn't require that you install and provision additional distribution points in Configuration Manager.  
 
-- Supports content download from clients configured for other content technologies, such as Windows BranchCache and alternate content providers.  
+- Supports content download from clients configured for other content technologies, such as Windows BranchCache.  
 
 - Starting in version 1806, use cloud distribution points as source locations for pull-distribution points.  
 
