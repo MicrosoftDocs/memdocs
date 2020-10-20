@@ -557,7 +557,8 @@ As a preview, you can deploy endpoint security [policy for Antivirus](../protect
 
 - Configuration Manager current branch 2006
 
-For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
+For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#
+requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
 
 #### Changes for Endpoint security Antivirus policy exclusions<!--5583940, 6018119    -->
 We’ve introduced two changes for managing the Microsoft Defender Antivirus exclusion lists you configure as part of an [Endpoint Security Antivirus policy](../protect/endpoint-security-antivirus-policy.md). The changes help you to prevent conflicts between different policies and resolve exclusion list conflicts that might exist in your previously deployed policies.
