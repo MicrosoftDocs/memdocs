@@ -17,7 +17,7 @@
     - name: Features in development
       href: in-development.md   
     - name: Important notices
-      href: whats-new.md#notices   
+      href: whats-new.md#notices
 - name: Quickstarts
   items:
   - name: Try Intune for free
@@ -65,59 +65,40 @@
     href: manage-os-versions.md
   - name: Manage Windows Holographic
     href: windows-holographic-for-business.md
-
 - name: How-to guides
   items:
-  - name: Plan deployment
+  - name: Plan and Deploy
     items:
-    - name: Planning guide
-      href: planning-guide.md
-      items:
-      - name: Determine goals and objectives
-        href: planning-guide-deployment-goals.md
-      - name: Identify scenarios
-        href: planning-guide-scenarios.md
-      - name: Determine requirements
-        href: planning-guide-requirements.md
-      - name: Develop a rollout plan
-        href: planning-guide-rollout-plan.md
-      - name: Develop a communication plan
-        href: planning-guide-communication-plan.md
-      - name: Develop a support plan
-        href: planning-guide-support-plan.md
-      - name: Design
-        href: planning-guide-design.md
-      - name: Implement
-        href: planning-guide-onboarding.md
-      - name: Test and validate
-        href: planning-guide-test-validation.md
-      - name: Additional resources
-        href: planning-guide-resources.md
-    - name: Migration guide
+    - name: Overview
       href: migration-guide.md
+    - name: Planning guide
+      href: intune-planning-guide.md
+    - name: Deployment/Migration guides
       items:
-      - name: Prepare Intune
-        href: migration-guide-prepare.md
+      - name: Intune setup
         items:
-        - name: Basic setup
-          href: migration-guide-setup.md
-        - name: Configure device and app management policies
-          href: migration-guide-configure-policies.md
-        - name: Configure app protection policies
-          href: migration-guide-app-protection-policies.md
-        - name: Migration considerations
-          href: migration-guide-considerations.md
-      - name: Migration campaign
-        href: migration-guide-campaign.md
-        items:
-        - name: Plan communications
-          href: migration-guide-communication-plan.md
-        - name: Drive adoption
+        - name: Setup deployment guide
+          href: deployment-guide-intune-setup.md
+        - name: Use conditional access
           href: migration-guide-drive-adoption.md
-        - name: Typical migration cycle
-          href: migration-guide-cycle.md
-    - name: Plan communications
-      href: migration-guide-communication-plan.md
+      - name: Enroll devices
+        items:
+        - name: Overview
+          href: deployment-guide-enrollment.md
+        - name: MAM-WE 
+          href: deployment-guide-enrollment-mamwe.md
+        - name: Android, Android Enterprise
+          href: deployment-guide-enrollment-android.md
+        - name: iOS, iPadOS
+          href: deployment-guide-enrollment-ios-ipados.md
+        - name: macOS
+          href: deployment-guide-enrollment-macos.md
+        - name: Windows
+          href: deployment-guide-enrollment-windows.md
+      - name: Device and app management
+        href: migration-guide-configure-policies.md
+      - name: App protection
+        href: migration-guide-app-protection-policies.md
     - name: Educate users
       items:
       - name: How to educate your end users
