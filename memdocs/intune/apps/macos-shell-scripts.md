@@ -144,14 +144,18 @@ You can create custom attribute profiles which enable you to collect custom prop
    > When using Date type attributes, ensure that the shell script returns dates in ISO-8601 format. See the following examples.
    >
    > **To print an ISO-8601-compliant date with time-zone:**
-   > ``` #!/bin/sh
-   > ``` var=$(date +"%Y-%m-%dT%H:%M:%S%z")
-   > ``` echo $var # Prints an ISO-8601 compliant date with time-zone
+   > ``` Powershell
+   > #!/bin/sh
+   > var=$(date +"%Y-%m-%dT%H:%M:%S%z")
+   > echo $var # Prints an ISO-8601 compliant date with time-zone
+   > ```
    >
    > **To print an ISO-8601-compliant date in UTC time:**
-   > ``` #!/bin/sh
-   > ``` var=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-   > ``` echo $var # Prints an ISO-8601 compliant date in UTC time
+   > ``` Powershell
+   > #!/bin/sh
+   > var=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+   > echo $var # Prints an ISO-8601 compliant date in UTC time
+   > ```
 
 5. In **Assignments**, click **Select groups to include**. When you choose **Select groups to include** an existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy. Alternatively, you can choose to select **All users**, **All devices**, or **All users and all devices** by selecting one of these options in the dropdown box next to **Assign to**.
    > [!NOTE]
