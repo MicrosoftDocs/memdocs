@@ -37,7 +37,6 @@ The following operating systems are supported for deployment of Microsoft Defend
 - Windows 8.1 (x84, x64)
 - Windows Server 2019 and later (x64)
 - Windows Server 2016 (x64)
-   - Including Windows Server, version 1803 (x64)
 - Windows Server 2012 R2 (x64)
 
 Security policies, such as [Antivirus policies](deploy-antivirus-policy.md), have additional operating system version requirements.
