@@ -46,7 +46,6 @@ When a device is enrolled, it's issued an MDM certificate. This certificate comm
 You can enroll devices on the following platforms. For the specific versions, see [Supported operating systems](../fundamentals/supported-devices-browsers.md):
 
 - Android
-- Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows
@@ -91,11 +90,11 @@ Depending on the platform, a factory reset may be required before enrolling in I
 -----
 | Platform | Factory reset required? |
 | --- | --- |
+| Android Enterprise personally-owned work profile | No |
+| Android Enterprise corporate-owned work profile | Yes |
+| Android Enterprise fully managed | Yes |
+| Android Enterprise dedicated devices | Yes |
 | Android device administrator | No |
-| Android Enterprise dedicated devices (COSU) | Yes |
-| Android Enterprise fully managed (COBO) | Yes |
-| Android Enterprise personal with work profile (profile owner) | No |
-| Android Enterprise corporate with personal profile (COPE) | Yes |
 | iOS/iPadOS | Yes |
 | macOS | Yes |
 | Windows | No |
