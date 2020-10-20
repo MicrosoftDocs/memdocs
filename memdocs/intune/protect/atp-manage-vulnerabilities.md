@@ -35,11 +35,21 @@ When you integrate Intune with Microsoft Defender Advanced Threat Protection (AT
 
 ## How integration works
 
-After you connect Intune to Microsoft Defender Advanced Threat Protection, ATP receives threat and vulnerability details from managed devices. Vulnerabilities that are discovered are not based on configurations from Intune. They are based on Microsoft Defender ATP configurations and scan details.
+After you connect Intune to Microsoft Defender Advanced Threat Protection, ATP receives threat and vulnerability details from managed devices. 
+
+- Vulnerabilities that are discovered are not based on configurations from Intune. They are based on Microsoft Defender ATP configurations and scan details.
+- Only issues that can be remediated by Intune are raised as security tasks for Intune.
 
 In the Microsoft Defender Security Center console, ATP security admins review data about endpoint vulnerabilities. The admins then use a single-click to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Intune console where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
 
 When a task is accepted, the Intune admin then acts to remediate the vulnerability though Intune, using the guidance provided as part of the security task.
+
+Each task is identified by a *Remediation Type*:
+
+- **Application** – An application is identified that has a vulnerability or issue you can mitigate with Intune. For example, Microsoft Defender ATP identifies a vulnerability for an app named *Contoso Media Player v4*, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune, and there could be a security update or newer version of an application that resolves the issue.
+- **Configuration** – Vulnerabilities or risks in your environment can be mitigated through use of Intune endpoint security policies. For example, Microsoft Defender ATP identifies that devices lack protection from *Potentially Unwanted Applications* (PUA). An admin creates a security task for this, which identifies a mitigation of configuring the setting **Action to take on potentially unwanted apps** as part of the Microsoft Defender Antivirus profile for Antivirus policy. 
+
+  For configuration issues, when there isn’t a plausible remediation that Intune can provide, then Microsoft Defender ATP won’t create a security task for it.
 
 Common actions for remediation include:
 
@@ -50,9 +60,9 @@ Common actions for remediation include:
 - **Disable** or **Enable** a configuration to affect the vulnerability.
 - **Require Attention** alerts the admin to the threat when there's no suitable recommendation to provide.
 
-An example workflow:
+Following is an example workflow for an application. This same general workflow applies for configuration issues:
 
-- Within Microsoft Defender ATP, a vulnerability for an app named Contoso Media Player v4 is discovered and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune.
+- A Microsoft Defender ATP scan identifies a vulnerability for an app named Contoso Media Player v4, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune.
 
   This security task appears in the Intune console with a status of Pending:
 
