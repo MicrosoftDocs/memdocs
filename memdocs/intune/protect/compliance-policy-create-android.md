@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -194,13 +194,13 @@ The available settings for passwords vary by the version of Android on the devic
   - **None** *(default)* - No password required.
   - **Low** - The password satisfies one of the following conditions:
     - Pattern
-    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
+    - Numeric PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
   - **Medium** - The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
     - Alphabetic, with a minimum length of 4.
     - Alphanumeric, with a minimum length of 4.
   - **High** - The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
