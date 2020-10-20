@@ -128,19 +128,50 @@ You can create custom attribute profiles which enable you to collect custom prop
 ### Create and assign a custom attribute for macOS devices
 
 1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > > **Custom attributes** > **Add**.
+2. Select **Devices** > **macOS** > **Custom attributes** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the script.
    - **Description**: Enter a description for the script. This setting is optional, but recommended.
 4. In **Attribute settings**, enter the following properties, and select **Next**:
-   - **Date type of attribute**: Select the data type of the result that the script returns. Available values are **String**, **Integer**, and **Date**.
+   - **Data type of attribute**: Select the data type of the result that the script returns. Available values are **String**, **Integer**, and **Date**.
    - **Script**: Select a script file.
+
+   Additional details:
+   - The shell script must echo the attribute to be reported and the data type of the output must match the data type of attribute in the custom attribute profile.
+   - The result returned by the shell script must be 20KB or less.   
+
+   > [!NOTE]
+   > When using Date type attributes, ensure that the shell script returns dates in ISO-8601 format. See the following examples.
+   >
+   > **To print an ISO-8601-compliant date with time-zone:**
+   > ``` #!/bin/sh
+   > ``` var=$(date +"%Y-%m-%dT%H:%M:%S%z")
+   > ``` echo $var # Prints an ISO-8601 compliant date with time-zone
+   >
+   > **To print an ISO-8601-compliant date in UTC time:**
+   > ``` #!/bin/sh
+   > ``` var=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+   > ``` echo $var # Prints an ISO-8601 compliant date in UTC time
+
 5. In **Assignments**, click **Select groups to include**. When you choose **Select groups to include** an existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy. Alternatively, you can choose to select **All users**, **All devices**, or **All users and all devices** by selecting one of these options in the dropdown box next to **Assign to**.
    > [!NOTE]
    > - Scripts assigned to user groups applies to any user logging in to the Mac.  
 6. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
 The script you created now appears in the list of custom attributes. 
+
+## Monitor a custom attribute policy
+
+You can monitor the run status of all assigned custom attribute profiles for users and devices by choosing one of the following reports:
+- **Custom attributes** > *select the custom attribute profile to monitor* > **Device status**
+- **Custom attributes** > *select the custom attribute profile to monitor* > **User status**
+
+> [!IMPORTANT]
+> Shell scripts provided in custom attribute profiles are run every 8 hours on managed Macs and reported.
+
+Once a custom attribute profile runs, it returns one of the following statuses:
+- A status of **Failed** indicates that the script returned a non-zero exit code or the script is malformed. The error is reported in the **Result** column.
+- As status of **Success** indicates that the script returned zero as the exit code. The output echoed by the script is reported in the **Result** column.
 
 ## Frequently asked questions
 ### Why are assigned shell scripts not running on the device?
