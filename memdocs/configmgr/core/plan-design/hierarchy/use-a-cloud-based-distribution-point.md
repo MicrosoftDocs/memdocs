@@ -64,7 +64,7 @@ The cloud distribution point provides the following additional benefits:
 
 - To meet changing demands for content requests by clients, manually scale the cloud service in Azure. This action doesn't require that you install and provision additional distribution points in Configuration Manager.  
 
-- Supports content download from clients configured for other content technologies, such as Windows BranchCache and alternate content providers.  
+- Supports content download from clients configured for other content technologies, such as Windows BranchCache.  
 
 - Starting in version 1806, use cloud distribution points as source locations for pull-distribution points.  
 
@@ -320,9 +320,9 @@ Certificates for cloud distribution points support the following configurations:
 
 - Version 3 certificates. For more information, see [CNG certificates overview](../network/cng-certificates-overview.md).  
 
-- Starting in version 1802, when you configure Windows with the following policy: **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**  
+- When you configure Windows with the following policy: **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**  
 
-- Starting in version 1802, support for TLS 1.2. For more information, see [Cryptographic controls technical reference](../security/cryptographic-controls-technical-reference.md#about-ssl-vulnerabilities).  
+- Support for TLS 1.2. For more information, see [Cryptographic controls technical reference](../security/cryptographic-controls-technical-reference.md#about-ssl-vulnerabilities).  
 
 ### Server authentication certificate
 

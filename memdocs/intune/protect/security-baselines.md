@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 10/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,6 +71,7 @@ The following security baseline instances are available for use with Intune. Use
   > The Microsoft Defender ATP security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft Edge Baseline**
+  - [Microsoft Edge baseline for September 2020 (Edge version 85 and later)](security-baseline-settings-edge.md?pivots-edge-sept-2020)
   - [Microsoft Edge baseline for April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
   - [Preview: Microsoft Edge baseline for October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
 
@@ -135,7 +136,7 @@ Strictly speaking, no. The Microsoft security team consults organizations, such 
 
 - Many customers are using the Intune baseline recommendations as a starting point, and then customizing it to meet their IT and security demands. Microsoft's Windows 10 RS5 **MDM Security Baseline** is the first baseline to release. This baseline is built as a generic infrastructure that allows customers to eventually import other security baselines based on CIS, NIST, and other standards. Currently, it's available for Windows and will eventually include iOS/iPadOS and Android.
 
-- Migrating from on-premises Active Directory group policies to a pure cloud solution using Azure Active Directory (AD) with Microsoft Intune is a journey. To help, there are group policy templates included in the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) that can help manage hybrid AD and Azure AD-joined devices. These devices can get MDM settings from the cloud (Intune) and group policy settings from on-premises domain controllers as needed.
+- Migrating from on-premises Active Directory group policies to a pure cloud solution using Azure Active Directory (AD) with Microsoft Intune is a journey. To help, use the various tools from the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) that can help you identify cloud-based options from security baselines that can replace your on-premises GPO configurations.
 
 ## Next steps
 

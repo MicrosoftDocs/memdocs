@@ -1,24 +1,24 @@
 ---
-title: "Create configuration items for client-managed Macs "
-titleSuffix: "Configuration Manager"
-description: "Use the Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
+title: Create configuration items for macOS
+titleSuffix: Configuration Manager
+description: Use the Configuration Manager macOS X configuration item to manage settings for macOS devices.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
 ---
-# Create configuration items for Mac OS X devices
-Use the Configuration Manager **Mac OS X (custom)** configuration item to manage settings for Mac OS X devices that are managed by the Configuration Manager client.  
+
+# Create configuration items for macOS X devices
+
+Use the Configuration Manager **Mac OS X (custom)** configuration item to manage settings for macOS X devices that are managed by the Configuration Manager client.  
   
-The Mac OS X operating system uses property list (.plist) files to store application settings. Use compliance settings to evaluate and remediate settings in a property list file. You can also manage Mac OS X settings by writing a shell script that returns a value that you can evaluate and remediate for compliance.  
+The macOS X operating system uses property list (.plist) files to store application settings. Use compliance settings to evaluate and remediate settings in a property list file. You can also manage macOS X settings by writing a shell script that returns a value that you can evaluate and remediate for compliance.  
   
-## Create a custom Mac OS X configuration item  
+## Create a custom macOS X configuration item  
   
 1. In the Configuration Manager console, select **Assets and compliance**.  
   
@@ -32,7 +32,7 @@ The Mac OS X operating system uses property list (.plist) files to store applica
   
 6. If you create and assign categories to help you search and filter configuration items in the Configuration Manager console, select **Categories**.  
   
-7. On the **Supported Platforms** page of the wizard, select the specific Mac OS X versions that will evaluate the configuration item.  
+7. On the **Supported Platforms** page of the wizard, select the specific macOS X versions that will evaluate the configuration item.  
   
 8. On the **Settings** page of the wizard, add new settings that are evaluated for compliance on Mac computers. Select **New** to open the **Create Setting** dialog box.  
   

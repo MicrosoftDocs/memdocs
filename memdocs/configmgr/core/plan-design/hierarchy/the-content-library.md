@@ -57,7 +57,7 @@ Configuration Manager uses the content library on the central administration sit
 
 Use the following options to manage the content library on the central administration site:  
 
-- To prevent the content library from being installed on a specific drive, create an empty file named **no_sms_on_drive.sms**. Copy it to the root of the drive before the content library is created.  
+- To prevent the content library from being installed on a specific drive, create an empty file named **NO_SMS_ON_DRIVE.SMS**. Copy it to the root of the drive before the content library is created.  
 
 - After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager tools to manage the location of the content library. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).  
 
