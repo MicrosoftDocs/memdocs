@@ -186,6 +186,9 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
 
+> [!NOTE]
+> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](#bkmk_scp-updates), so you may have already allowed it.
+
 ### In-console feedback
 
 - `http://petrol.office.microsoft.com`
