@@ -2,7 +2,7 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 06/09/2020
+ms.date: 10/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -21,7 +21,7 @@ manager: dougeby
 Starting in version 2002, if the hierarchy consists of the central administration site (CAS) and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
 > [!IMPORTANT]
-> In this version of Configuration Manager, this feature is pre-release and not enabled by default. It's currently available for Microsoft Premier customers.
+> This feature is currently pre-release and not enabled by default. It's currently available for Microsoft Premier customers that use the latest version of Configuration Manager.
 >
 > To enable this feature, contact your technical account manager for assistance:
 >
