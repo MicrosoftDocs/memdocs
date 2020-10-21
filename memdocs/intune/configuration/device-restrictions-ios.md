@@ -140,11 +140,11 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
   - iOS 12.1 and newer
   - iPadOS 13.0 and newer
 
-- **Defer software updates**: **Enable** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed.
+- **Defer software updates**: **Enable** allows you to delay when software updates are shown on devices, from 1-90 days. This setting doesn't control when updates are or aren't installed.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show software updates on devices as Apple releases them. For example, if an iOS/iPadOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date.  
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. When the delay expires, users get notified to update to the earliest OS version available when the delay is triggered.
+  - **Delay visibility of software updates**: Enter a value from 1-90 days. When the delay expires, users get notified to update to the earliest OS version available when the delay is triggered. Don't set this value to 0 days. 
 
     For example, if iOS 12.a is available on **January 1**, and **Delay visibility** is set to **5 days**, then iOS 12.a isn't shown as an available update on user devices. On the **sixth day** following the release, that update is available, and users can install it.
 
