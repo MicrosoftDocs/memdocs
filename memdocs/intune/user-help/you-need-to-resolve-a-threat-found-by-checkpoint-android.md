@@ -97,6 +97,8 @@ When an event occurs, you'll see a blue dot next to the **MY NETWORK** icon.  To
 3. The **Event Center** opens. Tap the **i** info icon next to any event to get more details about the prevented threat. 
 
 ## Next steps  
+If you use Company Portal or the Intune app, open those apps and sync your device after you resolve a threat. Otherwise, you'll have to wait until Intune checks in with your device to regain access to corporate resources.   
+
 Still need help? 
 
 * For the most up-to-date information about SandBlast Mobile Protect, see the SandBlast Mobile Protect user and admin guides on the [Check Point support center website](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk120655). 
