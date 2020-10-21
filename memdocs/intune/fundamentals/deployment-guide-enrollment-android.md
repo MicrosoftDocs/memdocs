@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
-:::image type="content" source="./media/deployment-guide-enrollment-android/android-enrollment-methods.png" alt-text="See the available Android enrollment methods in Microsoft Intune" lightbox="./media/deployment-guide-enrollment-android/app-level-management-zoom.png":::
+:::image type="content" source="./media/deployment-guide-enrollment-android/android-enrollment-methods.png" alt-text="See the available Android enrollment methods in Microsoft Intune" lightbox="./media/deployment-guide-enrollment-android/expanded-image.png":::
 
 This article provides recommendations on the following Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type:
 
