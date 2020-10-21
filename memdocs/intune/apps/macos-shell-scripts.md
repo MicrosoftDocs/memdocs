@@ -144,14 +144,14 @@ You can create custom attribute profiles which enable you to collect custom prop
    > When using `Date` type attributes, ensure that the shell script returns dates in ISO-8601 format. See the examples below.
    >
    > **To print an ISO-8601-compliant date with time-zone:**
-   > ``` Powershell
+   > ``` Shell
    > #!/bin/sh
    > var=$(date +"%Y-%m-%dT%H:%M:%S%z")
    > echo $var # Prints an ISO-8601 compliant date with time-zone
    > ```
    >
    > **To print an ISO-8601-compliant date in UTC time:**
-   > ``` Powershell
+   > ``` Shell
    > #!/bin/sh
    > var=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
    > echo $var # Prints an ISO-8601 compliant date in UTC time
