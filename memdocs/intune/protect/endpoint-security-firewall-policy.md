@@ -67,8 +67,6 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
     This profile is supported with devices that are tenant attached and run the following platforms:
 
     - Windows 10 and later (x86, x64, ARM64)
-    - Windows Server 2019 and later (x64)
-    - Windows server 2016 (x64)
 
 For more information about support for Configuration Manager devices, see [Tenant attach](../protect/tenant-attach-intune.md).
 

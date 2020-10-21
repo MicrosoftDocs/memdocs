@@ -31,7 +31,6 @@ ms.reviewer: mattsha
 
 View the Microsoft Windows Defender Firewall settings you can manage with the **Microsoft Defender Firewall (preview) (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Firewall policy](../protect/endpoint-security-firewall-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario.
 
-
 ## Microsoft Defender Firewall
 
 - **Certificate revocation list verification (Device)**  

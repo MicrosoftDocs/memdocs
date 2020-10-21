@@ -338,6 +338,8 @@
       href: endpoint-security-disk-encryption-profile-settings.md
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
+    - name: Tenant attach Firewall settings    
+      href: endpoint-security-firewall-profile-settings-tenant-attach.md
     - name: Endpoint detection and response profile settings
       href: endpoint-security-edr-profile-settings.md 
     - name: Attack surface reduction profile settings
