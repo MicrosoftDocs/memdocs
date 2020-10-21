@@ -101,4 +101,4 @@ For help with specific errors, try [Resolve common errors for the Intune Exchang
 To get support, or to get help from the Intune community:
 
 - See [Get support](../fundamentals/get-support.md) to use the Intune console to troubleshoot the issue or to open a support case with Microsoft.
-- Post your issue in the [Microsoft Intune forums](https://social.technet.microsoft.com/Forums/home?forum=microsoftintuneprod).
+- Post your issue in the [Microsoft Intune forums](/answers/products/mem).

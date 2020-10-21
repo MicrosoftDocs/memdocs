@@ -159,11 +159,11 @@ Yes, you have rights to use Configuration Manager to manage clients covered by t
 
 If *SA* or your subscription is active, you have use rights for Configuration Manager current branch. An active subscription is equivalent of having active *SA*, but no perpetual *"L" (license)*. Once your subscription is over, uninstall the current branch. At this time, you don't have rights to use the LTSB.  
 
-### <a name="bkmk_sql"></a> What are the use rights associated with the SQL technology provided with Configuration Manager?
+### <a name="bkmk_sql"></a> What are the use rights associated with the SQL Server technology provided with Configuration Manager?
 
 Configuration Manager includes SQL Server technology. Microsoft's licensing terms for this product allows your use of SQL Server technology only to support Configuration Manager components. SQL Server client access licenses are not required for that use.
 
-Approved use rights for the SQL capabilities with Configuration Manager include:
+Approved use rights for the SQL Server capabilities with Configuration Manager include:
 
 - Site database role
 - Windows Server Update Services (WSUS) for software update point role

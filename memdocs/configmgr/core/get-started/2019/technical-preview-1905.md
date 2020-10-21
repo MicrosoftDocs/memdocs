@@ -51,7 +51,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to OS deployment](includes/1905/4512937.md)]
 <!-- 4512937,4224642  -->
 
-[!INCLUDE [Add a SQL AlwaysOn node](includes/1905/3127336.md)]
+[!INCLUDE [Add a SQL Server Always On availability group node](includes/1905/3127336.md)]
 
 
 <!-- ## Known issues -->

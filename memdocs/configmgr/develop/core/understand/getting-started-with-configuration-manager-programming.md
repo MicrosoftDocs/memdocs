@@ -1,16 +1,17 @@
 ---
-title: "Configuration Manager programming"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Manager programming
+titleSuffix: Configuration Manager
+description: Learn the basics of programming and automation with the Configuration Manager software development kit (SDK).
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Get started with Configuration Manager programming
 To get started with programming for Configuration Manager, it's beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
 
@@ -39,7 +40,7 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 
 #### Forums
 
-- [Configuration Manager forums](https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc)  
+- [Configuration Manager on Microsoft Q&A](/answers/products/mem)
 
 - [windows-noob.com: Configuration Manager 2012](https://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 

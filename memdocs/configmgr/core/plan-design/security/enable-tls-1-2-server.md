@@ -5,9 +5,7 @@ description: Information about how to enable TLS 1.2 for Configuration Manager s
 ms.date: 12/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: 0ce9b428-cb0f-46f3-bf69-c465e6623d6f
 author: mestew
 ms.author: mstewart
@@ -47,7 +45,7 @@ Secondary site servers need to use at least SQL Server 2016 Express with Service
 > [!NOTE]
 > [KB 3135244](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) also describes requirements for SQL Server client components.
 
-Make sure to also update the SQL Server Native Client to at least version SQL 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
+Make sure to also update the SQL Server Native Client to at least version SQL Server 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:
 

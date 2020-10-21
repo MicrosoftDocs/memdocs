@@ -104,8 +104,8 @@ Configuration Manager cannot successfully update a primary site that has a datab
 
 For more information, see [Database replicas for management points for Configuration Manager](../deploy/configure/database-replicas-for-management-points.md).
 
-**Set SQL Server AlwaysOn availability groups to manual failover:**   
-If you use an availability group, ensure that the availability group is set to manual failover before you start the update installation. After the site has  updated, you can restore failover to be automatic. For more information see [SQL Server AlwaysOn for a site database](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+**Set SQL Server Always On availability groups to manual failover:**   
+If you use an availability group, ensure that the availability group is set to manual failover before you start the update installation. After the site has  updated, you can restore failover to be automatic. For more information see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 **Reconfigure software update points that use NLBs:**   
 Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.

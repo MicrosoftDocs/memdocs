@@ -172,7 +172,7 @@ The following information can help you decide when to install a secondary site:
 
 - Secondary site installation is initiated from the Configuration Manager console, instead of running setup directly on a computer.  
 
-- Secondary sites use a subset of the information in the site database. This behavior reduces the amount of data that SQL replicates between the parent primary site and secondary site.  
+- Secondary sites use a subset of the information in the site database. This behavior reduces the amount of data that SQL Server replicates between the parent primary site and secondary site.  
 
 - Secondary sites support the routing of file-based content to other secondary sites that have a common parent primary site.  
 

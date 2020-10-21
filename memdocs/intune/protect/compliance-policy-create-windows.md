@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 10/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -111,11 +111,6 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 - **Require device compliance from Configuration Manager**:  
   - **Not configured** (*default*) - Intune doesn't check for any of the Configuration Manager settings for compliance.
   - **Require** - Require all settings (configuration items) in Configuration Manager to be compliant.
-
-    For example, you require all software updates to be installed on devices. In Configuration Manager, this requirement has the "Installed" state. If any programs on the device are in an unknown state, then the device is non-compliant in Intune.
-
-  > [!NOTE]
-  > Only use **Require device compliance from Configuration Manager** when the Compliance workload for co-management is set to *Configuration Manager*. When you use this setting with the Compliance workload set to *Intune*, it can affect overall compliance evaluations.
 
 ## System Security
 
@@ -263,6 +258,13 @@ To verify device encryption on the Microsoft HoloLens, see [Verify device encryp
 Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md) in Intune (requires Azure Active Directory (Azure AD)), and target the Surface Hub devices as device groups. Surface Hubs are required to be Azure AD joined for compliance and Conditional Access to work.
 
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
+
+**Special consideration for Surface Hubs running Windows 10 Team OS**:  
+Surface Hubs that run Windows 10 Team OS do not support the Microsoft Defender ATP and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10 Team OS set the following two settings to their default of *Not configured*:
+
+- In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
+
+- In the category [Microsoft Defender ATP](#microsoft-defender-atp), set **Require the device to be at or under the machine risk score** to the default of *Not configured*.
 
 ## Next steps
 

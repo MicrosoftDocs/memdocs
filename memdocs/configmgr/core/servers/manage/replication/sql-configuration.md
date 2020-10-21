@@ -1,32 +1,30 @@
 ---
-title: SQL configuration
+title: SQL Server configuration
 titleSuffix: Configuration Manager
-description: Use this diagram to start troubleshooting SQL configuration for Configuration Manager
+description: Use this diagram to start troubleshooting SQL Server configuration for Configuration Manager
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: 95ab8cbd-0807-4422-823a-f5f9314ba623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# SQL configuration
+# SQL Server configuration
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
+In a multi-site hierarchy, Configuration Manager uses SQL Server replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
-Use the following diagram to start troubleshooting SQL configuration related to SQL Service Broker:
+Use the following diagram to start troubleshooting SQL Server configuration related to SQL Server Service Broker:
 
-![Diagram to troubleshoot SQL configuration](media/sql-configuration.svg)
+![Diagram to troubleshoot SQL Server configuration](media/sql-configuration.svg)
 
 ## Queries
 
 This diagram has the following queries and actions:
 
-### Check if SQL can deliver SSB messages
+### Check if SQL Server can deliver SSB messages
 
 ```sql
 SELECT transmission_status, *
@@ -44,9 +42,9 @@ Common issues:
 - Network configuration
 - SSB certificate misconfigured
 
-### Run SQL profiler to trace SSB events
+### Run SQL Server profiler to trace SSB events
 
-Run SQL profiler on the CAS and primary site database to trace events related to the SQL Service Broker:
+Run SQL Server profiler on the CAS and primary site database to trace events related to the SQL Server Service Broker:
 
 - **Audit Broker Login**
 - **Audit Broker Conversation**

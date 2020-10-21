@@ -93,7 +93,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - On the web server that will host the self-service portal, install [Microsoft ASP.NET MVC 4.0](/aspnet/mvc/mvc4) and .NET Framework 3.5 feature before staring the install process. Other required Windows server roles and features will be installed automatically during the portal installation process.
 
-- The user account that runs the portal installer script needs SQL **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
+- The user account that runs the portal installer script needs SQL Server **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL Server role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
 
 - BitLocker Management is not supported on virtual machines (VMs) or on server OSes. For this reason some features may not work as expected on virtual machines or on server OSes. For example on virtual machines BitLocker Management will not start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they are not encrypted.
 

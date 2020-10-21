@@ -7,7 +7,7 @@ keywords:
 ms.author: erikre
 author: Erikre
 manager: dougeby
-ms.date: 09/15/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,9 +62,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
         "LastContact", 
         "UPN", 
         "DeviceId" 
-    ], 
-    "localization": "true", 
-    "ColumnName": "ui" 
+    ]
 } 
 ```
 ### Response example
@@ -306,7 +304,7 @@ The following table contains the possible output when calling the `Devices` repo
 | JailBroken  |
 | EasActivationStatusString        |
 
-You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
+You can choose to filter the `Devices` report's output based on the following columns:
 - `OwnerType`
 - `DeviceType` 
 - `ManagementAgents`

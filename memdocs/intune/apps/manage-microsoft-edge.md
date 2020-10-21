@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -293,8 +293,8 @@ Use the following key/value pairs to configure either an allowed or blocked site
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts are not disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context.<p>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.         |
 |com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** allows restricted sites to be opened in the Azure AD account's InPrivate context. If the Azure AD account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account.<p> **false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked.<p>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true.          |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Enter the number of seconds that users will see the snack bar notification "Link opened with InPrivate mode. Your organization requires the use of InPrivate mode for this content." By default, the snack bar notification is shown for 7 seconds.
@@ -359,7 +359,7 @@ Before you start:
 - Microsoft apps must have an app protection policy that has **Restrict web content transfer with other apps** data transfer setting set to **Microsoft Edge**.
 
 > [!NOTE]
-> Updated Application Proxy redirection data can take up to 24 hours to take effect in Edge for iOS and Android.
+> Edge for iOS and Android updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
 
 Target Edge for iOS with the following key/value pair, to enable Application Proxy:
 

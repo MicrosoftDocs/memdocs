@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/13/2020
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -103,7 +103,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. In **Request Handling**, select **Allow private key to be exported**.
 
     > [!NOTE]
-    > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
+    > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device.
     > It is required that the certificate template allows the private key to be exported, so that the certificate connector is able to export the PFX certificate and send it to the device.
     >
     > However, please note that the certificates are installed on the device itself with the private key marked as not exportable.
@@ -121,7 +121,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 13. For the server to manage certificates for enrolled devices and users, use the following steps:
 
     1. Right-click the Certification Authority, choose **Properties**.
-    2. On the security tab, add the Computer account of the server where you run the connectors (**Microsoft Intune Connector** or **PFX Certificate Connector for Microsoft Intune**). 
+    2. On the security tab, add the Computer account of the server where you run the connectors (**Microsoft Intune Connector** or **PFX Certificate Connector for Microsoft Intune**).
     3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
 
 14. Sign out of the Enterprise CA.
@@ -164,7 +164,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
    - **Profile**: Select **Trusted certificate**
-  
+
 4. Select **Create**.
 
 5. In **Basics**, enter the following properties:
@@ -192,7 +192,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
-  For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
 12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -229,19 +229,19 @@ Before you begin, [review requirements for the connector](certificate-connectors
    
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
-   |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  | 
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. |
+   |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
+   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
    |**Key storage provider (KSP)**   |<ul><li>Windows 10  |For Windows, select where to store the keys on the device. |
    |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
    |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority". |
    |**Certificate template name**    |<ul><li>All         |Lists the name of your certificate template. |
    |**Certificate type**             |<ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later|Select a type: <ul><li> **User** certificates can contain both user and device attributes in the subject and subject alternative name (SAN) of the certificate. </il><li>**Device** certificates can only contain device attributes in the subject and SAN of the certificate.​ Use Device for scenarios such as user-less devices, like kiosks or other shared devices.  <br><br> This selection affects the Subject name format. |
-   |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br> For most platforms, use the **Common name** option unless otherwise required. <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later</li></ul>  <p>  |
+   |**Subject name format**          |<ul><li>All         |For details on how to configure the subject name format, see [Subject name format](#subject-name-format) later in this article.  <br><br>For the following platforms, the Subject name format is determined by the certificate type: <ul><li>Android Enterprise (*Work Profile*)</li><li>iOS</li><li>macOS</li><li>Windows 10 and later</li></ul>  <p>  |
    |**Subject alternative name**     |<ul><li>All         |For *Attribute*, select **User principal name (UPN)** unless otherwise required, configure a corresponding *Value*, and then select **Add**. <br><br> You can use variables or static text for the SAN of both certificate types. Use of a variable isn't required.<br><br>For more information, see [Subject name format](#subject-name-format) later in this article.|
    |**Extended key usage**           |<ul><li> Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) </li><li>Windows 10 |Certificates usually require *Client Authentication* so that the user or device can authenticate to a server. |
    |**Allow all apps access to private key** |<ul><li>macOS  |Set to **Enable** to give apps that are configured for the associated mac device access to the PKCS certificates private key. <br><br> For more information on this setting, see *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Root Certificate**             |<ul><li>Android device administrator </li><li>Android Enterprise (*Device Owner*, *Work Profile*) |Select a root CA certificate profile that was previously assigned. |
-
+ 
 8. Select **Next**.
 
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -253,7 +253,6 @@ Before you begin, [review requirements for the connector](certificate-connectors
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
-
 
 ### Subject name format
 
@@ -268,6 +267,7 @@ Platforms:
 
 > [!NOTE]
 > There is a known issue for using PKCS to get certificates [which is the same issue as seen for SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
+>
 > - \+
 > - ;
 > - ,
@@ -294,7 +294,7 @@ Platforms:
   That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
 - **Device certificate type**  
-  Format options for the Subject name format include the following variables: 
+  Format options for the Subject name format include the following variables:
   - **{{AAD_Device_ID}}**
   - **{{Device_Serial}}**
   - **{{Device_IMEI}}**
@@ -310,7 +310,8 @@ Platforms:
   You can specify these variables, followed by the text for the variable, in the textbox. For example, the common name for a device named *Device1* can be added as **CN={{DeviceName}}Device1**.
 
   > [!IMPORTANT]  
-  > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.  
+  >
+  > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.
   > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
   > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
