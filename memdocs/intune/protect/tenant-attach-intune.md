@@ -77,7 +77,8 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 - **Firewall policy**: The following Configuration Manager environments are supported:
 
-  - **Configuration Manager current branch version 2006 or later**
+  - **Configuration Manager current branch version 2006 or later** - If you use Configuration Manager current branch version 2006 you must install the in-console update **Configuration Manager 2006 Hotfix (KB4578605)** to support this firewall policy.
+
 
 ## Set up Configuration Manager to support Intune policies
 
