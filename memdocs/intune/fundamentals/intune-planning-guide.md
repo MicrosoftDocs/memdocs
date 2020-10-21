@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,9 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Intune planning guide
 
-A successful Microsoft Intune deployment or migration starts with having a good plan. This guide steps you through common mobile device management (MDM) and mobile application management (MAM) objectives, inventorying your devices, licensing, reviewing current policies and infrastructure, creating a rollout plan, and more.
+A successful Microsoft Intune deployment or migration starts with planning. This guide steps you through common mobile device management (MDM) and mobile application management (MAM) goals. It also provides guidance on inventorying your devices, licensing, reviewing current policies and infrastructure, creating a rollout plan, and more.
+
+This planning guide is a living thing. So, be sure to add tips and guidance you've found helpful.
 
 > [!TIP]
 > The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, and more good information.
@@ -43,7 +45,7 @@ In this section, we discuss common objectives when using Intune.
 
 ### Objective: Access organizational apps and email
 
-Users expect to work from devices using organization apps, including reading and responding to email, updating and sharing data, and more. In Intune, you can deploy different types of apps, including:
+Users expect to work on devices using organization apps, including reading and responding to email, updating and sharing data, and more. In Intune, you can deploy different types of apps, including:
 
 - Office 365 apps
 - Win32 apps
@@ -55,7 +57,7 @@ Users expect to work from devices using organization apps, including reading and
 
 - Many organizations deploy the Office suite of apps to PCs and tablets, such as Word, Excel, OneNote, PowerPoint, and Teams. On smaller devices, such as mobile phones, individual apps might be installed, depending on the user requirements.
 
-  For example, someone in sales may require Teams, Excel, and SharePoint. On mobile phones, you can deploy only these apps, instead of deploying the entire Office suite.
+  For example, the sales team may require Teams, Excel, and SharePoint. On mobile devices, you can deploy only these apps, instead of deploying the entire Office suite.
 
 - Users expect to read and reply to email and join meetings on all devices, including personal devices. On organization-owned devices, you can deploy Outlook and Teams. And, manage and control all device settings and all app settings, including PIN and password requirements. On personal devices, you don't have this control. So, determine if you want to give users access to organization apps, such as email and meetings.
 
@@ -77,7 +79,7 @@ When data is stored on mobile devices, it should be protected from malicious act
 
   - Conditional access helps protect your network and resources from devices, even devices that aren't enrolled with Intune.
 
-    For example, Intune integrates with Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP scans a device, and determines it's compromised. Conditional access can then automatically block access on this device from organization resources, including email.
+    For example, Intune integrates with Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP scans a device, and determines if it's compromised. Then, conditional access can automatically block access on this device from organization resources, including email.
 
 - Updates to the device, the operating system, and apps also help keep your data secure. Create a plan on how and when updates are installed. There are policies in Intune that help you manage updates, including updates to store apps.
 
@@ -93,17 +95,17 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 ### Objective: Distribute IT
 
-Many organizations want to give different administrators control over locations, divisions, and so on. For example, the **Charlotte IT Administrators** group controls and monitors the policies in the Charlotte office. These Charlotte IT Administrators can only see and manage policies for the Charlotte location. They can't see and manage policies for the Redmond location. This approach is called distributed IT.
+Many organizations want to give different admins control over locations, divisions, and so on. For example, the **Charlotte IT Admins** group controls and monitors the policies in the Charlotte campus. These Charlotte IT Admins can only see and manage policies for the Charlotte location. They can't see and manage policies for the Redmond location. This approach is called distributed IT.
 
 In Intune, distributed IT uses [scope tags](scope-tags.md) and [device enrollment categories](../enrollment/device-group-mapping.md). Scope tags use role-based access control (RBAC). So, only users in a specific group have permission to manage policies and profiles for users and devices in their scope.
 
-When using device categories, devices are automatically added to groups based on categories you create. When users enroll their device, they choose a category, such as Sales, IT administrator, point-of-sale device, and so on. These device groups are now ready to receive the profiles and policies you create.
+When using device categories, devices are automatically added to groups based on categories you create. When users enroll their device, they choose a category, such as Sales, IT admin, point-of-sale device, and so on. These device groups are now ready to receive the profiles and policies you create.
 
 To make managing devices easier, you can use Intune device categories to automatically add devices to groups based on categories that you define.
 
 **Task**: Determine how you want to distribute your rules and settings (policies and profiles). Some considerations:
 
-- Determine your administrator structure. For example, you might want to separate by location, such as **Charlotte IT Administrators** or **Redmond IT Administrators**. You might want to separate by role, such as **Network administrators** that control all network access, including VPN.
+- Determine your admin structure. For example, you might want to separate by location, such as **Charlotte IT Admins** or **Redmond IT Admins**. You might want to separate by role, such as **Network Admins** that control all network access, including VPN.
 
   These categories will become your [scope tags](scope-tags.md).
 
@@ -149,13 +151,13 @@ Intune supports Android device administrator, Android Enterprise, iOS, iPadOS, m
 
 On personal devices, it's normal and expected for users to check email, join Teams meetings, update SharePoint files, and more. Many organizations allow personal devices, and many organizations only allow organization-owned devices.
 
-As an organization and as an administrator, you decide if you'll allow personal devices.
+As an organization and as an admin, you decide if you'll allow personal devices.
 
 **Task**: Determine how you want to handle personal devices. If being "mobile" is important to your organization, consider the following approaches:
 
-- On personal devices, give users the choice to enroll in Intune. Once enrolled, administrators fully manage these devices, including pushing policies, controlling device features and settings, and even wiping devices. As an administrator, you may want this control, or you may *think* you want this control.
+- On personal devices, give users the choice to enroll in Intune. Once enrolled, admins fully manage these devices, including pushing policies, controlling device features and settings, and even wiping devices. As an admin, you may want this control, or you may *think* you want this control.
 
-  When users enroll their personal devices, they may not realize or understand that administrators can do anything on the device, including accidentally wiping or resetting the device. As an administrator, you may not want this liability or potential impact on devices your organization doesn't own.
+  When users enroll their personal devices, they may not realize or understand that admins can do anything on the device, including accidentally wiping or resetting the device. As an admin, you may not want this liability or potential impact on devices your organization doesn't own.
 
   Also, many users refuse to enroll. They find other ways to access organization resources. For example, you require devices be enrolled to use the Outlook app to check organization email. To skip this requirement, users open any web browser on the device, and sign in to Outlook web access, which may not be what you want. Or, they create screenshots, and save the images on the device, which also isn't what you want.
 
@@ -167,7 +169,7 @@ As an organization and as an administrator, you decide if you'll allow personal 
 
   Look at the tasks your organization uses the most, such as email and joining meetings. Use [app configuration policies](../apps/app-configuration-policies-overview.md) to configure app-specific settings. Use [app protection policies](../apps/app-protection-policy.md) to control the security and access to these apps.
 
-  For example, users can use the Outlook app on their personal device to check work email. Using Intune, administrators create an Outlook app protection policy that uses multi-factor authentication (MFA) every time the Outlook app opens, prevents copy and paste, and more.
+  For example, users can use the Outlook app on their personal device to check work email. Using Intune, admins create an Outlook app protection policy that uses multi-factor authentication (MFA) every time the Outlook app opens, prevents copy and paste, and more.
 
 - You want every device to be fully managed. In this scenario, give users all the devices they need, including mobile phones. Invest in a hardware refresh plan so users continue to be productive and effective. Enroll these organization-owned devices in Intune, and manage them using policies.
 
@@ -179,20 +181,21 @@ Intune can manage desktop computers running Windows 10 and newer. The Windows 10
 
 For more information, see [Guided scenario - Cloud-managed Modern Desktop](guided-scenarios-cloud-managed-pc.md).
 
-If your Windows 10 devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more.
+If your Windows 10 devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
-For more information, see [What is co-management](https://docs.microsoft.com/configmgr/comanage/overview) and [Paths to co-management](https://docs.microsoft.com/configmgr/comanage/quickstart-paths).
+For more information, see [What is co-management](/configmgr/comanage/overview), [Paths to co-management](/configmgr/comanage/quickstart-paths), and [Endpoint Manager tenant attach](/configmgr/tenant-attach/device-sync-actions).
 
 **Task**: Look at what you currently use for mobile device management, what the goals are, and determine the best path. Some considerations:
 
-- If you currently don't use anything, then go straight to Intune.
-- For new devices not enrolled in Configuration Manager, or any MDM solution, go straight to Intune.
+- If you currently don't use anything, then going straight to Intune may be best.
+- For new devices not enrolled in Configuration Manager, or any MDM solution, then going straight to Intune may be best.
 - If you currently use Configuration Manager, then your options include:
 
-  - If you want a pure cloud solution to manage devices, move to Intune. Existing devices managed by Configuration Manager can move to Intune.
-  - If you want to keep your existing infrastructure, and move some workloads to the cloud, then use co-management. You get the benefit of both services. Existing devices can receive some policies from Configuration Manager, and other policies from Intune.
+  - If you want to keep your existing infrastructure, and move some workloads to the cloud, then use co-management. You get the benefit of both services. Existing devices can receive some policies from Configuration Manager (on-premises), and other policies from Intune (cloud).
+  - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Endpoint Manager admin center, while still using Configuration Manager to manage devices.
+  - If you want a pure cloud solution to manage devices, then move to Intune. This scenario is rare. Existing Configuration Manager users often prefer to continue using Configuration Manager. The [setup deployment guide](deployment-guide-intune-setup.md) has some good information.
 
-  For more information, see [co-management workloads](https://docs.microsoft.com/configmgr/comanage/workloads).
+  For more information, see [co-management workloads](/configmgr/comanage/workloads).
 
 ## Task 3: Determine costs and licensing
 
@@ -267,7 +270,7 @@ With these goals in mind, create a baseline of your policies. If you have multip
   - Device profiles: At a minimum, you might want to:
     - Create a [Wi-Fi profile](../configuration/wi-fi-settings-configure.md) with the preconfigured settings that connect to the Contoso Wi-Fi wireless network.
     - Create a [VPN profile](../configuration/vpn-settings-configure.md) with a certificate to automatically authenticate, and connect to an organization VPN.
-    - Create an [email profile](..//configuration/email-settings-configure.md) with the preconfigured settings that connect to Office 365 or Gmail email solution.
+    - Create an [email profile](..//configuration/email-settings-configure.md) with the preconfigured settings that connect to Office 365 or a Gmail email solution.
 
   - Apps: At a minimum, you might want to:
     - Deploy Office 365 with app protection policies.
@@ -290,11 +293,11 @@ With these goals in mind, create a baseline of your policies. If you have multip
     - [Migration to Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/migration-microsoft-365-enterprise-workload)
     - [Upgrade to Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/migrate-to-microsoft-365-business)
 
-- If you have multiple device management solutions, switch to a single mobile device management solution. We recommend using Intune to help protect organization data in apps and on devices.
+- If you have multiple device management solutions, then switch to a single mobile device management solution. We recommend using Intune to help protect organization data in apps and on devices.
 
 ## Task 5: Create a rollout plan
 
-The next task is to plan how and when your users and devices receive your policies. In the phase, also consider:
+The next task is to plan how and when your users and devices receive your policies. In this task, also consider:
 
 - Define your goals and success metrics. Use these data points to create other rollout phases. Make sure goals are SMART (Specific, Measurable, Attainable, Realistic, and Timely). Plan to measure against your goals at each phase so your rollout project stays on track.
 - Have clearly-defined goals and objectives. Include these objectives in all awareness and training activities so users understand why your organization chose Intune.
@@ -372,9 +375,9 @@ Change management relies on clear and helpful communications about upcoming chan
 
   The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) might be helpful. Use it as-is, or change it for your organization.
 
-- Choose how to communicate Intune rollout information to your targeted organizational groups and users. For example:
+- Choose how to communicate Intune rollout information to your targeted groups and users. For example:
 
-  - Create an organizational-wide in-person meeting, or use Microsoft Teams.
+  - Create an organization wide in-person meeting, or use Microsoft Teams.
   - Create an email for pre-enrollment, email for enrollment, and email for post-enrollment. For example:
 
     - **Email 1**: Explain the benefits, expectations, and schedule. Take this opportunity to showcase any other services whose access is granted on devices managed by Intune.
@@ -383,7 +386,7 @@ Change management relies on clear and helpful communications about upcoming chan
   - Use an organization web site that explains the rollout phases, what users can expect, and who to contact for help.
   - Create posters, use organization social media platforms (such as Yammer), or distribute flyers to announce the pre-enrollment phase.
 
-- Create a timeline that includes when and who. The first Intune kickoff communications can target the entire organization, or just a subset. They can take place over several weeks before the Intune rollout begins. After that, information could be communicated in phases to organizational users and groups, aligned with their Intune rollout schedule.
+- Create a timeline that includes when and who. The first Intune kickoff communications can target the entire organization, or just a subset. They can take place over several weeks before the Intune rollout begins. After that, information could be communicated in phases to users and groups, aligned with their Intune rollout schedule.
 
   The following example is a high-level Intune rollout communications plan:
 
@@ -402,11 +405,11 @@ Change management relies on clear and helpful communications about upcoming chan
 
 ## Task 7: Support help desk and end users
 
-Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable support and help desk teams also helps users adopt these changes.
+Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable help desk and support teams also help users adopt these changes.
 
 **Task**: Incorporate support training. Validate the end-user experience with success metrics in your deployment plan. Some considerations:
 
-- Determine who will support end users. Organizations may have different tiers or levels (1-3). For example, tier 1 and 2 may be part of the support team, and tier 3 include members of the MDM team responsible for the Intune deployment.
+- Determine who will support end users. Organizations may have different tiers or levels (1-3). For example, tier 1 and 2 may be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
 
   Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](get-support.md) may be considered as tier 4.
 
@@ -414,7 +417,7 @@ Include your IT support and helpdesk in the early stages of Intune deployment pl
     - If different users or groups are hesitant about enrolling their personal devices, consider a Teams calls to answer common questions.
     - If users are having the same issues enrolling organization-owned devices, then host an in-person event to help users enroll the devices.
 
-- Create a help desk workflow, and constantly communicate support issues, trends, and other important information to all tiers in your support team. For example, hold daily or weekly Teams meeting so all tiers are informed of trends, patterns, and can get help.
+- Create a help desk workflow, and constantly communicate support issues, trends, and other important information to all tiers in your support team. For example, hold daily or weekly Teams meetings so all tiers are aware of trends, patterns, and can get help.
 
   The following example shows how Contoso implements their IT support or helpdesk workflows:
 
