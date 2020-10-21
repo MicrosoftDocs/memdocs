@@ -181,11 +181,11 @@ After the profile is assigned, the devices start showing in the [Endpoint Manage
 
 The end user experience depends on the Windows Autopilot deployment option you chose, such as [user driven](../../autopilot/user-driven.md) or [pre-provision](../../autopilot/pre-provision.md).
 
-- **Self-Deploying mode**: No actions. This option doesn't associate a user with the device. Users just turn on the device, and the enrollment automatically starts.
+- **Self-Deploying mode**: No actions. This option doesn't associate a user with the device. Users just turn on the device, and the enrollment automatically starts. 
 
   For more specific information, see [self deployment](../../autopilot/self-deploying.md).
 
-- **Pre-provisioning**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts.
+- **Pre-provisioning**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. Since the device is pre-provisioned by admins, the enrollment is faster compared to **User-driven**.
 
   For more specific information, see [pre-provisioned deployment](../../autopilot/pre-provision.md).
 
