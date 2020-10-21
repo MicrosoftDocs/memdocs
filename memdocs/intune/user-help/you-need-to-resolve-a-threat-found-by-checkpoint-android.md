@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Resolve threats found by SandBlast Mobile Protect for Android | Microsoft Docs
-description: Learn how to use SandBlast Mobile Protect for Android to keep your device secure.  
+title: Resolve threats in SandBlast Mobile Protect for Android - Microsoft Intune | Microsoft Docs
+description: Learn how to use SandBlast Mobile Protect for Android to keep your device secure.    
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -31,7 +31,7 @@ ms.collection:
 
 # Resolve threats found by SandBlast Mobile Protect for Android
 
-SandBlast Mobile Protect is a mobile threat defender app that alerts you to potential threats and compliance problems (such as a no device password) on your Android device. As long as the threat or problem exists on your device, you might not be able to:   
+SandBlast Mobile Protect is a mobile threat defender app that's integrated with Intune to alert you to potential threats and compliance problems. As long as the threat or problem exists on your device, you might not be able to:   
 
 * Connect to corporate e-mail  
 * Connect to corporate Wi-Fi  
@@ -39,7 +39,7 @@ SandBlast Mobile Protect is a mobile threat defender app that alerts you to pote
 * Sync corporate files with OneDrive  
 * Access internal apps   
 
-This article describes how to recognize SandBlast Mobile Protect threat alerts and what to do to resolve them.    
+This article describes how to use the app to view and resolve threats so that you can maintain your access to these resources.  
 
 ## Set up SandBlast Mobile Protect app    
 Complete the following steps to set up SandBlast Mobile Protect on your device.  
