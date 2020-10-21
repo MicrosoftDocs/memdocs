@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -96,7 +96,7 @@ Be sure the file is less than 1 MB and has a proper unicode encoding. If the exp
 
     - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows 10. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
 
-      For more information on CSPs, see the [CSP reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+      For more information on CSPs, see the [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
@@ -104,11 +104,11 @@ Be sure the file is less than 1 MB and has a proper unicode encoding. If the exp
 
 Group Policy analytics can parse the following CSPs:
 
-- [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider)
-- [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)
-- [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
-- [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+- [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider)
+- [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp)
+- [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
+- [Firewall CSP](/windows/client-management/mdm/firewall-csp)
+- [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
 
 ## Group Policy migration readiness report
 
@@ -153,4 +153,4 @@ At any time, you can delete imported GPOs:
 
 ## See also
 
-Learn more about [Configuration Service Providers (CSP)](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
+Learn more about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
