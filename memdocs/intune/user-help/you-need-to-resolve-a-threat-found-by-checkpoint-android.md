@@ -77,7 +77,7 @@ The app's main screen shows the current status and threat count, if applicable.
 
 * Threats detected: The screen shows a red circle with the number of threats detected.  
 
-* Security event occured: The screen shows a blue circle with the number of events that occured.  
+* Security event occurred: The screen shows a blue circle with the number of events that occurred.  
 
 At any time, you can tap **MY DEVICES** to see the complete list of  settings that were scanned on your device. Settings that appear green meet your organization's requirements. Settings that appear red do not meet your organization's requirements.   
 
