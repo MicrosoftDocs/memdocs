@@ -45,7 +45,7 @@ This article describes how to use the app to view and resolve threats.
 Complete the following steps to set up SandBlast Mobile Protect on your device.  
 
 1. Install the app from [Google Play](https://go.microsoft.com/fwlink/?linkid=2139455). Your organization might let you know that you need to get the app via notification, email, or by installing the app on your device.  
-    * Company Portal/Intune app notification: Tap the Company Portal push notification to open Google Play.  
+    * Company Portal/Intune app notification: Tap the push notification to open Google Play.  
     * Work or school email: Tap the link or scan the QR code provided in that email to open Google Play. 
     * App already installed: Open the app and continue to step 3 to sign in.  
 3. When installation is complete, open the app.  
