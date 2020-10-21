@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/29/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -129,7 +129,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 5. Convert the WDAC policy to **newPolicy.xml**:
 
     > [!NOTE]
-    > You can block apps that are only installed on HoloLens devices. For more information, see [package family names for apps on HoloLens](https://docs.microsoft.com/hololens/windows-defender-application-control-wdac#package-family-names-for-apps-on-hololens). 
+    > You can block apps that are only installed on HoloLens devices. For more information, see [package family names for apps on HoloLens](/hololens/windows-defender-application-control-wdac#package-family-names-for-apps-on-hololens). 
 
     ```powershell
     New-CIPolicy -rules $rule -f .\newPolicy.xml -UserPEs
@@ -186,7 +186,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
         The policy GUID **must match** the PolicyTypeID node in the **mergedPolicy.xml** file (created in step 6).
 
-        The OMA-URI uses the [ApplicationControl CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp). For more information on the nodes in this CSP, go to [ApplicationControl CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp).
+        The OMA-URI uses the [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp). For more information on the nodes in this CSP, go to [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp).
 
       - **Data type**: Set to **Base64 file**. It automatically converts the file from bin to base64.
       - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 9).
