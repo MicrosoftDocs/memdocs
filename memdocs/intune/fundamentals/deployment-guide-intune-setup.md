@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -88,7 +88,7 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 
 ## Currently use Configuration Manager
 
-Configuration Manager supports Windows and macOS devices. If you're using other platforms, you may need to reset the devices, and then enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+Configuration Manager supports Windows and macOS devices, and Windows Servers. If you're using other platforms, you may need to reset the devices, and then enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
@@ -102,7 +102,7 @@ For more information, see [enable tenant attach](../../configmgr/tenant-attach/d
 
 ### Option 2: Set up co-management
 
-This option uses Configuration Manager for some workflows, and uses Intune for other workflows.
+This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
 1. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
@@ -123,7 +123,7 @@ This scenario is rare. Most existing Configuration Manager customers want to kee
 These steps are an overview, and are only included for those users who want a 100% cloud solution. With this option, you:
 
 - Register existing on-premises Active Directory Windows 10 devices as devices in Azure Active Directory (AD).
-- Move your existing on-premises Configuration Manager workflows to Intune.
+- Move your existing on-premises Configuration Manager workloads to Intune.
 
 This option is more work for administrators, but can create a more seamless experience for existing Windows 10 devices. For new Windows 10 devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4-start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
@@ -133,7 +133,7 @@ This option is more work for administrators, but can create a more seamless expe
 
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
 3. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
-4. In Configuration Manager, [slide all the workflows from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
+4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#BKMK_UninstalClient).
 
     Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
