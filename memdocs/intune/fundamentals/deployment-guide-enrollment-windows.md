@@ -159,9 +159,7 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](/aut
 
 - Be sure your devices are running Windows 10 and newer. For a complete list, see [software requirements](/autopilot/software-requirements).
 
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices to Intune Autopilot. This step joins the devices to Azure AD.
-
-  For more information, see [register devices](/autopilot/add-devices) and [Add devices](/autopilot/enrollment-autopilot#add-devices).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Intune Autopilot. This step joins the devices to Azure AD. For more specific information, see [register devices](/autopilot/add-devices) and [Add devices](/autopilot/enrollment-autopilot#add-devices).
 
 - Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](/autopilot/enrollment-autopilot#create-an-autopilot-deployment-profile).
 
@@ -171,9 +169,7 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](/aut
 
   - Configure startup behaviors, such as disabling the local administrator, and skipping the EULA. For more specific information, see [Configure Autopilot profiles](/autopilot/profiles).
 
-- Assign the Autopilot deployment profile to your Azure AD security groups. You can also exclude security groups.
-
-  For more information, see [Create an Autopilot deployment profile](/autopilot/enrollment-autopilot#create-an-autopilot-deployment-profile).
+- Assign the Autopilot deployment profile to your Azure AD security groups. You can also exclude security groups. For more information, see [Create an Autopilot deployment profile](/autopilot/enrollment-autopilot#create-an-autopilot-deployment-profile).
 
 - For hybrid Azure AD joined devices, you register the devices, create the deployment profile, and assign the profile. You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Azure AD.
 

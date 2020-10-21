@@ -312,7 +312,7 @@ The next task is to plan how and when your users and devices receive your polici
 
     - **Departments**: Each department can be a rollout phase. You target an entire department at a time. In this rollout, users in each department might use their device in the same way, and access the same applications. Users likely have the same types of policies.
 
-    - **Geography**: Deploy your policies to all users in a specific geography, whether it's the same continent, country/region, or same organization building. This rollout lets you focus on the specific location of users. You could provide a "white glove" approach, as the number of locations deploying Intune at the same time is less. There are chances of different departments or different use cases at the same location. So, you could be testing different use cases simultaneously.
+    - **Geography**: Deploy your policies to all users in a specific geography, whether it's the same continent, country/region, or same organization building. This rollout lets you focus on the specific location of users. You could provide a Windows Autopilot for pre-provisioned deployment approach, as the number of locations deploying Intune at the same time is less. There are chances of different departments or different use cases at the same location. So, you could be testing different use cases simultaneously.
 
     - **Platform**: This rollout deploys similar platforms at the same time. For example, deploy policies to all iOS/iPadOS devices in February, all Android devices in March, and all Windows devices in April. This approach might simplify help desk support, as they only support one platform at a time.
 
@@ -333,7 +333,7 @@ The next task is to plan how and when your users and devices receive your polici
 - Choose how users will enroll their personal and organization-owned devices. There are different enrollment approaches you can use, including:
 
   - **User self-service**: Users enroll their own devices following steps provided by their IT organization. This approach is most common, and is more scalable than user-assisted enrollment.
-  - **User-assisted enrollment**: Using this "white glove" approach, an IT member helps users through the enrollment process, in person or using Teams. This approach is common with executive staff and other groups that might need more assistance.
+  - **User-assisted enrollment**: Using this pre-provisioned deployment approach, an IT member helps users through the enrollment process, in person or using Teams. This approach is common with executive staff and other groups that might need more assistance.
   - **IT tech fair**: At this event, the IT group sets up an Intune enrollment assistance booth. Users receive information on Intune enrollment, ask questions, and get help enrolling their devices. This option is beneficial for IT and users, especially during the early phases of an Intune rollout.
 
   The following example includes the enrollment approaches:
@@ -344,14 +344,14 @@ The next task is to plan how and when your users and devices receive your polici
   | Self-service | IT |  |  |  |
   | Expanded Pilot |  |  |  |  |
   | Self-service | IT |  |  |  |
-  | White glove | IT Executives |  |  |  |
+  | Pre-provisioned | IT Executives |  |  |  |
   | Production rollout phase 1 |  | Sales, Marketing |  |  |
   | Self-service |  | Sales and Marketing |  |  |
   | Production rollout phase 2 |  |  | Retail |  |
   | Self-service |  |  | Retail |  |
   | Production rollout phase 3 |  |  |  | Executives, HR, Finance |
   | Self-service |  |  |  | HR, Finance |
-  | White glove |  |  |  | Executives |
+  | Pre-provisioned |  |  |  | Executives |
 
 ## Task 6: Communicate changes
 
