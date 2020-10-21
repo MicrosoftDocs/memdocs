@@ -49,7 +49,7 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 - **Wi-Fi type**: Choose **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-Fi connections. For example, enter **Contoso WiFi**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
-- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection.
+- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection. Note that the device will not automatically connect to this Wi-Fi network if it's already connected to another preferred Wi-Fi connection. Disconnect the device from any existing Wi-Fi connections if it fails to connect automatically despite this seting being enabled.
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **Wi-Fi type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
 
