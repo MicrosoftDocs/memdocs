@@ -58,19 +58,10 @@ After you install the app and sign in, the app will scan your device for threats
 This section describes how to use the app to view and resolve threats and security events.  
 
 
-### App notifications         
-By default, SandBlast Mobile Protect uses two notification methods to alert you to threats:  
+### Get threat notifications         
+By default, SandBlast Mobile Protect uses push notifications and its in-app **Threat Center** to alert you to threats and events. As a best practice, do not turn off these notifications.  
 
-* Push notification: Tap the on-screen notification to open the app. 
-* Notification in the app's **Threat Center**: After you open the app, tap inside the red circle to go to **Threat Center**.  
-
-As a best practice, do not turn off these notifications. 
-
-If you have Company Portal or the Microsoft Intune app, you'll see warnings in both apps about restricted access. These warnings are related to the threats found in SandBlast Mobile Protect. They will go away after you resolve the threats and check in with Intune.  
-
- ![Example screenshot of the Company Portal device page, showing the SandBlast Mobile Protect warning.](./media/CP-lookout-virus-banner-1808.png)  
-
- ### Overall threat status  
+ ### View overall device status  
 The app's main screen shows the current status and threat count, if applicable. 
 
 * No threats/events detected: The screen shows a green circle with a checkmark. 
@@ -81,7 +72,7 @@ The app's main screen shows the current status and threat count, if applicable.
 
 At any time, you can tap **MY DEVICES** to see the complete list of  settings that were scanned on your device. Settings that appear green meet your organization's requirements. Settings that appear red do not meet your organization's requirements.   
 
-### App threat detected     
+### View app threats      
 An app is considered a threat when it poses a risk to you or your organization's data. Examples of threats include:
 
 * Apps that contain malware
@@ -96,7 +87,7 @@ When a threat is present, a red dot appears next to the **MY APPS** icon. To get
 
 To find out why your organization classifies an app as high, medium, or low risk, contact your IT support person.   
 
-### Security event detected  
+### View security events   
 A security event occurs when SandBlast Mobile Protect prevents an attack before it happens. This type of event is informational and poses no immediate risk on your device. It happens when your organization enforces network protection policies, such as requiring you to use a VPN. 
 
 When an event occurs, you'll see a blue dot next to the **MY NETWORK** icon.  To get more details about a security event:
