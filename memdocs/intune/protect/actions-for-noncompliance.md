@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,7 +72,7 @@ When you enable this action:
   - iOS/iPadOS
   - macOS
 
-- **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
+- **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management.
 
   The following platforms support this action:
   - Android:
@@ -81,7 +81,9 @@ When you enable this action:
     - Android Enterprise Work Profile
   - iOS/iPadOS
   - macOS
-
+  <!-- PENDING CONFIRMATION: 
+  When this action applies to a device, that device qualifies to be retired and is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. To initiate retirement of one or more devices, an admin must select devices from the list and then select **Retire Selected Devices**. The admin can also select options to *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing a devices retire state removes it from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
+  -->
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
 - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
@@ -189,7 +191,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
    - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
 
-5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. (*Retire the noncompliant device* supports a minimum of 30 days.) After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
+5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
 
    When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in, the device is evaluated as non-compliant immediately. If also using conditional access, then conditional access kicks in immediately. If you want to allow a grace period, then change the **Schedule** on the **Mark device noncompliant** action.
 
