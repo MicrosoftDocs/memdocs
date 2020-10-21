@@ -53,7 +53,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
-Be sure the file is less than 1 MB. If it's greater than 1 MB, then include fewer GPOs when you save your report.
+Be sure the file is less than 1 MB and has a proper unicode encoding. If the exported file is greater than 1 MB, then include fewer GPOs when you save your report from the GPMC.msc tool.
 
 ## Use Group Policy analytics
 
