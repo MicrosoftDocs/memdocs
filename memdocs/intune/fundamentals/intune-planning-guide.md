@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,9 +69,9 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 **Task**: Determine how you want to secure your devices, and minimize the impact of malicious activity. Some considerations:
 
-- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](..//protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) and Intune together.
+- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) and Intune together.
 
-  [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
+  [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
 
 - If a device is compromised, you'll want to limit the impact using [conditional access](../protect/conditional-access.md). For example:
 
@@ -183,7 +183,7 @@ For more information, see [Guided scenario - Cloud-managed Modern Desktop](guide
 
 If your Windows 10 devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
-For more information, see [What is co-management](/configmgr/comanage/overview), [Paths to co-management](/configmgr/comanage/quickstart-paths), and [Endpoint Manager tenant attach](/configmgr/tenant-attach/device-sync-actions).
+For more information, see [What is co-management](../../configmgr/comanage/overview.md), [Paths to co-management](../../configmgr/comanage/quickstart-paths.md), and [Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
 **Task**: Look at what you currently use for mobile device management, what the goals are, and determine the best path. Some considerations:
 
@@ -195,7 +195,7 @@ For more information, see [What is co-management](/configmgr/comanage/overview),
   - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Endpoint Manager admin center, while still using Configuration Manager to manage devices.
   - If you want a pure cloud solution to manage devices, then move to Intune. This scenario is rare. Existing Configuration Manager users often prefer to continue using Configuration Manager. The [setup deployment guide](deployment-guide-intune-setup.md) has some good information.
 
-  For more information, see [co-management workloads](/configmgr/comanage/workloads).
+  For more information, see [co-management workloads](../../configmgr/comanage/workloads.md).
 
 ## Task 3: Determine costs and licensing
 
@@ -218,7 +218,7 @@ All of these services are included in the **Microsoft 365 E5** license. For more
 
 **Task**: Determine what services and programs your organization needs and uses to be productive and secure. Some considerations:
 
-- If your goal is to deploy policies (rules) and profiles (settings), without any enforcement, at a minimum, you need Intune. Intune is available with different subscriptions, including as a stand-alone service. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).
+- If your goal is to deploy policies (rules) and profiles (settings), without any enforcement, at a minimum, you need Intune. Intune is available with different subscriptions, including as a stand-alone service. For more information, see [Microsoft Intune licensing](licenses.md).
 
   You currently use Configuration Manager, and want to set up co-management for your devices. Intune is already included in your Configuration Manager license. If you want new devices or existing co-managed devices to be fully managed by Intune, then you need a separate Intune license.
 
@@ -284,14 +284,14 @@ With these goals in mind, create a baseline of your policies. If you have multip
 
   - Moving existing distribution lists (DL) to Azure AD might be more challenging. Once they DLs are in Azure AD, these groups can be used by Intune and Microsoft 365. For more information, see:
 
-    - [What is hybrid identity with Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
-    - [Azure AD Connect sync: Understand and customize synchronization](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-whatis)
+    - [What is hybrid identity with Azure Active Directory?](/azure/active-directory/hybrid/whatis-hybrid-identity)
+    - [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis)
 
   - If you have existing Office 365 groups, you can move to Microsoft 365. Your existing groups remain, and you get all the features services of Microsoft 365. For more information, see:
 
-    - [What is Microsoft 365?](https://docs.microsoft.com/learn/modules/what-is-m365/)
-    - [Migration to Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/migration-microsoft-365-enterprise-workload)
-    - [Upgrade to Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/migrate-to-microsoft-365-business)
+    - [What is Microsoft 365?](/learn/modules/what-is-m365/)
+    - [Migration to Microsoft 365 Enterprise](/microsoft-365/enterprise/migration-microsoft-365-enterprise-workload)
+    - [Upgrade to Microsoft 365 Business](/microsoft-365/business/migrate-to-microsoft-365-business)
 
 - If you have multiple device management solutions, then switch to a single mobile device management solution. We recommend using Intune to help protect organization data in apps and on devices.
 
@@ -445,7 +445,7 @@ Include your IT support and helpdesk in the early stages of Intune deployment pl
   - Tools and resources
   - Q & A
 
-The [educate your end users documentation](end-user-educate.md), community-based [Intune forum](https://social.technet.microsoft.com/Forums/home), and [end-user documentation](https://docs.microsoft.com/intune-user-help/use-managed-devices-to-get-work-done) are also great resources.
+The [educate your end users documentation](end-user-educate.md), community-based [Intune forum](https://social.technet.microsoft.com/Forums/home), and [end-user documentation](/intune-user-help/use-managed-devices-to-get-work-done) are also great resources.
 
 ## Next steps
 

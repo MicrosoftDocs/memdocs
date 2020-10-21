@@ -53,7 +53,7 @@ This article lists the enrollment prerequisites, has information on using other 
 
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
-  - The [MDM Authority](../fundamentals/mdm-authority-set.md) is set to Intune, even when using [co-management](/configmgr/comanage/overview) with Intune + Configuration Manager.
+  - The [MDM Authority](../fundamentals/mdm-authority-set.md) is set to Intune, even when using [co-management](../../configmgr/comanage/overview.md) with Intune + Configuration Manager.
   - [Intune licenses are assigned](../fundamentals/licenses-assign.md).
 
   For more information, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
