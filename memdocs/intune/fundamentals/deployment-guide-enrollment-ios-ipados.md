@@ -139,7 +139,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 - **Enroll with user affinity + Company Portal app**:
 
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from your profile. It can take some time for the Company Portal app to auto-install.
-  2. UserS open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When they sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
+  2. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When they sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
   Users may have to enter more information. For more specific steps, see [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
 
