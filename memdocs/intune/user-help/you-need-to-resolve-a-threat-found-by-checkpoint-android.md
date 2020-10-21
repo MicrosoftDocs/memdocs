@@ -64,11 +64,11 @@ When no threats are detected, the main app screen shows a glowing, green checkma
 By default, SandBlast Mobile Protect uses two notification methods to alert you to threats:  
 
 * Push notification: Tap the on-screen notification to open the app. 
-* Notification in the app's **Threat Center**: After you open the app, tap inside the red circle (it will say something like "1 threat detected") to go to **Threat Center**.  
+* Notification in the app's **Threat Center**: After you open the app, tap inside the red circle to go to **Threat Center**.  
 
 As a best practice, do not turn off these notifications. 
 
-If you have Company Portal or the Microsoft Intune app, you'll see warnings in both apps about restricted access. These warnings are related to the threats found in SandBlast Mobile Protect and will go away after you resolve the threats and check in with Intune.  
+If you have Company Portal or the Microsoft Intune app, you'll see warnings in both apps about restricted access. These warnings are related to the threats found in SandBlast Mobile Protect. They will go away after you resolve the threats and check in with Intune.  
 
  ![Example screenshot of the Company Portal device page, showing the SandBlast Mobile Protect warning.](./media/CP-lookout-virus-banner-1808.png)  
 
@@ -93,7 +93,7 @@ A security event occurs when SandBlast Mobile Protect prevents an attack before 
 When an event occurs, you'll see a blue dot next to the **MY NETWORK** icon.  To get more details about a security event:
 
 1. Tap **MY NETWORK**. 
-2. The **NETWORK PROTECTION** secion shows the number of events that occured. Tap the number.  
+2. The **NETWORK PROTECTION** section shows the number of events that occurred. Tap the number.  
 3. The **Event Center** opens. Tap the **i** info icon next to any event to get more details about the prevented threat. 
 
 ## Next steps  
