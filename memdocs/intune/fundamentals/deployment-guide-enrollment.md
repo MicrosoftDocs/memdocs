@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -28,9 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Deployment guidance: Enroll devices in Microsoft Intune
-
-> [!WARNING]
-> THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
 
 Azure AD is the backbone of Intune and Endpoint Manager. Once users and devices are registered within your Azure AD (also called a tenant), then it's available to Intune and Endpoint Manager. This feature is called "enrollment".
 

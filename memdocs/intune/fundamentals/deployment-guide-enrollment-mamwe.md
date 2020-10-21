@@ -29,9 +29,6 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Enroll devices using Application management without enrollment (MAMWE) in Microsoft Intune
 
-> [!WARNING]
-> THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
-
 MAM-WE isn't a traditional "enrollment" method, as it uses app configuration profile to deploy apps to devices. Devices aren't enrolled. When combined with app protection policies, you can protect data within an app.
 
 MAM-WE is commonly used for personal or bring your own devices (BYOD), or for managed devices that need extra security. MAM-WE is also an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.

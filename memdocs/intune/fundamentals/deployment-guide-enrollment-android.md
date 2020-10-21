@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -29,9 +29,6 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Enroll Android devices in Microsoft Intune
 
-> [!WARNING]
-> THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
-
 Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
 - [Android Enterprise personally-owned work profile](#android-enterprise-personally-owned-work-profile)
@@ -40,7 +37,9 @@ Personal and organization-owned devices can be enrolled in Intune. Once enrolled
 - [Android Enterprise corporate-owned with personal profile](#android-enterprise-corporate-with-personal-profile)
 - [Android device administrator](#android-device-administrator)
 
-This article provides recommendations on the Android enrollment methods to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
+This article provides recommendations on the Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type.
+
+For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
 
 ## Before you begin
 
@@ -59,7 +58,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 | Devices are associated with a single user. | ✔️ |
 | You use the optional device enrollment manager (DEM) account. | ✔️ |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
-| Devices are owned by the organization or school. | ❌ <br/><br/>Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Android Enterprise fully managed. |
+| Devices are owned by the organization or school. | ❌ <br/><br/>Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Android Enterprise fully managed, or using Android Enterprise corporate-owned with personal profile. |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> User-less or shared devices should be organization-owned. These devices should be enrolled using Android Enterprise dedicated devices. |
 
 ---
