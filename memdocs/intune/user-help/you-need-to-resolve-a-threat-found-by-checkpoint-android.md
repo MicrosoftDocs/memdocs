@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 10/21/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -39,7 +39,7 @@ SandBlast Mobile Protect is a mobile threat defender app that's integrated with 
 * Sync corporate files with OneDrive  
 * Access internal apps   
 
-This article describes how to use the app to view and resolve threats so that you can maintain your access to these resources.  
+This article describes how to use the app to view and resolve threats.  
 
 ## Set up SandBlast Mobile Protect app    
 Complete the following steps to set up SandBlast Mobile Protect on your device.  
@@ -49,14 +49,13 @@ Complete the following steps to set up SandBlast Mobile Protect on your device.
     * Work or school email: Tap the link or scan the QR code provided in that email to open Google Play. 
     * App already installed: Open the app and continue to step 3 to sign in.  
 3. When installation is complete, open the app.  
-4. Tap your account (the same one you use to sign in to Company Portal) to sign in.  
-5. Tap **ACTIVATE** to give the app device administrator permissions.   
+4. Tap your account (the same one you use to sign in at work or school) to sign in.  
+5. Tap **ACTIVATE** to make the app a device administrator.  
 
-After you install the app and sign in, the app will scan your device for threats.  
+After your initial sign in, the app will scan your device for threats.  
 
 ## Using SandBlast Mobile Protect    
-This section describes how to use the app to view and resolve threats and security events.  
-
+SandBlast Mobile Protect detects device threats, app threats, and network security events. This section describes how to use the app to view and resolve each type of threat. 
 
 ### Get threat notifications         
 By default, SandBlast Mobile Protect uses push notifications and its in-app **Threat Center** to alert you to threats and events. As a best practice, do not turn off these notifications.  
@@ -64,16 +63,22 @@ By default, SandBlast Mobile Protect uses push notifications and its in-app **Th
  ### View overall device status  
 The app's main screen shows the current status and threat count, if applicable. 
 
-* No threats/events detected: The screen shows a green circle with a checkmark. 
+* No threat or events detected: The screen shows a green circle with a checkmark. 
 
 * Threats detected: The screen shows a red circle with the number of threats detected.  
 
 * Security event occurred: The screen shows a blue circle with the number of events that occurred.  
 
-At any time, you can tap **MY DEVICES** to see the complete list of  settings that were scanned on your device. Settings that appear green meet your organization's requirements. Settings that appear red do not meet your organization's requirements.   
+## View device threats 
+A device threat happens when the settings on your device don't meet your organization's requirements. When a threat is present, a red dot appears next to the **MY DEVICES** icon. To get more details about a threat: 
+
+1. Tap **MY DEVICES** to open the list of settings that were scanned on your device. 
+2. Settings that appear in red do not meet your organization's requirements. Tap a red setting to find out more information about it.
+3. Open the Settings app on your device to adjust the setting.  
+4. If SandBlast Mobile Protect doesn't show the threat as resolved right away, return to the app and tap the circle on the main app page to initiate a new scan.  
 
 ### View app threats      
-An app is considered a threat when it poses a risk to you or your organization's data. Examples of threats include:
+An app is considered a threat when it poses a security risk to you or your organization's data. Examples of threats include:
 
 * Apps that contain malware
 * Apps that are on your organization's block list
@@ -88,7 +93,7 @@ When a threat is present, a red dot appears next to the **MY APPS** icon. To get
 To find out why your organization classifies an app as high, medium, or low risk, contact your IT support person.   
 
 ### View security events   
-A security event occurs when SandBlast Mobile Protect prevents an attack before it happens. This type of event is informational and poses no immediate risk on your device. It happens when your organization enforces network protection policies, such as requiring you to use a VPN. 
+A security event occurs when SandBlast Mobile Protect prevents an attack before it happens. This type of event is informational and poses no immediate risk on your device. They could happen if your organization enforces network protection policies, such as requiring you to use a VPN. 
 
 When an event occurs, you'll see a blue dot next to the **MY NETWORK** icon.  To get more details about a security event:
 
@@ -97,7 +102,7 @@ When an event occurs, you'll see a blue dot next to the **MY NETWORK** icon.  To
 3. The **Event Center** opens. Tap the **i** info icon next to any event to get more details about the prevented threat. 
 
 ## Next steps  
-If you use Company Portal or the Intune app, open those apps and sync your device after you resolve a threat. Otherwise, you'll have to wait until Intune checks in with your device to regain access to corporate resources.   
+If you use Company Portal or the Intune app, open the app and sync your device after you resolve a threat. Otherwise, you'll have to wait until Intune checks in with your device to regain access to corporate resources.   
 
 Still need help? 
 
