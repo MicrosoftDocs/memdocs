@@ -69,20 +69,21 @@ On the *Help and support* pane, select a tile to focus support on the device man
   - Desktop Analytics
   - Endpoint analytics for Configuration Manager devices
   - Tenant attach for Configuration Manager devices
-  - [Co-management workloads](./configmgr/comanage/workloads.md) with Configuration Manager as the management authority
 
   For issues with **on-premises Configuration Manager**, open your case at [www.support.microsoft.com](https://support.microsoft.com).
 
 - **Co-management**:
-  - Enabling co-management for Intune devices
-  - [Co-management workloads](./configmgr/comanage/workloads.md) with Intune as the management authority
+  - [Co-management workloads](./configmgr/comanage/workloads.md) with Configuration Manager as the management authority
 
 - **Microsoft Managed Desktop**:
-  - Information requests on the Microsoft Managed Desktop tenant or configuration
-vChange requests to the configuration of Microsoft Managed Desktop devices
+  
+  *This tile is available only to Microsoft Managed Desktop customers.*
+
+  - Information requests for the Microsoft Managed Desktop tenant or configuration
+  - Change requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  For more information, see [Support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/service-description/support.md?view=o365-worldwide&preserve-view=true).
+  If you are a Microsoft Managed Desktop (MMD) customer, selecting the MMD tile for MMD related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support.md?view=o365-worldwide&preserve-view=true).
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
