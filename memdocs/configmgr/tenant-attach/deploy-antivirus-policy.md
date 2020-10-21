@@ -2,7 +2,7 @@
 title: Tenant attach - Deploy endpoint security Antivirus policy from the Microsoft Endpoint Manager admin center  (preview)
 titleSuffix: Configuration Manager
 description: " Create and deploy Microsoft Defender antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 09/22/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -40,7 +40,7 @@ To support managing tamper protection your environment must additionally meet th
 
 ## <a name="bkmk_av"></a> Assign Microsoft Defender Antivirus Policy to a collection
 
-1. In a browser, go to [https://aka.ms/MDAVTenantAttachPreview](https://aka.ms/MDAVTenantAttachPreview).
+1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10 and Windows Server (ConfigMgr)**.
@@ -51,7 +51,7 @@ To support managing tamper protection your environment must additionally meet th
 
 ## <a name="bkmk_security"></a> Assign Windows Security experience policy to a collection
 
-1. In a browser, go to [https://aka.ms/MDAVTenantAttachPreview](https://aka.ms/MDAVTenantAttachPreview).
+1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10 and Windows Server (ConfigMgr)**.
