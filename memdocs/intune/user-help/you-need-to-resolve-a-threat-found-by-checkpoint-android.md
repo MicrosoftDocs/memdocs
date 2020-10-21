@@ -70,8 +70,16 @@ If you have Company Portal or the Microsoft Intune app, you'll see warnings in b
 
  ![Example screenshot of the Company Portal device page, showing the SandBlast Mobile Protect warning.](./media/CP-lookout-virus-banner-1808.png)  
 
- ### No threat detected   
-When no threats are detected, the main app screen shows a glowing, green checkmark. At any time, you can tap **My Devices** to see the complete list of device settings that were scanned. Settings that appear green are compliant with your organization's policies.  
+ ### Overall threat status  
+The app's main screen shows the current status and threat count, if applicable. 
+
+* No threats/events detected: The screen shows a green circle with a checkmark. 
+
+* Threats detected: The screen shows a red circle with the number of threats detected.  
+
+* Security event occured: The screen shows a blue circle with the number of events that occured.  
+
+At any time, you can tap **MY DEVICES** to see the complete list of  settings that were scanned on your device. Settings that appear green meet your organization's requirements. Settings that appear red do not meet your organization's requirements.   
 
 ### App threat detected     
 An app is considered a threat when it poses a risk to you or your organization's data. Examples of threats include:
