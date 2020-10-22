@@ -14,7 +14,7 @@ ms.audience: itpro
 author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Windows Autopilot for pre-provisioned deployment
