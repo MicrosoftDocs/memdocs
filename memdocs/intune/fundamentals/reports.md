@@ -107,7 +107,7 @@ These are reports that provide insight into the update state and compliance of W
 >   
 >       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
 >    
->       - **Scope**: Select **Windows Updates*
+>       - **Scope**: Select **Windows Updates**
 >
 > - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
