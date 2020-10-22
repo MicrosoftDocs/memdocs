@@ -59,7 +59,7 @@ The following image is an example of accessing help and support for Microsoft In
 
 > ![Navigate to open help and support](./media/get-support/navigate-to-help-and-support.png)
 
-On the *Help and support* pane, select a tile to focus support on the device management scenario you are seeking assistance for. The following information can help you choose the correct focus:
+On the *Help and support* pane, select a tile to focus support on the scenario you are seeking assistance for. The following information can help you choose the correct focus:
 
 - **Intune**:
   - Managing devices with Intune
@@ -73,7 +73,7 @@ On the *Help and support* pane, select a tile to focus support on the device man
   For issues with **on-premises Configuration Manager**, open your case at [www.support.microsoft.com](https://support.microsoft.com).
 
 - **Co-management**:
-  - [Co-management workloads](./configmgr/comanage/workloads.md) with Configuration Manager as the management authority
+  - [Co-management workloads](./configmgr/comanage/workloads.md) with Intune or Configuration Manager as the management authority
 
 - **Microsoft Managed Desktop**:
   
