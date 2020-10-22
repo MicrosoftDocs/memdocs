@@ -88,13 +88,45 @@ The **Windows 10 detected malware** report provides bulk actions that are applic
 
 For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
 
-## Feature update failures report (Operational)
+## Windows update reports
+
+These are reports that provide insight into the update state and compliance of Windows devices in your organization. They are a part of the ongoing public preview for feature updates management. More software updates reports for other scopes and content types will be added over time.
+
+> [!NOTE]
+> In order to populate reporting data for Windows updates, devices must be configured to monitor device health for the Windows update scope of device events. In order to configure devices to monitor this data and populate your windows update reports, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
+>
+>  - **Platform**: Select **Windows 10 and later**
+>  
+>  - **Profile**: Select **Windows health monitoring**
+>  
+>  - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
+>   
+>  - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+>    
+>  - In **Configuration Settings**:
+>   
+>       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
+>    
+>       - **Scope**: Select **Windows Updates*
+>
+> - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+
+### Feature update failures report (Operational)
 The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
 
 You can view the **Feature update failures** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Feature update failures**.
+
+### Windows 10 feature updates (Organizational)
+The **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting. 
+
+You can view the **Windows 10 feature updates** report using the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Windows updates** to view the summary report.
+3. Select the **Reports** tab and click the **Windows Feature Update Report** to see the **Windows 10 feature updates** report.
 
 ## Device compliance report (Organizational)
 
@@ -140,14 +172,6 @@ You can view the **Detected malware** report using the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Detected malware**.
 
-## Windows 10 feature updates (Organizational)
-The **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting. 
-
-You can view the **Windows 10 feature updates** report using the following steps:
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Windows updates** to view the summary report.
-3. Select the **Reports** tab and click the **Windows Feature Update Report** to see the **Windows 10 feature updates** report.
 
 ## Device compliance trend report (Historical)
 
