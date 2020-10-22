@@ -43,7 +43,7 @@ The following policy types and profiles are supported by Configuration Manager d
   - **Profile**: Endpoint detection and response (ConfigMgr)
 
 - **Policy path**: Endpoint security > Firewall > Windows 10 and Windows Server (ConfigMgr)
-  - **Profile**: Microsoft Defender Firewall (preview)
+  - **Profile**: Microsoft Defender Firewall (ConfigMgr) (preview)
 
 ## Requirements to use Intune policy for tenant attach
 
