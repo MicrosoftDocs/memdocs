@@ -64,8 +64,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### Changes for Password settings in Device restriction profiles for Android device administrator<!-- 7662279  -->
 
-Recently we added *Password complexity* as a new setting for for
-[Device compliance](../protect/compliance-policy-create-android.md#password) policy and [Device restriction](../configuration/device-restrictions-android.md#password)
+Recently we added *Password complexity* as a new setting for [Device compliance](../protect/compliance-policy-create-android.md#password) policy and [Device restriction](../configuration/device-restrictions-android.md#password)
 for *Android device administrator*. We've now added additional changes to the UI for settings in both policy types to help Intune accommodate the password changes in Android version 10 and later. These changes help ensure settings for passwords continue to apply to devices as expected.
   
 You'll find the following changes to the Intune UI for passwords settings for the two policy types, which won't affect existing profiles:
