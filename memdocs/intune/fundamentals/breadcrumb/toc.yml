@@ -11,9 +11,9 @@
       topicHref: /mem/
       items:
       - name: Intune
-        tocHref: /mem/intune
-        topicHref: /mem/intune/
+        tocHref: /mem/intune/
+        topicHref: /mem/intune/index
         items:
         - name: Fundamentals
           tocHref: /mem/intune/fundamentals/
-          topicHref: /mem/
+          topicHref: /mem/index
