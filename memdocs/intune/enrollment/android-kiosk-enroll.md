@@ -66,6 +66,9 @@ You must create an enrollment profile so that you can enroll your dedicated devi
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
 2. Choose **Create** and fill out the required fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
+    - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
+        - **Corporate-owned dedicated device**: This token enrolls devices into a userless state.
+        - **Corporate-owned dedicated device with Azure AD shared mode**: This token also enrolls devices in a userless state. It also deploys the Microsoft Authenticator app and puts the devices in shared mode. With this option, users have an easier sign-in/sign-out experience when using apps that are integrated with the Azure AD Microsoft Authentication Library and global sign-in/sign-out calls.
     - **Token expiration date**: The date when the token expires. Google enforces a maximum of 90 days.
 3. Choose **Create** to save the profile.
 
