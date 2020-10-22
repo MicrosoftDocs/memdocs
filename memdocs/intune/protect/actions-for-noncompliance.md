@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -81,9 +81,11 @@ When you enable this action:
     - Android Enterprise Work Profile
   - iOS/iPadOS
   - macOS
-  <!-- PENDING CONFIRMATION: 
-  When this action applies to a device, that device qualifies to be retired and is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. To initiate retirement of one or more devices, an admin must select devices from the list and then select **Retire Selected Devices**. The admin can also select options to *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing a devices retire state removes it from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
-  -->
+
+  When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
+
+  To retire one or more devices from the list, select devices from the list and then select **Retire Selected Devices**. You can also select options to *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
+
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
 - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
