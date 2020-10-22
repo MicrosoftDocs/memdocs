@@ -84,11 +84,11 @@ Log files for these roles include Windows Event Viewer, Certificate consoles, an
 
   Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
-  Location: On the server that hosts the Intune PKCS Connector at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
+  Location: On the server that hosts the Intune Certificate Connector at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
 - **Windows Application log**:
 
-  Location: On the server that hosts the Intune PKCS Connector: Run **eventvwr.msc** to open Windows Event Viewer
+  Location: On the server that hosts the Intune Certificate Connector: Run **eventvwr.msc** to open Windows Event Viewer
 
 ### Logs for Android devices
 
@@ -124,9 +124,9 @@ On the device, open **Event Viewer** > **Applications and Services Logs** > **Mi
 
 ## Antivirus exclusions
 
-Consider adding Antivirus exclusions on servers that host the Intune PKCS Connector when:
+Consider adding Antivirus exclusions on servers that host the Intune Certificate Connector when:
 
-- Certificate requests reach the server or the Intune PKCS Connector, but are not successfully processed 
+- Certificate requests reach the server or the Intune Certificate Connector, but are not successfully processed 
 - Certificates are issued slowly
 
 The following are examples of locations that you might exclude:
@@ -205,11 +205,11 @@ IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015
 
 #### Cause - Certificate enrollment policy server name
 
-This issue occurs if the computer that hosts the Intune PKCS Connector can't locate a certificate enrollment policy server.
+This issue occurs if the computer that hosts the Intune Certificate Connector can't locate a certificate enrollment policy server.
 
 **Resolution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune PKCS Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps&preserve-view=true) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune Certificate Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps&preserve-view=true) PowerShell cmdlet.
 
 ### The submission is pending
 
@@ -297,7 +297,7 @@ Because the cause of this problem isn’t identified clearly in logs, work throu
 
 Review the request files for errors that indicate why they failed to be processed.
 
-1. On the server that hosts the Intune PKCS Connector, use File Explorer to navigate to **%programfiles%\Microsoft Intune\PfxRequest**.
+1. On the server that hosts the Intune Certificate Connector, use File Explorer to navigate to **%programfiles%\Microsoft Intune\PfxRequest**.
 2. Review files in the **Failed** and **Processing** folders, using your favorite text editor.
 
    > [!div class="mx-imgBorder"]
