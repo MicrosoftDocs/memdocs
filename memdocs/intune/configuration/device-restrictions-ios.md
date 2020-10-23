@@ -388,11 +388,11 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 12.1 and newer
   - iPadOS 13.0 and newer
 
-- **Defer software updates**: **Yes** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed.
+- **Defer software updates**: **Enable** allows you to delay when software updates are shown on devices, from 1-90 days. This setting doesn't control when updates are or aren't installed.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show software updates on devices as Apple releases them. For example, if an iOS/iPadOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date.  
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. When the delay expires, users get notified to update to the earliest OS version available when the delay is triggered.
+  - **Delay visibility of software updates**: Enter a value from 1-90 days. When the delay expires, users get notified to update to the earliest OS version available when the delay is triggered. Don't set this value to 0 days.
 
     For example, if iOS 12.a is available on **January 1**, and **Delay visibility** is set to **5 days**, then iOS 12.a isn't shown as an available update on user devices. On the **sixth day** following the release, that update is available, and users can install it.
 
@@ -726,33 +726,33 @@ You can also:
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
 - Kiosk Mode (Single App Mode): Referred to as "app lock" in the [Apple developer documentation](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
-- Disable Activation Lock 
-- Autonomous Single App Mode 
-- Web Content Filter 
-- Set background and lock screen 
-- Silent App Push 
-- Always-On VPN 
-- Allow managed app installation exclusively 
-- iBookstore 
-- iMessages 
-- Game Center 
-- AirDrop 
-- AirPlay 
-- Host pairing 
-- Cloud Sync 
-- Spotlight search 
-- Handoff 
-- Erase device 
-- Restrictions UI 
-- Installation of configuration profiles by UI 
-- News 
-- Keyboard shortcuts 
-- Passcode modifications 
-- Device name changes 
-- Automatic app downloads 
-- Apple Music 
-- Mail Drop 
-- Pair with Apple Watch 
+- Disable Activation Lock
+- Autonomous Single App Mode
+- Web Content Filter
+- Set background and lock screen
+- Silent App Push
+- Always-On VPN
+- Allow managed app installation exclusively
+- iBookstore
+- iMessages
+- Game Center
+- AirDrop
+- AirPlay
+- Host pairing
+- Cloud Sync
+- Spotlight search
+- Handoff
+- Erase device
+- Restrictions UI
+- Installation of configuration profiles by UI
+- News
+- Keyboard shortcuts
+- Passcode modifications
+- Device name changes
+- Automatic app downloads
+- Apple Music
+- Mail Drop
+- Pair with Apple Watch
 
 > [!NOTE]
 > Apple confirmed that certain settings move to supervised-only in 2019. We recommend taking this into consideration when using these settings, instead of waiting for Apple to migrate them to supervised-only:
