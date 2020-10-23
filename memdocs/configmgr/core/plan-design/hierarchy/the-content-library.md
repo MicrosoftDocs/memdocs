@@ -57,7 +57,7 @@ Configuration Manager uses the content library on the central administration sit
 
 Use the following options to manage the content library on the central administration site:  
 
-- To prevent the content library from being installed on a specific drive, create an empty file named **no_sms_on_drive.sms**. Copy it to the root of the drive before the content library is created.  
+- To prevent the content library from being installed on a specific drive, create an empty file named **NO_SMS_ON_DRIVE.SMS**. Copy it to the root of the drive before the content library is created.  
 
 - After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager tools to manage the location of the content library. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).  
 
@@ -177,7 +177,7 @@ If you chose the **Automatic** option, Configuration Manager selects the drive w
 
 You specify a reserve space amount during configuration. Configuration Manager attempts to use a secondary disk once the best available disk has only this reserve space amount left free. Each time a new drive is selected for use, the drive with the most available free space is selected.
 
-You can't specify that a distribution point should use all drives except for a specific set. Prevent this behavior by creating an empty file on the root of the drive, called `no_sms_on_drive.sms`. Place this file before Configuration Manager selects the drive for use. If Configuration Manager detects this file on the root of the drive, it doesn't use the drive for the content library.
+You can't specify that a distribution point should use all drives except for a specific set. Prevent this behavior by creating an empty file on the root of the drive, called `NO_SMS_ON_DRIVE.SMS`. Place this file before Configuration Manager selects the drive for use. If Configuration Manager detects this file on the root of the drive, it doesn't use the drive for the content library.
 
 
 ## Troubleshooting
