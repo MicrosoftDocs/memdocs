@@ -79,11 +79,11 @@ Proactive remediations also require one of the following licenses for the manage
 ### Endpoint analytics permissions
 
 The following permissions are used for Endpoint analytics:
-- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
+- Permissions appropriate to the user's role under the **Endpoint Analytics** or **Organization** categories.
 
-A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+A read-only user would only need the **Read** permission under either category. An Intune administrator would typically need all permissions.
 
-- **Read** under the **Organization**, **Help Desk Operator**, **School Administrator**, or **Endpoint Security Manager** [Intune roles](/intune/fundamentals/role-based-access-control).
+- **Read** under the **Help Desk Operator**, **School Administrator**, or **Endpoint Security Manager** [Intune roles](/intune/fundamentals/role-based-access-control).
 
 - **[Reports Reader]**(azure/active-directory/roles/permissions-reference#reports-reader) Azure AD role.
 
