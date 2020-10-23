@@ -63,12 +63,6 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 <!-- ***********************************************-->
 ## App management
 
-### Update to device icons in Company Portal and Intune apps on Android<!-- 6057023  -->
-We're updating the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
-
-### iOS Company Portal will support Apple's Automated Device Enrollment without user affinity<!-- 7282707  --> 
-iOS Company Portal will be supported on devices enrolled using Apple's Automated Device Enrollment without requiring an assigned user. An end user can sign in to the iOS Company Portal to establish themselves as the primary user on an iOS/iPadOS device enrolled without device affinity. For more information about Automated Device Enrollment, see [Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
-
 ### Rolling minimum Company Portal (CP) version for Android devices<!-- 5151625  -->
 You'll have the ability to set a rolling minimum Company Portal (CP) version for Android devices. This Intune setting will ensure that end users are within a certain range of CP releases (in days). Admins will no longer have to re-visit the conditional launch settings when a new CP update is released. You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App protection policies** > **Create policy**. The **Min Company Portal version** setting will be available in the **App conditions** section of the **Conditional launch** value setting step. For more information about Intune app protection policies, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
@@ -92,21 +86,7 @@ For more information on VPN profiles in Intune, see [Create VPN profiles to conn
 Applies to:
 - Android Enterprise Work Profile
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
-
-### Changes for Password settings in Device restriction profiles for Android device administrator<!-- 7662279   --> 
-
-We’re introducing a few changes for password settings for *Device restriction* and *compliance* policies for *Android device administrator*. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**) 
-
-These changes help Intune accommodate changes in Android version 10 and later, to ensure settings for passwords continue to apply to devices as expected. Changes include:
-
-- Settings will be reorganized into sections that are based on which devices they apply to.
-- Additional updates to labels and example text.
-
-These changes apply to the UI for settings, and won’t affect existing profiles.
-
-Applies to:
-- Android device administrator
-
+ 
 ### Required password type default setting is changing on Android Enterprise devices<!-- 8092655  -->
 On Android Enterprise devices, you can create a device password profile that sets the **Required password type** (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device restrictions** > **Device password**).
 
@@ -174,9 +154,6 @@ PowerShell scripts will support Azure AD registered devices in Intune. For more 
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
 
-### Tenant attach: Run Scripts from the admin center<!--7220536, CM6234688 -->
-You'll be able to bring the power of the Configuration Manager on-premises [Run Scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts). 
-
 ### Deploy Software Updates to macOS devices <!-- 3194876 -->
 You'll be able to deploy Software Updates to groups of macOS devices. This feature includes critical, firmware, configuration file, and other updates. You'll be able to send updates on the next device check-in or select a weekly schedule to deploy updates in or out of time windows that you set. This helps when you want to update devices outside standard work hours or when your help desk is fully staffed. You'll also get a detailed report of all macOS devices with updates deployed. You can drill into the report on a per-device basis to see the statuses of particular updates.
 
@@ -187,9 +164,6 @@ Subnet ID and IP addresses will be displayed on the **Properties** page for corp
 <!-- ***********************************************-->
 ## Intune apps
 
-### Unified delivery of Azure AD Enterprise and Office Online applications in the Windows Company Portal<!-- 1817861  -->
-In the 2006 release, we announced [Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal](../fundamentals/whats-new.md). This feature will be supported in the Windows Company Portal. On the **Customization** pane of Intune, you'll be able to select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Windows Company Portal. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
- 
  #### Improvements to iOS Company Portal privacy message customization<!-- 7006929 -->
 You will have greater ability to customize the privacy messaging in the iOS Company Portal. In addition to the previous support for being able to customize what your organization *can't see*, you will now also be able to customize what your organization's *can see* in the privacy message displayed to end users in the iOS Company Portal. When this feature is release, devices will need to be running at least Company Portal version 4.11 to see the customized messaging about what can be seen. This feature will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. For related information, see the Company Portal [Privacy](../apps/company-portal-app.md#privacy) message. 
 

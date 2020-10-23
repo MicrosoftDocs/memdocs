@@ -29,7 +29,7 @@ There are two methods in the Configuration Manager console to install site syste
 
 Before it installs the site system role, Configuration Manager checks the destination computer to make sure it meets the prerequisites for the selected roles.
 
-By default, when Configuration Manager installs a site system role, it installs files on the first available NTFS-formatted disk drive that has the most available free disk space. To prevent Configuration Manager from installing on specific drives, before you install the site system server, create an empty file named **no_sms_on_drive.sms** in the root of the drive.
+By default, when Configuration Manager installs a site system role, it installs files on the first available NTFS-formatted disk drive that has the most available free disk space. To prevent Configuration Manager from installing on specific drives, before you install the site system server, create an empty file named **NO_SMS_ON_DRIVE.SMS** in the root of the drive.
 
 Configuration Manager uses the **site system installation account** to install roles. You specify this account when you install the role. By default, this account is the local system account of the site server computer. You can specify a domain user account as the site system installation account. For more information, see [Accounts - Site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).
 

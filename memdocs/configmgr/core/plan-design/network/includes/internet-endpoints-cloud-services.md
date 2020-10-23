@@ -23,7 +23,7 @@ The following sections list the endpoints by role. Some endpoints refer to a ser
 >
 > - CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.cloudapp.net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
 
-### Service connection point
+### Service connection point for cloud services
 
 For Configuration Manager to deploy the CMG or CDP services in Azure, the service connection point needs access to:
 
@@ -65,7 +65,7 @@ The CMG connection point only needs to connect to the CMG service endpoints. It 
   - `login.microsoftonline.com` (Azure public cloud)
   - `login.microsoftonline.us` (Azure US Government cloud)
 
-### Configuration Manager console
+### Configuration Manager console for cloud services
 
 - For Azure AD token retrieval, the Azure AD endpoint:
 
