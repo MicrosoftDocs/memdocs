@@ -148,7 +148,7 @@ With Intune, you can now provision Android Enterprise dedicated devices with Mic
 #### App protection policy support on Android and iOS/iPadOS for additional partners<!-- 4452423, 4731168  WNReady -->
 In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners.
 
-With this update, were expanding this support to the following two partners for using an app protection policy to block or selectively wipe a user’s corporate data based on the health of the device:
+With this update, we're expanding this support to the following two partners for using an app protection policy to block or selectively wipe a user’s corporate data based on the health of the device:
 
 - **Check Point Sandblast** on Android, iOS and iPadOS
 - **Symantec Endpoint Security** on Android, iOS and iPadOS
@@ -192,7 +192,7 @@ We've made several changes to improve the experience of configuring firewall rul
  
 Improvements include:
 - Improved layout in the UI, including section headers to organize the view.
-- Increasing the character limit for the description field 
+- Increasing the character limit for the description field. 
 - Validation of IP address entries.
 - Sorting of IP address lists.
 - Option to *select all* addresses when you clear entries from an IP address list.
@@ -205,7 +205,7 @@ After you onboard your enrolled iOS/iPadOS devices, your compliance polices for 
 The Defender for iOS app should move from public preview to generally availability by the end of the year.
 
 ####  Security Experience profiles for Endpoint Security Antivirus policy now have tri-state options<!-- 8082161  WNReady -->
-We’ve added a third state of configuration for settings in the *Windows Security experience* profile for Endpoint security Antivirus policies.  This update applies to the [Windows Security experience](../protect/ antivirus-security-experience-windows-settings.md) for Windows 10 and later.  
+We’ve added a third state of configuration for settings in the *Windows Security experience* profile for Endpoint security Antivirus policies.  This update applies to the [Windows Security experience](../protect/ antivirus-security-experience-windows-settings.md) for Windows 10 and later).  
  
 For example, where a setting previously offered **Not configured** and **Yes**, if supported by the platform, you now have the additional option of **No**.
 
