@@ -26,8 +26,8 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
    - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
-      -  Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062).
-      - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).
+      -  Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+      - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
