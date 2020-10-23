@@ -46,7 +46,7 @@ The first scenario in this release is for **SQL Server Service Broker**. The ser
 
 <!--7699511-->
 
-You can now monitor the health of the fast channel used for client actions. If your environment is [tenant attached with devices uploaded](../../../../../tenant-attach/device-sync-actions.md), this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.
+You can now monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.
 
 ### Report setup and upgrade failures to Microsoft
 <!--5622909-->
@@ -84,7 +84,7 @@ The Windows 10 long-term servicing channel (LTSC) was designed for devices where
 
 Wake on LAN (WoL) has always posed a problem in complex, subnetted networks. Good networking best practice reduces the size of broadcast domains to mitigate against the risk of broadcast traffic adversely affecting the network. The most common way to limiting network broadcast is by not allowing broadcast packets to be routed between subnets. Another option is to enable subnet directed broadcasts but most organizations don't allow the magic packet to traverse internal routers.
 
-In version 1810, the introduction of [peer wake up](../../../../clients/deploy/configure-wake-on-lan.md#bkmk_wol-1810) allowed an administrator to wake a device or collection of devices, on demand using the client notification channel. Overcoming the need for the server to be in the same broadcast domain as the client.
+In version 1810, the introduction of peer wake up allowed an administrator to wake a device or collection of devices, on demand using the client notification channel. Overcoming the need for the server to be in the same broadcast domain as the client.
 
 This latest improvement allows the Configuration Manager site to wake devices at the deadline of a deployment, using that same client notification channel. Instead of the site server issuing the magic packet directly, the site uses the client notification channel to find an online machine in the last known subnet of the target device(s) and instructs the online client to issue the WoL packet for the target device.
 
@@ -121,7 +121,7 @@ You can now deploy a non-OS deployment task sequence to a user-based collection.
 
 <!--6888853-->
 
-Configuration Manager technical preview version 2004 included new [management insight rules for OS deployment](../../technical-preview-2004.md#bkmk_osdmi). These insights help you manage the policy size of task sequences. Large task sequences cause problems with client processing.
+Configuration Manager technical preview version 2004 included new management insight rules for OS deployment. These insights help you manage the policy size of task sequences. Large task sequences cause problems with client processing.
 
 To further help manage the size of task sequences, starting in this release Configuration Manager restricts the following actions for a task sequence that's greater than 2 MB in size:<!-- there are three items that talk about TS size, combine into a single blurb. -->
 
@@ -129,7 +129,7 @@ To further help manage the size of task sequences, starting in this release Conf
 
 <!--7645732-->
 
-This release continues to iterate on changes in technical preview [version 2004](../../technical-preview-2004.md#bkmk_osdmi) and [version 2007](../../technical-preview-2007.md#bkmk_tspol) to help you manage the size of task sequences. When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.
+This release continues to iterate on changes in technical preview version 2004 and version 2007 to help you manage the size of task sequences. When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.
 
 ### Analyze SetupDiag errors for feature updates
 
@@ -137,7 +137,7 @@ This release continues to iterate on changes in technical preview [version 2004]
 
 With the release of Windows 10, version 2004, the [SetupDiag](/windows/deployment/upgrade/setupdiag) diagnostic tool is included with Windows Setup. If there's an issue with the upgrade, SetupDiag automatically runs to determine the cause of the failure.
 
-Configuration Manager now gathers and summarizes SetupDiag results from feature update deployments with [Windows 10 servicing](../../../../../osd/deploy-use/manage-windows-as-a-service.md).
+Configuration Manager now gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
 
 The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console now includes a tile for **Collection Errors**:
 
@@ -185,7 +185,7 @@ The Configuration Manager console now has a new wizard for sending feedback. The
 
 <!--6488450-->
 
-Configuration Manager technical preview branch version 2001.2 included a [new status message](../../technical-preview-2001-2.md#bkmk_sendsmile), which has details about feedback sent from the site. To help you more easily find those status messages, this release includes a query, **Feedback sent to Microsoft**.
+Configuration Manager technical preview branch version 2001.2 included a new status message, which has details about feedback sent from the site. To help you more easily find those status messages, this release includes a query, **Feedback sent to Microsoft**.
 
 ## Configuration Manager console
 
@@ -242,7 +242,7 @@ The content library cleanup tool in delete mode could remove orphaned files from
 
 ### Enable user proxy for software update scans
 <!--8379199-->
-Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../../../clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403).
+Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new software updates client setting is available to allow these connections. For more information, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403).
 
 ### Notifications for devices no longer receiving updates
 <!--7520646-->
@@ -291,7 +291,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2010 release notes](/powershell/sccm/2010-release-notes).
 
-For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2010).
+For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md).
 
 <!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4578830).
