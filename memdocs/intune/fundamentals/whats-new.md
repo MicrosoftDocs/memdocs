@@ -210,7 +210,7 @@ We’ve added a third state of configuration for settings in the *Windows Securi
 For example, where a setting previously offered **Not configured** and **Yes**, if supported by the platform, you now have the additional option of **No**.
 
 #### Updated version of the Edge security baseline<!-- 8230830  WNReady   -->
-We’ve added a new [security baseline for Edge](../protect/security-baseline-settings-edge.md&pivots=edge-sept-2020) to Intune: September 2020 (Edge version 85 and later).  
+We’ve added a new [security baseline for Edge](../protect/security-baseline-settings-edge.md) to Intune: September 2020 (Edge version 85 and later).  
  
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
  
