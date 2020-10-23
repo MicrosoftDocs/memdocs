@@ -109,7 +109,7 @@ Applies to:
 #### New lockout password settings on macOS devices<!-- 7780272   -->
 New settings are available when you create a macOS password profile (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device restrictions** for profile > **Password**):
 
-- **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, from 2-11. Set this value to a higher number. Setting this value to `2` or '3' isn't recommended, as mistakes are common.
+- **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, is from 2-11. Set this value to a higher number. Setting this value to `2` or '3' isn't recommended, as mistakes are common.
 
   Applies to all enrollment types.
 
@@ -171,7 +171,7 @@ For more information on security tasks, see [Use Intune to remediate vulnerabili
 #### Endpoint security Firewall policies for tenant attached devices <!--  7323417   -->
 As a public preview, you can deploy endpoint security [policy for Firewalls](../protect/endpoint-security-firewall-policy.md) to devices you manage with Configuration Manager. This scenario requires you to configure a tenant attach between a supported version of Configuration Manager and your Intune subscription. 
 
-Firewall policy for tenant attached devices is supported for devices tht run *Windows 10 and later*, and requires your environment to run *Configuration Manager current branch 2006* with the in-console hotfix *KB4578605*.
+Firewall policy for tenant attached devices is supported for devices that run *Windows 10 and later*, and requires your environment to run *Configuration Manager current branch 2006* with the in-console hotfix *KB4578605*.
 
 For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
 
@@ -181,7 +181,7 @@ In **Device control** profiles, which are part of endpoint security [Attack surf
 - Allow hardware device installation by device identifiers 
 - Block hardware device installation by device identifiers 
 - Allow hardware device installation by setup class 
-- Block hardware device installation by setup classes 
+- Block hardware device installation by setup class 
 - Allow hardware device installation by device instance identifiers 
 - Block hardware device installation by device instance identifiers 
  
