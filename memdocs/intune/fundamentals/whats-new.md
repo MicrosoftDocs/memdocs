@@ -174,7 +174,7 @@ As a public preview, you can deploy endpoint security [policy for Firewalls](../
 
 Firewall policy for tenant attached devices is supported for devices tht run *Windows 10 and later*, and requires your environment to run *Configuration Manager current branch 2006* with the in-console hotfix *KB4578605*.
 
-For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
+For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
 
 #### Expanded settings to manage hardware device installation through block and allow lists<!-- 7339038  WNReady    -->
 In **Device control** profiles, which are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md), we’ve revised and [expanded our settings for managing hardware device installation](../protect/endpoint-security-asr-profile-settings.md#device-control). You’ll now find settings to define *block* lists and separate *allow* lists using *device IDs*, *setup classes*, and *instance identifiers*.  The following six settings are now available:
@@ -231,7 +231,7 @@ Both the **Antivirus agent status report** and the **Detected malware report** h
 #### Updated Help and Support for Microsoft Endpoint Manager  <!-- 7328994 WNReady -->
 The Help and Support experience uses machine learning to display solutions, diagnostics, and insights that will help you resolve your issues. We've updated the help and support page in Microsoft Endpoint Manager admin center with a new, easier to navigate, consistent UX experience. The new UX has now been rolled out in all blades in the console and will help us get you more relevant help. 
 
-You'll now find an [updated and consolidated support experience](../../get-support.md) for the following cloud-based offerings from within the admin center:
+You'll now find an [updated and consolidated support experience](../fundamentals/get-support.md) for the following cloud-based offerings from within the admin center:
 
 - **Intune**
 - **Configuration Manager**
