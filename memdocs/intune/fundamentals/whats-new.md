@@ -228,7 +228,15 @@ The **Feature update failures** operational report provides failure details for 
 #### Updates to Antivirus reports<!-- 8456632 wnready -->
 Both the **Antivirus agent status report** and the **Detected malware report** have been updated. These reports now show data visualizations and provide additional columns of information (**SignatureUpdateOverdue**, **MalwareID**, **displayName**, and **InitialDetectionDateTime**). In addition, remote actions are included in the Antivirus agent status report. For more information, see the [Antivirus agent status report](../fundamentals/reports.md#antivirus-agent-status-report-organizational) and the [Detected malware report](../fundamentals/reports.md#detected-malware-report-organizational).
 
+#### Updated Help and Support for Microsoft Endpoint Manager  <!-- 7328994 WNReady -->
+The Help and Support experience uses machine learning to display solutions, diagnostics, and insights that will help you resolve your issues. We've updated the help and support page in Microsoft Endpoint Manager admin center with a new, easier to navigate, consistent UX experience. The new UX has now been rolled out in all blades in the console and will help us get you more relevant help. 
 
+You'll now find an [updated and consolidated support experience](../../get-support.md) for the following cloud-based offerings from within the admin center:
+
+- **Intune**
+- **Configuration Manager**
+- **Co-management**
+- **Microsoft Managed Desktop**
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
