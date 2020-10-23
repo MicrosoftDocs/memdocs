@@ -141,9 +141,6 @@ Applies to:
 #### Intune support for provisioning Azure Active Directory shared devices<!--6327412 wnready-->
 With Intune, you can now provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode. For more information on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device management
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -200,7 +197,7 @@ Improvements include:
 - Sorting of IP address lists.
 - Option to *select all* addresses when you clear entries from an IP address list.
 
-#### Use Microsoft Defender for Endpoint in compliance policies for iOS<-- 7895451 WNReady -->
+#### Use Microsoft Defender for Endpoint in compliance policies for iOS<!-- 7895451 WNReady -->
 As a public preview, you can now use Intune device compliance policy to [onboard iOS devices to Microsoft Defender for Endpoint](../protect/advanced-threat-protection-configure.md#onboard-devices) (formerly named Microsoft Defender for Advanced Threat Protection).
  
 After you onboard your enrolled iOS/iPadOS devices, your compliance polices for iOS can use the *threat level* signals from Microsoft Defender. These are the same signals that you can use for Android and Windows 10 devices.
@@ -237,10 +234,6 @@ You'll now find an [updated and consolidated support experience](../fundamentals
 - **Configuration Manager**
 - **Co-management**
 - **Microsoft Managed Desktop**
-
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Role-based access control
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
