@@ -109,7 +109,7 @@ Applies to:
 #### New lockout password settings on macOS devices<!-- 7780272   -->
 New settings are available when you create a macOS password profile (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device restrictions** for profile > **Password**):
 
-- **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, is from 2-11. Set this value to a higher number. Setting this value to `2` or '3' isn't recommended, as mistakes are common.
+- **Maximum allowed sign-in attempts**: The maximum number of times users can try to consecutively sign in before the device locks them out, is from 2-11. Set this value to a higher number. Setting this value to 2 or 3 isn't recommended, as mistakes are common.
 
   Applies to all enrollment types.
 
@@ -207,7 +207,7 @@ After you onboard your enrolled iOS/iPadOS devices, your compliance polices for 
 The Defender for iOS app should move from public preview to generally availability by the end of the year.
 
 ####  Security Experience profiles for Endpoint Security Antivirus policy now have tri-state options<!-- 8082161   -->
-We’ve added a third state of configuration for settings in the *Windows Security experience* profile for Endpoint security Antivirus policies.  This update applies to the [Windows Security experience](../protect/ antivirus-security-experience-windows-settings.md) for Windows 10 and later).  
+We’ve added a third state of configuration for settings in the *Windows Security experience* profile for Endpoint security Antivirus policies.  This update applies to the [Windows Security experience](../protect/antivirus-security-experience-windows-settings.md) for Windows 10 and later).  
  
 For example, where a setting previously offered **Not configured** and **Yes**, if supported by the platform, you now have the additional option of **No**.
 
