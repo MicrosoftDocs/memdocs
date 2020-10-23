@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -90,6 +90,8 @@ Review the following steps before you install an update from within the Configur
 ### <a name="bkmk_step1"></a> Step 1: Review the update checklist  
 
 Review the applicable update checklist for actions to take before you start the update:
+
+- [Checklist for installing update 2010](checklist-for-installing-update-2010.md)
 
 - [Checklist for installing update 2006](checklist-for-installing-update-2006.md)
 
@@ -198,7 +200,7 @@ Use the following steps to monitor progress:
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
 >[!NOTE]
-> Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
+> During the **Installation** phase, you can see the state of the **Upgrade ConfigMgr database** task.
 >
 > - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
 >   - The cmupdate.log will log the program name and sessionid from SQL Server that is blocking the database upgrade.
@@ -356,6 +358,8 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 ## <a name="bkmk_after"></a> After a site installs an update  
 
 After the site updates, review the post-update checklist for the applicable version:  
+
+- [Post-update checklist for version 2010](checklist-for-installing-update-2010.md#post-update-checklist)
 
 - [Post-update checklist for version 2006](checklist-for-installing-update-2006.md#post-update-checklist)
 
