@@ -39,7 +39,7 @@ The Configuration Manager client automatically determines whether it's on the in
 To verify that clients have the policy specifying the CMG, open a Windows PowerShell command prompt as an administrator on the client computer, and run the following command:
 
 ```powershell
-Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}
 ```
 
 This command displays any internet-based management points the client knows about. While the CMG isn't technically an internet-based management point, clients view it as one.

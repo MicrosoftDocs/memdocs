@@ -71,9 +71,9 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 ## Supported volume
 
 - Maximum enrollment profiles per token: 1,000  
-- Maximum Automated Device Enrollment devices per profile: no limit (within maximum number of devices per token)
+- Maximum Automated Device Enrollment devices per profile: within the maximum number of devices per token
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000
-- Maximum Automated Device Enrollment devices per token: The limit on the first sync is 75,000-80,000 devices. Intune will continue to sync with ABM or ASM with every 12 hour check-in to add more devices every time. A manual sync (which can be triggered once every 15 minutes) will also add another device batch over to Intune. Syncs will continue to occur and devices will keep getting synced from ABM/ASM over to Intune in large quantities. 
+- Maximum Automated Device Enrollment devices per token: Intune recommends not exceeding 60,000 devices per token otherwise you might run into sync issues. If you have more than 60,000 devices, split those up into multiple DEP tokens.
 
 ## Get an Apple Automated Device Enrollment token
 
@@ -140,7 +140,7 @@ With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pu
 
 ## Create an Apple enrollment profile
 
-Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There is a limit of 100 enrollment profiles per ADE token.
+Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There is a limit of 1000 enrollment profiles per ADE token.
 
 > [!NOTE]
 > Devices will be blocked if there aren't enough Company Portal licenses for a VPP token, or if the token has expired. Intune will display an alert when a token is about to expire or licenses are running low.

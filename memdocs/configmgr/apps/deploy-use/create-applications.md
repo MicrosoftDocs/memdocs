@@ -704,7 +704,7 @@ Configuration Manager supports the following deployment types for applications:
 | **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
 | **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  
 | **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
-| **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
+| **macOS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
 | **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
 | **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |

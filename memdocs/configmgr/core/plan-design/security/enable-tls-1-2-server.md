@@ -5,9 +5,7 @@ description: Information about how to enable TLS 1.2 for Configuration Manager s
 ms.date: 12/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: 0ce9b428-cb0f-46f3-bf69-c465e6623d6f
 author: mestew
 ms.author: mstewart

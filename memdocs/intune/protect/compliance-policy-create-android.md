@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -194,20 +194,15 @@ The available settings for passwords vary by the version of Android on the devic
   - **None** *(default)* - No password required.
   - **Low** - The password satisfies one of the following conditions:
     - Pattern
-    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
+    - Numeric PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
   - **Medium** - The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
     - Alphabetic, with a minimum length of 4.
     - Alphanumeric, with a minimum length of 4.
   - **High** - The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
-
-  > [!IMPORTANT]
-  > The new **Password complexity** setting remains a work in in progress. In late October 2020, *Password complexity* will take effect on devices.
-  >
-  > If you set *Password complexity* to something other than *None*, you must also set **Require a password to unlock mobile devices** (from the settings for *All Android devices*) to **Require** to ensure that end users who use a password that doesn’t meet your complexity requirements receive a warning to update their password. If you don’t set *Require a password to unlock mobile devices* to *Require*, users with weak passwords won’t receive the warning.
 
 #### Android 9 and earlier or Samsung Knox
 

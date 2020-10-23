@@ -28,7 +28,7 @@ If you use WSUS to keep your antimalware definitions up to date, you can configu
 
 1. To specify the **Products** updated with WSUS, switch to the **Products** tab.
 
-    - For Windows 10 and later: Under Microsoft > Windows, select **Windows Defender**.
+    - For Windows 10 and later: Under Microsoft > Windows, select **Microsoft Defender Antivirus**.
 
     - For Windows 8.1 and earlier: Under Microsoft > Forefront, select **System Center Endpoint Protection**.
 
@@ -42,7 +42,7 @@ Use the following procedure to configure Endpoint Protection updates when your W
 
 1. To specify the **Products** updated with WSUS, switch to the **Products** tab.
 
-    - For Windows 10 and later: Under Microsoft > Windows, select **Windows Defender**.
+    - For Windows 10 and later: Under Microsoft > Windows, select **Microsoft Defender Antivirus**.
 
     - For Windows 8.1 and earlier: Under Microsoft > Forefront, select **System Center Endpoint Protection**.
 

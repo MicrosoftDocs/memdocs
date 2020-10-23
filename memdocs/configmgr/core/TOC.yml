@@ -196,7 +196,7 @@
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: CNG certificates overview
+    - name: CNG v3 certificates overview
       href: plan-design/network/cng-certificates-overview.md
     - name: PKI certificate requirements
       href: plan-design/network/pki-certificate-requirements.md

@@ -1,105 +1,102 @@
 ---
-title: "Create and apply power plans"
-titleSuffix: "Configuration Manager"
-description: "Create and apply power plans in Configuration Manager."
-ms.date: 04/17/2019
+title: Create and apply power plans
+titleSuffix: Configuration Manager
+description: Create and apply power plans in Configuration Manager.
+ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
 ---
+
 # How to create and apply power plans in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Power management in Configuration Manager enables you to apply power plans that are supplied with Configuration Manager to collections of computers in your hierarchy, or to create your own custom power plans. Use the procedure in this topic to apply a built-in or custom power plan to computers.  
+Power management in Configuration Manager enables you to apply power plans to collections of computers in your hierarchy. Configuration Manager defines several power plans, or you can create your own custom power plans.
 
-> [!IMPORTANT]  
->  You can only apply Configuration Manager power plans to device collections.  
+You can only apply Configuration Manager power plans to device collections. If a computer is a member of multiple collections, each with different power plans, then the following actions happen:
 
- If a computer is a member of multiple collections, each applying different power plans, then the following actions will be taken:  
+- Power plan: If policy applies multiple values for power settings on a computer, it uses the least restrictive value.
 
-- Power plan: If multiple values for power settings are applied to a computer, the least restrictive value is used.  
+- Wakeup time: If policy applies multiple wakeup times to a desktop computer, it uses the time closest to midnight.
 
-- Wakeup time: If multiple wakeup times are applied to a desktop computer, the time closest to midnight is used.  
+To display all computers that have multiple power plans applied to them, use the **Computers with Multiple Power Plans** report. This report can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management](monitor-and-plan-for-power-management.md).
 
-  Use the **Computers with Multiple Power Plans** report to display all computers that have multiple power plans applied to them. This can help you discover computers that have power conflicts. For more information about power management reports, see [How to monitor and plan for power management](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+Make sure to review any power settings that you apply from group policy. Power settings configured by using group policy will override settings configured by Configuration Manager power management.
 
-> [!IMPORTANT]  
->  Power settings configured by using Windows Group Policy will override settings configured by Configuration Manager power management.  
+> [!IMPORTANT]
+> Systems that you enable for **Modern Standby** (S0) won't apply Configuration Manager power policies. You'll see a message similar to the following in the PwrProvider.log: `The "Required idleness to sleep" setting (<738eddaa-52e2-467f-b453-821ef2884d47>) is not supported on this operating system. This setting will be ignored.`<!-- SCCMDocs#2177 -->
 
- Use the following procedure to create and apply a Configuration Manager power plan.  
+## Create and apply a power plan
 
-### To create and apply a power plan  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace.
 
-1. In the Configuration Manager console, click **Assets and Compliance**.  
+1. In the **Assets and Compliance** workspace, select the **Device Collections** node.
 
-2. In the **Assets and Compliance** workspace, click **Device Collections**.  
+1. In the **Device Collections** list, choose the collection to which you want to apply power management settings. In the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
 
-3. In the **Device Collections** list, click the collection to which you want to apply power management settings and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
+1. Switch to the **Power Management** tab of the collection, and select **Specify power management settings for this collection**.
 
-4. In the **Power Management** tab of the <em><Collection Name\></em>**Properties** dialog box, select **Specify power management settings for this collection**.  
+    > [!NOTE]
+    > You can also select **Browse**, and copy the power management settings from another collection to this collection.
 
-   > [!NOTE]  
-   >  You can also click **Browse** and then copy the power management settings from a selected collection to the selected collection.  
+1. Specify the **Start** and **End** time for peak (or business) hours.
 
-5. In the **Start** and **End** fields, specify the start and end time for peak (or business) hours.  
+1. To specify a time when a desktop computer wakes from sleep or hibernate, Enable **Wakeup time (desktop computers)**. When the client wakes up, it can install scheduled software updates or other deployments.
 
-6. Enable **Wakeup time (desktop computers)** to specify a time when a desktop computer will wake from sleep or wake from hibernate to install scheduled updates or software installations.  
+    > [!IMPORTANT]
+    > Power management uses the internal Windows wakeup time feature to wake computers from sleep or hibernate. Wakeup time settings aren't applied to portable computers to prevent scenarios in which they might wake when not plugged in. The wake up time is randomized and computers will be woken over a one hour period from the specified wakeup time.
 
-   > [!IMPORTANT]  
-   >  Power management uses the internal Windows wakeup time feature to wake computers from sleep or hibernate. Wakeup time settings are not applied to portable computers to prevent scenarios in which they might wake when not plugged in. The wake up time is randomized and computers will be woken over a one hour period from the specified wakeup time.  
+1. If you want to configure a custom power plan for business hours, select **Customized Peak (ConfigMgr)** from the **Peak plan** list, and then select **Edit**. If you want to configure a power plan for non-business hours, select **Customized Non-Peak (ConfigMgr)** from the **Non-peak plan** list, and then select **Edit**.
 
-7. If you want to configure a custom power plan for peak (or business) hours, select **Customized Peak (ConfigMgr)** from the **Peak plan** drop-down list, and then click **Edit**. If you want to configure a power plan for non-peak (or nonbusiness) hours, select **Customized Non-Peak (ConfigMgr)** from the **Non-peak plan** drop-down list, and then click **Edit**.  
+    > [!NOTE]
+    > You can use the **Computer Activity** report to help you decide the schedules to use for peak and non-peak hours when you apply power plans to collections of computers. For more information, see [How to monitor and plan for power management](monitor-and-plan-for-power-management.md).
 
-   > [!NOTE]  
-   >  You can use the **Computer Activity** report to help you decide the schedules to use for peak and non-peak hours when you apply power plans to collections of computers. For more information, see [How to monitor and plan for power management](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+    You can also select from the built-in power plans: **Balanced (ConfigMgr)**, **High Performance (ConfigMgr)**, and **Power Saver (ConfigMgr)**. Select **View** to display the properties of each power plan.
 
-    You can also select from the built-in power plans, **Balanced (ConfigMgr)**, **High Performance (ConfigMgr)** and **Power Saver (ConfigMgr)**, and then click **View** to display the properties of each power plan.  
+    > [!NOTE]
+    > You can't modify the built-in power plans.
 
-   > [!NOTE]  
-   >  You cannot modify the built-in power plans.  
+1. For the power plan properties, configure the following settings:
 
-8. In the <em><power plan name\></em>**Properties** dialog box, configure the following settings:  
+    - **Name:** Specify a name for this power plan or use the supplied default value.
 
-   -   **Name:** Specify a name for this power plan or use the supplied default value.  
+    - **Description:** Specify an optional description to further describe the plan in the console.
 
-   -   **Description:**  Specify a description for this power plan or use the supplied default value.  
+    - **Specify the properties for this power plan:** Configure the power plan properties. For more information, see [Available power management plan settings](#BKMK_Plans).
 
-   -   **Specify the properties for this power plan:** Configure the power plan properties. To disable a property, clear its check box. For information about the available settings, see [Available power management plan settings](#BKMK_Plans) in this topic.  
+        > [!IMPORTANT]
+        > When the Configuration Manager client applies the power plan to the device, it applies the enabled settings. If you unselect a power setting in the policy, the value on the client computer doesn't change when it applies the power plan. This action also doesn't restore the power setting to its previous value before a power plan was applied.
 
-       > [!IMPORTANT]  
-       >  Enabled settings are applied to computers when the power plan is applied. If you clear a power setting check box, the value on the client computer is not changed when the power plan is applied. Clearing a check box does not restore the power setting to its previous value before a power plan was applied.  
+1. Select **OK** to save and close the power plan properties.
 
-9. Click **OK** to close the <em><power plan name\></em>**Properties** dialog box.  
+1. Select **OK** to save and close the collection properties, and to apply the power plan.
 
-10. Click **OK** to close the <em><Collection Name\></em>**Settings** dialog box and to apply the power plan.  
+## <a name="BKMK_Plans"></a> Available power plan settings
 
-##  <a name="BKMK_Plans"></a> Available power management plan settings  
- The following table lists the power management settings available in Configuration Manager. You can configure separate settings for when the computer is plugged in or running on battery power. Depending on the version of Windows you are using, some settings might not be configurable.  
+The following table lists the power management settings available in Configuration Manager. You can configure separate settings for when the computer is plugged in or running on battery power. Depending on the version of Windows you use, some settings might not be configurable.
 
-> [!NOTE]  
->  Power settings that you do not configure will retain their current value on client computers.  
+> [!NOTE]
+> Power settings that you don't configure keep their current value on client computers.
 
-|Name|Description|  
-|----------|-----------------|  
-|**Turn off display after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before the display is turned off. Specify a value of **0** if you do not want power management to turn off the display.|  
-|**Sleep after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before it enters sleep. Specify a value of **0** if you do not want power management to enter sleep on the computer.|  
-|**Require a password on wakeup**|A **Yes** or **No** value specifies whether a password is required to unlock the computer when it enters wake from sleep.|  
-|**Power button action**|Specifies the action that is taken when the computer's power button is pressed. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Start menu power button**|Specifies the action that occurs when you press the computer's **Start** menu power button. Possible values **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Sleep button action**|Specifies the action that occurs when you press the computer's **Sleep** button. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Lid close action**|Specifies the action that occurs when the user closes the lid of a portable computer. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Turn off hard disk after (minutes)**|Specifies the length of time, in minutes, that the computer's hard disk must be inactive before it is turned off. Specify a value of **0** if you do not want power management to turn off the computer's hard disk.|  
-|**Hibernate after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before it enters hibernate. Specify a value of **0** if you do not want power management to enter hibernate on the computer.|  
-|**Low battery action**|Specifies the action that occurs when the computer's battery reaches the specified low battery notification level. Possible values **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Critical battery action**|Specifies the action that is taken when the computer's battery reaches the specified critical battery notification level. When **On battery** possible values **Sleep**, **Hibernate**, and **Shut down**. When **Plugged in** possible values  **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|  
-|**Allow hybrid sleep**|Selecting the **On** or **Off** value specifies whether Windows saves a hibernation file when entering sleep, which can be used to restore the computer's state in the event of power loss while it has entered sleep.<br /><br /> Hybrid sleep is designed for desktop computers and, by default, is not enabled on portable computers. On computers that are running Windows 7, enabling hybrid sleep disables the hibernate functionality.|  
-|**Allow standby state when sleeping action**|Selecting the **On** or **Off** value enables the computer to be on standby, which still consumes some power, but enables the computer to wake faster. If this setting is set to **Off**, the computer can only hibernate or turn off.|  
-|**Required idleness to sleep (%)**|Specifies the percentage of idle time on the computer processor time required for the computer to enter sleep. For computers running Windows 7, this value is always set to **0**.|  
-|**Enable Windows wake up timer for desktop computers**|Selecting the **Enable** or **Disable** value can enable the built-in Windows timer to be used by power management to wake a desktop computer. When a desktop computer is woken by using the Windows wake up timer, it will remain awake for 10 minutes by default to allow time for the computer to install any updates or to receive policy.<br /><br /> Wakeup timers are not supported on portable computers to prevent scenarios in which they might wake when they are not plugged in.|  
+|Name|Description|
+|----------|-----------------|
+|**Turn off display after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before the display is turned off. If you don't want power management to turn off the display, specify a value of `0`.|
+|**Sleep after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before it enters sleep. If you don't want the device to sleep, specify a value of `0`.|
+|**Require a password on wakeup**|`Yes` specifies that a user has to unlock the computer when it wakes up.|
+|**Power button action**|Specifies the action when you press the computer's power button: **Do nothing**, **Sleep**, **Hibernate**, or **Shut down**.|
+|**Start menu power button**|Specifies the action when you press the computer's **Start** menu power button: **Sleep**, **Hibernate**, or **Shut down**.|
+|**Sleep button action**|Specifies the action when you press the computer's **Sleep** button: **Do nothing**, **Sleep**, **Hibernate**, or **Shut down**.|
+|**Lid close action**|Specifies the action when the user closes the lid of a portable computer: **Do nothing**, **Sleep**, **Hibernate**, and **Shut down**.|
+|**Turn off hard disk after (minutes)**|Specifies the length of time, in minutes, that the computer's hard disk must be inactive before it's turned off. If you don't want power management to turn off the computer's hard disk, specify a value of `0`.|
+|**Hibernate after (minutes)**|Specifies the length of time, in minutes, that the computer must be inactive before it hibernates. If you don't want the device to hibernate, specify a value of `0`.|
+|**Low battery action**|Specifies the action when the computer's battery reaches the specified low battery notification level: **Do nothing**, **Sleep**, **Hibernate**, or **Shut down**.|
+|**Critical battery action**|Specifies the action when the computer's battery reaches the specified critical battery notification level. When it's *on battery*: **Sleep**, **Hibernate**, or **Shut down**. When it's *plugged in*: **Do nothing**, **Sleep**, **Hibernate**, or **Shut down**.|
+|**Allow hybrid sleep**|`On` specifies that Windows saves a hibernation file when it enters sleep. If there's a power loss while it's asleep, Windows uses this file to restore the computer's state.<br /><br /> Hybrid sleep is designed for desktop computers. By default, it's not enabled on portable computers. Enabling hybrid sleep disables the hibernate functionality.|
+|**Allow standby state when sleeping action**|`On` enables the computer to be on standby. This state still consumes some power, but enables the computer to wake faster. If this setting is `Off`, the computer can only hibernate or turn off.|
+|**Required idleness to sleep (%)**|Specifies the percentage of idle time on the computer processor time required for the computer to enter sleep. For computers running Windows 7 and alter, this value is always `0`.|
+|**Enable Windows wake up timer for desktop computers**|Set `Enable` to enable the built-in Windows timer to wake a desktop computer. When this timer wakes a desktop computer, it stays awake for 10 minutes by default. This time period allows the client to install any updates or to receive policy.<br /><br />Wakeup timers aren't supported on portable computers. This behavior prevents scenarios where they might wake when they're on limited battery power.|

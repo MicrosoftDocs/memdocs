@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 10/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,9 +59,9 @@ Antivirus policies include the same settings as *endpoint protection* or *device
 
 ### Prerequisites for tamper protection
 
-You can use Intune policy to manage tamper protection on Windows devices. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
+You can use Intune to manage tamper protection on Windows devices as part of Antivirus policy. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
 
-### Intune managed devices
+#### Intune managed devices
 
 Prerequisites to support tamper protection for devices managed by Intune:
 
@@ -74,7 +74,7 @@ Profiles for *Antivirus* policy that support tamper protection for [devices mana
 
 You can also use the [Endpoint protection](../protect/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
 
-### Configuration Manager clients managed through the tenant attach scenario 
+#### Configuration Manager clients managed through the tenant attach scenario
 
 Prerequisites to support managing tamper protection with these profiles:
 
@@ -86,8 +86,6 @@ Prerequisites to support managing tamper protection with these profiles:
 
 - Platform: **Windows 10 and Windows Server (ConfigMgr)**
   - Profile: **Windows Security experience (preview)**
-
- 
 
 ## Antivirus profiles
 
@@ -133,7 +131,19 @@ The following profiles are supported for devices you manage with Intune:
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
+The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
+
+- Platform: **Windows 10 and Windows Server (ConfigMgr)**
+  - Profile: **Microsoft Defender Antivirus Policy (preview)** - Manage [Antivirus policy settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+
+    This profile is supported with devices that are tenant attached and run the following platforms:
+    - Windows 10 and later (x86, x64, ARM64)
+    - Windows Server 2019 and later (x64)
+    - Windows server 2016 (x64)
+
+<!-- 
 [!INCLUDE [Profiles for Configuration Manager tenant attached devices](includes/configmgr-antivirus-profiles.md)]
+-->
 
 ## Policy merge for settings
 

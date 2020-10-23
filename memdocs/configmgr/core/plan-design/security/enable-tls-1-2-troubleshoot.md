@@ -5,7 +5,7 @@ description: Describes common issues when enabling Transport Layer Security (TLS
 ms.date: 12/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart

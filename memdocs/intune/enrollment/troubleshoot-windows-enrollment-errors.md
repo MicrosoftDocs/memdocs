@@ -159,7 +159,7 @@ Error 80180026: "Something went wrong. Confirm you are using the correct sign-in
 
 **Cause:** This error can occur when you try to join a Windows 10 computer to Azure AD and both of the following conditions are true: 
 - MDM automatic enrollment is enabled in Azure.    
-- The Intune PC client (Intune PC agent) is installed on the Windows 10 computer.
+- The Intune PC software client (Intune PC agent) is installed on the Windows 10 computer.
 
 #### Resolution
 Use one of the following methods to address this issue:
@@ -170,7 +170,7 @@ Use one of the following methods to address this issue:
 3. Set **MDM User scope** to **None**, and then click **Save**.    
      
 ##### Uninstall
-Uninstall the Intune PC client agent from the computer.    
+Uninstall the Intune PC software client agent from the computer.    
 
 ### The software cannot be installed.
 

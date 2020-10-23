@@ -12,10 +12,10 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.topic: article
+ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
-- M365initiative-coredeploy
+- m365initiative-coredeploy
 ---
 
 

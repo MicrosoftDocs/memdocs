@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -126,7 +126,9 @@ A device must meet the following conditions to be eligible for silently enabling
 
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
 - If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
-- The device must be Azure AD Joined  
+- The device must be Azure AD Joined
+- Device must contain TPM (Trusted Platform Module) 2.0
+- The BIOS mode must be set to Native UEFI only. 
 
 **BitLocker policy configuration**:
 

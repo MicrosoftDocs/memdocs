@@ -151,7 +151,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
 
 > [!NOTE]
-> The OEMConfig standard doesn't currently include status reporting. So, by default, profiles show a **Pending** status.
+> Intune currently shows the status of an OEMConfig policy based on OEMConfig app install status. For example, a **Success** status on an OEMConfig profile means that the corresponding OEMConfig app for that profile was successfully installed on the device.
 
 ## Supported OEMConfig apps
 

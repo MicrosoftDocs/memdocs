@@ -1,7 +1,7 @@
 ---
-title: "Create Endpoint Protection point site system role"
-titleSuffix: "Configuration Manager"
-description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
+title: Create Endpoint Protection point site system role
+titleSuffix: Configuration Manager
+description: Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,9 +10,8 @@ ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Create an Endpoint Protection point site system role
 
 *Applies to: Configuration Manager (current branch)*
@@ -25,6 +24,16 @@ Use one of the following procedures depending on whether you want to install a n
 
 > [!IMPORTANT]
 >  When you install an Endpoint Protection point, an Endpoint Protection client is installed on the server hosting the Endpoint Protection point. Services and scans are disabled on this client to enable it to co-exist with any existing antimalware solution that is installed on the server. If you later enable this server for management by Endpoint Protection and select the option to remove any third-party antimalware solution, the third-party product will not be removed. You must uninstall this product manually.
+
+## Prerequisites
+
+The endpoint protection point requires the following Windows Server features:
+
+- .NET Framework 3.5
+
+- Windows Defender features (Windows Server 2016 or later)<!-- SCCMDocs#2120 -->
+
+For more information, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).
 
 ## New site system server
 
