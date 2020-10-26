@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -46,17 +46,20 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 ## Currently don't use anything
 
-If you currently don't use any MDM or MAM provider, then you will likely want to go straight to Intune. Next, [deploy Intune](#deploy-intune) (in this article). 
+If you currently don't use any MDM or MAM provider, then you have some options:
 
-> [!NOTE]
-> You might want to consider Microsoft Endpoint Configuration Manager, likely with [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management), if you require one or more of the following:
->
-> - Management of on-premises devices (for example, Windows Server 2016 or Windows 8.1 devices)
-> - Robust software updates management
-> - Custom task sequences for operating system deployment
-> - Comprehensive app management
->
-> To help you decide, see [Choose a device management solution](https://docs.microsoft.com/mem/configmgr/core/plan-design/choose-a-device-management-solution).
+- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, and app features in Intune, and the benefits of the Endpoint Manager admin center.
+
+  Next, [deploy Intune](#deploy-intune) (in this article).
+  
+- **Configuration Manager + Endpoint Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
+
+  - [Manage on-premises devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md), including Windows Server or Windows 8.1 devices.
+  - [Manage software updates](../../configmgr/sum/understand/software-updates-introduction.md).
+  - [Create custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying operating systems.
+  - [Deploy and manage many app](../../configmgr/apps/understand/introduction-to-application-management.md) types. 
+
+To help you decide, see [choose a device management solution](../../configmgr/core/plan-design/choose-a-device-management-solution.md).
 
 ## Currently use a third party MDM provider
 
