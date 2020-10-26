@@ -61,6 +61,13 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ## Week of October 26, 2020 (2010 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### New and updated planning, setup, and enrollment deployment guides
+
+The existing planning and migration guides are rewritten, and updated with new guidance. There's also some new deployment guides that focus on Intune setup, and enrollment for Android, iOS/iPadOS, macOS, and Windows devices.
+
+For more information, go to [Overview](migration-guide.md).
+
 ### App management
 
 #### Apps that require enrollment are hidden when enrollment is set to unavailable<!-- 6305901  -->
