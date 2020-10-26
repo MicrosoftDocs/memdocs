@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -48,6 +48,9 @@ You can enroll devices on the following platforms. For the specific versions, se
 - Windows
 
 This article lists the enrollment prerequisites, has information on using other MDM providers, and includes links to platform-specific enrollment guidance.
+
+> [!TIP]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Prerequisites
 

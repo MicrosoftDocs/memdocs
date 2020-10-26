@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer:
+ms.reviewer: mawierci, heenamac
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,6 +40,9 @@ You have the following options when enrolling Windows devices:
 
 This article provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Windows devices](../enrollment/windows-enrollment-methods.md).
 
+> [!TIP]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+
 ## Before you begin
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
@@ -58,7 +61,7 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You have Azure AD Premium | ✔️ If personal or organization owned devices will be fully managed by Intune (joined to Azure AD), then Azure AD Premium is required. <br/><br/> ❌ If you don't have Azure AD Premium, or aren't planning to get it, then devices can be registered in Azure AD. Registering devices, instead of joining devices, is common with BYOD or personal devices. |
+| You have Azure AD Premium | ✔️ |
 | You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md). | ✔️ On Windows 10 1803 and newer, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
 | Devices are personal or BYOD. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ |
@@ -66,8 +69,8 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is available for organization-owned devices, not personal/BYOD.|
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated. or shared device. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| You use the optional device enrollment manager (DEM) account. | ✔️ |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
-| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Automatic Enrollment. |
 
 ---
 
@@ -95,7 +98,11 @@ You can also use this enrollment method to automatically bulk enroll devices wit
     - If you want to only manage the device, then choose **None**, and configure the **MDM user scope**.
     - If you want to manage the device *and* manage the organization account on the device, then choose **Some** or **All**, and configure the **MDM user scope**.
 
-  For more information on joined devices vs. registered devices, see [Azure AD device identity](/azure/active-directory/devices/overview).
+  For more information on joined devices vs. registered devices, see:
+
+  - [Azure AD device identity](/azure/active-directory/devices/overview)
+  - [Azure AD registered devices](/azure/active-directory/devices/concept-azure-ad-register)
+  - [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join)
 
 - For bulk enrollment, go to the Microsoft Store, and download the Windows Configuration Designer (WCD) app. Configure the Windows Configuration Designer app, and choose to enroll devices in Azure AD. A package file is created. Put the package file on a USB drive, or on a network share.
 

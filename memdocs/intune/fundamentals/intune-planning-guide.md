@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,10 +32,10 @@ ms.collection: M365-identity-device-management
 
 A successful Microsoft Intune deployment or migration starts with planning. This guide steps you through common mobile device management (MDM) and mobile application management (MAM) goals. It also provides guidance on inventorying your devices, licensing, reviewing current policies and infrastructure, creating a rollout plan, and more.
 
-This planning guide is a living thing. So, be sure to add tips and guidance you've found helpful.
-
 > [!TIP]
 > The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, and more good information.
+>
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Task 1: Determine your objectives
 
