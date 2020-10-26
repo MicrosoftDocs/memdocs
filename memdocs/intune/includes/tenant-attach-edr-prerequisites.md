@@ -13,7 +13,7 @@ ms.custom: include file
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
-Manage [Endpoint detection and response policy settings for Configuration Manager devices](../protect/endpoint-security-edr-profile-settings.md#endpoint-detection-and-response-configmgr), when you use [tenant attach](../protect/tenant-attach-intune.md).
+Manage [Endpoint detection and response policy settings for Configuration Manager devices](../protect/endpoint-security-edr-profile-settings.md#endpoint-detection-and-response-configmgr), when you use tenant attach.
 
 **Policy path**:
 

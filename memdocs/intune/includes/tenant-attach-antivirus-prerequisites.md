@@ -13,7 +13,7 @@ ms.custom: include file
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
-Manage [Antivirus settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use [tenant attach](../protect/tenant-attach-intune.md).
+Manage [Antivirus settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
 
 **Policy path**:
 

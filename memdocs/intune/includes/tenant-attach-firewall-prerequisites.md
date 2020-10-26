@@ -13,7 +13,7 @@ ms.custom: include file
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
-Manage [Firewall policy settings for Configuration Manager devices](../protect/endpoint-security-firewall-profile-settings-tenant-attach.md), when you use [tenant attach](../protect/tenant-attach-intune.md).
+Manage [Firewall policy settings for Configuration Manager devices](../protect/endpoint-security-firewall-profile-settings-tenant-attach.md), when you use tenant attach.
 
 **Policy path**:
 
