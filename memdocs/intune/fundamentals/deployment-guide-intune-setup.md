@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,6 +33,9 @@ ms.collection: M365-identity-device-management
 This deployment guide includes information when moving to Intune, or adopting Intune as your MDM and MAM solution.
 
 In this guide, you sign up for Intune, add your domain name, configure Intune as the MDM authority, and more. Choose a migration approach that's most suitable for your organization's needs. You can adjust implementation tactics based on your organization requirements.
+
+> [!TIP]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Prerequisites
 

@@ -8,7 +8,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/15/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,7 +35,10 @@ ms.collection: M365-identity-device-management
 
 A successful adoption or migration to Microsoft Intune starts with a plan. This plan depends on your current mobile device management (MDM) environment, business goals, and technical requirements. Additionally, you need to include the key stakeholders who will support and collaborate with your plan.
 
-We created some planning and deployment guides to help plan your adoption or move to Intune. These guides are living things. So, be sure to add tips and guidance you've found helpful.
+We created some planning and deployment guides to help plan your adoption or move to Intune. 
+
+> [!TIP]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 

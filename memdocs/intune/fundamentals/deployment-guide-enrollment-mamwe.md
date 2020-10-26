@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,6 +40,9 @@ MAM-WE is available on the following platforms:
 - Windows
 
 This article provides recommendations on when to use MAM-WE. It also includes an overview of the administrator and user tasks. For more specific information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
+
+> [!TIP]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 

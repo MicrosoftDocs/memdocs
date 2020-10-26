@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer:
+ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,21 +31,24 @@ ms.collection: M365-identity-device-management
 
 Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
-- [Android Enterprise personally-owned work profile](#android-enterprise-personally-owned-work-profile)
-- [Android Enterprise corporate-owned dedicated devices](#android-enterprise-dedicated-devices)
-- [Android Enterprise corporate-owned fully managed](#android-enterprise-fully-managed)
-- [Android Enterprise corporate-owned with personal profile](#android-enterprise-corporate-with-personal-profile)
+- [Android Enterprise personally owned work profile](#android-enterprise-personally-owned-work-profile)
+- [Android Enterprise corporate owned dedicated devices](#android-enterprise-dedicated-devices)
+- [Android Enterprise corporate owned fully managed](#android-enterprise-fully-managed)
+- [Android Enterprise corporate owned with personal profile](#android-enterprise-corporate-with-personal-profile)
 - [Android device administrator](#android-device-administrator)
 
 This article provides recommendations on the Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type.
 
 For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
 
+> [!TIP]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+
 ## Before you begin
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-## Android Enterprise personally-owned work profile
+## Android Enterprise personally owned work profile
 
 These devices are personal or BYOD (bring your own device) Android devices that access organization email, apps, and other data.
 
@@ -63,14 +66,14 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 
 ---
 
-### Android Enterprise personally-owned work profile administrator tasks
+### Android Enterprise personally owned work profile administrator tasks
 
 This task list provides an overview. For more specific information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
-### Android Enterprise personally-owned work profile end user tasks
+### Android Enterprise personally owned work profile end user tasks
 
 Your users must do the following steps. For the specific user experience, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
 
@@ -88,7 +91,7 @@ Your users must do the following steps. For the specific user experience, see [e
 
 ## Android Enterprise dedicated devices
 
-These devices are organization-owned, and supported by Google’s Zero Touch. The only purpose is to be a kiosk-style device. They're aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
+These devices are organization-owned, and supported by Google’s Zero Touch. The only purpose is to be a kiosk-style device. They aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
 
 ---
 | Feature | Use this enrollment option when |
@@ -97,7 +100,7 @@ These devices are organization-owned, and supported by Google’s Zero Touch. Th
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ |
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally-owned work profile.|
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally owned work profile.|
 | Devices are associated with a single user. | ❌ <br/><br/> Not recommended. These devices should be enrolled using Android Enterprise fully managed. |
 | You use the optional device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
@@ -132,7 +135,7 @@ These devices are organization-owned, and have one user. They're used exclusivel
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> User-less devices should be enrolled using Android Enterprise dedicated devices.|
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally-owned work profile.|
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally owned work profile.|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the optional device enrollment manager (DEM) account | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -175,7 +178,7 @@ These devices are organization-owned, and have one user. They're used for organi
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../configuration/device-restrictions-android-for-work.md#device-experience) profile, and assign this profile to this device. |
-| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally-owned work profile.|
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise personally owned work profile.|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the optional device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
