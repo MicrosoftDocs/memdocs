@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 10/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -133,6 +133,17 @@ Group Policy analytics can parse the following CSPs:
     
     > [!NOTE]
     > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
+
+
+## Send product feedback
+
+You can provide feedback on Group Policy Analytics when you select **Got feedback**. Examples of feedback areas:
+
+* You received errors during GPO omport or analytics that you need more information.
+* How easy is it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
+* Will this tool help you move some workloads to Endpoint Manager? If yes, what workloads are you considering?
+
+To get information on the customer experience, the feedback is aggregated, and sent to Microsoft. Entering an email is optional, and may be used to get more information.
 
 ## Privacy and security
 
