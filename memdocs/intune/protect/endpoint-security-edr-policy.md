@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/07/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,6 +57,8 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 ## EDR profiles
 
+### Devices managed by Intune
+
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
 
 **Intune** – The following are supported for devices you manage with Intune:
@@ -64,10 +66,9 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 - Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
 - Profile: **Endpoint detection and response (MDM)**
 
-**Configuration Manager** - The following are supported for devices you manage with Configuration Manager:
+### Devices managed by Configuration Manager
 
-- Platform: **Windows 10 and Windows Server (ConfigMgr)** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
-- Profile: **Endpoint detection and response (ConfigMgr)**
+[!INCLUDE [EDR policy prerequisites](../includes/tenant-attach-edr-prerequisites.md)]
 
 ## Set up Configuration Manager to support EDR policy
 
@@ -122,22 +123,6 @@ The following are supported for devices you manage with Intune:
 
 - Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
   - Profile: **Endpoint detection and response (MDM)**
-
-### Devices managed by Configuration Manager *(In preview)*
-
-The following are supported for devices you manage with Configuration Manager through the *tenant attach* scenario:
-
-- Platform: **Windows 10 and Windows Server (ConfigMgr)** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
-  - Profile: **Endpoint detection and response (ConfigMgr) (Preview)** - Manage [Endpoint detection and response policy settings for Configuration Manager devices](../protect/endpoint-security-edr-profile-settings.md#endpoint-detection-and-response-configmgr), when you use tenant attach.
-
-    This profile is supported with devices that are tenant attached and run the following platforms:
-    - Windows 10 and later (x86, x64, ARM64).
-    - Windows 8.1 (x84, x64)
-    - Windows 7 SP1 (x84, x64)
-    - Windows Server 2019 and later (x64)
-    - Windows Server 2012 R2 (x64)
-    - Windows Server 2008 R2 SP1 (x64)
-
 
 ## Create and deploy EDR policies
 
