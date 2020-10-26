@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 10/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,16 +59,7 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 ### Devices managed by Configuration Manager
 
-*Support for devices managed by Configuration Manager is in Preview*.
-
-- Platform: **Windows 10 and Windows Server (ConfigMgr)**
-  - Profile: **Microsoft Defender Firewall (preview)** - Manage [Windows Defender Firewall settings for Configuration Manager devices](../protect/endpoint-security-Firewall-profile-settings.md), when you use tenant attach.
-
-    This profile is supported with devices that are tenant attached and run the following platforms:
-
-    - Windows 10 and later (x86, x64, ARM64)
-
-For more information about support for Configuration Manager devices, see [Tenant attach](../protect/tenant-attach-intune.md).
+[!INCLUDE [Firewall policy prerequisites](../includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Firewall rule mergers and policy conflicts
 
