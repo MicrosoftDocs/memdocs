@@ -65,7 +65,7 @@ Before you deploy Intune policies to Configuration Manager devices, complete the
 
 The following tasks are completed in the Configuration Manager console. If you’re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
-1. [Confirm your Configuration Manage environment](#task-1-install-the-update-for-configuration-manager)
+1. [Confirm your Configuration Manage environment](#task-1-confirm-your-configuration-manage-environment)
 2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
 3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
 4. [Enable collections to support Intune policies](#task-4-enable-collections-for-endpoint-security-policies)
