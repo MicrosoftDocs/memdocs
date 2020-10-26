@@ -58,7 +58,7 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 | User   Enrollment | Not supported. | Supported using Managed Apple IDs. |
 | Books | Not supported. | Supported. |
 | Licenses   used | 1 license per device. The license is associated with the   device. | 1 license for up to 5 devices using the same personal   Apple ID. The license is associated with the user.<p>An end user   associated with a personal Apple ID and a Managed Apple ID in Intune consumes   2 app licenses. |
-| License   migration | Apps can migrate silently from user to device licenses. | Apps cannot migrate from device to user licenses. |
+| License   migration | Apps can migrate silently from user to device licenses only when using **Required** assignment type. | Apps cannot migrate from device to user licenses for any assignment type. |
 
 > [!NOTE]  
 > Company Portal does not show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
