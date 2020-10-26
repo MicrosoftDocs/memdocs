@@ -1,6 +1,92 @@
 {
     "redirections": [
+
         {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-communication-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-campaign.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-considerations.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados",
+            "redirect_document_id": true
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-cycle.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": true
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-setup.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": true
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-prepare.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-resources.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-test-validation.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-onboarding.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-design.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-support-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-communication-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-rollout-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-requirements.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-scenarios.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-deployment-goals.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {      
             "source_path": "memdocs/intune/user-help/about-cp-app-for-windows-10.md",
             "redirect_url": "/mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows",
             "redirect_document_id": false

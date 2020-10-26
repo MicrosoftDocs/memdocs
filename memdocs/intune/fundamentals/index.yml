@@ -53,12 +53,12 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Plan communications
-        url: migration-guide-communication-plan.md
-      - text: Planning guide
-        url: planning-guide.md
-      - text: Migration guide
+      - text: Deploy or move to Intune
         url: migration-guide.md
+      - text: Planning guide
+        url: intune-planning-guide.md
+      - text: Enrollment deployment guide
+        url: deployment-guide-enrollment.md
       - text: Intune Adoption Kit
         url: https://www.microsoft.com/download/details.aspx?id=58348
 
