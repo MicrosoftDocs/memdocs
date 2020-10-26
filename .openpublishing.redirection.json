@@ -346,8 +346,6 @@
             "redirect_url": "/mem/autopilot/pre-provision",
             "redirect_document_id": true
         },
-
-
         {
             "source_path": "memdocs/intune/fundamentals/manage-windows-pcs-with-microsoft-intune.md",
             "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
@@ -427,6 +425,11 @@
             "source_path": "memdocs/intune/fundamentals/resolve-gpo-and-microsoft-intune-policy-conflicts.md",
             "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
             "redirect_document_id": false
-        }                     
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/get-support.md",
+            "redirect_url": "/mem/get-support",
+            "redirect_document_id": false
+        }                   
     ]
 }
