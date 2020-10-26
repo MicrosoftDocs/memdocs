@@ -49,7 +49,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 If you currently don't use any MDM or MAM provider, then you will likely want to go straight to Intune. Next, [deploy Intune](#deploy-intune) (in this article). 
 
 > [!NOTE]
-> You might want to consider Microsoft Endpoint Configuration Manager, likely with [tenant attach](#Option-1:-Add-tenant-attach) or [co-management](#Option-2:-Set-up-co-management), if you require one or more of the following:
+> You might want to consider Microsoft Endpoint Configuration Manager, likely with [tenant attach](#Option-1-Add-tenant-attach) or [co-management](#Option-2-Set-up-co-management), if you require one or more of the following:
 >
 > - Management of on-premises devices (for example, Windows Server 2016 or Windows 8.1 devices)
 > - Robust software updates management
