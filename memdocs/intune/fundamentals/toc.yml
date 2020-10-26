@@ -186,8 +186,7 @@
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
   - name: Developer guidance
-    href: ../developer/index.yml     
-
+    href: ../developer/index.yml
   - name: Get help and support
     items:
     - name: Tenant status
@@ -195,9 +194,9 @@
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
     - name: Using the Intune docs
-      href: use-docs.md 
+      href: use-docs.md
     - name: Get support
-      href: get-support.md
+      href: ../../get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
   - name: Reports
     items:
     - name: Intune reports
