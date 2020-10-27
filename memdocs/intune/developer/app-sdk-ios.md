@@ -234,7 +234,7 @@ Additionally, apps can override these Azure AD settings at runtime. To do this, 
 As previously mentioned, the Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios. If **your app does not use MSAL for its own authentication mechanism**, then you may need to configure custom AAD settings:
 
 * Developers need to create an app registration in AAD with a custom redirect URI in the format specified [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). 
-* Developers should set the `ADALClientID` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class. 
+* Developers should set the `ADALClientId` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class. 
 * Developers should also ensure they follow step 4 in the previous section, to give their app registration access to the Intune app protection service.
 
 ### Special considerations when using MSAL 
