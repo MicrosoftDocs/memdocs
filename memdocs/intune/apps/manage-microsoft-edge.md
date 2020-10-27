@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/15/2020
+ms.date: 10/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -118,7 +118,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy.
+Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy.
 
 > [!IMPORTANT]
 > Edge for Android does not support Chromium settings that are available in Managed Google Play.
@@ -255,7 +255,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 ## Data protection app configuration scenarios
 
-Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy:
+Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
 
 - Manage account synchronization
 - Manage restricted web sites
