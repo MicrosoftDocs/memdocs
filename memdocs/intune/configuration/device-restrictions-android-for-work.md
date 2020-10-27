@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 10/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,51 +50,50 @@ Some settings only apply at the work profile level for corporate-owned devices w
 
 :::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise Applications settings that apply at the work profile level in Microsoft Intune and Endpoint Manager.":::
 
-
 ### General
 
-- **Screen capture**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
-- **Camera**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
+- **Screen capture (work profile-level)**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
+- **Camera (work profile-level)**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
   Intune only manages access to the device camera. It doesn't have access to pictures or videos.
 
-- **Default permission policy**: This setting defines the default permission policy for requests for runtime permissions. Your options
-  - **Device default**: Use the device's default setting.
+- **Default permission policy (work profile-level)**: This setting defines the default permission policy for requests for runtime permissions. Your options
+  - **Device default** (default): Use the device's default setting.
   - **Prompt**: Users are prompted to approve the permission.
   - **Auto grant**: Permissions are automatically granted.
   - **Auto deny**: Permissions are automatically denied.
 - **Date and Time changes**: **Block** prevents users from manually setting the date and time. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to the set date and time on the device.
-- **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
-- **Factory reset**: **Block** prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device.
 - **Safe boot**: **Block** prevents users from rebooting the device into safe mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to reboot the device in safe mode.
-- **Status bar**: **Block** prevents access to the status bar, including notifications and quick settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users access to the status bar.
 - **Roaming data services**: **Block** prevents data roaming over the cellular network. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
-- **Wi-Fi setting changes**: **Block** prevents users from changing Wi-Fi settings created by the device owner. Users can create their own Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
 - **Wi-Fi access point configuration**: **Block** prevents users from creating or changing any Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
 - **Bluetooth configuration**: **Block** prevents users from configuring Bluetooth on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using Bluetooth on the device.
 - **Tethering and access to hotspots**: **Block** prevents tethering and access to portable hotspots. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots.
-- **USB storage**: Choose **Allow** to access USB storage on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent access to USB storage.
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
-- **Beam data using NFC**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
+- **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
 - **Debugging features**: Choose **Allow** to let users use debugging features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from using the debugging features on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
 - **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. If an email isn't entered, anyone can unlock the device after it's restored to the factory settings. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
+- **System update**: Choose an option to define how the device handles over-the-air updates. Your options
+  - **Device Default** (default): Use the device's default setting.
+  - **Automatic**: Updates are automatically installed without user interaction. Setting this policy immediately installs any pending updates.
+  - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts users to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to users on the device.
+  - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
+
+- **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
+- **Factory reset**: **Block** prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device.
+- **Status bar**: **Block** prevents access to the status bar, including notifications and quick settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users access to the status bar.
+- **Wi-Fi setting changes**: **Block** prevents users from changing Wi-Fi settings created by the device owner. Users can create their own Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
+- **USB storage**: Choose **Allow** to access USB storage on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent access to USB storage.
 - **Network escape hatch**: **Enable** allows users to turn on the network escape hatch feature. If a network connection isn't made when the device boots, then the escape hatch asks to temporarily connect to a network and refresh the device policy. After applying the policy, the temporary network is forgotten and the device continues booting. This feature connects devices to a network if:
   - There isn't a suitable network in the last policy.
   - The device boots into an app in lock task mode.
   - Users are unable to reach the device settings.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on the network escape hatch feature on the device.
-
-- **System update**: Choose an option to define how the device handles over-the-air updates. Your options
-  - **Device Default**: Use the device's default setting.
-  - **Automatic**: Updates are automatically installed without user interaction. Setting this policy immediately installs any pending updates.
-  - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts users to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to users on the device.
-  - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
 
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
 - **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
@@ -271,13 +270,8 @@ End of comment -->
 
 ### Device password
 
-- **Disable lock screen**: Choose **Disable** to prevent users from using Keyguard lock screen feature on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use the Keyguard features.
-- **Disabled lock screen features**: When keyguard is enabled on the device, choose which features to disable. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
-
-  These features are available to users when the device is locked. Users won't see or access features that are checked.
-
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default**
+  - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to something more secure than **Device default**.
   - **Password required, no restrictions**
   - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Numeric**: Password must only be numbers, such as `123456789`. Also enter:
@@ -305,9 +299,18 @@ End of comment -->
   > [!NOTE]
   > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
 
+- **Disabled lock screen features**: When the device is locked, choose the features that can't be used. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
+
+  These features are available to users when the device is locked. Users won't see or access features that are checked.
+
+  - On corporate-owned work profile devices, only **Unredacted notifications**, **Trust agents**, and **Fingerprint unlock** can be disabled.
+  - If users turn off the **Use one lock** setting on their device, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the work profile-level. If users turn on the **Use one lock** setting, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the device-level.
+
+- **Disable lock screen**: **Disable** blocks all Keyguard lock screen features from being used. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the Keyguard features, such as camera, fingerprint unlock, and more.
+
 ### Power settings
 
-- **Time to lock screen**: Enter the maximum time a user can set until the device locks. For example, if you set this setting to `10 minutes`, then users can set the time from 15 seconds up to 10 minutes. When set to **Not configured** (default), Intune doesn't change or update this setting.
+- **Time to lock screen (work profile-level)**: Enter the maximum time a user can set until the device locks. For example, if you set this setting to `10 minutes`, then users can set the time from 15 seconds up to 10 minutes. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 - **Screen on while device plugged in**: Choose which power sources cause the device's screen to stay on when plugged in.
 
@@ -315,17 +318,21 @@ End of comment -->
 
 - **Add new users**: **Block** prevents users from adding new users. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add other users to the device.
 - **User removal**: **Block** prevents users from removing users. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove other users from the device.
-- **Account changes** (dedicated devices only): **Block** prevents users from modifying accounts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
-
-  > [!NOTE]
-  > This setting isn't honored on fully managed, dedicated, and corporate-owned work profile devices. If you configure this setting, then the setting is ignored, and has no impact.
-
-- **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add their personal Google account.
+- **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
+- **Account changes**: **Block** prevents users from modifying accounts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
 
 ### Applications
 
 - **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allows users to side-load apps on the device using means other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
+
+- **App auto-updates (work profile-level)**: Devices check for app updates daily. Choose when automatic updates are installed. Your options:
+  - **Not configured**: Intune doesn't change or update this setting.
+  - **User choice**: The OS might default to this option. Users can set their preferences in the managed Google Play app.
+  - **Never**: Updates are never installed. This option isn't recommended.
+  - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
+  - **Always**: Updates are installed when they're available.
+
 - **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md).
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
@@ -335,16 +342,9 @@ End of comment -->
 
   If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
 
-- **App auto-updates**: Devices check for app updates daily. Choose when automatic updates are installed. Your options:
-  - **Not configured**: Intune doesn't change or update this setting.
-  - **User choice**: The OS might default to this option. Users can set their preferences in the managed Google Play app.
-  - **Never**: Updates are never installed. This option isn't recommended.
-  - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
-  - **Always**: Updates are installed when they're available.
-
 ### Connectivity
 
-- **Always-on VPN**: **Enable** sets the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. Or, immediately connect when users lock their device, the device restarts, or the wireless network changes.
+- **Always-on VPN  (work profile-level)**: **Enable** sets the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. Or, immediately connect when users lock their device, the device restarts, or the wireless network changes.
 
   Choose **Not configured** to disable always-on VPN for all VPN clients.
 
@@ -542,7 +542,7 @@ These password settings apply to personal profiles on devices that use a work pr
 
   This setting applies to:
 
-  - Android 8 (Oreo) and above
+  - Android 8 (Oreo) and newer
 
 - **Prevent app installations from unknown sources in the personal profile**: By design, Android Enterprise work profile devices can't install apps from sources other than the Play Store. This setting allows administrators more control of app installations from unknown sources. **Block** prevents app installations from sources other than the Google Play Store in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow app installations from unknown sources in the personal profile. By nature, work profile devices are intended to be dual-profile:
 

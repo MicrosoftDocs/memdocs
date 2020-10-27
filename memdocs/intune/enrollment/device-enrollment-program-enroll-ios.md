@@ -39,7 +39,7 @@ You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [Au
 To enable ADE, you use both the Intune and [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management in either Apple portal. You create ADE enrollment profiles in Intune containing settings that are applied to devices during enrollment. ADE can't be used with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
 
 > [!NOTE]
-> ADE sets device configurations that can't necessarily be removed by the end user. Therefore, before [migrating to ADE](../fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
+> ADE sets device configurations that can't necessarily be removed by the end user. Therefore, before using ADE, the device must be wiped to return it to an out-of-box (new) state. For more information, see [Deployment guide: Enroll iOS and iPadOS devices](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ## Automated Device Enrollment and the Company Portal
 
@@ -71,9 +71,9 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 ## Supported volume
 
 - Maximum enrollment profiles per token: 1,000  
-- Maximum Automated Device Enrollment devices per profile: no limit (within maximum number of devices per token)
+- Maximum Automated Device Enrollment devices per profile: within the maximum number of devices per token
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000
-- Maximum Automated Device Enrollment devices per token: The limit on the first sync is 75,000-80,000 devices. Intune will continue to sync with ABM or ASM with every 12 hour check-in to add more devices every time. A manual sync (which can be triggered once every 15 minutes) will also add another device batch over to Intune. Syncs will continue to occur and devices will keep getting synced from ABM/ASM over to Intune in large quantities. 
+- Maximum Automated Device Enrollment devices per token: Intune recommends not exceeding 60,000 devices per token otherwise you might run into sync issues. If you have more than 60,000 devices, split those up into multiple DEP tokens.
 
 ## Get an Apple Automated Device Enrollment token
 
@@ -295,7 +295,7 @@ You can use the enrollment **Name** field to create a dynamic group in Azure Act
 
 You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
 
-For the fastest policy delivery on ADE devices with user affinity, make sure the enrolling user is a member, prior to device setup, of an AAD user group. 
+For the fastest policy delivery on ADE devices with user affinity, make sure the enrolling user is a member, prior to device setup, of an Azure AD user group. 
 
 Assigning dynamic groups to enrollment profiles can lead to some delay in delivering applications and policies to devices after the enrollment.
 

@@ -51,6 +51,7 @@ The following table lists the versions of Windows 10 that you can use as a clien
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **20H2**<br>(10.0.19042)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -72,6 +73,8 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 - Starting in version 1906, Configuration Manager supports Windows 10 Pro for Workstation.
 
 - For Windows 10, version 1909, OS deployment media shows the version as 10.0.18362.418.
+
+- For Windows 10, version 20H2, OS deployment media shows the version as 10.0.19041.508.
 
 ### <a name="bkmk_arm64"></a> Windows 10 on ARM64
 

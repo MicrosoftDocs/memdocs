@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2020
+ms.date: 10/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,14 +53,14 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
-Be sure the file is less than 4 MB. If it's greater than 4 MB, then include fewer GPOs when you save your report.
+Be sure the file is less than 1 MB and has a proper unicode encoding. If the exported file is greater than 1 MB, then include fewer GPOs when you save your report from the GPMC.msc tool.
 
 ## Use Group Policy analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
-    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 1 MB. If a single GPO is larger than 1 MB, then the import will fail.
+    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 1 MB. If a single GPO is larger than 1 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
 3. After the analysis runs, the GPO you imported is listed with the following information:
 
@@ -96,7 +96,7 @@ Be sure the file is less than 4 MB. If it's greater than 4 MB, then include fewe
 
     - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows 10. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
 
-      For more information on CSPs, see the [CSP reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+      For more information on CSPs, see the [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
@@ -104,11 +104,11 @@ Be sure the file is less than 4 MB. If it's greater than 4 MB, then include fewe
 
 Group Policy analytics can parse the following CSPs:
 
-- [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider)
-- [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)
-- [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
-- [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+- [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider)
+- [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp)
+- [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
+- [Firewall CSP](/windows/client-management/mdm/firewall-csp)
+- [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
 
 ## Group Policy migration readiness report
 
@@ -134,6 +134,17 @@ Group Policy analytics can parse the following CSPs:
     > [!NOTE]
     > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
 
+
+## Send product feedback
+
+You can provide feedback on Group Policy Analytics when you select **Got feedback**. Examples of feedback areas:
+
+* You received errors during GPO omport or analytics that you need more information.
+* How easy is it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
+* Will this tool help you move some workloads to Endpoint Manager? If yes, what workloads are you considering?
+
+To get information on the customer experience, the feedback is aggregated, and sent to Microsoft. Entering an email is optional, and may be used to get more information.
+
 ## Privacy and security
 
 Any use of customer data, such as which GPOs are used in your organization, is aggregated. It's not sold to any third parties. This data might be used to make business decisions within Microsoft. Your customer data is stored securely.
@@ -153,4 +164,4 @@ At any time, you can delete imported GPOs:
 
 ## See also
 
-Learn more about [Configuration Service Providers (CSP)](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
+Learn more about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).

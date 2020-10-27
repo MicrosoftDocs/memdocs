@@ -122,7 +122,6 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 ![Access granted on remediation for Sharepoint example](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 
-<!-- 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Symantec Endpoint Protection Mobile Threat Defense solution considers a device to be infected:
@@ -131,7 +130,6 @@ When the Symantec Endpoint Protection Mobile Threat Defense solution considers a
 Access is granted on remediation:
 
 ![Access is granted on remediation for App protection policy](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-remediated.png)
--->
 
 ## Next steps
 

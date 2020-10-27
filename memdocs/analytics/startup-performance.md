@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Configuration Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 09/22/2020
+ms.date: 10/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -20,8 +20,10 @@ The startup performance score helps IT get users from power-on to productivity q
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 For devices enrolled via Intune, Startup performance insights are only available for:
-- Devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education
-   - Windows 10 long-term servicing channel (LTSC), Home, and Pro editions aren't currently supported.
+- Devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro editions.
+   - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+   - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
+   - Windows 10 long-term servicing channel (LTSC) and Home editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
 

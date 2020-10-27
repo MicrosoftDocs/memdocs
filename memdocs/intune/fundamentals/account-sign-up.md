@@ -73,7 +73,7 @@ Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSett
 
 Intune for Education: https://intuneeducation.portal.azure.com
 
-Intune classic portal: https://manage.microsoft.com
+Intune classic portal: https://admin.manage.microsoft.com
 The Intune classic portal is only used for managing devices enrolled with the Intune PC software client
 
 ### URLs for Intune services provided by Microsoft 365

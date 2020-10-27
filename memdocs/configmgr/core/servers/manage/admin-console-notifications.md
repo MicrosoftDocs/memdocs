@@ -72,21 +72,29 @@ For more information and troubleshooting assistance, see the **SmsAdminUI.log** 
 
 Starting in version 2006, you can choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
 
+> [!NOTE]
+> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](../../plan-design/network/internet-endpoints.md#bkmk_scp-updates), so you may have already allowed it.
+
 ### Configure notification settings for Microsoft messages
 
 1. Navigate to **Administration** > **Site Configuration** > **Sites**.
-1. Right-click on a site and select **Properties**.
+
+1. Select a site, and then in the ribbon, select **Properties**.
+
 1. In the **Alerts** tab, enable the notifications by selecting **Receive messages from Microsoft**. You can deselect any of the following notifications if you prefer not to receive them:  
+
    - **Prevent/fix**: Known issues affecting your organization that may require you to take action.
+
    - **Plan for change**: Changes to Configuration Manager that may require you to take action.
+
    - **Stay informed**: Informs you of new or updated features that are available.
 
-     [ ![Notification from Microsoft options in site properties](./media/3953121-microsoft-notifications.png)](./media/3953121-microsoft-notifications.png#lightbox)
-
-
+:::image type="content" source="media/3953121-microsoft-notifications.png" alt-text="Notification from Microsoft options in site properties" lightbox="media/3953121-microsoft-notifications.png":::
 
 ## Next steps
 
 - [Use the console](admin-console.md)
+
 - [Console tips](admin-console-tips.md)
+
 - [Accessibility features](../../understand/accessibility-features.md)

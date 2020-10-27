@@ -175,7 +175,7 @@ If you need to download and sideload the Windows 10 Company Portal app, you can 
 
 The iOS 10.3 release started rolling out on March 27, 2017 to iOS users. All existing Intune MDM and MAM scenarios are compatible with the latest version of Apple's OS. We anticipate all existing Intune features currently available for managing iOS devices will continue to work as your users upgrade their devices and apps to iOS 10.3.
 
-There are currently no known issues to share. If you run into any issues with iOS 10.3, please feel free to reach out to the [Intune support team](get-support.md).
+There are currently no known issues to share. If you run into any issues with iOS 10.3, please feel free to reach out to the [Intune support team](../../get-support.md).
 
 #### Improved support for Android users based in China <!--720444-->
 
@@ -210,9 +210,9 @@ The Company Portal website will support apps that are targeted to users who do n
 ### Notices
 
 #### Group migration will not require any updates to groups or policies for iOS devices <!--898837-->
-For every Intune device group pre-assigned by a Corporate Device Enrollment profile, a corresponding dynamic device group will be created in AAD based on the Corporate Device Enrollment profile's name, during the migration to Azure Active Directory device groups. This will ensure the as devices enroll, they will be automatically grouped and receive the same policies and apps as the original Intune group.
+For every Intune device group pre-assigned by a Corporate Device Enrollment profile, a corresponding dynamic device group will be created in Azure AD based on the Corporate Device Enrollment profile's name, during the migration to Azure Active Directory device groups. This will ensure the as devices enroll, they will be automatically grouped and receive the same policies and apps as the original Intune group.
 
-Once a tenant enters the migration process for grouping and targeting, Intune will automatically create a dynamic AAD group to correspond to an Intune group targeted by a Corporate Device Enrollment profile. If the Intune Admin deletes the targeted Intune group, the corresponding dynamic AAD group will not be deleted. The group's members and the dynamic query will be cleared, but the group itself will remain until the IT Admin removes it via the AAD portal.
+Once a tenant enters the migration process for grouping and targeting, Intune will automatically create a dynamic Azure AD group to correspond to an Intune group targeted by a Corporate Device Enrollment profile. If the Intune Admin deletes the targeted Intune group, the corresponding dynamic Azure AD group will not be deleted. The group's members and the dynamic query will be cleared, but the group itself will remain until the IT Admin removes it via the Azure AD portal.
 
 Similarly, if the IT Admin changes which Intune group is targeted by a Corporate Device Enrollment profile, Intune will create new dynamic group reflecting the new profile assignment, but will not remove the dynamic group created for the old assignment.
 
@@ -306,7 +306,7 @@ In early calendar year 2017, we will be migrating our full admin experience onto
 The admin experience in the Azure portal will use the already announced new grouping and targeting functionality; when your existing tenant is migrated to the new grouping experience you will also be migrated to preview the new admin experience on your tenant. In the meantime, find out more about what we have in store for Microsoft Intune in the Azure portal in our [new documentation](what-is-intune.md).
 
 __Telecom expense management integration in public preview of Azure portal__ <!--747605-->
-We are now beginning to preview integration with third-party telecom expense management (TEM) services within the Azure portal. You can use Intune to enforce limits on domestic and roaming data usage. We are beginning these integrations with [Saaswedo](http://www.saaswedo.com/). To enable this feature in your trial tenant, please [contact Microsoft support](get-support.md).
+We are now beginning to preview integration with third-party telecom expense management (TEM) services within the Azure portal. You can use Intune to enforce limits on domestic and roaming data usage. We are beginning these integrations with [Saaswedo](http://www.saaswedo.com/). To enable this feature in your trial tenant, please [contact Microsoft support](../../get-support.md).
 
 ### New Capabilities
 

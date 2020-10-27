@@ -127,7 +127,7 @@ For more information, see [How to install clients with logon scripts](../deploy-
 
 ## Manual installation  
 
-**Supported client platform**: Windows, UNIX/Linux, Mac OS X  
+**Supported client platform**: Windows, macOS X  
 
 #### Advantages  
 
@@ -144,8 +144,6 @@ For more information, see [How to install clients with logon scripts](../deploy-
 For more information about how to manually install the client on each of platform, see the following articles:  
 
 -   [How to deploy clients to Windows computers](../deploy-clients-to-windows-computers.md#BKMK_Manual)  
-
--   [How to deploy clients to UNIX and Linux servers](../deploy-clients-to-unix-and-linux-servers.md)  
 
 -   [How to deploy clients to Macs](../deploy-clients-to-macs.md)  
 

@@ -8,7 +8,7 @@
     displayName: ems; emm; azure ad; active directory; ad
   - name: Device management overview
     href: what-is-device-management.md
-    displayName: teamviewer    
+    displayName: teamviewer 
   - name: What's new
     href: whats-new.md
     items:
@@ -17,7 +17,7 @@
     - name: Features in development
       href: in-development.md   
     - name: Important notices
-      href: whats-new.md#notices   
+      href: whats-new.md#notices
 - name: Quickstarts
   items:
   - name: Try Intune for free
@@ -65,59 +65,40 @@
     href: manage-os-versions.md
   - name: Manage Windows Holographic
     href: windows-holographic-for-business.md
-
 - name: How-to guides
   items:
-  - name: Plan deployment
+  - name: Plan and Deploy
     items:
-    - name: Planning guide
-      href: planning-guide.md
-      items:
-      - name: Determine goals and objectives
-        href: planning-guide-deployment-goals.md
-      - name: Identify scenarios
-        href: planning-guide-scenarios.md
-      - name: Determine requirements
-        href: planning-guide-requirements.md
-      - name: Develop a rollout plan
-        href: planning-guide-rollout-plan.md
-      - name: Develop a communication plan
-        href: planning-guide-communication-plan.md
-      - name: Develop a support plan
-        href: planning-guide-support-plan.md
-      - name: Design
-        href: planning-guide-design.md
-      - name: Implement
-        href: planning-guide-onboarding.md
-      - name: Test and validate
-        href: planning-guide-test-validation.md
-      - name: Additional resources
-        href: planning-guide-resources.md
-    - name: Migration guide
+    - name: Overview
       href: migration-guide.md
+    - name: Planning guide
+      href: intune-planning-guide.md
+    - name: Deployment/Migration guides
       items:
-      - name: Prepare Intune
-        href: migration-guide-prepare.md
+      - name: Intune setup
         items:
-        - name: Basic setup
-          href: migration-guide-setup.md
-        - name: Configure device and app management policies
-          href: migration-guide-configure-policies.md
-        - name: Configure app protection policies
-          href: migration-guide-app-protection-policies.md
-        - name: Migration considerations
-          href: migration-guide-considerations.md
-      - name: Migration campaign
-        href: migration-guide-campaign.md
-        items:
-        - name: Plan communications
-          href: migration-guide-communication-plan.md
-        - name: Drive adoption
+        - name: Setup deployment guide
+          href: deployment-guide-intune-setup.md
+        - name: Use conditional access
           href: migration-guide-drive-adoption.md
-        - name: Typical migration cycle
-          href: migration-guide-cycle.md
-    - name: Plan communications
-      href: migration-guide-communication-plan.md
+      - name: Enroll devices
+        items:
+        - name: Overview
+          href: deployment-guide-enrollment.md
+        - name: MAM-WE 
+          href: deployment-guide-enrollment-mamwe.md
+        - name: Android, Android Enterprise
+          href: deployment-guide-enrollment-android.md
+        - name: iOS, iPadOS
+          href: deployment-guide-enrollment-ios-ipados.md
+        - name: macOS
+          href: deployment-guide-enrollment-macos.md
+        - name: Windows
+          href: deployment-guide-enrollment-windows.md
+      - name: Device and app management
+        href: migration-guide-configure-policies.md
+      - name: App protection
+        href: migration-guide-app-protection-policies.md
     - name: Educate users
       items:
       - name: How to educate your end users
@@ -205,8 +186,7 @@
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
   - name: Developer guidance
-    href: ../developer/index.yml     
-
+    href: ../developer/index.yml
   - name: Get help and support
     items:
     - name: Tenant status
@@ -216,7 +196,7 @@
     - name: Using the Intune docs
       href: ../../use-docs.md 
     - name: Get support
-      href: get-support.md
+      href: ../../get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
   - name: Reports
     items:
     - name: Intune reports
@@ -253,46 +233,11 @@
         href: education-settings-configure-ios.md
       - name: Shared iPads
         href: education-settings-configure-ios-shared.md
-    - name: Legacy Intune PC client
+    - name: Legacy Intune PC software client
       href: intune-legacy-pc-client.md
-    - name: Manage PCs with software agent
-      href: manage-windows-pcs-with-microsoft-intune.md
-      items:
-      - name: Compare PC management
-        href: pc-management-comparison.md
-      - name: Install the PC client
-        href: install-the-windows-pc-client-with-microsoft-intune.md
-      - name: Common PC management tasks
-        href: common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md
-        items:
-        - name: PC policies
-          href: use-policies-to-simplify-windows-pc-management.md
-        - name: View inventory
-          href: view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md
-        - name: Retire PCs
-          href: retire-a-windows-pc-with-microsoft-intune.md
-        - name: Link PCs to users
-          href: manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md
-        - name: Remote assistance
-          href: request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md
-      - name: Policies to protect Windows PCs
-        href: policies-to-protect-windows-pcs-in-microsoft-intune.md
-        items:
-        - name: Software updates
-          href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
-        - name: Windows Firewall
-          href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
-        - name: Endpoint Protection
-          href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
-      - name: Add apps for Intune client PCs
-        href: add-apps-for-windows-pcs-in-microsoft-intune.md
-      - name: Manage license agreements
-        href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
-      - name: Resolve policy conflicts
-        href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
-      - name: Troubleshoot software updates
-        href: troubleshoot-software-updates-in-microsoft-intune.md
-      - name: Endpoint protection common errors 
-        href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-  - name: Intune end-user documentation  
+    - name: Troubleshoot software updates
+      href: troubleshoot-software-updates-in-microsoft-intune.md
+    - name: Endpoint protection common errors
+      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+  - name: Intune end-user documentation
     href: ../user-help/use-managed-devices-to-get-work-done.md

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # App-based Conditional Access with Intune
 
-[Intune app protection policies](../apps/app-protection-policy.md) help protect your company data on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that company data and resources are protected.
+[Intune app protection policies](../apps/app-protection-policy.md) help protect your company data on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that aren't enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that company data and resources are protected.
 
 App-based Conditional Access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
 
@@ -74,7 +74,7 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 4. The broker app starts the Azure AD registration process, which creates a device record in Azure AD. This isn't the same as the mobile device management (MDM) enrollment process, but this record is necessary so the Conditional Access policies can be enforced on the device.
 
-5. The broker app verifies the identity of the app. There's a security layer so the broker app can validate if the app is authorized for use by the user.
+5. The broker app confirms the Azure AD device ID, the user, and the application. This information is passed to the Azure AD sign-in servers to validate access to the requested service.
 
 6. The broker app sends the App Client ID to Azure AD as part of the user authentication process to check if it's in the policy approved list.
 
@@ -89,6 +89,7 @@ In this example, the admin has applied app protection policies to the Outlook ap
 11. Corporate e-mail is delivered to the user's mailbox.
 
 ## Next steps
+
 [Create an app-based Conditional Access policy](app-based-conditional-access-intune-create.md)
 
-[Block apps that do not have modern authentication](app-modern-authentication-block.md)
+[Block apps that don't have modern authentication](app-modern-authentication-block.md)

@@ -126,7 +126,7 @@ The following browsers are supported for these portals:
 
 ### Intune classic portal
 
-The Intune classic portal is only used for managing devices enrolled with the Intune PC software client (https://manage.microsoft.com). The Intune classic portal requires Silverlight browser support.
+The Intune classic portal is only used for managing devices enrolled with the Intune PC software client (https://admin.manage.microsoft.com). The Intune classic portal requires Silverlight browser support.
 
 The following Silverlight browsers support the Intune console:
 
