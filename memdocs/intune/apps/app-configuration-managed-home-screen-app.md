@@ -95,7 +95,6 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Type of   virtual home button | string | swipe_up | Use swipe_up to access   home button with a swipe up gesture. Use float to access a sticky,   persistent home button that can be moved around the screen by the end user. |
 | Enable   notifications badge | bool | FALSE | Enables the notification badge for   app icons that shows the number of new notifications on the app. If you   enable this setting, end users will see notification badges on apps that have   unread notifications. If you keep this configuration key disabled, the end   user will not see any notification badged to apps that might have unread   notifications. |
 | Battery   and Signal Strength indicator bar | bool | TRUE | Turning this setting   to True shows the battery and signal strength indicator bar. |
-| Define   theme color | string | light | Specify whether or not you want   Managed Home Screen to run in “light” or “dark” mode.  |
 
 **Configurations for a custom screensaver**: 
 
