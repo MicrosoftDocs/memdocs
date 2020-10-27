@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Configure the Microsoft Managed Home Screen app for Android Enterprise
 
-The Managed Home Screen is the application used for corporate-owned Android Enterprise dedicated devices enrolled via Intune and running in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. 
+The Managed Home Screen is the application used for corporate-owned Android Enterprise dedicated devices enrolled via Intune and running in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).   
 
 ## When to configure the Microsoft Managed Home Screen app
 
@@ -152,7 +152,7 @@ The following is an example JSON script with all the available configuration key
 ```json
 {
     "kind": "androidenterprise#managedConfiguration",
-    "productId": "com.microsoft.launcher.enterprise",
+    "productId": "app:com.microsoft.launcher.enterprise",
     "managedProperty": [
         {
             "key": "lock_home_screen",
@@ -204,6 +204,31 @@ The following is an example JSON script with all the available configuration key
                 }
             ]
         },
+		{
+            "key": "widgets",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "package name of application that exposes the widget here. An example: com.microsoft.launcher.enterprise"
+                        },
+                        {
+                            "key": "widget_class",
+                            "valueString": "class name of widget here. an example: Time"
+                        },
+                        {
+                            "key": "span_x",
+                            "valueInteger": 5
+                        },
+                        {
+                            "key": "span_y",
+                            "valueInteger": 2
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "key": "show_virtual_home",
             "valueBool": false
@@ -218,7 +243,7 @@ The following is an example JSON script with all the available configuration key
         },
         {
             "key": "exit_lock_task_mode_code",
-            "valueString": ""
+            "valueString": "123456"
         },
         {
             "key": "show_wifi_setting",
@@ -351,7 +376,27 @@ The following is an example JSON script with all the available configuration key
                             "valueInteger": 3
                         }
                     ]
-                }
+                },
+				{
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "class name for widget here"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "widget"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 1
+                        }
+                    ]
+                }	
             ]
         },
         {
@@ -400,6 +445,10 @@ The following is an example JSON script with all the available configuration key
                             "key": "folder_name",
                             "valueString": "Example folder name 2"
                         },
+						{
+                            "key": "is_customer_facing",
+                            "valueBool": true
+                        },
                         {
                             "key": "applications",
                             "valueBundleArray": [
@@ -416,16 +465,109 @@ The following is an example JSON script with all the available configuration key
                     ]
                 }
             ]
+        },
+		{
+            "key": "show_notification_badge",
+            "valueBool": true
+        },
+		{
+            "key": "show_screen_saver",
+            "valueBool": true
+        },
+        {
+            "key": "screen_saver_image",
+            "valueString": "URL to desired screen saver image here"
+        },
+        {
+            "key": "screen_saver_show_time",
+            "valueInteger": 0
+        },
+	    {
+            "key": "inactive_time_to_show_screen_saver",
+            "valueInteger": 30
+        },
+        {
+            "key": "media_detect_before_screen_saver",
+            "valueBool": true
+        }, 
+		{
+            "key": "enable_max_inactive_time_outside_MHS",
+            "valueBool": false
+        },
+        {
+            "key": "enable_max_absolute_time_outside_MHS",
+            "valueBool": false
+        },
+        {
+            "key": "max_inactive_time_outside_MHS",
+            "valueInteger": 180
+        },
+        {
+            "key": "max_absolute_time_outside_MHS",
+            "valueInteger": 600
+        },
+		{
+            "key": "theme_color",
+            "valueString": "light"
+        },
+        {
+            "key": "enable_mhs_signin",
+            "valueBool": true
+        },
+        {
+            "key": "signin_type",
+            "valueString": "AAD"
+        },
+        {
+            "key": "signin_screen_wallpaper",
+            "valueString": "URL to desired image for signin screen wallpaper here"
+        },
+        {
+            "key": "enable_corporate_logo",
+            "valueBool": true
+        },
+        {
+            "key": "signin_screen_branding_logo",
+            "valueString": "URL to desired image for branding logo here"
+        },
+        {
+            "key": "enable_session_PIN",
+            "valueBool": true
+        },
+        {
+            "key": "session_PIN_complexity",
+            "valueString": "simple"
+        },
+        {
+            "key": "enable_auto_signout",
+            "valueBool": true
+        },
+        {
+            "key": "inactive_time_to_signout",
+            "valueInteger": 300
+        },
+        {
+            "key": "auto_signout_time_to_give_user_notice",
+            "valueInteger": 30
+        },
+        {
+            "key": "enable_PIN_to_resume",
+            "valueBool": true
+        },
+        {
+            "key": "custom_privacy_statement_title",
+            "valueString": "name of custom privacy statement here"
+        },
+        {
+            "key": "custom_privacy_statement_url",
+            "valueString": "link to custom privacy statement here"
         }
     ]
 }
 ```
 
-## Google's Android Device Policy app
-The Managed Home Screen app now provides access to Google's Android Device Policy app. The Managed Home Screen app is a custom launcher used for devices enrolled in Intune as Android Enterprise (AE) dedicated devices using multi-app kiosk mode. You can access the Android Device Policy app, or guide users to the Android Device Policy app, for support and debug purposes. This launching capability is available at the time the device enrolls and locks into Managed Home Screen. No additional installations are needed to use this functionality.
-
 ## Managed Home Screen debug screen
-You can access the Managed Home Screen's debug screen by clicking the **back** button until the debug screen is displayed (click the **back** button 15 times or more). From this debug screen, you are able to launch the Android Device Policy application, view and upload logs, or temporarily pause kiosk mode to update the device. For more information about pausing kiosk mode, see the **Leave kiosk mode** item in the Android Enterprise [dedicated device settings](../configuration/device-restrictions-android-for-work.md#device-experience). If you would like an easier way to access Managed Home Screen's debug screen, you can set the **Enable easy access debug menu** to `True` using application configuration policies. 
+You can access the Managed Home Screen's debug screen by clicking the **back** button until the debug screen is displayed (click the **back** button 15 times or more). From this debug screen, you are able to launch the Android Device Policy application, view and upload logs, or temporarily pause kiosk mode to update the device. For more information about pausing kiosk mode, see the **Leave kiosk mode** item in the Android Enterprise [dedicated device settings](../configuration/device-restrictions-android-for-work.md#device-experience). If you would like an easier way to access Managed Home Screen's debug screen, you can enable the **Quick access to debug menu** setting using device configuration policies or you can set the **Enable easy access debug menu** to `True` using application configuration policies. 
 
 ## Next steps
 
