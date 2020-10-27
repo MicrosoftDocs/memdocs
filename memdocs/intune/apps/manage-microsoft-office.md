@@ -124,7 +124,7 @@ By default, Office for iOS and Android enables users to create Sticky Notes. For
 
 ## Data protection app configuration scenarios
 
-Office for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy
+Office for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
 
 - Manage file transfers via Transfer Files action
 - Manage file transfers via Share Nearby action
