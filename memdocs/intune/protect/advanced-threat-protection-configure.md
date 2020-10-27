@@ -147,7 +147,39 @@ After you establish the service-to-service connection between Intune and Microso
 
 Unlike for Windows devices, there isn't a configuration package for devices that run iOS/iPadOS. Instead, see [Overview of Microsoft Defender Advanced Threat Protection for iOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-ios) in the Microsoft Defender ATP documentation for prerequisites and onboarding instructions for iOS/iPadOS.
 
-You can also use Intune policy to modify Microsoft Defender ATP on iOS/iPadOS. For more information, see [Microsoft Defender ATP web protection for iOS/iPadOS](../protect/advanced-threat-protection-manage-android.md).
+For devices that run iOS/iPadOS (in Supervised Mode), there is specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through a App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. 
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **App configuration policies** > **Managed devices**.
+3. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, select **Platform** as **iOS/iPadOS** then choose **Next**.
+4. Select **Targeted app** as **Microsoft Defender for iOS**.
+4. On the **Settings** page, set the **Configuration key** as **issupervised**, then **Value type** as **string** with the **{{issupervised}}** as the **Configuration value**. 
+8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
+9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it is best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   When deploying to user groups, a user must sign-in on a device before the policy applies. 
+
+   Select **Next**.
+
+10. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles. 
+
+Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team has made available a custom .mobileconfig profile to deploy to iPad/iOS devices. This .mobileconfig profile will be used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
+
+1. Download the .mobile profile which is hosted here: https://aka.ms/mdatpiossupervisedprofile 
+2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Devices** > **Configuration profiles** > **Create profile**.
+4. For **Platform**, select **iOS/iPadOS**
+5. For **Profile type**, select **Custom**, and then select **Create**.
+6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
+7. Enter a *Configuration profile name*, and select a file to .mobileconfig file to Upload.
+8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
+9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it is best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   When deploying to user groups, a user must sign-in on a device before the policy applies. 
+
+   Select **Next**.
+
+10. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles. 
 
 ## Create and assign compliance policy to set device risk level
 
