@@ -2,9 +2,9 @@
 title: How to use the docs
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search the docs, provide doc feedback, and contribute to the docs for Microsoft Endpoint Manager. These docs include Configuration Manager, Intune, and Autopilot.
-ms.date: 10/13/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 10/27/2020
+ms.service: mem
+ms.subservice: fundamentals
 ms.topic: how-to
 ms.assetid: 54d19001-7e2b-489a-ba52-1fee3ff25bae
 author: aczechowski
@@ -14,7 +14,7 @@ manager: dougeby
 
 # How to use the docs
 
-This article provides resources and tips for using the Microsoft Endpoint Manager documentation library for Configuration Manager, Microsoft Intune, and Autopilot:
+This article provides resources and tips for using the Microsoft Endpoint Manager documentation library. It applies to Configuration Manager, Microsoft Intune, and Autopilot, and covers the following areas:
 
 - How to search
 - Submitting doc bugs, enhancements, questions, and new ideas
@@ -27,7 +27,7 @@ For general help and support, see:
 - [Get support for Intune](intune/fundamentals/get-support.md)
 
 > [!TIP]
-> Visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
+> Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
 
 Information in this article also applies to the [Configuration Manager PowerShell documentation](/powershell/sccm/overview) in the [sccm-docs-powershell-ref repository](https://github.com/MicrosoftDocs/sccm-docs-powershell-ref).
 
@@ -59,7 +59,7 @@ Use the following search tips to help you find the information that you need:
 
     :::image type="content" source="media/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter":::
 
-Having problems finding something? [File feedback!](#about-feedback) When you file an issue regarding search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
+Having problems finding something? [File feedback!](#about-feedback) When you file an issue about search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
 
 ## About feedback
 
@@ -85,7 +85,7 @@ Use GitHub Issues to submit the following types of feedback:
 - Localization: Feedback about content translation.
 - Search engine optimization (SEO): Feedback about problems searching for content. Include the search engine, keywords, and target article in the comments.
 
-If you create an issue for non-doc-related topics, Microsoft will close the issue and redirect you to a better feedback channel. For example:
+If you create an issue for something not related to docs, Microsoft will close the issue and redirect you to a better feedback channel. For example:
 
 - Product feedback for [Configuration Manager](configmgr/core/understand/find-help.md#product-feedback) or [Intune](https://microsoftintune.uservoice.com/forums/291681-ideas)
 - [Product questions](/answers/products/mem)
