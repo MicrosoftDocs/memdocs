@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -93,7 +93,15 @@ When you established the connection between Intune and Microsoft Defender ATP, I
 
 The configuration package configures devices to communicate with [Microsoft Defender ATP services](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) to scan files and detect threats. The device is also configured to report to Microsoft Defender ATP the devices risk level based on compliance policies you'll create.
 
-After you onboard a device using the configuration package, you don't need to do it again. You can also onboard devices using a [group policy or Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+After you onboard a device using the configuration package, you don't need to do it again.
+
+In addition to device configuration policy, you can onboard devices using:
+
+- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy. Intune EDR policy is part of endpoint security in Intune, which you can use to configure device security without the overhead of the larger body of settings found in device configuration profiles. You can also use EDR policy with tenant attached devices, which are devices you manage with Configuration Manager.
+- [Group policy or Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+
+> [!TIP]
+> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender ATP), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ### Create the device configuration profile to onboard Windows devices
 
@@ -117,6 +125,8 @@ After you onboard a device using the configuration package, you don't need to do
 7. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
 8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   When deploying to user groups, a user must sign-in on a device before the policy applies and the device can onboard to Defender ATP. 
 
    Select **Next**.
 
