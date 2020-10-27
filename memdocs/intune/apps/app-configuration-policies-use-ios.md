@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -165,6 +165,8 @@ When you create an app configuration file, you can specify one or more of the fo
   <string>{{udidlast4digits}}</string>
   <key>aaddeviceid</key>
   <string>{{aaddeviceid}}</string>
+  <key>issupervised</key>
+  <string>{{issupervised}}</string>
 </dict>
 ```
 
@@ -192,6 +194,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
+- \{\{issupervised\}\}—for example, **true** (for iOS/iPadOS devices)
 
 ## Configure the Company Portal app to support iOS and iPadOS DEP devices
 
