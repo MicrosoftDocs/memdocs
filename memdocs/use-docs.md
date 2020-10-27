@@ -24,7 +24,7 @@ This article provides resources and tips for using the Microsoft Endpoint Manage
 For general help and support, see:
 
 - [Find help for Configuration Manager](configmgr/core/understand/find-help.md)
-- [Get support for Intune](intune/fundamentals/get-support.md)
+- [Get support in Microsoft Endpoint Manager](get-support.md)
 
 > [!TIP]
 > Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
@@ -89,7 +89,7 @@ If you create an issue for something not related to docs, Microsoft will close t
 
 - Product feedback for [Configuration Manager](configmgr/core/understand/find-help.md#product-feedback) or [Intune](https://microsoftintune.uservoice.com/forums/291681-ideas)
 - [Product questions](/answers/products/mem)
-- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Intune](intune/fundamentals/get-support.md)
+- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Endpoint Manager](get-support.md)
 
 To share feedback on the fundamental docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
 
