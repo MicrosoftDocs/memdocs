@@ -347,6 +347,16 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "memdocs/intune/fundamentals/use-docs.md",
+            "redirect_url": "/mem/use-docs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/understand/use-docs.md",
+            "redirect_url": "/mem/use-docs",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/fundamentals/manage-windows-pcs-with-microsoft-intune.md",
             "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
             "redirect_document_id": false
