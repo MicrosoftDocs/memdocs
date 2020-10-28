@@ -66,7 +66,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
 
 > [!Warning]
-> - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
+> - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 ## <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to ATP (recommended)
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to ATP by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
@@ -126,7 +126,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 > [!IMPORTANT]
 > - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
-> - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
+> - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 ### Onboard the up-level devices
 
