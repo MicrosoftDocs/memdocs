@@ -157,7 +157,7 @@ If you want to contribute, but don't know where to start, see the following sugg
 > [!NOTE]
 > Large contributions require signing a Contribution License Agreement (CLA) if you aren't a Microsoft employee. GitHub automatically requires you to sign this agreement when a contribution meets the threshold. You only need to sign this agreement once.
 
-### Tips
+### Contribution tips
 
 Follow these general guidelines when you contribute:
 
