@@ -60,13 +60,13 @@ Down-level operating systems include:
 - Windows Server 2012 R2
 - Windows Server 2016, version 1709 and earlier
 
-When you onboard devices to ATP with Configuration Manager, you deploy the ATP policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are up-level, down-level, or both.
+When you onboard devices to ATP with Configuration Manager, you deploy the ATP policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
 
 - If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended).
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
 
 > [!Warning]
-> - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded. The **Workspace key** and **Workspace ID** used for onboarding down-level devices are optional, but if they aren't included then the policy will fail on down-level clients.
+> - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 ## <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to ATP (recommended)
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to ATP by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
@@ -125,7 +125,8 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Download the compressed archive (.zip) file and extract the contents.
 
 > [!IMPORTANT]
-> The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+> - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+> - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 ### Onboard the up-level devices
 
