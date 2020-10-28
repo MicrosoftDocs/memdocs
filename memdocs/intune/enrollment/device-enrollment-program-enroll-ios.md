@@ -335,6 +335,12 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
+> [!NOTE]
+> You might see the following error during setup while enrolling iOS/iPadOS devices with Automated Device Enrollment iOS/iPadOS and user affinity:
+> "The SCEP server returned an invalid response."
+> To resolve this error, you must factory reset the device. This is because of a 15-minute time limit on SCEP certificates due to security reasons. 
+ 
+
 ## Renew an Automated Device Enrollment token  
 
 > [!NOTE]
