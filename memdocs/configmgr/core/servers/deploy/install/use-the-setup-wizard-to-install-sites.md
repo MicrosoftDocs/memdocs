@@ -31,7 +31,6 @@ Install a secondary site from within the Configuration Manager console. Secondar
 > - [**Download System Center Updates Publisher**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Download clients for additional operating systems**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
->   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Release notes**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
 > - [**Read documentation**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Obtain installation assistance**: [Microsoft Q&A: Configuration Manager site and client deployment](/answers/topics/mem-cm-site-deployment.html) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->

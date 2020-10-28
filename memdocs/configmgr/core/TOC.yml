@@ -671,8 +671,6 @@
       href: clients/deploy/plan/best-practices-for-client-deployment.md
     - name: Determine whether to block clients
       href: clients/deploy/plan/determine-whether-to-block-clients.md
-    - name: Planning for client deployment to Linux and UNIX computers
-      href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
     - name: Planning for client deployment to Mac computers
       href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
     - name: Client deployment to Windows Embedded devices
@@ -709,12 +707,6 @@
         href: clients/deploy/about-client-installation-properties.md
       - name: Client installation properties published to AD
         href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
-    - name: Deploy clients to UNIX and Linux servers
-      items:
-      - name: How to deploy clients to UNIX and Linux servers
-        href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md     
-      - name: Linux and UNIX client commands
-        href: clients/deploy/linux-and-unix-clients-technical-reference.md
     - name: Prepare to deploy clients to Macs
       href: clients/deploy/prepare-to-deploy-mac-clients.md
     - name: How to deploy clients to Macs
@@ -733,14 +725,10 @@
     items:
     - name: How to monitor clients
       href: clients/manage/monitor-clients.md
-    - name: How to monitor Linux and UNIX clients
-      href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
     - name: How to manage clients
       href: clients/manage/manage-clients.md
     - name: Client notification
       href: clients/manage/client-notification.md
-    - name: How to manage Linux and UNIX clients
-      href: clients/manage/manage-clients-for-linux-and-unix-servers.md
     - name: Sync data to Azure Monitor
       href: /azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context
     - name: Maintain Mac clients
@@ -779,8 +767,6 @@
       href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
     - name: Resource Explorer default classes
       href: clients/manage/inventory/resource-explorer-classes.md
-    - name: Hardware inventory for Linux and UNIX
-      href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
     - name: Security and privacy for hardware inventory
       href: clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
   - name: Software inventory
@@ -853,8 +839,6 @@
       href: clients/manage/upgrade/exclude-clients-windows.md
     - name: Upgrade Windows clients
       href: clients/manage/upgrade/upgrade-clients-for-windows-computers.md
-    - name: Upgrade Linux and UNIX clients
-      href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Upgrade Mac clients
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
 - name: Manage clients over the internet

@@ -83,39 +83,3 @@ Endpoint Protection manages and monitors Microsoft Defender Advanced Threat Prot
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
 
  ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)  
-
-
-
-## Endpoint Protection Client for Mac Computers and Linux Servers  
-
-> [!Important]  
-> Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux may be discontinued after the end of support. For more information, see [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).  
-
- System Center Endpoint Protection includes an Endpoint Protection client for Linux and for Mac computers. These clients aren't supplied with Configuration Manager. Download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx):  
-
--   System Center Endpoint Protection for Mac  
-
--   System Center Endpoint Protection for Linux  
-
-
-> [!Note]  
->  You must be a Microsoft Volume License customer to download the Endpoint Protection installation files for Linux and the Mac.  
-
- These products can't be managed from the Configuration Manager console. A System Center Operations Manager management pack is supplied with the installation files, which allows you to manage the client for Linux.  
-
-### How to get the Endpoint Protection client for Mac computers and Linux servers
-
-Use the following steps to download the image file containing the Endpoint Protection client software and documentation for Mac computers and Linux servers.
-1. Sign in to the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).
-2. Select the **Downloads and Keys** tab at the top of the website.
-3. Filter on product **System Center Endpoint Protection (current branch)**.
-4. Click link to **Download**
-5. Click **Continue**. You should see several files, including one named: **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**.
-6. To download the file, click the arrow icon. The file name is **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO**.
-
-The January 2018 update (X21-67050) includes the following versions:
-
-- System Center Endpoint Protection for Mac 4.5.32.0 (support for macOS 10.13 High Sierra)
-- System Center Endpoint Protection for Linux 4.5.20.0 
-
-  For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products. This product documentation is in the **Documentation** folder of the .ISO file.

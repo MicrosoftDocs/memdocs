@@ -33,12 +33,9 @@ Before you begin the installation of a new site, make sure that the site server 
 -   [Supported configurations for Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)  
 -   [Prerequisite Checker](prerequisite-checker.md)  
 
-##  <a name="bkmk_Addclients"></a> Clients for additional operating systems  
-You can download client software for Configuration Manager from the Microsoft Download Center for the following operating systems:  
+## <a name="bkmk_Addclients"></a> Clients for additional operating systems
 
-- macOS (Apple)
-- UNIX
-- Linux
+You can download client software for Configuration Manager from the Microsoft Download Center for macOS.
 
 Use the following links to download clients for the version of Configuration Manager you use:  
 
