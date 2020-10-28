@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 10/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -43,7 +43,9 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 
 ### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune requires:
 - Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
-   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro and Windows 10 long-term servicing channel (LTSC) aren't supported.
+   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) and isn't supported.
+      -  Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+      - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
@@ -78,12 +80,7 @@ Proactive remediations also require one of the following licenses for the manage
 
 ### Endpoint analytics permissions
 
-The following permissions are used for Endpoint analytics:
-- **Read** under the **Device configurations** category.
-- **Read** under the **Organization** category. <!--temporary for pp-->
-- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
-
-A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+[!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 
 ### Proactive remediations permissions
 

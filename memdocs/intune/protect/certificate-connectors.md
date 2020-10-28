@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -120,7 +120,7 @@ For guidance on installation of this connector, see [Configure infrastructure to
 
 ## Connector Lifecycle
 
-Periodically, updated versions of certificate connectors are released. Announcements for new connector releases appear in the (What’s New](../fundamentals/whats-new.md) article for Intune and in the [What's new for Connectors](#whats-new-for-connectors) section near the end of this article.
+Periodically, updated versions of certificate connectors are released. Announcements for new connector releases appear in the [What’s New](../fundamentals/whats-new.md) article for Intune and in the [What's new for Connectors](#whats-new-for-connectors) section near the end of this article.
 
 When a new version releases, support for the previous version is deprecated with a limited grace period for its continued use. After the grace period expires, support for that deprecated version ends, and it can stop functioning at any time. The grace period is six months.
 
@@ -154,9 +154,9 @@ You can manually update a certificate connector even when it supports automatic 
    - SCEP: [Configure infrastructure to support SCEP with Intune](certificates-scep-configure.md)
    - PKCS: [Download, install, and configure the PFX Certificate Connector for Microsoft Intune](certificates-pfx-configure.md)
 
-## Connector status and version
+## Connector status <!-- and version -->
 
-In the Microsoft Endpoint Manager admin center, you can select a certificate connector to view information about its status and confirm its version:
+In the Microsoft Endpoint Manager admin center, you can select a certificate connector to view information about its status: <!-- and confirm its version: -->
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 

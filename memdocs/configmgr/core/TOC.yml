@@ -13,7 +13,7 @@
     - name: Find help for Configuration Manager
       href: understand/find-help.md
     - name: How to use the docs
-      href: understand/use-docs.md
+      href: ../../use-docs.md
     - name: Accessibility features
       href: understand/accessibility-features.md
     - name: Software Center user guide

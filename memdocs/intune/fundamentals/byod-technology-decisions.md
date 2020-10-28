@@ -88,4 +88,4 @@ Still, many organizations often have specific risks they're concerned about.  Th
 ## Next steps
 Now it's time to decide if you are going to enable BYOD in your organization by focusing on device management, app management, or a combination of the two. The implementation choice is yours, where you can rest assured that the identity and security features available with Azure AD will be available regardless.  
 
-Use the Intune [Planning Guide](planning-guide.md) to map out your next level of planning.
+Use the Intune [Planning Guide](intune-planning-guide.md) to map out your next level of planning.

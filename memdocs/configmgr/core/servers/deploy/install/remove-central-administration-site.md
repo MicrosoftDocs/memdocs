@@ -2,7 +2,7 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 06/09/2020
+ms.date: 10/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,10 +18,10 @@ manager: dougeby
 
 <!-- 3607277 -->
 
-Starting in version 2002, if the hierarchy consists of the central administration site (CAS) and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
+If the hierarchy consists of the central administration site (CAS) and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
 > [!IMPORTANT]
-> In this version of Configuration Manager, this feature is pre-release and not enabled by default. It's currently available for Microsoft Premier customers.
+> This feature is currently pre-release and not enabled by default. It's currently available for Microsoft Premier customers that use the latest version of Configuration Manager.
 >
 > To enable this feature, contact your technical account manager for assistance:
 >
@@ -34,6 +34,8 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 - The hierarchy needs to consist of the CAS and a single child primary site. The primary site can have secondary sites. To remove other child primary sites from the hierarchy, review the planning steps and prerequisites to [Uninstall a primary site](uninstall-sites-and-hierarchies.md#bkmk_primary).
 
 - Make sure your child primary site meets the size and scale requirements for a [stand-alone primary site](../../../plan-design/configs/size-and-scale-numbers.md#bkmk_pri).
+
+- Make sure to upgrade all sites to the [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
 
 - Move or retire any site roles at the CAS, except the service connection point and the software update point. Configuration Manager setup handles these two roles when you remove the CAS.
 
@@ -63,6 +65,8 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 - Review any third-party software that might have a dependency on the CAS.
 
 ## Prerequisites
+
+- The [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
 
 - The administrative user that runs Configuration Manager setup needs the following security rights:
 
@@ -138,7 +142,7 @@ After you remove the CAS, review the following steps as they apply to your envir
 
 - If you connect Configuration Manager with [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
 
-- In version 2002, if you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Microsoft Surface drivers and firmware updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
+- If you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Microsoft Surface drivers and firmware updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - If you manage third-party software updates:
 
