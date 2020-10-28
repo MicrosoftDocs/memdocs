@@ -157,18 +157,18 @@ Use one of these values for &lt;Device ID\>:
 |Windows CE|6|  
 |Windows Embedded|7|  
 |Intel system on a chip|12|  
-|Unix and Linux servers|13|  
 |Microsoft HoloLens (MDM)|15|
 |Microsoft Surface Hub (MDM)|16|
 
 > [!NOTE]
 > Values that aren't listed in this table are associated with devices that are no longer supported.
 
-<!-- removed with hybrid EOL
+<!-- old, unsupported values
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  
 |Android|11|  
+|Unix and Linux servers|13|  
 |Apple macOS (MDM)|14|
 |Android for Work|17|
  -->
