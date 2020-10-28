@@ -35,7 +35,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 - Make sure your child primary site meets the size and scale requirements for a [stand-alone primary site](../../../plan-design/configs/size-and-scale-numbers.md#bkmk_pri).
 
-- Ensure all sites are upgraded to the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details).
+- Make sure to upgrade all sites to the [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
 
 - Move or retire any site roles at the CAS, except the service connection point and the software update point. Configuration Manager setup handles these two roles when you remove the CAS.
 
@@ -66,7 +66,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 ## Prerequisites
 
-- The [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details).
+- The [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
 
 - The administrative user that runs Configuration Manager setup needs the following security rights:
 
