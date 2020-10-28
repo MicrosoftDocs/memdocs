@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 10/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -117,8 +117,8 @@ Supported platforms and profiles:
 
   - **Allow standard users to enable encryption during Autopilot**  
     CSP: [AllowStandardUserEncryption](https://go.microsoft.com/fwlink/?linkid=2114200)
-    - **Not configured** (*default*) – During Azure Active Directory Join (AADJ) silent enable scenarios, users don't need to be local administrators to enable BitLocker.
-    - **Yes** - The setting is left as client default, which is to require local admin access to enable BitLocker.
+    - **Not configured** (*default*) – The setting is left as client default, which is to require local admin access to enable BitLocker.
+    - **Yes** - During Azure Active Directory Join (AADJ) silent enable scenarios, users don't need to be local administrators to enable BitLocker.
 
     For non-silent enablement and Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
 
