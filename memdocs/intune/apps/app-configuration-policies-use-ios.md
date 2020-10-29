@@ -194,7 +194,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
-- \{\{issupervised\}\}—for example, **true** (for iOS/iPadOS devices)
+- \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
 
 ## Configure the Company Portal app to support iOS and iPadOS DEP devices
 
