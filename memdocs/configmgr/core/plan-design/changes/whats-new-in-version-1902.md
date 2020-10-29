@@ -429,7 +429,7 @@ For more information, see [Configuration Manager console notifications](../../se
 <!--3556010-->
 When you send [feedback](../../understand/find-help.md#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-For more information, see [Product feedback](../../understand/find-help.md#bkmk_feedbackid).
+For more information, see [Product feedback](../../understand/find-help.md#confirmation-of-console-feedback).
 
 ### View recently connected consoles
 
