@@ -982,6 +982,13 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
 
+> [!NOTE]
+> Default values are:
+> - User device affinity usage threshold (minutes): 2880
+> - User device affinity usage threshold (days): 30
+> - Automatically configure user device affinity from usage data: No
+> - Allow user to define their primary devices: No
+
 ## Windows Diagnostic Data
 
 > [!IMPORTANT]

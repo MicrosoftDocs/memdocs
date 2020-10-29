@@ -7,10 +7,10 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 10/28/2020
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: 
+ms.service: mem
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
