@@ -87,7 +87,7 @@ Applies to:
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 ### On-demand rules with Microsoft Tunnel for iOS<!-- 8460915  -->
-Were adding support to the Microsoft Tunnel to use on-demand rules for iOS devices. On-demand rules are configured in device configuration VPN profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **VPN**).
+We're adding support to the Microsoft Tunnel to use on-demand rules for iOS devices. On-demand rules are configured in device configuration VPN profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **VPN**).
 
 With on-demand rules you can specify the use of the VPN when conditions are met for specific FQDNs or IP addresses. 
  
@@ -132,11 +132,9 @@ The Company Portal app will store, as well as display, push notifications sent t
 ### New messaging explaining work profile management in Company Portal for Android<!--8378333 -->
 We're adding messaging to the Company Portal for Android for work profile users to introduce and explain the work profile setup. Here's where you will see the new messaging:
 
-After the work profile setup flow, users will see a new informational screen explaining where to find work apps, with links to help documentation.
-
-When a user accidentally re-enables the Company Portal app in the personal profile, where they had seen the **Your device now has a profile just for work** screen (and previously the **You're Halfway There** screen) we redesigned the screen with clearer explanations and new illustrations to guide users to where they can find work apps, with links to help documentation.
-
-In the Help page in the **Frequently Asked Questions** section, there is a new link to help documentation about the work profile setup and how to find work apps. 
+1. After the work profile setup flow, users will see a new informational screen explaining where to find work apps, with links to help documentation.
+2. When a user accidentally re-enables the Company Portal app in the personal profile, where they had seen the **Your device now has a profile just for work** screen (and previously the **You're Halfway There** screen) we redesigned the screen with clearer explanations and new illustrations to guide users to where they can find work apps, with links to help documentation.
+3. In the Help page in the **Frequently Asked Questions** section, there is a new link to help documentation about the work profile setup and how to find work apps. 
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -161,7 +159,7 @@ We’re reworking the endpoint security Account protection policy to use the new
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
 ### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7339038   -->
-We’re expanding support for *policy merge* of Windows Defender Antivirus exclusions to support USB device ID’s. This support will be added to the *Device control* profile for the endpoint security Attack surface reduction policy. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > *for Platform select Windows 10 and later* > **Device control**).
+We’re expanding support for *policy merge* of Windows Defender Antivirus exclusions to support USB device ID’s. This support will be added to the *Device control* profile for the endpoint security Attack surface reduction policy. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > for **Platform** select *Windows 10 and later* > **Device control**).
 
 With policy merge, the device ID's that are listed as part of different Device control profiles will merge into a single list for each device or user. That list is based on the individual policies that apply to a specific user or device. This merge will help to prevent conflicts between profiles and policies, and existing policies that were in conflict will no longer be in conflict for the device ID lists. 
 
@@ -176,7 +174,7 @@ The **Co-management device workloads** report provides a report of devices that 
 A new operational report will be available in public preview to help troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. The **Assignment failures** report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You have the ability to filter, sort, and search across all of the records throughout the report. This report will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Assignment failures (preview)**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 ### Reporting updates for Windows Virtual Desktop VMs<!--5736314 -->
-The following settings will show display as **Not applicable** in the Policy reports:
+The following settings will display as **Not applicable** in the Policy reports:
 - BitLocker settings
 - Device encryption
 - Defender Application Guard settings
@@ -210,7 +208,7 @@ The improvements include:
   - **User defined**
 
 ### Improved Antivirus status operations report for endpoint security<!-- 7771023    -->
-We’re adding new details to the *Antivirus status operations* report for Windows Defender Antivirus, which is an endpoint security policy report. (**Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**)
+We’re adding new details to the *Antivirus status operations* report for Windows Defender Antivirus, which is an endpoint security policy report. (**Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**).
  
 The following new columns of information will be available for each device:
 - Product status – The status of Windows Defender on the device.
@@ -223,7 +221,7 @@ We’re improving the conflict resolution behavior when rules merge for our *Att
 With the new merge behavior, the values for settings that are part of different Attack surface reduction rule profiles that apply to a device will be merged into a single list. That list then applies to the device. This merge behavior will help prevent conflicts between profiles, and existing policies that were in conflict will no longer be in conflict. 
 
 ### New setting for Device Control profile for endpoint security<!-- 8456551    -->
-We’re adding a new setting, **Block write access to removable storage** to the *Device control* profile for Attack surface reduction policy in endpoint security. (**Endpoint security** > **Attack surface reduction ** > **Windows 10 or later** > **Device Control**).
+We’re adding a new setting, **Block write access to removable storage** to the *Device control* profile for Attack surface reduction policy in endpoint security. (**Endpoint security** > **Attack surface reduction** > **Windows 10 or later** > **Device Control**).
 
 <!-- ***********************************************-->
 ## Notices
