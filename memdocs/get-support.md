@@ -11,14 +11,14 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 10/23/2020
 ms.topic: how-to
-ms.service: microsoft-intune
+ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 
 # optional metadata
-
+ 
 #audience:
 #ms.devlang:
 ms.reviewer: hipethe
