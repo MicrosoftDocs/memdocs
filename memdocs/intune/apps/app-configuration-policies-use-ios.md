@@ -165,8 +165,8 @@ When you create an app configuration file, you can specify one or more of the fo
   <string>{{udidlast4digits}}</string>
   <key>aaddeviceid</key>
   <string>{{aaddeviceid}}</string>
-  <key>issupervised</key>
-  <string>{{issupervised}}</string>
+  <key>IsSupervised</key>
+  <string>{{IsSupervised}}</string>
 </dict>
 ```
 
