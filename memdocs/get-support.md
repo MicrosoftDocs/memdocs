@@ -44,7 +44,7 @@ With administrative access to the admin center, you can use the **Help and Suppo
 
 Use one of the following links to open the Microsoft Endpoint Manager admin center. The link you use depends on how your tenant is hosted:
 
-- **Public cloud**: Use [https://https://endpoint.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2109431)
+- **Public cloud**: Use [https://endpoint.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2109431)
 - **Private cloud** for government, which is also known as a sovereign cloud like Azure Government: Use [https://endpoint.microsoft.us](https://endpoint.microsoft.us)
 
 From within the admin center, use one of the following methods to access Help and support:
