@@ -87,7 +87,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 - A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
 
-- [Onboard the site](/configmgr/core/clients/manage/cmg/configure-azure-ad) to Azure AD for cloud management.  
+- [Onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Azure AD for cloud management.  
 
 - *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later, and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
 
