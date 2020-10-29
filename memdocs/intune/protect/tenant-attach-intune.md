@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,16 +33,6 @@ ms.reviewer: mattsha
 
 When you use the Configuration Manager tenant attach scenario, you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Endpoint Manager admin center to create and deploy policies.
 
-The following policy types and profiles are supported by Configuration Manager devices that are tenant attached:
-
-- **Policy path**: Endpoint security > Antivirus > Windows 10 and Windows Server (ConfigMgr) 
-  - **Profile**: Microsoft Defender Antivirus (preview)
-  - **Profile**: Windows Security experience (preview)
-
-- **Policy path**: Endpoint security > Endpoint detection and response > Windows 10 and Windows Server (ConfigMgr)
-  - **Profile**: Endpoint detection and response (ConfigMgr)
-
-
 ## Requirements to use Intune policy for tenant attach
 
 To support using Intune endpoint security policies with Configuration Manager devices, your Configuration Manager environment requires the following configurations. [Configuration guidance](#set-up-configuration-manager-to-support-intune-policies) is provided in this article:
@@ -59,27 +49,15 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 - **Permissions to Azure AD** - To complete setup of tenant attach, you’ll need an account with Global Administrator permissions to your Azure subscription.
 
-### Specific requirements for Intune endpoint security policies
+- **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
 
-- **Antivirus policy** (*preview*):
+### Configuration Manager version requirements for Intune endpoint security policies
 
-  - **Configuration Manager** - The following environments are supported:
+[!INCLUDE [Antivirus policy prerequisites](../includes/tenant-attach-antivirus-prerequisites.md)]
 
-    - **Configuration Manager current branch version 2006 or later** - Support for Intune antivirus policies was added with this current branch version.
-    <!--
-    - **Configuration Manager technical preview 2007 or later** - Support for Intune antivirus policies was added with this technical preview version. -->
+[!INCLUDE [endpoint detection and response policy prerequisites](../includes/tenant-attach-edr-prerequisites.md)]
 
-  - **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
-
-- **Endpoint detection and response policy**:
-
-  - **Configuration Manager** - The following environments are supported:
-
-    - **Configuration Manager technical preview 2003 or later** - Support for Intune Endpoint detection and response policies was added with the technical preview version 2003.
-
-    - **Configuration Manager current branch version 2002 or later** - If you use Configuration Manager with version 2002 you must install the in-console update **Configuration Manager 2002 Hotfix (KB4563473)**. This update enables support in Configuration Manager 2002 for using endpoint security policies.
-
-  - **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
+[!INCLUDE [Firewall policy prerequisites](../includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Set up Configuration Manager to support Intune policies
 
@@ -87,7 +65,7 @@ Before you deploy Intune policies to Configuration Manager devices, complete the
 
 The following tasks are completed in the Configuration Manager console. If you’re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
-1. [Install the update for Configuration Manager](#task-1-install-the-update-for-configuration-manager)
+1. [Confirm your Configuration Manage environment](#task-1-confirm-your-configuration-manage-environment)
 2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
 3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
 4. [Enable collections to support Intune policies](#task-4-enable-collections-for-endpoint-security-policies)
@@ -98,17 +76,13 @@ The following tasks are completed in the Configuration Manager console. If you�
 > - [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
 > - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
-### Task 1: Install the update for Configuration Manager
+### Task 1: Confirm your Configuration Manage environment
 
-If you use Configuration Manager current branch version 2002, install the following in-console update that adds support for the endpoint security policies you deploy from the Microsoft Endpoint Manager admin center.
+Intune policies for Configuration Manager devices require different minimum versions of Configuration Manager, depending on when the policy was first released. Review the [Configuration Manager version requirements for Intune endpoint security policies](#configuration-manager-version-requirements-for-intune-endpoint-security-policies) found earlier in this article to ensure your environment supports the policies you plan to use. A more recent version of Configuration Manager will support policies that require an earlier version.
 
-**Update details**:
+When a Configuration Manager hotfix is necessary, you can find the hotfix as an in-console update for Configuration Manager. For more information see [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
 
-- **Configuration Manager 2002 Hotfix (KB4563473)**
-
-To install this update, follow the guidance from [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
-
-After installing the update, return here to continue configuring your environment to support endpoint security policies from the Microsoft Endpoint Manager admin center.
+After installing necessary updates, return here to continue configuring your environment to support endpoint security policies from the Microsoft Endpoint Manager admin center.
 
 ### Task 2: Configure tenant attach and synchronize collections
 

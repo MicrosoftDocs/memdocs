@@ -139,5 +139,5 @@ If a device is a distribution point that uses the same PKI certificate for both 
 
 ## Next steps
 
-[Troubleshoot ConfigMgr client details](troubleshoot-client-details.md)
-[Enable co-management](../comanage/overview.md) to get additional cloud-powered capabilities like conditional access.
+- [Troubleshoot ConfigMgr client details](troubleshoot-client-details.md)
+- [Enable co-management](../comanage/overview.md) to get additional cloud-powered capabilities like conditional access.

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 10/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,6 +45,8 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 ## Firewall profiles
 
+### Devices managed by Intune
+
 **macOS profiles**:
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
@@ -54,6 +56,10 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
 - **Microsoft Defender Firewall rules** *(Preview)* - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+
+### Devices managed by Configuration Manager
+
+[!INCLUDE [Firewall policy prerequisites](../includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Firewall rule mergers and policy conflicts
 

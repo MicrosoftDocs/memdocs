@@ -39,7 +39,7 @@ You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [Au
 To enable ADE, you use both the Intune and [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management in either Apple portal. You create ADE enrollment profiles in Intune containing settings that are applied to devices during enrollment. ADE can't be used with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
 
 > [!NOTE]
-> ADE sets device configurations that can't necessarily be removed by the end user. Therefore, before [migrating to ADE](../fundamentals/migration-guide-considerations.md), the device must be wiped to return it to an out-of-box (new) state.
+> ADE sets device configurations that can't necessarily be removed by the end user. Therefore, before using ADE, the device must be wiped to return it to an out-of-box (new) state. For more information, see [Deployment guide: Enroll iOS and iPadOS devices](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ## Automated Device Enrollment and the Company Portal
 
@@ -295,7 +295,7 @@ You can use the enrollment **Name** field to create a dynamic group in Azure Act
 
 You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
 
-For the fastest policy delivery on ADE devices with user affinity, make sure the enrolling user is a member, prior to device setup, of an AAD user group. 
+For the fastest policy delivery on ADE devices with user affinity, make sure the enrolling user is a member, prior to device setup, of an Azure AD user group. 
 
 Assigning dynamic groups to enrollment profiles can lead to some delay in delivering applications and policies to devices after the enrollment.
 
@@ -334,6 +334,12 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
 See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
+
+> [!NOTE]
+> You might see the following error during setup while enrolling iOS/iPadOS devices with Automated Device Enrollment iOS/iPadOS and user affinity:
+> "The SCEP server returned an invalid response."
+> To resolve this error, you must factory reset the device. This is because of a 15-minute time limit on SCEP certificates due to security reasons. 
+ 
 
 ## Renew an Automated Device Enrollment token  
 
