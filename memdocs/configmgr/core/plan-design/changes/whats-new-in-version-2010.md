@@ -179,7 +179,11 @@ You can now view dependency relationships between collections in a graphical for
 
 <!--3180826-->
 
-The Configuration Manager console now has a new wizard for sending feedback. The redesigned wizard improves the workflow with better guidance about how to submit good feedback.
+The Configuration Manager console has a new wizard for sending feedback. The redesigned wizard improves the workflow with better guidance about how to submit good feedback.
+
+:::image type="content" source="media/3180826-send-a-smile-2010.png" alt-text="Send a smile product feedback wizard" lightbox="media/3180826-send-a-smile-2010.png":::
+
+For more information, see [Find help: Product feedback](../../understand/find-help.md#product-feedback).
 
 ### Query for feedback sent to Microsoft
 
