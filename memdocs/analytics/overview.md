@@ -35,8 +35,6 @@ This initial release, focuses on three things:
 - [**Proactive remediation scripting**](proactive-remediations.md): Fix common support issues before end-users notice issues
 - [**Start up performance**](startup-performance.md): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
 
-This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
-
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 You can enroll devices via Configuration Manager or Microsoft Intune.
