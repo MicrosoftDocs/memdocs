@@ -440,6 +440,11 @@
             "source_path": "memdocs/intune/fundamentals/get-support.md",
             "redirect_url": "/mem/get-support",
             "redirect_document_id": false
-        }                   
+        },
+        {
+            "source_path": "memdocs/analytics/whats-new.md",
+            "redirect_url": "/mem/analytics/overview",
+            "redirect_document_id": false
+        }
     ]
 }
