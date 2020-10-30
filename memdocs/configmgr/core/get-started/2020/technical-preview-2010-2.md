@@ -43,6 +43,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [8537319](includes/2010-2/8537319.md)]
 [!INCLUDE [8565578](includes/2010-2/8565578.md)]
 [!INCLUDE [8613105](includes/2010-2/8613105.md)]
+[!INCLUDE [3555923](includes/2010-2/3555923.md)]
 
 <!--
 ## General known issues
