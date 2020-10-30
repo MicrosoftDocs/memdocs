@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/28/2020
+ms.date: 10/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -83,13 +83,13 @@ Microsoft supports each technical preview version up until three successive vers
 > [!TIP]
 > When you install an update to the technical preview, you update your preview installation to that new technical preview version. A technical preview installation never has the option to upgrade to a current branch installation. It also never receives updates from the current branch release.
 >
-> Several times throughout the year, there are technical preview branch and current branch versions with the same version number. For example, there is a technical preview version 1910 and a current branch version 1910.
+> Several times throughout the year, there are technical preview branch and current branch versions with the same version number. For example, there is a technical preview version 2006 and a current branch version 2006.
 
 ### Active baseline versions
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version. The following Configuration Manager technical preview branch versions are available as both in-console updates and as new baseline versions:
 
-- **Technical preview version 2007**
+- **Technical preview version 2010.2**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -118,24 +118,17 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2010.2
 
-- [3607457](2020/technical-preview-2010-2.md) <!--3607457-->
-- [5679831](2020/technical-preview-2010-2.md) <!--5679831-->
-- [6077985](2020/technical-preview-2010-2.md) <!--6077985-->
-- [6974300](2020/technical-preview-2010-2.md) <!--6974300-->
-- [6979223](2020/technical-preview-2010-2.md) <!--6979223-->
-- [6979470](2020/technical-preview-2010-2.md) <!--6979470-->
-- [7033501](2020/technical-preview-2010-2.md) <!--7033501-->
-- [7137169](2020/technical-preview-2010-2.md) <!--7137169-->
-- [7303430](2020/technical-preview-2010-2.md) <!--7303430-->
-- [7768130](2020/technical-preview-2010-2.md) <!--7768130-->
-- [7979972](2020/technical-preview-2010-2.md) <!--7979972-->
-- [8052494](2020/technical-preview-2010-2.md) <!--8052494-->
-- [8126836](2020/technical-preview-2010-2.md) <!--8126836-->
-- [8227649](2020/technical-preview-2010-2.md) <!--8227649-->
-- [8286432](2020/technical-preview-2010-2.md) <!--8286432-->
-- [8537319](2020/technical-preview-2010-2.md) <!--8537319-->
-- [8565578](2020/technical-preview-2010-2.md) <!--8565578-->
-- [8613105](2020/technical-preview-2010-2.md) <!--8613105-->
+- [Tenant attach: Troubleshooting portal lists a user’s devices based on usage](2020/technical-preview-2010-2.md#bkmk_uda) <!--6974300-->
+- [Tenant attach: Create and deploy firewall policies](2020/technical-preview-2010-2.md#bkmk_fire) <!--7768130-->
+- [Enhancements to applications in Microsoft Endpoint Manager admin center](2020/technical-preview-2010-2.md#bkmk_apps) <!--7979972-->
+- [Improvements to BitLocker management](2020/technical-preview-2010-2.md#bkmk_blmcmg) <!--6979223-->
+- [Improvements to deploy an OS over CMG using boot media](2020/technical-preview-2010-2.md#bkmk_osdcmg) <!--3555923-->
+- [Desktop Analytics support for new Windows 10 data levels](2020/technical-preview-2010-2.md#bkmk_da) <!--6979470-->
+- [Immediate distribution point fallback for clients downloading software update delta content](2020/technical-preview-2010-2.md#bkmk_dp) <!--8286432-->
+- [Disable Azure AD authentication for onboarded tenants](2020/technical-preview-2010-2.md#bkmk_aadauth) <!--8537319-->
+- [Additional options when creating app registrations in Azure Active Directory](2020/technical-preview-2010-2.md#bkmk_expire) <!--7153654-->
+- [Validate internet access for the service connection point](2020/technical-preview-2010-2.md#bkmk_scp) <!--8565578-->
+- [Improvements to the administration service](2020/technical-preview-2010-2.md#bkmk_rest) <!--8613105-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
