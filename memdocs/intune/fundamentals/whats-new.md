@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 10/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -153,6 +153,15 @@ With Intune, you can now provision Android Enterprise dedicated devices with Mic
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
+
+#### Update for Microsoft Tunnel<!-- 8629678  -->
+
+We’ve released a [new version](../protect/microsoft-tunnel-configure#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway, which includes the following changes:
+
+- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor#view-microsoft-tunnel-logs) when you run the *journalctl -t* command line on the tunnel server.
+- Additional bug fixes.
+
+The Tunnel Gateway server will automatically update to the new release.
 
 #### App protection policy support on Android and iOS/iPadOS for additional partners<!-- 4452423, 4731168   -->
 In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners.
