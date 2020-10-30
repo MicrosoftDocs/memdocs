@@ -2,7 +2,7 @@
 title: PowerShell scripts for Proactive remediations
 titleSuffix: Configuration Manager
 description: PowerShell script reference for Proactive remediations in Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 10/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
