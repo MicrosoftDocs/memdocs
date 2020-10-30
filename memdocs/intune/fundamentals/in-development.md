@@ -158,9 +158,18 @@ We’re reworking the endpoint security Account protection policy to use the new
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
 ### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7339038   -->
-We’re expanding support for *policy merge* of Windows Defender Antivirus exclusions to support USB device ID’s. This support will be added to the *Device control* profile for the endpoint security Attack surface reduction policy. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > for **Platform** select *Windows 10 and later* > **Device control**).
+We’ve added support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
+ 
+- Allow hardware device installation by device identifiers
+- Block hardware device installation by device identifiers
+- Allow hardware device installation by setup classes
+- Block hardware device installation by setup classes 
+- Allow hardware device installation by device instance identifiers 
+- Block hardware device installation by device instance identifiers 
 
-With policy merge, the device ID's that are listed as part of different Device control profiles will merge into a single list for each device or user. That list is based on the individual policies that apply to a specific user or device. This merge will help to prevent conflicts between profiles and policies, and existing policies that were in conflict will no longer be in conflict for the device ID lists. 
+Policy merge applies to the configuration of each setting across the different profiles that apply to a device. It doesn’t include evaluation between different settings, even when two settings are closely related.
+
+For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings ](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles. 
 
 
 ### New co-management eligibility organizational report<!-- 7854306  -->
