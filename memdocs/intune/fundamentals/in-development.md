@@ -129,12 +129,11 @@ To avoid confusion, the term for the *work profile* Android Enterprise managemen
 ### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
 The Company Portal app will store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications will be able to view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [Device ownership notifications](../apps/company-portal-app.md#device-ownership-notification).
 
-### New messaging explaining work profile management in Company Portal for Android<!--8378333 -->
-We're adding messaging to the Company Portal for Android for work profile users to introduce and explain the work profile setup. Here's where you will see the new messaging:
-
-1. After the work profile setup flow, users will see a new informational screen explaining where to find work apps, with links to help documentation.
-2. When a user accidentally re-enables the Company Portal app in the personal profile, where they had seen the **Your device now has a profile just for work** screen (and previously the **You're Halfway There** screen) we redesigned the screen with clearer explanations and new illustrations to guide users to where they can find work apps, with links to help documentation.
-3. In the Help page in the **Frequently Asked Questions** section, there is a new link to help documentation about the work profile setup and how to find work apps. 
+### Improvements to work profile messaging in Company Portal for Android<!--8378333 -->
+We're updating messaging in Company Portal for Android to better introduce and explain how work profile works. The new messaging appears:  
+1. After the work profile setup flow. Users will see a new informational screen explaining where to find work apps, with links to help documentation.
+2. When a user accidentally re-enables the Company Portal app in the personal profile. We redesigned a screen (**Your device now has a profile just for work**) with clearer explanations and new illustrations to guide users to their work apps, with links to help documentation.
+3. On the **Help** page > **Frequently Asked Questions** section, there's a new link to help documentation about how to set up work profile and find apps. 
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
