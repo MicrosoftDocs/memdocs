@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics.
-ms.date: 10/23/2020
+ms.date: 10/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -81,6 +81,20 @@ Proactive remediations also require one of the following licenses for the manage
 ### Endpoint analytics permissions
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
+
+### Built-in role permissions
+
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
+
+|Role name|Azure Active Directory role|Intune role|Endpoint analytics permissions|
+|---|---|---|---|
+|Global Administrator|Yes||Read/write|
+|Intune Service Administrator|Yes||Read/write|
+|School Administrator||Yes|Read/write|
+|Endpoint Security Manager||Yes|Read only|
+|Help Desk Operator||Yes|Read only|
+|Read Only Operator||Yes|Read only|
+|Reports Reader|Yes||Read only|
 
 ### Proactive remediations permissions
 
