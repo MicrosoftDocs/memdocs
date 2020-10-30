@@ -197,36 +197,34 @@ This script package detects if last Group Policy refresh is greater than `7 days
 #
 # Script Name:     Detect_stale_Group_Policies.ps1
 # Description:     Detect if Group Policy has been updated within number of days
-# Notes:           Remediate if "Match", $numDays default value of 7, change as appropriate
+# Notes:           Remediate if "Match", $lastGPUpdateDays default value of 7, change as appropriate
 #
 #=============================================================================================================================
 
 # Define Variables
-$numDays = 7
 
 try {
-    $gpResult = gpresult /R | Select-String -pattern "Last time Group Policy was applied:" | Select-Object -last 1
-
-    if ($gpResult){
+    $gpResult = [datetime]::FromFileTime(([Int64] ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeHi) -shl 32) -bor ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeLo))
+    $lastGPUpdateDate = Get-Date ($gpResult[0])
     [int]$lastGPUpdateDays = (New-TimeSpan -Start $lastGPUpdateDate -End (Get-Date)).Days
-        if ($lastGPUpdateDays -gt $numDays){
-            #We want within last $numDays so we get "Match"
-            Write-Host "Match"
-            exit 1
-        }
-        else {
-            #Script succeeds but > $numDays since last update so remediate
-            #Exit 1 for Intune and "Match" for ConfigMan
-            Write-Host "No_Match"
-            exit 0
-        }
+        
+    if ($lastGPUpdateDays -gt 7){
+        #Exit 1 for Intune. We want it to be within the last 7 days "Match" to remediate in SCCM
+        Write-Host "Match"
+        exit 1
+    }
+    else {
+        #Exit 0 for Intune and "No_Match" for SCCM, only remediate "Match"
+        Write-Host "No_Match"
+        exit 0
     }
 }
 catch {
     $errMsg = $_.Exception.Message
-    Write-Error $errMsg
+    return $errMsg
     exit 1
 }
+
 ```
 
 ### Remediate_stale_GroupPolicies.ps1
@@ -240,14 +238,23 @@ catch {
 #
 #=============================================================================================================================
 
-try{
-    $compGP = gpupdate /target:computer /force | out-string
-    $userGP = gpupdate /target:user /force | out-string
-    exit 0
+try {
+    $compGPUpd = gpupdate /force
+    $gpResult = [datetime]::FromFileTime(([Int64] ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeHi) -shl 32) -bor ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeLo))
+    $lastGPUpdateDate = Get-Date ($gpResult[0])
+    [int]$lastGPUpdateDays = (New-TimeSpan -Start $lastGPUpdateDate -End (Get-Date)).Days
+
+    if ($lastGPUpdateDays -eq 0){
+        Write-Host "gpupdate completed successfully"
+        exit 0
+    }
+    else{
+        Write-Host "gpupdate failed"
+        }
 }
 catch{
     $errMsg = $_.Exception.Message
-    Write-Error $errMsg
+    return $errMsg
     exit 1
 }
 ```
