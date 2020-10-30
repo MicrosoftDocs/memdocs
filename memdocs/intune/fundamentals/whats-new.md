@@ -150,7 +150,6 @@ Applies to:
 #### Intune support for provisioning Azure Active Directory shared devices<!--6327412 -->
 With Intune, you can now provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode. For more information on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
