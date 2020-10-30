@@ -169,7 +169,7 @@ We’ve added support for *policy merge* of USB device ID’s to the [Device con
 
 Policy merge applies to the configuration of each setting across the different profiles that apply to a device. It doesn’t include evaluation between different settings, even when two settings are closely related.
 
-For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings ](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles. 
+For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings ](../protect/endpoint-security-asr-policy.md) for device control profiles. 
 
 
 ### New co-management eligibility organizational report<!-- 7854306  -->
