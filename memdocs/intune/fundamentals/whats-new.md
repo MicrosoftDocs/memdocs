@@ -156,9 +156,9 @@ With Intune, you can now provision Android Enterprise dedicated devices with Mic
 
 #### Update for Microsoft Tunnel<!-- 8629678  -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-configure#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway, which includes the following changes:
+We’ve released a [new version](../protect/microsoft-tunnel-configure#microsoft-tunnel-updates.md) of the Microsoft Tunnel Gateway, which includes the following changes:
 
-- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor#view-microsoft-tunnel-logs) when you run the *journalctl -t* command line on the tunnel server.
+- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor#view-microsoft-tunnel-logs.md) when you run the *journalctl -t* command line on the tunnel server.
 - Additional bug fixes.
 
 The Tunnel Gateway server will automatically update to the new release.
