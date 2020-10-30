@@ -230,8 +230,8 @@ The specific port depends upon the software update point configuration.
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS|--|443|
-|HTTP|--|80|  
+|HTTPS|--|443/8531|
+|HTTP|--|80/8530|  
 
 For more information, see [CMG Ports and data flow](../../clients/manage/cmg/data-flow.md).
 
