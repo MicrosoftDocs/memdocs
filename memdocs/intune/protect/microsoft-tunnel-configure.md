@@ -250,7 +250,7 @@ Image hash values:
 
 Changes in this release:
 
-- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor#view-microsoft-tunnel-logs.md).
+- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs).
 - Additional bug fixes.
 
 ### October 12, 2020
