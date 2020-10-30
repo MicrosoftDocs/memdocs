@@ -23,10 +23,6 @@ landingContent:
         links:
           - text: Endpoint analytics overview
             url: overview.md
-      - linkListType: whats-new
-        links:
-          - text: What's new
-            url: whats-new.md
 
   # Card 
   - title: Get started

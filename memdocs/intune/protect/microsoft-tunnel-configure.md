@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/12/2020
+ms.date: 10/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,7 +16,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ 
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
@@ -239,6 +239,19 @@ Updates for the Microsoft Tunnel are released periodically. When we update the t
 After an update releases, it rolls out to tenants over the following days. Therefore, your tunnel servers might not start the process to update for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### October 29, 2020
+
+Image hash values:
+
+- **agentImageDigest**: sha256:ba48de2c746a68286d15985f807702c60004131368a4a6a50ceab0f04653031a
+
+- **serverImageDigest**:  sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
+
+Changes in this release:
+
+- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs).
+- Additional bug fixes.
 
 ### October 12, 2020
 

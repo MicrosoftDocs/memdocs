@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics.
-ms.date: 10/23/2020
+ms.date: 10/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -34,8 +34,6 @@ This initial release, focuses on three things:
 - [**Recommended software**](recommended-software.md): Recommendations for providing the best user experience
 - [**Proactive remediation scripting**](proactive-remediations.md): Fix common support issues before end-users notice issues
 - [**Start up performance**](startup-performance.md): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
-
-This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -81,6 +79,20 @@ Proactive remediations also require one of the following licenses for the manage
 ### Endpoint analytics permissions
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
+
+### Built-in role permissions
+
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
+
+|Role name|Azure Active Directory role|Intune role|Endpoint analytics permissions|
+|---|---|---|---|
+|Global Administrator|Yes||Read/write|
+|Intune Service Administrator|Yes||Read/write|
+|School Administrator||Yes|Read/write|
+|Endpoint Security Manager||Yes|Read only|
+|Help Desk Operator||Yes|Read only|
+|Read Only Operator||Yes|Read only|
+|Reports Reader|Yes||Read only|
 
 ### Proactive remediations permissions
 
