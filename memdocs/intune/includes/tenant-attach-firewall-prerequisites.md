@@ -4,7 +4,7 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 10/23/2020
+ms.date: 11/02/2020
 ms.author: brenduns
 ms.custom: include file
 ---
@@ -17,7 +17,7 @@ Manage [Firewall policy settings for Configuration Manager devices](../protect/e
 
 **Policy path**:
 
-- Endpoint security > Firewall > Windows 10 and Windows Server (ConfigMgr)
+- Endpoint security > Firewall > Windows 10 and later
 
 **Profiles**:
 
