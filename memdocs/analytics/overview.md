@@ -64,10 +64,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 
 ## Licensing Prerequisites
 
-Endpoint analytics is included in the following plans:
-
-- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager license. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses) or [Configuration Manager licensing](../configmgr/core/understand/learn-more-editions). 
 
 Proactive remediations also require one of the following licenses for the managed devices:
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
