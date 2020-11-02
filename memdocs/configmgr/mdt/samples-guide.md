@@ -1445,9 +1445,9 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
  All existing servers are working properly. However, each new server added to the network with the image is unable to run the application. Because it is the responsibility of a different group to maintain and update images, you decide that the deployment task sequence be changed to install the relevant version of DAO if the existing version of DAO deployed with the image is incorrect.  
 
- **To add a File Properties condition to a task sequence step in Configuration Manager 2007 R3**  
+ **To add a File Properties condition to a task sequence step in Configuration Manager**  
 
-1.  In Configuration Manager 2007 R3, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to Create a Package](/previous-versions/system-center/configuration-manager-2007/bb693627(v=technet.10)).  
+1.  In Configuration Manager, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to create a package](../apps/deploy-use/packages-and-programs.md#create-a-package-and-program).   
 
 2.  Create an **Install Software** step to deploy the DAO package.  
 
