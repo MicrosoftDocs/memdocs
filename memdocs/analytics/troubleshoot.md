@@ -176,4 +176,4 @@ The maximum allowed output size limit for proactive remediation scripts is 2048 
 
 ## Next steps
 
-For more information on changes to Endpoint analytics, see [What's new](whats-new.md).
+Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
