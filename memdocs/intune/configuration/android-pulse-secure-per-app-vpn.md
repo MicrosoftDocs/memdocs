@@ -97,19 +97,7 @@ After you assign the policy to your Android device or user groups, users should 
 
     :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Android device administrator per-app VPN custom policy in Microsoft Intune":::
 
-8. Select **Next**.
-
-9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-    Select **Next**.
-
-10. In **Assignments**, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
-
-    Select **Next**.
-
-11. In **Review + create**, when you're done, choose **Create**. The profile is created, and shown in the list.
-
-    You can also [monitor its status](device-profile-monitor.md).
+8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
 
 ### Set your blocked and allowed app list (optional)
 

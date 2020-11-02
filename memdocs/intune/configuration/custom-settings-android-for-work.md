@@ -125,12 +125,8 @@ In this example, you create a custom profile that restricts copy and paste actio
 
     :::image type="content" source="./media/custom-settings-android-for-work/custom-policy-afw-copy-paste.png" alt-text="Block copy and paste for Android Enterprise work profile in Microsoft Intune.":::
 
-    Select **Next**.
-
 8. Select **Next**.
-9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile.
-
-    For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
