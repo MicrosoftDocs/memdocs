@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/22/2020
+ms.date: 11/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,7 +56,7 @@ After you assign the policy to your Android device or user groups, users should 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android device administrator per-app VPN profile for entire company**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android DA per-app VPN profile for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -74,20 +74,42 @@ After you assign the policy to your Android device or user groups, users should 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+    - **Platform**: Select **Android device administrator**.
+    - **Profile**: Select **Custom**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
     - **Name**: Enter a descriptive name for the custom profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Custom OMA-URI Android VPN profile for entire company**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android device administrator**.
-    - **Profile type**: Select **Custom**.
 
-4. Choose **Settings** > **Configure**.
-5. On the **Custom OMA-URI Settings** pane, choose **Add**.
+6. Select **Next**.
+
+7. In **Configuration settings** > **OMA-URI Settings**, select **Add**. Enter the following OMA-URI values:
+
     - **Name**: Enter a name for your setting.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     - **OMA-URI**: Enter `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`, where *Name* is the connection name you noted in Step 1. In this example, the string is `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`.
     - **Data type**: Enter **String**.
     - **Value**: Enter a semicolon-separated list of packages to associate with the profile. For example, if you want Excel and the Google Chrome browser to use the VPN connection, enter `com.microsoft.office.excel;com.android.chrome`.
 
+    Your settings look similar to the following settings:
+
     :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Android device administrator per-app VPN custom policy in Microsoft Intune":::
+
+8. Select **Next**.
+
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, when you're done, choose **Create**. The profile is created, and shown in the list.
+
+    You can also [monitor its status](device-profile-monitor.md).
 
 ### Set your blocked and allowed app list (optional)
 
