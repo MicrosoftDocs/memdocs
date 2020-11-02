@@ -255,7 +255,7 @@ additionalContent:
       - title: Azure Active Directory
         links: 
         - text: User management documentation
-          url: /azure/active-directory/users-groups-roles/
+          url: /azure/active-directory/fundamentals/active-directory-manage-groups
         - text: Authentication documentation
           url: /azure/active-directory/authentication/
         - text: Device identity documentation
