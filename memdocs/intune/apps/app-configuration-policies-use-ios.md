@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 11/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -191,7 +191,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{username\}\}—for example, **John Doe**
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
-- \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
+- \{\{aaddeviceid\}\} or \{\{AzureADDeviceId\}\} —for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## Configure the Company Portal app to support iOS and iPadOS DEP devices
 
