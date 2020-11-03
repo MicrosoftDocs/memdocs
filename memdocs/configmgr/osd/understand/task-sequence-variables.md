@@ -938,7 +938,7 @@ Specify additional command-line options for the user state migration tool (USMT)
 
 The USMT options specified with this task sequence variable aren't validated for accuracy prior to running the task sequence.
 
-For more information on available options, see [ScanState Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-scanstate-syntax).
+For more information on available options, see [ScanState Syntax](/windows/deployment/usmt/usmt-scanstate-syntax).
 
 ### <a name="OSDMigrateAdditionalRestoreOptions"></a> OSDMigrateAdditionalRestoreOptions
 
@@ -950,7 +950,7 @@ Specifies additional command-line options for the user state migration tool (USM
 
 The USMT options specified with this task sequence variable aren't validated for accuracy prior to running the task sequence.
 
-For more information on available options, see [LoadState Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+For more information on available options, see [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).
 
 ### <a name="OSDMigrateComputerName"></a> OSDMigrateComputerName
 
@@ -1247,7 +1247,7 @@ Specifies the Windows Server license mode that's used.
 
 Specifies the additional command-line options that are added to Windows Setup during a Windows 10 upgrade. The task sequence doesn't verify the command-line options.
 
-For more information, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ### <a name="OSDStateFallbackToNAA"></a> OSDStateFallbackToNAA
 
@@ -1333,7 +1333,7 @@ Set to the time zone of the computer. The value is set only if the [OSDMigrateTi
 
 Specifies the default input locale setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - InputLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - InputLocale](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale).
 
 ### <a name="OSDWindowsSettingsSystemLocale"></a> OSDWindowsSettingsSystemLocale
 
@@ -1341,7 +1341,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the default system locale setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - SystemLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - SystemLocale](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale).
 
 ### <a name="OSDWindowsSettingsUILanguage"></a> OSDWindowsSettingsUILanguage
 
@@ -1349,7 +1349,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the default user interface language setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguage](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguage](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage).
 
 ### <a name="OSDWindowsSettingsUILanguageFallback"></a> OSDWindowsSettingsUILanguageFallback
 
@@ -1357,7 +1357,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the fallback user interface language setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguageFallback](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguageFallback](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback).
 
 ### <a name="OSDWindowsSettingsUserLocale"></a> OSDWindowsSettingsUserLocale
 
@@ -1365,7 +1365,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the default user locale setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UserLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UserLocale](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale).
 
 ### <a name="OSDWipeDestinationPartition"></a> OSDWipeDestinationPartition
 

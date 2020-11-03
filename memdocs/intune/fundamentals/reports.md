@@ -86,7 +86,7 @@ The **Windows 10 detected malware** report provides bulk actions that are applic
 - **Quick scan** - This action performs a Windows Defender quick scan of the selected devices. 
 - **Full scan** - This action performs a Windows Defender full scan of the selected devices. 
 
-For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
+For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
 
 ## Feature update failures report (Operational)
 The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
