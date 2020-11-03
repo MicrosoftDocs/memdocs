@@ -193,7 +193,7 @@ Computers with the Configuration Manager console require access to the following
 
 - `http://petrol.office.microsoft.com`
 
-For more information on this feature, see [Product feedback](../../understand/find-help.md#product-feedback).
+For more information on this feature, see [Product feedback](../../understand/product-feedback.md).
 
 ### Community workspace
 

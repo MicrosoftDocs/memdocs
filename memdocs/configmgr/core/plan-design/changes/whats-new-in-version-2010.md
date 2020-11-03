@@ -183,7 +183,7 @@ The Configuration Manager console has a new wizard for sending feedback. The red
 
 :::image type="content" source="media/3180826-send-a-smile-2010.png" alt-text="Send a smile product feedback wizard" lightbox="media/3180826-send-a-smile-2010.png":::
 
-For more information, see [Find help: Product feedback](../../understand/find-help.md#product-feedback).
+For more information, see [Find help: Product feedback](../../understand/product-feedback.md).
 
 ### Query for feedback sent to Microsoft
 
