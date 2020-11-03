@@ -53,10 +53,10 @@ After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepar
 
 Windows 10 1709 and later clients will download Intune Win32 app content by using a delivery optimization component on the Windows 10 client. Delivery optimization provides peer-to-peer functionality that's turned on by default. 
 
-You can configure the Delivery Optimization agent to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured by group policy and via Intune device configuration. For more information, see [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+You can configure the Delivery Optimization agent to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured by group policy and via Intune device configuration. For more information, see [Delivery Optimization for Windows 10](/windows/deployment/update/waas-delivery-optimization). 
 
 > [!NOTE]
-> You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+> You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
 
 ## Install required and available apps on devices
 

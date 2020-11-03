@@ -43,11 +43,11 @@ Examples of just a few of the Office app polices include the following:
 > [!NOTE]
 > When you select to configure each specific app policy, additional policy details are provided. You can filter the Office policy list to quickly select the recommended **Security Baseline** policies.
 
-You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, you must meet the requirements for using the Office cloud policy service. App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
+You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, you must meet the requirements for using the Office cloud policy service. App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](/deployoffice/overview-office-cloud-policy-service).
 
 ## Prerequisites
 
-You must meet the requirements to use policies for Office apps. For more information, see [Requirements for using the Office cloud policy service](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service).
+You must meet the requirements to use policies for Office apps. For more information, see [Requirements for using the Office cloud policy service](/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service).
 
 ## To add an Office app policy
 
@@ -68,11 +68,11 @@ After you set up Intune for your organization, you can create an Office app poli
 
 ## Additional information
 
-- [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
-- [Use policy settings to manage privacy controls for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls)
-- [Use preferences to manage privacy controls for Office for Mac](https://docs.microsoft.com/deployoffice/privacy/mac-privacy-preferences)
-- [Use preferences to manage privacy controls for Office on iOS devices](https://docs.microsoft.com/deployoffice/privacy/ios-privacy-preferences)
-- [Use policy settings to manage privacy controls for Office on Android devices](https://docs.microsoft.com/deployoffice/privacy/android-privacy-controls)
+- [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](/deployoffice/overview-office-cloud-policy-service)
+- [Use policy settings to manage privacy controls for Microsoft 365 Apps for enterprise](/deployoffice/privacy/manage-privacy-controls)
+- [Use preferences to manage privacy controls for Office for Mac](/deployoffice/privacy/mac-privacy-preferences)
+- [Use preferences to manage privacy controls for Office on iOS devices](/deployoffice/privacy/ios-privacy-preferences)
+- [Use policy settings to manage privacy controls for Office on Android devices](/deployoffice/privacy/android-privacy-controls)
 
 ## Next steps
 

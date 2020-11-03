@@ -33,7 +33,7 @@ ms.collection:
 
 If you receive a message that you need to enable code integrity, contact your IT support person. Your support person will help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
 
-If you're using a PC and consider yourself an advanced user, you can enable Secure Boot through the PC BIOS menu. For instructions, see [Re-enable Secure Boot](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
+If you're using a PC and consider yourself an advanced user, you can enable Secure Boot through the PC BIOS menu. For instructions, see [Re-enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
 
 
 ## What is code integrity? 
@@ -42,7 +42,7 @@ Code integrity is a threat protection feature that checks the drivers and system
 
 ## IT pro support  
 
-If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add a device compliance policy for Windows 10 devices in Intune](https://docs.microsoft.com/mem/intune/protect/compliance-policy-create-windows). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add a device compliance policy for Windows 10 devices in Intune](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## Next steps
 

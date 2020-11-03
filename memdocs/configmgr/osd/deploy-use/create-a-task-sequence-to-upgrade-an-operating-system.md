@@ -131,7 +131,7 @@ Add steps in this group to remove any drivers that are incompatible with this ve
 
 Add steps in this group to remove or suspend third-party security programs, such as antivirus.  
 
-If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.  
+If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.  
 
 ### Download Package Content task sequence step  
 
@@ -202,7 +202,7 @@ To gather logs from the client, add steps in this group.
      `%_SMSTSLogPath%\*.log`  
      `%SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log`  
 
-- For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).  
+- For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).  
 
 - For more information on Configuration Manager client logs, see [Configuration Manager client logs](../../core/plan-design/hierarchy/log-files.md#BKMK_ClientLogs).  
 
