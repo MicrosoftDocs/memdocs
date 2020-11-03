@@ -312,7 +312,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
 
 ### Install the Configuration Manager client by using Intune
 
-1. In Intune, [add a Windows line-of-business app](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
+1. In Intune, [add a Windows line-of-business app](../../../../intune/apps/lob-apps-windows.md) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:  
 

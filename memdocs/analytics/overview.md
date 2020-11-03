@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics.
-ms.date: 10/23/2020
+ms.date: 10/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -35,8 +35,6 @@ This initial release, focuses on three things:
 - [**Proactive remediation scripting**](proactive-remediations.md): Fix common support issues before end-users notice issues
 - [**Start up performance**](startup-performance.md): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
 
-This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
-
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 You can enroll devices via Configuration Manager or Microsoft Intune.
@@ -66,10 +64,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 
 ## Licensing Prerequisites
 
-Endpoint analytics is included in the following plans:
-
-- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager license. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 Proactive remediations also require one of the following licenses for the managed devices:
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
@@ -81,6 +76,20 @@ Proactive remediations also require one of the following licenses for the manage
 ### Endpoint analytics permissions
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
+
+### Built-in role permissions
+
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
+
+|Role name|Azure Active Directory role|Intune role|Endpoint analytics permissions|
+|---|---|---|---|
+|Global Administrator|Yes||Read/write|
+|Intune Service Administrator|Yes||Read/write|
+|School Administrator||Yes|Read/write|
+|Endpoint Security Manager||Yes|Read only|
+|Help Desk Operator||Yes|Read only|
+|Read Only Operator||Yes|Read only|
+|Reports Reader|Yes||Read only|
 
 ### Proactive remediations permissions
 

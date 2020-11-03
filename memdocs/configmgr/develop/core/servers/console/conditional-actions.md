@@ -77,7 +77,7 @@ Configuration Manager actions can be displayed according to specified conditions
 ```  
 
 ### Object Class Permissions  
- You can use the `ClassPermissions` element to set the object class permissions required for an action. [ActionSecurityDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actionsecuritydescription.aspx) describes the object class and the required permissions for that object class. The following XML example describes the permissions required for SMS collections:  
+ You can use the `ClassPermissions` element to set the object class permissions required for an action. [ActionSecurityDescription](/previous-versions/system-center/developer/cc147257(v=msdn.10)) describes the object class and the required permissions for that object class. The following XML example describes the permissions required for SMS collections:  
 
 ```  
 <ClassPermissions> <ActionSecurityDescription ClassObject="SMS_Collection" RequiredPermissions="1280" />  

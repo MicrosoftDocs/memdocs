@@ -480,6 +480,11 @@
             "source_path": "memdocs/configmgr/core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md",
             "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/analytics/whats-new.md",
+            "redirect_url": "/mem/analytics/overview",
+            "redirect_document_id": false
         }
     ]
 }

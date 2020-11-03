@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 11/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,15 +33,14 @@ Virtual private networks (VPNs) give users secure remote access to your organiza
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
 > [!NOTE]
-> User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
-
-> [!NOTE]
-> You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
 >
-> * Android 4 and later
-> * Enrolled devices that run Windows 8.1 and later
-> * Enrolled devices that run Windows 10 desktop
-> * Windows Holographic for Business
+> - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
+> - You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
+>
+>   - Android 4 and later
+>   - Enrolled devices that run Windows 8.1 and later
+>   - Enrolled devices that run Windows 10 desktop
+>   - Windows Holographic for Business
 
 ## VPN connection types
 
@@ -192,8 +191,7 @@ If you use certificate-based authentication for your VPN profile, then deploy th
 For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 > [!NOTE]
-> Certificates added using the **PKCS imported certificate** profile type aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile type are supported for VPN authentication.
-
+> Certificates added using the **PKCS imported certificate** profile aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile are supported for VPN authentication.
 
 ### User name and password
 
@@ -201,6 +199,5 @@ The user authenticates to the VPN server by providing a user name and password.
 
 ## Next steps
 
-Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md) to some devices, and [monitor its status](device-profile-monitor.md).
-
-You can also create and use per-app VPNs on [Android device administrator/Android Enterprise](android-pulse-secure-per-app-vpn.md) and [iOS/iPadOS](vpn-setting-configure-per-app.md) devices.
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- You can also create and use per-app VPNs on [Android device administrator/Android Enterprise](android-pulse-secure-per-app-vpn.md) and [iOS/iPadOS](vpn-setting-configure-per-app.md) devices.

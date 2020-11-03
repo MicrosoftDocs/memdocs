@@ -29,7 +29,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
   - **Platform**: Select **Windows 10 and later**
   
-  - **Profile**: Select **Windows Health monitoring**
+  - **Profile**: Select **Windows health monitoring**
   
   - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
    
@@ -39,7 +39,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
    
        - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
     
-       - **Scope**: Select **Boot performance**. Basic scope is not used by endpoint analytics.
+       - **Scope**: Select **Endpoint analytics**. Basic scope is not used by endpoint analytics.
 
   - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
