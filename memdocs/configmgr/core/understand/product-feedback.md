@@ -232,6 +232,31 @@ When you send feedback, it shows a confirmation message. This message includes a
 
   :::image type="content" source="media/1902-offline-feedback-id-example.png" alt-text="Feedback confirmation from UploadOfflineFeedback.exe in Configuration Manager":::
 
+### Feedback for PowerShell
+
+If you have feedback on the [Configuration Manager PowerShell cmdlets](/powershell/module/configurationmanager), use the same options in the Configuration Manager to send feedback.
+
+When you send a frown, include the following additional information specific to PowerShell:
+
+- The exact script or command syntax that you used so that Microsoft can try to reproduce the issue.
+
+- What behavior you expected compared to the actual behavior.
+
+- The full output when you run it with the [Verbose](/powershell/module/microsoft.powershell.core/about/about_commonparameters#verbose) common parameter.
+
+- The version and path of the **ConfigurationManager** module. For example, include the output of the following commands:
+
+    ```powershell
+    (Get-Module -Name ConfigurationManager).Version
+    (Get-Module -Name ConfigurationManager).Path
+    ```
+
+- If a cmdlet returns an error, use the following command to get exception details:
+
+    ```powershell
+    $Error[0].Exception | Format-List * -Force
+    ```
+
 ## Next steps
 
 [How to use the docs](../../../use-docs.md)
