@@ -18,7 +18,7 @@ manager: dougeby
 
 From the Configuration Manager console, you can share feedback directly to the Microsoft product group. In the upper right corner of the console, select the smiley face icon.  There are three types of feedback:
 
-![Submit feedback in Configuration Manager](media/console-share-feedback.png)
+:::image type="content" source="media/console-share-feedback.png" alt-text="Submit feedback in Configuration Manager":::
 
 - **Send a smile** (**ALT** + **SHIFT** + **7**): Send feedback on what you liked.
 
@@ -63,13 +63,13 @@ To send feedback on something that you like about Configuration Manager:
 
     - **Include screenshot**: Select this option to add a screenshot. By default it uses the full screen, select **Refresh** to capture the latest image. Select **Browse** to select a different image file.
 
-    [![Screenshot of Provide feedback wizard to send a smile](../../media/3180826-send-a-smile.png)](../../media/3180826-send-a-smile.png#lightbox)
+    :::image type="content" source="media/3180826-send-a-smile-2010.png" alt-text="Screenshot of Provide feedback wizard to send a smile" lightbox="media/3180826-send-a-smile-2010.png":::
 
 1. Select **Next** to send the feedback. You may see a progress bar as it packages the content to send.
 
 1. When the progress is complete, select **Details** to see the transaction ID or any errors that occurred.
 
-    [![Screenshot of Provide feedback wizard completion page](../../media/3180826-provide-feedback-complete.png)](../../media/3180826-provide-feedback-complete.png#lightbox)
+    :::image type="content" source="media/provide feedback-complete.png" alt-text="Screenshot of Provide feedback wizard completion page" lightbox="media/provide feedback-complete.png":::
 
 ## Send a frown
 
@@ -83,7 +83,7 @@ Before you file a frown, prepare your information:
 
 - Is this feedback a suggestion to improve the product? If so, share a new idea on UserVoice. For more information, see [Send a suggestion](#send-a-suggestion).
 
-- Is the issue with the product documentation? You can file feedback directly on the documentation. For more information, see [Doc feedback](../../use-docs.md#about-feedback).
+- Is the issue with the product documentation? You can file feedback directly on the documentation. For more information, see [Doc feedback](../../../use-docs.md#about-feedback).
 
 To send feedback on something that you didn't like about the Configuration Manager product:
 
@@ -97,7 +97,7 @@ To send feedback on something that you didn't like about the Configuration Manag
 
     - **You can contact me about this feedback**: To allow Microsoft to contact you about this feedback if necessary, select this option and specify a valid email address.
 
-    [![Screenshot of Provide feedback wizard to send a frown](../../media/3180826-describe-issue.png)](../../media/3180826-describe-issue.png#lightbox)
+    :::image type="content" source="media/3180826-describe-issue-2010.png" alt-text="Screenshot of Provide feedback wizard to send a frown" lightbox="media/3180826-describe-issue-2010.png":::
 
 1. On the **Add more details** page of the wizard:
 
@@ -105,7 +105,7 @@ To send feedback on something that you didn't like about the Configuration Manag
 
     - **Include additional files**: Select **Attach** and add log files, which can help Microsoft better understand the issue. To remove all attached files from your feedback, select **Clear all**. To remove individual files, select the delete icon to the right of the file name.
 
-    [![Screenshot of Add more details page in Provide feedback wizard](../../media/3180826-add-more-details.png)](../../media/3180826-add-more-details.png#lightbox)
+    :::image type="content" source="media/3180826-add-more-details.png" alt-text="Screenshot of Add more details page in Provide feedback wizard" lightbox="media/3180826-add-more-details.png":::
 
 1. Select **Next** to send the feedback. You may see a progress bar as it packages the content to send.
 
@@ -120,40 +120,6 @@ If you don't have internet connectivity:
 - Select the option to **Save a copy of feedback and attachments**. For more information on how to send it to Microsoft, see [Send feedback that you saved for later submission](#send-feedback-that-you-saved-for-later-submission).
 
 If the **Provide feedback** wizard successfully submits your feedback, but fails to send the attached files, use the same instructions for no internet connectivity.
-
-## Share feedback in version 2006 and earlier
-
-<!--1357542-->
-
-1. In the upper right corner of the console, select the smiley face.
-
-1. In the drop-down menu, select **Send a smile** or **Send a frown**.
-
-1. Use the text box to explain what you liked or what you didn't like.
-
-1. Choose if you would like to share your e-mail address and a screenshot.
-
-1. Select **Submit Feedback**.
-  If you don't have internet connectivity, select **Save** at the bottom. For more information, see [Send feedback that you saved for later submission](#send-feedback-that-you-saved-for-later-submission).
-
-![Submit feedback form in Configuration Manager 1806](media/1806-feedback-form.png)
-
-## Status messages for send a smile
-<!--5891852-->
-Starting in Configuration Manager 2002, when you **Send a smile** or **Send a frown**, it creates a status message when you submit the feedback. This improvement provides a record of:
-
-- When you submitted the feedback
-- Who submitted it
-- The feedback ID
-- The message ID identifies if the feedback submission was successful:
-  - 53900: Success
-  - 53901: Failed
-
-View status messages from **Monitoring** > **System Status** > **Status Message Queries**. Start with the **All Status Messages** query and select your time frame. When the messages load, select **Filter messages**, and filter for message ID 53900 or 53901.
-
-Status messages aren't created if you [Send feedback that you saved for later submission](#send-feedback-that-you-saved-for-later-submission).
-
-[![Status message for successfully submitting feedback](./media/5891852-send-smile-status-message.png)](./media/5891852-send-smile-status-message.png#lightbox)
 
 ## Send a suggestion
 
@@ -172,6 +138,40 @@ When you **Send a suggestion**, it opens the Configuration Manager site on [User
   - We want to give back your UserVoice votes so you can use them on other items.
 
   - You can file new ideas for this feature. Help us know the next most important improvement for this feature.
+
+## Share feedback in version 2006 and earlier
+
+<!--1357542-->
+
+1. In the upper right corner of the console, select the smiley face.
+
+1. In the drop-down menu, select **Send a smile** or **Send a frown**.
+
+1. Use the text box to explain what you liked or what you didn't like.
+
+1. Choose if you would like to share your e-mail address and a screenshot.
+
+1. Select **Submit Feedback**.
+  If you don't have internet connectivity, select **Save** at the bottom. For more information, see [Send feedback that you saved for later submission](#send-feedback-that-you-saved-for-later-submission).
+
+:::image type="content" source="media/1806-feedback-form.png" alt-text="Submit feedback form in Configuration Manager 2006 and earlier" lightbox="media/1806-feedback-form.png":::
+
+## Status messages
+<!--5891852-->
+Starting in Configuration Manager 2002, when you **Send a smile** or **Send a frown**, it creates a status message when you submit the feedback. This improvement provides a record of:
+
+- When you submitted the feedback
+- Who submitted it
+- The feedback ID
+- The message ID identifies if the feedback submission was successful:
+  - **53900**: Success
+  - **53901**: Failed
+
+View status messages in the **Monitoring** workspace, under **System Status** in the **Status Message Queries** node. Start with the **All Status Messages** query and select your time frame. When the messages load, select **Filter messages**, and filter for message ID 53900 or 53901.
+
+If you [create feedback that you save for later submission](#send-feedback-that-you-saved-for-later-submission), the site doesn't create a status message.
+
+:::image type="content" source="media/5891852-send-smile-status-message.png" alt-text="Status message for successfully submitting feedback":::
 
 ## Information sent with feedback
 
@@ -229,11 +229,11 @@ When you send feedback, it shows a confirmation message. This message includes a
 
 - In the Provide feedback window from the console, it displays the feedback ID on the final page. To copy it, select the copy icon next to the ID, or use the **CTRL** + **C** key shortcut. This ID isn't stored on your computer, so make sure to copy it before you close the window.
 
+- Starting in Configuration Manager 2002, the status message includes the feedback ID.
+
 - The **UploadOfflineFeedback** command tool writes the **FeedbackID** to the console unless you use `--silent`.
 
-  ![Feedback confirmation from UploadOfflineFeedback.exe in Configuration Manager](media/1902-offline-feedback-id-example.png)
-
-- Starting in Configuration Manager 2002, the status message includes the feedback ID.
+  :::image type="content" source="media/1902-offline-feedback-id-example.png" alt-text="Feedback confirmation from UploadOfflineFeedback.exe in Configuration Manager":::
 
 ## Next steps
 
