@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 11/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -57,7 +57,7 @@ When you create a profile (**Configuration profiles** > **Create profile**), cho
 - **Windows 10 and later**
 - **Windows 8.1 and later**
 
-Then, choose the profile type. Depending on the platform you choose, the settings you can configure are different. The following articles describe the settings for the different profile types:
+Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the settings for the different profiles:
 
 - [Administrative templates (Windows)](administrative-templates-windows.md)
 - [Custom](custom-settings-configure.md)
