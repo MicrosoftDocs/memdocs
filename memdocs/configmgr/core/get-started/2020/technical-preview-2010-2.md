@@ -24,7 +24,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2010-2/1234567.md)] -->
 
-[!INCLUDE [Tenant attach: Troubleshooting portal lists a user’s devices based on usage](includes/2010-2/6974300.md)]
+[!INCLUDE [Tenant attach: Troubleshooting portal lists a user's devices based on usage](includes/2010-2/6974300.md)]
 [!INCLUDE [Tenant attach: Create and deploy firewall policies](includes/2010-2/7768130.md)]
 [!INCLUDE [Enhancements to applications in Microsoft Endpoint Manager admin center](includes/2010-2/7979972.md)]
 [!INCLUDE [Improvements to BitLocker management](includes/2010-2/6979223.md)]
