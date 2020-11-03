@@ -42,12 +42,9 @@ Starting in version 2010, there's a new wizard to send feedback with a redesigne
 
 ## Prerequisites
 
-- Update the Configuration Manager console to the latest version
+Update the Configuration Manager console to the latest version.
 
-- On the computer where you run the console, allow it to access the following internet endpoints to send diagnostic data to Microsoft:
-
-  - `https://*.events.data.microsoft.com/`
-  - `https://*.blob.core.windows.net/`
+[!INCLUDE [Internet endpoints for product feedback](../plan-design/network/includes/internet-endpoints-product-feedback.md)]
 
 ## Send a smile
 

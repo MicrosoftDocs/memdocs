@@ -191,7 +191,7 @@ Computers with the Configuration Manager console require access to the following
 
 ### In-console feedback
 
-- `http://petrol.office.microsoft.com`
+[!INCLUDE [Internet endpoints for product feedback](includes/internet-endpoints-product-feedback.md)]
 
 For more information on this feature, see [Product feedback](../../understand/product-feedback.md).
 
