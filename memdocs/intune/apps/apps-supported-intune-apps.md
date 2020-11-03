@@ -51,7 +51,7 @@ In addition to supporting the core App Protection Policy settings, apps are also
 ## Microsoft apps
 
 > [!NOTE]
-> For more information on Conditional Access support, see [App protection policy requirement](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
+> For more information on Conditional Access support, see [App protection policy requirement](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
 The below apps support the Core Intune App Protection Policy settings and are also capable of supporting advanced App Protection Policy and App Configuration Policy settings:
 
@@ -68,8 +68,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|
 |Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✔|N/A|✖|✖|N/A|
 |Microsoft OneNote|[iOS](https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246)|✔|No settings|✔|N/A|✖|✖|N/A|
-|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](https://aka.ms/omappconfig)|✔|✔|✔|✖|✖|
-|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](https://aka.ms/omappconfig)|✔|✔|✔|✖|✔|
+|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✖|✖|
+|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✖|✔|
 |Microsoft Planner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.planner)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|
