@@ -164,11 +164,13 @@ Starting in Configuration Manager 2002, when you **Send a smile** or **Send a fr
   - **53900**: Success
   - **53901**: Failed
 
+:::image type="content" source="media/5891852-send-smile-status-message.png" alt-text="Status message for successfully submitting feedback":::
+
 View status messages in the **Monitoring** workspace, under **System Status** in the **Status Message Queries** node. Start with the **All Status Messages** query and select your time frame. When the messages load, select **Filter messages**, and filter for message ID 53900 or 53901.
 
-If you [create feedback that you save for later submission](#send-feedback-that-you-saved-for-later-submission), the site doesn't create a status message.
+Starting in version 2010, use the built-in status message query, **Feedback sent to Microsoft**.<!-- 6488450 --> This query makes it easier to find these feedback status messages.
 
-:::image type="content" source="media/5891852-send-smile-status-message.png" alt-text="Status message for successfully submitting feedback":::
+If you [create feedback that you save for later submission](#send-feedback-that-you-saved-for-later-submission), the site doesn't create a status message.
 
 ## Information sent with feedback
 
