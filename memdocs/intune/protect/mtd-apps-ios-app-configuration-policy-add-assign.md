@@ -87,8 +87,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
 
 ### MVSISION Mobile app configuration policy
-
-### Zimperium app configuration policy
+***COPIED from Zimperium - Pending details***
 
 See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the MVISION Mobile iOS app configuration policy.
 
@@ -107,12 +106,9 @@ See the instructions for [using Microsoft Intune app configuration policies for 
    </dict>
    ```
 
-
-
 ### Pradeo app configuration policy
 
 Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
-
 
 ### SEP Mobile app configuration policy
 

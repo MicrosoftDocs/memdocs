@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/1/2020
+ms.date: 11/16/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -98,12 +98,13 @@ Access is granted when the device is remediated:<br>
 
 Learn how to protect access to company resource based on device, network, and application risk with:
 
-- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
-- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
-- [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
-- [Zimperium](zimperium-mobile-threat-defense-connector.md)
-- [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Better Mobile](better-mobile-threat-defense-connector.md)
-- [Sophos Mobile](sophos-mtd-connector.md)
-- [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Microsoft Defender](../protect/advanced-threat-protection.md)
+- [MVISION Mobile](mcafee-mobile-threat-defense-connector)
+- [Pradeo](pradeo-mobile-threat-defense-connector.md)
+- [Sophos Mobile](sophos-mtd-connector.md)
+- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
+- [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Zimperium](zimperium-mobile-threat-defense-connector.md)
