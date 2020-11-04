@@ -31,7 +31,9 @@ ms.collection:
 
 # Report a problem in Company Portal    
 
-If you run into a problem while using Company Portal on your device, you can use the in-app **Help & support** options to get help from your IT support person. During this process, your Company Portal diagnostic logs are shared with the Microsoft support team in case the problem requires additional help.   
+If you run into a problem while using Company Portal on your device, you can use the in-app **Help & support** options to get help from your IT support person. 
+
+During this process, your Company Portal diagnostic logs are also shared with the Microsoft support team in case the problem requires additional help.   
 
 ## How to report problem 
 Complete the following steps to report a problem you're experiencing in-app or during device enrollment. 
@@ -42,13 +44,14 @@ Complete the following steps to report a problem you're experiencing in-app or d
    ![Screenshot of the Help & support page, highlighting the left navigation bar and Get Help section.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
    
 > [!Note]	  
-> After you click **Get help**, the Company Portal automatically sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. As mentioned above, Microsoft's support team can pull up the logs by referencing the diagnostic ID that's assigned to you.   
+> After you click **Get help**, the Company Portal automatically sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
 
 
-3. On the **Share** screen, select **Mail**. The Mail app will create an email message for you. Type in a description of the problem you experienced so that the support team has an idea of what to look for. 
+3. When prompted to choose a program, select **Mail** or your preferred email app.   
 
    ![Screenshot of the Share screen, highlighting the Mail app icon.](./media/1811_Mail_Logs_Windows_CPapp.png)  
-
+   
+4. The email app will open an email template for you to fill in. Type in a description of the problem you experienced so that the support team has an idea of what to look for and then tap **Send**.  
 
    ![Screenshot of the prepopulated email that opens in the Mail app.](./media/1811_Get_Help_Email_Windows_CPapp.png)  
 
