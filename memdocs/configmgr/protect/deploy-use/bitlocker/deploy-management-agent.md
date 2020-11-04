@@ -195,6 +195,8 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it will upload the new TPM password hash to the recovery service.
 
+For additional information please see [Change the TPM owner password](https://docs.microsoft.com/en-us/windows/security/information-protection/tpm/change-the-tpm-owner-password)
+
 ### Re-encryption
 
 Configuration Manager doesn't re-encrypt drives that are already protected with BitLocker Drive Encryption. If you deploy a BitLocker management policy that doesn't match the drive's current protection, it reports as non-compliant. The drive is still protected.
