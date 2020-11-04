@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Send logs using the Company Portal app for Windows - Microsoft Intune
-description: Email error and log details to help company support fix app problems.
+title: Report problems in Company Portal app for Windows - Microsoft Intune
+description: Learn how to use the Help & Support options to report Company Portal or enrollment problems.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/22/2020
+ms.date: 11/04/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,16 +29,20 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Email IT support about Company Portal app problem  
+# Report a problem in Company Portal    
 
-If you run into a problem while using Company Portal on your device, you can use the in-app **Help & support** options to email your support team.   
+If you run into a problem while using Company Portal on your device, you can use the in-app **Help & support** options to get help from your IT support person. During this process, your Company Portal diagnostic logs are shared with the Microsoft support team in case the problem requires additional help.   
 
+## How to report problem 
+Complete the following steps to report a problem you're experiencing in-app or during device enrollment. 
 
 1. Open the **Company Portal** app.
 2. Select **Help & support** > **Get help**. 
 
    ![Screenshot of the Help & support page, highlighting the left navigation bar and Get Help section.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
-
+   
+> [!Note]	  
+> After you click **Get help**, the Company Portal automatically sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. As mentioned above, Microsoft's support team can pull up the logs by referencing the diagnostic ID that's assigned to you.   
 
 
 3. On the **Share** screen, select **Mail**. The Mail app will create an email message for you. Type in a description of the problem you experienced so that the support team has an idea of what to look for. 
@@ -54,8 +58,6 @@ Events and errors that occur in the Company Portal app are saved on your device 
 * When a problem happened.  
 * The steps leading up to the problem.  
 * The state of the app when the problem appeared.   
-
-When you report a problem, a diagnostic log ID is assigned to your case. If your support team can't resolve the problem with the details you provide them, they'll contact Microsoft for help. Microsoft will use the diagnostic ID to pull up your logs.   
 
 
 ## Next steps  
