@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Zimperium MTD connector with Intune
+title: McAfee MTD connector with Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with Zimperium Mobile Threat Defense to control mobile device access to your corporate resources.
+description: Learn about integrating Intune with MacAfee MVISION Endpoint to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,11 +29,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Zimperium Mobile Threat Defense connector with Intune
+# Integrate MVISION Endpoint with Intune
 
-You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Zimperium, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Zimperium app.
+You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by McAfee MVISION Endpoint, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the MVISION Endpoint app.
 
-You can configure Conditional Access policies based on Zimperium risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
+You can configure Conditional Access policies based on MVISION Endpoint risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
 ## Supported platforms
 
@@ -47,13 +47,13 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 
 - Microsoft Intune subscription
 
-- Zimperium Mobile Threat Defense subscription
+- MVISION Endpoint Mobile Threat Defense subscription
 
-  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips).
+  - For more information, see [McAfee MVISION Endpoint Product Guide](https://docs.mcafee.com/bundle/mvision-endpoint-product-guide/page/GUID-EA971FC5-BECC-4604-AAF1-9BFE190FDE1F.html).
 
-## How do Intune and Zimperium help protect your company resources?
+## How do Intune and MVISION Endpoint help protect your company resources?
 
-The Zimperium app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Zimperium cloud service to assess the device's risk for mobile threats.
+The MVISION Endpoint app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Zimperium cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Zimperium. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Zimperium app installed in their devices to resolve the issue and regain access to corporate resources. To support using Zimperium with enrolled devices:
   - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
