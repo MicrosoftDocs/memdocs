@@ -43,8 +43,8 @@ Complete the following steps to report a problem you're experiencing in-app or d
 
    ![Screenshot of the Help & support page, highlighting the left navigation bar and Get Help section.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
    
-> [!Note]	  
-> After you click **Get help**, the Company Portal automatically sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
+   > [!Note]	  
+   > After you click **Get help**, the Company Portal automatically sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
 
 
 3. When prompted to choose a program, select **Mail** or your preferred email app.   
