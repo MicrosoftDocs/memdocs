@@ -3,7 +3,7 @@
 
 title: McAfee MVISION Mobile connector with Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with MacAfee MVISION Mobile to control mobile device access to your corporate resources.
+description: Learn about integrating Intune with McAfee MVISION Mobile to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
