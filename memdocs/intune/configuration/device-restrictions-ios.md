@@ -558,7 +558,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Block passcode modification**: **Yes** stops the passcode from being changed, added, or removed. After blocking this feature, changes to passcode restrictions are ignored on supervised devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
+- **Block passcode modification**: **Yes** stops the passcode from being changed, added, or removed. After blocking this feature, changes to passcode restrictions are ignored on supervised devices. This setting is ignored on Shared iPads. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
 
   - **Block modification of Touch ID fingerprints and Face ID faces**: **Yes** stops users from changing, adding, or removing TouchID fingerprints and Face ID. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update the TouchID fingerprints and Face ID on devices.
 
