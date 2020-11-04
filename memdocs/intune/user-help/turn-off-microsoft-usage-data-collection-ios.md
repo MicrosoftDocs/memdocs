@@ -31,20 +31,17 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Turn off Company Portal for iOS usage data       
+# Adjust Company Portal usage data settings for iOS     
 
-This article describes how to prevent Microsoft from collecting data about your Intune Company Portal usage. To do this, you need to adjust your usage data settings in the iOS settings app. 
+This article describes how to change your usage data settings for Intune Company Portal. Usage data is helpful for improving future products, but you're not required to turn on usage data for Company Portal. 
 
-## About Microsoft data collection   
+When usage data for Company Portal is turned on, all in-app performance and usage data is shared annonymously with Microsoft. This type of data helps Microsoft improve the reliability and performance of their products. Your organization doesn't have control over the collection of this data and they also can't change your usage data preferences.   
 
-When usage data for Company Portal is turned on, all in-app performance and usage data is shared annonymously with Microsoft. This type of data helps Microsoft improve the reliability and performance of their products. Your organization doesn't have control over the collection of this data and they also can't change your usage data preferences. 
-
-# How to turn off data collection    
+## Turn on/off usage data       
 
 1. Open the **Settings** app.  
 2. Tap **Company Portal**.  
-3. Switch the **Usage Data** toggle off.  
-
+3. Switch the **Usage Data** toggle off to prevent usage data from being collected. Or switch the toggle on to allow usage data to be collected.   
 
 ## Next steps  
 
