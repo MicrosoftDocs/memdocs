@@ -33,7 +33,7 @@ ms.collection:
 
 # Sharing Company Portal usage data with Microsoft     
 
-When usage data for Company Portal is turned on, all in-app performance and usage data is shared annonymously with Microsoft. This type of data helps Microsoft improve the reliability and performance of their products. Your organization doesn't have control over the collection of this data and they also can't change your usage data preferences. 
+When usage data for Company Portal is turned on, all in-app performance and usage data is shared anonymously with Microsoft. This type of data helps Microsoft improve the reliability and performance of their products. Your organization doesn't have control over the collection of this data and they also can't change your usage data preferences. 
 
 Sharing your Company Portal usage data with Microsoft can be helpful to future Microsoft products, but it's not required. The next section describes how to adjust usage data settings on your iOS device.  
 
