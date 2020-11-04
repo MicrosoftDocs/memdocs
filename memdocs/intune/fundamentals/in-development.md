@@ -157,7 +157,7 @@ We’re reworking the endpoint security Account protection policy to use the new
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7339038   -->
+### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
 We're adding support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
  
 - Allow hardware device installation by device identifiers
