@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,9 +57,62 @@ See the instructions for [adding iOS store apps to Microsoft Intune](../apps/sto
 
 To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration is not available, so please refer to [Add Mobile Threat Defense apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md).
 
+### Better Mobile app configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Better Mobile iOS app configuration policy.
+
+- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body. Replace the `https://client.bmobi.net` URL with the appropriate console URL.
+
+   ```
+    <dict>
+   <key>better_server_url</key>
+   <string>https://client.bmobi.net</string>
+   <key>better_udid</key>
+   <string>{{aaddeviceid}}</string>
+   <key>better_user</key>
+   <string>{{userprincipalname}}</string>
+   </dict>
+   ```
+
+### Check Point SandBlast Mobile app configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Check Point SandBlast Mobile iOS app configuration policy.
+
+- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
+
+  `<dict><key>MDM</key><string>INTUNE</string></dict>`
+
 ### Lookout for Work app configuration policy
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
+
+### MVSISION Mobile app configuration policy
+
+### Zimperium app configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the MVISION Mobile iOS app configuration policy.
+
+- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
+
+   ```
+   <dict>
+   <key>provider</key><string>Intune</string>
+   <key>userprincipalname</key><string>{{userprincipalname}}</string>
+   <key>deviceid</key>
+   <string>{{deviceid}}</string>
+   <key>serialnumber</key>
+   <string>{{serialnumber}}</string>
+   <key>udidlast4digits</key>
+   <string>{{udidlast4digits}}</string>
+   </dict>
+   ```
+
+
+
+### Pradeo app configuration policy
+
+Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
+
 
 ### SEP Mobile app configuration policy
 
@@ -78,55 +131,6 @@ Use the same Azure AD account previously configured in the [Symantec Endpoint Pr
 
 > [!NOTE]
 > If you are unable to retrieve the files, contact [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
-
-### Check Point SandBlast Mobile app configuration policy
-
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Check Point SandBlast Mobile iOS app configuration policy.
-
-- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
-
-  `<dict><key>MDM</key><string>INTUNE</string></dict>`
-
-
-### Zimperium app configuration policy
-
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
-
-- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
-
-   ```
-   <dict>
-   <key>provider</key><string>Intune</string>
-   <key>userprincipalname</key><string>{{userprincipalname}}</string>
-   <key>deviceid</key>
-   <string>{{deviceid}}</string>
-   <key>serialnumber</key>
-   <string>{{serialnumber}}</string>
-   <key>udidlast4digits</key>
-   <string>{{udidlast4digits}}</string>
-   </dict>
-   ```
-
-### Pradeo app configuration policy
-
-Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
-
-### Better Mobile app configuration policy
-
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Better Mobile iOS app configuration policy.
-
-- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body. Replace the `https://client.bmobi.net` URL with the appropriate console URL.
-
-   ```
-    <dict>
-   <key>better_server_url</key>
-   <string>https://client.bmobi.net</string>
-   <key>better_udid</key>
-   <string>{{aaddeviceid}}</string>
-   <key>better_user</key>
-   <string>{{userprincipalname}}</string>
-   </dict>
-   ```
 
 ### Sophos Mobile app configuration policy
 
@@ -158,6 +162,25 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 > [!NOTE]
 > A single iOS configuration policy may be used across all devices that are to be provisioned with Wandera.  
+
+### Zimperium app configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
+
+- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
+
+   ```
+   <dict>
+   <key>provider</key><string>Intune</string>
+   <key>userprincipalname</key><string>{{userprincipalname}}</string>
+   <key>deviceid</key>
+   <string>{{deviceid}}</string>
+   <key>serialnumber</key>
+   <string>{{serialnumber}}</string>
+   <key>udidlast4digits</key>
+   <string>{{udidlast4digits}}</string>
+   </dict>
+   ```
 
 ## Assigning Mobile Threat Defense apps to end users via Intune
 
