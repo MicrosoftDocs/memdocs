@@ -82,12 +82,12 @@ When malicious apps such as malware are detected on devices, you can block devic
 *Block when malicious apps are detected:*
 
 > [!div class="mx-imgBorder"]
-> ![Conceptual image of Malicious apps detected](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
+> ![Conceptual image of Malicious apps detected](./media/mcafee-mobile-threat-defense-connector/mcafee-malicious-apps-blocked.png)
 
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Conceptual image of access granted after remediation](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
+> ![Conceptual image of access granted after remediation](./media/mcafee-mobile-threat-defense-connector/mcafee-malicious-apps-unblocked.png)
 
 ### Control access based on threat to network
 
@@ -96,12 +96,12 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 *Block network access through Wi-Fi:*
 
 > [!div class="mx-imgBorder"]
-> ![Block network access through Wi-Fi](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
+> ![Block network access through Wi-Fi](./media/mcafee-mobile-threat-defense-connector/mcafee-network-wifi-blocked.png)
 
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Access granted on remediation](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
+> ![Access granted on remediation](./media/mcafee-mobile-threat-defense-connector/mcafee-network-wifi-unblocked.png)
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -110,24 +110,24 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 *Block SharePoint Online when network threats are detected:*
 
 > [!div class="mx-imgBorder"]
-> ![Block SharePoint Online when network threats are detected](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
+> ![Block SharePoint Online when network threats are detected](./media/mcafee-mobile-threat-defense-connector/mcafee-network-spo-blocked.png)
 
 *Access granted on remediation:*
 
 > [!div class="mx-imgBorder"]
-> ![Access granted on remediation for Sharepoint example](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
+> ![Access granted on remediation for Sharepoint example](./media/mcafee-mobile-threat-defense-connector/mcafee-network-spo-unblocked.png)
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Zimperium Mobile Threat Defense solution considers a device to be infected:
 
 > [!div class="mx-imgBorder"]
-> ![App protection policy blocks due to detected malware](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png)
+> ![App protection policy blocks due to detected malware](./media/mcafee-mobile-threat-defense-connector/mcafee-mobile-app-policy-block.png)
 
 Access is granted on remediation:
 
 > [!div class="mx-imgBorder"]
-> ![Access is granted on remediation for App protection policy](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png)
+> ![Access is granted on remediation for App protection policy](./media/mcafee-mobile-threat-defense-connector/mcafee-mobile-app-policy-remediated.png)
 
 ## Next steps
 
