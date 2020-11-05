@@ -38,9 +38,9 @@ Review the [technical preview](../technical-preview.md) article before installin
 **The following sections describe the new features to try out in this version:**  
 
 
-[!INCLUDE [Additional languages for Office 365 updates](includes/1902-2/3555955.md)]
+[!INCLUDE [Additional languages for Microsoft 365 updates](includes/1902-2/3555955.md)]
 
-[!INCLUDE [Integration with analytics for Office 365 ProPlus readiness](includes/1902-2/3735402.md)]
+[!INCLUDE [Integration with analytics for Microsoft 365 Apps for enterprise readiness](includes/1902-2/3735402.md)]
 
 [!INCLUDE [Improvement to phased deployment success criteria](includes/1902-2/3555946.md)]
 

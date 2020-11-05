@@ -19,7 +19,7 @@ manager: dougeby
 This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache (DOINC).
+> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
 
 ## Verify
 
@@ -220,12 +220,12 @@ The DO cache server adds the following rewrite rules:
 Disk space required for each DO cache server may vary, based on your organization's update requirements. 100 GB should be enough space to cache the following content:
 
 - A feature update
-- Two to three months of quality and Office updates
+- Two to three months of quality and Microsoft 365 Apps updates
 - Microsoft Intune apps and Windows inbox apps
 
 The DO cache server shouldn't consume much system memory or processor time. After you install the DO cache server, if you notice significant process or memory resource consumption, analyze the IIS and ARR log files.
 
-If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS Log File Storage](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS Log File Storage](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## See also
 

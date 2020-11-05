@@ -42,16 +42,10 @@ When you migrate data from a source site to a destination site, you lose any aud
 ## Privacy Information for Migration  
  Migration discovers information from the site databases that you identify in a source infrastructure and stores this data to the database in the destination hierarchy. The information that Configuration Manager can discover from a source site or hierarchy depends upon the features that were enabled in the source environment, as well as the management operations that were performed in that source environment.  
 
- For more information about security and privacy information, see one of the following topics:  
-
--   For more information about the privacy information for Configuration Manager 2007, see [Security and Privacy for Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) in the Configuration Manager 2007 documentation library.  
-
--   For more information about the privacy information for System Center 2012 Configuration Manager, see  [Security and Privacy for System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) in the System Center 2012 Configuration Manager documentation library.  
-
--   For more information about the privacy information for Configuration Manager, see [Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
+For more information about security and privacy information, see [Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md). 
 
 You can migrate some or all of the supported data from a source site to a destination hierarchy.  
 
 Migration is not enabled by default and requires several configuration steps. Migration information is not sent to Microsoft.  
 
-Before you migrate data from a source hierarchy, consider your privacy requirements.  
+Before you migrate data from a source hierarchy, consider your privacy requirements.

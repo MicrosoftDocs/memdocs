@@ -56,10 +56,14 @@
         href: deploy-use/endpoint-antimalware-policies.md
       - name: Configure client
         href: deploy-use/endpoint-protection-configure-client.md
+      - name: Configure Endpoint Protection on a standalone client
+        href: deploy-use/endpoint-protection-configure-standalone-client.md
+      - name: Manage Endpoint Protection using Group Policies
+        href: deploy-use/endpoint-protection-group-policies.md
     - name: Windows Firewall policies
       href: deploy-use/create-windows-firewall-policies.md
     - name: Microsoft Defender Advanced Threat Protection
-      href: deploy-use/windows-defender-advanced-threat-protection.md
+      href: deploy-use/defender-advanced-threat-protection.md
     - name: Create and deploy Exploit Guard policy
       href: deploy-use/create-deploy-exploit-guard-policy.md
     - name: Create and deploy Application Guard policy
@@ -117,7 +121,7 @@
   - name: Deploy Wi-Fi, VPN, email, and certificate profiles
     href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
   - name: Terms and conditions settings
-    href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
   - name: Monitor protection
     items:
     - name: Monitor Wi-Fi, email, and VPN profiles

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to turn off Microsoft data collection | Microsoft Docs
-description:
+title: Turn off Microsoft data collection for Android - Microsoft Intune | Microsoft Docs
+description: Learn how to turn off Microsoft data collection in the Microsoft Intune and Company Portal apps for Android.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
-ms.topic: article
+ms.date: 09/23/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,14 +29,18 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Turn off Microsoft usage data collection
+# Turn off Microsoft data collection on Android device  
 
-Microsoft automatically collects certain data about products and services. The data is used to improve the reliability and performance of apps, like Company Portal and Microsoft Intune. Even though this data is anonymized, some users may not feel comfortable with this collection. Your organization doesn't have control over the collection of this data, and they can't change your setting selection.   
+This article describes how to prevent Microsoft from collecting data about your Microsoft Intune or Company Portal usage. To turn off data collection in these apps:  
 
-To turn off data collection on your Android device:  
+1. Open the Intune or Company Portal app.  
+2. Select the menu button > **Settings**.
+3. Turn the **Usage data** toggle off.    
 
-1. Open the Company Portal or Microsoft Intune app.
-2. Select **Settings**.
-3. Under the usage data setting, flip the switch to the off position. 
+## Allowing Microsoft data collection   
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+When usage data is turned on, your in-app performance and usage data is automatically anonymized and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and cannot change your preferences.    
+
+## Next steps  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

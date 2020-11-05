@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bbc5fb02-8502-4003-8f4d-d69508674ce0
 author: aczechowski
 ms.author: aaroncz
@@ -60,9 +60,8 @@ public void SynchronizeSoftwareUpdatePoint(WqlConnectionManager connection)
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|---------|----|-----------|
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  

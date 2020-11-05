@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 5/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -34,6 +34,8 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 To support [Android Enterprise work profile](android-work-profile-enroll.md), [Android Enterprise fully managed](android-fully-managed-enroll.md), and [Android Enterprise dedicated devices](android-kiosk-enroll.md), you must connect your Intune tenant account to your Managed Google Play account.  
+
+Refer to the following support article from Google to ensure that Android Enterprise is available in your country or region: https://support.google.com/work/android/answer/6270910
 
 To make it easier for you to configure and use Android Enterprise management, upon connecting to Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin console. The four Android Enterprise apps are the following:
 

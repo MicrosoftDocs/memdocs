@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 20668ec6-c221-4c44-8119-19565706d544
 author: aczechowski
 ms.author: aaroncz
@@ -156,7 +156,7 @@ Class SMS_AppDeploymentStatus : SMS_BaseClass
 
  Enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  

@@ -158,11 +158,11 @@ Configure these values under the following Windows Registry key:
 
 |Name  |Values  |Type  |Description
 |---------|---------|---------|---------|
-|SqlEnabled| `1`: enable SQL tracing<br> `0`: disable SQL tracing |REG_DWORD|Add SQL trace logging to all site server logs.|
+|SqlEnabled| `1`: enable SQL Server tracing<br> `0`: disable SQL Server tracing |REG_DWORD|Add SQL Server trace logging to all site server logs.|
 |ArchiveEnabled| `1`: enable log archives<br> `0`: disable log archives | REG_DWORD |Archive site server logs to a separate location for historical preservation.|
 |ArchivePath| A valid folder path, for example `C:\Logs\Archive` | REG_SZ |The path to archive site server logs.|
 
-Only enable SQL tracing for troubleshooting purposes. Avoid using it in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
+Only enable SQL Server tracing for troubleshooting purposes. Avoid using it in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
 
 > [!Note]  
 > Don't change other values that may exist in this registry key.
@@ -208,7 +208,10 @@ For example, for the distribution point role:
 
 To change the verbose level of the AdminUI.log for the Configuration Manager console, use the following procedure:
 
-1. Open the console configuration file, **Microsoft.ConfigurationManagement.exe.config**, in an XML editor like Notepad. The default configuration file is in the following location: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Open the console configuration file, **Microsoft.ConfigurationManagement.exe.config**, in an XML editor like Notepad. The default configuration file is in the following location: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+    > [!IMPORTANT]
+    > Starting in version 1910, this path changed to use the `Microsoft Endpoint Manager` folder. Make sure you don't use an older version of the file that might exist in another folder.
 
 1. Under the **system.diagnostics** > **sources** > **source** element, change the **switchValue** attribute from `Error` to `Verbose`. For example:
 
@@ -238,7 +241,7 @@ The following locations are the defaults. If you customized the installation dir
 - Client: `C:\Windows\CCM\logs`
 - Server: `C:\Program Files\Microsoft Configuration Manager\Logs`
 - Management point: `C:\SMS_CCM\Logs`
-- Configuration Manager console: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager console: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS: `C:\inetpub\logs\logfiles\w3svc1`
 
 ### Task sequence log locations

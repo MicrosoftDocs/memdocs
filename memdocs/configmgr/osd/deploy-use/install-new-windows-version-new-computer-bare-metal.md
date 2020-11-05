@@ -5,15 +5,13 @@ description: Use Configuration Manager to install an operating system on a new c
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
-
 ---
+
 # Install a new version of Windows on a new computer (bare metal) with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*

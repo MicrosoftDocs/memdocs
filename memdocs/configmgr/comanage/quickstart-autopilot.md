@@ -2,7 +2,7 @@
 title: Windows Autopilot with co-management
 titleSuffix: Configuration Manager
 description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows 10 devices.
-ms.date: 02/21/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -74,9 +74,9 @@ With Autopilot, you can now provide a hands-free OS deployment to unmanned devic
 
 ## Case study
 
-The German logistics and rail freight company DB Shenker uses Autopilot to increase employee productivity and free its IT teams from working on day-to-day support tasks. Shenker has moved away from traditional imaging and replaced it with provisioning via the cloud. They now use Azure AD-join and Intune to get new devices up and running quickly. 
+The German logistics and rail freight company DB Schenker uses Autopilot to increase employee productivity and free its IT teams from working on day-to-day support tasks. DB Schenker has moved away from traditional imaging and replaced it with provisioning via the cloud. They now use Azure AD-join and Intune to get new devices up and running quickly. 
 
-Rather than have their remote workers waste time traveling to a location with IT services, Shenker now uses Windows Autopilot. They ship their workers hardware directly from the manufacturer to their local field office. The worker connects the new device to the internet, and they sign in with their Azure AD credentials. The device then connects to the applications and services that Schenker's IT department assigns to the user's individual profile.
+Rather than have their remote workers waste time traveling to a location with IT services, DB Schenker now uses Windows Autopilot. They ship their workers hardware directly from the manufacturer to their local field office. The worker connects the new device to the internet, and they sign in with their Azure AD credentials. The device then connects to the applications and services that DB Schenker's IT department assigns to the user's individual profile.
 
 For more information, see [Global logistics firm centralizes IT, unites employees with modern digital workplace](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10).
 
@@ -92,7 +92,6 @@ Create satisfaction in your organization by creating a better user experience fo
 
 For more information, see the following articles:
 
-[Use Intune to create Windows Autopilot profiles](https://docs.microsoft.com/intune/enrollment-autopilot)
+[Use Intune to create Windows Autopilot profiles](/intune/enrollment-autopilot)
 
-[Windows Autopilot for existing devices](../osd/deploy-use/windows-autopilot-for-existing-devices.md) task sequence
-
+[Windows Autopilot for existing devices](../../autopilot/existing-devices.md)

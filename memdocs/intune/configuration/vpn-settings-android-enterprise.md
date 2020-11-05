@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,9 +39,12 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
 ## Before you begin
 
-[Create a device configuration profile](vpn-settings-configure.md), and choose **Android Enterprise**.
+Create an [Android Enterprise VPN device configuration profile](vpn-settings-configure.md):
 
-## Device owner only
+- Fully managed, dedicated, and corporate-owned work profile
+- Work profile
+
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the available VPN connections. For example, enter `Contoso VPN`.
 - **IP address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter **192.168.1.1** or **vpn.contoso.com**.
@@ -79,4 +82,4 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), [Windows 8.1](vpn-settings-windows-8-1.md), and [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md) devices.
+You can also create VPN profiles for [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md).

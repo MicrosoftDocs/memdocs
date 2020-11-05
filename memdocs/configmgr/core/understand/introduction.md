@@ -5,13 +5,11 @@ description: Learn the basics of Microsoft Endpoint Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # What is Configuration Manager?
@@ -26,10 +24,10 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.md).
@@ -107,4 +105,4 @@ When you're familiar with the basic concepts, use this documentation library to 
 - [Features and capabilities of Configuration Manager](../plan-design/changes/features-and-capabilities.md)  
 - [Choose a device management solution](../plan-design/choose-a-device-management-solution.md)  
 - [Evaluate Configuration Manager by building your own lab environment](../get-started/set-up-your-lab.md)
-- [Find help for using Configuration Manager](find-help.md)  
+- [Find help for using Configuration Manager](find-help.md)

@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
-ms.topic: conceptual
+ms.date: 08/28/2020
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -165,7 +165,7 @@ Connections that resemble the following example, with a status code of 500, indi
 
 Use the following steps to test the URL that is specified in the SCEP certificate profile.
 
-1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/mscep.dll*.
+1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble `https://contoso.com/certsrv/mscep/mscep.dll`.
 
 2. Open a web browser, and then browse to that SCEP server URL. The result should be: **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
 
@@ -195,6 +195,7 @@ When you browse to the SCEP server URL, you receive the following Network Device
   ```
 
   If the installation fails, remove the Microsoft Intune Connector and then reinstall it.
+  If the installation was successful and you continue to receive the General NDES message, run the **iisreset** command to restart IIS.
 
 #### HTTP Error 503
 
@@ -254,7 +255,7 @@ If the SCEP application pool isn't started, check the application event log on t
   **Resolution**: Update the reference with the thumbprint of a valid certificate.
   1. Identify a replacement certificate:
      - Renew the existing certificate
-     - Select a different certificate with similar proprties (subject, EKU, key type and length, etc.)
+     - Select a different certificate with similar properties (subject, EKU, key type and length, etc.)
      - Enroll a new certificate
   2. Export the `NDESPolicy` Registry key to back up the current values.
   3. Replace the data of the `NDESCertThumbprint` Registry value with the thumbprint of the new certificate, removing all whitespace and converting the text to lowercase.
@@ -266,9 +267,9 @@ When you browse to the SCEP server URL, you receive the following error:
 
 ![Gatewaytimeout error](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **Cause**: The **Microsoft AAD Application Proxy Connector** service isn't started.
+- **Cause**: The **Microsoft Azure AD Application Proxy Connector** service isn't started.
 
-  **Resolution**:  Run **services.msc**, and then make sure that the **Microsoft AAD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
+  **Resolution**:  Run **services.msc**, and then make sure that the **Microsoft Azure AD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
 
 #### HTTP 414 Request-URI Too Long
 

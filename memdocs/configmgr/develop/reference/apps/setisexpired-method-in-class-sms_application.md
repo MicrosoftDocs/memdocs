@@ -1,10 +1,10 @@
 ---
-title: "SetIsExpired Method"
+title: SetIsExpired method in class SMS_Application
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 19057632-e75d-4b1c-ab26-72aeb1da2974
 author: aczechowski
 ms.author: aaroncz

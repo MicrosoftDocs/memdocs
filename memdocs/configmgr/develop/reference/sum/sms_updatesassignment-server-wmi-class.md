@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7
 author: aczechowski
 ms.author: aaroncz
@@ -171,8 +171,8 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 
  For this class, the default value is REQUIRED (1).  
 
-|||  
-|-|-|  
+| Value | Type |  
+| ----- | ---- |  
 |1|REQUIRED|  
 |2|NOT_ALLOWED|  
 
@@ -378,8 +378,8 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 
  Verbosity of state messages sent for this deployment.  
 
-|||  
-|-|-|  
+| Value | Message verbosity |  
+| ----- | ----------------- |  
 |0|NONE|  
 |1|ERRORS|  
 |5|SUCCESSES|  

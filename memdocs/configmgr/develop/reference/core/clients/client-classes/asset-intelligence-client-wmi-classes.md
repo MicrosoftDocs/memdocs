@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: daea40b0-c6cf-40fa-b759-6b3038889512
 author: aczechowski
 ms.author: aaroncz
@@ -34,9 +34,9 @@ In Configuration Manager, the Asset Intelligence client Windows Management Instr
 
 Classes related to the asset intelligence client WMI classes are:  
 
-- `SoftwareLicensingProduct` class. For more information, see [SoftwareLicensingProduct class](https://docs.microsoft.com/previous-versions/windows/desktop/sppwmi/softwarelicensingproduct).
+- `SoftwareLicensingProduct` class. For more information, see [SoftwareLicensingProduct class](/previous-versions/windows/desktop/sppwmi/softwarelicensingproduct).
 
-- `SoftwareLicensingService` class. For more information, see [SoftwareLicensingService class](https://docs.microsoft.com/previous-versions/windows/desktop/sppwmi/softwarelicensingservice).  
+- `SoftwareLicensingService` class. For more information, see [SoftwareLicensingService class](/previous-versions/windows/desktop/sppwmi/softwarelicensingservice).  
 
 - `Win32_USBDevice` class. Tracks devices connected to USB ports.  
 

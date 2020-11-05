@@ -23,7 +23,7 @@ Windows Defender Application Control is designed to protect PCs against malware 
 
 Windows Defender Application Control is a software-based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, Application Control does not have any hardware or firmware prerequisites. Application Control policies deployed with Configuration Manager enable a policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined in this article. Optionally, hypervisor-based protection of Application Control policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
 
-To learn more about Windows Defender Application Control, read the [Windows Defender Application Control deployment guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+To learn more about Windows Defender Application Control, read the [Windows Defender Application Control deployment guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
    > [!NOTE]
    > - Beginning with Windows 10, version 1709, configurable code integrity policies are known as Windows Defender Application Control.
@@ -128,7 +128,7 @@ To verify the specific software being blocked or audited, see the following loca
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -150,6 +150,3 @@ In this situation, the software might continue to be allowed to run even if the 
 ## Next steps
 
  [Manage antimalware policies and firewall settings](endpoint-antimalware-firewall.md)
-
-
-

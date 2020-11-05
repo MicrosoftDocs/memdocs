@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 04/01/2020
+ms.date: 10/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Client notification in Configuration Manager
@@ -120,7 +118,11 @@ Trigger clients to switch to the next available software update point. For more 
 
 ### Evaluate device health attestation
 
-Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).  
+Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
+
+### Check conditional access compliance
+
+Trigger clients to check compliance for conditional access policies. For more information, see [Conditional access](../../../comanage/quickstart-conditional-access.md).
 
 ### Wake Up
 
@@ -137,7 +139,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 
 - **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
 - **Disable verbose logging**: Change the global log level to default, and disable debug logging.
-- **Collect Client Logs** (starting in 2002): A client notification message is sent to the selected clients to gather the CCM logs. The logs are returned using software inventory file collection. <!--4226618-->
+- **Collect Client Logs** (starting in 2002): The site sends a client notification message to the selected clients to gather the CCM logs. The client sends the logs to the management point using the same channel as software inventory file collection. <!--4226618--> You don't need to enable software inventory in client settings.<!-- MEMDocs#305 -->
    - The size limit for the compressed client logs is 100 MB. <!--6366098-->
    - Use [Resource Explorer](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) manage and view these files.
 
@@ -198,7 +200,13 @@ Trigger Endpoint Protection or Windows Defender to run a *quick* antimalware sca
 
 Trigger Endpoint Protection or Windows Defender to download the latest antimalware definitions.  
 
-## See also
+## Monitor client operations
+
+Monitor the operations sent to clients by using the **Client Operations** node under the **Monitoring** workspace. For some instances, you can cancel the operation by using the **Cancel** option in the ribbon. Use the **Delete** option to remove the operation from the console's view.
+
+:::image type="content" source="media/client-operations-node.png" alt-text="Client Operations node in the Monitoring workspace" lightbox="media/client-operations-node.png":::
+
+## Next steps
 
 - [How to manage clients](manage-clients.md)
 - [How to manage collections](collections/manage-collections.md)

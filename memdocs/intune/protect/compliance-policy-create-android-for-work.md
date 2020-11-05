@@ -46,7 +46,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.
 
 
-## Device owner
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 ### Microsoft Defender ATP
 
@@ -71,7 +71,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
   
 > [!NOTE]
-> All the Mobile Threat Defense (MTD) providers are supported on Android Enterprise device owner deployments using app configuration. Check with your MTD provider for the exact configuration needed to support Android Enterprise Device Owner platforms on Intune.
+> All the Mobile Threat Defense (MTD) providers are supported on Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile deployments using app configuration. Check with your MTD provider for the exact configuration needed to support Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile platforms on Intune.
 
 #### Google Play Protect
 

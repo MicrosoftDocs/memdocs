@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1f01d10f-1aff-4f56-9f23-b53f222a57e9
 author: aczechowski
 ms.author: aaroncz
@@ -152,7 +152,7 @@ public void MoveTaskSequenceStepUp(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence or task sequence group|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|A valid task sequence or task sequence group|  
 |`taskSequenceStepName`<br /><br /> `stepName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the task sequence step to move.|  
 
 ## Compiling the Code  

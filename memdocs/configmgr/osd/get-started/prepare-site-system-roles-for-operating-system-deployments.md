@@ -113,7 +113,7 @@ The size of the user state directly affects disk storage on the state migration 
 
 To capture and restore the user state during the deployment of the operating systems, use a User State Migration Tool (USMT) package that points to the USMT source files. Configuration Manager automatically creates this package in the Configuration Manager console in **Software Library** > **Application Management** > **Packages**. Configuration Manager uses USMT 10 to capture the user state from one OS and then restore it to another. The Windows Assessment and Deployment Kit (Windows ADK) for Windows 10 includes USMT 10.
 
-For a description of different migration scenarios for USMT 10, see [Common Migration Scenarios](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios) in the Windows documentation.  
+For a description of different migration scenarios for USMT 10, see [Common Migration Scenarios](/windows/deployment/usmt/usmt-common-migration-scenarios) in the Windows documentation.  
 
 
 ### Retention policy  
@@ -153,4 +153,4 @@ When you use these wizards, you're prompted to provide the following information
 
 -   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you can't use the state migration point to store user state data.  
 
-For the steps to install a site system role, see [Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md).  
+For the steps to install a site system role, see [Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md).

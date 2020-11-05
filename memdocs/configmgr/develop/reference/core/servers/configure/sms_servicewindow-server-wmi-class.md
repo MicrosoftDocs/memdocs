@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a45f7f94-d2c4-4185-9035-ef07b90c7846
 author: aczechowski
 ms.author: aaroncz
@@ -91,7 +91,7 @@ Class SMS_ServiceWindow
 
  The schedule recurrence. Possible values are listed below. The default value is NONE (1).  
 
-|||  
+|Value|Recurrence type|  
 |-|-|  
 |1|NONE|  
 |2|DAILY|  
@@ -137,7 +137,7 @@ Class SMS_ServiceWindow
 
  The maintenance window type. Possible values are listed below. The default value is GENERAL (1).  
 
-|||  
+|Value|Maintenance window type|  
 |-|-|  
 |1|GENERAL. General maintenance window.|  
 |4|UPDATES. Software Updates maintenance window.|  

@@ -1,10 +1,10 @@
 ---
-title: "RebuildPackage Method"
+title: RebuildPackage method in class SMS_DriverPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ea311e8c-5ad5-4c0c-882f-eeb8e74ba0f0
 author: aczechowski
 ms.author: aaroncz

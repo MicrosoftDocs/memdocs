@@ -2,13 +2,13 @@
 # required metadata
 
 title: Add VPN settings to devices in Microsoft Intune - Azure | Microsoft Docs
-description: For Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
+description: On Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
-ms.topic: conceptual
+ms.date: 11/02/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -28,19 +28,19 @@ ms.collection: M365-identity-device-management
 
 # Create VPN profiles to connect to VPN servers in Intune
 
-Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization, so they can easily and securely connect to your organizational network.
+Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
 
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
 > [!NOTE]
-> You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
 >
-> * Android 4 and later
-> * Enrolled devices that run Windows 8.1 and later
-> * Windows Phone 8.1 and later
-> * Enrolled devices that run Windows 10 desktop
-> * Windows 10 Mobile
-> * Windows Holographic for Business
+> - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
+> - You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
+>
+>   - Android 4 and later
+>   - Enrolled devices that run Windows 8.1 and later
+>   - Enrolled devices that run Windows 10 desktop
+>   - Windows Holographic for Business
 
 ## VPN connection types
 
@@ -52,16 +52,16 @@ You can create VPN profiles using the following connection types:
 - Check Point Capsule VPN
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise device owner (fully managed)
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
 
@@ -70,8 +70,8 @@ You can create VPN profiles using the following connection types:
 
 - Citrix SSO
   - Android device administrator
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
-  - Android Enterprise device owner (fully managed): Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise fully managed and corporate-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -84,12 +84,11 @@ You can create VPN profiles using the following connection types:
 - F5 Access
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise device owner (fully managed)
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -98,8 +97,13 @@ You can create VPN profiles using the following connection types:
 - L2TP
   - Windows 10
 
+- NetMotion Mobility
+  - iOS/iPadOS
+  - macOS
+
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -109,24 +113,23 @@ You can create VPN profiles using the following connection types:
 - Pulse Secure
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise device owner (fully managed)
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -140,13 +143,12 @@ You can create VPN profiles using the following connection types:
 
     - **Platform**: Choose the platform of your devices. Your options:
       - **Android device administrator**
-      - **Android Enterprise** > **Device owner only**
-      - **Android Enterprise** > **Work profile only**
+      - **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile**
+      - **Android Enterprise** > **Work profile**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 and later**
       - **Windows 8.1 and later**
-      - **Windows Phone 8.1**
     - **Profile**: Select **VPN**.
 
 4. Select **Create**.
@@ -164,7 +166,6 @@ You can create VPN profiles using the following connection types:
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (including Windows Holographic for Business)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -185,13 +186,12 @@ VPN profiles can use a number of different connection types and protocols from d
 
 When you create the VPN profile, you choose a SCEP or PKCS certificate profile that you previously created in Intune. This profile is known as the identity certificate. It's used to authenticate against a trusted certificate profile (or *root certificate*) that you create to allow the user's device to connect. The trusted certificate is assigned to the computer that authenticates the VPN connection, typically, the VPN server.
 
-If you use certificate based authentication for your VPN profile, deploy the VPN profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.
+If you use certificate-based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This assignment makes sure each device recognizes the legitimacy of your certificate authority.
 
 For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 > [!NOTE]
-> Certificates added using the **PKCS imported certificate** profile type aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile type are supported for VPN authentication.
-
+> Certificates added using the **PKCS imported certificate** profile aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile are supported for VPN authentication.
 
 ### User name and password
 
@@ -199,6 +199,5 @@ The user authenticates to the VPN server by providing a user name and password.
 
 ## Next steps
 
-Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md) to some devices, and [monitor its status](device-profile-monitor.md).
-
-You can also create and use per-app VPNs on [Android device administrator/Android Enterprise](android-pulse-secure-per-app-vpn.md) and [iOS/iPadOS](vpn-setting-configure-per-app.md) devices.
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- You can also create and use per-app VPNs on [Android device administrator/Android Enterprise](android-pulse-secure-per-app-vpn.md) and [iOS/iPadOS](vpn-setting-configure-per-app.md) devices.

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 79363139-dce4-47c0-9c16-8a3979d2e4df
 author: aczechowski
 ms.author: aaroncz
@@ -167,8 +167,8 @@ Class SMS_ComponentSummarizer : SMS_BaseClass
 
  State of the component. Possible values are:  
 
-|||  
-|-|-|  
+| Value | State |
+| ----- | ----- |
 |0|STOPPED|  
 |1|STARTED|  
 |2|PAUSED|  
@@ -185,8 +185,8 @@ Class SMS_ComponentSummarizer : SMS_BaseClass
 
  Status value indicating the health of the component. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |
+| ----- | ------ |
 |GREEN(0)|OK. There are no warning or error messages.|  
 |YELLOW(1)|Warning. Warning messages were generated, but not error messages.|  
 |RED(2)|Critical. There are error messages.|  
@@ -209,8 +209,8 @@ Class SMS_ComponentSummarizer : SMS_BaseClass
 
  Type of component, for example, one that autostarts (runs continuously). Possible values are:  
 
-|||  
-|-|-|  
+| Value | Type |
+| ----- | ---- |
 |0|AUTOSTARTING|  
 |1|SCHEDULED|  
 |2|MANUAL|  

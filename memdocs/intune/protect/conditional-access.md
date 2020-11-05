@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby    
 ms.date: 03/06/2018
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -38,7 +38,7 @@ Enterprise Mobility + Security (EMS)  is not a standalone product. It's a soluti
 You can define conditions that gate access to your corporate data based on location, device, user state, and application sensitivity.
 
 > [!NOTE]
-> Conditional Access also extends its capabilities to [Office 365 services](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access).
+> Conditional Access also extends its capabilities to [Microsoft 365 services](/office365/enterprise/office-365-client-support-conditional-access).
 
 ![Conditional Access diagram](./media/conditional-access/ca-diagram-1.png)
 

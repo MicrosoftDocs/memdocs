@@ -27,9 +27,8 @@ This article introduces the features that are available in the Technical Preview
 
 You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
-|||||
-|-|-|-|-|
-|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+| Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Earlier than 1702|Yes|User|User license|
 |Earlier than 1702|No|User|User license|
 |Earlier than 1702|Yes|Device|User license|
@@ -82,7 +81,7 @@ With technical preview 1703, only Windows Store for Business (WSfB) is configure
 
 - Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- For more information about web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview).
 
 ### Prerequisites and planning
 When you set up a connection between Configuration Manager and the Windows Store for Business, you must provide a folder where app content synchronized from the store will be kept. To ensure that this folder is secure and that its content can be deployed to devices, make sure the following permissions are in place:
@@ -129,7 +128,7 @@ You can view and edit the properties of a cloud service to modify the configurat
 In the console go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services**, select a Cloud Service and then choose **Properties**.
 
 ## Convert from BIOS to UEFI during an in-place upgrade
-Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## Collapsible task sequence groups
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.

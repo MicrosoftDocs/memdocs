@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b7749c61-a744-4824-b36b-6ed957d30eb3
 author: aczechowski
 ms.author: aaroncz
@@ -71,9 +71,8 @@ public void CreateSMSAdmin(WqlConnectionManager connection, string distinguished
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`distinguishedName`|-   Managed: `String`|Like "CN=John Doe,OU=UserAccounts,DC=contoso,DC=com"|  
 |`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account .|  

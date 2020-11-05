@@ -35,7 +35,7 @@ The Configuration Manager console architecture is built on the following four di
 ## Configuration Manager Console XML  
  The Configuration Manager console XML defines how the Configuration Manager console looks and behaves. The XML defines nodes, queries, actions, forms, and everything else that is necessary to render the Configuration Manager console hierarchy, the results pane, and the action pane.  
 
- The XML files that are used by the Configuration Manager console are stored under %*ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\\. The following table shows the subfolders.  
+ The XML files that are used by the Configuration Manager console are stored under %*ProgramFiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\\. The following table shows the subfolders.  
 
 |Folder|Description|  
 |------------|-----------------|  

@@ -8,8 +8,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
-ms.topic: conceptual
+ms.date: 05/22/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -33,17 +33,17 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) with their work or school account.  
+This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](../user-help/sign-in-to-the-company-portal.md) with their work or school account.  
 
 As an Intune admin, you can simplify enrollment in the following ways:
 
-- [Enable automatic enrollment](#enable-windows-10-automatic-enrollment) (Azure AD Premium required)
-- [CNAME registration](#simplify-windows-enrollment-without-azure-ad-premium)
-- [Enable bulk enrollment](windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required)
+- [Enable automatic enrollment](#enable-windows-10-automatic-enrollment) (Azure AD Premium required).
+- [CNAME registration](#simplify-windows-enrollment-without-azure-ad-premium).
+- [Enable bulk enrollment](windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required).
 
 Two factors determine how you can simplify Windows device enrollment:
 
-- **Do you use Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
+- **Do you use Azure Active Directory Premium?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
 - **What versions of Windows clients will users enroll?** <br>Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
 
 ||**Azure AD Premium**|**Other AD**|
@@ -99,8 +99,8 @@ The Contoso DNS admin should create the following CNAMEs:
 
 Changes to DNS records might take up to 72 hours to propagate. You can't verify the DNS change in Intune until the DNS record propagates.
 
-## Additional Endpoints Are Supported but Not Recommended
-EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment, but there are two other endpoints that have been used by customers in the past and are supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won't have to do the additional confirmation step, so this is the recommended configuration
+## Additional endpoints are used but no longer supported
+EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment. There are two other endpoints that have been used by customers in the past and still work, but they are no longer supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won't have to do the additional confirmation step, so this is the recommended configuration
 
 ## Alternate Methods of Redirection Are Not Supported
 Using a method other than the CNAME configuration is not supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc is not supported.
@@ -115,7 +115,7 @@ Tell your users how to enroll their Windows devices and what to expect after the
 > [!NOTE]
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-For end-user enrollment instructions, see [Enroll your Windows device in Intune](../user-help/windows-enrollment-company-portal.md). You can also tell users to review [What can my IT admin see on my device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+For end-user enrollment instructions, see [Enroll Windows 10 device](../user-help/enroll-windows-10-device.md) and [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md). You can also tell users to review [What can my IT admin see on my device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
 > If you do not have Auto-MDM enrollment enabled, but you have Windows 10 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account. 
@@ -127,10 +127,10 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| NAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
+| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
 
 For more information about device registration, see
-[Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+[Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
 
 ## Windows 10 auto enrollment and device registration
 

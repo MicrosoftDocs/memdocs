@@ -10,7 +10,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 01/17/2020
+ms.date: 09/22/2020
 ms.author: erikje
 
 # optional metadata
@@ -39,7 +39,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune in the Microsoft Endpoint Manager
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Set up Windows 10 automatic enrollment
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 09/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -59,7 +59,7 @@ As the above table indicates, all changes to the App Protection Policies should 
 
 When testing changes to an APP, be aware of the [delivery timing](app-protection-policy-delivery.md). The status of APP delivery for a given user can monitored. For more information, see [How to monitor app protection policies](app-protection-policies-monitor.md).
 
-Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](app-protection-policy-settings-log.md) and [Manage web access by using Microsoft Edge with Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](app-protection-policy-settings-log.md) and [Use Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## APP Data Protection Framework settings
 
@@ -68,7 +68,7 @@ The following App Protection Policy settings should be enabled for the applicabl
 Microsoft recommends reviewing and categorizing usage scenarios, and then configuring users using the prescriptive guidance for that level. As with any framework, settings within a corresponding level may need to be adjusted based on the needs of the organization as data protection must evaluate the threat environment, risk appetite, and impact to usability.  
 
 ### Conditional Access Policies
-To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. See **Scenario 1: Office 365 apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies.
+To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. See **Scenario 1: Office 365 apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies.
 
 ### Apps to include in the App Protection Policies  
 
@@ -124,6 +124,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Override biometric instead of PIN for access  | Require  | iOS/iPadOS, Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access  | Allow  | iOS/iPadOS  |   |
+| Biometrics instead of PIN for access  | Allow  | Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
 | App PIN when device PIN is set  | Require  | iOS/iPadOS, Android  | If the device is enrolled in Intune, administrators can consider setting this to "Not required" if they are enforcing a strong device PIN via a device compliance policy.  |
 | Work or school account credentials for access  | Not required  | iOS/iPadOS, Android  |   |
@@ -144,7 +145,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 
 Level 2 is the data protection configuration recommended as a standard for devices where users access more sensitive information. These devices are a natural target in enterprises today. These recommendations do not assume a large staff of highly skilled security practitioners, and therefore should be accessible to most enterprise organizations. This configuration expands upon the configuration in Level 1 by restricting data transfer scenarios and by requiring a minimum operating system version.
 
-The policy settings enforced in level 2 include all the policy settings recommended for level 1 and only adds to or updates the below policy settings to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
+The policy settings enforced in level 2 include all the policy settings recommended for level 1 but only lists those settings below that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
 
 #### Data protection
 
@@ -152,8 +153,10 @@ The policy settings enforced in level 2 include all the policy settings recommen
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Data Transfer |       Backup org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Send org   data to other apps  |          Policy   managed apps  |          iOS/iPadOS,   Android  |          <p>With   iOS/iPadOS, administrators can configure this value to be "Policy managed   apps", "Policy managed apps with OS sharing", or "Policy managed apps   with Open-In/Share filtering". </p><p>Policy managed apps with OS   sharing is available when the device is also enrolled with Intune. This   setting allows data transfer to other policy managed apps, as well as   file transfers to other apps that have are managed by   Intune. </p><p>Policy managed apps with Open-In/Share filtering   filters the OS Open-in/Share dialogs to only display policy managed   apps. </p><p> For more information, see [iOS app protection policy   settings](app-protection-policy-settings-ios.md).</p> |
+| Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Allow   users to save copies to selected services  |          OneDrive   for Business, SharePoint Online |          iOS/iPadOS,   Android  |                  |
+| Data Transfer |       Transfer telecommunication data to  |          All apps |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Restrict   cut, copy, and paste between apps  |          Policy   managed apps with paste in  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Screen   capture and Google Assistant  |          Block  |          Android  |                  |
 | Functionality |       Restrict   web content transfer with other apps  |          Microsoft   Edge  |          iOS/iPadOS,   Android  |                  |
@@ -171,15 +174,20 @@ The policy settings enforced in level 2 include all the policy settings recommen
 
 Level 3 is the data protection configuration recommended as a standard for organizations with large and sophisticated security organizations, or for specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries, and as such merit the additional constraints and controls described. This configuration expands upon the configuration in Level 2 by restricting additional data transfer scenarios, increasing the complexity of the PIN configuration, and adding mobile threat detection.  
 
-The policy settings enforced in level 3 include all the policy settings recommended for levels 2 and 1 and only adds to or updates the below policy settings to implement strict data protection configuration and controls. These policy settings can have a potentially significant impact to users or to applications, enforcing a level of security commensurate with the risks facing targeted organizations.  
+The policy settings enforced in level 3 include all the policy settings recommended for level 2 but only lists those settings below that have been added or changed to implement more controls and a more sophisticated configuration than level 2. These policy settings can have a potentially significant impact to users or to applications, enforcing a level of security commensurate with the risks facing targeted organizations.  
 
 #### Data protection
 
 | Setting | Setting description |             Value  |             Platform        | Notes |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Data Transfer |       Transfer telecommunication data to  |          Any policy-managed dialer app |          Android  | Administrators can also configure this setting to use a dialer app that does not support App Protection Policies by selecting **A specific dialer app** and providing the **Dialer App Package ID** and **Dialer App Name** values.   |
+| Data Transfer |       Transfer telecommunication data to  |          A specific dialer app |          iOS/iPadOS  |  |
+| Data Transfer |       Dialer App URL Scheme  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | On iOS/iPadOS, this value must be replaced with the URL scheme for the custom dialer app being used. If the URL scheme is not known, contact the app developer for more information. For more information on URL schemes, see [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Data transfer |       Receive   data from other apps  |          Policy   managed apps  |          iOS/iPadOS, Android         |  |
-| Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS, this blocks all third-party keyboards from   functioning within the app.  |
-| Data transfer |       Approved   keyboards  |          Require  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
+| Data transfer |       Open data into Org documents  |          Block  |          iOS/iPadOS, Android         |  |
+| Data transfer |       Allow users to open data from selected services  |          OneDrive for Business, SharePoint  |          iOS/iPadOS, Android         |  |
+| Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS/iPadOS, this blocks all third-party keyboards from   functioning within the app.  |
+| Data transfer |       Approved   keyboards  |          Require  |          Android        |  |
 | Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
 | Functionality |       Printing org data  |          Block  |          iOS/iPadOS, Android         |  |
 

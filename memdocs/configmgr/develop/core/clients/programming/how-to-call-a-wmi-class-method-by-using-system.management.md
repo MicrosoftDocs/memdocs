@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 051ecc47-dfef-4586-9b50-abde4148bfff
 author: aczechowski
 ms.author: aaroncz
@@ -78,7 +78,7 @@ public void CallMethod(ManagementScope scope)
  System.Management  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](https://docs.microsoft.com/dotnet/api/system.management.managementexception).  
+ The exception that can be raised is [System.Management.ManagementException](/dotnet/api/system.management.managementexception).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   

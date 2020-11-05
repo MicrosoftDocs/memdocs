@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to turn off Microsoft data collection for macOS devices | Microsoft Docs
-description:
+title: Turn off Microsoft data collection for macOS - Microsoft Intune | Microsoft Docs
+description: Learn how to turn off Microsoft data collection in Intune Company Portal for macOS. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/08/2017
-ms.topic: article
+ms.date: 09/23/2020  
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,10 +29,18 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How to turn off Microsoft data collection
+# Turn off Microsoft data collection on macOS device  
 
-Microsoft automatically collects certain data about our products and services. We do this to improve the reliability and performance of our products, including the Company Portal app. Even though this data is anonymized, some users may not feel comfortable with this collection. Your company support does not have control over the collection of this data, and they cannot change your selection for the setting.
+This article describes how to prevent Microsoft from collecting data about your Intune Company Portal usage. To turn off data collection in Company Portal:  
 
-If you wish to turn off the collection of usage data on your macOS device, open the Company Portal app, then select the **Company Portal** menu. Open **Preferences** and under **Send usage data to Microsoft**, uncheck the **Allow Microsoft to collect data** box.
+1. Open the Company Portal app.  
+2. Select the menu button > **Preferences**.
+3. Under **Send usage data to Microsoft**, clear the checkbox next to **Allow Microsoft to collect data**.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Allowing Microsoft data collection   
+
+When the checkbox for this setting is selected, your in-app performance and usage data is automatically anonymized and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and cannot change your preferences.  
+
+## Next steps  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: de34161a-9f17-4b93-b1b0-5020f0533886
 author: aczechowski
 ms.author: aaroncz
@@ -127,7 +127,7 @@ Class SMS_AdvertisementInfo : SMS_BaseClass
 
  The type of advertisement.  
 
-|||  
+|Value|Advertisement type|  
 |-|-|  
 |0|Required Advertisement.|  
 |2|Available advertisement.|  

@@ -5,9 +5,7 @@ description: IProgressUI::ShowMessage method
 ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: 2b79dafd-c4ba-4832-88f7-62d2e6b4caf0
 author: aczechowski
 ms.author: aaroncz
@@ -20,7 +18,7 @@ In Configuration Manager, the `ShowMessage` method displays customizable dialog 
 
 ## Syntax  
 
-```  
+```
 [IDL]  
 HRESULT ShowMessage(  
      BSTR pszText,  
@@ -69,6 +67,8 @@ An `HRESULT` code. Possible values include, but aren't limited to, the following
 
 S_OK  
 The method succeeded.  
+
+To evaluate the user's response to the message box, use the [IProgressUI::ShowMessageEx](iprogressui--showmessageex-method.md) method.
 
 ## See also
 

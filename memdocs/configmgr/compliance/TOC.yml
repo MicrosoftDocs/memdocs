@@ -32,7 +32,7 @@
       items:
       - name: Windows 10
         href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
-      - name: Mac OS X
+      - name: macOS X
         href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
       - name: Windows desktop and server (custom)
         href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
@@ -56,7 +56,7 @@
     href: deploy-use/create-remote-connection-profiles.md
   - name: Upgrade Windows devices to a new edition
     href: deploy-use/upgrade-windows-version.md
-  - name: Configure Microsoft Edge settings
+  - name: Configure Microsoft Edge Legacy settings
     href: deploy-use/browser-profiles.md
   - name: Monitor compliance settings
     href: deploy-use/monitor-compliance-settings.md

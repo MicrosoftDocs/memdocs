@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
-ms.topic: conceptual
+ms.date: 07/17/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -62,7 +62,7 @@ The Encryption report pane displays a list of the devices you manage with high
     - Version 1709 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
     - The device must have a TPM chip
 
-    For more information, see the [BitLocker configuration service provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
+    For more information, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
   - **Not ready**: The device doesn't have full encryption capabilities, but still supports encryption. For example, a Windows device might be encrypted manually by a user, or through Group Policy that can be set to allow encrypting without a TPM.
   - **Not applicable**: There isn't enough information to classify this device.
@@ -121,7 +121,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The device is already encrypted. Device user must decrypt the device to continue.
 
-    *Consider: Intune can't set up FileVault on a device that is already encrypted. Instead, the user needs to manually decrypt their device before it can be managed by a device configuration policy and Intune*.
+    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Alternately, but not recommended as the following can leave a device unencrypted for a time, the user can manually decrypt their device before so it can then be encrypted by Intune policy.*
 
   - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
@@ -172,68 +172,20 @@ While viewing the Encryption report pane, you can select **Export** to create a 
 
 This report can be of use in identifying problems for groups of devices. For example, you might use the report to identify a list of macOS devices that all report *FileVault is already enabled by the user*, which indicates devices that must be manually decrypted before Intune can manage their FileVault settings.
 
-## FileVault recovery keys
+## Manage recovery keys
 
-When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the end-user.
+For details on managing recovery keys, see the following in the Intune documentation:
 
-For managed devices, Intune can escrow a copy of the personal recovery key. Escrow of keys enables Intune administrators to rotate keys to help protect devices, and users to recover a lost or rotated personal recovery key.
+macOS FileVault:
+- [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
+- [Rotate recovery keys](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Recover recovery keys](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune supports multiple options to rotate and recover personal recovery keys. One reason to rotate a key is if the current personal key is lost or thought to be at risk.
-
-> [!IMPORTANT]
-> Devices that are encrypted by users, and not by Intune, cannot be managed by Intune. This means that Intune can't escrow the personal recovery of these devices, nor manage the rotation of the recovery key. Before Intune can manage FileVault and recovery keys for the device, the user must decrypt their device, and then let Intune encrypt the device.
-
-### Rotate recovery keys
-
-- **Automatic rotation**: As an admin, you can configure the FileVault setting Personal recovery key rotation to automatically generate new recovery key's periodically. When a new key is generated for a device, the key isn't displayed to the user. Instead, the user must get the key either from an admin, or by using the company portal app.
-
-- **Manual rotation**: As an admin, you can view information for a device that you manage with Intune and that's encrypted with FileVault. You can then choose to manually rotate the recovery key for corporate devices. You can't rotate recovery keys for personal devices.
-
-  To rotate a recovery key:
-
-  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-  
-  2. Select **Devices** > **All devices**.
-  
-  3. From the list of devices, select the device that is encrypted and for which you want to rotate its key. Then under Monitor, select **Recovery keys**.
-  
-  4. On the Recovery keys pane, select **Rotate FileVault recovery key**.
-
-     The next time the device checks in with Intune, the personal key is rotated. When needed, the new key can be obtained by the end-user through the company portal.
-
-### Recover recovery keys
-
-- **Administrator**: Administrators can't view personal recovery keys for devices that are encrypted with FileVault.
-
-- **End-user**: End-users use the Company Portal website from any device to view the current personal recovery key for any of their managed devices. You can't view recovery keys from the Company Portal app.
-
-  To view a recovery key:
-  
-  1. Sign in to the *Intune Company Portal* website from any device.
-
-  2. In the portal, go to **Devices** and select the macOS device that is encrypted with FileVault.
-
-  3. Select **Get recovery key**. The current recovery key is displayed.
-
-## BitLocker recovery keys
-
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Intune portal. To be accessible, the device must have its keys escrowed to Azure AD.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Devices** > **All devices**.
-
-3. Select a device from the list, and then under *Monitor*, select **Recovery keys**.
-  
-   When keys are available in Azure AD, the following information is available:
-   - BitLocker Key ID
-   - BitLocker Recovery Key
-   - Drive Type
-
-   When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
-
-Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1709 and later, and for Windows 10 Pro version 1809 and later.
+Windows 10 BitLocker:
+- [Rotate BitLocker recovery keys](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## Next steps
 
-Create a [device compliance](compliance-policy-create-windows.md) policy.
+[Manage BitLocker policy](../protect/encrypt-devices.md)
+
+[Manage FileVault policy](encrypt-devices-filevault.md)

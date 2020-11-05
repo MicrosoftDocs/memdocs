@@ -36,14 +36,6 @@
       href: core/understand/introduction-to-wbemtest.md
     - name: Simple example of list, create, modify, and delete
       href: core/understand/simple-example-of-list--create--modify--and-delete.md
-  - name: Get started with Configuration Manager and Windows PowerShell
-    items:
-    - name: Get started with Configuration Manager and Windows PowerShell
-      href: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
-    - name: Windows PowerShell basics
-      href: core/understand/windows-powershell-basics.md
-    - name: Connect to Configuration Manager with Windows PowerShell
-      href: core/understand/connecting-to-configuration-manager-with-windows-powershell.md
   - name: Call Configuration Manager code snippets
     href: core/understand/calling-code-snippets.md
   - name: Encrypt passwords or data for a site

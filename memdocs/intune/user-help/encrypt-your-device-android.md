@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Encrypt Android device for Intune | Microsoft Docs
-description: Steps to turn on Android device encryption when required by Intune
+title: Encrypt your Android device - Microsoft Intune | Microsoft Docs
+description: Learn how to turn on Android device encryption when required by Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/31/2020
-ms.topic: article
+ms.date: 09/23/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -32,7 +32,7 @@ ms.collection:
 
 # Encrypting your Android device
 
-Device encryption protects your files and folders from unauthorized access if your device is lost or stolen. It makes the data on your device inaccessible and unreadable to people without a passcode. 
+Device encryption protects your files and folders from unauthorized access if your device is lost or stolen. It makes the data inaccessible and unreadable to people who don't have a passcode. 
 
 Before you can access school or work resources, your organization might require you to:
 
@@ -45,12 +45,10 @@ Before you can access school or work resources, your organization might require 
 
 ## Encrypt device
 
-Follow these steps to encrypt your device. Your device may restart several times. 
-
-The name and location of the encryption option will vary depending on your device manufacturer and Android version. 
+Follow these steps to encrypt your device. Your device may restart several times. The name and location of the encryption option will vary depending on your device manufacturer and Android version. 
 
 1. Open the **Settings** app.
-2. Type **security** or **encrypt** in the app's search bar to find related settings.
+2. Type **security** or **encrypt** in the search bar to find related settings.  
 3. Tap the option to encrypt your device. Follow the onscreen instructions.  
 4. When prompted, set a lock screen password, PIN, or other authentication method (if allowed by your organization). 
 5. To recheck settings, open the Company Portal or Microsoft Intune app.
@@ -59,23 +57,24 @@ The name and location of the encryption option will vary depending on your devic
 
 ## Enable secure startup
 
-Your organization may require you to enable secure startup as part of their encryption policy. This feature further protects your device by requiring a password or PIN to be entered before the phone starts up. You many have additional authentication options but it will vary depending on what your organization allows. 
+Secure startup protects your device by requiring a password or PIN each time the device is turned on. 
 
-The name and location of the secure startup option will vary depending on your device manufacturer and Android version. On some devices, this setting may be called **Strong protection**. 
+The name and location of the secure startup option can vary depending on your device manufacturer and Android version. 
 
 1. Open the **Settings** app.
-2. Type **secure startup** in the app's search bar.
-3. Tap **Secure startup** > **Require PIN when device turns on**.
+2. Type **secure startup** in the app's search bar. 
+    a. If that doesn't bring up a matching result, try searching for **Strong protection**. 
+3. Tap **Secure startup** > **Require PIN when device turns on**.  
 4. When prompted, enter your device PIN.   
-5. To recheck settings, open the Company Portal or Microsoft Intune app.
-    * Company Portal users: Select your device and tap **Check device settings**. 
-    * Microsoft Intune users: You'll have to wait until the page updates, but when it does, your encryption status should change to compliant.  
+5. If you're going through device setup/enrollment, return to the app and select **CONTINUE**. If you received this message outside or after enrollment:  
+   * Company Portal app users: Open the app, select your device, and then tap **Check device settings**. 
+   * Microsoft Intune app users: Open the app, wait until the screen loads, and then your encryption status should change to compliant.  
 
 
 ## Set startup passcode   
-When you [encrypt your device](#encrypt-device) and [enable secure startup](#enable-secure-startup), you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). No further steps are needed. 
+Once you encrypt your device and enable secure startup, you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). Competing that step will satisfy the startup passcode requirement. 
 
-To choose or change the lock screen type:
+To set a lock screen on your device or change the type that you're currently using:  
 
 1. Open the **Settings** app.
 2. Type **screen lock** in the app's search bar.

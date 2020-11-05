@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: You need to update your Windows device | Microsoft Docs
+title: Update your Windows device - Microsoft Intune | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: For mobile devices running Windows, you need to update your device.
+description: Learn how to check for updates on your device so that you can meet your organization's OS version requirements. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2018
-ms.topic: article
+ms.date: 10/16/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,17 +30,29 @@ ms.custom: intune-enduser; seodec18
 ms.collection: 
 ---
 
-# You need to update your Windows device
+# Update Windows device  
+Update your device so that you can access your organization's internal apps and resources. This article is for devices that are enrolled or trying to enroll in Intune.   
 
-[!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
+Before updating your device, be sure to back it up so that you can restore it to its previous state if something goes wrong. 
 
-For mobile devices running Windows, update your device by navigating to **Settings** > **phone update** > **check for updates**.
+## Check for Windows updates 
 
-For computers running Windows, search for **operating system** and follow the prompts to identify which version of Windows you're running.
+To manually check for the latest recommended updates:
 
-> [!Note]
-> To update computers that have operating systems earlier than Windows 8.1, search for **Windows updates**.
+1. Select **Start**. 
+2. Open the **Settings** app. 
+3. Select **Update & Security**  > **Windows Update**.
+4. Select **Check for updates**. 
 
-For Windows 10 and Windows 8.1, type __Windows version__ into the __search bar__. Under __Can I help?__, select __windows version__. The version number will appear. This number will look something like __10.0.14393.447__.
+>[!Important]
+> Support for Windows 10 Mobile and Windows Phone 8.1 has ended. If you're trying to enroll a device that runs Windows 10 Mobile or Windows Phone 8.1, enrollment will fail. Devices currently enrolled will stop syncing with Intune. We recommend moving to a Windows 10 device. Windows 10 has built-in security and device features that have a first class integration with Microsoft Intune.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Benefit of device updates  
+Keeping your device up-to-date lets you access the newest features, and it also ensures that your device has the most secure version of its operating system. Microsoft and other major vendors generally recommend keeping both personal and corporate devices running on the newest versions of software available to you. 
+
+## Troubleshooting  
+See Microsoft support's [Troubleshoot problems updating Windows 10](https://support.microsoft.com/help/4089834/windows-10-troubleshoot-problems-updating) to learn how to resolve common problems with your Windows 10 update.  
+
+## Next steps  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

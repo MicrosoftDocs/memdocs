@@ -2,10 +2,10 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 04/24/2020
+ms.date: 10/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
@@ -27,8 +27,6 @@ The following sections provide details about the different log files available t
   - [Client operations](#BKMK_ClientOpLogs)  
 
   - [Client installation](#BKMK_ClientInstallLog)  
-
-  - [Client for Linux and UNIX](#BKMK_LogFilesforLnU)  
 
   - [Client for Mac computers](#BKMK_LogfilesforMac)  
 
@@ -72,6 +70,8 @@ The following sections provide details about the different log files available t
 
   - [Discovery](#BKMK_DiscoveryLog)  
 
+  - [Endpoint analytics](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Extensions](#BKMK_Extensions)  
@@ -126,18 +126,30 @@ The following table lists the log files located on the Configuration Manager cli
 |Ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|  
 |CcmRestart.log|Records client service restart activity.|  
 |CCMSDKProvider.log|Records activities for the client SDK interfaces.|  
-|ccmsqlce.log|Records activities for the SQL Compact Edition that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
+|ccmsqlce.log|Records activities for the SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
+|CcmUsrCse.log|Records details during user sign on for folder redirection policies.|
+|CCMVDIProvider.log|Records information for clients in a virtual desktop infrastructure (VDI).|
+|CertEnrollAgent.log|Records information for Windows Hello for Business. Specifically communication with the Network Device Enrollment Service (NDES) for certificate requests using the Simple Certificate Enrollment Protocol (SCEP).|
 |CertificateMaintenance.log|Maintains certificates for Active Directory Domain Services and management points.|  
-|CIDownloader.log|Records details about configuration item definition downloads.|  
+|CIAgent.log|Records details about the process of remediation and compliance for compliance settings, software updates, and application management.|
+|CIDownloader.log|Records details about configuration item definition downloads.|
+|CIStateStore.log|Records changes in state for configuration items, such as compliance settings, software updates, and applications.|
+|CIStore.log|Records information about configuration items, such as compliance settings, software updates, and applications.|
 |CITaskMgr.log|Records tasks for each application and deployment type, such as content download and install or uninstall actions.|  
 |ClientAuth.log|Records signing and authentication activity for the client.|  
 |ClientIDManagerStartup.log|Creates and maintains the client GUID and identifies tasks during client registration and assignment.|  
-|ClientLocation.log|Records tasks that are related to client site assignment.|  
+|ClientLocation.log|Records tasks that are related to client site assignment.|
+|ClientServicing.log|Records information for client deployment state messages during auto-upgrade and client piloting.|
+|CMBITSManager.log|Records information for Background Intelligent Transfer Service (BITS) jobs on the device.|
 |CMHttpsReadiness.log|Records the results of running the Configuration Manager HTTPS Readiness Assessment Tool. This tool checks whether computers have a public key infrastructure (PKI) client authentication certificate that can be used with Configuration Manager.|  
 |CmRcService.log|Records information for the remote control service.|  
 |CoManagementHandler.log|Use to troubleshoot co-management on the client.|
+|ComplRelayAgent.log|Records information for the co-management workload for compliance policies.|
 |ContentTransferManager.log|Schedules the Background Intelligent Transfer Service (BITS) or Server Message Block (SMB) to download or access packages.|  
 |DataTransferService.log|Records all BITS communication for policy or package access.|  
+|DCMAgent.log|Records high-level information about the evaluation, conflict reporting, and remediation of configuration items and applications.|
+|DCMReporting.log|Records information about reporting policy platform results into state messages for configuration items.|
+|DcmWmiProvider.log|Records information about reading configuration item synclets from WMI.|
 |DeltaDownload.log|Records information about the download of express updates and updates downloaded using Delivery Optimization.|  
 |Diagnostics.log|Records the status of client diagnostic actions.|
 |EndpointProtectionAgent|Records information about the installation of the System Center Endpoint Protection client and the application of antimalware policy to that client.|  
@@ -148,7 +160,8 @@ The following table lists the log files located on the Configuration Manager cli
 |FileSystemFile.log|Records the activity of the Windows Management Instrumentation (WMI) provider for software inventory and file collection.|  
 |FSPStateMessage.log|Records the activity for state messages that are sent to the fallback status point by the client.|  
 |InternetProxy.log|Records the network proxy configuration and use activity for the client.|  
-|InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|  
+|InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.| 
+|InventoryProvider.log|More details about hardware inventory, software inventory, and heartbeat discovery actions on the client.|
 |LocationCache.log|Records the activity for location cache use and maintenance for the client.|  
 |LocationServices.log|Records the client activity for locating management points, software update points, and distribution points.|  
 |M365AHandler.log|Information about the Desktop Analytics settings policy|
@@ -166,14 +179,20 @@ The following table lists the log files located on the Configuration Manager cli
 |SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
 |Scheduler.log|Records activities of scheduled tasks for all client operations.|  
 |SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|Records the activity for notifying users about software for the specified user.|  
-|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
 |SleepAgent_&lt;*domain*\>@SYSTEM_0.log|The main log file for wake-up proxy.|  
+|SmsClientMethodProvider.log|Records activity for sending client schedules. For example, with the Send Schedule tool or other programmatic methods.|
 |smscliui.log|Records use of the Configuration Manager client in Control Panel.|  
 |SrcUpdateMgr.log|Records activity for installed Windows Installer applications that are updated with current distribution point source locations.|  
+|StateMessageProvider.log|Records information for the component that sends state messages from the client to the site.|
 |StatusAgent.log|Records status messages that are created by the client components.|  
 |SWMTRReportGen.log|Generates a use data report that is collected by the metering agent. This data is logged in Mtrmgr.log.|  
-|UserAffinity.log|Records details about user device affinity.|  
+|UserAffinity.log|Records details about user device affinity.|
+|UserAffinityProvider.log|Technical details from the component that tracks user device affinity.|
 |VirtualApp.log|Records information specific to the evaluation of Application Virtualization (App-V) deployment types.|  
 |Wedmtrace.log|Records operations related to write filters on Windows Embedded clients.|  
 |wakeprxy-install.log|Records installation information when clients receive the client setting option to turn on wake-up proxy.|  
@@ -189,53 +208,7 @@ The following table lists the log files that contain information related to the 
 |ccmsetup-ccmeval.log|Records ccmsetup.exe tasks for client status and remediation.|  
 |CcmRepair.log|Records the repair activities of the client agent.|  
 |client.msi.log|Records setup tasks done by client.msi. Can be used to troubleshoot client installation or removal problems.|  
-
-### <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX
-
-> [!Important]  
-> Starting in version 1902, Configuration Manager doesn't support Linux or UNIX clients.
->
-> Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
-
-The Configuration Manager client for Linux and UNIX records information in the following log files:  
-
-> [!TIP]
-> Use CMTrace to view the log files for the client for Linux and UNIX.
-
-|Log name|Details|
-|-------------------|-----------------------------------------------------------------|
-|Scxcm.log| The log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin. By default, this log file is located at **/var/opt/microsoft/scxcm.log**. To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You don't need to restart the client computer or service for the change to take effect. You can set the log level to one of four different settings. |
-| Scxcmprovider.log |The log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin. This log is located at `/var/opt/microsoft/configmgr/scxcmprovider.log`. To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You don't need to restart the client computer or service for the change to take effect. You can set the log level to one of three settings.|
-
-Both log files support several levels of logging:  
-
-- **scxcm.log**. To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the  **MODULE** tag to the log level you want:  
-
-  - ERROR: Indicates problems that require attention  
-
-  - WARNING: Indicates possible problems for client operations  
-
-  - INFO: More detailed logging that indicates the status of various events on the client  
-
-  - TRACE: Verbose logging that typically is used to diagnose problems  
-
-- **scxcmprovider.log**. To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the **MODULE** tag to the log level you want:  
-
-  - ERROR: Indicates problems that require attention  
-
-  - WARNING: Indicates possible problems for client operations
-
-  - INFO: More detailed logging that indicates the status of various events on the client  
-
-Under normal operating conditions, use the ERROR log level. This log level creates the smallest log file. As the log level is increased from ERROR to WARNING, to INFO, and then to TRACE, a larger log file is created as more data is written to the file.  
-
-#### <a name="BKMK_ManageLinuxLogs"></a> Manage log files for the Linux and UNIX client
-
-The client for Linux and UNIX doesn't limit the maximum size of the client log files. It also doesn't automatically copy the contents of its .log files to another file, such as to a .lo_ file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
-
-For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the client log files. The Configuration Manager client for Linux and UNIX has an interface that enables **logrotate** to signal the client when the log rotation completes, so the client can resume logging to the log file.  
-
-For information about **logrotate**, see the documentation for the Linux and UNIX distributions that you use.  
+|ClientServicing.log|Records information for client deployment state messages during auto-upgrade and client piloting.|
 
 ### <a name="BKMK_LogfilesforMac"></a> Client for Mac computers
 
@@ -321,6 +294,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. In version 1910 and earlier, it also included synchronization of collection membership results to Azure AD.| Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
+|SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
@@ -339,7 +313,8 @@ The following table lists the log files that are on the Configuration Manager si
 |srsrpsetup.log|Records results of the reporting point installation process.|Site system server|  
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
-|swmproc.log|Records the processing of metering files and settings.|Site server|  
+|swmproc.log|Records the processing of metering files and settings.|Site server|
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|
 
 ### <a name="BKMK_SiteInstallLog"></a> Site server installation
 
@@ -379,7 +354,9 @@ The following table lists the log files that contain information related to the 
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Records client messaging activity on the endpoint.|Site system server|  
+|CcmIsapi.log|Records client messaging activity on the endpoint.|Site system server|
+|CCM_STS.log|Records activities for authentication tokens, either from Azure Active Directory or site-issued client tokens.|Site system server|
+|ClientAuth.log|Records signing and authentication activity.|Site system server|
 |MP_CliReg.log|Records the client registration activity processed by the management point.|Site system server|  
 |MP_Ddr.log|Records the conversion of XML.ddr records from clients, and then copies them to the site server.|Site system server|  
 |MP_Framework.log|Records the activities of the core management point and client framework components.|Site system server|  
@@ -389,6 +366,7 @@ The following table lists the log files that contain information related to the 
 |MP_Location.log|Records location request and reply activity from clients.|Site system server|  
 |MP_OOBMgr.log|Records the management point activities related to receiving an OTP from a client.|Site system server|  
 |MP_Policy.log|Records policy communication.|Site system server|  
+|MP_RegistrationManager.log|Records activities related to client registration, such as validating certificates, CRL, and tokens.|Site system server|
 |MP_Relay.log|Records the transfer of files that are collected from the client.|Site system server|  
 |MP_Retry.log|Records hardware inventory retry processes.|Site system server|  
 |MP_Sinv.log|Records details about the conversion of XML software inventory records from clients and the copy of those files to the site server.|Site system server|  
@@ -415,10 +393,11 @@ The following table lists the log files that contain information related to the 
 |Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
 |Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
 |hman.log|Records information about message forwarding.|Site server|  
-|MSfBSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
+|WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
 |outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
+|ServiceConnectionTool.log|Records details about use of the [service connection tool](../../servers/manage/use-the-service-connection-tool.md) based on the parameter you use. Each time you run the tool, it replaces any existing log file.|Same location as the tool|
 |Sitecomp.log|Records details of service connection point installation.|Site server|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
@@ -456,14 +435,14 @@ The following table lists the log files that contain information related to appl
 |AppIntentEval.log|Records details about the current and intended state of applications, their applicability, whether requirements were met, deployment types, and dependencies.|Client|  
 |AppDiscovery.log|Records details about the discovery or detection of applications on client computers.|Client|  
 |AppEnforce.log|Records details about enforcement actions (install and uninstall) taken for applications on the client.|Client|  
-|AppGroupHandler.log|Starting in version 1906, detection and enforcement information for application groups|Client|
+|AppGroupHandler.log|Records detection and enforcement information for application groups|Client|
 |awebsctl.log|Records monitoring activities for the Application Catalog web service point site system role.|Site system server|  
 |awebsvcMSI.log|Records detailed installation information for the Application Catalog web service point site system role.|Site system server|  
 |BusinessAppProcessWorker.log|Records processing for Microsoft Store for Business apps.|Site server|
 |Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
 |ConfigMgrSoftwareCatalog.log|Records the activity of the Application Catalog, which includes its use of Silverlight.|Client|  
-|MSfBSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
+|WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |NotiCtrl.log|Application request notifications.|Site server|  
 |portlctl.log|Records the monitoring activities for the Application Catalog website point site system role.|Site system server|  
 |portlwebMSI.log|Records the MSI installation activity for the Application Catalog website role.|Site system server|  
@@ -476,6 +455,7 @@ The following table lists the log files that contain information related to appl
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
 |SoftwareCatalogUpdateEndpoint.log|Records activities for managing the URL for the Application Catalog shown in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|  
+|TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.|Client|<!-- MEMDocs#336 -->
 
 #### Packages and programs
 
@@ -517,6 +497,7 @@ The following table lists the Configuration Manager log files that contain infor
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
+|CertEnrollAgent.log|Records client communication with NDES for certificate requests using the Simple Certificate Enrollment Protocol (SCEP).|Windows Hello for Business client|
 |Crp.log|Records enrollment activities.|Certificate registration point|  
 |Crpctrl.log|Records the operational health of the certificate registration point.|Certificate registration point|  
 |Crpsetup.log|Records details about the installation and configuration of the certificate registration point.|Certificate registration point|  
@@ -551,23 +532,7 @@ The following table lists the log files that contain information related to clie
 
 ### Cloud management gateway
 
-The following table lists the log files that contain information related to the cloud management gateway.
-
-|Log name|Description|Computer with log file|
-|--------------|-----------------|----------------------------|  
-|CloudMgr.log|Records details about deploying the cloud management gateway service, ongoing service status, and use data associated with the service. To configure the logging level, edit the **Logging level** value in the following registry key: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|The *installdir* folder on the primary site server or CAS.|
-|CMGSetup.log <sup>[Note 1](#bkmk_note1)</sup>|Records details about the second phase of the cloud management gateway deployment (local deployment in Azure). To configure the logging level, use the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|CMGService.log <sup>[Note 1](#bkmk_note1)</sup>|Records details about the cloud management gateway service core component in Azure. To configure the logging level, use the setting **Trace level** (**Information** (Default), **Verbose**, **Error**) on the **Azure portal\Cloud services configuration** tab.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-|SMS_Cloud_ProxyConnector.log|Records details about setting up connections between the cloud management gateway service and the cloud management gateway connection point.|Site system server|
-|CMGContentService.log <sup>[Note 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->When you enable a CMG to also serve content from Azure storage, this log records the details of that service.|The **%approot%\logs** on your Azure server, or the SMS/Logs folder on the site system server|
-
-- For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
-- For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
-- For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**.
-
-#### <a name="bkmk_note1"></a> Note 1: Logs synchronized from Azure
-
-These are local Configuration Manager log files that cloud service manager syncs from Azure storage every five minutes. The cloud management gateway pushes logs to Azure storage every five minutes. So the maximum delay is 10 minutes. Verbose switches affect both local and remote logs. The actual file names include the service name and role instance identifier. For example, CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
+[!INCLUDE [Logs for cloud management gateway](includes/logs-cmg.md)]
 
 ### <a name="BKMK_CompSettingsLog"></a> Compliance settings and company resource access
 
@@ -634,6 +599,15 @@ The following table lists the log files that contain information related to disc
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
+
+### <a name="bkmk_analytics"></a> Endpoint analytics
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|  
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|Client|  
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|Client|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|Client|
 
 ### <a name="BKMK_EPLog"></a> Endpoint Protection
 
@@ -758,7 +732,7 @@ The following table lists the log files that contain information related to OS d
 |MP_ClientIDManager.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
-|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
+|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Records details about Windows Sysprep and setup logs.|Client|  
 |Setuperr.log|Records details about Windows Sysprep and setup logs.|Client|  
 |smpisapi.log|Records details about the client state capture and restore actions, and threshold information.|Client|  
@@ -868,7 +842,7 @@ Servicing uses the same infrastructure and process as software updates. For othe
 |DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
 
-For more information, see [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+For more information, see [Online Servicing-Related Log Files](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ### <a name="BKMK_WULog"></a> Windows Update Agent
 
@@ -878,7 +852,7 @@ The following table lists the log files that contain information related to the 
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment, and whether there are updates to the agent components.|Client|  
 
-For more information, see [Windows Update log files](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+For more information, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 ### <a name="BKMK_WSUSLog"></a> WSUS server
 

@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -38,7 +38,7 @@ You can enroll up to 1,000 mobile devices with a single Azure Active Directory a
 DEM user accounts and devices that are enrolled with a DEM user account have the following limitations:
 
 - A DEM account user must be assigned an Intune license.
-- Wipe can't be done from the Company Portal. Wiping a device enrolled by a DEM user account can be done from the Intune in Azure portal.
+- Wipe can't be done from the Company Portal. Wiping a device enrolled by a DEM user account can be done from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - Only the local device appears in the Company Portal app or website.
 - DEM user accounts cannot use Apple Volume Purchase Program (VPP) apps with Apple VPP user licenses because of per-user Apple ID requirements for app management.
 - DEM accounts cannot be used when enrolling devices via Apple's Automated Device Enrollment (ADE).
@@ -53,9 +53,9 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 
 You can use the following methods to enroll devices using DEM accounts:
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- DEM initiated via Company Portal
+- [DEM initiated via Company Portal](../user-help/use-managed-devices-to-get-work-done.md)
 
 ## Add a device enrollment manager
 
@@ -81,4 +81,3 @@ Removing a device enrollment manager doesn't affect enrolled devices.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
 2. On the **Device enrollment managers** blade, select the DEM user, and select **Delete**.
-

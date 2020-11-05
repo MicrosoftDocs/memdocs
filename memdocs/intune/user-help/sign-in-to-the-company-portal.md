@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to sign in to the Company Portal app | Microsoft Docs
-description: Find out how to sign in to the Company Portal app on multiple platforms.
+title: How to sign in to Company Portal app | Microsoft Docs
+description: Learn where to get the Company Portal app and the three different ways to sign in.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/31/2019
-ms.topic: article
+ms.date: 08/27/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,74 +29,71 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Sign in to Company Portal  
+# How to sign in to Company Portal  
 
-There are three ways to sign in to the Company Portal app:
+Company Portal is available for Windows 10, Android, iOS, and macOS devices from the following locations (respectively): 
 
-* Sign in with your work email address and password.  
+* [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
+* [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
+* [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070): Selecting this link will immediately download the Company Portal installer package on your device.  
+
+There are three ways to sign in to the Company Portal app.
+
+* Sign in with your school or work email address and password.  
 * Sign in with certificate-based authentication.  
-* Sign in from another device.    
+* Sign in from another device.   
+
+This article describes how to sign in using each of these methods. For the best experience, use the method that your organization recommends or requires. 
 
 
-## Sign in with your email address and password
-The following steps show screenshots from the Company Portal for iOS.  
+## Sign in with school or work account    
+Complete the following steps to sign in to Company Portal with your school or work account. 
 
-1. Open the app on your device and tap **Sign In**.  
+1. Open the app and tap **Sign In**.  
 
-   ![Example screenshot of the Company Portal sign-in page.](./media/intune-ios-cp-signin-1908.png)
-
-
-2. Enter your **Work or school account** and tap **Next**.
-
-   ![The user is prompted to provide just their email address rather than their email and password on the same screen.](./media/cp_ios_aad_signin_after_1804_002.png)
+2. Enter the email address associated with your school or work account and then tap **Next**.
 
 3. Enter your password and tap **Sign In**.
 
-   ![The user is prompted for their password after their email address has been accepted.](./media/cp_ios_aad_signin_after_1804_003.png)
 
-4. The app will verify your credentials. When done, you can access your organization's resources and install available apps.  
+4. Wait while the app verifies your credentials. When done, you can access the features in the app and your organization's resources.  
 
-   ![After going through the authentication process, the Company Portal app signs in, shows a loading bar.](./media/cp_ios_aad_signin_after_1804_004.png)
-
-## Sign in with certificate-based authentication
+## Sign in with certificate  
 You'll only see this sign-in option if your organization allows certificate-based authentication and you have a certificate available to use.  
 
 1. Open the Company Portal app on your device.  
 
-2. Enter your **Work or school account**.  
+2. Enter the email address associated with your work or school account and then tap **Next**.   
 
-3. Tap the **Sign in with a certificate** link.  
+3. Tap **Sign in with a certificate**.  
 
 4. Tap **Continue** to use the certificate.  
+5. Wait while the app verifies your certificate. When done, you can access the features in the app and your organization's resources.  
 
-## Sign in from another device
+## Sign in via another device    
 
-If your company uses smartcards to access your computers, it's likely that you have to authenticate by signing in from another device.  
+If you normally use a smart card to access work resources, follow the steps in this section to sign in to Company Portal.  
 
-1. Open the Company Portal app on your device. Make sure it's the device you'll be using to access your work resources.       
+1. Open Company Portal on the device you'll be using to access your work resources.  
 
-1. Select **Sign in from another device**.  
+2. Select **Sign in from another device**.  
 
-   ![The Company Portal sign-in page prompts user for email address.  Shows the "Next" button and a link to "Sign in from another device." Also includes a link to "Can't access your account?" A link at the bottom leads to Microsoft Privacy and Cookies information.](./media/cp_ios_aad_signin_after_1804_005.png)
-
-2. You receive a unique, one-time code to sign in to the Company Portal. Copy the code.
+3. Write down the one-time, sign-in code that appears on screen (or just keep this screen handy for the next couple steps). 
 
    ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. On your other device (the one you're using to authenticate), open your browser and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Enter or paste the code.  
+3. Switch to your other device (the one you're using to authenticate) and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).  
+
+4. When prompted to, enter the code.  
 
    ![An image of the user's browser on their work computer rather than their Company Portal app. The "Device login" page displayed prompts the user for the code they received in the Company Portal app.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
 4. Select  __Continue__ to allow the Company Portal to sign in on your work device.   
 
-   ![The user has input their unique code into the field, and the "Device login" site has asked for confirmation that the Intune Company Portal was the correct app to receive authorization to sign in.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_005.png) 
+5. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.  
 
-5. Once the code is verified, you can close the window.  
 
-   ![A confirmation page that states that the user has now signed into the Company Portal app on their device, and that this page can be closed.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+## Next steps  
 
-6. The Company Portal app signs you in on your work device.  
-
-   ![After going through the authentication process, the Company Portal app signs in, noting its process with a loading bar.](./media/cp_ios_aad_signin_after_1804_007.png)
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Stuck or need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

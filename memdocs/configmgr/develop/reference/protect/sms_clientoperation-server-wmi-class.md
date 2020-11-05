@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f523822e-1638-42bc-8997-c52ac4d53a82
 author: aczechowski
 ms.author: aaroncz
@@ -114,8 +114,8 @@ Class SMS_ClientOperation : SMS_BaseClass
 
  Filter type of the target members, applicable only when the `TargetType` is 3. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Filter type |  
+| ----- | ----------- |  
 |0|No filter.|  
 |1|Infected by given threat (Filter).|  
 
@@ -164,8 +164,8 @@ Class SMS_ClientOperation : SMS_BaseClass
 
  Target object type of the primary action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |1|Threat|  
 
  `PrimaryActionType`  
@@ -177,8 +177,8 @@ Class SMS_ClientOperation : SMS_BaseClass
 
  "Action type of the primary action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Action type |  
+| ----- | ----------- |  
 |1|Full Scan|  
 |2|Quick Scan|  
 |3|Download Definition|  
@@ -224,8 +224,8 @@ Class SMS_ClientOperation : SMS_BaseClass
 
  Operation state. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Operation state |  
+| ----- | --------------- |  
 |0|Inactive|  
 |1|Active|  
 |2|Decommission|  
@@ -257,8 +257,8 @@ Class SMS_ClientOperation : SMS_BaseClass
 
  Operation target type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Target type |  
+| ----- | ----------- |  
 |0|Current members of a specified collection.|  
 |1|Specific clients in a specified collection.|  
 |2|Members of a specified collection.|  

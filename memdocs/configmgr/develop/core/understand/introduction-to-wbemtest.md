@@ -92,13 +92,13 @@ If you spend much time around Configuration Manager you become aware that much o
 
   **Other:** Other resources for WMI are listed below.  
 
-- [Windows Management Instrumentation (SDK)](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)  
+- [Windows Management Instrumentation (SDK)](/windows/win32/wmisdk/wmi-start-page)  
 
-- [WMI Scripting Primer: Part 1](https://msdn.microsoft.com/library/ms974579.aspx)  
+- [WMI Scripting Primer: Part 1](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/ms974579(v=msdn.10))  
 
-- [WMI Scripting Primer: Part 2](https://msdn.microsoft.com/library/ms974592.aspx)  
+- [WMI Scripting Primer: Part 2](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/ms974592(v=msdn.10))  
 
-- [WMI Scripting Primer: Part 3](https://msdn.microsoft.com/library/ms974547.aspx)  
+- [WMI Scripting Primer: Part 3](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/ms974547(v=msdn.10))  
 
 ## See Also  
  [Getting Started with Configuration Manager Programming](../../../develop/core/understand/getting-started-with-configuration-manager-programming.md)

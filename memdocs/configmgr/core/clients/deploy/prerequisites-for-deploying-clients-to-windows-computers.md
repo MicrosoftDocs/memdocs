@@ -2,7 +2,7 @@
 title: Windows client deployment prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Prerequisites for deploying clients to Windows computers in Configuration Manager
@@ -25,24 +23,26 @@ For more information on the minimum hardware and OS requirements for the Configu
 > [!NOTE]  
 > The software version numbers shown in this article only list the minimum version numbers required.  
 
-
 ## <a name="BKMK_prereqs_computers"></a> Prerequisites for Windows clients  
 
 Use the following information to determine the prerequisites for when you install the Configuration Manager client on Windows devices.  
 
-### Dependencies external to Configuration Manager  
+### Dependencies external to Configuration Manager
 
-|Component|Description|  
-|---|---|  
-|Windows Installer version 3.1.4000.2435|Required to support the use of Windows Installer update (.msp) files for packages and software updates.|  
-|Microsoft Background Intelligent Transfer Service (BITS) version 2.5|Required to allow throttled data transfers between the client computer and Configuration Manager site systems. BITS isn't automatically downloaded during client installation. When BITS is installed on computers, it typically requires a restart to complete the installation.<br /><br /> Most operating systems include BITS. If they don't, install BITS before you install the Configuration Manager client.|  
-|Microsoft Task Scheduler|Enable this service on the client for the client installation to complete.|  
+Many of these components are services or features that Windows enables by default. Don't disable these components on Configuration Manager clients.
+
+|Component|Description|
+|---|---|
+|Windows Installer|Required to support the use of Windows Installer files for applications and software updates.|
+|Microsoft Background Intelligent Transfer Service (BITS)|Required to allow throttled data transfers between the client computer and Configuration Manager site systems.|
+|Microsoft Task Scheduler|Required for client operations, such as regularly evaluating the health of the Configuration Manager client.|
+|Microsoft Remote Differential Compression (RDC)|Required to optimize data transmission over the network.|
 |SHA-2 code signing support|Starting in version 1906, clients require support for the SHA-2 code signing algorithm. For more information, see [SHA-2 code signing support](#bkmk_sha2).|
 
 #### <a name="bkmk_sha2"></a> SHA-2 code signing support
 
 <!--SCCMDocs-pr#3404-->
-Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. Legacy Windows OS versions require an update for SHA-2 code signing support. For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+Because of weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. Legacy Windows OS versions require an update for SHA-2 code signing support. For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
 
@@ -61,18 +61,15 @@ If you need to manage a client on a version of Windows that's not updated, or ol
 
 The Configuration Manager client has external dependencies. These dependencies depend on the OS version and the installed software on the client computer.  
 
-If the client requires these dependencies to complete the installation, it automatically installs them.  
+If the client requires these dependencies to complete the installation, it automatically installs them.
 
-|Component|Description|  
-|---|---|  
-|Windows Update Agent version 7.0.6000.363|Required by Windows to support update detection and deployment.|  
-|Microsoft Core XML Services (MSXML) version 6.20.5002 or later|Required to support the processing of XML documents in Windows.|  
-|Microsoft Remote Differential Compression (RDC)|Required to optimize data transmission over the network.|  
-|Microsoft Visual C++ 2013 Redistributable version 12.0.21005.1|Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.|  
-|Microsoft Visual C++ 2005 Redistributable version 8.0.50727.42|For version 1606 and earlier, required to support Microsoft SQL Server Compact operations.|  
-|Windows Imaging APIs 6.0.6001.18000|Required to allow Configuration Manager to manage Windows image (.wim) files.|  
-|Microsoft Policy Platform 1.2.3514.0|Required to allow clients to evaluate compliance settings.|  
-|Microsoft .NET Framework version 4.5.2|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
+|Component|Description|
+|---|---|
+|Microsoft Core XML Services (MSXML) version 6.20.5002 or later (`msxml6.msi`)|Required to support the processing of XML documents in Windows.|
+|Microsoft Visual C++ 2013 Redistributable version 12.0.40660.0 (`vcredist_x*.exe`)|Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.|<!-- SCCMDocs#1526 -->
+|Windows Imaging APIs 6.0.6001.18000 or later (`wimgapi.msi`)|Required to allow Configuration Manager to manage Windows image (.wim) files.|
+|Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`)|Required to allow clients to evaluate compliance settings.|  
+|Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
 
 > [!Important]
@@ -117,7 +114,7 @@ The following prerequisites are specific to the various methods of client instal
 
 #### Client push installation  
 
-- The site uses client push installation accounts to connect to computers to install the client. Specify these accounts on the **Accounts** tab of the Client Push Installation Properties. The account must be a member of the local administrators group on the destination computer.  
+- The site uses client push installation accounts to connect to computers to install the client. Specify these accounts on the **Accounts** tab of the Client Push Installation Properties. The account must be a member of the local Administrators group on the destination computer.  
 
     If you don't specify a client push installation account, the site server uses its computer account.  
 

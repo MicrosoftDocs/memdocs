@@ -9,7 +9,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,7 +31,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve a threat found by Lookout for Work  
+# Resolve a threat found by Lookout for Work on iOS
 
 The Lookout for Work app is a Mobile Threat Defender service that identifies potential threats on your iOS device. These threats are reported to the Company Portal app, and appear there as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:
 

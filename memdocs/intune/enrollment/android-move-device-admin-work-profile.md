@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -44,7 +44,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 - Set up Android work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
-  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
+  - [Configure Azure Active Directory device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
 
 ## Create device compliance policy
@@ -63,19 +63,23 @@ When users see that they're out of compliance for this reason, they can tap **Re
     ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. On the **Locations** page, you can add locations if you want > **Next**.
-6. On the **Actions for noncompliance**, you can set the **Send email to end user** action.
 
-    ![Send email](./media/android-move-device-admin-work-profile/send-email.png)
+6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end user experience for this flow.
 
+    ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    In the email, you can include the URL below in your messages to users. The URL will launch the Android Company Portal to the **Update device settings** page. This page starts their flow to move to work profile management.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
+    These are some actions to consider:
+
+    - **Mark device noncompliant**: By default, this action is set to zero (0) days, marking devices as noncompliant immediately. Changing this to a greater number of days provides users with a grace period in which they can see the flow to move to work profile management without yet being marked noncompliant. For example, setting this to 14 days would give users two weeks to move from device administrator to work profile management without the risk of losing access to resources.
+    - **Send push notification to end user**: Configure this to send push notifications to the device administrator devices. When a user selects the notification, it will launch the Android Company Portal to the **Update device settings** page where they can start the flow to move to work profile management.
+    - **Send email to end user**: Configure this to send emails to users about the move from device administrator to work profile management. In the email, you can include the URL below , which when selected, will launch the Android Company Portal to the Update device settings page where they can start the flow to move to work profile management.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-    > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
-    > - Users must tap the link on an Android device. If they instead paste it into a browser, it will not launch the Android Company Portal. 
+      > [!NOTE]
+      > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
+      > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
+      > - Users must tap the link on an Android device. If they instead paste it into a browser, it will not launch the Android Company Portal. 
 
     Choose **Next**.
 

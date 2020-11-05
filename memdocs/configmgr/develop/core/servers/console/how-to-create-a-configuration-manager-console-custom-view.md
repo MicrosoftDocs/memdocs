@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4bd77dc3-97d1-475b-a860-bff0157054be
 author: aczechowski
 ms.author: aaroncz
@@ -68,7 +68,7 @@ In Configuration Manager, to create a custom console view, you must create two .
     > [!NOTE]
     >  In other parts of the Console Extension section, the examples use an assembly named `ConfigMgrObjectsControl.dll`. If you are building the examples in other sections, make sure to name the assembly `ConfigMgrObjectsControl.dll` at this step (or change the other assembly references to your specific assembly name).  
 
-2.  Copy the assembly to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin folder.  
+2.  Copy the assembly to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin folder.  
 
 ## See Also  
  [About Configuration Manager Administrator Console Views](../../../../develop/core/servers/console/about-configuration-manager-console-views.md)   

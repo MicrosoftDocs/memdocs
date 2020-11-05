@@ -5,7 +5,7 @@ description: Information about viewing the properties of, and modifying Configur
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 9e27d0a3-9b5a-410e-9d80-49eef493a1e2

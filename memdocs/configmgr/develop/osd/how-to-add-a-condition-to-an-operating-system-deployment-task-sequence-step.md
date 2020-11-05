@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 153b47c9-14fc-4b09-a2d7-99e0de5b6759
 author: aczechowski
 ms.author: aaroncz
@@ -114,8 +114,8 @@ public void AddRegistryCondition(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence step ([SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](/windows/win32/wmisdk/swbemobject)|A valid task sequence step ([SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

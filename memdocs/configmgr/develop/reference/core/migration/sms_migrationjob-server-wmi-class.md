@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6ecbb0a8-2ed4-40d0-ba75-5d0c7c484b58
 author: aczechowski
 ms.author: aaroncz
@@ -366,7 +366,7 @@ Class SMS_MigrationJob : SMS_BaseClass
 
  Job status. Possible values are:  
 
-|||  
+|Value|Job status|  
 |-|-|  
 |0|NotStarted|  
 |1|Completed|  
@@ -392,7 +392,7 @@ Class SMS_MigrationJob : SMS_BaseClass
 
  The type of job. Possible values are:  
 
-|||  
+|Value|Job type|  
 |-|-|  
 |1|Object|  
 |2|Client|  

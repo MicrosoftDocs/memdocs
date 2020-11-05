@@ -100,6 +100,9 @@ Configuration Manager detects one or more blocking issues that prevent device en
 
 For example, the Configuration Manager client isn't at least version 1902 (5.0.8790). Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
 
+> [!TIP]
+> There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
+
 Starting in version 2002, you can more easily identify client proxy configuration issues in two areas:
 
 - **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down into clients that are unable to enroll to see the endpoints to which clients can't connect due to proxy configuration issues. For more information, see [Endpoint connectivity checks](#endpoint-connectivity-checks).<!-- 4963230 -->
@@ -209,7 +212,7 @@ Otherwise, it might display one of the following errors:
 
 - Can't configure device app compatibility data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
 
-- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
+- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
 
 Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
 
@@ -326,7 +329,7 @@ For more information, review M365AHandler.log on the client.
 <!--1004-->
 If this check isn't successful, a user selected a lower Windows diagnostic data on the device. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](enroll-devices.md#windows-settings).
 
-Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### Check user proxy
 
@@ -335,7 +338,7 @@ The DisableEnterpriseAuthProxy setting is enabled by default for Windows 7. For 
 
 This property may display the following errors:
 
-- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Can't check for the Authentication proxy status. Check the logs for the exception details
 
@@ -370,7 +373,7 @@ There's a different ID for the device. This registry key is used by group policy
 
 2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
 
-[![Screenshot of commercial ID in Desktop Analytics portal](media/commercial-id.png)](media/commercial-id.png#lightbox)
+:::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal" lightbox="media/commercial-id.png":::
 
 > [!Important]  
 > Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](enroll-devices.md#device-enrollment). This process might result in loss of diagnostic data during the transition.  
@@ -405,6 +408,9 @@ If this check is successful, then the DiagTrack component is properly configured
 Otherwise, it might display one of the following errors:
 
 - Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements  
+
+    > [!TIP]
+    > There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Can't find the Connected User Experience and telemetry (diagtrack.dll) component. Check requirements  
 
@@ -444,7 +450,7 @@ Desktop Analytics uses the Microsoft Account service for a more reliable device 
 
 Make sure the **Microsoft Account Sign-In Assistant** service isn't disabled. The startup type should be **Manual (Trigger Start)**.
 
-To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### Windows diagnostic data opt-in
 

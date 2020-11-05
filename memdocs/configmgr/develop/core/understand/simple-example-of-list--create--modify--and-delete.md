@@ -71,8 +71,8 @@ using System.Text;
 using System.Threading.Tasks;  
 
 // Added the below Configuration Manager DLL references to support basic SMS Provider operations:  
-//    C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.ManagementProvider.dll  
-//    C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\AdminUI.WqlQueryEngine.dll  
+//    C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.ManagementProvider.dll  
+//    C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\AdminUI.WqlQueryEngine.dll  
 // Added the below Configuration Manager namespaces to support basic SMS Provider operations:  
       using Microsoft.ConfigurationManagement.ManagementProvider;                    
       using Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine;     

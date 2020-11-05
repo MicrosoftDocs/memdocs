@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c5c499ab-97f4-4d11-befa-e5151db75cba
 author: aczechowski
 ms.author: aaroncz
@@ -138,7 +138,7 @@ Class SMS_LicensedVppApps : SMS_BaseClass
 
  The type of license. Possible values are:  
 
-|||  
+|Value|License type|  
 |-|-|  
 |0|Online|  
 |1|Offline|  
@@ -152,7 +152,7 @@ Class SMS_LicensedVppApps : SMS_BaseClass
 
  The platform on which the application runs. Possible values are:  
 
-|||  
+|Value|Platform|  
 |-|-|  
 |0 or 1|Windows|  
 |2|iOS|  

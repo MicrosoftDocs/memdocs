@@ -54,6 +54,8 @@ landingContent:
             url: how-to-switch-workloads.md
           - text: Monitor co-management in Configuration Manager
             url: how-to-monitor.md
+          - text: Use the Company Portal app on co-managed devices
+            url: company-portal.md
       - linkListType: video
         links:
           - text: Windows Autopilot with co-management

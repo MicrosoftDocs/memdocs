@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: efaa6ef5-e9a0-4939-bf9a-855e42d2df65
 author: aczechowski
 ms.author: aaroncz
@@ -159,7 +159,7 @@ Class SMS_AppDeploymentRequirementsNotMetStatus : SMS_BaseClass
 
  Enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  
@@ -204,7 +204,7 @@ Class SMS_AppDeploymentRequirementsNotMetStatus : SMS_BaseClass
 
  Type of requirement that has not been met. Possible values are:  
 
-|||  
+|Value|Type of requirement violation|  
 |-|-|  
 |0|Constraint violation|  
 |1|Conflict violation|  
@@ -241,7 +241,7 @@ Class SMS_AppDeploymentRequirementsNotMetStatus : SMS_BaseClass
 
  Status type.  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

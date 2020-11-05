@@ -114,10 +114,10 @@ Use the [content library cleanup tool](../hierarchy/content-library-cleanup-tool
 
 
 ### Use the OMS connector with the Azure Government cloud
-You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/azure/azure-monitor/platform/collect-sccm).
 
 ### Software update points are added to boundary groups
-Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#software-update-points) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
+Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
 
 
 <!-- ## Migration  -->
@@ -188,7 +188,7 @@ You can now return to a previous page when you run a task sequence and there is 
 Beginning in version 1702, for available deployments of task sequences, you can choose to use pre-cache content. Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive. For details, see [Configure pre-cache content](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
 
 ### Convert from BIOS to UEFI during an in-place upgrade
-Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### Improvements to the Install Applications task sequence step
 This version introduced the following improvements:
@@ -217,11 +217,11 @@ Beginning in this release, when you upgrade the Windows ADK version and then use
 
 ## Software updates
 
-### Deploy Office 365 apps to clients
-Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager. For details, see [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+### Deploy Microsoft 365 apps to clients
+Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager. For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
-> The Office 365 app that you create and deploy by using the Office 365 Application Wizard in Configuration Manager is not automatically managed by Configuration Manager until you enable the **Enable management of the Office 365 Client Again** software updates client agent setting. For details, see [About client settings](../../clients/deploy/about-client-settings.md).
+> The Microsoft 365 app that you create and deploy by using the Office 365 Application Wizard in Configuration Manager is not automatically managed by Configuration Manager until you enable the **Enable management of the Office 365 Client Again** software updates client agent setting. For details, see [About client settings](../../clients/deploy/about-client-settings.md).
 
 ### Manage Express installation files for Windows 10 updates
 Beginning in version 1702, Configuration Manager supports express installation files for Windows 10 updates. When you use a supported version of Windows 10, you can use Configuration Manager settings to download only the changes between the current month's Windows 10 Cumulative Update and the previous month's update. Without express installation files, Configuration Manager downloads the full Windows 10 Cumulative Update (including all updates from previous months) each month. Using express installation files provides for smaller downloads and faster installation times on clients. For details, see [Manage express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
@@ -268,9 +268,8 @@ Starting with 1702, Hybrid mobile device management with Microsoft Intune now su
 
 You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
-|||||
-|-|-|-|-|
-|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+| Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Earlier than 1702|Yes|User|User license|
 |Earlier than 1702|No|User|User license|
 |Earlier than 1702|Yes|Device|User license|

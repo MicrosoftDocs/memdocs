@@ -5,7 +5,7 @@ description: Information about how to access reports in the Configuration Manage
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 2020b94b-fc6f-4a70-91fb-51df948b9cb1

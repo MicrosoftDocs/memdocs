@@ -208,11 +208,11 @@ For more information, see [How to prepare internet-based devices for co-manageme
 <!--1358651-->
 Previously, you had to deploy a cloud distribution point and CMG as separate roles. A CMG can now also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. 
 
-For more information, see [Modify a CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg).
+For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
 #### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_cmgroot) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
 
 
 
@@ -230,7 +230,7 @@ The following workloads are now able to transition from Configuration Manager to
 
 - **Device configuration**<!--1357903-->: This workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications.  
 
-- **Office 365**<!--1357841-->: Devices don't install Office 365 deployments from Configuration Manager.  
+- **Office 365**<!--1357841-->: Devices don't install Microsoft 365 deployments from Configuration Manager.  
 
 - **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. This feature is a [pre-release feature](../../servers/manage/pre-release-features.md).  
 
@@ -275,9 +275,9 @@ Create a phased deployment for an application. Phased deployments allow you to o
 
 For more information, see the following articles:  
 
-- [Create a phased deployment](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Create a phased deployment](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Manage and monitor phased deployments](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Manage and monitor phased deployments](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### Provision Windows app packages for all users on a device
@@ -289,9 +289,9 @@ For more information, see [Create Windows applications](../../../apps/get-starte
 
 ### Office Customization Tool integration with the Office 365 Installer
 <!--1358149-->
-The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Office 365. This integration allows you to take advantage of new manageability settings in Office 365 as soon as they're available. 
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Microsoft 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Microsoft 365. This integration allows you to take advantage of new manageability settings in Microsoft 365 as soon as they're available. 
 
-For more information, see [Deploy Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+For more information, see [Deploy Microsoft 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### Support for new Windows app package formats
@@ -303,7 +303,7 @@ For more information, see [Create Windows applications](../../../apps/get-starte
 
 ### Uninstall application on approval revocation
 <!--1357891-->
-The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
 
 For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
@@ -343,7 +343,7 @@ For more information, see [Phase settings](../../../osd/deploy-use/create-phased
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!--1358500-->
-The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
+The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
 
 For more information, see [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -541,7 +541,7 @@ The following areas of the **Monitoring** workspace now support copying text:
 
 Right-click the asset, and select **Copy**. This action copies the selected assets as a comma-delimited list that includes the full details. The keyboard shortcut **CTRL** + **C** also works in these views. 
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### Improvements to the Surface dashboard
@@ -563,7 +563,7 @@ For more information, see [Surface dashboard](../../clients/manage/surface-devic
 <!--1358202-->
 Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console.md#view-users-for-a-device).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### Submit feedback from the Configuration Manager console  
@@ -571,7 +571,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console.md#send-feedback) and [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) and [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 
@@ -579,7 +579,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes).
 
 The following update rollup (4462978) is available in the console starting on 24 October 2018: [Update rollup for Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978).
 

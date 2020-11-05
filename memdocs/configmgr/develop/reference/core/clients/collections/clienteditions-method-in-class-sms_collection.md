@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 030dee48-575c-40fe-b402-920426271329
 author: aczechowski
 ms.author: aaroncz
@@ -34,8 +34,8 @@ SInt32 ClientEditions(
 
  Edition of the client. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client edition |
+| ----- | -------------- |
 |0|Desktop|  
 |1|Windows RT|  
 |2|Windows Mobile 6|  

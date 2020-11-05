@@ -3,7 +3,7 @@ title: "Bind Configuration Manager Data to a Form"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c8ae07f8-0d77-4cf2-850f-c13fc140eab6
 author: aczechowski
 ms.author: aaroncz
@@ -40,7 +40,7 @@ In Configuration Manager, to bind Configuration Manager console data to a proper
 
 9. In **textBox1_TextChanged**, add the following code to set the dirty flag when text is changed: `Dirty = true;`  
 
-10. Build the project and copy the assembly to %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin.  
+10. Build the project and copy the assembly to %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin.  
 
 11. Open the Configuration Manager console, and navigate to the **Packages** node under **Software Distribution**.  
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1e35b0f1-e436-4358-b7e3-b970452ffb25
 author: aczechowski
 ms.author: aaroncz
@@ -86,8 +86,8 @@ Class SMS_Certificate : SMS_BaseClass
 
  The public key type for the certificate. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Key type |  
+| ----- | -------- |  
 |1|self-sign|  
 |2|issued|  
 
@@ -136,8 +136,8 @@ Class SMS_Certificate : SMS_BaseClass
 
  The type of certificate. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Certificate type |  
+| ----- | ---------------- |  
 |1|Boot Media|  
 |2|PXE|  
 |3|ISVProxy|  

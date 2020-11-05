@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739
 author: aczechowski
 ms.author: aaroncz
@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Modify a Configuration Manager Object by Using Managed Code
-To modify a Configuration Manager object instance by using the managed SMS Provider, use the object's [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) interface to make modifications. You then call the [IResultObject.Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method to submit the changes.  
+To modify a Configuration Manager object instance by using the managed SMS Provider, use the object's [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) interface to make modifications. You then call the [IResultObject.Put](/previous-versions/system-center/developer/cc146500(v=msdn.10)) method to submit the changes.  
 
 > [!NOTE]
 >  The IResultObject interface for an object can be obtained through the WqlConnectionManager.GetInstance method or through other queries. For an example that uses asynchronous queries, see [How to Perform an Asynchronous Configuration Manager Query Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md).  
@@ -22,11 +22,11 @@ To modify a Configuration Manager object instance by using the managed SMS Provi
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
-2.  Using the **WqlConnectionManager** object you obtain in step one, call *GetInstance* to get an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) for the required object.  
+2.  Using the **WqlConnectionManager** object you obtain in step one, call *GetInstance* to get an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) for the required object.  
 
 3.  Make changes to object using the IResultObject.  
 
-4.  Commit the changes to the SMS provider with the IResultObject object [Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method.  
+4.  Commit the changes to the SMS provider with the IResultObject object [Put](/previous-versions/system-center/developer/cc146500(v=msdn.10)) method.  
 
 ## Example  
  The following example function updates a package's description from a supplied package identifier and description.  
@@ -82,7 +82,7 @@ public void ModifyPackageDescription(WqlConnectionManager connection, string pac
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## See Also  
  [Objects overview](configuration-manager-objects-overview.md)
@@ -93,4 +93,4 @@ public void ModifyPackageDescription(WqlConnectionManager connection, string pac
  [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
  [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)   
- [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)   
+ [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)

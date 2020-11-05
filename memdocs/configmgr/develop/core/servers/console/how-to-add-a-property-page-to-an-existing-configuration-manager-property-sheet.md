@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 182335e6-3505-49a9-84a1-e16221a42ea3
 author: aczechowski
 ms.author: aaroncz
@@ -21,7 +21,7 @@ To add a property page to an existing property sheet, in Configuration Manager, 
 
 ### To add a property page to a Properties property sheet  
 
-1.  Copy the package.xml file from %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Forms to %ProgramFiles%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Forms.  
+1.  Copy the package.xml file from %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Forms to %ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Forms.  
 
 2.  In the package.xml file, add the following property page XML (you should place it below the other `<Page>` elements, near the end of the file):  
 

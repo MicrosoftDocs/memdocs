@@ -2,13 +2,13 @@
 # required metadata
 
 title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
+description: Add or create an iOS, iPadOS, or macOS device profile. Configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 10/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -58,7 +58,7 @@ Applies to:
 
 ## App notifications
 
-Choose how apps on your iOS and iPadOS devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
+Choose how apps on your iOS and iPadOS devices receive notifications. For example, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
 For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
@@ -137,7 +137,7 @@ Applies to:
 
 Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
 
-The single sign-on profile is based on Kerberos. Kerberos is a network authentication protocol that uses secret-key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specified apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
+The single sign-on profile is based on Kerberos. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
 
 To use single sign-on, be sure you have:
 
@@ -157,7 +157,11 @@ These settings configure an app extension that enables single sign-on (SSO) for 
 
 In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth and SAML2. You can use a generic redirect extension on macOS devices. For iOS/iPadOS devices, you can choose between Microsoft's Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+
+  > [!IMPORTANT]
+  > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
+
 - The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).

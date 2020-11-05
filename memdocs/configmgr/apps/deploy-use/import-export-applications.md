@@ -46,5 +46,5 @@ Use Configuration Manager to import and export applications between two hierarch
  
 Automate the import and export of applications using PowerShell.
 
-* [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication)
-* [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication)
+* [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication)
+* [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication)

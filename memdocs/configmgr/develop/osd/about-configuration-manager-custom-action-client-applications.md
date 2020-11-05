@@ -103,7 +103,7 @@ string          PackageIDForAbcExe;
 -   The package identifier is provided by using the `/run` command-line parameter to Smsswd.exe.  
 
 ## Pre-Network Partition and Pre-Partition Setup  
- If you need to configure disk or network connectivity before you have a disk partition and before you have network connectivity, you will need to create an application to perform these tasks. Your application should be placed in a custom boot image by using the Windows Assessment and Deployment Kit. For more information, see [Windows ADK for Windows 10 scenarios for IT Pros](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros).  
+ If you need to configure disk or network connectivity before you have a disk partition and before you have network connectivity, you will need to create an application to perform these tasks. Your application should be placed in a custom boot image by using the Windows Assessment and Deployment Kit. For more information, see [Windows ADK for Windows 10 scenarios for IT Pros](/windows/deployment/windows-adk-scenarios-for-it-pros).  
 
 > [!NOTE]
 >  Adding files to the boot image file can increase the minimum RAM requirements and can, due to low memory conditions, cause task sequences to fail in unexpected ways.  
@@ -116,4 +116,4 @@ string          PackageIDForAbcExe;
 
 ## See Also  
  [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)   
- [About the Configuration Manager Custom Action MOF File](../../develop/osd/about-configuration-manager-custom-action-mof-files.md)   
+ [About the Configuration Manager Custom Action MOF File](../../develop/osd/about-configuration-manager-custom-action-mof-files.md)

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9b365b0d-404c-4c37-a39a-3849c9d6d906
 author: aczechowski
 ms.author: aaroncz
@@ -143,7 +143,7 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 
  The state of the source files on the distribution point. Possible values are:  
 
-|||  
+|Value|State|  
 |-|-|  
 |0|INSTALLED|  
 |1|INSTALL_PENDING|  

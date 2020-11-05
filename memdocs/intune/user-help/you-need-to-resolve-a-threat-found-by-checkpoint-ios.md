@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve a threat found by SandBlast Mobile Protect
+# Resolve a threat found by SandBlast Mobile Protect on iOS
 
 SandBlast Mobile Protect is a Mobile Threat Defender service that identifies and assesses potential threats on your iOS devices. It then reports the threats so that you can view them from the Company Portal app. Threats appear to you in the app as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:   
 

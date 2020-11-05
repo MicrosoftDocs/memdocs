@@ -484,6 +484,8 @@
           href: core/clients/client-classes/iprogressui--showerrordialog-method.md
         - name: IProgressUI ShowMessage method
           href: core/clients/client-classes/iprogressui--showmessage-method.md
+        - name: IProgressUI ShowMessageEx method
+          href: core/clients/client-classes/iprogressui--showmessageex-method.md
         - name: IProgressUI ShowRebootDialog method
           href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
         - name: IProgressUI ShowSwapMediaDialog method
@@ -1609,6 +1611,8 @@
       href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
     - name: SMS_TaskSequence_PrepareSMSClientAction server WMI class
       href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+    - name: SMS_TaskSequence_PrestartCheckAction server WMI class
+      href: osd/sms_tasksequence_prestartcheckaction-server-wmi-class.md
     - name: SMS_TaskSequence_RebootAction server WMI class
       href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
     - name: SMS_TaskSequence_Reference server WMI class
@@ -1623,6 +1627,8 @@
       href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
     - name: SMS_TaskSequence_RunCommandLineAction server WMI class
       href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+    - name: SMS_TaskSequence_RunPowerShellScriptAction server WMI class
+      href: osd/sms_tasksequence_runpowershellscriptaction-server-wmi-class.md
     - name: SMS_TaskSequence_SetupWindowsAndSMSAction server WMI class
       href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
     - name: SMS_TaskSequence_SetVariableAction server WMI class

@@ -45,8 +45,10 @@ Plan to update the extended interoperability client on devices that you manage w
 
 1. Obtain a supported version of the EIC from the `\SMSSETUP\Client` folder of the Configuration Manager update installation media. Make sure that you copy the entire contents of the folder.  
 
-    > [!TIP]  
-    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, search for `System Center Config`, and then select **System Center Config Mgr (current branch)**.
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. Manually install the EIC on those devices. For more information, see [Manually install the client](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).  
 

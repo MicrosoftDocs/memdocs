@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0deba515-ebef-44c8-8059-8480d536f9b3
 author: aczechowski
 ms.author: aaroncz
@@ -43,7 +43,7 @@ UInt32 GetAvailableScopes(
 
  Type of scope, could be RBA security category (29) or collection(1). The default value is 29.  
 
-|||  
+|Value|Scope type|  
 |-|-|  
 |1|Collection|  
 |29|Secured scope.|  

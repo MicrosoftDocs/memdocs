@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: acf26163-06c6-4108-8916-f8c37be34cea
 author: aczechowski
 ms.author: aaroncz
@@ -250,7 +250,7 @@ Class SMS_Application : SMS_ConfigurationItemBaseClass
 
  If any of the contained deployment type of dependent deployment types is user context, this application is user context.  
 
-|||  
+|Value|Execution context|  
 |-|-|  
 |0|System|  
 |1|User|  
@@ -444,7 +444,7 @@ Class SMS_Application : SMS_ConfigurationItemBaseClass
 
  Requirement for user logon to setup. Possible values are:  
 
-|||  
+|Value|Logon required?|  
 |-|-|  
 |0|Others|  
 |1|LogonRequired|  

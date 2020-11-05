@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bf1d205a-d474-457b-b451-9c8f5afb7c23
 author: aczechowski
 ms.author: aaroncz
@@ -44,7 +44,7 @@ Class SMS_ClientDeploymentCollectionBucket: SMS_BaseClass
 
  The baseline type. Possible values are:  
 
-|||  
+|Value|Baseline type|  
 |-|-|  
 |1|Product Baseline|  
 |2|Staging Baseline|  
@@ -93,7 +93,7 @@ Class SMS_ClientDeploymentCollectionBucket: SMS_BaseClass
 
  The feature type. Possible values are:  
 
-|||  
+|Value|Feature type|  
 |-|-|  
 |3|Client Deployment|  
 

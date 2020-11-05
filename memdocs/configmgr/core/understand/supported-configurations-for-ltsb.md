@@ -69,7 +69,7 @@ You can use the LTSB to manage the following Windows computer operating systems 
 - The Server Core installation of Windows Server 2012 (x64) (Note 2)
 
 **(Note 1)** Datacenter releases are supported but not certified for Configuration Manager.  
-**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
+**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### Windows Embedded
 You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -125,8 +125,9 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Russian  
 -   Spanish (Spain)  
 
-### Mac computers  
- You can use the LTSB to manage Mac OS X computers with the Configuration Manager client for Mac.
+### Mac computers
+
+You can use the LTSB to manage macOS X computers with the Configuration Manager client for Mac.
 
 The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
 
@@ -134,10 +135,11 @@ Support for Mac operating systems is limited to those listed in this section. Su
 
 For more information, see [How to deploy clients to Macs](../clients/deploy/deploy-clients-to-macs.md).
 
-**Supported versions:**  
--   Mac OS X 10.9 (Mavericks)  
--   Mac OS X 10.10 (Yosemite)  
--   Mac OS X 10.11 (El Capitan)  
+#### Supported versions for macOS
+
+- macOS X 10.9 (Mavericks)
+- macOS X 10.10 (Yosemite)
+- macOS X 10.11 (El Capitan)
 
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
@@ -265,7 +267,7 @@ The following versions are supported by using the indicated .tar file.
 -   Exchange Server 2013  
 
 > [!NOTE]
-> The LTSB does not support the management of devices that connect through an online service, like Exchange Online (Office 365).
+> The LTSB does not support the management of devices that connect through an online service, like Exchange Online (Microsoft 365).
 
 
 ## Configuration Manager console
@@ -281,7 +283,7 @@ The LTSB supports the following operating systems to run the Configuration Manag
 
 
 ## SQL Server versions supported for the site database and reporting point
-The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md) for the Current Branch apply to the LTSB.  This includes the use of a SQL Server Cluster, or a SQL Server AlwaysOn availability group.  
+The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md) for the current branch apply to the LTSB.  This support includes the use of a SQL Server Always On failover cluster instance or an availability group.
 
 **Supported versions:**
 

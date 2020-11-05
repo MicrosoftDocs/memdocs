@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,7 +17,7 @@ ms.technology:
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX
 #audience:
 
 ms.suite: ems
@@ -28,6 +28,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Email profile settings in Microsoft Intune for devices running Windows Phone 8.1
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 This article shows you the email profile settings you can configure for your devices running Windows Phone 8.1.
 

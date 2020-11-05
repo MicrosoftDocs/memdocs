@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,7 +35,7 @@ You can set up an application using Azure Active Directory (Azure AD) and authen
 
 ## Authorization
 
-Azure Active Directory (Azure AD) uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Azure AD tenant. This guide shows you how to authenticate your application using C#. The OAuth 2.0 authorization code flow is described in section 4.1 of the OAuth 2.0 specification. For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Azure Active Directory (Azure AD) uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Azure AD tenant. This guide shows you how to authenticate your application using C#. The OAuth 2.0 authorization code flow is described in section 4.1 of the OAuth 2.0 specification. For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 
 ## Azure KeyVault
@@ -55,7 +55,7 @@ In this section, you provide details about the Web app you would like to point t
 
     - An app name, such as *Intune App-Only Auth*.
     - The **Application type**. Choose **Web app / API** to add an app that represents a web application, a web API, or both.
-    - The **Sign-on URL** of the application. This is the location users automatically navigate to during the authentication process. They are required to prove that they are who they say they are. For more information, see [What is application access and single sign-on with Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
+    - The **Sign-on URL** of the application. This is the location users automatically navigate to during the authentication process. They are required to prove that they are who they say they are. For more information, see [What is application access and single sign-on with Azure Active Directory?](/azure/active-directory/active-directory-appssoaccess-whatis)
 
 7. Click **Create** at the bottom of the **Create** blade.
 
@@ -168,5 +168,4 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
     > To see additional implementation code, see [Intune-Data-Warehouse code example](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).
 
 ## Next Steps
-Learn more about Azure Key Vault by reviewing [What is Azure Key Vault?](https://docs.microsoft.com/azure/key-vault/key-vault-whatis)
-
+Learn more about Azure Key Vault by reviewing [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis)

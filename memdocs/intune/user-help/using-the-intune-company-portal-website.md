@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -40,7 +40,7 @@ From the Company Portal website, you can take any of the following actions:
 
 - [Remove your device](remove-your-device-cpwebsite.md)
 
-- [Reset your device](reset-erase-your-device-cpwebsite.md)
+- [Reset your device](reset-device-company-portal-website.md)
 
 - [Reset your device passcode](reset-your-passcode-cpwebsite.md)
 

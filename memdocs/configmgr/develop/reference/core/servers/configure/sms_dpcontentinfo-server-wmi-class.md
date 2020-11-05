@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 95e54f24-0e0e-4b64-88ae-572393c964ad
 author: aczechowski
 ms.author: aaroncz
@@ -92,7 +92,7 @@ Class SMS_DPContentInfo : SMS_BaseClass
 
  Object type.  
 
-|||  
+|value|Object type|  
 |-|-|  
 |Value|Description|  
 |0|PKG_TYPE_REGULAR|  
@@ -115,7 +115,7 @@ Class SMS_DPContentInfo : SMS_BaseClass
 
  Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |Value|Description|  
 |2|SMS_Package|  

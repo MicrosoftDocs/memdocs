@@ -1,10 +1,10 @@
 ---
-title: "Refresh Method"
+title: Refresh method in class SMS_SiteInstallMap
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
 author: aczechowski
 ms.author: aaroncz

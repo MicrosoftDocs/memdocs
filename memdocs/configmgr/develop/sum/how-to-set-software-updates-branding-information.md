@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5702affd-7815-4836-aa74-2b45212899a9
 author: aczechowski
 ms.author: aaroncz
@@ -112,10 +112,9 @@ public void SetSUMClientBranding(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|Parameter|Type|Description|
+|---------|----|-----------|
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`brandingText`|-   Managed: `String`<br />-   VBScript: `String`|The text to replace the branding text in the site control file.|  

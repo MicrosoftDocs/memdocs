@@ -5,7 +5,7 @@ description: Use the steps in this article to set up the administration service 
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 829eb4a4-8791-4746-a777-1fb0382b6d7c
 author: aczechowski
 ms.author: aaroncz
@@ -70,7 +70,7 @@ When the site creates a certificate for the SMS Provider, clients won't trust it
 1. Distribute and import the root certificate to the Trusted Root Certification Authorities store on any computer that you want to access the administration service.
 
     - Manually import the certificate where you need it. See the steps above for the Certificate Import Wizard.
-    - Use Configuration Manager to distribute and install the certificate using a custom script. For example, use the [Import-Certificate](https://docs.microsoft.com/powershell/module/pkiclient/import-certificate) PowerShell cmdlet.
+    - Use Configuration Manager to distribute and install the certificate using a custom script. For example, use the [Import-Certificate](/powershell/module/pkiclient/import-certificate) PowerShell cmdlet.
     - Use the following Active Directory group policy: **Computer Configuration\Policies\Windows Settings\Security Settings\Public Key Policies\Trusted Root Certification Authorities**
 
 ### Use a server authentication certificate
@@ -118,7 +118,7 @@ For example:
 
 You can use the administration service on-premises only, or you can enable it for access through the cloud management gateway (CMG). Some scenarios require access to the administration service from the internet, such as tenant attach or app approvals via email.
 
-Before you can configure the SMS Provider to allow CMG traffic, first set up a CMG. For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+Before you can configure the SMS Provider to allow CMG traffic, first set up a CMG. For more information, see [Overview of CMG](../../core/clients/manage/cmg/overview.md).
 
 Then use the following process to enable the administration service through the CMG:
 

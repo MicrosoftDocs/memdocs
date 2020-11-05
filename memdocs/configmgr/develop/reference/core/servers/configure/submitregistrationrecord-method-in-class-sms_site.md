@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ca40b886-729f-4390-aacf-64878811a96a
 author: aczechowski
 ms.author: aaroncz
@@ -72,9 +72,9 @@ SInt32 SubmitRegistrationRecord(
 
  Qualifiers: [in, optional]  
 
- UdaSetting. . The default value for this parameter is Disabled (0).  
+ UdaSetting. The default value for this parameter is Disabled (0).  
 
-|||  
+|Value|UdaSetting|  
 |-|-|  
 |0|Disabled|  
 |1|Pending|  

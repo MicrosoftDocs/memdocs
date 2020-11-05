@@ -111,7 +111,7 @@ Complete the **SCEP Enrollment** page of the Create Certificate Profile Wizard.
 
   - **Install to Trusted Platform Module (TPM) otherwise fail**: Installs the key to the TPM. If the TPM module isn't present, the installation fails.  
 
-  - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > This option doesn't support Smart card logon for the Enhanced key usage on the Certificate Properties page.

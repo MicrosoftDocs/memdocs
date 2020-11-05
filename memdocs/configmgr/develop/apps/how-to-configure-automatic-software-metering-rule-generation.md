@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7b4ff9a8-096d-4830-a4fa-c76237419e8d
 author: aczechowski
 ms.author: aaroncz
@@ -182,10 +182,9 @@ public void ConfigureAutomaticSWMRuleGeneration(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`enableAutoCreateDisabledRule`|-   Managed: `String`<br />-   VBScript: `String`|Enables or disables Software Metering auto rule creation.<br /><br /> -   0 - Disabled<br />-   1 - Enabled|  

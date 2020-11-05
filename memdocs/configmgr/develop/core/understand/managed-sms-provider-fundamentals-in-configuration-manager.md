@@ -25,7 +25,7 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
 ### WqlConnectionManager  
  The class `WqlConnectionManager` provides access to the Configuration Manager Windows Management Instrumentation (WMI) provider.  
 
- It is an implementation of the abstract base class [ConnectionManagerBase](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.aspx) that defines connections throughout the managed Configuration Manager libraries.  
+ It is an implementation of the abstract base class [ConnectionManagerBase](/previous-versions/system-center/developer/cc147366(v=msdn.10)) that defines connections throughout the managed Configuration Manager libraries.  
 
  It is used to connect to the SMS Provider and query, or create, Configuration Manager object instances. The following tasks demonstrate the basic usage of WqlConnectionManager.  
 
@@ -36,7 +36,7 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
  [How to Perform an Asynchronous Configuration Manager Query Using  Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)  
 
 ### IResultObject  
- [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) is an interface that all result sets and objects expose. Through it, you can read, modify, delete, call methods on, and otherwise manipulate Configuration Manager objects. You typically get an `IResultObject` whenever you create an object or as a result of a query.  
+ [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) is an interface that all result sets and objects expose. Through it, you can read, modify, delete, call methods on, and otherwise manipulate Configuration Manager objects. You typically get an `IResultObject` whenever you create an object or as a result of a query.  
 
  The following tasks demonstrate the basic use of `IResultObject`:  
 
@@ -47,14 +47,14 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
  [How to Call a Configuration Manager Object Method Using Managed Code](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md)  
 
 ### QueryProcessor  
- QueryProcesor provides support for both synchronous and asynchronous queries against the SMS Provider. In asynchronous queries, [SmsBackgroundWorker](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.aspx) is used to provide thread support query results. The following tasks demonstrate queries:  
+ QueryProcesor provides support for both synchronous and asynchronous queries against the SMS Provider. In asynchronous queries, [SmsBackgroundWorker](/previous-versions/system-center/developer/cc147429(v=msdn.10)) is used to provide thread support query results. The following tasks demonstrate queries:  
 
  [How to Perform an Asynchronous Configuration Manager Query Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md).  
 
  [How to Perform a Synchronous Configuration Manager Query Using  Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md).  
 
 ### IQueryPropertyItem  
- [IQueryPropertyItem](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iquerypropertyitem.aspx) is a single property of the result object, supports data binding and get/set properties.  
+ [IQueryPropertyItem](/previous-versions/system-center/developer/cc147375(v=msdn.10)) is a single property of the result object, supports data binding and get/set properties.  
 
  The following tasks demonstrate the use of `IQueryPropertyItem`:  
 

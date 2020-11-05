@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 340ab144-d2e3-475b-9a1b-e3346c2be551
 author: aczechowski
 ms.author: aaroncz
@@ -36,9 +36,8 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|-|-|-|
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
 |`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`|  

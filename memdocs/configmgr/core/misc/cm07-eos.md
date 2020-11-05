@@ -43,5 +43,3 @@ For more information, see the following articles:
 - [Introduction to Configuration Manager current branch](../understand/introduction.md)  
 - [Documentation on how to migrate to Configuration Manager current branch](../migration/migrate-data-between-hierarchies.md)  
     This article also includes a video that discusses and demonstrates common migration scenarios.
-
-The [Configuration Manager 2007 documentation library](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\)) is still available.

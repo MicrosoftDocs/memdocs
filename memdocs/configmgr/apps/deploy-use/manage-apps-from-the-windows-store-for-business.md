@@ -14,7 +14,7 @@ manager: dougeby
 
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager
 
-The [Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/) is where you find and acquire Windows apps for your organization. When you connect the store to Configuration Manager, you then synchronize the list of apps you've acquired. View these apps in the Configuration Manager console, and deploy them like you deploy any other app.
+The [Microsoft Store for Business and Education](/microsoft-store/) is where you find and acquire Windows apps for your organization. When you connect the store to Configuration Manager, you then synchronize the list of apps you've acquired. View these apps in the Configuration Manager console, and deploy them like you deploy any other app.
 
 ## <a name="bkmk_apps"></a> Online and offline apps
 
@@ -24,7 +24,7 @@ The Microsoft Store for Business and Education supports two types of app:
 
 - **Offline**: This type lets you cache apps and licenses to deploy directly within your on-premises network. Devices don't need to connect to the store or have a connection to the internet.
 
-For more information, see the [Microsoft Store for Business and Education overview](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview).
+For more information, see the [Microsoft Store for Business and Education overview](/microsoft-store/microsoft-store-for-business-overview).
 
 ### Summary of capabilities
 
@@ -59,7 +59,7 @@ Before deploying Microsoft Store for Business and Education apps to devices that
 
 - When the local Administrator account signs in on the device, it can't access Microsoft Store for Business and Education apps.  
 
-- Devices must have a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business).  
+- Devices must have a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](/microsoft-store/prerequisites-microsoft-store-for-business).  
 
 ### Notes for devices running earlier versions of Windows 10
 
@@ -105,17 +105,17 @@ When you synchronize the list of Microsoft Store for Business and Education apps
 
 Connect your Configuration Manager site to Azure AD and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
 
-Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ### <a name="bkmk_config"></a> Supplemental information and configuration
 
 On the **App** page of the Azure Services Wizard, first configure the **Azure environment** and **Web app**. Then read the **More Information** section at the bottom of the page. This information includes the following additional actions in the Microsoft Store for Business and Education portal:  
 
-- Configure Configuration Manager as the store management tool. For more information, see [Configure management provider](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
+- Configure Configuration Manager as the store management tool. For more information, see [Configure management provider](/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
 
-- Enable support for offline licensed apps. For more information, see [Distribute offline apps](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).  
+- Enable support for offline licensed apps. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).  
 
-- Acquire at least one app. For more information, see [Find and acquire apps](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview).  
+- Acquire at least one app. For more information, see [Find and acquire apps](/microsoft-store/find-and-acquire-apps-overview).  
 
 On the **Configurations** page of the Azure Services Wizard, specify the following information:  
 
@@ -156,7 +156,7 @@ For each store app you manage, view the following information about the app:
 
 After deploying online apps, any updates to that app come directly from the Microsoft Store. Furthermore, Configuration Manager doesn't check version compliance of online apps, just that Windows reports the app as installed.  
 
-When deploying offline apps to Windows 10 devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. One option to disable the Microsoft Store is by using [group policy](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
+When deploying offline apps to Windows 10 devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. One option to disable the Microsoft Store is by using [group policy](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
 
 After the Microsoft Store for Business and Education administrator acquires an offline app, don't publish the app to users via the store. This configuration makes sure that users can't install or update online. Users only receive offline app updates via Configuration Manager.
 

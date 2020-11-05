@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
-ms.topic: conceptual
+ms.date: 09/24/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -48,6 +48,8 @@ After you configure integration, you'll then [configure Jamf and Intune to enfor
 You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
+- Microsoft Intune and Microsoft AAD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
+- A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
 
@@ -114,10 +116,10 @@ To connect Intune with Jamf Pro:
 
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   The app registration process in Azure AD is complete.
+The app registration process in Azure AD is complete.
 
-    > [!NOTE]
-    > If the client secret expires, you must create a new client secret in Azure and then update the Conditional Access data in Jamf Pro. Azure allows you to have both the old secret and new key active to prevent service disruptions.
+> [!NOTE]
+> If the client secret expires, you must create a new client secret in Azure and then update the Conditional Access data in Jamf Pro. Azure allows you to have both the old secret and new key active to prevent service disruptions.
 
 ### Enable Intune to integrate with Jamf Pro
 

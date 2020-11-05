@@ -41,9 +41,9 @@ The following requirements apply to all site system servers:
 
     If you must change any of these items, first remove the site system role from the computer. Then reinstall the role after the change is complete. For changes affecting the site server, first uninstall the site. Then reinstall the site after the change is complete.  
 
-- Site system roles aren't supported on an instance of a Windows Server cluster. The only exception is the site database server. For more information, see [Use a SQL Server cluster for the Configuration Manager site database](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).  
+- Site system roles aren't supported on an instance of a Windows Server cluster. The only exception is the site database server. For more information, see [Use a SQL Server Always On failover cluster instance for the site database](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).  
 
-    Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](../../servers/deploy/configure/high-availability-options.md). <!--3607761, fka 1359132-->  
+    The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode. For more information, see [High availability options](../../servers/deploy/configure/high-availability-options.md). <!--3607761, fka 1359132-->  
 
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.  
 
@@ -88,7 +88,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows ADK  
@@ -124,7 +124,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
@@ -209,7 +209,7 @@ Also install a supported version of the .NET Framework version 4.5 or later.
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration  
@@ -265,7 +265,7 @@ Also install a supported version of the .NET Framework version 4.5 or later.
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -307,7 +307,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### SQL Server Native Client
@@ -329,7 +329,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -441,7 +441,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -492,7 +492,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -555,7 +555,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -587,7 +587,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### SQL Server Reporting Services  
@@ -616,7 +616,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
@@ -646,7 +646,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows Server Update Services  
@@ -685,7 +685,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -711,4 +711,3 @@ For more information about .NET Framework versions, see the following articles:
 ### SQL Server Native Client
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-

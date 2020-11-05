@@ -2,13 +2,13 @@
 # required metadata
 
 title: Set or change device password | Microsoft Docs
-description:
+description: Create or change the password on your Windows 10 mobile or desktop device.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2018
-ms.topic: article
+ms.date: 08/27/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -22,35 +22,30 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: priyar
+#ms.reviewer: amhaq 
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Make your device safer with the right password
+# Set a device password on Windows 10 device
+Create or change the password on your Windows 10 mobile or desktop device. 
 
-Accessing corporate resources, such as email and documents, is something that people need to do every day from their Windows devices. Your organization wants to make sure that your device is doing this safely. One way to make sure that your device is securely accessing these resources is requiring devices to use a password. These passwords are used, for example, to access your device from the lock screen.
+On a mobile device:
 
-If your Windows device doesn't comply with your company support's password policy, you will see a message that briefly describes the issue and explains what you need to do to make your password meet the requirements.
+1. Go to the **Start** menu > **Settings**.
+2. The system settings open. Select **Accounts** > **Sign-in options**.
+3. Select **Password** > **Change**.
+4. Follow the on-screen prompts to set a new password.  
 
-> [!Note]
-> Your company support can set more than one password requirement. For example, the password might have to be a certain number of characters, and it might have to be a mix of numbers and letters. Because more than one requirement might be set, these instructions explain only how to set or change your password. They don't explain every possible combination of requirements.
+On a desktop device:  
+1. Press **Ctrl**+**Alt**+**Del** on your keyboard.   
+2. Select **Change a password**.
+3. Follow the on-screen prompts to set a new password.  
 
-## To change your password on Windows Phone 8.1
+For additional help: 
+ 
+* Contact your IT support person for help with password requirements, Company Portal, or network access issues. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* For more information about the other sign-in options in Windows 10, see [Windows 10 sign-in options and account protection](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy).  
 
-1. From the **home** screen, choose **Settings**, and then choose **lock screen**.
-2. Scroll down to **Password**, and choose **change password**.
-3. Enter your current password in the **Current password** box.
-4. Enter your new password in the **New password** box, and then reenter it in the **Confirm password** box.
-4. Choose **done**.
-
-## To set your password on Windows Phone 8.1
-
-1. From the **home** screen, choose **Settings**, and then choose **lock screen**.
-2. Scroll down to **Password**, and slide the **Password** bar to **On**.
-3. Enter your new password in the **New password** box, and then reenter it in the **Confirm password** box.
-4. Choose **done**.
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

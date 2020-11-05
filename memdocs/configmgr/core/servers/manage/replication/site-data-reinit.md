@@ -1,13 +1,11 @@
 ---
 title: Site data reinit
 titleSuffix: Configuration Manager
-description: Use this diagram to start troubleshooting SQL replication reinit for site data in a Configuration Manager hierarchy
+description: Use this diagram to start troubleshooting SQL Server replication reinit for site data in a Configuration Manager hierarchy
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: 19741d45-2d42-438e-a9f3-15bb365d63ca
 author: aczechowski
 ms.author: aaroncz
@@ -16,9 +14,9 @@ manager: dougeby
 
 # Troubleshoot site data reinit
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
+In a multi-site hierarchy, Configuration Manager uses SQL Server replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
-Use the following diagram to start troubleshooting SQL replication reinitialization (reinit) for site data in a Configuration Manager hierarchy:
+Use the following diagram to start troubleshooting SQL Server replication reinitialization (reinit) for site data in a Configuration Manager hierarchy:
 
 ![Diagram to troubleshoot site data reinit](media/site-data-reinit.svg)
 

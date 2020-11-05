@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e6b6bb80-6c63-4bc0-9f7e-8f8194e281e9
 author: aczechowski
 ms.author: aaroncz
@@ -113,7 +113,7 @@ public void AssignPackageToDistributionPoint(WqlConnectionManager connection, st
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the existing package.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`serverName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the server.|  

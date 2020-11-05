@@ -1,222 +1,245 @@
 ---
-title: "SMS_TaskSequence_UpgradeOperatingSystemAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "12/01/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_UpgradeOperatingSystemAction class
+titleSuffix: Configuration Manager
+ms.date: 08/11/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4a5f6ade-6ab5-4324-ac0e-6348b9488712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_UpgradeOperatingSystemAction Server WMI Class
-The `SMS_TaskSequence_UpgradeOperatingSystemAction` Windows Management Instrumentation (WMI) class is an SMS provider server class, in Configuration Manager, that represents a task sequence action that upgrades the operating system. This is only supported for Windows 10 and Windows 10 Anniversary Update.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_UpgradeOperatingSystemAction server WMI class
 
-## Syntax  
+The `SMS_TaskSequence_UpgradeOperatingSystemAction` WMI class is an SMS provider server class in Configuration Manager. It represents a task sequence action that upgrades the OS. This step is only supported for Windows 10.
 
-```  
-Class SMS_TaskSequence_UpgradeOperatingSystemAction : SMS_TaskSequence_Action  
-{  
-    SMS_TaskSequence_Condition Condition;  
-    Boolean ContinueOnError;  
-    String Description;  
-    String DriverPackageID;  
-    String DynamicUpdateSettings;  
-    Boolean Enabled;  
-    Boolean IgnoreMessages;  
-    UInt32 InstallEditionIndex;  
-    String InstallPackageID;  
-    String InstallPath;  
-    String Name;  
-    String OsProductKey;  
-    String PreserveSettings;  
-    UInt32 SetupTimeout;  
-    String SupportedEnvironment;  
-    UInt32 Timeout;  
-};  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-```  
+## Syntax
 
-## Methods  
- The `SMS_TaskSequence_UpgradeOperatingSystemAction` class does not define any methods.  
+```MOF
+Class SMS_TaskSequence_UpgradeOperatingSystemAction : SMS_TaskSequence_Action
+{
+    SMS_TaskSequence_Condition Condition;
+    Boolean ContinueOnError;
+    String Description;
+    String DriverPackageID;
+    String DynamicUpdateSettings;
+    Boolean Enabled;
+    Boolean IgnoreMessages;
+    UInt32 InstallEditionIndex;
+    String InstallPackageID;
+    String InstallPath;
+    String Name;
+    String OsProductKey;
+    String PreserveSettings;
+    Boolean ScanOnly;
+    UInt32 SetupTimeout;
+    String StagedContent;
+    String SupportedEnvironment;
+    UInt32 Timeout;
+};
+```
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+## Methods
 
- Access type: Read/Write  
+The `SMS_TaskSequence_UpgradeOperatingSystemAction` class doesn't define any methods.
 
- Qualifiers: None  
+## Properties
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `Condition`
 
- `ContinueOnError`  
- Data type: `Boolean`  
+Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: None  
+Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `Description`  
- Data type: `String`  
+### `ContinueOnError`
 
- Access type: Read/Write  
+Data type: `Boolean`
 
- Qualifiers: [AllowedLen("0-255")]  
+Access type: Read/Write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: None
 
- `DriverPackageID`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Access type: Read/Write  
+### `Description`
 
- Qualifiers: [TaskSequencePackage]  
+Data type: `String`
 
- The package ID of the driver package to use during upgrade.  
+Access type: Read/Write
 
- `DynamicUpdateSettings`  
- Data type: `string`  
+Qualifiers: `[AllowedLen("0-255")]`
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Qualifiers:  [ValueMap]  
+### `DriverPackageID`
 
- Specifies whether to dynamically update Windows Setup with Windows Update.  
+Data type: `String`
 
-|Possible values|  
-|----|  
-|Disable|  
-|OveridePolicy|  
+Access type: Read/Write
 
- `Enabled`  
- Data type: `Boolean`  
+Qualifiers: `[TaskSequencePackage]`
 
- Access type: Read/Write  
+The package ID of the driver package to use during upgrade.
 
- Qualifiers: None  
+### `DynamicUpdateSettings`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `string`
 
- `IgnoreMessages`  
- Data type: `Boolean`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: `[ValueMap]`
 
- Qualifiers: None  
+Specifies whether to dynamically update Windows Setup with Windows Update.
 
- Ignores dismissible compatibility messages. The default value is `false`.  
+Possible values:
 
- `InstallEditionIndex`  
- Data type: `UInt32`  
+- `Disable`
+- `OveridePolicy`
 
- Access type: Read/Write  
+### `Enabled`
 
- Qualifiers: None  
+Data type: `Boolean`
 
- The installation edition index. The default value is 1.  
+Access type: Read/Write
 
- `InstallPackageID`  
- Data type: `String`  
+Qualifiers: None
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Qualifiers: [TaskSequencePackage("image"), RequiredIfNull("InstallPath")]  
+### `IgnoreMessages`
 
- The ID of the operating system installation package to use for  upgrades.  
+Data type: `Boolean`
 
- `InstallPath`  
- Data type: `String`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: None
 
- Qualifiers: [RequiredIfNull("InstallPackageID")]  
+Ignores dismissible compatibility messages. The default value is `false`.
 
- The path or environment variable to the operating system installation package to use for the upgrade.  
+### `InstallEditionIndex`
 
- `Name`  
- Data type:  `String`  
+Data type: `UInt32`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+The installation edition index. The default value is `1`.
 
- `OsProductKey`  
- Data type: `String`  
+### `InstallPackageID`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: [QuasiSecret]  
+Access type: Read/Write
 
- The product key for the operating system upgrade content.  
+Qualifiers: `[TaskSequencePackage("image"), RequiredIfNull("InstallPath")]`
 
- `PreserveSettings`  
- Data type: `String`  
+The ID of the OS upgrade package to use.
 
- Access type: Read/Write  
+### `InstallPath`
 
- Qualifiers:  [ValueMap]  
+Data type: `String`
 
- Specifies what data to keep during an upgrade. The default value is Upgrade, which keeps applications, data, and settings. For best results, use the default value.  
+Access type: Read/Write
 
- `ScanOnly`  
- Data type: `Boolean`  
+Qualifiers: `[RequiredIfNull("InstallPackageID")]`
 
- Access type: Read/Write  
+The path or environment variable to the OS upgrade package to use.
 
- Qualifiers: None  
+### `Name`
 
- Performs a Windows Setup compatibility scan without starting the upgrade. The default value is `false`.  
+Data type: `String`
 
- `SetupTimeout`  
- Data type: `UInt32`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: `[AllowedLen("1-100")]`
 
- Qualifiers: None  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The timeout that applies when running Windows Setup from the command line during an upgrade.  
+### `OsProductKey`
 
- `StagedContent`  
- Data type: `String`  
+Data type: `String`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: None  
+Qualifiers: `[QuasiSecret]`
 
- The path or environment variable to the driver content to use for the upgrade.  
+The product key for the OS upgrade content.
 
- `SupportedEnvironment`  
- Data type: `String`  
+### `PreserveSettings`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: None  
+Access type: Read/Write
 
- The default value is FullOS. See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: `[ValueMap]`
 
- `Timeout`  
- Data type: `UInt32`  
+Specifies what data to keep during an upgrade. The default value is `Upgrade`, which keeps applications, data, and settings. For best results, use the default value.
 
- Access type: Read/Write  
+### `ScanOnly`
 
- Qualifiers: None  
+Data type: `Boolean`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
-## Requirements  
+Qualifiers: None
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+Runs a Windows Setup compatibility scan without starting the upgrade. The default value is `false`.
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### `SetupTimeout`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The timeout that applies when running Windows Setup from the command line during an upgrade.
+
+### `StagedContent`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The path or environment variable to the driver content to use for the upgrade.
+
+### `SupportedEnvironment`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The default value is `FullOS`. For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+### `Timeout`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+## Requirements
+
+### Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-You can install the Configuration Manager client on Mac computers that run the Mac OS X operating system and use the following management capabilities:  
+You can install the Configuration Manager client on Mac computers that run macOS X and use the following management capabilities:  
 
 - **Hardware inventory**  
 
@@ -66,19 +66,19 @@ You can install the Configuration Manager client on Mac computers that run the M
 
 - **Compliance settings**  
 
-   You can use Configuration Manager compliance settings to view the compliance of and remediate Mac OS X preference (.plist) settings. For example, you could enforce settings for the home page in the Safari web browser or ensure that the Apple firewall is enabled. You can also use shell scripts to monitor and remediate settings in MAC OS X.  
+   You can use Configuration Manager compliance settings to view the compliance of and remediate macOS X preference (.plist) settings. For example, you could enforce settings for the home page in the Safari web browser or ensure that the Apple firewall is enabled. You can also use shell scripts to monitor and remediate settings in macOS X.
 
 - **Application management**  
 
    Configuration Manager can deploy software to Mac computers. You can deploy the following software formats to Mac computers:  
 
-  -   Apple Disk Image (.DMG)  
+  - Apple disk image (.DMG)
 
-  -   Meta Package File (.MPKG)  
+  - Meta package file (.MPKG)
 
-  -   Mac OS X Installer Package (.PKG)  
+  - macOS X installer package (.PKG)
 
-  -   Mac OS X Application (.APP)  
+  - macOS X application (.APP)
 
   When you install the Configuration Manager client on Mac computers, you cannot use the following management capabilities that are supported by the Configuration Manager client on Windows-based computers:  
 
@@ -89,7 +89,7 @@ You can install the Configuration Manager client on Mac computers that run the M
 - Software updates  
 
   > [!NOTE]  
-  >  You can use Configuration Manager application management to deploy required Mac OS X software updates to Mac computers. In addition, you can use compliance settings to make sure that computers have any required software updates.  
+  >  You can use Configuration Manager application management to deploy required macOS X software updates to Mac computers. In addition, you can use compliance settings to make sure that computers have any required software updates.  
 
 - Maintenance windows  
 

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -47,7 +47,7 @@ After you've added the app to Intune, you can then [assign it to users and devic
 As part of the app lifecycle, new versions of apps are regularly released. Intune provides tools to easily [update apps](apps-add.md) that you have deployed to a newer version. Additionally, you can configure extra functionality for some apps, for example:
 
 - [iOS/iPadOS app configuration policies](app-configuration-policies-use-ios.md) supply settings for compatible iOS/iPadOS apps that are used when the app is run. For example, an app might require specific branding settings or the name of a server to which it must connect.
-- [Managed browser policies](app-configuration-managed-browser.md) help you to configure settings for the [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), which replaces the default device browser and lets you restrict the websites that your users can visit.
+- [Managed browser policies](manage-microsoft-edge.md) help you to configure settings for the [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), which replaces the default device browser and lets you restrict the websites that your users can visit.
 
 ## Protect
 
@@ -58,7 +58,7 @@ Intune gives you many ways to help protect the data in your apps. The main metho
 
 ## Retire
 
-Eventually, it's likely that apps that you deployed become outdated and need to be removed. Intune makes it easy to [retire apps from service](../remote-actions/device-management.md).
+Eventually, it's likely that apps that you deployed become outdated and need to be removed. Intune makes it easy to uninstall apps. For more information, see [Uninstall an app](../apps/apps-add.md#uninstall-an-app).
 
 ## Next steps
 

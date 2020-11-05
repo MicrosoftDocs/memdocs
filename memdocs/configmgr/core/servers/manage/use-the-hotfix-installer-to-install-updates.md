@@ -203,7 +203,7 @@ The catalog for Updates Publisher is named **SCUPCatalog.cab** and can be found 
 > [!IMPORTANT]  
 > Because the SCUPCatalog.cab file is created by using paths that are specific to the site server where the update bundle is installed, it cannot be used on other site servers.  
 
-After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Use the following procedure to import the SCUPCatalog.cab file to Updates Publisher and publish the updates.  
 
@@ -257,4 +257,4 @@ You can deploy specific updates to applicable clients. The following information
 > [!NOTE]  
 > To update a site database, deploy the update to the site server for that site.  
 
-For information about how to create collections, see [How to create collections](../../../core/clients/manage/collections/create-collections.md).  
+For information about how to create collections, see [How to create collections](../../../core/clients/manage/collections/create-collections.md).

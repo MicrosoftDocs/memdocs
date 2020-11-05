@@ -18,7 +18,7 @@ The `ShowDialog` action, in Configuration Manager, opens a property sheet or reg
 
 -   The `ActionDescription` element `Class` attribute is set to `ShowDialog`.  
 
--   The `DialogID` element is the identifier for a property sheet or dialog box displayed in a dialog. It matches the name of the form XML file in the *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Forms folder.  
+-   The `DialogID` element is the identifier for a property sheet or dialog box displayed in a dialog. It matches the name of the form XML file in the *%ProgramFiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Forms folder.  
 
 ## Sample ShowDialog Action XML  
  The following XML shows how to show a dialog box with the identifier **PrototypeForm**:  

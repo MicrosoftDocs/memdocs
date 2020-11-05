@@ -409,7 +409,7 @@ Sample report models are included in Configuration Manager, but you can also def
 
 9. Save and close the file _&lt;Model Name\>_**.smdl**.  
 
-10. Copy the file _&lt;Model Name\>_**.smdl** to the folder *%programfiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Other on the Configuration Manager site server.  
+10. Copy the file _&lt;Model Name\>_**.smdl** to the folder *%programfiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Other on the Configuration Manager site server.  
 
     > [!IMPORTANT]  
     >  After copying the report model file to the Configuration Manager site server, you must exit and restart the Configuration Manager console before you can use the report model in the **Create Report Wizard**.  

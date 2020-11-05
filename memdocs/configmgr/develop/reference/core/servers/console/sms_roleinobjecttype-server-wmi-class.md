@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 849fb64d-23d4-4642-b5bc-92168a35b2c1
 author: aczechowski
 ms.author: aaroncz
@@ -40,8 +40,8 @@ Class SMS_RoleInObjectType : SMS_BaseClass
 
  Secured object class ID. Possible values are listed below.  
 
-|||  
-|-|-|  
+| Value | Object type ID |
+| ----- | -------------- |
 |2|SMS_Package|  
 |14|SMS_OperatingSystemInstallPackage|  
 |18|SMS_ImagePackage|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 671a582b-ccd0-4e5c-a2ba-795a4766aa6b
 author: aczechowski
 ms.author: aaroncz
@@ -239,7 +239,7 @@ Class SMS_GlobalCondition : SMS_ConfigurationItemBaseClass
 
  Type of the global condition.  
 
-|||  
+|Value|Global condition type|  
 |-|-|  
 |1|Setting|  
 |2|Expression|  

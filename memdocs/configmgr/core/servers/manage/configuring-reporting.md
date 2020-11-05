@@ -34,7 +34,7 @@ SQL Server Reporting Services is a server-based reporting platform that provides
 
 When you run a report, the Reporting Services component connects to the Configuration Manager site database to retrieve data.  
 
-Before you can install the reporting services point in a Configuration Manager site, install and configure SQL Server Reporting Services on the target site system. For more information, see [Install SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
+Before you can install the reporting services point in a Configuration Manager site, install and configure SQL Server Reporting Services on the target site system. For more information, see [Install SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).  
 
 ### Verify SQL Server Reporting Services installation
 
@@ -42,7 +42,7 @@ Use the following procedure to verify that SQL Server Reporting Services is inst
 
 1. Go to the **Start** menu on the site system, and open **Reporting Services Configuration Manager**. You may find it in the **Configuration Tools** section of the **Microsoft SQL Server** group.
 
-2. In the **Reporting Services Configuration Connection** window, enter the name of the server that hosts SQL Server Reporting Services. Select the instance of SQL Server on which you installed SQL Reporting Services. Then select **Connect** to open Reporting Services Configuration Manager.  
+2. In the **Reporting Services Configuration Connection** window, enter the name of the server that hosts SQL Server Reporting Services. Select the instance of SQL Server on which you installed SQL Server Reporting Services. Then select **Connect** to open Reporting Services Configuration Manager.  
 
 3. On the **Report Server Status** page, verify that **Report Service Status** is **Started**. If it's not in this state, select **Start**.  
 
@@ -125,7 +125,7 @@ For more information about configuring site systems, see [Install site system ro
 
     - **Reporting services point account**: Select **Set**, and then select an account to use. SQL Server Reporting Services on the reporting services point uses this account to connect to the Configuration Manager site database. This connection is to retrieve the data for a report. Select **Existing account** to specify a Windows user account that you previously configured as a Configuration Manager account. Select **New account** to specify a Windows user account that's not currently configured for use. Configuration Manager automatically grants the specified user access to the site database.  
 
-        The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**. It also needs the **Read tokenGroupsGlobalAndUniversal** permission set to **Allow**. Users in a different domain than the reporting services point account need a two-way trust between the domains to successfully run reports.
+        The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**. This grants the account **Allow Read** permissions on the **tokenGroupsGlobalAndUniversal** attribute for all user objects within the domain. Users in a different domain than the reporting services point account need a two-way trust between the domains to successfully run reports.
 
         The specified Windows user account and password are encrypted and stored in the Reporting Services database. Reporting Services retrieves the data for reports from the site database by using this account and password.  
 
@@ -236,7 +236,7 @@ Step through this log file starting from the time that the reporting services po
 There are many options for you to author reports in SQL Server Reporting Services. When you create or edit reports in the Configuration Manager console, Configuration Manager opens Report Builder to use as the authoring environment. Regardless of how you author your Configuration Manager reports, you need a self-signed certificate for server authentication to the site database server.
 
 > [!NOTE]  
-> For more information about authoring reports with SQL Server Reporting Services, see [Report Builder authoring environment](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
+> For more information about authoring reports with SQL Server Reporting Services, see [Report Builder authoring environment](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
 
 Configuration Manager automatically installs the certificate on the site server and any SMS Provider roles. You can create or edit reports from the Configuration Manager console when you run it from one of these servers.
 

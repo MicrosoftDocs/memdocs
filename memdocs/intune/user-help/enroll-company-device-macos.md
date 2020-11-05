@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -39,7 +39,7 @@ To begin management setup, power on your device and sign in with your work or sc
 
 ## What is Apple DEP?
 
-Your organization might have purchased their devices through something called the *Apple Device Enrollment Program* (DEP). Apple DEP lets organizations buy large amounts of iOS or macOS devices. Organizations can then configure and manage those devices within their preferred mobile device management provider, such as Intune. If you're an administrator and want more information about Apple DEP, see [Automatically enroll macOS devices with Apple's Device Enrollment Program](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos).  
+Your organization might have purchased their devices through something called the *Apple Device Enrollment Program* (DEP). Apple DEP lets organizations buy large amounts of iOS or macOS devices. Organizations can then configure and manage those devices within their preferred mobile device management provider, such as Intune. If you're an administrator and want more information about Apple DEP, see [Automatically enroll macOS devices with Apple's Device Enrollment Program](/intune/enrollment/device-enrollment-program-enroll-macos).  
 
 ## Get your device managed
 

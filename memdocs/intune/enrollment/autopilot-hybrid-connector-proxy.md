@@ -8,7 +8,7 @@ author: master11218
 ms.author: erikje
 manager: dougeby
 ms.date: 4/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -32,9 +32,9 @@ ms.collection: M365-identity-device-management
 
 This article explains how to configure the Intune Connector for Active Directory to work with outbound proxy servers. It is intended for customers with network environments that have existing proxies.
 
-By default, the Intune Connector for Active Directory will attempt to automatically locate a proxy server on the network using Web Proxy Auto-Discovery (WPAD). If this has been configured on your network, additional configuration may not be required.  If changes are needed, the following sections describe how to override the default settings, leveraging [the standard .NET Framework capabilities for configuring proxy settings](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  Additional options are described in that documentation.
+By default, the Intune Connector for Active Directory will attempt to automatically locate a proxy server on the network using Web Proxy Auto-Discovery (WPAD). If this has been configured on your network, additional configuration may not be required.  If changes are needed, the following sections describe how to override the default settings, leveraging [the standard .NET Framework capabilities for configuring proxy settings](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  Additional options are described in that documentation.
 
-For more information about how connectors work, see [Understand Azure AD Application Proxy connectors](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
+For more information about how connectors work, see [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## Completely bypass outbound proxies
 

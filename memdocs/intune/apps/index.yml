@@ -86,7 +86,7 @@ landingContent:
       - text: Managed apps without device enrollment
         url: app-configuration-policies-managed-app.md
       - text: Configure the Managed Browser
-        url: app-configuration-managed-browser.md
+        url: ./manage-microsoft-edge.md
       - text: Manage VPP apps and books
         url: vpp-apps.md
 

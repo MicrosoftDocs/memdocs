@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -42,13 +42,13 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 * Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) from GitHub.
 
-* A macOS computer that runs OS X 10.8.5 or later and has the Xcode toolset version 9 or later installed.
+* A macOS computer that has the Xcode toolset version 11 or later installed.
 
 * The input iOS app must be developed and signed by your company or an independent software vendor (ISV).
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 11 or later.
+  * The input app must be compiled for iOS 12 or later.
 
   * The input app cannot be encrypted.
 
@@ -229,7 +229,7 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | ADAL Client ID |String|empty| Same as -ac|
 | ADAL Reply URI |String|empty| Same as -ar|
 | Verbose Enabled |Boolean|false| Same as -v|
-| Remove Missing Entitlements |Boolean|false| Same as -c|
+| Remove Missing Entitlements |Boolean|false| Same as -e|
 | Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
 | Build String Override |String|empty| The custom CFBundleVersion of the wrapped output app|
 | Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Same as -citrix|
@@ -327,7 +327,7 @@ The App Wrapping Tool for iOS has some requirements that must be met in order to
 
 ## Setting app entitlements
 
-Before wrapping your app, you can grant *entitlements* to give the app additional permissions and capabilities that exceed what an app can typically do. An *entitlement file* is used during code signing to specify special permissions within your app (for example, access to a shared keychain). Specific app services called *capabilities* are enabled within Xcode during app development. Once enabled, the capabilities are reflected in your entitlements file. For more information about entitlements and capabilities, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library. For a complete list of supported capabilities, see [Supported capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Before wrapping your app, you can grant *[entitlements](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* to give the app additional permissions and capabilities that exceed what an app can typically do. An *entitlement file* is used during code signing to specify special permissions within your app (for example, access to a shared keychain). Specific app services called *capabilities* are enabled within Xcode during app development. Once enabled, the capabilities are reflected in your entitlements file. For more information about entitlements and capabilities, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library. For a complete list of supported capabilities, see [Supported capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### Supported capabilities for the App Wrapping Tool for iOS
 

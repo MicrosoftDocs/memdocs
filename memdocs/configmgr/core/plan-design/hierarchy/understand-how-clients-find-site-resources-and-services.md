@@ -58,7 +58,7 @@ A client selects a management point to communicate with based on the client's  c
 
 You can use preferred management points. Preferred management points are management points from a client's assigned site that are associated with a boundary group that the client is using to find site system servers. A preferred management point's association with a boundary group as a site system server is similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it will try to use a preferred management point before using other management points from its assigned site.  
 
-You can also use the information in the [management point affinity](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blog to configure management point affinity. Management point affinity overrides the default behavior for assigned management points and lets the client use one or more specific management points.  
+You can also use the information in the [management point affinity](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blog to configure management point affinity. Management point affinity overrides the default behavior for assigned management points and lets the client use one or more specific management points.  
 
 Each time a client needs to contact a management point, it checks the MP list, which it stores locally in Windows Management Instrumentation (WMI). The client creates an initial MP list when it's installed. The client then periodically updates the list with details about each management point in the hierarchy.  
 
@@ -240,4 +240,4 @@ When other service location mechanisms fail, clients can find an initial managem
 
 By default, a primary site publishes to WINS the first management point at the site that is configured for HTTP and the first management point that is configured for HTTPS.  
 
-If you do not want clients to find an HTTP management point in WINS, configure clients with the CCMSetup.exe Client.msi property **SMSDIRECTORYLOOKUP=NOWINS**.  
+If you do not want clients to find an HTTP management point in WINS, configure clients with the CCMSetup.exe Client.msi property **SMSDIRECTORYLOOKUP=NOWINS**.

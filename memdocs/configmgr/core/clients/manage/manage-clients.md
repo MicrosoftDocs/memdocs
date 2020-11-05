@@ -10,8 +10,6 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to manage clients in Configuration Manager
@@ -100,7 +98,7 @@ For more information, see [How to configure client settings](../deploy/configure
 
 ### Approve
 
-When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest and trusted forests. This default behavior means that you don't have to manually approve each client. Manually approve workgroup computers that you trust, and any other unapproved computers that you trust.
+When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest, trusted forests, and connected Azure Active Directory (Azure AD) tenants<!-- MEMDocs#318 -->. This default behavior means that you don't have to manually approve each client. Manually approve workgroup computers that you trust, and any other unapproved computers that you trust.
 
 > [!IMPORTANT]  
 > Although some management functions might work for unapproved clients, this is an unsupported scenario for Configuration Manager.  
@@ -246,22 +244,24 @@ The default location for the Configuration Manager client cache is `%windir%\ccm
 
 ### About the client cache  
 
-The Configuration Manager client downloads the content for required software soon after it receives the deployment but waits to run it until the deployment scheduled time. At the scheduled time, the Configuration Manager client checks to see whether the content is available in the cache. If content is in the cache and it's the correct version, the client uses the cached content. When the required version of the content changes, or if the client deletes the content to make room for another package, the client downloads the content to the cache again.  
+The Configuration Manager client downloads the content for required software soon after the deployment's available time but waits to run it until the deployment's scheduled time. At the scheduled time, the Configuration Manager client checks to see whether the content is available in the cache. If content is in the cache and it's the correct version, the client uses the cached content. When the required version of the content changes, or if the client deletes the content to make room for another package, the client downloads the content to the cache again.  
 
 If the client attempts to download content for a program or application that is greater than the size of the cache, the deployment fails because of insufficient cache size. The client generates status message 10050 for insufficient cache size. If you increase the cache size later, the result is:  
 
 - For a required program: The client doesn't automatically retry to download the content. Redeploy the package and program to the client.  
 - For a required application: The client automatically retries to download the content when it downloads its client policy.  
 
-If the client attempts to download a package that's less than the size of the cache, but the cache is full, all *required* deployments keep retrying until:
+If the client attempts to download content that's less than the size of the cache, but the cache is full, all *required* deployments keep retrying until:
 
 - The cache space is available
 - The download times out
 - The retry count reaches its limit
 
-If you later increase the cache size, the client attempts to download the package again during the next retry interval. The client tries to download the content every four hours until it tries 18 times.  
+If you later increase the cache size, the client attempts to download the content again during the next retry interval. The client tries to download the content every four hours until it tries 18 times.  
 
-Cached content isn't automatically deleted. It remains in the cache for at least one day after the client uses that content. If you configure the package properties with the option to persist content in the client cache, the client doesn't automatically delete it. If the cache space is used by packages that were downloaded within the last 24 hours, and the client must download new packages, either increase the cache size or choose the option to delete persisted cache content.  
+Cached content isn't automatically deleted. It remains in the cache for at least one day after the client uses that content. If you configure the content with the option to persist content in the client cache, the client doesn't automatically delete it. If the cache space is used by content that was downloaded within the last 24 hours, and the client must download new content, either increase the cache size or choose the option to delete persisted cache content.
+
+For applications only, if the content for a related deployment currently exists in the cache, then the client downloads only new or changed files. Related deployments include those for older revisions of the same deployment type and superseded applications.
 
 Use the following procedures to configure the client cache during manual client installation, or after the client is installed.  
 

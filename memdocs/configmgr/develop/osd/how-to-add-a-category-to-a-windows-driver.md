@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ed70a6c3-137b-41f9-b428-675737fb6a86
 author: aczechowski
 ms.author: aaroncz
@@ -128,7 +128,7 @@ public void AddDriverCategory(
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `Connection` | - Managed: `WqlConnectionManager`<br /> - VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) | A valid connection to the SMS Provider. |
+| `Connection` | - Managed: `WqlConnectionManager`<br /> - VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices-get) | A valid connection to the SMS Provider. |
 | `driver` | - Managed: `IResultObject`<br /> - VBScript: `SWbemObject` | The Windows driver. It is an instance of [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md). |
 | `categoryName` | - Managed: `String`<br /> - VBScript: `String` | The name of an existing category. This matches the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) `LocalizedCategoryInstanceName` property. |
 

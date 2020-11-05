@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: efed0902-d5cc-40e1-82aa-d6ff893ee44e
 author: aczechowski
 ms.author: aaroncz
@@ -46,7 +46,7 @@ Class SMS_ST_RecurMonthlyByWeekday : SMS_ScheduleToken
 
  Day of the week when the event is scheduled to occur. Possible values are listed below. The default value is 1.  
 
-|||  
+|Value|Day|  
 |-|-|  
 |1|SUNDAY|  
 |2|MONDAY|  
@@ -119,7 +119,7 @@ Class SMS_ST_RecurMonthlyByWeekday : SMS_ScheduleToken
 
  Week of the month when the event is scheduled to occur. Possible values are listed below. The default value is 0.  
 
-|||  
+|Value|Week|  
 |-|-|  
 |0|LAST|  
 |1|FIRST|  

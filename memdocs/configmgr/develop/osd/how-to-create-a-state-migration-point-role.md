@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: dd3b2d67-edcb-44fb-9efc-72afef3896c9
 author: aczechowski
 ms.author: aaroncz
@@ -160,9 +160,8 @@ public void WriteScfEmbeddedProperty(
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`serverName`|Managed: `String`|The Configuration Manager server that the state migration point is running on.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  

@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -61,8 +61,9 @@ Before you create a profile, review the following articles that detail the endpo
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Endpoint Protection profile that configures the Firewall for all macOS devices**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
+
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
 
@@ -94,7 +95,7 @@ When you plan for profiles with custom Firewall rules, consider the following in
 
 - When a rule fails to apply, all rules in the profile are reported as failed. Intune cannot identify which individual rule failed.  
 
-The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows 10 devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows 10 devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
 ### To add custom firewall rules to an Endpoint protection profile
 

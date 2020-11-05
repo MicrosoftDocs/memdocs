@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: dcbcd570-3d2b-48ea-bec3-2a7273910e07
 author: aczechowski
 ms.author: aaroncz
@@ -35,8 +35,8 @@ SInt32 ExportDefaultBootImage(
 
  Operating system architecture of the boot image. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Architecture |
+| ----- | ------------ |
 |x86|I386 32-bit microprocessor|  
 |ia64|Itanium 64-bit microprocessor|  
 |x64|X86-64 64-bit microprocessor|  

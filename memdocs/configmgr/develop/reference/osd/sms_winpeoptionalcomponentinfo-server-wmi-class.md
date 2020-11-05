@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 5b4d124c-2eb3-4e32-9027-c076dc27e91f
 author: aczechowski
 ms.author: aaroncz
@@ -124,8 +124,8 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 
  The unique ID of WinPE optional component. Possible values are:  
 
-|||  
-|-|-|  
+| ID value | WinPE component |
+| -------- | --------------- |
 |X86||  
 |1|WinPE-DismCmdlets.cab|  
 |2|WinPE-Dot3Svc.cab|  
@@ -154,8 +154,8 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 |25|WinPE-WinReCfg.cab|  
 |26|WinPE-WMI.cab|  
 
-|||  
-|-|-|  
+| ID value | WinPE component |
+| -------- | --------------- |
 |X64||  
 |27|WinPE-DismCmdlets.cab|  
 |28|WinPE-Dot3Svc.cab|  

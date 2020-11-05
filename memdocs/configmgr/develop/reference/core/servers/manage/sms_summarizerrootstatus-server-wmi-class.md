@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7b416c99-5c38-4257-ab39-2f4355eec4d9
 author: aczechowski
 ms.author: aaroncz
@@ -43,8 +43,8 @@ Class SMS_SummarizerRootStatus : SMS_BaseClass
 
  Value indicating the overall health of the site hierarchy. Possible values are listed below. Determining the overall status for the site hierarchy is based on the status of the child sites.  
 
-|||  
-|-|-|  
+| Value | Properties |
+| ----- | ---------- |
 |GREEN(0)|OK. All the child sites reported a GREEN status.|  
 |YELLOW(1)|Warning. One or more child sites reported a YELLOW status, but no RED status was reported by a child site.|  
 |RED(2)|Critical. One or more of the child sites reported a RED status.|  

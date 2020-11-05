@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -36,10 +36,9 @@ The **Sync** device action forces the selected device to immediately check in wi
 ## Supported platforms
 
 - Windows
-- Windows Phone
 - iOS
 - macOS
-- Android
+- Android (Device administrator and Android for work only)
 
 ## Sync a device
 

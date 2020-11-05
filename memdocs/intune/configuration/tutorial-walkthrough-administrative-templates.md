@@ -43,7 +43,7 @@ ADMX templates are available for the following services:
 - **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: Built in to the Windows 10 OS.
 
-For more information on ADMX policies, see [Understanding ADMX-backed policies](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
+For more information on ADMX policies, see [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 These templates are built in to Microsoft Intune, and are available as **Administrative templates** profiles. In this profile, you configure the settings you want to include, and then "assign" this profile to your devices.
 
@@ -63,7 +63,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   For more information on what you get with the different Microsoft 365 licenses, see [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -196,10 +196,10 @@ In these next steps, you create security groups, and add users to these groups. 
 
 - Dynamic groups are a feature in Azure AD Premium. If you don't have Azure AD Premium, then you're licensed to only create assigned groups. For more information on dynamic groups, see:
 
-  - [Dynamic Group Membership in Azure Active Directory (Part 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Dynamic Group Membership in Azure Active Directory (Part 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Dynamic Group Membership in Azure Active Directory (Part 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Dynamic Group Membership in Azure Active Directory (Part 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium includes other services that are commonly used when managing apps and devices, including [multi-factor authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
+- Azure AD Premium includes other services that are commonly used when managing apps and devices, including [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](/azure/active-directory/conditional-access/overview).
 
 - Many administrators ask when to use user groups and when to use device groups. For some guidance, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -426,7 +426,7 @@ Your settings look similar to the following settings:
 > [!div class="mx-imgBorder"]
 > ![Create a OneDrive administrative template in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-For more information on OneDrive client settings, see [Use Group Policy to control OneDrive sync client settings](https://docs.microsoft.com/onedrive/use-group-policy).
+For more information on OneDrive client settings, see [Use Group Policy to control OneDrive sync client settings](/onedrive/use-group-policy).
 
 ### Assign your template
 
@@ -444,7 +444,7 @@ At this point, you created some administrative templates, and assigned them to g
 This section uses the following resources. We'll install these resources in this section.
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph API for Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph API for Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. On the **Admin computer**, open **Windows PowerShell** as administrator:
 
@@ -464,7 +464,7 @@ This section uses the following resources. We'll install these resources in this
 
     3. Enter `Y` to change it.
 
-    PowerShell's execution policy helps prevent executing malicious scripts. For more information, see [About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    PowerShell's execution policy helps prevent executing malicious scripts. For more information, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 3. Enter: `Install-Module -Name Microsoft.Graph.Intune`
 
@@ -587,7 +587,7 @@ When no longer needed, you can:
 
 ## Next steps
 
-In this tutorial, you got more familiar with the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created administrative templates in Intune to configure [ADMX settings](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). You also compared using ADMX templates on-premises and in the cloud with Intune. As a bonus, you used PowerShell cmdlets to create an administrative template.
+In this tutorial, you got more familiar with the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created administrative templates in Intune to configure [ADMX settings](/windows/client-management/mdm/understanding-admx-backed-policies). You also compared using ADMX templates on-premises and in the cloud with Intune. As a bonus, you used PowerShell cmdlets to create an administrative template.
 
 For more information on administrative templates in Intune, see:
 

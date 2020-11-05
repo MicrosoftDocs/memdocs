@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9932385a-60a7-418a-828d-043869a04dfa
 author: aczechowski
 ms.author: aaroncz
@@ -44,8 +44,8 @@ sint32 SetSummarizationSettings(
 
  Types of summarization. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Summarization type |
+| ----- | ------------------ |
 |2|Application Deployment Summarization|  
 |3|Application State Summarization (spans all previous and current deployments)|  
 

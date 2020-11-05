@@ -65,7 +65,7 @@ To assign an Intune license to a user:
 2. Select **Users** > **Active Users**, and then select the user you just created.
 3. Select the **Licenses and Apps** tab.
 4. Under **Select location**, select a location for the user, if it's not already set.
-2. Select the **Intune** check box in the **Licenses** section. If another license includes Intune, you can select that license. The displayed [product name](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) is used as the service plan in Azure management.
+2. Select the **Intune** check box in the **Licenses** section. If another license includes Intune, you can select that license. The displayed [product name](/azure/active-directory/users-groups-roles/licensing-service-plan-reference) is used as the service plan in Azure management.
 
     ![Select the location and Intune license](./media/quickstart-create-user/create-user-03.png)
 

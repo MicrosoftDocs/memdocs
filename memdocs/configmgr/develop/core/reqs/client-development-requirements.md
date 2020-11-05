@@ -24,10 +24,10 @@ The Configuration Manager client can be programmed by using the following progra
 ## VBScript  
  You can use VBScript to access the Configuration Manager client WMI namespaces. The client also has a number of COM automation objects that you can use.  
 
- For more information about scripting with WMI, see [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page).  
+ For more information about scripting with WMI, see [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page).  
 
 ## C++  
- C++ examples are provided for some Configuration Manager technologies where C++ is the most appropriate development language. In most cases, C++ developers should use the VBScript samples as a guide. For more information about using WMI with C++, see [Creating a WMI Application Using C++](https://docs.microsoft.com/windows/win32/wmisdk/creating-a-wmi-application-using-c-).  
+ C++ examples are provided for some Configuration Manager technologies where C++ is the most appropriate development language. In most cases, C++ developers should use the VBScript samples as a guide. For more information about using WMI with C++, see [Creating a WMI Application Using C++](/windows/win32/wmisdk/creating-a-wmi-application-using-c-).  
 
 ## Other Languages  
  For languages that are not based on .NET Framework, use the VBScript samples as a starting point for accessing Configuration Manager through WMI.  

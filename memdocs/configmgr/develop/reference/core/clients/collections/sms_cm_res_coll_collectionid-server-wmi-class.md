@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ad11fe22-620e-4259-b71d-c393e464f3ff
 author: aczechowski
 ms.author: aaroncz
@@ -55,8 +55,8 @@ Class SMS_CM_RES_COLL_CollectionID : SMS_CollectionMember
 
  Type of client. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client type |
+| ----- | ----------- |
 |1|Advanced|  
 |3|Device|  
 
@@ -96,8 +96,8 @@ Class SMS_CM_RES_COLL_CollectionID : SMS_CollectionMember
 
  Whether the resource is approved. Possible values are:   
 
-|||  
-|-|-|  
+| Value | Approval type |
+| ----- | ------------- |
 |0|Not approved|  
 |1|Approved|  
 |2|Not applicable|  

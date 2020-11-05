@@ -35,13 +35,13 @@ Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Micro
 
 ## Install the Intune Company Portal app without access to the Google Play Store 
 
-### For users outside of mainland China 
+### For users outside of People's Republic of China
 
 If Google Play isn't available, Android devices can download the [Microsoft Intune Company Portal for Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) and sideload the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually. 
 
-### For users in mainland China 
+### For users in People's Republic of China
 
-Because the Google Play Store is currently not available in mainland China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in mainland China](../user-help/install-company-portal-android-china.md).
+Because the Google Play Store is currently not available in People's Republic of China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in People's Republic of China](../user-help/install-company-portal-android-china.md).
 
 ## Limitations of Intune device administrator management when GMS is unavailable 
 

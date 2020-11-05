@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
-ms.topic: conceptual
+ms.date: 11/02/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
@@ -121,7 +121,7 @@ When you create the profile in StageNow, on the last step, select **Export to MD
   Or, you can use built-in features in Intune to get these changes, including:
 
   - App management features to [add](../apps/apps-add.md), [deploy](../apps/apps-deploy.md), update, and [monitor](../apps/apps-monitor.md) apps.
-  - Manage [system and app updates](device-restrictions-android-for-work.md#device-owner-only) on devices running Android Enterprise
+  - Manage [system and app updates](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) on devices running Android Enterprise
 
 After you test the file, the next step is to deploy the profile to devices using Intune.
 
@@ -141,18 +141,34 @@ In Intune, create a device configuration profile:
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+    - **Platform**: Select **Android device administrator**.
+    - **Profile**: Select **MX profile (Zebra only)**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android device administrator**.
-    - **Profile type**: Select **MX profile (Zebra only)**.
 
-4. In **MX profile in .xml format**, add the XML profile file [you exported from StageNow](#step-4-create-a-device-management-profile-in-stagenow) (in this article).
-5. Select **OK** > **Create** to save your changes. The policy is created and shown in the list.
+6. Select **Next**.
+7. In **Configuration settings** > **Choose a valid Zebra MX XML file**, add the XML profile file [you exported from StageNow](#step-4-create-a-device-management-profile-in-stagenow) (in this article).
+
+    When done, select **Next**.
 
     > [!TIP]
     > For security reasons, you won't see the profile XML text after you save it. The text is encrypted, and you only see asterisks (`****`). For your reference, it's recommended to save copies of the MX profiles before you add them to Intune.
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+8. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+9. In **Assignments**, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+10. In **Review + create**, when you're done, choose **Create**. The profile is created, and shown in the list.
+
+    You can also [monitor its status](device-profile-monitor.md).
 
 The next time the device checks for configuration updates, the MX profile is deployed to the device. Devices sync with Intune when devices enroll, and then approximately every 8 hours. You can also [force a sync in Intune](../remote-actions/device-sync.md). Or, on the device, open the **Company Portal app** > **Settings** > **Sync**. 
 

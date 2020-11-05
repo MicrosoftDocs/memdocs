@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ Education profiles in Intune are designed for students to take a test or exam on
 
 - Windows 10 and later
 
-When the user signs in, the Take a Test app automatically opens with the test you entered. No other apps can run on the device while the test is in progress. [Take tests in Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) provides more details on the Take a Test app.
+When the user signs in, the Take a Test app automatically opens with the test you entered. No other apps can run on the device while the test is in progress. [Take tests in Windows 10](/education/windows/take-tests-in-windows-10) provides more details on the Take a Test app.
 
 This article lists the steps to create a device configuration profile  in Microsoft Intune. It also includes information to read and learn about the available education settings for your Windows 10 devices.
 

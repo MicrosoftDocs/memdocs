@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f93360ef-677e-48e0-886a-a07b8451611c
 author: aczechowski
 ms.author: aaroncz
@@ -86,7 +86,7 @@ public void MoveActionToGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
+|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
 |`sourceGroup`|-   Managed: `IResultObject`<br />-   VBScript: `SWbemObject`|The group `SMS_TaskSequenceGroup` the step is copied from.|  
 |`targetGroup`|-   Managed: `IResultObject`<br />-   VBScript: `SWbemObject`|The group `SMS_TaskSequenceGroup` the step is copied to.|  
 

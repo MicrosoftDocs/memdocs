@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -111,9 +111,24 @@ There are specific requirements that must be followed to collect log files:
 - Stored logs are encrypted to protect any personal identifiable information contained in the logs​.
 - While opening support tickets for Win32 app failures, attach the related failure logs using the steps provided above.
 
+## App types supported on ARM64 devices
+
+App types that are supported on ARM64 devices include the following:
+- Web apps that do not require a managed browser to open. 
+- Microsoft Store for Business apps or Windows Universal LOB apps (`.appx`) with any of the following combination of `TargetDeviceFamily` and  `ProcessorArchitectures` elements:
+  - `TargetDeviceFamily` includes Desktop apps, Universal apps and Windows8x apps. Windows8x apps apply only as Online Microsoft Store for Business apps.
+  - `ProcessorArchitecture` includes x86 apps, ARM apps, ARM64 apps, and neutral apps.
+- Windows Store apps
+- Mobile MSI LOB apps
+- Win32 apps with the requirement rule of 32-bit.
+- Windows Office click-to-run apps if 32-bit or x86 architecture is selected.
+
+> [!NOTE]
+> To better recognize ARM64 apps in the Company Portal, consider adding **ARM64** to the name of your ARM64 apps. 
+
 ## Troubleshooting apps from the Microsoft Store
 
-The information in the topic [Troubleshooting packaging, deployment, and query of Microsoft Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) helps you troubleshoot common problems you might encounter when installing apps from the Microsoft Store, whether by using Intune, or by any other means.
+The information in the topic [Troubleshooting packaging, deployment, and query of Microsoft Store apps](/windows/win32/appxpkg/troubleshooting) helps you troubleshoot common problems you might encounter when installing apps from the Microsoft Store, whether by using Intune, or by any other means.
 
 ## App troubleshooting resources
 - [Deploying Visio and Project as part of your Microsoft 365 Apps Deployment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
@@ -125,4 +140,4 @@ The information in the topic [Troubleshooting packaging, deployment, and query o
 
 - For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../fundamentals/help-desk-operators.md). 
 - Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+- Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).

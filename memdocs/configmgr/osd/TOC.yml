@@ -17,29 +17,13 @@
     - name: Upgrade Windows to the latest version
       href: deploy-use/upgrade-windows-to-the-latest-version.md
     - name: Windows Autopilot for existing devices
-      href: deploy-use/windows-autopilot-for-existing-devices.md
+      href: ../../autopilot/existing-devices.md
     - name: Refresh an existing computer with a new version of Windows
       href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
     - name: Install a new version of Windows on a new computer (bare metal)
       href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
     - name: Replace an existing computer and transfer settings
       href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
-  - name: Methods to deploy enterprise operating systems
-    items:
-    - name: OS deployment methods
-      href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
-    - name: Use PXE to deploy Windows over the network
-      href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
-    - name: Use Software Center to deploy Windows over the network
-      href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
-    - name: Use bootable media to deploy Windows over the network
-      href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
-    - name: Use stand-alone media to deploy Windows without using the network
-      href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
-    - name: Use multicast to deploy Windows over the network
-      href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
-    - name: Create an image for an OEM in factory or a local depot
-      href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
   - name: Security and privacy for OS deployment
     href: plan-design/security-and-privacy-for-operating-system-deployment.md
   - name: Planning for OS deployment interoperability
@@ -78,6 +62,26 @@
     href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
 - name: Deploy and use
   items:
+  - name: Methods to deploy enterprise operating systems
+    items:
+    - name: OS deployment methods
+      href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+    - name: Use PXE to deploy Windows over the network
+      href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+    - name: Use Software Center to deploy Windows over the network
+      href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+    - name: Use bootable media to deploy Windows over the network
+      href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+    - name: Use stand-alone media to deploy Windows without using the network
+      href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+    - name: Use multicast to deploy Windows over the network
+      href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+    - name: Create an image for an OEM in factory or a local depot
+      href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Create a task sequence for non-OS deployments
+      href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Deploy Windows to Go
+      href: deploy-use/deploy-windows-to-go.md
   - name: Manage and create task sequences
     href: deploy-use/manage-task-sequences-to-automate-tasks.md
   - name: Create task sequences to automate tasks
@@ -94,8 +98,6 @@
       href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
     - name: Create a custom task sequence
       href: deploy-use/create-a-custom-task-sequence.md
-    - name: Create a task sequence for non-OS deployments
-      href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
   - name: Deploy a task sequence
     href: deploy-use/deploy-a-task-sequence.md
   - name: Create a phased deployment
@@ -104,8 +106,6 @@
     href: deploy-use/manage-monitor-phased-deployments.md
   - name: Manage Windows as a service
     href: deploy-use/manage-windows-as-a-service.md
-  - name: Deploy Windows to Go
-    href: deploy-use/deploy-windows-to-go.md
   - name: Monitor OS deployments
     href: deploy-use/monitor-operating-system-deployments.md
   - name: Debug a task sequence

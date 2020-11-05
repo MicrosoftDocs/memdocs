@@ -1,10 +1,10 @@
 ---
-title: "RefreshPkgSource Method"
+title: RefreshPkgSource method in class SMS_DeviceSettingPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: df79aea4-1ff7-400a-b160-f3eff63f277a
 author: aczechowski
 ms.author: aaroncz

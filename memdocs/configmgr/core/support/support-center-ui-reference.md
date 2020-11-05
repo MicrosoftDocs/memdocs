@@ -582,16 +582,16 @@ The **Configuration** tab of the Support Center Viewer tool provides the followi
 This view displays the same information shown on the **Client** tab of Support Center.
 
 #### Operating system
-Details for the client's operating system. It uses the [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) class.
+Details for the client's operating system. It uses the [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) class.
 
 #### Computer
-Details for the client computer. It uses the [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) class.
+Details for the client computer. It uses the [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) class.
 
 #### Services
-Details for services running on the client computer. It uses the [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) class.
+Details for services running on the client computer. It uses the [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) class.
 
 #### Network adapters
-Details for network adapters installed on the client computer. It uses the [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) class.
+Details for network adapters installed on the client computer. It uses the [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) class.
 
 
 ### <a name="bkmk_viewer-logs"></a> Logs tab

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7d2c87e0-ab18-4660-abb9-8d095efa5478
 author: aczechowski
 ms.author: aaroncz
@@ -45,7 +45,7 @@ Class SMS_ST_RecurWeekly : SMS_ScheduleToken
 
  Day of the week when the event is scheduled to occur. Possible values are listed below. The default value is 1.  
 
-|||  
+|Value|Day|  
 |-|-|  
 |1|SUNDAY|  
 |2|MONDAY|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b4026ec4-a938-4866-a3d0-e001582a7504
 author: aczechowski
 ms.author: aaroncz
@@ -52,7 +52,7 @@ Class SMS_Boundary : SMS_BaseClass
 
  Specifies the connection type of the boundary. Possible values are:  
 
-|||  
+|Value|Connection type|  
 |-|-|  
 |0|FAST|  
 |1|SLOW|  
@@ -75,7 +75,7 @@ Class SMS_Boundary : SMS_BaseClass
 
  Boundary type.  
 
-|||  
+|Value|Boundary type|  
 |-|-|  
 |0|IPSUBNET|  
 |1|ADSITE|  

@@ -71,11 +71,11 @@ In the 1601 Technical Preview, we have added support for the following features:
 
     -   A Microsoft Intune Subscription. The Microsoft Intune Subscription  should be configured in Configuration Manager Console.  
 
-    -   [Prerequisites for Azure AD auto-registration](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Prerequisites for Azure AD auto-registration](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
 
-    -   **Require registration in Azure ActiveDirectory:** This rule checks if the user's device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Require registration in Azure ActiveDirectory:** This rule checks if the user's device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     -   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see  if the user's device has all required updates (specified in the **Required automatic updates** rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
 
@@ -126,8 +126,8 @@ A client is online if it is currently connected to a Configuration Manager manag
 
 ### Icons for client status  
 
-|||  
-|-|-|  
+| Icon | Description |
+| ---- | ----------- |
 |![online status icon for clients](media/online-status-icon.png)|Client is online.|  
 |![offline status icon for clients](media/offline-status-icon.png)|Client is offline.|  
 |![unknown status icon for clients](media/unknown-status-icon.png)|Client status is unknown.|  
@@ -209,4 +209,4 @@ A client is online if it is currently connected to a Configuration Manager manag
 
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).

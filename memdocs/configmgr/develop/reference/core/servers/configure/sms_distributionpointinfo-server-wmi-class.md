@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: aa3fabb4-c0b4-4a99-a8c3-0889e8c99491
 author: aczechowski
 ms.author: aaroncz
@@ -70,7 +70,7 @@ Class SMS_DistributionPointInfo : SMS_BaseClass
 
 The following table lists the methods in the `SMS_DistributionPointInfo` class.  
 
-|||  
+|Method|Description|  
 |-|-|  
 |[GetChainedPullDPs Method in Class SMSDistributionPointInfo](getchainedpulldps-method-in-class-smsdistributionpointinfo.md)|Ensures that when a source distribution point is assigned, a looping chain is not generated.|  
 |[SetDPMaintenanceMode method in class SMS_DistributionPointInfo](setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md)|Starting in version 1902, put a distribution point in maintenance mode.|
@@ -158,7 +158,7 @@ Qualifiers: [enumeration, read]
 
 Distribution point flags.  
 
-|||  
+|Value|Distribution point flag|  
 |-|-|  
 |0|DP_TYPE_READONLY|  
 

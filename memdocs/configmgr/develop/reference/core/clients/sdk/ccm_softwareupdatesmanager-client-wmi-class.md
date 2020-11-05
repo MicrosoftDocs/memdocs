@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 21f63cf9-a39d-4e05-913b-65fca65b9e62
 author: aczechowski
 ms.author: aaroncz
@@ -31,9 +31,8 @@ class CCM_SoftwareUpdatesManager();
 ## Methods  
  The following table shows the methods in the `CCM_SoftwareUpdatesManager` class.  
 
-|||  
-|-|-|  
-|**Method**|**Description**|  
+|Method|Description|  
+|-|-|   
 |[CancelDownload Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/canceldownload-method-in-class-ccm_softwareupdatesmanager.md)|Cancels an in-progress download of software updates during a deployment.|  
 |[GetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/getallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md)|Gets the user experience mode that determines how software updates are displayed on a target computer.|  
 |[InstallUpdates Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/installupdates-method-in-class-ccm_softwareupdatesmanager.md)|Installs the software updates.|  

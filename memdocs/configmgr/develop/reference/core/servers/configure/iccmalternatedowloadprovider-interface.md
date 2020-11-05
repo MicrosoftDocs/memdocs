@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 42eb99e9-6421-415d-8e80-7e8f8b322cb3
 author: aczechowski
 ms.author: aaroncz
@@ -29,7 +29,7 @@ The **ICcmAlternateDownloadProvider** interface, in Configuration Manager, defin
 ## Methods  
  The **ICcmAlternateDownloadProvider** interface defines the following methods.  
 
-|||  
+|Method|Description|  
 |-|-|  
 |[ICcmAlternatedownloadProvider : CancelJob Method](../../../../../develop/reference/core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md)|Cancels a job.|  
 |[ICcmAlternatedownloadProvider : DownloadContent Method](../../../../../develop/reference/core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md)|Instructs the provider to download content.|  

@@ -238,10 +238,10 @@ namespace ConfigurationManagerSnippets
  microsoft.configurationmanagement.managementprovider  
 
 > [!NOTE]
->  The assemblies are in the \<Program Files>\Microsoft Configuration Manager\AdminConsole\bin folder.  
+>  The assemblies are in the \<Program Files>\Microsoft Endpoint Manager\AdminConsole\bin folder.  
 
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).

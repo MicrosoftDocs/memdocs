@@ -23,7 +23,7 @@ The long-term servicing branch (LTSB) of Configuration Manager is a distinct bra
 Based on Configuration Manager version 1606, the LTSB has reduced functionality when compared to the current branch of Configuration Manager.
 
 > [!TIP]   
-> The Configuration Manager LTSB isn't related to the System Center suite long-term servicing channel (LTSC). For more information, see [Overview of System Center release options](https://docs.microsoft.com/system-center/ltsc-and-sac-overview).
+> The Configuration Manager LTSB isn't related to the System Center suite long-term servicing channel (LTSC). For more information, see [Overview of System Center release options](/system-center/ltsc-and-sac-overview).
 
 ## Features that aren't available
 
@@ -50,7 +50,7 @@ Cloud integrations, as well as any features included with Configuration Manager 
 
 ## Find LTSB documentation
 
-The LTSB is based on current branch version 1606. Use the [current branch documentation](https://docs.microsoft.com/mem/configmgr/), with caveats and limitations that are specific to the LTSB. Those caveats and limitations are identified in the following articles:
+The LTSB is based on current branch version 1606. Use the [current branch documentation](../../index.yml), with caveats and limitations that are specific to the LTSB. Those caveats and limitations are identified in the following articles:
 
 - [Install the LTSB](install-the-ltsb.md)
 - [Upgrade the LTSB to the current branch](convert-to-current-branch.md)

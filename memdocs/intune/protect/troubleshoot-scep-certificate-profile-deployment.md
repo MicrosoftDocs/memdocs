@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high

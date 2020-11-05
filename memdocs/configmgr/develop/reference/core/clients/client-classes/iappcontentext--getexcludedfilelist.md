@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: cff72c0f-e94e-4047-aa6d-f92c5e9cdcac
 author: aczechowski
 ms.author: aaroncz
@@ -63,6 +63,6 @@ HRESULT GetExcludedFileList(
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
 
 ## See Also  
- [Microsoft.ConfigurationManagement.ApplicationManagement](https://msdn.microsoft.com/library/microsoft.configurationmanagement.applicationmanagement.aspx)]
+ [Microsoft.ConfigurationManagement.ApplicationManagement](/previous-versions/)]
  [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,22 +38,24 @@ For more information on this feature, see [Upgrade Windows 10 editions or enable
 
 ## Before you begin
 
-[Create the profile](edition-upgrade-configure-windows-10.md#create-the-profile).
+Create a [Windows 10 edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
 
 ## Edition upgrade
 
 - **Edition to upgrade to**: Select the Windows 10 edition that you're upgrading to. The devices targeted by this policy are upgraded to the edition you choose.
 - **Product Key**: Enter the product key that you received from Microsoft. After you create the policy with the product key, the key can't be updated, and is hidden for security reasons. To change the product key, enter the entire key again.
-- **License File**: For **Windows 10 Holographic for Business** or **Windows 10 Mobile edition**, choose **Browse** to select the license file you received from Microsoft. This license file includes license information for the editions you're upgrading the devices to.
+- **License File**: For **Windows 10 Holographic for Business**, choose **Browse** to select the license file you received from Microsoft. This license file includes license information for the editions you're upgrading the devices to.
 
 ## Mode switch
 
-- **No configuration**: An S mode device stays in S mode. An end user can switch the device out of S mode.
-- **Keep in S mode**: Disables the end user from switching the device out of S mode.
-- **Switch**: Switches the device out of S mode.
+- **Switch out of S mode**: Switches the device out of S mode. Your options:
+
+  - **No configuration**: Intune doesn't change or update this setting. By default, the S mode device might stay in S mode. User can switch the device out of S mode.
+  - **Keep in S mode**: Prevents users from switching the device out of S mode.
+  - **Switch**: Allows users to switch the device out of S mode.
 
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 You can also create edition upgrade profiles for [Windows Holographic for Business](holographic-upgrade.md) devices.

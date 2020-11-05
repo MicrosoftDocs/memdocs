@@ -9,8 +9,7 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+description: Plan for antimalware policies and Windows Firewall security
 ---
 # Planning for Endpoint Protection in Configuration Manager
 
@@ -77,7 +76,7 @@ Endpoint Protection in Configuration Manager allows you to create antimalware po
 
 ## Microsoft Defender Advanced Threat Protection
 
-Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. Microsoft Defender ATP is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Microsoft Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md).
+Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. Microsoft Defender ATP is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Microsoft Defender Advanced Threat Protection](../deploy-use/defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 30afde42-278b-4578-8909-9815903e6939
 author: aczechowski
 ms.author: aaroncz
@@ -175,7 +175,7 @@ Class SMS_MigrationDP : SMS_DistributionPointInfoBase
 
  Distribution point flags.  
 
-|||  
+|Value|Distribution point flags|  
 |-|-|  
 |0|DP_TYPE_READONLY|  
 

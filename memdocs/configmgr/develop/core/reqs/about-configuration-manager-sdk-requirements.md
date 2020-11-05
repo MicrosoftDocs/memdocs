@@ -21,7 +21,7 @@ Developing applications and scripts for Microsoft Configuration Manager can be d
 
 ## Development tools
 
-Visual Studio provides a suitable environment for developing Configuration Manager applications and scripts. For more information, see [Visual Studio documentation](https://docs.microsoft.com/visualstudio).  
+Visual Studio provides a suitable environment for developing Configuration Manager applications and scripts. For more information, see [Visual Studio documentation](/visualstudio).  
 
 ## Development Requirements  
  For information about development requirements, see [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md) and [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 615f6edc-392f-43d5-8078-29f8c21548f8
 author: aczechowski
 ms.author: aaroncz
@@ -170,7 +170,7 @@ Class SMS_DeploymentSummary : SMS_BaseClass
 
  Feature type. Possible values are:  
 
-|||  
+|Value|Feature type|  
 |-|-|  
 |1|Application|  
 |2|Program|  
@@ -266,7 +266,7 @@ Class SMS_DeploymentSummary : SMS_BaseClass
 
  Secured object class ID. Possible values are:  
 
-|||  
+|Value|Secured object class ID|  
 |-|-|  
 |200|SMS_CIAssignment|  
 |201|SMS_Advertisement|  

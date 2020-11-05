@@ -83,7 +83,7 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
 </br></br>
 - **Data Warehouse database settings:**
   - **Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
-  - **Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
+  - **Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL Server, Configuration Manager will use that database.
   - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 
 **Synchronization settings** page:   
@@ -125,7 +125,7 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 
    You will reconfigure these data groups and tables after you restore the database to a new server and reinstall the site system role.  
 
-2. Use SQL Server Management Studio to backup the data warehouse database, and then again to restore that database to a SQL server on the new computer that will host the data warehouse.
+2. Use SQL Server Management Studio to backup the data warehouse database, and then again to restore that database to a SQL Server on the new computer that will host the data warehouse.
 
    After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.
 
@@ -315,4 +315,4 @@ After you make these configuration changes, you can create a user policy and mov
 
 ## Change to configuring multi-factor authentication for device enrollment
 
-Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](/mem/intune/enrollment/multi-factor-authentication).
+Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](../../../intune/enrollment/multi-factor-authentication.md).

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e4db0e59-84c0-44eb-8e41-acb91c4ee463
 author: aczechowski
 ms.author: aaroncz
@@ -132,10 +132,9 @@ public void CreateComputerVariable(
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code of the source site.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable to be created.|  
 |`value`|-   Managed: `String`<br />-   VBScript: `String`|The value of the variable.|  

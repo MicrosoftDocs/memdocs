@@ -19,7 +19,7 @@ manager: dougeby
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
 > [!NOTE]
->  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer's hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. For more information, see [Diagnostics and Recovery Toolset 10](https://docs.microsoft.com/microsoft-desktop-optimization-pack/dart-v10/).  
+>  The Microsoft Diagnostics and Recovery Toolset (DaRT) contains powerful tools for recovering and troubleshooting client computers that do not start or have become unstable. You can use DaRT to determine the cause of a crash, restore lost files, and so on. You can also use DaRT as a troubleshooting tool when developing and deploying a Windows operating system. For example, if a built image fails to start correctly, you can start the client computer containing the image by using ERD Commander—a diagnostic environment. Then, you can explore the client computer's hard disk, view the event log, remove updates, change operating system settings, and so on. DaRT is part of the Microsoft Desktop Optimization Pack for Software Assurance. For more information, see [Diagnostics and Recovery Toolset 10](/microsoft-desktop-optimization-pack/dart-v10/).  
 
 ## Understanding Logs  
  Before effective troubleshooting of MDT can begin, you must have a clear understanding of the many .log files used during an operating system deployment. When you know which log files to research for what failure condition and at what time, issues that were once mysterious and difficult to understand may become clear and understandable.  
@@ -48,7 +48,7 @@ manager: dougeby
 - **DeploymentWorkbench_*id*.log**. This log file is created in the %temp% folder when you specify **a /debug** when starting the Deployment Workbench.  
 
 ### Configuration Manager Operating System Deployment Logs  
- For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](https://technet.microsoft.com/library/hh427342.aspx).  
+ For information about which operating system deployment log files created by Microsoft System Center 2012 R2 Configuration Manager, see [Technical Reference for Log Files in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427342(v=technet.10)).  
 
  When running the Windows User State Migration Tool (USMT), MDT automatically adds the logging options to save the USMT log files to the MDT log file locations. The log files and when they are created are as follows:  
 
@@ -348,7 +348,7 @@ Figure 2. NTFS data streams
 
   **Possible Solution 1:** Relocate the MSP file to the Updates directory, and then run setup.exe without specifying the **\/adminfile** option. For more information about deploying updates during the installation, see [Deploying the 2007 Office system](https://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx).  
 
-  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](https://technet.microsoft.com/library/bb490141.aspx).  
+  **Possible Solution 2:** Verify that the MSP file does not have the **Suppress modal** check box selected. For more information about configuring this setting, see [Overview of 2007 Office System Deployment](/previous-versions//bb490141(v=technet.10)).  
 
 ### AutoLogon  
  Review the problems and solutions for automatic logon issues:  
@@ -433,7 +433,7 @@ Figure 2. NTFS data streams
 
 13. Close the SQL Server Configuration Manager console.  
 
-    For additional information, [How to enable remote connections in SQL Server 2008](https://blogs.msdn.com/b/walzenbach/archive/2010/04/14/how-to-enable-remote-connections-in-sql-server-2008.aspx).  
+    For additional information, [How to enable remote connections in SQL Server 2008](/archive/blogs/walzenbach/how-to-enable-remote-connections-in-sql-server-2008).  
 
 #####  <a name="EnableNamedPipeConnectionsinSQL"></a> Enable Named Pipe Connections in SQL Server 2005  
  To enable named pipe connections in SQL Server 2005, perform the following steps:  
@@ -572,7 +572,7 @@ Figure 2. NTFS data streams
  Configure Unattend.xml to join a workgroup. Then, use the built\-in **Recover from Domain** task sequence step to add a step in the task sequence to join the domain after the static IP has been applied.  
 
 ### Driver Installation  
- To ensure the best possible user experience, installation of hardware devices and software drivers should run as seamlessly as possible, with little or no user intervention. Microsoft provides tools and guidelines to help create installation packages that meet this goal. For general information about driver installation, see [Device and Driver Installation](https://docs.microsoft.com/windows-hardware/drivers/install/).  
+ To ensure the best possible user experience, installation of hardware devices and software drivers should run as seamlessly as possible, with little or no user intervention. Microsoft provides tools and guidelines to help create installation packages that meet this goal. For general information about driver installation, see [Device and Driver Installation](/windows-hardware/drivers/install/).  
 
  Review device driver installation–related problems and solutions:  
 
@@ -581,7 +581,7 @@ Figure 2. NTFS data streams
 -   Troubleshooting device driver installation issues using the SetupAPI.log as described in [Troubleshoot Device Installation with SetupAPI.log](#TroubleshootDeviceInstallationwithSetupAPI.log)  
 
 ####  <a name="TroubleshootDeviceInstallationwithSetupAPI.log"></a> Troubleshoot Device Installation with SetupAPI.log  
- The white paper [Troubleshooting Device Installation with the SetupAPI Log File](https://msdn.microsoft.com/windows/hardware/gg463393.aspx) provides information about debugging Windows device installation. Specifically, the paper provides guidelines for driver developers and testers to interpret the SetupAPI log file.  
+ The white paper [Troubleshooting Device Installation with the SetupAPI Log File](/previous-versions/windows/hardware/download/dn550976(v=vs.85)) provides information about debugging Windows device installation. Specifically, the paper provides guidelines for driver developers and testers to interpret the SetupAPI log file.  
 
  One of the most useful log files for debugging purposes is the SetupAPI.log file. This plain\-text file maintains the information that SetupAPI records about device installation, service pack installation, and update installation. Specifically, the file maintains a record of device and driver changes as well as major system changes beginning from the most recent Windows installation. This paper focuses on using the SetupAPI log file to troubleshoot device installation; it does not describe the log file sections that are associated with service pack and update installations.  
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: aa27cdc3-1635-42cd-8681-5dc61966451e
 author: aczechowski
 ms.author: aaroncz
@@ -17,7 +17,7 @@ To create a Configuration Manager console property sheet, in Configuration Manag
 
 |Class|Description|  
 |-----------|-----------------|  
-|[SmsPageControl](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.aspx)|The control displayed on the property page.|  
+|[SmsPageControl](/previous-versions/system-center/developer/cc147309(v=msdn.10))|The control displayed on the property page.|  
 
  The following procedures show you how to create a Configuration Manager property sheet assembly by using Visual Studio. The property sheet displays a property page that contains a button. When it is clicked, the button displays the name of a package selected in the Configuration Manager console **Packages** node.  
 
@@ -46,7 +46,7 @@ To create a Configuration Manager console property sheet, in Configuration Manag
 
 6.  In Solution Explorer, right-click **References** and then click **Add Reference**.  
 
-7.  In the **Add Reference** dialog box, click the **Browse** tab, navigate to **%ProgramFiles%\Microsoft Configuration Manager\AdminConsole\bin** and then select  **microsoft.configurationmanagement.exe**, **Microsoft.ConfigurationManagement.DialogFramework.dll** and **microsoft.configurationmanagement.managementprovider.dll** . Click **OK** to add the assemblies as project references.  
+7.  In the **Add Reference** dialog box, click the **Browse** tab, navigate to **%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin** and then select  **microsoft.configurationmanagement.exe**, **Microsoft.ConfigurationManagement.DialogFramework.dll** and **microsoft.configurationmanagement.managementprovider.dll** . Click **OK** to add the assemblies as project references.  
 
 8.  In Solution Explorer, right-click **ConfigMgrControl.cs**, and then click **View Code**.  
 
@@ -83,7 +83,7 @@ To create a Configuration Manager console property sheet, in Configuration Manag
 
 1.  Build the project. The assembly should be created as \Visual Studio 2010\Projects\ConfigMgrControl\ConfigMgrControl\bin\Debug\ConfigMgrControl.dll.  
 
-2.  Copy the assembly to the folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin.  
+2.  Copy the assembly to the folder %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin.  
 
 ## See Also  
  [How to Add a Property Page to an Existing Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md)   

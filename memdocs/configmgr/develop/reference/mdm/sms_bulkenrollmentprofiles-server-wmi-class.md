@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b958ac99-cf9a-4dd3-aa52-0235cf6033b0
 author: aczechowski
 ms.author: aaroncz
@@ -67,8 +67,8 @@ Class SMS_BulkEnrollmentProfiles : SMS_BaseClass
 
  Specifies the type of URL for all enrollment proxy points. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Enrollment Proxy Point type |
+| ----- | --------------------------- |
 |0|NONE|  
 |1|INTERNET|  
 |2|INTRANET|  

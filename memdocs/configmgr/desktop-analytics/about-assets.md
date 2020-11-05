@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -37,6 +37,9 @@ The **Apps** tab shows all installed apps that the service detects on your Windo
 
 **Noteworthy** apps are installed on more than 2% of enrolled devices.
 
+> [!TIP]
+> For a specific deployment plan, you can configure this value. In the properties of a deployment plan, in **Readiness rules**, specify the value to **Define a low install count threshold for your apps**.
+
 The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working with a deployment plan. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
 Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
@@ -49,9 +52,12 @@ Configure the **Importance** of apps by setting one of the following categories:
 - Not reviewed
 - Not important<!-- 3587232 -->
 
+> [!NOTE]
+> If you deployed the app with Configuration Manager, Desktop Analytics automatically configures it as **important** by default. This behavior lets you configure the apps in your environment more quickly, to progress faster towards a production deployment.<!-- 4859763 -->
+
 When the **App versions details** setting is off, the app details pane shows the number of app versions and languages that it combines. If you save any changes to the app details, it applies to all versions. For example, set the **Importance** or **Owner**. Some values will display "Multiple", which means there's not one consistent value across all versions.
 
-### <a name="bkmk_plan-autoapp" /> Automatic upgrade decision of system and store apps
+### <a name="bkmk_plan-autoapp"> </a> Automatic upgrade decision of system and store apps
 
 <!-- 3587232 -->
 Identifying **Importance** and **Upgrade Decision** is critical for all noteworthy apps in the Desktop Analytics workflow. To help reduce your efforts in annotating these apps, certain types of apps are automatically marked as *Not important*. The deployment plan upgrade decision for these apps is also marked as *Ready*. The following apps are compatible and should continue to work after you upgrade Windows:

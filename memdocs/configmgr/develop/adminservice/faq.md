@@ -46,11 +46,11 @@ It depends upon your organization's risk level, and what controls you use or put
 
 - Control access to the web service with the certificate trust. If a device doesn't trust the certificate chain, a user on that device can't query the administration service.
 
-- Add additional security layers. For example, [Azure App Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- Add additional security layers. For example, [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
 
 ### Can I use it with conditional access?
 
-Yes, and that configuration is easiest if you use [Azure App Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+Yes, and that configuration is easiest if you use [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
 
 ## Miscellaneous
 

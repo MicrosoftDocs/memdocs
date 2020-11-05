@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: fa8d0144-76bb-47de-916f-ea6e7f39b8d0
 author: aczechowski
 ms.author: aaroncz
@@ -127,7 +127,7 @@ Class SMS_PDF_Package : SMS_BaseClass
 
  Load status of the package definition file. Possible values are:  
 
-|||  
+|Value|Load status|  
 |-|-|  
 |0|Loaded|  
 |1|RequiresIcon|  

@@ -1,8 +1,8 @@
 ---
-title: "Setup Downloader"
-titleSuffix: "Configuration Manager"
-description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
-ms.date: 01/22/2020
+title: Setup downloader tool
+titleSuffix: Configuration Manager
+description: Use the standalone tool to download current versions of key installation files for setup.
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,98 +10,108 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Setup Downloader for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you run Setup to install or upgrade a Configuration Manager site, you can use the Setup Downloader standalone application from the version of Configuration Manager that you want to install to download updated Setup files.  
+Before you run Configuration Manager setup to install or upgrade a site, you can use the setup downloader standalone tool to download updated setup files. Run the tool from the version of Configuration Manager that you want to install. Use updated setup files to make sure your site installation uses current versions of key installation files.
 
-Using updated Setup files ensures that your site installation uses current versions of key installation files. In oveview:   
--   When you use Setup Downloader to download files prior to starting setup, you specify a folder to contain the files.  
--   The account you use to run Setup Downloader must have **Full Control** permissions to the download folder.  
--   When you run Setup to install or upgrade a site, you can direct it to use this local copy of files you previously downloaded. This prevents Setup form having to connect to Microsoft when you start the site install or upgrade.  
--   You can use the same local copy of setup files for subsequent site installations or upgrades.  
+When you use setup downloader, you specify a folder to contain the files. The account you use to run the tool must have **Full Control** permissions to the download folder. When you run setup to install or upgrade a site, you can specify this local copy of files you previously downloaded. This behavior prevents setup from connecting to Microsoft when you start the site install or upgrade. You can use the same local copy of setup files for other site installations or upgrades of the same version.
 
-The following types of files are downloaded by Setup Downloader:  
--   Required prerequisite redistributable files  
--   Language packs  
--   The latest product updates for Setup  
+The setup downloader tool downloads the following types of files:
 
-You have two options for running Setup Downloader:
+- Required prerequisite redistributable files
+- Language packs
+- The latest product updates for setup
+
+You have two options to run setup downloader:
+
 - Run the application with the user interface
-- For command-line options, run the application at a command prompt
+- Run the application at a command prompt for additional command-line options
 
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the tool to access internet endpoints. The device where you'll run the tool requires internet access the same as the service connection point. For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_scp).<!-- SCCMDocs#677 -->
 
-## <a name="bkmk_ui"></a> Run Setup Downloader with the user interface  
+## <a name="bkmk_ui"></a> Run setup downloader with the user interface
 
-1.  On a computer that has Internet access, open Windows Explorer, and go to **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
+1. On a computer that has internet access, browse to the installation media for the version of Configuration Manager that you want to install.
 
-2.  To open Setup Downloader, double-click **Setupdl.exe**.   
+1. In the **SMSSETUP\BIN\X64** subfolder, run **Setupdl.exe**.
 
-3. Specify the path for the folder that will host the updated installation files, and then click **Download**. Setup Downloader verifies the files that are currently in the download folder. It downloads only files that are missing or that are newer than existing files. Setup Downloader creates subfolders for downloaded languages, and other required subfolders.  
+1. Specify the path for the folder to store the updated installation files, and then select **Download**. Setup downloader verifies the files that are currently in the download folder. It downloads only files that are missing or that are newer than existing files. It creates subfolders for downloaded languages, and other required components.
 
-4.  To review the download results, open the **ConfigMgrSetup.log** file in the root directory of drive C.  .  
+1. To review the download results, see **C:\ConfigMgrSetup.log**.
 
-## <a name="bkmk_cmd"></a> Run Setup Downloader from a command prompt  
+## <a name="bkmk_cmd"></a> Run setup downloader from a command prompt
 
-1.  In a Command Prompt window, go to **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**.   
+1. Open a command prompt, and change directory to the installation media for the version of Configuration Manager that you want to install.
 
-2.  To open Setup Downloader, run  **Setupdl.exe**.
+1. Change directory to the **SMSSETUP\BIN\X64** subfolder, and run **Setupdl.exe** with the necessary options.
 
-    You can use the following command-line options with **Setupdl.exe**:   
+1. To review the download results, see **C:\ConfigMgrSetup.log**.
 
-    -   **/VERIFY**: Use this option to verify the files in the download folder, which include language files. Review the ConfigMgrSetup.log file in the root directory of drive C for a list of files that are outdated. No files are downloaded when you use this option.  
+### Command-line options
 
-    -   **/VERIFYLANG**: Use this option to verify the language files in the download folder. Review the ConfigMgrSetup.log file in the root directory of drive C for a list of language files that are outdated.
+You can use the following command-line options with **Setupdl.exe**:
 
-    -   **/LANG**: Use this option to download only the language files to the download folder.  
+- **/VERIFY**: Verify the files in the download folder, which include language files. For the list of outdated files, review **C:\ConfigMgrSetup.log**. When you use this option, it doesn't download any files.
 
-    -   **/NOUI**: Use this option to start Setup Downloader without displaying the user interface. When you use this option, you must specify the **download path** as part of the command at the command prompt.  
+- **/VERIFYLANG**: Only verify the language files in the download folder. For the list of outdated language files, review **C:\ConfigMgrSetup.log**.
 
-    -   **&lt;DownloadPath\>**: You can specify the path to the download folder to automatically start the verification or download process. You must specify the download path when you use the **/NOUI** option. If you do not specify a download path, you must specify the path when Setup Downloader opens. Setup Downloader creates the folder if it does not exist.  
+- **/LANG**: Download only the language files to the download folder.
 
-    Example commands:
+- **/NOUI**: Start setup downloader without the user interface. When you use this option, the **download path** is required.
 
-    -   **setupdl &lt;DownloadPath\>**  
+- **Download path**: To automatically start the verification or download process, specify the path to the download folder. When you use the **/NOUI** option, the download path is required. If you don't specify a download path, setup downloader prompts you to specify the path. If the folder doesn't exist, setup downloader creates it.
 
-        -   Setup Downloader starts, verifies the files in the specified download folder, and then downloads only the files that are missing or that have newer versions than existing files.     
+### Example commands
 
-    -   **setupdl /VERIFY &lt;DownloadPath\>**  
+#### Example 1
 
-        -   Setup Downloader starts and verifies the files in the specified download folder.  
+Setup downloader verifies the files in the specified download folder, and then downloads files.
 
-    -   **setupdl /NOUI &lt;DownloadPath\>**  
+`setupdl.exe C:\Download`
 
-        -   Setup Downloader starts, verifies the files in the specified download folder, and then downloads only the files that are missing or that are newer than the existing files.  
+#### Example 2
 
-    -   **setupdl /LANG  &lt;DownloadPath\>**  
+Setup downloader only verifies the files in the specified download folder.
 
-        -   Setup Downloader starts, verifies the language files in the specified download folder, and then downloads only the language files that are missing or that are newer than the existing files.  
+`setupdl.exe /VERIFY C:\Download`
 
-    -   **setupdl /VERIFY**  
+#### Example 3
 
-        -   Setup Downloader starts, and then you must specify the path to the download folder. Next, after you click **Verify**, Setup Downloader verifies the files in the download folder.  
+Setup downloader verifies the files in the specified download folder, and then downloads files. The tool doesn't show any user interface.
 
-3.  To review the download results, open the **ConfigMgrSetup.log** file in the root directory of drive C.
+`setupdl.exe /NOUI C:\Download`
 
-## <a name="bkmk_cp-files"></a> Copy Setup Downloader files to another computer
+#### Example 4
+
+Setup downloader verifies the language files in the specified download folder, and then downloads only the language files.
+
+`setupdl.exe /LANG C:\Download`
+
+## <a name="bkmk_cp-files"></a> Copy setup downloader files to another computer
 
 1. In Windows Explorer, go to either one of the following locations:
 
     - **&lt;Configuration Manager installation media>\SMSSETUP\BIN\X64**
+
     - **&lt;Configuration Manager installation path>\BIN\X64**
-    
+
 1. Copy the following files to the same destination folder on the other computer:
-    
+
     - **setupdl.exe**
+
     - **.\\&lt;language>\\setupdlres.dll**
-      - This file is in the subfolder for the install language. For instance, English is in the `00000409` subfolder.
 
-    As an example, the destination folders on your device should look like this:
-    - C:\ConfigManInstall\setupdl.exe
-    - C:\ConfigManInstall\00000409\setupdlres.dll
+        > [!NOTE]
+        > This file is in the subfolder for the install language. For instance, English is in the `00000409` subfolder.
 
-1. Launch the Setup Downloader from the computer by using either the [user interface](#bkmk_ui) or the [command prompt](#bkmk_cmd), described in the sections above.
+    The destination folders on your device should look like the following example:
+
+    - `C:\ConfigManInstall\setupdl.exe`
+
+    - `C:\ConfigManInstall\00000409\setupdlres.dll`
+
+1. Run the setup downloader from the destination computer. Use either the [user interface](#bkmk_ui) or the [command prompt](#bkmk_cmd).

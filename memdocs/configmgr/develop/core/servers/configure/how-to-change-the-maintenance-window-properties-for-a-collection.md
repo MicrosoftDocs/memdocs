@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c73f7ea3-5f13-4b93-897e-ef865418ccfd
 author: aczechowski
 ms.author: aaroncz
@@ -129,7 +129,7 @@ public void ChangeMaintenanceWindowProperties(WqlConnectionManager connection,
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the collection.|  
 |`serviceWindowID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the maintenance window for which to change properties.|  
 |`newMaintenanceWindowDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description of the new maintenance window.|  

@@ -65,7 +65,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Microsoft Defender Advanced Threat Protection onboarding
-            url: deploy-use/windows-defender-advanced-threat-protection.md
+            url: deploy-use/defender-advanced-threat-protection.md
           - text: Troubleshoot Windows Defender or Endpoint Protection client
             url: deploy-use/troubleshoot-endpoint-client.md
           - text: Manage antimalware policies and firewall settings

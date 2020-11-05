@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -43,6 +43,8 @@ By default, Desktop Analytics refreshes deployment plan data daily. Any changes 
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
 
+Deployment plans support targeting the three most recent Windows 10 versions. Desktop Analytics will add support for a new Windows 10 version within 45 days after it's available. At that time, the service will also drop the oldest version. You won't be able to use any deployment plans that target the oldest version. If you have any ongoing deployment plans that target the oldest supported version in Desktop Analytics, complete the deployment within 45 days after a new windows 10 version is available.
+
 ## Readiness rules
 
 The following readiness rules are available in deployment plans:
@@ -63,7 +65,7 @@ See the **Windows upgrade decision** for each device in the deployment plan.
 
 The Windows upgrade decision to **Replace device** can be because of one of the following reasons:
 
-- It failed a Windows 10 required processor check. For more information, see [Minimum hardware requirements](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- It failed a Windows 10 required processor check. For more information, see [Minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - It has a BIOS block
 - It doesn't have enough memory
 - A boot critical component on the system has a blocked driver
@@ -125,4 +127,4 @@ After creating a deployment plan, use Configuration Manager to deploy the produc
 
 - [Learn about security and feature updates](about-updates.md)  
 
-- [Create a deployment plan](create-deployment-plans.md)  
+- [Create a deployment plan](create-deployment-plans.md)

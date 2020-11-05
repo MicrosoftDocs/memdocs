@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -60,7 +60,7 @@ You'll use the device category name when you create Azure Active Directory (Azur
 ### Step 2: Create Azure Active Directory security groups
 In this step, you'll create dynamic groups in the Azure portal, based on the device category and device category name.
 
-To continue, refer to [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation.
+To continue, refer to [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation.
 
 Use the information in this section to create a device group with an advanced rule, by using the **deviceCategory** attribute. For example: **device.deviceCategory -eq** "*the device category name you got from the Azure portal*".
 

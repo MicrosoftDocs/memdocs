@@ -5,13 +5,11 @@ description: You can use several methods in Configuration Manager to partition a
 ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Refresh an existing computer with a new version of Windows
@@ -87,4 +85,4 @@ For more information, see the following articles:
 For more information, see [Monitor OS deployments](monitor-operating-system-deployments.md).  
 
 > [!Note]
-> When you reimage a UEFI device, Windows Boot Manager creates a new entry in the boot loader. This behavior is most noticeable when you repeatedly reimage a device, such as in a test environment or a student lab. It generally doesn't impact the performance or usage of the device. If the list gets too large, some specific hardware devices may encounter functional issues. For example, not booting to an external USB drive, or not able to select the current boot entry from the list. Use the Windows **bcdedit** command to clear unused boot entries. For more information, see [BCDEdit /deletevalue](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcdedit--deletevalue).<!-- 2841926 -->
+> When you reimage a UEFI device, Windows Boot Manager creates a new entry in the boot loader. This behavior is most noticeable when you repeatedly reimage a device, such as in a test environment or a student lab. It generally doesn't impact the performance or usage of the device. If the list gets too large, some specific hardware devices may encounter functional issues. For example, not booting to an external USB drive, or not able to select the current boot entry from the list. Use the Windows **bcdedit** command to clear unused boot entries. For more information, see [BCDEdit /deletevalue](/windows-hardware/drivers/devtest/bcdedit--deletevalue).<!-- 2841926 -->
