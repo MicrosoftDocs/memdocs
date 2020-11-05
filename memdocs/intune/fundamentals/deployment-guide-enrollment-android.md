@@ -77,7 +77,7 @@ This task list provides an overview. For more specific information, see [Set up 
 
 Your users must do the following steps. For the specific user experience, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
 
-1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintunecompanyportal).
+1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.intune).
 2. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users may have to enter more information. For more specific steps, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
@@ -231,7 +231,7 @@ Google is reducing device administrator support in new Android releases. To avoi
 
 Your users must do the following steps. For more specific steps, see [enroll the device](../user-help/enroll-device-android-company-portal.md).
 
-1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintunecompanyportal).
+1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.intune).
 2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users may have to enter more information. For more specific steps, see [enroll the device](../user-help/enroll-device-android-company-portal.md).

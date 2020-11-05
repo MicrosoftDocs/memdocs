@@ -371,7 +371,7 @@ Supported platforms and profiles:
   - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
 - **Block hardware device installation by setup classes**  
-  CSP: [AllowInstallationOfMatchingDeviceSetupClasses](/windows/client-management/mdm/policy-csp-deviceinstallation.md#deviceinstallation-allowinstallationofmatchingdevicesetupclasses)
+  CSP: [AllowInstallationOfMatchingDeviceSetupClasses](/windows/client-management/mdm/policy-csp-deviceinstallation)
 
   - **Not configured** *(default)*
   - **Yes** - Specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
