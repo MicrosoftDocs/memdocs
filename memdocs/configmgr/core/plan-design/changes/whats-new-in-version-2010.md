@@ -117,7 +117,7 @@ If you previously configured devices for **Limited** or **Limited (Enhanced)**, 
 
 <!--6107649-->
 
-The Windows 10 long-term servicing channel (LTSC) was designed for devices where the key requirement is that functionality and features don't change over time. This servicing model prevents Windows 10 Enterprise LTSC devices from receiving the usual feature updates. It provides only quality updates to make sure that device security stays up to date. Some customers want to shift from LTSC to the semi-annual servicing channel, to have access to new features, services, and other major changes. Starting in this release, you can now enroll LTSC devices to Desktop Analytics to evaluate in your deployment plans.
+The Windows 10 long-term servicing channel (LTSC) was designed for devices where the key requirement is that functionality and features don't change over time. This servicing model prevents Windows 10 Enterprise LTSC devices from receiving the usual feature updates. It provides only quality updates to make sure that device security stays up to date. Some customers want to shift from LTSC to the semi-annual servicing channel, to have access to new features, services, and other major changes. You can now use Configuration Manager to enroll LTSC devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans.
 
 ## Real-time management
 
