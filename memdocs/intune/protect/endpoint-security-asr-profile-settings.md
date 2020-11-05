@@ -235,7 +235,7 @@ Supported platforms and profiles:
   - **Block** - Office applications are blocked from injecting code into other processes.
   - **Audit mode** - Windows events are raised instead of blocking.
   - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
-  - **Disable** - This setting is turned off. 
+  - **Disable** - This setting is turned off.
 
 - **Block Office applications from creating executable content**  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872975)
@@ -275,6 +275,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Office communication applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872978)
@@ -293,7 +294,6 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Defender blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
   - **Audit mode** - Windows events are raised instead of blocking.
-  <!-- Thgis option wasn't listed for this setting - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior. -->
   - **Disable** - This setting is turned off.
 
 - **Block process creations originating from PSExec and WMI commands**  
@@ -353,6 +353,16 @@ Supported platforms and profiles:
   - **Block disk modification** - Only attempts to write to disk sectors are blocked.
   - **Audit disk modification** - Windows events are raised instead of blocking attempts to write to disk sectors.
   
+- **List of additional folders that need to be protected**  
+  CSP: [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
+
+  Define a list of disk locations that will be protected from untrusted applications.
+
+- **List of apps that have access to protected folders**  
+  CSP: [ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
+
+  Define a list of apps that have access to read/write to controlled locations.
+
 - **Exclude files and paths from attack surface reduction rules**  
   CSP: [AttackSurfaceReductionOnlyExclusions](https://go.microsoft.com/fwlink/?linkid=872981)
 
