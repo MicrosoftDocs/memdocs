@@ -33,7 +33,7 @@ This content can assist you in learning and supporting Configuration Manager.
 For more information, see the following articles:
 
 - [Configuration Manager documentation library](../../index.yml?WT.mc_id=configmgr-console)  
-- [How to use the Configuration Manager docs](../understand/use-docs.md?WT.mc_id=configmgr-console)
+- [How to use the Configuration Manager docs](../../../use-docs.md?WT.mc_id=configmgr-console)
 
 ## Recommended
 

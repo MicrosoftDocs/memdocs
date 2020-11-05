@@ -56,7 +56,7 @@ The following is information from the [original deprecation announcement](https:
 >
 >This change will allow you to take advantage of the enhanced capabilities available through the MDM channel for Windows management. We encourage you to migrate as soon as possible, and no later than October 15, 2020. After that date, the Silverlight-based Intune console will no longer be accessible. PCs managed with the PC software client will stop receiving security updates and apps, and will no longer be able to be configured.
 >
-> Contact your partner of record or [support](https://aka.ms/IntuneSupport) if you need assistance.
+> Contact your partner of record or [support](../../get-support.md) if you need assistance.
 
 ## Uninstall the Intune PC software client software
 
