@@ -28,9 +28,19 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Microsoft Endpoint Manager tenant attach
 
+### Troubleshooting portal lists a user’s devices based on usage
+<!--6974300-->
+The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
 
-## Endpoint analytics
+### Enhancements to applications in Microsoft Endpoint Manager admin center
+<!--7979972, 8227649-->
 
+We've made improvements to applications for tenant attached devices. Administrators can now do the following actions for applications in the Microsoft Endpoint Manager admin center:
+
+- **Uninstall** an application
+- **Repair** installation of an application
+- **Re-evaluate** the application installation status
+- **Reinstall** an application has replaced **Retry installation**
 
 ## Site infrastructure
 
@@ -56,6 +66,14 @@ You can now monitor the health of the fast channel used for client actions. If y
 <!--6503308-->
 You now have a new maintenance task available for cleaning up collected diagnostic files. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect regular collected files. The new maintenance task is enabled by default.
 
+### Improvements to the administration service
+
+<!-- 8613105 -->
+
+The Configuration Manager REST API, the administration service, requires a secure HTTPS connection. With the previous methods to enable HTTPS, enabling IIS on the SMS Provider was a prerequisite.
+
+Starting in this release, you no longer need to enable IIS on the SMS Provider for the administration service. When you enable the site for enhanced HTTP, it creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS.
+
 ## Cloud-attached management
 
 ### Cloud management gateway with virtual machine scale set
@@ -64,11 +82,38 @@ You now have a new maintenance task available for cleaning up collected diagnost
 
 Cloud management gateway (CMG) deployments now use virtual machine scale sets in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions.
 
+### Disable Azure AD authentication for onboarded tenants
+
+<!--8537319-->
+
+You can now disable Azure Active Directory (Azure AD) authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Azure AD, it allows the site and clients to use modern authentication. Currently, Azure AD device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Azure AD authentication.
+
+### Additional options when creating app registrations in Azure Active Directory
+<!--7153654-->
+You can now specify **Never** for the expiration of a secret key when creating Azure Active Directory app registrations. For more information about creating app registrations, see [Configure Azure Services](../../servers/deploy/configure/azure-services-wizard.md#azure-app-properties).
+
+### Validate internet access for the service connection point
+
+<!--8565578-->
+
+If you use Desktop Analytics or tenant attach, the service connection point now checks important internet endpoints. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem.
+
 ## Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
-### Desktop Analytics support for Windows 10 Enterprise LTSC
+### Support for new Windows 10 data levels
+
+<!--6979470-->
+
+Microsoft is increasing transparency by categorizing the data that Windows 10 collects:
+
+- **Basic** diagnostic data is recategorized as **Required** diagnostic data
+- **Full** is recategorized as **Optional**
+
+If you previously configured devices for **Limited** or **Limited (Enhanced)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
+
+### Support for Windows 10 Enterprise LTSC
 
 <!--6107649-->
 
@@ -152,6 +197,14 @@ This release includes the following improvements to OS deployment:
 - Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you can activate the Windows power plan for **High Performance**. Starting in this technical preview release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan. Now when you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
 
 ## Protection
+
+### Improvements to BitLocker management
+
+<!--6979223-->
+
+You can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). This change also provides support for BitLocker management via internet-based client management (IBCM) and when you configure the site for enhanced HTTP. There's no change to the setup process for BitLocker management.
+
+<!-- For more information, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md). -->
 
 ### Expanded Windows Defender Application Control management
 <!--7752243-->
@@ -248,6 +301,10 @@ Beginning with the September 2020 cumulative update, HTTP-based WSUS servers wil
 <!--7520646-->
 To help you manage security risk in your environment, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates. Additionally, a new **Management Insights** rule was added to detect Windows 7, Windows Server 2008, and Windows Server 2008 R2 without [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates).
 
+### Immediate distribution point fallback for clients downloading software update delta content
+<!--8286432-->
+There's a new client setting for software updates. If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is five minutes.
+
 ## PowerShell
 
 ### Support for PowerShell version 7
@@ -264,6 +321,7 @@ With more customers managing remote devices now, this release includes several n
 
 
 <!-- Unused sections in this release:
+## Endpoint analytics
 ## Reporting
 ## User experience
 ## Office management
