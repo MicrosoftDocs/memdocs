@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2020
+ms.date: 11/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -177,7 +177,7 @@ You can add optional actions when you create a compliance policy, or update an e
    Don't have a policy yet? Create an [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md), or other platform policy.
 
    > [!NOTE]
-   > JAMF devices and devices targeted with device groups cannot receive compliance actions at this time.
+   > Devices managed by third-party device compliance partners that are targeted with device groups cannot receive compliance actions at this time.
 
 3. Select **Actions for noncompliance** > **Add**.
 

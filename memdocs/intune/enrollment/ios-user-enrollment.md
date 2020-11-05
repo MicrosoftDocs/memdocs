@@ -42,6 +42,7 @@ For more information about the options available with User Enrollment, see [User
 - [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 - [Managed Apple ID](https://support.apple.com/en-us/HT210737)
+- [iOS 13 or later](https://support.apple.com/en-au/guide/security/sec38eb8731b/web)
 
 ## Create a User Enrollment profile in Intune
 

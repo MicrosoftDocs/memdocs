@@ -39,7 +39,7 @@ Successfully configure your [hybrid Azure AD-joined devices](/azure/active-direc
 
 The device to be enrolled must follow these requirements:
 - Use Windows 10 v1809 or greater.
-- Have access to the internet [following Windows Autopilot network requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Have access to the internet [following Windows Autopilot network requirements](/mem/autopilot/networking-requirements).
 - Have access to an Active Directory domain controller. The device must be connected to the organization's network so that it can:
   - Resolve the DNS records for the AD domain and the AD domain controller.
   - Communicate with the domain controller to authenticate the user.

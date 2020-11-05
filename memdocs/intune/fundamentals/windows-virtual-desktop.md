@@ -31,21 +31,21 @@ ms.collection: M365-identity-device-management
 
 # Using Windows Virtual Desktop with Intune
 
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. It lets end users connect securely to a full desktop from any device. With Microsoft Intune, you can secure and manage your Windows Virtual Desktop VMs with policy and apps at scale, after they're enrolled. 
+[Windows Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. It lets end users connect securely to a full desktop from any device. With Microsoft Intune, you can secure and manage your Windows Virtual Desktop VMs with policy and apps at scale, after they're enrolled. 
 
 ## Prerequisites 
 
 Currently, Intune supports Windows Virtual Desktop VMs that are: 
 
 - Running Windows 10 Enterprise, version 1809 or later.
-- [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
-- Set up as [personal remote desktops](https://docs.microsoft.com/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure. 
+- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
+- Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure. 
 - Enrolled in Intune in one of the following methods: 
-    - Configure [Active Directory group policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
-    - [Configuration Manager co-management](https://docs.microsoft.com/configmgr/comanage/overview).
+    - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
+    - [Configuration Manager co-management](/configmgr/comanage/overview).
     - [User self-enrollment via Azure AD Join](../enrollment/windows-enrollment-methods.md#user-self-enrollment-in-intune).
 
-For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview#requirements).
+For more information on Windows Virtual Desktop licensing requirements, see [What is Windows Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
 Intune treats Windows Virtual Desktop personal VMs the same as Windows 10 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Windows Virtual Desktop management of the same virtual machine. 
 
@@ -61,7 +61,7 @@ Also, the following profiles aren't currently supported:
 - [Domain Join](../configuration/device-profiles.md#domain-join)
 - [Wi-Fi](../configuration/device-profiles.md#wi-fi)
 
-Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
+Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
 
 ### Remote actions
 
@@ -84,4 +84,4 @@ Intune doesn't currently support management of Windows 10 Enterprise multi-sessi
 
 ## Next steps
 
-[Learn more about Windows Virtual Desktops](https://docs.microsoft.com/azure/virtual-desktop/).
+[Learn more about Windows Virtual Desktops](/azure/virtual-desktop/).

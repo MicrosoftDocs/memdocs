@@ -57,7 +57,7 @@ Neither Apple Business Manager enrollment or Apple School Manager work with the 
 
 ## Get an Apple ADE token
 
-Before you can enroll macOS devices with ADE or Apple School Manager, you need a token (.p7m) file from Apple. This token lets Intune sync information about the devices that your organization owns. It also lets Intune upload enrollment profiles to Apple and to these profiles to devices.
+Before you can enroll macOS devices with ADE or Apple School Manager, you need a token (.p7m) file from Apple. This token lets Intune sync information about the devices that your organization owns. It also lets Intune upload enrollment profiles to Apple and assign these profiles to devices.
 
 You use the Apple portal to create a token. You also use the Apple portal to assign devices to Intune for management.
 
