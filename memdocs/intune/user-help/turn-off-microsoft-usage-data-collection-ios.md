@@ -33,16 +33,16 @@ ms.collection:
 
 # Sharing Company Portal usage data with Microsoft     
 
-When usage data for Company Portal is turned on, all in-app performance and usage data is shared anonymously with Microsoft. This type of data helps Microsoft improve the reliability and performance of their products. Your organization doesn't have control over the collection of this data and they also can't change your usage data preferences. 
+Company Portal for iOS has a usage data feature that, when enabled, shares your in-app performance and usage data with Microsoft. Your organization can't change your usage data preference, and doesn't have any control over the collection of your data. 
 
-Sharing your Company Portal usage data with Microsoft can be helpful to future Microsoft products, but it's not required. The next section describes how to adjust usage data settings on your iOS device.  
+Sharing your Company Portal usage data helps to improve the reliability and performance of other Microsoft products, but it's optional. You can enable or disable this feature from the Settings app.  
 
-## Edit usage data settings
-Complete the following steps to change how Company Portal shares usage data with Microsoft. 
+## Edit usage data preferences
+Change your preference for how Company Portal shares your usage data with Microsoft. 
 
 1. Open the **Settings** app.  
 2. Tap **Company Portal**.  
-3. Switch the **Usage Data** toggle off (prevent usage data from being collected) or on (allow usage data to be collected).   
+3. Switch the **Usage Data** toggle to the off position (to prevent usage data from being collected), or to the on position (to allow usage data to be collected).   
 
 ## Next steps  
 
