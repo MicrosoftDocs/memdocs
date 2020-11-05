@@ -71,7 +71,7 @@ The following articles are also good resources for better understanding Windows 
 >
 > The daily delta scan happens at 3:00 AM (device local time). Some events are sent at the first available time throughout the day. These times aren't configurable.
 >
-> For more information, see [Configure Windows diagnostic data in your organization](https://aka.ms/enterprisetelemetry).  
+> For more information, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).  
 
 ## Endpoints
 

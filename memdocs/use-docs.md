@@ -163,7 +163,7 @@ Follow these general guidelines when you contribute:
 
 - Don't surprise us with large pull requests. Instead, [file an issue](#about-feedback) and start a discussion. Then we can agree on a direction before you invest a large amount of time.
 
-- Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice).
+- Read the [Microsoft style guide](/style-guide/welcome/). Know the [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice).
 
 - Follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
 
