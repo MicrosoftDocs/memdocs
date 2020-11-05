@@ -226,21 +226,19 @@ We've integrated the functionality of Collection Evaluation Viewer into the Conf
 
 You can now view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
 
-## Send product feedback
+## Configuration Manager console
 
-### New feedback wizard
+### Product feedback
 
 <!--3180826-->
 
-The Configuration Manager console now has a new wizard for sending feedback. The redesigned wizard improves the workflow with better guidance about how to submit good feedback.
+The Configuration Manager console has a new wizard for sending feedback. The redesigned wizard improves the workflow with better guidance about how to submit good feedback.
 
-### Query for feedback sent to Microsoft
+:::image type="content" source="media/3180826-send-a-smile-2010.png" alt-text="Send a smile product feedback wizard" lightbox="media/3180826-send-a-smile-2010.png":::
 
-<!--6488450-->
+There's also a new status message query, **Feedback sent to Microsoft**. Use this query to easily find feedback status messages.<!--6488450-->
 
-Configuration Manager technical preview branch version 2001.2 included a new status message, which has details about feedback sent from the site. To help you more easily find those status messages, this release includes a query, **Feedback sent to Microsoft**.
-
-## Configuration Manager console
+For more information, see [Product feedback](../../understand/product-feedback.md).
 
 ### Import objects to current folder
 

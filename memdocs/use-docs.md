@@ -87,7 +87,7 @@ Use GitHub Issues to submit the following types of feedback:
 
 If you create an issue for something not related to docs, Microsoft will close the issue and redirect you to a better feedback channel. For example:
 
-- Product feedback for [Configuration Manager](configmgr/core/understand/find-help.md#product-feedback) or [Intune](https://microsoftintune.uservoice.com/forums/291681-ideas)
+- Product feedback for [Configuration Manager](configmgr/core/understand/product-feedback.md) or [Intune](https://microsoftintune.uservoice.com/forums/291681-ideas)
 - [Product questions](/answers/products/mem)
 - Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Endpoint Manager](get-support.md)
 

@@ -26,7 +26,7 @@ Existing WMI and PowerShell cmdlets are still supported and will continue to wor
 
 ### What if an existing WMI class or method doesn't work over the administration service?
 
-If you find an existing WMI class or method that doesn't GET or PUT as expected, send a frown to inform the engineering team. For more information, see [Find help for Configuration Manager](../../core/understand/find-help.md#send-a-smile-or-send-a-frown).
+If you find an existing WMI class or method that doesn't GET or PUT as expected, send a frown to inform the engineering team. For more information, see [Product feedback](../../core/understand/product-feedback.md).
 
 ### Are Swagger definitions available?
 

@@ -12,6 +12,8 @@
     items:
     - name: Find help for Configuration Manager
       href: understand/find-help.md
+    - name: Product feedback
+      href: understand/product-feedback.md
     - name: How to use the docs
       href: ../../use-docs.md
     - name: Accessibility features
