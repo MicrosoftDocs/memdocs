@@ -60,7 +60,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
     - **Computer name prefix**: Enter a prefix for the device name. Computer names are 15 characters long. After the prefix, the remaining 15 characters are randomly generated.
     - **Domain name**: Enter the Fully Qualified Domain Name (FQDN) the devices are to join. For example, enter `americas.corp.contoso.com.`
-    - **Organizational unit** (optional): Enter the full path ([distinguished name](/windows/win32/ad/object-names-and-identities#distinguished-name)) to the organizational unit (OU) the computer accounts are to be created. For example, enter `"CN=Users,DC=Contoso,DC=com"`. If you don't enter a value, a well-known computer object container is used.
+    - **Organizational unit** (optional): Enter the full path ([distinguished name](/windows/win32/ad/object-names-and-identities#distinguished-name)) to the organizational unit (OU) the computer accounts are to be created. For example, enter `"OU=Mine,DC=Contoso,DC=com"` without quotation marks. Leave this field blank to use the well-known computer object container (e.g. CN=Computers, DC=Contoso, DC=Com)
 
       For more information and advice on this setting, see [Deploy hybrid Azure AD-joined devices](../../autopilot/windows-autopilot-hybrid.md).
 
