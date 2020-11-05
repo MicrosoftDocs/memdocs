@@ -82,7 +82,7 @@ To avoid this issue, use the following user name formats to connect to a remote 
 
 ### Scripted server message block connections to remote clients might require removal
 
-When connecting to remote clients using the [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) PowerShell cmdlet, Support Center creates a server message block (SMB) connection to each remote client. It retains those connections after you complete data collection. To avoid exceeding the maximum number of remote connections for Windows, use the `net use` command to see the currently active set of remote connections. Then disable any unneeded connections by using the following command:
+When connecting to remote clients using the [New-CMMachineConnection](/previous-versions/system-center/powershell/system-center-2012-r2/dn688183(v=sc.20)) PowerShell cmdlet, Support Center creates a server message block (SMB) connection to each remote client. It retains those connections after you complete data collection. To avoid exceeding the maximum number of remote connections for Windows, use the `net use` command to see the currently active set of remote connections. Then disable any unneeded connections by using the following command:
 `net use <connection_name> /d`
 where `<connection_name>` is the name of the remote connection.
 
