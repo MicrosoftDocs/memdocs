@@ -20,6 +20,23 @@ Use the information below to find out about changes to the Configuration Manager
 
 ## General tips
 
+### Fixed-width font now used in some console areas
+
+<!--7632637-->
+*(Introduced in version 2010)*
+
+Various areas in the Configuration Manager console now use the fixed-width font Consolas. This font provides consistent spacing and makes it easier to read. You'll see the Consolas font in the following places:
+
+- Application scripts
+- Configuration item scripts
+- WMI-based collection membership queries
+- CMPivot queries
+- Scripts
+- Run PowerShell Script
+- Run Command Line
+
+:::image type="content" source="media/7632637-script-editor.png" alt-text="Script editor example with fixed-width Consolas font" lightbox="media/7632637-script-editor.png":::
+
 ### Improvements to console search
 <!--4640570-->
 *(Introduced in version 1910)*
@@ -100,7 +117,7 @@ Copy discovery data from devices and users in the console. Copy the details to t
 
     - **Save results as**: Saves selected properties and values to a comma-separated values (CSV) file that you specify.
 
-:::image type="content" source="media/6890051-copy-discovery-data.png" alt-text="Screenshot of device properties to copy discovery data":::
+:::image type="content" source="media/6890051-copy-discovery-data.png" alt-text="Screenshot of device properties to copy discovery data" lightbox="media/6890051-copy-discovery-data.png":::
 
 ### Real-time actions from device lists
 <!--4616810-->
