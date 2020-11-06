@@ -240,38 +240,23 @@ There's also a new status message query, **Feedback sent to Microsoft**. Use thi
 
 For more information, see [Product feedback](../../understand/product-feedback.md).
 
-### Import objects to current folder
-
-<!--6601203-->
-
-Based on your feedback, now when you import an object in the Configuration Manager console, it imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to applications, packages, driver packages, and task sequences.
-
-### Copy discovery data from the console
-
-<!--6890051-->
-
-You can now copy discovery data from devices and users in the console. Copy the details to the clipboard, or export them all to a file. These new actions make it easier for you to quickly get this data from the console. For example, copy the MAC address of a device before you reimage it.
-
-### Fixed-width font now used in some console areas
-
-<!--7632637-->
-
-Various areas in the Configuration Manager console now use the fixed-width font Consolas. This font provides consistent spacing and makes it easier to read.
-
-### Syntax highlighting for scripting languages
-<!--7964912-->
-
-To assist you when creating scripts and queries in the Configuration Manager console, you'll now see syntax highlighting and code folding, where available.
-
-### Shortcuts to status messages
-
-<!--8232705-->
-
-You now have an easier way to view status messages for objects.
-
 ### Improvements to in-console notifications
 <!--7410221-->
 You now have an updated look and feel for in-console notifications. Notifications are more readable and the action link is easier to find. Additionally, the age of the notification is displayed to help you find the latest information. If you dismiss or snooze a notification, that action is now persistent for your user across consoles.
+
+### Improvements to the Configuration Manager console
+
+- You can now copy discovery data from devices and users in the console. Copy the details to the clipboard, or export them all to a file. These new actions make it easier for you to quickly get this data from the console. For example, copy the MAC address of a device before you reimage it.<!--6890051-->
+
+- Various areas in the Configuration Manager console now use the fixed-width font Consolas. This font provides consistent spacing and makes it easier to read.<!--7632637-->
+
+- You now have an easier way to view status messages for objects.<!--8232705-->
+
+- Now when you import an object in the Configuration Manager console, it imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to applications, packages, driver packages, and task sequences.<!--6601203-->
+
+- To assist you when creating scripts and queries in the Configuration Manager console, you'll now see syntax highlighting and code folding, where available.<!--7964912-->
+
+For more information, see [Configuration Manager console changes and tips](../../servers/manage/admin-console-tips.md).
 
 ## Content management
 
