@@ -245,7 +245,7 @@ Both the **Antivirus agent status report** and the **Detected malware report** h
 #### Updated Help and Support for Microsoft Endpoint Manager  <!-- 7328994  -->
 The Help and Support experience uses machine learning to display solutions, diagnostics, and insights that will help you resolve your issues. We've updated the help and support page in Microsoft Endpoint Manager admin center with a new, easier to navigate, consistent UX experience. The new UX has now been rolled out in all blades in the console and will help us get you more relevant help. 
 
-You'll now find an [updated and consolidated support experience](../fundamentals/get-support.md) for the following cloud-based offerings from within the admin center:
+You'll now find an [updated and consolidated support experience](../../get-support.md) for the following cloud-based offerings from within the admin center:
 
 - **Intune**
 - **Configuration Manager**
@@ -1064,10 +1064,10 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Monitor and troubleshoot
 
 #### Use Endpoint analytics to improve user productivity and reduce IT support costs<!-- 5653063 --> 
-During the next week, this feature will be rolled out. Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics preview](https://aka.ms/uea).
+During the next week, this feature will be rolled out. Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics preview](../../analytics/overview.md).
 
 #### Proactively remediate end user device issues using script packages<!-- 5933328 -->
-You can create and run script packages on end user devices to proactively find and fix the top support issues in your organization. Deploying script packages will help you reduce support calls. Choose to create your own script packages or deploy one of the script packages we've written and used in our environment to reduce support tickets. Intune allows you to see the status of your deployed script packages and to monitor the detection and remediation results. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [Proactive remediations](https://aka.ms/uea_prs).
+You can create and run script packages on end user devices to proactively find and fix the top support issues in your organization. Deploying script packages will help you reduce support calls. Choose to create your own script packages or deploy one of the script packages we've written and used in our environment to reduce support tickets. Intune allows you to see the status of your deployed script packages and to monitor the detection and remediation results. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [Proactive remediations](../../analytics/proactive-remediations.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security

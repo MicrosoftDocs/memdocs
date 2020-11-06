@@ -90,7 +90,7 @@ You can [set up Delivery Optimization](../configuration/delivery-optimization-se
 
 ### Background Intelligent Transfer Service (BITS) and BranchCache 
 
-You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache and BITS aren't supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md).
+You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache and BITS aren't supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](./intune-legacy-pc-client.md).
 
 #### Use (BITS) on computers (requires Intune software client)
 

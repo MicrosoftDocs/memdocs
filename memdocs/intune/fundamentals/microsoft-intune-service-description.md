@@ -50,7 +50,7 @@ You can start to use Intune with a 30-day free trial that includes 100 user lice
 
 --->
 ## Intune Onboarding benefit
-Microsoft offers the Intune Onboarding benefit for eligible services in eligible plans. The Onboarding benefit lets you work remotely with Microsoft specialists to get your Intune environment ready for use. For more about the Onboarding benefit, see [Microsoft Intune Onboarding Benefit Description](https://go.microsoft.com/fwlink/?LinkId=619281).
+Microsoft offers the Intune Onboarding benefit for eligible services in eligible plans. The Onboarding benefit lets you work remotely with Microsoft specialists to get your Intune environment ready for use. For more about the Onboarding benefit, see [Microsoft Intune Onboarding Benefit Description](/fasttrack/introduction).
 
 
 ## Learn how Intune service updates affect you

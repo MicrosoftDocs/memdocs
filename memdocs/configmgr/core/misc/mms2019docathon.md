@@ -128,7 +128,7 @@ The following awards are calculated by the number of legitimate contributions to
 
 ## Resources
 
-- [Microsoft Style](https://aka.ms/MicrosoftStyle)
+- [Microsoft Style](/style-guide/welcome/)
 
     - [Quick start](/contribute/style-quick-start)
 
