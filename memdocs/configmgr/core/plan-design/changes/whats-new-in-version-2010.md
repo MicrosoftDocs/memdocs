@@ -111,7 +111,9 @@ Microsoft is increasing transparency by categorizing the data that Windows 10 co
 - **Basic** diagnostic data is recategorized as **Required** diagnostic data
 - **Full** is recategorized as **Optional**
 
-If you previously configured devices for **Limited** or **Limited (Enhanced)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
+If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
+
+For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#support-for-new-windows-10-data-levels).
 
 ### Support for Windows 10 Enterprise LTSC
 
