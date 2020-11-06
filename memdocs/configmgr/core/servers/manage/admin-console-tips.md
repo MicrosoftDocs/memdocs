@@ -1,8 +1,8 @@
 ---
-title: Configuration Manager console changes and tips
+title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -20,7 +20,7 @@ Use the information below to find out about changes to the Configuration Manager
 
 ## General tips
 
-### <a name="bkmk_search"></a> Improvements to console search
+### Improvements to console search
 <!--4640570-->
 *(Introduced in version 1910)*
 
@@ -39,15 +39,13 @@ Use the information below to find out about changes to the Configuration Manager
     >
     > The in-console setting corresponds to the **QueryResultCountLimit** value in the same key. An administrator can configure these values in the HKLM hive for all users of the device. The HKCU value overrides the HKLM setting.
 
-### Role based administration for folders
+### Role-based administration for folders
 <!--3600867-->
 *(Introduced in version 1906)*
 
 You can set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
 ### Views sort by integer values
-
-*(Introduced in version 1902)*
 
 We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
 
@@ -59,8 +57,6 @@ We've made improvements to how various views sort data. For example, in the **De
 
 ### Move the warning for a large number of results
 
-*(Introduced in version 1902)*
-
 When you select a node in the console that returns more than 1,000 results, Configuration Manager displays the following warning:
 
 > Configuration Manager returned a large number of results. You can narrow your results by using search. Or, click here to view a maximum of 100000 results.
@@ -69,7 +65,6 @@ There's now additional blank space in between this warning and the search field.
 
 ### Send feedback
 
-*(Introduced in version 1806)*
 <!--1357542-->
 
 Submit product feedback from the console.  
@@ -81,7 +76,6 @@ Submit product feedback from the console.
 - **Send a suggestion**: Takes you to UserVoice to share your idea  
 
 For more information, see [Product Feedback](../../understand/product-feedback.md).
-
 
 ## Assets and Compliance workspace
 
@@ -99,17 +93,16 @@ There are various ways to display a list of devices under the **Devices** node i
 
   - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
 
-
 ### Collections tab in devices node
 <!--4616810-->
 *(Introduced in version 1906)*
 
-In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device. 
+In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device.
 
-> [!Note]  
-> - This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
-> - This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309--> <!--5107309-->
-
+> [!NOTE]
+> This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+>
+> This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309--> <!--5107309-->
 
 ### Add SMBIOS GUID column to device and device collection nodes
 
@@ -121,13 +114,12 @@ In both the **Devices** and **Device Collections** nodes, you can now add a new 
 ### Search device views using MAC address
 
 <!--3600878-->
-*(Introduced in version 1902)*
 
 You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
 
 ### View users for a device
 
-Starting in version 1806, the following columns are available in the **Devices** node:  
+The following columns are available in the **Devices** node:  
 
 - **Primary user(s)** <!--1357280-->  
 
@@ -141,7 +133,7 @@ For more information on how to show a non-default column, see [How to use the ad
 ### Improvement to device search performance
 
 <!-- 3614690 -->
-Starting in version 1806, when searching in a device collection, it doesn't search the keyword against all object properties. When you're not specific about what to search, it searches across the following four properties:
+When searching in a device collection, it doesn't search the keyword against all object properties. When you're not specific about what to search, it searches across the following four properties:
 
 - Name
 - Primary user(s)
@@ -149,7 +141,6 @@ Starting in version 1806, when searching in a device collection, it doesn't sear
 - Last logon user name
 
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
-
 
 ## Software Library workspace
 
@@ -186,7 +177,6 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 ### Maximize the browse registry window
 
 <!--3594151 includes all MMS 1902 console changes-->
-*(Introduced in version 1902)*
 
 1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method.
@@ -196,19 +186,14 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 
 ### Edit a task sequence by default
 
-*(Introduced in version 1902)*
-
 In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
 
 ### Go to the collection from an application deployment
-
-*(Introduced in version 1902)*
 
 1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 1. Select an application. In the details pane, switch to the **Deployments** tab.
 1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
    - This action is also available from the right-click context menu on the deployment in this view.
-
 
 ## Monitoring workspace
 
@@ -222,11 +207,9 @@ In the **Monitoring** workspace, select **Client Operations**. The operation to 
 <!--4616810-->
 *(Introduced in version 1906)*
 
-In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** in addition to the ID.
+In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** and the ID.
 
 ### Remove content from monitoring status
-
-*(Introduced in version 1902)*
 
 1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
 1. Select an item in the list, and choose the **View Status** option in the ribbon.
@@ -234,7 +217,6 @@ In the **Monitoring** workspace, select the **Script Status** node. It now lists
 
 ### Copy details in monitoring views
 
-*(Introduced in version 1806)*
 <!--1357856-->
 Copy information from the **Asset Details** pane for the following monitoring nodes:  
 
