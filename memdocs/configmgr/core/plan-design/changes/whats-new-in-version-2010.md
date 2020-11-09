@@ -113,7 +113,7 @@ Microsoft is increasing transparency by categorizing the diagnostic data that Wi
 
 If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
 
-For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#support-for-new-windows-10-data-levels).
+For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#support-for-new-windows-10-diagnostic-data-levels).
 
 ### Support for Windows 10 Enterprise LTSC
 
