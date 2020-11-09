@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -210,6 +210,11 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
      - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
 
         For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
+
+   - **On-Demand VPN Rules**:  
+     Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
+
+     For more information, see [Automatic VPN settings](../intune/configuration/vpn-settings-ios.md#automatic-vpn-settings)
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
