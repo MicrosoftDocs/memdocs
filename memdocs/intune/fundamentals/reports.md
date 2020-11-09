@@ -115,7 +115,7 @@ To see a generated report of device state, you can use the following steps:
 
 For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
-## Reports summary 
+## Reports summary
 
 The device compliance report is available as the summary report in the **Reports** workload. Use the following steps to view the device compliance report:
 
