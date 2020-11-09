@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,11 +31,11 @@ ms.collection: M365-identity-device-management
 
 Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
-- [Android Enterprise personally owned work profile](#android-enterprise-personally-owned-work-profile)
-- [Android Enterprise corporate owned dedicated devices](#android-enterprise-dedicated-devices)
-- [Android Enterprise corporate owned fully managed](#android-enterprise-fully-managed)
-- [Android Enterprise corporate owned with personal profile](#android-enterprise-corporate-with-personal-profile)
-- [Android device administrator](#android-device-administrator)
+- [BYOD: Android Enterprise personally owned work profile](#byod-android-enterprise-personally-owned-work-profile)
+- [Android Enterprise corporate owned dedicated devices](#android-enterprise-dedicated-devices) (COSU)
+- [Android Enterprise corporate owned fully managed](#android-enterprise-fully-managed) (COBO)
+- [Android Enterprise corporate owned with personal profile](#android-enterprise-corporate-with-personal-profile) (COPE)
+- [Android device administrator](#android-device-administrator) (DA)
 
 This article provides recommendations on the Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type.
 
@@ -48,7 +48,7 @@ For more specific information, see [Enroll Android devices](../enrollment/androi
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-## Android Enterprise personally owned work profile
+## BYOD: Android Enterprise personally owned work profile
 
 These devices are personal or BYOD (bring your own device) Android devices that access organization email, apps, and other data.
 
@@ -91,7 +91,7 @@ Your users must do the following steps. For the specific user experience, see [e
 
 ## Android Enterprise dedicated devices
 
-These devices are organization-owned, and supported by Google’s Zero Touch. The only purpose is to be a kiosk-style device. They aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
+Previously referred to as COSU. These devices are organization-owned, and supported by Google’s Zero Touch. The only purpose is to be a kiosk-style device. They aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
 
 ---
 | Feature | Use this enrollment option when |
@@ -125,7 +125,7 @@ It's not recommended for users to enroll Android Enterprise dedicated devices. T
 
 ## Android Enterprise fully managed
 
-These devices are organization-owned, and have one user. They're used exclusively for organization work; not personal use.
+Previously referred to as COBO. These devices are organization-owned, and have one user. They're used exclusively for organization work; not personal use.
 
 ---
 | Feature | Use this enrollment option when |
@@ -168,7 +168,7 @@ The specific steps depend on how you configured the enrollment profile. For the 
 
 ## Android Enterprise corporate with personal profile
 
-These devices are organization-owned, and have one user. They're used for organization work, and allow personal use.
+Previously referred to as COPE. These devices are organization-owned, and have one user. They're used for organization work, and allow personal use.
 
 ---
 | Feature | Use this enrollment option when |
