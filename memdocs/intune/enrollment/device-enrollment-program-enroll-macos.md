@@ -205,7 +205,7 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 For macos 10.13 and later deivces, you can follow these steps to enroll.
 
 1. In the Apple Business Manager or Apple School Manager portal, import the device.
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the devices are assigned a macOS enrollment profile with or without user affinity. 
+2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the device is assigned a macOS enrollment profile with or without user affinity. 
 3. Log in to the device as a local administrator account.
 4. To trigger enrollment, on the **Home** page, open **Terminal** and run the following command:
     sudo profiles renew -type enrollment
