@@ -485,6 +485,11 @@
             "source_path": "memdocs/analytics/whats-new.md",
             "redirect_url": "/mem/analytics/overview",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/manage/use-alerts-and-the-status-system.md",
+            "redirect_url": "/mem/configmgr/core/servers/manage/use-status-system",
+            "redirect_document_id": false
         }
     ]
 }

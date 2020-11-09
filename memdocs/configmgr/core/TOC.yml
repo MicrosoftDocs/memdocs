@@ -546,8 +546,10 @@
     items:
     - name: Monitor hierarchy
       href: servers/manage/monitor-hierarchy.md
-    - name: Use alerts and the status system
-      href: servers/manage/use-alerts-and-the-status-system.md
+    - name: Use the status system
+      href: servers/manage/use-status-system.md
+    - name: Configure alerts
+      href: servers/manage/configure-alerts.md
     - name: Health attestation
       href: servers/manage/health-attestation.md
     - name: Replication infrastructure

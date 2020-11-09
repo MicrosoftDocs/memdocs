@@ -106,7 +106,7 @@ These settings directly set up the level of detail that's included in status rep
 
 Specify account and email server details to enable Configuration Manager to send email notifications for alerts.  
 
-For more information, see [Use alerts and the status system](../../manage/use-alerts-and-the-status-system.md).
+For more information, see [Configure alerts](../../manage/configure-alerts.md#configure-email-notification-for-alerts).
 
 
 ### <a name="bkmk_colleval"></a> Collection membership evaluation  
