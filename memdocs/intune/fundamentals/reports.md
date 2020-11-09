@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 10/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -132,8 +132,6 @@ You can view the **Antivirus agent status** report using the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**.
 
-The information for this report is based on details available from the [Defender CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
-
 ## Detected malware report (Organizational)
 The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report show a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
 
@@ -141,8 +139,6 @@ You can view the **Detected malware** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Detected malware**.
-
-The information for this report is based on details available from the [Defender CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
 
 ## Windows 10 feature updates (Organizational)
 The **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting. 
