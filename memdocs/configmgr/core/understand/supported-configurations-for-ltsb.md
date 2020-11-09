@@ -141,6 +141,7 @@ For more information, see [How to deploy clients to Macs](../clients/deploy/depl
 - macOS X 10.10 (Yosemite)
 - macOS X 10.11 (El Capitan)
 
+<!--
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
 
@@ -251,8 +252,9 @@ The following versions are supported by using the indicated .tar file.
 |Version 12.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 |Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+-->
 
-### Exchange Server connector
+## Exchange Server connector
  The LTSB supports limited management of devices that connect to your Exchange Server instance, without installing client software. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
  **Requirements and limitations:**  
@@ -268,7 +270,6 @@ The following versions are supported by using the indicated .tar file.
 
 > [!NOTE]
 > The LTSB does not support the management of devices that connect through an online service, like Exchange Online (Microsoft 365).
-
 
 ## Configuration Manager console
 The LTSB supports the following operating systems to run the Configuration Manager console. Each computer that hosts the console must have a minimum .NET Framework version of 4.5.2 except for Windows 10, which requires a minimum of .NET Framework 4.6.

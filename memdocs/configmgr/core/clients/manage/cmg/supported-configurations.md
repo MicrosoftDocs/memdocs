@@ -60,7 +60,7 @@ The following table lists CMG support for Configuration Manager features:
 | Remote tools | ![Not supported](media/Red_X.png) |
 | Reporting website | ![Not supported](media/Red_X.png) |
 | Wake on LAN | ![Not supported](media/Red_X.png) |
-| Mac, Linux, and UNIX clients | ![Not supported](media/Red_X.png) |
+| macOS clients | ![Not supported](media/Red_X.png) |
 | Peer cache | ![Not supported](media/Red_X.png) |
 | On-premises MDM | ![Not supported](media/Red_X.png) |
 | BitLocker Management | ![Not supported](media/Red_X.png) |

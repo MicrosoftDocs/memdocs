@@ -107,7 +107,6 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Windows computers (for example, desktops, servers, laptops)  
 - Mobile devices that Configuration Manager enrolls  
 - Mac computers  
-- Computers that run Linux or UNIX  
 
 This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With many clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
@@ -405,7 +404,7 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ### Polling interval for mobile device legacy clients
 
-Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, macOS, and Unix or Linux.
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, or macOS.
 
 ### Polling interval for modern devices (minutes)
 

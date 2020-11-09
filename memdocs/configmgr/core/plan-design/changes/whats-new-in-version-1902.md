@@ -10,8 +10,7 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
@@ -428,9 +427,9 @@ For more information, see [Configuration Manager console notifications](../../se
 ### Confirmation of console feedback
 
 <!--3556010-->
-When you send [feedback](../../understand/find-help.md#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
+When you send [feedback](../../understand/product-feedback.md) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-For more information, see [Product feedback](../../understand/find-help.md#bkmk_feedbackid).
+For more information, see [Product feedback](../../understand/product-feedback.md#confirmation-of-console-feedback).
 
 ### View recently connected consoles
 

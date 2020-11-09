@@ -80,7 +80,7 @@ Submit product feedback from the console.
 
 - **Send a suggestion**: Takes you to UserVoice to share your idea  
 
-For more information, see [Product Feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Product Feedback](../../understand/product-feedback.md).
 
 
 ## Assets and Compliance workspace

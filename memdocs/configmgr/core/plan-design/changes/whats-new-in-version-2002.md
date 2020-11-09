@@ -375,7 +375,7 @@ When you Send a smile or Send a frown, a status message is created when the feed
 
 A status message with an ID of 53900 is a successful submission and 53901 is a failed submission.
 
-For more information, see [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Product feedback](../../understand/product-feedback.md).
 
 ### Search all subfolders for configuration items and configuration baselines
 
