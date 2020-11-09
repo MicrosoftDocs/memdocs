@@ -1,7 +1,7 @@
 ---
 title: Setup wizard
 titleSuffix: Configuration Manager
-ms.date: 07/26/2019
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -236,7 +236,9 @@ If you're installing a central administration site as part of a site expansion s
 
     - You can connect a Configuration Manager console to the site before Setup is complete. This console connects as read-only, and lets you view objects and settings, but you can't modify anything.  
 
-    - After Setup completes, you can connect a console that can edit objects and settings.  
+    - After Setup completes, you can connect a console that can edit objects and settings.
+      
+    - Starting in Configuration Manager version 2002, you'll be given a **Report update error to Microsoft** option if setup fails. For more information, see [Report setup and upgrade failures to Microsoft](../manage/install-in-console-updates.md#bkmk_report).
 
 
 ## <a name="bkmk_expand"></a> Expand a stand-alone primary site

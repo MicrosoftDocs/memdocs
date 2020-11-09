@@ -353,7 +353,26 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 - **Retry**: When you **Retry** from **Site Servicing Status**, you restart the installation of the update at only that site. Unlike running **Retry** from the **Updates and Servicing** node, this retry doesn't ignore prerequisite warnings.  
 
-- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.  
+- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings. 
+
+## <a name="bkmk_report"></a> Report setup and upgrade failures to Microsoft
+<!--5622909-->
+Starting in Configuration Manager version 2010, if the setup or update process fails to complete successfully, you can report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. When running [setup from the media](../../servers/deploy/install/use-the-setup-wizard-to-install-sites.md) rather than the console, you'll also be given the **Report update error to Microsoft** option if setup fails.
+
+> [!IMPORTANT]
+> Contact [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request for business impacting issues. Reporting setup and upgrade failures from the console is for providing product feedback on setup errors you may have encountered. Reporting an error doesn't generate a support request.
+
+To report upgrade failures to Microsoft:
+
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Updates and Servicing**.
+1. Select an update then select **Report update error to Microsoft** in the ribbon.
+   :::image type="content" source="./media/5622909-report-error.png" alt-text="Report update error to Microsoft button in the ribbon" lightbox="./media/5622909-report-error.png":::
+1. Before you submit the feedback, you'll be given options to:
+   - Attach additional files
+   - Provide your email address if you're willing to be contacted about the error.
+1. When you submit feedback, you'll be given a transaction ID for the feedback. A status message is also generated with this information.
+   - Message ID 53900 is a successful submission.
+   - Message ID 53901 is a failed submission.
 
 ## <a name="bkmk_after"></a> After a site installs an update  
 
