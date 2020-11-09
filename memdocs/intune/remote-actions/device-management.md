@@ -36,14 +36,14 @@ As an IT admin, you must ensure that managed devices are providing the resources
 
 The **Devices** workload gives you insights into the devices you manage, and lets you activate remote tasks on those devices.
 
-Not all device actions are available for every platform or device. Available actions are shown on the device's overview page.
+Not all device actions are available for every platform or device. Available actions are shown on the device's overview page (**Devices** > **All devices** > choose a device).
 
 ## Get to your devices
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
-   - **Overview** shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, which remote actions are available for the device, and more.
+   - **Overview** shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
    - **All devices** shows a list of the enrolled devices you manage.
 
      Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
