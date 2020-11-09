@@ -58,12 +58,7 @@ Select one of these objects in the Configuration Manager console, and then selec
 
 Your user account needs at least **Read** permission to these objects.
 
-### Import objects to current folder
-
-<!--6601203-->
-*(Introduced in version 2010)*
-
-When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to applications, packages, driver packages, and task sequences.
+For more information, see [Use the status system](use-status-system.md).
 
 ### Improvements to console search
 <!--4640570-->
@@ -211,6 +206,13 @@ When searching in a device collection, it doesn't search the keyword against all
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ## Software Library workspace
+
+### Import objects to current folder
+
+<!--6601203-->
+*(Introduced in version 2010)*
+
+When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#export-and-import).
 
 ### Order by program name in task sequence
 <!--4616810-->
