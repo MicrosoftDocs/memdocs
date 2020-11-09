@@ -62,11 +62,11 @@ The following articles are also good resources for better understanding Windows 
 >
 > For more information, see [Configure Windows diagnostic data in your organization](https://aka.ms/enterprisetelemetry).  
 
-### Support for new Windows 10 data levels
+### Support for new Windows 10 diagnostic data levels
 
-Microsoft is increasing transparency by categorizing the data that Windows 10 collects:
+Microsoft is increasing transparency by categorizing the diagnostic data that Windows 10 collects:
 
-- **Basic** diagnostic data is recategorized as **Required** diagnostic data
+- **Basic** diagnostic data is recategorized as **Required**
 - **Full** is recategorized as **Optional**
 
 If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.

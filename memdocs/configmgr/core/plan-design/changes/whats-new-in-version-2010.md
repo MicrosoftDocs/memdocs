@@ -102,13 +102,13 @@ If you use Desktop Analytics or tenant attach, the service connection point now 
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
-### Support for new Windows 10 data levels
+### Support for new Windows 10 diagnostic data levels
 
 <!--6979470-->
 
-Microsoft is increasing transparency by categorizing the data that Windows 10 collects:
+Microsoft is increasing transparency by categorizing the diagnostic data that Windows 10 collects:
 
-- **Basic** diagnostic data is recategorized as **Required** diagnostic data
+- **Basic** diagnostic data is recategorized as **Required**
 - **Full** is recategorized as **Optional**
 
 If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
