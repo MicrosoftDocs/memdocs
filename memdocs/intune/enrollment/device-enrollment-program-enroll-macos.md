@@ -202,7 +202,7 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 ### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant
 
-For macos 10.13 and later deivces, you can follow these steps to enroll.
+For macOS 10.13 and later deivces, you can follow these steps to enroll.
 
 1. In the Apple Business Manager or Apple School Manager portal, import the device.
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the device is assigned a macOS enrollment profile with or without user affinity. 
