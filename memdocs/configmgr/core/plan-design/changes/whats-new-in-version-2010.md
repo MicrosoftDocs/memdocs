@@ -250,7 +250,7 @@ You now have an updated look and feel for in-console notifications. Notification
 
 - Various areas in the Configuration Manager console now use the fixed-width font Consolas. This font provides consistent spacing and makes it easier to read.<!--7632637-->
 
-- You now have an easier way to view status messages for objects.<!--8232705-->
+- You now have an easier way to view status messages for objects. Select an object in the Configuration Manager console, and then select **Show Status Messages** from the ribbon.<!--8232705-->
 
 - Now when you import an object in the Configuration Manager console, it imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to applications, packages, driver packages, and task sequences.<!--6601203-->
 

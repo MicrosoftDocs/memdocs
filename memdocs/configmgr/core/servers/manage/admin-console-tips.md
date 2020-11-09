@@ -37,6 +37,27 @@ Various areas in the Configuration Manager console now use the fixed-width font 
 
 :::image type="content" source="media/7632637-script-editor.png" alt-text="Script editor example with fixed-width Consolas font" lightbox="media/7632637-script-editor.png":::
 
+## <a name="bkmk_status"></a> Shortcuts to status messages
+
+<!--8232705-->
+*(Introduced in version 2010)*
+
+You now have an easier way to view status messages for the following objects:
+
+- Devices
+- Users
+- Content
+- Deployments
+  - Monitoring workspace
+    - Phased deployments (select **Show Deployments** from the Phased Deployments node)
+  - Deployments tab in the details pane for:
+    - Packages
+    - Task sequences
+
+Select one of these objects in the Configuration Manager console, and then select **Show Status Messages** from the ribbon. Set the viewing period, and then the status message viewer opens. The viewer filters the results to the object you selected.
+
+Your user account needs at least **Read** permission to these objects.
+
 ### Improvements to console search
 <!--4640570-->
 *(Introduced in version 1910)*

@@ -228,6 +228,20 @@ For more information, see the following references:
 
 1. The Status Message Viewer has many controls to customize the view. For example, to filter the results based on the status messages details, go to the **View** menu, and select **Filter**.
 
+Starting in version 2010, there's an easier way to view status messages for the following objects:<!--8232705-->
+
+- Devices
+- Users
+- Content
+- Deployments
+  - Monitoring workspace
+    - Phased deployments (select **Show Deployments** from the Phased Deployments node)
+  - Deployments tab in the details pane for:
+    - Packages
+    - Task sequences
+
+Select one of these objects in the Configuration Manager console, and then select **Show Status Messages** from the ribbon.
+
 ## Next steps
 
 [Configure alerts](configure-alerts.md)
