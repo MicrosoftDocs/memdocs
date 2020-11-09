@@ -89,7 +89,7 @@ If you update the site before you update the Windows ADK, see [Update distributi
 #### Review the site and hierarchy status for unresolved issues 
 Before you update a site, resolve all operational issues for the site server, the site database server, and site system roles that are installed on remote computers. A site update can fail due to existing operational problems.
 
-For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 #### Review file and data replication between sites   
 Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update. For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.

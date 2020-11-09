@@ -343,7 +343,7 @@ Use this task to delete from the site database aged replication summary data whe
 
 ### Delete Aged Status Messages
 
-Use this task to delete from the database aged status message data as configured in status filter rules. For more information, see [Monitor the status system of Configuration Manager](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
+Use this task to delete from the database aged status message data as configured in status filter rules. For more information, see [Monitor the status system](use-status-system.md#monitor-the-status-system).
 
 | Site type | Status |
 | --------- | ------ |
@@ -418,7 +418,7 @@ This task operates only on resources that are Configuration Manager clients. It'
 
 ### Delete Obsolete Alerts
 
-Use this task to delete from the database expired alerts that have been stored longer than a specified time. For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+Use this task to delete from the database expired alerts that have been stored longer than a specified time. For more information, see [Configure alerts](configure-alerts.md).
 
 | Site type | Status |
 | --------- | ------ |
