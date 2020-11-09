@@ -62,6 +62,8 @@ You can now monitor the health of the fast channel used for client actions. If y
 <!--5622909-->
  If the setup or update process fails to complete successfully, you can now report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. In technical previews, this button is always enabled even when the setup completes successfully.
 
+For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_report).
+
 ### Delete Aged Collected Diagnostic Files task
 <!--6503308-->
 You now have a new maintenance task available for cleaning up collected diagnostic files. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect regular collected files. The new maintenance task is enabled by default.
