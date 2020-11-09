@@ -238,7 +238,7 @@ If you're installing a central administration site as part of a site expansion s
 
     - After Setup completes, you can connect a console that can edit objects and settings.
       
-    - Starting in Configuration Manager version 2002, you'll be given a **Report update error to Microsoft** option if setup fails. For more information, see [Report setup and upgrade failures to Microsoft](../../manage/install-in-console-updates.md#bkmk_report).
+    - Starting in Configuration Manager version 2010, you'll be given a **Report update error to Microsoft** option if setup fails. For more information, see [Report setup and upgrade failures to Microsoft](../../manage/install-in-console-updates.md#bkmk_report).
 
 ## <a name="bkmk_expand"></a> Expand a stand-alone primary site
 
