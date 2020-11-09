@@ -54,7 +54,7 @@ Not all device actions are available for every platform or device. Available act
    - **Enroll devices**: This option takes you to the enrollment page.
    - **Policy**: These options let you set various policies for your organization's devices.
    - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-portal).
-   - **Device categories**: This option lets you create [device categories](device-group-mapping.md).
+   - **Device categories**: This option lets you create [device categories](../enrollment/device-group-mapping.md).
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
 
 ## Available device actions
