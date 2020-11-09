@@ -2,7 +2,7 @@
 title: Manage drivers
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points.
-ms.date: 07/26/2019
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -18,17 +18,13 @@ manager: dougeby
 
 Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your Configuration Manager environment. Use the driver catalog to import device drivers into Configuration Manager, to group them in packages, and to distribute those packages to distribution points. Device drivers can be used when you install the full OS on the destination computer and when you use Windows PE in a boot image. Windows device drivers consist of a setup information (INF) file and any additional files that are required to support the device. When you deploy an OS, Configuration Manager obtains the hardware and platform information for the device from its INF file. 
 
-
-
 ## <a name="BKMK_DriverCategories"></a> Driver categories
 
 When you import device drivers, you can assign the device drivers to a category. Device driver categories help group similarly used device drivers together in the driver catalog. For example, set all network adapter device drivers to a specific category. Then, when you create a task sequence that includes the [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) step, specify a category of device drivers. Configuration Manager then scans the hardware and selects the applicable drivers from that category to stage on the system for Windows Setup to use.  
 
-
-
 ## <a name="BKMK_ManagingDriverPackages"></a> Driver packages
 
-Group similar device drivers in packages to help streamline OS deployments. For example, create a driver package for each computer manufacturer on your network. You can create a driver package when importing drivers into the driver catalog directly in the **Driver Packages** node. After you create a driver package, distribute it to distribution points. Then Configuration Manager client computers can install the drivers as required. 
+Group similar device drivers in packages to help streamline OS deployments. For example, create a driver package for each computer manufacturer on your network. You can create a driver package when importing drivers into the driver catalog directly in the **Driver Packages** node. After you create a driver package, distribute it to distribution points. Then Configuration Manager client computers can install the drivers as required.
 
 Consider the following points:  
 
@@ -39,7 +35,6 @@ Consider the following points:
 - You can copy a subset of the device drivers from an existing driver package. First, create a new driver package. Then add the subset of device drivers to the new package, and then distribute the new package to a distribution point.  
 
 - When you use task sequences to install drivers, create driver packages that contain less than 500 device drivers.
-
 
 ### <a name="BKMK_CreatingDriverPackages"></a> Create a driver package  
 
@@ -63,44 +58,61 @@ The new driver package doesn't contain any drivers. The next step adds drivers t
 
 If the **Driver Packages** node contains several packages, you can add folders to the node to separate the packages into logical groups.  
 
-
 ### <a name="BKMK_PackageActions"></a> Additional actions for driver packages  
 
-You can do additional actions to manage driver packages when you select one or more driver packages from the **Driver Packages** node. 
+You can do additional actions to manage driver packages when you select one or more driver packages from the **Driver Packages** node.
 
+#### Create prestage content file
 
-#### Create Prestage Content file
 Creates files that you can use to manually import content and its associated metadata. Use prestaged content when you have low network bandwidth between the site server and the distribution points where the driver package is stored.
 
 #### Delete
+
 Removes the driver package from the **Driver Packages** node.
 
-#### Distribute Content
+#### Distribute content
+
 Distributes the driver package to distribution points, distribution point groups, and distribution point groups that are associated with collections.
 
-#### Manage Access Accounts
+#### Export
+
+Start the **Export Driver Package Wizard** to save associated drivers and content to a file. Use this process to move driver packages between hierarchies.
+
+### Import driver package
+
+Start the **Import Driver Package Wizard** to create a driver package from a previously exported package.
+
+> [!TIP]
+> Starting in version 2010, when you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node.<!--6601203-->
+
+#### Manage access accounts
+
 Adds, modifies, or removes access accounts for the driver package.
 
 For more information about package access accounts, see [Accounts used in Configuration Manager](../../core/plan-design/hierarchy/accounts.md).
 
 #### Move
+
 Moves the driver package to another folder in the **Driver Packages** node.
 
-#### Update Distribution Points
-Updates the device driver package on all the distribution points where the package is stored. This action copies only the content that has changed after the last time it was distributed.
-
 #### Properties
-Opens the **Properties** dialog box. Review and change the content and properties of the driver. For example, change the name and description of the driver, enable or disable it, and specify on which platforms it can run. 
+
+Opens the **Properties** window. Review and change the content and properties of the driver. For example, change the name and description of the driver, enable or disable it, and specify on which platforms it can run.
 
 <!--3607716, fka 1358270-->
-Starting in version 1810, driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value from the drop-down lists, or enter a string to create a new entry.
+Driver packages have metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete. On the **General** tab, select an existing value, or enter a string to create a new entry.
 
 In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria.
 
 Starting in version 1906, use these attributes to pre-cache content on a client. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).<!--4224642-->  
 
+#### Show members
 
+View all the drivers in the selected driver package.
 
+#### Update distribution points
+
+Updates the driver package on all the distribution points where the site stores it. This action copies only the content that has changed after the last time it was distributed.
 
 ## <a name="BKMK_DeviceDrivers"></a> Device drivers
 

@@ -37,7 +37,7 @@ Various areas in the Configuration Manager console now use the fixed-width font 
 
 :::image type="content" source="media/7632637-script-editor.png" alt-text="Script editor example with fixed-width Consolas font" lightbox="media/7632637-script-editor.png":::
 
-## <a name="bkmk_status"></a> Shortcuts to status messages
+### Shortcuts to status messages
 
 <!--8232705-->
 *(Introduced in version 2010)*
@@ -57,6 +57,13 @@ You now have an easier way to view status messages for the following objects:
 Select one of these objects in the Configuration Manager console, and then select **Show Status Messages** from the ribbon. Set the viewing period, and then the status message viewer opens. The viewer filters the results to the object you selected.
 
 Your user account needs at least **Read** permission to these objects.
+
+### Import objects to current folder
+
+<!--6601203-->
+*(Introduced in version 2010)*
+
+When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to applications, packages, driver packages, and task sequences.
 
 ### Improvements to console search
 <!--4640570-->
