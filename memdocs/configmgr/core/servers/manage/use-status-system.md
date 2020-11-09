@@ -210,12 +210,6 @@ There are different system status views in the Configuration Manager console:
 
 - **Status Message Queries**: Query status messages for specific events and related details. Use status message queries to find the status messages related to specific events. You can identify when a specific component, operation, or Configuration Manager object was modified, and the account that was used to make the modification. For example, run the built-in **Collections Created, Modified, or Deleted** query to identify when a specific collection was created, and the user account used to create it.
 
-For more information, see the following references:
-
-- [Procedures to configure the status system](#procedures-to-configure-the-status-system)
-
-- [Configuration Manager Service Manager](../deploy/configure/site-components.md#BKMK_ServiceMgr)
-
 ## View status messages
 
 1. To view status messages in the Configuration Manager console, select a specific site system server or component.
@@ -245,3 +239,5 @@ Select one of these objects in the Configuration Manager console, and then selec
 ## Next steps
 
 [Configure alerts](configure-alerts.md)
+
+[Configuration Manager Service Manager](../deploy/configure/site-components.md#BKMK_ServiceMgr)

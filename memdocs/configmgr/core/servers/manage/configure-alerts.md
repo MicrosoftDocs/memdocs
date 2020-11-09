@@ -26,14 +26,6 @@ Some alerts you configure, such as alerts for endpoint protection and client sta
 
 You can configure subscriptions to alerts. Subscriptions can send details by email, which increases your awareness of key issues.
 
-For more information, see the following references:
-
-- [Configure endpoint protection alerts for a collection](../../../protect/deploy-use/endpoint-protection-configure.md)
-- [Configure client status alerts for a collection](../../../core/clients/deploy/configure-client-status.md)
-- [Manage Configuration Manager alerts](#BKMK_Manage)
-- [Configure email subscriptions to alerts](#BKMK_Manage)
-- [Monitor alerts](#monitor-alerts) <!-- update these anchors -->
-
 ## Manage general alerts
 
 In the Configuration Manager console, go to the **Monitoring** workspace, expand **Alerts**, and then select **Active Alerts** or **All Alerts**.
@@ -162,4 +154,6 @@ When Configuration Manager generates an alert, you can take one of the following
 
 ## Next steps
 
-[Use the status system](use-status-system.md)
+[Configure endpoint protection alerts for a collection](../../../protect/deploy-use/endpoint-protection-configure.md)
+
+[Configure client status alerts for a collection](../../../core/clients/deploy/configure-client-status.md)
