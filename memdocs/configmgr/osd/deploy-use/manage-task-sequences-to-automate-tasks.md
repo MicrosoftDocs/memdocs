@@ -2,7 +2,7 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -241,7 +241,7 @@ You can also prestage the content referenced in the task sequence. Configuration
 
 For more information, see [Deploy a task sequence](deploy-a-task-sequence.md).
 
-## <a name="BKMK_ExportImport"></a> Export and import  
+## Export and import
 
 Export and import task sequences with or without their related objects. This referenced content includes the following objects:  
 
@@ -313,6 +313,9 @@ If you include content when you export a task sequence, make sure that you copy 
 
 After you import the task sequence, edit the task sequence to specify any passwords that were in the original task sequence. For security reasons, passwords aren't exported.  
 
+> [!TIP]
+> Starting in version 2010, when you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node.<!--6601203-->
+
 ## Return to previous page on failure
 
 When you run a task sequence, and there's a failure, you can return to a previous page of the task sequence wizard. In prior versions of Configuration Manager, you had to restart the task sequence when there was a failure. Use the **Previous** button in the following scenarios:
@@ -343,7 +346,7 @@ Disables the task sequence so that it can't run on computers. You can deploy a d
 
 ### Export
 
-For more information, see [Export and import task sequences](#BKMK_ExportImport).
+For more information, see [Export and import task sequences](#export-and-import).
 
 ### Copy
 

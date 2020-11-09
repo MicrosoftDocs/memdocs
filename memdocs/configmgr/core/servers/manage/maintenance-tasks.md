@@ -19,7 +19,7 @@ manager: dougeby
 
 Configuration Manager sites and hierarchies require regular maintenance and monitoring to provide services effectively and continuously. Regular maintenance ensures that the hardware, software, and Configuration Manager database continue to function correctly and efficiently. Optimal performance greatly reduces the risk of failure.  
 
- To set up Alerts and use the Status System to monitor the health of Configuration Manager, see [Use alerts and the status system for Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
+To set up alerts and use the status system to monitor the health of Configuration Manager, see [Use the status system](../../../core/servers/manage/use-status-system.md) and [Configure alerts](../../../core/servers/manage/configure-alerts.md).
 
 ## <a name="bkmk_MTs"></a> Maintenance tasks
 

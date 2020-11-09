@@ -234,7 +234,7 @@ When you send feedback, it shows a confirmation message. This message includes a
 
   :::image type="content" source="media/1902-offline-feedback-id-example.png" alt-text="Feedback confirmation from UploadOfflineFeedback.exe in Configuration Manager":::
 
-### Feedback for PowerShell
+## Feedback for PowerShell
 
 If you have feedback on the [Configuration Manager PowerShell cmdlets](/powershell/module/configurationmanager), use the same options in the Configuration Manager to send feedback.
 
