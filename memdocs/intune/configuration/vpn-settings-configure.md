@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/02/2020
+ms.date: 11/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -96,6 +96,9 @@ You can create VPN profiles using the following connection types:
 
 - L2TP
   - Windows 10
+
+- Microsoft Tunnel
+  - iOS/iPadOS
 
 - NetMotion Mobility
   - iOS/iPadOS
@@ -195,7 +198,7 @@ For more information about how to create and use certificate profiles in Intune,
 
 ### User name and password
 
-The user authenticates to the VPN server by providing a user name and password.
+The user authenticates to the VPN server by providing a user name and password, or [derived credentials](../protect/derived-credentials.md).
 
 ## Next steps
 
