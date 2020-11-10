@@ -30,6 +30,10 @@ Find **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCl
 
 - Run it directly on the server that hosts the distribution point to clean up, or remotely from another computer.
 
+- The tool doesn't support removing content from the site server, which has a single content library. When the site server also has the distribution point role, if a package isn't targeted to the server, the package is still in the single content library.<!-- MEMDocs#905 -->
+
+- The tool doesn't support a content-enabled cloud management gateway or a cloud-based distribution point.
+
 - The user account that runs the tool must have permissions the same as the **Full Administrator** security role in Configuration Manager.
 
 ## Modes of operation
