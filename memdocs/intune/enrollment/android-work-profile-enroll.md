@@ -31,8 +31,6 @@ ms.collection: M365-identity-device-management
 
 # Set up enrollment of Android Enterprise personally-owned work profile devices
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 Intune helps you deploy apps and settings to Android Enterprise personally-owned work profile devices to make sure work and personal information are separate. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 To set up Android Enterprise personally-owned work profile management, follow these steps:
