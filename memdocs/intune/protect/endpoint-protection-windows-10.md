@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/3/2020
+ms.date: 11/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -1304,7 +1304,7 @@ Use these options to configure the local security settings on Windows 10 devices
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
 
-  Enter the maximum minutes of inactivity on the interactive desktop's sign-in screen until the screen saver starts. (**0** - **99999**)  
+  Enter the maximum minutes of inactivity until the screensaver activates. (**0** - **99999**)  
 
 - **Require CTRL+ALT+DEL to log on**  
   **Default**: Not configured  
