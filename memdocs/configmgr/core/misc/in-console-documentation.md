@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 10/12/2020
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -24,7 +24,7 @@ All docs.ms links should include `?WT.mc_id=configmgr-console` campaign ID at th
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: October 12, 2020*
+*Last update: November 10, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -32,8 +32,14 @@ This content can assist you in learning and supporting Configuration Manager.
 
 For more information, see the following articles:
 
-- [Configuration Manager documentation library](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console)  
-- [How to use the Configuration Manager docs](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs?WT.mc_id=configmgr-console)
+- [Configuration Manager documentation library](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console)
+- [Get started with Configuration Manager PowerShell cmdlets](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console)
+- [How to use the Configuration Manager docs](https://docs.microsoft.com/mem/use-docs?WT.mc_id=configmgr-console)
+
+For the latest product changes, see the following articles:<!-- 8625956 -->
+
+- [What's new in current branch](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions?WT.mc_id=configmgr-console)
+- [Technical preview releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
 
 ## Recommended
 
@@ -49,43 +55,53 @@ A curated list of important articles.
 - [Manage Microsoft 365 Apps updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates?WT.mc_id=configmgr-console)
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)
 - [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
-- [Technical preview releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
 
 ## Trending
 
-The most popular articles between September 1 and September 30, 2020.
+The most popular articles between October 1 and October 31, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 23163 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
-| 18847 | [What's new in version 2006](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006?WT.mc_id=configmgr-console) |
-| 18185 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
-| 17916 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
-| 17697 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
-| 16911 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway?WT.mc_id=configmgr-console) |
-| 16344 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
-| 14897 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
-| 12437 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
-| 10930 | [Deploy clients to Windows](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers?WT.mc_id=configmgr-console) |
+| 23193 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
+| 17752 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
+| 17738 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
+| 16504 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
+| 16081 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
+| 15089 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
+| 13276 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
+| 12940 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway?WT.mc_id=configmgr-console) |
+| 12706 | [What's new in version 2006](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006?WT.mc_id=configmgr-console) |
+| 11213 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr) received 35,299 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr) received 34,802 page views in this time period.
 
 ## Recently updated
 
-Articles with a recent and significant update.
+Articles with a recent and significant update:
 
 | Last reviewed | Title |
 |---------------|-------|
-| 9/28/2020 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway?WT.mc_id=configmgr-console) |
-| 9/28/2020 | [Cloud management gateway overview](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/overview?WT.mc_id=configmgr-console) |
-| 9/22/2020 | [Tenant attach - Deploy endpoint security Antivirus policy from the Microsoft Endpoint Manager admin center  (preview)](https://docs.microsoft.com/mem/configmgr/tenant-attach/deploy-antivirus-policy?WT.mc_id=configmgr-console) |
-| 9/18/2020 | [Troubleshoot scripts for devices uploaded to the admin center](https://docs.microsoft.com/mem/configmgr/tenant-attach/troubleshoot-scripts?WT.mc_id=configmgr-console) |
-| 9/16/2020 | [Configure a software update point to use TLS/SSL with a PKI certificate tutorial](https://docs.microsoft.com/mem/configmgr/sum/get-started/software-update-point-ssl?WT.mc_id=configmgr-console) |      
-| 9/15/2020 | [Tenant attach data collection](https://docs.microsoft.com/mem/configmgr/tenant-attach/data-collection?WT.mc_id=configmgr-console) |
-| 9/14/2020 | [Technical preview 2009](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2009?WT.mc_id=configmgr-console) |
-| 9/8/2020 | [Troubleshooting resource explorer](https://docs.microsoft.com/mem/configmgr/tenant-attach/troubleshoot-resource-explorer?WT.mc_id=configmgr-console) |
-| 9/8/2020 | [Troubleshooting the device timeline](https://docs.microsoft.com/mem/configmgr/tenant-attach/troubleshoot-timeline?WT.mc_id=configmgr-console) |
-| 9/8/2020 | [Troubleshoot CMPivot for devices uploaded to the admin center](https://docs.microsoft.com/mem/configmgr/tenant-attach/troubleshoot-cmpivot?WT.mc_id=configmgr-console) |
+| 10/30/2020 | [Technical preview 2010.2](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2010-2?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
+| 10/12/2020 | [Internet access requirements](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints?WT.mc_id=configmgr-console) |
+| 10/12/2020 | [Optimize Windows 10 update delivery](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console) |
+| 10/9/2020 | [Deploy content](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content?WT.mc_id=configmgr-console) |
+| 10/9/2020 | [CNG v3 certificates overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/cng-certificates-overview?WT.mc_id=configmgr-console) |
+| 10/8/2020 | [Failover cluster instance](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database?WT.mc_id=configmgr-console) |
+| 10/8/2020 | [Prepare to use an availability group](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database?WT.mc_id=configmgr-console) |
+| 10/7/2020 | [Azure AD authentication workflow](https://docs.microsoft.com/mem/configmgr/core/clients/manage/azure-ccmsetup?WT.mc_id=configmgr-console) |
+| 10/2/2020 | [Technical preview 2010](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2010?WT.mc_id=configmgr-console) |
+
+PowerShell cmdlet articles with recent updates:
+
+| Last reviewed | Title |
+|---------------|-------|
+| 10/30/2020 | [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [New-CMTSStepConditionQueryWmi](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepconditionquerywmi?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [Start-CMTaskSequenceDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/start-cmtasksequencedeployment?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepdownloadpackagecontent?WT.mc_id=configmgr-console) |
+| 10/1/2020 | [Get-CMDevice](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmdevice?WT.mc_id=configmgr-console) |
+| 10/1/2020 | [Get-CMResource](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmresource?WT.mc_id=configmgr-console) |
 
 ## Troubleshooting articles
 
@@ -120,10 +136,8 @@ Support articles that are new or updated between July 18 and October 15, 2020.
 
 Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com and support.office.com are moving to a new consolidated site. Existing Configuration Manager articles are migrated to the new site below and still accessible using their original URLs.
 
-[Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager)
+[Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager?WT.mc_id=configmgr-console)
 
-For additional information refer to the following Windows IT Pro blog post.
-
-[What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399)
+For more information, see [What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399).
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
