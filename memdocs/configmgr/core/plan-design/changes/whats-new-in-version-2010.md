@@ -46,17 +46,17 @@ We've made improvements to applications for tenant attached devices. Administrat
 
 ### Monitor scenario health
 
-<!--7699463-->
-
 Configuration Manager is complicated to troubleshoot. It's especially complex to understand system latency and the backlog between components. Cloud service-attached features increase that complexity.
 
 You can now use Configuration Manager to monitor the health of end-to-end scenarios. It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation.
 
-The first scenario in this release is for **SQL Server Service Broker**. The service broker is a required configuration for the site database. Many of the core subsystems in Configuration Manager use the service broker.
+This release includes the following two scenarios:
 
-<!--7699511-->
+- **SQL Server Service Broker**: The service broker is a required configuration for the site database. Many of the core subsystems in Configuration Manager use the service broker.<!--7699463-->
 
-You can now monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.
+- **Client action health**: Monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.<!--7699511-->
+
+For more information, see [Monitor scenario health](../../servers/manage/scenario-health.md).
 
 ### Report setup and upgrade failures to Microsoft
 <!--5622909-->
