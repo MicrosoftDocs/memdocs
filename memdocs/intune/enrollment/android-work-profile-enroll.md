@@ -46,7 +46,7 @@ To set up Android Enterprise personally-owned work profile management, follow th
 
 3. [Tell your users how to enroll their devices](../user-help/enroll-device-android-work-profile.md).  
 
-Devices previosuly enrolled with Android devcie administrator can be re-enrolled using personally-owned work profiles. You'll first need to unenroll the device administrator devices. Then you can re-enroll them with personally-owned work profiles.
+Devices previously enrolled with Android device administrator can be re-enrolled using personally-owned work profiles. You'll first need to unenroll the device administrator devices. Then you can re-enroll them with personally-owned work profiles.
 
 > [!NOTE]
 > As an administrator, you can accomplish this remotely using the **Retire** function. This function can be found in the actions menu after selecting the device from the **All Devices** blade.
