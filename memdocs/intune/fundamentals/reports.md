@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 11/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,23 +70,19 @@ The **Windows 10 unhealthy endpoints** report surfaces data typically used by He
 You can view the **Windows 10 unhealthy endpoints** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Antivirus** > **Windows 10 unhealthy endpoints**.
+2. Select **Endpoint security** > **Antivirus** > **Windows 10 unhealthy endpoints** tab.
 
-## Windows 10 detected malware report (Operational)
-The **Windows 10 detected malware** report provides data to identify devices with malware problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
-You can view the **Windows 10 detected malware** report using the following steps:
+## Windows 10 active malware report (Operational)
+The **Windows 10 active malware** report provides data to identify devices with malware problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+
+You can view the **Windows 10 active malware** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Antivirus** > **Windows 10 detected malware**.
+2. Select **Endpoint security** > **Antivirus** > **Windows 10 active malware** tab.
 
-### Bulk actions for devices
-The **Windows 10 detected malware** report provides bulk actions that are applicable to the devices selected within the report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The actions available are the following:
-- **Restart** - This action performs a restart of the selected devices.
-- **Quick scan** - This action performs a Windows Defender quick scan of the selected devices. 
-- **Full scan** - This action performs a Windows Defender full scan of the selected devices. 
-
-For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
+For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
 ## Feature update failures report (Operational)
 The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
@@ -94,7 +90,7 @@ The **Feature update failures** operational report provides failure details for 
 You can view the **Feature update failures** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > **Feature update failures**.
+2. Select **Devices** > **Monitor** **Feature update failures**.
 
 ## Device compliance report (Organizational)
 
@@ -103,10 +99,9 @@ Device compliance reports are meant to be broad in nature and provide a more tra
 To see a generated report of device state, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** to view the reports summary.
-3. Select **Device compliance**.
-4. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
-5. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance**.
+3. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
+4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
     ![Device compliance report](./media/intune-reports/intune-reports-02a.png)
 
@@ -115,22 +110,14 @@ To see a generated report of device state, you can use the following steps:
 
 For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
-## Reports summary 
-
-The device compliance report is available as the summary report in the **Reports** workload. Use the following steps to view the device compliance report:
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** to view the reports summary.
-
-    ![Intune Reports summary](./media/intune-reports/intune-reports-01.png)
-
 ## Antivirus agent status report (Organizational)
 The **Antivirus agent status** report provides the agent status of your organization's devices. This report shows which devices have real-time or network protection, as well as their state. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. This report shows data visualizations as a pie chart for a breakdown of agent status count across devices. In addition, remote actions are included in this report. The report is available from the primary **Microsoft Defender Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
 
 You can view the **Antivirus agent status** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**.
+2. Select **Reports** > **Microsoft Defender Antivirus** > **Reports** tab > **Antivirus agent status**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Detected malware report (Organizational)
 The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report show a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
@@ -138,7 +125,8 @@ The **Detected malware** report provides the malware state of your organization'
 You can view the **Detected malware** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Microsoft Defender Antivirus** > **Detected malware**.
+2. Select **Reports** > **Microsoft Defender Antivirus** > **Reports** tab > **Detected malware**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Windows 10 feature updates (Organizational)
 The **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting. 
@@ -148,17 +136,19 @@ You can view the **Windows 10 feature updates** report using the following steps
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Windows updates** to view the summary report.
 3. Select the **Reports** tab and click the **Windows Feature Update Report** to see the **Windows 10 feature updates** report.
+4. Select the **Update aggregated status** and **Ownership** filters to refine your report.
+5. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Device compliance trend report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
 
-A device compliance trend report for device compliance trends can show the trend of device compliance states over a period of time. You can identify where compliance peaks occurred and focus your time and effort accordingly.
+A compliance trend report for device compliance can show the trend of device compliance states over a period of time. You can identify where compliance peaks occurred and focus your time and effort accordingly.
 
-You can view the **Trends** report using the following steps:
+You can view the **Device compliance trends** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Trends** to view device compliance over a 60 day trend.
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 60 day trend.
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
 
@@ -178,6 +168,10 @@ You can create and view custom reports using the following steps:
     ![Intune Reports - Add diagnostic setting](./media/intune-reports/intune-reports-04.png)
 
 3. Click **Add diagnostic setting** to display the **Diagnostic settings** pane. 
+    
+   > [!NOTE]
+   > An Azure subscription is required to use this capability. 
+
 4. Add a **Name** for the diagnostic settings. 
 5. Select the **Send to Log Analytics** and **DeviceComplianceOrg** settings.
 
@@ -208,6 +202,14 @@ Log Analytics is the primary tool in the Azure portal for writing log queries an
 
 ### Workbooks
 Workbooks combine text, Analytics queries, Azure Metrics, and parameters into rich interactive reports. Workbooks are editable by any other team members who have access to the same Azure resources. For more information about workbooks, see [Azure Monitor workbooks](/azure/azure-monitor/app/usage-workbooks). Also, you can work with and contribute to workbook templates. For more information, see [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045).
+
+## Bulk actions for device reports
+The **Windows 10 unhealthy endpoints** and **Windows 10 active malware** reports provide bulk actions that are applicable to the devices selected within each report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The actions available are the following:
+- **Restart** - This action performs a restart of the selected devices.
+- **Quick scan** - This action performs a Windows Defender quick scan of the selected devices. 
+- **Full scan** - This action performs a Windows Defender full scan of the selected devices. 
+
+For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
 
 ## Next steps 
 
