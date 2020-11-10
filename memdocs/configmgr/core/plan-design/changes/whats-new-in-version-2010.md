@@ -272,9 +272,9 @@ The client data sources dashboard now offers an expanded selection of filters to
 
 <!--6887878-->
 
-If you remove content from a distribution point while the site system is offline, an orphaned record can exist in WMI. Over time, this behavior can eventually lead to a warning status on the distribution point. To mitigate the issue in the past, you had to manually remove the orphaned entries from WMI. Making a mistake during this process could cause more severe issues with the server.
+If you remove content from a distribution point while the site system is offline, an orphaned record can exist in WMI. Over time, this behavior can eventually lead to a warning status on the distribution point. To mitigate the issue in the past, you had to manually remove the orphaned entries from WMI. The content library cleanup tool in delete mode can now remove these orphaned content records from WMI.
 
-The content library cleanup tool in delete mode could remove orphaned files from the content library. It can now also remove orphaned content records from the WMI provider on a distribution point. Run the tool with the `/delete` parameter for both use cases.
+For more information, see the [Content library cleanup tool](../hierarchy/content-library-cleanup-tool.md).
 
 ## Software updates
 
