@@ -423,7 +423,7 @@ Preferred management points enable a client to identify a management point that'
 > [!NOTE]  
 > Client roaming means it changes its network locations. For example, when a laptop travels to a remote office location. When a client roams, it might use a management point from the local site before attempting to use a server from its assigned site. This list of servers from its assigned site includes the preferred management points. For more information, see [Understand how clients find site resources and services](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
-## Overlapping boundaries and boundary groups
+## <a name="overlapping-boundaries"></a> Overlapping boundaries and boundary groups
 
 Configuration Manager supports overlapping boundary and boundary group configurations for content and service location requests. Overlapping occurs when a client's location maps to multiple boundary groups. This happens for one of two reasons:
 
@@ -431,7 +431,7 @@ Configuration Manager supports overlapping boundary and boundary group configura
 
 - You add separate boundaries that include the client's location to different boundary groups.
 
-When overlapping occurs, Configuration Manager creates a list of all site systems referenced by all boundary groups that include a client's location. Configuration Manager sends this list to a client in response to a content or service location request. Configuration Manager does not apply any precedence or deterministic ordering to this list based on overlapping boundaries and boundary groups. Instead, the client chooses at random from this list.
+When overlapping occurs, Configuration Manager creates a list of all site systems referenced by all boundary groups that include a client's location. Configuration Manager sends this list to a client in response to a content or service location request. Configuration Manager doesn't apply any precedence or deterministic ordering to this list based on overlapping boundaries and boundary groups. Instead, the client chooses at random from this list.
 
 For client content requests, Configuration Manager includes only distribution points that have the requested content in the list of site systems returned. For other service location requests, Configuration Manager includes only site systems that host the type of role requested which may be one of the following:
 
