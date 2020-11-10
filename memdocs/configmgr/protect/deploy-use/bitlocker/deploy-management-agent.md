@@ -130,7 +130,7 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 > [!IMPORTANT]
-> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins.
+> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
 
 Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
@@ -195,7 +195,7 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it will upload the new TPM password hash to the recovery service.
 
-For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+Uploading of the TPM password hash mainly pertains to versions of Windows prior to Windows 10. Windows 10 by default does not save the TPM password hash so therefore does not normally upload the TPM password hash. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
 
 ### Re-encryption
 
