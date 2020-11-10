@@ -68,6 +68,8 @@ For more information, see [Install in-console updates](../../servers/manage/inst
 <!--6503308-->
 You now have a new maintenance task available for cleaning up collected diagnostic files. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect regular collected files. The new maintenance task is enabled by default.
 
+For more information, see the client diagnostic section of the [Client notification](clients/manage/client-notification.md#cleanup-aged-client-diagnostic-files) article and [Reference for maintenance tasks in Configuration Manager](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-diagnostic-files).
+
 ### Improvements to the administration service
 
 <!-- 8613105 -->

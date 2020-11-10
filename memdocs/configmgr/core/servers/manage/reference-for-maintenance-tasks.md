@@ -2,7 +2,7 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 06/04/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -140,6 +140,16 @@ Use this task to delete from the site database aged information from clients in 
 ### Delete Aged Collected Files
 
 Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).  
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Collected Diagnostic Files
+<!--6503308-->
+Use this task to delete [collected diagnostic files](../../clients/manage/client-notification.md#client-diagnostics). Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect other collected files. This maintenance task is enabled by default and was introduced in Configuration Manager version 2010. Earlier Configuration Manager versions use the [Delete Aged Collected Files](#delete-aged-collected-files) task for deleting client diagnostic files.
 
 | Site type | Status |
 | --------- | ------ |
