@@ -127,10 +127,7 @@ The default value is 240 minutes.
 
 ### When a deployment requires a restart, show a dialog window to the user instead of a toast notification
 <!--3555947-->
-Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
+To change the user experience to be more intrusive, configure this setting to **Yes**. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
 
 ### When a deployment requires a restart, allow low-rights users to restart a device running Windows Server
 
@@ -141,9 +138,9 @@ For a low-rights user on a device that runs Windows Server, by default they aren
 > [!IMPORTANT]
 > Allowing low-rights users to restart a server can potentially impact other users or services.
 
-## Device restart notifications (version 1906)
+## Device restart notifications
 <!--3976435-->
-Some customers prefer frequent restart notifications and allowing users a short time frame to postpone. Others allow users to postpone a restart for longer periods of time, and infrequently notify users of the pending restart. Starting in Configuration Manager version 1906, you have additional control over the timing and frequency of restart notifications.
+Some customers prefer frequent restart notifications and allowing users a short time frame to postpone. Others allow users to postpone a restart for longer periods of time, and infrequently notify users of the pending restart. You have control over the timing and frequency of restart notifications.
 
 ### Install required software at or after the deadline
 
@@ -167,7 +164,7 @@ If the user selects **Snooze**, another temporary notification shows after the s
 
 When it reaches the final countdown, Software Center shows the user a notification they can't close. The progress bar is in red and the user can't **Snooze** it.
 
-:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Software Center final countdown notification in version 1906":::
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Software Center final countdown notification":::
 
 ### Proactively install required software before the deadline
 
@@ -218,45 +215,6 @@ The device will restart five days (**7200** minutes) after the deployment deadli
 |When a deployment requires a restart, show a dialog window to the user instead of a toast notification|Yes|
 
 The device will restart two days (**2880** minutes) after the deployment deadline. One hour (**60** minutes) before it restarts, the user sees a countdown that they can't close or snooze. This configuration allows for 47 hours to show reminders (`(2880 - 60) / 60`). **30** minutes after the deadline, Software Center displays the first reminder. It displays a maximum of 92 additional reminders every **30 minutes**. The user sees the reminder as a window on the screen, instead of a notification that disappears in a few seconds.
-
-## Device restart notifications (version 1902)
-
-<!--3555947-->
-Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
-
-Starting in version 1902, when software changes are required or deployments need a restart, you have the option of using a more intrusive dialog window.
-
-In the [Computer Restart](#client-settings) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
-
-Configuring this client setting changes the user experience for all required deployments that require a restart from toast notifications:
-
-:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Toast notification that Restart required":::
-
-To the more intrusive Software Center dialog window:
-
-:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Dialog window to restart your computer":::
-
-If the user didn't restart their device after the installation, then they'll get a notification as a reminder. This temporary reminder will appear to the user based on the client setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**. This setting is the overall time the user has to restart the machine before a restart is forced.
-
-- Temporary notification when you use toast notifications:
-
-    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Toast notification of pending restart":::
-
-- Temporary notification when you use Software Center dialog window, not toast:
-
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Pending restart Software Center notification with snooze button in version 1902":::
-
-If the user doesn't restart after the temporary notification, they'll be given the final countdown notification that they can't close. The timing of when the final notification appears is based on the client setting: **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**. For instance, if the setting is 60, then an hour before a reboot is forced, the final notification appears to the user:
-
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Software Center final countdown notification in version 1902":::
-
-The following settings must be shorter in duration than the shortest [maintenance window](../manage/collections/use-maintenance-windows.md) applied to the computer:
-
-- **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
-- **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
-
-> [!IMPORTANT]
-> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 ## Log files
 
