@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 11/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,13 +38,13 @@ These settings apply to devices running:
 - Windows 10
 - Windows Holographic for Business
 
-Depending on the settings you choose, not all values may be configurable.
-
 ## Before you begin
 
 Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
 
-## Base VPN settings
+The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
+
+## Base VPN
 
 - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 - **Servers**: Add one or more VPN servers that devices connect to. When you add a server, you enter the following information:
@@ -59,7 +59,7 @@ Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
   - **Pulse Secure**
-  - **F5 Edge Client**
+  - **F5 Access**
   - **SonicWALL Mobile Connect**
   - **Check Point Capsule VPN**
   - **Citrix**
@@ -90,6 +90,7 @@ Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md
 
       To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
 
+    - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
     - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
   - **Remember credentials at each logon**: Choose to cache the authentication credentials.
   - **Custom XML**: Enter any custom XML commands that configure the VPN connection.
@@ -211,12 +212,12 @@ For more information about creating custom EAP XML, see [EAP configuration](/win
   - **Automatically connect**: When **Enabled**, the device automatically connects to the VPN when a device connects to a domain you enter, such as `contoso.com`. When **Not configured** (default), the device doesn't automatically connect to the VPN
   - **Persistent**: When set to **Enabled**, the rule stays in the Name Resolution Policy table (NRPT) until the rule is manually removed from the device, even after the VPN disconnects. When set to **Not configured** (default), NRPT rules in the VPN profile are removed from the device when the VPN disconnects.
 
-## Proxy settings
+## Proxy
 
-- **Automatic configuration script**: Use a file to configure the proxy server. Enter the **Proxy server URL**, such as `http://proxy.contoso.com`, that includes the configuration file.
-- **Address**: Enter the proxy server address, such as an IP address or `vpn.contoso.com`
-- **Port number**: Enter the TCP port number used by your proxy server
-- **Bypass proxy for local addresses**: If you don't want to use a proxy server for local addresses, then choose Enable. This setting applies if your VPN server requires a proxy server for the connection.
+- **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
+- **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
+- **Port number**: Enter the port number used by your proxy server. For example, enter `8080`.
+- **Bypass proxy for local addresses**: This setting applies if your VPN server requires a proxy server for the connection. If you don't want to use a proxy server for local addresses, then choose **Enable**.
 
 ## Split Tunneling
 
@@ -239,6 +240,6 @@ For example, if the user is already connected to a trusted DNS suffix, then the 
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+The profile is created, but may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 Configure VPN settings on [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), and [macOS](vpn-settings-macos.md) devices.
