@@ -95,8 +95,11 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
-  - Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans to shift from LTSC to the semi-annual servicing channel.<!--6107649-->
+  - Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) 2019 devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans to shift from LTSC to the semi-annual servicing channel.<!--6107649-->
   
+    > [!NOTE]
+    > Desktop Analytics only supports the Windows 10 Enterprise LTSC 2019, which is equivalent to Windows 10, version 1809. It doesn't support Windows 10 Enterprise 2015 LTSB (version 1507) or Windows 10 Enterprise 2016 LTSB (version 1607).
+
     In Configuration Manager version 2006 and earlier, Desktop Analytics doesn't support upgrades to or from Windows 10 LTSC. For more information, see [Windows as a service overview](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
   > [!NOTE]
