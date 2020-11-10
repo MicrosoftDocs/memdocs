@@ -143,6 +143,8 @@ For a low-rights user on a device that runs Windows Server, by default they aren
 
 Starting in this release, you can now control this behavior as needed. In the **Computer Restart** group of client settings, enable the following setting: **When a deployment requires a restart, allow low-rights users to restart a device running Windows Server**.
 
+For more information, see [Device restart notifications: Client settings](../../clients/deploy/device-restart-notifications.md#client-settings).
+
 ## Application management
 
 ### Improvements to available apps via CMG
