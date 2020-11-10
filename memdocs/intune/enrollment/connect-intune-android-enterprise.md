@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-To support [Android Enterprise work profile](android-work-profile-enroll.md), [Android Enterprise fully managed](android-fully-managed-enroll.md), and [Android Enterprise dedicated devices](android-kiosk-enroll.md), you must connect your Intune tenant account to your Managed Google Play account.  
+To support [Android Enterprise personally-owned](android-work-profile-enroll.md) and [corporate-owned](android-corporate-owned-work-profile-enroll.md) work profiles, [Android Enterprise fully managed](android-fully-managed-enroll.md), and [Android Enterprise dedicated devices](android-kiosk-enroll.md), you must connect your Intune tenant account to your Managed Google Play account.  
 
 Refer to the following support article from Google to ensure that Android Enterprise is available in your country or region: https://support.google.com/work/android/answer/6270910
 
@@ -41,7 +41,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification.
-- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise work profile scenarios.
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise personally-owned and corporate-owned work profile scenarios.
 - [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) - Used for Android Enterprise dedicated/kiosk scenarios.
 
 > [!NOTE]
@@ -67,7 +67,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 
 ## Disconnect your Android Enterprise administrative account
 
-You can turn off Android Enterprise enrollment and management. To do this, you must first retire any enrolled Android Enterprise devices, including work profile devices, dedicated devices and fully managed devices. Then, choose **Disconnect** in the Intune administration console to remove all enrolled Android Enterprise work profile devices, dedicated devices and fully managed devices from enrollment. This also removes the relationship between the Managed Google Play account and Intune.
+You can turn off Android Enterprise enrollment and management. To do this, you must first retire any enrolled Android Enterprise devices, including personally-owned and corporate-owned work profile devices, dedicated devices and fully managed devices. Then, choose **Disconnect** in the Intune administration console to remove all enrolled Android Enterprise personally-owned and corporate-owned work profile devices, dedicated devices, and fully managed devices from enrollment. This also removes the relationship between the Managed Google Play account and Intune.
 
 1. As an Intune administrator, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Android** > **Android enrollment** > **Managed Google Play** > **Disconnect**.
@@ -75,5 +75,5 @@ You can turn off Android Enterprise enrollment and management. To do this, you m
 
 ## Next steps
 
-After connecting to the Managed Google Play account, you can [set up Android Enterprise work profile devices](android-work-profile-enroll.md), 
+After connecting to the Managed Google Play account, you can [set up Android Enterprise personally-owned](android-work-profile-enroll.md) and [corporate-owned](android-corporate-owned-work-profile-enroll.md) work profile devices, 
 [set up Android Enterprise dedicated devices](android-kiosk-enroll.md) and [set up Android Enterprise fully managed devices](android-fully-managed-enroll.md)
