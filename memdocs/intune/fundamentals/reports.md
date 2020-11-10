@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/20/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,8 +51,8 @@ Users with the following permissions can review logs:
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Read** permissions
 
-## Non-compliant devices report (Operational)
-The Non-compliant devices report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+## Noncompliant devices report (Operational)
+The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
 You can view the **Noncompliant devices** report using the following steps:
 
@@ -63,6 +63,26 @@ You can view the **Noncompliant devices** report using the following steps:
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device compliance** > **Noncompliant devices**.
+
+## Noncompliant policies (Operational)
+
+*This report is in preview*
+
+The **Noncompliant policies** report can help you troubleshoot policies that have compliance errors or conflicts.
+
+When you select the report, it displays a list of compliance policies that have one or more devices with an error or a non-compliant status. The details include the count for each of those categories and the device platform. Use this report to drill in on individual entries to discover more information, and at each level you can sort and filter across records.
+
+While viewing the report:
+
+- Select a policy to view device and user information for devices that have errors or are non-compliant. Information includes the Deployment status and when the status was last updated.
+- Select a device from the list to dig deeper and view a list of settings from the policy. The list of settings includes the setting status like *Compliant*, *Noncompliant*, or *Not applicable*. If there was an error, the relevant error code is shown.
+- If you then select a specific setting, you’ll see more details about the status or error code. This information also includes the profiles that were used to deploy the setting to the device.
+
+To view the Noncompliant policies report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > **Noncompliant policies**.
+
 
 ## Windows 10 unhealthy endpoints report (Operational)
 The **Windows 10 unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of a number of settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
