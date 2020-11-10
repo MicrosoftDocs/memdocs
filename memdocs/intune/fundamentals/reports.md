@@ -72,7 +72,7 @@ You can view the **Windows 10 unhealthy endpoints** report using the following s
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Antivirus** > **Windows 10 unhealthy endpoints** tab.
 
-For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-devices).
+For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
 ## Windows 10 active malware report (Operational)
 The **Windows 10 active malware** report provides data to identify devices with malware problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
@@ -82,7 +82,7 @@ You can view the **Windows 10 active malware** report using the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Antivirus** > **Windows 10 active malware** tab.
 
-For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-devices).
+For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
 ## Feature update failures report (Operational)
 The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
