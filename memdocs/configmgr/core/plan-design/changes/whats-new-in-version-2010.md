@@ -222,6 +222,8 @@ Windows Defender Application Control enforces an explicit list of software allow
 <!--7380401-->
 You can now preview the query results when you're creating or editing a query for collection membership. Preview the query results from the query statement properties dialog. When you select **Edit Query Statement**, select the green triangle on the query properties for the collection to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query.
 
+For more information, see [Configure a query rule](../../clients/manage/collections/create-collections.md#bkmk-query).
+
 ### Collection evaluation view
 <!--6251274-->
 We've integrated the functionality of Collection Evaluation Viewer into the Configuration Manager console. This change provides administrators a central location to view and troubleshoot the collection evaluation process.

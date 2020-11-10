@@ -2,7 +2,7 @@
 title: "Create queries"
 titleSuffix: "Configuration Manager"
 description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
-ms.date: 05/08/2019
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -40,14 +40,13 @@ This article describes how to create and import queries in Configuration Manager
 
 6.  Select **Edit Query Statement** to open the &lt;Query Name\> **Statement Properties** dialog box.  
 
-7.  On the **General** tab of the &lt;Query Name\> **Statement Properties** dialog box, specify the attributes that the query returns and how they should be displayed. Select the **New** icon to add a new attribute. You can also select **Show Query Language** to enter or edit the query directly in WMI Query Language (WQL). For examples of WMI queries, see the [Example WQL queries](#BKMK_Example) section in this article.  
+7.  On the **General** tab of the &lt;Query Name\> **Statement Properties** dialog box, specify the attributes that the query returns and how they should be displayed. Select the **New** icon to add a new attribute. You can also select **Show Query Language** to enter or edit the query directly in WMI Query Language (WQL). For examples of WMI queries, see the [Example WQL queries](#BKMK_Example) section in this article.
 
-    > [!TIP]  
-    > You can use the following reference documentation to help you construct your own WQL queries:  
-    >   
-    > -   [WQL (SQL for WMI)](/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [WHERE Clause](/windows/win32/wmisdk/where-clause)  
-    > -   [WQL Operators](/windows/win32/wmisdk/wql-operators)  
+    - You can use the following reference documentation to help you construct your own WQL queries:  
+       - [WQL (SQL for WMI)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+       - [WHERE Clause](/windows/win32/wmisdk/where-clause)  
+       - [WQL Operators](/windows/win32/wmisdk/wql-operators)  
+    - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. In the **Query Statement Properties**, select the green triangle to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query. <!--7380401-->
 
 8.  On the **Criteria** tab of the &lt;Query Name\> **Statement Properties** dialog box, specify criteria that are used to refine the results of the query. For example, you could return only resources that have a site code of **XYZ**. You can configure multiple criteria for a query.  
 

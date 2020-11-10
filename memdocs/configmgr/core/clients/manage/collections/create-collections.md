@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 10/13/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -152,10 +152,11 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Resource class**: Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** to search for inventory data returned from client computers or from **Unknown Computer** to select from values returned by unknown computers.
 
-- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
+- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in less rows returned but potentially quicker results. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
 
-    > [!TIP]  
-    > On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in less rows returned but potentially quicker results.
+   - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. In the **Query Statement Properties**, select the green triangle to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query. <!--7380401-->
+   :::image type="content" source="./media/7380401-preview-collection-query.png" alt-text="Client data sources dashboard" lightbox="./media/7380401-preview-collection-query.png":::
+
 
 ### <a name="bkmk-category"></a> Device category rule
 
