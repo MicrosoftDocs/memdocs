@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 11/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,11 +39,11 @@ Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
-## Base VPN settings
+## Base VPN
 
 **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 
-- **IP address or FQDN**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
+- **VPN server address**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
   - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, see [How to configure certificates](../protect/certificates-configure.md).
   - **Username and password**: End users must supply a username and password to log into the VPN server.
@@ -53,7 +53,6 @@ Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
   - **NetMotion Mobility**
-  - **Pulse Secure**
   - **Custom VPN**: Select this option if your VPN vendor isn't listed. Also configure:
 
     - **VPN identifier**: Enter an identifier for the VPN app you're using. This identifier is supplied by your VPN provider.
@@ -62,6 +61,8 @@ Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
 - **Split tunneling**: **Enable** or **Disable** this option that lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing.
 
 ## Automatic VPN
+
+Select the type of automatic VPN you want: On-demand VPN or Per-app VPN:
 
 - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching IP address or domain name. If there's a match, then the action you choose runs.
 
@@ -114,11 +115,11 @@ Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
     This setting applies to:  
     - macOS 11 and newer (Big Sur)
 
-## Proxy settings
+## Proxy
 
-- **Automatic configuration script**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`.
-- **Address**: Enter the proxy server address (as an IP address).
-- **Port number**: Enter the port number associated with the proxy server.
+- **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
+- **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
+- **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 
 ## Next steps
 
