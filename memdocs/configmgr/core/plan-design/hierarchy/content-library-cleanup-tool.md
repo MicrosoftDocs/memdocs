@@ -20,7 +20,7 @@ Use the content library cleanup command-line tool to remove content that's no lo
 
 The tool only affects the content on the distribution point that you specify when you run the tool. The tool can't remove content from the content library on the site server.
 
-If you remove content from a distribution point while the site system is offline, an orphaned record can exist in WMI. Over time, this behavior can eventually lead to a warning status on the distribution point. To mitigate the issue in version 2006 and earlier, you had to manually remove the orphaned entries from WMI. Making a mistake during this process could cause more severe issues with the server. Starring in version 2010, the tool can also remove orphaned content records from the WMI provider on a distribution point.<!--6887878-->
+If you remove content from a distribution point while the site system is offline, an orphaned record can exist in WMI. Over time, this behavior can eventually lead to a warning status on the distribution point. To mitigate the issue in version 2006 and earlier, you had to manually remove the orphaned entries from WMI. Making a mistake during this process could cause more severe issues with the server. Starting in version 2010, the tool can also remove orphaned content records from the WMI provider on a distribution point.<!--6887878-->
 
 Find **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` on the site server. For more information on this location, see [The CD.Latest folder](../../servers/manage/the-cd.latest-folder.md).
 
