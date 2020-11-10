@@ -2,7 +2,7 @@
 title: Device restart notifications
 titleSuffix: Configuration Manager
 description: Restart notification behavior for various client settings in Configuration Manager. 
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -131,6 +131,15 @@ Starting in version 1902, configuring this setting to **Yes** changes the user e
 
 > [!IMPORTANT]
 > In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
+
+### When a deployment requires a restart, allow low-rights users to restart a device running Windows Server
+
+<!--7821529-->
+
+For a low-rights user on a device that runs Windows Server, by default they aren't assigned the user rights to restart Windows. When you target a deployment to this device, this user can't manually restart. For example, they can't restart Windows to install software updates. Starting in version 2010, you can now control this behavior as needed.
+
+> [!IMPORTANT]
+> Allowing low-rights users to restart a server can potentially impact other users or services.
 
 ## Device restart notifications (version 1906)
 <!--3976435-->
