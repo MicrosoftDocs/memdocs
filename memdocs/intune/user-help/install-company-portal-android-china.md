@@ -51,5 +51,7 @@ Company Portal is also available from the [Baidu App Store](https://go.microsoft
 ## Next steps  
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
 
+Please note, Android enterprise is not available in China. The only way to enrol your Android device would be using the Android Administrator.  
+
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
