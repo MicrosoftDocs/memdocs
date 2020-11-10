@@ -33,6 +33,7 @@ This content can assist you in learning and supporting Configuration Manager.
 For more information, see the following articles:
 
 - [Configuration Manager documentation library](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console)
+- [Get started with Configuration Manager PowerShell cmdlets](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console)
 - [How to use the Configuration Manager docs](https://docs.microsoft.com/mem/use-docs?WT.mc_id=configmgr-console)
 
 For the latest product changes, see the following articles:<!-- 8625956 -->
@@ -76,7 +77,7 @@ The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr) r
 
 ## Recently updated
 
-Articles with a recent and significant update.
+Articles with a recent and significant update:
 
 | Last reviewed | Title |
 |---------------|-------|
@@ -90,6 +91,17 @@ Articles with a recent and significant update.
 | 10/8/2020 | [Prepare to use an availability group](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database?WT.mc_id=configmgr-console) |
 | 10/7/2020 | [Azure AD authentication workflow](https://docs.microsoft.com/mem/configmgr/core/clients/manage/azure-ccmsetup?WT.mc_id=configmgr-console) |
 | 10/2/2020 | [Technical preview 2010](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2010?WT.mc_id=configmgr-console) |
+
+PowerShell cmdlet articles with recent updates:
+
+| Last reviewed | Title |
+|---------------|-------|
+| 10/30/2020 | [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [New-CMTSStepConditionQueryWmi](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepconditionquerywmi?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [Start-CMTaskSequenceDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/start-cmtasksequencedeployment?WT.mc_id=configmgr-console) |
+| 10/28/2020 | [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepdownloadpackagecontent?WT.mc_id=configmgr-console) |
+| 10/1/2020 | [Get-CMDevice](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmdevice?WT.mc_id=configmgr-console) |
+| 10/1/2020 | [Get-CMResource](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmresource?WT.mc_id=configmgr-console) |
 
 ## Troubleshooting articles
 
@@ -126,8 +138,6 @@ Note: Effective October 2020, the Microsoft knowledge base articles previously f
 
 [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager?WT.mc_id=configmgr-console)
 
-For additional information refer to the following Windows IT Pro blog post.
-
-[What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399)
+For more information, see [What's next for Windows release notes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-next-for-windows-release-notes/ba-p/1754399).
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
