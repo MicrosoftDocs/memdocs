@@ -125,7 +125,16 @@ The device compliance report is available as the summary report in the **Reports
     ![Intune Reports summary](./media/intune-reports/intune-reports-01.png)
 
 ## Antivirus agent status report (Organizational)
-The **Antivirus agent status** report provides the agent status of your organization's devices. This report shows which devices have real-time or network protection, as well as their state. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. This report shows data visualizations as a pie chart for a breakdown of agent status count across devices. In addition, remote actions are included in this report. The report is available from the primary **Microsoft Defender Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Antivirus agent status** report provides the agent status of your organization's devices. 
+
+The report is available from the primary **Microsoft Defender Antivirus** workload, and provides filtering, searching, paging, and sorting. The data found in this report is timely and shows the following details:
+- If a device has real-time or network protection, as well as the state
+- The status of Windows Defender
+- If Tamper protection is enabled
+- If the device is a virtual machine, or a physical device.
+- Calls out the unhealthy device, the user name, and severity.
+
+This report shows data visualizations as a pie chart for a breakdown of agent status count across devices, and includes remote actions. 
 
 You can view the **Antivirus agent status** report using the following steps:
 
