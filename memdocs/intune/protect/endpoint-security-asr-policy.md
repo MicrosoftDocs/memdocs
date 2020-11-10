@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/3/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -74,6 +74,19 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
 Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
   To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender ATP documentation.
+
+  **Merge behavior for Attack surface reduction rules in Intune**:
+
+  Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that are not in conflict are merged, while those that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
+
+  Attack surface reduction rule merge behavior is as follows:
+  - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
+    - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
+    - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
+    - Endpoint security > Security baselines > Microsoft Defender ATP Baseline > **Attack Surface Reduction Rules**.
+  - Settings that do not have conflicts are added to a superset of policy for the device.
+  - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
+  - Only the configurations for conflicting settings are held back.
 
 - **Device control** – With settings for device control, you can configure devices for a layered approach to secure removable media. Microsoft Defender ATP provides multiple monitoring and control features to help prevent threats in unauthorized peripherals from compromising your devices.
 
