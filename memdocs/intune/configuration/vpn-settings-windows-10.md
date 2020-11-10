@@ -84,13 +84,14 @@ The available settings depend on the VPN client you choose. Some settings are on
 
       To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
 
+    - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+
     - **Machine certificates** (IKEv2 only): Select an existing device client certificate profile to authenticate the device.
 
       If you use [device tunnel connections](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select this option.
 
       To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
 
-    - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
     - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
   - **Remember credentials at each logon**: Choose to cache the authentication credentials.
   - **Custom XML**: Enter any custom XML commands that configure the VPN connection.
