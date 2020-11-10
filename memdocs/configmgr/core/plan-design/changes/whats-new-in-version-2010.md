@@ -224,6 +224,8 @@ You can now preview the query results when you're creating or editing a query fo
 <!--6251274-->
 We've integrated the functionality of Collection Evaluation Viewer into the Configuration Manager console. This change provides administrators a central location to view and troubleshoot the collection evaluation process.
 
+For more information, see [Collection evaluation view](../../clients/manage/collections/collection-evaluation-view.md).
+
 ### View collection relationships
 
 <!--3608121-->
