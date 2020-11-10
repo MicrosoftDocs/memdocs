@@ -2,7 +2,7 @@
 # required metadata
 
 title: Use VPN settings for Android Enterprise in Microsoft Intune - Azure | Microsoft Docs
-description: See all the settings to create VPN connections on Android Enterprise devices in Microsoft Intune. Enter the connection name, IP address or FQDN of the VPN server, choose how users authenticate, and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
+description: See all the settings to create VPN connections on Android Enterprise devices in Microsoft Intune, including COBO, COSU, COPE, and BYOD. Enter the connection name, IP address or FQDN of the VPN server, choose how users authenticate, and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
