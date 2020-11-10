@@ -198,7 +198,23 @@ You can pick a default macOS and iOS/iPadOS profile to be applied to all devices
 
 ## Distribute devices
 
-You have enabled management and syncing between Apple and Intune, and assigned a profile to let your devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device cannot apply an enrollment profile until the device is wiped.
+You have enabled management and syncing between Apple and Intune, and assigned a profile to let your devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. 
+
+### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant
+
+For macOS 10.13 and later devices, you can follow these steps to enroll.
+
+1. In the Apple Business Manager or Apple School Manager portal, import the device.
+2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the device is assigned a macOS enrollment profile with or without user affinity. 
+3. Log in to the device as a local administrator account.
+4. To trigger enrollment, on the **Home** page, open **Terminal** and run the following command:
+    sudo profiles renew -type enrollment
+5. Enter your device password for the local administrator account.
+6. In the **Device enrollment** window, choose **Details**.
+7. In the **System preferences** window, choose **Profiles**. 
+8. Follow the prompts that will download the management profile, certs, and policies from Intune. You can view the profiles on the device anytime by going to **System Preferences** > **Profiles**.   
+9. If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal for Azure AD registration and Conditional Access. 
+
 
 ## Renew an ADE token
 
