@@ -861,6 +861,10 @@
       href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
     - name: FindMachineSite method
       href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
+    - name: GetDependency method
+      href: core/clients/collections/getdependency-method-in-class-sms_collection.md
+    - name: GetDependent method
+      href: core/clients/collections/getdependent-method-in-class-sms_collection.md
     - name: GetNumResults method
       href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
     - name: GenerateCCRByName method

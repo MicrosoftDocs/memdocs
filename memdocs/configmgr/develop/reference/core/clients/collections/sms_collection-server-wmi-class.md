@@ -68,32 +68,34 @@ Class SMS_Collection : SMS_BaseClass
 
 The following methods are available in the `SMS_Collection` class:
 
-- [AddMembershipRule Method in Class SMS_Collection](addmembershiprule-method-in-class-sms_collection.md): Adds one new rule to the `CollectionRules` property of `SMS_Collection`.
-- [AddMembershipRules Method in Class SMS_Collection](addmembershiprules-method-in-class-sms_collection.md): Adds multiple new rules to the `CollectionRules` property of `SMS_Collection`.
-- [ApproveClients Method in Class SMS_Collection](approveclients-method-in-class-sms_collection.md): Approves specified client computers to join the site.
-- [BlockClients Method in Class SMS_Collection](blockclients-method-in-class-sms_collection.md): Blocks specified client computers from communicating with the site.
-- [ChangeOwnership Method in Class SMS_Collection](changeownership-method-in-class-sms_collection.md): Changes ownership of machines to a device owner.
-- [ClearDeploymentLocksForCollection Method in Class SMS_Collection](cleardeploymentlocksforcollection-method-in-class-sms_collection.md): Clears deployment locks for a selected collection.
-- [ClearDeviceCategory Method in Class SMS_Collection](cleardevicecategory-method-in-class-sms_collection.md): Clears a category from a set of devices.
-- [ClearLastNBSAdvForCollection Method in Class SMS_Collection](clearlastnbsadvforcollection-method-in-class-sms_collection.md): Clears the last Network Boot advertisement for a selected collection.
-- [ClearLastNBSAdvForMachines Method in Class SMS_Collection](clearlastnbsadvformachines-method-in-class-sms_collection.md): Clears the last Network Boot advertisement for selected client computers.
-- [ClientEditions Method in Class SMS_Collection](clienteditions-method-in-class-sms_collection.md): Retrieves a list of client editions.
-- [CreateCCR Method in Class SMS_Collection](createccr-method-in-class-sms_collection.md): Creates a client configuration request (CCR) for a particular resource.
-- [CreateCCRs Method in Class SMS_Collection](createccrs-method-in-class-sms_collection.md): Generates client configuration requests (CCRs) for the computers in the collection.
-- [DeleteAllMembers Method in Class SMS_Collection](deleteallmembers-method-in-class-sms_collection.md): Deletes all members, that is, resources and discovery data, for the collection.
-- [DeleteMembershipRule Method in Class SMS_Collection](deletemembershiprule-method-in-class-sms_collection.md): Deletes a membership rule from the collection.
-- [DeleteMembershipRules Method in Class SMS_Collection](deletemembershiprules-method-in-class-sms_collection.md): Deletes multiple membership rules from the collection.
-- [FindResourceSite Method in Class SMS_Collection](findresourcesite-method-in-class-sms_collection.md): Gets site code information for a computer from SQL.
-- [FindMachineSite Method in Class SMS_Collection](findmachinesite-method-in-class-sms_collection.md): Gets site code information for resources from SQL.
-- [GetNumResults Method in Class SMS_Collection](getnumresults-method-in-class-sms_collection.md): Gets a count of all members in a collection, excluding subcollections.
-- [GenerateCCRByName Method in Class SMS_Collecton](generateccrbyname-method-in-class-sms_collecton.md): Generates a client configuration request by computer name.
-- [GetTotalNumResults Method in Class SMS_Collection](gettotalnumresults-method-in-class-sms_collection.md): Gets a count of all members in a collection, including subcollections.
-- [ReassignClientsToSite Method in Class SMS_Collection](reassignclientstosite-method-in-class-sms_collection.md): Reassigns the site for the clients in the list.
-- [RequestRefresh Method in Class SMS_Collection](requestrefresh-method-in-class-sms_collection.md): Triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.
-- [SetDeviceCategory Method in Class SMS_Collection](setdevicecategory-method-in-class-sms_collection.md): Assigns a category to a set of devices.
-- [SetMemberOrder Method in Class SMS_Collection](setmemberorder-method-in-class-sms_collection.md): Sets the order of the members of a collection.
-- [UpdateVisibilityInEPDashBoard in Class SMS_Collection](updatevisibilityinepdashboard-in-class-sms_collection.md): Show this collection in the EndPoint Protection dashboard.
-- [VerifyNoCircularDependencies Method in Class SMS_Collection](verifynocirculardependencies-method-in-class-sms_collection.md): Verifies that no circular dependencies are formed if one collection is the parent of another.
+- [AddMembershipRule method](addmembershiprule-method-in-class-sms_collection.md): Adds one new rule to the `CollectionRules` property of `SMS_Collection`.
+- [AddMembershipRules method](addmembershiprules-method-in-class-sms_collection.md): Adds multiple new rules to the `CollectionRules` property of `SMS_Collection`.
+- [ApproveClients method](approveclients-method-in-class-sms_collection.md): Approves specified client computers to join the site.
+- [BlockClients method](blockclients-method-in-class-sms_collection.md): Blocks specified client computers from communicating with the site.
+- [ChangeOwnership method](changeownership-method-in-class-sms_collection.md): Changes ownership of machines to a device owner.
+- [ClearDeploymentLocksForCollection method](cleardeploymentlocksforcollection-method-in-class-sms_collection.md): Clears deployment locks for a selected collection.
+- [ClearDeviceCategory method](cleardevicecategory-method-in-class-sms_collection.md): Clears a category from a set of devices.
+- [ClearLastNBSAdvForCollection method](clearlastnbsadvforcollection-method-in-class-sms_collection.md): Clears the last PXE deployment for a selected collection.
+- [ClearLastNBSAdvForMachines method](clearlastnbsadvformachines-method-in-class-sms_collection.md): Clears the last PXE deployment for selected client computers.
+- [ClientEditions method](clienteditions-method-in-class-sms_collection.md): Retrieves a list of client editions.
+- [CreateCCR method](createccr-method-in-class-sms_collection.md): Creates a client configuration request (CCR) for a particular resource.
+- [CreateCCRs method](createccrs-method-in-class-sms_collection.md): Generates client configuration requests (CCRs) for the computers in the collection.
+- [DeleteAllMembers method](deleteallmembers-method-in-class-sms_collection.md): Deletes all members, that is, resources and discovery data, for the collection.
+- [DeleteMembershipRule method](deletemembershiprule-method-in-class-sms_collection.md): Deletes a membership rule from the collection.
+- [DeleteMembershipRules method](deletemembershiprules-method-in-class-sms_collection.md): Deletes multiple membership rules from the collection.
+- [FindResourceSite method](findresourcesite-method-in-class-sms_collection.md): Gets site code information for a computer from the site database.
+- [FindMachineSite method](findmachinesite-method-in-class-sms_collection.md): Gets site code information for resources from the site database.
+- [GetDependency method](getdependency-method-in-class-sms_collection.md): Starting in version 2010, get the collection relationship info which the input collection depends on.
+- [GetDependent method](getdependent-method-in-class-sms_collection.md): Starting in version 2010, get the collection relationship info which depends on the input collection.
+- [GetNumResults method](getnumresults-method-in-class-sms_collection.md): Gets a count of all members in a collection, excluding subcollections.
+- [GenerateCCRByName method](generateccrbyname-method-in-class-sms_collecton.md): Generates a client configuration request by computer name.
+- [GetTotalNumResults method](gettotalnumresults-method-in-class-sms_collection.md): Gets a count of all members in a collection, including subcollections.
+- [ReassignClientsToSite method](reassignclientstosite-method-in-class-sms_collection.md): Reassigns the site for the clients in the list.
+- [RequestRefresh method](requestrefresh-method-in-class-sms_collection.md): Triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.
+- [SetDeviceCategory method](setdevicecategory-method-in-class-sms_collection.md): Assigns a category to a set of devices.
+- [SetMemberOrder method](setmemberorder-method-in-class-sms_collection.md): Sets the order of the members of a collection.
+- [UpdateVisibilityInEPDashBoard method](updatevisibilityinepdashboard-in-class-sms_collection.md): Show this collection in the endpoint protection dashboard.
+- [VerifyNoCircularDependencies method](verifynocirculardependencies-method-in-class-sms_collection.md): Verifies that no circular dependencies are formed if one collection is the parent of another.
 
 ## Properties
 
