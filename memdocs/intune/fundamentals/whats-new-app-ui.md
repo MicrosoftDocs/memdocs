@@ -53,7 +53,7 @@ When a user accidentally re-enables the Company Portal app in the personal profi
 |---|---|   
 |<img alt="Screenshot of Company Portal **Find your work apps** screen." src="./media/whats-new-app-ui/find-work-apps-cp-2011.png" width="300"> |<img alt="Example image of previous Company Portal work profile screen before." src="./media/whats-new-app-ui/intune-company-portal-after-work-profile-2009.png" width="300">|  
 
-When they swipe right, they'll learn how to get more work apps from the Google Play Store.  
+When they swipe right, they'll learn how to get more work apps from the Google Play Store.  `
 
  > [!div class="mx-imgBorder"]
  > ![Screenshot of Company Portal **Get more apps for work** screen.](./media/whats-new-app-ui/get-more-apps-cp-2011.png)  
