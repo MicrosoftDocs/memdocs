@@ -9,7 +9,7 @@ ms.date: 11/20/2020
 
 These configurations apply to the computer that hosts the service connection point and any firewalls between that computer and the internet. They both must allow communications through outgoing port **TCP 443** for HTTPS and outgoing port **TCP 80** for HTTP to the below internet locations.
 
-The service connection point supports using a web proxy (with or without authentication) to use these locations. For more information, see [Proxy server support](proxy-server-support.md).
+The service connection point supports using a web proxy (with or without authentication) to use these locations. For more information, see [Proxy server support](../proxy-server-support.md).
 
 Other Configuration Manager features may require additional endpoints from the service connection point.
 
