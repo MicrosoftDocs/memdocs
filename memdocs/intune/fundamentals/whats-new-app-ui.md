@@ -44,7 +44,8 @@ If you're an employee or student, be sure to check out the screenshots and links
 We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. After the work profile setup flow, users see a new informational screen explaining where to find work apps, with links to help documentation.   
 
 
-<img alt="Screenshot of Company Portal **Your new work setup** screen." src="./media/whats-new-app-ui/new-work-profile-cp-2011.png" width="300">  
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal **Your new work setup** screen.](./media/whats-new-app-ui/new-work-profile-cp-2011.png)  
 
 When a user accidentally re-enables the Company Portal app in the personal profile, they'll see a screen (formerly **Your device now has a profile just for work**) that guides them to their work apps, with links to help documentation.   
 
@@ -54,13 +55,13 @@ When a user accidentally re-enables the Company Portal app in the personal profi
 
 When they swipe right, they'll learn how to get more work apps from the Google Play Store.  
 
-
-<img alt="Screenshot of Company Portal **Get more apps for work** screen." src="./media/whats-new-app-ui/get-more-apps-cp-2011.png" width="300">  
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal **Get more apps for work** screen.](./media/whats-new-app-ui/get-more-apps-cp-2011.png)  
 
 Finally, on the **Help** page > **Frequently Asked Questions** section, there's a new link to a Microsoft Docs article about how to find work profile apps.  
 
-
-<img alt="Screenshot of Company Portal Help screen highlighting the new FAQ doc link." src="./media/whats-new-app-ui/company-portal-work-profile-link.png" width="300">  
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal Help screen highlighting the new FAQ doc link.](./media/whats-new-app-ui/company-portal-work-profile-link.png)  
 
 ## Week of September 28, 2020  
 
