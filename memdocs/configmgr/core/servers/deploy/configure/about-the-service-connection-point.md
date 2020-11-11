@@ -73,7 +73,7 @@ If your organization restricts network communication with the internet using a f
 
 For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md). Other Configuration Manager features may require additional endpoints from the service connection point.
 
-[!INCLUDE [Internet endpoints for service connection point](includes/internet-endpoints-service-connection-point.md)]
+[!INCLUDE [Internet endpoints for service connection point](../../../plan-design/network/includes/internet-endpoints-service-connection-point.md)]
 
 ## Validate internet access
 

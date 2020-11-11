@@ -16,16 +16,16 @@ Other Configuration Manager features may require additional endpoints from the s
 > [!TIP]  
 > The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [KB 3187516: Service connection point doesn't download updates](https://support.microsoft.com/help/3187516).  
 
-Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../../servers/manage/use-status-system.md#monitor-the-status-system) node of the Configuration Manager console.<!-- 5566763 -->
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../../../servers/manage/use-status-system.md#monitor-the-status-system) node of the Configuration Manager console.<!-- 5566763 -->
 
-Starting in version 2010, the service connection point validates important internet endpoints for Desktop Analytics and tenant attach. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../../servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
+Starting in version 2010, the service connection point validates important internet endpoints for Desktop Analytics and tenant attach. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../../../servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
 
 ### <a name="bkmk_scp-updates"></a> Updates and servicing
 
-For more information on this function, see [Updates and servicing for Configuration Manager](../../servers/manage/updates.md).
+For more information on this function, see [Updates and servicing for Configuration Manager](../../../servers/manage/updates.md).
 
 > [!Tip]  
-> Enable these endpoints for the [management insight](../../servers/manage/management-insights.md) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
+> Enable these endpoints for the [management insight](../../../servers/manage/management-insights.md) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
 
 - `*.akamaiedge.net`  
 
@@ -61,7 +61,7 @@ For more information on this function, see [Updates and servicing for Configurat
 
 ### Windows 10 servicing
 
-For more information on this function, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
+For more information on this function, see [Manage Windows as a service](../../../../osd/deploy-use/manage-windows-as-a-service.md).
 
 - `download.microsoft.com`  
 
@@ -71,7 +71,7 @@ For more information on this function, see [Manage Windows as a service](../../.
 
 ### Azure services
 
-For more information on this function, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
+For more information on this function, see [Configure Azure services for use with Configuration Manager](../../../servers/deploy/configure/azure-services-wizard.md).
 
 - `management.azure.com` (Azure public cloud)
 - `management.usgovcloudapi.net` (Azure US Government cloud)
