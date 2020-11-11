@@ -490,6 +490,11 @@
             "source_path": "memdocs/configmgr/core/servers/manage/use-alerts-and-the-status-system.md",
             "redirect_url": "/mem/configmgr/core/servers/manage/use-status-system",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
+            "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
         }
     ]
 }

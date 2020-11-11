@@ -37,12 +37,6 @@ Dynamically update the membership of a collection based on a query that Configur
 
 For example queries that you can use to build collections, see [How to create queries](../../../servers/manage/create-queries.md).
 
-### Device category rule
-
-You can make management of your devices easier by associating device categories with the device collections.
-
-For more information, see [Automatically categorize devices into collections](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
-
 ### Include collection rule
 
 Include the members of another collection in a Configuration Manager collection. If the included collection changes, Configuration Manager updates the membership of the current collection on a schedule.
@@ -73,7 +67,6 @@ You create a collection that has one include collection rule and one exclude col
 
     - [Direct rule](#bkmk-direct)
     - [Query rule](#bkmk-query)
-    - [Device category rule](#bkmk-category)
     - [Include collection rule](#bkmk-include)
     - [Exclude collection rule](#bkmk-exclude)
 
@@ -156,17 +149,6 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
    - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. In the **Query Statement Properties**, select the green triangle to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query. <!--7380401-->
    :::image type="content" source="./media/7380401-preview-collection-query.png" alt-text="Client data sources dashboard" lightbox="./media/7380401-preview-collection-query.png":::
-
-
-### <a name="bkmk-category"></a> Device category rule
-
-The following actions are available in the **Select Device Categories** window.
-
-- **Create**: Specify a name to create a new category.
-- **Rename**: Rename the selected category.
-- **Delete**: Select one or more categories, and use this action to remove them from the list.
-
-For more information, see [Automatically categorize devices into collections](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
 
 ### <a name="bkmk-include"></a> Configure an include collection rule
 
