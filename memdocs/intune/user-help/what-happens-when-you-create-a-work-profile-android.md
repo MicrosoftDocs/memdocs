@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: arnab
+ms.reviewer: esalter
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -43,7 +43,23 @@ Your IT support person can only manage the work-related email, apps, settings, a
 
 To learn how to set up a work profile, see [Create a work profile and enroll your device](enroll-device-android-work-profile.md).  
 
-## Access your work profile  
+## Identify work apps 
+Work apps are marked with a briefcase badge, while personal apps do not have a briefcase badge. Some screen readers and voice assistants identify work apps by saying "work" before the app name.  
+
+
+|Personal app (no briefcase)|Work app (briefcase)|
+|---|---|  
+|<img alt="Screenshot of typical Outlook app icon with no work profile briefcase." src="./media/personal-no-briefcase-android.png" width="100">|<img alt="Screenshot of Outlook app icon with work profile briefcase." src="./media/work-briefcase-badge-android.png" width="100">|  
+ 
+
+After you've set up the work profile, you may see duplicate apps on your device. For example, you could have two Outlook apps. Use the version that's marked with the briefcase for work-related tasks.       
+
+> [!TIP] 
+> For the best experience, always sign in to work apps with your work account, and sign in to personal apps with your personal account. 
+
+The appearance of the briefcase can vary slightly from device to device. To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#briefcase-badge) at the bottom of this article.   
+
+## Find your work profile  
 Once you've set up a work profile, your organization can automatically install work apps on your device. 
 
 The location of the work profile varies by device manufacturer and Android version. This section describes where to find the work profile in the app drawer and on the home screen.  
@@ -66,24 +82,7 @@ On some devices, work apps are in a work-designated folder on the home screen. T
 <img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="150">  
 
 
-To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#work-profile-folder) at the bottom of this article.  
-
-
-## Identify work apps 
-Work apps are marked with a briefcase badge, while personal apps do not have a briefcase badge. Some screen readers and voice assistants identify work apps by saying "work" before the app name.  
-
-
-|Personal app (no briefcase)|Work app (briefcase)|
-|---|---|  
-|<img alt="Screenshot of typical Outlook app icon with no work profile briefcase." src="./media/personal-no-briefcase-android.png" width="100">|<img alt="Screenshot of Outlook app icon with work profile briefcase." src="./media/work-briefcase-badge-android.png" width="100">|  
- 
-
-After you've set up the work profile, you may see duplicate apps on your device. For example, you could have two Outlook apps. Use the version that's marked with the briefcase for work-related tasks.       
-
-> [!TIP] 
-> For the best experience, always sign in to work apps with your work account, and sign in to personal apps with your personal account. 
-
-The appearance of the briefcase can vary slightly from device to device. To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#briefcase-badge) at the bottom of this article.   
+To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#work-profile-folder) at the bottom of this article. 
 
 
 ## Get more work apps  
@@ -138,15 +137,15 @@ This section shows examples of how the work profile and its features appear on c
 Some features are not available on all devices.   
 
 ### Work profile folder
-The following table shows examples of the work profile folder.   
+The following table shows examples of the work profile folder. For more information, see [Find your work profile](#find-your-work-profile).    
 
 |Surface Duo (Android 10)|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)|
 |---|---|---|  
-|<img alt="Screenshot of the Surface Duo work profile folder." src="./media/surface-duo-work-profile-folder-android.png" width="75">|<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="75">|<img alt="Screenshot of the Nexus 5X work profile folder." src="./media/nexus-5X-work-profile-folder-android.png" width="75">|  
+|<img alt="Screenshot of the Surface Duo work profile folder." src="./media/surface-duo-work-profile-folder-android.png" width="75">|<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="75">|<img alt="Screenshot of the Nexus 5X work profile folder." src="./media/nexus-5X-work-profile-folder-android.png" width="75">|    
 
 
 ### Work profile in app drawer 
-These images show where the work profile appears in the app drawer.  
+These images show where the work profile appears in the app drawer. For more information, see [Find your work profile](#find-your-work-profile).   
 
 
 Surface Duo (Android 10)   
@@ -172,7 +171,7 @@ Nexus 5X (Android 8.1.0)
 
 ### Briefcase badge  
 
-These tables show examples of the briefcase badge that appears on work apps.    
+These tables show examples of the briefcase badge that's used on work apps. For more information, see [Identify your work apps](#identify-work-apps).   
 
 |Surface Duo (Android 10)|Google Pixel 4 (Android 11)|
 |---|---| 
@@ -184,7 +183,7 @@ These tables show examples of the briefcase badge that appears on work apps.
 |<img alt="Screenshot of Outlook work app on a Samsung Galaxy S20 device." src="./media/samsung-galaxy-s20-badge-android.png" width="75">| <img alt="Screenshot of Outlook work app on a Nexus 5X device." src="./media/nexus-5x-badge-android.png" width="75">| 
 
 ### Pause in quick settings   
-These images show where the pause option appears in the quick settings menu.
+These images show where the pause option appears in the quick settings menu. For more information, see [Pause the work profile](#pause-the-work-profile).  
 
 
 Surface Duo (Android 10)  
@@ -216,7 +215,7 @@ Nexus 5X (Android 8.1.0)
 
 
 ### Pause in Settings app 
-These images show where the pause option appears in the Settings app.  
+These images show where the pause option appears in the Settings app. For more information, see [Pause the work profile](#pause-the-work-profile).    
 
 Surface Duo (Android 10)  
 
@@ -243,7 +242,7 @@ Nexus 5X (Android 8.1.0)
    > ![Screenshot of Work profile toggle switch turned on in Nexus 5X device settings.](./media/nexus-5x-settings-android.png)  
 
 ### Pause in app drawer   
-These images show where the pause option appears in the app drawer on a Google Pixel 4 (Android 11).    
+These images show where the pause option appears in the app drawer on a Google Pixel 4 (Android 11). For more information, see [Pause the work profile](#pause-the-work-profile).      
 
 
    > [!div class="mx-imgBorder"]
@@ -251,4 +250,4 @@ These images show where the pause option appears in the app drawer on a Google P
 
 
 ## Next steps   
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Need more help figuring out the work profile? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
