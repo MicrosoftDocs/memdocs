@@ -113,7 +113,7 @@ Swipe down on your screen to access the quick settings menu. Tap **Work profile*
 To see how quick settings appear on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#pause-in-quick-settings) at the bottom of this article.   
 
 ### Settings app pause option 
-Open the Settings app and go to **Work profile** settings.Switch the **Work profile** toggle off.   
+Open the Settings app and go to **Work profile** settings. Switch the **Work profile** toggle off.   
 
 
 <img alt="Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings." src="./media/google-pixel-4-settings-android.png" width="250">  
