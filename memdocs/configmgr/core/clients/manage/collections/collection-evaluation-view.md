@@ -24,6 +24,12 @@ Starting in Configuration Manager version 2010, the functionality of [Collection
 - Which collections are currently being evaluated
 - The estimated time that a collection evaluation will start and complete
 
+> [!Tip]
+> The collection evaluation process is performed on primary sites, not on the central administration site (CAS). When using the console connected to a CAS, you'll see the following behavior:
+> - Evaluation related columns for device collections won't contain data.
+> - The **Collection Evaluation** node under the **Monitoring** workspace isn't shown.
+> - Evaluation related information, such as evaluation status and links to the collection evaluation queues, won't be shown in the collection **Summary** group pane.
+
 ## Collection evaluation queues
 
 The collection evaluation process evaluates the membership rules of a collection to update its members. A primary site places a collection that it's evaluating into one of four different queues:
