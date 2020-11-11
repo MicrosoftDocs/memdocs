@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/02/2020
+ms.date: 11/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,19 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+
+<!-- ########################## -->
+## Week of November 9, 2020  
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### App management  
+
+#### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->
+We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. The new messaging appears:  
+* After the work profile setup flow. Users see a new informational screen explaining where to find work apps, with links to help documentation.  
+* When a user accidentally re-enables the Company Portal app in the personal profile. We redesigned a screen (**Your device now has a profile just for work**) with clearer explanations and new illustrations to guide users to their work apps, with links to help documentation.  
+* On the **Help** page. In the **Frequently Asked Questions** section, there's a new link to help documentation about how to set up work profile and find apps.  
 
 <!-- ########################## -->
 ## Week of October 26, 2020 (2010 Service release)
