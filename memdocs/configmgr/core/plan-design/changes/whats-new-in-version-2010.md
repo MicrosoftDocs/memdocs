@@ -236,6 +236,12 @@ For more information, see [Collection evaluation view](../../clients/manage/coll
 
 You can now view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
 
+:::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
+
+If you want to change or delete collections, view the relationships to understand the impact of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+
+For more information, see [How to manage collections](../../clients/manage/collections/manage-collections.md).
+
 ## Configuration Manager console
 
 ### Product feedback

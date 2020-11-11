@@ -128,6 +128,8 @@ Displays the following options:
 
 #### View Relationships
 
+For more information, see [View collection relationships](#view-collection-relationships).
+
 #### Move
 
 Move the selected collection to another folder in the **Device Collections** node.
@@ -186,6 +188,46 @@ When you view properties for a collection, you can view and configure the follow
 - **Security**: Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
 - **Alerts**: Configure when alerts are generated for client status and endpoint protection. For more information, see [How to configure client status](../../deploy/configure-client-status.md) and [How to monitor endpoint protection](../../../../protect/deploy-use/monitor-endpoint-protection.md).
+
+## View collection relationships
+
+<!--3608121-->
+
+Starting in version 1910, you can view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
+
+:::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
+
+If you want to change or delete collections, view the relationships to understand the impact of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+
+When you select the **View Relationships** action on a device or user collection:
+
+- To view the relationships with parent collections, select **Dependency**.
+
+- To view the relationships with child collections, select **Dependent**.
+
+For example, if you select the **All Systems** collection to view its relationships, the **Dependency** node will be **0** as it has no parent collections.
+
+Use the following tips to navigate the relationship viewer:
+
+- Select the plus (`+`) or minus (`-`) icons next to the collection name to expand or collapse members of a node.
+
+- The number in parentheses after the collection name is the number of relationships. If the number is **0**, then that collection is the final or leaf node in that relationship tree.
+
+- The style and color of the line between the collections determines the type of relationship:
+
+    :::image type="content" source="media/3608121-collection-relationship-legend.png" alt-text="Collection dependency relationship line style legend":::
+
+    If you hover over a specific line, a tooltip shows the relationship type.
+
+- When the width of the tree is larger than the window, use the green arrows to the right or the left to view more.
+
+- When a node of the relationship tree is larger than the available space, select **More** to change the view to just that node.
+
+- To navigate to a prior view, select the **Back** arrow in the upper right corner. Select the **Home** icon to return to the main page.
+
+- Use the **Search** box in the upper right corner to locate a collection in the current tree view.
+
+- Use the **Navigator** in the lower right corner to zoom and pan around the tree. You can also print the current view.
 
 ## PowerShell
 
