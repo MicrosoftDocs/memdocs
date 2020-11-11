@@ -63,7 +63,7 @@ For pre-1911 service release tenants, if you haven't yet set the MDM authority, 
 When Android or Apple device management is enabled, Intune sends device and user information to integrate with these third-party services to manage their respective devices.
 
 Scenarios that add a consent to share data are included when:
-- You enable Android work profiles.
+- You enable Android Enterprise personally-owned or corporate-owned work profiles.
 - You enable and upload Apple MDM push certificates.
 - You Enable any of the Apple services, such as Device Enrollment Program, School Manager, or Volume Purchasing Program.
 
