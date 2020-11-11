@@ -45,7 +45,7 @@ We've updated messaging in Company Portal for Android to better introduce and ex
 
 
  > [!div class="mx-imgBorder"]
- > ![Screenshot of Company Portal **Your new work setup** screen.](./media/whats-new-app-ui/new-work-profile-cp-2011.png)  
+ > ![Screenshot of Company Portal **Your new work setup** screen.](./media/whats-new-app-ui/new-work-profile-company-portal-2011.png)  
 
 When a user accidentally re-enables the Company Portal app in the personal profile, they'll see a screen (formerly **Your device now has a profile just for work**) that guides them to their work apps, with links to help documentation.   
 
