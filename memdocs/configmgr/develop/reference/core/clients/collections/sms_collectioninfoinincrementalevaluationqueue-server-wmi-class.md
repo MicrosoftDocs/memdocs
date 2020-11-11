@@ -1,6 +1,7 @@
 ---
 title: SMS_CollectionInfoInIncrementalEvaluationQueue class
 titleSuffix: Configuration Manager
+description: Show collection info from incremental evaluation queue.
 ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

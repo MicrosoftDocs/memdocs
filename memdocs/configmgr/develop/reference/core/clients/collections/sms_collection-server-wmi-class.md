@@ -1,6 +1,7 @@
 ---
 title: SMS_Collection class
 titleSuffix: Configuration Manager
+description: WMI class for collection objects.
 ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

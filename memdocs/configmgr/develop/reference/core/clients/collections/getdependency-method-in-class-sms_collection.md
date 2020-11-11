@@ -1,6 +1,7 @@
 ---
 title: GetDependency method
 titleSuffix: Configuration Manager
+description: Get the collection relationship info which the input collection depends on.
 ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

@@ -67,7 +67,6 @@ You create a collection that has one include collection rule and one exclude col
 
     - [Direct rule](#bkmk-direct)
     - [Query rule](#bkmk-query)
-    - [Device category rule](#bkmk-category)
     - [Include collection rule](#bkmk-include)
     - [Exclude collection rule](#bkmk-exclude)
 

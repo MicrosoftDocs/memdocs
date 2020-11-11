@@ -1,6 +1,7 @@
 ---
 title: SMS_CollectionEvaluationFull class
 titleSuffix: Configuration Manager
+description: Show full evaluated collections.
 ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
