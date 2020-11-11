@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2020 
+ms.date: 11/11/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,31 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Update your organization's documentation or helpdesk procedures.  
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
+
+# Week of November 9, 2020  
+
+### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->  
+
+We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. After the work profile setup flow, users see a new informational screen explaining where to find work apps, with links to help documentation.   
+
+
+<img alt="Screenshot of Company Portal **Your new work setup** screen." src="./media/whats-new-app-ui/new-work-profile-cp-2011.png" width="300">  
+
+When a user accidentally re-enables the Company Portal app in the personal profile, they'll see a screen (formerly **Your device now has a profile just for work**) that guides them to their work apps, with links to help documentation.   
+
+|Updated|Previous|   
+|---|---|   
+|<img alt="Screenshot of Company Portal **Find your work apps** screen." src="./media/whats-new-app-ui/find-work-apps-cp-2011.png" width="300"> |<img alt="Example image of previous Company Portal work profile screen before." src="./media/whats-new-app-ui/intune-company-portal-after-work-profile-2009.png" width="300">|  
+
+When they swipe right, they'll learn how to get more work apps from the Google Play Store.  
+
+
+<img alt="Screenshot of Company Portal **Get more apps for work** screen." src="./media/whats-new-app-ui/get-more-apps-cp-2011.png" width="300">  
+
+Finally, on the **Help** page > **Frequently Asked Questions** section, there's a new link to a Microsoft Docs article about how to find work profile apps.  
+
+
+<img alt="Screenshot of Company Portal Help screen highlighting the new FAQ doc link." src="./media/whats-new-app-ui/company-portal-work-profile-link.png" width="300">  
 
 ## Week of September 28, 2020  
 
