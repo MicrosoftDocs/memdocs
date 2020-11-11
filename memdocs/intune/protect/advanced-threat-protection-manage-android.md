@@ -96,7 +96,7 @@ To configure web protection on devices, use the following procedures to create a
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App configuration policies** > **Add**, and then select Managed devices.
+2. Select **Apps** > **App configuration policies** > **Add**, and then select **Managed devices**.
 
 3. On **Basics**, enter the following details:
 
