@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/12/2020
+ms.date: 11/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,6 +52,8 @@ Some settings only apply at the work profile level for corporate-owned devices w
 
 ### General
 
+#### Fully managed, dedicated, and corporate-owned work profile devices
+
 - **Screen capture (work profile-level)**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 - **Camera (work profile-level)**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
@@ -83,6 +85,8 @@ Some settings only apply at the work profile level for corporate-owned devices w
   - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts users to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to users on the device.
   - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
 
+#### Fully managed and dedicated devices
+
 - **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
 - **Factory reset**: **Block** prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device.
 - **Status bar**: **Block** prevents access to the status bar, including notifications and quick settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users access to the status bar.
@@ -97,6 +101,32 @@ Some settings only apply at the work profile level for corporate-owned devices w
 
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
 - **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
+
+#### Dedicated devices
+
+- **Power button menu**: **Block** hides the power options when users hold down the power button when in kiosk mode. Hiding these options prevents users from accidentally or intentionally shutting down devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when users hold down the power button on a device, they're shown power options, such as Restart and Power off.
+
+- **System error warnings**: **Allow** shows system warnings on the screen when in kiosk mode, including unresponsive apps and system warnings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might hide these warnings. When one of these events occurs, the system forces the app to close.
+
+- **Enabled system navigation features**: Allow users to access the device home and overview buttons when in kiosk mode. Your options:
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the device home and overview buttons.
+  - **Home button only**: Users can see and select the home button. They can't see or select the overview buttons.
+  - **Home and overview buttons**: Users can see and select the home and overview buttons.
+
+  This setting applies to:
+
+  - Android 9.0 and newer
+
+- **System notifications and information**: Allow users to access the device status bar, and receive notifications from the status bar when in kiosk mode. Your options:
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
+  - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
+  - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar.
+
+  This setting applies to:
+
+  - Android 9.0 and newer
+
+- **End-user access to device settings**: **Block** prevents users from accessing the Settings app when in kiosk mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings app.
 
 ### System security
 
@@ -270,6 +300,8 @@ End of comment -->
 
 ### Device password
 
+#### Fully managed, dedicated, and corporate-owned work profile devices
+
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
   - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to something more secure than **Device default**.
   - **Password required, no restrictions**
@@ -306,21 +338,35 @@ End of comment -->
   - On corporate-owned work profile devices, only **Unredacted notifications**, **Trust agents**, and **Fingerprint unlock** can be disabled.
   - If users turn off the **Use one lock** setting on their device, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the work profile-level. If users turn on the **Use one lock** setting, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the device-level.
 
+#### Fully managed and dedicated devices
+
 - **Disable lock screen**: **Disable** blocks all Keyguard lock screen features from being used. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the Keyguard features, such as camera, fingerprint unlock, and more.
 
 ### Power settings
 
+#### Fully managed, dedicated, and corporate-owned work profile devices
+
 - **Time to lock screen (work profile-level)**: Enter the maximum time a user can set until the device locks. For example, if you set this setting to `10 minutes`, then users can set the time from 15 seconds up to 10 minutes. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+#### Fully managed and dedicated devices
 
 - **Screen on while device plugged in**: Choose which power sources cause the device's screen to stay on when plugged in.
 
 ### Users and Accounts
 
+#### Fully managed, dedicated, and corporate-owned work profile devices
+
 - **Add new users**: **Block** prevents users from adding new users. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add other users to the device.
+
+#### Fully managed and dedicated devices
+
 - **User removal**: **Block** prevents users from removing users. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove other users from the device.
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add their personal Google account.
 - **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
-- **Account changes**: **Block** prevents users from modifying accounts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
+
+#### Dedicated devices
+
+- **Account changes**: **Block** prevents users from updating or changing accounts when in kiosk mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
 
 ### Applications
 
@@ -344,6 +390,8 @@ End of comment -->
 
 ### Connectivity
 
+#### Fully managed, dedicated, and corporate-owned work profile devices
+
 - **Always-on VPN  (work profile-level)**: **Enable** sets the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. Or, immediately connect when users lock their device, the device restarts, or the wireless network changes.
 
   Choose **Not configured** to disable always-on VPN for all VPN clients.
@@ -366,6 +414,8 @@ End of comment -->
   > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. For more information, see [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Lockdown mode**: **Enable** forces all network traffic to use the VPN tunnel. If a connection to the VPN isn't established, then the device won't have network access. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow traffic to flow through the VPN tunnel or through the mobile network.
+
+#### Fully managed and dedicated devices
 
 - **Recommended global proxy**: **Enable** adds a global proxy to the devices. When enabled, HTTP and HTTPS traffic, including some apps on the device, use the proxy you enter. This proxy is only a recommendation. It's possible some apps won't use the proxy. **Not configured** (default) doesn't add a recommended global proxy.
 
