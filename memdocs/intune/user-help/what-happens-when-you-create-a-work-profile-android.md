@@ -120,27 +120,19 @@ To see how work profile settings appear on other Android devices, skip to [Examp
 ### Pause in app drawer
  Swipe up on the home screen or select **Apps** to access the app drawer. Tap the **Work** tab and then switch the **Work profile** toggle off.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer.](./media/samsung-galaxy-s20-pause-app-drawer.png)  
+ <img alt="Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer." src="./media/samsung-galaxy-s20-pause-app-drawer.png" width="300">  
  
 
 ## Examples of work profile  
 This section shows examples where the work profile is located on common Android devices.  
 
 ### Work profile folder
-Examples of how the work profile appears as a home screen folder.  
+The following table shows how the work profile folder appears on common Android devices.  
 
-A **Work apps** folder appears on the Surface Duo (Android 10) home screen.  
+|Surface Duo (Android 10)|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)|
+|---|---|---|  
+|<img alt="Screenshot of the Surface Duo work profile folder." src="./media/surface-duo-work-profile-folder-android.png" width="75">|<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="75">|<img alt="Screenshot of the Nexus 5X work profile folder." src="./media/nexus-5X-work-profile-folder-android.png" width="75">|  
 
-<img alt="Screenshot of the Surface Duo work profile folder." src="./media/surface-duo-work-profile-folder-android.png" width="75"> 
-
-A **Work apps** folder appears on the Samsung Galaxy S20 (Android 10) home screen. A folder isn't always automatically created.    
-
-<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="75">  
-
-A **Work** folder appears on the Nexus 5X (Android 8.1.0) home screen.  
-
-<img alt="Screenshot of the Nexus 5X work profile folder." src="./media/nexus-5X-work-profile-folder-android.png" width="75">  
 
 ### Work profile in app drawer 
 Examples of where the work profile appears in the app drawer.  
@@ -167,6 +159,13 @@ Work apps appear alongside personal apps in the Nexus 5X (Android 8.1.0) app dra
    > ![Screenshot of work apps and personal apps together in Nexus 5X app drawer.](./media/nexus-5X-app-drawer-android.png)  
 
 ## Examples of briefcase badge  
+
+The following table shows how badges appear on common Android devices. 
+
+|Surface Duo (Android 10)|Google Pixel 4 (Android 11)|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)|
+|---|---|---|---|   
+|<img alt="Screenshot of Outlook work app on a Surface Duo device." src="./media/surface-duo-badge-android.png" width="75">|<img alt="Screenshot of Outlook work app on a Google Pixel 4 device." src="./media/google-pixel-4-badge-android.png" width="75">|<img alt="Screenshot of Outlook work app on a Samsung Galaxy S20 device." src="./media/samsung-galaxy-s20-badge-android.png" width="75">| <img alt="Screenshot of Outlook work app on a Nexus 5X device." src="./media/nexus-5x-badge-android.png" width="75">| 
+
 The following images show how badges appear on common Android devices. 
 
 Surface Duo (Android 10)  
