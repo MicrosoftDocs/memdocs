@@ -131,7 +131,7 @@ The in-console updates can apply to one or more of the following systems:
 
 Configuration Manager discovers new updates for you. Synchronize your Configuration Manager service connection point with the Microsoft cloud service, noting the following behaviors:  
 
-- When your service connection point is in online mode, your site synchronizes with Microsoft every day. It automatically identifies new updates that apply to your infrastructure. To download updates and redistributable files, the computer that hosts the service connection point site system role uses the **System** context to access the following internet locations: go.microsoft.com and download.microsoft.com. For more information about additional locations used by the service connection point, see [Internet access requirements](../deploy/configure/about-the-service-connection-point.md#bkmk_urls).  
+- When your service connection point is in online mode, your site synchronizes with Microsoft every day. It automatically identifies new updates that apply to your infrastructure. To download updates and redistributable files, the computer that hosts the service connection point site system role uses the **System** context to access the following internet locations: go.microsoft.com and download.microsoft.com. For more information about additional locations used by the service connection point, see [Internet access requirements](../plan-design/network/internet-endpoints.md#bkmk_scp).  
 
 - When your service connection point is in offline mode, use the service connection tool to manually sync with the Microsoft cloud. For more information, see [Use the service connection tool](use-the-service-connection-tool.md).  
 

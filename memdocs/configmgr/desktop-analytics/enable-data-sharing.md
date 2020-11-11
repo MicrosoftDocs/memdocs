@@ -82,6 +82,8 @@ To enable data sharing, configure your proxy server to allow the following inter
 
 Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../core/servers/manage/use-status-system.md#monitor-the-status-system) node of the Configuration Manager console.<!-- 5566763 -->
 
+Starting in version 2010, the service connection point validates important internet endpoints for Desktop Analytics. These checks help make sure that the cloud service is available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../../servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
+
 > [!NOTE]
 > For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service, any IP address in these ranges could be used.
 
