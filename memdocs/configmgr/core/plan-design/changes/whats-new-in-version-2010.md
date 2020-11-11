@@ -280,7 +280,18 @@ For more information, see [Configuration Manager console changes and tips](../..
 
 <!--7102084-->
 
-The client data sources dashboard now offers an expanded selection of filters to view information about where clients get content.
+The client data sources dashboard now offers an expanded selection of filters to view information about where clients get content. These new filters include:
+
+- Single boundary group
+- All boundary groups
+- Internet clients
+- Clients not associated with a boundary group
+
+The dashboard also includes a new tile for **Content downloads using fallback source**. This information helps you understand how often clients download content from an alternate source.
+
+:::image type="content" source="media/7102084-client-data-sources.png" alt-text="Client data sources dashboard" lightbox="media/7102084-client-data-sources.png":::
+
+For more information, see [Monitor content: Client Data Sources dashboard](../../servers/deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
 ### Improvements to the content library cleanup tool
 
