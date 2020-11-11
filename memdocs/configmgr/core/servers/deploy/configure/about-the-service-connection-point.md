@@ -2,7 +2,7 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 01/08/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # About the service connection point in Configuration Manager
@@ -73,7 +71,9 @@ When you install the service connection point on a site system server that's rem
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_scp).
+For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md). Other Configuration Manager features may require additional endpoints from the service connection point.
+
+[!INCLUDE [Internet endpoints for service connection point](includes/internet-endpoints-service-connection-point.md)]
 
 ## Install
 
