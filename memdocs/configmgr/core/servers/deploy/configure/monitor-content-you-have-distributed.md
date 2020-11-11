@@ -126,14 +126,33 @@ The **Distribution Point Configuration Status** node in the **Monitoring** works
 
 1. In the results pane, switch to the **Details** tab. It displays status information for the distribution point.  
 
-## Client Data Sources dashboard
+## Client data sources dashboard
 
-Use the **Client Data Sources** dashboard to better understand from where clients get content in your environment. The dashboard starts displaying data after clients download content and report that information back to the site. This process can take up to 24 hours.
+Use the **Client data sources** dashboard to better understand from where clients get content in your environment. The dashboard starts displaying data after clients download content and report that information back to the site. This process can take up to 24 hours.
+
+Starting in version 2010, the client data sources dashboard now offers an expanded selection of filters to view information about where clients get content. The following screenshot shows the dashboard in the version 2010 console:<!--7102084-->
+
+:::image type="content" source="media/7102084-client-data-sources.png" alt-text="Client data sources dashboard in version 2010" lightbox="media/7102084-client-data-sources.png":::
 
 > [!NOTE]
-> Configuration Manager doesn't enable this optional feature by default. You must enable the **Client Peer Cache** feature before using it. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
+> Configuration Manager doesn't enable this optional feature by default. Before you can use it, enable the **Client Peer Cache** feature. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
 
-In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and select the **Client Data Sources** node. Select a time period to apply to the dashboard. Then select the boundary group for which you want to view information. You can hover your mouse over tiles to see more details about the different content or policy sources.
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and select the **Client Data Sources** node.
+
+1. **Report Period**: Select a time period to apply to the dashboard.
+
+1. Then select the **single boundary group** for which you want to view information.
+
+    Starting in version 2010, you can also select additional filters for the dashboard:
+
+    - All boundary groups
+    - Internet clients
+    - Clients not associated with a boundary group
+
+    > [!NOTE]
+    > If there's no data available for the selected client group, the chart displays: "This data is not yet available."
+
+You can hover your mouse over tiles to see more details about the different content or policy sources.
 
 Also use the report, **Client Data Sources - Summarization**, to view a summary of the client data sources for each boundary group.
 
@@ -141,7 +160,7 @@ Also use the report, **Client Data Sources - Summarization**, to view a summary 
 
 The dashboard includes the following tiles:
 
-#### Client Content Sources
+#### Client content sources
 
 Displays the sources from which clients got content:
 
@@ -165,6 +184,14 @@ Displays the sources from which clients got content:
 >
 > For more information, see [Manage Express installation files for Windows 10 updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
+#### Content downloads using fallback source
+
+Starting in version 2010, this information helps you understand how often clients download content from an alternate source.
+
+#### Top distributed content
+
+The most distributed packages by source type
+
 #### Distribution points
 
 Displays the number of distribution points that are part of the selected boundary group.
@@ -173,14 +200,10 @@ Displays the number of distribution points that are part of the selected boundar
 
 Of the number of clients that are in the selected boundary group, this tile shows how many used a distribution point to get content.
 
-#### Peer Cache sources
+#### Peer cache sources
 
 For the selected boundary group, this tile shows how many peer cache sources have reported download history.
 
 #### Clients that used a peer
 
 Of the number of clients that are in the selected boundary group, this tile shows how many used a peer cache source to get content.
-
-#### Top Distributed Content
-
-The most distributed packages by source type
