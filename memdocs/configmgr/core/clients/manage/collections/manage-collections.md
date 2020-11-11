@@ -193,7 +193,7 @@ When you view properties for a collection, you can view and configure the follow
 
 <!--3608121-->
 
-Starting in version 1910, you can view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
+Starting in version 2010, you can view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
 
 :::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
 
