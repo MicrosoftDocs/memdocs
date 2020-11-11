@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise security configurations work profile
+title: Android Enterprise security configurations for personally-owned work profile
 titleSuffix: Microsoft Intune
 description: Learn the restrictions and settings suggested for Android Enterprise device basic and high security.
 keywords:
@@ -29,7 +29,7 @@ ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Android Enterprise work profile security configurations
+# Android Enterprise personally-owned work profile security configurations
 
 As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise work profile mobile users. For more information on each policy setting, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#work-profile-only).
 
@@ -37,13 +37,13 @@ When choosing your settings, be sure to review and categorize usage scenarios. T
 
 For personally-owned work profile devices, there are two recommended security configuration frameworks:
 
-- [Work profile basic security (level 1)](#work-profile-basic-security) 
-- [Work profile high security (level 3)](#work-profile-high-security) 
+- [Personally-owned work profile basic security (level 1)](#personally-owned-work-profile-basic-security) 
+- [Personally-owned work profile high security (level 3)](#personally-owned-work-profile-high-security) 
 
 > [!Note]
-> Because of the settings available for Android Enterprise work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
+> Because of the settings available for personaly-owned work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
 
-## Work profile basic security
+## Personally-owned work profile basic security
 
 Level 1 is the recommended minimum security configuration for personal devices where users access work or school data. This configuration can apply to most mobile users. Some of the controls may impact user experience.
 
@@ -110,13 +110,13 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | System Security | Prevent app installations from unknown sources in the personal profile | Block ||
 
 > [!Note]
-> When Android Enterprise work profile is enabled, “One Lock” is configured by default to combine device and work profile passcodes. One Lock may be disabled to separate work profile and device passcodes if necessary, under work profile settings.
+> When a personally-owned work profile is enabled, “One Lock” is configured by default to combine device and work profile passcodes. One Lock may be disabled to separate work profile and device passcodes if necessary, under work profile settings.
 
-## Work profile high security
+## Personally-owned work profile high security
 
 Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries merit the additional constraints described below. This configuration expands upon the configuration in Level 1 by:
 - implementing mobile threat defense or Microsoft Defender ATP.
-- restricting work profile data scenarios.
+- restricting personally-owned work profile data scenarios.
 - enacting stronger password policies.
 
 The policy settings enforced in level 3 include all the policy settings recommended for level 1. However, the settings listed below include only those that have been added or changed. These settings may have a slightly higher impact to users or applications. They enforce a level of security more appropriate for risks facing users with access to sensitive information on mobile devices.
