@@ -37,7 +37,7 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
 
-# Week of November 9, 2020  
+## Week of November 9, 2020  
 
 ### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->  
 
