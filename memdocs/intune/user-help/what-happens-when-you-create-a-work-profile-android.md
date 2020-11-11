@@ -124,8 +124,7 @@ To see how work profile settings appear on other Android devices, see the [examp
 ### App drawer pause option 
  Swipe up on the home screen or select **Apps** to access the app drawer. Tap the **Work** tab and then switch the **Work profile** toggle off.  
 
-
- <img alt="Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer." src="./media/samsung-galaxy-s20-pause-app-drawer.png" width="250">  
+<img alt="Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer." src="./media/samsung-galaxy-s20-pause-app-drawer.png" width="250">  
 
  
 ## Examples  
@@ -152,19 +151,24 @@ These images show where the work profile appears in the app drawer.
 
 Surface Duo (Android 10)   
 
- <img alt="Screenshot of work tab in Surface Duo app drawer." src="./media/surface-duo-app-drawer-android.png" width="250">  
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of work tab in Surface Duo app drawer.](./media/surface-duo-app-drawer-android.png)   
 
 Google Pixel 4 (Android 11)  
 
- <img alt="Screenshot of work tab in Google Pixel 4 app drawer." src="./media/google-pixel-4-app-drawer-android.png" width="250">   
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of work tab in Google Pixel 4 app drawer.](./media/google-pixel-4-app-drawer-android.png)   
 
 Samsung Galaxy S20 (Android 10)   
 
- <img alt="Screenshot of work tab in Samsung Galaxy S20 app drawer." src="./media/samsung-galaxy-s20-app-drawer-android.png" width="250">  
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of work tab in Samsung Galaxy S20 app drawer.](./media/samsung-galaxy-s20-app-drawer-android.png)  
+  
 
 Nexus 5X (Android 8.1.0)    
 
- <img alt="Screenshot of work apps and personal apps together in Nexus 5X app drawer." src="./media/nexus-5X-app-drawer-android.png" width="250">     
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of work apps and personal apps together in Nexus 5X app drawer.](./media/nexus-5X-app-drawer-android.png)  
 
 ### Briefcase badge  
 
@@ -236,10 +240,11 @@ Samsung Galaxy S20 (Android 10)
 Nexus 5X (Android 8.1.0)   
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of Work profile toggle switch turned on in Nexus 5X device settings.](./media/nexus-5x-settings-android.png) 
+   > ![Screenshot of Work profile toggle switch turned on in Nexus 5X device settings.](./media/nexus-5x-settings-android.png)  
 
 ### Pause in app drawer   
 These images show where the pause option appears in the app drawer on a Google Pixel 4 (Android 11).    
+
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer.](./media/samsung-galaxy-s20-pause-app-drawer.png)  
