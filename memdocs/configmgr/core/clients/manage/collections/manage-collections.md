@@ -2,215 +2,221 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to manage collections in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the overview information in this article to help you perform management tasks for collections in Configuration Manager.  
+Use the overview information in this article to help you run management tasks for collections in Configuration Manager.
 
-> [!NOTE]  
->  For information about how to create Configuration Manager collections, see [How to create collections](create-collections.md).
+For information about how to create Configuration Manager collections, see [How to create collections](create-collections.md).
 
+## Collection actions
 
+In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select **Device Collections** or **User Collections**, select the collection to manage, and then select a management task.
 
-## <a name="bkmk_device"></a> How to manage device collections  
-
-In the **Assets and Compliance** workspace, select **Device Collections**, select the collection to manage, and then select a management task.  
-
+### Manage device collections
 
 #### Show Members
+
 Displays all of the resources that are members of the selected collection in a temporary node under the **Devices** node.
 
-
 #### Add Selected Items
-Provides the following options: 
 
-- **Add Selected Items to Existing Device Collection**: Opens the **Select Collection** dialog box. Select the collection to which you want to add the members of the selected collection. The selected collection is included in this collection by using an **Include Collections** membership rule.  
+Provides the following options:
 
-- **Add Selected Items to New Device Collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using an **Include Collections** membership rule.  
+- **Add Selected Items to Existing Device Collection**: Opens the **Select Collection** window. Select the collection to which you want to add the members of the selected collection. The selected collection is included in this collection by using an **Include Collections** membership rule.
 
+- **Add Selected Items to New Device Collection**: Opens the **Create Device Collection Wizard** where you can create a new collection. The selected collection is included in this collection by using an **Include Collections** membership rule.
 
 For more information, see [How to create collections](create-collections.md).
 
-
 #### Install Client
+
 Opens the **Install Client Wizard**. This wizard uses client push installation to install a Configuration Manager client on all computers in the selected collection. For more information, see [Client push installation](../../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).
 
-
 #### Run Script
+
 Opens the **Run Script** wizard to run a PowerShell script on all of the clients in the collection. For more information, see [Create and run PowerShell scripts](../../../../apps/deploy-use/create-deploy-scripts.md).
 
+#### Start CMPivot
+
+Opens CMPivot for this collection. Use CMPivot to query device information and take action in real time. For more information, see [CMPivot for real-time data](../../../servers/manage/cmpivot.md).
 
 #### Manage Affinity Requests
-Opens the **Manage User Device Affinity Requests** dialog box. Approve or reject pending requests to establish user device affinities for devices in the selected collection. For more information, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)
 
+Opens the **Manage User Device Affinity Requests** dialog box. Approve or reject pending requests to establish user device affinities for devices in the selected collection. For more information, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
 #### Clear Required PXE Deployments
+
 Clears any required PXE boot deployments from all members of the selected collection. For more information, see [Use PXE to deploy Windows over the network](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
-
 #### Update Membership
+
 Evaluates the membership for the selected collection. For collections with many members, this update might take some time to finish. Use the **Refresh** action to update the display with the new collections members after the update is completed.
 
+#### Synchronize Membership
+
+If you configured this collection for cloud sync, synchronize the current membership with an Azure Active Directory group. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
 #### Add Resources
-Opens the **Add Resources to Collection** dialog box. Search for new resources to add to the selected collection. The icon for the selected collection displays an hourglass symbol while the update is in progress.
 
+Opens the **Add Resources to Collection** window. Search for new resources to add to the selected collection. The icon for the selected collection displays an hourglass symbol while the update is in progress.
 
 #### Client Notification
+
 For more information, see [Client notifications](../client-notification.md).
 
+#### Client Diagnostics
+
+Displays the following options:
+
+- **Enable verbose logging**
+- **Disable verbose logging**
+- **Collect client logs**
+
+For more information, see [Client diagnostics](../client-notification.md#client-diagnostics).
 
 #### Endpoint Protection
-For more information, see [Client notifications](../client-notification.md).
 
+For more information, see [Client notifications: Endpoint protection](../client-notification.md#endpoint-protection).
 
 #### Export
-Opens the **Export Collection Wizard** that helps you export this collection to a Managed Object Format (MOF) file. This file can then be archived or imported at another Configuration Manager site. When you export a collection, referenced collections aren't exported. A referenced collection is referenced by the selected collection through the use of an **Include** or **Exclude** rule.
 
+Opens the **Export Collection Wizard** that helps you export this collection to a Managed Object Format (MOF) file. You can then archive this file, or import it to another Configuration Manager site. When you export a collection, referenced collections aren't exported. A referenced collection is referenced by the selected collection through the use of an **Include** or **Exclude** rule.
 
 #### Copy
+
 Creates a copy of the selected collection. The new collection uses the selected collection as a limiting collection.
 
-
 #### Refresh
+
 Refresh the view.
 
-
 #### Delete
-Deletes the selected collection. You can also delete all of the resources in the collection from the site database. 
+
+Deletes the selected collection. You can also delete all of the resources in the collection from the site database.
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
 
-
 #### Simulate Deployment
+
 Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](../../../../apps/deploy-use/simulate-application-deployments.md).
 
-
 #### Deploy
-Displays the following options:  
 
-- **Application**: Opens the **Deploy Software Wizard**. Select and configure an application deployment to the selected collection. For more information, see [How to deploy applications](../../../../apps/deploy-use/deploy-applications.md).  
+Displays the following options:
 
-- **Program**: Opens the **Deploy Software Wizard**. Select and configure a package and program deployment to the selected collection. For more information, see [Packages and programs](../../../../apps/deploy-use/packages-and-programs.md).  
+- **Application**: Opens the **Deploy Software Wizard**. Select and configure an application deployment to the selected collection. For more information, see [How to deploy applications](../../../../apps/deploy-use/deploy-applications.md).
 
-- **Configuration Baseline**: Opens the **Deploy Configuration Baselines** dialog box. Configure the deployment of one or more configuration baselines to the selected collection. For more information, see [How to deploy configuration baselines](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
+- **Program**: Opens the **Deploy Software Wizard**. Select and configure a package and program deployment to the selected collection. For more information, see [Packages and programs](../../../../apps/deploy-use/packages-and-programs.md).
 
-- **Task Sequence**: Opens the **Deploy Software Wizard**. Select and configure a task sequence deployment to the selected collection. For more information, see [Manage task sequences to automate tasks](../../../../osd/deploy-use/deploy-a-task-sequence.md).  
+- **Configuration Baseline**: Opens the **Deploy Configuration Baselines** window. Configure the deployment of one or more configuration baselines to the selected collection. For more information, see [How to deploy configuration baselines](../../../../compliance/deploy-use/deploy-configuration-baselines.md).
 
-- **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Manage software updates](../../../../sum/understand/software-updates-introduction.md).  
+- **Task Sequence**: Opens the **Deploy Software Wizard**. Select and configure a task sequence deployment to the selected collection. For more information, see [Deploy a task sequence](../../../../osd/deploy-use/deploy-a-task-sequence.md).
 
+- **Software Updates**: Opens the **Deploy Software Updates Wizard**. Configure the deployment of software updates to resources in the selected collection. For more information, see [Deploy software updates](../../../../sum/deploy-use/deploy-software-updates.md).
 
-#### Clear Server Group Deployment Locks
-Manually release all server group deployment locks for the collection. For more information, see [Service a server group](../../../../sum/deploy-use/service-a-server-group.md).
-
+#### View Relationships
 
 #### Move
-Move the selected collection to another folder in the **Device Collections** node. 
 
+Move the selected collection to another folder in the **Device Collections** node.
 
 #### Properties
-For more information, see [Collection properties](#BKMK_CollProp).  
 
+For more information, see [Collection properties](#collection-properties).
 
-## <a name="bkmk_user"></a> How to manage user collections  
+### Manage user collections
 
-In the **Assets and Compliance** workspace, select **User Collections**, select the collection to manage, and then select a management task.  
+The following actions are available on user collections. The behaviors are the same as with device collections, other than they apply to user collections and the users within. For more information, see the corresponding action under [Manage device collections](#manage-device-collections).
 
-> [!Note]  
-> The following actions are available on user collections, but the behaviors are the same as with device collections. Other than they apply to user collections and the users within. For more information, see the corresponding action under [How to manage device collections](#bkmk_device).  
+- Show Members
+- Add Selected Items
+  - Add Selected Items to Existing User Collection
+  - Add Selected Items to New User Collection
+- Manage Affinity Requests
+- Update Membership
+- Synchronize Membership
+- Add Resources
+- Export
+- Copy
+- Refresh
+- Delete
+- Simulate Deployment
+- Deploy
+  - Application
+  - Program
+  - Configuration Baseline
+- View Relationships
+- Move
+- Properties
 
-- **Show Members**  
-- **Add Selected Items**  
-    - **Add Selected Items to Existing User Collection**  
-    - **Add Selected Items to New User Collection**  
-- **Manage Affinity Requests**  
-- **Update Membership**  
-- **Add Resources**  
-- **Export**  
-- **Copy**  
-- **Refresh**  
-- **Delete**  
-- **Simulate Deployment**  
-- **Deploy**  
-    - **Application**  
-    - **Program**  
-    - **Configuration Baseline**
-- **Move**  
-- **Properties**
+## Collection properties
 
+When you view properties for a collection, you can view and configure the following options:
 
-##  <a name="BKMK_CollProp"></a> Collection properties  
+- **General**: View and configure general information about the selected collection including the collection name, the limiting collection, the collection ID, and last update times.
 
-When you open the **Properties** dialog box for a collection, view and configure the following options:  
+- **Membership Rules**: Configure the membership rules that define the membership of this collection. For more information, see [How to create collections](create-collections.md).
 
-#### General
-View and configure general information about the selected collection including the collection name and the limiting collection.
+- **Power Management**: Configure power management plans that you've assigned to computers in the selected collection. For more information, see [Introduction to power management](../power/introduction-to-power-management.md).
 
-#### Membership Rules
-Configure the membership rules that define the membership of this collection. For more information, see [How to create collections](create-collections.md).  
+- **Deployments**: Displays any software that you've deployed to members of the selected collection.
 
-#### Power Management
-Configure power management plans that you've assigned to computers in the selected collection. For more information, see [Introduction to power management](../power/introduction-to-power-management.md).  
+- **Maintenance Windows**: View and configure maintenance windows that are applied to members of the selected collection. For more information, see [How to use maintenance windows](use-maintenance-windows.md).
 
-#### Deployments
-Displays any software that you've deployed to members of the selected collection.  
+- **Collection Variables**: Configure variables that apply to this collection and can be used by task sequences. For more information, see [How to set task sequence variables](../../../../osd/understand/using-task-sequence-variables.md#bkmk_set).
 
-#### Maintenance Windows
-View and configure maintenance windows that are applied to members of the selected collection. For more information, see [How to use maintenance windows](use-maintenance-windows.md).
+- **Distribution Point Groups**: Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-#### Collection Variables
-Configure variables that apply to this collection and can be used by task sequences. For more information, see [How to set task sequence variables](../../../../osd/understand/using-task-sequence-variables.md#bkmk_set).  
+- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md) starting in version 1906. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
-#### Distribution Point Groups
-Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
+    Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center](../../../../tenant-attach/atp-onboard.md).
 
-#### AAD Group Sync
-Synchronize collection membership results to Azure Active Directory Groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md) starting in version 1906. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+- **Security**: Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
-#### Security
-Displays the administrative users who have permissions for the selected collection from associated roles and security scopes. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).  
+- **Alerts**: Configure when alerts are generated for client status and endpoint protection. For more information, see [How to configure client status](../../deploy/configure-client-status.md) and [How to monitor endpoint protection](../../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-#### Alerts 
-Configure when alerts are generated for client status and Endpoint Protection. For more information, see [How to configure client status](../../deploy/configure-client-status.md) and [How to monitor Endpoint Protection](../../../../protect/deploy-use/monitor-endpoint-protection.md).  
-## <a name="bkmk_powershell"></a> Using PowerShell
+## PowerShell
 
-PowerShell can be used to manage collections.  For more information, see:
+You can also use PowerShell to manage collections. For more information, see the following articles:
 
-* [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection)
-* [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
-* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
-* [Copy-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
-* [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)
-* [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
-* [Export-CMCollection](/powershell/module/configurationmanager/export-cmcollection)
-* [Get-CMCollectionMember](/powershell/module/configurationmanager/get-cmcollectionmember)
-* [Get-CMCollectionSetting](/powershell/module/configurationmanager/get-cmcollectionsetting)
-* [Invoke-CMCollectionUpdate](/powershell/module/configurationmanager/invoke-cmcollectionupdate)
-* [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
-* [Set-CMCollectionPowerManagement](/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
-* [Get-CMCollectionMembershipRule](/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
-* [Remove-CMCollectionMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
-* [Get-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
-* [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
-* [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
-* [Add-CMCollectionToAdministrativeUser](/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
-* [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
-* [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
-* [Get-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
-* [Add-CMCollectionToDistributionPointGroup](/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
-* [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
-* [Remove-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
-* [Remove-CMCollectionFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
+- [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection)
+- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
+- [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+- [Copy-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
+- [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)
+- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
+- [Export-CMCollection](/powershell/module/configurationmanager/export-cmcollection)
+- [Get-CMCollectionMember](/powershell/module/configurationmanager/get-cmcollectionmember)
+- [Get-CMCollectionSetting](/powershell/module/configurationmanager/get-cmcollectionsetting)
+- [Invoke-CMCollectionUpdate](/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+- [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+- [Set-CMCollectionPowerManagement](/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+- [Get-CMCollectionMembershipRule](/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+- [Remove-CMCollectionMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+- [Get-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+- [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+- [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+- [Add-CMCollectionToAdministrativeUser](/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+- [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+- [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+- [Get-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+- [Add-CMCollectionToDistributionPointGroup](/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+- [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+- [Remove-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+- [Remove-CMCollectionFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
+
+## Next steps
+
+[Client notifications](../client-notification.md)
