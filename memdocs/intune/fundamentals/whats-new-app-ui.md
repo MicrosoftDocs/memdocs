@@ -28,7 +28,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
-# UI updates for Intune end-user apps
+# UI updates for Intune end-user apps  
 
 Learn about the most recent updates to the Microsoft Intune apps. We regularly add to and improve the Intune Company Portal app and website. If you're an Intune administrator or support person, this article provides the information you need to:
 
@@ -42,7 +42,6 @@ If you're an employee or student, be sure to check out the screenshots and links
 ### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->  
 
 We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. After the work profile setup flow, users see a new informational screen explaining where to find work apps, with links to help documentation.   
-
 
  > [!div class="mx-imgBorder"]
  > ![Screenshot of Company Portal **Your new work setup** screen.](./media/whats-new-app-ui/new-work-profile-company-portal-2011.png)  
