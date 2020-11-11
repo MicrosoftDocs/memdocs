@@ -28,8 +28,17 @@ Class SMS_Collection : SMS_BaseClass
    SInt32 CollectionVariablesCount;
    String Comment;
    UInt32 CurrentStatus;
+   Uint32 FullEvaluationRunTime;
+   Uint32 FullEvaluationMemberChanges;
+   DateTime FullEvaluationMemberChangeTime;
+   DateTime FullEvaluationLastRefreshTime;
+   DateTime FullEvaluationNextRefreshTime;
    Boolean HasProvisionedMember;
    SInt32 IncludeExcludeCollectionsCount;
+   Uint32 IncrementalEvaluationRunTime;
+   Uint32 IncrementalEvaluationMemberChanges;
+   DateTime IncrementalEvaluationMemberChangeTime;
+   DateTime IncrementalEvaluationLastRefreshTime;
    Boolean IsBuiltIn;
    Boolean IsReferenceCollection;
    UInt8 ISVData[];
@@ -168,6 +177,56 @@ Current status of the collection. Possible values are:
 | `7` | Appending member |
 | `8` | Querying |
 
+### `FullEvaluationRunTime`
+
+Data type: `Uint32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the full evaluation run time in seconds.
+
+### `FullEvaluationMemberChanges`
+
+Data type: `Uint32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the number of member changes from full evaluation.
+
+### `FullEvaluationMemberChangeTime`
+
+Data type: `Datetime`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the last time that membership changed from full evaluation.
+
+### `FullEvaluationLastRefreshTime`
+
+Data type: `Datetime`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the full evaluation last refresh time.
+
+### `FullEvaluationNextRefreshTime`
+
+Data type: `Datetime`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the full evaluation next refresh time.
+
 ### `HasProvisionedMember`
 
 Data type: `Boolean`
@@ -187,6 +246,46 @@ Access type: Read-only
 Qualifiers: [read]
 
 Count of collections that are included and excluded with this one.
+
+### `IncrementalEvaluationRunTime`
+
+Data type: `Uint32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the incremental evaluation run time in seconds.
+
+### `IncrementalEvaluationMemberChanges`
+
+Data type: `Uint32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the number of member changes from incremental evaluation.
+
+### `IncrementalEvaluationMemberChangeTime`
+
+Data type: `Datetime`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the last time that membership changed from incremental evaluation.
+
+### `IncrementalEvaluationLastRefreshTime`
+
+Data type: `Datetime`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Starting in version 2010, the incremental evaluation last refresh time.
 
 ### `IsBuiltIn`
 
