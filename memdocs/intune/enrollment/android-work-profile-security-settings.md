@@ -38,7 +38,7 @@ When choosing your settings, be sure to review and categorize usage scenarios. T
 For personally-owned work profile devices, there are two recommended security configuration frameworks:
 
 - [Personally-owned work profile basic security (level 1)](#personally-owned-work-profile-basic-security) 
-- [Personally-owned work profile high security (level 3)](#work-profile-high-security) 
+- [Personally-owned work profile high security (level 3)](#personally-owned-work-profile-high-security) 
 
 > [!Note]
 > Because of the settings available for personaly-owned work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
