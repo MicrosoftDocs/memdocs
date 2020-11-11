@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,7 +42,7 @@ Intune supports turning off all or part of the web protection feature. The metho
 
 - **Android device administrator**: Use a configuration profile to set custom OMA-URI settings on the device to disable the entire web protection feature or to disable only the use of VPNs. For general information about custom settings for Android devices, see [Custom settings](../configuration/custom-settings-android.md).
 
-- **Android Enterprise work profile**: Use an app configuration profile and the *configuration designer* to disable web protection. This method and enrollment type support disabling all web protection capabilities but doesn't support disabling only the use of VPNs. For general information about app configuration policies, see [Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+- **Android Enterprise Personally-Owned Work Profile**: Use an app configuration profile and the *configuration designer* to disable web protection. This method and enrollment type support disabling all web protection capabilities but doesn't support disabling only the use of VPNs. For general information about app configuration policies, see [Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 To configure web protection on devices, use the following procedures to create and deploy the applicable configuration.
 
@@ -92,18 +92,18 @@ To configure web protection on devices, use the following procedures to create a
 
 7. On **Review + create**, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-### Disable web protection for Android Enterprise work profile
+### Disable web protection for Android Enterprise Personally-Owned Work Profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App configuration policies** > **Add**, and then select Managed devices.
+2. Select **Apps** > **App configuration policies** > **Add**, and then select **Managed devices**.
 
 3. On **Basics**, enter the following details:
 
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, *Android app configuration for Microsoft Defender ATP web protection*.
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
    - **Platform**: Select **Android Enterprise**
-   - **Profile Type**: Select **Work Profile Only**
+   - **Profile Type**: Select **Personally-Owned Work Profile Only**
    - **Targeted app**: Click on **Select app**.
 
 4. On **Associated app**, find and select **Defender ATP**, and then select **OK** > **Next**.
