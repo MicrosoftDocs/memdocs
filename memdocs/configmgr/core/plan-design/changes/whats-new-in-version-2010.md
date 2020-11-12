@@ -137,6 +137,8 @@ In version 1810, the introduction of peer wake up allowed an administrator to wa
 
 This latest improvement allows the Configuration Manager site to wake devices at the deadline of a deployment, using that same client notification channel. Instead of the site server issuing the magic packet directly, the site uses the client notification channel to find an online machine in the last known subnet of the target device(s) and instructs the online client to issue the WoL packet for the target device.
 
+For more information, see [How to configure Wake on LAN](../../clients/deploy/configure-wake-on-lan.md#bkmk_deadline).
+
 ### Improved Windows Server restart experience for non-administrator accounts
 
 <!--7821529-->

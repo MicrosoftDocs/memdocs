@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Specify Wake on LAN settings for Configuration Manager when you want to bring computers out of a sleep state.
+Specify Wake on LAN (WoL) settings for Configuration Manager when you want to bring computers out of a sleep state.
 
 ## <a name="bkmk_wol-1810"></a> Wake on LAN starting in version 1810
 <!--3607710-->
@@ -29,14 +29,16 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
 - This feature doesn't support the following network technologies:
    - IPv6
    - 802.1x network authentication
-    >[!NOTE]
-    > 802.1x network authentication may work with additional configuration depending on the hardware and its configuration.
-- Machines only wake when you notify them through the **Wake Up** client notification.
-    - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
-    -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
+      - 802.1x network authentication may work with additional configuration depending on the hardware and its configuration.
 - DHCP lease durations can't be set to infinite. <!--8018584-->
-   - You may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite.  
+   - You may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite.
 
+Limitations for Configuration Manager version 2006 and earlier:
+- Machines only wake when you notify them through the **Wake Up** client notification.
+   - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
+      - Starting in Configuration Manager version 2010, you can wake-up at deadline with the new version of WoL. For more information, see [Notify client to wake when a deployment deadline occurs](#bkmk_deadline).
+   - If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.
+ 
 ### Security role permissions
 
 - **Notify resource** under the Collection category
@@ -68,11 +70,32 @@ Right-click on the client, go to **Client Notification**, then select **Wake up*
    - Starting in Configuration Manager 2002, this action is available from a console connected to a Central Administration site, a stand-alone site, or child primary site.
    - In versions 1910 and earlier, this action is only active when the Configuration Manager console is connected to a stand-alone or child primary site. When connected to a Central Administration Site, the action is not available.
 
+### <a name="bkmk_deadline"></a> Use the client notification channel to  wake a client when a deployment deadline occurs
+<!--3734819-->
+*(Introduced in version 2010)*
+
+Starting in Configuration Manager version 2010, you can allow the site to wake devices at the deadline of a deployment, using the client notification channel. Instead of the site server issuing the magic packet directly, the site uses the client notification channel to find an online machine in the last known subnet of the target device(s) and instructs the online client to issue the WoL packet for the target device.
+
+
+1. At the site level, enable Wake on LAN:
+   1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
+   1. Select the primary site to configure, and then choose **Properties**.
+   1. In the **Wake on LAN** tab, select **Enable Wake On LAN for this site** and send the wake-up packets **Using client notification channel**.
+   1. Select **OK** and repeat the procedure for all primary sites in the hierarchy.
+       :::image type="content" source="./media/3734819-wol-site-setting.png" alt-text="Send wake-up packets option in the deployment wizard" lightbox="./media/3734819-wol-site-setting.png":::
+
+1. Verify **Allow network wake-up** under the [**Power Management** client settings](../../../../clients/deploy/about-client-settings.md#power-management) is enabled.
+1. Create a deployment as **Required** with the **Send wake-up packages** option and a **Deadline**. Clients are sent a notification when a deadline is received on deployments such as task sequences, software distribution, or software updates installation.
+
+    :::image type="content" source="./media/3734819-wol-deployment.png" alt-text="Send wake-up packets option in the deployment wizard" lightbox="./media/3734819-wol-deployment.png":::
+
 ### What to expect when only the new version of Wake on LAN is enabled
 
 When you have only the new version of Wake on LAN enabled, only the **Wake Up** client notification is enabled. Clients aren't sent a notification when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. Once a sleeping machine is back online, it will be reflected in the console when it checks in with the Management Point.
 
-Starting in Configuration Manager version 1902, you can specify the Wake on LAN port. This setting is shared by both the new and older version of Wake on LAN.
+- Starting in Configuration Manager version 1902, you can specify the Wake on LAN port. This setting is shared by both the new and older version of Wake on LAN.
+
+- Starting in Configuration Manager version 2020, you can use the client notification channel to wake clients when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. 
 
 ### What to expect when both versions of Wake on LAN are enabled
 
@@ -100,9 +123,9 @@ A computer that receives the wake-up proxy client settings will likely pause its
  To use Wake on LAN, you need to enable it for each site in a hierarchy.
 
 1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
-2. Click the primary site to configure, and then click **Properties**.
-3. Click the **Wake on LAN** tab, and configure the options that you require for this site. To support wake-up proxy, make sure you select **Use wake-up packets only** and **Unicast**. For more information, see [Plan how to wake up clients](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
-4. Click **OK** and repeat the procedure for all primary sites in the hierarchy.
+2. Select the primary site to configure, and then choose **Properties**.
+3. In the **Wake on LAN** tab, and configure the options that you require for this site. To support wake-up proxy, make sure you select **Use wake-up packets only** and **Unicast**. For more information, see [Plan how to wake up clients](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
+4. Select **OK** and repeat the procedure for all primary sites in the hierarchy.
 
 ![Enable Wake On LAN in the site properties](media/wol-site-properties.png)
 
