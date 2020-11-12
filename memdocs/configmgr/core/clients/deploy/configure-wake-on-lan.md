@@ -2,7 +2,7 @@
 title: "Configure Wake on LAN"
 titleSuffix: "Configuration Manager"
 description: "Select Wake On LAN settings in Configuration Manager."
-ms.date: 08/26/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -103,7 +103,7 @@ Prerequisites for the computer sending the WoL magic packet to the target comput
 
     :::image type="content" source="./media/3734819-wol-deployment.png" alt-text="Send wake-up packets option in the deployment wizard" lightbox="./media/3734819-wol-deployment.png":::
 
-### What to expect when only the new version of Wake on LAN is enabled
+## What to expect when only the new version of Wake on LAN is enabled
 
 When you have only the new version of Wake on LAN enabled, only the **Wake Up** client notification is enabled. Clients aren't sent a notification when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. Once a sleeping machine is back online, it will be reflected in the console when it checks in with the Management Point.
 
@@ -111,7 +111,7 @@ When you have only the new version of Wake on LAN enabled, only the **Wake Up** 
 
 - Starting in Configuration Manager version 2020, you can use the client notification channel to wake clients when a deadline is received on deployments such as task sequences, software distribution, or software updates installation. For more information, see [Use the client notification channel to  wake a client when a deployment deadline occurs](#bkmk_deadline).
 
-### What to expect when both versions of Wake on LAN are enabled
+## What to expect when both versions of Wake on LAN are enabled
 
 When you have both versions of Wake on LAN enabled, you can use the **Wake Up** client notification and wake up on deadline. The client notification functions a little differently than traditional Wake on LAN. For a brief explanation of how the client notification works, see the [Wake on LAN starting in version 1810](#bkmk_wol-1810) section. The new client setting **Allow network wake-up** will change the NIC properties to allow Wake on LAN. You no longer need to manually change it for new machines that are added to your environment. All other functionality of Wake on LAN hasn't been changed.
 
