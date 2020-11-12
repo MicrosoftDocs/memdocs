@@ -66,7 +66,7 @@ Default restrictions are automatically provided for both device type and device 
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Choose **Next** to go to the **Platform settings** page.
 4. Under **Platform**, choose **Allow** for the platforms that you want this restriction to allow.
-    ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/choose-platform-settings.png)
+    ![Screen cap for choosing settings](./media/enrollment-restrictions-set/choose-platform-settings.png)
 5. Under **Versions**, choose the minimum and maximum versions that you want the allowable platforms to support. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal.
      Supported version formats include:
     - Android device administrator and Android Enterprise personally-owned work profile support major.minor.rev.build.
