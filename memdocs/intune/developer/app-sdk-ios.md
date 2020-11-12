@@ -184,6 +184,9 @@ To enable the Intune App SDK, follow these steps:
 
 If the '-o' parameter is not specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
 
+### Xcode Build Settings
+The app should have the "Strip Swift Symbols" (STRIP_SWIFT_SYMBOLS in Xcconfig) be set to No.
+
 ## Configure MSAL
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
@@ -516,6 +519,8 @@ The `isSaveToAllowedForLocation` API provides constants to check whether the IT 
 
 Apps should use the constants in `isSaveToAllowedForLocation` to check if data can be saved to locations considered "managed," like OneDrive for Business, or "personal." Additionally, the API should be used when the app can't check whether a location is "managed" or "personal."
 
+The `IntuneMAMSaveLocationSharePoint` should be used for both SharePoint online and AAD Authenticated SharePoint on-prem.
+
 The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device. Similarly, the `IntuneMAMSaveLocationCameraRoll` constant should be used if the app is saving a photo to the camera roll.
 
 If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` and `IntuneMAMSaveLocationCameraRoll` locations should always be paired with a `nil` account.
@@ -532,6 +537,8 @@ The `isOpenFromAllowedForLocation` API provides constants to check whether the I
 * IntuneMAMOpenLocationAccountDocument
 
 Apps should use the constants in `isOpenFromAllowedForLocation` to check if data can be opened from locations considered "managed", like OneDrive for Business, or "personal". Additionally, the API should be used when the app can't check whether a location is "managed" or "personal".
+
+The `IntuneMAMOpenLocationSharePoint` should be used for both SharePoint online and AAD Authenticated SharePoint on-prem.
 
 The `IntuneMAMOpenLocationCamera` constant should be used when the app is opening data from the camera or photo album.
 
