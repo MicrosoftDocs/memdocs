@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -404,6 +404,13 @@ Supported platforms and profiles:
     - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
+
+- **Block write access to removable storage**  
+  CSP: [RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess)
+
+  - **Not configured** *(default)*
+  - **Yes** - Write access is denied to removable storage.
+  - **No** - Write access is allowed.
 
 - **Scan removable drives during full scan**  
   CSP: [Defender/AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
