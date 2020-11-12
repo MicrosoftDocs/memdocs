@@ -37,9 +37,9 @@ In many organizations, administrators are challenged to protect resources and da
 
 The APP-WE and the Android Enterprise personally-owned work profile deployment scenarios include the following key features important for BYOD environments:
 
-1. **Protection and segregation of organization-managed data**: Both solutions protect organization data by enforcing data loss prevention (DLP) controls on organization-managed data. These protections prevent accidental leaks of protected data, such as an end user accidentally sharing it to a personal app or account. They also serve to ensure that a device accessing the data is healthy and not compromised.
+- **Protection and segregation of organization-managed data**: Both solutions protect organization data by enforcing data loss prevention (DLP) controls on organization-managed data. These protections prevent accidental leaks of protected data, such as an end user accidentally sharing it to a personal app or account. They also serve to ensure that a device accessing the data is healthy and not compromised.
 
-2. **End-user privacy**: APP-WE and Android Enterprise personally-owned work profiles separate end users content on the device, and data managed by the mobile device management (MDM) administrator. In both scenarios, IT admins enforce policies, such as PIN-only authentication on organization-managed apps or identities. IT admins are unable to read, access, or erase data that's owned or controlled by end users.
+- **End-user privacy**: APP-WE and Android Enterprise personally-owned work profiles separate end users content on the device, and data managed by the mobile device management (MDM) administrator. In both scenarios, IT admins enforce policies, such as PIN-only authentication on organization-managed apps or identities. IT admins are unable to read, access, or erase data that's owned or controlled by end users.
 
 Whether you choose APP-WE or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide.
 
