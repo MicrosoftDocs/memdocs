@@ -3,7 +3,7 @@
 
 title: Move Android devices from device administrator to personally-owned work profile management
 titleSuffix: Microsoft Intune
-description: Move Android devices from device administrator to personaly-owned work profile management in Intune.
+description: Move Android devices from device administrator to personally-owned work profile management in Intune.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -64,15 +64,15 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 5. On the **Locations** page, you can add locations if you want > **Next**.
 
-6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end user experience for this flow.
+6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
     ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    These are some actions to consider:
+    Some actions to consider include:
 
-    - **Mark device noncompliant**: By default, this action is set to zero (0) days, marking devices as noncompliant immediately. Changing this to a greater number of days provides users with a grace period in which they can see the flow to move to personally-owned work profile management without yet being marked noncompliant. For example, setting this to 14 days would give users two weeks to move from device administrator to work profile management without the risk of losing access to resources.
-    - **Send push notification to end user**: Configure this to send push notifications to the device administrator devices. When a user selects the notification, it will launch the Android Company Portal to the **Update device settings** page where they can start the flow to move to personally-owned  work profile management.
-    - **Send email to end user**: Configure this to send emails to users about the move from device administrator to personally-owned work profile management. In the email, you can include the URL below , which when selected, will launch the Android Company Portal to the Update device settings page where they can start the flow to move to work profile management.
+    - **Mark device noncompliant**: By default, this action is set to zero (0) days, marking devices as noncompliant immediately. Changing this to a greater number of days provides users with a grace period in which they can see the flow to move to personally-owned work profile management without yet being marked noncompliant. For example, setting this action to 14 days would give users two weeks to move from device administrator to work profile management without the risk of losing access to resources.
+    - **Send push notification to end user**: Configure this action to send push notifications to the device administrator devices. When a user selects the notification, it will launch the Android Company Portal to the **Update device settings** page where they can start the flow to move to personally-owned  work profile management.
+    - **Send email to end user**: Configure this action to send emails to users about the move from device administrator to personally-owned work profile management. In the email, you can include the following URL, which when selected, will launch the Android Company Portal to the Update device settings page where they can start the flow to move to work profile management.
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
       - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
@@ -105,7 +105,7 @@ To get the **Resolve** button to appear, the user must postpone setup and restar
 To avoid this condition, use enrollment restrictions to block enrollment into device administrator management.
 
 ### User sees an error after tapping URL to Update device settings page
-Users might see an error page in the browser when they tap the URL to the **Update device settings page** of the Android Company Portal. This error can be caused by one of the following:
+Users might see an error page in the browser when they tap the URL to the **Update device settings page** of the Android Company Portal. This error can be caused by one of the following conditions:
 - The device isn't an Android.
 - The Android device doesn't have the Company Portal app.
 - The Android Company Portal version is earlier than 5.0.4720.0.
