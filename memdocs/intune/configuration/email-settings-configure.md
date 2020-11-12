@@ -50,7 +50,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
     - **Platform**: Choose the platform of your devices. Your options:  
 
         - **Android device administrator** (Samsung Android Knox Standard only)
-        - **Android Enterprise**
+        - **Android Enterprise** personally-owned work profiles
         - **iOS/iPadOS**
         - **Windows 10 and later**
 
