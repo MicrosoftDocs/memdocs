@@ -32,7 +32,7 @@ Complete the steps in one of the OS deployment scenarios, and then use the secti
 > [!WARNING]
 > If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. [Deployment verification](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
-Starting in version 2006, PXE-based task sequences can download cloud-based content. The PXE-enabled distribution point still requires the boot image, and the device needs an intranet connection to the management point. It can then get additional content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Support for cloud-based content](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+Starting in version 2006, PXE-based task sequences can download cloud-based content. The PXE-enabled distribution point still requires the boot image, and the device needs an intranet connection to the management point. It can then get additional content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## <a name="BKMK_Configure"></a> Configure distribution points for PXE
 
