@@ -202,8 +202,6 @@ For more information, see [Manage Windows as a service](../../../osd/deploy-use/
 
 This release includes the following improvements to OS deployment:
 
-- After you update the site to version 2010, the Configuration Manager console shows the size in KB for all existing task sequences.<!--7799892--> Previously, the console showed a size of **0** for existing task sequences, which only updated when you modified the task sequence.
-
 - It resolves a bug with boot image metadata on PXE-enabled distribution points that have multiple content library drives.<!--7068388--> This bug could cause the client to fail to download the boot image over TFTP.
 
 - Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you can activate the Windows power plan for **High Performance**. Starting in this technical preview release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan. Now when you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->

@@ -57,7 +57,7 @@ For example, if you try to save changes to a large task sequence, the task seque
 > [!TIP]
 > The behavior in version 2010 and later checks for the 2 MB size limit on the task sequence as stored in the site database. When the client processes the entire task sequence policy, the expanded size can cause problems over 32 MB. The management insights check for the 32 MB task sequence policy size.
 
-Starting in version 2010, when you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732--> The site updates this value when you save the task sequence. After upgrade, the value will show as 0 KB until you edit the task sequence and save the changes. For example, add a space character (` `) to the task sequence description.
+Starting in version 2010, when you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
 
 ### Actions to reduce task sequence size
 
