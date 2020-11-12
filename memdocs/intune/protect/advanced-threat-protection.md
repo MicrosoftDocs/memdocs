@@ -79,7 +79,7 @@ To use Microsoft Defender ATP with Intune, be sure you have the following config
 - [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) environment which will give you access to the Microsoft Defender Security Center (ATP portal)
 
 > [!NOTE]
-> Microsoft Defender ATP is not supported with Intune app protection policies.
+> Microsoft Defender ATP is not supported with Intune app protection policies. See [Microsoft Defender for Android system requirements](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#system-requirements) to see which management modes are supported. 
 
 ## Next steps
 
