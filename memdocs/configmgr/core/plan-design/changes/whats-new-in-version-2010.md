@@ -266,6 +266,8 @@ For more information, see [Product feedback](../../understand/product-feedback.m
 <!--7410221-->
 You now have an updated look and feel for in-console notifications. Notifications are more readable and the action link is easier to find. Additionally, the age of the notification is displayed to help you find the latest information. If you dismiss or snooze a notification, that action is now persistent for your user across consoles.
 
+For more information, see [Improvements to Configuration Manager console notifications](../../servers/manage/admin-console-notifications.md#bkmk_2010).
+
 ### Improvements to the Configuration Manager console
 
 - You can now copy discovery data from devices and users in the console. Copy the details to the clipboard, or export them all to a file. These new actions make it easier for you to quickly get this data from the console. For example, copy the MAC address of a device before you reimage it.<!--6890051-->
