@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/02/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -51,7 +51,7 @@ You can create VPN profiles using the following connection types:
 
 - Check Point Capsule VPN
   - Android device administrator
-  - Android Enterprise work profiles
+  - Android Enterprise personally-owned work profile
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
@@ -60,7 +60,7 @@ You can create VPN profiles using the following connection types:
 
 - Cisco AnyConnect
   - Android device administrator
-  - Android Enterprise work profiles
+  - Android Enterprise personally-owned work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
@@ -70,7 +70,7 @@ You can create VPN profiles using the following connection types:
 
 - Citrix SSO
   - Android device administrator
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise personally-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
@@ -83,7 +83,7 @@ You can create VPN profiles using the following connection types:
 
 - F5 Access
   - Android device administrator
-  - Android Enterprise work profiles
+  - Android Enterprise personally-owned work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
@@ -97,12 +97,15 @@ You can create VPN profiles using the following connection types:
 - L2TP
   - Windows 10
 
+- Microsoft Tunnel
+  - iOS/iPadOS
+
 - NetMotion Mobility
   - iOS/iPadOS
   - macOS
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise personally-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
@@ -112,7 +115,7 @@ You can create VPN profiles using the following connection types:
 
 - Pulse Secure
   - Android device administrator
-  - Android Enterprise work profiles
+  - Android Enterprise personally-owned work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - Windows 10
@@ -120,7 +123,7 @@ You can create VPN profiles using the following connection types:
 
 - SonicWall Mobile Connect
   - Android device administrator
-  - Android Enterprise work profiles
+  - Android Enterprise personally-owned work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
@@ -128,7 +131,7 @@ You can create VPN profiles using the following connection types:
   - Windows 8.1
 
 - Zscaler
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise personally-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
@@ -144,7 +147,7 @@ You can create VPN profiles using the following connection types:
     - **Platform**: Choose the platform of your devices. Your options:
       - **Android device administrator**
       - **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile**
-      - **Android Enterprise** > **Work profile**
+      - **Android Enterprise** > **Personally-owned work profile**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 and later**
@@ -195,7 +198,7 @@ For more information about how to create and use certificate profiles in Intune,
 
 ### User name and password
 
-The user authenticates to the VPN server by providing a user name and password.
+The user authenticates to the VPN server by providing a user name and password, or [derived credentials](../protect/derived-credentials.md).
 
 ## Next steps
 
