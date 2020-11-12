@@ -219,6 +219,14 @@ Use the following tips to navigate the relationship viewer:
 
     If you hover over a specific line, a tooltip shows the relationship type.
 
+- The maximum number of child nodes displayed depends upon the level of the graph:
+  - First level: five nodes
+  - Second level: three nodes
+  - Third level: two nodes
+  - Fourth level: one node
+
+  If there are more objects than the graph can display at that level, you'll see the **More** icon.
+
 - When the width of the tree is larger than the window, use the green arrows to the right or the left to view more.
 
 - When a node of the relationship tree is larger than the available space, select **More** to change the view to just that node.
@@ -228,6 +236,12 @@ Use the following tips to navigate the relationship viewer:
 - Use the **Search** box in the upper right corner to locate a collection in the current tree view.
 
 - Use the **Navigator** in the lower right corner to zoom and pan around the tree. You can also print the current view.
+
+- You can only see relationships between collections to which you have permission:
+
+  - If you have permission for **All Systems** or **All Users and User Groups**, then you'll see all relationships.
+
+  - If you don't have permission for a specific collection, you don't see it in the graph, and can't view its relationships.
 
 ## PowerShell
 
