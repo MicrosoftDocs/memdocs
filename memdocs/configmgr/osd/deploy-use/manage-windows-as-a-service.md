@@ -66,6 +66,8 @@ The Windows 10 servicing dashboard provides you with information about Windows 1
 
 - **Service Plan Monitoring**: Displays servicing plans that you've created and a chart of the compliance for each. This tile gives you a quick overview of the current state of the servicing plan deployments. If an earlier deployment ring meets your expectations for compliance, then you can select a later servicing plan (deploying ring). Select **Deploy Now** instead of waiting for the servicing plan rules to automatically trigger.
 
+- **Collection errors**: Starting in version 2010, this tile shows the number of devices that failed with the specified error code. You can scope the tile to a specific collection. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
+
 For more detailed information about Windows 10 builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
 
 > [!IMPORTANT]
@@ -278,6 +280,20 @@ The following settings are available in the servicing plan properties that weren
 Configure how Configuration Manager and System Center Operations Manager generate alerts for this deployment.
 
 You can review recent alerts from the **Software Updates** node in the **Software Library** workspace.
+
+## Analyze SetupDiag errors
+
+<!--4385028-->
+
+With the release of Windows 10, version 2004, the [SetupDiag](/windows/deployment/upgrade/setupdiag) diagnostic tool is included with Windows Setup. If there's an issue with the upgrade, SetupDiag automatically runs to determine the cause of the failure.
+
+Starting in version 2010, Configuration Manager gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
+
+The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console now includes a tile for **Collection Errors**:
+
+:::image type="content" source="media/4385028-collection-errors-tile.jpg" alt-text="Collection Errors tile in Windows 10 Servicing dashboard":::
+
+You can scope the tile to a specific collection. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 
 ## Next steps
 
