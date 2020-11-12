@@ -109,7 +109,18 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 
 When the wizard closes, you'll see the new connection in the **Azure Services** node. You can also view the tenant and app registrations in the **Azure Active Directory Tenants** node of the Configuration Manager console.
 
-If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. Open the properties of the **Cloud Management** service, and switch to the **Applications** tab. Select the option to **Disable Azure Active Directory authentication for this tenant**. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
+### Disable Azure AD authentication for non-device or user tenants
+<!--8537319-->
+
+If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices.
+
+1. Open the properties of the **Cloud Management** service.
+
+1. Switch to the **Applications** tab.
+
+1. Select the option to **Disable Azure Active Directory authentication for this tenant**.
+
+For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).
 
 ## Configure Azure resource providers
 
