@@ -137,6 +137,20 @@ This section shows examples of how the work profile and its features appear on c
 Some features are not available on all devices.   
 
 
+### Briefcase badge  
+
+These tables show examples of the briefcase badge that's used on work apps. For more information, see [Identify your work apps](#identify-work-apps).   
+
+|Surface Duo (Android 10)|Google Pixel 4 (Android 11)|
+|---|---| 
+|<img alt="Screenshot of Outlook work app on a Surface Duo device." src="./media/surface-duo-badge-android.png" width="75">|<img alt="Screenshot of Outlook work app on a Google Pixel 4 device." src="./media/google-pixel-4-badge-android.png" width="75">|  
+
+
+|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)| 
+|---|---|  
+|<img alt="Screenshot of Outlook work app on a Samsung Galaxy S20 device." src="./media/samsung-galaxy-s20-badge-android.png" width="75">| <img alt="Screenshot of Outlook work app on a Nexus 5X device." src="./media/nexus-5x-badge-android.png" width="75">|  
+
+
 ### Work profile in app drawer 
 These images show where the work profile appears in the app drawer. For more information, see [Find your work profile](#app-drawer).   
 
@@ -168,19 +182,6 @@ The following table shows examples of the work profile folder. For more informat
 |Surface Duo (Android 10)|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)|
 |---|---|---|  
 |<img alt="Screenshot of the Surface Duo work profile folder." src="./media/surface-duo-work-profile-folder-android.png" width="75">|<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="75">|<img alt="Screenshot of the Nexus 5X work profile folder." src="./media/nexus-5X-work-profile-folder-android.png" width="75">|    
-
-### Briefcase badge  
-
-These tables show examples of the briefcase badge that's used on work apps. For more information, see [Identify your work apps](#identify-work-apps).   
-
-|Surface Duo (Android 10)|Google Pixel 4 (Android 11)|
-|---|---| 
-|<img alt="Screenshot of Outlook work app on a Surface Duo device." src="./media/surface-duo-badge-android.png" width="75">|<img alt="Screenshot of Outlook work app on a Google Pixel 4 device." src="./media/google-pixel-4-badge-android.png" width="75">|  
-
-
-|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)| 
-|---|---|  
-|<img alt="Screenshot of Outlook work app on a Samsung Galaxy S20 device." src="./media/samsung-galaxy-s20-badge-android.png" width="75">| <img alt="Screenshot of Outlook work app on a Nexus 5X device." src="./media/nexus-5x-badge-android.png" width="75">| 
 
 ### Pause in quick settings   
 These images show where the pause option appears in the quick settings menu. For more information, see [Pause the work profile](#quick-settings-pause-option).  
