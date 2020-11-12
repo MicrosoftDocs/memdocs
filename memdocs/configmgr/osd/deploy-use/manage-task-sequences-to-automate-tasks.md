@@ -36,7 +36,7 @@ Create task sequences by using the Create Task Sequence Wizard. This wizard can 
 
 Modify a task sequence by adding or removing steps, adding or removing groups, or by changing the order of the steps. For more information, see [Use the task sequence editor](../understand/task-sequence-editor.md).
 
-## <a name="bkmk_policysize"></a> Reduce the size of task sequence policy
+## Reduce the size of task sequence policy
 
 <!--6982275-->
 When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
@@ -59,6 +59,11 @@ To help reduce the overall size of policy of a task sequence deployment, take th
 - There's an 8-KB limit on the size of the task sequence environment when it runs. Review the usage of custom task sequence variables, which can also contribute to the policy size.
 
 - As a last resort, split a complex, dynamic task sequence into separate task sequences with distinct deployments to different collections.
+
+Starting in version 2010, when you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
+
+> [!NOTE]
+> The site updates this value when you save the task sequence. After upgrade, the value will show as 0 KB until you edit the task sequence and save the changes. For example, add a space character (` `) to the task sequence description.
 
 ## <a name="bkmk_prop-general"></a> Software Center properties
 

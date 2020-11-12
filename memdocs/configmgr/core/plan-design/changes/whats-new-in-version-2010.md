@@ -190,7 +190,9 @@ To further help manage the size of task sequences, starting in this release Conf
 
 <!--7645732-->
 
-This release continues to iterate on changes in technical preview version 2004 and version 2007 to help you manage the size of task sequences. When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.
+This release continues to iterate on improvements to help you manage the size of task sequences. When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.
+
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
 
 ### Analyze SetupDiag errors for feature updates
 
