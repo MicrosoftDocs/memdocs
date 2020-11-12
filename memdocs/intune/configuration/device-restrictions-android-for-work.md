@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,6 +31,15 @@ ms.collection: M365-identity-device-management
 # Android Enterprise device settings to allow or restrict features using Intune
 
 This article lists and describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+
+This feature applies to:
+
+- Android Enterprise personally-owned work profile (BYOD)
+- Android Enterprise corporate-owned work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+For Android device administrator, see [Android and Samsung Knox Standard device restrictions](device-restrictions-android.md).
 
 ## Before you begin
 
