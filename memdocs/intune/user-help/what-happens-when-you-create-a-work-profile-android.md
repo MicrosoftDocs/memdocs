@@ -46,10 +46,9 @@ To learn how to set up a work profile, see [Create a work profile and enroll you
 ## Identify work apps 
 Work apps are marked with a briefcase badge, while personal apps do not have a briefcase badge. Some screen readers and voice assistants identify work apps by saying "work" before the app name.  
 
-
 |Personal app (no briefcase)|Work app (briefcase)|
 |---|---|  
-|<img alt="Screenshot of typical Outlook app icon with no work profile briefcase." src="./media/personal-no-briefcase-android.png" width="100">|<img alt="Screenshot of Outlook app icon with work profile briefcase." src="./media/work-briefcase-badge-android.png" width="100">|  
+|![Screenshot of typical Outlook app icon with no work profile briefcase.](./media/personal-no-briefcase-android.png)|![Screenshot of Outlook app icon with work profile briefcase.](./media/work-briefcase-badge-android.png)|  
  
 
 After you've set up the work profile, you may see duplicate apps on your device. For example, you could have two Outlook apps. Use the version that's marked with the briefcase for work-related tasks.       
@@ -70,16 +69,17 @@ The location of the work profile varies by device manufacturer and Android versi
 ### App drawer  
 Swipe up on the home screen or select **Apps** to access the app drawer. Work apps appear alongside your personal apps or within a **Work** tab in your app drawer.  
 
-<img alt="Screenshot of work tab in Google Pixel 4 app drawer." src="./media/google-pixel-4-app-drawer-android.png" width="250">  
+
+![Screenshot of work tab in Google Pixel 4 app drawer.](./media/google-pixel-4-app-drawer-android.png)  
 
 To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#work-profile-in-app-drawer) at the bottom of this article. 
 
 
 ### Folder  
-On some devices, work apps are in a work-designated folder on the home screen. This folder is automatically created during setup.  
+On some devices, work apps are in a work-designated folder on the home screen. This folder is automatically created during setup.    
 
 
-<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="150">  
+![Screenshot of the Samsung Galaxy S20 work profile folder.](./media/samsung-galaxy-s20-work-folder-android.png)
 
 
 To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#work-profile-folder) at the bottom of this article. 
@@ -90,7 +90,7 @@ To see how it appears on other Android devices, see the [examples](what-happens-
 Open the work version of the Google Play Store to see all of the apps your organization has made available to you.  
 
 
-<img alt="Screenshot of Google Play Store icon with briefcase badge." src="./media/samsung-galaxy-s20-play-store-android.png" width="150">  
+![Screenshot of Google Play Store icon with briefcase badge.](./media/samsung-galaxy-s20-play-store-android.png)  
 
 
 Continue to use the work version of the Play Store to search for and install other apps for work.  If you don’t see an app you need for work, you can request it from your IT support person. 
@@ -106,16 +106,14 @@ The location of the pause setting varies by device manufacturer and Android vers
 ### Quick settings pause option 
 Swipe down on your screen to access the quick settings menu. Tap **Work profile** to pause the work profile.   
 
-
-<img alt="Screenshot of inactive work profile icon in Google Pixel 4 quick settings." src="./media/google-pixel-4-quick-settings-android.png" width="250"> 
+![Screenshot of inactive work profile icon in Google Pixel 4 quick settings.](./media/google-pixel-4-quick-settings-android.png)  
 
 To see how quick settings appear on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#pause-in-quick-settings) at the bottom of this article.   
 
 ### Settings app pause option 
 Open the Settings app and go to **Work profile settings**. Switch the **Work profile** toggle off.   
 
-
-<img alt="Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings." src="./media/google-pixel-4-settings-android.png" width="250">  
+![Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings.](./media/google-pixel-4-settings-android.png)  
 
 To see how work profile settings appear on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#pause-in-settings-app) at the bottom of this article.   
 
@@ -123,7 +121,7 @@ To see how work profile settings appear on other Android devices, see the [examp
 ### App drawer pause option 
  Swipe up on the home screen or select **Apps** to access the app drawer. Tap the **Work** tab and then switch the **Work profile** toggle off.  
 
-<img alt="Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer." src="./media/samsung-galaxy-s20-pause-app-drawer.png" width="250">  
+ ![Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer.](./media/samsung-galaxy-s20-pause-app-drawer.png)   
 
  
 ## Examples  
@@ -141,14 +139,15 @@ Some features are not available on all devices.
 
 These tables show examples of the briefcase badge that's used on work apps. For more information, see [Identify your work apps](#identify-work-apps).   
 
+
 |Surface Duo (Android 10)|Google Pixel 4 (Android 11)|
 |---|---| 
-|<img alt="Screenshot of Outlook work app on a Surface Duo device." src="./media/surface-duo-badge-android.png" width="75">|<img alt="Screenshot of Outlook work app on a Google Pixel 4 device." src="./media/google-pixel-4-badge-android.png" width="75">|  
+|![Screenshot of Outlook work app on a Surface Duo device.](./media/surface-duo-badge-android.png)|![Screenshot of Outlook work app on a Google Pixel 4 device.](./media/google-pixel-4-badge-android.png) |  
 
 
 |Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)| 
 |---|---|  
-|<img alt="Screenshot of Outlook work app on a Samsung Galaxy S20 device." src="./media/samsung-galaxy-s20-badge-android.png" width="75">| <img alt="Screenshot of Outlook work app on a Nexus 5X device." src="./media/nexus-5x-badge-android.png" width="75">|  
+| ![Screenshot of Outlook work app on a Samsung Galaxy S20 device.](./media/samsung-galaxy-s20-badge-android.png) | ![Screenshot of Outlook work app on a Nexus 5X device.](./media/nexus-5x-badge-android.png) |  
 
 
 ### Work profile in app drawer 
@@ -181,7 +180,7 @@ The following table shows examples of the work profile folder. For more informat
 
 |Surface Duo (Android 10)|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)|
 |---|---|---|  
-|<img alt="Screenshot of the Surface Duo work profile folder." src="./media/surface-duo-work-profile-folder-android.png" width="75">|<img alt="Screenshot of the Samsung Galaxy S20 work profile folder." src="./media/samsung-galaxy-s20-work-folder-android.png" width="75">|<img alt="Screenshot of the Nexus 5X work profile folder." src="./media/nexus-5X-work-profile-folder-android.png" width="75">|    
+|![Screenshot of the Surface Duo work profile folder.](./media/surface-duo-work-profile-folder-android.png) |![Screenshot of the Samsung Galaxy S20 work profile folder.](./media/samsung-galaxy-s20-work-folder-android-example.png) |![Screenshot of the Nexus 5X work profile folder.](media/nexus-5X-work-profile-folder-android.png)|      
 
 ### Pause in quick settings   
 These images show where the pause option appears in the quick settings menu. For more information, see [Pause the work profile](#quick-settings-pause-option).  

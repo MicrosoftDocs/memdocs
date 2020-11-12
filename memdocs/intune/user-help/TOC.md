@@ -51,7 +51,7 @@
 #### [Get work or school apps](use-managed-apps-on-your-device-android.md)  
 #### [Get Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
 #### [Install Company Portal app in China](install-company-portal-android-china.md)  
-#### Introduction to Android work profile(what-happens-when-you-create-a-work-profile-android.md)   
+#### [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md)   
 
 ### Resolve a threat in MTD app  
 #### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
