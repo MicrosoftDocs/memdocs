@@ -55,7 +55,7 @@ Enable [Azure AD User Discovery](../../servers/deploy/configure/configure-discov
 After you complete these actions, your Configuration Manager site is connected to Azure AD.
 
 > [!NOTE]
-> If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
+> If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. For more information, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
 
 ## Configure client settings
 
