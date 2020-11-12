@@ -156,6 +156,8 @@ For more information, see [Device restart notifications: Client settings](../../
 <!--7033501-->
 An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
 
+For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+
 ## OS deployment
 
 ### Deploy an OS over CMG using boot media
