@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 11/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -104,7 +104,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 ## Remove an email profile
 
-There are different ways to remove an email profile from a device, even when there's only one email profile on the device:
+There are different ways to remove an email profile from devices, even when there's only one email profile on the device:
 
 - **Option 1**: Open the email profile (**Devices** > **Configuration profiles** > select your profile), and choose **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
 
@@ -126,20 +126,17 @@ You can help secure email profiles using the following options:
 
 If the user already configured an email account, then the email profile is assigned differently, depending on the platform.
 
+- **Android device administrator Samsung Knox Standard**: An existing, duplicate email profile is detected based on the email address, and overwrites it with the Intune profile. Android doesn't use the host name to identify the profile. Don't create multiple email profiles using the same email address on different hosts. The profiles overwrite each other.
+
+- **Android Enterprise personally-owned work profiles**: Intune provides two Android work email profiles: Gmail app and Nine Work app. These apps are available in the Google Play Store, and install in the personally-owned work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your user devices. Then, create and deploy the email profile.
+
+  You can also use certificate profiles on Gmail and Nine Work. Any Gmail or Nine Work device configuration policies that you create continue to apply to the device. It's not necessary to move them to app configuration policies. Email apps, such as Nine Work, may not be free. Review the app's licensing details, or contact the app company with any questions.
+
+  On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../apps/app-configuration-policies-use-android.md). The app configuration policies support the GMail and Nine Work email apps.
+
 - **iOS/iPadOS**: An existing, duplicate email profile is detected based on host name and email address. The duplicate email profile blocks the assignment of an Intune profile. In this case, the Company Portal app notifies the user that they aren't compliant, and prompts the end user to manually remove the configured profile. To help prevent this scenario, tell your end users to enroll *before* installing an email profile, which allows Intune to set up the profile.
 
 - **Windows:** An existing, duplicate email profile is detected based on host name and email address. Intune overwrites the existing email profile created by the end user.
-
-- **Android Samsung Knox Standard**: An existing, duplicate email profile is detected based on the email address, and overwrites it with the Intune profile. Android doesn't use host name to identify the profile. Don't create multiple email profiles using the same email address on different hosts. The profiles overwrite each other.
-
-- **Android Enterprise work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the personally-owned work profile, and on the corporate owned work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your user devices. Then, create and deploy the email profile. You can use Gmail and Nine email configuration profiles on the following enrollment types:
-
-  - Android Enterprise personally-owned work profile
-  - Android Enterprise fully managed
-  - Android Enterprise dedicated devices
-  - Android Enterprise corporate owned work profile
-
-  You can use certificate profiles on Gmail and Nine email. Any Gmail or Nine device configuration policies that you create continue to apply to the device. It's not necessary to move them to app configuration policies. Email apps, such as Nine Work, may not be free. Review the app's licensing details, or contact the app company with any questions.
 
 ## Changes to assigned email profiles
 
