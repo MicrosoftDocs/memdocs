@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/28/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -90,7 +90,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Android enterprise**.
+    - **Platform**: Select **Android Enterprise**.
     - **Profile**: Select **OEMConfig**.
 
 4. Select **Create**.
