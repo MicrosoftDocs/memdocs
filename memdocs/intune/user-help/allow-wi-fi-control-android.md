@@ -2,7 +2,7 @@
 # required metadata
 
 title: Give Wi-Fi control to Company Portal - Microsoft Intune | Microsoft Docs
-description: 
+description: Learn how to give Wi-Fi control to Company Portal. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -34,7 +34,7 @@ ms.collection:
 
 During enrollment, Company Portal may prompt you for permission to access your Wi-Fi settings. Company Portal needs this permission to receive Wi-Fi configurations from Intune. If you deny permission, Intune won't be able to deliver the configurations to your device, which could prevent you from connecting to your organization's Wi-Fi network. 
 
-This article describes how to give Company Portal permissions to control Wi-Fi.   
+This article describes how to give Company Portal permission to control Wi-Fi.   
 
 ## Required devices      
 
@@ -67,6 +67,6 @@ Follow these steps to allow Company Portal to control Wi-Fi.
 
 ## Next steps  
 
-After you allow Wi-Fi control....  **LN: What happens or what should they do after they switch the toggle on?** 
+After you allow Wi-Fi control....  **LN: If applicable, do you want to include what happens or what should they do after they switch the toggle on?** 
 
 Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
