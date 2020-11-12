@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -207,7 +207,10 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 Only devices that are enrolled to Intune are supported with Microsoft Tunnel. The following device platforms are supported:
 
-- Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile)
+- Android Enterprise:
+  - Fully Managed
+  - Corporate-Owned Work Profile
+  - Personally-Owned Work profile
 - iOS/iPadOS
 
 The following functionality is supported by all platforms:
