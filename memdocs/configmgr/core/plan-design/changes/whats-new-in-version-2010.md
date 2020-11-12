@@ -172,11 +172,13 @@ Starting in current branch version 2006, the cloud management gateway (CMG) supp
 
 For more information on this scenario and other related scenarios, see the new article to [Deploy a task sequence over the internet](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-an-OS-over-CMG-using-bootable-media).
 
-### Deploy a task sequence to a user
+### Deploy a task sequence deployment type to a user collection
 
 <!--8018255-->
 
-You can now deploy a non-OS deployment task sequence to a user-based collection. Use the task sequence deployment type of an application to install or uninstall it.
+You can now deploy an application with a task sequence deployment type to a user-based collection. A user-targeted deployment still runs in the context of the local System account.
+
+For more information, see [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).
 
 ### Manage task sequence size
 
