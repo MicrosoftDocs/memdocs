@@ -81,6 +81,11 @@ For more information, see [Internet access requirements](../../../plan-design/ne
 
 If you use Desktop Analytics or tenant attach, starting in version 2010, the service connection point now checks important internet endpoints. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem.
 
+For the list of internet endpoints, see the following sections of the **Internet access requirements** article:
+
+- [Desktop Analytics](../../../plan-design/network/internet-endpoints.md#desktop-analytics)
+- [Tenant attach](../../../plan-design/network/internet-endpoints.md#tenant-attach)
+
 For more details, review the **EndpointConnectivityCheckWorker.log** file on the service connection point.
 
 A failure isn't always determined by the HTTP status code, but if there's network connectivity to an endpoint. The following scenarios can cause a check to fail:
