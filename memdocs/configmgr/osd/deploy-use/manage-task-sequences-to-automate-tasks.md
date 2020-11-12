@@ -221,6 +221,8 @@ When the task sequence starts, in most scenarios it records the currently enable
 > [!Warning]
 > Be cautious with this setting on low performance hardware. Running intense system operations for an extended period of time can strain low-end hardware. Check with your hardware manufacturer for specific guidance.
 
+Starting in version 2010, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby). It also supports other devices that don't have that default power plan. When you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
+
 ### Known issue
 
 <!-- 5554928 -->

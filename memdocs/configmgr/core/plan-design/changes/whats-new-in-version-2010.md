@@ -198,13 +198,12 @@ With the release of Windows 10, version 2004, the [SetupDiag](/windows/deploymen
 
 For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#analyze-setupdiag-errors).
 
-### Improvements to OS deployment
+### Improvements to task sequence performance settings
 
-This release includes the following improvements to OS deployment:
+<!--7721999 & 8177793-->
+Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you could activate the Windows power plan for **High Performance**. Starting in this release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan.
 
-- It resolves a bug with boot image metadata on PXE-enabled distribution points that have multiple content library drives.<!--7068388--> This bug could cause the client to fail to download the boot image over TFTP.
-
-- Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you can activate the Windows power plan for **High Performance**. Starting in this technical preview release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan. Now when you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
+For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
 
 ## Protection
 
