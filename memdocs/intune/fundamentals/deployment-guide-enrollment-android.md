@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -219,6 +219,15 @@ Google is reducing device administrator support in new Android releases. To avoi
 - If devices will update to Android 10, then migrate devices off device administrator management.
 - Move existing Android device administrator devices to Android Enterprise work profiles. For more information, see [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
 - By default, device administrator enrollment is blocked on new tenants.
+
+There are some situations when you must use Device Administrator enrollment:
+
+- Android Enterprise isn't available where Google services are not available. This could happen because of geography, or because of the device manufacturer. For example:
+
+  - In China, Android Enterprise enrollment isn't allowed due to government firewall restrictions. In this situation, use Android device administrator enrollment.  
+  - Some devices are based on Android, but don't have access to Google Services, such as Amazon Fire tablets and RealWear devices. In this situation, use Android device administrator enrollment.
+
+- Android OS versions older than 5.0 must use Android device administrator enrollment. Android Enterprise enrollment isn't an option.
 
 <!-- MandiA 9.10.2020: Commenting out this section.
 
