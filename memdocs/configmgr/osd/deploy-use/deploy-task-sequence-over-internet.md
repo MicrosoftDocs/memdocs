@@ -40,7 +40,7 @@ Starting in version 2006, you can deploy a task sequence with a boot image to a 
 
 ### Use bootable media to install a Windows imaging task sequence
 
-Starting in version 2010, you can use bootable media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows. For more information, see [Deploy an OS over CMG using bootable media](#deploy-an-OS-over-CMG-using-bootable-media).<!--3555923-->
+Starting in version 2010, you can use bootable media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows. For more information, see [Deploy an OS over CMG using bootable media](#deploy-an-os-over-cmg-using-bootable-media).<!--3555923-->
 
 In version 2002 and earlier, operations that require a boot media aren't supported with this setting. Allow a task sequence to run on the internet only for generic software installations or script-based task sequences that run operations in the standard OS.
 
