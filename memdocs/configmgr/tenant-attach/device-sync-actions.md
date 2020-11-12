@@ -37,6 +37,8 @@ This feature supports all OS versions that Configuration Manager currently suppo
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
+Starting in version 2010, the service connection point validates important internet endpoints for tenant attach. These checks help make sure that the cloud service is available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../core/servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
+
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
 If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload instead.

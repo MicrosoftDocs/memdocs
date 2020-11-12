@@ -102,6 +102,8 @@ You can now specify **Never** for the expiration of a secret key when creating A
 
 If you use Desktop Analytics or tenant attach, the service connection point now checks important internet endpoints. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem.
 
+For more information, see [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).
+
 ## Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
