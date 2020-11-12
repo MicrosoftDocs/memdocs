@@ -52,6 +52,7 @@ The following table lists CMG support for Configuration Manager features:
 | Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** | ![Supported](media/green_check.png) |
 | Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Supported](media/green_check.png) (1910) |
 | Task sequence with a boot image, started from Software Center | ![Supported](media/green_check.png) (2006) |
+| Task sequence with a boot image, started from bootable media | ![Supported](media/green_check.png) (2010) |
 | Any other task sequence scenario | ![Not supported](media/Red_X.png) |
 | Client push | ![Not supported](media/Red_X.png) |
 | Automatic site assignment | ![Not supported](media/Red_X.png) |

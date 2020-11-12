@@ -170,7 +170,7 @@ For more information, see [Deploy user-available applications](../../../apps/dep
 
 Starting in current branch version 2006, the cloud management gateway (CMG) supported running a task sequence with a boot image when you start it from Software Center. With this release, you can now use bootable media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows.
 
-For more information on this scenario and other related scenarios, see the new article to [Deploy a task sequence over the internet](../../../osd/deploy-use/deploy-task-sequence-over-internet.md).
+For more information on this scenario and other related scenarios, see the new article to [Deploy a task sequence over the internet](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-an-OS-over-CMG-using-bootable-media).
 
 ### Deploy a task sequence to a user
 

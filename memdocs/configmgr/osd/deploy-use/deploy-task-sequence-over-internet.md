@@ -40,7 +40,7 @@ Starting in version 2006, you can deploy a task sequence with a boot image to a 
 
 ### Use bootable media to install a Windows imaging task sequence
 
-Starting in version 2010, you can use bootable media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows. For more information, see [](#).<!-- NEED LINK -->
+Starting in version 2010, you can use bootable media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows. For more information, see [Deploy an OS over CMG using bootable media](#deploy-an-OS-over-CMG-using-bootable-media).<!--3555923-->
 
 In version 2002 and earlier, operations that require a boot media aren't supported with this setting. Allow a task sequence to run on the internet only for generic software installations or script-based task sequences that run operations in the standard OS.
 
@@ -92,8 +92,47 @@ When the task sequence runs, it downloads content from the cloud-based sources. 
 
 - Distribute the content referenced by the task sequence to the content-enabled CMG or cloud distribution point.
 
+## Deploy an OS over CMG using bootable media
 
+<!--3555923-->
 
+Starting in version 2010, you can use boot media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows.
+
+### Prerequisites for boot media via CMG
+
+- [Set up a CMG](../../core/clients/manage/cmg/overview.md)
+
+- For all content referenced in the task sequence, distribute it to a content-enabled CMG or a cloud distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+
+- Enable the following client settings in the [Cloud services](../../core/clients/deploy/about-client-settings.md#cloud-services) group:
+
+  - **Allow access to cloud distribution point**
+
+  - **Enable clients to use a cloud management gateway**
+
+- Configure the **Apply Network Settings** task sequence step to join a workgroup. During the task sequence, the device can't join the on-premises Active Directory domain. It doesn't have connectivity to a domain controller to join the domain.
+
+- When you [deploy the task sequence](deploy-a-task-sequence.md) to a collection, configure the following settings:
+
+  - User experience page: **Allow task sequence to run for client on the internet**
+
+  - Deployment settings page: Make available to an option that includes media.
+
+  - Distribution points page, deployment options: **Download content locally when needed by the running task sequence**. For more information, see [Deployment options](deploy-a-task-sequence.md#bkmk_deploy-options).
+
+- Make sure the device has a constant internet connection while the task sequence runs. Windows PE doesn't support wireless networks, so the device needs a wired network connection.
+
+Start the create task sequence media wizard for bootable media. For more information, see [Create bootable media](create-bootable-media.md). Modify the standard process using the following steps:
+
+- On the **Media Management** page of the wizard, select the option for **Site-based media**.
+
+- On the **Security** page, set a strong password to protect this media.
+
+- On the **Boot Image** page, select the **Cloud management gateway** for this boot media to use.
+
+When you boot an internet-connected device using this media, it communicates with the specified CMG. The boot media downloads the policy for the task sequence deployment via the CMG. As the task sequence runs, it downloads any additional content and policies over the internet.
+
+After the task sequence runs, the client uses token-based authentication.
 
 ## See also
 
