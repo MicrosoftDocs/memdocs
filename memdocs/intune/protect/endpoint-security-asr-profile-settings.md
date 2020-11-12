@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -215,6 +215,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Attempts to steal credentials via lsass.exe are blocked.
   - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Adobe Reader from creating child processes**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -224,6 +225,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Adobe Reader is blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Office applications from injecting code into other processes**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -232,6 +234,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from injecting code into other processes.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block Office applications from creating executable content**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -240,6 +244,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from creating executable content.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block all Office applications from creating child processes**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -248,6 +254,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block Win32 API calls from Office macro**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -256,6 +264,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block**  - Office macro's are blocked from using Win32 API calls.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block Office communication apps from creating child processes**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)  
@@ -265,6 +275,7 @@ Supported platforms and profiles:
   - **User defined**
   - **Enable** - Office communication applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -273,6 +284,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Defender blocks execution of obfuscated scripts.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block JavaScript or VBScript from launching downloaded executable content**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -281,6 +294,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Defender blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Disable** - This setting is turned off.
 
 - **Block process creations originating from PSExec and WMI commands**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -289,6 +303,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Process creation by PSExec or WMI commands is blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block untrusted and unsigned processes that run from USB**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -297,6 +313,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Untrusted and unsigned processes that run from a USB drive are blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block executable files from running unless they meet a prevalence, age, or trusted list criteria**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -305,6 +323,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block**
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block executable content download from email and webmail clients**  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -312,6 +332,8 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Executable content downloaded from email and webmail clients is blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Use advanced protection against ransomware**  
    [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -331,6 +353,16 @@ Supported platforms and profiles:
   - **Block disk modification** - Only attempts to write to disk sectors are blocked.
   - **Audit disk modification** - Windows events are raised instead of blocking attempts to write to disk sectors.
   
+- **List of additional folders that need to be protected**  
+  CSP: [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
+
+  Define a list of disk locations that will be protected from untrusted applications.
+
+- **List of apps that have access to protected folders**  
+  CSP: [ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
+
+  Define a list of apps that have access to read/write to controlled locations.
+
 - **Exclude files and paths from attack surface reduction rules**  
   CSP: [AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
 
@@ -404,6 +436,13 @@ Supported platforms and profiles:
     - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
+
+- **Block write access to removable storage**  
+  CSP: [RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess)
+
+  - **Not configured** *(default)*
+  - **Yes** - Write access is denied to removable storage.
+  - **No** - Write access is allowed.
 
 - **Scan removable drives during full scan**  
   CSP: [Defender/AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
