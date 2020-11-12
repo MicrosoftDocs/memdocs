@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,8 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+params:
+  siblings_only: true
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,19 +32,24 @@ ms.collection: M365-identity-device-management
 
 This article lists and describes the different VPN connection settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to create a VPN connection, choose how the VPN authenticates, select a VPN server type, and more.
 
-As an Intune administrator, you can create and assign VPN settings to Android Enterprise devices. 
+This feature applies to:
 
-To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-configure.md).
+- Android Enterprise personally-owned work profile (BYOD)
+- Android Enterprise corporate-owned work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+As an Intune administrator, you can create and assign VPN settings to Android Enterprise devices. To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-configure.md).
 
 > [!NOTE]
-> To configure always-on VPN, you need to create a VPN profile and also create a [device restrictions](device-restrictions-android-for-work.md#connectivity) profile with the Always-on VPN setting configured.
+> To configure always-on VPN, you need to create a VPN profile, and also create a [device restrictions](device-restrictions-android-for-work.md#connectivity) profile with the Always-on VPN setting configured.
 
 ## Before you begin
 
 Create an [Android Enterprise VPN device configuration profile](vpn-settings-configure.md):
 
 - Fully managed, dedicated, and corporate-owned work profile
-- Work profile
+- Personally-owned work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -90,7 +97,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
 - **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 
-## Work profile only
+## Personally-owned work profile
 
 - **Connection type**: Select the VPN connection type. Your options:
 
@@ -103,7 +110,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
-### Base VPN - Work profile
+### Base VPN
 
 - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the available VPN connections. For example, enter `Contoso VPN`.
 - **VPN server address**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter `192.168.1.1` or `vpn.contoso.com`.
@@ -123,19 +130,19 @@ The available settings depend on the VPN client you choose. Some settings are on
 
   For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
 
-### Per-app VPN - Work profile
+### Per-app VPN
 
 - **Add**: Select managed apps from the list. When users start the apps you add, traffic automatically routes through the VPN connection.
 
 For more information, see [Use a VPN and per-app VPN policy on Android Enterprise devices](../apps/app-configuration-vpn-ae.md).
 
-### Always-on VPN - Work profile
+### Always-on VPN
 
 - **Always-on VPN**: **Enable** turns on always-on VPN so VPN clients automatically connect and reconnect to the VPN when possible. When set to **Not configured**, Intune doesn't change or update this setting. By default, always-on VPN might be disabled for all VPN clients.
 
   Only one VPN client can be configured for always-on VPN on a device. Be sure to have no more than one always-on VPN policy deployed to a single device.
 
-### Proxy - Work profile
+### Proxy
 
 - **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.

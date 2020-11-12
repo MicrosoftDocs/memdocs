@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,7 +59,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   *Device administrator* capabilities are superseded by Android Enterprise.
 
   - **Not configured** (*default*)
-  - **Block** - Blocking device administrator will guide users to move to Android Enterprise work profile management to regain access.
+  - **Block** - Blocking device administrator will guide users to move to Android Enterprise Personally-Owned and Corporate-Owned Work Profile management to regain access.
 
 - **Rooted devices**  
   Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and above.)
