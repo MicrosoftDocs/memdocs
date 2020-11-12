@@ -74,7 +74,7 @@ When you select the report, it displays a list of compliance policies that have 
 
 While viewing the report:
 
-- Select a policy to view device and user information for devices that have errors or are non-compliant. Information includes the Deployment status and when the status was last updated.
+- Select a policy to view device compliance policies with devices in a noncompliant or error state. Information includes the Deployment status and when the status was last updated.
 - Select a device from the list to dig deeper and view a list of settings from the policy. The list of settings includes the setting status like *Compliant*, *Noncompliant*, or *Not applicable*. If there was an error, the relevant error code is shown.
 - If you then select a specific setting, you’ll see more details about the status or error code. This information also includes the profiles that were used to deploy the setting to the device.
 
