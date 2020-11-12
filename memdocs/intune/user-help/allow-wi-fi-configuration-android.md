@@ -28,22 +28,33 @@ ms.custom: intune-enduser
 ms.collection: 
 --- 
 
-As of October 2020, you must accept additional permissions  in order to receive Wi-Fi network configurations in Intune.if you have an Android device running Android 10 or later and it's enrolled in Intune using Android device administrator, you'll need to accept additional permissions in order to receive Wi-Fi network configurations in Intune. These permissions aren't required when enrolled as Android Enterprise. If required, you're prompted to accept these permissions when you enroll in Intune. If you choose to not accept these permissions, Intune will be unable to deliver Wi-Fi configurations to your device and you may be unable to connect to your organization's Wi-Fi network. If you get a Company Portal notification telling you to accept additional permissions so your organization can send you Wi-Fi configurations, you can accept these permissions by allowing Company Portal to control Wi-Fi. You can find this setting in your Settings app.
+During enrollment, Company Portal prompts certain Android devices for permission to receive Wi-Fi network configurations from Intune. If you don't allow it, Intune can't deliver Wi-Fi configurations to your device. So you might be unable to connect to your organization's Wi-Fi network. 
 
-Google Pixel devices
+Intune requires permission from devices: 
 
-Open your Settings app.
-Go to Apps & notifications > Special App access > Wi-Fi Control.
-Tap Company Portal.
-Enable the toggle to allow app to control Wi-Fi.
+* Running Android, version 10 or later and
+* Enrolled in Intune via Android device administrator
 
-Samsung devices
+Intune doesn't prompt Android Enterprise devices for this type of permission.  
 
-Open your Settings app.
-Go to Apps.
-Click on the three line menu.
-Go to Special access > Wi-Fi Control.
-Tap Company Portal.
-Enable the toggle to allow app to control Wi-Fi.
+## Allow permission to configure Wi-Fi  
+
+You can give permission by editing your device settings to allow Company Portal to control Wi-Fi. This section describes how to do this on Google Pixel and Samsung devices. 
+
+### Google Pixel devices
+
+1. Open your Settings app.
+2. Go to **Apps & notifications** > **Special App access** > **Wi-Fi Control**.
+3. Tap **Company Portal**.
+4. Switch the toggle on to allow the app to control Wi-Fi.
+
+### Samsung devices
+
+1. Open your Settings app.
+2. Go to **Apps**.
+3. Tap Menu 
+4. Go to Special access > Wi-Fi Control.
+5. Tap Company Portal.
+6. Enable the toggle to allow app to control Wi-Fi.
 
 For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
