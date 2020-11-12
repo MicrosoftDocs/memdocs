@@ -53,8 +53,8 @@ Most console notifications are per session. The console evaluates queries when a
 ## Console notification improvements
 
 ### <a name="bkmk_2010"></a> Improvements starting in version 2010
-<!--7410221-->
-Starting in Configuration Manager version 2010, you have an updated look and feel for in-console notifications. Notifications are more readable and the action link is easier to find. Additionally, the age of the notification is displayed to help you find the latest information. If you dismiss or snooze a notification, that action is now persistent for your user across consoles.
+
+Starting in Configuration Manager 2010, you have an updated look and feel for in-console notifications. Notifications are more readable and the action link is easier to find. The age of the notification is displayed to help you find the latest information. If you dismiss or snooze a notification, that action is now persistent for your user across consoles.
 
  Right-click or select `...` on the notification to take one of the following actions:
 - **Translate text**: Launches [Bing Translator](https://www.bing.com/translator/) for the text.
@@ -67,6 +67,19 @@ Starting in Configuration Manager version 2010, you have an updated look and fee
 - **Dismiss**: Dismisses the notification.
 
 To see these improvements for notifications, update the Configuration Manager console to the latest version.
+
+#### New notifications in version 2010
+<!--7410221-->
+To help you manage security risk in your environment, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates.
+:::image type="content" source="./media/7520646-notification.png" alt-text="Screenshot of in-console notifications for operating systems past the end of support date":::
+
+Environments with the following operating systems installed on client devices receive a notification:
+
+- [Windows 7](/lifecycle/products/windows-7), [Windows Server 2008 (non-Azure)](/lifecycle/products/windows-server-2008), and [Windows Server 2008 R2 (non-Azure)](/lifecycle/products/windows-server-2008-r2) without ESU.
+   - Selecting **More info** takes you to the [Management insights](../../servers/manage/management-insights.md#security) **Security** group to review the **Update clients running Windows 7 and Windows Server 2008** rule.
+
+- Versions of Windows 10 Semi-Annual Channel that are past the end-of-support date for [Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education) and [Home and Pro](/lifecycle/products/windows-10-home-and-pro) editions.
+   - Selecting **More info** takes you to the [Management insights](../../servers/manage/management-insights.md#security) **Simplified Management** group to review the **Update clients to a supported Windows 10 version** rule.
 
 ### <a name="bkmk_2006"></a> Improvements starting in version 2006
 

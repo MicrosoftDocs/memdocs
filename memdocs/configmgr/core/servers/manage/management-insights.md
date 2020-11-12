@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -239,6 +239,8 @@ Insights for improving the security of your infrastructure and devices.
 - **NTLM fallback is enabled**:<!--4572953--> Starting in version 1906, this insight detects if you enabled the less secure NTLM authentication fallback method for the site. When using the client push method of installing the Configuration Manager client, the site can require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).<!-- C16C6826-8209-47A9-BA71-14A8C83E4C35 -->
 
 - **Unsupported antimalware client versions**: More than 10% of clients are running versions of System Center Endpoint Protection that aren't supported. For more information, see [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).<!-- ACD63321-CF15-4CDD-B1A3-69005887C633 -->
+
+- **Update clients running Windows 7 and Windows Server 2008**: <!--7520646--> The rule shows clients running Windows 7, Windows Server 2008 (non-Azure), and Windows Server 2008 R2 (non-Azure) that are no longer receiving security updates. For more information about updates for these operating systems, see [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates).<!--A22E3D36-5A90-43A5-B6C6-D7D0B7DCF073-->
 
 ### Simplified management
 
