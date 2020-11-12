@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -250,6 +250,24 @@ If you imported the Azure app in Configuration Manager, use the Azure portal to 
 
 > [!NOTE]
 > Save the secret key before closing the Azure application properties **Key** page. This information is removed when you close the page.
+
+## Disable authentication
+
+<!--8537319-->
+
+Starting in version 2010, you can disable Azure AD authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Azure AD, it allows the site and clients to use modern authentication. Currently, Azure AD device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Azure AD authentication.
+
+1. In the Configuration Manager console, go to the **Administration** workspace.
+
+1. Expand **Cloud Services** and select the **Azure Services** node.
+
+1. Select the target connection of type **Cloud Management**. In the ribbon, select **Properties**.
+
+1. Switch to the **Applications** tab.
+
+1. Select the option to **Disable Azure Active Directory authentication for this tenant**.
+
+1. Select **OK** to save and close the connection properties.
 
 ## View the configuration of an Azure service
 

@@ -2,7 +2,7 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 09/28/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -108,6 +108,8 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 1. Review the settings and complete the wizard.
 
 When the wizard closes, you'll see the new connection in the **Azure Services** node. You can also view the tenant and app registrations in the **Azure Active Directory Tenants** node of the Configuration Manager console.
+
+If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. Open the properties of the **Cloud Management** service, and switch to the **Applications** tab. Select the option to **Disable Azure Active Directory authentication for this tenant**. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
 
 ## Configure Azure resource providers
 
