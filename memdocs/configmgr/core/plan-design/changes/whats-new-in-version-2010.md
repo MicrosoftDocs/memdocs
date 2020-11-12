@@ -92,6 +92,8 @@ Cloud management gateway (CMG) deployments now use virtual machine scale sets in
 
 You can now disable Azure Active Directory (Azure AD) authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Azure AD, it allows the site and clients to use modern authentication. Currently, Azure AD device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Azure AD authentication.
 
+For more information, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).
+
 ### Additional options when creating app registrations in Azure Active Directory
 <!--7153654-->
 You can now specify **Never** for the expiration of a secret key when creating Azure Active Directory app registrations. For more information about creating app registrations, see [Configure Azure Services](../../servers/deploy/configure/azure-services-wizard.md#azure-app-properties).
