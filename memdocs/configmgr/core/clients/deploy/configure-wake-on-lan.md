@@ -96,9 +96,9 @@ Prerequisites for the computer sending the WoL magic packet to the target comput
    1. Select the primary site to configure, and then choose **Properties**.
    1. In the **Wake on LAN** tab, select **Enable Wake On LAN for this site** and send the wake-up packets **Using client notification channel**.
    1. Select **OK** and repeat the procedure for all primary sites in the hierarchy.
-       :::image type="content" source="./media/3734819-wol-site-setting.png" alt-text="Send wake-up packets option in the deployment wizard" lightbox="./media/3734819-wol-site-setting.png":::
+       :::image type="content" source="./media/3734819-wol-site-setting.png" alt-text="Site properties for using client notification channel for WoL" lightbox="./media/3734819-wol-site-setting.png":::
 
-1. Verify **Allow network wake-up** under the [**Power Management** client settings](../../../../clients/deploy/about-client-settings.md#power-management) is enabled.
+1. Verify **Allow network wake-up** under the [**Power Management** client settings](about-client-settings.md#power-management) is enabled.
 1. Create a deployment as **Required** with the **Send wake-up packages** option and a **Deadline**. Clients are sent a notification when a deadline is received on deployments such as task sequences, software distribution, or software updates installation.
 
     :::image type="content" source="./media/3734819-wol-deployment.png" alt-text="Send wake-up packets option in the deployment wizard" lightbox="./media/3734819-wol-deployment.png":::
