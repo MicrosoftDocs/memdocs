@@ -134,6 +134,8 @@ When you boot an internet-connected device using this media, it communicates wit
 
 After the task sequence runs, the client uses token-based authentication.
 
-## See also
+## Next steps
+
+[Monitor OS deployments](monitor-operating-system-deployments.md)
 
 [Manage task sequences to automate tasks](manage-task-sequences-to-automate-tasks.md)
