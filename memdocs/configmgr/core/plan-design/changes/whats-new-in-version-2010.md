@@ -192,11 +192,9 @@ This release continues to iterate on changes in technical preview version 2004 a
 
 <!--4385028-->
 
-With the release of Windows 10, version 2004, the [SetupDiag](/windows/deployment/upgrade/setupdiag) diagnostic tool is included with Windows Setup. If there's an issue with the upgrade, SetupDiag automatically runs to determine the cause of the failure.
+With the release of Windows 10, version 2004, the [SetupDiag](/windows/deployment/upgrade/setupdiag) diagnostic tool is included with Windows Setup. If there's an issue with the upgrade, SetupDiag automatically runs to determine the cause of the failure. Configuration Manager now gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
 
-Configuration Manager now gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
-
-The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console now includes a tile for **Collection Errors**:
+For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#analyze-setupdiag-errors).
 
 ### Improvements to OS deployment
 
