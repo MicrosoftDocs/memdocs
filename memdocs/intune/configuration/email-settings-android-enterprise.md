@@ -35,7 +35,7 @@ This feature applies to:
 
 - Android Enterprise personally-owned work profile devices (BYOD)
 
-For Android device administrator, see [Android device settings to configure email](email-settings-android.md).
+On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../apps/app-configuration-policies-use-android.md). For Android device administrator, see [Android device settings to configure email](email-settings-android.md).
 
 As an Intune administrator, you can create and assign email settings to Android Enterprise personally-owned work profile devices. To learn more about email profiles in Intune, see [configure email settings](email-settings-configure.md).
 
