@@ -178,19 +178,13 @@ For more information on this scenario and other related scenarios, see the new a
 
 You can now deploy a non-OS deployment task sequence to a user-based collection. Use the task sequence deployment type of an application to install or uninstall it.
 
-### Manage task sequence policy size
+### Manage task sequence size
 
-<!--6888853-->
+Large task sequences cause problems with client processing. To further help manage the size of task sequences, this release continues to iterate on improvements.
 
-Configuration Manager technical preview version 2004 included new management insight rules for OS deployment. These insights help you manage the policy size of task sequences. Large task sequences cause problems with client processing.
+- Starting in this release Configuration Manager restricts actions for a task sequence that's greater than 2 MB in size. For example, the task sequence editor will display an error if you try to save changes to a large task sequence.<!--6888853-->
 
-To further help manage the size of task sequences, starting in this release Configuration Manager restricts the following actions for a task sequence that's greater than 2 MB in size:<!-- there are three items that talk about TS size, combine into a single blurb. -->
-
-### See task sequence size in the console
-
-<!--7645732-->
-
-This release continues to iterate on improvements to help you manage the size of task sequences. When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.
+- When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
 
 For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
 
