@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 11/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -185,6 +185,9 @@ When you're ready to retire the device and release it from management, update th
 These steps unlock the device's UEFI (BIOS) menus. The values remain the same as the profile (**Enabled** or **Disabled**), and aren't set back to any default OS values.
 
 You're now ready to wipe the device. Once the device is wiped, delete the Autopilot record. Deleting the record prevents the device from automatically re-enrolling when it reboots.
+
+> [!TIP]
+> To remove Surface devices from DFCI enrollment, see [removing DFCI management](/surface/surface-manage-dfci-guide#removing-dfci-management).
 
 ### Recover
 
