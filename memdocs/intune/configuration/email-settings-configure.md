@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -98,7 +98,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
   - Device groups are typically used when there's not a primary user, or if you don't know who the user will be. Email profiles targeted to device groups (not user groups) may not be delivered to the device.
 
-    For example, if your email profile targets an all iOS/iPadOS devices group, be sure all these devices have a user. If any device doesn't have a user, the email profile may not deploy. Then, you limit the profile, and could miss some devices. If the device has a primary user, then deploying to device groups should work.
+    For example, your email profile targets an all iOS/iPadOS devices group. Be sure all these devices have a user. If any device doesn't have a user, then the email profile may not deploy. You limit the profile, and could miss some devices. If the device has a primary user, then deploying to device groups should work.
 
     For more information on possible issues with using device groups, see [Common issues with email profiles](troubleshoot-email-profiles-in-microsoft-intune.md).
 
@@ -132,7 +132,14 @@ If the user already configured an email account, then the email profile is assig
 
 - **Android Samsung Knox Standard**: An existing, duplicate email profile is detected based on the email address, and overwrites it with the Intune profile. Android doesn't use host name to identify the profile. Don't create multiple email profiles using the same email address on different hosts. The profiles overwrite each other.
 
-- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install on the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your user devices. Then, create and deploy the email profile. You can use Gmail and Nine email configuration profiles that work for Work Profile and Fully Managed, Dedicated, and Corporate-owned Work Profile enrollment types, including using certificate profiles on both email configuration types. Any Gmail or Nine policies that you create in Device Configuration for Work Profiles continue to apply to the device. It's not necessary to move them to app configuration policies. Email apps, such as Nine Work, may not be free. Review the app's licensing details, or contact the app company with any questions.
+- **Android Enterprise work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the personally-owned work profile, and on the corporate owned work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your user devices. Then, create and deploy the email profile. You can use Gmail and Nine email configuration profiles on the following enrollment types:
+
+  - Android Enterprise personally-owned work profile
+  - Android Enterprise fully managed
+  - Android Enterprise dedicated devices
+  - Android Enterprise corporate owned work profile
+
+  You can use certificate profiles on Gmail and Nine email. Any Gmail or Nine device configuration policies that you create continue to apply to the device. It's not necessary to move them to app configuration policies. Email apps, such as Nine Work, may not be free. Review the app's licensing details, or contact the app company with any questions.
 
 ## Changes to assigned email profiles
 
