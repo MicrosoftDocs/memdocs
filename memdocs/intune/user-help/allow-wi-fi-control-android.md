@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Give Wi-Fi control to Company Portal - Microsoft Intune | Microsoft Docs
+title: Allow Company Portal to control Wi-Fi - Microsoft Intune | Microsoft Docs
 description: Learn how to give Wi-Fi control to Company Portal. 
 keywords:
 author: lenewsad
@@ -28,22 +28,17 @@ ms.custom: intune-enduser
 ms.collection: 
 --- 
 
-# Give Wi-Fi control to Company Portal   
+# Allow Company Portal to control Wi-Fi  
 
-**LN: Can you confirm what the wording/phrases are that's used in the UI? Want to make sure that title SEO is strong.**
+Company Portal must get user permission to control Wi-Fi on certain devices. Company Portal needs this permission in order to receive Wi-Fi network configurations from Intune. If you don't allow Company Portal to control your Wi-Fi, Intune won't be able to deliver Wi-Fi configurations to your device, which could prevent you from connecting to your organization's Wi-Fi network.   
 
-During enrollment, Company Portal may prompt you for permission to access your Wi-Fi settings. Company Portal needs this permission to receive Wi-Fi configurations from Intune. If you deny permission, Intune won't be able to deliver the configurations to your device, which could prevent you from connecting to your organization's Wi-Fi network. 
+You'll be prompted to allow Wi-Fi control if you're on a device that's:
 
-This article describes how to give Company Portal permission to control Wi-Fi.   
+* Runing Android version 10 or later and 
+* Enrolling or already enrolled in Intune using Android device administrator
 
-## Required devices      
-
-Company Portal needs permission from devices that are: 
-
-* Running Android, version 10 or later and
-* Enrolled in Intune using Android device administrator
-
-Permission isn't required from devices enrolled as Android Enterprise.    
+Company Portal prompts for permission during enrollment. If you enrolled your device in Intune before October 2020, you'll receive the prompt the next time your organization updates their Wi-Fi policy. 
+  
 
 ## Edit Wi-Fi control      
 
@@ -52,7 +47,7 @@ Follow these steps to allow Company Portal to control Wi-Fi.
 ### Google Pixel devices
 
 1. Open your Settings app.
-2. Go to **Apps & notifications** > **Special App access** > **Wi-Fi Control**.  **LN: Just checking b/c I don't have test device to confirm--is capitalization correct for these settings?**
+2. Go to **Apps & notifications** > **Special App access** > **Wi-Fi Control**.  
 3. Tap **Company Portal**.
 4. Turn the toggle on to allow the app to control Wi-Fi.
 
@@ -63,10 +58,8 @@ Follow these steps to allow Company Portal to control Wi-Fi.
 3. Tap **Menu** (appears as 3 dots or lines). 
 4. Go to **Special access** > **Wi-Fi Control**.
 5. Tap **Company Portal**.
-6. Turn the toggle on to allow the app to control Wi-Fi.  **LN: Does the toggle have a name? Or is it the only toggle that's there?**
+6. Turn the toggle on to allow the app to control Wi-Fi.  
 
 ## Next steps  
-
-After you allow Wi-Fi control....  **LN: If applicable, do you want to include what happens or what should they do after they switch the toggle on?** 
 
 Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
