@@ -61,6 +61,7 @@ Features of the VPN profiles for the tunnel include:
 - The Site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
+- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
 
 Server configurations include:

@@ -211,6 +211,11 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
         For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
+   - **On-Demand VPN Rules**:  
+     Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
+
+     For more information, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn)
+
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
