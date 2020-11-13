@@ -34,7 +34,7 @@ This article lists and describes the different VPN connection settings you can c
 
 This feature applies to:
 
-- Android Enterprise personally-owned work profile (BYOD)
+- Android Enterprise personally owned devices with a work profile (BYOD)
 - Android Enterprise corporate-owned work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)

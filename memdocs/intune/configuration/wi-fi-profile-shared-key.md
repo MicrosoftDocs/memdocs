@@ -36,7 +36,7 @@ Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks,
 This feature supports:
 
 - Android device administrator
-- Android Enterprise personally-owned work profile
+- Android Enterprise personally owned devices with a work profile
 - Windows
 - EAP-based Wi-Fi
 

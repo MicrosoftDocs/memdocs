@@ -34,7 +34,7 @@ You can create a profile with specific Wi-Fi settings, and then deploy this prof
 
 This feature applies to:
 
-- Android Enterprise personally-owned work profile (BYOD)
+- Android Enterprise personally owned devices with a work profile (BYOD)
 - Android Enterprise corporate-owned work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
