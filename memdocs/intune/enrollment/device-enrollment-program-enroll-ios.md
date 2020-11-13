@@ -269,8 +269,6 @@ Now that you've installed your token, you can create an enrollment profile for A
     | <strong>Software Update</strong> | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |
     | <strong>SIM Setup</strong> | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
     | <strong>Appearance</strong> | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
-    | <strong>Express Language</strong>| Display the Express Language screen to the user. |
-    | <strong>Preferred Language</strong> | Give the user the option to choose their  **Preferred Language**. |
     | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from their old device to this device. For iOS/iPadOS 13.0 and later. |
     | <strong>Registration</strong> | Display the registration screen to the user. For macOS 10.9 and later. |
     | <strong>FileVault</strong> | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |

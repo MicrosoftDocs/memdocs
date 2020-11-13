@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/02/2020
+ms.date: 11/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,19 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
+
+<!-- ########################## -->
+## Week of November 9, 2020  
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### App management  
+
+#### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->
+We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. The new messaging appears:  
+* After the work profile setup flow. Users see a new informational screen explaining where to find work apps, with links to help documentation.  
+* When a user accidentally re-enables the Company Portal app in the personal profile. We redesigned a screen (**Your device now has a profile just for work**) with clearer explanations and new illustrations to guide users to their work apps, with links to help documentation.  
+* On the **Help** page. In the **Frequently Asked Questions** section, there's a new link to help documentation about how to set up work profile and find apps.  
+
 <!-- ########################## -->
 ## Week of October 26, 2020 (2010 Service release)
 
@@ -93,6 +106,17 @@ Existing Win32 apps are supported for Workplace join (WPJ) devices. PowerShell s
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
+
+#### Device Firmware Configuration Interface (DFCI) is generally available<!-- 5858274 -->
+
+DFCI is an open-source Unified Extensible Firmware Interface (UEFI) framework. It allows you to securely manage the UEFI (BIOS) settings of your Windows Autopilot devices using Microsoft Endpoint Manager. It also limits end user control over firmware configurations.
+ 
+Unlike traditional UEFI management, DFCI removes the need for managing third-party solutions. It also provides zero-touch firmware management by using Microsoft Endpoint Manager for cloud management. DFCI also accesses the existing Windows Autopilot device information for authorization. 
+
+For more information on this feature, see [Use DFCI profiles on Windows devices in Intune](../configuration/device-firmware-configuration-interface-windows.md). 
+
+> [!IMPORTANT]
+> DFCI policy reporting in the Endpoint Manager admin center wasn't working as expected. All policies reported a "Pending" status. This behavior is fixed.
 
 #### Use the Connect Automatically setting on Android Enterprise basic Wi-Fi profiles<!-- 6329130   -->
 On Android Enterprise devices, you can create basic Wi-Fi profiles that include common Wi-Fi settings, such as the connection name. You can configure the **Connect automatically** setting that automatically connects to your Wi-Fi network when devices are in range.
@@ -647,7 +671,7 @@ If you don’t set the additional setting to Require, users with weak passwords 
 Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. These insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics](../../analytics/overview.md).
 
 #### Bulk actions for devices listed in operational report<!-- 8218481  -->
-As part of the new antivirus reports coming out under Microsoft Endpoint Manager security, the **Windows 10 detected malware** operational report provides bulk actions that are applicable to the devices selected within the report. Actions include **Restart**, **Quick scan**, and **Full scan**. For more information, see [Windows 10 detected malware report](../fundamentals/reports.md#windows-10-detected-malware-report-operational).
+As part of the new antivirus reports coming out under Microsoft Endpoint Manager security, the **Windows 10 detected malware** operational report provides bulk actions that are applicable to the devices selected within the report. Actions include **Restart**, **Quick scan**, and **Full scan**. For more information, see [Windows 10 detected malware report](../fundamentals/reports.md#detected-malware-report-organizational).
 
 #### Export Intune reports using Graph APIs<!-- 8270831  -->
 All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top level export API. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).

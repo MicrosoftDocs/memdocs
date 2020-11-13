@@ -19,7 +19,7 @@ ms.reviewer: acabello
 
 ### <a name="bkmk_intune"></a> Can I use cloud-enabled analytics with Intune-managed devices?
 
-Not today, but see the announcement from Microsoft Ignite 2019 on [insights-driven device management](https://myignite.techcommunity.microsoft.com/sessions/81690?source=sessions). This planned solution is a successor to Device Health and Upgrade Readiness.
+Not today, but see the announcement from Microsoft Ignite 2019 on [insights-driven device management](https://myignite.microsoft.com/archives/IG19-BRK3086). This planned solution is a successor to Device Health and Upgrade Readiness.
 
 The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from analytics data, and we're working on ways to share insights with them as well.
 
@@ -35,7 +35,7 @@ When you first set up Desktop Analytics, the reports in Configuration Manager an
   > [!IMPORTANT]
   > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
 
-If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.microsoft.com/hub/4343728/support-for-business).
+If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.serviceshub.microsoft.com/supportforbusiness).
 
 ## Connect Configuration Manager
 
@@ -97,13 +97,13 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 > [!Important]  
 > The Windows Analytics service is retired as of January 31, 2020.
 >
-> For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
 Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
 
-For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
 
 ### Are there any Windows Analytics features that aren't available in Desktop Analytics?
 
