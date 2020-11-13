@@ -29,7 +29,7 @@ Given the sensitive nature of this information, you need to protect it in the fo
 
   - HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
 
-  - Configure the site for [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).<!--6979223--> This option applies to Configuration Manager version 2010 or later.
+  - Configure the site for [Enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).<!--6979223--> This option applies to Configuration Manager version 2010 or later.
 
   - Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to Configuration Manager versions 1910 or later.
 
@@ -209,4 +209,4 @@ For more information on these SQL commands, see the following articles:
 
 ## Next steps
 
-[Deploy BitLocker management client](../deploy-use/bitlocker/deploy-management-agent.md)
+[Deploy BitLocker management client](deploy-management-agent.md)
