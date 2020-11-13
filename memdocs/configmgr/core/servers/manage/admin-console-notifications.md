@@ -71,6 +71,7 @@ To see these improvements for notifications, update the Configuration Manager co
 #### New notifications in version 2010
 <!--7410221-->
 To help you manage security risk in your environment, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates.
+
 :::image type="content" source="./media/7520646-notification.png" alt-text="Screenshot of in-console notifications for operating systems past the end of support date":::
 
 Environments with the following operating systems installed on client devices receive a notification:
