@@ -51,7 +51,7 @@ You can create VPN profiles using the following connection types:
 
 - Check Point Capsule VPN
   - Android device administrator
-  - Android Enterprise personally-owned work profile
+  - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
@@ -60,7 +60,7 @@ You can create VPN profiles using the following connection types:
 
 - Cisco AnyConnect
   - Android device administrator
-  - Android Enterprise personally-owned work profile
+  - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
@@ -70,7 +70,7 @@ You can create VPN profiles using the following connection types:
 
 - Citrix SSO
   - Android device administrator
-  - Android Enterprise personally-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
@@ -83,7 +83,7 @@ You can create VPN profiles using the following connection types:
 
 - F5 Access
   - Android device administrator
-  - Android Enterprise personally-owned work profile
+  - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
@@ -105,7 +105,7 @@ You can create VPN profiles using the following connection types:
   - macOS
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise personally-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
@@ -115,7 +115,7 @@ You can create VPN profiles using the following connection types:
 
 - Pulse Secure
   - Android device administrator
-  - Android Enterprise personally-owned work profile
+  - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - Windows 10
@@ -123,7 +123,7 @@ You can create VPN profiles using the following connection types:
 
 - SonicWall Mobile Connect
   - Android device administrator
-  - Android Enterprise personally-owned work profile
+  - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
@@ -131,7 +131,7 @@ You can create VPN profiles using the following connection types:
   - Windows 8.1
 
 - Zscaler
-  - Android Enterprise personally-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
