@@ -69,7 +69,16 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Prerequisites
 
+### General prerequisites
+
 - To create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
+
+- To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](../../core/servers/manage/configuring-reporting.md).
+
+    > [!NOTE]
+    > For the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
+
+### Prerequisites for the recovery service
 
 - The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
 
@@ -83,10 +92,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. To use the recovery service, you need at least one management point not in a replica configuration. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 
-- To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](../../core/servers/manage/configuring-reporting.md).
-
-    > [!NOTE]
-    > For the **Recovery Audit Report** to work from the administration and monitoring website, only use a reporting services point at the primary site.
+### Prerequisites for BitLocker portals
 
 - To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
