@@ -115,9 +115,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Email profiles aren't supported by Android devices)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
 
-### Android Enterprise devices with a work profile
+### Android Enterprise personally-owned devices with a work profile
 
-Removing company data from an Android work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android work profiles.
+Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
 
 ### Android Enterprise dedicated devices
 

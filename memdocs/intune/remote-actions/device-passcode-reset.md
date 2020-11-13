@@ -40,10 +40,10 @@ This document discusses both device level passcode reset and work profile passco
 | Platform | Supported? |
 | ---- | ---- |
 | Android devices on version 6.x or earlier | Yes |
-| Android enterprise devices enrolled as Device Owner | Yes |
+| Android Enterprise devices enrolled as Device Owner | Yes |
 | iOS/iPadOS devices | Yes |
 | iOS/iPadOS devices enrolled with User Enrollment | No |
-| Android devices enrolled with a work profile | No |
+| Android Enterprise personally-owned/corporate-owned devices enrolled with a work profile | No |
 | Android devices on version 7.0 or later | No |
 | macOS | No |
 | Windows | No |
@@ -71,11 +71,11 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 ## Reset Android work profile and Device Owner passcodes
 
-Supported Android Enterprise devices enrolled with a work profile receive a new managed profile unlock password or a managed profile challenge for the end user.
+Supported Android Enterprise personally-owned and corporate-owned work profile devices enrolled with a work profile receive a new managed profile unlock password or a managed profile challenge for the end user.
 
-For Android Enterprise work profile devices running version 8.x or later, end users get notified to activate their reset passcode right after enrollment completes. The notification is displayed if a work profile password is required and set. After their passcode is entered, the notification is dismissed.
+For Android Enterprise personally-owned work profile devices running version 8.x or later, end users get notified to activate their reset passcode right after enrollment completes. The notification is displayed if a work profile password is required and set. After their passcode is entered, the notification is dismissed.
 
-For Android Enterprise device owner or work profile devices running version 8.x or later, after the reset passcode is selected from the console, the MEM Intune admin is presented with a temporary passcode. The temporary passcode must be entered on the device. The temporary passcode for the device will be displayed in the console for 7 days.
+For Android Enterprise device owner, personally-owned work profile, or corporate-owned work profile devices running version 8.x or later, after the reset passcode is selected from the console, the MEM Intune admin is presented with a temporary passcode. The temporary passcode must be entered on the device. The temporary passcode for the device will be displayed in the console for 7 days.
 
 
 ## Remove iOS/iPadOS passcodes
