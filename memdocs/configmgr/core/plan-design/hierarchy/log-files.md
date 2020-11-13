@@ -296,6 +296,7 @@ The following table lists the log files that are on the Configuration Manager si
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
+|SMS_MESSAGE_PROCESSING_ENGINE.log| Log file for the message processing engine, which the site uses to process results for client actions. For example, run scripts and CMPivot.| Site server|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
 |SMS_REST_PROVIDER.log|Service health state for the SMS Provider administration service REST API, including certificate information|Computer with the SMS Provider|
