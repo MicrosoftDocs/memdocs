@@ -315,9 +315,9 @@ For more information, see the [Content library cleanup tool](../hierarchy/conten
 
 ### Enable user proxy for software update scans
 <!--8379199-->
-Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new software updates client setting is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403).
+Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new software updates client setting is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
 
-For more information about enabling a proxy for software update scans, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
+For more information about enabling a proxy for software update scans, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates). 
 
 ### Notifications for devices no longer receiving updates
 <!--7520646-->

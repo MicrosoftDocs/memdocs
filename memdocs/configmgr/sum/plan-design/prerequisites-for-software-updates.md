@@ -69,7 +69,10 @@ Software updates are enabled for clients by default. There are other available s
 
 - [Client settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
-- [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)  
+- [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)
+
+> [!Important]
+> Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403).
 
 ### Reporting services points  
  The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md).  
