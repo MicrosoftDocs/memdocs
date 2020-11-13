@@ -87,12 +87,12 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
 
 ### MVSISION Mobile app configuration policy
-***COPIED from Zimperium - Pending details***
 
 See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the MVISION Mobile iOS app configuration policy.
 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
 
+<!-- Script hasn't been confirmed as required by MVISION Mobile:
    ```
    <dict>
    <key>provider</key><string>Intune</string>
@@ -105,6 +105,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
    <string>{{udidlast4digits}}</string>
    </dict>
    ```
+-->
 
 ### Pradeo app configuration policy
 
@@ -186,14 +187,32 @@ To install the Mobile Threat Defense app on the end user device, you can follow 
 
 Choose the section that corresponds to your MTD provider:
 
-- [Lookout for Work](#assigning-lookout-for-work)
-- [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
-- [Check Point SandBlast Mobile](#assigning-check-point-sandblast-mobile)
-- [Zimperium](#assigning-zimperium)
-- [Pradeo](#assigning-pradeo)
 - [Better Mobile](#assigning-better-mobile)
+- [Check Point SandBlast Mobile](#assigning-check-point-sandblast-mobile)
+- [Lookout for Work](#assigning-lookout-for-work)
+- [MVISION Mobile](#assigning-mvision-mobile)
+- [Pradeo](#assigning-pradeo)
 - [Sophos Mobile](#assigning-sophos)
+- [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
 - [Wandera](#assigning-wandera)
+- [Zimperium](#assigning-zimperium)
+
+### Assigning Better Mobile
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Active Shield app store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) for the **Appstore URL**.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) for the **Appstore URL**.
+
+### Assigning Check Point SandBlast Mobile
+
+- **Android**  
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Check Point SandBlast Mobile app store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) for the **Appstore URL**.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.  
+
 
 ### Assigning Lookout for Work
 
@@ -226,30 +245,17 @@ Choose the section that corresponds to your MTD provider:
 
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
-### Assigning Symantec Endpoint Protection Mobile
+### Assigning MVISION Mobile
+
+*The following App Store links are pending the released application URLs*
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SEP Mobile app store URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) for the **Appstore URL**.  For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile app store URL](https://play.google.com/store/apps/) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile app store URL](https://itunes.apple.com/us/app/) for the **Appstore URL**.
 
-### Assigning Check Point SandBlast Mobile
 
-- **Android**  
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Check Point SandBlast Mobile app store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) for the **Appstore URL**.
-
-- **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.  
-
-### Assigning Zimperium
-
-- **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) for the **Appstore URL**.
-
-- **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.  
- 
 ### Assigning Pradeo
 
 - **Android**
@@ -257,14 +263,6 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo app store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) for the **Appstore URL**.
-
-### Assigning Better Mobile
-
-- **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Active Shield app store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) for the **Appstore URL**.
-
-- **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) for the **Appstore URL**.
 
 ### Assigning Sophos
 
@@ -274,6 +272,14 @@ Choose the section that corresponds to your MTD provider:
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) for the **Appstore URL**.
 
+### Assigning Symantec Endpoint Protection Mobile
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SEP Mobile app store URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) for the **Appstore URL**.  For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) for the **Appstore URL**.
+
 ### Assigning Wandera
 
 - **Android**
@@ -281,6 +287,14 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile app store URL](https://itunes.apple.com/app/wandera/id605469330) for the **Appstore URL**.
+
+### Assigning Zimperium
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) for the **Appstore URL**.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.  
 
 ## Next steps
 
