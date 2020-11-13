@@ -2,7 +2,7 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -39,6 +39,18 @@ The following table lists the updates for each component on supported OS version
 | Windows 10 1709 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Note 2](#bkmk_note2)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Note 3](#bkmk_note3)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009469) |
+
+Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) devices to Desktop Analytics.<!--6107649-->
+
+> [!NOTE]
+> Desktop Analytics only supports the Windows 10 Enterprise LTSC 2019, which is equivalent to Windows 10, version 1809. It doesn't support Windows 10 Enterprise 2015 LTSB (version 1507) or Windows 10 Enterprise 2016 LTSB (version 1607).
+
+| OS version | Equivalent version | DiagTrack |
+|---------|---------|---------|
+| Windows 10 Enterprise LTSC 2019 | Windows 10, version 1809 | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
+
+<!--| Windows 10 Enterprise 2016 LTSB | Windows 10, Version 1607 | [Latest cumulative update](https://support.microsoft.com/help/4000825) |
+| Windows 10 Enterprise 2015 LTSB | Windows 10, Version 1507 | [Latest cumulative update](https://support.microsoft.com/help/4000823) |-->
 
 > [!TIP]
 > Use Configuration Manager to automatically install these updates. For more information, see [Deploy software updates](../sum/deploy-use/deploy-software-updates.md).
