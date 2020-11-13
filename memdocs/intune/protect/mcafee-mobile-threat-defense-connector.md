@@ -51,7 +51,7 @@ You can configure Conditional Access policies based on MVISION Mobile risk asses
 
 For more information, see the documentation for McAfee MVISION Mobile.
 
-## How do Intune and MVISION mobile help protect your company resources?
+## How do Intune and MVISION help protect your company resources?
 
 The MVISION Mobile app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the MVISION Mobile cloud service to assess the device's risk for mobile threats.
 
