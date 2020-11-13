@@ -81,6 +81,8 @@ Environments with the following operating systems installed on client devices re
 - Versions of Windows 10 Semi-Annual Channel that are past the end-of-support date for [Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education) and [Home and Pro](/lifecycle/products/windows-10-home-and-pro) editions.
    - Selecting **More info** takes you to the [Management insights](../../servers/manage/management-insights.md#security) **Simplified Management** group to review the **Update clients to a supported Windows 10 version** rule.
 
+You can also view the [Product Lifecycle Dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) to see information about which operating systems are out of support. This information (such as the support lifecycle for Windows 10 versions) is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
+
 ### <a name="bkmk_2006"></a> Improvements starting in version 2006
 
 - You have an option to receive [Messages from Microsoft](#bkmk_msft)
