@@ -92,7 +92,6 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
 
-<!-- Script hasn't been confirmed as required by MVISION Mobile:
    ```
    <dict>
    <key>provider</key><string>Intune</string>
@@ -105,7 +104,6 @@ See the instructions for [using Microsoft Intune app configuration policies for 
    <string>{{udidlast4digits}}</string>
    </dict>
    ```
--->
 
 ### Pradeo app configuration policy
 
@@ -247,13 +245,11 @@ Choose the section that corresponds to your MTD provider:
 
 ### Assigning MVISION Mobile
 
-*The following App Store links are pending the released application URLs*
-
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile app store URL](https://play.google.com/store/apps/) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile app store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile app store URL](https://itunes.apple.com/us/app/) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
 
 
 ### Assigning Pradeo
