@@ -440,6 +440,7 @@ The following additional hotfixes are available to address specific issues:
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | July 24, 2020 | No |
 | [4576782](https://support.microsoft.com/help/4576782) | Application blade times out in Microsoft Endpoint Manager admin center | August 11, 2020 | No |
 | [4578123](https://support.microsoft.com/help/4578123) | CMPivot queries return unexpected results in Configuration Manager, version 2002 | August 24, 2020 | No |
+| [4575783](https://support.microsoft.com/help/4575783) | Office updates fail to download in Configuration Manager current branch, version 2002 | November 11, 2020 | Yes |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
