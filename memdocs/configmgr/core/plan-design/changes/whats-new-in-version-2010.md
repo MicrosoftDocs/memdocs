@@ -331,7 +331,7 @@ There's a new client setting for software updates. If delta content is unavailab
 
 <!--6023299-->
 
-The Configuration Manager [PowerShell cmdlet library](/powershell/sccm/overview) now offers support for PowerShell 7.
+The Configuration Manager PowerShell cmdlet library now offers support for PowerShell 7. For more information, see [Get started with Configuration Manager cmdlets](/powershell/sccm/overview).
 
 ### Improvements to cloud management gateway cmdlets
 
@@ -339,6 +339,7 @@ The Configuration Manager [PowerShell cmdlet library](/powershell/sccm/overview)
 
 With more customers managing remote devices now, this release includes several new and improved Windows PowerShell cmdlets for the cloud management gateway (CMG). You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Azure Active Directory (Azure AD) requirements.
 
+For more information, see [Configuration Manager version 2010 PowerShell release notes](/powershell/sccm/2010-release-notes).
 
 <!-- Unused sections in this release:
 ## Endpoint analytics
@@ -367,7 +368,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2010 release notes](/powershell/sccm/2010-release-notes).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2010 release notes](/powershell/sccm/2010-release-notes).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md).
 
