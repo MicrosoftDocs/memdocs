@@ -43,11 +43,11 @@ To enable ADE, you use both the Intune and [Apple Business Manager (ABM)](https:
 
 ## Automated Device Enrollment and the Company Portal
 
-ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device or to use modern authentication to complete the enrollment process. 
+ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device, to use modern authentication to complete the enrollment process, or to provide a staged enrollment in which the device is enrolled and receives device policies prior to a user authenticating in the Company Portal. 
 
 To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied. Deploy the Company Portal app through Intune as a required VPP app with an Application Configuration policy to enable Device Staging, where a device is fully enrolled and receives device policies prior to the addition of a user affinity as well.
 
 ## What is supervised mode?
 
@@ -181,7 +181,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     
     ![Screenshot of install company portal with VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
-8. If you chose **Setup Assistant** for **Select where users must authenticate**, but you also want to use Conditional Access or deploy company apps on the devices, you must install the Company Portal on the devices. To do so, choose **Yes** for **Install Company Portal**.  If you would like users to receive the Company Portal without having to authenticate into the app store, choose to **Install Company Portal with VPP** and select a VPP token. Make sure that the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
+8. If you chose **Setup Assistant** for **Select where users must authenticate**, but you also want to use Conditional Access or deploy company apps on the devices, you must install the Company Portal on the devices and sign in to complete the Azure AD registration. To do so, choose **Yes** for **Install Company Portal**.  If you would like users to receive the Company Portal without having to authenticate into the app store, choose to **Install Company Portal with VPP** and select a VPP token. Make sure that the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
 9. If you chose a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Choose **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in using the Company Portal.
 
@@ -269,8 +269,6 @@ Now that you've installed your token, you can create an enrollment profile for A
     | <strong>Software Update</strong> | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |
     | <strong>SIM Setup</strong> | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
     | <strong>Appearance</strong> | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
-    | <strong>Express Language</strong>| Display the Express Language screen to the user. |
-    | <strong>Preferred Language</strong> | Give the user the option to choose their  **Preferred Language**. |
     | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from their old device to this device. For iOS/iPadOS 13.0 and later. |
     | <strong>Registration</strong> | Display the registration screen to the user. For macOS 10.9 and later. |
     | <strong>FileVault</strong> | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |

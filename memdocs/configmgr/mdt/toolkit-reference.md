@@ -34,7 +34,7 @@ manager: dougeby
 
 - **Options**. Indicates the valid configuration options that you can specify for the task sequence group or step that define if and when the task is performed and what is considered a successful exit code from the task  
 
-  For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](/mem/configmgr/osd/understand/introduction-to-operating-system-deployment).  
+  For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](../osd/understand/introduction-to-operating-system-deployment.md).  
 
 ###  <a name="CommonPropertiesandOptionsforTaskSequenceStepTypes"></a> Common Properties and Options for Task Sequence Step Types  
  Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.  
@@ -54,7 +54,7 @@ manager: dougeby
 |**Description**|A user-defined description that should make the task sequence step requirements and tasks easily understandable.|-|-|  
 
 #### Common Options  
- Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](/mem/configmgr/osd/understand/task-sequence-steps#common-settings).  
+ Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](../osd/understand/task-sequence-steps.md#common-settings).  
 
 ##### Table 2. Settings Available on the Options Tab  
 
@@ -213,7 +213,7 @@ manager: dougeby
 >  For more information about these server properties, see [Dnscmd](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772069(v=ws.11)).  
 
 #### Enable BitLocker  
- This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_EnableBitLocker).  
+ This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).  
 
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:  
 
@@ -263,7 +263,7 @@ manager: dougeby
 | **Wait for the runbook to finish before continuing** |                                                                                                                                                                                                                                                                                                                                                                                                                                                       This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> If this check box is:<br /><br /> - **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> - **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> Note:<br /><br /> This check box must be selected if the runbook returns output parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 #### Format and Partition Disk  
- This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk).  
+ This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk).  
 
  The unique properties and settings for the **Format and Partition Disk** task sequence step type are:  
 
@@ -322,7 +322,7 @@ manager: dougeby
 |**Selection profile**|Installs all drivers in the selected profile|  
 
 #### Install Application  
- This task sequence step installs applications on the target computer. For more information about this step type, see [Install Software](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates).  
+ This task sequence step installs applications on the target computer. For more information about this step type, see [Install Software](../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).  
 
  The unique properties and settings for the **Install Application** task sequence step type are:  
 
@@ -474,7 +474,7 @@ manager: dougeby
 |**None**|None|  
 
 #### Run Command Line  
- This task sequence step runs the specified commands on the target computer. For more information about this step type, see [Run Command Line](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine).  
+ This task sequence step runs the specified commands on the target computer. For more information about this step type, see [Run Command Line](../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine).  
 
  The unique properties and settings for the **Run Command Line** task sequence step type are:  
 
@@ -516,7 +516,7 @@ manager: dougeby
 >  This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Run PowerShell Script** in the General group.  
 
 #### Set Task Sequence Variable  
- This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable).  
+ This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable).  
 
  The unique properties and settings for the **Set Task Sequence Variable** task sequence step type are:  
 
@@ -731,7 +731,7 @@ manager: dougeby
 |**Conditional qualifier**|Not specified|  
 
 #### Capture User State  
- This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf). For more information about this step type, see [Capture User State](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state#capture-the-user-state).  
+ This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf). For more information about this step type, see [Capture User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#capture-the-user-state).  
 
  The default configuration of the **Capture User State** task sequence step is:  
 
@@ -1457,7 +1457,7 @@ manager: dougeby
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf).  
 
- For more information about this step type, see [Restore User State](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state#restore-the-user-state).  
+ For more information about this step type, see [Restore User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#restore-the-user-state).  
 
  The default configuration of the **Restore User State** task sequence step is:  
 
@@ -1698,7 +1698,7 @@ manager: dougeby
 
 - **Example**.Provides an example of a property use as it might appear in the .ini files.  
 
-  For more information about these and other task sequence properties that might be referenced while performing a ZTI deployment, see [Operating System Deployment Task Sequence Variables](/mem/configmgr/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence).  
+  For more information about these and other task sequence properties that might be referenced while performing a ZTI deployment, see [Operating System Deployment Task Sequence Variables](../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
   The deployment scripts generally require values to be specified in upper case so that they are properly read. Therefore, when specifying property values, use uppercase letters.  
 
@@ -13910,7 +13910,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 -   [Planning for Media Operating System Deployments in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh499044(v=technet.10))  
 
--   [About Prestaged Media for Operating System Deployment](/mem/configmgr/osd/deploy-use/create-prestaged-media)  
+-   [About Prestaged Media for Operating System Deployment](../osd/deploy-use/create-prestaged-media.md)  
 
 #### Stage Group  
  Use a stage group to group one or more stages in the UDI Wizard Designer. UDI stage groups are loosely related to MDT deployment scenarios, but there is no one-to-one correlation between the two.  

@@ -63,13 +63,13 @@ For pre-1911 service release tenants, if you haven't yet set the MDM authority, 
 When Android or Apple device management is enabled, Intune sends device and user information to integrate with these third-party services to manage their respective devices.
 
 Scenarios that add a consent to share data are included when:
-- You enable Android work profiles.
+- You enable Android Enterprise personally-owned or corporate-owned work profiles.
 - You enable and upload Apple MDM push certificates.
 - You Enable any of the Apple services, such as Device Enrollment Program, School Manager, or Volume Purchasing Program.
 
 In each case, the consent is strictly related to running a mobile device management service. For example, confirming that an IT Admin has authorized Google or Apple devices to enroll. Documentation to address what information is shared when the new workflows go live is available from the following locations:
-- [Data Intune sends to Google](https://aka.ms/Data-intune-sends-to-google)
-- [Data Intune sends to Apple](https://aka.ms/data-intune-sends-to-apple)
+- [Data Intune sends to Google](../protect/data-intune-sends-to-google.md)
+- [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md)
 
 ## Key Considerations
 After you switch to the new MDM authority, there will likely be transition time (up to eight hours) before the device checks in and synchronizes with the service. You're required to configure settings in the new MDM authority to make sure enrolled devices will continue to be managed and protected after the change. 

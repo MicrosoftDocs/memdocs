@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/02/2020
+ms.date: 11/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,19 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
+
+<!-- ########################## -->
+## Week of November 9, 2020  
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### App management  
+
+#### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->
+We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. The new messaging appears:  
+* After the work profile setup flow. Users see a new informational screen explaining where to find work apps, with links to help documentation.  
+* When a user accidentally re-enables the Company Portal app in the personal profile. We redesigned a screen (**Your device now has a profile just for work**) with clearer explanations and new illustrations to guide users to their work apps, with links to help documentation.  
+* On the **Help** page. In the **Frequently Asked Questions** section, there's a new link to help documentation about how to set up work profile and find apps.  
+
 <!-- ########################## -->
 ## Week of October 26, 2020 (2010 Service release)
 
@@ -93,6 +106,17 @@ Existing Win32 apps are supported for Workplace join (WPJ) devices. PowerShell s
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
+
+#### Device Firmware Configuration Interface (DFCI) is generally available<!-- 5858274 -->
+
+DFCI is an open-source Unified Extensible Firmware Interface (UEFI) framework. It allows you to securely manage the UEFI (BIOS) settings of your Windows Autopilot devices using Microsoft Endpoint Manager. It also limits end user control over firmware configurations.
+ 
+Unlike traditional UEFI management, DFCI removes the need for managing third-party solutions. It also provides zero-touch firmware management by using Microsoft Endpoint Manager for cloud management. DFCI also accesses the existing Windows Autopilot device information for authorization. 
+
+For more information on this feature, see [Use DFCI profiles on Windows devices in Intune](../configuration/device-firmware-configuration-interface-windows.md). 
+
+> [!IMPORTANT]
+> DFCI policy reporting in the Endpoint Manager admin center wasn't working as expected. All policies reported a "Pending" status. This behavior is fixed.
 
 #### Use the Connect Automatically setting on Android Enterprise basic Wi-Fi profiles<!-- 6329130   -->
 On Android Enterprise devices, you can create basic Wi-Fi profiles that include common Wi-Fi settings, such as the connection name. You can configure the **Connect automatically** setting that automatically connects to your Wi-Fi network when devices are in range.
@@ -245,7 +269,7 @@ Both the **Antivirus agent status report** and the **Detected malware report** h
 #### Updated Help and Support for Microsoft Endpoint Manager  <!-- 7328994  -->
 The Help and Support experience uses machine learning to display solutions, diagnostics, and insights that will help you resolve your issues. We've updated the help and support page in Microsoft Endpoint Manager admin center with a new, easier to navigate, consistent UX experience. The new UX has now been rolled out in all blades in the console and will help us get you more relevant help. 
 
-You'll now find an [updated and consolidated support experience](../fundamentals/get-support.md) for the following cloud-based offerings from within the admin center:
+You'll now find an [updated and consolidated support experience](../../get-support.md) for the following cloud-based offerings from within the admin center:
 
 - **Intune**
 - **Configuration Manager**
@@ -647,7 +671,7 @@ If you don’t set the additional setting to Require, users with weak passwords 
 Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. These insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics](../../analytics/overview.md).
 
 #### Bulk actions for devices listed in operational report<!-- 8218481  -->
-As part of the new antivirus reports coming out under Microsoft Endpoint Manager security, the **Windows 10 detected malware** operational report provides bulk actions that are applicable to the devices selected within the report. Actions include **Restart**, **Quick scan**, and **Full scan**. For more information, see [Windows 10 detected malware report](../fundamentals/reports.md#windows-10-detected-malware-report-operational).
+As part of the new antivirus reports coming out under Microsoft Endpoint Manager security, the **Windows 10 detected malware** operational report provides bulk actions that are applicable to the devices selected within the report. Actions include **Restart**, **Quick scan**, and **Full scan**. For more information, see [Windows 10 detected malware report](../fundamentals/reports.md#detected-malware-report-organizational).
 
 #### Export Intune reports using Graph APIs<!-- 8270831  -->
 All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top level export API. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
@@ -740,7 +764,7 @@ Applies to:
 #### Prevent users from unlocking Android Enterprise work profile devices using face and iris scanning<!--6069759 idmiss -->
 You can now prevent users from using face or iris scanning to unlock their work profile managed devices, either at the device level or the work profile level. This can be set in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Work profile > Device restrictions** for profile > **Work profile settings** and **Password** sections.
 
-For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#work-profile-only).
+For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#personally-owned-work-profile).
 
 Applies to: 
 - Android Enterprise work profile
@@ -1064,10 +1088,10 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Monitor and troubleshoot
 
 #### Use Endpoint analytics to improve user productivity and reduce IT support costs<!-- 5653063 --> 
-During the next week, this feature will be rolled out. Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics preview](https://aka.ms/uea).
+During the next week, this feature will be rolled out. Endpoint analytics aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes. For more information, see [Endpoint analytics preview](../../analytics/overview.md).
 
 #### Proactively remediate end user device issues using script packages<!-- 5933328 -->
-You can create and run script packages on end user devices to proactively find and fix the top support issues in your organization. Deploying script packages will help you reduce support calls. Choose to create your own script packages or deploy one of the script packages we've written and used in our environment to reduce support tickets. Intune allows you to see the status of your deployed script packages and to monitor the detection and remediation results. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [Proactive remediations](https://aka.ms/uea_prs).
+You can create and run script packages on end user devices to proactively find and fix the top support issues in your organization. Deploying script packages will help you reduce support calls. Choose to create your own script packages or deploy one of the script packages we've written and used in our environment to reduce support tickets. Intune allows you to see the status of your deployed script packages and to monitor the detection and remediation results. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [Proactive remediations](../../analytics/proactive-remediations.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security

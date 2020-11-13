@@ -166,11 +166,18 @@ If you want to remove devices from the Intune portal, you can delete them from t
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 ### Automatically delete devices with cleanup rules
-You can configure Intune to automatically delete devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
+You can configure Intune to automatically remove devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
+
+Device cleanup rules don't support Android Enterprise devices, including fully managed, dedicated, corporate-owned work profile, and personally-owned work profile.
+
+If a removed device checks in before its device certification expires, it will reappear in the console. 
+
+The device clean up rule doesn't trigger a wipe or retire.
 
 > [!NOTE]
 > Device cleanup rules aren't available for Jamf-managed devices and Android Enterprise scenarios like [Fully Managed](../enrollment/android-fully-managed-enroll.md), [Dedicated](../enrollment/android-kiosk-enroll.md), and [Corporate-Owned with Work Profile](../enrollment/android-corporate-owned-work-profile-enroll.md).

@@ -112,8 +112,6 @@ You'll be able to set Automated Device Enrollment (ADE) profiles to hide these S
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
 
-### Deploy Software Updates to macOS devices <!-- 3194876 -->
-You'll be able to deploy Software Updates to groups of macOS devices. This feature includes critical, firmware, configuration file, and other updates. You'll be able to send updates on the next device check-in or select a weekly schedule to deploy updates in or out of time windows that you set. This helps when you want to update devices outside standard work hours or when your help desk is fully staffed. You'll also get a detailed report of all macOS devices with updates deployed. You can drill into the report on a per-device basis to see the statuses of particular updates.
 
 ### Subnet ID and IP addresses on Properties page for corporate-owned Windows devices<!--5265589 -->
 Subnet ID and IP addresses will be displayed on the **Properties** page for corporate-owned Windows devices. To see them, go to [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > choose a corporate-owned Windows device > **Properties**.
@@ -157,8 +155,8 @@ We’re reworking the endpoint security Account protection policy to use the new
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7339038   -->
-We’ve added support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
+### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
+We're adding support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
  
 - Allow hardware device installation by device identifiers
 - Block hardware device installation by device identifiers
