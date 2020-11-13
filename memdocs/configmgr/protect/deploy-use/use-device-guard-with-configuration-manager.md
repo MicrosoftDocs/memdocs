@@ -2,7 +2,7 @@
 title: How to manage Windows Defender Application Control
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage Windows Defender Application Control.
-ms.date: 11/19/2019
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
