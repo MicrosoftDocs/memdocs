@@ -66,7 +66,7 @@ When you deploy a policy, typically, the following executables can run:
 
 To use Windows Defender Application Control with Configuration Manager, devices you manage must be running:
 - Windows 10 Enterprise version 1703, or later.
-- Windows Server 2019 or later (Introduced in version 2010) <!--7752243, 8581848-->
+- Windows Server 2019, or later (Introduced in version 2010) <!--7752243, 8581848-->
 
 > [!Tip]
 > Create new policies to target Windows Server operating systems after installation of Configuration Manager 2010 and installing the updated client. Existing Windows Defender Application Control polices created prior to installing 2010 won't work with Windows Server operating systems.
