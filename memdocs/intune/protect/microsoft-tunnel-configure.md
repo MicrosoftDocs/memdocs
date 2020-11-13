@@ -171,7 +171,7 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 
-2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** from for either *Device Owner Only* or *Work Profile Only*, and then select **Create**.
+2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Prorfile**, and then select **Create**.
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 

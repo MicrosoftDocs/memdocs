@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 11/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,6 +38,16 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 
 > [!NOTE]  
 > Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+
+## Email apps
+
+Android Enterprise has several enrollment methods. The enrollment type depends on how email is configured on the device:
+
+- On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use an app configuration policy and the steps in this article. App configuration policies support GMail and Nine Work email apps.
+- On Android Enterprise personally-owned work profile devices, create an [Android Enterprise email device configuration profile](../configuration/email-settings-android-enterprise.md). When you create the profile, you can configure GMail and Nine Work email settings.
+- On Android device administrator, create an [Android device administrator email device configuration profile](../configuration/email-settings-android.md) for Samsung Knox devices. When you create the profile, you can configure Exchange email settings, such as `outlook.office365.com`.
+
+## Create an app configuration policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
@@ -82,8 +92,6 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 You can use the configuration designer for Managed Google Play apps when the app is designed to support configuration settings. Configuration applies to devices enrolled in Intune. The designer lets you configure specific configuration values for the settings exposed by the app.
 
 1. Select **Add**. Choose the list of configuration settings that you want to enter for the app.
-
-    If you're using GMail or Nine Work for your email app, see [Android Enterprise device settings to configure email](../configuration/email-settings-android-enterprise.md) for more information on these settings.
 
 2. For each key and value in the configuration, set:
 

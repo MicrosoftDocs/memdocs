@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 11/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -203,6 +203,15 @@ When you assign the policy to an iPhone, the page looks similar to the following
       - **Modal**: The notification is shown and users must manually dismiss it before continuing to use the device.
     - **Badge on app icon**: Select **Enable** to add a badge to the app icon. The badge means the app sent a notification.
     - **Sounds**: Select **Enable** to play a sound when a notification is delivered.
+    - **Show previews**: Shows a preview of recent app notifications. Select when to show the preview. The value you choose overrides the user configured value on the device (Settings > Notifications > Show Previews). Your options:
+      - **Not configured**: Intune doesn't change or update this setting.
+      - **When unlocked**: The preview only shows when the device is unlocked.
+      - **Always**: The preview always shows on the lock screen.
+      - **Never**: The preview never shows.
+
+      This feature applies to:
+
+      - iOS/iPadOS 14.0 and newer
 
 ## Lock screen message
 
