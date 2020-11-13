@@ -116,6 +116,6 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Next steps
 
-[Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md) (an optional prerequisite before deploying policy for the first time)
+[Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md) is an optional prerequisite before deploying policy for the first time.
 
 [Deploy BitLocker management client](../deploy-use/bitlocker/deploy-management-agent.md)
