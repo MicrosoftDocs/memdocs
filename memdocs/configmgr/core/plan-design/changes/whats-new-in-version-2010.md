@@ -216,7 +216,7 @@ This release includes the following improvements to OS deployment:
 
 You can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). This change also provides support for BitLocker management via internet-based client management (IBCM) and when you configure the site for enhanced HTTP. There's no change to the setup process for BitLocker management.
 
-<!-- For more information, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md). -->
+For more information, see [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
 
 ### Expanded Windows Defender Application Control management
 <!--7752243-->

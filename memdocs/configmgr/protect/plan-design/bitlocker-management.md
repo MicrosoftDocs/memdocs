@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 09/15/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -34,7 +34,9 @@ Configuration Manager provides the following management capabilities for BitLock
 
 ### Client deployment
 
-Deploy the BitLocker client to managed Windows devices running Windows 10 or Windows 8.1
+- Deploy the BitLocker client to managed Windows devices running Windows 10 or Windows 8.1
+
+- Manage BitLocker policies and escrow recovery keys for on-premises and internet-based clients
 
 ### Manage encryption policies
 
@@ -67,15 +69,15 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Prerequisites
 
-- Azure Active Directory-joined, workgroup clients, or clients in untrusted domains aren't supported. The client currently needs to be joined to on-premises Active Directory. This configuration is to authenticate with the recovery service to escrow keys.
-
 - To create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
 
-- The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. There are two options:
+- The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
 
-  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option only applies to Configuration Manager version 2002.<!-- 5925660 -->
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
 
-  - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or 2002.
+  - Configure the site for [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).<!--6979223--> This option applies to Configuration Manager version 2010 or later.
+
+  - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or later.
 
   For more information, see [Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md).
 
@@ -95,7 +97,13 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - The user account that runs the portal installer script needs SQL Server **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL Server role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
 
-- BitLocker Management is not supported on virtual machines (VMs) or on server OSes. For this reason some features may not work as expected on virtual machines or on server OSes. For example on virtual machines BitLocker Management will not start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they are not encrypted.
+## Supported configurations
+
+- BitLocker management isn't supported on virtual machines (VMs) or on server editions. For example, BitLocker management won't start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they aren't encrypted.
+
+- Azure Active Directory-joined, workgroup clients, or clients in untrusted domains aren't supported. The client currently needs to be joined to on-premises Active Directory. This configuration is to authenticate with the recovery service to escrow keys.
+
+- Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM) and when you configure the site for enhanced HTTP. There's no change to the setup process for BitLocker management.<!--6979223-->
 
 > [!TIP]
 > By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).

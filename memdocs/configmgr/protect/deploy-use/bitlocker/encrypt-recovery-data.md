@@ -2,7 +2,7 @@
 title: Encrypt recovery data
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes across the network and in the Configuration Manager database.
-ms.date: 10/06/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -25,14 +25,13 @@ When you create a BitLocker management policy, Configuration Manager deploys the
 
 Given the sensitive nature of this information, you need to protect it in the following circumstances:
 
-- Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. There are two options:
+- Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. Use one of the following options:
 
-  - HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option only applies to Configuration Manager version 2002.<!-- 5925660 -->
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
 
-  - Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to Configuration Manager versions 1910 or 2002.
+  - Configure the site for [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).<!--6979223--> This option applies to Configuration Manager version 2010 or later.
 
-    > [!NOTE]
-    > It currently doesn't support Enhanced HTTP.
+  - Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to Configuration Manager versions 1910 or later.
 
 - Consider also encrypting this data when stored in the site database. If you install a SQL Server certificate, Configuration Manager encrypts your data in SQL.
 
@@ -207,3 +206,7 @@ For more information on these SQL commands, see the following articles:
 - [Create master key](/sql/t-sql/statements/create-master-key-transact-sql)
 - [Backup master key](/sql/t-sql/statements/backup-master-key-transact-sql)
 - [Grant certificate permissions](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+
+## Next steps
+
+[Deploy BitLocker management client](../deploy-use/bitlocker/deploy-management-agent.md)
