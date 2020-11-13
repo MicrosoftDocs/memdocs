@@ -220,7 +220,9 @@ You can now manage BitLocker policies and escrow recovery keys over a cloud mana
 
 ### Expanded Windows Defender Application Control management
 <!--7752243-->
-Windows Defender Application Control enforces an explicit list of software allowed to run on devices. In this technical preview, we've expanded Windows Defender Application Control policies to support devices running Windows Server 2016 or later.
+Windows Defender Application Control enforces an explicit list of software allowed to run on devices. In this technical preview, we've expanded Windows Defender Application Control policies to support devices running Windows Server 2019 or later.
+
+For more information, see [Windows Defender Application Control management with Configuration Manager](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md#bkmk_os).
 
 ## Collections
 
