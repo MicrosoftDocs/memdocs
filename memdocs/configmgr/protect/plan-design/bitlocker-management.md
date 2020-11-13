@@ -107,9 +107,9 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - BitLocker management isn't supported on virtual machines (VMs) or on server editions. For example, BitLocker management won't start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they aren't encrypted.
 
-- Azure Active Directory-joined, workgroup clients, or clients in untrusted domains aren't supported. The client currently needs to be joined to on-premises Active Directory. This configuration is to authenticate with the recovery service to escrow keys.
+- Azure Active Directory (Azure AD)-joined, workgroup clients, or clients in untrusted domains aren't supported. BitLocker management in Configuration Manager only supports devices that are joined to on-premises Active Directory. Hybrid Azure AD-joined devices are also supported. This configuration is to authenticate with the recovery service to escrow keys.
 
-- Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM) and when you configure the site for enhanced HTTP. There's no change to the setup process for BitLocker management.<!--6979223-->
+- Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM) and when you configure the site for enhanced HTTP. There's no change to the setup process for BitLocker management.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
 > [!TIP]
 > By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).

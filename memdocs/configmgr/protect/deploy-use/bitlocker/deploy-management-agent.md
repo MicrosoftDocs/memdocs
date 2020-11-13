@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 08/21/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -169,6 +169,8 @@ The BitLocker recovery service is a server component that receives BitLocker rec
 Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text.
 
 For more information, see [Encrypt recovery data](encrypt-recovery-data.md).
+
+Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
 
 ## Migration considerations
 
