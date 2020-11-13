@@ -89,7 +89,7 @@ Required data collected by Intune may include, but is not limited to:
   - Profile names
   - Compliance policies
   - Group policy
-  - Powershell scripts
+  - PowerShell scripts
   - Line-of-Business (LOB) application
 - Application inventory, like
   - app name
