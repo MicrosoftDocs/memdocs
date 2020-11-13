@@ -131,7 +131,7 @@ In this example, you create a custom profile that restricts copy and paste actio
 
     After you enter the settings, your environment looks similar to the following image:
 
-    :::image type="content" source="./media/custom-settings-android-for-work/custom-policy-afw-copy-paste.png" alt-text="You can can add more OMA-URI values, and export the values for Android Enterprise personally owned devices with a work profile in Microsoft Intune.":::
+    :::image type="content" source="./media/custom-settings-android-for-work/custom-policy-afw-copy-paste.png" alt-text="You can add more OMA-URI values, and export the values for Android Enterprise personally owned devices with a work profile in Microsoft Intune.":::
 
 8. Select **Next**.
 9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
