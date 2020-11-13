@@ -40,8 +40,6 @@ Supported languages for syntax highlighting include PowerShell, JavaScript/JScri
 |Task sequence scripts|Yes|-|-|-|
 |Create scripts|Yes| -| -| -|
 
-
-
 ### Fixed-width font now used in some console areas
 
 <!--7632637-->
