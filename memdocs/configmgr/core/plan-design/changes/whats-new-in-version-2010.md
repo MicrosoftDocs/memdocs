@@ -319,6 +319,8 @@ Beginning with the September 2020 cumulative update, HTTP-based WSUS servers wil
 <!--7520646-->
 To help you manage security risk in your environment, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates. Additionally, a new **Management Insights** rule was added to detect Windows 7, Windows Server 2008, and Windows Server 2008 R2 without [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates).
 
+For more information, see [Management insights](../../servers/manage/management-insights.md#security) and [Console notifications](../../servers/manage/admin-console-notifications.md#bkmk_2010).
+
 ### Immediate distribution point fallback for clients downloading software update delta content
 <!--8286432-->
 There's a new client setting for software updates. If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is five minutes.
