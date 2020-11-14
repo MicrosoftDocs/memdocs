@@ -5,7 +5,7 @@ description: "Primary sites require a software update point on the central admin
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/16/2020
+ms.date: 11/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -36,21 +36,22 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ## Proxy server settings  
  You can configure the proxy server settings on different pages of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** depending on the version of Configuration Manager that you use.  
 
--   You must configure the proxy server, and then specify when to use the proxy server for software updates. Configure the following settings:  
+- You must configure the proxy server, and then specify when to use the proxy server for software updates. Configure the following settings:  
 
-    -   Configure the proxy server settings on the **Proxy** page of the wizard or on the **Proxy** tab in Site system Properties. The proxy server settings are site system specific, meaning that all site system roles use the proxy server settings that you specify.  
+   - Configure the proxy server settings on the **Proxy** page of the wizard or on the **Proxy** tab in Site system Properties. The proxy server settings are site system specific, meaning that all site system roles use the proxy server settings that you specify.  
 
-    -   Specify whether to use the proxy server when Configuration Manager synchronizes the software updates and when it downloads content by using an automatic deployment rule. Configure the software update point proxy server settings on the **Proxy and Account Settings** page of the wizard or on the **Proxy and Account Settings** tab in Software update point Properties.  
+   - Specify whether to use the proxy server when Configuration Manager synchronizes the software updates and when it downloads content by using an automatic deployment rule. Configure the software update point proxy server settings on the **Proxy and Account Settings** page of the wizard or on the **Proxy and Account Settings** tab in Software update point Properties.  
 
-        > [!NOTE]  
-        >  The **Use a proxy when downloading content by using automatic deployment rules** setting is available but it is not used for a software update point on a secondary site. Only the software update point on the central administration site and primary site downloads content from the Microsoft Update page.  
+   - The **Use a proxy when downloading content by using automatic deployment rules** setting is available but it is not used for a software update point on a secondary site. Only the software update point on the central administration site and primary site downloads content from the Microsoft Update page.  
 
-> [!IMPORTANT]  
->  By default, the **Local System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run. When this account does not have access to the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007**. Configure the credentials to connect to the proxy server when the Local System account does not have Internet access.  
+  - By default, the **Local System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run. When this account does not have access to the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007**. Configure the credentials to connect to the proxy server when the Local System account does not have Internet access. 
 
 
 ## WSUS settings  
  You must configure WSUS settings on different pages of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** depending on the version of Configuration Manager that you use, and in some cases, only in the properties for the software update point, also known as Software Update Point Component Properties. Use the information in the following sections to configure the WSUS settings.  
+
+> [!Important]
+> To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). 
 
 ### <a name="BKMK_wsusport"></a>WSUS port settings  
  You must configure the WSUS port settings on the Software Update Point page of the wizard or in the properties of the software update point. Use the following procedure to determine the port settings used by WSUS.  
@@ -62,10 +63,12 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
  2.  Expand **Sites**, right-click the Web site for the WSUS server, and then click **Edit Bindings**. In the Site Bindings dialog, the HTTP and HTTPS port values are displayed in the **Port** column.
 
 
-### Configure SSL communications to WSUS  
- You can configure SSL communication on the **General** page of the wizard or on the **General** tab in the properties of the software update point.  
+### Configure SSL communications to WSUS 
+
+ To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. You can configure SSL communication on the **General** page of the wizard or on the **General** tab in the properties of the software update point.  
 
  For more information about how to use SSL, see [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) and [Configure a software update point to use TLS/SSL with a PKI certificate](../get-started/software-update-point-ssl.md).  
+
 
 ### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you don't configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  

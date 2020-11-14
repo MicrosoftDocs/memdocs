@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 09/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -861,6 +861,12 @@ Adjust this schedule based on company policy for software update compliance, and
 
 > [!NOTE]  
 > If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
+
+### Allow user proxy for software update scans
+<!--8379199-->
+*(Introduced in version 2010)*
+
+Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. Set this option to **Yes** to allow these connections if you require a user proxy despite the security trade-offs. By default, this setting is set to **No**. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
 
 ### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
