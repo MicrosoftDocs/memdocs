@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -258,7 +258,7 @@ These settings use the [experience policy CSP](/windows/client-management/mdm/po
 
 - **Internet sharing**: **Block** prevents Internet connection sharing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Phone reset**: **Block** prevents users from wiping or doing a factory reset on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **USB connection**: **Block** prevents access to syncing files through a USB connection or using developer tools on an HoloLens device. Changing this policy will not affect USB charging. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
+- **USB connection**: **Block** prevents access to syncing files through a USB connection or using developer tools on an HoloLens device. Changing this policy doesn't affect USB charging. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
 
   [Connectivity/AllowUSBConnection CSP](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 
