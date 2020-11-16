@@ -367,6 +367,8 @@ The following additional hotfixes are available to address specific issues:
 |---------|---------|---------|---------|
 | [4580678](https://support.microsoft.com/help/4580678) | Tenant attach rollup for Configuration Manager current branch, version 2006 | September 18, 2020 | Yes |
 | [4584759](https://support.microsoft.com/help/4584759) | Clients report Desktop Analytics configuration errors in Configuration Manager, version 2006 | October 2, 2020 | Yes |
+| [4575786](https://support.microsoft.com/help/4575786) | Configuration Manager console terminates unexpectedly on Configuration Manager current branch, version 2006 | November 12, 2020 | Yes |
+| [4575787](https://support.microsoft.com/help/4575787) | Co-management enrollment takes longer than expected for Configuration Manager clients | November 12, 2020 | No |
 
 ## Next steps
 
