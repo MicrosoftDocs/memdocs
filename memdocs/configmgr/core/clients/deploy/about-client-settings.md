@@ -899,7 +899,20 @@ This setting configures the local port for the HTTP listener to download delta c
 > [!NOTE]
 >This client setting replaces **Port used to download content for Express installation files**.
 
+### If content is unavailable from distribution points in the current boundary group, immediately fallback to a neighbor or the site default
 
+*(Introduced in version 2010)*
+
+If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is 5 minutes. The following options are available:
+
+- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
+      - Delta content is unavailable from distribution points in the current boundary group.
+      - The software update deployment allows fallback.
+
+- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
+
+> [!NOTE]
+> This setting is for delta content only.
 ### Enable management of the Office 365 Client Agent
 
 When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).

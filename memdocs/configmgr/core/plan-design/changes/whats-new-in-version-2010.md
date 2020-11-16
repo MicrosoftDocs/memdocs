@@ -334,6 +334,8 @@ For more information, see [Management insights](../../servers/manage/management-
 <!--8286432-->
 There's a new client setting for software updates. If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is five minutes.
 
+For more information, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
+
 ## PowerShell
 
 ### Support for PowerShell version 7
