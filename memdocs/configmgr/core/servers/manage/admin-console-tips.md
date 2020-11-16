@@ -158,7 +158,7 @@ Copy discovery data from devices and users in the console. Copy the details to t
 
     - **Select all**: Selects all properties and values. You can also use the keyboard shortcut **Ctrl** + **A**.
 
-    - **Save results as**: Saves selected properties and values to a comma-separated values (CSV) file that you specify.
+    - **Save results as**: Saves all properties and values to a comma-separated values (CSV) file that you specify.
 
 :::image type="content" source="media/6890051-copy-discovery-data.png" alt-text="Screenshot of device properties to copy discovery data" lightbox="media/6890051-copy-discovery-data.png":::
 
