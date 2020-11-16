@@ -42,6 +42,7 @@ We've made improvements to applications for tenant attached devices. Administrat
 - **Re-evaluate** the application installation status
 - **Reinstall** an application has replaced **Retry installation**
 
+For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_repair).
 ## Site infrastructure
 
 ### Monitor scenario health
