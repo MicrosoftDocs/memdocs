@@ -88,7 +88,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
   - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or later.
 
-  For more information, see [Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md).
+  For more information, see [Encrypt recovery data in transit](../deploy-use/bitlocker/encrypt-recovery-data-transit.md).
 
 - Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. To use the recovery service, you need at least one management point not in a replica configuration. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 
@@ -116,6 +116,4 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 ## Next steps
 
-[Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md) is an optional prerequisite before deploying policy for the first time.
-
-[Deploy BitLocker management client](../deploy-use/bitlocker/deploy-management-agent.md)
+[Encrypt recovery data in transit](../deploy-use/bitlocker/encrypt-recovery-data-transit.md)
