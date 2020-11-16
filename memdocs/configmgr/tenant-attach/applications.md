@@ -104,11 +104,11 @@ Deploying applications to a user has the following limitations:
 - Install the latest version of the Configuration Manager client
 - Targeted clients need to be online
 - To uninstall an application:
-   - The application must have at least one [deployment type](../../../../../apps/deploy-use/create-applications.md#start-the-create-deployment-type-wizard) with the uninstall command defined
+   - The application must have at least one [deployment type](../apps/deploy-use/create-applications.md#start-the-create-deployment-type-wizard) with the uninstall command defined
    - Required deployments of the application can't be targeted to the client
    - The application must currently be installed on the device
 - To repair an application:
-   - The application must have at least one [deployment type](../../../../../apps/deploy-use/create-applications.md#start-the-create-deployment-type-wizard) with the repair command defined
+   - The application must have at least one [deployment type](../apps/deploy-use/create-applications.md#start-the-create-deployment-type-wizard) with the repair command defined
    - The application must currently be installed on the device
 
 #### Uninstall, repair, reinstall, or re-evaluate an application
