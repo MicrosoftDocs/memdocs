@@ -20,7 +20,7 @@ manager: dougeby
 
 When you create a BitLocker management policy, Configuration Manager deploys the recovery service to a management point. On the **Client Management** page of the BitLocker management policy, when you **Configure BitLocker Management Services**, the client backs up key recovery information to the site database. This information includes BitLocker recovery keys, recovery packages, and TPM password hashes. When users are locked out of their protected device, you can use this information to help them recover access to the device.
 
-Given the sensitive nature of this information, you need to protect it. Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. For more information, see [Encrypt recovery data in transit](../deploy-use/bitlocker/encrypt-recovery-data-transit.md).
+Given the sensitive nature of this information, you need to protect it. Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. For more information, see [Encrypt recovery data in transit](encrypt-recovery-data-transit.md).
 
 Consider also encrypting this data when stored in the site database. If you install a SQL Server certificate, Configuration Manager encrypts your data in SQL.
 

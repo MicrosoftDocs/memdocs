@@ -68,6 +68,6 @@ Starting in version 2010, if you enable enhanced HTTP for the site, then you don
 
 ## Next steps
 
-[Encrypt recovery data at rest](../deploy-use/bitlocker/encrypt-recovery-data.md) is an optional prerequisite before deploying policy for the first time.
+[Encrypt recovery data at rest](encrypt-recovery-data.md) is an optional prerequisite before deploying policy for the first time.
 
-[Deploy BitLocker management client](../deploy-use/bitlocker/deploy-management-agent.md)
+[Deploy BitLocker management client](deploy-management-agent.md)
