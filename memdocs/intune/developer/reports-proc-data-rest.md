@@ -66,7 +66,7 @@ You now have an app defined in Azure. Grant access from the native app to the Mi
 5. Find and select the Intune API. It is named **Microsoft Intune API**.
 6. Select **Delegated Permissions** box and click the **Get data warehouse information from Microsoft Intune** box.
 7. Click **Add permissions**.
-8. Optionally, Select **Grant admin consent for Microsoft** in the Configured permissions pane, then select **Yes**. This will grant access to all accounts in the current directory. This will prevent the consent dialog box from appearing for every user in the tenant. For more information, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+8. Optionally, Select **Grant admin consent for Microsoft** in the Configured permissions pane, then select **Yes**. This will grant access to all accounts in the current directory. This will prevent the consent dialog box from appearing for every user in the tenant. For more information, see [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
 9. Select **Certificates & secrets** > **+ New client secret** and generate a new secret. Make sure to copy it someplace safe because you won't be able to access it again.
 
 ## Get data from the Microsoft Intune API with Postman

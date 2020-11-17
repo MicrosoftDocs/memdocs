@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,7 +59,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   *Device administrator* capabilities are superseded by Android Enterprise.
 
   - **Not configured** (*default*)
-  - **Block** - Blocking device administrator will guide users to move to Android Enterprise work profile management to regain access.
+  - **Block** - Blocking device administrator will guide users to move to Android Enterprise Personally-Owned and Corporate-Owned Work Profile management to regain access.
 
 - **Rooted devices**  
   Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and above.)
@@ -203,11 +203,6 @@ The available settings for passwords vary by the version of Android on the devic
     - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
-
-  > [!IMPORTANT]
-  > The new **Password complexity** setting remains a work in in progress. In late October 2020, *Password complexity* will take effect on devices.
-  >
-  > If you set *Password complexity* to something other than *None*, you must also set **Require a password to unlock mobile devices** (from the settings for *All Android devices*) to **Require** to ensure that end users who use a password that doesn’t meet your complexity requirements receive a warning to update their password. If you don’t set *Require a password to unlock mobile devices* to *Require*, users with weak passwords won’t receive the warning.
 
 #### Android 9 and earlier or Samsung Knox
 

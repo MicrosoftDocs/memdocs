@@ -44,10 +44,11 @@ For more information about using S/MIME with Intune, [Use S/MIME to encrypt emai
 
 Intune supports import of PFX certificates for the following platforms:
 
-- Android - Device Administrator
-- Android Enterprise - Fully Managed
-- Android Enterprise - Work profile
-- Android Enterprise - Corporate-owned work profile
+- Android device administrator
+- Android Enterprise:
+  - Fully Managed
+  - Corporate-Owned Work Profile
+  - Personally-Owned Work Profile
 - iOS/iPadOS
 - macOS
 - Windows 10

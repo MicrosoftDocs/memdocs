@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,8 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+params:
+  siblings_only: true
 ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
@@ -31,6 +32,13 @@ ms.collection: M365-identity-device-management
 
 You can create a profile with specific Wi-Fi settings, and then deploy this profile to your Android Enterprise fully managed and dedicated devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 
+This feature applies to:
+
+- Android Enterprise personally owned devices with a work profile (BYOD)
+- Android Enterprise corporate-owned work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
 This article describes these settings. [Use Wi-Fi on your devices](wi-fi-settings-configure.md) includes more information about the Wi-Fi feature in Microsoft Intune.
 
 ## Before you begin
@@ -38,7 +46,7 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings-configure.md):
 
 - Fully managed, dedicated, and corporate-owned work profile
-- Work profile
+- Personally-owned work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -49,6 +57,10 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 - **Wi-Fi type**: Choose **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-Fi connections. For example, enter **Contoso WiFi**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
+- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection. 
+
+  If devices are already connected to another preferred Wi-Fi connection, then they won't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
+
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **Wi-Fi type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
 
@@ -104,7 +116,7 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-## Work profile only
+## Personally-owned work profile
 
 ### Basic
 
@@ -175,6 +187,6 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 
 ## Next steps
 
-The profile is created, but it's not doing anything. Next, [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
+The profile is created, but may not doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
 You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.

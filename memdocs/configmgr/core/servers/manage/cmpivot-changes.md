@@ -217,10 +217,10 @@ You now have additional arithmetic operators, aggregators, and the ability to ad
 
 |Table operators| Description|
 |-----|-----|
-| [join](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Merge the rows of two tables to form a new table by matching row for the same device|
+| [join](/azure/kusto/query/joinoperator)| Merge the rows of two tables to form a new table by matching row for the same device|
 |render|Renders results as graphical output|
 
-The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](#bkmk_cmpivot_examples1906) section and Kusto's [join operator](https://docs.microsoft.com/azure/kusto/query/joinoperator) article.
+The render operator already exists in CMPivot. Support for multiple series and the **with** statement were added. For more information, see the [examples](#bkmk_cmpivot_examples1906) section and Kusto's [join operator](/azure/kusto/query/joinoperator) article.
 
 #### Limitations for joins
 
@@ -301,7 +301,7 @@ Starting in Configuration Manager version 1902, you can run CMPivot from the cen
 
 Running CMPivot on the CAS will require additional permissions when SQL Server or the SMS Provider aren't on the same machine or in the case of SQL Server Always On availability group configuration. With these remote configurations, you have a "double hop scenario" for CMPivot.
 
-To get CMPivot to work on the CAS in such a "double hop scenario", you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. Kerberos needs to work through all of the hops between the machines.<!--5746133--> If you have more than one remote configuration such as SQL Server or SMS Provider being colocated with the CAS or not, or multiple trusted forests, you may require a combination of permission settings. Below are the steps that you may need to take:
+To get CMPivot to work on the CAS in such a "double hop scenario", you can define constrained delegation. To understand the security implications of this configuration, read the [Kerberos constrained delegation](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) article. Kerberos needs to work through all of the hops between the machines.<!--5746133--> If you have more than one remote configuration such as SQL Server or SMS Provider being colocated with the CAS or not, or multiple trusted forests, you may require a combination of permission settings. Below are the steps that you may need to take:
 
 ### CAS has a remote SQL Server
 
@@ -354,7 +354,7 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
-1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) for the CAS listener name and each primary listener name.
+1. Make sure the [SPN is published](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) for the CAS listener name and each primary listener name.
 1. Restart the primary SQL Server nodes.
 1. Restart the CAS site server and the CAS SQL Server nodes.
 
@@ -415,7 +415,7 @@ CMPivot supports the following scalar functions:
 
 ### <a name="bkmk_cmpivot-charts"></a> Rendering visualizations
 
-CMPivot now includes basic support for the KQL [render operator](https://docs.microsoft.com/azure/kusto/query/renderoperator). This support includes the following types:  
+CMPivot now includes basic support for the KQL [render operator](/azure/kusto/query/renderoperator). This support includes the following types:  
 - **barchart**: First column is x-axis, and can be text, datetime or numeric. The second columns must be numeric and is displayed as a horizontal strip.  
 - **columnchart**: Like barchart, with vertical strips instead of horizontal strips.  
 - **piechart**: First column is color-axis, second column is numeric.  

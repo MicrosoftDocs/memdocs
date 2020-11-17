@@ -59,7 +59,7 @@ For more information, see [Windows 10 upgrade paths](/windows/deployment/upgrade
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 
-For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
+For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview).
 
 
 ## <a name="BKMK_Plan"></a> Plan  

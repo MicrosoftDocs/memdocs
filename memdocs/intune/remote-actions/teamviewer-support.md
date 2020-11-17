@@ -33,10 +33,10 @@ Devices managed by Intune can be administered remotely using [TeamViewer](https:
 
 ## Prerequisites
 
-- Use a supported device. Intune-managed Android Device Admin, Android Work Profile, Windows, iOS/iPadOS, and macOS devices support remote administration. TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) for any updates.
+- Use a supported device. Intune-managed Android Device Admin, Android persoanlly-owned work profile, Windows, iOS/iPadOS, and macOS devices support remote administration. TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) for any updates.
 
 > [!NOTE]
-> Android Dedicated and Fully Managed are not supported.
+> Corporate-own devices are not supported. The Team viewer only works with the Company portal and not the Intune App.
 
 - The Intune administrator within the Azure portal must have following [Intune roles](../fundamentals/role-based-access-control.md):  
 

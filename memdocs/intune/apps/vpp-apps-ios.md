@@ -58,7 +58,7 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 | User   Enrollment | Not supported. | Supported using Managed Apple IDs. |
 | Books | Not supported. | Supported. |
 | Licenses   used | 1 license per device. The license is associated with the   device. | 1 license for up to 5 devices using the same personal   Apple ID. The license is associated with the user.<p>An end user   associated with a personal Apple ID and a Managed Apple ID in Intune consumes   2 app licenses. |
-| License   migration | Apps can migrate silently from user to device licenses. | Apps cannot migrate from device to user licenses. |
+| License   migration | Apps can migrate silently from user to device licenses only when using **Required** assignment type. | Apps cannot migrate from device to user licenses for any assignment type. |
 
 > [!NOTE]  
 > Company Portal does not show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
@@ -195,7 +195,8 @@ To renew an Apple VPP token, use the following steps:
 
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
 2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
-3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**. Then, manually upload the token.
+3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
+4. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 
 >[!NOTE]
 >You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.

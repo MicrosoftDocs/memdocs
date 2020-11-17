@@ -180,4 +180,4 @@ The following are known issues related to the Enrollment Status Page.
 
 After you set up Windows enrollment pages, learn how to [manage Windows devices](../remote-actions/device-management.md).
 
-[Troubleshoot the Windows Enrollment Status page](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)
+[Troubleshoot the Windows Enrollment Status page](/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 11/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -42,7 +42,7 @@ You _**do not need**_ to register your app. For internal [line-of-business (LOB)
 
 ### If your app will be released to a public app store, like the Apple App Store or Google Play:
 
-You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Intune protected partner app](../apps/apps-supported-intune-apps.md#partner-apps).
+You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Partner productivity apps](../apps/apps-supported-intune-apps.md#partner-productivity-apps).
 
 Until registration has been finished and confirmed by the Microsoft Intune team, Intune administrators will not have the option to apply app protection policy to your app's deep link. Microsoft will also add your app to its [Microsoft Intune Partners page](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). There, the app's icon will be displayed to show that it supports Intune app protection policies.
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/12/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,7 +16,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ 
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
@@ -35,7 +35,7 @@ To Install Microsoft Tunnel Gateway, you’ll need at least one Linux server wit
 
 Before you start installation be sure to complete the following tasks:
 
-- Review and [Configure prerequisites for Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
+- Review and [Configure prerequisites for Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#configure-prerequisites-for-microsoft-tunnel).
 - Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-overview.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
 After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
@@ -171,7 +171,7 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 
-2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** from for either *Device Owner Only* or *Work Profile Only*, and then select **Create**.
+2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Prorfile**, and then select **Create**.
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
@@ -211,6 +211,11 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
         For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
+   - **On-Demand VPN Rules**:  
+     Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
+
+     For more information, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn)
+
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
@@ -239,6 +244,19 @@ Updates for the Microsoft Tunnel are released periodically. When we update the t
 After an update releases, it rolls out to tenants over the following days. Therefore, your tunnel servers might not start the process to update for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### October 29, 2020
+
+Image hash values:
+
+- **agentImageDigest**: sha256:ba48de2c746a68286d15985f807702c60004131368a4a6a50ceab0f04653031a
+
+- **serverImageDigest**:  sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
+
+Changes in this release:
+
+- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs).
+- Additional bug fixes.
 
 ### October 12, 2020
 

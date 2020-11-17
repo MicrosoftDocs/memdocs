@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,6 +61,7 @@ Features of the VPN profiles for the tunnel include:
 - The Site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
+- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
 
 Server configurations include:
@@ -207,7 +208,10 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 Only devices that are enrolled to Intune are supported with Microsoft Tunnel. The following device platforms are supported:
 
-- Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile)
+- Android Enterprise:
+  - Fully Managed
+  - Corporate-Owned Work Profile
+  - Personally-Owned Work profile
 - iOS/iPadOS
 
 The following functionality is supported by all platforms:
@@ -272,7 +276,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
 
    > [!CAUTION]
-   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7&preserve-view=true) in the PowerShell documentation.
+   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy?preserve-view=true&view=powershell-7) in the PowerShell documentation.
    >
    > In a future update, *mst-CA-readiness.ps1* will be signed, which will remove the need to set ExecutionPolicy to *Unrestricted*.
 
