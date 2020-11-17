@@ -31,7 +31,8 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
    - 802.1x network authentication
       - 802.1x network authentication may work with additional configuration depending on the hardware and its configuration.
 - DHCP lease durations can't be set to infinite. <!--8018584-->
-   - You may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite.
+   - With Configuration Manager version 2010 and later, if the DHCP lease is set to infinite a client won't be woken up or used as a peer to wake other devices. 
+   - With Configuration Manager version 2006 and earlier, you may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite. 
 
 Limitations for Configuration Manager version 2006 and earlier:
 - Machines only wake when you notify them through the **Wake Up** client notification.
