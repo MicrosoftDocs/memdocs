@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 11/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -106,7 +106,7 @@ For more specific information on this enrollment type, see [Automatically enroll
 | --- | --- |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new devices. | ✔️ |
-| You have existing devices. | ✔️ <br/><br/> Follow the instructions on [Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#enroll-your-macos-device-registered-in-abmasm-with-automated-device-enrollment-after-setup-assistant) to enroll existing devices. |
+| You have existing devices. | ✔️ <br/><br/> To enroll existing devices, see [Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#enroll-your-macos-device-registered-in-abmasm-with-automated-device-enrollment-after-setup-assistant) . |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
