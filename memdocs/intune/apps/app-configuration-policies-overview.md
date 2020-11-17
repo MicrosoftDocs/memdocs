@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -79,12 +79,14 @@ Selecting **Managed apps** as the **Device Enrollment Type** specifically refers
 
 ## Android app configuration policies
 
-For Android app configuration policies, you can select the device enrollment type before creating an app configuration profile. You can account for certificate profiles that are based on enrollment type (work profile, fully managed, dedicated, and corporate-owned work profile). This update provides the following:
+For Android app configuration policies, you can select the device enrollment type before creating an app configuration profile. You can account for certificate profiles that are based on enrollment type (either **All Profile Types**, **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**, or **Work Profile Only**). This update provides the following:
 
-1. If a new profile is created and **All Profile Types** is selected for device enrollment type, you will not be able to associate a certificate profile with the app config policy.
-2. If a new profile is created and Work Profile only is selected, Work Profile certificate policies created under Device Configuration can be utilized.
-3. If a new profile is created and **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only** is selected, **Fully Managed, Dedicated, and Corporate-Owned Work Profile** certificate policies created under Device Configuration can be utilized. 
-4. If you deploy a Gmail or Nine configuration profile to an Android Enterprise dedicated device which doesn’t involve a user, it will fail because Intune can’t resolve the user.
+1. If a new profile is created and **All Profile Types** is selected for device enrollment type, you will not be able to associate a certificate profile with the app config policy. This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
+2. If a new profile is created and **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only** is selected, **Fully Managed, Dedicated, and Corporate-Owned Work Profile** certificate policies created under **Device** > **Configuration profiles** can be utilized. This option supports certificate-based authentication, and username and password authentication. **Fully Managed** relates to Android Enterprise fully managed devices (COBO). **Dedicated** relates to Android Enterprise dedicated devices (COSU). **Corporate-Owned Work Profile** relates to Android Enterprise corporate-owned work profile (COPE).
+3. If a new profile is created and **Work Profile Only** is selected, Work Profile certificate policies created under **Device** > **Configuration profiles** can be utilized. This option supports certificate-based authentication, and username and password authentication.
+
+> [!NOTE]
+> If you deploy a Gmail or Nine configuration profile to an Android Enterprise dedicated device work profile which doesn’t involve a user, it will fail because Intune can’t resolve the user.
 
 > [!IMPORTANT]
 > Existing policies created prior to the release of this feature (April 2020 release - 2004) that do not have any certificate profiles associated with the policy will default to **All Profile Types** for device enrollment type. Also, existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
@@ -95,15 +97,15 @@ For Android app configuration policies, you can select the device enrollment typ
 
 You can validate the app configuration policy using the following three methods:
 
-   1. Visibly on the device. Is the targeted app exhibiting the behavior applied in the App Configuration policy?
-   2. Via Diagnostic Logs (see the Diagnostic Logs section below).
-   3. In the Intune Portal. The **Monitor** section of a policy can provide the relevant status:
+   1. Verify the app configuration policy visibly on the device. Confirm that the targeted app is exhibiting the behavior applied in the app configuration policy.
+   2. Verify via Diagnostic Logs (see the [Diagnostic Logs](#diagnostic-logs) section below).
+   3. Verify in the Microsoft Endpoint Manager admin center. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the related app**. Then, under the **Monitor** section, select either **Device install status** or **User install status**:
 
       ![First screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-1.png)
 
       ![Second screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      Additionally, under **Intune** -> **Devices** -> **All Devices** on the left side of the screen, the **App Configuration** option will display all the assigned policies and their state:
+      Additionally,in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > *select a device* > **App configuration**. The app configuration** pane will display all the assigned policies and their state:
 
       ![Screenshot of app configuration](./media/app-configuration-policies-overview/app-configuration.png)
 

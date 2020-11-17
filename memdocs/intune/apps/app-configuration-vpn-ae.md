@@ -111,8 +111,8 @@ If you’re not familiar with creating app configuration policies, see [Add app 
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
     - **Platform**: Select **Android Enterprise**.
     - **Profile type**: Your options:
-      - **All profile types**: This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
-      - **Fully Managed, Dedicated, and Corporate-Owned work profile only**: This option supports certificate-based authentication, and username and password authentication.
+      - **All Profile Types**: This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
+      - **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
       - **Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
     - **Targeted app**: Select the VPN client app you previously added. In the following example, the Cisco AnyConnect VPN client app is used:
 
