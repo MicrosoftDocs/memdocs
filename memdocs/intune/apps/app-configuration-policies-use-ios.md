@@ -198,9 +198,9 @@ Additionally, Intune supports the following token types in the property list:
 
 ## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
-DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices using the following steps.
+Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices even when users have downloaded the Company Portal from the App Store using the following steps.
 
-1. In Intune, add the Intune Company Portal app if necessary, by going to **Intune** > **Apps** > **All apps** > **Add**.
+1. In Intune, add the Intune Company Portal app if it has not been added yet, by going to **Intune** > **Apps** > **All apps** > **Add**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
@@ -217,7 +217,7 @@ DEP (Apple's Device Enrollment Program) enrollments are not compatible with the 
             </dict>
         </dict>
         ```
-    - **Use the Company Portal on a DEP device enrolled without user affinity**:
+    - **Use the Company Portal on a DEP device enrolled without user affinity (also known as Device Staging)**:
 
         > [!NOTE]
         > The user signing in to Company Portal is set as the primary user of the device.
