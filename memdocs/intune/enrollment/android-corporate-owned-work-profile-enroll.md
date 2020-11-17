@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Setup Intune enrollment for Android Enterprise corporate-owned devices with work profile
+title: Setup Intune enrollment for Android Enterprise corporate-owned devices with corporate-owned work profile
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise corporate-owned devices with work profile in Intune.
 keywords:
@@ -87,7 +87,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in AAD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.
 
 ### Revoke tokens
@@ -112,7 +112,7 @@ Users can now [enroll their corporate-owned work profile devices](android-dedica
 
 ## Managing apps on Android Enterprise corporate-owned work profile devices
 
-Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise corporate-owned work profile devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise work profile devices.
+Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise corporate-owned work profile devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personally-owned work profile devices.
 
 Apps are automatically updated on managed devices when the app developer publishes an update to Google Play.
 

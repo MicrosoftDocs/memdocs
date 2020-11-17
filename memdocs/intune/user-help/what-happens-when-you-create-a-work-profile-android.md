@@ -180,7 +180,7 @@ The following table shows examples of the work profile folder. For more informat
 
 |Surface Duo (Android 10)|Samsung Galaxy S20 (Android 10)|Nexus 5X (Android 8.1.0)|
 |---|---|---|  
-|![Screenshot of the Surface Duo work profile folder.](./media/surface-duo-work-profile-folder-android.png) |![Screenshot of the Samsung Galaxy S20 work profile folder.](./media/samsung-galaxy-s20-work-folder-android-example.png) |![Screenshot of the Nexus 5X work profile folder.](media/nexus-5X-work-profile-folder-android.png)|      
+|![Screenshot of the Surface Duo work profile folder.](./media/surface-duo-work-profile-folder-android.png) |![Screenshot of the Samsung Galaxy S20 work profile folder on the device.](./media/samsung-galaxy-s20-work-folder-android-example.png) |![Screenshot of the Nexus 5X work profile folder.](media/nexus-5X-work-profile-folder-android.png)|      
 
 ### Pause in quick settings   
 These images show where the pause option appears in the quick settings menu. For more information, see [Pause the work profile](#quick-settings-pause-option).  

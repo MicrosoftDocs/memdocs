@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,9 +78,9 @@ Before you can configure Conditional Access, verify the following configurations
 
 - **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
-- **EAS mail clients on Android work profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
+- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android Enterprise Personally-Owned Work Profile devices. For Conditional Access to work with Android Enterprise Personally-Owned Work Profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
 
-#### To set up Conditional Access for Android work profile devices
+#### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
 
   1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
