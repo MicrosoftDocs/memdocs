@@ -21,7 +21,7 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: heenamac
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
