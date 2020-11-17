@@ -85,7 +85,7 @@ The Microsoft Tunnel now supports [on-demand rules for iOS/iPad devices](../prot
  
 To configure on-demand rules for iOS/iPadOS with Microsoft Tunnel, configure a VPN Profile for iOS/iPadOS as part of device configuration policy. On the profiles *Configuration settings* page, select *Microsoft Tunnel* as the *Connection type* and you’ll then have access to configure **On-Demand VPN Rules**.
  
-For information about the on-demand VPN rules you can configure, see [Automatic VPN settings](../intune/configuration/vpn-settings-ios.md#automatic-vpn-settings).
+For information about the on-demand VPN rules you can configure, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn-settings).
 
 Applies to:
 - iOS/iPadOS 14.0 and newer (supervised)
@@ -100,10 +100,10 @@ To avoid confusion, the term for the *work profile* Android Enterprise managemen
 ### Device security
 
 #### New setting for Device Control profile for endpoint security<!-- 8456551     -->
-We’ve added a new setting, **Block write access to removable storage** to the [Device control profile](../protect/endpoint-security-account-porotection-profile-settings.md#device-control)  for Attack surface reduction policy in endpoint security.  When set to *Yes*, write access to removable storage is blocked.
+We’ve added a new setting, **Block write access to removable storage** to the [Device control profile](../protect/endpoint-security-account-protection-profile-settings.md#device-control)  for Attack surface reduction policy in endpoint security.  When set to *Yes*, write access to removable storage is blocked.
 
 #### Improvements to settings in Attack surface reduction rule profiles <!-- 7319334     -->
-We’ve updated the options for applicable [settings in the Attack surface reduction rule profile](..protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules) which is part of endpoint securities Attack surface reduction policy.  
+We’ve updated the options for applicable [settings in the Attack surface reduction rule profile](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules) which is part of endpoint securities Attack surface reduction policy.  
 
 We've brought consistency across settings to existing options, like *Disable* and *Enable*, added a new option, *Warn*:  
 
@@ -124,7 +124,7 @@ Policy merge applies to the configuration of each setting across the different p
 For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles.
 
 #### Improved Antivirus status operations report for endpoint security<!-- 7771023   -->
-We’ve added new details to the [Antivirus status operations](../intune/fundamentals/reports.md#antivirus-agent-status-report-organizational) report for Windows Defender Antivirus, which is an endpoint security policy report.  
+We’ve added new details to the [Antivirus status operations](reports.md#antivirus-agent-status-report-organizational) report for Windows Defender Antivirus, which is an endpoint security policy report.  
  
 The following new columns of information will be available for each device:
  
@@ -163,7 +163,7 @@ The following settings will show display as **Not applicable** in the Policy rep
 - Wi-Fi profiles
 
 #### Noncompliant policies report to troubleshoot devices in error or that are noncompliant<!-- 6471368    -->
-In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](../fundamentals/reports.md#noncompliant-policies-(operational)) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
+In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](reports.md#noncompliant-policies-(operational)) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
 
 Use this report to:
  
