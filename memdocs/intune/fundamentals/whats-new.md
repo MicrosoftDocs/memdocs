@@ -90,6 +90,25 @@ For information about the on-demand VPN rules you can configure, see [Automatic 
 Applies to:
 - iOS/iPadOS 14.0 and newer (supervised)
 
+#### More authentication settings for Wi-Fi profiles on Windows 10 and newer devices<!-- 7980773 -->
+New settings and features for Wi-Fi profiles on devices running Windows 10 and newer (**Devices** > **Device Configuration** > **Create profile** > **Windows 10 and later** for platform > **Wi-Fi** for profile > **Enterprise**):
+
+- **Authentication mode**: Authenticate the user, device, either, or use guest authentication.
+- **Remember credentials at each logon**: Force users to enter credentials whenever they connect to the VPN. Or, cache the credentials so users only enter their credentials once.
+- More granular control over authentication behavior, including:
+  - Authentication period
+  - Authentication retry delay period
+  - Start period
+  - Maximum EAPOL-Start messages
+  - Maximum authentication failures
+
+- **Use separate VLANs for device and user authentication**: When using single sign-on, the Wi-Fi profile can use a different virtual LAN based on the user’s credentials. Your Wi-Fi server must support this feature.
+
+To see these settings, and all the setting you can configure, go to [Add Wi-Fi settings for Windows 10 and later devices in Intune](../configuration/wi-fi-settings-windows.md).
+
+Applies to:
+- Windows 10 and newer
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
