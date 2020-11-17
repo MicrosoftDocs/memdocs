@@ -103,6 +103,9 @@
   - name: Shared multi-user devices
     href: shared-user-device-settings.md
     displayName: shared pc, education
+  - name: Windows health monitoring
+    href: windows-health-monitoring.md
+    displayName: endpoint analytics, microsoft productivity score 
   - name: Education Take a Test app
     href: education-settings-configure.md
   - name: eSIM cellular on Windows
