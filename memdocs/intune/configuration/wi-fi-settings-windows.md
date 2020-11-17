@@ -109,7 +109,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable this feature, and cache the credentials.
   - **Enable**: Caches user credentials when entered the first time users connect to the Wi-Fi network. Cached credentials are used for future connections, and users don't need to reenter them.
-  - **Disable**: User credentials are not remembered or cached. When connecting to Wi-Fi, users must enter their credentials every time.
+  - **Disable**: User credentials aren't remembered or cached. When connecting to Wi-Fi, users must enter their credentials every time.
 
 - **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
 
