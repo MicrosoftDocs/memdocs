@@ -109,7 +109,7 @@ For information about the actions you can take with this report, see [Bulk actio
 These are reports that provide insight into the update state and compliance of Windows devices in your organization. They are a part of the ongoing public preview for feature updates management. More software updates reports for other scopes and content types will be added over time.
 
 > [!NOTE]
-> In order to populate reporting data for Windows updates, devices must be configured to monitor device health for the Windows update scope of device events. In order to configure devices to monitor this data and populate your windows update reports, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
+> In order to populate reporting data for Windows updates, devices must be configured to monitor device health for the Windows update scope of device events. In order to configure devices to monitor this data and populate your windows update reports, [Create a profile](../configuration/device-profile-create.md#create-the-profile) with  the following information: 
 >
 >  - **Platform**: Select **Windows 10 and later**
 >  
@@ -125,7 +125,7 @@ These are reports that provide insight into the update state and compliance of W
 >    
 >       - **Scope**: Select **Windows Updates**
 >
-> - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+> - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 ### Feature update failures report (Operational)
 The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
