@@ -36,7 +36,7 @@ Create task sequences by using the Create Task Sequence Wizard. This wizard can 
 
 Modify a task sequence by adding or removing steps, adding or removing groups, or by changing the order of the steps. For more information, see [Use the task sequence editor](../understand/task-sequence-editor.md).
 
-## <a name="bkmk_policysize"></a> Reduce the size of task sequence policy
+## Reduce the size of task sequence policy
 
 <!--6982275-->
 When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
@@ -45,9 +45,25 @@ The size of the task sequence as stored in the site database is smaller, but can
 
 Starting in version 2006, to check for the 32-MB task sequence policy size on clients, use [management insights](../../core/servers/manage/management-insights.md#operating-system-deployment).
 
-To help reduce the overall size of policy of a task sequence deployment, take the following actions:
+Starting in version 2010, Configuration Manager restricts the following actions for a task sequence in the site database that's greater than 2 MB in size:<!--6888853-->
 
-- Separate functional segments into child task sequences, and use the [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence) step. Each task sequence has a separate 32-MB limit on its policy size.
+- Save changes in the task sequence editor
+- Save changes with PowerShell cmdlets
+- Import a new task sequence
+- Any other change using supported SDK methods
+
+For example, if you try to save changes to a large task sequence, the task sequence editor will display an error.
+
+> [!TIP]
+> The behavior in version 2010 and later checks for the 2 MB size limit on the task sequence as stored in the site database. When the client processes the entire task sequence policy, the expanded size can cause problems over 32 MB. The management insights check for the 32 MB task sequence policy size.
+
+Starting in version 2010, when you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
+
+### Actions to reduce task sequence size
+
+To help reduce the size of task sequences and task sequence deployment policies, take the following actions:
+
+- Separate functional segments into child task sequences, and use the [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence) step. Keep each task sequence less than 2 MB in the database. Each task sequence has a separate 32-MB limit on its policy size.
 
     > [!NOTE]
     > Reducing the total number of steps and groups in a task sequence has minimal impact on the policy size. Each step is generally a couple of KB in policy. Moving groups of steps to a child task sequence is more impactful.
@@ -56,7 +72,7 @@ To help reduce the overall size of policy of a task sequence deployment, take th
 
 - Instead of entering a script in the [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step, reference it via a package.
 
-- There's an 8-KB limit on the size of the task sequence environment when it runs. Review the usage of custom task sequence variables, which can also contribute to the policy size.
+- There's an 8-KB limit on the size of the task sequence _environment_ when it runs. Review the usage of custom task sequence variables, which can also contribute to the policy size.
 
 - As a last resort, split a complex, dynamic task sequence into separate task sequences with distinct deployments to different collections.
 
@@ -183,7 +199,7 @@ The following notification message displays when the end user opens the installa
 
 <!--3555926-->
 
-Starting in version 1910, you can now run a task sequence with the high performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high performance power plan, which delivers maximum performance at the expense of higher power consumption. This option is on by default for new task sequences.
+Starting in version 1910, you can now run a task sequence with the high-performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption. This option is on by default for new task sequences.
 
 When the task sequence starts, in most scenarios it records the currently enabled power plan. It then switches the active power plan to the Windows default **High Performance** plan. If the task sequence restarts the computer, it repeats this process. At the end of the task sequence, it resets the power plan to the stored value. This functionality works in both Windows and Windows PE, but has no impact on virtual machines.
 
@@ -204,6 +220,8 @@ When the task sequence starts, in most scenarios it records the currently enable
 
 > [!Warning]
 > Be cautious with this setting on low performance hardware. Running intense system operations for an extended period of time can strain low-end hardware. Check with your hardware manufacturer for specific guidance.
+
+Starting in version 2010, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby). It also supports other devices that don't have that default power plan. When you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
 
 ### Known issue
 
@@ -393,7 +411,7 @@ For more information, see [Configure Software Center properties](#bkmk_prop-gene
 ### View
 
 <!--3633146-->
-Starting in version 1902, the **View** action on task sequences is the default. This action lets you see the steps of the task sequence without locking it for editing. For more information, see [Use the task sequence editor](../understand/task-sequence-editor.md#bkmk_view).
+The **View** action on task sequences is the default. This action lets you see the steps of the task sequence without locking it for editing. For more information, see [Use the task sequence editor](../understand/task-sequence-editor.md#bkmk_view).
 
 ## See also
 

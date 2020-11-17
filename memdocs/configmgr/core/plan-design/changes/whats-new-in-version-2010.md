@@ -169,31 +169,31 @@ For more information, see [Deploy user-available applications](../../../apps/dep
 
 ## OS deployment
 
-### Deploy an OS over CMG using boot media
+### Deploy an OS over CMG using bootable media
 
 <!--3555923-->
 
-Starting in current branch version 2006, the cloud management gateway (CMG) supports running a task sequence with a boot image when you start it from Software Center. With this release, you can now use boot media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows.
+Starting in current branch version 2006, the cloud management gateway (CMG) supported running a task sequence with a boot image when you start it from Software Center. With this release, you can now use bootable media to reimage internet-based devices that connect through a CMG. This scenario helps you better support remote workers. If Windows won't start so that the user can access Software Center, you can now send them a USB drive to reinstall Windows.
 
-### Deploy a task sequence to a user
+For more information on this scenario and other related scenarios, see the new article to [Deploy a task sequence over the internet](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-an-os-over-cmg-using-bootable-media).
+
+### Deploy a task sequence deployment type to a user collection
 
 <!--8018255-->
 
-You can now deploy a non-OS deployment task sequence to a user-based collection. Use the task sequence deployment type of an application to install or uninstall it.
+You can now deploy an application with a task sequence deployment type to a user-based collection. A user-targeted deployment still runs in the context of the local System account.
 
-### Manage task sequence policy size
+For more information, see [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).
 
-<!--6888853-->
+### Manage task sequence size
 
-Configuration Manager technical preview version 2004 included new management insight rules for OS deployment. These insights help you manage the policy size of task sequences. Large task sequences cause problems with client processing.
+Large task sequences cause problems with client processing. To further help manage the size of task sequences, this release continues to iterate on improvements.
 
-To further help manage the size of task sequences, starting in this release Configuration Manager restricts the following actions for a task sequence that's greater than 2 MB in size:<!-- there are three items that talk about TS size, combine into a single blurb. -->
+- Starting in this release Configuration Manager restricts actions for a task sequence that's greater than 2 MB in size. For example, the task sequence editor will display an error if you try to save changes to a large task sequence.<!--6888853-->
 
-### See task sequence size in the console
+- When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
 
-<!--7645732-->
-
-This release continues to iterate on changes in technical preview version 2004 and version 2007 to help you manage the size of task sequences. When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
 
 ### Analyze SetupDiag errors for feature updates
 
@@ -203,15 +203,12 @@ With the release of Windows 10, version 2004, the [SetupDiag](/windows/deploymen
 
 For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#analyze-setupdiag-errors).
 
-### Improvements to OS deployment
+### Improvements to task sequence performance settings
 
-This release includes the following improvements to OS deployment:
+<!--7721999 & 8177793-->
+Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you could activate the Windows power plan for **High Performance**. Starting in this release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan.
 
-- After you update the site to version 2010, the Configuration Manager console shows the size in KB for all existing task sequences.<!--7799892--> Previously, the console showed a size of **0** for existing task sequences, which only updated when you modified the task sequence.
-
-- It resolves a bug with boot image metadata on PXE-enabled distribution points that have multiple content library drives.<!--7068388--> This bug could cause the client to fail to download the boot image over TFTP.
-
-- Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you can activate the Windows power plan for **High Performance**. Starting in this technical preview release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan. Now when you use this task sequence option, it creates a temporary power plan that's similar to the default for **High Performance**. After the task sequence completes, it reverts to the original power plan, and deletes the temporary plan.<!--7721999 & 8177793-->
+For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
 
 ## Protection
 
