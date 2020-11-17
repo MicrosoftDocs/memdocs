@@ -277,9 +277,13 @@ Platforms:
 > - =
 
 - **User certificate type**  
-  Format options for the *Subject name format* include two variables: **Common Name (CN)** and **Email (E)**. **Common Name (CN)** can be set to any of the following variables:
+  Format options for the *Subject name format* include two variables: **Common Name (CN)** and **Email (E)**. Email (E) would usually be set with the {{EmailAddress}} variable.
+  For example: E={{EmailAddress}} 
 
-  - **CN={{UserName}}**: The user principal name of the user, such as janedoe@contoso.com.
+  **Common Name (CN)** can be set to any of the following variables:
+
+  - **CN={{UserName}}**: The user name of the user, such as janedoe.
+  - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
   - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
   - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
   - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
