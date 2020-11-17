@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 11/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -186,6 +186,17 @@ If the '-o' parameter is not specified, the input file will be modified in-place
 
 ### Xcode Build Settings
 The app should have the "Strip Swift Symbols" (STRIP_SWIFT_SYMBOLS in Xcconfig) be set to No.
+
+### Integrating a File Provider extension
+File Provider extensions have certain memory requirements that might make integrating the full SDK difficult. To make it easier, there are static libraries `libIntuneMAMFileProvider.a` and `libIntuneMAMSwiftFileProvider.a` which are stripped down versions of the SDK specifically for File Provider extensions. Note this is for the non-UI portion of the FileProvider extension. You will need to integrate the full SDK into the file-provider UI extension. 
+
+To integrate the one of these libraries with your File Provider extension, follow the steps for integrating the SDK as a static library as shown above. Make sure to include `ContainingAppBundleId` setting.
+
+If it’s a multi-identity app, the current user identity should be set in the file provider enumerator in `- enumeratorForContainerItemIdentifier:error:` API using `setIdentity:onFileProviderEnumerator:` method of `IntuneMAMFileProtectionManager`.
+
+In `- startProvidingItemAtURL:completionHandler:` check if you should encrypt files using `[[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]`. Use `encryptFile:forIdentity` API in `IntuneMAMFileProtectionManager` for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+
+In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check whether the file is encrypted using `isFileEncrytped:` API in `IntuneMAMFileProtectionManager`. If it is then decrypt it using `decryptFile:toCopyPath:` API of `IntuneMAMFileProtectionManager`.
 
 ## Configure MSAL
 
