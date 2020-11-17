@@ -106,11 +106,11 @@ For more specific information on this enrollment type, see [Automatically enroll
 | --- | --- |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new devices. | ✔️ |
+| You have existing devices. | ✔️ <br/><br/> Follow the instructions on [Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#enroll-your-macos-device-registered-in-abmasm-with-automated-device-enrollment-after-setup-assistant) to enroll existing devices. |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using Device enrollment. |
-| You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using Apple Configurator. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use Device enrollment to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
