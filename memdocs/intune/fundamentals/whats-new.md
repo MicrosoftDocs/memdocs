@@ -105,7 +105,7 @@ We’ve added a new setting, **Block write access to removable storage** to the 
 #### Improvements to settings in Attack surface reduction rule profiles <!-- 7319334     -->
 We’ve updated the options for applicable [settings in the Attack surface reduction rule profile](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules-profile) which is part of endpoint securities Attack surface reduction policy.  
 
-We've brought consistency across settings to existing options, like *Disable* and *Enable*, added a new option, *Warn*:  
+We've brought consistency across settings to existing options, like *Disable* and *Enable*, and added a new option, *Warn*:  
 
 - **Warn** - On devices that run Windows 10 version 1809 or later, the device user receives a message that they can bypass the setting. For example, on the setting *Block Adobe Reader from creating child processes*, the option of *Warn* presents users with the option to bypass that block and allow Adobe Reader to create a child process. On devices that run earlier versions of Windows 10, the rule enforces the behavior without the option to bypass it. 
 
@@ -138,8 +138,8 @@ Attack surface reduction rules now support new behavior for merger of settings f
 Attack surface reduction rule merge behavior is as follows:
 
 - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:
-  - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > [Attack Surface Reduction](../protect/endpoint-protection-windows-10.md#attack-surface-reduction)
-  - Endpoint security > Attack surface reduction policy > [Attack surface reduction rules](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles)
+  - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > [Attack Surface Reduction](../protect/endpoint-protection-windows-10.md#attack-surface-reduction).
+  - Endpoint security > Attack surface reduction policy > [Attack surface reduction rules](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles).
   - Endpoint security > Security baselines > Microsoft Defender ATP Baseline > [Attack Surface Reduction Rules](../protect/security-baseline-settings-defender-atp.md#attack-surface-reduction-rules).
 - Settings that do not have conflicts are added to a superset of policy for the device.
 - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
@@ -155,7 +155,7 @@ You can control mobile device access to corporate resources using Conditional Ac
 A new **Assignment failures** operational report is available in public preview to help troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You have the ability to filter, sort, and search across all of the records throughout the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find this report by selecting **Devices** > **Monitor** > **Assignment failures (preview)**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
 #### Reporting updates for Windows Virtual Desktop VMs<!--5736314 idready  -->
-The following settings will show display as **Not applicable** in the Policy reports:
+The following settings are marked as **Not applicable** in the Policy reports:
 - BitLocker settings
 - Device encryption
 - Defender Application Guard settings
