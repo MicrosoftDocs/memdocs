@@ -84,11 +84,9 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
   - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
 
-  - Configure the site for [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md).<!--6979223--> This option applies to Configuration Manager version 2010 or later.
-
   - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or later.
 
-  For more information, see [Encrypt recovery data in transit](../deploy-use/bitlocker/encrypt-recovery-data-transit.md).
+  For more information, see [Encrypt recovery data over the network](../deploy-use/bitlocker/encrypt-recovery-data-transit.md).
 
 - Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. To use the recovery service, you need at least one management point not in a replica configuration. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 
@@ -109,11 +107,11 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - Azure Active Directory (Azure AD)-joined, workgroup clients, or clients in untrusted domains aren't supported. BitLocker management in Configuration Manager only supports devices that are joined to on-premises Active Directory. Hybrid Azure AD-joined devices are also supported. This configuration is to authenticate with the recovery service to escrow keys.
 
-- Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM) and when you configure the site for enhanced HTTP. There's no change to the setup process for BitLocker management.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
+- Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
 > [!TIP]
 > By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
 
 ## Next steps
 
-[Encrypt recovery data in transit](../deploy-use/bitlocker/encrypt-recovery-data-transit.md)
+[Encrypt recovery data over the network](../deploy-use/bitlocker/encrypt-recovery-data-transit.md)

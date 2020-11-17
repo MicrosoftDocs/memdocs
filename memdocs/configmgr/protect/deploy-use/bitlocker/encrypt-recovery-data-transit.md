@@ -1,5 +1,5 @@
 ---
-title: Encrypt recovery data in transit
+title: Encrypt recovery data over the network
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes over the network.
 ms.date: 11/20/2020
@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Encrypt recovery data in transit
+# Encrypt recovery data over the network
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -30,15 +30,11 @@ Configuration Manager requires an HTTPS connection between the client and the re
 
 - HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
 
-- Configure the site for [Enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).<!--6979223--> This option applies to Configuration Manager version 2010 or later.
-
-<!--5925660-->
-
-### Configure the management point for HTTPS
+## Configure the management point for HTTPS
 
 In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-### HTTPS-enable the IIS website
+## HTTPS-enable the IIS website
 
 Starting in version 2002, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.
 
@@ -62,12 +58,8 @@ On the client, use the **BitLockerManagementHandler.log** to troubleshoot this c
 >
 > This recommendation applies to both options: enable the management point for HTTPS, or enable the IIS website that hosts the recovery service on the management point.
 
-### Enhanced HTTP
-
-Starting in version 2010, if you enable enhanced HTTP for the site, then you don't need a custom certificate. For more information, see [Enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).
-
 ## Next steps
 
-[Encrypt recovery data at rest](encrypt-recovery-data.md) is an optional prerequisite before deploying policy for the first time.
+[Encrypt recovery data in the database](encrypt-recovery-data.md) is an optional prerequisite before deploying policy for the first time.
 
 [Deploy BitLocker management client](deploy-management-agent.md)
