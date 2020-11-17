@@ -298,7 +298,7 @@ This feature supports:
 
 ## Windows health monitoring
 
-[Windows health monitoring](windows-health-monitoring.md) lets you data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+[Windows health monitoring](windows-health-monitoring.md) lets your data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
 
 This feature supports:
 

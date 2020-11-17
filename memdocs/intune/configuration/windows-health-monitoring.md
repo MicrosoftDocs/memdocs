@@ -45,8 +45,8 @@ This article shows you how to create the profile, and enable the monitoring.
 
 These settings use the following CSPs:
 
-- [DeviceHealthMonitoring/AllowDeviceHealthMonitoring](windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
-- [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope](windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
+- [DeviceHealthMonitoring/AllowDeviceHealthMonitoring](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
+- [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
 
 ## Create the profile
 
@@ -60,13 +60,13 @@ These settings use the following CSPs:
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows: Windows Health Monitoring profile**.
+    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows devices: Windows Health Monitoring profile**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
 7. In **Configuration settings**, configure the following settings:
 
-    - **Health monitoring**: This feature tracks Windows updates and events  Your options:
+    - **Health monitoring**: This settings turns on health monitoring to track Windows updates and events. Your options:
       - **Not configured**: Intune doesn't change or update this setting.
       - **Enable**: Event information is collected from the devices, and sent to Microsoft for analytics and insights.
       - **Disable**: Event information isn't collected from the devices.
