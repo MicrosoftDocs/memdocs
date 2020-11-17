@@ -196,7 +196,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 - \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
 
-## Configure the Company Portal app to support iOS and iPadOS DEP devices
+## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
 DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices using the following steps.
 
