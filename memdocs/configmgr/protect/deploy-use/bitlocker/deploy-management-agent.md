@@ -103,7 +103,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
         - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
 
-        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data at rest](encrypt-recovery-data.md).
+        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
 
     For more information on these and other settings on this page, see [Settings reference - Client management](../../tech-ref/bitlocker/settings.md#client-management).
 
@@ -166,9 +166,12 @@ Use the following logs to monitor and troubleshoot:
 
 The BitLocker recovery service is a server component that receives BitLocker recovery data from Configuration Manager clients. The site deploys the recovery service when you create a BitLocker management policy. Configuration Manager automatically installs the recovery service on each management point with an HTTPS-enabled website.
 
-Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data at rest](encrypt-recovery-data.md).
+Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
 
-Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
+Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When domain-joined clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
+
+> [!IMPORTANT]
+> The message processing engine channel only escrows keys for OS and fixed drive volumes. It currently doesn't support recovery keys for removable drives or the TPM password hash.
 
 ## Migration considerations
 
