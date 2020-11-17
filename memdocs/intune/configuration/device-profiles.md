@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 11/16/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -294,6 +294,14 @@ This feature supports:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (import only)
+- Windows 10 and later
+
+## Windows health monitoring
+
+[Windows health monitoring](windows-health-monitoring.md) lets you data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+
+This feature supports:
+
 - Windows 10 and later
 
 ## Wired networks
