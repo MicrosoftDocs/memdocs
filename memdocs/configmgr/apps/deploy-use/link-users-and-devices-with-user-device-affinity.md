@@ -2,7 +2,7 @@
 title: Link users and devices with user device affinity
 titleSuffix: Configuration Manager
 description: Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user.
-ms.date: 07/26/2019
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -62,12 +62,9 @@ To configure these settings, use Windows Group Policy.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.  
 
-1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**.
+1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**. If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md). 
 
-    To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
-
-    > [!NOTE]  
-    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
+   - To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
 
 1. In the **User and Device Affinity** group, set the following settings:  
 
@@ -77,8 +74,7 @@ To configure these settings, use Windows Group Policy.
 
     - **Automatically configure user device affinity from usage data**: Select **True** to let the site automatically create user device affinities. If you select **False**, you need to manually approve all user device affinity assignments.  
 
-    > [!TIP]  
-    > For example, if you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
+As an example, if you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
 
 After Configuration Manager creates an automatic user device affinity, it continues to monitor the user device affinity thresholds. If the user's activity for the device falls below the thresholds you've set, the site removes the user device affinity. Set **User device affinity threshold (days)** to a value of at least seven days. This configuration avoids situations in which an automatically configured user device affinity might be lost while the user isn't signed in, for example, during the weekend.  
 
