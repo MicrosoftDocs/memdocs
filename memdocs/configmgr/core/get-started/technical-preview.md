@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/02/2020
+ms.date: 10/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -83,13 +83,13 @@ Microsoft supports each technical preview version up until three successive vers
 > [!TIP]
 > When you install an update to the technical preview, you update your preview installation to that new technical preview version. A technical preview installation never has the option to upgrade to a current branch installation. It also never receives updates from the current branch release.
 >
-> Several times throughout the year, there are technical preview branch and current branch versions with the same version number. For example, there is a technical preview version 1910 and a current branch version 1910.
+> Several times throughout the year, there are technical preview branch and current branch versions with the same version number. For example, there is a technical preview version 2006 and a current branch version 2006.
 
 ### Active baseline versions
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version. The following Configuration Manager technical preview branch versions are available as both in-console updates and as new baseline versions:
 
-- **Technical preview version 2007**
+- **Technical preview version 2010.2**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -116,16 +116,19 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2010
+### Technical preview version 2010.2
 
-- [Desktop Analytics support for Windows 10 Enterprise LTSC](2020/technical-preview-2010.md#bkmk_daltsc) <!--6107649-->
-- [Improvements to scenario health](2020/technical-preview-2010.md#bkmk_health) <!--7699511-->
-- [Expanded Windows Defender Application Control management](2020/technical-preview-2010.md#bkmk_wdac) <!--7752243-->
-- [Syntax highlighting for scripting languages](2020/technical-preview-2010.md#bkmk_syntax) <!--7964912-->
-- [Deploy a task sequence to a user](2020/technical-preview-2010.md#bkmk_tsdt) <!--8018255-->
-- [Shortcuts to status messages](2020/technical-preview-2010.md#bkmk_status) <!--8232705-->
-- [Enable user proxy for software update scans](2020/technical-preview-2010.md#bkmk_sum) <!--8379199-->
-- [Improvements to task sequence performance for power plans](2020/technical-preview-2010.md#bkmk_osd) <!--7721999-->
+- [Tenant attach: Troubleshooting portal lists a user’s devices based on usage](2020/technical-preview-2010-2.md#bkmk_uda) <!--6974300-->
+- [Tenant attach: Create and deploy firewall policies](2020/technical-preview-2010-2.md#bkmk_fire) <!--7768130-->
+- [Enhancements to applications in Microsoft Endpoint Manager admin center](2020/technical-preview-2010-2.md#bkmk_apps) <!--7979972-->
+- [Improvements to BitLocker management](2020/technical-preview-2010-2.md#bkmk_blmcmg) <!--6979223-->
+- [Improvements to deploy an OS over CMG using boot media](2020/technical-preview-2010-2.md#bkmk_osdcmg) <!--3555923-->
+- [Desktop Analytics support for new Windows 10 data levels](2020/technical-preview-2010-2.md#bkmk_da) <!--6979470-->
+- [Immediate distribution point fallback for clients downloading software update delta content](2020/technical-preview-2010-2.md#bkmk_dp) <!--8286432-->
+- [Disable Azure AD authentication for onboarded tenants](2020/technical-preview-2010-2.md#bkmk_aadauth) <!--8537319-->
+- [Additional options when creating app registrations in Azure Active Directory](2020/technical-preview-2010-2.md#bkmk_expire) <!--7153654-->
+- [Validate internet access for the service connection point](2020/technical-preview-2010-2.md#bkmk_scp) <!--8565578-->
+- [Improvements to the administration service](2020/technical-preview-2010-2.md#bkmk_rest) <!--8613105-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -142,6 +145,17 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2010
+
+- [Desktop Analytics support for Windows 10 Enterprise LTSC](2020/technical-preview-2010.md#bkmk_daltsc) <!--6107649-->
+- [Improvements to scenario health](2020/technical-preview-2010.md#bkmk_health) <!--7699511-->
+- [Expanded Windows Defender Application Control management](2020/technical-preview-2010.md#bkmk_wdac) <!--7752243-->
+- [Syntax highlighting for scripting languages](2020/technical-preview-2010.md#bkmk_syntax) <!--7964912-->
+- [Deploy a task sequence to a user](2020/technical-preview-2010.md#bkmk_tsdt) <!--8018255-->
+- [Shortcuts to status messages](2020/technical-preview-2010.md#bkmk_status) <!--8232705-->
+- [Enable user proxy for software update scans](2020/technical-preview-2010.md#bkmk_sum) <!--8379199-->
+- [Improvements to task sequence performance for power plans](2020/technical-preview-2010.md#bkmk_osd) <!--7721999-->
 
 ### Technical preview version 2009
 

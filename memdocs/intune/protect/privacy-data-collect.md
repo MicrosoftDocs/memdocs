@@ -8,7 +8,7 @@ keywords: privacy, personal data
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 11/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,6 +85,12 @@ Required data collected by Intune may include, but is not limited to:
   - Active Directory ID of each customer IT admin
   - Payment data for customer billing
   - Subscription key
+- Admin created data, like
+  - Profile names
+  - Compliance policies
+  - Group policy
+  - PowerShell scripts
+  - Line-of-Business (LOB) application
 - Application inventory, like
   - app name
   - version
@@ -122,7 +128,7 @@ Required data collected by Intune may include, but is not limited to:
 
 ## Optional data
 
-Data in the optional category is not essential to the product or service experience. Customers can control the collection of optional data. Intune enables customers to opt-in or opt-out of optional data collection. Examples of the optional data consist of  data Intune collects for diagnostics and telemetry. Please note that we think there are compelling reasons for people to share this optional data as it creates opportunities for new and richer experiences but we understand the importance to provide users the opportunity to make these choices for themselves. 
+Data in the optional category is not essential to the product or service experience. Customers can control the collection of optional data. Intune enables customers to opt-in or opt-out of optional data collection. Examples of the optional data consist of data Intune collects for diagnostics and telemetry. Please note that we think there are compelling reasons for people to share this optional data as it creates opportunities for new and richer experiences but we understand the importance to provide users the opportunity to make these choices for themselves. 
 
 Examples of the optional diagnostic data may include application usage data, error, and performance data. All diagnostic data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services is pseudonymized as defined in the ISO/IEC 19944:2017 (section 8.3.3) standard.
 

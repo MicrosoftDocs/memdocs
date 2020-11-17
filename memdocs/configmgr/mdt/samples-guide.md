@@ -1445,9 +1445,9 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
  All existing servers are working properly. However, each new server added to the network with the image is unable to run the application. Because it is the responsibility of a different group to maintain and update images, you decide that the deployment task sequence be changed to install the relevant version of DAO if the existing version of DAO deployed with the image is incorrect.  
 
- **To add a File Properties condition to a task sequence step in Configuration Manager 2007 R3**  
+ **To add a File Properties condition to a task sequence step in Configuration Manager**  
 
-1.  In Configuration Manager 2007 R3, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to Create a Package](/previous-versions/system-center/configuration-manager-2007/bb693627(v=technet.10)).  
+1.  In Configuration Manager, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to create a package](../apps/deploy-use/packages-and-programs.md#create-a-package-and-program).   
 
 2.  Create an **Install Software** step to deploy the DAO package.  
 
@@ -2889,7 +2889,7 @@ The following table details some useful functions available, and their output. F
 
        The **%** symbol is a wildcard character that is included in the names to allow administrators to return any computer models or manufactures that contains the value specified for ***hardware_model*** or ***hardware_manufacturer***.  
 
-      For more information about WMI and WQL queries, see the section, "Add WMI Queries to Task Sequence Step Conditions", in the MDT document *Using the Microsoft Deployment Toolkit*, and see [Querying with WQL](https://msdn.microsoft.com/library/aa392902.aspx).  
+      For more information about WMI and WQL queries, see the section, "Add WMI Queries to Task Sequence Step Conditions", in the MDT document *Using the Microsoft Deployment Toolkit*, and see [Querying with WQL](/windows/win32/wmisdk/querying-with-wql).  
 
 11. Click **OK** to submit the query, and then click **OK** to submit changes to the task sequence.  
 
@@ -3131,7 +3131,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
 18. When the boot image has been imported, any computer that boots in PXE and receives a reply from Windows Deployment Services will be able to download the LTI boot image and initiate an LTI installation.  
 
-    Installing and configuring Windows Deployment Services is not covered in this guide. For additional information about Windows Deployment Services, see the [Windows Deployment Services Guide](https://technet.microsoft.com/library/cc265612.aspx).  
+    Installing and configuring Windows Deployment Services is not covered in this guide. For additional information about Windows Deployment Services, see the [Windows Deployment Services Guide](/previous-versions/tn-archive/cc265612(v=technet.10)).  
 
 #### Use Windows Deployment Services to Automatically Detect the Deployment Server  
  An additional option is available when using Windows Deployment Services to host MDT boot images when the MDT deployment share is hosted on the same server as Windows Deployment Services.  

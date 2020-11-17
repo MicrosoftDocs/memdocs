@@ -124,7 +124,7 @@ Learn more about [decreasing support for Android device administrator](https://t
 
 Create certificate profiles:  
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](certficates-pfx-configure.md)  
+- [Configure and manage PKCS certificates with Intune](./certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
 
 Learn about [Certificate connectors](certificate-connectors.md)

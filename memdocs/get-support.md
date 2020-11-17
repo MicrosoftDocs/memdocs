@@ -11,14 +11,14 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 10/23/2020
 ms.topic: how-to
-ms.service: microsoft-intune
+ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 
 # optional metadata
-
+ 
 #audience:
 #ms.devlang:
 ms.reviewer: hipethe
@@ -44,7 +44,7 @@ With administrative access to the admin center, you can use the **Help and Suppo
 
 Use one of the following links to open the Microsoft Endpoint Manager admin center. The link you use depends on how your tenant is hosted:
 
-- **Public cloud**: Use [https://https://endpoint.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2109431)
+- **Public cloud**: Use [https://endpoint.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2109431)
 - **Private cloud** for government, which is also known as a sovereign cloud like Azure Government: Use [https://endpoint.microsoft.us](https://endpoint.microsoft.us)
 
 From within the admin center, use one of the following methods to access Help and support:
@@ -83,7 +83,7 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
   - Change requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  If you are a Microsoft Managed Desktop (MMD) customer, selecting the MMD tile for MMD related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support.md?view=o365-worldwide&preserve-view=true).
+  If you are a Microsoft Managed Desktop (MMD) customer, selecting the MMD tile for MMD related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:

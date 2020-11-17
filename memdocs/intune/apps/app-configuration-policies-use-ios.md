@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -165,6 +165,8 @@ When you create an app configuration file, you can specify one or more of the fo
   <string>{{udidlast4digits}}</string>
   <key>aaddeviceid</key>
   <string>{{aaddeviceid}}</string>
+  <key>IsSupervised</key>
+  <string>{{IsSupervised}}</string>
 </dict>
 ```
 
@@ -192,8 +194,9 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
+- \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
 
-## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment 
+## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
 Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices even when users have downloaded the Company Portal from the App Store using the following steps.
 

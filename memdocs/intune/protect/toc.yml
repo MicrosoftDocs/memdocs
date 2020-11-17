@@ -195,6 +195,11 @@
         items:
         - name: Lookout and Intune integration
           href: lookout-mtd-connector-integration.md
+      - name: Set up MVISION Mobile
+        href: mcafee-mobile-threat-defense-connector.md
+        items:
+        - name: MVISION Mobile and Intune integration
+          href: mcafee-mtd-connector-integration.md 
       - name: Set up Pradeo
         href: pradeo-mobile-threat-defense-connector.md
         items:

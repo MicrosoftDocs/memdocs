@@ -45,7 +45,7 @@ Configuration Manager supports the in-place upgrade of the server OS that hosts 
 
 To upgrade a server, use the upgrade procedures provided by the OS you're upgrading to. See the following articles:  
 
-- [Windows Server Upgrade Center](https://aka.ms/upgradecenter)  
+- [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview)  
 
 - [Upgrade and conversion options for Windows Server 2016](/windows-server/get-started/supported-upgrade-paths)  
 

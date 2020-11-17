@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 10/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -93,7 +93,15 @@ When you established the connection between Intune and Microsoft Defender ATP, I
 
 The configuration package configures devices to communicate with [Microsoft Defender ATP services](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) to scan files and detect threats. The device is also configured to report to Microsoft Defender ATP the devices risk level based on compliance policies you'll create.
 
-After you onboard a device using the configuration package, you don't need to do it again. You can also onboard devices using a [group policy or Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+After you onboard a device using the configuration package, you don't need to do it again.
+
+In addition to device configuration policy, you can onboard devices using:
+
+- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy. Intune EDR policy is part of endpoint security in Intune, which you can use to configure device security without the overhead of the larger body of settings found in device configuration profiles. You can also use EDR policy with tenant attached devices, which are devices you manage with Configuration Manager.
+- [Group policy or Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+
+> [!TIP]
+> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender ATP), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ### Create the device configuration profile to onboard Windows devices
 
@@ -109,7 +117,8 @@ After you onboard a device using the configuration package, you don't need to do
      > [!NOTE]
      > If you've properly established a connection with Microsoft Defender ATP, Intune will automatically **Onboard** the configuration profile for you, and the **Microsoft Defender ATP client configuration package type** setting will not be available.
   
-   - **Sample sharing for all files**: **Enable** allows samples to be collected, and shared with Microsoft Defender ATP. For example, if you see a suspicious file, you can submit it to Microsoft Defender ATP for deep analysis. **Not configured** doesn't share any samples to Microsoft Defender ATP.
+   - **Sample sharing for all files**: Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
+
    - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender ATP service more frequently.
 
      [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on these Microsoft Defender ATP settings.
@@ -117,6 +126,8 @@ After you onboard a device using the configuration package, you don't need to do
 7. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
 8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   When deploying to user groups, a user must sign-in on a device before the policy applies and the device can onboard to Defender ATP. 
 
    Select **Next**.
 
@@ -137,7 +148,39 @@ After you establish the service-to-service connection between Intune and Microso
 
 Unlike for Windows devices, there isn't a configuration package for devices that run iOS/iPadOS. Instead, see [Overview of Microsoft Defender Advanced Threat Protection for iOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-ios) in the Microsoft Defender ATP documentation for prerequisites and onboarding instructions for iOS/iPadOS.
 
-You can also use Intune policy to modify Microsoft Defender ATP on iOS/iPadOS. For more information, see [Microsoft Defender ATP web protection for iOS/iPadOS](../protect/advanced-threat-protection-manage-android.md).
+For devices that run iOS/iPadOS (in Supervised Mode), there is specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through a App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. 
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **App configuration policies** > **Managed devices**.
+3. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, select **Platform** as **iOS/iPadOS** then choose **Next**.
+4. Select **Targeted app** as **Microsoft Defender for iOS**.
+4. On the **Settings** page, set the **Configuration key** as **issupervised**, then **Value type** as **string** with the **{{issupervised}}** as the **Configuration value**. 
+8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
+9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it is best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   When deploying to user groups, a user must sign-in on a device before the policy applies. 
+
+   Select **Next**.
+
+10. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles. 
+
+Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team has made available a custom .mobileconfig profile to deploy to iPad/iOS devices. This .mobileconfig profile will be used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
+
+1. Download the .mobile profile which is hosted here: https://aka.ms/mdatpiossupervisedprofile 
+2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Select **Devices** > **Configuration profiles** > **Create profile**.
+4. For **Platform**, select **iOS/iPadOS**
+5. For **Profile type**, select **Custom**, and then select **Create**.
+6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
+7. Enter a *Configuration profile name*, and select a file to .mobileconfig file to Upload.
+8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
+9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it is best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   When deploying to user groups, a user must sign-in on a device before the policy applies. 
+
+   Select **Next**.
+
+10. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles. 
 
 ## Create and assign compliance policy to set device risk level
 
