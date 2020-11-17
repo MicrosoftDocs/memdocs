@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 11/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -188,7 +188,7 @@ If the '-o' parameter is not specified, the input file will be modified in-place
 The app should have the "Strip Swift Symbols" (STRIP_SWIFT_SYMBOLS in Xcconfig) be set to No.
 
 ### Integrating a File Provider extension
-File Provider extensions have certain memory requirements that might make integrating the full SDK difficult. To make it eaiser, there are static libraries `libIntuneMAMFileProvider.a` and `libIntuneMAMSwiftFileProvider.a` which are stripped down versions of the SDK specifically for File Provider extensions. Note this is for the non-UI portion of the FileProvider extension. You will need to integrate the full SDK into the file-provider UI extension. 
+File Provider extensions have certain memory requirements that might make integrating the full SDK difficult. To make it easier, there are static libraries `libIntuneMAMFileProvider.a` and `libIntuneMAMSwiftFileProvider.a` which are stripped down versions of the SDK specifically for File Provider extensions. Note this is for the non-UI portion of the FileProvider extension. You will need to integrate the full SDK into the file-provider UI extension. 
 
 To integrate the one of these libraries with your File Provider extension, follow the steps for integrating the SDK as a static library as shown above. Make sure to include ‘ContainingAppBundleId’ setting.
 
