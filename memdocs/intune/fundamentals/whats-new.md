@@ -59,15 +59,11 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 ## Week of November 16, 2020  (2011 Service release)
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
-### App management  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 ### Device configuration
 
-#### Power menu, status bar notifications, and more restrictive settings available for Android Enterprise dedicated devices<!-- 6184533 wnready -->
+#### Power menu, status bar notifications, and more restrictive settings available for Android Enterprise dedicated devices<!-- 6184533  -->
 On Intune enrolled Android Enterprise dedicated devices running single or multi-app kiosk mode, you can:
 - Restrict the power menu, system error warnings, and access to the Settings app.
 - Choose if users can see the home and overview buttons, and notifications. 
@@ -79,12 +75,12 @@ For more information on these settings, and the other settings you can configure
 Applies to:
 - Android Enterprise dedicated devices
 
-#### New show previews setting for app notifications on iOS/iPadOS devices<!-- 8351845 idready wnready -->
+#### New show previews setting for app notifications on iOS/iPadOS devices<!-- 8351845 idready  -->
 On iOS/iPadOS devices, there's a **Show Previews** setting (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **App Notifications**). Use this setting to choose when recent app notification previews are shown on devices.
 
 For more information on app notification settings, and other settings you can configure, see [device settings to use common iOS/iPadOS features](../configuration/ios-device-features-settings.md).
 
-#### On-demand rules with Microsoft Tunnel for iOS<!-- 8460915  WNReady  -->
+#### On-demand rules with Microsoft Tunnel for iOS<!-- 8460915    -->
 The Microsoft Tunnel now supports [on-demand rules for iOS/iPad devices](../protect/microsoft-tunnel-configure.md#ios). With on-demand rules you can specify the use of the VPN when conditions are met for specific FQDNs or IP addresses. 
  
 To configure on-demand rules for iOS/iPadOS with Microsoft Tunnel, configure a VPN Profile for iOS/iPadOS as part of device configuration policy. On the profiles *Configuration settings* page, select *Microsoft Tunnel* as the *Connection type* and you’ll then have access to configure **On-Demand VPN Rules**.
@@ -97,16 +93,16 @@ Applies to:
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Personally-owned work profile terminology<!--8361769 idready wnready -->
+#### Personally-owned work profile terminology<!--8361769 idready  -->
 To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally-owned devices with a work profile" or *personally-owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### New setting for Device Control profile for endpoint security<!-- 8456551   WNReady  -->
+#### New setting for Device Control profile for endpoint security<!-- 8456551     -->
 We’ve added a new setting, **Block write access to removable storage** to the [Device control profile](../protect/endpoint-security-account-porotection-profile-settings.md#device-control)  for Attack surface reduction policy in endpoint security.  When set to *Yes*, write access to removable storage is blocked.
 
-#### Improvements to settings in Attack surface reduction rule profiles <!-- 7319334  WNReady   -->
+#### Improvements to settings in Attack surface reduction rule profiles <!-- 7319334     -->
 We’ve updated the options for applicable [settings in the Attack surface reduction rule profile](..protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules) which is part of endpoint securities Attack surface reduction policy.  
 
 We've brought consistency across settings to existing options, like *Disable* and *Enable*, added a new option, *Warn*:  
@@ -114,7 +110,7 @@ We've brought consistency across settings to existing options, like *Disable* an
 - **Warn** - On devices that run Windows 10 version 1809 or later, the device user receives a message that they can bypass the setting. For example, on the setting *Block Adobe Reader from creating child processes*, the option of *Warn* presents users with the option to bypass that block and allow Adobe Reader to create a child process. On devices that run earlier versions of Windows 10, the rule enforces the behavior without the option to bypass it. 
 
 
-#### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254  WNReady -->
+#### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
 We’ve added support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
 - Allow hardware device installation by device identifiers
 - Block hardware device installation by device identifiers
@@ -127,7 +123,7 @@ Policy merge applies to the configuration of each setting across the different p
 
 For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles.
 
-#### Improved Antivirus status operations report for endpoint security<!-- 7771023  WNReady -->
+#### Improved Antivirus status operations report for endpoint security<!-- 7771023   -->
 We’ve added new details to the [Antivirus status operations](../intune/fundamentals/reports.md#antivirus-agent-status-report-organizational) report for Windows Defender Antivirus, which is an endpoint security policy report.  
  
 The following new columns of information will be available for each device:
@@ -136,7 +132,7 @@ The following new columns of information will be available for each device:
 - **Tamper protection** – Is tamper protection enabled or disabled.
 - **Virtual machine** – Is the device a virtual machine, or physical device.
 
-#### Improved rule merge for Attack surface reduction rules<!--7798290  WNReady    -->
+#### Improved rule merge for Attack surface reduction rules<!--7798290      -->
 Attack surface reduction rules now support new behavior for merger of settings from different policies, to create a superset of policy for each device. Only the settings that are not in conflict are merged, while those that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
 
 Attack surface reduction rule merge behavior is as follows:
@@ -149,16 +145,16 @@ Attack surface reduction rule merge behavior is as follows:
 - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
 
-#### MVISION Mobile – New Mobile Threat Defense partner <!-- 8112625 WNReady --> 
+#### MVISION Mobile – New Mobile Threat Defense partner <!-- 8112625  --> 
 You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by [MVISION Mobile](../protect/mcafee-mobile-threat-defense-connector.md), a Mobile Threat Defense solution from McAfee that integrates with Microsoft Intune.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-#### New Intune operational report to help troubleshoot configuration profile issues<!-- 6471222 wnready -->
+#### New Intune operational report to help troubleshoot configuration profile issues<!-- 6471222  -->
 A new **Assignment failures** operational report is available in public preview to help troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You have the ability to filter, sort, and search across all of the records throughout the report. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find this report by selecting **Devices** > **Monitor** > **Assignment failures (preview)**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
 
-#### Reporting updates for Windows Virtual Desktop VMs<!--5736314 idready wnready -->
+#### Reporting updates for Windows Virtual Desktop VMs<!--5736314 idready  -->
 The following settings will show display as **Not applicable** in the Policy reports:
 - BitLocker settings
 - Device encryption
@@ -166,7 +162,7 @@ The following settings will show display as **Not applicable** in the Policy rep
 - Defender Tamper Protection
 - Wi-Fi profiles
 
-#### Noncompliant policies report to troubleshoot devices in error or that are noncompliant<!-- 6471368  WNReady  -->
+#### Noncompliant policies report to troubleshoot devices in error or that are noncompliant<!-- 6471368    -->
 In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](../fundamentals/reports.md#noncompliant-policies-(operational)) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
 
 Use this report to:
@@ -188,7 +184,7 @@ For more information on monitoring device compliance, see [Monitor Intune Device
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 ### App management  
 
-#### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->
+#### Improvements to work profile messaging in Company Portal for Android<!--8378333  -->
 We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. The new messaging appears:  
 * After the work profile setup flow. Users see a new informational screen explaining where to find work apps, with links to help documentation.  
 * When a user accidentally re-enables the Company Portal app in the personal profile. We redesigned a screen (**Your device now has a profile just for work**) with clearer explanations and new illustrations to guide users to their work apps, with links to help documentation.  
