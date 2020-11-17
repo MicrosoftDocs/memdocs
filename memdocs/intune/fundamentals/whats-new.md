@@ -100,7 +100,7 @@ To avoid confusion, the term for the *work profile* Android Enterprise managemen
 ### Device security
 
 #### New setting for Device Control profile for endpoint security<!-- 8456551     -->
-We’ve added a new setting, **Block write access to removable storage** to the [Device control profile](../protect/endpoint-security-account-protection-profile-settings.md#device-control)  for Attack surface reduction policy in endpoint security.  When set to *Yes*, write access to removable storage is blocked.
+We’ve added a new setting, **Block write access to removable storage** to the [Device control profile](../protect/endpoint-security-account-protection-profile-settings.md)  for Attack surface reduction policy in endpoint security.  When set to *Yes*, write access to removable storage is blocked.
 
 #### Improvements to settings in Attack surface reduction rule profiles <!-- 7319334     -->
 We’ve updated the options for applicable [settings in the Attack surface reduction rule profile](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules-profile) which is part of endpoint securities Attack surface reduction policy.  
