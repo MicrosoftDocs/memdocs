@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,6 +61,7 @@ Features of the VPN profiles for the tunnel include:
 - The Site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
+- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
 
 Server configurations include:
@@ -207,7 +208,10 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 Only devices that are enrolled to Intune are supported with Microsoft Tunnel. The following device platforms are supported:
 
-- Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile)
+- Android Enterprise:
+  - Fully Managed
+  - Corporate-Owned Work Profile
+  - Personally-Owned Work profile
 - iOS/iPadOS
 
 The following functionality is supported by all platforms:
