@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 09/28/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -59,7 +59,18 @@ Deployment and operation of the CMG includes the following components:
 You create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When you deploy CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
 
 > [!NOTE]
-> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).
+> CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
+
+### Virtual machine scale sets
+
+<!--3601040-->
+Starting in version 2010, CMG deployments can now use a **virtual machine scale set** in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
+
+- Additional [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
+
+- Different service names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. For more information, see [CMG server authentication certificate](server-auth-cert.md).
+
+- The CMG connection point only communicates with the virtual machine scale set in Azure over HTTPS. It doesn't require TCP-TLS ports. For more information, see [Ports and data flow](data-flow.md).
 
 ### Hierarchy design
 
@@ -124,7 +135,9 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 - An **Azure subscription** to host the CMG.
 
     > [!IMPORTANT]
-    > CMG doesn't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 -->
+    > CMG deployments with the **cloud service (classic)** method don't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 --> In version 2006 and earlier, this deployment method is the only option.
+    >
+    > Starting in version 2010, you can deploy the CMG with a **virtual machine scale set** in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](#virtual-machine-scale-sets).
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
@@ -146,7 +159,7 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 - Clients must use **IPv4**.
 
-- Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
+- Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
 
 ## Performance and scale
 

@@ -124,12 +124,30 @@ For more information, see [Configure Azure services](../../../servers/deploy/con
 
 ## Configure Azure resource providers
 
-The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+The CMG service requires that you register specific resource providers in your Azure subscription. The providers vary depending upon how you deploy the CMG:
 
-- **Microsoft.ClassicCompute**
-- **Microsoft.Storage**
+- [Virtual machine scale set](#virtual-machine-scale-set)
+- [Cloud service (classic)](#cloud-service-classic)
+
+You need an Azure **global administrator** to register these providers.
 
 For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+
+### Virtual machine scale set
+
+Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, register the following resource providers:
+
+- Microsoft.KeyVault
+- Microsoft.Storage
+- Microsoft.Network
+- Microsoft.Compute
+
+### Cloud service (classic)
+
+The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+
+- Microsoft.ClassicCompute
+- Microsoft.Storage
 
 ## Next steps
 
