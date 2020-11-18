@@ -32,8 +32,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--6974300-->
 The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
 
-For more information, see [?]((../../../tenant-attach/?.md) and [Link users and devices with user device affinity in Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity#automatically-create-user-device-affinities-windows-pcs-only).
-
+For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../../tenant-attach/client-details.md#bkmk_list).
 ### Enhancements to applications in Microsoft Endpoint Manager admin center
 <!--7979972, 8227649-->
 

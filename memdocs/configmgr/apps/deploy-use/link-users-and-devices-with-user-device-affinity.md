@@ -13,7 +13,6 @@ manager: dougeby
 
 
 ---
-
 # Link users and devices with user device affinity in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -62,7 +61,7 @@ To configure these settings, use Windows Group Policy.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.  
 
-1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**. If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md). 
+1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**. If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
    - To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
 
@@ -78,7 +77,8 @@ As an example, if you set **User device affinity threshold (minutes)** to **60**
 
 After Configuration Manager creates an automatic user device affinity, it continues to monitor the user device affinity thresholds. If the user's activity for the device falls below the thresholds you've set, the site removes the user device affinity. Set **User device affinity threshold (days)** to a value of at least seven days. This configuration avoids situations in which an automatically configured user device affinity might be lost while the user isn't signed in, for example, during the weekend.  
 
-
+> [!Note]
+> Starting in Configuration Manager version 2010, the troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned user device affinity automatically based on usage are returned when searching for a user. For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../tenant-attach/client-details.md#bkmk_list)
 ## Import user device affinities from a file
 
 To create many relationships at one time, import a file that has the details for multiple user device affinities. Make sure the target devices are already discovered by the site and exist as resources in the Configuration Manager database.  
