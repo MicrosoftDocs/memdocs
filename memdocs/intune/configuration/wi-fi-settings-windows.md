@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 11/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -97,6 +97,29 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **Unrestricted**: Default. The connection isn't metered and there are no restrictions on traffic.
   - **Fixed**: Use this option if the network is configured with fixed limit for network traffic. After this limit is reached, network access is prohibited.
   - **Variable**: Used this option if network traffic is costed per byte.
+
+- **Authentication mode**: Choose how the Wi-Fi profile authenticates with the Wi-Fi server. Your options:
+  - **Not configured**: Intune doesn't change or update this setting. By default, **User or machine** authentication is used.
+  - **User**: The user account signed in to the device authenticates to the Wi-Fi network.
+  - **Machine**: Device credentials authenticate to the Wi-Fi network.
+  - **User or machine**: When a user is signed in to the device, user credentials authenticate to the Wi-Fi network. When no users are signed in, then device credentials authenticate.
+  - **Guest**: No credentials are associated with the Wi-Fi network. Authentication is either open, or handled externally, such as through a web page.
+
+- **Remember credentials at each logon**: Choose to cache user credentials, or if users must enter them every time when connecting to Wi-Fi. Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable this feature, and cache the credentials.
+  - **Enable**: Caches user credentials when entered the first time users connect to the Wi-Fi network. Cached credentials are used for future connections, and users don't need to reenter them.
+  - **Disable**: User credentials aren't remembered or cached. When connecting to Wi-Fi, users must enter their credentials every time.
+
+- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
+
+- **Authentication retry delay period**: Enter the number of seconds between a failed authentication attempt and the next authentication attempt, from 1-3600. If you leave this value empty or blank, then `1` second is used.
+
+- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds is used.
+
+- **Maximum EAPOL-start**: Enter the number of EAPOL-Start messages, from 1 and 100. If you leave this value empty or blank, then a maximum of `3` messages are sent.
+
+- **Maximum authentication failures**: Enter the maximum number of authentication failures for this set of credentials to authenticate, from 1-100. If you leave this value empty or blank, then `1` attempt is used.
 
 - **Single sign-on (SSO)**: Allows you to configure single sign-on (SSO), where credentials are shared for computer and Wi-Fi network sign-in. Your options are:
   - **Disable**: Disables SSO behavior. The user needs to authenticate to the network separately.
