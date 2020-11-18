@@ -198,6 +198,18 @@ You can pick a default macOS and iOS/iPadOS profile to be applied to all devices
 
 You have enabled management and syncing between Apple and Intune, and assigned a profile to let your devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. 
 
+Devices registered with ABM/ASM and assigned a profile in Intune can be enrolled:
+
+- During Setup Assistant for new devices or wiped devices.
+- After Setup Assistant using the profiles command.
+
+### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment during Setup Assistant
+Devices configured in ABM/ASM will automatically enroll into management with Intune during Setup Assistant with a Remote Management prompt.
+
+> [!NOTE]
+> If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal for Azure AD registration and Conditional Access.
+
+
 ### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant
 
 For macOS 10.13 and later devices, you can follow these steps to enroll.
