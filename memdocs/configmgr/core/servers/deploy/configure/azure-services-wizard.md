@@ -160,6 +160,9 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
+   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
+   > [!IMPORTANT]
+   > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment.
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 

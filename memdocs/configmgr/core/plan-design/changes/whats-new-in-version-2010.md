@@ -97,7 +97,7 @@ For more information, see [Configure Azure services](../../servers/deploy/config
 
 ### Additional options when creating app registrations in Azure Active Directory
 <!--7153654-->
-You can now specify **Never** for the expiration of a secret key when creating Azure Active Directory app registrations. For more information about creating app registrations, see [Configure Azure Services](../../servers/deploy/configure/azure-services-wizard.md#azure-app-properties).
+You can now specify **Never** for the expiration of a secret key when creating Azure Active Directory app registrations. For more information about creating app registrations, see [Configure Azure Services](../../servers/deploy/configure/azure-services-wizard.md#create-server-application-dialog).
 
 ### Validate internet access for the service connection point
 
