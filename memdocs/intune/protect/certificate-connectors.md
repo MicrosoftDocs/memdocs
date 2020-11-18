@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,7 +49,7 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 >
 > - Android Enterprise – Fully Managed
 > - Android Enterprise – Dedicated
-> - Android Enterprise – Corporate Owned Work Profile  
+> - Android Enterprise – Corporate-Owned Work Profile  
 >
 > The functionality of the Microsoft Intune Connector isn't deprecated and you can continue use it with PKCS certificate profiles for some platforms. However, if you do not use SCEP or otherwise require use of NDES, you can switch to the PFX Certificate Connector and remove NDES from your servers.
 
@@ -86,7 +86,7 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
 - Can be used to issue PKCS certificates to most device platforms, but not all. This connector doesn't support issuing of PKCS certificates to:
   - Android Enterprise – Fully Managed
   - Android Enterprise – Dedicated
-  - Android Enterprise – Corporate Owned Work Profile
+  - Android Enterprise – Corporate-Owned Work Profile
 
   To support those platforms, use the *PFX Certificate Connector*, which supports issuing PKCS certificates to all device platforms. If you don’t use SCEP, you can then uninstall this connector, and use only the PFX Certificate Connector.
 

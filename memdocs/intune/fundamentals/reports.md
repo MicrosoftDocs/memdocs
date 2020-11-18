@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/10/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,8 +51,8 @@ Users with the following permissions can review logs:
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Read** permissions
 
-## Non-compliant devices report (Operational)
-The Non-compliant devices report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+## Noncompliant devices report (Operational)
+The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
 You can view the **Noncompliant devices** report using the following steps:
 
@@ -63,6 +63,26 @@ You can view the **Noncompliant devices** report using the following steps:
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device compliance** > **Noncompliant devices**.
+
+## Noncompliant policies (Operational)
+
+*This report is in preview*
+
+The **Noncompliant policies** report can help you troubleshoot policies that have compliance errors or conflicts.
+
+When you select the report, it displays a list of compliance policies that have one or more devices with an error or a non-compliant status. The details include the count for each of those categories and the device platform. Use this report to drill in on individual entries to discover more information, and at each level you can sort and filter across records.
+
+While viewing the report:
+
+- Select a policy to view device compliance policies with devices in a noncompliant or error state. Information includes the Deployment status and when the status was last updated.
+- Select a device from the list to dig deeper and view a list of settings from the policy. The list of settings includes the setting status like *Compliant*, *Noncompliant*, or *Not applicable*. If there was an error, the relevant error code is shown.
+- If you then select a specific setting, you’ll see more details about the status or error code. This information also includes the profiles that were used to deploy the setting to the device.
+
+To view the Noncompliant policies report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > **Noncompliant policies**.
+
 
 ## Windows 10 unhealthy endpoints report (Operational)
 The **Windows 10 unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of a number of settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
@@ -84,13 +104,44 @@ You can view the **Windows 10 active malware** report using the following steps:
 
 For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
-## Feature update failures report (Operational)
+## Windows update reports
+
+These are reports that provide insight into the update state and compliance of Windows devices in your organization. They are a part of the ongoing public preview for feature updates management. More software updates reports for other scopes and content types will be added over time.
+
+> [!NOTE]
+> In order to populate reporting data for Windows updates, devices must be configured to monitor device health for the Windows update scope of device events. In order to configure devices to monitor this data and populate your windows update reports, [Create a profile](../configuration/device-profile-create.md#create-the-profile) with  the following information: 
+>
+>  - **Platform**: Select **Windows 10 and later**
+>  
+>  - **Profile**: Select **Windows health monitoring**
+>  
+>  - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
+>   
+>  - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+>    
+>  - In **Configuration Settings**:
+>   
+>       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
+>    
+>       - **Scope**: Select **Windows Updates**
+>
+> - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+
+### Feature update failures report (Operational)
 The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
 
 You can view the **Feature update failures** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** **Feature update failures**.
+2. Select **Devices** > **Monitor** > **Feature update failures**.
+
+## Assignment failures report (Operational)
+The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You have the ability to filter by type and platform, sort based on column, and search by profile name. 
+
+You can view the **Assignment failures** report using the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** **Assignment failures**.
 
 ## Device compliance report (Organizational)
 
@@ -111,13 +162,24 @@ To see a generated report of device state, you can use the following steps:
 For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
 ## Antivirus agent status report (Organizational)
-The **Antivirus agent status** report provides the agent status of your organization's devices. This report shows which devices have real-time or network protection, as well as their state. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. This report shows data visualizations as a pie chart for a breakdown of agent status count across devices. In addition, remote actions are included in this report. The report is available from the primary **Microsoft Defender Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Antivirus agent status** report provides the agent status of your organization's devices. 
+
+The report is available from the primary **Microsoft Defender Antivirus** workload, and provides filtering, searching, paging, and sorting. The data found in this report is timely and shows the following details:
+- If a device has real-time or network protection, as well as the state
+- The status of Windows Defender
+- If Tamper protection is enabled
+- If the device is a virtual machine, or a physical device.
+- Calls out the unhealthy device, the user name, and severity.
+
+This report shows data visualizations as a pie chart for a breakdown of agent status count across devices, and includes remote actions. 
 
 You can view the **Antivirus agent status** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Reports** tab > **Antivirus agent status**.
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
+The information for this report is based on details available from the [Defender CSP](/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
 
 ## Detected malware report (Organizational)
 The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report show a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
@@ -127,6 +189,8 @@ You can view the **Detected malware** report using the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Reports** tab > **Detected malware**.
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
+The information for this report is based on details available from the [Defender CSP](/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
 
 ## Windows 10 feature updates (Organizational)
 The **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, as well as other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting. 

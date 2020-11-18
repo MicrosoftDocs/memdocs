@@ -66,7 +66,7 @@ Default restrictions are automatically provided for both device type and device 
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Choose **Next** to go to the **Platform settings** page.
 4. Under **Platform**, choose **Allow** for the platforms that you want this restriction to allow.
-    ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/choose-platform-settings.png)
+    ![Screen cap for choosing settings](./media/enrollment-restrictions-set/choose-platform-settings.png)
 5. Under **Versions**, choose the minimum and maximum versions that you want the allowable platforms to support. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal.
      Supported version formats include:
     - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
@@ -74,8 +74,8 @@ Default restrictions are automatically provided for both device type and device 
     - Windows supports major.minor.build.rev for Windows 10 only.
     
     > [!IMPORTANT]
-    > Android Enterprise (work profile) and Android device administrator platforms have the following behavior:
-    > - If both platforms are allowed for the same group, then users will be enrolled with a work profile if their device supports it, otherwise they will enroll as DA. 
+    > Android Enterprise work profile and Android device administrator platforms have the following behavior:
+    > - If both platforms are allowed for the same group, then users will be enrolled with a work profile if their device supports it, otherwise they will enroll as device administrator. 
     > - If both platforms are allowed for the group and refined for specific and non-overlapping versions, then users will receive the enrollment flow defined for their OS version. 
     > - If both platforms are allowed, but blocked for the same versions, then users on devices with the blocked versions will be taken down the Android device administrator enrollment flow and then get blocked from enrollment and prompted to sign out. 
     >
@@ -139,9 +139,9 @@ You can change the settings for an enrollment restriction by following the steps
 
 
 ## Blocking personal Android devices
-- If you block personally owned Android device administrator devices from enrollment, personally owned Android Enterprise work profile devices can still enroll.
-- By default, your Android Enterprise work profile devices settings are the same as your settings for your Android device administrator devices. After you change your Android Enterprise work profile or your Android device administrator settings, that's no longer the case.
-- If you block personal Android Enterprise work profile enrollment, only corporate-owned Android devices can enroll with Android Enterprise work profiles.
+- If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
+- By default, your Android Enterprise work profile devices settings are the same as your settings for your Android device administrator devices. After you change your Android Enterprise personally-owned work profile or your Android device administrator settings, that's no longer the case.
+- If you block Android Enterprise personal work profile enrollment, only corporate-owned Android devices can enroll with Android Enterprise personally-owned work profiles.
 
 ## Blocking personal Windows devices
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized as a corporate enrollment. Unauthorized enrollments will be blocked.
