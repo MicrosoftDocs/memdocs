@@ -103,6 +103,9 @@
   - name: Shared multi-user devices
     href: shared-user-device-settings.md
     displayName: shared pc, education
+  - name: Network boundary
+    href: network-boundary-windows.md
+    displayName: trusted sites
   - name: Windows health monitoring
     href: windows-health-monitoring.md
     displayName: endpoint analytics, microsoft productivity score 
