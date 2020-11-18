@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use a network boundary to add trusted sites on Windows devices in Microsoft Intune
 
-When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that aren't trusted by your organization. This feature is called a network boundary. It allows you to add network domains, add IPV4 and IPv6 ranges, add proxy servers, and more.
+When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that aren't trusted by your organization. This feature is called a network boundary. It allows you to add network domains, IPV4 and IPv6 ranges, proxy servers, and more to your network boundary. Items in this boundary are trusted.
 
 In Intune, you can create a network boundary profile, and deploy the profile to your devices.
 
