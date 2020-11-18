@@ -69,6 +69,7 @@ The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://
 - An environment that's tenant attached with uploaded devices
 - Install the latest version of the Configuration Manager client
 - Target clients with **User and Device Affinity** [client settings](../core/clients/deploy/about-client-settings.md#user-and-device-affinity) to automatically create the affinities
+   - For more information, see [Create user device affinity automatically based on usage](../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md#set-up-the-site-to-automatically-create-user-device-affinities).
 ### View a user's devices
 
 1. Go to the  [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
