@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 11/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,6 +56,13 @@ These settings use the following CSPs:
 
     - **Platform**: Choose **Windows 10 and later**.
     - **Profile**: Select **Windows health monitoring**.
+
+    > [!NOTE]
+    > 
+    > If you don't see **Windows health monitoring** in the list, then:
+    >
+    > 1. Go to **Reports** > **Endpoint Analytics** > **Settings**.
+    > 2. Select **Intune data collection policy**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
