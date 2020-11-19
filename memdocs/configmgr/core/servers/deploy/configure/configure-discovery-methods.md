@@ -102,7 +102,7 @@ Then use the information in the following sections to configure the specific dis
 
 - [Active Directory Group Discovery](#bkmk_config-adgd)  
 
-- [Active Directory System Discovery](#bkmk_config-adgd)  
+- [Active Directory System Discovery](#bkmk_config-adsd)  
 
 - [Active Directory User Discovery](#bkmk_config-adud)  
 
