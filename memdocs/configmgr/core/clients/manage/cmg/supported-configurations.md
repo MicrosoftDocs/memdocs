@@ -36,6 +36,7 @@ The following table lists CMG support for Configuration Manager features:
 
 | Feature | Support |
 |---------|---------|
+| Automatic Client Upgrade | ![Supported](media/green_check.png) |
 | Software updates | ![Supported](media/green_check.png) |
 | Endpoint protection | ![Supported](media/green_check.png) <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
 | Hardware and software inventory | ![Supported](media/green_check.png) |
