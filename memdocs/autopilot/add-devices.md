@@ -102,8 +102,8 @@ To use this script, you can use either of the following methods:
 To install it directly and capture the hardware hash from the local computer, use the following commands from an elevated Windows PowerShell prompt:
 
 ```powershell
-md c:\\HWID
-Set-Location c:\\HWID
+New-Item -Type Directory -Path "C:\HWID"
+Set-Location -Path "C:\HWID"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
 Install-Script -Name Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
