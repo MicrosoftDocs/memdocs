@@ -80,6 +80,7 @@ To assign the script package:
 1. From the **Proactive remediations** node, select one of the built-in script packages.
 1. Select **Properties**, then next the **Assignments** heading, select **Edit**.
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
+1. To change the **Scope tags**, select **Edit** then **Select scope tags**.
 1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.
 
