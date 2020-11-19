@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2020
+ms.date: 11/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -112,13 +112,13 @@ In addition to device configuration policy, you can onboard devices using:
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following in **Endpoint Detection and Response**:
   
-  > [!NOTE]
-    > In this instance, this has been auto populated as Defender for Endpoint has already been integrated with Intune. 
-    > 
-    > The following image is an example of what you'll see when Microsoft Defender for Endpoint is NOT integrated with Intune:
-    >
-    > [!div class="mx-imgBorder"]
-    > ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/atp-onboarding-configuration.png)
+   > [!NOTE]
+   > In this instance, this has been auto populated as Defender for Endpoint has already been integrated with Intune. 
+   > 
+   > The following image is an example of what you'll see when Microsoft Defender for Endpoint is NOT integrated with Intune:
+   >
+   > [!div class="mx-imgBorder"]
+   > ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/atp-onboarding-configuration.png)
 
    - **Sample sharing for all files**: Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
 
