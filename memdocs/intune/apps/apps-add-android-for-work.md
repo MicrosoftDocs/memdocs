@@ -185,7 +185,7 @@ If you have approved an app from the store and don't see it in the **Apps** work
 6. In the Microsoft Endpoint Manager admin center select  **Apps** > **All apps**.  
     The newly available Managed Google Play app is displayed.
 
-## Assigning a Managed Google Play app to Android Enterprise personally-owned work profile (BYOD) and Android Enterprise corporate-owned work profile (COPE) devices
+## Assign a Managed Google Play app to Android Enterprise personally-owned and corporate-owned work profile devices
 
 When the app is displayed in the **App licenses** node of the **Apps** workload pane, you can [assign it just as you would assign any other app](./apps-deploy.md) by assigning the app to groups of users.
 
@@ -194,7 +194,7 @@ After you assign the app, it is installed (or available for install) on the devi
 > [!NOTE] 
 > Only apps that have been assigned will show up in the Managed Google Play store for an end user. As such, this is a key step for the admin to take when setting up apps with Managed Google Play.
 
-## Assigning a Managed Google Play app to Android Enterprise fully managed devices
+## Assign a Managed Google Play app to Android Enterprise fully managed devices
 
 [Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md) are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Users on fully managed devices can get their available company apps from the managed Google Play app on their device.
 

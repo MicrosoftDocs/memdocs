@@ -171,7 +171,7 @@ For example, an app uses the device's microphone. The user is prompted to grant 
 
 ## Additional information
 
-- [Assigning a Managed Google Play app to Android Enterprise devices](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
+- [Assign a Managed Google Play app to Android Enterprise personally-owned and corporate-owned work profile devices](apps-add-android-for-work.md#assig-a-Managed-Google-Play-app-to-android-enterprise-personally-owned-and-corporate-owned-work-profile-devices)
 - [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps

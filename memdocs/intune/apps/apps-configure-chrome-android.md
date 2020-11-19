@@ -93,7 +93,7 @@ Once the Android device is enrolled with Android Enterprise, the managed Google 
 Launch Google Chrome and you will find the settings applied.
 
    Bookmarks:<br>
-   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="View bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    Blocked URL:<br>
    <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
