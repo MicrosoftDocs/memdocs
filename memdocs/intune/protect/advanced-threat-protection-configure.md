@@ -106,16 +106,16 @@ In addition to device configuration policy, you can onboard devices using:
 ### Create the device configuration profile to onboard Windows devices
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security > Endpoint detection and response** > **Create profile**.
+2. Select **Endpoint security** > **Endpoint detection and response** > **Create profile**.
 3. For **Platform**, select **Windows 10 and Later**.
 4. For **Profile type**, select **Endpoint detection and response**, and then select **Create**.
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following in **Endpoint Detection and Response**:
   
    > [!NOTE]
-   > In this instance, this has been auto populated as Defender for Endpoint has already been integrated with Intune. 
+   > In this instance, this has been autopopulated because Defender for Endpoint has already been integrated with Intune. 
    > 
-   > The following image is an example of what you'll see when Microsoft Defender for Endpoint is NOT integrated with Intune:
+   > The following image is an example of what you'll see when Microsoft Defender for Endpoint is *not* integrated with Intune:
    >
    > [!div class="mx-imgBorder"]
    > ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/atp-onboarding-configuration.png)
