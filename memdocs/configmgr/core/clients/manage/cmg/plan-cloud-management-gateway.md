@@ -63,14 +63,26 @@ You create the CMG using an **Azure Resource Manager deployment**. [Azure Resour
 
 ### Virtual machine scale sets
 
+> [!NOTE]
+> In this version of Configuration Manager, a CMG with a virtual machine scale set is a pre-release feature. To enable it, see [Pre-release features](../../../servers/manage/pre-release-features.md).
+
 <!--3601040-->
-Starting in version 2010, CMG deployments can now use a **virtual machine scale set** in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
+Starting in version 2010, CMG deployments can now use a **virtual machine scale set** in Azure to support Cloud Solution Provider (CSP) subscriptions. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
 
 - Additional [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
 
 - Different service names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. For more information, see [CMG server authentication certificate](server-auth-cert.md).
 
 - The CMG connection point only communicates with the virtual machine scale set in Azure over HTTPS. It doesn't require TCP-TLS ports. For more information, see [Ports and data flow](data-flow.md).
+
+> [!IMPORTANT]
+> If you've already deployed a CMG, you don't need to make any change at this time.
+
+#### Current limitations for a CMG with a virtual machine scale set
+
+- The supported number of concurrent client connections is 2,000. For more information, see [Performance and scale](#performance-and-scale).
+- It's only supported with a standalone primary site.
+- It doesn't support Azure US Government Cloud environments.
 
 ### Hierarchy design
 

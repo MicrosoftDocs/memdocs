@@ -82,11 +82,11 @@ Starting in this release, you no longer need to enable IIS on the SMS Provider f
 
 ## Cloud-attached management
 
-### Cloud management gateway with virtual machine scale set
+### Cloud management gateway with virtual machine scale set for CSP
 
 <!--3601040-->
 
-Cloud management gateway (CMG) deployments can now use a virtual machine scale set in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions.
+Cloud management gateway (CMG) deployments can now use a virtual machine scale set in Azure to support Cloud Solution Provider (CSP) subscriptions. This feature is currently pre-release, and at this time intended only for CSP customers.
 
 For more information, see [CMG topology design: virtual machine scale sets](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
