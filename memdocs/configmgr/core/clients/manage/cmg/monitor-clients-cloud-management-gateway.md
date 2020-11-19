@@ -77,7 +77,7 @@ To aid troubleshooting, use the CMG connection analyzer for real-time verificati
 
 :::image type="content" source="media/cmg-connection-analyzer.png" alt-text="Example output for the cloud management gateway (CMG) connection analyzer":::
 
-## <a name="bkmk_stop"></a> Stop CMG when it exceeds threshold
+## Stop CMG when it exceeds threshold
 
 <!--3735092-->
 Configuration Manager can stop a CMG service when the total data transfer goes over your limit. Use [alerts](#set-up-outbound-traffic-alerts) to trigger notifications when the usage reaches warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this option turns off the cloud service.

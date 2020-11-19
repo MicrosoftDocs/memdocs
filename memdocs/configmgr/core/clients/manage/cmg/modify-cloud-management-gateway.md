@@ -107,6 +107,31 @@ You can reuse the same service name and CMG server authentication certificate, b
 
 1. Delete the old CMG and associated CMG connection point.
 
+## Stop and start the service
+
+Use the Configuration Manager console to stop and start the service if you need to.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
+
+1. Select the CMG instance.  
+
+1. In the ribbon, select one of the following actions:
+
+    - To stop a running CMG, select **Stop service**.
+    - To start a stopped CMG, select **Start service**.
+
+Configuration Manager can stop a CMG service when the total data transfer goes over your limit. For more information, see [Stop CMG when it exceeds threshold](monitor-clients-cloud-management-gateway.md#stop-cmg-when-it-exceeds-threshold)
+
+> [!IMPORTANT]
+> Even if the service isn't running, there are still costs associated with the cloud service. Stopping the service doesn't eliminate all associated Azure costs. To remove all cost for the cloud service, [delete the CMG](#delete-the-service).
+>
+> When you stop the CMG service, internet-based clients can't communicate with Configuration Manager.
+
+You can also use PowerShell to stop and start a CMG:
+
+- [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway)
+- [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway)
+
 ## Determine deployment model
 
 To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->

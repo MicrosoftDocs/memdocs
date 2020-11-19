@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 11/20/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -89,6 +89,9 @@ Configuration Manager starts to set up the service. After you close the wizard, 
 > [!NOTE]
 > To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+> [!TIP]
+> Starting in version 2010, you can also use the PowerShell cmdlet **New-CMCloudManagementGateway** for this process.<!--6978300--> Optionally use this cmdlet to create the CMG service. While it was available in earlier versions, version 2010 includes significant improvements to this cmdlet. For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
+
 ## Configure primary site for client certificate authentication
 
 If you're using [client authentication certificates](configure-authentication.md#pki-certificate) for clients to authenticate with the CMG, follow this procedure to configure each primary site.
@@ -109,6 +112,9 @@ The CMG connection point is the site system role for communicating with the CMG.
 > If you're using client authentication certificates, the CMG connection point needs this certificate. For more information, see [client authentication certificate](configure-authentication.md#pki-certificate).
 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
+
+> [!TIP]
+> You can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** for this process. Optionally use this cmdlet to add the CMG connection point role to a site system server. For more information, see [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint).
 
 ## <a name="bkmk_role"></a> Configure client-facing roles for CMG traffic
 
