@@ -140,7 +140,7 @@ We’ve added support for *policy merge* of USB device ID’s to the [Device con
 
 Policy merge applies to the configuration of each setting across the different profiles that apply to a device. It doesn’t include evaluation between different settings, even when two settings are closely related.
 
-For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles.
+For a more detailed example of what merges, and how to allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles.
 
 #### Improved Antivirus status operations report for endpoint security<!-- 7771023   -->
 We’ve added new details to the [Antivirus status operations](reports.md#antivirus-agent-status-report-organizational) report for Windows Defender Antivirus, which is an endpoint security policy report.  
@@ -186,7 +186,7 @@ In preview, the new **Noncompliant policies** report is an operational report yo
 
 Use this report to:
  
-- View the device compliance policies with devices in a noncompliant or error state, and then drill in to view a the list of devices and users in a failed state.
+- View the device compliance policies with devices in a noncompliant or error state, and then drill in to view of the list of devices and users in a failed state.
 - Drill down further to see the list of settings and setting information causing a failure.
 - Filter, sort, and search across all records in the report. We've added paging controls and improved export capability to a csv file.
 - Identify when issues are occurring, and streamline troubleshooting.
@@ -248,7 +248,7 @@ Existing Win32 apps are supported for Workplace join (WPJ) devices. PowerShell s
 
 #### Device Firmware Configuration Interface (DFCI) is generally available<!-- 5858274 -->
 
-DFCI is an open-source Unified Extensible Firmware Interface (UEFI) framework. It allows you to securely manage the UEFI (BIOS) settings of your Windows Autopilot devices using Microsoft Endpoint Manager. It also limits end user control over firmware configurations.
+DFCI is an open-source Unified Extensible Firmware Interface (UEFI) framework. It allows you to securely manage the UEFI (BIOS) settings of your Windows Autopilot devices using Microsoft Endpoint Manager. It also limits end-user control over firmware configurations.
  
 Unlike traditional UEFI management, DFCI removes the need for managing third-party solutions. It also provides zero-touch firmware management by using Microsoft Endpoint Manager for cloud management. DFCI also accesses the existing Windows Autopilot device information for authorization. 
 
@@ -283,7 +283,7 @@ New settings are available when you create a macOS password profile (**Devices**
 
   Applies to all enrollment types.
 
-- **Lockout duration**: Choose how long the lockout lasts, in minutes. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout durations ends, user can sign in again. To use this setting, configure the **Maximum allowed sign-in attempts** setting.
+- **Lockout duration**: Choose how long the lockout lasts, in minutes. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout duration ends, user can sign in again. To use this setting, configure the **Maximum allowed sign-in attempts** setting.
 
   Applies to macOS 10.10 and newer, and all enrollment types.
 
@@ -380,7 +380,7 @@ Improvements include:
 #### Use Microsoft Defender for Endpoint in compliance policies for iOS<!-- 7895451  -->
 As a public preview, you can now use Intune device compliance policy to [onboard iOS devices to Microsoft Defender for Endpoint](../protect/advanced-threat-protection-configure.md#onboard-devices) (formerly named Microsoft Defender for Advanced Threat Protection).
  
-After you onboard your enrolled iOS/iPadOS devices, your compliance polices for iOS can use the *threat level* signals from Microsoft Defender. These are the same signals that you can use for Android and Windows 10 devices.
+After you onboard your enrolled iOS/iPadOS devices, your compliance policies for iOS can use the *threat level* signals from Microsoft Defender. These are the same signals that you can use for Android and Windows 10 devices.
              
 The Defender for iOS app should move from public preview to generally availability by the end of the year.
 
@@ -537,7 +537,7 @@ You can now control which trusted data sources are allowed to open into organiza
 - **Open data into org documents**
 - **Allow users to open data from selected services**
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create policy**. To use this functionality, Intune policy managed applications must implement support for this control. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create policy**. To use this functionality, Intune policy-managed applications must implement support for this control. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -765,7 +765,7 @@ Specifically, when you select a baseline, select *Version*, and the select an in
 - **Security baseline posture** chart - This chart now displays the following status details:
   - **Matches default baseline** – This status replaces *Matches baseline* and identifies when a devices configuration matches the default (unmodified) baseline configuration.
   - **Matches custom settings** – This status identifies when a devices configuration matches the baseline that you’ve configured (customized) and deployed.
-  - **Misconfigured** – This status is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, as detailed below.
+  - **Misconfigured** – This status is a rollup that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, as detailed below.
   - **Not applicable** - This status represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
 - **Security baseline posture by category** - This is a list view that displays device status by category. The available columns mirror much of the *Security baseline posture* chart, but in place of *Misconfigured* you’ll see three columns for the status that make up Misconfigured:
   - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
@@ -813,7 +813,7 @@ Endpoint analytics aims to improve user productivity and reduce IT support costs
 As part of the new antivirus reports coming out under Microsoft Endpoint Manager security, the **Windows 10 detected malware** operational report provides bulk actions that are applicable to the devices selected within the report. Actions include **Restart**, **Quick scan**, and **Full scan**. For more information, see [Windows 10 detected malware report](../fundamentals/reports.md#detected-malware-report-organizational).
 
 #### Export Intune reports using Graph APIs<!-- 8270831  -->
-All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top level export API. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top-level export API. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 #### New and improved Microsoft Defender Antivirus reporting for Windows 10 and newer<!-- 6018169  -->
 We're adding four new reports for Microsoft Defender Antivirus on Windows 10 in Microsoft Endpoint Manager. These reports include:
@@ -901,7 +901,7 @@ Applies to:
 - Windows 10 and newer
 
 #### Prevent users from unlocking Android Enterprise work profile devices using face and iris scanning<!--6069759 idmiss -->
-You can now prevent users from using face or iris scanning to unlock their work profile managed devices, either at the device level or the work profile level. This can be set in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Work profile > Device restrictions** for profile > **Work profile settings** and **Password** sections.
+You can now prevent users from using face or iris scanning to unlock their work profile-managed devices, either at the device level or the work profile level. This can be set in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Work profile > Device restrictions** for profile > **Work profile settings** and **Password** sections.
 
 For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile).
 
@@ -973,7 +973,7 @@ As a Microsoft Intune administrator, you can upload a custom brand image to Intu
 ### App management
 
 #### The Company Portal adds Configuration Manager application support<!-- 4297660 -->
-The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md). 
+The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end-user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md). 
 
 ### Device security
 
@@ -1003,7 +1003,7 @@ You can now initiate an application install in real time for a tenant attached d
 ### Monitor and troubleshoot
 
 #### Power BI compliance report template V2.0<!-- 636958 -->
-Power BI template apps enable Power BI partners to build Power BI apps with little or no coding, and deploy them to any Power BI customer. Admins can update the version of the Power BI compliance report template from V1.0 to V2.0. V2.0 includes an improved design, as well as changes to the calculations and data that is surfaced as part of the template. For more information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md) and [Update a template app](/power-bi/service-template-apps-install-distribute#update-a-template-app). Additionally, see the blog post [Announcing a New Version of the Power BI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report).
+Power BI template apps enable Power BI partners to build Power BI apps with little or no coding, and deploy them to any Power BI customer. Admins can update the version of the Power BI compliance report template from V1.0 to V2.0. V2.0 includes an improved design, as well as changes to the calculations and data that are surfaced as part of the template. For more information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md) and [Update a template app](/power-bi/service-template-apps-install-distribute#update-a-template-app). Additionally, see the blog post [Announcing a New Version of the Power BI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## Week of July 13, 2020  (2007 Service release)
@@ -1024,7 +1024,7 @@ You can now enable S/MIME for Outlook on iOS and Android devices using an app co
 
 When you create a VPN profile using the IKEv2 connection type, there are new settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Base VPN**):
 
-- **Device Tunnel**: Allows devices to automatically connect to VPN without requiring any user interaction, including user log on. This feature requires you to enable **Always On**, and use **Machine certificates** as the authentication method.
+- **Device Tunnel**: Allows devices to automatically connect to VPN without requiring any user interaction, including user log-on. This feature requires you to enable **Always On**, and use **Machine certificates** as the authentication method.
 - Cryptography suite settings: Configure the algorithms used to secure IKE and child security associations, which allow you to match client and server settings.
 
 To see the settings you can configure, go to [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
