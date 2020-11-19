@@ -30,7 +30,7 @@ Use this article as a reference for the features and configurations that are sup
 
 - CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
 
-  Starting in version 2010, CMG deployments can now use a **virtual machine scale set** in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](#virtual-machine-scale-sets).
+  Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ## Support for Configuration Manager features
 

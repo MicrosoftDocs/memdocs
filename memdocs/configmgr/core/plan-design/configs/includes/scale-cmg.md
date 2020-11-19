@@ -18,6 +18,6 @@ ms.date: 09/17/2020
 
   - **Cloud service (classic)**: 6,000
 
-  - **Virtual machine scale set**: 2,000 (version 2010)
+  - **Virtual machine scale set**: 2,000 (version 2010 for Cloud Service Provider (CSP) subscriptions)
 
   When the CMG is under high load with more than the supported number of clients, it still handles requests but there may be delay.

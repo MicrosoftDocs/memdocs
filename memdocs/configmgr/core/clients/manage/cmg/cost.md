@@ -43,6 +43,11 @@ To help determine potential costs, use the following Azure resources:
 
 - For more information on how many VMs you need to support your clients, see [Plan for CMG: Performance and scale](plan-cloud-management-gateway.md#performance-and-scale).
 
+## Virtual machine scale set
+
+<!--3601040-->
+Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. When estimating cost, this deployment method replaces the [virtual machine](#virtual-machine). The specific details are otherwise the same. For example, it also uses a Standard A2 V2 VM. The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
+
 ## Outbound data transfer
 
 - Charges are based on data flowing out of Azure, otherwise referred to as egress or download. Any data flows into Azure are free, which are also known as ingress or upload.

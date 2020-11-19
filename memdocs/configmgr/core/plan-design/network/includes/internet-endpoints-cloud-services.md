@@ -22,6 +22,8 @@ The following sections list the endpoints by role. Some endpoints refer to a ser
 > - CMG _service name_: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`.
 >
 > - CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.cloudapp.net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
+>
+> Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, the deployment name is different. With a virtual machine scale set, the service name uses the **cloudapp.azure.com** domain along with the region. For example, `GraniteFalls.EastUS.CloudApp.Azure.Com` for a deployment in the **East US** Azure region. Note that difference as you read this article and configure internet access for a virtual machine scale set deployment.
 
 ### Service connection point for cloud services
 

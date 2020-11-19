@@ -67,11 +67,11 @@ You create the CMG using an **Azure Resource Manager deployment**. [Azure Resour
 > In this version of Configuration Manager, a CMG with a virtual machine scale set is a pre-release feature. To enable it, see [Pre-release features](../../../servers/manage/pre-release-features.md).
 
 <!--3601040-->
-Starting in version 2010, CMG deployments can now use a **virtual machine scale set** in Azure to support Cloud Solution Provider (CSP) subscriptions. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
+Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
 
 - Additional [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
 
-- Different service names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. For more information, see [CMG server authentication certificate](server-auth-cert.md).
+- Different deployment names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. For more information, see [CMG server authentication certificate](server-auth-cert.md).
 
 - The CMG connection point only communicates with the virtual machine scale set in Azure over HTTPS. It doesn't require TCP-TLS ports. For more information, see [Ports and data flow](data-flow.md).
 
@@ -80,9 +80,11 @@ Starting in version 2010, CMG deployments can now use a **virtual machine scale 
 
 #### Current limitations for a CMG with a virtual machine scale set
 
+- If you require more than one CMG instance, they all have to use the same deployment method.
 - The supported number of concurrent client connections is 2,000. For more information, see [Performance and scale](#performance-and-scale).
 - It's only supported with a standalone primary site.
 - It doesn't support Azure US Government Cloud environments.
+- Users will experience a delay of several seconds for actions in Software Center.
 
 ### Hierarchy design
 
@@ -149,7 +151,7 @@ For more information, see the following FAQ: [Do the user accounts have to be in
     > [!IMPORTANT]
     > CMG deployments with the **cloud service (classic)** method don't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 --> In version 2006 and earlier, this deployment method is the only option.
     >
-    > Starting in version 2010, you can deploy the CMG with a **virtual machine scale set** in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](#virtual-machine-scale-sets).
+    > Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](#virtual-machine-scale-sets).
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
@@ -170,8 +172,6 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [Configure client authentication](configure-authentication.md).
 
 - Clients must use **IPv4**.
-
-- Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
 
 ## Performance and scale
 

@@ -2,7 +2,7 @@
 title: Modify a cloud management gateway
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 09/28/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -65,6 +65,9 @@ Clients refresh policy by default every 24 hours. Before you delete the old CMG,
 If you have an existing CMG from Configuration Manager version 1810 or earlier, it uses the Azure Service Manager deployment method with an Azure management certificate. Redeploy a new CMG to use the Azure Resource Manager deployment method.<!--509753-->
 
 The process to redeploy the service depends upon your service name and whether you want to reuse it.
+
+> [!NOTE]
+> If you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**, and vice versa. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method. For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ### Replace a CMG and reuse the same service name
 
@@ -140,7 +143,11 @@ To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
 
 1. Select the CMG instance.  
 
-1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
+1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute.
+
+    For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
+
+    Starting in version 2010, you'll see either **Cloud service (classic)** or **Virtual machine scale set**.
 
 You can also add the **Deployment Model** attribute as a column to the list view.  
 
