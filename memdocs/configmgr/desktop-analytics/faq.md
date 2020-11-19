@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 02/03/2020
+ms.date: 11/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -145,6 +145,10 @@ Yes, the following Windows Analytics features were either retired or aren't yet 
 - Support for Windows Server
 
 ## Other
+
+### Why aren't new Windows releases available immediately in Desktop Analytics?
+
+Desktop Analytics uses several signals to generate the [compatibility assessment](compat-assessment.md) for applications. One of these signals is [Ready for Windows](compat-assessment.md#ready-for-windows) data. This data is based on the adoption status of every combination of application and OS versions from commercial devices that share data with Microsoft. This signal is more accurate from 30 to 60 days after the general availability of a new OS release. To avoid many of your assets having an **Unknown** or **Insufficient data** compatibility risk assessment, we wait 1-2 months before we add it to the list of target OS versions.
 
 ### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Microsoft 365 Apps upgrades?
 
