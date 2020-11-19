@@ -106,17 +106,19 @@ In addition to device configuration policy, you can onboard devices using:
 ### Create the device configuration profile to onboard Windows devices
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. For **Platform**, select **Windows 10 and later**
-4. For **Profile type**, select **Microsoft Defender ATP (Windows 10 Desktop)**, and then select **Create**.
+2. Select **Endpoint security > Endpoint detection and response** > **Create profile**.
+3. For **Platform**, select **Windows 10 and Later**.
+4. For **Profile type**, select **Endpoint detection and response**, and then select **Create**.
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
-6. On the **Configuration settings** page, configure the following:
+6. On the **Configuration settings** page, configure the following in **Endpoint Detection and Response**:
+  
+  > [!NOTE]
+    > In this instance, this has been auto populated as Defender for Endpoint has already been integrated with Intune. 
+    > 
+    > The following image is an example of what you'll see when Microsoft Defender for Endpoint is NOT integrated with Intune:
+    >
+    > ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/2466460812371ffae2d19a10c347d6f4.png)
 
-   - **Microsoft Defender ATP client configuration package type**: Select **Onboard** to add the configuration package to the profile. Select **Offboard** to remove the configuration package from the profile.
-  
-     > [!NOTE]
-     > If you've properly established a connection with Microsoft Defender ATP, Intune will automatically **Onboard** the configuration profile for you, and the **Microsoft Defender ATP client configuration package type** setting will not be available.
-  
    - **Sample sharing for all files**: Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
 
    - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender ATP service more frequently.
