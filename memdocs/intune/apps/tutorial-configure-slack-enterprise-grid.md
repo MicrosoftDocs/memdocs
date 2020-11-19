@@ -36,7 +36,7 @@ Slack is a collaboration app that you can use with Microsoft Intune.
 In this tutorial, you will:
 > [!div class="checklist"]
 > - Set Intune as the Enterprise Mobility Management (EMM) provider on your Slack Enterprise Grid. You'll be able to limit access to your Grid plan's workspaces to Intune managed devices.
-> - Create app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android work profile devices.
+> - Create app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android personally-owned work profile devices.
 > - Create Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
@@ -105,7 +105,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 7. Click **OK**, and then select **OK** again.
 8. Click **Create**.
 
-## Set up Slack on Android work profile devices
+## Set up Slack on Android personally-owned work profile devices
 Add the Slack Managed Google Play app to your Intune tenant and create an app configuration policy to enable your organizations' Android users to access Slack with Intune as an EMM provider.
 
 ### Add Slack to Intune
@@ -145,7 +145,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 2. In Name, enter "Android compliance policy test".
 3. In Description, enter "Android compliance policy test".
 4. Under Platform, select **Android Enterprise**.
-5. Under Profile type, select **Work profile**.
+5. Under Profile type, select **Personally-Owned Work Profile Only**.
 6. Select **Device Health**. Next to Rooted devices, select **Block**, and then select **OK**.
 7. Select **System Security** and enter **Password settings**. For this tutorial, select the following recommended settings:
     - For Require a password to unlock mobile devices, select **Require**.
@@ -159,13 +159,13 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Launch Slack
 
-With the policies you've just created, any iOS/iPadOS or Android work profile devices that attempt to sign in to one of your workspaces will need to be Intune enrolled. To test this scenario, try launching Slack for EMM on an Intune enrolled iOS/iPadOS device or launching Slack on an Intune enrolled Android work profile device. 
+With the policies you've just created, any iOS/iPadOS or Android personally-owned work profile devices that attempt to sign in to one of your workspaces will need to be Intune enrolled. To test this scenario, try launching Slack for EMM on an Intune enrolled iOS/iPadOS device or launching Slack on an Intune enrolled Android personally-owned work profile device. 
 
 ## Next steps
 
 In this tutorial:
 - You set Intune as the Enterprise Mobility Management (EMM) provider on your Slack Enterprise Grid. 
-- You created app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android work profile devices.
+- You created app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android personally-owned work profile devices.
 - You created Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
 To learn more about app configuration policies, see [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md). To learn more about device compliance policies, see [Set rules on devices to allow access to resources in your organization using Intune](../protect/device-compliance-get-started.md).
