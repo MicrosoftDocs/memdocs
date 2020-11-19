@@ -117,7 +117,8 @@ In addition to device configuration policy, you can onboard devices using:
     > 
     > The following image is an example of what you'll see when Microsoft Defender for Endpoint is NOT integrated with Intune:
     >
-    > ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/2466460812371ffae2d19a10c347d6f4.png)
+    > [!div class="mx-imgBorder"]
+    > ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/atp-onboarding-configuration.png)
 
    - **Sample sharing for all files**: Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
 
