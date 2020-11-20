@@ -19,7 +19,10 @@ ms.topic: conceptual
 
 # Windows Autopilot scenarios and capabilities
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 10
+- Windows Holographic, version 2004 or later
 
 ## Scenarios
 
