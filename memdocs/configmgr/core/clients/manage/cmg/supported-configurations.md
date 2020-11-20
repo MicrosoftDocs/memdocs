@@ -43,6 +43,7 @@ The following table lists CMG support for Configuration Manager features:
 | Run scripts | ![Supported](media/green_check.png) |
 | CMPivot | ![Supported](media/green_check.png) |
 | Compliance settings | ![Supported](media/green_check.png) |
+| Automatic client upgrade | ![Supported](media/green_check.png) |
 | Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | ![Supported](media/green_check.png) |
 | Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) (2002) |
 | Software distribution (device-targeted) | ![Supported](media/green_check.png) |
