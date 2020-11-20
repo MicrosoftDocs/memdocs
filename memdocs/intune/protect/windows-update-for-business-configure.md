@@ -2,13 +2,13 @@
 # required metadata
 
 title: Configure Windows Update for Business in Microsoft Intune - Azure | Microsoft Docs
-description: Manage Windows 10 Software Updates by using update rings and feature updates policy. You can review compliance, and  pause update installation with Windows Update for Business settings using Microsoft Intune.
+description: Manage Windows 10 Software Updates by using Intune policy for update rings and feature updates. You can review compliance, and pause update installation with Windows Update for Business settings using Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2020
-ms.topic: how-to
+ms.date: 11/25/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -31,19 +31,27 @@ ms.collection: M365-identity-device-management
 
 Use Intune to manage the install of Windows 10 software updates from Windows Update for Business.
 
-By using Windows Update for Business, you simplify the update management experience. You don't need to approve individual updates for groups of devices. You can manage risk in your environments by configuring an update rollout strategy. Intune provides the ability to [configure update settings](windows-update-settings.md) on devices and gives you the ability to defer update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+By using Windows Update for Business, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. Intune provides the ability to [configure update settings](windows-update-settings.md) on devices and gives you the ability to defer update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 Intune stores only the update policy assignments, not the updates themselves. Devices access Windows Update directly for the updates.
+
+Learn more about Windows 10 [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) in the Windows documentation.
+
+## Policy types to manage updates
 
 Intune provides the following policy types to manage updates:
 
 - **Windows 10 update ring**: This policy is a collection of settings that configures when Windows 10 updates get installed.
 
-- **Windows 10 feature updates (public preview)**: This policy brings devices to the Windows version you specify and freezes the feature set on those devices until you choose to update them to a later Windows version.  While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
+  Update ring policies are supported for devices that run Windows 10 version 1607 or later.
 
-You assign policies for Windows 10 update rings and Windows 10 feature updates to groups of devices. You can use both policy types in the same Intune environment to manage software updates for your Windows 10 devices and to create an update strategy that mirrors your business needs.
+- **Windows 10 feature updates** *(public preview)*: This policy updates devices to the Windows version you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
 
-For more information, see [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).
+  Feature updates policies are supported for devices that run Windows 10 version 1709 or later.
+
+You assign policies for Windows 10 update rings and Windows 10 feature updates to groups of devices. Use both policy types in the same Intune environment to manage updates for your Windows 10 devices.
+
+<!-- moving out 
 
 ## Prerequisites
 
@@ -263,15 +271,14 @@ From this pane, you can:
 - Select **Delete** to delete the policy from Intune and remove it from devices.
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
+-->
 
-## Validation and reporting for Windows 10 updates
+## Reporting on updates
 
-For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
-
-To monitor Windows 10 feature update failures, use the **Feature update failures** report. This report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Intune reports](../fundamentals/reports.md).
+To learn about report options for Windows 10 update ring policy and Windows 10 feature updates policy, see [Intune compliance reports for updates](windows-update-compliance-reports.md).
 
 ## Next steps
 
-[Windows update settings supported by Intune](windows-update-settings.md)
-
-[Troubleshooting Windows 10 update rings](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
+- [Use Windows 10 update rings in Intune](../protect/windows-10-update-rings-policy-in-intune)
+- [Use Windows 10 feature updates in Intune](../protect/windows-10-feture-updates-policy-in-Intune)
+- For more information, see [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.
