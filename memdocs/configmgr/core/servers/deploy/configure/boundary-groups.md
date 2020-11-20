@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 08/11/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -41,7 +41,7 @@ Clients use a boundary group for:
     > [!NOTE]  
     > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](boundary-group-procedures.md#bkmk_proc-prefer).  
 
-  - Cloud management gateway (starting in version 1902)
+  - Cloud management gateway
 
 ## Boundary groups and relationships
 
@@ -192,8 +192,10 @@ The task sequence tries to acquire content in the following order:
 
 3. Distribution points in a *neighbor* boundary group  
 
-    > [!Important]  
-    > Due to the real-time nature of task sequence processing, it doesn't wait for the failover time on a neighbor boundary group. It uses the failover times for prioritizing the neighbor boundary groups. For example, if the task sequence fails to acquire content from a distribution point in its current boundary group, it immediately tries a distribution point in a neighbor boundary group with the shortest failover time. If that process fails, it then fails over to a distribution point in a neighbor boundary group with a larger failover time.  
+    > [!IMPORTANT]
+    > Due to the real-time nature of task sequence processing, it doesn't wait for the failover time on a neighbor boundary group. It uses the failover times for prioritizing the neighbor boundary groups. For example, if the task sequence fails to acquire content from a distribution point in its current boundary group, it immediately tries a distribution point in a neighbor boundary group with the shortest failover time. If that process fails, it then fails over to a distribution point in a neighbor boundary group with a larger failover time.
+    >
+    > For content like applications, which are downloaded by the client and not the task sequence engine, the client behaves as normal. In other words, if you install applications from a task sequence, when the client tries to download the content it will wait for boundary group failover.<!-- 7594647 -->
 
 4. Distribution points in the *site default* boundary group  
 
@@ -298,16 +300,14 @@ By default, the management point prioritizes peer cache sources at the top of th
 > [!TIP]
 > This behavior applies to the Configuration Manager client. It doesn't apply when the task sequence downloads content. When the task sequence runs, it prefers peer cache sources over distribution points.<!-- SCCMDocs#1376 -->
 
-#### <a name="bkmk_bgoptions4"></a> Prefer cloud distribution points over distribution points
+#### <a name="bkmk_bgoptions4"></a> Prefer cloud based sources over on-premise sources
 
-If you have a branch office with a faster internet link, you can now prioritize cloud content.  
-
-In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
+If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
 
 - Cloud distribution points
-- Microsoft Update (added in version 1902)
+- Microsoft Update
 
-## <a name="bkmk_sup"></a> Software update points 
+## <a name="bkmk_sup"></a> Software update points
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
