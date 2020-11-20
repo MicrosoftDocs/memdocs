@@ -67,7 +67,7 @@ You create the CMG using an **Azure Resource Manager deployment**. [Azure Resour
 > In this version of Configuration Manager, a CMG with a virtual machine scale set is a pre-release feature. To enable it, see [Pre-release features](../../../servers/manage/pre-release-features.md).
 
 <!--3601040-->
-Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
+Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. This support is only if they don't currently have a CMG deployed using classic cloud services to another subscription. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
 
 - Additional [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
 
@@ -81,10 +81,10 @@ Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscri
 #### Current limitations for a CMG with a virtual machine scale set
 
 - If you require more than one CMG instance, they all have to use the same deployment method.
-- The supported number of concurrent client connections is 2,000. For more information, see [Performance and scale](#performance-and-scale).
+- The supported number of concurrent client connections is 2,000 per VM instance. For more information, see [Performance and scale](#performance-and-scale).
 - It's only supported with a standalone primary site.
 - It doesn't support Azure US Government Cloud environments.
-- Users will experience a delay of several seconds for actions in Software Center.
+- Users may experience a delay of up to three seconds for actions in Software Center.
 
 ### Hierarchy design
 
