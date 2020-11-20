@@ -80,6 +80,8 @@ The Configuration Manager REST API, the administration service, requires a secur
 
 Starting in this release, you no longer need to enable IIS on the SMS Provider for the administration service. When you enable the site for enhanced HTTP, it creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS.
 
+For more information, see [Prerequisites for the administration service](../../../develop/adminservice/overview.md#prerequisites).
+
 ## Cloud-attached management
 
 ### Cloud management gateway with virtual machine scale set
