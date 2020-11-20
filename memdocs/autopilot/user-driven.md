@@ -19,8 +19,6 @@ ms.topic: how-to
 
 # Windows Autopilot user-driven mode
 
-**Applies to: W
-
 **Applies to**
 
 - Windows 10, version 1809 or later
