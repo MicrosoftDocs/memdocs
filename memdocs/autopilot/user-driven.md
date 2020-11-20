@@ -19,7 +19,15 @@ ms.topic: how-to
 
 # Windows Autopilot user-driven mode
 
-**Applies to: Windows 10, version 1809 or later**
+**Applies to: W
+
+**Applies to**
+
+- Windows 10, version 1809 or later
+- Windows Holographic, version 2004 or later
+
+> [!NOTE]
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 Windows Autopilot user-driven mode lets you configure new Windows 10 devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 
