@@ -3,7 +3,7 @@ title: Windows Autopilot what's new
 ms.reviewer: 
 manager: laurawi
 description: Read news and resources about the latest updates and past versions of Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
+keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -23,12 +23,12 @@ ms.topic: article
 **Applies to**
 
 - Windows 10
+- Windows Holographic, version 2004
 
-## Windows Autopilot update history
 
-The following [Windows Autopilot updates](autopilot-update.md) are available. **Note**: Updates are automatically downloaded and applied during the Windows Autopilot deployment process. 
+## Windows Autopilot for HoloLens 2
 
-No updates are available yet. Check back here later for more information.
+Windows Autopilot now enables you to configure HoloLens 2 devices! For more information, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## Feature name change
 
