@@ -363,7 +363,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 The following features are now deprecated:
 
-- The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->
+- The [collection evaluation viewer](../../support/ceviewer.md)<!-- 8509484 -->
 - [Connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 -->
 
 <!--
