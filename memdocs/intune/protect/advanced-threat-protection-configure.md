@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 The information and procedures in this article will help you to configure integration of Microsoft Defender ATP with Intune. Configuration includes the following general steps:
 
 - Enable Microsoft Defender ATP for your tenant
-- Onboard devices that run Android, iOS/iPadOS, and Windows 10
+- Onboard devices that run Android, iOS/iPadOS, MacOS and Windows 10
 - Use compliance policies to set device risk levels
 - Use conditional access policies to block devices that exceed your expected risk levels
 
@@ -65,7 +65,10 @@ You only need to enable Microsoft Defender ATP a single time per tenant.
    - Set **Connect iOS devices version 8.0 and above to Microsoft Defender Advanced Threat Protection** to **On**
    - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**
 
-   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for the purpose of compliance.
+   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for the purpose of compliance. 
+   
+   > [!NOTE]
+   > MacOS does not currently support device compliance with Microsoft Intune. 
 
 5. Select **Save**.
 
@@ -136,6 +139,11 @@ In addition to device configuration policy, you can onboard devices using:
 
 9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
  **OK**, and then **Create** to save your changes, which creates the profile.
+
+### Onboard MacOS devices
+After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard MacOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level. 
+
+For MacOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for MacOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
 
 ### Onboard Android devices
 
