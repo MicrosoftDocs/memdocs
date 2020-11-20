@@ -10,8 +10,6 @@ ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Collection Evaluation Viewer
@@ -20,8 +18,8 @@ manager: dougeby
 
 Collection Evaluation Viewer is one of the [Configuration Manager tools](tools.md). Use it to view and troubleshoot the collection evaluation process on the primary site server.
 
-> [!Tip]
-> Starting in Configuration Manager version 2010, this functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2010, this standalone tool is deprecated.<!-- 8509484 --> Its functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
 
 The tool displays the following information:  
 
