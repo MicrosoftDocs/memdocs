@@ -1,7 +1,7 @@
 ### Apple
-- Apple iOS 11.0 and later
+- Apple iOS 12.0 and later
 - Apple iPadOS 13.0 and later
-- Mac OS X 10.12 and later
+- Mac OS X 10.13 and later
 
 ### Google
 - Android 5.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
