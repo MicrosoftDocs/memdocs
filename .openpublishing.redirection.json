@@ -268,7 +268,7 @@
         },
         {
             "source_path": "memdocs/autopilot/autopilot-update.md",
-            "redirect_url": "/mem/autopilot/index.yml",
+            "redirect_url": "/mem/autopilot/index",
             "redirect_document_id": false
         },
         {
