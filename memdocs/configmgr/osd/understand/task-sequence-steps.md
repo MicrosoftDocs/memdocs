@@ -417,7 +417,7 @@ Specify the server licensing mode.
 #### Maximum connections
 
 > [!NOTE]
-> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 -->
+> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 --> Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.<!-- 7035424 -->
 
 #### Randomly generate the local administrator password and disable the account on all supported platforms (recommended)  
 
