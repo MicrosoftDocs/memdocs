@@ -2,7 +2,7 @@
 title: Overview of Windows Autopilot
 description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. 
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
+ms.reviewer: gisan
 manager: laurawi
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -23,7 +23,8 @@ ms.collection:
 
 **Applies to**
 
--  Windows 10
+- Windows 10
+- Windows Holographic, version 2004
 
 Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. You can also use Windows Autopilot to reset, repurpose, and recover devices. This solution enables an IT department to achieve the above with little to no infrastructure to manage, with a process that's easy and simple.
 
