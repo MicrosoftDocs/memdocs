@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 11/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -89,6 +89,8 @@ The below apps support the core Intune App Protection Policy settings.
 
 |App|Platform|[Core App Protection Policy settings](app-protection-policy.md)|[App configuration](app-configuration-policies-overview.md)|
 |--- |--- |:-: |--- |
+|Dynamics 365 Remote Assist|[Android](https://play.google.com/store/apps/details?id=com.microsoft.ramobile)|✔|No settings|
+|Dynamics 365 Remote Assist|[iOS](https://apps.apple.com/us/app/dynamics-365-remote-assist/id1470512565)|✔|No settings|
 |Field Service Mobile|[Android](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile)|✔|No settings|
 |Field Service Mobile|[iOS](https://apps.apple.com/app/field-service-mobile/id1414669075)|✔|No settings|
 |Microsoft 365 Admin|[Android](https://play.google.com/store/apps/details?id=com.ms.office365admin)|✔|No settings|
