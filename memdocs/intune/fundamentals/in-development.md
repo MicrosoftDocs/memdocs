@@ -225,7 +225,7 @@ When you use the Graph API to export Intune reports without selecting any column
 ## Security
 
 ### New Endpoint Security Firewall reports <!-- 5653366   -->
-We’re adding two new reports that are dedicated to Firewall policies in Endpoint Security:
+We're adding two new reports that are dedicated to Firewall policies in Endpoint Security:
 
 - The first, under Endpoint security, will show the list of Windows 10 devices with Firewall turned off. This report will show for each device the device name, device ID, user information, and the Firewall status. (**Endpoint security** > **Firewall** > ***Windows 10 MDM devices with firewall off***).
 - The second, under Reports, will be an organizational report which lists Windows 10 devices with their firewall status. This report will display status information about device firewalls that include if the firewall is enabled, disabled, limited, or temporarily disabled.  (**Reports** > **Firewall** > ***Windows 10 MDM Firewall status***).
@@ -246,7 +246,7 @@ To use the tool, you must:
 
 ### Increased certificate validity period for SCEP and PKCS profiles<!-- 8629805   -->
 You'll soon be able to use a **Certificate validity period** of up to **24** months in certificate profiles for Simple Certificate Enrollment Protocol (SCEP) and 
-Public Key Cryptography Standards (PKCS). This is an increase from the current support  for a period of up to 12 months.  This support is coming to Windows and Android. Certificate validity periods are ignored by iOS/iPad OS and MacOS.  (**Devices** > **Configuration profiles** > **Create profile** > *SCEP certificate* or *PKCS certificate*)
+Public Key Cryptography Standards (PKCS). This is an increase from the current support  for a period of up to 12 months.  This support is coming to Windows and Android. Certificate validity periods are ignored by iOS/iPad OS and macOS.  (**Devices** > **Configuration profiles** > **Create profile** > *SCEP certificate* or *PKCS certificate*)
 
 <!-- ***********************************************-->
 ## Notices
