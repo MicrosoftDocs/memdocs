@@ -31,6 +31,11 @@ ms.collection: M365-identity-device-management
  
 
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
+
+**Applies to**
+
+- Windows 10
+
 You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
 
 ## Prerequisites
