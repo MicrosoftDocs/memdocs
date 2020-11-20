@@ -65,15 +65,15 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Mandatory   install of apps on devices (required) <sup>2</sup> | Yes | Yes | Yes | Yes |
 | Optional   installation on devices from the Company Portal (available installation) | Yes <sup>3</sup> | Yes | Yes | Yes |
 | Install   shortcut to an app on the web (web link) | Yes <sup>4</sup> | Yes | Yes | Yes |
-| In-house   (line-of-business) apps | Yes | Yes | Yes | Yes |
+| In-house   (line-of-business) apps | Yes <sup>5</sup>| Yes | Yes | Yes |
 | Apps from a   store | Yes | Yes | No | Yes |
 | Update apps | Yes | Yes | No | Yes |
 
 <sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience). 
-
+<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
+<sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Play.
 
 ## Get started
 
