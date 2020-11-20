@@ -66,14 +66,6 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 ### Configure whether a required iOS app is removable<!-- 8391462  -->
 You will be able to configure whether a required iOS app is installed as a removable app by end users. The new setting will apply to iOS store, LOB and built-in apps. You will be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > **Add**. When setting the app assignments, you will be able to select **Install as removable**. The default value is **yes**, which means the app is removable. Existing required installs on iOS 14 will be updated to the default (removable) setting value when this setting is implemented. For more information about iOS apps, see [Microsoft Intune app management](..\apps\app-management.md).
 
-### New show previews setting for app notifications on iOS/iPadOS devices<!-- 8351845  -->
-On iOS/iPadOS devices, there's a **Show Previews** setting (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **App Notifications**). Use this setting to choose when recent app notification previews are shown on devices.
-
-For more information on app notification settings, and other settings you can configure, see [device settings to use common iOS/iPadOS features](../configuration/ios-device-features-settings.md).
-
-Applies to:
-- iOS/iPadOS 14.0 and newer (supervised)
-
 <!-- ***********************************************-->
 ## Device configuration
 
@@ -86,10 +78,6 @@ Applies to:
 - Android Enterprise Work Profile
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-### On-demand rules with Microsoft Tunnel for iOS<!-- 8460915  -->
-We're adding support to the Microsoft Tunnel to use on-demand rules for iOS devices. On-demand rules are configured in device configuration VPN profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **VPN**).
-
-With on-demand rules you can specify the use of the VPN when conditions are met for specific FQDNs or IP addresses. 
  
 <!-- ***********************************************-->
 ## Device enrollment
@@ -116,8 +104,6 @@ Intune device detail logs will be available in **Reports** > **Log analytics**. 
 ### Subnet ID and IP addresses on Properties page for corporate-owned Windows devices<!--5265589 -->
 Subnet ID and IP addresses will be displayed on the **Properties** page for corporate-owned Windows devices. To see them, go to [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > choose a corporate-owned Windows device > **Properties**.
 
-### Personally-owned work profile terminology<!--8361769 -->
-To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally-owned devices with a work profile" or *personally-owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
 
 
 <!-- ***********************************************-->
@@ -137,38 +123,10 @@ We're updating messaging in Company Portal for Android to better introduce and e
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
-### Noncompliant policies report to troubleshoot devices in error or noncompliant<!-- 6471368  -->
-There's a new operational report to help troubleshoot errors and conflicts for compliance policies targeting devices. The "Noncompliant policies" report will show the list of compliance policies and the number of devices in an error or noncompliant state.
-
-Administrators can use this report to:
-
-- Drill down in a policy to see the list of devices and users in a failed state.
-- Drill down to see the list of settings and setting information causing a failure.
-- Filter, sort, and search across all records in the report.
-- Identify when issues are occurring, and streamline troubleshooting.
-
-For more information on monitoring and reporting, see [Monitor device compliance policies](../protect/compliance-policy-monitor.md) and [Intune reports](../fundamentals/reports.md).
-
-
 ### Account protection policy changes in Endpoint security<!--  7492116   --> 
 We’re reworking the endpoint security Account protection policy to use the new APIs for Windows Hello for Business. The new APIs will result in a more consistent experience. The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts.   This API replaces the use of  *./User/Vendor/MSFT/PassportForWork*.  (**Endpoint security** > **Account protection**)
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
-
-### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
-We're adding support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
- 
-- Allow hardware device installation by device identifiers
-- Block hardware device installation by device identifiers
-- Allow hardware device installation by setup classes
-- Block hardware device installation by setup classes 
-- Allow hardware device installation by device instance identifiers 
-- Block hardware device installation by device instance identifiers 
-
-Policy merge applies to the configuration of each setting across the different profiles that apply to a device. It doesn’t include evaluation between different settings, even when two settings are closely related.
-
-For a more detailed example of what merges, and how allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md) for device control profiles. 
-
 
 ### New co-management eligibility organizational report<!-- 7854306  -->
 The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. You'll be able to view a summary for this report in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Reports** > **Co-management eligibility**. For related report information, see [Intune reports](../fundamentals/reports.md).
@@ -176,16 +134,6 @@ The **Co-management eligibility** report provides an eligibility evaluation for 
 ### New co-management device workloads organizational report<!-- 7854306  -->
 The **Co-management device workloads** report provides a report of devices that are currently co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. You'll be able to view a summary for this report in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Reports** > **Co-management device workloads**. For related report information, see [Intune reports](../fundamentals/reports.md).
 
-### New Intune operational report to help troubleshoot configuration profile issues<!-- 6471222  -->
-A new operational report will be available in public preview to help troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. The **Assignment failures** report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You have the ability to filter, sort, and search across all of the records throughout the report. This report will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Assignment failures (preview)**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
-
-### Reporting updates for Windows Virtual Desktop VMs<!--5736314 -->
-The following settings will display as **Not applicable** in the Policy reports:
-- BitLocker settings
-- Device encryption
-- Defender Application Guard settings
-- Defender Tamper Protection
-- Wi-Fi profiles
 
 <!-- ***********************************************-->
 <!--
@@ -197,37 +145,9 @@ The following settings will display as **Not applicable** in the Policy reports:
 
 
 <!-- ***********************************************-->
-## Security
+<!--## Security-->
 
-### Improvements to settings in Attack surface reduction rule profiles <!-- 7319334  -->
-We’re improving the settings in the Attack surface reduction rule profiles which are part of endpoint securities Attack surface reduction policy.  (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Windows 10 or later** for platform > **Attack surface reduction rules**).
 
-The improvements include:
-
-- Adding a new option of **Warn** to each applicable setting in the profile.
-- For applicable settings, the configuration options will be consistent, supporting the following values:
-  - **Disable** – The setting is off.
-  - **Block** - Executable content downloaded from email and webmail clients will be blocked.
-  - **Audit** - Windows events will be raised instead of blocking.
-  - **Warn** - On devices that run Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Block* behavior.
-  - **Not configured** - The setting is off.
-  - **User defined**
-
-### Improved Antivirus status operations report for endpoint security<!-- 7771023    -->
-We’re adding new details to the *Antivirus status operations* report for Windows Defender Antivirus, which is an endpoint security policy report. (**Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**).
- 
-The following new columns of information will be available for each device:
-- Product status – The status of Windows Defender on the device.
-- Tamper protection – Is tamper protection enabled or disabled.
-- Virtual machine – Is the device a virtual machine, or physical device.
-
-### Improved rule merge for Attack surface reduction rules<!--7798290  -->
-We’re improving the conflict resolution behavior when rules merge for our *Attack surface reduction rules* profile, which is part of the endpoint security Attack Surface Reduction policy. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Windows 10 or later** for platform > **Attack surface reduction rules**).
-
-With the new merge behavior, the values for settings that are part of different Attack surface reduction rule profiles that apply to a device will be merged into a single list. That list then applies to the device. This merge behavior will help prevent conflicts between profiles, and existing policies that were in conflict will no longer be in conflict. 
-
-### New setting for Device Control profile for endpoint security<!-- 8456551    -->
-We’re adding a new setting, **Block write access to removable storage** to the *Device control* profile for Attack surface reduction policy in endpoint security. (**Endpoint security** > **Attack surface reduction** > **Windows 10 or later** > **Device Control**).
 
 <!-- ***********************************************-->
 ## Notices
