@@ -357,10 +357,16 @@ With more customers managing remote devices now, this release includes several n
 ## Co-management
 -->
 
-<!-- ## Deprecated operating systems
+## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+The following features are now deprecated:
+
+- The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->
+- [Connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 -->
+
+<!--
 As first announced in version 1906, version 2010 drops support for the following client OS versions:  
 
 - Windows CE 7.0
