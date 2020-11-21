@@ -272,6 +272,13 @@ Starting in version 2010, you can disable Azure AD authentication for tenants no
 
 1. Select **OK** to save and close the connection properties.
 
+> [!TIP]
+> It can take up to 25 hours for this change to take effect on clients.<!-- 8717813 --> For purposes of testing to speed up this change in behavior, use the following steps:
+>
+> 1. Restart the **sms_executive** service on the site server.
+> 1. Restart the **ccmexec** service on the client.
+> 1. Trigger the client schedule to refresh the default management point. For example, use the [send schedule tool](../../../support/send-schedule-tool.md): `SendSchedule {00000000-0000-0000-0000-000000000023}`
+
 ## View the configuration of an Azure service
 
 View the properties of an Azure service you've configured for use. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Services**. Select the service you want to view or edit, and then select **Properties**.

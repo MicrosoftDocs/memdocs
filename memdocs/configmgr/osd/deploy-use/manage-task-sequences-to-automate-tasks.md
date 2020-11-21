@@ -102,10 +102,12 @@ Use the following procedure to configure the behavior of the task sequence on th
 
 3. On the **Advanced** tab, the following settings are available:  
 
-    - **Run another program first**: Select this option to run a program in another package before the task sequence runs. By default, this check box is cleared. You don't need to separately deploy the program that you specify to run first.  
+    - **Run another program first**: Select this option to run a program in another package before the task sequence runs. By default, this check box is cleared. You don't need to separately deploy the program that you specify to run first.
 
         > [!IMPORTANT]
-        > This setting applies only to task sequences that run in the full OS. If you start the task sequence by using PXE or boot media, Configuration Manager ignores this setting.  
+        > This setting applies only to task sequences that run in the full OS. If you start the task sequence by using PXE or boot media, Configuration Manager ignores this setting.
+        >
+        > It also doesn't apply to task sequences that run on clients that communicate via a cloud management gateway (CMG). This option uses the UNC network path of the package, which isn't accessible via CMG.<!-- 8674270 -->
 
         - **Package**: Browse for the package that contains the program to run before this task sequence.  
 

@@ -326,7 +326,7 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ## Administration workspace
 
 <!--4223683-->
-Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#bkmk_console).
+Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#enable-console-usage).
 
 ## Next steps
 
