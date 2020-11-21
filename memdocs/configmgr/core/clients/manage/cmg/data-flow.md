@@ -54,7 +54,7 @@ This table lists the required network ports and protocols. The *Client* is the d
 | Client | HTTPS | 443 | CMG | General client communication |
 | Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
-| CMG connection point | HTTPS or HTTP | 443 or 80 | Software update point | On-premises traffic, port depends upon software update point configuration |
+| CMG connection point | HTTPS or HTTP | 443 or 80 / 8530 or 8531 | Software update point | On-premises traffic, port depends upon software update point configuration |
 
 When you allow the CMG to function as a cloud distribution point and serve content from Azure storage, some additional requirements apply. For more information, see [Use a cloud distribution point: Ports and data flow](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).
 
