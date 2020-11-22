@@ -32,7 +32,7 @@ For information about each client setting, see [About client settings](about-cli
 1. View and configure the client settings for each group of settings in the navigation pane.
 
 > [!TIP]
-> Configuration Manage configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).
+> Configuration Manager configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).
 
 ## Create and deploy custom client settings
 
