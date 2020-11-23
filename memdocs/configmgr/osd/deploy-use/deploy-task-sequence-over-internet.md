@@ -25,6 +25,9 @@ Configuration Manager supports various methods to deploy a task sequence to remo
 
 On the **User Experience** page of the Deploy Software Wizard, you can configure the deployment to **Allow task sequence to run for client on the Internet**. This setting is required for all internet-based client scenarios. The following sections cover the main scenarios when you enable this setting.
 
+> [!NOTE]
+> The task sequence advanced setting to **Run another program first** doesn't apply to task sequences that run on clients that communicate via a cloud management gateway (CMG). This option uses the UNC network path of the package, which isn't accessible via CMG.<!-- 8674270 -->
+
 ### Windows 10 in-place upgrade
 
 Use this setting for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway (CMG). All supported versions of Configuration Manager support this scenario. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).

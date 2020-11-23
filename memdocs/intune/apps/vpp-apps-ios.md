@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune
+# How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,7 +45,10 @@ Microsoft Intune helps you manage apps purchased through this program by:
 Additionally, you can synchronize, manage, and assign books you purchased from Apple Business Manager with Intune to iOS/iPadOS devices. For more information, see [How to manage iOS/iPadOS eBooks you purchased through a volume-purchase program](vpp-ebooks-ios.md).
 
 ## What are location tokens?
-Location tokens are also known as Volume Purchase Program (VPP) tokens. These tokens are used to assign and manage licenses purchased using Apple Business Manager. Content Managers can purchase and associate licenses with location tokens they have permissions to in Apple Business Manager. These location tokens are then downloaded from Apple Business Manager and uploaded in Microsoft Intune. Microsoft Intune supports uploading multiple location tokens per tenant. Each token is valid for one year.
+Location tokens are volume purchase licenses that were commonly known as Volume Purchase Program (VPP) tokens. These location tokens are used to assign and manage licenses purchased using Apple Business Manager. Content Managers can purchase and associate licenses with location tokens they have permissions to in Apple Business Manager. These location tokens are then downloaded from Apple Business Manager and uploaded in Microsoft Intune. Microsoft Intune supports uploading multiple location tokens per tenant. Each token is valid for one year.
+
+> [!NOTE]
+> The Apple Volume Purchase Program (VPP) has been integrated into Apple Business Manager. Apple Business Manager is a portal for admins to deploy Apple devices and buy content in volume. Content may include apps, books, and custom apps. Location tokens are used to assign and manage licenses purchased using Apple Business Manager. VPP is now called legacy VPP tokens.
 
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
@@ -53,8 +56,8 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 | Action | Device Licensing | User Licensing |
 |------- | -----------------| ---------------|
 | App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
-| Device   configuration blocking access to App Store | Apps can be installed and updated using Company Portal. | The invitation to join Apple VPP requires access to App   Store. If you have set a policy to disable App Store, user licensing for VPP   apps will not work. |
-| Automatic   app update | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. |
+| Device   configuration blocking access to App Store | Apps can be installed and updated using Company Portal. | The invitation to join Apple Business Manager requires access to App   Store. If you have set a policy to disable App Store, user licensing for VPP   apps will not work. |
+| Automatic   app update | As configured by the Intune admin in Apple Business Manager token settings.<p>If the assignment type is available for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. | As configured by the Intune admin in Apple Business Manager token settings.<p>If the assignment type is available for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. |
 | User   Enrollment | Not supported. | Supported using Managed Apple IDs. |
 | Books | Not supported. | Supported. |
 | Licenses   used | 1 license per device. The license is associated with the   device. | 1 license for up to 5 devices using the same personal   Apple ID. The license is associated with the user.<p>An end user   associated with a personal Apple ID and a Managed Apple ID in Intune consumes   2 app licenses. |
@@ -94,7 +97,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 4. Download the new location token by going to **Apple Business (or School) Manager** > **Settings** > **Apps and Books** > **My Server Tokens**.
 5. Update the location token in Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens** and manually upload the token.
 
-## Upload an Apple VPP or location token
+## Upload an Apple VPP or Apple Business Manager location token
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
@@ -102,7 +105,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 4. On the **Basics** page, specify the following information:
    - **Token Name** - An administrative field for setting the token name.
    - **Apple ID** - Enter the Managed Apple ID of the account associated with the uploaded token.
-   - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple VPP token for your account and select it here.
+   - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple Business Manager location token (Apple VPP token) for your account and select it here.
 5. Click **Next** to display the **Settings** page.
 6. On the **Settings** page, specify the following information:
    - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
@@ -187,11 +190,11 @@ You can delete an Apple Volume Purchasing Program (VPP) token using the console.
 <!-- 820870 -->  
 To revoke the license of all VPP apps for a given VPP token, you must first revoke all app licenses associated with the token, then delete the token.
 
-## Renewing VPP tokens
+## Renewing VPP tokens or Apple Business Manager location token
 
-You can renew an Apple VPP token by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
+You can renew an Apple Business Manager location token (Apple VPP token) by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
 
-To renew an Apple VPP token, use the following steps:
+To renew an Apple Business Manager location token (Apple VPP token), use the following steps:
 
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
 2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
@@ -207,9 +210,9 @@ Currently, you cannot delete an iOS/iPadOS VPP app from Microsoft Intune.
 
 ## Assigning custom role permissions for VPP
 
-Access to Apple VPP tokens and VPP apps can be controlled independently using permissions assigned to custom administrator roles in Intune.
+Access to Apple Business Manager location token and apps (Apple VPP tokens and VPP apps) can be controlled independently using permissions assigned to custom administrator roles in Intune.
 
-* To allow an Intune custom role to manage Apple VPP tokens, in Microsoft Endpoint Manager admin center, select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**, assign permissions for **Managed apps**.
+* To allow an Intune custom role to manage Apple Business Manager location tokens, in Microsoft Endpoint Manager admin center, select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**, assign permissions for **Managed apps**.
 * To allow an Intune custom role to manage apps purchased using iOS/iPadOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
 
 ## Additional information

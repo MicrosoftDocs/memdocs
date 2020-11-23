@@ -236,7 +236,7 @@ When you send feedback, it shows a confirmation message. This message includes a
 
 ## Feedback for PowerShell
 
-If you have feedback on the [Configuration Manager PowerShell cmdlets](/powershell/module/configurationmanager), use the same options in the Configuration Manager to send feedback.
+If you have feedback on the [Configuration Manager PowerShell cmdlets](/powershell/module/configurationmanager), use the same options in the Configuration Manager console to send feedback.
 
 When you send a frown, include the following additional information specific to PowerShell:
 

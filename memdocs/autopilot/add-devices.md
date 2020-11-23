@@ -24,8 +24,12 @@ ms.collection:
 **Applies to**
 
 - Windows 10
+- Windows Holographic, version 2004
 
 Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity and uploading it manually.
+
+> [!NOTE]
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## OEM registration
 
@@ -102,8 +106,8 @@ To use this script, you can use either of the following methods:
 To install it directly and capture the hardware hash from the local computer, use the following commands from an elevated Windows PowerShell prompt:
 
 ```powershell
-md c:\\HWID
-Set-Location c:\\HWID
+New-Item -Type Directory -Path "C:\HWID"
+Set-Location -Path "C:\HWID"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
 Install-Script -Name Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv

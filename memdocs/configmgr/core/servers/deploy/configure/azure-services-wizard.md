@@ -162,7 +162,7 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
    - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
    > [!IMPORTANT]
-   > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment.
+   > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment until you manually mitigate.
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
@@ -271,6 +271,13 @@ Starting in version 2010, you can disable Azure AD authentication for tenants no
 1. Select the option to **Disable Azure Active Directory authentication for this tenant**.
 
 1. Select **OK** to save and close the connection properties.
+
+> [!TIP]
+> It can take up to 25 hours for this change to take effect on clients.<!-- 8717813 --> For purposes of testing to speed up this change in behavior, use the following steps:
+>
+> 1. Restart the **sms_executive** service on the site server.
+> 1. Restart the **ccmexec** service on the client.
+> 1. Trigger the client schedule to refresh the default management point. For example, use the [send schedule tool](../../../support/send-schedule-tool.md): `SendSchedule {00000000-0000-0000-0000-000000000023}`
 
 ## View the configuration of an Azure service
 

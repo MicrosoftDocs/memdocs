@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 11/18/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -217,6 +217,14 @@ This feature supports:
 ## Microsoft Defender ATP
 
 [Microsoft Defender advanced threat protection (ATP)](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
+
+This feature supports:
+
+- Windows 10 and later
+
+## Network boundary
+
+[Network boundary](network-boundary-windows.md) creates a list of sites that are trusted by your organization. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
 
 This feature supports:
 

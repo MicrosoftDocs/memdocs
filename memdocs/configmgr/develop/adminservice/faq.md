@@ -36,7 +36,7 @@ No, the administration service currently doesn't publish an [OpenAPI (Swagger) d
 
 ### Can I use the administration service with internet-based client management?
 
-No, internet-based client management (IBCM) doesn't support exposing the SMS Provider role to the internet. For internet access to the administration service, you need a cloud management gateway. For more information, see [Enable internet access](set-up.md#bkmk_cmg).
+No, internet-based client management (IBCM) doesn't support exposing the SMS Provider role to the internet. For internet access to the administration service, you need a cloud management gateway. For more information, see [Enable internet access](set-up.md#enable-internet-access).
 
 ### Isn't it too risky to open this API to the internet?
 

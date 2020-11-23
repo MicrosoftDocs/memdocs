@@ -65,8 +65,8 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
 | [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040--> | Version 2010 | ![Not yet](media/red_x.png) |
-| [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816--> | Version 2002 | ![Not yet](media/red_x.png) |
-| [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953--> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953,CB0CDFFB-9C6F-4B18-8954-A43A387302A2--> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 --> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Task sequence debugger](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | Version 1906 | ![Not yet](media/red_x.png) |
@@ -74,12 +74,8 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 | [Synchronize collection membership results to Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->| Version 1906| Version 2002 |
 | [CMPivot standalone](cmpivot.md#bkmk_standalone) <!--3555890/4692885,no GUID--> | Version 1906 | Version 2002 |
 | [SMS Provider administration service](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service) <!--1359052--> | Version 1810 | Version 1906 |
-| [Enhanced HTTP site system](../../plan-design/hierarchy/enhanced-http.md) <!--1356889,1358228--> | Version 1806 | Version 1810 |
 | [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) <br/> (previously known as *Mobile apps for co-managed devices*) <!--1357892/3600959,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | Version 1806 | Version 2002 |
-| [Package conversion manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861--> | Version 1806 | Version 1810 |
-| [Phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md) <!--1356837--> | Version 1802 | Version 1806 |
 | [Windows Defender Application Control management](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
-| [Servicing a cluster-aware collection (Server groups)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 1602 | ![Not yet](media/red_x.png) |
 
 <!--Image used = ![Not yet](media/red_x.png) -->
 

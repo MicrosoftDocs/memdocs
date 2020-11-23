@@ -160,6 +160,17 @@ Also use the report, **Client Data Sources - Summarization**, to view a summary 
 
 The dashboard includes the following tiles:
 
+#### Data source usage
+
+Starting in version 2010, this tile summarizes the types of sources in your environment and how many clients use them.
+
+This summary tile replaces the following four tiles in prior versions:
+
+- Distribution points
+- Clients that used a distribution point
+- Peer cache sources
+- Clients that used a peer
+
 #### Client content sources
 
 Displays the sources from which clients got content:
@@ -194,16 +205,16 @@ The most distributed packages by source type
 
 #### Distribution points
 
-Displays the number of distribution points that are part of the selected boundary group.
+In version 2006 and earlier, this tile displays the number of distribution points that are part of the selected boundary group. In version 2010, this tile is replaced by the [Data source usage](#data-source-usage) tile.
 
 #### Clients that used a distribution point
 
-Of the number of clients that are in the selected boundary group, this tile shows how many used a distribution point to get content.
+In version 2006 and earlier, of the number of clients that are in the selected boundary group, this tile shows how many used a distribution point to get content. In version 2010, this tile is replaced by the [Data source usage](#data-source-usage) tile.
 
 #### Peer cache sources
 
-For the selected boundary group, this tile shows how many peer cache sources have reported download history.
+In version 2006 and earlier, for the selected boundary group, this tile shows how many peer cache sources have reported download history. In version 2010, this tile is replaced by the [Data source usage](#data-source-usage) tile.
 
 #### Clients that used a peer
 
-Of the number of clients that are in the selected boundary group, this tile shows how many used a peer cache source to get content.
+In version 2006 and earlier, of the number of clients that are in the selected boundary group, this tile shows how many used a peer cache source to get content. In version 2010, this tile is replaced by the [Data source usage](#data-source-usage) tile.

@@ -80,6 +80,8 @@ The Configuration Manager REST API, the administration service, requires a secur
 
 Starting in this release, you no longer need to enable IIS on the SMS Provider for the administration service. When you enable the site for enhanced HTTP, it creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS.
 
+For more information, see [Prerequisites for the administration service](../../../develop/adminservice/overview.md#prerequisites).
+
 ## Cloud-attached management
 
 ### Cloud management gateway with virtual machine scale set for CSP
@@ -342,7 +344,7 @@ For more information, see [Client settings for software updates](../../clients/d
 
 <!--6023299-->
 
-The Configuration Manager [PowerShell cmdlet library](/powershell/sccm/overview) now offers support for PowerShell 7.
+The Configuration Manager PowerShell cmdlet library now offers support for PowerShell 7. For more information, see [Get started with Configuration Manager cmdlets](/powershell/sccm/overview).
 
 ### Improvements to cloud management gateway cmdlets
 
@@ -350,6 +352,7 @@ The Configuration Manager [PowerShell cmdlet library](/powershell/sccm/overview)
 
 With more customers managing remote devices now, this release includes several new and improved Windows PowerShell cmdlets for the cloud management gateway (CMG). You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Azure Active Directory (Azure AD) requirements.
 
+For more information, see [Configuration Manager version 2010 PowerShell release notes](/powershell/sccm/2010-release-notes).
 
 <!-- Unused sections in this release:
 ## Endpoint analytics
@@ -359,10 +362,16 @@ With more customers managing remote devices now, this release includes several n
 ## Co-management
 -->
 
-<!-- ## Deprecated operating systems
+## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+The following features are now deprecated:
+
+- The [collection evaluation viewer](../../support/ceviewer.md)<!-- 8509484 -->
+- [Connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 -->
+
+<!--
 As first announced in version 1906, version 2010 drops support for the following client OS versions:  
 
 - Windows CE 7.0
@@ -378,7 +387,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2010 release notes](/powershell/sccm/2010-release-notes).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2010 release notes](/powershell/sccm/2010-release-notes).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md).
 
