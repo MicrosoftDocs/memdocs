@@ -48,7 +48,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 12 or later.
+  * The input app must be compiled for iOS 13 or later.
 
   * The input app cannot be encrypted.
 
