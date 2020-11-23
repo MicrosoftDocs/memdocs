@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 11/23/2020
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,7 +34,7 @@ Company Portal must get user permission to control Wi-Fi on certain devices. Com
 
 You'll be prompted to allow Wi-Fi control if you're on a device that's:
 
-* Runing Android version 10 or later and 
+* Running Android version 10 or later and 
 * Enrolling or already enrolled in Intune using Android device administrator
 
 Company Portal prompts for permission during enrollment. If you enrolled your device in Intune before October 2020, you'll receive the prompt the next time your organization updates their Wi-Fi policy. 
