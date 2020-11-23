@@ -54,7 +54,7 @@ Intune offers integrated report views for the Windows 10 update ring policies yo
 
    In the **Monitor** section, choose from the following reports to view more detailed information about the update ring:
    - **Device status** - View the device configuration status. See [Update deviceConfigurationDeviceStatus](/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0&preserve-view=true).
-   - **User status** - View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
+   - **User status** - View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0&preserve-view=true).
    - **End-user update status** - View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
 
 ## Reports for Windows 10 feature updates policy
@@ -111,7 +111,7 @@ To enable data collection, you use [Endpoint analytics]f(../mem/analytics/overvi
 It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.  
 
 > [TIP]  
-> If you use [Endpoint Analytics](../mem/analytics/overview.md) and [configured it through Intune](../mem/analytics/enroll-intune.md#bkmk_onboard), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+> If you use [Endpoint Analytics](./mem/analytics/overview.md) and [configured it through Intune](./mem/analytics/enroll-intune.md#bkmk_onboard), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
 
 ### About reporting data latency
 
