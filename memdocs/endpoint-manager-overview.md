@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 10/28/2020
 ms.topic: overview
 ms.service: mem
-ms.subservice: fundamentals 
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
