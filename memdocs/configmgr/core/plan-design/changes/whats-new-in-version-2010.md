@@ -257,6 +257,12 @@ For more information, see [How to manage collections](../../clients/manage/colle
 
 ## Configuration Manager console
 
+### Categorize Community hub content
+<!--8052494-->
+Community hub content is grouped into a Microsoft, curated, or unreviewed category to allow admins to choose the types of content their environment displays. Admins can choose from the different categories of content that are provided in the Community hub to match their risk profile and their willingness to share and use content from those outside Microsoft and outside their own company.
+
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_category).
+
 ### Product feedback
 
 <!--3180826-->
