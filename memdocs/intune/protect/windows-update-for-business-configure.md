@@ -222,7 +222,7 @@ When a device receives a Windows 10 feature updates policy:
 
 The following prerequisites must be met to use Windows 10 feature updates in Intune.
 
-- Windows desktop versions is supported (Pro, Enterprise, Pro Education and Education)
+- Devices must run Windows 10 Pro, Enterprise, Pro Education or Education.
 - Devices must be enrolled in Intune MDM and be Hybrid AD joined, Azure AD joined, or Azure AD registered.
 - To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
   
