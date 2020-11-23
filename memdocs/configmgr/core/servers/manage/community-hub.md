@@ -181,6 +181,30 @@ Since the content is *open-source* style content, admins should always review wh
 1. Ensure that only Microsoft content is displayed and available for download.
 1. Go back to **Hierarchy Settings** and select another option such as **Display all content, including unreviewed content**.
 1. Confirm that only the type of content is displayed and able to be downloaded from the Community hub, that matches the corresponding hierarchy setting category.
+
+## <a name="bkmk_hub_os"></a> Community hub on Windows Server operating systems
+<!--3555940, 8625943, 8717639 -->
+*(Introduced in version 2010)*
+
+Starting in Configuration Manager version 2010, You can now display the Community hub on Windows Server operating systems. Follow the instructions below to enable Windows Server 2012 and later to load the Community hub:
+
+1. In the upper-right corner of the console, select the bell icon to display Configuration Manager console notifications.
+
+   :::image type="content" source="./media/3555909-notification.png" alt-text="Notifications in the Configuration Manager console":::
+
+1. The notification will say **New custom console extensions are available**.
+
+   :::image type="content" source="./media/3555909-extension-notification.png" alt-text="New custom console extensions are available notification":::
+
+1. Select the link **Install custom console extensions** to launch the install.
+1. When the install completes, select **Close** to restart the console.
+
+    :::image type="content" source="./media/3555909-extension-installed.png" alt-text="Console extension completed install":::
+
+1. Confirm that you can view the **Community hub** node from the machine running the Windows Server operating system.
+   - You may also notice that a new folder `AdminConsole\bin\Microsoft.WebView2.FixedVersionRuntime.<version>.x86` was created.
+   - The files are automatically downloaded from https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section with the other redistributable files.
+
 ## <a name="bkmk_known"></a> Known issues
 
 ### Unable to access community hub node when running console as a different user
