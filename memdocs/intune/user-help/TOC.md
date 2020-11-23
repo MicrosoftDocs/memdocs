@@ -30,6 +30,7 @@
 
 ### Update device settings 
 #### [Move to new device management setup](move-to-new-device-management-setup.md)
+#### [Allow Wi-Fi control](allow-wi-fi-control-android.md)  
 #### [Encrypt your device](encrypt-your-device-android.md)
 #### [Fix encryption problems](your-device-appears-encrypted-but-cp-says-otherwise-android.md)  
 #### [Set your PIN or password](set-your-pin-or-password-android.md)
