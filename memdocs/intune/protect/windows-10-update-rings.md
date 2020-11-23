@@ -172,7 +172,7 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 1. While viewing the overview page for a paused Update Ring, select **Uninstall**.
 2. Select from the available options to uninstall either **Feature** or **Quality** updates, and then select **OK**.
-3. After triggering the uninstall for one update type, you can select Uninstall again to uninstall the remaining update type.
+3. After you trigger the uninstall for one update type, you can select Uninstall again to uninstall the remaining update type.
 
 ## Validation and reporting
 
