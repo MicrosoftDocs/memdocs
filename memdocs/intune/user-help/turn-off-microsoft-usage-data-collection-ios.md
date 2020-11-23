@@ -33,9 +33,9 @@ ms.collection:
 
 # Share Company Portal usage data with Microsoft     
 
-When turned on, the Company Portal usage data feature shares your in-app performance and usage data with Microsoft. Your organization can't change your usage data preference, and doesn't have any control over the collection of your data. 
+When turned on, the Company Portal usage data feature shares your in-app performance and usage data with Microsoft. Sharing your Company Portal usage data helps to improve the reliability and performance of Microsoft products like Intune. 
 
-Sharing your Company Portal usage data helps to improve the reliability and performance of Microsoft products like Intune. But it's optional. You can turn this feature on or off from the Settings app. 
+You can turn this feature on or off from the Settings app. Your organization can't change your usage data preference, and doesn't have any control over the collection of your data. 
 
 If you turn off Company Portal usage data:    
 
