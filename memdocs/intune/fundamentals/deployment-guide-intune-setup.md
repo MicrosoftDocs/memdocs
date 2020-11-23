@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -233,10 +233,6 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 8. Create your administrative team. Intune uses role-based access control to control what users can see and change. As a global administrator, you can assign roles to users, such as Help Desk operator, Application Manager, Intune Role Administrator, and more.
 
     For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
-
-## Common issues and resolutions
-
-In this section, add extra information provided by CSS and PFE teams.
 
 ## Next steps
 

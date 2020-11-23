@@ -22,7 +22,8 @@ ms.topic: article
 
 **Applies to**
 
--  Windows 10
+- Windows 10
+- Windows Holographic, version 2004 or later
 
 You must apply a settings profile to each device that uses the Windows Autopilot deployment service. The profile must specify the device's exact deployment behavior. For detailed procedures on how to configure profile settings and register devices, see [Registering devices](add-devices.md#registering-devices).
 
