@@ -32,6 +32,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [6991647](includes/2011/6991647.md)]
 [!INCLUDE [7137169](includes/2011/7137169.md)]
 [!INCLUDE [8052494](includes/2011/8052494.md)]
+[!INCLUDE [3555940](includes/2011/3555909.md)]
 [!INCLUDE [8116426](includes/2011/8116426.md)]
 [!INCLUDE [8160460](includes/2011/8160460.md)]
 [!INCLUDE [8272488](includes/2011/8272488.md)]
