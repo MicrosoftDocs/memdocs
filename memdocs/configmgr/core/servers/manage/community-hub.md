@@ -56,7 +56,7 @@ Community hub supports the following objects:
 - Starting in version 2010, Full Administrators can opt in the hierarchy for uncurated content via hierarchy settings. Lower hierarchy administrators can't opt in the hierarchy for uncurated hub items.
 
 
-Most [built-in security roles](../../../../understand/fundamentals-of-role-based-administration.md) will have access to Community hub:
+Most [built-in security roles](../../understand/fundamentals-of-role-based-administration.md) will have access to Community hub:
 
 |Role name|View the hub| Contribute hub content|Download hub content|
 |---|---|---|---|
