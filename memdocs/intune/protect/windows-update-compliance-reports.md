@@ -66,7 +66,7 @@ Intune offers integrated reports to view detailed Windows 10 update deployment s
 The data in the Intune reports for Windows 10 feature updates policy is used only for these reports and doesn’t surface in other Intune reports.
 
 - [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
-- [Feature update failures report (Operational)](#use-the-feature-update-failures-report-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to assist in troubleshooting and optimizing your devices.
+- [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to assist in troubleshooting and optimizing your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
 
@@ -111,7 +111,7 @@ To enable data collection, you use [Endpoint analytics]f(../mem/analytics/overvi
 It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.  
 
 > [TIP]  
-> If you use [Endpoint Analytics](./mem/analytics/overview.md) and [configured it through Intune](./mem/analytics/enroll-intune.md#bkmk_onboard), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+> If you use [Endpoint Analytics](/mem/analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
 
 ### About reporting data latency
 
@@ -211,7 +211,7 @@ To use the report:
 
     ````````````````````
 
-### Use the Feature update failures report (Operational) report
+### Use the Feature update failures (Operational) report
 
 *In public preview*
 

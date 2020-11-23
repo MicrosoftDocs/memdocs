@@ -58,5 +58,5 @@ To learn about report options for Windows 10 update ring policy and Windows 10 f
 ## Next steps
 
 - [Use Windows 10 update rings in Intune](../protect/windows-10-update-rings.md)
-- [Use Windows 10 feature updates in Intune](../protect/windows-10-feture-updates.md)
+- [Use Windows 10 feature updates in Intune](../protect/windows-10-feature-updates.md)
 - For more information, see [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.
