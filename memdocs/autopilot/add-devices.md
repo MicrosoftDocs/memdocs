@@ -24,8 +24,12 @@ ms.collection:
 **Applies to**
 
 - Windows 10
+- Windows Holographic, version 2004
 
 Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity and uploading it manually.
+
+> [!NOTE]
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## OEM registration
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 11/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,7 +35,7 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
 ## Prerequisites
 
-- The user's Android Enterprise device must be enrolled in Intune. For more information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
+- The user's Android Enterprise device must be enrolled in Intune. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md).
 - Google Chrome is added as a Managed Google Play app. For more information about Managed Google Play, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 ## Add the Google Chrome app to Intune
@@ -93,7 +93,7 @@ Once the Android device is enrolled with Android Enterprise, the managed Google 
 Launch Google Chrome and you will find the settings applied.
 
    Bookmarks:<br>
-   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="View bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    Blocked URL:<br>
    <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">

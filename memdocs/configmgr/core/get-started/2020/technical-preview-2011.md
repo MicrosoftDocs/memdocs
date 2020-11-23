@@ -36,6 +36,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [8160460](includes/2011/8160460.md)]
 [!INCLUDE [8272488](includes/2011/8272488.md)]
 [!INCLUDE [7774961](includes/2011/7774961.md)]
+[!INCLUDE [8764365](includes/2011/8764365.md)]
 
 <!--
 ## General known issues
