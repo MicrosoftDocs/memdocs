@@ -267,6 +267,8 @@
       items:
       - name: Use Windows Update for Business
         href: windows-update-for-business-configure.md
+        name: Windows updates policies
+        items:
         - name: Update rings policy
           href: windows-10-update-rings.md
         - name: Feature updates policy
