@@ -83,7 +83,7 @@ In addition, devices must:
 
 The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune. Instead, these reports use data that is classified as Windows Diagnostic Data. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
-To enable data collection, you use [Endpoint analytics]f(../mem/analytics/overview.md) in the Microsoft Endpoint Manager admin center to enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
+To enable data collection, you use [Endpoint analytics](../mem/analytics/overview.md) in the Microsoft Endpoint Manager admin center to enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
 
 ### Enable data collection
 
