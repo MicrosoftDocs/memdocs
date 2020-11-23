@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 *This feature is in public preview.*
 
-With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1803 or version 1809. Intune supports setting a feature level of 1803 or later.
+With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1803 or version 1809. Intune supports setting a feature level of 1803 or later.
 
 Windows 10 feature updates policies work in conjunction with your *Windows 10 update ring* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
@@ -120,5 +120,5 @@ There are multiple options to get in-depth reporting for Windows 10 updates with
 
 ## Next steps
 
-- [Use Windows 10 update rings in Intune](../protect/windows-10-udpate-rings.md)
+- [Use Windows 10 update rings in Intune](../protect/windows-10-update-rings.md)
 - Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10 updates

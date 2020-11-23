@@ -38,7 +38,7 @@ With Intune, you can deploy updates to Windows 10 devices by using policies for 
 
 - **Update Compliance**:
 
-  [Use Update Compliance with Intune](#update-compliance) to monitor Windows 10 update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
+  [Use Update Compliance with Intune](#use-update-compliance) to monitor Windows 10 update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
 
 For more information, see [Monitor Windows Updates with Update Compliance](/windows/deployment/update/update-compliance-monitor) in the Windows documentation.
 
@@ -53,9 +53,9 @@ Intune offers integrated report views for the Windows 10 update ring policies yo
 3. To view additional details, select **Monitor**. Then below **Software updates**, select **Per update ring deployment state** and choose the deployment ring to review.
 
    In the **Monitor** section, choose from the following reports to view more detailed information about the update ring:
-   - **Device status** - View the device configuration status. See [Update deviceConfigurationDeviceStatus]( /graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
+   - **Device status** - View the device configuration status. See [Update deviceConfigurationDeviceStatus](/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0&preserve-view=true).
    - **User status** - View the user name, status, and last report date. See [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
-   - **End-user update status** - View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
+   - **End-user update status** - View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
 
 ## Reports for Windows 10 feature updates policy
 
@@ -66,7 +66,7 @@ Intune offers integrated reports to view detailed Windows 10 update deployment s
 The data in the Intune reports for Windows 10 feature updates policy is used only for these reports and doesn’t surface in other Intune reports.
 
 - [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)  - This report provides an overall view of compliance for devices on a per-policy basis.
-- [Feature update failures report (Operational)](#use-the-feature-update-failures-reoport-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to assist in troubleshooting and optimizing your devices.
+- [Feature update failures report (Operational)](#use-the-feature-update-failures-report-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to assist in troubleshooting and optimizing your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
 
@@ -93,13 +93,13 @@ To enable data collection, you use [Endpoint analytics]f(../mem/analytics/overvi
 
    On the **General** tab of *Endpoint analytics* | *Settings*, select the link **Intune data collection policy**. When you select this link, Intune automatically creates a default policy for data collection that deploys to All Devices.
    > [!div class="mx-imgBorder"]
-   > ![Enable data collection for Intune](./media/windows-update-compliance-reports/intune-data-collection-policy.png)
+   > ![Intune data collection policy](./media/windows-update-compliance-reports/intune-data-collection-policy.png)
 
 3. After the **Intune data collection policy** is created, Intune displays the Overview page for the policy. You can select **Properties** to view the policy and edit its configuration.
 
 4. Next, configure the **Windows health monitoring** profile as part of a device configuration policy. This profile type is available only after your tenant has an **Intune data collection policy**.
 
-   For guidance on creating and configuring this profile, see [Windows health monitoring](../configuration/windows-health-monitoring) in the Intune documentation.
+   For guidance on creating and configuring this profile, see [Windows health monitoring](../configuration/windows-health-monitoring.md) in the Intune documentation.
 
    When you configure this profile:
 
@@ -111,7 +111,7 @@ To enable data collection, you use [Endpoint analytics]f(../mem/analytics/overvi
 It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.  
 
 > [TIP]  
-> If you use [Endpoint Analytics](../mem/analytics/overview) and [configured it through Intune](../mem/analytics/enroll-intune#bkmk_onboard), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+> If you use [Endpoint Analytics](../mem/analytics/overview.md) and [configured it through Intune](../mem/analytics/enroll-intune.md#bkmk_onboard), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
 
 ### About reporting data latency
 
@@ -150,7 +150,7 @@ To use the report:
 
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
-     > ![Enable data collection for Intune](./media/windows-update-compliance-reports/windows-feature-updates-by-policy.png)
+     > ![Review ownership](./media/windows-update-compliance-reports/windows-feature-updates-by-policy.png)
   
    The following list identifies the columns that are available in the view:
    - **Devices** – The name of the device.
@@ -209,7 +209,9 @@ To use the report:
    - **Other**:
      - **Needs attention**: The device has some issue and needs attention.
 
-    ````````````````````### Use the Feature update failures report (Operational) report
+    ````````````````````
+
+### Use the Feature update failures report (Operational) report
 
 *In public preview*
 
@@ -229,7 +231,7 @@ To use the report:
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
 
      > [!div class="mx-imgBorder"]
-     > ![Enable data collection for Intune](./media/windows-update-compliance-reports/update-failures-summary.png)
+     > ![Per-profile view](./media/windows-update-compliance-reports/update-failures-summary.png)
 
    - Selecting a profile opens a dedicated view that contains all active Alerts for that profile.
 
@@ -241,7 +243,7 @@ To use the report:
 
      - Select the device name to open the Device page:
        > [!div class="mx-imgBorder"]
-       > ![Enable data collection for Intune](./media/windows-update-compliance-reports/device-details.png)
+       > ![View the device page](./media/windows-update-compliance-reports/device-details.png)
 
 The following list identifies Alert Messages, and suggested remediation actions:
 
@@ -282,7 +284,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **PolicyConflictDeferral** | The Deferral Policy configured on the device is preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PolicyConflictPause** | Updates are paused on the device, preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PostRestartIssue** | Windows Update couldn't determine the results of installing the update. The error is usually false and the update probably succeeded. | If the update you're trying to install isn't available, no action is required. If the update is still available, retry the installation. |
-| **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the [Setup Diagnostics Tool](windows/deployment/upgrade/setupdiag) on the Device. Don't retry the installation until the impact is understood. |
+| **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the [Setup Diagnostics Tool](/windows/deployment/upgrade/setupdiag) on the Device. Don't retry the installation until the impact is understood. |
 | **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds). | Check the Support website to see whether there are any known issues with the update. |
 | **UnexpectedShutdown** | The installation was stopped because a Windows shutdown or restart was in progress. | Ensure the device remains on during Windows installation. |
 | **VersionMismatch** | Device is on a version of Windows that was not intended by the Deployment Service. | Confirm whether the device is on the intended version. |
@@ -293,9 +295,6 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **WUDecryptionIssue** | Windows Update couldn't decrypt the encrypted update file because it couldn't find the proper key. | Retry the installation. |
 | **WUDiskError**  | Windows Update encountered an error while reading or writing to the system drive. | Run the Windows Update Troubleshooter on the device. Retry the installation. |
 | **WUIssue**  | Windows Update couldn't understand the metadata provided by the update service. This error usually indicates a problem with the update. | Contact support. |
-
-
-
 
 ## Use Update Compliance
 

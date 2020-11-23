@@ -118,7 +118,7 @@ To view the **Feature update failures** report, use the following steps:
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - [Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organization)
+> - [Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organizational)
 > - Feature update failures report (Operational) *(this report)*  
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
@@ -198,7 +198,7 @@ You can view the **Windows 10 feature updates** report using the following steps
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
 > - Windows 10 feature updates (Organizational) *(this report)*
-> - [Feature update failures report (Operational)](#feature-update-failures-report)
+> - [Feature update failures report (Operational)](#feature-update-failures-report-operational)
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
 
