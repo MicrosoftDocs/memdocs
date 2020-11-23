@@ -408,11 +408,8 @@ Specify the product key to use for the Windows installation on the destination c
 
 #### Server licensing
 
-Specify the server licensing mode.
-
-- Select **Per server** or **Per user** as the licensing mode.  
-- If you select **Per server**, also specify the maximum number of connections permitted per your license agreement.  
-- If the destination computer isn't a server, or you don't want to specify the licensing mode, select **Do not specify**.  
+> [!NOTE]
+> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 --> Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.<!-- 7035424 -->
 
 #### Maximum connections
 
