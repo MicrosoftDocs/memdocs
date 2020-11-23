@@ -42,7 +42,7 @@ If you turn off Company Portal usage data:
 * All optional telemetry and diagnostic data that's normally collected and sent to Intune will stop being sent.
 * Proactive troubleshooting will no longer be possible, so you'll need to manually upload your logs to Intune if you have a problem with the device.  
 
-The usage data setting doesn't control the data that's required to run the Intune service. That data will continue to be sent to Intune, but oesn't contain any personal information.  
+The usage data setting doesn't control the data that's required to run the Intune service. That data will continue to be sent to Intune but doesn't contain any personal information.  
 
 ## Edit usage data preferences
 Change your usage data preferences to turn usage data collection on or off.  
