@@ -89,10 +89,28 @@ For work profile enrolled devices, you can only reset the work profile passcode 
 
 For Dedicated devices (COSU) and Fully Managed, device passcode reset is supported.
 
+## Duo devices
+
+### Company Portal not prompting users to enroll
+In some cases, the enrollment checklist may not be displayed as expected when users launch the Company Portal app.
+
+If users aren’t seeing the enrollment checklist, they can always navigate to it by tapping on the notification bell in the upper right of the Company Portal app and tapping the notification there, which will bring up the enrollment checklist.
+
+### Users unable to find the Microsoft Launcher app
+Users can't find or launch the Microsoft Launcher app the work profile. 
+
+The Microsoft Launcher app is the default launcher app on Duo devices, so the app icon has been hidden from the apps list and in the personal and work Play stores. This will be fixed in a coming update.
+
+### Edge sign in prompt during enrollment
+When an unenrolled user tries to access corporate data in an app protected by conditional access (CA), the user will be guided to enroll their device. During this enrollment flow, the Edge app is launched to open the Company Portal website. In some cases, the Edge app may prompt the user to sign into Edge, which diverts the user from the enrollment flow.
+
+To avoid this entirely, tell users to enroll in the Company Portal before trying to access their organization’s data. If a user does try to access their organization’s data before enrolling, if Edge prompts the user to sign in, they should skip the Edge sign in step in order to proceed with the enrollment flow. Users can always initiate enrollment in the preinstalled Company Portal app.
+
+
 
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
-- [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
+- [Ask a question on the Intune forum](/answers/products/mem)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

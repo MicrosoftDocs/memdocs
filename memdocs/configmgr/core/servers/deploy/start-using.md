@@ -9,8 +9,7 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+description: Links to articles to install Configuration Manager site servers and roles.
 ---
 
 # Deploy servers and roles

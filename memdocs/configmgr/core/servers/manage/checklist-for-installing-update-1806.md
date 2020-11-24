@@ -104,8 +104,8 @@ Configuration Manager can't successfully update a primary site that has a databa
 
 For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
-#### Set SQL Server AlwaysOn availability groups to manual failover   
-If you use an availability group, ensure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [SQL Server AlwaysOn for a site database](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+#### Set SQL Server Always On availability groups to manual failover   
+If you use an availability group, ensure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 #### Disable site maintenance tasks at each site
 Before you install the update, disable any site maintenance task that might run during the time the update process is active. For example, but not limited to:

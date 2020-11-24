@@ -6,12 +6,14 @@ manager: laurawi
 ms.audience: itpro
 keywords: upgrade, in-place, configuration, deploy
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 audience: itpro
 author: greg-lindsay
-ms.topic: article
+ms.author: greglin
+ms.topic: conceptual
 ---
 
 #  Windows Autopilot deployment process
@@ -20,6 +22,9 @@ ms.topic: article
 -   Windows 10
 
 Windows Autopilot deployment processes are summarized in the poster below. The poster is two pages in portrait mode (11x17). Click the image below to view a PDF in your browser.
+
+> [!NOTE]
+> The Windows Autopilot white glove feature has been renamed to Windows Autopilot for pre-provisioned deployment. All references to white glove refer to the [pre-provisioning](pre-provision.md) scenario. The term white glove will be replaced soon in the process diagrams on this page. 
 
 [![Deploy Windows 10 with Autopilot](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 

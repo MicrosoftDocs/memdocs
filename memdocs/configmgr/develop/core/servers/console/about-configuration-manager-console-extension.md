@@ -52,7 +52,7 @@ The Configuration Manager console has an XML-based architecture that can be easi
 
 ## Accessibility
 
-When developing console extensions, they should be based on designs with accessibility considerations.  For example, you can make use of color, layout, intelligent default values, sound, and exposing appropriate keyboard focus.  By using various accessibility techniques, you will make it easier for users with disabilities to use your software.  For more information, see [Resources for designing accessible applications](/visualstudio/ide/reference/resources-for-designing-accessible-applications?view=vs-2019).  
+When developing console extensions, they should be based on designs with accessibility considerations.  For example, you can make use of color, layout, intelligent default values, sound, and exposing appropriate keyboard focus.  By using various accessibility techniques, you will make it easier for users with disabilities to use your software.  For more information, see [Resources for designing accessible applications](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
 
 
 ## See Also  

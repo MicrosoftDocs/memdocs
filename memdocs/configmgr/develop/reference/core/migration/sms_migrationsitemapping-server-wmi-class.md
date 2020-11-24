@@ -1,19 +1,20 @@
 ---
-title: "SMS_MigrationSiteMapping Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_MigrationSiteMapping class
+titleSuffix: Configuration Manager
+description: The technical details of the SMS_MigrationSiteMapping server WMI class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ac9084b4-13fd-4c95-a183-86508a2e1e07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_MigrationSiteMapping Server WMI Class
-The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a mapping between the Configuration Manager source site and the Configuration Manager top site.  
+
+# SMS_MigrationSiteMapping server WMI class
+
+The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a mapping between the Configuration Manager source site and the Configuration Manager top site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -81,7 +82,7 @@ Class SMS_MigrationSiteMapping : SMS_BaseClass
 
  Qualifiers: none  
 
- SQL Account used for migration.  
+ SQL Server account used for migration.  
 
  `ContentDestination`  
  Data type: `String`  

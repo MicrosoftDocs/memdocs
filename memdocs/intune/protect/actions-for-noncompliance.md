@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,11 +43,13 @@ Not all actions are available for all platforms.
 
 ## Available actions for noncompliance
 
-Following are the available actions for noncompliance. Unless stated otherwise, each action is available for all platforms supported by Intune:
+Following are the available actions for noncompliance:
 
 - **Mark device non-compliant**: By default, this action is set for each compliance policy and has a schedule of zero (**0**) days, marking devices as noncompliant immediately.
 
   When you change the default schedule, you provide a grace period in which a user can remediate issues or become compliant without being marked as non-compliant.
+
+  This action is supported on all platforms supported by Intune.
 
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
@@ -55,38 +57,50 @@ When you enable this action:
   - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the subject, message body, and can include the company logo, company name, and additional contact information.
   - Choose to send the message to additional recipients by selecting one or more of your Azure AD Groups.
 
-When the email is sent, Intune includes details about the noncompliant device in the email notification.
+  When the email is sent, Intune includes details about the noncompliant device in the email notification.
+
+  This action is supported on all platforms supported by Intune.
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
   The following platforms support this action:
-  - Android:
-    - Android device administrator
-    - Android Fully Managed, Dedicated, and Corporate-Owned Work Profile
-    - Android Enterprise Work Profile
+  - Android device administrator
+  - Android Enterprise:
+    - Fully Managed
+    - Dedicated
+    - Corporate-Owned Work Profile
+    - Personally-Owned Work Profile
     - Android Enterprise kiosk devices
   - iOS/iPadOS
   - macOS
 
-- **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
+- **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management.
 
   The following platforms support this action:
-  - Android:
-    - Android device administrator
-    - Android Enterprise Device Owner
-    - Android Enterprise Work Profile
+  - Android device administrator
+  - Android Enterprise:
+    - Fully Managed
+    - Dedicated
+    - Corporate-Owned Work Profile
+    - Personally-Owned Work Profile
   - iOS/iPadOS
   - macOS
+
+  When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
+
+  To retire one or more devices from the list, select devices from the list and then select **Retire Selected Devices**. You can also select options to *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
 - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
 
   The following platforms support this action:
-  - Android:
-    - Android device administrator
-    - Android Enterprise Device Owner
-    - Android Enterprise Work Profile
+  - Android device administrator
+  - Android Enterprise:
+    - Fully Managed
+    - Dedicated
+    - Corporate-Owned Work Profile
+    - Personally-Owned Work Profile
   - iOS/iPadOS
 
   The push notification is sent the first time a device checks in with Intune and is found to be non-compliant to the compliance policy. When a user selects the notification, the Company Portal app or Intune app opens and displays information about why they're non-compliant. The user can then take action to resolve the issue. The message details about non-compliance are generated by Intune and can't be customized.
@@ -151,7 +165,9 @@ To send email to your users, create a notification message template. When a devi
 
 Notifications that have been created are available in the *Compliance policies* > *Notifications* page. From the page you can select a notification to view its configuration and:
 
-- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune. 
+- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune.
+
+  To successfully send the preview email, your account must have permissions equal to those of the following Azure AD groups or Intune roles: *Azure AD Global Administrator*, Intune *Administrator* (Intune Azure AD Intune Service Administrator), or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 ## Add actions for noncompliance
@@ -167,7 +183,7 @@ You can add optional actions when you create a compliance policy, or update an e
    Don't have a policy yet? Create an [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md), or other platform policy.
 
    > [!NOTE]
-   > JAMF devices and devices targeted with device groups cannot receive compliance actions at this time.
+   > Devices managed by third-party device compliance partners that are targeted with device groups cannot receive compliance actions at this time.
 
 3. Select **Actions for noncompliance** > **Add**.
 
@@ -183,7 +199,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
    - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
 
-5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. (*Retire the noncompliant device* supports a minimum of 30 days.) After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
+5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
 
    When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in, the device is evaluated as non-compliant immediately. If also using conditional access, then conditional access kicks in immediately. If you want to allow a grace period, then change the **Schedule** on the **Mark device noncompliant** action.
 

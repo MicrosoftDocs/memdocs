@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: You need to update your iOS device | Microsoft Docs
-description:
+title: Update macOS operating system version - Microsoft Intune  | Microsoft Docs
+description: Describes how to updated your macOS device from the iOS App Store. 
 keywords:
 author: lenewsad
 

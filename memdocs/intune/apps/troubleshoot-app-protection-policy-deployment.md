@@ -116,7 +116,7 @@ When you assign the policy to a user group, make sure that the user is in the us
 > [!IMPORTANT]
 > - The Intune app protection policy must be assigned to user groups and not device groups.
 > - If the affected device uses Apple Device Enrollment Program (DEP), make sure that **User Affinity** is enabled. User Affinity is required for any app that requires user authentication under DEP.
-> - If the affected device uses Android Enterprise, only work profiles will support app protection policies.
+> - If the affected device uses Android Enterprise, only work personally-owned profiles will support app protection policies.
 
 
 ### Verify that the managed app is targeted
@@ -139,7 +139,7 @@ When you create an app protection policy, you can target it to all app types or 
 
 - Apps on unmanaged devices
 - Apps on Intune-managed devices
-- Apps in the Android Work Profile
+- Apps in the Android personally-owned work profile
 
 > [!NOTE] 
 > To specify the app types, set **Target to all app types** to **No**, and then select from the **App types** list.
@@ -191,9 +191,9 @@ For more information, see [How to manage data transfer between iOS apps in Micro
 
 ## References
 
-If you're still looking for a solution to a related problem, or for more information about Intune, post a question in our [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of our development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
+If you're still looking for a solution to a related problem, or for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
 
-To open a support request for the Microsoft Intune product support team, see [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+To open a support request for the Microsoft Intune product support team, see [How to get support in Microsoft Endpoint Manager](../../get-support.md).
 
 For more information about Intune app protection policy, see the following articles:
 
@@ -210,4 +210,4 @@ For all the latest news, information, and tech tips, go to our official blogs:
 
 - For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../fundamentals/help-desk-operators.md). 
 - Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+- Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).

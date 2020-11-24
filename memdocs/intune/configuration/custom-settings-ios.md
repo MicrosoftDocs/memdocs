@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,7 +42,7 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Before you begin
 
-[Create the profile](custom-settings-configure.md).
+Create an [iOS/iPadOS custom device configuration profile](custom-settings-configure.md).
 
 ## What you need to know
 

@@ -1,8 +1,8 @@
 ---
-title: SQL Server Always On
+title: Prepare to use an availability group
 titleSuffix: Configuration Manager
-description: Plan to use a SQL Server Always On availability group with Configuration Manager
-ms.date: 07/13/2020
+description: Plan to use a SQL Server Always On availability group for the Configuration Manager site database.
+ms.date: 10/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -12,33 +12,31 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Prepare to use SQL Server Always On availability groups with Configuration Manager
+# Prepare to use a SQL Server Always On availability group with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use this article to prepare Configuration Manager to use SQL Server Always On availability groups. This feature provides a high availability and disaster recovery solution for the site database.  
+Use this article to prepare Configuration Manager to use a SQL Server Always On availability group for the site database. This feature provides a high availability and disaster recovery solution.
 
 Configuration Manager supports using availability groups:
 
 - At primary sites and the central administration site.
 - On-premises, or in Microsoft Azure.
 
-When you use availability groups in Microsoft Azure, you can further increase availability of your site database by using *Azure Availability Sets*. For more information on Azure Availability Sets, see [Manage the availability of virtual machines](/azure/virtual-machines/windows/manage-availability).
+When you use availability groups in Microsoft Azure, you can further increase availability of your site database by using *Azure availability sets*. For more information on Azure availability sets, see [Manage the availability of virtual machines](/azure/virtual-machines/windows/manage-availability).
 
-> [!Important]
-> Before you continue, be comfortable with configuring SQL Server and SQL Server availability groups. The information that follows references the SQL Server documentation library and procedures.
-
+> [!IMPORTANT]
+> Before you continue, be comfortable with configuring SQL Server and availability groups. This article references the SQL Server documentation library with more information and procedures.
 
 ## Supported scenarios
 
 The following scenarios are supported for using availability groups with Configuration Manager. For more information and procedures for each scenario, see [Configure availability groups for Configuration Manager](configure-aoag.md).
 
-- [Create an availability group for use with Configuration Manager](configure-aoag.md#bkmk_create)  
-- [Configure a site to use the availability group](configure-aoag.md#bkmk_configure)  
-- [Add or remove synchronous replica members from an availability group that hosts a site database](configure-aoag.md#bkmk_sync)  
-- [Configure or recover a site from an asynchronous commit replicas](configure-aoag.md#bkmk_async)  
-- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](configure-aoag.md#bkmk_stop)  
-
+- [Create an availability group for use with Configuration Manager](configure-aoag.md#bkmk_create)
+- [Configure a site to use the availability group](configure-aoag.md#bkmk_configure)
+- [Add or remove synchronous replica members from an availability group that hosts a site database](configure-aoag.md#bkmk_sync)
+- [Configure or recover a site from an asynchronous commit replicas](configure-aoag.md#bkmk_async)
+- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](configure-aoag.md#bkmk_stop)
 
 ## Prerequisites
 
@@ -71,20 +69,21 @@ Use an *Enterprise* edition of SQL Server.
 
 Each instance of SQL Server can run under a domain user account (**service account**) or a non-domain account. Each replica in a group can have a different configuration.
 
-- Use an account with the lowest possible permissions. For more information, see [Security considerations for a SQL Server installation](/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
+- Use an account with the lowest possible permissions. For more information, see [Security considerations for a SQL Server installation](/sql/sql-server/install/security-considerations-for-a-sql-server-installation).
 
-- For more information on configuring service accounts and permissions for SQL Server, see [Configure Windows service accounts and permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
+- For more information on configuring service accounts and permissions for SQL Server, see [Configure Windows service accounts and permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
 
-- To use a non-domain account, you must use certificates. For more information, see [Use certificates for a database mirroring endpoint (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
+- To use a non-domain account, you must use certificates. For more information, see [Use certificates for a database mirroring endpoint (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).
 
-- For more information, see [Create a database mirroring endpoint for Always On availability groups](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
-
+- For more general information, see [Create a database mirroring endpoint for availability groups](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).
 
 ### Database
 
 #### Configure the database on a new replica
 
-Configure the database of each replica with the following settings:  
+Only make these configurations on a primary replica. To configure a secondary replica, first fail over the primary to the secondary. This action makes the secondary the new primary replica.
+
+Configure the database of each replica with the following settings:
 
 - Enable **CLR Integration**:
 
@@ -99,9 +98,9 @@ Configure the database of each replica with the following settings:
     GO
     ```
 
-    For more information, see [CLR integration](/sql/relational-databases/clr-integration/clr-integration-enabling).  
+    For more information, see [CLR integration](/sql/relational-databases/clr-integration/clr-integration-enabling).
 
-- Set **Max text repl size** to `2147483647`:  
+- Set **Max text repl size** to `2147483647`:
 
     ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
@@ -117,13 +116,13 @@ Configure the database of each replica with the following settings:
 
     For more information, see the [TRUSTWORTHY database property](/sql/relational-databases/security/trustworthy-database-property).
 
-- Enable the **Service Broker**:  
+- Enable the **Service Broker**:
 
     ``` SQL
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER
     ```
 
-    > [!Note]  
+    > [!NOTE]
     > You can't enable the Service Broker option on a database that's already part of an availability group. You have to enable that option before adding it to the availability group.<!-- SCCMDocs#1432 -->
 
 - Configure the Service Broker priority:
@@ -131,10 +130,7 @@ Configure the database of each replica with the following settings:
     ``` SQL
     ALTER DATABASE [CM_xxx] SET HONOR_BROKER_PRIORITY ON;
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE
-
     ```
-
-Only make these configurations on a primary replica. To configure a secondary replica, first fail over the primary to the secondary. This action makes the secondary the new primary replica.
 
 #### Database verification script
 
@@ -200,43 +196,40 @@ Run the following SQL script to verify database configurations for both primary 
     Branch_Exit:
 ```
 
-
 ### Availability group configurations
 
 #### Replica members
 
-- The availability group must have one primary replica.  
+- The availability group must have one primary replica.
 
 - Use the same number and type of replicas in an availability group that your version of SQL Server supports.
 
-- You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](../../manage/recover-sites.md#site-database-recovery-options).  
+- You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](../../manage/recover-sites.md#site-database-recovery-options).
 
-    > [!Warning]  
+    > [!WARNING]
     > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
 
 Configuration Manager doesn't validate the state of the asynchronous commit replica to confirm it's current. Use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk. This replica can be out of sync by design. For more information, see [Overview of SQL Server Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 Each replica member must have the following configuration:
 
-- Use the *default instance* or a *named instance*  
+- Use the *default instance* or a *named instance*.
 
-- The **Connections in Primary Role** setting is **Allow all connections**  
+- The **Connections in Primary Role** setting is **Allow all connections**.
 
-- The **Readable Secondary** setting is **Yes**  
+- The **Readable Secondary** setting is **Yes**.
 
 - Enabled for **Manual Failover**
 
-    > [!Note]
-    > In version 1902 and earlier, you need to configure all availability groups on the SQL Server for manual failover. This configuration is needed even if it doesn't host the site database.
+    > [!NOTE]
+    > Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
     >
-    > Starting in version 1906, Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
-    >
-    > - You run Configuration Manager setup to specify use of the site database in the availability group.  
-    > - You install any update to Configuration Manager. (Not just updates that apply to the site database).  
+    > - You run Configuration Manager setup to specify use of the site database in the availability group.
+    > - You install any update to Configuration Manager. (Not just updates that apply to the site database).
 
 - All members need the same [seeding mode](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Configuration Manager setup includes a prerequisite check to verify this configuration when creating a database through install or recovery.
 
-    > [!Note]  
+    > [!NOTE]
     > When setup creates the database, and you configure **automatic** seeding, the availability group must have permissions to create the database. This requirement applies to both a new database or recovery. For more information, see [Automatic seeding for secondary replica](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
 
 #### Replica member location
@@ -244,13 +237,13 @@ Each replica member must have the following configuration:
 Either host all replicas in an availability group on-premises, or host them all on Microsoft Azure. A group that includes an on-premises member and a member in Azure isn't supported.
 
 > [!NOTE]
-> If you're using an Azure virtual machine for the SQL server, enable **floating IP**. For more information, see [Configure a load balancer for a SQL Server Always On availability group in Azure virtual machines](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
+> If you're using an Azure virtual machine for the SQL Server, enable **floating IP**. For more information, see [Configure a load balancer for a SQL Server Always On availability group in Azure virtual machines](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Configuration Manager setup needs to connect to each replica. When you set up an availability group in Azure, and the group is behind an internal or external load balancer, open the following default ports:
 
 - RPC Endpoint Mapper: **TCP 135**
 
-- SQL Server Service Broker: **TCP 4022**  
+- SQL Server Service Broker: **TCP 4022**
 
 - SQL over TCP: **TCP 1433**
 
@@ -258,7 +251,7 @@ After setup completes, these ports must stay open for Configuration Manager and 
 
 You can use custom ports for these configurations. Use the same custom ports by the endpoint and on all replicas in the availability group.
 
-For SQL to replicate data between sites, create a load balancing rule for each port in the Azure load balancer. For more information, see [Configure High Availability Ports for an internal load balancer](/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+For SQL Server to replicate data between sites, create a load-balancing rule for each port in the Azure load balancer. For more information, see [Configure High Availability Ports for an internal load balancer](/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### Listener
 
@@ -266,7 +259,7 @@ The availability group must have at least one *availability group listener*. Whe
 
 #### File paths
 
-When you run Configuration Manager setup to configure a site to use the database in an availability group, each secondary replica server must have a SQL Server file path that's identical to the file path for the site database files on the current primary replica. If an identical path doesn't exist, setup fails to add the instance for the availability group as the new location of the site database.  
+When you run Configuration Manager setup to configure a site to use the database in an availability group, each secondary replica server must have a SQL Server file path that's identical to the file path for the site database files on the current primary replica. If an identical path doesn't exist, setup fails to add the instance for the availability group as the new location of the site database.
 
 The local SQL Server service account must have **Full Control** permission to this folder.
 
@@ -274,22 +267,22 @@ The secondary replica servers only require this file path while you're using Con
 
 For example, consider the following scenario:
 
-- You create an availability group that uses three SQL Servers.  
+- You create an availability group that uses three SQL Servers.
 
-- Your primary replica server is a new installation of SQL Server 2014. By default, it stores the database .MDF and .LDF files in `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`.  
+- Your primary replica server is a new installation of SQL Server 2014. By default, it stores the database MDF and LDF files in `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`.
 
-- You upgraded both of your secondary replica servers to SQL Server 2014 from previous versions. With the upgrade, these servers keep the original file path to store database files: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
+- You upgraded both of your secondary replica servers to SQL Server 2014 from previous versions. With the upgrade, these servers keep the original file path to store database files: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.
 
-- Before moving the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.  
+- Before moving the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.
 
-- You then grant the SQL Server service account on each secondary replica full control access to the newly created file location on that server.  
+- You then grant the SQL Server service account on each secondary replica full control access to the newly created file location on that server.
 
-- You can now successfully run Configuration Manager setup to configure the site to use the site database in the availability group.  
+- You can now successfully run Configuration Manager setup to configure the site to use the site database in the availability group.
 
 #### Multi-subnet failover
 
 <!-- SCCMDocs-pr#3734 -->
-Starting in version 1906, you can enable the [MultiSubnetFailover connection string keyword](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following values to the Windows Registry on the site server:
+You can enable the [MultiSubnetFailover connection string keyword](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually add the following values to the Windows Registry on the site server:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -298,11 +291,10 @@ HKLM:\SOFTWARE\Microsoft\SMS\SQL Server
 MSF Enabled : 1 (DWORD)
 ```
 
-> [!Warning]  
-> Use of [site server high availability](site-server-high-availability.md) and SQL Server Always On with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
+> [!WARNING]
+> Use of [site server high availability](site-server-high-availability.md) and SQL Server Always On availability groups with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
 
 If you need to create an availability group with a member in a remote location, prioritize based on the lowest network latency. High network latency can cause replication failures.<!-- SCCMDocs#1381 -->
-
 
 ## Limitations and known issues
 
@@ -310,48 +302,38 @@ The following limitations apply to all scenarios.
 
 ### Unsupported SQL Server options and configurations
 
-- **Basic availability groups**: Introduced with SQL Server 2016 Standard edition, basic availability groups don't support read access to secondary replicas. Configuration requires this access. For more information, see [Basic SQL Server availability groups](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Basic availability groups**: Introduced with SQL Server 2016 Standard edition, basic availability groups don't support read access to secondary replicas. Configuration requires this access. For more information, see [Basic SQL Server availability groups](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups).
 
-- **Failover cluster instance**: Failover cluster instances aren't supported for a replica you use with Configuration Manager. For more information, see [SQL Server Always On failover cluster instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
-
-- **MultiSubnetFailover**: In version 1902 and earlier, it's not supported to use an availability group with Configuration Manager in a multi-subnet configuration. You also can't use the [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.
-
-    To support this configuration, update Configuration Manager to version 1906 or later. For more information, see the [Multi-subnet failover](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
+- **Failover cluster instance**: Failover cluster instances aren't supported for a replica you use with Configuration Manager. For more information, see [SQL Server Always On failover cluster instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).
 
 ### SQL Servers that host additional availability groups
 
 <!--SCCMDocs issue 649-->
 When the SQL Server hosts one or more availability groups in addition to the group you use for Configuration Manager, it needs specific settings at the time you run Configuration Manager setup. These settings are also needed to install an update for Configuration Manager. Each replica in each availability group must have the following configurations:
 
-- Manual Failover  
-- Allow any read-only connection  
+- Manual failover
 
-> [!Note]
-> In version 1902 and earlier, you need to configure all availability groups on the SQL Server for manual failover. This configuration is needed even if it doesn't host the site database.
+- Allow any read-only connection
+
+> [!NOTE]
+> Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
 >
-> Starting in version 1906, Configuration Manager supports using the availability group synchronous replicas when set to **Automatic Failover**. Set **Manual Failover** when:
->
-> - You run Configuration Manager setup to specify use of the site database in the availability group.  
-> - You install any update to Configuration Manager. (Not just updates that apply to the site database).  
+> - You run Configuration Manager setup to specify use of the site database in the availability group.
+> - You install any update to Configuration Manager. (Not just updates that apply to the site database).
 
 ### Unsupported database use
 
 #### Configuration Manager supports only the site database in an availability group
 
-The following databases aren't supported by Configuration Manager in a SQL Server Always On availability group:  
+The following databases aren't supported by Configuration Manager in an availability group:
 
-- Reporting database  
-- WSUS database  
+- Reporting database
+
+- WSUS database
 
 #### Pre-existing database
 
-You can't use a new database created on the replica. When you configure an availability group, restore a copy of an existing Configuration Manager database to the primary replica.  
-
-#### Distributed views
-
-<!-- SCCMDocs-pr#3792 -->
-In version 1902 and earlier, if you host the site database on a SQL Server Always On availability group, you can't enable [distributed views](../../../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) for database replication. To support this configuration, update to version 1906 or later.
-
+You can't use a new database created on the replica. When you configure an availability group, restore a copy of an existing Configuration Manager database to the primary replica.
 
 ### Setup errors in ConfigMgrSetup.log
 
@@ -364,51 +346,48 @@ These errors are safe to ignore.
 ### Site expansion
 
 <!--SCCMDocs issue 568-->
-If you configure the site database for a standalone primary site to use SQL Always On, you can't expand the site to include a central administration site. If you try this process, it fails. To expand the site, temporarily remove the primary site database from the availability group.
+If you configure the site database for a standalone primary site to use an availability group, you can't expand the site to include a central administration site. If you try this process, it fails. To expand the site, temporarily remove the primary site database from the availability group.
 
 You don't need to make any changes to the configuration when adding a secondary site.
-
 
 ## Changes for site backup
 
 ### Backup database files
-  
-When a site database uses an availability group, run the built-in **Backup Site server** maintenance task to back up common Configuration Manager settings and files. Don't use the .MDF or .LDF files created by that backup. Instead, make direct backups of these database files by using SQL Server.
 
-### Transaction log  
+When a site database uses an availability group, run the built-in **Backup Site server** maintenance task to back up common Configuration Manager settings and files. Don't use the MDF or LDF files created by that backup. Instead, make direct backups of these database files by using SQL Server.
+
+### Transaction log
 
 Set the recovery model of the site database to **Full**. This configuration is a requirement for Configuration Manager use in an availability group. Plan to monitor and maintain the size of the site database transaction log. In the full recovery model, the transactions aren't hardened until it makes a full backup of the database or transaction log. For more information, see [Back up and restore of SQL Server databases](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
-
 
 ## Changes for site recovery
 
 If at least one node of the availability group is still functional, use the site recovery option to **Skip database recovery (Use this option if the site database was unaffected)**.
 
-Starting in version 1906, site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+Site recovery can recreate the database in an availability group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
-In version 1902 or earlier, when you lose all nodes of an availability group, before you can recover the site, first recreate the availability group. Configuration Manager can't rebuild or restore the availability node. Recreate the group, restore the backup, and reconfigure SQL. Then use the site recovery option to **Skip database recovery (Use this option if the site database was unaffected)**.
+> [!TIP]
+> When you run the setup/recovery wizard, the **New Availability Group Database** page only applies to manual seeding configurations. With automatic seeding, there's no shared database backup, so that page of the wizard isn't shown.<!-- SCCMDocs #2242 -->
 
 For more information, see [Backup and recovery](../../manage/backup-and-recovery.md).
-
 
 ## Changes for reporting
 
 ### Install the reporting service point
 
-The reporting services point doesn't support using the listener virtual name of the availability group. It also doesn't support hosting its database in a SQL Server Always On availability group.  
+The reporting services point doesn't support using the listener virtual name of the availability group. It also doesn't support hosting its database in an availability group.
 
-- By default, the reporting services point installation sets the **Site database server name** to the virtual name that's specified as the listener. Change this setting to specify a computer name and instance of a replica in the availability group.  
+- By default, the reporting services point installation sets the **Site database server name** to the virtual name that's specified as the listener. Change this setting to specify a computer name and instance of a replica in the availability group.
 
-- To offload reporting and to increase availability when a replica node is offline, consider installing additional reporting services points on each replica node. Then configure each reporting services point to use its own computer name. When you install a reporting service point on each replica of the availability group, reporting can always connect to an active reporting point server.  
+- To offload reporting and to increase availability when a replica node is offline, consider installing additional reporting services points on each replica node. Then configure each reporting services point to use its own computer name. When you install a reporting service point on each replica of the availability group, reporting can always connect to an active reporting point server.
 
 ### Switch the reporting services point used by the console
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node.
 
-1. In the ribbon, select **Report Options**.  
+1. In the ribbon, select **Report Options**.
 
-1. In the Report Options dialog box, select the reporting services point you want to use.  
-
+1. In the Report Options dialog box, select the reporting services point you want to use.
 
 ## Next steps
 

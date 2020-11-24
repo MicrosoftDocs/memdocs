@@ -363,7 +363,7 @@ Use the following details to install a CAS by using an unattended setup script f
 
     - **Required:** Yes  
 
-    - **Values:** <*SQL server name*>  
+    - **Values:** <*SQL Server name*>  
 
     - **Details:** Specifies the name of the server or clustered instance that's running SQL Server to host the site database.  
 
@@ -701,7 +701,7 @@ Use the following details to install a primary site by using an unattended setup
 
     - **Required:** Yes  
 
-    - **Values:** <*SQL server name*>  
+    - **Values:** <*SQL Server name*>  
 
     - **Details:** Specifies the name of the server or clustered instance that runs SQL Server to host the site database.  
 
@@ -1035,7 +1035,7 @@ Use the following details to recover a CAS by using an unattended setup script f
 
     - **Required:** Yes  
 
-    - **Values:** <*SQL server name*>  
+    - **Values:** <*SQL Server name*>  
 
     - **Details:** Specifies the name of the server or clustered instance that is running SQL Server, and which hosts the site database. Specify the same server that hosted the site database before the failure.  
 
@@ -1301,7 +1301,7 @@ Use the following details to recover a primary site by using an unattended setup
 
     - **Required:** Yes  
 
-    - **Values:** <*SQL server name*>  
+    - **Values:** <*SQL Server name*>  
 
     - **Details:** Specifies the name of the server or clustered instance that runs SQL Server to host the site database. Specify the same server that hosted the site database before the failure.  
 

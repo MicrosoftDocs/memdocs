@@ -1,6 +1,7 @@
 ---
 title: Learn about updates
 titleSuffix: Configuration Manager
+description: Learn more about available updates
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager

@@ -2,7 +2,7 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 10/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -161,6 +161,9 @@ The following levels are available:
 - **Certificate authentication**: Require authentication with a valid certificate that's issued by a trusted PKI certificate authority. You don't configure this certificate in Configuration Manager. Configuration Manager requires the administrator to be signed into Windows using PKI.  
 
 - **Windows Hello for Business authentication**: Require authentication with strong two-factor authentication that's tied to a device and uses biometrics or a PIN. For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+
+    > [!IMPORTANT]
+    > When you select this setting, the SMS Provider and [administration service](#bkmk_admin-service) require the user's authentication token to contain a multi-factor authentication (MFA) claim from Windows Hello for Business. In other words, a user of the console, SDK, PowerShell, or administration service has to authenticate to Windows with their Windows Hello for Business PIN or biometric. Otherwise the site rejects the user's action. Note, this behavior is for Windows Hello for Business, not Windows Hello.<!-- SCCMDocs#2088 -->
 
 ### Exclusions
 

@@ -38,13 +38,13 @@ For more information, see [Use the service connection tool](../../servers/manage
 
 Some data consists of strings of random alphanumeric characters. Configuration Manager uses the SHA-256 algorithm to create one-way hashes. This process makes sure that Microsoft doesn't collect potentially sensitive data. The hashed data can still be used for correlation and comparison purposes.
 
-For example, instead of collecting the names of tables in the site database, it captures the one-way hash for each table name. This behavior makes sure that any custom table names aren't visible. Microsoft then does the same one-way hash process of the default SQL table names. Comparing the results of the two queries determines the deviation of your database schema from the product default. This information is then used to improve updates that require changes to the SQL schema.  
+For example, instead of collecting the names of tables in the site database, it captures the one-way hash for each table name. This behavior makes sure that any custom table names aren't visible. Microsoft then does the same one-way hash process of the default SQL Server table names. Comparing the results of the two queries determines the deviation of your database schema from the product default. This information is then used to improve updates that require changes to the SQL Server schema.
 
 When you view the raw data, a common hashed value appears in each row of data. This hash is the hierarchy ID. It's used to correlate data with the same hierarchy without identifying the customer or source.
 
 ### How the one-way hash works
 
-1. Get your hierarchy ID by running the following SQL query in SQL Management Studio against the Configuration Manager database:
+1. Get your hierarchy ID by running the following SQL query in SQL Server Management Studio against the Configuration Manager database:
 
     ``` SQL
     select [dbo].[fnGetHierarchyID]()

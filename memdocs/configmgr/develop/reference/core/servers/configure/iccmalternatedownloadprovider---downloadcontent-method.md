@@ -5,7 +5,7 @@ description: Learn about the ICcmAlternateDownloadProvider::DownloadContent meth
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e3c904db-2838-47e2-ad60-68411e262778
 author: aczechowski
 ms.author: aaroncz

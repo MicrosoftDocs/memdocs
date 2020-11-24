@@ -4,8 +4,7 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-
-
+description: Info and rules for MMS 2019 docathon
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
@@ -62,7 +61,7 @@ You're also welcome and encouraged to make changes to other docs.microsoft.com c
 
 ## Learn the process
 
-Read info on [how to file issues](../understand/use-docs.md#bkmk_docfeedback) and [how to contribute](../understand/use-docs.md#bkmk_contribute). Most basic changes can be done through the GitHub browser experience.  
+Read info on [how to file issues](../../../use-docs.md#about-feedback) and [how to contribute](../../../use-docs.md#contribute). Most basic changes can be done through the GitHub browser experience.  
 
 > [!Note]  
 > If you're interested in the more complex workflow with git and VSCode, see [Install content authoring tools](/contribute/get-started-setup-tools). And/or ask Aaron/Erik for help. The following actions are some of the reasons why to use the more complex workflow:
@@ -129,7 +128,7 @@ The following awards are calculated by the number of legitimate contributions to
 
 ## Resources
 
-- [Microsoft Style](https://aka.ms/MicrosoftStyle)
+- [Microsoft Style](/style-guide/welcome/)
 
     - [Quick start](/contribute/style-quick-start)
 

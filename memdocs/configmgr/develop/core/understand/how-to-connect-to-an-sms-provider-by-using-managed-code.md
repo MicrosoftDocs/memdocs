@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2a435561-01b7-45d5-b7cf-89fc1845025f
 author: aczechowski
 ms.author: aaroncz
@@ -114,7 +114,7 @@ public WqlConnectionManager Connect(string serverName, string userName, string u
  The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## .NET Framework Security  
- [UnauthorizedAccessException](/dotnet/api/system.unauthorizedaccessexception?view=netcore-3.1) is raised when the wrong credentials are passed to **WqlConnectionManager.Connect**.  
+ [UnauthorizedAccessException](/dotnet/api/system.unauthorizedaccessexception) is raised when the wrong credentials are passed to **WqlConnectionManager.Connect**.  
 
 ## See Also  
  [SMS Provider fundamentals](sms-provider-fundamentals.md)

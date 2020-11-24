@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,7 +38,7 @@ After you've configured the profile, assign and deploy it to your students.
 
 ## Before you begin
 
-[Create a device configuration profile](education-settings-configure.md#create-a-device-profile).
+Create a [Windows 10 secure assessment education device configuration profile](education-settings-configure.md#create-a-device-profile).
 
 ## Take a test settings
 

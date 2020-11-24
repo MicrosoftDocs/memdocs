@@ -272,7 +272,7 @@ Specify a variable value for a setting in a task sequence step. In the task sequ
 
 For example, use the variable name as part of the **Command Line** field of the **Run Command Line** step. The following command line writes the computer name to a text file.
 
-`cmd.exe /c %_SMSTSMachineName% > C:\File.txt`
+`cmd.exe /c echo %_SMSTSMachineName% > C:\File.txt`
 
 ### <a name="bkmk_access-condition"></a> Step condition
 

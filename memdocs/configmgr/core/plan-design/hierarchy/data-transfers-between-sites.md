@@ -34,7 +34,7 @@ Configuration Manager database replication uses SQL Server to transfer data. It 
 
 For more information, see [Database replication](database-replication.md).
 
-For help with troubleshooting SQL replication, see [Troubleshoot SQL replication](../../servers/manage/replication/overview.md).
+For help with troubleshooting SQL Server replication, see [Troubleshoot SQL Server replication](../../servers/manage/replication/overview.md).
 
 ## See also
 

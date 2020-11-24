@@ -113,7 +113,7 @@ To change the settings of an existing policy, choose it in the list, and select 
 
 When you create more than one policy, you can configure their relative priority. If you deploy multiple policies to a client, it uses the priority value to determine its settings.
 
-Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
 
 ## Deploy a policy
 
@@ -130,9 +130,9 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 > [!IMPORTANT]
-> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins.
+> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
 
-Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## Monitor
 
@@ -195,6 +195,8 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it will upload the new TPM password hash to the recovery service.
 
+Uploading of the TPM password hash mainly pertains to versions of Windows prior to Windows 10. Windows 10 by default does not save the TPM password hash so therefore does not normally upload the TPM password hash. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+
 ### Re-encryption
 
 Configuration Manager doesn't re-encrypt drives that are already protected with BitLocker Drive Encryption. If you deploy a BitLocker management policy that doesn't match the drive's current protection, it reports as non-compliant. The drive is still protected.
@@ -209,7 +211,8 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
 
-When you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption) .
+> [!NOTE]
+> Switching encryption management authorities while maintaining the desired encryption algorithm doesn't require any additional actions on the client. However, if you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption).
 
 For more information about managing BitLocker with Intune, see the following articles:
 

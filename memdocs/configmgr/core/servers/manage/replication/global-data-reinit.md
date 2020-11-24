@@ -1,13 +1,11 @@
 ---
 title: Global data reinit
 titleSuffix: Configuration Manager
-description: Use this diagram to start troubleshooting SQL replication reinit for global data in a Configuration Manager hierarchy
+description: Use this diagram to start troubleshooting SQL Server replication reinit for global data in a Configuration Manager hierarchy
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: referemce
 ms.assetid: d36622c0-776c-493b-971a-4a586fc394d4
 author: aczechowski
 ms.author: aaroncz
@@ -16,9 +14,9 @@ manager: dougeby
 
 # Troubleshoot global data reinit
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
+In a multi-site hierarchy, Configuration Manager uses SQL Server replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
-Use the following diagram to start troubleshooting SQL replication reinitialization (reinit) for global data in a Configuration Manager hierarchy:
+Use the following diagram to start troubleshooting SQL Server replication reinitialization (reinit) for global data in a Configuration Manager hierarchy:
 
 ![Diagram to troubleshoot global data reinit](media/global-data-reinit.svg)
 

@@ -32,7 +32,7 @@ For more information about collected information and how it's used, see [Usage d
 Configuration Manager collects diagnostics and usage data about itself, which Microsoft uses to improve the installation experience, quality, and security of future releases.
 Diagnostics and usage data is enabled for each Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.
 
-Configuration Manager collects data only from the site's SQL server database, and it doesn't collect data directly from clients or site servers.
+Configuration Manager collects data only from the site's SQL Server database, and it doesn't collect data directly from clients or site servers.
 
 Administrators can change the level of data that's collected by going to the **Usage Data** section of the Configuration Manager console.
 

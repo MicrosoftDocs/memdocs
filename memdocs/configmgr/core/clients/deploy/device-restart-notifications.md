@@ -46,7 +46,7 @@ Software Center shows a notification with a snooze option and the time remaining
 
 Software Center shows this final countdown notification that the user can't close or snooze.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center final countdown notification":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center final restart countdown":::
 
 Starting in version 1906, the user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
 
@@ -174,6 +174,9 @@ Once the deployment reaches its deadline, Software Center follows the behavior t
 
 The following examples describe how to configure the client settings to achieve specific behaviors.
 
+> [!NOTE]
+> If the user puts the device to sleep, it doesn't pause or interrupt a countdown. For example, a restart countdown is halfway into a four-hour timer, and the user puts the device to sleep. 12 hours later the user wakes up the device. The device restarts, as it's past the deadline.<!-- SCCMDocs#2295 -->
+
 ### Reminders are off
 
 | Setting | Value |
@@ -232,11 +235,11 @@ If the user didn't restart their device after the installation, then they'll get
 
 - Temporary notification when you use Software Center dialog window, not toast:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Pending restart Software Center notification with snooze button":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Pending restart Software Center notification with snooze button in version 1902":::
 
 If the user doesn't restart after the temporary notification, they'll be given the final countdown notification that they can't close. The timing of when the final notification appears is based on the client setting: **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**. For instance, if the setting is 60, then an hour before a reboot is forced, the final notification appears to the user:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Software Center final countdown notification":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Software Center final countdown notification in version 1902":::
 
 The following settings must be shorter in duration than the shortest [maintenance window](../manage/collections/use-maintenance-windows.md) applied to the computer:
 

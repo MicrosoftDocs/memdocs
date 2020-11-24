@@ -51,7 +51,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 #### <a name="bkmk_note1"></a> Note 1: Collocated SQL
 
-When you install the site server and SQL Server on the same computer, the deployment supports the maximum [sizing and scale numbers](size-and-scale-numbers.md) for sites and clients. This configuration can limit [high availability options](../../servers/deploy/configure/high-availability-options.md), like using a SQL Server cluster. If you have a larger environment, because of the higher I/O requirements to support both roles on the same computer, consider using a remote SQL Server.
+When you install the site server and SQL Server on the same computer, the deployment supports the maximum [sizing and scale numbers](size-and-scale-numbers.md) for sites and clients. This configuration can limit [high availability options](../../servers/deploy/configure/high-availability-options.md), like using a SQL Server Always On failover cluster instance. If you have a larger environment, because of the higher I/O requirements to support both roles on the same computer, consider using a remote SQL Server.
 
 ### <a name="bkmk_RemoteSiteSystem"></a> Remote site system servers
 

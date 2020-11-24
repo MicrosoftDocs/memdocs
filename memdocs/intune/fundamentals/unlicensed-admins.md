@@ -31,6 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Unlicensed admins
 
+> [!Important]
+> This option only removes the license requirement for admins to access Microsoft Endpoint Manager. Use of other features or services like Azure Active Directory Premium may still require a license for the admin.
+
 You can grant Intune/Microsoft Endpoint Manager admin center access to admins without Intune licenses.
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** > **Administrator licensing**.

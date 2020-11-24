@@ -32,8 +32,8 @@ conceptualContent:
         - text: Microsoft Endpoint Manager tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
-        - text: Plan for the cloud management gateway
-          url: ./core/clients/manage/cmg/plan-cloud-management-gateway.md
+        - text: Overview of cloud management gateway (CMG)
+          url: ./core/clients/manage/cmg/overview.md
           itemType: overview
         - text: Plan for Azure AD
           url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
@@ -194,7 +194,7 @@ additionalContent:
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
         summary: Ask technical questions in the product forums
-        url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+        url: /answers/products/mem
       - title: UserVoice product feedback
         summary: Share product ideas with the engineering team
         url: https://configurationmanager.uservoice.com/forums/300492-ideas
@@ -208,7 +208,7 @@ additionalContent:
      items:
         - title: Develop
           links:
-            - url: /powershell/sccm/overview?view=sccm-ps
+            - url: /powershell/sccm/overview
               text: PowerShell
             - url: ./develop/index.yml
               text: Software development kit (SDK)
@@ -232,4 +232,4 @@ additionalContent:
               text: ConfigMgr on Reddit
             - url: https://www.facebook.com/groups/ConfigMgr2012
               text: ConfigMgr Professionals Group on Facebook
-   footer: "Found a problem on our site? [Let us know](./core/understand/use-docs.md#bkmk_docfeedback)!"
+   footer: "Found a problem on our site? [Let us know](../use-docs.md#about-feedback)!"

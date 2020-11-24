@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 09/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -37,7 +37,7 @@ If you do not already have a tenant with your company, you can create a demo ten
 1. Navigate to the [Microsoft CDX tenant creation site](https://cdx.transform.microsoft.com/my-tenants/create-tenant) and create a Microsoft 365 Enterprise tenant.
 2. [Set up Intune](../fundamentals/setup-steps.md) to enable mobile device management (MDM).
 3. [Create users](../fundamentals/users-add.md).
-4. [Create groups]../fundamentals/(groups-add.md).
+4. [Create groups](../fundamentals/groups-add.md).
 5. [Assign licenses](../fundamentals/licenses-assign.md) as appropriate for your testing.
 
 
@@ -76,7 +76,6 @@ Use of intents and content providers are affected by these policies.
     - Sharing content between your app and managed apps is allowed.
     - Sharing from your app to non-managed apps (for example, Chrome) is blocked.
 
-
 #### Restrict receiving data from other apps
 
 1. Set **Send org data to other apps** to **All apps**.
@@ -101,7 +100,7 @@ You can restrict the system clipboard to managed applications, as follows:
     - Copying text from your app into an unmanaged app (for example, Messages) is blocked.
 
 ### Prevent save
-If your app requires integrated Save As controls, you can control **Save As** functionality, as follows:
+If your app requires [integrated Save As controls](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations), you can control **Save As** functionality, as follows:
 
 1. Set **Prevent 'Save As'** to **Yes**.
 2. Confirm the following conditions:

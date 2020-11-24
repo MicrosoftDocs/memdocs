@@ -91,7 +91,7 @@ The **Maintenance Windows** tab of the collection properties displays all config
 
 PowerShell can be used to configure maintenance windows. For more information, see the following articles:
 
-- [Get-CMMaintenanceWindow](/powershell/module/configurationmanager/get-cmmaintenancewindow?view=sccm-ps)
-- [New-CMMaintenanceWindow](/powershell/module/configurationmanager/new-cmmaintenancewindow?view=sccm-ps)
-- [Remove-CMMaintenanceWindow](/powershell/module/configurationmanager/remove-cmmaintenancewindow?view=sccm-ps)
-- [Set-CMMaintenanceWindow](/powershell/module/configurationmanager/set-cmmaintenancewindow?view=sccm-ps)
+- [Get-CMMaintenanceWindow](/powershell/module/configurationmanager/get-cmmaintenancewindow)
+- [New-CMMaintenanceWindow](/powershell/module/configurationmanager/new-cmmaintenancewindow)
+- [Remove-CMMaintenanceWindow](/powershell/module/configurationmanager/remove-cmmaintenancewindow)
+- [Set-CMMaintenanceWindow](/powershell/module/configurationmanager/set-cmmaintenancewindow)

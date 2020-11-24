@@ -575,6 +575,12 @@ If there are multiple device drivers in the driver catalog that are compatible w
 
 A comma-delimited list of the driver catalog category unique IDs. The **Auto Apply Driver** step only considers the drivers in at least one of the specified categories. This value is optional, and it's not set by default. Obtain the available category IDs by enumerating the list of **SMS_CategoryInstance** objects on the site.
 
+### <a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+
+Specify the PIN for BitLocker encryption. This variable is only valid if the BitLocker mode is **TPM and PIN**.
+
 ### <a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
 *Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
@@ -932,7 +938,7 @@ Specify additional command-line options for the user state migration tool (USMT)
 
 The USMT options specified with this task sequence variable aren't validated for accuracy prior to running the task sequence.
 
-For more information on available options, see [ScanState Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-scanstate-syntax).
+For more information on available options, see [ScanState Syntax](/windows/deployment/usmt/usmt-scanstate-syntax).
 
 ### <a name="OSDMigrateAdditionalRestoreOptions"></a> OSDMigrateAdditionalRestoreOptions
 
@@ -944,7 +950,7 @@ Specifies additional command-line options for the user state migration tool (USM
 
 The USMT options specified with this task sequence variable aren't validated for accuracy prior to running the task sequence.
 
-For more information on available options, see [LoadState Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+For more information on available options, see [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).
 
 ### <a name="OSDMigrateComputerName"></a> OSDMigrateComputerName
 
@@ -1241,7 +1247,7 @@ Specifies the Windows Server license mode that's used.
 
 Specifies the additional command-line options that are added to Windows Setup during a Windows 10 upgrade. The task sequence doesn't verify the command-line options.
 
-For more information, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ### <a name="OSDStateFallbackToNAA"></a> OSDStateFallbackToNAA
 
@@ -1327,7 +1333,7 @@ Set to the time zone of the computer. The value is set only if the [OSDMigrateTi
 
 Specifies the default input locale setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - InputLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - InputLocale](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale).
 
 ### <a name="OSDWindowsSettingsSystemLocale"></a> OSDWindowsSettingsSystemLocale
 
@@ -1335,7 +1341,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the default system locale setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - SystemLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - SystemLocale](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale).
 
 ### <a name="OSDWindowsSettingsUILanguage"></a> OSDWindowsSettingsUILanguage
 
@@ -1343,7 +1349,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the default user interface language setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguage](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguage](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage).
 
 ### <a name="OSDWindowsSettingsUILanguageFallback"></a> OSDWindowsSettingsUILanguageFallback
 
@@ -1351,7 +1357,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the fallback user interface language setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguageFallback](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UILanguageFallback](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback).
 
 ### <a name="OSDWindowsSettingsUserLocale"></a> OSDWindowsSettingsUserLocale
 
@@ -1359,7 +1365,7 @@ For more information on the Windows setup answer file value, see [Microsoft-Wind
 
 Specifies the default user locale setting that's used in the new OS.
 
-For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UserLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale).
+For more information on the Windows setup answer file value, see [Microsoft-Windows-International-Core - UserLocale](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale).
 
 ### <a name="OSDWipeDestinationPartition"></a> OSDWipeDestinationPartition
 
@@ -1640,7 +1646,9 @@ Use this variable to temporarily persist content in the task sequence cache. Thi
 
 ### <a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifies a command that's run after the task sequence completes. For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
+Specifies a command that's run after the task sequence completes. Just before exiting the task sequence, the TSManager process spawns the specified post action. It doesn't wait or record any status, just exits after calling that command.<!-- MEMDocs #719 -->
+
+For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
 
 ### <a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 
@@ -1774,6 +1782,17 @@ Specifies the primary users of the destination computer by using the following f
 #### Example
 
 `contoso\jqpublic, contoso\megb, contoso\janedoh`
+
+### SMSTSWaitCcmexecOperationalTimeout
+
+(input)
+
+Starting in version 1910, use this variable to control the timeout period for the task sequence to wait for the SMS Agent Host service (ccmexec) to completely start. Specify this value in seconds. The default timeout period is 30 minutes, or 1800 seconds.
+
+#### Examples of SMSTSWaitCcmexecOperationalTimeout
+
+- `1800` (default): 30 minutes
+- `300`: The task sequence waits five minutes for ccmexec to start
 
 ### <a name="SMSTSWaitForSecondReboot"></a> SMSTSWaitForSecondReboot
 

@@ -5,7 +5,7 @@ description: Use the SMSResGen COM class to automate the creation of a data disc
 ms.date: 04/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 98b96b3e-3689-4cec-8617-597c2c850f19
 author: aczechowski
 ms.author: aaroncz

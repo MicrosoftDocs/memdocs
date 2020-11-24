@@ -55,9 +55,9 @@ When you use a PKI, you can also use IPsec to help secure the server-to-server c
 When PKI certificates aren't available, Configuration Manager automatically generates self-signed certificates. Some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you don't have to take additional action. One example is the site server signing certificate. This certificate is always self-signed. It makes sure that the policies that clients download from the management point were sent from the site server and weren't tampered with.  
 
 
-### <a name="bkmk_plan-cng"></a> Cryptography: Next Generation (CNG) certificates  
+### <a name="bkmk_plan-cng"></a> Cryptography: Next Generation (CNG) v3 certificates  
 
-Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates. For more information, see [CNG certificates overview](../network/cng-certificates-overview.md).
+Configuration Manager supports Cryptography: Next Generation (CNG) v3 certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates. For more information, see [CNG v3 certificates overview](../network/cng-certificates-overview.md).
 
 
 ### <a name="bkmk_plan-ehttp"></a> Enhanced HTTP  
@@ -68,7 +68,8 @@ Using HTTPS communication is recommended for all Configuration Manager communica
 ### <a name="bkmk_plan-cmgcdp"></a> Certificates for CMG and CDP
 
 Managing clients on the internet via the cloud management gateway (CMG) and cloud distribution point (CDP) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios. For more information, see the following articles:
-- [Certificates for the cloud management gateway](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
+
+- [CMG set up checklist](../../clients/manage/cmg/set-up-checklist.md)
 - [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
@@ -106,7 +107,7 @@ When you use PKI certificates with Configuration Manager, plan for use of a cert
 
 IIS always checks the CRL for client certificates, and you can't change this configuration in Configuration Manager. By default, Configuration Manager clients always check the CRL for site systems. Disable this setting by specifying a site property and by specifying a CCMSetup property.  
 
-Computers that use certificate revocation checking but can't locate the CRL behave as if all certificates in the certification chain are revoked. This behavior is due to the fact that they can't verify if the certificates are in the certificate revocation list. In this scenario, all connections fail that require certificates and include CRL checking. When validating that your CRL is accessible by browsing to its http location, it is important to note that the Configuration Manager client runs as LOCAL SYSTEM. Therefore, testing CRL accessibility with a web browser running under user context may succeed, however the computer account may be blocked when attempting to make an http connection to the same CRL URL due to the internal web filtering solution. Whitelisting the CRL URL on any web filtering solutions may be necessary in this situation.
+Computers that use certificate revocation checking but can't locate the CRL behave as if all certificates in the certification chain are revoked. This behavior is due to the fact that they can't verify if the certificates are in the certificate revocation list. In this scenario, all connections fail that require certificates and include CRL checking. When validating that your CRL is accessible by browsing to its http location, it is important to note that the Configuration Manager client runs as LOCAL SYSTEM. Therefore, testing CRL accessibility with a web browser running under user context may succeed, however the computer account may be blocked when attempting to make an http connection to the same CRL URL due to the internal web filtering solution. Adding the CRL URL to the approved list on any web filtering solutions may be necessary in this situation.
 
 Checking the CRL every time that a certificate is used offers more security against using a certificate that's revoked. Although it introduces a connection delay and additional processing on the client. Your organization may require this additional security check for clients on the internet or an untrusted network.  
 
@@ -382,7 +383,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Client**  
 
-- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/overview.md)  
 
 - [Manage cloud domain-joined devices](../../clients/deploy/deploy-clients-cmg-azure.md)  
 

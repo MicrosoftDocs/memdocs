@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to turn off Microsoft data collection for iOS devices | Microsoft Docs
-description:
+title: Turn off Microsoft data collection for iOS - Microsoft Intune | Microsoft Docs
+description: Learn how to turn off Microsoft data collection in Intune Company Portal for iOS.
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2017
+ms.date: 09/23/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,10 +31,19 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How to turn off Microsoft data collection for iOS devices
+# Turn off Microsoft data collection on iOS device  
 
-Microsoft automatically collects certain data about our products and services. We do this to improve the reliability and performance of our products, including the Company Portal app. Even though this data is anonymized, some users may not feel comfortable with this collection. Your company support does not have control over the collection of this data, and they cannot change your selection for the setting.
+This article describes how to prevent Microsoft from collecting data about your Intune Company Portal usage. To turn off data collection in Company Portal:  
 
-If you wish to turn off the collection of usage data on your iOS device, open **Settings**, tap **Company Portal**, and then turn off **Usage Data**. For macOS devices, open the **Company Portal** menu > **Preferences**, then uncheck **Allow Microsoft to collect usage data**.
+1. Open the **Settings** app.  
+2. Tap **Company Portal**.  
+3. Switch the **Usage Data** toggle off.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Allowing Microsoft data collection   
+
+When the checkbox for this setting is selected, your in-app performance and usage data is automatically anonymized and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and cannot change your preferences.  
+
+## Next steps  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+

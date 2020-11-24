@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c02c7824-d46e-4a7a-b96d-8d1aa695fbbc
 author: aczechowski
 ms.author: aaroncz

@@ -14,10 +14,10 @@ In this version of the technical preview branch, you can't create a new collecti
 
 To work around this issue, use Configuration Manager PowerShell cmdlets to create new collections and edit existing user collections. Some of the available cmdlets for managing collections include:
 
-- [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection?view=sccm-ps)
+- [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
 
-- [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection?view=sccm-ps)
+- [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection)
 
-- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection?view=sccm-ps#related-links)
+- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection#related-links)
 
-- [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule?view=sccm-ps)
+- [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)

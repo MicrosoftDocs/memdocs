@@ -51,7 +51,7 @@ Peer cache doesn't replace the use of other solutions like Windows BranchCache o
 
 To enable peer cache, deploy the [client settings](#bkmk_settings) to a collection. Then members of that collection act as a peer cache source for other clients in the same boundary group.  
 
-- A client that operates as a peer content source submits a list of available cached content to its management point using state messages.
+- A client that operates as a peer content source submits a list of available cached content to its management point using state messages. A peer content source client also sends a state message to the management point when it removes content from its local cache.
 
    > [!NOTE]
    > See [State messages in Configuration Manager](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map) for the list of applicable peer content source state messages specifcally those with with state message IDs of 7200, 7201, 7202, and 7203.

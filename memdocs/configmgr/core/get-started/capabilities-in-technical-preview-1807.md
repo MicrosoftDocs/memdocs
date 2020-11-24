@@ -180,7 +180,7 @@ If you don't configure these prerequisites, the site sends email notification fo
 
     - Restart the SMS_EXEC service after enabling the REST endpoint
 
-- [Cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md)  
+- [Cloud management gateway](../clients/manage/cmg/overview.md)  
 
 - Onboard the site to [Azure services](../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 

@@ -38,7 +38,7 @@ To access the most current product documentation, start at the [library index](/
 
 <a name="BKMK_SearchTips"></a>  
 
-For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](use-docs.md).  
+For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](../../../use-docs.md).  
 
 
 
@@ -168,14 +168,12 @@ Continue to use the [UserVoice page](https://configurationmanager.uservoice.com/
 
 The Configuration Manager engineering and partner teams use the [Enterprise Mobility + Security blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) to provide you with technical information and other news about Configuration Manager and related technologies. Our blog posts supplement the product documentation and support information.  
 
+## <a name="BKMK_SupportOptions"></a> Support options and community resources
 
-##  <a name="BKMK_SupportOptions"></a> Support options and community resources  
+The following links provide information about support options and community resources:
 
-The following links provide information about support options and community resources:  
+- [Microsoft support](https://aka.ms/cmcbsupport)
 
--   [Microsoft support](https://aka.ms/cmcbsupport)  
+- [Configuration Manager on Microsoft Q&A](/answers/products/mem)
 
--   [Configuration Manager Community: Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
-
--   [Configuration Manager forums page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
-    <!-- NOTE: the above URL requires "en-US" for the category to work -->
+- [Configuration Manager Community: Configuration Manager (Current Branch) Survival Guide](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx)

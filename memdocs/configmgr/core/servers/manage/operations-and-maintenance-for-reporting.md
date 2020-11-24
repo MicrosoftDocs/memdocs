@@ -2,7 +2,7 @@
 title: Operations and maintenance for reporting
 titleSuffix: Configuration Manager
 description: Learn the details of managing reports and report subscriptions in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 11/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -19,13 +19,13 @@ ms.author: aaroncz
 After the infrastructure is in place for reporting in Configuration Manager, there are a number of operations that you typically do to manage reports and report subscriptions.
 
 > [!NOTE]
-> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).
+> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).  
 
 ## Run a report from Reporting Services
 
 Configuration Manager stores its reports in SQL Server Reporting Services. The report retrieves data from the Configuration Manager site database. You can access reports in the Configuration Manager console or by using Report Manager via a web browser. Open reports from a web browser on any computer that can access the reporting services point, and the user has sufficient rights to view the reports. To run reports, you need **Read** rights for the **Site** permission and the **Run Report** permission for specific objects.
 
-When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#-languages-for-reports).
+When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#bkmk_languages). 
 
 > [!NOTE]  
 > Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)

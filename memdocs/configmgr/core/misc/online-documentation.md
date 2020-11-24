@@ -9,8 +9,7 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+description: Additional links for Configuration Manager help documentation
 ---
 
 # Online documentation for Configuration Manager

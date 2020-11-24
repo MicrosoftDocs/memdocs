@@ -125,8 +125,8 @@ When you add this deployment type to an app, configure its properties on the **T
 
 Starting in version 2006, use the following Windows PowerShell cmdlets to add and configure a task sequence deployment type:
 
-- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
-- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype)
 
 ### Prerequisites for a task sequence deployment type
 

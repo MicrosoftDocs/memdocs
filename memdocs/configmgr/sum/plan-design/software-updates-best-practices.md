@@ -5,7 +5,7 @@ description: Use these best practices for software updates in Configuration Mana
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -49,7 +49,8 @@ When the Configuration Manager and WSUS databases share the same instance of SQL
 
 When you install WSUS, select the setting to **Store updates locally**. This setting causes WSUS to download the license terms that are associated with software updates. It downloads the terms during the synchronization process and stores them on the local hard drive for the WSUS server. If you don't select this setting, client computers might fail compliance scans for software updates that have license terms. The **WSUS Synchronization Manager** component of the software update point verifies that this setting is enabled every 60 minutes, by default.  
 
-
+### <a name="bkmk_ssl"></a> Configure your software update points to use TLS/SSL
+Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. For more information, see the [Configure a software update point to use TLS/SSL with a PKI certificate tutorial](../get-started/software-update-point-ssl.md).
 
 ## <a name="bkmk_operation"></a> Operational Best Practices  
 

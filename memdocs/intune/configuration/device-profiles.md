@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 11/18/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,9 +44,11 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates
+## Administrative templates and Group policy
 
 [Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
+
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
 
 This feature supports:
 
@@ -220,6 +222,14 @@ This feature supports:
 
 - Windows 10 and later
 
+## Network boundary
+
+[Network boundary](network-boundary-windows.md) creates a list of sites that are trusted by your organization. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
+
+This feature supports:
+
+- Windows 10 and later
+
 ## OEMConfig
 
 On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard that allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
@@ -292,6 +302,14 @@ This feature supports:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (import only)
+- Windows 10 and later
+
+## Windows health monitoring
+
+[Windows health monitoring](windows-health-monitoring.md) lets your data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+
+This feature supports:
+
 - Windows 10 and later
 
 ## Wired networks

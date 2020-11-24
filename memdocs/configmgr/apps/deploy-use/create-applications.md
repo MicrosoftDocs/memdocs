@@ -234,7 +234,10 @@ On the **Content** page, specify the following information:
     > [!IMPORTANT]  
     > The System account of the site server computer must have permissions to the specified content location.  
 
-  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.  
+  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.
+
+    > [!TIP]
+    > This option persists the specific version of content that the client installs. If you update the content for this app, the client doesn't automatically cache this content again. Once an action happens that requires the new content, the client downloads the new content version.<!-- MEMDocs#684 -->
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
@@ -683,7 +686,7 @@ Use the following procedure to import an application into Configuration Manager:
 The new application appears in the **Applications** node.  
 
 > [!TIP]  
-> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication).  
 
 For more information about how to export an application, see [Management tasks for applications](management-tasks-applications.md).
 
@@ -701,7 +704,7 @@ Configuration Manager supports the following deployment types for applications:
 | **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
 | **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  
 | **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
-| **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
+| **macOS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
 | **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
 | **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |

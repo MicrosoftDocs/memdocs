@@ -5,7 +5,7 @@ description: Use the steps in this article to set up the administration service 
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 829eb4a4-8791-4746-a777-1fb0382b6d7c
 author: aczechowski
 ms.author: aaroncz
@@ -118,7 +118,7 @@ For example:
 
 You can use the administration service on-premises only, or you can enable it for access through the cloud management gateway (CMG). Some scenarios require access to the administration service from the internet, such as tenant attach or app approvals via email.
 
-Before you can configure the SMS Provider to allow CMG traffic, first set up a CMG. For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+Before you can configure the SMS Provider to allow CMG traffic, first set up a CMG. For more information, see [Overview of CMG](../../core/clients/manage/cmg/overview.md).
 
 Then use the following process to enable the administration service through the CMG:
 

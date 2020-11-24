@@ -3,7 +3,7 @@ title: "Create a Configuration Manager Action"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: affca54f-bebb-44f8-9c94-58598670770e
 author: aczechowski
 ms.author: aaroncz

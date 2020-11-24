@@ -1,7 +1,7 @@
 ---
 title: Service a server group
 titleSuffix: "Configuration Manager"
-description: "The Configuration Manager console provides alerts and statuses to monitor updates and compliance."
+description: Server groups have been replaced by orchestration groups
 author: mestew
 ms.author: mstewart
 manager: dougeby

@@ -25,8 +25,6 @@ In addition to creating configuration baselines and configuration items in the C
 
 - Configuration data that was externally authored and that conforms to the SML schema.  
 
-  For an example Configuration Pack that helps you manage compliance for System Center 2012 Configuration Manager site server roles, see [System Center 2012 Configuration Manager Configuration Pack](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
-
 When you import a configuration baseline, some or all of the configuration items that are referenced in the configuration baseline might also be included in the cabinet file. During the import process, Configuration Manager verifies that all of the configuration items that are referenced in the configuration baseline are either also included in the cabinet file or already exist in the Configuration Manager site. The import process fails if you attempt to import a configuration baseline that references configuration data that Configuration Manager cannot locate.  
 
 Other scenarios where the import process might fail include the following:  

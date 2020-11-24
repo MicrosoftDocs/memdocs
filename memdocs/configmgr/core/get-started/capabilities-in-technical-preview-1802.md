@@ -71,7 +71,7 @@ For more information, see the **Group** delivery mode option in [Delivery Optimi
 ## Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
 
-The Windows 10 [in-place upgrade task sequence](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
+The Windows 10 [in-place upgrade task sequence](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../clients/manage/cmg/overview.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
 
 Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices cannot run the task sequence.
 
@@ -223,7 +223,7 @@ The list of [unsupported scenarios](../plan-design/network/cng-certificates-over
 
 ## Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud management gateway](../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
@@ -286,7 +286,7 @@ If you deploy applications as available to users, they can now browse and instal
    - Windows 10
    - Azure AD-joined, also known as cloud domain-joined
 - To support internet-based clients:
-    - [Cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) 
+    - [Cloud management gateway](../clients/manage/cmg/overview.md) 
     - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../clients/deploy/about-client-settings.md#client-policy) group
 - To support clients on the corporate network:
     - Add the cloud distribution point to a boundary group used by the clients

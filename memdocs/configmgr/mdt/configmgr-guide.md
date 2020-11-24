@@ -67,7 +67,7 @@ manager: dougeby
 
 -   Windows Server 2008 R2, see [Installing Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379511(v=ws.10))  
 
--   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-ver15)  
+-   SQL Server 2008 R2, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)  
 
 > [!NOTE]   
 >  This guide assumes that MDT is being evaluated on 64-bit (x64) physical or virtual computers. If evaluating MDT on 32-bit (x86) platforms, download and install the x86 editions of MDT and the components that this guide describes.  
@@ -1092,7 +1092,7 @@ manager: dougeby
 
     The Windows PowerShell Modules command prompt opens.  
 
-2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](/powershell/module/microsoft.powershell.management/new-psdrive?view=powershell-7) cmdlet as shown in the following example:  
+2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](/powershell/module/microsoft.powershell.management/new-psdrive) cmdlet as shown in the following example:  
 
    ```  
    New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  
@@ -1520,7 +1520,7 @@ manager: dougeby
 
 1. On WDG-MDT-01, click **Start**, point to **Administrative Tools**, and then click **Windows PowerShell Modules**.The Windows PowerShell Modules command prompt opens.  
 
-2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](/powershell/module/microsoft.powershell.management/new-psdrive?view=powershell-7) cmdlet as shown in the following example:  
+2. Create a PowerShell drive that uses the MDT PowerShell provider by running the [New-PSDrive](/powershell/module/microsoft.powershell.management/new-psdrive) cmdlet as shown in the following example:  
 
    ```  
    New-PSDrive -Name DS001 -PSProvider mdtprovider -Root d:\DeploymentShare$  

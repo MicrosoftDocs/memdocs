@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 59e73a1c-ff5a-485c-bff7-41aab12e5623
 author: aczechowski
 ms.author: aaroncz
@@ -556,4 +556,4 @@ Class SMS_Package : SMS_PackageBaseclass
  [SMS_PackageBaseclass Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md)   
  [GetPDFData Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md)   
  [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
- [PowerShell Cmdlet: New-CMPackage](/powershell/module/configurationmanager/new-cmpackage?view=sccm-ps)
+ [PowerShell Cmdlet: New-CMPackage](/powershell/module/configurationmanager/new-cmpackage)

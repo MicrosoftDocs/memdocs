@@ -31,6 +31,8 @@ landingContent:
         url:  software-requirements.md
       - text: What's new
         url:  windows-autopilot-whats-new.md
+      - text: Windows Autopilot for HoloLens 2
+        url:  https://docs.microsoft.com/hololens/hololens2-autopilot
 
   # Card (optional)
   - title: Deployment scenarios
@@ -49,8 +51,8 @@ landingContent:
         url: self-deploying.md
       - text: Windows Autopilot Reset
         url: windows-autopilot-reset.md
-      - text: White glove
-        url: white-glove.md
+      - text: Pre-provisioning
+        url: pre-provision.md
       - text: Support for existing devices
         url: existing-devices.md
 
@@ -119,5 +121,3 @@ landingContent:
         url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
       - text: Windows Autopilot and Surface devices
         url: /surface/windows-autopilot-and-surface-devices
-      - text: Out of Office Hours blog
-        url: https://oofhours.com/

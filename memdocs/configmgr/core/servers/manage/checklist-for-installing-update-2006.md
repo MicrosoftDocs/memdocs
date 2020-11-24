@@ -80,7 +80,7 @@ To opt-in to the early update ring:
 1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
 1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
@@ -176,9 +176,9 @@ Configuration Manager can't successfully update a primary site that has a databa
 
 For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
-### Set SQL Server AlwaysOn availability groups to manual failover
+### Set SQL Server Always On availability groups to manual failover
 
-If you use an availability group, make sure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [SQL Server AlwaysOn for a site database](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+If you use an availability group, make sure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Disable site maintenance tasks at each site
 
@@ -282,9 +282,9 @@ Update all remote Configuration Manager consoles to the same version. You're pro
 
 After you update a primary site, reconfigure the database replica for management points that you uninstalled before you updated the site. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).  
 
-### Reconfigure SQL Server AlwaysOn availability groups
+### Reconfigure availability groups
 
-If you use an availability group, reset the failover configuration to automatic. For more information, see [SQL Server AlwaysOn for a site database](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).<!-- SCCMDocs #1366 -->
+If you use an availability group, reset the failover configuration to automatic. For more information, see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).<!-- SCCMDocs #1366 -->
 
 ### Reconfigure any disabled maintenance tasks
 

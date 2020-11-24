@@ -12,8 +12,6 @@
   items:
   - name: Scenarios and capabilities
     href: windows-autopilot-scenarios.md
-  - name: Windows Autopilot update
-    href: autopilot-update.md
   - name: Deployment scenarios
     items:
     - name: User-driven mode
@@ -22,8 +20,8 @@
       href: self-deploying.md
     - name: Windows Autopilot Reset
       href: windows-autopilot-reset.md
-    - name: White glove
-      href: white-glove.md
+    - name: Pre-provisioning
+      href: pre-provision.md
     - name: Support for existing devices
       href: existing-devices.md
     - name: Requirements

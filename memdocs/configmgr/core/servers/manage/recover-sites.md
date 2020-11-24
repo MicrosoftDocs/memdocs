@@ -2,7 +2,7 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 06/02/2020
+ms.date: 09/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -74,7 +74,7 @@ The server is now ready for the Configuration Manager restore procedure.
 #### Clean an existing server for site database recovery only
 
 1. Back up the site database. Also back up any other supporting databases, like WSUS.
-2. Make sure to note the SQL server name and instance name
+2. Make sure to note the SQL Server name and instance name
 3. Manually delete the site database from the SQL Server
 4. Restart the SQL Server
 
@@ -83,12 +83,12 @@ The server is now ready for the Configuration Manager restore procedure.
 #### Clean an existing server for full recovery
 
 1. Back up the site database. Also back up any other supporting databases, like WSUS.
-2. Make a copy of the content library
-3. Manually delete the site database from the SQL Server
-4. Uninstall the Configuration Manager site
-5. Manually delete the Configuration Manager installation folder, and any other Configuration Manager folders
-6. Restart the server
-7. Restore the content library and other databases like WSUS
+1. Make a copy of the content library
+1. Uninstall the Configuration Manager site
+1. Manually delete the site database from the SQL Server
+1. Manually delete the Configuration Manager installation folder, and any other Configuration Manager folders
+1. Restart the server
+1. Restore the content library and other databases like WSUS
 
 The server is now ready for the Configuration Manager restore procedure.
 
@@ -188,7 +188,7 @@ Use this option when no data loss has occurred on the Configuration Manager site
 
 ### SQL Server change tracking retention period
 
-Configuration Manager enables change tracking for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes made to database tables after a previous point in time. The retention period specifies how long change tracking information is kept. By default, the site database is configured to have a retention period of five days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your SQL server fails, and your last backup is seven days old, it's outside the retention period.
+Configuration Manager enables change tracking for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes made to database tables after a previous point in time. The retention period specifies how long change tracking information is kept. By default, the site database is configured to have a retention period of five days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your SQL Server fails, and your last backup is seven days old, it's outside the retention period.
 
 For more information about SQL Server change tracking internals, see the following blog posts from the SQL Server team: [Change Tracking Cleanup - part 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) and [Change Tracking Cleanup - part 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 

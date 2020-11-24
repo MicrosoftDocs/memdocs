@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,6 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +34,7 @@ This article shows you the Microsoft Intune device restrictions settings that yo
 
 ## Before you begin
 
-[Create the device profile](device-restrictions-configure.md#create-the-profile).
+Create a [Windows 10 Teams device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
 
 ## Apps and experience
 

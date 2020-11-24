@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: dudeso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -199,20 +199,30 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 *This feature is in public preview.*
 
-With *Windows 10 feature updates*, you select the Windows feature version that you want devices to remain at, like Windows 10 version 1803 or version 1809. You can set a feature level of 1803 or later.
+With *Windows 10 feature updates*, you select the Windows feature version that you want devices to remain at, like Windows 10 version 1803 or version 1809. You can set a feature level of 1803 or later.  Windows 10 feature updates work in conjunction with Update Ring policies to prevent a device from receiving a Windows feature version greater than the value specified in the feature update policy.
 
 When a device receives a Windows 10 feature updates policy:
 
 - The device will update to the version of Windows specified in the policy. A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable for the duration of the policy.
 
-- While the installed version of Windows remains set, devices can still receive and install quality and security updates for their Windows version for the duration of support for that version, which helps you to keep devices current and secure.
+  > [!NOTE]
+  > A device won't install an update when it has a *safeguard hold* for that Windows version. When a device evaluates applicability of an update version, Windows creates the temporary safeguard hold if an unresolved known issue exists. Once the issue is resolved, the hold is removed and the device can then update.
+  >
+  > - Learn more about [safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) in the Windows documentation for *Feature Update Status*.
+  > - To learn about known issues that can result in a safeguard hold, see [Windows 10 release information](/windows/release-information/) and then reference the relevant Windows version from the table of contents for that page.
+  >
+  >   For example, for Windows version 2004, open [Windows 10 release information](/windows/release-information/), and then from the left-hand pane, select *Version 2004* and then *Known issues and notifications*. The [resultant page](/windows/release-information/status-windows-10-2004) details known issues for that Windows version that might result in safeguard hold.
+  >
+  > While safeguard holds are not visible in Intune today, a future release will add the ability to report on them.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
+
 
 ### Prerequisites for Windows 10 feature updates
 
 The following prerequisites must be met to use Windows 10 feature updates in Intune.
 
+- Devices must run Windows 10 Pro, Windows 10 Enterprise, Windows 10 Pro Education, or Windows 10 Education.
 - Devices must be enrolled in Intune MDM and be Hybrid AD joined, Azure AD joined, or Azure AD registered.
 - To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
   
@@ -226,7 +236,12 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 - Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
-- While Windows 10 feature updates remains in public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
+- While Windows 10 feature updates remain in public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
+
+- Only **device groups** are supported for Windows 10 feature update policies.  When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature update policy settings for any feature update holds.  User groups are not supported.
+
+- The current version of the Windows feature version may not be immediately visible in the Microsoft Endpoint Manager admin center after it is released.  Because a Windows feature version higher than the current version number will not be immediately available, there is no benefit to having the current feature version available.  For example, since Windows 10 feature update version 20H2 (2010) is the highest version of Windows 10 currently available, creating a feature update policy today that specifies Windows feature version 2010 is equivalent to not having a feature update policy since there is no higher feature update version of the OS to prevent from installing.  New version numbers are typically added in a monthly update soon after the feature update version is released.
+  
 
 ### Create and assign Windows 10 feature updates
 
@@ -236,7 +251,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 3. Under **Basics**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
 
-4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature update deployment to one or more groups. Select **Next** to continue.
+4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature update deployment to one or more device or user groups. Select **Next** to continue.
 
 5. Under **Review + create**, review the settings and select **Create** when ready to save the Windows 10 feature updates policy.  
 
@@ -253,6 +268,8 @@ From this pane, you can:
 ## Validation and reporting for Windows 10 updates
 
 For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
+
+To monitor Windows 10 feature update failures, use the **Feature update failures** report. This report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Intune reports](../fundamentals/reports.md).
 
 ## Next steps
 

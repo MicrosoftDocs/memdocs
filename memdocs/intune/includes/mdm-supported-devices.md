@@ -1,7 +1,7 @@
 ### Apple
-- Apple iOS 11.0 and later
+- Apple iOS 12.0 and later
 - Apple iPadOS 13.0 and later
-- Mac OS X 10.12 and later
+- Mac OS X 10.13 and later
 
 ### Google
 - Android 5.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
@@ -15,9 +15,8 @@
 
   For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
-- Windows 10 Mobile
+
 - Windows 10 IoT Enterprise (x86, x64)
-- Windows 10 IoT Mobile Enterprise
 - Windows Holographic for Business
 
   For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md).

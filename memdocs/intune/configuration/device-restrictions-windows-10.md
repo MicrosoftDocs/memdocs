@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -247,14 +248,17 @@ These settings use the [experience policy CSP](/windows/client-management/mdm/po
 
   [System/DisableOneDriveFileSync CSP](/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
 
-- **Removable storage**: **Block** prevents users from using external storage devices, like SD cards with the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+- **Removable storage**: **Block** prevents users from using external storage devices, like USB drives or SD cards with the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  [System/AllowStorageCard CSP](/windows/client-management/mdm/policy-csp-system#system-allowstoragecard)
+
 - **Geolocation**: **Block** prevents users from turning on location services on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
   [System/AllowLocation CSP](/windows/client-management/mdm/policy-csp-system#system-allowlocation)
 
 - **Internet sharing**: **Block** prevents Internet connection sharing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Phone reset**: **Block** prevents users from wiping or doing a factory reset on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **USB connection**: **Block** prevents access to external storage devices through a USB connection on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
+- **USB connection**: **Block** prevents access to syncing files through a USB connection or using developer tools on an HoloLens device. Changing this policy doesn't affect USB charging. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
 
   [Connectivity/AllowUSBConnection CSP](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 

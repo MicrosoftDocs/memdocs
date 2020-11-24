@@ -201,7 +201,7 @@ On the **Customization** tab, select any of the following settings:
 - **Set default keyboard layout in WinPE**: <!--4910348-->Starting in version 1910, configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
 > [!Tip]
-> Use the [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet to configure these settings from a script.
+> Use the [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) PowerShell cmdlet to configure these settings from a script.
 
 #### Optional Components
 
