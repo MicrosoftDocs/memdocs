@@ -313,10 +313,7 @@ Configure the site to support Enhanced HTTP.
 
 1. In the Configuration Manager console, go to **Administration > Overview > Site Configuration > Sites**, and open the properties of the primary site.  
 
-2. On the **Client Computer Communication** tab, select the *HTTPS or HTTP* option for **Use Configuration Manager-generated certificates for HTTP site systems**, and then select **OK** to save the configuration.
-
-    > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+2. On the **Communication Security** tab, select the *HTTPS or HTTP* option for **Use Configuration Manager-generated certificates for HTTP site systems**, and then select **OK** to save the configuration.
 
 3. Now go to **Administration > Overview > Site Configuration > Servers and Site System Roles** and select the server with a management point where you want to install the cloud management gateway connection point.  
 
