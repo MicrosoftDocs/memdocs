@@ -100,7 +100,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 3. Under **Basics**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
 
-4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device or user groups. Select **Next** to continue.
+4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 
 5. Under **Review + create**, review the settings. When ready to save the Windows 10 feature updates policy, select **Create**.  
 
