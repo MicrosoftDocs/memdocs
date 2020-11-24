@@ -41,7 +41,7 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 - You will need a Mac OS computer which has Xcode 11 or later installed.
 
-- Your app must be targeted for iOS 12 or above.
+- Your app must be targeted for iOS 13 or above.
 
 - Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
 
@@ -55,20 +55,23 @@ The following files are relevant to apps/extensions that contain no Swift code:
 
 * **libIntuneMAM.a**: The Intune App SDK static library. Developers may choose to link the static library instead of the framework. Because static libraries are embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, integrating it into your app is a more complicated process. If your app includes any extensions, linking the static library to the app and extensions will result in a larger app bundle size, as the static library will be embedded into each app/extension binary. When using the framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
 
-* **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the static library (libIntuneMAM.a).
 
 The following files are relevant to apps/extensions that contain Swift code:
 
-* **IntuneMAMSwift.framework**: The Intune App SDK Swift framework. This framework contains all the headers for APIs that your app will call. Link this framework to your app/extensions to enable Intune client application management.
+* **IntuneMAMSwift.framework**: The Intune App SDK Swift framework. This framework contains all the headers for APIs that your app will call. It is recommended that you link this framework to your app/extensions to enable Intune client application management. However some developers may prefer the performance benefits of the static library. See the following.
 
-* **IntuneMAMSwiftStub.framework**: The Intune App SDK Swift Stub framework. This is a required dependency of IntuneMAMSwift.framework which apps/extensions must link.
+* **libIntuneMAMSwift.a**: The Intune App SDK Swift static library. Developers may choose to link the static library instead of the framework. Because static libraries are embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, integrating it into your app is a more complicated process. If your app includes any extensions, linking the static library to the app and extensions will result in a larger app bundle size, as the static library will be embedded into each app/extension binary. When using the framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
+
+* **IntuneMAMSwiftStub.framework**: The Intune App SDK Swift Stub framework. This is a required dependency of both IntuneMAMSwift.framework and libIntuneMAMSwift.a which apps/extensions must link.
 
 
 The following files are relevant to all apps/extentions:
 
+* **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the static library (libIntuneMAM.a or libIntuneMAMSwift.a).
+
 * **IntuneMAMConfigurator**: A tool used to configure the app or extension's Info.plist with the minimum required changes for Intune management. Depending on the functionality of your app or extension, you may need to make additional manual changes to the Info.plist.
 
-* **Headers**: Exposes the public Intune App SDK APIs. These headers are included within the IntuneMAM/IntuneMAMSwift frameworks, so developers who consume either of the frameworks do not need to manually add the headers to their project. Developers that choose to link against the static library (libIntuneMAM.a) will need to manually include these headers in their project.
+* **Headers**: Exposes the public Intune App SDK APIs. These headers are included within the IntuneMAM/IntuneMAMSwift frameworks, so developers who consume either of the frameworks do not need to manually add the headers to their project. Developers that choose to link against the static library (libIntuneMAM.a or libIntuneMAMSwift.a) will need to manually include these headers in their project.
 
 The following header files include the APIs, data types, and protocols which the Intune App SDK makes available to developers:
 
@@ -105,18 +108,20 @@ The objective of the Intune App SDK for iOS is to add management capabilities to
 
 To enable the Intune App SDK, follow these steps:
 
-1. **Option 1 - Framework (recommended)**: If your app/extension contains Swift code, link `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to your target: Drag `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to the **Embedded Binaries** list of the project target.
+1. **Option 1 - Framework (recommended)**: If your app/extension contains Swift code, link `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to your target: Drag `IntuneMAMSwift.framework` and `IntuneMAMSwiftStub.framework` to the **Frameworks and Libraries** list of the project target.
 
-    Otherwise, link `IntuneMAM.framework` to your target: Drag `IntuneMAM.framework` to the **Embedded Binaries** list of the project target.
+    Otherwise, link `IntuneMAM.framework` to your target: Drag `IntuneMAM.framework` to the **Frameworks and Libraries** list of the project target.
 
    > [!NOTE]
    > If you use the framework, you must manually strip out the simulator architectures from the universal framework before you submit your app to the App Store. See [Submit your app to the App Store](#submit-your-app-to-the-app-store) for more details.
 
-   **Option 2 - Static Library**: This option is only available for apps/extensions that contain no Swift code. Link to the `libIntuneMAM.a` library. Drag the `libIntuneMAM.a` library to the **Linked Frameworks and Libraries** list of the project target.
+   **Option 2 - Static Library**:  If your app/extension contains Swift code, link `libIntuneMAMSwift.a` and `IntuneMAMSwiftStub.framework` to the target: Drag `libIntuneMAMSwift.a` and `IntuneMAMSwiftStub.framework` to the **Frameworks and Libraries** list of the project target.  
+
+    Otherwise, link the `libIntuneMAM.a` library. Drag the `libIntuneMAM.a` library to the **Linked Frameworks and Libraries** list of the project target.
 
     ![Intune App SDK iOS: linked frameworks and libraries](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
-    Add `-force_load {PATH_TO_LIB}/libIntuneMAM.a` to either of the following, replacing `{PATH_TO_LIB}` with the Intune App SDK location:
+    Add `-force_load {PATH_TO_LIB}/libIntuneMAM.a` or `-force_load {PATH_TO_LIB}/libIntuneMAMSwift.a` to either of the following, replacing `{PATH_TO_LIB}` with the Intune App SDK location:
    * The project's `OTHER_LDFLAGS` build configuration setting.
    * The Xcode UI's **Other Linker Flags**.
 
@@ -802,9 +807,11 @@ If your application displays only corporate data in the webview and users can't 
 
 ### Webviews that might display both corporate and non-corporate content/websites
 
-For this scenario, only WKWebView is supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application does display corporate content within the WKWebView, and users can also access non-corporate content/websites which may lead to data leaks, the application should implement the `isExternalURL:` delegate method defined in `IntuneMAMPolicyDelegate.h`. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data. 
+For this scenario, both WKWebView and SFSafariViewController are supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application both displays corporate content within a WKWebView or SFSafariViewController and allows users to access non-corporate content/websites that may lead to data leaks, the application should implement the `IntuneMAMWebViewPolicyDelegate` and its `isExternalURL:` delegate method defined in `IntuneMAMPolicyDelegate.h`. The `IntuneMAMWebViewPolicyDelegate` should be set for each WKWebView or SFSafariViewController used in this way by calling IntuneMAMPolicyManager's `setWebViewPolicyDelegate:forWebViewer:`. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data.
 
-Returning NO in `isExternalURL` will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
+Returning NO in `isExternalURL:` will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
+
+> NOTE: The previous `isExternalURL:` delegate method inside the `IntuneMAMPolicyDelegate` has been deprecated and removed in version 14.0.0 of the Intune SDK. Use of that delegate method is no longer supported since it can apply in unexpected scenarios. Using the `IntuneMAMWebViewPolicyDelegate`'s delegate method ensures that the blocking behavior is only occuring for web views where explicitly set by the app.
 
 ## iOS best practices
 
