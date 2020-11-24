@@ -2,7 +2,7 @@
 title: Modify a cloud management gateway
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 09/28/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -66,6 +66,9 @@ If you have an existing CMG from Configuration Manager version 1810 or earlier, 
 
 The process to redeploy the service depends upon your service name and whether you want to reuse it.
 
+> [!NOTE]
+> If you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**, and vice versa. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method. For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+
 ### Replace a CMG and reuse the same service name
 
 <!--
@@ -107,6 +110,31 @@ You can reuse the same service name and CMG server authentication certificate, b
 
 1. Delete the old CMG and associated CMG connection point.
 
+## Stop and start the service
+
+Use the Configuration Manager console to stop and start the service if you need to.
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
+
+1. Select the CMG instance.  
+
+1. In the ribbon, select one of the following actions:
+
+    - To stop a running CMG, select **Stop service**.
+    - To start a stopped CMG, select **Start service**.
+
+Configuration Manager can stop a CMG service when the total data transfer goes over your limit. For more information, see [Stop CMG when it exceeds threshold](monitor-clients-cloud-management-gateway.md#stop-cmg-when-it-exceeds-threshold)
+
+> [!IMPORTANT]
+> Even if the service isn't running, there are still costs associated with the cloud service. Stopping the service doesn't eliminate all associated Azure costs. To remove all cost for the cloud service, [delete the CMG](#delete-the-service).
+>
+> When you stop the CMG service, internet-based clients can't communicate with Configuration Manager.
+
+You can also use PowerShell to stop and start a CMG:
+
+- [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway)
+- [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway)
+
 ## Determine deployment model
 
 To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
@@ -115,7 +143,11 @@ To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
 
 1. Select the CMG instance.  
 
-1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute. For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
+1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute.
+
+    For a Resource Manager deployment, this attribute is **Azure Resource Manager**. The legacy deployment model with the Azure management certificate displays as **Azure Service Manager**.
+
+    Starting in version 2010, you'll see either **Cloud service (classic)** or **Virtual machine scale set**.
 
 You can also add the **Deployment Model** attribute as a column to the list view.  
 

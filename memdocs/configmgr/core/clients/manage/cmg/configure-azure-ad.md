@@ -124,12 +124,42 @@ For more information, see [Configure Azure services](../../../servers/deploy/con
 
 ## Configure Azure resource providers
 
-The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+The CMG service requires that you register specific resource providers in your Azure subscription. The providers vary depending upon how you deploy the CMG:
 
-- **Microsoft.ClassicCompute**
-- **Microsoft.Storage**
+- [Virtual machine scale set](#virtual-machine-scale-set)
+- [Cloud service (classic)](#cloud-service-classic)
+
+You need an Azure **global administrator** to register these providers.
 
 For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+
+### Virtual machine scale set
+
+Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, register the following resource providers:
+
+- Microsoft.KeyVault
+- Microsoft.Storage
+- Microsoft.Network
+- Microsoft.Compute
+
+### Cloud service (classic)
+
+The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+
+- Microsoft.ClassicCompute
+- Microsoft.Storage
+
+## Automate with PowerShell
+
+Starting in version 2010, you can optionally automate aspects of these configurations using PowerShell.<!--6978300-->
+
+1. Use the [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication) cmdlet to define the Azure AD web/server app in Configuration Manager.
+
+1. Use the [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication) cmdlet to define the Azure AD native/client app in Configuration Manager.
+
+1. Use the [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication) cmdlet to get the imported app objects.
+
+1. Then pass the app objects to the [New-CMCloudManagementAzureService](/powershell/module/configurationmanager/New-CMCloudManagementAzureService) cmdlet to create the Azure service for **Cloud Management** in Configuration Manager.
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
-ms.date: 09/28/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -28,7 +28,9 @@ Use this article as a reference for the features and configurations that are sup
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->
 
-- CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available).
+- CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
+
+  Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ## Support for Configuration Manager features
 

@@ -2,7 +2,7 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
-ms.date: 04/01/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -49,21 +49,22 @@ In the Updates and Servicing Wizard, pre-release features are visible but you ca
 
 When you enable a pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before using the feature.
 
-## <a name="bkmk_table"></a> List of pre-release features
+## List of pre-release features
 
 <!--Note/tip for target article
 
-> [!Note]  
-> In this version of Configuration Manager, <feature name> is a pre-release feature. To enable it, see [Pre-release features](pre-release-features.md).  
+> [!NOTE]
+> In this version of Configuration Manager, <feature name> is a pre-release feature. To enable it, see [Pre-release features](pre-release-features.md).
 
-> [!Tip]  
-> This feature was first introduced in version 1702 as a [pre-release feature](pre-release-features.md). Beginning with version 1906, it's no longer a pre-release feature.  
+> [!TIP]
+> This feature was first introduced in version 1702 as a [pre-release feature](pre-release-features.md). Beginning with version 1906, it's no longer a pre-release feature.
 
 -->
 
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
+| [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040--> | Version 2010 | ![Not yet](media/red_x.png) |
 | [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953,CB0CDFFB-9C6F-4B18-8954-A43A387302A2--> | Version 2002 | ![Not yet](media/red_x.png) |
 | [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 --> | Version 2002 | ![Not yet](media/red_x.png) |

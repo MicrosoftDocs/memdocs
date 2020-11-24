@@ -92,7 +92,7 @@ When you install or update to version 1902, Configuration Manager setup now incl
 <!--3735092-->
 Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service.
 
-For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#bkmk_stop).
+For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#stop-cmg-when-it-exceeds-threshold).
 
 ### Use Azure Resource Manager for cloud services
 
