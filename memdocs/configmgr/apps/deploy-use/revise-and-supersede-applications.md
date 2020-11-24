@@ -106,6 +106,8 @@ The end result is that all deployments of the main application use the new depen
     > [!NOTE]
     > By default, the new deployment type doesn't uninstall the deployment type of the superseded application. This scenario is commonly used when you want to deploy an upgrade to an existing application. To remove the existing deployment type before the new deployment type is installed, select **Uninstall**. If you decide to upgrade an application, make sure that you test this in a lab environment first.
 
+1. If you want users to still see in Software Center deployments for both applications, select the option to **Allow users to see deployments for this application and all applications that it supersedes in Software Center.**. With this option, you give users the choice to still install an older version of the app if needed. By default, this option isn't selected, so only the superseding application displays in Software Center. This option is only for available deployments to user collections.<!-- MEMDocs#977 -->
+
 1. Select **OK** to save your changes and close the windows.
 
 ### Display applications that supersede the current application
