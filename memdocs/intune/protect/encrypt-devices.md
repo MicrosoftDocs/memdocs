@@ -114,7 +114,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ## Manage BitLocker
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). You can also view and retrieve BitLocker recovery keys when you view the encryption report.
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). 
 
 ### Silently enable BitLocker on devices
 
