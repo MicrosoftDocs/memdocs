@@ -77,6 +77,7 @@ Before a device can send the reporting data that’s used in the Windows 10 feat
 In addition, devices must:
 
 - Meet the [prerequisites for Windows 10 feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Windows 10 feature updates with Intune**.
+- Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for  reporting.
 - Run Windows 10 1903 or later. Although Windows 10 feature updates policy supports earlier versions of Windows, earlier versions don’t support reporting of the data that Intune uses for the feature updates reports.
 
 ### Configure data collection
@@ -170,14 +171,14 @@ To use the report:
 
    - **Service-side data**:
      - **Pending**:
-       - **Validation** – The update can’t be offered to the device because of a validation issue with the device and Deployment Service.
+       - **Validation** – The update can’t be offered to the device because of a validation issue with the device and Windows Update.
        - **Scheduled** – The update isn’t ready to be offered to the device but it's scheduled to be offered.
      - **On hold**:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
-       - **ServicePaused** – The update is on hold because of an automatic action by the Deployment Service.
+       - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
      - **Cancelled**:
        - **Admin Cancelled** - The update offer was cancelled by explicit Administrator action.
-       - **Service Cancelled** - The update was cancelled because of an automatic action by the Deployment Service.
+       - **Service Cancelled** - The update was cancelled because of an automatic action by Windows Update.
        - **Removed from Deployment** - The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
      - **Offering**:
        - **OfferReady** – The update is currently being offered to the device by Windows Update.
@@ -252,10 +253,10 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **CancelledByUser** | User cancelled the update. | Retry the installation. |
 | **DamagedMedia**  | The update file or the hard drive is damaged. | Run **Chkdsk/F** on the device with administrator privileges, then retry the update. |
 | **DeploymentConflict** | Device is in more than one deployment of the same update type. Only the first deployment assigned is effective. | Remove the device from any deployments that shouldn't apply. |
-| **DeviceRegistrationInvalidAzureADDeviceId**|The device isn't able to register or authenticate properly with the Deployment Service because of an invalid Azure AD Device ID. | Check that the device is joined to the Azure Active Directory tenant making the request. |
-| **DeviceRegistrationInvalidGlobalDeviceId** | The device isn't able to register or authenticate properly with the Deployment Service because of an invalid Global Device ID. | The Microsoft Account Sign-In Assistant (MSA) Service might be disabled, preventing Global Device ID assignment. Check that the MSA Service is running or able to run on the device. |
-| **DeviceRegistrationIssue** | The device isn't able to register or authenticate properly with the Deployment Service. | Check that the device registration information is correct and the device can connect. |
-| **DeviceRegistrationNoTrustType** | The device isn't able to register or authenticate properly with the Deployment Service because it can't establish Trust. | Check that the device is joined in Azure Active Directory using your account. If the issue persists, the device might need to be unenrolled from Intune first. |
+| **DeviceRegistrationInvalidAzureADDeviceId**|The device isn't able to register or authenticate properly with Windows Update  because of an invalid Azure AD Device ID. | Check that the device is joined to the Azure Active Directory tenant making the request. |
+| **DeviceRegistrationInvalidGlobalDeviceId** | The device isn't able to register or authenticate properly with Windows Update  because of an invalid Global Device ID. | The Microsoft Account Sign-In Assistant (MSA) Service might be disabled, preventing Global Device ID assignment. Check that the MSA Service is running or able to run on the device. |
+| **DeviceRegistrationIssue** | The device isn't able to register or authenticate properly with Windows Update . | Check that the device registration information is correct and the device can connect. |
+| **DeviceRegistrationNoTrustType** | The device isn't able to register or authenticate properly with Windows Update because it can't establish Trust. | Check that the device is joined in Azure Active Directory using your account. If the issue persists, the device might need to be unenrolled from Intune first. |
 | **DiskFull**  | The installation couldn't complete because the Windows partition is full. | Free up disk space on the Windows partition. Retry the installation. |
 | **DownloadCancelled** | Windows Update couldn't download the update because the update server stopped the connection. | Make sure your network is working and retry the download. If it still fails, check your WSUS server or contact support. |
 | **DownloadConnectionIssue**| Windows Update couldn't connect to the update server and the update couldn't download. | Make sure your network is working and retry the download. If it still fails, contact support. |
@@ -280,14 +281,14 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **InstallOutOfMemory** | The installation couldn't complete because Windows ran out of memory. | Restart Windows, then try the installation again. If it still fails, allocate more memory to the virtual machine, or increase the size of the virtual memory pagefiles. |
 | **InstallSetupError** | Windows Setup encountered an error while installing. | Check that the BIOS and drivers are up to date. Retry the download. |
 | **InstallSystemError** | A system  occurred while installing. | Check that the BIOS and drivers are up to date. Retry the download. |
-| **PolicyConflict**  | There are client policies (MDM, GP) that conflict with Deployment Service settings. | Check that the client policies configured on the device don't conflict with deployment settings. |
+| **PolicyConflict**  | There are client policies (MDM, GP) that conflict with Windows Update  settings. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PolicyConflictDeferral** | The Deferral Policy configured on the device is preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PolicyConflictPause** | Updates are paused on the device, preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PostRestartIssue** | Windows Update couldn't determine the results of installing the update. The error is usually false and the update probably succeeded. | If the update you're trying to install isn't available, no action is required. If the update is still available, retry the installation. |
 | **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the [Setup Diagnostics Tool](/windows/deployment/upgrade/setupdiag) on the Device. Don't retry the installation until the impact is understood. |
 | **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds). | Check the Support website to see whether there are any known issues with the update. |
 | **UnexpectedShutdown** | The installation was stopped because a Windows shutdown or restart was in progress. | Ensure the device remains on during Windows installation. |
-| **VersionMismatch** | Device is on a version of Windows that was not intended by the Deployment Service. | Confirm whether the device is on the intended version. |
+| **VersionMismatch** | Device is on a version of Windows that was not intended by Windows Update . | Confirm whether the device is on the intended version. |
 | **WindowsRepairRequired** | The current version of Windows needs to be repaired before it can be updated. | Run the Startup Repair Tool on this device. |
 | **WUBusy**   | Windows Update can't do this task because it's busy. | Restart Windows. Retry the installation. |
 | **WUComponentMissing** | Windows Update might be missing a component or the update file might be damaged. | Run **dism/online /cleanup-image /restorehealth** on the device with administrator privileges, and then retry the update. If the commands fail, a reinstall of Windows might be required. |

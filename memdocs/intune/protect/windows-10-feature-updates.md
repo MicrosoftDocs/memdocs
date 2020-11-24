@@ -67,6 +67,8 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 - Feature updates are supported for the following Windows 10 editions:  
   - Windows 10 Pro
   - Windows 10 Enterprise
+  - Windows 10 Pro Education
+  - Windows 10 Education
 
   > [!NOTE]
   > **Unsupported versions and editions**:  
@@ -82,15 +84,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 - While this feature is in preview and you co-manage devices with Configuration Manager, there is a limitation where feature updates policies might not immediately take effect. This delay can result in devices updating to a later feature update version than as configured policy. This limitation will be removed with a future update to Configuration Manager.
 
-- Only **device groups** are supported for Windows 10 feature updates policies. User groups aren't supported. When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
-
-- When Windows 10 releases a new feature update, that update version isn’t immediately available in Intune to select. Instead, the new version becomes available in the monthly Intune update that follows the Windows 10 release.
-
-  To deploy the latest Windows 10 feature update to devices prior to it being available as a selection in Intune:
-  - Identify the devices that you want to receive the latest Windows 10 feature update version.
-  - For Windows 10 update rings profiles that apply to these devices, change **Feature update deferral period (days)** configurations to **0**.
-  - Remove the devices from any other Windows 10 feature updates profiles that might restrict the feature update version they can install.
-
+- When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
 ### Create and assign Windows 10 feature updates policy
 
