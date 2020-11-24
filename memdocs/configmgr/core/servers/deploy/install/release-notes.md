@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/17/2020
+ms.date: 11/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -16,26 +16,26 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.  
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.
 
-Feature-specific documentation includes information about known issues that affect core scenarios.  
+Feature-specific documentation includes information about known issues that affect core scenarios.
 
-This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md)  
+This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md).
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
 - [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [What's new in version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
-- [What's new in version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 
 For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
-> [!Tip]  
+> [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
-## Set up and upgrade  
+## Set up and upgrade
 
 ### Client automatic upgrade happens immediately for all clients
 
@@ -146,7 +146,7 @@ There are two instances in which task sequences can't run on a device that commu
 ### Security roles are missing for phased deployments
 
 <!--3479337, SCCMDocs-pr issue 3095-->
-*Applies to: Configuration Manager versions 1810, 1902*
+*Applies to: Configuration Manager versions 1810 and later*
 
 The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
 
@@ -188,24 +188,6 @@ If you have a hierarchy, and enable **Hardware inventory** site data for [distri
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
 To work around this issue, disable **Hardware inventory** site data for distributed views on every site replication link.
-
-### Console unexpectedly closes when removing collections
-
-<!-- 4749443 -->
-*Applies to: Configuration Manager version 1902 with update rollup*
-
-After you connect the site to [Desktop Analytics](../../../../desktop-analytics/connect-configmgr.md), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
-
-To work around this issue, when you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
-
-### Pilot status tile shows some devices as 'undefined'
-
-<!-- 4547783 -->
-*Applies to: Configuration Manager version 1902 with update rollup*
-
-When you use the Configuration Manager console to monitor your pilot deployment status, pilot devices that are up-to-date on the target version of Windows for that deployment plan show as **undefined** in the Pilot status tile.  
-
-These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
 
 ## Cloud services
 
