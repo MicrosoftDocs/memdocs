@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 10/30/2020
+ms.date: 11/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -116,19 +116,17 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2010.2
+### Technical preview version 2011
 
-- [Tenant attach: Troubleshooting portal lists a user’s devices based on usage](2020/technical-preview-2010-2.md#bkmk_uda) <!--6974300-->
-- [Tenant attach: Create and deploy firewall policies](2020/technical-preview-2010-2.md#bkmk_fire) <!--7768130-->
-- [Enhancements to applications in Microsoft Endpoint Manager admin center](2020/technical-preview-2010-2.md#bkmk_apps) <!--7979972-->
-- [Improvements to BitLocker management](2020/technical-preview-2010-2.md#bkmk_blmcmg) <!--6979223-->
-- [Improvements to deploy an OS over CMG using boot media](2020/technical-preview-2010-2.md#bkmk_osdcmg) <!--3555923-->
-- [Desktop Analytics support for new Windows 10 data levels](2020/technical-preview-2010-2.md#bkmk_da) <!--6979470-->
-- [Immediate distribution point fallback for clients downloading software update delta content](2020/technical-preview-2010-2.md#bkmk_dp) <!--8286432-->
-- [Disable Azure AD authentication for onboarded tenants](2020/technical-preview-2010-2.md#bkmk_aadauth) <!--8537319-->
-- [Additional options when creating app registrations in Azure Active Directory](2020/technical-preview-2010-2.md#bkmk_expire) <!--7153654-->
-- [Validate internet access for the service connection point](2020/technical-preview-2010-2.md#bkmk_scp) <!--8565578-->
-- [Improvements to the administration service](2020/technical-preview-2010-2.md#bkmk_rest) <!--8613105-->
+- [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
+- [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
+- [Windows 10 Servicing dashboard changes](2020/technical-preview-2011.md#bkmk_dashboard) <!--3555940-->
+- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
+- [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
+- [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
+- [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
+- [Improvements to OS deployment](2020/technical-preview-2011.md#bkmk_osd) <!--8764365-->
+- [Update PowerShell help](2020/technical-preview-2011.md#bkmk_pwsh) <!--7774961-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -145,6 +143,20 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2010.2
+
+- [Tenant attach: Troubleshooting portal lists a user’s devices based on usage](2020/technical-preview-2010-2.md#bkmk_uda) <!--6974300-->
+- [Tenant attach: Create and deploy firewall policies](2020/technical-preview-2010-2.md#bkmk_fire) <!--7768130-->
+- [Enhancements to applications in Microsoft Endpoint Manager admin center](2020/technical-preview-2010-2.md#bkmk_apps) <!--7979972-->
+- [Improvements to BitLocker management](2020/technical-preview-2010-2.md#bkmk_blmcmg) <!--6979223-->
+- [Improvements to deploy an OS over CMG using boot media](2020/technical-preview-2010-2.md#bkmk_osdcmg) <!--3555923-->
+- [Desktop Analytics support for new Windows 10 data levels](2020/technical-preview-2010-2.md#bkmk_da) <!--6979470-->
+- [Immediate distribution point fallback for clients downloading software update delta content](2020/technical-preview-2010-2.md#bkmk_dp) <!--8286432-->
+- [Disable Azure AD authentication for onboarded tenants](2020/technical-preview-2010-2.md#bkmk_aadauth) <!--8537319-->
+- [Additional options when creating app registrations in Azure Active Directory](2020/technical-preview-2010-2.md#bkmk_expire) <!--7153654-->
+- [Validate internet access for the service connection point](2020/technical-preview-2010-2.md#bkmk_scp) <!--8565578-->
+- [Improvements to the administration service](2020/technical-preview-2010-2.md#bkmk_rest) <!--8613105-->
 
 ### Technical preview version 2010
 

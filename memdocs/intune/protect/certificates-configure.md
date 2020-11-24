@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ Typical use scenarios for certificates include:
 Intune supports Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS), and imported PKCS certificates as methods to provision certificates on devices. The different provisioning methods have different requirements, and results. For example:
 
 - SCEP provisions certificates that are unique to each request for the certificate.
-- With PKCS, a user can have the same certificate provisioned on each device they use.
+- PKCS provisions each device with a unique certificate.
 - With Imported PKCS, you can deploy the same certificate that you’ve exported from a source, like an email server, to multiple recipients. This shared certificate is useful to ensure all your users or devices can then decrypt emails that were encrypted by that certificate.
 
 To provision a user or device with a specific type of certificate, Intune uses a certificate profile.
