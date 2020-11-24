@@ -84,11 +84,13 @@ For more information, see [Prerequisites for the administration service](../../.
 
 ## Cloud-attached management
 
-### Cloud management gateway with virtual machine scale set
+### Cloud management gateway with virtual machine scale set for CSP
 
 <!--3601040-->
 
-Cloud management gateway (CMG) deployments now use virtual machine scale sets in Azure. This change introduces support for Azure Cloud Solution Provider (CSP) subscriptions.
+Cloud management gateway (CMG) deployments can now use a virtual machine scale set in Azure to support Cloud Solution Provider (CSP) subscriptions. This feature is currently pre-release, and at this time intended only for CSP customers that don't already have a CMG in another subscription.
+
+For more information, see [CMG topology design: virtual machine scale sets](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
 ### Disable Azure AD authentication for onboarded tenants
 
