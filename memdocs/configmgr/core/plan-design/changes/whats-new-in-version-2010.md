@@ -28,11 +28,12 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Microsoft Endpoint Manager tenant attach
 
-### Troubleshooting portal lists a user’s devices based on usage
+### Troubleshooting portal lists a user's devices based on usage
 <!--6974300-->
 The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
 
 For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../../tenant-attach/client-details.md#bkmk_list).
+
 ### Enhancements to applications in Microsoft Endpoint Manager admin center
 <!--7979972, 8227649-->
 
@@ -44,43 +45,6 @@ We've made improvements to applications for tenant attached devices. Administrat
 - **Reinstall** an application has replaced **Retry installation**
 
 For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_repair).
-## Site infrastructure
-
-### Monitor scenario health
-
-Configuration Manager is complicated to troubleshoot. It's especially complex to understand system latency and the backlog between components. Cloud service-attached features increase that complexity.
-
-You can now use Configuration Manager to monitor the health of end-to-end scenarios. It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation.
-
-This release includes the following two scenarios:
-
-- **SQL Server Service Broker**: The service broker is a required configuration for the site database. Many of the core subsystems in Configuration Manager use the service broker.<!--7699463-->
-
-- **Client action health**: Monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.<!--7699511-->
-
-For more information, see [Monitor scenario health](../../servers/manage/scenario-health.md).
-
-### Report setup and upgrade failures to Microsoft
-<!--5622909-->
- If the setup or update process fails to complete successfully, you can now report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. In technical previews, this button is always enabled even when the setup completes successfully.
-
-For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_report).
-
-### Delete Aged Collected Diagnostic Files task
-<!--6503308-->
-You now have a new maintenance task available for cleaning up collected diagnostic files. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect regular collected files. The new maintenance task is enabled by default.
-
-For more information, see the client diagnostic section of the [Client notification](../../clients/manage/client-notification.md#cleanup-aged-client-diagnostic-files) article and [Reference for maintenance tasks in Configuration Manager](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-diagnostic-files).
-
-### Improvements to the administration service
-
-<!-- 8613105 -->
-
-The Configuration Manager REST API, the administration service, requires a secure HTTPS connection. With the previous methods to enable HTTPS, enabling IIS on the SMS Provider was a prerequisite.
-
-Starting in this release, you no longer need to enable IIS on the SMS Provider for the administration service. When you enable the site for enhanced HTTP, it creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS.
-
-For more information, see [Prerequisites for the administration service](../../../develop/adminservice/overview.md#prerequisites).
 
 ## Cloud-attached management
 
@@ -88,7 +52,7 @@ For more information, see [Prerequisites for the administration service](../../.
 
 <!--3601040-->
 
-Cloud management gateway (CMG) deployments can now use a virtual machine scale set in Azure to support Cloud Solution Provider (CSP) subscriptions. This feature is currently pre-release, and at this time intended only for CSP customers that don't already have a CMG in another subscription.
+Cloud management gateway (CMG) deployments can now use a virtual machine scale set in Azure to support Cloud Solution Provider (CSP) subscriptions. This feature is currently pre-release. At this time, it's intended only for CSP customers that don't already have a CMG in another subscription.
 
 For more information, see [CMG topology design: virtual machine scale sets](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
@@ -133,12 +97,50 @@ For more information, see [Enable data sharing](../../../desktop-analytics/enabl
 
 <!--6107649-->
 
-The Windows 10 long-term servicing channel (LTSC) was designed for devices where the key requirement is that functionality and features don't change over time. This servicing model prevents Windows 10 Enterprise LTSC devices from receiving the usual feature updates. It provides only quality updates to make sure that device security stays up to date. Some customers want to shift from LTSC to the semi-annual servicing channel, to have access to new features, services, and other major changes. You can now use Configuration Manager to enroll LTSC devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans.
+The Windows 10 long-term servicing channel (LTSC) was designed for devices where functionality and features don't change over time. This servicing model prevents Windows 10 Enterprise LTSC devices from receiving the usual feature updates. It provides only quality updates to make sure that device security stays up to date. Some customers want to shift from LTSC to the semi-annual servicing channel, to have access to new features, services, and other major changes. You can now use Configuration Manager to enroll LTSC devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans.
 
 For more information, see [Desktop Analytics prerequisites](../../../desktop-analytics/overview.md#prerequisites)
 
-## Real-time management
+## Site infrastructure
 
+### Monitor scenario health
+
+Configuration Manager is complicated to troubleshoot. It's especially complex to understand system latency and the backlog between components. Cloud service-attached features increase that complexity.
+
+You can now use Configuration Manager to monitor the health of end-to-end scenarios. It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation.
+
+This release includes the following two scenarios:
+
+- **SQL Server Service Broker**: The service broker is a required configuration for the site database. Many of the core subsystems in Configuration Manager use the service broker.<!--7699463-->
+
+- **Client action health**: Monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.<!--7699511-->
+
+For more information, see [Monitor scenario health](../../servers/manage/scenario-health.md).
+
+### Report setup and upgrade failures to Microsoft
+<!--5622909-->
+If the setup or update process fails to complete successfully, you can now report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. In technical previews, this button is always enabled even when the setup completes successfully.
+
+For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_report).
+
+### Delete Aged Collected Diagnostic Files task
+<!--6503308-->
+You now have a new maintenance task available for cleaning up collected diagnostic files. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when it looks for diagnostic files to clean up. This task doesn't affect regular collected files. The new maintenance task is enabled by default.
+
+For more information, see the following articles:
+
+- Client diagnostic section of the [Client notification](../../clients/manage/client-notification.md#cleanup-aged-client-diagnostic-files) article
+- [Reference for maintenance tasks in Configuration Manager](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-diagnostic-files).
+
+### Improvements to the administration service
+
+<!-- 8613105 -->
+
+The Configuration Manager REST API, the administration service, requires a secure HTTPS connection. With the previous methods to enable HTTPS, enabling IIS on the SMS Provider was a prerequisite.
+
+Starting in this release, you no longer need to enable IIS on the SMS Provider for the administration service. When you enable the site for enhanced HTTP, it creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS.
+
+For more information, see [Prerequisites for the administration service](../../../develop/adminservice/overview.md#prerequisites).
 
 ## Client management
 
@@ -147,9 +149,9 @@ For more information, see [Desktop Analytics prerequisites](../../../desktop-ana
 
 Wake on LAN (WoL) has always posed a problem in complex, subnetted networks. Good networking best practice reduces the size of broadcast domains to mitigate against the risk of broadcast traffic adversely affecting the network. The most common way to limiting network broadcast is by not allowing broadcast packets to be routed between subnets. Another option is to enable subnet directed broadcasts but most organizations don't allow the magic packet to traverse internal routers.
 
-In version 1810, the introduction of peer wake up allowed an administrator to wake a device or collection of devices, on demand using the client notification channel. Overcoming the need for the server to be in the same broadcast domain as the client.
+In version 1810, the introduction of peer wake-up allowed an administrator to wake a device or collection of devices, on demand using the client notification channel. Overcoming the need for the server to be in the same broadcast domain as the client.
 
-This latest improvement allows the Configuration Manager site to wake devices at the deadline of a deployment, using that same client notification channel. Instead of the site server issuing the magic packet directly, the site uses the client notification channel to find an online machine in the last known subnet of the target device(s) and instructs the online client to issue the WoL packet for the target device.
+This latest improvement allows the Configuration Manager site to wake devices at the deadline of a deployment. Instead of the site server issuing the magic packet directly, the site uses the client notification channel. It finds an online machine in the last known subnet of the target device. It then instructs the online client to issue the WoL packet for the target device.
 
 For more information, see [How to configure Wake on LAN](../../clients/deploy/configure-wake-on-lan.md#bkmk_deadline).
 
@@ -162,6 +164,32 @@ For a low-rights user on a device that runs Windows Server, by default they aren
 Starting in this release, you can now control this behavior as needed. In the **Computer Restart** group of client settings, enable the following setting: **When a deployment requires a restart, allow low-rights users to restart a device running Windows Server**.
 
 For more information, see [Device restart notifications: Client settings](../../clients/deploy/device-restart-notifications.md#client-settings).
+
+## Collections
+
+### Collection query preview
+<!--7380401-->
+You can now preview the query results when you're creating or editing a query for collection membership. Preview the query results from the query statement properties dialog. When you select **Edit Query Statement**, select the green triangle on the query properties for the collection to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query.
+
+For more information, see [Configure a query rule](../../clients/manage/collections/create-collections.md#bkmk-query).
+
+### Collection evaluation view
+<!--6251274-->
+We've integrated the functionality of Collection Evaluation Viewer into the Configuration Manager console. This change provides administrators a central location to view and troubleshoot the collection evaluation process.
+
+For more information, see [Collection evaluation view](../../clients/manage/collections/collection-evaluation-view.md).
+
+### View collection relationships
+
+<!--3608121-->
+
+You can now view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
+
+:::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
+
+If you want to change or delete collections, view the relationships to understand the impact of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+
+For more information, see [How to manage collections](../../clients/manage/collections/manage-collections.md).
 
 ## Application management
 
@@ -227,35 +255,29 @@ For more information, see [Plan for BitLocker management](../../../protect/plan-
 
 ### Expanded Windows Defender Application Control management
 <!--7752243-->
-Windows Defender Application Control enforces an explicit list of software allowed to run on devices. In this technical preview, we've expanded Windows Defender Application Control policies to support devices running Windows Server 2019 or later.
+Windows Defender Application Control enforces an explicit list of software allowed to run on devices. In this release, we've expanded Windows Defender Application Control policies to support devices running Windows Server 2019 or later.
 
 For more information, see [Windows Defender Application Control management with Configuration Manager](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md#bkmk_os).
 
-## Collections
+## Software updates
 
-### Collection query preview
-<!--7380401-->
-You can now preview the query results when you're creating or editing a query for collection membership. Preview the query results from the query statement properties dialog. When you select **Edit Query Statement**, select the green triangle on the query properties for the collection to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query.
+### Enable user proxy for software update scans
+<!--8379199-->
+Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. By default, a client that scans for updates against an HTTP-based WSUS can't use a user proxy. If you still require a user proxy despite the security trade-offs, a new software updates client setting is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/changes-to-improve-security-for-windows-devices-scanning-wsus/ba-p/1645547). To make sure that the best security protocols are in place, use the TLS protocol. This protocol helps to [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
 
-For more information, see [Configure a query rule](../../clients/manage/collections/create-collections.md#bkmk-query).
+For more information about enabling a proxy for software update scans, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
-### Collection evaluation view
-<!--6251274-->
-We've integrated the functionality of Collection Evaluation Viewer into the Configuration Manager console. This change provides administrators a central location to view and troubleshoot the collection evaluation process.
+### Notifications for devices no longer receiving updates
+<!--7520646-->
+To help you manage security risk in your environment, you'll be notified in-console about devices with operating systems that are past the end of support date. These devices may no longer receive security updates. Additionally, a new **Management Insights** rule was added to detect Windows 7, Windows Server 2008, and Windows Server 2008 R2 without [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates).
 
-For more information, see [Collection evaluation view](../../clients/manage/collections/collection-evaluation-view.md).
+For more information, see [Management insights](../../servers/manage/management-insights.md#security) and [Console notifications](../../servers/manage/admin-console-notifications.md#bkmk_2010).
 
-### View collection relationships
+### Immediate distribution point fallback for clients downloading software update delta content
+<!--8286432-->
+There's a new client setting for software updates. If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is five minutes.
 
-<!--3608121-->
-
-You can now view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
-
-:::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
-
-If you want to change or delete collections, view the relationships to understand the impact of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
-
-For more information, see [How to manage collections](../../clients/manage/collections/manage-collections.md).
+For more information, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
 ## Configuration Manager console
 
@@ -318,27 +340,15 @@ If you remove content from a distribution point while the site system is offline
 
 For more information, see the [Content library cleanup tool](../hierarchy/content-library-cleanup-tool.md).
 
-## Software updates
-
-### Enable user proxy for software update scans
-<!--8379199-->
-Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new software updates client setting is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
-
-For more information about enabling a proxy for software update scans, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates). 
-
-### Notifications for devices no longer receiving updates
-<!--7520646-->
-To help you manage security risk in your environment, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates. Additionally, a new **Management Insights** rule was added to detect Windows 7, Windows Server 2008, and Windows Server 2008 R2 without [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates).
-
-For more information, see [Management insights](../../servers/manage/management-insights.md#security) and [Console notifications](../../servers/manage/admin-console-notifications.md#bkmk_2010).
-
-### Immediate distribution point fallback for clients downloading software update delta content
-<!--8286432-->
-There's a new client setting for software updates. If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is five minutes.
-
-For more information, see [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
-
 ## PowerShell
+
+### Update PowerShell help
+
+<!--7774961-->
+
+You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+
+For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 
 ### Support for PowerShell version 7
 
@@ -360,6 +370,7 @@ For more information, see [Configuration Manager version 2010 PowerShell release
 ## User experience
 ## Office management
 ## Co-management
+## Real-time management
 -->
 
 ## Deprecated features
@@ -389,7 +400,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2010 release notes](/powershell/sccm/2010-release-notes).
 
-For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md).
+<!-- For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md). -->
 
 <!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4578830).
