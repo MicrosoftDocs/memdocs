@@ -93,7 +93,7 @@ To see a list of the settings you can configure, go to [Microsoft Edge - Policie
 
 For more information on .plist files, see [Add a property list file to macOS devices using Intune](../configuration/preference-file-settings-macos.md)
 
-To see the policies you have configured, open Microsoft Edge, and go to [edge://policy](edge://policy).
+To see the policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
 Applies to:
 - Microsoft Edge browser on macOS
