@@ -53,7 +53,7 @@ Community hub supports the following objects:
 
 - To import a script: **Create** permission for **SMS_Scripts** class.
 - To import a report: Full Administrator security role.
-- Starting in version 2010, Full Administrators can opt in the hierarchy for uncurated content via hierarchy settings. Lower hierarchy administrators can't opt in the hierarchy for uncurated hub items.
+- Starting in version 2010, Full Administrators can opt in the hierarchy for unreviewed content via hierarchy settings. Lower hierarchy administrators can't opt in the hierarchy for unreviewed hub items.
 
 
 Most [built-in security roles](../../understand/fundamentals-of-role-based-administration.md) will have access to Community hub:
@@ -152,7 +152,7 @@ To open a shared link:
 <!--8052494-->
 *(Introduced in version 2010)*
 
-Starting in Configuration Manager version 2010, Community hub content is grouped into a Microsoft, curated, or unreviewed category to allow admins to choose the types of content their environment displays. Admins can choose from the different categories of content that are provided in the Community hub to match their risk profile and their willingness to share and use content from those outside Microsoft and outside their own company. Only **Full Administrators** can opt in the hierarchy for uncurated content via hierarchy settings.
+Starting in Configuration Manager version 2010, Community hub content is grouped into a Microsoft, curated, or unreviewed category to allow admins to choose the types of content their environment displays. Admins can choose from the different categories of content that are provided in the Community hub to match their risk profile and their willingness to share and use content from those outside Microsoft and outside their own company. Only **Full Administrators** can opt in the hierarchy for unreviewed content via hierarchy settings.
 
 Community hub content has three categories for content sources:
 - **Microsoft curated**: Content provided by Microsoft
