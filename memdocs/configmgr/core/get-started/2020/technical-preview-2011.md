@@ -2,7 +2,7 @@
 title: Technical preview 2011
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2011.
-ms.date: 11/23/2020
+ms.date: 11/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,20 +24,15 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2011/1234567.md)] -->
 
-[!INCLUDE [3555940](includes/2011/3555940.md)]
-[!INCLUDE [3607457](includes/2011/3607457.md)]
-[!INCLUDE [4316341](includes/2011/4316341.md)]
-[!INCLUDE [4639895](includes/2011/4639895.md)]
-[!INCLUDE [4993167](includes/2011/4993167.md)]
-[!INCLUDE [6991647](includes/2011/6991647.md)]
-[!INCLUDE [7137169](includes/2011/7137169.md)]
-[!INCLUDE [8052494](includes/2011/8052494.md)]
-[!INCLUDE [3555940](includes/2011/3555909.md)]
-[!INCLUDE [8116426](includes/2011/8116426.md)]
-[!INCLUDE [8160460](includes/2011/8160460.md)]
-[!INCLUDE [8272488](includes/2011/8272488.md)]
-[!INCLUDE [7774961](includes/2011/7774961.md)]
-[!INCLUDE [8764365](includes/2011/8764365.md)]
+[!INCLUDE [Categorize Community hub content](includes/2011/8052494.md)]
+[!INCLUDE [Improvements to the product lifecycle dashboard](includes/2011/8160460.md)]
+[!INCLUDE [Windows 10 Servicing dashboard changes](includes/2011/3555940.md)]
+[!INCLUDE [Software Center notifications display with logo](includes/2011/4993167.md)]
+[!INCLUDE [Approved scripts for Orchestration Groups](includes/2011/6991647.md)]
+[!INCLUDE [Community hub on Windows Server operating systems](includes/2011/3555909.md)]
+[!INCLUDE [Improvements to Support Center](includes/2011/8272488.md)]
+[!INCLUDE [Improvements to OS deployment](includes/2011/8764365.md)]
+[!INCLUDE [Update PowerShell help](includes/2011/7774961.md)]
 
 <!--
 ## General known issues
