@@ -95,15 +95,15 @@
           href: endpoint-security-asr-policy.md
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
-    - name: Microsoft Defender ATP
+    - name: Microsoft Defender for Endpoint
       items:
-      - name: Microsoft Defender ATP
+      - name: Microsoft Defender for Endpoint
         href: advanced-threat-protection.md  
-      - name: Configure Defender ATP
+      - name: Configure Defender for Endpoint
         href: advanced-threat-protection-configure.md
       - name: Android web protection
         href: advanced-threat-protection-manage-android.md
-      - name: Monitor Defender ATP
+      - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
@@ -355,7 +355,7 @@
     items: 
     - name: Windows 10 MDM baseline settings
       href: security-baseline-settings-mdm-all.md
-    - name: Microsoft Defender ATP baseline settings 
+    - name: Microsoft Defender for Endpoint baseline settings 
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md

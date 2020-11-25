@@ -7,7 +7,7 @@ description: Describes how to enable BitLocker encryption on a device by using I
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,7 +46,7 @@ With Microsoft Intune, you have the following methods to manage BitLocker on Win
 
    You can read about the available options and features here: [Windows Encryption](/intune/endpoint-protection-windows-10#windows-encryption).
 
-- **Security baselines** - [Security baselines](security-baselines.md) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender ATP Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies. 
+- **Security baselines** - [Security baselines](security-baselines.md) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender for Endpoint Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies. 
 
 In addition to Intune, for hardware that is compliant with Modern Standby and HSTI, when using either of these features, BitLocker Device Encryption is automatically turned on whenever the user joins a device to Azure AD. Azure AD provides a portal where recovery keys are also backed up, so users can retrieve their own recovery key for self-service, if required.
 
