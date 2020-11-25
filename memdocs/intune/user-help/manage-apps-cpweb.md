@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/25/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -57,6 +57,14 @@ Select **Refine** to see filter and sort options. Filter the list to show apps w
 * App name, ascending or descending alphabetically 
 * Publisher name, ascending or descending alphabetically 
 * Publish date, oldest or newest  
+
+### Viewing apps for Windows devices  
+Company Portal doesn't immediately recognize Windows devices that are added. So before you can see your available apps, you have to tell Company Portal which device you're using. To do that: 
+
+1. Sign in to https://portal.manage.microsoft.com/devices.
+2. Select **Devices**.
+3. Under the list of devices, you'll see a message that prompts you to identify your device. Tap the message. 
+4. Select your device on the **What device are you using** screen. 
 
 ## View installed apps  
 From the menu, select **Installed Apps** to view a list of all apps installed on your device.  
