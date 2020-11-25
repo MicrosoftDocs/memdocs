@@ -53,7 +53,7 @@ The Encryption report pane displays a list of the devices you manage with high
 - **OS version** – The version of Windows or macOS on the device.
 - **TPM version** *(applies to Windows 10 only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows 10 device.
 
-  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
+  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
 
 - **Encryption readiness** – An evaluation of the devices readiness to support an applicable encryption technology, like BitLocker or FileVault encryption. Devices are identified as:
   - **Ready**: The device can be encrypted by using MDM policy, which requires the device meet the following requirements:
@@ -88,7 +88,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
   
-  For Windows devices, this field does not look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [Devicestatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp).  
+  For Windows devices, this field does not look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [Devicestatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).  
 
 - **Profiles** – A list of the *Device configuration* profiles that apply to this device and are configured with the following values:
 
@@ -135,7 +135,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   **Windows 10**:
   
-  For Windows 10 devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+  For Windows 10 devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
 
   - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
       
@@ -169,7 +169,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - Windows Recovery Environment (WinRE) isn't configured.
   
-    *Consider: Need to run command line to configure the WinRE on separate partition; as that was not detected. For more information, see [REAgentC command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
+    *Consider: Need to run command line to configure the WinRE on separate partition; as that was not detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
 
   - A TPM isn't available for BitLocker, either because it isn't present, it's been made unavailable in the Registry, or the OS is on a removable drive.
  
