@@ -281,6 +281,17 @@ For more information, see [Client settings for software updates](../../clients/d
 
 ## Configuration Manager console
 
+### Categorize Community hub content
+<!--8052494-->
+Community hub content is grouped into a Microsoft, curated, or unreviewed category to allow admins to choose the types of content their environment displays. Admins can choose from the different categories of content that are provided in the Community hub to match their risk profile and their willingness to share and use content from those outside Microsoft and outside their own company.
+
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_category).
+
+##  Community hub on Windows Server operating systems
+<!--3555940, 8625943, 8717639 -->
+You can now display the Community hub on Windows Server operating systems. The Configuration Manager console will notify you to install the console extension to enable Windows Server 2012 and later to load the Community hub.
+
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_hub_os).
 ### Product feedback
 
 <!--3180826-->
