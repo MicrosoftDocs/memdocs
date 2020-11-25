@@ -89,7 +89,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune. Instead, it's collected through Endpoint analytics, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
-To enable data collection through [Endpoint analytics](../mem/analytics/overview.md) in the Microsoft Endpoint Manager admin center, enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
+To enable data collection through [Endpoint analytics](/mem/analytics/overview) in the Microsoft Endpoint Manager admin center, enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
 
 ### Enable data collection
 
