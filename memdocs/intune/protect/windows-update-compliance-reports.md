@@ -72,19 +72,24 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 ### Prerequisites  
 
-Before a device can send the reporting data that’s used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configure-data-collection).
+- **Data collection**:  Before a device can send the reporting data that’s used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configure-data-collection):
 
-In addition, devices must:
+  - Service-based data is collected for all feature update versions and doesn’t require you to configure data collection. 
+  - Client-based data is collected from devices only after data collection is configured.
+  
+  Service and client based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
 
-- Meet the [prerequisites for Windows 10 feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Windows 10 feature updates with Intune**.
-- Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for  reporting.
-- Run Windows 10 1903 or later. Although Windows 10 feature updates policy supports earlier versions of Windows, earlier versions don’t support reporting of the data that Intune uses for the feature updates reports.
+- **Devices**: Devices must:
+
+  - Meet the [prerequisites for Windows 10 feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Windows 10 feature updates with Intune**.
+  - Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for  reporting.
+  - Run Windows 10 1903 or later. Although Windows 10 feature updates policy supports earlier versions of Windows, earlier versions don’t support reporting of the data that Intune uses for the feature updates reports.
 
 ### Configure data collection
 
-The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune. Instead, these reports use data that is classified as Windows Diagnostic Data. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
+The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune. Instead, it's collected through Endpoint analytics, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
-To enable data collection, you use [Endpoint analytics](../mem/analytics/overview.md) in the Microsoft Endpoint Manager admin center to enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
+To enable data collection through [Endpoint analytics](../mem/analytics/overview.md) in the Microsoft Endpoint Manager admin center, enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
 
 ### Enable data collection
 
@@ -105,7 +110,10 @@ To enable data collection, you use [Endpoint analytics](../mem/analytics/overvie
    When you configure this profile:
 
    1. On the **Configuration settings** page, for **Health monitoring** select *Enable*.
-   2. On the **Applicability Rules** page, you can optionally add a rule to only apply the profile to devices on this version or above.  Only Windows 10 version 1093 and later is supported for these reports.
+   2. On the **Configuration settings** page, for **Scope** select *Windows updates*.
+      > [!div class="mx-imgBorder"]
+      > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
+   3. On the **Applicability Rules** page, you can optionally add a rule to only apply the profile to devices on this version or above.  Only Windows 10 version 1903 and later is supported for these reports.
 
 5. When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
 
@@ -165,7 +173,6 @@ To use the report:
    - **Alert Type** - When applicable, Alert Type displays the most recent alert message.
    - **Alert Details** – *This column isn't in use.*
    - **Last Scan Time** - The last time this device ran a scan for Windows Update. <br>
-
 
    The following information applies to **Update State** and **Update Substate**:
 
