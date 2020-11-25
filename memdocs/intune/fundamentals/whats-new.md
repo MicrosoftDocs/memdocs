@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 11/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,20 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## Week of November 23, 2020
+
+### App management
+
+#### PowerShell scripts execute before apps, and timeout reduced<!-- 8829670 -->
+
+There are some updates to PowerShell scripts:
+
+- PowerShell scripts execute before Win32 apps run. Previously, Win32 apps ran, and then PowerShell scripts ran.
+- To resolve an Enrollment Status Page (ESP) timeout issue, PowerShell scripts timeout after 30 minutes. Previously, they timed out after 60 minutes.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
 <!-- ########################## -->
 ## Week of November 16, 2020  (2011 Service release)

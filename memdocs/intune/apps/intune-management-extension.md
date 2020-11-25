@@ -2,12 +2,12 @@
 # required metadata
 
 title: Add PowerShell scripts to Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
-description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, use reports to monitor the scripts, and see the steps to delete scripts you add on Windows 10 devices in Microsoft Intune. Also see some common issues and resolutions. 
+description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10 devices in Microsoft Intune. Read common issues and resolutions. 
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use PowerShell scripts on Windows 10 devices in Intune
 
-Use the Microsoft Intune management extension to upload PowerShell scripts in Intune to run on Windows 10 devices. The management extension enhances Windows device management (MDM), and makes it easier to move to modern management.
+Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows 10 devices. The management extension enhances Windows device management (MDM), and makes it easier to move to modern management.
 
 This feature applies to:
 
@@ -42,15 +42,29 @@ This feature applies to:
 
 ## Move to modern management
 
-End-user computing is going through a digital transformation. Classic, traditional IT focuses on a single device platform, business-owned devices, users that work from the office, and different manual, reactive IT processes. The modern workplace uses many platforms that are user and business owned, allows users to work from anywhere, and provides automated and proactive IT processes.
+User computing is going through a digital transformation. Traditional IT focuses on a single device platform, business-owned devices, users that work from the office, and different manual, reactive IT processes. The modern workplace uses many platforms that are user and business owned. It allows users to work from anywhere, and provides automated and proactive IT processes.
 
 MDM services, such as Microsoft Intune, can manage mobile and desktop devices running Windows 10. The built-in Windows 10 management client communicates with Intune to run enterprise management tasks. There are some tasks that you might need, such as advanced device configuration and troubleshooting. For Win32 app management, you can use the [Win32 app management](app-management.md) feature on your Windows 10 devices.
 
 The Intune management extension supplements the in-box Windows 10 MDM features. You can create PowerShell scripts to run on Windows 10 devices. For example, create a PowerShell script that does advanced device configurations. Then, upload the script to Intune, assign the script to an Azure Active Directory (AD) group, and run the script. You can then monitor the run status of the script from start to finish.
 
+## Before you begin
+
+- When scripts are set to user context and the end user has administrator rights, by default, the PowerShell script runs under the administrator privilege.
+
+- End users aren't required to sign in to the device to execute PowerShell scripts.
+
+- The Intune management extension agent checks with Intune once every hour and after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent retries the script three times for the next three consecutive Intune management extension agent check-ins.
+
+- For shared devices, the PowerShell script will run for every new user that signs in.
+
+- PowerShell scripts are executed before Win32 apps run. In other words, PowerShell scripts execute first. Then, Win32 apps execute.
+
+- PowerShell scripts time out after 30 minutes.
+
 ## Prerequisites
 
-The Intune management extension has the following prerequisites. Once the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
+The Intune management extension has the following prerequisites. Once they're met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
 - Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1709 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps. 
   
@@ -67,13 +81,13 @@ The Intune management extension has the following prerequisites. Once the prereq
   
   - Devices manually enrolled in Intune, which is when:
   
-    - [Auto-enrollment to Intune](../enrollment/quickstart-setup-auto-enrollment.md) is enabled in Azure AD. The end user signs in to the device using a local user account, manually joins the device to Azure AD, and then signs in to the device using their Azure AD account.
-    
+    - [Auto-enrollment to Intune](../enrollment/quickstart-setup-auto-enrollment.md) is enabled in Azure AD. Users sign in to devices using a local user account, and manually join the device to Azure AD. Then, they sign in to the device using their Azure AD account.
+
     OR  
-    
+
     - User signs in to the device using their Azure AD account, and then enrolls in Intune.
 
-  - Co-managed devices that use Configuration Manager and Intune. When installing Win32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension will be deployed to a device when you target a PowerShell script to the device. However, as noted above, the device must be an Azure AD or Hybrid Azure AD joined device and must be running Windows 10 version 1607 or later. See the following articles for guidance: 
+  - Co-managed devices that use Configuration Manager and Intune. When installing Win32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension will be deployed to a device when you target a PowerShell script to the device. Remember, the device must be an Azure AD or Hybrid Azure AD joined device. And, it must be running Windows 10 version 1607 or later. See the following articles for guidance:
   
     - [What is co-management](/configmgr/comanage/overview) 
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
@@ -126,42 +140,37 @@ The Intune management extension has the following prerequisites. Once the prereq
 
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the policy is deployed to the groups you chose.
 
-## Important considerations
-
-- When scripts are set to user context and the end user has administrator rights, by default, the PowerShell script runs under the administrator privilege.
-
-- End users aren't required to sign in to the device to execute PowerShell scripts.
-
-- The Intune management extension agent checks with Intune once every hour and after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent will attempt to retry the script three times for the next 3 consecutive Intune management extension agent check-ins.
-
-- For shared devices, the PowerShell script will run for every new user that signs in.
-
 ### Failure to run script example
+
 8 AM
-  -  Check in
-  -  Run script **ConfigScript01**
-  -  Script fails
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails
 
 9AM
-  -  Check in
-  -  Run script **ConfigScript01**
-  -  Script fails (retry count = 1)
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails (retry count = 1)
 
 10 AM
-  -  Check in
-  -  Run script **ConfigScript01**
-  -  Script fails (retry count = 2)
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails (retry count = 2)
   
 11 AM
-  -  Check in
-  -  Run script **ConfigScript01**
-  -  Script fails (retry count = 3)
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails (retry count = 3)
 
 12 PM
-  -  Check in
-  - No additional attempts are made to run **ConfigScript01**script.
-  - Going forward, if no additional changes are made to the script, no additional attempts will be made to run the script.
 
+- Check in
+- No additional attempts are made to run **ConfigScript01**script.
+- If no additional changes are made to the script, then no additional attempts are made to run the script.
 
 ## Monitor run status
 
@@ -190,7 +199,7 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 
 - The device isn't joined to Azure AD. Be sure the devices meet the [prerequisites](#prerequisites) (in this article). 
 - There are no PowerShell scripts or Win32 apps assigned to the groups that the user or device belongs.
-- The device can't check-in with the Intune service, due to no internet access, no access to Windows Push Notification Services (WNS), and so on.
+- The device can't check in with the Intune service. For example, there's no internet access, no access to Windows Push Notification Services (WNS), and so on.
 - The device is in S mode. The Intune management extension isn't supported on devices running in S mode. 
 
 To see if the device is auto-enrolled, you can:
@@ -207,7 +216,7 @@ To see if the device is auto-enrolled, you can:
 
 **Possible resolutions**:
 
-- The PowerShell scripts don't run at every sign-in. They run:
+- The PowerShell scripts don't run at every sign in. They run:
 
   - When the script is assigned to a device
   - If you change the script, upload it, and assign the script to a user or device
@@ -236,7 +245,7 @@ To see if the device is auto-enrolled, you can:
   - To test script execution without Intune, run the scripts in the System account using the [psexec tool](/sysinternals/downloads/psexec) locally:
 
     `psexec -i -s`  
-    
+
   - If the script reports that it succeeded, but it didn't actually succeed, then it's possible your antivirus service may be sandboxing AgentExecutor. The following script always reports a failure in Intune. As a test, you can use this script:
   
     ```powershell
@@ -247,7 +256,7 @@ To see if the device is auto-enrolled, you can:
 
     If the script reports a success, look at the `AgentExecutor.log` to confirm the error output. If the script executes, the length should be >2.
 
-  - To capture the .error and .output files, the following snippet executes the script through AgentExecutor to PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). It keeps the logs for your review. Remember, the Intune Management Extension cleans up the logs after the script executes:
+  - To capture the `.error` and `.output` files, the following snippet executes the script through AgentExecutor to PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). It keeps the logs for your review. Remember, the Intune Management Extension cleans up the logs after the script executes:
   
     ```powershell
     $scriptPath = read-host "Enter the path to the script file to execute"
