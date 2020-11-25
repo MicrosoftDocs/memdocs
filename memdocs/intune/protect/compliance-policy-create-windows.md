@@ -264,7 +264,7 @@ Surface Hubs that run Windows 10 Team OS do not support the Microsoft Defender f
 
 - In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
 
-- In the category [Microsoft Defender for Endpoint](#microsoft-defender-atp), set **Require the device to be at or under the machine risk score** to the default of *Not configured*.
+- In the category [Microsoft Defender for Endpoint](#microsoft-defender-for-endpoint), set **Require the device to be at or under the machine risk score** to the default of *Not configured*.
 
 ## Next steps
 
