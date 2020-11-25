@@ -62,12 +62,12 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ### App management
 
-#### PowerShell scripts execute before apps, and timeout reduced<!-- 8829670 -->
+#### PowerShell scripts execute before apps, and time out reduced<!-- 8829670 -->
 
 There are some updates to PowerShell scripts:
 
-- PowerShell scripts execute before Win32 apps run. Previously, Win32 apps ran, and then PowerShell scripts ran.
-- To resolve an Enrollment Status Page (ESP) timeout issue, PowerShell scripts timeout after 30 minutes. Previously, they timed out after 60 minutes.
+- Sidecar execution flow is reverted back to processing PowerShell scripts first, and then running Win32 apps.
+- To resolve an Enrollment Status Page (ESP) time out issue, PowerShell scripts time out after 30 minutes. Previously, they timed out after 60 minutes.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
