@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 11/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,22 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## Week of November 23, 2020
+
+### App management
+
+#### PowerShell scripts execute before apps, and time out reduced<!-- 8829670 -->
+
+There are some updates to PowerShell scripts:
+
+- Sidecar execution flow is reverted back to processing PowerShell scripts first, and then running Win32 apps.
+- To resolve an Enrollment Status Page (ESP) time out issue, PowerShell scripts time out after 30 minutes. Previously, they timed out after 60 minutes.
+
+For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
 <!-- ########################## -->
 ## Week of November 16, 2020  (2011 Service release)
@@ -410,7 +426,7 @@ To understand what's changed between versions, see [Compare baseline versions](.
 ### Monitor and troubleshoot
 
 #### New Windows 10 feature update failures report<!-- 6473121  -->
-The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Feature update failures report](../fundamentals/reports.md#feature-update-failures-report-operational) and [Validation and reporting for Windows 10 updates](../protect/windows-update-for-business-configure.md#validation-and-reporting-for-windows-10-updates).
+The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Feature update failures report](../protect/windows-update-compliance-reports.md#use-the-feature-update-failures-operational-report).
 
 #### Updates to Antivirus reports<!-- 8456632  -->
 Both the **Antivirus agent status report** and the **Detected malware report** have been updated. These reports now show data visualizations and provide additional columns of information (**SignatureUpdateOverdue**, **MalwareID**, **displayName**, and **InitialDetectionDateTime**). In addition, remote actions are included in the Antivirus agent status report. For more information, see the [Antivirus agent status report](../fundamentals/reports.md#antivirus-agent-status-report-organizational) and the [Detected malware report](../fundamentals/reports.md#detected-malware-report-organizational).
