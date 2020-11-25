@@ -88,7 +88,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
   
-  For Windows devices, this field does not look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [Devicestatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).  
+  For Windows devices, this field does not look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).  
 
 - **Profiles** – A list of the *Device configuration* profiles that apply to this device and are configured with the following values:
 
