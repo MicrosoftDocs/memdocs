@@ -87,7 +87,7 @@ To use Microsoft Defender for Endpoint with Intune, be sure you have the followi
 
 Learn more from the Intune documentation:
 
-- [Use security tasks with ATPs Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md)
+- [Use security tasks with Defender for Endpoints Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md)
 - [Get started with device compliance policies](device-compliance-get-started.md)
 
 Learn more from the Microsoft Defender for Endpoint documentation:

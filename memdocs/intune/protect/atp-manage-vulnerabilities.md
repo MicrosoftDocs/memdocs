@@ -76,7 +76,7 @@ Following is an example workflow for an application. This same general workflow 
 
   Because the media player in this example isn't a managed app, Intune can only provide text instructions. If the app was managed, Intune could provide instructions to download an updated version, and provide a link to open the deployment for the app so that the updated files can be added to the deployment.
 
-- After the completing the remediation, the Intune admin opens the security task and selects **Complete Task**.  The remediation status is updated for Intune and in ATP, where security admins confirm the revised status for the vulnerability.
+- After the completing the remediation, the Intune admin opens the security task and selects **Complete Task**.  The remediation status is updated for Intune and in Defender for Endpoint, where security admins confirm the revised status for the vulnerability.
 
 ## Prerequisites  
 
@@ -85,12 +85,12 @@ Following is an example workflow for an application. This same general workflow 
 - Microsoft Intune  
 - Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
-**Intune configurations for ATP**:
+**Intune configurations for Defender for Endpoint**:
 
 - Configure a service to service connection with Microsoft Defender for Endpoint.
 - Deploy a device configuration policy with a profile type of **Microsoft Defender for Endpoint (Windows 10 Desktop)** to devices that will have risk assessed by Defender for Endpoint.
 
-  For information about how to set up Intune to work with ATP, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
+  For information about how to set up Intune to work with Defender for Endpoint, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## Work with security tasks
 
