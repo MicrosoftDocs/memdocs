@@ -46,8 +46,6 @@ When a device receives a Windows 10 feature updates policy:
   > - To learn about known issues that can result in a safeguard hold, see [Windows 10 release information](/windows/release-information/) and then reference the relevant Windows version from the table of contents for that page.
   >
   >   For example, for Windows version 2004, open [Windows 10 release information](/windows/release-information/), and then from the left-hand pane, select *Version 2004* and then *Known issues and notifications*. The [resultant page](/windows/release-information/status-windows-10-2004) details known issues for that Windows version that might result in safeguard hold.
-  >
-  > While safeguard holds are not visible in Intune today, a future release will add the ability to report on them.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Windows 10 feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Windows 10 feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
@@ -82,7 +80,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 - Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
-- While this feature is in preview and you co-manage devices with Configuration Manager, there is a limitation where feature updates policies might not immediately take effect. This delay can result in devices updating to a later feature update version than as configured policy. This limitation will be removed with a future update to Configuration Manager.
+- While this feature is in preview and you co-manage devices with Configuration Manager, there is a limitation where feature updates policies might not immediately take effect. This delay can result in devices updating to a later feature update version than as configured policy.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
