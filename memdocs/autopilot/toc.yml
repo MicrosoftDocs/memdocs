@@ -7,6 +7,18 @@
   items:
   - name: Windows Autopilot overview
     href: windows-autopilot.md
+  - name: Device registration
+    items:
+    - name: Registration overview
+      href: registration-overview.md
+    - name: OEM registration
+      href: oem-registration.md
+    - name: Partner registration
+      href: partner-registration.md
+    - name: Automatic registration
+      href: automatic-registration.md
+    - name: Manual registration
+      href: manual-registration.md
 
 - name: Concepts
   items:
@@ -37,13 +49,13 @@
 
 - name: How-to guides
   items:
-    - name: Register devices
+    - name: Register devices manually
       href: add-devices.md
-    - name: Enroll devices in Intune
+    - name: Create device groups
       href: enrollment-autopilot.md
     - name: Deploy hybrid Azure AD-joined devices
       href: windows-autopilot-hybrid.md
-    - name: Configure device profiles
+    - name: Configure deployment profiles
       href: profiles.md
     - name: Enrollment Status Page
       href: enrollment-status.md
