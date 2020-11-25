@@ -69,6 +69,8 @@ There are some updates to PowerShell scripts:
 - Sidecar execution flow is reverted back to processing PowerShell scripts first, and then running Win32 apps.
 - To resolve an Enrollment Status Page (ESP) time out issue, PowerShell scripts time out after 30 minutes. Previously, they timed out after 60 minutes.
 
+For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
 <!-- ########################## -->
