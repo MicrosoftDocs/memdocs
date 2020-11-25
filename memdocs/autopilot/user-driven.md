@@ -19,7 +19,9 @@ ms.topic: how-to
 
 # Windows Autopilot user-driven mode
 
-**Applies to: Windows 10, version 1809 or later**
+**Applies to**
+
+- Windows 10, version 1809 or later
 
 Windows Autopilot user-driven mode lets you configure new Windows 10 devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 

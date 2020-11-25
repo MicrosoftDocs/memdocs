@@ -42,7 +42,7 @@ Use one of the following policy types to configure BitLocker on your managed dev
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles form device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
 > [!TIP]
-> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and retrieve BitLocker recovery keys when you view the encryption report.
+> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 >
 > You can also access important information for BitLocker from your devices, as found in Azure Active Directory (Azure AD).
 [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
@@ -114,7 +114,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ## Manage BitLocker
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). You can also view and retrieve BitLocker recovery keys when you view the encryption report.
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). 
 
 ### Silently enable BitLocker on devices
 
@@ -198,6 +198,5 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 ## Next steps
 
-[Manage FileVault policy](../protect/encrypt-devices-filevault.md)
-
-[Monitor disk encryption](../protect/encryption-monitor.md)
+- [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
+- [Monitor disk encryption](../protect/encryption-monitor.md)

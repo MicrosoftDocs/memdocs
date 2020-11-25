@@ -12,8 +12,6 @@
   items:
   - name: Scenarios and capabilities
     href: windows-autopilot-scenarios.md
-  - name: Windows Autopilot update
-    href: autopilot-update.md
   - name: Deployment scenarios
     items:
     - name: User-driven mode
