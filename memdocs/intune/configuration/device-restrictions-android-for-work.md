@@ -116,7 +116,15 @@ Some settings only apply at the work profile level for corporate-owned devices w
 
 - **Power button menu**: **Block** hides the power options when users hold down the power button when in kiosk mode. Hiding these options prevents users from accidentally or intentionally shutting down devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when users hold down the power button on a device, they're shown power options, such as Restart and Power off.
 
+ This setting applies to:
+
+  - Android 9.0 and newer
+
 - **System error warnings**: **Allow** shows system warnings on the screen when in kiosk mode, including unresponsive apps and system warnings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might hide these warnings. When one of these events occurs, the system forces the app to close.
+
+ This setting applies to:
+
+  - Android 9.0 and newer
 
 - **Enabled system navigation features**: Allow users to access the device home and overview buttons when in kiosk mode. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the device home and overview buttons.
@@ -130,13 +138,17 @@ Some settings only apply at the work profile level for corporate-owned devices w
 - **System notifications and information**: Allow users to access the device status bar, and receive notifications from the status bar when in kiosk mode. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
   - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
-  - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar.
+  - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. User must have device home button enabled to see notifications. Enable the home button using **Enabled system navigation features**.
 
   This setting applies to:
 
   - Android 9.0 and newer
 
-- **End-user access to device settings**: **Block** prevents users from accessing the Settings app when in kiosk mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings app.
+- **End-user access to device settings**: **Block** prevents users from accessing the Settings app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings app.
+
+  This setting applies to:
+
+  - Android 9.0 and newer
 
 ### System security
 
