@@ -7,7 +7,7 @@ description: Describes how to enable BitLocker encryption on a device by using I
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 11/25/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,6 +45,10 @@ With Microsoft Intune, you have the following methods to manage BitLocker on Win
 - **Device Configuration policies** - Certain built-in policy options are available in Intune when you create a device configuration profile to manage endpoint protection. To find these options, [create a device profile for endpoint protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), selecting **Windows 10 and later** for the *Platform*, and then selecting the **Windows Encryption** category for *Settings*. 
 
    You can read about the available options and features here: [Windows Encryption](/intune/endpoint-protection-windows-10#windows-encryption).
+   
+- **Endpoint Security policies** - Certain built-in policy options are available in Intune when you create an Endpoint Security profile for disk encryption. To find these options, [create a profile for disk encryption](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), selecting **Windows 10 and later** for the *Platform*, and then selecting the **BitLocker** for the *Profile type*.
+
+   You can read about the available options and features here: [Disk Encryption](/intune/protect/endpoint-security-disk-encryption-profile-settings).
 
 - **Security baselines** - [Security baselines](security-baselines.md) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender for Endpoint Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies. 
 
@@ -223,6 +227,8 @@ The following are more resources that might help when you work with BitLocker:
 - [BitLocker frequently asked questions](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
 - [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp)
 - [Intune Windows Encryption policy settings](/intune/endpoint-protection-windows-10#windows-encryption)
+- [Intune Disk Encryption policy settings for BitLocker](/intune/protect/endpoint-security-disk-encryption-profile-settings#bitlocker)
+- [Intune Encryption report](/intune/protect/encryption-monitor#view-encryption-details)
 - [Hardware independent automatic BitLocker encryption using AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [CSP Policy for BitLocker Encryption on Auto-Pilot Devices](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
 - [Walkthrough creating and deploying BitLocker policy with Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)
