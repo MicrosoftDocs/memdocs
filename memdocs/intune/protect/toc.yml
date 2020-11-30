@@ -265,8 +265,12 @@
     items:
     - name: Windows updates
       items:
-      - name: Windows Update for Business settings
-        href: windows-update-for-business-configure.md    
+      - name: Use Windows Update for Business
+        href: windows-update-for-business-configure.md
+      - name: Update rings policy
+        href: windows-10-update-rings.md
+      - name: Feature updates policy
+        href: windows-10-feature-updates.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
