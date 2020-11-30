@@ -33,8 +33,8 @@ ms.collection:
 
 Microsoft app developers want to hear from you when unexpected behavior occurs so they can find the root cause and prevent future occurrences. App errors are detailed and saved on your device in a document called a _diagnostic log_. The Company Portal team looks to Company Portal-specific logs to diagnose problems and improve the app.   
 
-    > [!NOTE]
-    > If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
+> [!NOTE]
+> If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
 
 To send logs to Microsoft:  
 
