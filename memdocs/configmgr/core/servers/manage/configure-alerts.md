@@ -2,7 +2,7 @@
 title: Configure alerts
 titleSuffix: Configuration Manager
 description: Configure alerts to understand the state of your Configuration Manager environment.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

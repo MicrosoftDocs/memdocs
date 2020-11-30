@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -120,7 +120,6 @@ The following features are available with the most recent Configuration Manager 
 
 - [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
 - [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
-- [Windows 10 Servicing dashboard changes](2020/technical-preview-2011.md#bkmk_dashboard) <!--3555940-->
 - [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
 - [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
 - [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->

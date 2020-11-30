@@ -2,7 +2,7 @@
 title: SMS_CollectionEvaluationIncremental class
 titleSuffix: Configuration Manager
 description: Show incremental evaluated collections.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference

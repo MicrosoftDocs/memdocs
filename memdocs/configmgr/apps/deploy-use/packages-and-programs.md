@@ -2,7 +2,7 @@
 title: Packages and programs
 titleSuffix: Configuration Manager
 description: Support deployments that use legacy packages and programs with Configuration Manager.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

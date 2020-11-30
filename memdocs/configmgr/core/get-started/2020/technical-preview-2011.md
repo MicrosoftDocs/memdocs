@@ -2,7 +2,7 @@
 title: Technical preview 2011
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2011.
-ms.date: 11/24/2020
+ms.date: 11/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -26,7 +26,6 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Categorize Community hub content](includes/2011/8052494.md)]
 [!INCLUDE [Improvements to the product lifecycle dashboard](includes/2011/8160460.md)]
-[!INCLUDE [Windows 10 Servicing dashboard changes](includes/2011/3555940.md)]
 [!INCLUDE [Software Center notifications display with logo](includes/2011/4993167.md)]
 [!INCLUDE [Approved scripts for Orchestration Groups](includes/2011/6991647.md)]
 [!INCLUDE [Community hub on Windows Server operating systems](includes/2011/3555909.md)]

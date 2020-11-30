@@ -2,7 +2,7 @@
 title: How to view collection evaluation
 titleSuffix: Configuration Manager
 description: View collection evaluation queues and evaluation related information.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

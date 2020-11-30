@@ -2,7 +2,7 @@
 title: Import and export applications
 titleSuffix: Configuration Manager
 description: Learn how to import and export applications in Configuration Manager to share between separate hierarchies.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
