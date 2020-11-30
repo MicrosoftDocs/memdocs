@@ -143,6 +143,9 @@ Automatic enrollment also lets users enroll their Windows 10 devices to Intune. 
    > [!IMPORTANT]  
    > If both **MAM user scope** and automatic MDM enrollment (**MDM user scope**) are enabled for a group, only MAM is enabled. Only Mobile Application Management (MAM) is added for users in that group when they workplace join personal device. Devices aren't automatically MDM-enrolled.  
 
+   > [!IMPORTANT] 
+   > You don’t need to toggle the MDM user scope for Device token enrollment I.e. When Configuration Manager is set to enroll devices to Intune. The MDM URL’s are fetched from CoMgmtConfigs table in the Configuration Manager Database
+
 3. Select **Save** to complete configuration of automatic enrollment.  
 
 4. Return to **Mobility (MDM and MAM)** and then select **Microsoft Intune Enrollment**.  
