@@ -29,7 +29,9 @@ ms.collection:
 
 Customers may purchase devices from resellers, distributors, or other partners. As long as these resellers, distributors, and partners are part of the [Cloud Solution Partners (CSP) program](https://partner.microsoft.com/cloud-solution-provider), they too can register devices for the customer. 
 
-As with OEMs, CSP partners must be granted permission to register devices for an organization. You can use the process described on the [Customer consent page](registration-auth.md#csp-authorization). The CSP partner requests a relationship with the organization. That organization's global administrator approves the request. After the approval, CSP partners add devices using [Partner Center](https://partner.microsoft.com/pcv/dashboard/overview), either directly through the web site or via available APIs that can automate the same tasks.
+As with OEMs, CSP partners must be granted permission to register devices for an organization. This process is described in the [CSP authorization](registration-auth.md#csp-authorization) section of the Windows Autopilot customer consent article. In summary:
+- The CSP partner requests a relationship with the organization. That organization's global administrator approves the request. 
+- After the approval, CSP partners add devices using [Partner Center](https://partner.microsoft.com/pcv/dashboard/overview), either directly through the web site or via available APIs that can automate the same tasks.
 
 For Surface devices, Microsoft Support can help with device registration.  For more information, see [Surface Registration Support for Windows Autopilot](/surface/surface-autopilot-registration-support).
 

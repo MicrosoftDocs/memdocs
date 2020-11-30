@@ -2,7 +2,7 @@
 title: Automatic registration of existing devices
 ms.reviewer: 
 manager: laurawi
-description: How to add devices to Windows Autopilot
+description: Automatically add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -26,14 +26,15 @@ ms.collection:
 - Windows Holographic, version 2004
 
 You can automatically register an existing device if it's:
-- running a supported version of Windows 10 semi-annual channel.
-- enrolled in an MDM service such an Intune.
+- running a [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel, and
+- enrolled in an MDM service such an Intune
+- a corporate device that is not already registered with Windows Autopilot
 
 For devices that meet both these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
 
-For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
+For more information on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
 
-You can automatically convert such devices to Windows using Intune's **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 
+![Convert all targeted devices](images/convert-devices.png)
 
-When using the [Windows Autopilot for existing devices](existing-devices.md) scenario, you don't need to pre-register the devices with Windows Autopilot. Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used. The device can then be registered with Windows Autopilot using the same "Convert all targeted devices to Autopilot" setting.
+When using the [Windows Autopilot for existing devices](existing-devices.md) scenario, you don't need to pre-register the devices with Windows Autopilot. Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used. The device can then be registered with Windows Autopilot using the same **Convert all targeted devices to Autopilot** setting.
 
