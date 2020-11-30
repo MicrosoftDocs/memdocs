@@ -46,7 +46,7 @@ With Microsoft Intune, you have the following methods to manage BitLocker on Win
 
    You can read about the available options and features here: [Windows Encryption](/intune/endpoint-protection-windows-10#windows-encryption).
    
-- **Endpoint Security policies** - Certain built-in policy options are available in Intune when you create an Endpoint Security profile for disk encryption. To find these options, [create a profile for disk encryption](https://docs.microsoft.com/mem/intune/protect/endpoint-security-policy#create-an-endpoint-security-policy), selecting **Windows 10 and later** for the *Platform*, and then selecting the **BitLocker** for the *Profile type*.
+- **Endpoint Security policies** - Certain built-in policy options are available in Intune when you create an Endpoint Security profile for disk encryption. To find these options, [create a profile for disk encryption](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), selecting **Windows 10 and later** for the *Platform*, and then selecting the **BitLocker** for the *Profile type*.
 
    You can read about the available options and features here: [Disk Encryption](/intune/protect/endpoint-security-disk-encryption-profile-settings).
 
