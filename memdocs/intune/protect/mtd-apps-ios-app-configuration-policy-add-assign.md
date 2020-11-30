@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -86,24 +86,31 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
 
-### MVSISION Mobile app configuration policy
+### MVISION Mobile app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the MVISION Mobile iOS app configuration policy.
+- **Android Enterprise**
+   
+   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the MVISION Android app configuration policy. 
+   
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
 
-- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
+| Configuration key  | Value type | Configuration value  |
+|---|---|---|
+|  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the MVISION console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the MVISION console  |
 
-   ```
-   <dict>
-   <key>provider</key><string>Intune</string>
-   <key>userprincipalname</key><string>{{userprincipalname}}</string>
-   <key>deviceid</key>
-   <string>{{deviceid}}</string>
-   <key>serialnumber</key>
-   <string>{{serialnumber}}</string>
-   <key>udidlast4digits</key>
-   <string>{{udidlast4digits}}</string>
-   </dict>
-   ```
+- **iOS**
+   
+   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the MVISION Mobile iOS app configuration policy.
+   
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
+
+| Configuration key  | Value type | Configuration value  |
+|---|---|---|
+|  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the MVISION console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the MVISION console  |
 
 ### Pradeo app configuration policy
 
@@ -136,8 +143,9 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 > [!NOTE]
 > For initial testing, use a test group when assigning users and devices in the Assignments section of the configuration policy. 
 
-- **Android**
-  - See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Wandera Android app configuration policy using the information below when prompted.
+- **Android Enterprise**
+
+   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Wandera Android app configuration policy using the information below when prompted.
 
 1. In the **RADAR Wandera Portal**, click the **Add** button under **Configuration settings** format.
 2. Select **Activation Profile URL** from the list of **Configuration Keys**. Click **OK**.
@@ -148,7 +156,8 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Wandera Activation Profile. If you don’t require multiple Wandera Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Wandera, be sure to select “Azure Active Directory” under the Associated User configuration to ensure Wandera is able to synchronize the device with Intune via UEM Connect.
 
 - **iOS**
-  - See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy using the information below when prompted.
+
+   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy using the information below when prompted.
 
 1. In **RADAR Wandera Portal**, navigate to **Devices > Activations** and select any activation profile. Click **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.  
 2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.  
@@ -160,22 +169,29 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 ### Zimperium app configuration policy
 
-See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
+- **Android Enterprise**
+   
+   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Zimperium Android app configuration policy. 
+   
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
 
-- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body.
+| Configuration key  | Value type | Configuration value  |
+|---|---|---|
+|  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the Zimperium console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the Zimperium console  |
 
-   ```
-   <dict>
-   <key>provider</key><string>Intune</string>
-   <key>userprincipalname</key><string>{{userprincipalname}}</string>
-   <key>deviceid</key>
-   <string>{{deviceid}}</string>
-   <key>serialnumber</key>
-   <string>{{serialnumber}}</string>
-   <key>udidlast4digits</key>
-   <string>{{udidlast4digits}}</string>
-   </dict>
-   ```
+- **iOS**
+   
+   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
+
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
+
+| Configuration key  | Value type | Configuration value  |
+|---|---|---|
+|  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the Zimperium console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the Zimperium console  |
 
 ## Assigning Mobile Threat Defense apps to end users via Intune
 
