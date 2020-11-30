@@ -112,7 +112,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 An organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
 
 > [!div class="mx-imgBorder"]
-> ![View the Firewall Status report](media/endpoint-security-firewall-policy/select-firewall-reports.png)
+> ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices.
 Status details include:
