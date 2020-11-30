@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -86,6 +86,14 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 
 ## Role based administration
+
+### Only Full Administrator can delete collections
+<!--8864728-->
+*Applies to version 2010*
+
+When trying to delete a collection, there is a query to check for Automatic Deployment Rules (ADR) that are referencing the collection. If you don't have permissions on ADRs, you will be unable to perform the deletion.
+
+To work around this issue, if you need to delete a collection, ensure you have full administrator permissions to do it. You can also grant **Read** permission to the **Software Update** object to your accounts, since that grants access to ADRs but note those accounts would be able to delete collections too.
 
 ### Security scopes for certain folders don't replicate from CAS to primary sites
 <!--6306759-->
