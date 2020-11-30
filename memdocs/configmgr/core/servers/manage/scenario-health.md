@@ -2,7 +2,7 @@
 title: Monitor scenario health
 titleSuffix: Configuration Manager
 description: Use Configuration Manager to monitor the health of end-to-end scenarios.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

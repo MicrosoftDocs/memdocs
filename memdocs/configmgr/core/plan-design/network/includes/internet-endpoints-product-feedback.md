@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ---
 
 On the computer where you run the console, allow it to access the following internet endpoints to send diagnostic data to Microsoft:

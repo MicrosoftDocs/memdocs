@@ -2,7 +2,7 @@
 title: Checklist for 2010
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2010.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Configure client settings
 titleSuffix: Configuration Manager
 description: Learn how to configure client settings in Configuration Manager.
-ms.date: 11/20/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
