@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2020
+ms.date: 11/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -311,6 +311,14 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - Removes existing App Clips on devices.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and removing App Clips on devices.
+
+  This feature applies to:  
+  - iOS 14.0 and newer
+  - iPadOS 14.0 and newer
+
+- **Limit Apple personalized advertising**: **Yes** limits Apple's personalized advertising in the App Store, Apple News, and Stocks apps. On the device, the **Settings** > **Privacy** > **Apple Advertising** is toggled off. This setting only impacts personalized ads in these apps. It doesn't impact non-personalized ads, and may not reduce ads. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on personalized ads.
+
+  For more information on Apple's policy, see [Apple Advertising & Privacy](https://support.apple.com/HT205223) (opens Apple's web site).
 
   This feature applies to:  
   - iOS 14.0 and newer
