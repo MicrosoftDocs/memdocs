@@ -87,7 +87,7 @@ The reports for Firewall policy display status details about the firewall status
 
 Summary is the default view when you open the Firewall node. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **Summary**.
 
-This view provides:  
+This view provides:
 
 - An aggregate count of devices that have the firewall turned off.
 - A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
@@ -96,23 +96,23 @@ This view provides:
 
 This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center], and then go to **Endpoint security** > **Firewall** >  **Windows 10 MDM devices with firewall off**.
 
-> [!div class="mx-imgBorder"]
-> ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
-
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
 
 - Device name
+- Firewall status
 - User principle name
-- Operating system
-- Device ID
+- Target (The method of device management)
 - Last check in time
+
+> [!div class="mx-imgBorder"]
+> ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
 
 ### Windows 10 MDM Firewall status
 
 An organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
 
 > [!div class="mx-imgBorder"]
-> ![View the Firewall Status report](media/endpoint-security-firewall-policy/firewall-status.png)
+> ![View the Firewall Status report](media/endpoint-security-firewall-policy/select-firewall-reports.png)
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices.
 Status details include:
@@ -120,13 +120,13 @@ Status details include:
 - **Enabled** – The firewall on, and successfully reporting.
 - **Disabled** - The firewall is turned off.
 - **Limited** – The firewall isn’t monitoring all networks, or some rules are turned off.
-- **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks 
+- **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
 - **Not applicable** – The device doesn’t support firewall reporting.
-You can filter returns for this report by using one or more of the status detail categories. 
 
+You can filter returns for this report by using one or more of the status detail categories.
 
-
-
+> [!div class="mx-imgBorder"]
+> ![View the Firewall Status report](media/endpoint-security-firewall-policy/firewall-status.png)
 
 ## Next steps
 
