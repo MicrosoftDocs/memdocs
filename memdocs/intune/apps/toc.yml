@@ -104,7 +104,7 @@
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
           href: apps-edge-macos.md   
-        - name: Microsoft Defender ATP for macOS
+        - name: Microsoft Defender for Endpoint for macOS
           href: apps-advanced-threat-protection-macos.md
       - name: PowerShell scripts
         href: intune-management-extension.md

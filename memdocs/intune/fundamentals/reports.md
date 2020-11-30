@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -147,7 +147,7 @@ To see a generated report of device state, you can use the following steps:
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated. 
 
-For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
 ## Antivirus agent status report (Organizational)
 The **Antivirus agent status** report provides the agent status of your organization's devices. 
