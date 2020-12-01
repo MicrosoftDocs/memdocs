@@ -14,4 +14,10 @@ ms.date: 09/17/2020
 
 - One CMG supports one to 16 virtual machine (VM) instances in the Azure cloud service.
 
-- Each CMG VM instance supports 6,000 simultaneous client connections. When the CMG is under high load with more than the supported number of clients, it still handles requests but there may be delay.
+- Simultaneous client connections per each CMG VM instance:
+
+  - **Cloud service (classic)**: 6,000
+
+  - **Virtual machine scale set**: 2,000 (version 2010 for Cloud Service Provider (CSP) subscriptions)
+
+  When the CMG is under high load with more than the supported number of clients, it still handles requests but there may be delay.

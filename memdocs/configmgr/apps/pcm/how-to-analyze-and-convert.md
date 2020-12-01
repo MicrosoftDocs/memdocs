@@ -5,7 +5,7 @@ description: Learn how to analyze and convert packages with Package Conversion M
 ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f3bf1737-827d-48fa-8bb1-f48fe71afe0c
 author: aczechowski
 ms.author: aaroncz
@@ -48,6 +48,9 @@ Before you can convert a package, first analyze it. Depending on the results of 
 
     - **Unknown**: First run the **Analyze** task, or wait for the next scheduled analysis. If the state doesn't change, then see [Troubleshoot Package Conversion Manager](troubleshoot-pcm.md).<!-- SCCMDocs#2044 -->
 
+> [!TIP]
+> Optionally, you can use the following PowerShell cmdlet to analyze a package: [Invoke-CMAnalyzePackage](/powershell/module/configurationmanager/invoke-cmanalyzepackage).
+
 ## <a name="bkmk_convert"></a> How to convert packages
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Application Management**, and select the **Packages** node.  
@@ -61,7 +64,8 @@ Before you can convert a package, first analyze it. Depending on the results of 
 
 4. Follow the instructions in the window. Select either **View applications** or **Close**.  
 
-
+> [!TIP]
+> Optionally, you can use the following PowerShell cmdlet to convert a package: [Invoke-CMConvertPackage](/powershell/module/configurationmanager/invoke-cmconvertpackage).
 
 ## <a name="bkmk_fix"></a> How to fix and convert packages
 
@@ -117,6 +121,6 @@ Before you can convert a package, first analyze it. Depending on the results of 
 Go to the **Monitoring** workspace of the Configuration Manager console, and select **Package Conversion Status**. This dashboard shows the overall analysis and conversion state of packages in the site. A new background task automatically summarizes the analysis data.
 
 > [!Tip]  
-> Package Conversion Manager integrated with Configuration Manager doesn't require you to schedule analysis of packages. This action is handled by the integrated summarization task.
+> Package Conversion Manager integrated with Configuration Manager doesn't require you to schedule analysis of packages. This action is handled by the integrated summarization task. Scheduled package analysis runs every seven days by default.
 
 ![Screenshot of example Package Conversion Status dashboard](media/1357861-pcm-dashboard.png)

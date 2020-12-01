@@ -10,8 +10,7 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # Checklist for installing update 1902 for Configuration Manager
@@ -96,7 +95,7 @@ A site update can fail due to existing operational problems. Before you update a
 - The site database server  
 - Remote site system roles on other servers   
 
-For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 #### Review file and data replication between sites   
 Make sure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update. For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.

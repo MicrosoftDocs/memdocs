@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 10/13/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -296,6 +296,7 @@ The following table lists the log files that are on the Configuration Manager si
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
+|SMS_MESSAGE_PROCESSING_ENGINE.log| Log file for the message processing engine, which the site uses to process results for client actions. For example, run scripts and CMPivot.| Site server|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
 |SMS_REST_PROVIDER.log|Service health state for the SMS Provider administration service REST API, including certificate information|Computer with the SMS Provider|
@@ -392,6 +393,7 @@ The following table lists the log files that contain information related to the 
 |Distmgr.log|Records details about content distribution requests.|Top-level site server|  
 |Dmpdownloader.log|Records details about downloads from Microsoft Intune.|Computer with the service connection point|  
 |Dmpuploader.log|Records detail related to uploading database changes to Microsoft Intune.|Computer with the service connection point|  
+|EndpointConnectivityCheckWorker.log|Starting in version 2010, records detail related to checks for important internet endpoints.|Computer with the service connection point|
 |hman.log|Records information about message forwarding.|Site server|  
 |WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  

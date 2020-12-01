@@ -350,11 +350,11 @@ Next, distribute the OS upgrade package to distribution points.
 
 2. Select your Windows 10 pilot deployment plan, and then select **Deployment Plan Details** in the ribbon.  
 
-3. In the **Pilot status** tile, choose **Task sequence** from the drop-down list, and then select **Deploy**.  
+3. In the **Pilot status** tile, select **Deploy**.
 
-4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Software** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.  
+4. On the **General** page of the Deploy Software Wizard, select **Browse** next to the **Task sequence** field. Select your Windows 10 in-place upgrade task sequence, and select **Next**.
 
-    > [!Note]  
+    > [!NOTE]
     > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](troubleshooting.md#data-latency).<!-- 4984639 -->
     >
     > This collection is reserved for Desktop Analytics deployment plan devices. Manual changes to this collection aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
