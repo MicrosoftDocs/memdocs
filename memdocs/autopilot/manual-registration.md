@@ -2,7 +2,7 @@
 title: Manual registration
 ms.reviewer: 
 manager: laurawi
-description:Manual registration overview
+description: Manual registration overview
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -28,11 +28,11 @@ ms.collection:
 Ideally, registration of a device with Windows Autopilot is performed by the OEM, reseller, or distributor from which the device was purchased. However it is also possible to register devices manually. You might need to register a device manually if:
 - The device was obtained from a non-participant device manufacturer or reseller.
 - The device is a virtual machine (VM).
-- The device does not otherwise qualify for automatic registraton, such as an older existing device.
+- The device does not otherwise qualify for automatic registraton, such as an existing legacy device.
 
-A list of participant device manufacturers and device resellers is available [here](https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896).
+For a list of participant device manufacturers and device resellers, see [Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896).
 
-To manually register a device, you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows 10 to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
+To [manually register a device](add-devices.md), you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows 10 to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
 
 > [!Note]
 > Customers can only register devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners as described in the previous sections.
@@ -40,7 +40,6 @@ To manually register a device, you must first capture its hardware hash. Once th
 ## Registering devices
 
 <img src="./images/image2.png" width="511" height="249" alt="process" />
-
 
 After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
 
@@ -103,19 +102,11 @@ A summary of each platform's capabilities is provided below.<br>
 ><b><sup>4</sup></b>Device profile assignment will be retired from MSfB and Partner Center in the coming months<br>
 
 For more information about device IDs, see the following topics:
-- [Device identification](#device-identification)
+- [Device identification](registration-overview.md#device-identification)
 - [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
 - [Add devices to a customer account](/partner-center/autopilot)
 
+## Also see
 
-## Summary
-
-When deploying new devices using Windows Autopilot, the following steps are required:
-
-1. [Register devices](#registering-devices). Ideally, this step is performed by the OEM, reseller, or distributor from which the devices were purchased. However, registration can also be done by the organization by collecting the hardware identity and uploading it manually.
-2. [Configure device profiles](profiles.md). Specify how the device should be deployed and what user experience should be presented.
-3. Boot the device. IF the device is connected to a network with internet access, it will contact the Windows Autopilot deployment service to see if the device is registered. If it's registered, it will download profile settings such as the [Enrollment Status page](enrollment-status.md), which are used to customize the end-user experience.
-
-## Next steps
-
-[BitLocker encryption settings](bitlocker.md): You can configure the BitLocker encryption settings to be applied before automatic encryption is started.
+[Registration overview](registration-overview.md)<br>
+[Manually register devices with Windows Autopilot](add-devices.md)

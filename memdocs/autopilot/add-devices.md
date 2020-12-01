@@ -143,13 +143,11 @@ A summary of each platform's capabilities is provided below.<br>
 ><b><sup>4</sup></b>Device profile assignment will be retired from MSfB and Partner Center in the coming months<br>
 
 For more information about device IDs, see the following topics:
-- [Device identification](#device-identification)
+- [Device identification](registration-overview.md#device-identification)
 - [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
 - [Add devices to a customer account](/partner-center/autopilot)
 
 
-
-
 ## Next steps
 
-[BitLocker encryption settings](bitlocker.md): You can configure the BitLocker encryption settings to be applied before automatic encryption is started.
+[Create device groups](enrollment-autopilot.md): Create an Autopilot device group.
