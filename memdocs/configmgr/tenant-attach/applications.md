@@ -2,7 +2,7 @@
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -41,9 +41,10 @@ Additionally, you'll need the following for installing [user targeted applicatio
 The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
+   - Apply the permission to both targeted device collections and targeted user collections.
 - The **Read** permission for **Application** in Configuration Manager.
 - The **Approve** permission for **Application** in Configuration Manager.
-- The **Admin User** role for the Configuration Manager Microservice application in Azure AD. 
+- The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
   - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
    > [!TIP]
    > The [Application Administrator role in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) has sufficient permissions to add a user to the application's **Admin User** role.
@@ -76,12 +77,51 @@ You can filter the application list based on the status.The application status c
 
 ## <a name="bkmk_user"></a> Deploy an application to a user
 <!--7518897-->
+*(Introduced in version 2006)*
+
 Starting in Configuration Manager version 2006, user available applications appear in the **Applications** node for a ConfigMgr device. The list of applications available for the device also includes applications deployed to the device's currently logged on user.
 
 Deploying applications to a user has the following limitations:
 - Multi-user session scenarios aren't supported.
 - Azure AD joined devices aren't currently supported.
    - Devices which are both domain joined and Azure AD joined are supported.
+
+## <a name="bkmk_repair"></a> Uninstall, repair, re-evaluate, or reinstall an application
+<!--7979972, 8227649-->
+*(Introduced in version 2010)*
+
+ Starting in Configuration manager version 2010, administrators can do the following actions for applications in the Microsoft Endpoint Manager admin center:
+
+- **Uninstall** an application
+- **Repair** installation of an application
+- **Re-evaluate** the application installation status
+- **Reinstall** an application has replaced **Retry installation**
+
+:::image type="content" source="./media/7979972-application-repair.png" alt-text="Application installation options in the Microsoft Endpoint Manager admin center" lightbox="./media/7979972-application-repair.png":::
+
+### Prerequisites to uninstall, repair, reinstall, or re-evaluate an application
+
+- Install the latest version of the Configuration Manager client
+- Targeted clients need to be online
+- To uninstall an application:
+   - The application must have at least one [deployment type](../apps/deploy-use/create-applications.md#start-the-create-deployment-type-wizard) with the uninstall command defined
+   - Required deployments of the application can't be targeted to the client
+   - The application must currently be installed on the device
+- To repair an application:
+   - The application must have at least one [deployment type](../apps/deploy-use/create-applications.md#start-the-create-deployment-type-wizard) with the repair command defined
+   - The application must currently be installed on the device
+
+#### Uninstall, repair, reinstall, or re-evaluate an application
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. Go to **Devices** then **All Devices**.
+1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md). Targeted clients need to be online and have the .
+1. Choose **Applications**.
+1. Select the application then one of the following actions you want to perform on the device:
+   - **Reinstall**
+   - **Re-evaluate**
+   - **Uninstall**
+   - **Repair**
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: Cost of cloud management gateway
 titleSuffix: Configuration Manager
 description: Understand the costs of operating the cloud management gateway (CMG) service in Microsoft Azure.
-ms.date: 09/28/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -42,6 +42,11 @@ To help determine potential costs, use the following Azure resources:
 - You select how many VM instances support the CMG. One is the default, and 16 is the maximum. This number is set when you create the CMG, but you can change it afterwards to scale the service as needed.
 
 - For more information on how many VMs you need to support your clients, see [Plan for CMG: Performance and scale](plan-cloud-management-gateway.md#performance-and-scale).
+
+## Virtual machine scale set
+
+<!--3601040-->
+Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. When estimating cost, this deployment method replaces the [virtual machine](#virtual-machine). The specific details are otherwise the same. For example, it also uses a Standard A2 V2 VM. The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
 
 ## Outbound data transfer
 

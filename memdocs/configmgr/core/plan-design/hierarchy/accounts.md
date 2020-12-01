@@ -520,7 +520,7 @@ The site server uses the **SMTP server connection account** to send email alerts
 > [!IMPORTANT]  
 > Specify an account that has the least possible permissions to send emails.  
 
-For more information, see [Use alerts and the status system](../../servers/manage/use-alerts-and-the-status-system.md).
+For more information, see [Configure alerts](../../servers/manage/configure-alerts.md#configure-email-notification-for-alerts).
 
 
 ### Software update point connection account  
