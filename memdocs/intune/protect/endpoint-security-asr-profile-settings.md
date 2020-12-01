@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -207,7 +207,7 @@ Supported platforms and profiles:
 ### Attack Surface Reduction Rules
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
-  <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
+
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
