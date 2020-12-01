@@ -45,7 +45,7 @@ Configuration Manager supports the in-place upgrade of the server OS that hosts 
 
 To upgrade a server, use the upgrade procedures provided by the OS you're upgrading to. See the following articles:  
 
-- [Windows Server Upgrade Center](https://aka.ms/upgradecenter)  
+- [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview)  
 
 - [Upgrade and conversion options for Windows Server 2016](/windows-server/get-started/supported-upgrade-paths)  
 
@@ -221,7 +221,7 @@ When you upgrade the version of SQL Server that hosts the site database, you mus
 
 3. Upgrade parent primary sites last. These sites include both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.  
 
-When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing SQL cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. If you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server. For more information, see [Supported SQL Server versions: Database compatibility level](../../plan-design/configs/support-for-sql-server-versions.md#database-compatibility-level).
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. If you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server. For more information, see [Supported SQL Server versions: Database compatibility level](../../plan-design/configs/support-for-sql-server-versions.md#database-compatibility-level).
 
 For more information about upgrading SQL Server, see the following SQL Server articles:  
 

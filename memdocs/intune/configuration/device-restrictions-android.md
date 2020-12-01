@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,8 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: chmaguir, chrisbal
+
+ms.reviewer: mikedano, chmaguir, chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,7 +29,11 @@ ms.collection: M365-identity-device-management
 
 # Android and Samsung Knox Standard device restriction settings lists in Intune
 
-This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android.
+This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password requirements, control security, and more.
+
+This feature applies to:
+
+- Android device administrator (DA)
 
 >[!TIP]
 >If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
@@ -91,13 +96,13 @@ These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
   - **None** (default): No password required.
   - **Low**: The password satisfies one of the following conditions:
     - Pattern
-    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
+    - Numeric PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
   - **Medium**: The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
     - Alphabetic, with a minimum length of 4.
     - Alphanumeric, with a minimum length of 4.
   - **High**: The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
@@ -107,7 +112,7 @@ These settings apply to Android 4.0 and newer, and Knox 4.0 and newer.
   > [!IMPORTANT]
   > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
   >
-  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don’t set the **Password** setting to **Require**, users with weak passwords won’t receive the warning.
 
 ### Android 9 and earlier, or Samsung Knox (any version)
 

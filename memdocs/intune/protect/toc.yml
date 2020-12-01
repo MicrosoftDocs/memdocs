@@ -195,6 +195,11 @@
         items:
         - name: Lookout and Intune integration
           href: lookout-mtd-connector-integration.md
+      - name: Set up MVISION Mobile
+        href: mcafee-mobile-threat-defense-connector.md
+        items:
+        - name: MVISION Mobile and Intune integration
+          href: mcafee-mtd-connector-integration.md 
       - name: Set up Pradeo
         href: pradeo-mobile-threat-defense-connector.md
         items:
@@ -260,8 +265,12 @@
     items:
     - name: Windows updates
       items:
-      - name: Windows Update for Business settings
-        href: windows-update-for-business-configure.md    
+      - name: Use Windows Update for Business
+        href: windows-update-for-business-configure.md
+      - name: Update rings policy
+        href: windows-10-update-rings.md
+      - name: Feature updates policy
+        href: windows-10-feature-updates.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
@@ -338,6 +347,8 @@
       href: endpoint-security-disk-encryption-profile-settings.md
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
+    - name: Tenant attach Firewall settings    
+      href: endpoint-security-firewall-profile-settings-tenant-attach.md
     - name: Endpoint detection and response profile settings
       href: endpoint-security-edr-profile-settings.md 
     - name: Attack surface reduction profile settings

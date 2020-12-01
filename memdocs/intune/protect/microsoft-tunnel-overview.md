@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,6 +61,7 @@ Features of the VPN profiles for the tunnel include:
 - The Site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
+- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
 
 Server configurations include:
@@ -120,8 +121,12 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   For information about installing and configuring Docker, see:
 
   - [Install Docker Engine on CentOS]( https://docs.docker.com/engine/install/centos/)
-  - [Using Docker on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.0_release_notes/sect-red_hat_enterprise_linux-7.0_release_notes-linux_containers_with_docker_format-using_docker)
+  - [Install Docker Engine on Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
+    > [!NOTE]
+    > The current version of Docker that’s available for download for Red Hat Enterprise Linux 7 is not supported with Microsoft Tunnel. Therefore, the preceding link directs you to the CentOS download and installation instructions. The CentOS distribution and installation instructions for Docker are supported on Red Hat Enterprise Linux 7 for Microsoft Tunnel and should be used until an updated distribution for Red Hat Enterprise Linux 7 is available.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+  
+<!-- RHEL 7 distro isn't a supported Docker version at this time:  [Using Docker on Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.0_release_notes/sect-red_hat_enterprise_linux-7.0_release_notes-linux_containers_with_docker_format-using_docker) -->
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -136,6 +141,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   - If you use a TLS certificate that's not publicly trusted, you must push the entire trust chain to devices using an Intune *Trusted certificate* profile.
 
   - The TLS certificate can be in **PEM** or **pfx** format.
+
+- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fallback to use TLS 1.2.
 
 ### Network
 
@@ -168,7 +175,7 @@ When you create a Server configuration for the tunnel, you can specify a differe
 
 **Additional requirements**:
 
-- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, as noted above.
+- The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
 - Configure firewall rules to support the configurations detailed in  [Microsoft Container Registry (MCR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/master/client-firewall-rules.md).
 
@@ -201,7 +208,10 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 Only devices that are enrolled to Intune are supported with Microsoft Tunnel. The following device platforms are supported:
 
-- Android Enterprise (Fully managed, Corporate-Owned Work Profile, Work profile)
+- Android Enterprise:
+  - Fully Managed
+  - Corporate-Owned Work Profile
+  - Personally-Owned Work profile
 - iOS/iPadOS
 
 The following functionality is supported by all platforms:
@@ -223,6 +233,9 @@ Before you start a server install, we recommend you download and run the **mst-r
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.  
 - Validates that the Azure Active Directory (Azure AD) account you’ll use to install Microsoft Tunnel has the required roles to complete enrollment.
 
+> [!IMPORTANT]
+> The readiness tool doesn't validate inbound ports, which is a common misconfiguration. After the readiness tool runs, review the [firewall prerequisites](#firewall) and manually validate your firewalls pass inbound traffic.
+
 The mst-readiness tool has a dependency on **jq**, a command-line JSON processor. Before you run the readiness tool, ensure **jq** is installed. For information about how to get and install **jq**, see the documentation for the version of Linux that you use.
 
 To use the readiness tool:
@@ -232,11 +245,11 @@ To use the readiness tool:
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.  
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunnelready.
 
-      For example, to use **wget** and preserve the file name during the download, run `wget https://aka.ms/microsofttunnelready -o mst-readiness`
+      For example, to use **wget** and log details to *mst-readiness* during the download, run `wget --output-document=mst-readiness https://aka.ms/microsofttunnelready`
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
-2. To validate your network configuration, run the script as **root** and use the following command line: `./mst-readiness network`
+2. To validate your network configuration, run the script as **root**. For example, you might use the following command line: `sudo chmod +x ./mst-readiness network`
 
    The script runs the following actions and reports on success or error for both:
    - Tries to connect to each Microsoft endpoint the tunnel will use.
@@ -263,7 +276,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
 
    > [!CAUTION]
-   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7&preserve-view=true) in the PowerShell documentation.
+   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy?preserve-view=true&view=powershell-7) in the PowerShell documentation.
    >
    > In a future update, *mst-CA-readiness.ps1* will be signed, which will remove the need to set ExecutionPolicy to *Unrestricted*.
 

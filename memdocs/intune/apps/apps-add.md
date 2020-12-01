@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 11/16/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -98,7 +98,7 @@ First, you must determine which group should have access to the app, based on th
 
 Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Azure Active Directory Application Proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
-Use the [Intune deployment planning, design and implementation guide](../fundamentals/planning-guide.md) to help determine how you identify the organizational groups that are associated with each use-case and sub-use-case app scenario. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+Use the [Intune deployment planning, design and implementation guide](../fundamentals/intune-planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 ### Determine the type of app for your solution
 
@@ -110,7 +110,7 @@ You can choose from the following app types:
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
 
-For more information about the types of apps that your organization needs, see "Apps" section within the "Feature requirements" section of [Create a design](../fundamentals/planning-guide-design.md#feature-requirements).
+For more information about the types of apps that your organization needs, [Create a design](../fundamentals/intune-planning-guide.md).
 
 ### Understanding app management and protection policies
 Intune lets you modify the functionality of apps that you deploy to help align them with your company's compliance and security policies. This control allows you to determine how your company data is protected. Intune-managed apps are enabled with a rich set of mobile application protection policies, such as:
@@ -124,7 +124,7 @@ Intune-managed apps can also enable app protection without requiring enrollment,
 ### Understanding licensed apps
 In addition to understanding web apps, store apps, and LOB apps, you should also be aware of the destination of volume-purchase-program apps and licensed apps, such as: 
 - **Apple Volume Purchasing Program for Business (iOS)**: The iOS/iPadOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOiOS/iPadOSS volume-purchased apps](vpp-apps-ios.md).
-- **Android work profile**: How you assign apps to Android work profile devices differs from how you assign them to standard Android devices. All apps you install for Android work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the Azure portal, and you can manage assignment of the app as you would any other app.
+- **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. All apps you install for Android Enterprise fully managed work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the Azure portal, and you can manage assignment of the app as you would any other app.
 - **Microsoft Store for Business (Windows 10)**: Microsoft Store for Business gives you a place to find and purchase apps for your organization, individually or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps in the Azure portal. For more information, see [Manage apps from Microsoft Store for Business](windows-store-for-business.md).
 
     > [!NOTE]

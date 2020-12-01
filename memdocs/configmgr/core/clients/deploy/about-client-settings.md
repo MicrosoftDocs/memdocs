@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 09/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -107,7 +107,6 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Windows computers (for example, desktops, servers, laptops)  
 - Mobile devices that Configuration Manager enrolls  
 - Mac computers  
-- Computers that run Linux or UNIX  
 
 This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With many clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
@@ -405,7 +404,7 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ### Polling interval for mobile device legacy clients
 
-Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, macOS, and Unix or Linux.
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, or macOS.
 
 ### Polling interval for modern devices (minutes)
 
@@ -863,6 +862,12 @@ Adjust this schedule based on company policy for software update compliance, and
 > [!NOTE]  
 > If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
 
+### Allow user proxy for software update scans
+<!--8379199-->
+*(Introduced in version 2010)*
+
+Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. Set this option to **Yes** to allow these connections if you require a user proxy despite the security trade-offs. By default, this setting is set to **No**. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
+
 ### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
 Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client starts installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
@@ -894,7 +899,20 @@ This setting configures the local port for the HTTP listener to download delta c
 > [!NOTE]
 >This client setting replaces **Port used to download content for Express installation files**.
 
+### If content is unavailable from distribution points in the current boundary group, immediately fallback to a neighbor or the site default
 
+*(Introduced in version 2010)*
+
+If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is 5 minutes. The following options are available:
+
+- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
+      - Delta content is unavailable from distribution points in the current boundary group.
+      - The software update deployment allows fallback.
+
+- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
+
+> [!NOTE]
+> This setting is for delta content only.
 ### Enable management of the Office 365 Client Agent
 
 When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
@@ -982,6 +1000,13 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 ### Allow user to define their primary devices
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
+
+> [!NOTE]
+> Default values are:
+> - User device affinity usage threshold (minutes): 2880
+> - User device affinity usage threshold (days): 30
+> - Automatically configure user device affinity from usage data: No
+> - Allow user to define their primary devices: No
 
 ## Windows Diagnostic Data
 

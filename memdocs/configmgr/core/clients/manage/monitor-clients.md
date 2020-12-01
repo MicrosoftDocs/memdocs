@@ -187,7 +187,7 @@ Client check runs the following checks and remediations:
 |Verify that the Windows Update service startup type is automatic or manual|Reset the service startup type to automatic|No additional information|  
 |Verify that the client service (SMS Agent Host) startup type is automatic|Reset the service startup type to automatic|No additional information|  
 |Verify that the Windows Management Instrumentation (WMI) service is running.|Start the Windows Management Instrumentation service|No additional information|  
-|Verify that the Microsoft SQL CE database is healthy|Reinstall the Configuration Manager client|No additional information|  
+|Verify that the Microsoft SQL Server Compact Edition database is healthy|Reinstall the Configuration Manager client|No additional information|  
 |Microsoft Policy Platform WMI Integrity Test|Repair the Microsoft Policy Platform|No additional information|  
 |Verify that the Microsoft Policy Platform Service exists|Repair the Microsoft Policy Platform|No additional information|  
 |Verify that the Microsoft Policy Platform service startup type is manual|Reset the service startup type to manual|No additional information|  

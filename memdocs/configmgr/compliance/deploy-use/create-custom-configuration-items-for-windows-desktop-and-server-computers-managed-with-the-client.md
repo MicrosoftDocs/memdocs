@@ -251,7 +251,7 @@ The value returned by the script is used to assess the compliance of the global 
 - **SQL Server instance**: Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
 
     > [!NOTE]  
-    > The instance name must refer to a local instance of SQL Server. To refer to a clustered SQL server instance, you should use a script setting.  
+    > The instance name must refer to a local instance of SQL Server. To refer to a SQL Server Always On failover cluster instance or availability group, use a script setting.  
 
 - **Database**: Specify the name of the Microsoft SQL Server database against which you want to run the SQL query.  
 
@@ -260,7 +260,7 @@ The value returned by the script is used to assess the compliance of the global 
 - **Transact-SQL statement**: Specify the full SQL query you want to use for the global condition. To use an existing SQL query, select **Open**.  
 
     > [!IMPORTANT]  
-    > SQL Query settings don't support any SQL commands that modify the database. You can only use SQL commands that read information from the database.  
+    > SQL query settings don't support any SQL commands that modify the database. You can only use SQL commands that read information from the database.  
 
 
 ### <a name="bkmk_wql"></a> WQL query

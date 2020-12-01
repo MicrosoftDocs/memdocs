@@ -90,7 +90,7 @@ When you make *revisions* to an application or a deployment type, Configuration 
 - Restore a previous version of an application
 - Delete an old version
 
-For more information, see [Revise applications](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
+For more information, see [Revise applications](../deploy-use/revise-and-supersede-applications.md#revisions).  
 
 ### Detection method
 
@@ -108,7 +108,7 @@ For more information, see [Deployment type Dependencies](../deploy-use/create-ap
 
 Configuration Manager lets you upgrade or replace existing applications by using a *supersedence* relationship. When you supersede an application, you specify a new deployment type to replace the deployment type of the superseded application. You can also decide whether to upgrade or uninstall the superseded application before the client installs the superseding application.
 
-For more information, see [Application supersedence](../deploy-use/revise-and-supersede-applications.md#application-supersedence).  
+For more information, see [Application supersedence](../deploy-use/revise-and-supersede-applications.md#supersedence).  
 
 ### User-centric management
 

@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 10/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -44,12 +44,7 @@ Endpoint analytics is included in the following plans:
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
-- The following permissions are used for Endpoint analytics:
-   - **Read** under the **Device configurations** category.
-   - **Read** under the **Organization** category. <!--temporary for pp-->
-   - Permissions appropriate to the user's role under the **Endpoint Analytics** category.
-
-A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+[!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 
 ## <a name="bkmk_endpoints"></a> Endpoints required for Configuration Manager-managed devices
 
@@ -62,7 +57,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ## Limitations
 
-- Not all Endpoint analytics insights are available for devices running Windows Server editions. For instance, the **To responsive desktop** metric wouldn't be applicable to Windows Server Core.
+- Endpoint analytics insights are available for devices running Windows Server editions.
 - Using multiple Configuration Manager hierarchies with a single Endpoint analytics instance is not currently supported.
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager

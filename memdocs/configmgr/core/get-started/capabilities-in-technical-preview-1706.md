@@ -94,7 +94,7 @@ To install a passive mode site server, you use the **Create Site System Server W
 
 - Both the active mode and passive mode site servers must use the same site database, which must be remote from the computers of each site server.
 
-    - The SQL Server that hosts the database can use a default instance, named instance, SQL Server cluster, or an Always On Availability Group.
+    - The SQL Server that hosts the database can use a default instance, named instance, SQL Server Always On failover cluster instance, or an availability group.
 
     - The site server in passive mode is configured to use the same site database as the active mode site server. However, the passive mode site server does not use that database until after it is promoted to active mode.
 

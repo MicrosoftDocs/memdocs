@@ -58,7 +58,7 @@ Create [OS images](../get-started/manage-operating-system-images.md) for specifi
 
 #### Driver package
 
-Create [driver packages](../get-started/manage-drivers.md#BKMK_ManagingDriverPackages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
+Create [driver packages](../get-started/manage-drivers.md#driver-packages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
 
 To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Name** property of the **Win32_ComputerSystemProduct** WMI class.
 

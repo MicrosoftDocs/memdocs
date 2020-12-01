@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 10/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -98,7 +98,7 @@ App configuration can be delivered either through the mobile device management (
 - Data protection settings
 
 > [!IMPORTANT]
-> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Edge for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Edge for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 
@@ -118,7 +118,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy.
+Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy.
 
 > [!IMPORTANT]
 > Edge for Android does not support Chromium settings that are available in Managed Google Play.
@@ -255,7 +255,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 ## Data protection app configuration scenarios
 
-Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy:
+Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
 
 - Manage account synchronization
 - Manage restricted web sites
@@ -293,8 +293,8 @@ Use the following key/value pairs to configure either an allowed or blocked site
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts are not disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context.<p>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.         |
 |com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** allows restricted sites to be opened in the Azure AD account's InPrivate context. If the Azure AD account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account.<p> **false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked.<p>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true.          |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Enter the number of seconds that users will see the snack bar notification "Link opened with InPrivate mode. Your organization requires the use of InPrivate mode for this content." By default, the snack bar notification is shown for 7 seconds.
@@ -355,11 +355,12 @@ Before you start:
 
 - Set up your internal applications through Azure AD Application Proxy.
   - To configure Application Proxy and publish applications, see the [setup documentation](/azure/active-directory/manage-apps/application-proxy).
+  - Ensure that the user is assigned to the Azure AD Application Proxy app, even if the app is configured with Passthrough pre-authentication type.
 - The Edge for iOS and Android app must have an [Intune app protection policy](app-protection-policy.md) assigned.
 - Microsoft apps must have an app protection policy that has **Restrict web content transfer with other apps** data transfer setting set to **Microsoft Edge**.
 
 > [!NOTE]
-> Updated Application Proxy redirection data can take up to 24 hours to take effect in Edge for iOS and Android.
+> Edge for iOS and Android updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
 
 Target Edge for iOS with the following key/value pair, to enable Application Proxy:
 

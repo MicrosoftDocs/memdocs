@@ -55,9 +55,9 @@ When you use a PKI, you can also use IPsec to help secure the server-to-server c
 When PKI certificates aren't available, Configuration Manager automatically generates self-signed certificates. Some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you don't have to take additional action. One example is the site server signing certificate. This certificate is always self-signed. It makes sure that the policies that clients download from the management point were sent from the site server and weren't tampered with.  
 
 
-### <a name="bkmk_plan-cng"></a> Cryptography: Next Generation (CNG) certificates  
+### <a name="bkmk_plan-cng"></a> Cryptography: Next Generation (CNG) v3 certificates  
 
-Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates. For more information, see [CNG certificates overview](../network/cng-certificates-overview.md).
+Configuration Manager supports Cryptography: Next Generation (CNG) v3 certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates. For more information, see [CNG v3 certificates overview](../network/cng-certificates-overview.md).
 
 
 ### <a name="bkmk_plan-ehttp"></a> Enhanced HTTP  
@@ -232,10 +232,7 @@ Because of the number of configuration options and choices in Configuration Mana
 
 1. Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.  
 
-2. Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).  
-
-    > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+2. Configure the **Communication Security** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).  
 
 3. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](../network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).  
 

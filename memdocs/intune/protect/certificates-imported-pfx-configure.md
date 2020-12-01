@@ -44,10 +44,11 @@ For more information about using S/MIME with Intune, [Use S/MIME to encrypt emai
 
 Intune supports import of PFX certificates for the following platforms:
 
-- Android - Device Administrator
-- Android Enterprise - Fully Managed
-- Android Enterprise - Work profile
-- Android Enterprise - Corporate-owned work profile
+- Android device administrator
+- Android Enterprise:
+  - Fully Managed
+  - Corporate-Owned Work Profile
+  - Personally-Owned Work Profile
 - iOS/iPadOS
 - macOS
 - Windows 10
@@ -75,7 +76,7 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
 
-  To support the connector, the server must run .NET 4.6 Framework or higher. If .NET 4.6 Framework isn't installed when you start the installation of the connector, the connector installation will install it automatically.
+  To support the connector, the server must run .NET 4.7.2 Framework or higher. If .NET 4.7.2 Framework isn't installed when you start the installation of the connector, the connector installation will install it automatically.
 
 - **Visual Studio 2015 or above** (optional):
 

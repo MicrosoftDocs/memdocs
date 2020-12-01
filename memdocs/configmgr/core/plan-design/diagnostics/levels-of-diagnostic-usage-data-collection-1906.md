@@ -77,7 +77,7 @@ For Configuration Manager version 1906, this level includes the following data:
 
     - Version of post-upgrade script  
 
-- SQL version, service pack level, edition, collation ID, and character set  
+- SQL Server version, service pack level, edition, collation ID, and character set  
 
 - Diagnostics and usage data statistics: when run, runtime, errors  
 
@@ -117,7 +117,7 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - ***[New]*** Status and health of the administration service
 
-- ***[New]*** Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
+- ***[New]*** Hash of key site attributes (site ID, SQL Server broker ID, and site exchange key)
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
@@ -495,11 +495,11 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Discovery types, enabled, and schedule (full, incremental)  
 
-- SQL AlwaysOn replica information, usage, and health status  
+- SQL Server Always On availability group replica information, usage, and health status  
 
-- SQL change tracking performance issues, retention period, and autocleanup state  
+- SQL Server change tracking performance issues, retention period, and autocleanup state  
 
-- SQL change tracking retention period  
+- SQL Server change tracking retention period  
 
 - State and status message performance statistics including most common and most expensive message types  
 
@@ -533,7 +533,7 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - ***[New]*** Aggregated statistics on the use of Desktop Analytics
 
-- ***[New]*** SQL maintenance task configuration and status
+- ***[New]*** SQL Server maintenance task configuration and status
 
 ## <a name="bkmk_level3"></a> Level 3 - Full
 

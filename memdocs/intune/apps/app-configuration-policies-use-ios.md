@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,8 +57,8 @@ Once you have selected the included groups for your application configuration po
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the Microsoft Endpoint Manager admin center.
+    - **Description** - The description of the profile that appears in the Microsoft Endpoint Manager admin center.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **iOS/iPadOS** as the **Platform**.
 5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
@@ -165,6 +165,8 @@ When you create an app configuration file, you can specify one or more of the fo
   <string>{{udidlast4digits}}</string>
   <key>aaddeviceid</key>
   <string>{{aaddeviceid}}</string>
+  <key>IsSupervised</key>
+  <string>{{IsSupervised}}</string>
 </dict>
 ```
 
@@ -192,12 +194,13 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
+- \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
 
-## Configure the Company Portal app to support iOS and iPadOS DEP devices
+## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
-DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices using the following steps.
+Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices even when users have downloaded the Company Portal from the App Store using the following steps.
 
-1. In Intune, add the Intune Company Portal app if necessary, by going to **Intune** > **Apps** > **All apps** > **Add**.
+1. In Intune, add the Intune Company Portal app if it has not been added yet, by going to **Intune** > **Apps** > **All apps** > **Add**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
@@ -214,7 +217,7 @@ DEP (Apple's Device Enrollment Program) enrollments are not compatible with the 
             </dict>
         </dict>
         ```
-    - **Use the Company Portal on a DEP device enrolled without user affinity**:
+    - **Use the Company Portal on a DEP device enrolled without user affinity (also known as Device Staging)**:
 
         > [!NOTE]
         > The user signing in to Company Portal is set as the primary user of the device.
@@ -230,7 +233,7 @@ DEP (Apple's Device Enrollment Program) enrollments are not compatible with the 
 5. Tell end users to sign into the Company Portal app when it is automatically installed.
 
 ## Monitor iOS/iPadOS  app configuration status per device 
-Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the Azure portal, select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
+Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
 
 ## Additional information
 

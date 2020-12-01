@@ -52,6 +52,9 @@ For more information on these prerequisites, see [Install clients using Azure AD
 
 To determine if your internet-enabled management point requires HTTPS, see [management points](#bkmk_mphttps).
 
+> [!NOTE]
+> If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
+
 ## PKI certificate
 
 If you have a public key infrastructure (PKI) that can issue client authentication certificates to devices, then consider this authentication method for internet-based devices with your CMG. It doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10.
@@ -69,7 +72,7 @@ The CMG client authentication certificate supports the following configurations:
 
 - 2048-bit or 4096-bit key length
 
-- This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG certificates overview](../../../plan-design/network/cng-certificates-overview.md).
+- This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG v3 certificates overview](../../../plan-design/network/cng-certificates-overview.md).
 
 ### <a name="bkmk_clientroot"></a> Export the client certificate's trusted root
 

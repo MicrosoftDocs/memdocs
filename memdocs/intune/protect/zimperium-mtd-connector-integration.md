@@ -21,12 +21,13 @@ ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
 #ROBOTS:
 #audience:
 
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
+
 ---
 
 # Integrate Zimperium with Intune

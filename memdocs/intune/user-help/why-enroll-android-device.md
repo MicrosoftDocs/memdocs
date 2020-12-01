@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/29/2020
+ms.date: 10/16/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,7 +33,17 @@ ms.collection:
 
 Schools and employers want to make sure that you're using a secure, trusted device to access internal resources such as apps and Wi-Fi. When you enroll in Intune, the Microsoft Intune and Company Portal apps ensure that you have secure access to these resources no matter where you are or what device you're using. 
 
-If your organization requires you to install and enroll with one of these apps, you'll need to do that before you can access internal apps on your device. This article describes the purpose and benefits of enrolling your devices with these apps.  
+If your organization requires you to install and enroll with one of these apps, you'll need to do that before you can access internal apps on your device. This article describes the purpose and benefits of enrolling your devices with these apps. 
+
+To skip this overview and go straight to the enrollment steps, select from one of the following articles (ask your IT support person if you're not sure which set of instructions you're supposed to follow):  
+ 
+* [Intune Company Portal enrollment](enroll-device-android-company-portal.md)
+* [Android work profile enrollment](enroll-device-android-work-profile.md)
+* [Microsoft Intune app enrollment](enroll-device-android-microsoft-intune-app.md)
+* Derived credentials enrollment (smart card users):  
+    * [Entrust datacard](enroll-android-device-entrust-datacard.md)  
+    * [Intercede](enroll-android-device-intercede.md)  
+    * [DISA Purebred](enroll-android-device-disa-purebred.md)  
 
 ## Secure your device 
  The Company Portal and Microsoft Intune app enroll your device in Intune.  Intune is a mobile device management provider that helps your org manage mobile devices and apps through security and device policies. 
@@ -85,15 +95,6 @@ They can:
 
 ## Next steps  
 
-When you're ready to enroll your Android device in Intune, select one of the following articles for step-by-step instructions. 
-
-* [Intune Company Portal enrollment](enroll-device-android-company-portal.md)
-* [Android work profile enrollment](enroll-device-android-work-profile.md)
-* [Microsoft Intune app enrollment](enroll-device-android-microsoft-intune-app.md)
-* Derived credentials enrollment:  
-    * [Entrust datacard](enroll-android-device-entrust-datacard.md)  
-    * [Intercede](enroll-android-device-intercede.md)  
-    * [DISA Purebred](enroll-android-device-disa-purebred.md)  
-
+When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the doc links listed under [Why enroll your Android device](why-enroll-android-device.md#why-enroll-your-android-device) for general step-by-step instructions.    
 
 Contact your IT support person or look at your organization's IT support page to find out which setup instructions you should use.  Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.  

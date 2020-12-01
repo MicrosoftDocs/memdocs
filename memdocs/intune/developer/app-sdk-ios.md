@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/04/2020
+ms.date: 11/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -184,6 +184,20 @@ To enable the Intune App SDK, follow these steps:
 
 If the '-o' parameter is not specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
 
+### Xcode Build Settings
+The app should have the "Strip Swift Symbols" (STRIP_SWIFT_SYMBOLS in Xcconfig) be set to No.
+
+### Integrating a File Provider extension
+File Provider extensions have certain memory requirements that might make integrating the full SDK difficult. To make it easier, there are static libraries `libIntuneMAMFileProvider.a` and `libIntuneMAMSwiftFileProvider.a` which are stripped down versions of the SDK specifically for File Provider extensions. Note this is for the non-UI portion of the FileProvider extension. You will need to integrate the full SDK into the file-provider UI extension. 
+
+To integrate the one of these libraries with your File Provider extension, follow the steps for integrating the SDK as a static library as shown above. Make sure to include `ContainingAppBundleId` setting.
+
+If it’s a multi-identity app, the current user identity should be set in the file provider enumerator in `- enumeratorForContainerItemIdentifier:error:` API using `setIdentity:onFileProviderEnumerator:` method of `IntuneMAMFileProtectionManager`.
+
+In `- startProvidingItemAtURL:completionHandler:` check if you should encrypt files using `[[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]`. Use `encryptFile:forIdentity` API in `IntuneMAMFileProtectionManager` for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+
+In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check whether the file is encrypted using `isFileEncrytped:` API in `IntuneMAMFileProtectionManager`. If it is then decrypt it using `decryptFile:toCopyPath:` API of `IntuneMAMFileProtectionManager`.
+
 ## Configure MSAL
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
@@ -234,12 +248,12 @@ Additionally, apps can override these Azure AD settings at runtime. To do this, 
 As previously mentioned, the Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios. If **your app does not use MSAL for its own authentication mechanism**, then you may need to configure custom AAD settings:
 
 * Developers need to create an app registration in AAD with a custom redirect URI in the format specified [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). 
-* Developers should set the `ADALClientID` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class. 
+* Developers should set the `ADALClientId` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class. 
 * Developers should also ensure they follow step 4 in the previous section, to give their app registration access to the Intune app protection service.
 
 ### Special considerations when using MSAL 
 
-1. **Check your Webview** - It is recommended that applications do not use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](https://docs.microsoft.com/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request). If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. WARNING: This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application should not show corporate data in any of those webview types.
+1. **Check your Webview** - It is recommended that applications do not use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request). If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. WARNING: This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application should not show corporate data in any of those webview types.
 2. **Linking both ADAL and MSAL** - Developers must opt in if they want Intune to prefer MSAL over ADAL in this scenario. By default, Intune will prefer supported ADAL versions to supported MSAL versions, if both are linked at runtime. Intune will only prefer a supported MSAL version when, at the time of Intune's first authentication operation, `IntuneMAMUseMSALOnNextLaunch` is `true` in `NSUserDefaults`. If `IntuneMAMUseMSALOnNextLaunch` is `false` or not set, Intune will fall back to the default behavior. As the name suggests, a change to `IntuneMAMUseMSALOnNextLaunch` will take effect on the next launch.
 
 
@@ -492,7 +506,7 @@ Apps can also react to changes of the `allowedAccounts` property by observing th
 
 The `isFileEncryptionRequired` API defined in `IntuneMAMPolicy.h` informs applications when the IT administrator requires that applications use Intune encryption on any files saved to disk. If `isFileEncryptionRequired` is true, then it is the app's responsibility to ensure that any files saved to disk by the app are encrypted using the APIs in `IntuneMAMFile.h`, `IntuneMAMFileProtectionManager.h`, and `IntuneMAMFDataProtectionManager.h`.
 
-Apps can react to changes in this policy by observinbg the `IntuneMAMDataProtectionDidChangeNotification` notification defined in `IntuneMAMFDataProtectionManager.h`.
+Apps can react to changes in this policy by observing the `IntuneMAMDataProtectionDidChangeNotification` notification defined in `IntuneMAMFDataProtectionManager.h`.
 
 ## Implement save-as and open-from controls
 
@@ -516,6 +530,8 @@ The `isSaveToAllowedForLocation` API provides constants to check whether the IT 
 
 Apps should use the constants in `isSaveToAllowedForLocation` to check if data can be saved to locations considered "managed," like OneDrive for Business, or "personal." Additionally, the API should be used when the app can't check whether a location is "managed" or "personal."
 
+The `IntuneMAMSaveLocationSharePoint` should be used for both SharePoint online and AAD Authenticated SharePoint on-prem.
+
 The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device. Similarly, the `IntuneMAMSaveLocationCameraRoll` constant should be used if the app is saving a photo to the camera roll.
 
 If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` and `IntuneMAMSaveLocationCameraRoll` locations should always be paired with a `nil` account.
@@ -532,6 +548,8 @@ The `isOpenFromAllowedForLocation` API provides constants to check whether the I
 * IntuneMAMOpenLocationAccountDocument
 
 Apps should use the constants in `isOpenFromAllowedForLocation` to check if data can be opened from locations considered "managed", like OneDrive for Business, or "personal". Additionally, the API should be used when the app can't check whether a location is "managed" or "personal".
+
+The `IntuneMAMOpenLocationSharePoint` should be used for both SharePoint online and AAD Authenticated SharePoint on-prem.
 
 The `IntuneMAMOpenLocationCamera` constant should be used when the app is opening data from the camera or photo album.
 
@@ -745,6 +763,8 @@ By default, apps are considered single identity. The SDK sets the process identi
     An example is when the user attempts to open a document, a mailbox, or a tab in a notebook. The app needs to notify the SDK before the file, mailbox, or tab is actually opened. This is done through the `setUIPolicyIdentity` API in `IntuneMAMPolicyManager`. This API should be called whether or not the user is managed. If the user is managed, the SDK will perform the conditional launch checks, like jailbreak detection, PIN, and authentication.
 
     The result of the identity switch is returned to the app asynchronously through a completion handler. The app should postpone opening the document, mailbox, or tab until a success result code is returned. If the identity switch failed, the app should cancel the task.
+    
+    Multi-identity apps should avoid using `setProcessIdentity` as a way to set the identity. Apps that use UIScenes should use the `setUIPolicyIdentity:forWindow` API to set the identity.
 
 * **SDK-initiated identity switch**:
 

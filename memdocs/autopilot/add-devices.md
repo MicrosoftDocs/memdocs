@@ -12,10 +12,10 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.topic: article
+ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
-- M365initiative-CoreDeploy
+- m365initiative-coredeploy
 ---
 
 
@@ -24,8 +24,12 @@ ms.collection:
 **Applies to**
 
 - Windows 10
+- Windows Holographic, version 2004
 
 Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity and uploading it manually.
+
+> [!NOTE]
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## OEM registration
 
@@ -42,7 +46,7 @@ Customers may purchase devices from resellers, distributors, or other partners. 
 
 As with OEMs, CSP partners must be granted permission to register devices for an organization. You can use the process described on the [Customer consent page](registration-auth.md#csp-authorization). The CSP partner requests a relationship with the organization. That organization's global administrator approves the request. After the approval, CSP partners add devices using [Partner Center](https://partner.microsoft.com/pcv/dashboard/overview), either directly through the web site or via available APIs that can automate the same tasks.
 
-For Surface devices, Microsoft Support can help with device registration.  For more information, see [Surface Registration Support for Windows Autopilot](https://docs.microsoft.com/surface/surface-autopilot-registration-support).
+For Surface devices, Microsoft Support can help with device registration.  For more information, see [Surface Registration Support for Windows Autopilot](/surface/surface-autopilot-registration-support).
 
 Windows Autopilot doesn't require delegated administrator permissions when establishing the relationship between the CSP partner and the organization. As part of the global administrator's approval process, they can choose to uncheck the "Include delegated administration permissions" checkbox.
 
@@ -59,7 +63,7 @@ For devices that meet both these requirements, the MDM service can ask the devic
 
 For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
 
-You can automatically convert such devices to Windows using Intune's **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 
+You can automatically convert such devices to Windows using Intune's **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 
 
 When using the [Windows Autopilot for existing devices](existing-devices.md) scenario, you don't need to pre-register the devices with Windows Autopilot. Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used. The device can then be registered with Windows Autopilot using the same "Convert all targeted devices to Autopilot" setting.
 
@@ -102,8 +106,8 @@ To use this script, you can use either of the following methods:
 To install it directly and capture the hardware hash from the local computer, use the following commands from an elevated Windows PowerShell prompt:
 
 ```powershell
-md c:\\HWID
-Set-Location c:\\HWID
+New-Item -Type Directory -Path "C:\HWID"
+Set-Location -Path "C:\HWID"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
 Install-Script -Name Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
@@ -155,7 +159,7 @@ A summary of each platform's capabilities is provided below.<br>
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/partner-center/autopilot">Partner Center</a></td>
+<td><a href="/partner-center/autopilot">Partner Center</a></td>
 <td>YES - 1000 at a time max</td>
 <td>YES<b><sup>34</sup></b></td>
 <td>Tuple or PKID or 4K HH</td>
@@ -169,14 +173,14 @@ A summary of each platform's capabilities is provided below.<br>
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles">Microsoft Store for Business</a></td>
+<td><a href="/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles">Microsoft Store for Business</a></td>
 <td>YES - 1000 at a time max</td>
 <td>YES<b><sup>4</sup></b></td>
 <td>4K HH</td>
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Business Premium</a></td>
+<td><a href="/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Business Premium</a></td>
 <td>YES - 1000 at a time max</td>
 <td>YES<b><sup>3</sup></b></td>
 <td>4K HH</td>

@@ -175,8 +175,8 @@ To verify that the client installation is successful, open the **Configuration M
 > To help troubleshoot the Mac client, use the **CMDiagnostics** tool included with the Mac client package. Use it to collect the following diagnostic information:  
 >   
 > - A list of running processes  
-> - The Mac OS X operating system version  
-> - Mac OS X crash reports relating to the Configuration Manager client including **CCM\*.crash** and **System Preference.crash**.  
+> - The macOS X operating system version  
+> - macOS X crash reports relating to the Configuration Manager client including **CCM\*.crash** and **System Preference.crash**.  
 > - The Bill of Materials (BOM) file and property list (.plist) file created by the Configuration Manager client installation.  
 > - The contents of the folder **/Library/Application Support/Microsoft/CCM/Logs**.  
 >   
@@ -216,7 +216,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
     - **Type**: **Mac OS X**  
 
-4. On the **Supported Platforms** page, select all Mac OS X versions.  
+4. On the **Supported Platforms** page, select all macOS X versions.  
 
 5. On the **Settings** page, select **New**. In the **Create Setting** window, specify the following information:  
 

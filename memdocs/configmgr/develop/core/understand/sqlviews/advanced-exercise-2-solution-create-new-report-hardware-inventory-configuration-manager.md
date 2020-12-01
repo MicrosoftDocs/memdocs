@@ -19,7 +19,7 @@ manager: dougeby
 The following procedure can be used to create the report for [Advanced exercise 2: Create a new report for hardware inventory in Configuration Manager](advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md).
 
 > [!NOTE]
-> Depending on your experience at creating SQL reports, there are numerous paths you can use to create a report. You can use your preferred method of creating reports if you prefer.
+> Depending on your experience at creating SQL Server reports, there are numerous paths you can use to create a report. You can use your preferred method of creating reports if you prefer.
 
 ## To create the hardware inventory information report
 

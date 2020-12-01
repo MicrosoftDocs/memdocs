@@ -139,7 +139,7 @@ If you need help with any of these settings, open [Manage settings and features 
 - **Minutes of inactivity before password is required**
 - **Remember password history**
 
-### New settings for Mac OS X devices
+### New settings for macOS X devices
 
 #### Password settings
 

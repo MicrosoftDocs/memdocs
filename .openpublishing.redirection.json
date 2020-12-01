@@ -1,5 +1,171 @@
 {
     "redirections": [
+
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-communication-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-campaign.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-considerations.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados",
+            "redirect_document_id": true
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-cycle.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": true
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-setup.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": true
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-prepare.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-resources.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-test-validation.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-onboarding.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-intune-setup",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-design.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-support-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-communication-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-rollout-plan.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-requirements.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-scenarios.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide-deployment-goals.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/planning-guide.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        },  
+        {      
+            "source_path": "memdocs/intune/user-help/about-cp-app-for-windows-10.md",
+            "redirect_url": "/mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-android.md",
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-reset-your-device-using-the-company-portal-windows.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-website",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/windows-enrollment-company-portal.md",  
+            "redirect_url": "/mem/intune/user-help/using-your-windows-device-with-intune",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-windows.md",  
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-windows",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/install-office-windows.md",  
+            "redirect_url": "/mem/intune/user-help/install-apps-cpapp-windows",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/troubleshoot-your-device-windows.md",  
+            "redirect_url": "/mem/intune/user-help/help-support-windows-cpapp",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/troubleshoot-your-device-macos.md",  
+            "redirect_url": "/mem/intune/user-help/send-errors-macos",  
+            "redirect_document_id": true 
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-get-an-error-while-using-the-company-portal-app-ios.md",  
+            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/using-your-iOS-device-with-intune.md",  
+            "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",  
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-unenroll-your-device-from-intune-ios.md",  
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-ios",  
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/troubleshoot-your-device-iOS.md",  
+            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_document_id": true
+        },
+                {
+            "source_path": "memdocs/intune/user-help/unenroll-your-device-from-intune-if-you-decline-terms-of-use-android.md",
+            "redirect_url": "/mem/intune/user-help/unenroll-your-device-from-intune-android",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/reset-erase-your-device-cpwebsite.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-website",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/reset-device-cp-app.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-windows",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-reset-your-device-using-the-company-portal-android.md",
+            "redirect_url": "/mem/intune/user-help/reset-device-company-portal-android",
+            "redirect_document_id": true
+        },
         {
             "source_path": "memdocs/intune/user-help/install-company-portal-app-android.md",
             "redirect_url": "/mem/intune/user-help/enroll-device-android-company-portal",
@@ -101,6 +267,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/autopilot/autopilot-update.md",
+            "redirect_url": "/mem/autopilot/index",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/core/misc/whats-new-endpoint-analytics.md",
             "redirect_url": "/mem/analytics/whats-new",
             "redirect_document_id": false
@@ -179,6 +350,156 @@
             "source_path": "memdocs/autopilot/white-glove.md",
             "redirect_url": "/mem/autopilot/pre-provision",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/use-docs.md",
+            "redirect_url": "/mem/use-docs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/understand/use-docs.md",
+            "redirect_url": "/mem/use-docs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/manage-windows-pcs-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/pc-management-comparison.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/install-the-windows-pc-client-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/use-policies-to-simplify-windows-pc-management.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/retire-a-windows-pc-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/policies-to-protect-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/add-apps-for-windows-pcs-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/resolve-gpo-and-microsoft-intune-policy-conflicts.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/get-support.md",
+            "redirect_url": "/mem/get-support",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/apps/get-started/creating-linux-and-unix-server-applications.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/linux-and-unix-clients-technical-reference.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/monitor-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/manage-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/analytics/whats-new.md",
+            "redirect_url": "/mem/analytics/overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/manage/use-alerts-and-the-status-system.md",
+            "redirect_url": "/mem/configmgr/core/servers/manage/use-status-system",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
+            "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
         }
     ]
 }

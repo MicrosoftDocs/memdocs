@@ -95,7 +95,7 @@ A site update can fail due to existing operational problems. Before you update a
 - The site database server  
 - Remote site system roles on other servers   
 
-For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 #### Review file and data replication between sites   
 Make sure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update. For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.
@@ -110,8 +110,8 @@ Configuration Manager can't successfully update a primary site that has a databa
 
 For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
-#### Set SQL Server AlwaysOn availability groups to manual failover   
-If you use an availability group, make sure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [SQL Server AlwaysOn for a site database](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+#### Set SQL Server Always On availability groups to manual failover   
+If you use an availability group, make sure that the availability group is set to manual failover before you start the update installation. After the site has updated, you can restore failover to be automatic. For more information, see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 #### Disable site maintenance tasks at each site
 Before you install the update, disable any site maintenance task that might run during the time the update process is active. For example, but not limited to:

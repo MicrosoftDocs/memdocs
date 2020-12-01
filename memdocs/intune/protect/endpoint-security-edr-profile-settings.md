@@ -63,7 +63,8 @@ Supported platforms and profiles:
 
 - **Sample sharing for all files**  
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
+  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  Sample Sharing sends a file to Microsoft for deep analysis. Organizations can disable sample sharing on specific devices that are considered too sensitive.
+
   - **Not configured**   (*default*)
   - **Yes**
 

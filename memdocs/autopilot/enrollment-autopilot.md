@@ -28,11 +28,19 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: 
 - M365-modern-desktop
-- M365initiative-CoreDeploy
+- m365initiative-coredeploy
 - M365-identity-device-management
 ---
 
 # Enroll Windows devices in Intune by using Windows Autopilot
+
+**Applies to**
+
+- Windows 10
+- Windows Holographic, version 2004 or later
+
+> [!NOTE]
+> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 Windows Autopilot simplifies enrolling devices in Intune. Building and maintaining customized operating system images is a time-consuming process. You might also spend time applying these custom operating system images to new devices to prepare them for use before giving them to your end users. With Microsoft Intune and Windows Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images to the devices. When you use Intune to manage Autopilot devices, you can manage policies, profiles, apps, and more after they're enrolled. For an overview of benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](windows-autopilot.md).
 
@@ -50,6 +58,9 @@ This article explains how to set up Autopilot for Windows PC. For more informati
 - [Intune subscription](../intune/fundamentals/licenses.md)
 - [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+
+> [!NOTE]
+> Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](../intune/fundamentals/role-based-access-control.md) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
 
 ## How to get the CSV for Import in Intune
 

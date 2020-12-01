@@ -10869,7 +10869,7 @@ ParameterCondition=OR
 
 - The columns that you will add to the table  
 
-- The SQL data type for each column you will add to the table  
+- The SQL Server data type for each column you will add to the table  
 
 - If the new column allows Null values  
 
@@ -11536,7 +11536,7 @@ Parameters=DefaultGateway
 
   For more information about setting up and configuring Windows Deployment Services, see:  
 
-- [Windows Deployment Services](https://technet.microsoft.com/library/hh831764.aspx)  
+- [Windows Deployment Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831764(v=ws.11))  
 
 - The Windows Deployment Services Help file, included in Windows Deployment Services  
 
@@ -11560,7 +11560,7 @@ Parameters=DefaultGateway
 
 -   "Add an Image," in Windows Deployment Services Help, which is included in Windows Deployment Services  
 
--   [Windows Deployment Services Getting Started Guide](https://technet.microsoft.com/library/jj648426.aspx)  
+-   [Windows Deployment Services Getting Started Guide](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj648426(v=ws.11))  
 
 ####  <a name="PrestageTargetComputersforWindowsDeploymentServicesforLTIDeployments"></a> Pre-stage Target Computers for Windows Deployment Services for LTI Deployments  
  You can pre-stage PXE client computers in AD DS domains. When target computers are pre-staged, the computer accounts exist in AD DS domains (also called *known computers*). Target computers that are not pre-staged do not have computer accounts in AD DS domains (also called unknown computers).  

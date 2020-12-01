@@ -94,7 +94,7 @@ The following list of Samsung device models do not support Knox. They are enroll
 
 ### Windows PC software client
 
-An [Intune software client](manage-windows-pcs-with-microsoft-intune.md) can be deployed and installed on Windows PCs as an alternate enrollment method. This functionality is only available using the Intune classic portal. You can use the Intune software client to manage 10 and later PCs with the exception of Windows 10 Home edition.
+An [Intune software client](./intune-legacy-pc-client.md) can be deployed and installed on Windows PCs as an alternate enrollment method. This functionality is only available using the Intune classic portal. You can use the Intune software client to manage 10 and later PCs with the exception of Windows 10 Home edition.
 
 > [!Note]
 > Microsoft announced that Windows 7 support ends on January 14th 2020. On this date, Intune also retires support for devices running Windows 7.
@@ -126,7 +126,7 @@ The following browsers are supported for these portals:
 
 ### Intune classic portal
 
-The Intune classic portal is only used for managing devices enrolled with the Intune PC software client (https://manage.microsoft.com). The Intune classic portal requires Silverlight browser support.
+The Intune classic portal is only used for managing devices enrolled with the Intune PC software client (https://admin.manage.microsoft.com). The Intune classic portal requires Silverlight browser support.
 
 The following Silverlight browsers support the Intune console:
 

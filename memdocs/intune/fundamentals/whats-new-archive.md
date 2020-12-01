@@ -571,7 +571,7 @@ The following properties are now exposed via the [devicePropertyHistory](../deve
 For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 #### Help and support workflow update to support additional services<!-- 5654170   -->
-We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:
+We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](../../get-support.md). With this change you'll be able to select from the following management types:
 
 - Configuration Manager (includes Desktop Analytics)
 - Intune
@@ -769,7 +769,7 @@ You'll see a new user experience when creating app configuration policies in Int
 Microsoft Intune now support the additional **Stable** deployment channel for the Microsoft Edge (version 77 and later) for Windows 10 app. The **Stable** channel is the recommended channel for deploying Microsoft Edge for Windows 10 broadly in Enterprise environments. This channel updates every six weeks, each release incorporating improvements from the **Beta** channel. In addition to the **Stable** and **Beta** channels, Intune supports a **Dev** channel. For more information, see [Microsoft Edge for Windows 10 - Configure app settings](../apps/apps-windows-edge.md#configure-app-settings).
 
 #### S/MIME support for Microsoft Outlook for iOS<!-- 2669398 -->
-Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](https://aka.ms/omsmime).
+Intune supports delivering S/MIME signing and encryption certificates that can be used with Outlook for iOS on iOS devices. For more information, see [Sensitivity labeling and protection in Outlook for iOS and Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
 
 #### Cache Win32 app content using Microsoft Connected Cache server<!-- 6030314 -->
 You can install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager - Support for Intune Win32 apps](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
@@ -785,7 +785,7 @@ On Android Enterprise Work Profile devices, you can create Wi-Fi profiles. When 
 
 Now when you choose the Enterprise type, you can also enter automatic proxy settings, including a proxy server URL, such as `proxy.contoso.com`.
 
-To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for devices running Android Enterprise and Android kiosk in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only).
+To see the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for devices running Android Enterprise and Android kiosk in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md#personally-owned-work-profile).
 
 Applies to:
 - Android Enterprise work profile
@@ -812,7 +812,7 @@ The following information is now on the **Overview** page for devices:
 The remote action **Bypass Activation Lock** has been renamed to **Disable Activation Lock**. For more information, see [Disable iOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md).
 
 #### Windows 10 feature update deployment support for Autopilot devices<!-- 5948137   -->
-Intune now supports targeting Autopilot registered devices using [Windows 10 feature update deployments](../protect/windows-update-for-business-configure.md#windows-10-feature-updates).
+Intune now supports targeting Autopilot registered devices using [Windows 10 feature update deployments](../protect/windows-10-feature-updates.md). 
 
 Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
@@ -1037,7 +1037,7 @@ Applies to:
 - iOS/iPadOS
 
 #### Windows 10 feature updates (public preview)<!-- 2384877 -->
-You can now deploy [Windows 10 feature updates](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) to Windows 10 devices. Windows 10 feature updates are a new software update policy that sets the version of Windows 10 that you want devices to install and remain at. You can use this new policy type along with your existing Windows 10 update rings.
+You can now deploy [Windows 10 feature updates](../protect/windows-10-feature-updates.md) to Windows 10 devices. Windows 10 feature updates are a new software update policy that sets the version of Windows 10 that you want devices to install and remain at. You can use this new policy type along with your existing Windows 10 update rings.
 
 Devices that receive Windows 10 feature updates policy will install the specified version of Windows, and then remain at that version until the policy is edited or removed. Devices that run a later version of Windows remain at their current version. Devices that are held at a specific version of Windows can still install quality and security updates for that version from Windows 10 update rings.
 
@@ -1068,7 +1068,7 @@ You can edit the Group Tag value for Autopilot devices. For more information, se
 
 #### Updated support experience<!-- 5012398 -->
 
-Starting today, an updated and streamlined in-console experience for [getting help and support for Intune](get-support.md) is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
+Starting today, an updated and streamlined in-console experience for [getting help and support for Intune](../../get-support.md) is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
 
 We've improved the in-console search and feedback for common issues, and the workflow you use to contact support. When opening a support issue, you'll see real-time estimates for when you can expect a callback or email reply, and Premier and Unified support customers can easily specify a severity for their issue, to help get support faster.
 
@@ -1143,7 +1143,7 @@ For available app installs on Android Enterprise work profile, dedicated, and fu
 #### Microsoft Edge version 77 and later for Windows 10 and macOS (public preview)<!-- 3872025, 4678761  -->
 Microsoft Edge version 77 and later will be available to deploy to PCs running Windows 10 and macOS.
 
-The public preview offers **Dev** and **Beta** channels for Windows 10 and a **Beta** channel for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). In addition, automatic updates of the browser is **On** by default, and Microsoft Edge cannot be uninstalled. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](../apps/apps-windows-edge.md) and [Microsoft Edge documentation](https://go.microsoft.com/fwlink/?linkid=2103823).
+The public preview offers **Dev** and **Beta** channels for Windows 10 and a **Beta** channel for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. Microsoft Edge is a Win32 app installed in system context and on like architectures (x86 app on x86 OS, and x64 app on x64 OS). In addition, automatic updates of the browser is **On** by default, and Microsoft Edge cannot be uninstalled. For more information, see [Add Microsoft Edge for Windows 10 to Microsoft Intune](../apps/apps-windows-edge.md) and [Microsoft Edge documentation](../apps/apps-windows-edge.md).
 
 #### Update to app protection UI and iOS app provisioning UI<!-- 4102027, 4102029   -->
 The UI to create and edit app protection policies and iOS app provisioning profiles in Intune has been updated. UI changes include:
@@ -1180,7 +1180,7 @@ Applies to:
 - Windows 10 RS5 (1809) and newer on supported firmware
 
 #### UI update for creating and editing Windows 10 Update Rings<!-- 4099089         -->
-We've updated the UI ex'erience for [creating and editing Windows 10 Update Rings](../protect/windows-update-for-business-configure.md#create-and-assign-update-rings) for Intune. Changes to UI include:  
+We've updated the UI ex'erience for [creating and editing Windows 10 Update Rings](../protect/windows-10-update-rings.md#create-and-assign-update-rings) for Intune. Changes to UI include:  
 - A wizard-style format condensed into a single console blade, which does away with the blade sprawl seen previously as you configure update rings.   
 - The revised workflow includes Assignments, before completing the initial configuration of the ring.
 - A summary page you can use to review all the configurations you made, before saving and deploying a new update ring. When editing an update ring, the summary shows only the list of items set within the category of properties you edited.
@@ -2826,7 +2826,7 @@ We are rolling out the new Help and Support experience to all tenants over the n
 The new experience lets you describe your problem in your own words and receive troubleshooting insight and web-based remediation content. These solutions are offered via a rule-based machine learning algorithm, driven by user inquires.
 In addition to issue-specific guidance, you use the new case creation workflow to open a support case by email or phone. 
 This new experience replaces the previous Help and Support experience of a static set of pre-selected options that are based on the area of the console you are in when you open Help and Support.
-For more information, see [How to get support for Microsoft Intune](get-support.md).
+For more information, see [How to get support for Microsoft Intune](../../get-support.md).
 
 #### New operational logs, and ability to send logs to Azure Monitor services<!-- 3762211  -->
 Intune has built-in audit logging that tracks events as changes are made. This update includes new logging features, including: 
@@ -3211,7 +3211,7 @@ For customers who are part of the rollout, this new experience replaces the curr
 
 *This new Help and Support experience is being rolled out to some but not all tenants and is available in the Device Management portal. Participants for this new experience are randomly selected from the available Intune tenants. New tenants will be added as we expand the rollout.*  
 
-For more information, see [Help and Support experience](get-support.md#help-and-support-experience) in How to get support for Microsoft Intune.  
+For more information, see [Help and Support experience](../../get-support.md) in How to get support for Microsoft Intune.  
 
 #### PowerShell module for Intune – Preview available<!-- 951068 -->
 A new PowerShell module, which provides support for the Intune API through Microsoft Graph, is now available for preview on [GitHub](https://aka.ms/intunepowershell). For details about how to use this module, see the README in that location.
@@ -3345,7 +3345,7 @@ You can now use Volume Purchase Program (VPP) device licenses to pre-provision t
 A confirmation is now required to delete a Volume Purchase Program (VPP) token if it is being used to pre-provision the Company Portal during DEP enrollment.
 
 #### Block Windows personal device enrollments<!-- 1849498 -->
-You can [block Windows personal devices](../enrollment/enrollment-restrictions-set.md) from enrolling with [mobile device management](../enrollment/windows-enroll.md) in Intune. Devices enrolled with [Intune PC agent](manage-windows-pcs-with-microsoft-intune.md) can't be blocked with this feature. This feature is rolling out over the next couple weeks so you might not see it immediately in the user interface.
+You can [block Windows personal devices](../enrollment/enrollment-restrictions-set.md) from enrolling with [mobile device management](../enrollment/windows-enroll.md) in Intune. Devices enrolled with [Intune PC agent](./intune-legacy-pc-client.md) can't be blocked with this feature. This feature is rolling out over the next couple weeks so you might not see it immediately in the user interface.
 
 #### Specify machine name patterns in an Autopilot profile<!--1849855-->
 You can [specify a computer name template](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) to generate and set the [computer name](/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
@@ -4076,7 +4076,7 @@ We've improved the language in the Company Portal for Windows 10 to be more user
 As part of our effort to give end users more control over their data and privacy, we've published updates to our docs that explain how to view and remove data stored locally by the Company Portal apps. You can find these updates at:
 
 - **Android**: [How to remove your Android device from Intune](../user-help/unenroll-your-device-from-intune-android.md)
-- **Android, if the user has declined terms of use**: [Remove your device management if you declined "Terms of Use"](../user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
+- **Android, if the user has declined terms of use**: [Remove your device management if you declined "Terms of Use"](../user-help/unenroll-your-device-from-intune-android.md#remove-the-company-portal-app-as-a-device-administrator)  
 - **iOS**: [Remove your iOS device from Intune](../user-help/unenroll-your-device-from-intune-ios.md)
 - **Windows**: [Remove your Windows device from Intune](../user-help/unenroll-your-device-from-intune-windows.md)
 
@@ -4733,7 +4733,7 @@ The Company Portal app for Android can now use geofencing to protect access to c
 
 The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
 - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
-- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](https://go.microsoft.com/fwlink/?linkid=859718) or to [turn off power-saving mode](https://go.microsoft.com/fwlink/?linkid=2077422&clcid=0x409). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../user-help/send-logs-to-microsoft-android.md).
+- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](../user-help/samsung-knox-errors-android.md) or to [turn off power-saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../user-help/send-logs-to-microsoft-android.md).
 
 #### New 'Resolve' action available for Android devices<!-- 1583480 -->
 

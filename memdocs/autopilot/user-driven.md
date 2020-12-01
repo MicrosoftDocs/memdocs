@@ -13,13 +13,15 @@ audience: itpro
 author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: how-to
 ---
 
 
 # Windows Autopilot user-driven mode
 
-**Applies to: Windows 10, version 1809 or later**
+**Applies to**
+
+- Windows 10, version 1809 or later
 
 Windows Autopilot user-driven mode lets you configure new Windows 10 devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 
@@ -77,7 +79,6 @@ For each device that will be deployed using user-driven deployment, these additi
  - If using Intune and Azure Active Directory static device groups, manually add the device to the device group.
  - If using other methods (for example, Microsoft Store for Business or Partner Center), manually assign an Autopilot profile to the device.
 
-
 ## User-driven mode for hybrid Azure Active Directory join
 
 Windows Autopilot requires that devices be Azure Active Directory joined. If you have an on-premises Active Directory environment, you can join devices to your on-premises domain. To join the devices, you must configure Autopilot devices to be [hybrid-joined to Azure Active Directory (Azure AD)](/azure/active-directory/devices/hybrid-azuread-join-plan). 
@@ -86,18 +87,19 @@ Windows Autopilot requires that devices be Azure Active Directory joined. If you
 
 To perform a user-driven hybrid Azure AD joined deployment using Windows Autopilot:
 
-- The device must be running Windows 10, version 1809 or later. 
 - A Windows Autopilot profile for user-driven mode must be created and 
- - **Hybrid Azure AD joined** must be specified as the selected option under **Join to Azure AD as** in the Autopilot profile.
+    - **Hybrid Azure AD joined** must be specified as the selected option under **Join to Azure AD as** in the Autopilot profile.
 - If using Intune, a device group in Azure Active Directory must exist with the Windows Autopilot profile assigned to that group.
-- If using intune, create and assign a Domain Join profile. A Domain Join configuration profile includes on-premises Active Directory domain information
-- The device must have access to an Active Directory domain controller. It must be connected to the organization's network. It must be able to resolve the DNS records for the AD domain and the AD domain controller. It must be able to communicate with the domain controller to authenticate the user.
-- The device must be able to access the Internet, following the [documented Windows Autopilot network requirements](networking-requirements.md).
+- If using Intune, create and assign a Domain Join profile. A Domain Join configuration profile includes on-premises Active Directory domain information
+- The device must be able to access the Internet. For more information, see the Windows Autopilot [networking requirements](networking-requirements.md).
 - The Intune Connector for Active Directory must be installed.
- - Note: The Intune Connector will perform an on-prem AD join. Therefore, users don't need on-prem AD-join permission. This assumes the Connector is [configured to perform this action](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) on the user's behalf. 
+    - Note: The Intune Connector will perform an on-prem AD join. Therefore, users don't need on-prem AD-join permission. This assumes the Connector is [configured to perform this action](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) on the user's behalf. 
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 
-**Azure AD device join**: The hybrid Azure AD join process uses the system context to perform device Azure AD join. It's not affected by user-based Azure AD join permission settings. All users can join devices to Azure AD by default.
+In addition to the core requirements for user driven Hybrid Azure AD Join mentioned above, the following additional requirements apply to an on-prem scenario:
+
+- The device must be running Windows 10, version 1809 or later. 
+- The device must have access to an Active Directory domain controller. It must be connected to the organization's network. It must be able to resolve the DNS records for the AD domain and the AD domain controller. It must be able to communicate with the domain controller to authenticate the user.
 
 ## User-driven mode for hybrid Azure Active Directory join with VPN support
 
@@ -105,16 +107,15 @@ Devices joined to Active Directory require connectivity to an Active Directory d
 
 With the addition of VPN support for this scenario, you can configure the Hybrid Azure AD Join process to skip the connectivity check. This doesn't eliminate the need for communicating with an Active Directory domain controller. Instead, to allow connection to the organization's network, Intune delivers the needed VPN configuration before the user attempts to sign in to Windows. 
 
-
 ### Requirements
 
-The following additional requirements apply for Hybrid Azure AD Join with VPN support:
+In addition to the core requirements for user driven hybrid Azure AD join mentioned above, the following additional requirements apply to a remote scenario of Hybrid Azure AD Join with VPN support:
 
 - A supported version of Windows 10:
- - Windows 10 1903 + December 10 Cumulative update (KB4530684, OS build 18362.535) or higher 
- - Windows 10 1909 + December 10 Cumulative update (KB4530684, OS build 18363.535) or higher 
- - Windows 10 2004 or later 
-- Enable the new “Skip domain connectivity check” toggle in the Hybrid Azure AD Join Autopilot profile.
+    - Windows 10 1903 + December 10 Cumulative update (KB4530684, OS build 18362.535) or higher 
+    - Windows 10 1909 + December 10 Cumulative update (KB4530684, OS build 18363.535) or higher 
+    - Windows 10 2004 or later 
+- Enable the “Skip domain connectivity check” toggle in the Hybrid Azure AD Join Autopilot profile.
 - A VPN configuration that:
   - can be deployed with Intune and lets the user manually establish a VPN connection from the Windows logon screen, or
   - one that automatically establishes a VPN connection as needed. 
@@ -161,3 +162,7 @@ Or, you can start Windows Update to install the latest updates:
 ### Step-by-step instructions
 
 See [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](/intune/windows-autopilot-hybrid).
+
+## Related topics
+
+[Trying Out Autopilot Hybrid Join Over VPN In Your Azure Lab](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/trying-out-autopilot-hybrid-join-over-vpn-in-your-azure-lab/ba-p/1606723)

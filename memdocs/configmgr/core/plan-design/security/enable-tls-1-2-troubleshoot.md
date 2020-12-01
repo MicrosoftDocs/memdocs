@@ -5,7 +5,7 @@ description: Describes common issues when enabling Transport Layer Security (TLS
 ms.date: 12/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart
@@ -40,7 +40,7 @@ If SQL Server communication fails and returns an **SslSecurityError** error, ver
 
 - [Update .NET Framework](enable-tls-1-2-server.md#bkmk_net), and enable strong cryptography on each machine
 - [Update SQL Server](enable-tls-1-2-server.md#bkmk_sql) on the host server
-- [Update SQL client components](enable-tls-1-2-server.md#bkmk_sql-client) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
+- [Update SQL Server client components](enable-tls-1-2-server.md#bkmk_sql-client) on all systems that communicate with SQL. For example, the site servers, SMS provider, and site role servers.
 
 ## Configuration Manager client communication failures
 

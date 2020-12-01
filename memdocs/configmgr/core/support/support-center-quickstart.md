@@ -34,13 +34,16 @@ Create a complete *troubleshooting bundle* file (.zip) that captures the client 
 
 ## Step 1: Create a data bundle on a local client
 
-1.  Install Support Center on the Configuration Manager client.  
+1. Install Support Center on the Configuration Manager client.  
 
-2.  Go to the **Start** menu, in the **Microsoft System Center** group, select **Support Center**.  
+1. Go to the **Start** menu, in the **Microsoft Endpoint Manager** group, select **Support Center**.  
 
-3.  On the Home tab of the ribbon, select **Collect Selected Data**. By default, Support Center only collects the minimum data set: log files, client configuration, and operating system.  
+    > [!NOTE]
+    > The above Start menu path is for versions from November 2019 (version 1910) or later. In earlier versions, the folder name is **Microsoft System Center**.
 
-4.  Save the troubleshooting bundle file (.zip) to a folder on the computer. By default, the file name is similar to the following example: `Support_c885cdfed3c7482bba4f9e662978ec07.zip`.  
+1. On the Home tab of the ribbon, select **Collect Selected Data**. By default, Support Center only collects the minimum data set: log files, client configuration, and operating system.  
+
+1. Save the troubleshooting bundle file (.zip) to a folder on the computer. By default, the file name is similar to the following example: `Support_c885cdfed3c7482bba4f9e662978ec07.zip`.  
 
 
 

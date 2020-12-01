@@ -5,7 +5,7 @@ description: "Tutorial - Configure Windows Server Update Services (WSUS) servers
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 10/06/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -156,7 +156,7 @@ Open the WSUS console to verify you can use an SSL connection to the WSUS server
 
 1. The **Use Secure Sockets Layer (SSL) to connect to this server** option automatically enables when either 8531 (default) or 443 are chosen.
 
-       :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
+   :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
        
 1. If your Configuration Manager site server is remote from the software update point, launch the WSUS console from the site server and verify the WSUS console can connect over SSL.
    - If the remote WSUS console can't connect, it likely indicates a problem with either trusting the certificate, name resolution, or the port being blocked.
@@ -237,12 +237,15 @@ When you change the software update point to require SSL, Configuration Manager 
    Write-Host "LastGoodSUP- $last"
    Write-Host "CurrentSUP- $current"
    ```
-
+   > [!TIP]
+   > [Open this script](https://communityhub.microsoft.com/item/8267) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 1. Run a software update scan cycle on your test client. You can force a scan with the following PowerShell script:
 
    ```powershell
    Invoke-WMIMethod -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000113}"
    ```
+   > [!TIP]
+   > [Open this script](https://communityhub.microsoft.com/item/8268) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 
 1. Review the client's **ScanAgent.log** to verify the message to scan against the software update point was received.
 

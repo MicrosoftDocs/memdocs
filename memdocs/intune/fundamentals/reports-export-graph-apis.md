@@ -7,7 +7,7 @@ keywords:
 ms.author: erikre
 author: Erikre
 manager: dougeby
-ms.date: 09/15/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top-level export API. You must use the Microsoft Graph API to make the HTTP call. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. 
 
 > [!NOTE]
-> For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](https://docs.microsoft.com/graph/use-the-api).
+> For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
 Microsoft Endpoint Manager will export reports based on the following Microsoft Graph API endpoint:
 
@@ -62,9 +62,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
         "LastContact", 
         "UPN", 
         "DeviceId" 
-    ], 
-    "localization": "true", 
-    "ColumnName": "ui" 
+    ]
 } 
 ```
 ### Response example
@@ -306,7 +304,7 @@ The following table contains the possible output when calling the `Devices` repo
 | JailBroken  |
 | EasActivationStatusString        |
 
-You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
+You can choose to filter the `Devices` report's output based on the following columns:
 - `OwnerType`
 - `DeviceType` 
 - `ManagementAgents`
@@ -490,5 +488,5 @@ You can choose to filter the `ActiveMalware` and `Malware` report's output based
 
 ## Next steps
 
-- [Microsoft Graph documentation](https://docs.microsoft.com/graph/)
-- [Intune reports](https://docs.microsoft.com/mem/intune/fundamentals/reports)
+- [Microsoft Graph documentation](/graph/)
+- [Intune reports](./reports.md)

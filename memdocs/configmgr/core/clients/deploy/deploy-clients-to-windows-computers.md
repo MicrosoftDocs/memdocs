@@ -5,13 +5,11 @@ description: Learn how to deploy the Configuration Manager client to Windows com
 ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to deploy clients to Windows computers in Configuration Manager
@@ -314,7 +312,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
 
 ### Install the Configuration Manager client by using Intune
 
-1. In Intune, [add a Windows line-of-business app](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
+1. In Intune, [add a Windows line-of-business app](../../../../intune/apps/lob-apps-windows.md) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:  
 

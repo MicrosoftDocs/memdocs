@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,9 +35,12 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 >
-> These settings use the [Apple VPN payload](https://developer.apple.com/documentation/devicemanagement/vpn) (opens Apple's web site).
+> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+>
+> - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
+>
+> - These settings use the [Apple VPN payload](https://developer.apple.com/documentation/devicemanagement/vpn) (opens Apple's web site).
 
 ## Connection type
 
@@ -58,6 +61,7 @@ Select the VPN connection type from the following list of vendors:
 - **Zscaler**: To use Conditional Access, or allow users to bypass the Zscaler sign in screen, then you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
 - **IKEv2**: [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
+- **Microsoft Tunnel**
 - **Custom VPN**
 
 > [!NOTE]
@@ -65,11 +69,9 @@ Select the VPN connection type from the following list of vendors:
 
 ## Base VPN settings
 
-The settings shown in the following list are determined by the VPN connection type you choose.  
-
 - **Connection name**: End users see this name when they browse their device for a list of available VPN connections.
 - **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
-- **IP address or FQDN**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
+- **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
 - **Authentication method**: Choose how devices authenticate to the VPN server. 
   - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) provides some guidance about certificate profiles.
@@ -111,7 +113,13 @@ The settings shown in the following list are determined by the VPN connection ty
 
   - To remove this setting, recreate the profile, and don't select **I agree**. Then, reassign the profile.
 
-### IKEv2 settings
+- **Enter key and value pairs for the NetMotion Mobility VPN attributes** (NetMotion Mobility only): Enter or import key and value pairs. These values may be supplied by your VPN provider.
+
+- **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
+
+  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+
+## IKEv2 settings
 
 These settings apply when you choose **Connection type** > **IKEv2**.
 
@@ -223,7 +231,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
   - **Diffie-Hellman group**: Select the group you want. Default is group `2`.
   - **Lifetime** (minutes): Enter how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
 
-## Automatic VPN settings
+## Automatic VPN
 
 - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching IP address or domain name. If there's a match, then the action you choose runs.
 
@@ -283,13 +291,21 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - iOS 14 and newer
     - iPadOS 14 and newer
 
-## Proxy settings
+## Per-app VPN
 
-If you're using a proxy, configure the following settings. Proxy settings aren't available for Zscaler VPN connections.  
+These settings apply when you choose **Connection type** > **Microsoft Tunnel**.
 
-- **Automatic configuration script**: Use a file to configure the proxy server. Enter the **Proxy server URL** (for example `http://proxy.contoso.com`) that includes the configuration file.
-- **Address**: Enter the IP address of fully qualified host name of the proxy server.
-- **Port number**: Enter the port number associated with the proxy server.
+- **Per-app VPN**: **Enable** associates a specific to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+
+  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+
+## Proxy
+
+If you use a proxy, then configure the following settings.
+
+- **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
+- **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
+- **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 
 ## Next steps
 

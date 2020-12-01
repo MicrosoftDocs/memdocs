@@ -72,7 +72,7 @@ Configuration Manager builds two types of evaluation graphs, *incremental* or *f
 
 ### Incremental collection evaluation
 
-When table data changes, a SQL trigger inserts a row in the **CollectionNotifications** table. The next time a collection evaluation schedule fires, it `AND`s the resource ID with the existing collection query and triggers updates on collections that are enabled for *incremental* collections.
+When table data changes, a SQL Server trigger inserts a row in the **CollectionNotifications** table. The next time a collection evaluation schedule fires, it `AND`s the resource ID with the existing collection query and triggers updates on collections that are enabled for *incremental* collections.
 
 Incremental collection evaluation executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes.
 
@@ -99,5 +99,6 @@ In the following example, installing DNS on the existing server makes it a membe
 ## Next steps
 - [How to create collections](create-collections.md)
 - [Best practices for collections](best-practices-for-collections.md)
+- [View collection evaluation (starting in version 2010)](collection-evaluation-view.md)
 - [Collection Evaluation Viewer](../../../support/ceviewer.md)
 - [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) session at TechEd Australia

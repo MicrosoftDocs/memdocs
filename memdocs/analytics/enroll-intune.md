@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 10/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -25,7 +25,9 @@ Before you start this tutorial, make sure you have the following prerequisites:
 ### Intune device requirements
 
 - Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
-   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro and Windows 10 long-term servicing channel (LTSC) aren't supported.
+   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
+      -  Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+      - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
@@ -51,12 +53,7 @@ Endpoint analytics is included in the following plans:
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
-- The following permissions are used for Endpoint analytics:
-   - **Read** under the **Device configurations** category.
-   - **Read** under the **Organization** category. <!--temporary for pp-->
-   - Permissions appropriate to the user's role under the **Endpoint Analytics** category.
-
-A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+[!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 
 ## <a name="bkmk_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for Intune managed devices. For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).

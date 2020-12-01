@@ -36,9 +36,6 @@ When hardware inventory runs on a client device, the first inventory data that t
 
  Configuration Manager provides limited support for dual-boot computers. Configuration Manager can discover dual-boot computers but returns inventory information only from the operating system that's active when the inventory cycle runs.  
 
-> [!NOTE]  
->  For information about how to use hardware inventory with clients that run Linux and UNIX, see [Hardware inventory for Linux and UNIX](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md).  
-
 ## Extending Configuration Manager hardware inventory  
  In addition to the built-in hardware inventory in Configuration Manager, you can also use one of these methods to extend hardware inventory to collect more information:  
 

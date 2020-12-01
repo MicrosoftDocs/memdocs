@@ -118,7 +118,7 @@ When you expand a primary site to a hierarchy, the data warehouse service point 
 
 You configured a dedicated instance of SQL Server to host the Configuration Manager site database.
 
-If another site uses the instance, you must select a different instance for the new site. You can also uninstall the other site, or move its database to a different instance for the SQL server.
+If another site uses the instance, you must select a different instance for the new site. You can also uninstall the other site, or move its database to a different instance for the SQL Server.
 
 ### Default client agent settings have NAP enabled
 
@@ -186,7 +186,7 @@ When you expand a primary site to a hierarchy, the site database for the standal
 
 *Applies to: Site database server*
 
-When using SQL Server Always On, the **max text repl size** setting must be properly configured. For more information, see [Prepare to use SQL Server Always On availability groups with Configuration Manager](../configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+When using an availability group, the **max text repl size** setting must be properly configured. For more information, see [Prepare to use an availability group](../configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Microsoft Intune Connector on the expanded primary site
 
@@ -274,7 +274,7 @@ For more information, see the Microsoft Support article on [Problems when instal
 
 The instance for SQL Server is configured to use the **SQL_Latin1_General_CP1_CI_AS** collation.
 
-If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL collation and unicode support](/sql/relational-databases/collations/collation-and-unicode-support).
+If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL Server collation and unicode support](/sql/relational-databases/collations/collation-and-unicode-support).
 
 If you're using a Chinese OS and require GB18030 support, this check doesn't apply. For more information about enabling GB18030 support, see [International support](../../../plan-design/hierarchy/international-support.md).
 
@@ -313,7 +313,7 @@ The specified site code isn't already in use in the Configuration Manager hierar
 
 *Applies to: Primary site, site database server*
 
-The site server computer account has **Administrator** rights on the SQL server and management point.
+The site server computer account has **Administrator** rights on the SQL Server and management point.
 
 ### Site server FQDN length
 
@@ -349,39 +349,39 @@ Configuration Manager doesn't support software update points on network (NLB) or
 
 *Applies to: Site database server*
 
-When using SQL Server Always On, it must meet the minimum requirements to host an availability group. For more information, see [Prepare to use SQL Server Always On availability groups with Configuration Manager](../configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+When using an availability group, the server must meet the minimum requirements. For more information, see [Prepare to use an availability group](../configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
-### SQL Server availability group configured for readable secondaries
-
-*Applies to: Site database server*
-
-When using SQL Server Always On, check the secondary read state of availability group replicas.
-
-### SQL Server availability group configured for manual failover
+### SQL Server Always On availability group configured for readable secondaries
 
 *Applies to: Site database server*
 
-When using SQL Server Always On, availability group replicas are configured for manual failover.
+When using an availability group, check the secondary read state of the replicas.
 
-### SQL Server availability group replicas on default instance
+### SQL Server Always On availability group configured for manual failover
 
 *Applies to: Site database server*
 
-When using SQL Server Always On, availability group replicas are on the default instance.
+When using an availability group, configure the replicas for manual failover.
 
-### SQL availability group replicas must all have the same seeding mode
+### SQL Server Always On availability group replicas on default instance
+
+*Applies to: Site database server*
+
+When using an availability group, replicas are on the default instance.
+
+### SQL Server Always On availability group replicas must all have the same seeding mode
 
 <!-- SCCMDocs-pr#3899 -->
 *Applies to: Site database server*
 
-Starting in version 1906, when using SQL Server Always On, you need to configure availability group replicas with the same [seeding mode](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+Starting in version 1906, when using an availability group, you need to configure replicas with the same [seeding mode](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
-### SQL availability group replicas must be healthy
+### SQL Server Always On availability group replicas must be healthy
 
 <!-- SCCMDocs-pr#3899 -->
 *Applies to: Site database server*
 
-Starting in version 1906, when using SQL Server Always On, availability group replicas are in a healthy state.
+Starting in version 1906, when using an availability group, replicas are in a healthy state.
 
 ### SQL Server configuration for site upgrade
 
@@ -520,7 +520,7 @@ The Windows Deployment Tools component of the Windows ADK is installed.
 
 Server with the site server, management point, or distribution point roles aren't part of a Windows Cluster.
 
-Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](../configure/high-availability-options.md). <!--1359132-->  
+The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode. For more information, see [High availability options](../configure/high-availability-options.md). <!--1359132-->  
 
 ### Windows PE installed
 
@@ -734,7 +734,7 @@ The account that you configured to run the SQL Server service for the site datab
 
 *Applies to: Site database server*
 
-Starting in version 1810, check if the site database has a backlog of SQL change tracking data.<!--SCCMDocs-pr issue 3023-->  
+Starting in version 1810, check if the site database has a backlog of SQL Server change tracking data.<!--SCCMDocs-pr issue 3023-->  
 
 Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
 
@@ -766,9 +766,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Updating the SQL Server Native Client may require a restart, which can impact the site install process.
 
-This check makes sure the site server has a supported version of the SQL Native Client. The prerequisite check doesn't verify the version of the SQL Native Client on remote site systems.
+This check makes sure the site server has a supported version of the SQL Server Native Client. The prerequisite check doesn't verify the version of the SQL Server Native Client on remote site systems.
 
-The minimum version is SQL 2012 SP4 (`11.*.7001.0`). This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
+The minimum version is SQL Server 2012 SP4 (`11.*.7001.0`). This SQL Server Native Client version supports TLS 1.2. For more information, see the following articles:
 
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

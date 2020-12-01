@@ -14,7 +14,7 @@ audience: itpro
 author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: how-to
 ---
 
 
@@ -82,7 +82,7 @@ You can set the policy using one of these methods:
    - **Platform** = **Windows 10 or later**
    - **Profile type** = **Device restrictions**
    - **Category** = **General**
-   - **Automatic Redeployment** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.
+   - **Autopilot Reset** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.
  - If you're using an MDM provider other than Intune, check your MDM provider documentation on how to set this policy. 
 
 - Windows Configuration Designer
@@ -119,7 +119,7 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
 You can use an MDM service such a Microsoft Intune to start the remote Windows Autopilot reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
 
-To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD. This feature isn't supported on devices that were enrolled using [Autopilot self deploying mode](self-deploying.md).
+To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD.
 
 ### Triggering a remote Windows Autopilot Reset
 
@@ -132,12 +132,7 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 >[!NOTE]
 >The Autopilot Reset option will not be enabled in Microsoft Intune for devices not running Windows 10 build 17672 or higher.
 
->[!IMPORTANT]
->The feature for Autopilot Reset will stay grayed out, **unless** you reset the device using Autopilot (either using Fresh Reset or manually sysprep the device).
-
 Once the reset is complete, the device is again ready for use.
- 
-
 
 ## Troubleshooting
 
@@ -145,7 +140,7 @@ Windows Autopilot Reset requires that the [Windows Recovery Environment (WinRE)]
 
 To make sure WinRE is enabled, use the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) to run the following command:
 
-```
+```cmd
 reagentc /enable
 ```
 

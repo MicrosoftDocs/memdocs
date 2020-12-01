@@ -87,7 +87,7 @@ For Configuration Manager version 1802, this level includes the following data:
 
      - Version of post-upgrade script
 
-- SQL version, service pack level, edition, collation ID, and character set     
+- SQL Server version, service pack level, edition, collation ID, and character set
 
 - Telemetry statistics: when run, runtime, errors
 
@@ -426,11 +426,11 @@ For Configuration Manager version 1802, this level includes the following data:
 
 - Discovery types, enabled, and schedule (full, incremental)
 
-- SQL AlwaysOn replica information, usage, and health status
+- SQL Server Always On availability group replica information, usage, and health status
 
-- SQL change tracking performance issues, retention period, and auto-cleanup state
+- SQL Server change tracking performance issues, retention period, and auto-cleanup state
 
-- SQL change tracking retention period
+- SQL Server change tracking retention period
 
 - State and status message performance statistics including most common and most expensive message types
 

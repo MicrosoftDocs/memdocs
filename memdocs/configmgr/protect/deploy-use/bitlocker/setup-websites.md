@@ -73,7 +73,7 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-SqlServerName <ServerName>` (required): The fully qualified domain name of the primary site database server.
 
-- `-SqlInstanceName <InstanceName>`: The SQL Server instance name for the primary site database. If SQL uses the default instance, don't include this parameter.
+- `-SqlInstanceName <InstanceName>`: The SQL Server instance name for the primary site database. If SQL Server uses the default instance, don't include this parameter.
 
 - `-SqlDatabaseName <DatabaseName>` (required): The name of the primary site database, for example `CM_ABC`.
 

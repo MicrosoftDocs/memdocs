@@ -2,7 +2,7 @@
 title: CMG server authentication certificate
 titleSuffix: Configuration Manager
 description: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
-ms.date: 09/28/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -28,6 +28,9 @@ A reminder of some CMG terminology that's used in this article:
 - **Service name**: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`.
 
 - **Deployment name**: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.cloudapp.net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
+
+  > [!IMPORTANT]
+  > Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, the deployment name is different. With a virtual machine scale set, the service name uses the **cloudapp.azure.com** domain along with the region. For example, `GraniteFalls.EastUS.CloudApp.Azure.Com` for a deployment in the **East US** Azure region. Note that difference as you read this article and prepare the server authentication certificate for a virtual machine scale set deployment.
 
 ## Choose the certificate type
 
@@ -89,7 +92,9 @@ If you also enable the CMG for content, confirm that it's also a unique Azure st
 
 - Test your name in the **Storage account name** field.
 
-The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a dash (`-`).<!-- SCCMDocs#1080 -->
+> [!IMPORTANT]
+> The DNS name prefix, for example `GraniteFalls`, should be 3 to 24 characters long, and only use alphanumeric characters. Don't use special characters, like a 
+> dash (`-`).<!-- SCCMDocs#1080 -->
 
 ## Issue the certificate
 
@@ -97,7 +102,7 @@ The CMG server authentication certificate supports the following configurations:
 
 - 2048-bit or 4096-bit key length
 
-- This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG certificates overview](../../../plan-design/network/cng-certificates-overview.md).
+- This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG v3 certificates overview](../../../plan-design/network/cng-certificates-overview.md).
 
 ### <a name="bkmk_serverauthpublic"></a> Use a public provider certificate
 

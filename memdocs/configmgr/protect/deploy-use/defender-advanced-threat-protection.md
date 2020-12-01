@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
-ms.date: 06/17/2020
+ms.date: 10/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -60,15 +60,13 @@ Down-level operating systems include:
 - Windows Server 2012 R2
 - Windows Server 2016, version 1709 and earlier
 
-When you onboard devices to ATP with Configuration Manager, you deploy the ATP policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are up-level, down-level, or both.
+When you onboard devices to ATP with Configuration Manager, you deploy the ATP policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
 
 - If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended).
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
-- If  your collection contains only down-level devices, then you can use the [down-level onboarding instructions](#bkmk_downlevel).
 
 > [!Warning]
-> - If your target collection contains up-level devices, and you use the instructions for down-level devices, then the up-level devices won't be onboarded.
-> - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded.
+> If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 ## <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to ATP (recommended)
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to ATP by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
@@ -95,11 +93,11 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 ### Onboard the devices
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies**.
-1. Select **Create Microsoft Defender ATP Policy** to open the Microsoft Defender ATP Policy Wizard. 
+1. Select **Create Microsoft Defender ATP Policy** to open the Microsoft Defender ATP Policy Wizard.
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
 1. Supply the **Workspace key** and **Workspace ID** then click **Next**.
-
+   - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender ATP online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender ATP Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
@@ -108,7 +106,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 1. Review the summary and complete the wizard.  
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender ATP policy to clients.
 
-## <a name="bkmk_uplevel"></a> Onboard devices running up-level operating systems to ATP
+## <a name="bkmk_uplevel"></a> Onboard devices running only up-level operating systems to ATP
 
 Up-level clients require an onboarding configuration file for onboarding to ATP. Up-level operating systems include:
 - Windows 10, version 1607 and later 
@@ -127,8 +125,8 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Download the compressed archive (.zip) file and extract the contents.
 
 > [!IMPORTANT]
-> The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
-
+> - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+> - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 ### Onboard the up-level devices
 
@@ -136,44 +134,14 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
    > [!Note]
-   > For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
+   > - For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
+   > - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender ATP online service. <!--8538605-->
+
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
    - **None**
    - **All file types**  
 1. Review the summary and complete the wizard.  
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender ATP policy to clients.
-
-## <a name="bkmk_downlevel"></a> Onboard devices running down-level operating systems to ATP
-
-Down-level clients require **Workspace key** and **Workspace ID** for ATP onboarding. Down-level operating systems include:
-- Windows 8.1
-- Windows Server 2012 R2
-- Windows Server 2016, version 1709 and earlier
-
-If your target collection contains both up-level and down-level devices, or if you're not sure, then use the instructions to [onboard devices running any supported operating system (recommended)](#bkmk_any_os).
-
-### Get the Workspace ID and Workspace key for down-level devices
-
-1. Go to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/) and sign in.
-1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
-1. For the operating system, select either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1, 2012 R2 and 2016** from the list.
-   - The **Workspace key** and **Workspace ID** will be the same regardless of which of these options you choose.
-1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section.
-
-### Onboard the down-level devices
-
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
-1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
-1. Provide the **Workspace key** and **Workspace ID**.
-   > [!Note]
-   > - For Configuration Manager version 2002, you'll need the configuration file even if you're onboarding only down-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 10** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188--> 
-   > - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
-   - **None**
-   - **All file types**  
-1. Review the summary and complete the wizard.  
-1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender ATP policy to clients.
-
 
 ## Monitor
 

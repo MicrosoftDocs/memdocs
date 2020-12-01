@@ -54,7 +54,6 @@ Prerequisites for device compliance policy with MTD:
 
 4. On **Basics**, specify  a device compliance policy **Name**, and **Description** (optional). Select **Next** to continue.
 
-
 5. On **Compliance settings**, expand and configure **Device Health**. Choose the Mobile Threat Level from the drop-down list for **Require the device to be at or under the Device Threat Level**.
 
    - **Secured**: This level is the most secure. The device can't have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
@@ -72,7 +71,7 @@ Prerequisites for device compliance policy with MTD:
 7. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 > [!IMPORTANT]
-> If you create Conditional Access policies for Microsoft 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device.
+> If you create Conditional Access policies for Microsoft 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device and reported to Intune via the chosen MTD vendor.
 
 ## To assign an MTD device compliance policy
 
@@ -90,4 +89,4 @@ To assign, or change the assignment of a device compliance policy to users:
 
 ## Next steps
 
-[Enable MTD with Intune](mtd-connector-enable.md)
+* [Enable MTD with Intune](mtd-connector-enable.md)

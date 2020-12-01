@@ -87,7 +87,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 - A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
 
-- Onboard the site to Azure AD for cloud management.  
+- [Onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Azure AD for cloud management.  
 
 - *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later, and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
 
@@ -96,12 +96,7 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node. Select the site and choose **Properties** in the ribbon.  
 
-2. Switch to the **Client Computer Communication** tab.
-
-    > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
-
-    Select the option for **HTTPS or HTTP**. Then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
+2. Switch to the **Communication Security** tab. Select the option for **HTTPS or HTTP**. Then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
 
 > [!Tip]
 > Wait up to 30 minutes for the management point to receive and configure the new certificate from the site.

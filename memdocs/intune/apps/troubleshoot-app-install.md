@@ -68,7 +68,7 @@ The following actions should be considered when you have problems installing app
   3. Navigate to [Azure Active Directory Users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Select the affected user and click **Devices**.
   5. If user is over the set limit then delete any stale records that are no longer needed.
-- For iOS/iPadOS DEP devices, ensure that the user is listed as **Enrolled by User** in Intune Device Overview pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
+- For iOS/iPadOS DEP devices, ensure that the user is listed as **Enrolled by User** in Intune Device Overview pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
 
 ## Win32 app installation troubleshooting
 
@@ -140,4 +140,4 @@ The information in the topic [Troubleshooting packaging, deployment, and query o
 
 - For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](../fundamentals/help-desk-operators.md). 
 - Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+- Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).

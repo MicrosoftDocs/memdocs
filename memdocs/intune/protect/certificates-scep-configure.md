@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 11/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ The following on-premises infrastructure must run on servers that are domain-joi
 - **NDES server role** – You must configure a Network Device Enrollment Service (NDES) server role on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
 
   - The server that hosts NDES must be domain-joined and in the same forest as your Enterprise CA.
-  - You can't use NDES that's installed on the server that hosts the Enterprise CA.
+  - We recommend you don’t use NDES that's installed on the server that hosts the Enterprise CA. While use of NDES that's installed on an Enterprise CA is supported, this configuration represents a security risk when the CA services internet requests.  
   - You'll install the Microsoft Intune Connector on the same server that hosts NDES.
 
   To learn more about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
@@ -219,6 +219,8 @@ It's optional to modify the validity period of the certificate template.
 After you [create the SCEP certificate template](#create-the-scep-certificate-template), you can edit the template to review the **Validity period** on the **General** tab.
 
 By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Intune console.
+
+Plan to use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.
