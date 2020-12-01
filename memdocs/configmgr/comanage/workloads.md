@@ -119,7 +119,8 @@ Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10
 
 For more information on the Intune feature, see [What is Microsoft Intune app management?](/intune/app-management).
 
-[!NOTE] In Windows 10 1903 (19H1) and later releases, PowerShell scripts will be executed on co-managed devices even if the 'Client Apps' workload has not been swung over to Intune.
+> [!NOTE]
+> In Windows 10 version 1903 and later, PowerShell scripts still run on co-managed devices even if you haven't switched the **Client Apps** workload to Intune.
 
 > [!Tip]  
 > This feature was first introduced in version 1806 as a [pre-release feature](../core/servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
