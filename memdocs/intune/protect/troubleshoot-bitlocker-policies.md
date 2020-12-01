@@ -7,7 +7,7 @@ description: Describes how to enable BitLocker encryption on a device by using I
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect

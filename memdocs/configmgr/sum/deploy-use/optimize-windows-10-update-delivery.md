@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 10/12/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -83,6 +83,9 @@ When the **Allow clients to download delta content when available** [client sett
    - The deployment setting for this fallback behavior is **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates** and it's found on the **Download Settings** page. For more information, see [Deploy software updates](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group).
 
 If either of the above options aren't viable, **Allow clients to download delta content when available** can be disabled in the client settings to allow fallbacks functionality. Delivery Optimization peering won't be leveraged in this case since the client won't use the delta channel.
+
+> [!Tip]
+> Starting in Configuration Manager version 2010, if delta content is unavailable from distribution points in the current boundary group, you can immediately fallback to a neighbor or the site default. For more information, see [Client settings for software updates](../../core/clients/deploy/about-client-settings.md#software-updates).
 
 ### Configuration Manager peer cache
 

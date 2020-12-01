@@ -73,6 +73,9 @@ The task sequence editor includes the following components:
 
 You can resize the task sequence editor using standard Windows controls. To resize the widths of the two main panes, use the mouse to select the bar between the task sequence and the step properties, and then drag it left or right.
 
+> [!NOTE]
+> Starting in version 2010, Configuration Manager restricts actions for a task sequence that's greater than 2 MB in size. For example, the task sequence editor will display an error if you try to save changes to a large task sequence.<!--6888853--> For more information, see [Reduce the size of task sequence policy](../deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+
 ## <a name="bkmk_view"></a> View a task sequence
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.  
