@@ -77,6 +77,9 @@ More resources:
 
 ### Operating System Version
 
+ > [!TIP]
+ > To discover build versions for all Windows 10 Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows 10 release information] (https://aka.ms/win10rel). Be sure to include the 10.0. prefix before the build numbers, as the examples below illustrate.
+
 - **Minimum OS version**:  
   Enter the minimum allowed version in the **major.minor.build.CU number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
 
@@ -102,7 +105,15 @@ More resources:
   When a device is using an OS version later than the version entered, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until the rule is changed to allow the OS version.
 
 - **Valid operating system builds**:  
-  Enter a range for the acceptable operating systems versions, including a minimum and maximum. You can also **Export** a comma-separated values (CSV) file list of these acceptable OS build numbers.
+
+> [!NOTE]
+> Valid operating system builds provides additional flexibility when compared against minimum and maximum OS version. Consider a scenario where  minimum OS version was set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version was set to 10.0.18363.xxx (Windows 10 1909), this could allow a Windows 10 1903 device which does not have recent cumulative updates installed to be compliant. Minimum and maximum OS version may be suitable if you have standardised on a single Windows 10 release, but may not address your requirements if you need the ability for multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, as this will allow multiple builds to be specified, as per the example.
+
+  Enter a range for the acceptable operating systems versions, including a minimum and maximum. You can also **Export** a comma-separated values (CSV) file list of these acceptable OS build numbers. Note that the first column can contain any decription, while the second and third columns need to adhere to valid OS build versions in the **major.minor.build.revision number** format.
+
+Win 10 2004 (Jun-Sept 2020)          10.0.19041.329           10.0.19041.508
+Win 10 1909 (Jun-Sept 2020)          10.0.18363.900           10.0.18363.1110       
+Win 10 1809 (Jun-Sept 2020)          10.0.17763.1282          10.0.17763.1490
 
 ## Configuration Manager Compliance
 
