@@ -28,12 +28,37 @@ ms.collection:
 
 Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Successful registration requires that two processes are complete:
 
-1. The device's unique hardware hash is captured and uploaded to the Autopilot service.
+1. The device's unique [hardware identity](#device-identification) (known as a hardware hash) is captured and uploaded to the Autopilot service.
 2. The device is associated to an Azure tenant ID.
 
 Ideally, both of these processes are performed by the OEM, reseller, or distributor from which the devices were purchased. An OEM or other device provider uses the [registration authorization](registration-auth.md) process to perform device registration on your behalf. 
 
 Registration can also be performed within your organization by collecting the hardware identity from new or existing devices and [uploading it manually](manual-registration). If devices meet certain requirements, they can also be configured for [automatic registration](automatic-registration) with Windows Autopilot.
+
+## Terms
+
+The following terms are used to refer to various steps in the registration process:
+
+TERMINOLOGY
+Term	Definition
+device registration	Association of a device's hardware hash with the Windows Autopilot service. This process is automatic for new enterprise devices manufactured by OEMs that are Windows Autopilot partners.
+add devices	Adding a device is the process of registering a device with the Windows Autopilot service, (if it is not already registered) and associating it to your tenant ID.
+import devices	Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information such as the model and serial number in order to manually add devices.
+enroll devices	Enrolling a device is the process of adding devices to Intune.
+
+## Device identification
+
+To identify a device with Windows Autopilot, the device's unique hardware hash must be captured and uploaded to the service. As previously mentioned, this step is ideally done by the hardware vendor (OEM, reseller, or distributor) automatically associating the device with an organization. It's also possible to do identify a device with a harvesting process that collects the device from within a running Windows 10 installation.
+
+The hardware hash contains details about the device:
+- manufacturer
+- model
+- device serial number
+- hard drive serial number
+- details about when the ID was generated
+- many other attributes that can be used to uniquely identify the device
+
+The hardware hash changes each time it's generated because it includes details about when it was generated. When the Windows Autopilot deployment service attempts to match a device, it considers changes like that. It also considers large changes such as a new hard drive, and is still able to match successfully. But large changes to the hardware, such as a motherboard replacement, wouldn't match, so a new hash would need to be generated and uploaded.
 
 Devices that have been registered with the Windows Autopilot service are displayed in the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices | Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
 

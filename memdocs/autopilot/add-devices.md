@@ -26,17 +26,16 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
-Before deploying a device using Windows Autopilot, the device must be [registered](registration-overview.md) with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity and uploading it manually. For an overview of this process, see (Manual registration overview)[manual-registration.md]. 
-
-> [!NOTE]
-> The process for obtaining the hardware hash from HoloLens devices is different than the process for a PC. For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
+This article provides a short summary of the device registration process and step by step guidance to perform manual registration. For an overview of Windows Autopilot device registration, see [Registration overview](registration-overview.md). 
 
 ## Manual registration process
 
-To manually register a device, you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows 10 to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
+Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity (the hardware hash) and uploading it manually. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
 
-> [!Note]
-> Customers can only register devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners as described in the previous sections.
+Device owners can only register thier devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
+
+> [!NOTE]
+> The process for obtaining the hardware hash from HoloLens devices is different than the process for a PC. For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
 ### Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
@@ -149,13 +148,7 @@ For more information about device IDs, see the following topics:
 - [Add devices to a customer account](/partner-center/autopilot)
 
 
-## Summary
 
-When deploying new devices using Windows Autopilot, the following steps are required:
-
-1. [Register devices](#registering-devices). Ideally, this step is performed by the OEM, reseller, or distributor from which the devices were purchased. However, registration can also be done by the organization by collecting the hardware identity and uploading it manually.
-2. [Configure device profiles](profiles.md). Specify how the device should be deployed and what user experience should be presented.
-3. Boot the device. IF the device is connected to a network with internet access, it will contact the Windows Autopilot deployment service to see if the device is registered. If it's registered, it will download profile settings such as the [Enrollment Status page](enrollment-status.md), which are used to customize the end-user experience.
 
 ## Next steps
 

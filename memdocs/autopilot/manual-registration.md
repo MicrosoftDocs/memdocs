@@ -37,20 +37,6 @@ To manually register a device, you must first capture its hardware hash. Once th
 > [!Note]
 > Customers can only register devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners as described in the previous sections.
 
-## Device identification
-
-To identify a device with Windows Autopilot, the device's unique hardware hash must be captured and uploaded to the service. As previously mentioned, this step is ideally done by the hardware vendor (OEM, reseller, or distributor) automatically associating the device with an organization. It's also possible to do identify a device with a harvesting process that collects the device from within a running Windows 10 installation.
-
-The hardware hash contains details about the device:
-- manufacturer
-- model
-- device serial number
-- hard drive serial number
-- details about when the ID was generated
-- many other attributes that can be used to uniquely identify the device
-
-The hardware hash changes each time it's generated because it includes details about when it was generated. When the Windows Autopilot deployment service attempts to match a device, it considers changes like that. It also considers large changes such as a new hard drive, and is still able to match successfully. But large changes to the hardware, such as a motherboard replacement, wouldn't match, so a new hash would need to be generated and uploaded.
-
 ## Registering devices
 
 <img src="./images/image2.png" width="511" height="249" alt="process" />
