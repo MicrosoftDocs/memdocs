@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -66,8 +66,8 @@ Intune supports derived credentials on the following platforms:
 
 - iOS/iPadOS
 - Android Enterprise:
-  - Fully Mmanaged devices (version 7.0 and above)
-  - Corporate-Owned Work pProfile
+  - Fully Managed devices (version 7.0 and above)
+  - Corporate-Owned Work Profile
 - Windows 10 and later
 
 ### Supported issuers
