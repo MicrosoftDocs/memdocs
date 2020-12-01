@@ -35,16 +35,16 @@ Ideally, both of these processes are performed by the OEM, reseller, or distribu
 
 Registration can also be performed within your organization by collecting the hardware identity from new or existing devices and [uploading it manually](manual-registration). If devices meet certain requirements, they can also be configured for [automatic registration](automatic-registration) with Windows Autopilot.
 
-## Terms
+## Terminology
 
 The following terms are used to refer to various steps in the registration process:
 
-TERMINOLOGY
-Term	Definition
-device registration	Association of a device's hardware hash with the Windows Autopilot service. This process is automatic for new enterprise devices manufactured by OEMs that are Windows Autopilot partners.
-add devices	Adding a device is the process of registering a device with the Windows Autopilot service, (if it is not already registered) and associating it to your tenant ID.
-import devices	Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information such as the model and serial number in order to manually add devices.
-enroll devices	Enrolling a device is the process of adding devices to Intune.
+| Term | Definition |
+| --- | --- |
+| device registration | Association of a device's hardware hash with the Windows Autopilot service. This process can be automated for new enterprise devices manufactured by OEMs that are Windows Autopilot partners. |
+| add devices | Adding a device is the process of registering a device with the Windows Autopilot service, (if it is not already registered) **and associating it to a tenant ID**. |
+| import devices | Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information such as the model and serial number in order to manually add devices. |
+| enroll devices | Enrolling a device is the process of adding devices to Intune. |
 
 ## Device identification
 
