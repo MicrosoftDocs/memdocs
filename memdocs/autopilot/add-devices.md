@@ -26,16 +26,27 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
-This article provides a short summary of the device registration process and step by step guidance to perform manual registration. For an overview of Windows Autopilot device registration, see [Registration overview](registration-overview.md). 
+This article provides step by step guidance to perform manual registration. For an overview of registration and manual registration, see the following topics:
+- [Registration overview](registration-overview.md)
+- [Manual registration overview](manual-registration.md)
 
 ## Manual registration process
 
-Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity (the hardware hash) and uploading it manually. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
+ Windows Autopilot device registration can be done within your organization by collecting the hardware identity (the hardware hash) and uploading it manually. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
 
-Device owners can only register thier devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
+> Device owners can only register thier devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
 > [!NOTE]
 > The process for obtaining the hardware hash from HoloLens devices is different than the process for a PC. For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
+
+## Prerequisites
+
+- [Intune subscription](../intune/fundamentals/licenses.md)
+- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+
+> [!NOTE]
+> Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](../intune/fundamentals/role-based-access-control.md) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
 
 ### Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
@@ -77,76 +88,40 @@ For more information about running the script, see the [Get-WindowsAutoPilotInfo
 >**HKCU\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserOOBE** <br>
 >To ensure OOBE has not been restarted too many times, you can change this value to 1.
 
-## Registering devices
 
-<img src="./images/image2.png" width="511" height="249" alt="process" />
+## Add devices
 
+Now that you have captured hardware hashes in a CSV file, you can add Windows Autopilot devices by importing the CSV file. The following are instructions to import the CSV using Intune:
 
-After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
-- [Microsoft Intune](enrollment-autopilot.md). This is the preferred mechanism for all customers.
-  - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
-- [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). This is used by CSP partners to register devices on behalf of customers.
-- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
-- [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
+    ![Screenshot of Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device.png)
 
-A summary of each platform's capabilities is provided below.<br>
-<br>
-<table>
-<tr>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Platform/Portal</font></td>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Register devices?</font></td>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Create/Assign profile</font></td>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Acceptable DeviceID</font></td>
-</tr>
+2. Under **Add Windows Autopilot devices**, browse to a CSV file listing the devices that you want to add. The CSV file should list:
+    - Serial numbers.
+    - Windows product IDs.
+    - Hardware hashes.
+    - Optional group tags.
+    - Optional assigned user.
+  
+    You can have up to 500 rows in the list. For information about how to get device information, see [Adding devices to Windows Autopilot](add-devices.md#device-identification). Use the header and line format shown below:
 
-<tr>
-<td>OEM Direct API</td>
-<td>YES - 1000 at a time max</td>
-<td>NO</td>
-<td>Tuple or PKID</td>
-</tr>
+   `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
+   `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
-<tr>
-<td><a href="/partner-center/autopilot">Partner Center</a></td>
-<td>YES - 1000 at a time max</td>
-<td>YES<b><sup>34</sup></b></td>
-<td>Tuple or PKID or 4K HH</td>
-</tr>
+   ![Screenshot of Adding Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device-2.png)
 
-<tr>
-<td><a href="enrollment-autopilot.md">Intune</a></td>
-<td>YES - 500 at a time max<b><sup>1</sup></b></td> 
-<td>YES<b><sup>12</sup></b></td> 
-<td>4K HH</td>
-</tr>
+   >[!IMPORTANT]
+   > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.
 
-<tr>
-<td><a href="/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles">Microsoft Store for Business</a></td>
-<td>YES - 1000 at a time max</td>
-<td>YES<b><sup>4</sup></b></td>
-<td>4K HH</td>
-</tr>
+    > [!NOTE]
+    > The CSV file being imported into the Intune portal must be formatted as described above.  Extra columns are not supported.  Quotes are not supported.  Only ANSI-format text files can be used (not Unicode).  Headers are case-sensitive.  Editing the file in Excel and saving as a CSV file will not generate a usable file due to these requirements.
 
-<tr>
-<td><a href="/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Business Premium</a></td>
-<td>YES - 1000 at a time max</td>
-<td>YES<b><sup>3</sup></b></td>
-<td>4K HH</td>
-</tr>
+3. Choose **Import** to start importing the device information. Importing can take several minutes.
 
-</table>
+4. After import is complete, choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Sync**. A message displays that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.
 
-><b><sup>1</sup></b>Microsoft recommended platform to use<br>
-><b><sup>2</sup></b>Intune license required<br>
-><b><sup>3</sup></b>Feature capabilities are limited<br>
-><b><sup>4</sup></b>Device profile assignment will be retired from MSfB and Partner Center in the coming months<br>
-
-For more information about device IDs, see the following topics:
-- [Device identification](registration-overview.md#device-identification)
-- [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
-- [Add devices to a customer account](/partner-center/autopilot)
-
+5. Refresh the view to see the new devices.
 
 ## Next steps
 

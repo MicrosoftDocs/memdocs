@@ -38,3 +38,6 @@ For more information on how to do this with Microsoft Intune, see [Create an Aut
 
 When using the [Windows Autopilot for existing devices](existing-devices.md) scenario, you don't need to pre-register the devices with Windows Autopilot. Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used. The device can then be registered with Windows Autopilot using the same **Convert all targeted devices to Autopilot** setting.
 
+## Also see
+
+[Registration overview](registration-overview.md)

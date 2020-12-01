@@ -39,3 +39,7 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 
 > [!Note]
 > While resellers, distributors, or partners could boot each new Windows device to obtain the hardware hash (for purposes of providing them to customers or direct registration by the partner), this isn't recommended. Instead, these partners should register devices using the PKID information obtained from the device packaging (barcode) or obtained electronically from the OEM or upstream partner (e.g. distributor).
+
+## Also see
+
+[Registration overview](registration-overview.md)

@@ -53,10 +53,10 @@
       href: add-devices.md
     - name: Create device groups
       href: enrollment-autopilot.md
-    - name: Deploy hybrid Azure AD-joined devices
-      href: windows-autopilot-hybrid.md
     - name: Configure deployment profiles
       href: profiles.md
+    - name: Deploy hybrid Azure AD-joined devices
+      href: windows-autopilot-hybrid.md
     - name: Enrollment Status Page
       href: enrollment-status.md
     - name: BitLocker encryption

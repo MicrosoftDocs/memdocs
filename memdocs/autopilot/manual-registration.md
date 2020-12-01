@@ -30,6 +30,10 @@ Ideally, registration of a device with Windows Autopilot is performed by the OEM
 - The device is a virtual machine (VM).
 - The device does not otherwise qualify for automatic registraton, such as an existing legacy device.
 
+The following diagram shows how you might use manual registration and OEM registration to deploy both new and existing devices with Windows Autopilot.
+
+<img src="./images/image2.png" width="511" height="249" alt="process" />
+
 For a list of participant device manufacturers and device resellers, see [Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896).
 
 To [manually register a device](add-devices.md), you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows 10 to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
@@ -37,9 +41,7 @@ To [manually register a device](add-devices.md), you must first capture its hard
 > [!Note]
 > Customers can only register devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners as described in the previous sections.
 
-## Registering devices
-
-<img src="./images/image2.png" width="511" height="249" alt="process" />
+## Platforms for device registration
 
 After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
 

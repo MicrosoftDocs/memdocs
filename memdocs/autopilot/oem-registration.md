@@ -33,3 +33,10 @@ For Surface devices, see [Surface registration support for Windows Autopilot](ht
 
 > [!Note]
 > While the hardware hashes (also known as hardware IDs) are generated as part of the OEM device manufacturing process, these are not generally provided directly to customers or CSP partners. Instead, the OEM should register devices on the customer's behalf. In cases where devices are being registered by CSP partners, OEMs may provide PKID information to those partners to support the device registration process.
+
+OEMs must follow [device guidelines](autopilot-device-guidelines.md) for Windows Autopilot devices.
+
+## Also see
+
+[Registration overview](registration-overview.md)
+

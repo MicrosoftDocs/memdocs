@@ -26,14 +26,16 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
-Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Successful registration requires that two processes are complete:
+Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. 
+
+Successful registration requires that two processes are complete:
 
 1. The device's unique [hardware identity](#device-identification) (known as a hardware hash) is captured and uploaded to the Autopilot service.
 2. The device is associated to an Azure tenant ID.
 
 Ideally, both of these processes are performed by the OEM, reseller, or distributor from which the devices were purchased. An OEM or other device provider uses the [registration authorization](registration-auth.md) process to perform device registration on your behalf. 
 
-Registration can also be performed within your organization by collecting the hardware identity from new or existing devices and [uploading it manually](manual-registration). If devices meet certain requirements, they can also be configured for [automatic registration](automatic-registration) with Windows Autopilot. For more information about the ways in which devices can be registered with Windows Autopilot, see the following topics:
+Registration can also be performed within your organization by collecting the hardware identity from new or existing devices and [uploading it manually](manual-registration.md). If devices meet certain requirements, they can also be configured for [automatic registration](automatic-registration.md) with Windows Autopilot. For more information about the ways in which devices can be registered with Windows Autopilot, see the following overview topics:
 
 - [OEM registration](oem-registration.md)
 - [Reseller, distributor, or partner registration](partner-registration.md)
@@ -42,7 +44,7 @@ Registration can also be performed within your organization by collecting the ha
 
 ## Terms
 
-The following terms are used to refer to various steps in the registration process. Some terms are nearly synonymous:
+The following terms are used to refer to various steps in the registration process:
 
 | Term | Definition |
 | --- | --- |
@@ -64,6 +66,10 @@ The hardware hash contains details about the device, such as:
 - many other attributes that can be used to uniquely identify the device
 
 The hardware hash changes each time it's generated because it includes details about when it was generated. When the Windows Autopilot deployment service attempts to match a device, it considers changes like that. It also considers large changes such as a new hard drive, and is still able to match successfully. But large changes to the hardware, such as a motherboard replacement, wouldn't match, so a new hash would need to be generated and uploaded.
+
+For more information about device IDs, see the following topics:
+- [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
+- [Add devices to a customer account](/partner-center/autopilot)
 
 ## Windows Autopilot devices
 
