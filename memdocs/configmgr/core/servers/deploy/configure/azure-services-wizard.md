@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -160,6 +160,9 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
+   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
+   > [!IMPORTANT]
+   > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment until you manually mitigate.
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
@@ -250,6 +253,31 @@ If you imported the Azure app in Configuration Manager, use the Azure portal to 
 
 > [!NOTE]
 > Save the secret key before closing the Azure application properties **Key** page. This information is removed when you close the page.
+
+## Disable authentication
+
+<!--8537319-->
+
+Starting in version 2010, you can disable Azure AD authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Azure AD, it allows the site and clients to use modern authentication. Currently, Azure AD device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Azure AD authentication.
+
+1. In the Configuration Manager console, go to the **Administration** workspace.
+
+1. Expand **Cloud Services** and select the **Azure Services** node.
+
+1. Select the target connection of type **Cloud Management**. In the ribbon, select **Properties**.
+
+1. Switch to the **Applications** tab.
+
+1. Select the option to **Disable Azure Active Directory authentication for this tenant**.
+
+1. Select **OK** to save and close the connection properties.
+
+> [!TIP]
+> It can take up to 25 hours for this change to take effect on clients.<!-- 8717813 --> For purposes of testing to speed up this change in behavior, use the following steps:
+>
+> 1. Restart the **sms_executive** service on the site server.
+> 1. Restart the **ccmexec** service on the client.
+> 1. Trigger the client schedule to refresh the default management point. For example, use the [send schedule tool](../../../support/send-schedule-tool.md): `SendSchedule {00000000-0000-0000-0000-000000000023}`
 
 ## View the configuration of an Azure service
 

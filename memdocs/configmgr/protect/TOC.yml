@@ -82,7 +82,9 @@
       href: deploy-use/endpoint-protection-client-faq.md
   - name: BitLocker management
     items:
-    - name: Encrypt recovery data
+    - name: Encrypt recovery data over the network
+      href: deploy-use/bitlocker/encrypt-recovery-data-transit.md
+    - name: Encrypt recovery data in the database
       href: deploy-use/bitlocker/encrypt-recovery-data.md
     - name: Deploy BitLocker management
       href: deploy-use/bitlocker/deploy-management-agent.md

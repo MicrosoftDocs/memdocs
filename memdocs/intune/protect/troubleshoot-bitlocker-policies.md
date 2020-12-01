@@ -7,7 +7,7 @@ description: Describes how to enable BitLocker encryption on a device by using I
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,21 +42,21 @@ BitLocker drive encryption is a service offered by Microsoft Windows operating s
 
 With Microsoft Intune, you have the following methods to manage BitLocker on Windows 10 devices:
 
-- **Device Configuration policies** - Certain built-in policy options are available in Intune when you create a device configuration profile to manage endpoint protection. To find these options, [create a device profile for endpoint protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), selecting **Windows 10 and later** for the *Platform*, and then selecting the **Windows Encryption** category for *Settings*. 
+- **Device Configuration policies** - Certain built-in policy options are available in Intune when you create a device configuration profile to manage endpoint protection. To find these options, [create a device profile for endpoint protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), selecting **Windows 10 and later** for the *Platform*, and then selecting the **Windows Encryption** category for *Settings*.
 
    You can read about the available options and features here: [Windows Encryption](/intune/endpoint-protection-windows-10#windows-encryption).
-   
+
 - **Endpoint Security policies** - Certain built-in policy options are available in Intune when you create an Endpoint Security profile for disk encryption. To find these options, [create a profile for disk encryption](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), selecting **Windows 10 and later** for the *Platform*, and then selecting the **BitLocker** for the *Profile type*.
 
    You can read about the available options and features here: [Disk Encryption](/intune/protect/endpoint-security-disk-encryption-profile-settings).
 
-- **Security baselines** - [Security baselines](security-baselines.md) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender for Endpoint Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies. 
+- **Security baselines** - [Security baselines](security-baselines.md) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender for Endpoint Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies.
 
-In addition to Intune, for hardware that is compliant with Modern Standby and HSTI, when using either of these features, BitLocker Device Encryption is automatically turned on whenever the user joins a device to Azure AD. Azure AD provides a portal where recovery keys are also backed up, so users can retrieve their own recovery key for self-service, if required.
+In addition to Intune, for hardware that is compliant with Modern Standby and HSTI, when using either of these features, BitLocker Device Encryption is automatically turned on whenever the user joins a device to Azure AD. Azure AD provides a portal where recovery keys are also backed up, so users can retrieve their own recovery key for self-service, if necessary.
 
 It's also possible that BitLocker settings are managed by other means like Group Policy, or manually set by a device user.
 
-No matter how settings are applied to a device, BitLocker policies make use of the [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) to configure encryption on the device. The BitLocker CSP is built into Windows and when Intune deploys a BitLocker policy to an assigned device, it's the BitLocker CSP on the device that writes the appropriate values to the Windows registry so that settings from the policy can take effect.
+No matter how settings are applied to a device, BitLocker policies use the [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) to configure encryption on the device. The BitLocker CSP is built into Windows and when Intune deploys a BitLocker policy to an assigned device, it's the BitLocker CSP on the device that writes the appropriate values to the Windows registry so that settings from the policy can take effect.
 
 If you'd like to learn more about BitLocker, see the following resources:
 
@@ -160,13 +160,13 @@ Similarly, you can see all the values and verify them from the BitLocker CSP lin
 
 ## Troubleshooting BitLocker Policy
 
-You should now have a good idea how to confirm that the BitLocker policy successfully deployed by Intune, which hands-off the configuration of BitLocker to the BitLocker CSP in WIndows.
+You should now have a good idea how to confirm that the BitLocker policy is successfully deployed by Intune, which hands-off the configuration of BitLocker to the BitLocker CSP in Windows.
 
 **Policy fails to reach the device** - When your Intune policy isn't present in any capacity:
 
 - **Is the device properly enrolled into Microsoft Intune?** If not, you'll need to address that before troubleshooting anything specific to the policy. Help with troubleshooting Windows enrollment issues can be found [here](../enrollment/troubleshoot-windows-enrollment-errors.md).
 
-- **Is there an active network connection on the device?** If the device is in airplane mode or turned off, or if the user has the device in a location with no service, the policy won't be delivered or apply until network connectivity is restored.
+- **Is there an active network connection on the device?** If the device is in airplane mode or turned off, or if the user has the device in a location with no service, the policy isn't delivered or applied until network connectivity is restored.
 
 - **Did the BitLocker policy deploy to the correct user or device group?** Check that the correct user or device is a member of the groups you target.
 
@@ -179,15 +179,14 @@ You should now have a good idea how to confirm that the BitLocker policy success
 
   2. **BitLocker isn't supported on all hardware**.
      Even if you have the right version of Windows, it's possible that the underlying device hardware doesn't meet the requirements for BitLocker encryption. You can find the [system requirements for BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) in the Windows documentation, but the main things to check are that the device has a compatible TPM chip (1.2 or later) and a Trusted Computing Group (TCG)-compliant BIOS or UEFI firmware.
-     
-**Bitlocker Encryption is not performed silently** - You have configured an Endpoint Protection policy with the setting "Warning for other disk encryption" set to block and the encryption wizard still appears:
 
-- **Confirm the Windows version supports silent encryption** This requires a minimum of version 1803. If the user is not an administrator on the device than it requires a minimum version of 1809. Additionally 1809 added support for devices that do not support Modern Standby
+**BitLocker Encryption is not performed silently** - You've configured an Endpoint Protection policy with the setting "Warning for other disk encryption" set to block and the encryption wizard still appears:
 
-**Bitlocker encrypted device shows as Not Compliant for Intune Compliance policies** - The issue occurs when BitLocker encryption isn't finished. Based on factors such as the disk size, number of files, and BitLocker settings, BitLocker encryption may take a long time. After encryption is complete, the device will be shown as Compliant. Devices can also become temporarily non compliant immediately following a recent installation of WIndows Updates.
+- **Confirm the Windows version supports silent encryption** - This requires a minimum of version 1803. If the user isn't an administrator on the device, then it requires a minimum version of 1809. Additionally 1809 added support for devices that don't support Modern Standby.
 
-**Devices are encrypted using 128 bit algorithm when policy specifices 256 bit** -- By default, Windows 10 will encrypt a drive with XTS-AES 128-bit encryption. See this guide for [Setting 256-bit encryption for BitLocker during Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+**BitLocker encrypted device shows as Not Compliant for Intune Compliance policies** - The issue occurs when BitLocker encryption isn't finished. Based on factors such as the disk size, number of files, and BitLocker settings, BitLocker encryption may take a long time. After encryption is complete, the device will be shown as Compliant. Devices can also become temporarily non-compliant immediately following a recent installation of Windows Updates.
 
+**Devices are encrypted using 128 bit algorithm when policy specifies 256 bit** - By default, Windows 10 will encrypt a drive with XTS-AES 128-bit encryption. See this guide for [Setting 256-bit encryption for BitLocker during Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
 
 **Example investigation**
 
