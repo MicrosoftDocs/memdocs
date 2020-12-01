@@ -1,5 +1,5 @@
 ---
-title: Adding devices
+title: Manually register devices with Windows Autopilot
 ms.reviewer: 
 manager: laurawi
 description: How to add devices to Windows Autopilot
@@ -19,74 +19,24 @@ ms.collection:
 ---
 
 
-# Adding devices to Windows Autopilot
+# Manually register devices with Windows Autopilot
 
 **Applies to**
 
 - Windows 10
 - Windows Holographic, version 2004
 
-Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity and uploading it manually.
+Before deploying a device using Windows Autopilot, the device must be [registered](registration-overview.md) with the Windows Autopilot deployment service. Ideally, this registration is performed by the OEM, reseller, or distributor from which the devices were purchased. However, the registration can also be done within your organization by collecting the hardware identity and uploading it manually. For an overview of this process, see (Manual registration overview)[manual-registration.md]. 
 
 > [!NOTE]
-> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+> The process for obtaining the hardware hash from HoloLens devices is different than the process for a PC. For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
-## OEM registration
-
-When you purchase devices from an OEM, that OEM can automatically register the devices with the Windows Autopilot. For the list of OEMs that support registration, see the "Participant device manufacturers and resellers" section of the [Windows Autopilot page](https://aka.ms/windowsautopilot).
-
-Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM starts this process, with approval granted by an Azure AD global administrator from the organization. See the "Customer Consent" section of the [Customer consent page](registration-auth.md#oem-authorization).
-
-> [!Note]
-> While the hardware hashes (also known as hardware IDs) are generated as part of the OEM device manufacturing process, these should not be provided directly to customers or CSP partners. Instead, the OEM should register devices on the customer's behalf. In cases where devices are being registered by CSP partners, OEMs may provide PKID information to those partners to support the device registration process.
-
-## Reseller, distributor, or partner registration
-
-Customers may purchase devices from resellers, distributors, or other partners. As long as these resellers, distributors, and partners are part of the [Cloud Solution Partners (CSP) program](https://partner.microsoft.com/cloud-solution-provider), they too can register devices for the customer. 
-
-As with OEMs, CSP partners must be granted permission to register devices for an organization. You can use the process described on the [Customer consent page](registration-auth.md#csp-authorization). The CSP partner requests a relationship with the organization. That organization's global administrator approves the request. After the approval, CSP partners add devices using [Partner Center](https://partner.microsoft.com/pcv/dashboard/overview), either directly through the web site or via available APIs that can automate the same tasks.
-
-For Surface devices, Microsoft Support can help with device registration.  For more information, see [Surface Registration Support for Windows Autopilot](/surface/surface-autopilot-registration-support).
-
-Windows Autopilot doesn't require delegated administrator permissions when establishing the relationship between the CSP partner and the organization. As part of the global administrator's approval process, they can choose to uncheck the "Include delegated administration permissions" checkbox.
-
-> [!Note]
-> While resellers, distributors, or partners could boot each new Windows device to obtain the hardware hash (for purposes of providing them to customers or direct registration by the partner), this isn't recommended. Instead, these partners should register devices using the PKID information obtained from the device packaging (barcode) or obtained electronically from the OEM or upstream partner (e.g. distributor).
-
-## Automatic registration of existing devices
-
-You can automatically register an existing device if it's:
-- running a supported version of Windows 10 semi-annual channel.
-- enrolled in an MDM service such an Intune.
-
-For devices that meet both these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
-
-For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
-
-You can automatically convert such devices to Windows using Intune's **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 
-
-When using the [Windows Autopilot for existing devices](existing-devices.md) scenario, you don't need to pre-register the devices with Windows Autopilot. Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used. The device can then be registered with Windows Autopilot using the same "Convert all targeted devices to Autopilot" setting.
-
-## Manual registration
+## Manual registration process
 
 To manually register a device, you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows 10 to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
 
 > [!Note]
 > Customers can only register devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners as described in the previous sections.
-
-## Device identification
-
-To identify a device with Windows Autopilot, the device's unique hardware hash must be captured and uploaded to the service. This step is ideally done by the hardware vendor (OEM, reseller, or distributor) automatically associating the device with an organization. It's also possible to do identify a device with a harvesting process that collects the device from within a running Windows 10 installation.
-
-The hardware hash contains details about the device:
-- manufacturer
-- model
-- device serial number
-- hard drive serial number
-- details about when the ID was generated
-- many other attributes that can be used to uniquely identify the device
-
-The hardware hash changes each time it's generated because it includes details about when it was generated. When the Windows Autopilot deployment service attempts to match a device, it considers changes like that. It also considers large changes such as a new hard drive, and is still able to match successfully. But large changes to the hardware, such as a motherboard replacement, wouldn't match, so a new hash would need to be generated and uploaded.
 
 ### Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
