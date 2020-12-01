@@ -232,10 +232,7 @@ Because of the number of configuration options and choices in Configuration Mana
 
 1. Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.  
 
-2. Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).  
-
-    > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+2. Configure the **Communication Security** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).  
 
 3. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](../network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).  
 

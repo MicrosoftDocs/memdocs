@@ -141,7 +141,7 @@ A site update can fail because of existing operational problems. Before you upda
 - The site database server  
 - Remote site system roles on other servers
 
-For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 ### Review file and data replication between sites
 

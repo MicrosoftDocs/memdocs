@@ -205,7 +205,7 @@ A stand-alone primary site supports the following number of devices:
 
 - 175,000 total clients and devices, not to exceed:  
 
-  - 150,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
+  - 150,000 Windows clients. Also see, support for [embedded devices](#embedded).
 
   - 25,000 devices that run Mac and Windows CE 7.0
 
@@ -221,7 +221,7 @@ Primary sites support Windows Embedded devices that have File-Based Write Filter
 
 Secondary sites support the following number of devices:  
 
-- 15,000 desktops (computers that run Windows, Linux, and UNIX)  
+- 15,000 Windows clients
 
 ### <a name="bkmk_mp"></a> Management points
 
@@ -229,10 +229,10 @@ Each management point can support the following number of devices:
 
 - 25,000 total clients and devices, not to exceed:  
 
-  - 25,000 desktops (computers that run Windows, Linux, and UNIX)  
+  - 25,000 Windows clients
 
   - One of the following (not both):  
 
     - 10,000 devices that are managed by using on-premises MDM  
 
-    - 10,000 devices that run Mac and Windows CE 7.0 clients
+    - 10,000 devices that run macOS and Windows CE 7.0 clients

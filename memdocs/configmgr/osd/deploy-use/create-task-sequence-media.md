@@ -42,7 +42,7 @@ When the destination computer starts, it connects to the network and retrieves t
 > [!IMPORTANT]  
 > The packages on bootable media aren't encrypted. Take appropriate security measures, such as adding a password to the media, to make sure that the package contents are secured from unauthorized users.  
 
-Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Support for cloud-based content](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## <a name="BKMK_PlanPrestagedMedia"></a> Prestaged media
 

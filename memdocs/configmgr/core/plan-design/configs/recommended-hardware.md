@@ -129,16 +129,6 @@ The following additional minimum hardware requirements are for optional function
 
 - **Remote Control:** For an optimal experience, at least a Pentium 4 Hyper-Threaded 3 GHz (single core) or comparable CPU, with at least 1-GB RAM.
 
-### Client for Linux and UNIX
-
-The following minimum requirements are for Linux and UNIX servers that you manage with Configuration Manager.
-
-|Requirement|Details|  
-|-----------------|-------------|  
-|Processor and memory|Refer to the processor and RAM requirements for the computer's OS.|  
-|Disk space|500 MB of available disk space, with 5 GB recommended for the Configuration Manager client cache.|  
-|Network connectivity|Configuration Manager client computers must have network connectivity to Configuration Manager site systems to enable management.|  
-
 ## <a name="bkmk_ScaleConsole"></a> Configuration Manager console
 
 The following minimum hardware requirements apply to each computer that runs the Configuration Manager console:
