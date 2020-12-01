@@ -127,7 +127,7 @@ Starting in version 2010, you can use boot media to reimage internet-based devic
 
 - If you use a PKI-based certificate for the boot media, configure it for SHA256 with the Microsoft Enhanced RSA and AES provider.<!-- 8837546 -->
 
-### Create boot media to use over CMG
+### Create boot media to use a CMG
 
 Start the create task sequence media wizard for bootable media. For more information, see [Create bootable media](create-bootable-media.md). Modify the standard process using the following steps:
 
