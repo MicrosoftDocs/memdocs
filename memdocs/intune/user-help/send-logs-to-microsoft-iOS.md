@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Send iOS logs to Microsoft developers | Microsoft Docs
+title: Send iOS logs to Microsoft - Microsoft Intune | Microsoft Docs
 description:
 keywords:
 author: lenewsad
