@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 and later settings to mark devices as compliant or not compliant using Intune
 
-This article lists and describes the different compliance settings you can configure on Windows 10 and later devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender Advanced Threat Protection (ATP), and more.
+This article lists and describes the different compliance settings you can configure on Windows 10 and later devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
 
 This feature applies to:
 
@@ -231,9 +231,9 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 
   [Policy CSP - Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-## Microsoft Defender ATP
+## Microsoft Defender for Endpoint
 
-### Microsoft Defender Advanced Threat Protection rules
+### Microsoft Defender for Endpoint rules
 
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
@@ -243,7 +243,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be non-compliant.
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
   
-  To set up Microsoft Defender ATP (Advanced Threat Protection) as your defense threat service, see [Enable Microsoft Defender ATP with Conditional Access](advanced-threat-protection.md).
+  To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](advanced-threat-protection.md).
 
 ## Windows Holographic for Business
 
@@ -260,11 +260,11 @@ Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are support
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
 **Special consideration for Surface Hubs running Windows 10 Team OS**:  
-Surface Hubs that run Windows 10 Team OS do not support the Microsoft Defender ATP and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10 Team OS set the following two settings to their default of *Not configured*:
+Surface Hubs that run Windows 10 Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10 Team OS set the following two settings to their default of *Not configured*:
 
 - In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
 
-- In the category [Microsoft Defender ATP](#microsoft-defender-atp), set **Require the device to be at or under the machine risk score** to the default of *Not configured*.
+- In the category [Microsoft Defender for Endpoint](#microsoft-defender-for-endpoint), set **Require the device to be at or under the machine risk score** to the default of *Not configured*.
 
 ## Next steps
 

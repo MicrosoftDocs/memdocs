@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Microsoft Defender Advanced Threat Protection 
+title: Intune security baselines settings for Microsoft Defender for Endpoint 
 titleSuffix: Microsoft Intune
-description: Security baseline settings supported by Intune for managing Microsoft Defender Advanced Threat Protection
+description: Security baseline settings supported by Intune for managing Microsoft Defender for Endpoint
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,13 +55,13 @@ March 2020 v3
 
 -->
 
-# Microsoft Defender Advanced Threat Protection baseline settings for Intune
+# Microsoft Defender for Endpoint baseline settings for Intune
 
-View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
+View the Microsoft Defender for Endpoint baseline settings that are supported by Microsoft Intune. The Microsoft Defender for Endpoint baseline defaults represent the recommended configuration for Defender for Endpoint, and might not match baseline defaults for other security baselines.
 
 ::: zone pivot="atp-sept-2020"
 
-**Microsoft Defender ATP baseline for September 2020 - version 5**  
+**Microsoft Defender for Endpoint baseline for September 2020 - version 5**  
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
@@ -74,7 +74,7 @@ To update a security baseline profile to the latest version of that baseline, se
 ::: zone-end
 ::: zone pivot="atp-april-2020"
 
-**Microsoft Defender ATP baseline for April 2020 - version 4**  
+**Microsoft Defender for Endpoint baseline for April 2020 - version 4**  
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
@@ -87,7 +87,7 @@ To update a security baseline profile to the latest version of that baseline, se
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
-**Microsoft Defender ATP baseline for March 2020 - version 3**  
+**Microsoft Defender for Endpoint baseline for March 2020 - version 3**  
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 
@@ -101,16 +101,16 @@ To update a security baseline profile to the latest version of that baseline, se
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
-The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
+The Microsoft Defender for Endpoint  baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites).
 
-This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 ::: zone-end
 ::: zone pivot="atp-sept-2020"
 
 ## Attack Surface Reduction Rules
 
-To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender ATP documentation.
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
 **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -120,7 +120,7 @@ To learn more, see [Attack surface reduction rules](/windows/security/threat-pro
   - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
     - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
     - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
-    - Endpoint security > Security baselines > Microsoft Defender ATP Baseline > **Attack Surface Reduction Rules**.
+    - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
   - Settings that do not have conflicts are added to a superset of policy for the device.
   - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
   - Only the configurations for conflicting settings are held back.
@@ -556,7 +556,7 @@ For more information about the following settings, see [WindowsAdvancedThreatPro
 - **Sample sharing for all files**  
   CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
+  Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
   
   - **Yes** (*default*)
   - **Not configured**
@@ -564,7 +564,7 @@ For more information about the following settings, see [WindowsAdvancedThreatPro
 - **Expedite telemetry reporting frequency**  
   CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-  Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.  
+  Expedite Microsoft Defender for Endpoint telemetry reporting frequency.  
 
   - **Yes** (*default*)
   - **Not configured**
