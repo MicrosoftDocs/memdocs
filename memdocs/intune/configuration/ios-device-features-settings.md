@@ -125,15 +125,15 @@ Add up to six items (apps and folders combined) to the dock on the screen. Many 
 
 #### Example
 
-In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
+In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Stocks app is selected to show its properties:
 
-> [!div class="mx-imgBorder"]
-> ![Sample iOS/iPadOS Home screen layout dock settings in Intune](./media/ios-device-features-settings/dock-screen-mail-app.png)
+:::image type="content" source="./media/ios-device-features-settings/dock-screen-stocks-app.png" alt-text="Sample iOS/iPadOS Home screen layout dock settings in Microsoft Intune":::
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-> [!div class="mx-imgBorder"]
-> ![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+:::image type="content" source="./media/ios-device-features-settings/bAgCe8F.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
+
+<!--> Commenting the whole Pages section out, as it's removed in ADO 8710594. Will confirm with PM (Anya).
 
 ### Pages
 
@@ -174,18 +174,17 @@ You can add up to **40** pages on a device.
 
 In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps:
 
-> [!div class="mx-imgBorder"]
-> ![iOS/iPadOS Home screen layout new page settings and example in Intune](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+:::image type="content" source="./media/ios-device-features-settings/page-find-friends-settings-apps.png" alt-text="iOS/iPadOS Home screen layout new page settings and example in Microsoft Intune":::
 
 The Settings app is selected to show its properties:
 
-> [!div class="mx-imgBorder"]
-> ![iOS/iPadOS Home screen layout Settings app properties example in Intune](./media/ios-device-features-settings/page-settings-app-properties.png)
+:::image type="content" source="./media/ios-device-features-settings/page-settings-app-properties.png" alt-text="iOS/iPadOS Home screen layout Settings app properties example in Microsoft Intune":::
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
-> [!div class="mx-imgBorder"]
-> ![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+:::image type="content" source="m./media/ios-device-features-settings/Bd37PHa.png" alt-text="iOS/iPadOS device with modified home screen configured in Microsoft Intune":::
+
+<-->
 
 ## App notifications
 
@@ -193,8 +192,7 @@ When you assign the policy to an iPhone, the page looks similar to the following
 
 - **Add**: Add notifications for apps:
 
-  > [!div class="mx-imgBorder"]
-  > ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
+  :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS profile in Microsoft Intune":::
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
@@ -248,8 +246,7 @@ This feature applies to:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS will prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
 
-    > [!div class="mx-imgBorder"]
-    > ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    :::image type="content" source="./media/ios-device-features-settings/User-name-attribute.png" alt-text="iOS/iPadOS Username SSO attribute in Microsoft Intune":::
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
