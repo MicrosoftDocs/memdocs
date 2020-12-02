@@ -86,9 +86,6 @@ You can run the commands remotely if both of the following are true:
 
 For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script’s help by using “Get-Help Get-WindowsAutoPilotInfo.ps1”.
 
-
-
-
 ## Add devices
 
 Now that you have captured hardware hashes in a CSV file, you can add Windows Autopilot devices by importing the CSV file. The following are instructions to import the CSV using Intune:
@@ -104,7 +101,7 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
     - Optional group tags.
     - Optional assigned user.
   
-    You can have up to 500 rows in the list. For information about how to get device information, see [Adding devices to Windows Autopilot](add-devices.md#device-identification). Use the header and line format shown below:
+    You can have up to 500 rows in the list. The header and line format is shown below:
 
    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
    `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
