@@ -78,7 +78,10 @@ You can decide which MTD toggle options you need to enable according to your org
 
 - **Connect iOS devices version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have iOS 8.0+ devices reporting security risk back to Intune.
 
-- **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and will provide updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+- **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and will provide updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). 
+
+  > [!NOTE]  
+  > On devices marked as *corporate*, all apps are shared with the Mobile Threat Defense vendor, while on devices marked as *personal*, only Intune managed apps are shared.
 
 - **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version.
 
