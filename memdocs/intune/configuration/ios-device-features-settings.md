@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,55 +80,60 @@ This feature applies to:
 
 - iOS 9.3 or newer
 - iPadOS 13.0 and newer
-
-### Settings apply to: Automated device enrollment (supervised)
+- Automated device enrollment (supervised)
 
 > [!NOTE]
-> Only add one app to the dock, a page, or a folder on a page. Adding the same app in all places prevents the app from showing on devices, and may show reporting errors.
+> Only add an app once to the dock, page, or folder on a page. Adding the same app in all places prevents the app from showing on devices, and may show reporting errors.
 >
 > For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 
+### Home screen
+
+Use this feature to add apps, and see how these apps look on pages, the dock, and within folders. It also shows you the app icons for the apps you add.
+
+- **+**: Select the add button to add apps.
+- **Create folder or add apps**: Add an **App** or a **Folder**:
+  - **App**: Select existing apps from the list. This option adds apps to the home screen on devices. If you don't have any apps, then [Add apps to Intune](../apps/apps-add.md).
+
+    You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
+
+  - **Folder**: Adds a folder to the home screen. Enter the **Folder name**, and select existing apps from the list to go in the folder. This folder name is shown to users on their devices.
+
+    You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
+
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page.
+
 ### Dock
 
-Use the **Dock** settings to add up to six items or folders to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. In this case, only the first four items you add are shown on devices.
+Add up to six items (apps and folders combined) to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. So, only the first four items you add are shown.
 
-You can add up to **six** items (apps and folders combined) for the device dock.
+- **+**: Select the add button to add apps or folders to the dock.
+- **Create folder or add apps**: Add an **App** or a **Folder**:
 
-- **Add**: Adds apps or folders to the dock on devices.
-- **Type**: Add an **App** or a **Folder**:
+  - **App**: Select existing apps from the list. This option adds apps to the dock on the screen. If you don't have any apps, then [Add apps to Intune](../apps/apps-add.md).
 
-  - **App**: Choose this option to add apps to the dock on the screen. Enter:
+    You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
-    - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
+  - **Folder**: Adds a folder to the dock on the screen. Enter the **Folder name**, and select existing apps from the list to go in the folder. This folder name is shown to users on their devices.
 
-  - **Folder**: Choose this option to add a folder to the dock on the screen.
+    You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    Apps that you add to a page in a folder are arranged from left to right, and in the same order as the list. If you add more apps than can fit on a page, the apps are moved to another page.
-
-    - **Folder name**: Enter the name of the folder. This name is shown to users on their devices.
-    - **List of pages**: **Add** a page, and enter the following properties:
-
-      - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
-      - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
-      - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
-
-      You can add up to **20** pages for the device dock.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages on the dock.
 
 > [!NOTE]
-> When you use the Home Screen Layout settings to add pages, or add pages and apps to the Dock, the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
+> When you use the Home Screen Layout settings to add pages, or add pages and apps to the dock, the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
 
-#### Example
+### Example
 
-In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
+In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Stocks app is selected to show its properties:
 
-> [!div class="mx-imgBorder"]
-> ![Sample iOS/iPadOS Home screen layout dock settings in Intune](./media/ios-device-features-settings/dock-screen-mail-app.png)
+:::image type="content" source="./media/ios-device-features-settings/dock-screen-stocks-app.png" alt-text="Sample iOS/iPadOS Home screen layout dock settings in Microsoft Intune":::
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-> [!div class="mx-imgBorder"]
-> ![Sample iOS/iPadOS dock layout on iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+:::image type="content" source="./media/ios-device-features-settings/safari-mail-stocks-apps-ios-dock.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
+
+<!-- MandiA 12.02.2020: Commenting the whole Pages section out, as it's removed in ADO 8710594. Will confirm with PM (Anya).
 
 ### Pages
 
@@ -169,18 +174,17 @@ You can add up to **40** pages on a device.
 
 In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps:
 
-> [!div class="mx-imgBorder"]
-> ![iOS/iPadOS Home screen layout new page settings and example in Intune](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+:::image type="content" source="./media/ios-device-features-settings/page-find-friends-settings-apps.png" alt-text="iOS/iPadOS Home screen layout new page settings and example in Microsoft Intune":::
 
 The Settings app is selected to show its properties:
 
-> [!div class="mx-imgBorder"]
-> ![iOS/iPadOS Home screen layout Settings app properties example in Intune](./media/ios-device-features-settings/page-settings-app-properties.png)
+:::image type="content" source="./media/ios-device-features-settings/page-settings-app-properties.png" alt-text="iOS/iPadOS Home screen layout Settings app properties example in Microsoft Intune":::
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
-> [!div class="mx-imgBorder"]
-> ![iOS/iPadOS device with modified home screen in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+:::image type="content" source="./media/ios-device-features-settings/find-friends-settings-apps-ios-pages.png" alt-text="iOS/iPadOS device with modified home screen configured in Microsoft Intune":::
+
+-->
 
 ## App notifications
 
@@ -188,8 +192,7 @@ When you assign the policy to an iPhone, the page looks similar to the following
 
 - **Add**: Add notifications for apps:
 
-  > [!div class="mx-imgBorder"]
-  > ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
+  :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS profile in Microsoft Intune":::
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
@@ -243,8 +246,7 @@ This feature applies to:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS will prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
 
-    > [!div class="mx-imgBorder"]
-    > ![iOS/iPadOS Username SSO attribute in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    :::image type="content" source="./media/ios-device-features-settings/User-name-attribute.png" alt-text="iOS/iPadOS Username SSO attribute in Microsoft Intune":::
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
@@ -383,6 +385,7 @@ This feature applies to:
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   > [!TIP]
+  >
   > - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter       `Username: {{username}}`. 
   > - However, be careful with variable substitution because variables aren't validated in the UI and they are case sensitive. Be sure to enter the correct information.
 
@@ -390,16 +393,25 @@ This feature applies to:
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
 - **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
 
-  If you're using the Microsoft Azure AD SSO app extension type, these apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in. The app bundle IDs you enter have permission to use the Microsoft Azure AD SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL). The experience for these apps may not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
+  If you use the **Microsoft Azure AD SSO app extension** type, then:
 
-  If you're using the Kerberos SSO app extension type, these apps have access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they’re authorized to access.
+  - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
+  - The app bundle IDs you enter have permission to use the Microsoft Azure AD SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL).
+
+    The experience for these apps may not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
+
+  If you use the **Kerberos SSO app extension** type, then these apps:
+
+  - Have access to the Kerberos Ticket Granting Ticket
+  - Have access to the authentication ticket
+  - Authenticate users to services they’re authorized to access
 
 - **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Wallpaper
 
-You may experience unexpected behavior when a profile with no image is assigned to devices with an existing image. For example, you create a profile without an image. This profile is assigned to devices that already have an image. In this scenario, the image may change to the device default, or the original image may stay on the device. This behavior is controlled and limited by Apple's MDM platform.
+You can experience unexpected behavior when a profile with no image is assigned to devices with an existing image. For example, you create a profile without an image. This profile is assigned to devices that already have an image. In this scenario, the image may change to the device default, or the original image may stay on the device. This behavior is controlled and limited by Apple's MDM platform.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
