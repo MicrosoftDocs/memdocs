@@ -34,7 +34,8 @@ ms.collection:
 
  Whenever you experience a problem in Company Portal, the details of that problem are recorded and stored on your device in a _diagnostic log_. This article describes how to upload those logs from your device to your computer. This process is useful for when you need troubleshooting help, because you can save the logs in a file and email it to your IT support person.   
 
-### Retrieve logs via Console app  
+## Retrieve logs via Console app  
+
 To retrieve logs via the native Console app, you'll need your iOS device, a USB cable, and a Mac running macOS 10.12 or later.   
 
 1. Connect your iOS device to your Mac with the USB cable. 
