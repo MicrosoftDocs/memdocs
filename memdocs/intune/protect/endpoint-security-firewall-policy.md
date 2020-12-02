@@ -109,7 +109,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 ### Windows 10 MDM Firewall status
 
-*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status)*.
+*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status-organizational)*.
 
 As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
 
