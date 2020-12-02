@@ -29,14 +29,14 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Send Company Portal for Android logs to Microsoft   
+# Send Android app logs to Microsoft   
 
-Microsoft app developers want to hear from you when unexpected behavior occurs so they can find the root cause and prevent future occurrences. App errors are detailed and saved on your device in a document called a _diagnostic log_. The Company Portal team looks to Company Portal-specific logs to diagnose problems and improve the app.   
+If Company Portal behaves unexpectedly, you can report the event to Microsoft by uploading your app logs. App logs contain details about unexpected events that occur in Company Portal and are saved on your device. Microsoft uses these logs to learn from and improve upon future products. 
 
 > [!NOTE]
-> If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
+> If you're using a Sovereign cloud environment, the send logs feature won't be available to you. Instead, you must send logs via email. 
 
-To send logs to Microsoft:  
+## Send logs  
 
 1. Open the Company Portal app.
 
