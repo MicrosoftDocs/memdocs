@@ -110,7 +110,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 - Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management. This improvement supports domain-joined and hybrid domain-joined devices.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
     > [!NOTE]
-    > If you have existing BitLocker management policies that you want to make available to internet-based clients via CMG:
+    > If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
     >
     > 1. In the Configuration Manager console, open the properties of the existing policy.
     > 1. Switch to the **Client Management** tab.
