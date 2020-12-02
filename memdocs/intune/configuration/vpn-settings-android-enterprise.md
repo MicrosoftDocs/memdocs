@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,6 +59,7 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
+  - **NetMotion Mobility**
   - **Microsoft Tunnel**
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
@@ -74,6 +75,8 @@ The available settings depend on the VPN client you choose. Some settings are on
   - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
     For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+
+- **Enter key and value pairs for the NetMotion Mobility VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. These values are typically supplied by your VPN provider.
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
@@ -106,6 +109,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
+  - **NetMotion Mobility**
   - **Microsoft Tunnel**
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
@@ -125,6 +129,8 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **Fingerprint** (Check Point Capsule VPN only): Enter the fingerprint string given to you by the VPN vendor, such as `Contoso Fingerprint Code`. This fingerprint verifies that the VPN server can be trusted. 
 
   When authenticating, a fingerprint is sent to the client so the client knows to trust any server that has the same fingerprint. If the device doesn't have the fingerprint, it prompts the user to trust the VPN server while showing the fingerprint. The user manually verifies the fingerprint, and chooses to trust to connect.
+
+- **Enter key and value pairs for the NetMotion Mobility VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. These values are typically supplied by your VPN provider.
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
@@ -152,4 +158,4 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md).
+You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md).
