@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -172,6 +172,9 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 
 2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Profile**, and then select **Create**.
+
+   > [!NOTE]
+   > *Android Enterprise dedicated* devices aren't supported by the Microsoft Tunnel.
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
