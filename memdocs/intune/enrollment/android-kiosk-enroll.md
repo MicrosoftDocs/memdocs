@@ -127,9 +127,6 @@ To remove an app from Android Enterprise dedicated devices, you can do either of
 - Delete the Required app deployment.
 - Create an uninstall deployment for the app.
 
-> [!NOTE]
-> It is necessary for a Broweser to be installed on the device in order to use Azure AD Shared device mode successfully. When using the token type **Corporate-owned dedicated device with Azure AD shared mode (public preview)** make sure that these devices are assigned a browser application. 
-
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)
 - [Add Android configuration policies](../configuration/device-profiles.md)
