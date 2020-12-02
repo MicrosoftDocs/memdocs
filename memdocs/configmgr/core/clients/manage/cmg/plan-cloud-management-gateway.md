@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 11/30/2020
+ms.date: 12/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -85,6 +85,7 @@ Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscri
 - It's only supported with a standalone primary site.
 - It doesn't support Azure US Government Cloud environments.
 - Users may experience a delay of up to three seconds for actions in Software Center.
+- Configuration Manager currently creates the Azure storage container based on the name of the resource group. Azure has different naming requirements for resource groups and storage containers. Make sure the name of the resource group for this service only has lowercase letters, numbers, and hyphens. If you have an existing resource group that doesn't work, rename it in the Azure portal, or create a new resource group.<!-- 8888841 -->
 
 ### Hierarchy design
 
