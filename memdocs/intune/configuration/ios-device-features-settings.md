@@ -101,7 +101,7 @@ Use this feature to add apps, and see how these apps look on pages, the dock, an
 
     You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page.
 
 ### Dock
 
@@ -118,12 +118,12 @@ Add up to six items (apps and folders combined) to the dock on the screen. Many 
 
     You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    Apps are arranged from left to right, and in the same order as shown. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages on the dock.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages on the dock.
 
 > [!NOTE]
 > When you use the Home Screen Layout settings to add pages, or add pages and apps to the dock, the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
 
-#### Example
+### Example
 
 In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Stocks app is selected to show its properties:
 
@@ -131,9 +131,9 @@ In the following example, the dock screen shows the Safari, Mail, and Stocks app
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-:::image type="content" source="./media/ios-device-features-settings/bAgCe8F.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
+:::image type="content" source="./media/ios-device-features-settings/safari-mail-stocks-apps-ios-dock.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
 
-<!--> Commenting the whole Pages section out, as it's removed in ADO 8710594. Will confirm with PM (Anya).
+<!-- MandiA 12.02.2020: Commenting the whole Pages section out, as it's removed in ADO 8710594. Will confirm with PM (Anya).
 
 ### Pages
 
@@ -182,9 +182,9 @@ The Settings app is selected to show its properties:
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
-:::image type="content" source="m./media/ios-device-features-settings/Bd37PHa.png" alt-text="iOS/iPadOS device with modified home screen configured in Microsoft Intune":::
+:::image type="content" source="./media/ios-device-features-settings/find-friends-settings-apps-ios-pages.png" alt-text="iOS/iPadOS device with modified home screen configured in Microsoft Intune":::
 
-<-->
+-->
 
 ## App notifications
 
