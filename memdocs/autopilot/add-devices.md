@@ -26,18 +26,24 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
+Windows Autopilot device registration can be done within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-value (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
+
+Device owners can only register thier devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
+
 This article provides step by step guidance to perform manual registration. For an overview of registration and manual registration, see the following topics:
 - [Registration overview](registration-overview.md)
 - [Manual registration overview](manual-registration.md)
 
-## Manual registration process
+For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
- Windows Autopilot device registration can be done within your organization by collecting the hardware identity (the hardware hash) and uploading it manually. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
-
-> Device owners can only register thier devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
+> [!IMPORTANT]
+> In Windows 10, version 1809 and earlier, it is important to not connect devices to the Internet prior to capturing the hardware hash and creating an Autopilot device profile. This includes collecting the hardware hash, uploading the .CSV into MSfB or Intune, assigning the profile, and confirming the profile assignment. Connecting the device to the Internet before this process is complete will result in the device downloading a blank profile that is stored on the device until it's explicity removed. In Windows 10 version 1809, you can clear the cached profile by restarting OOBE. In previous versions, the only way to clear the stored profile is to re-install the OS, reimage the PC, or run **sysprep /generalize /oobe**. <br>
+> <br>After Intune reports the profile ready to go, only then should the device be connected to the Internet.
 
 > [!NOTE]
-> The process for obtaining the hardware hash from HoloLens devices is different than the process for a PC. For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
+> If OOBE is restarted too many times it can enter a recovery mode and fail to run the Autopilot configuration. You can identify this scenario if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE displays each of these on a separate page. The following value key tracks the count of OOBE retries: <br>
+> <br>**HKCU\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserOOBE** <br>
+> To ensure OOBE has not been restarted too many times, you can change this value to 1.
 
 ## Prerequisites
 
@@ -45,8 +51,9 @@ This article provides step by step guidance to perform manual registration. For 
 - [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
-> [!NOTE]
-> Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](../intune/fundamentals/role-based-access-control.md) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
+### Required permissions
+
+Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](../intune/fundamentals/role-based-access-control.md) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
 
 ### Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
@@ -60,8 +67,8 @@ Microsoft Endpoint Configuration Manager automatically collects the hardware has
 The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
 
 To use this script, you can use either of the following methods:
-- download it from the PowerShell Gallery and run it on each computer.
-- install it directly from the PowerShell Gallery.
+- Download the script file from the PowerShell Gallery and run it on each computer.
+- Install the script directly from the PowerShell Gallery.
 
 To install it directly and capture the hardware hash from the local computer, use the following commands from an elevated Windows PowerShell prompt:
 
@@ -79,14 +86,7 @@ You can run the commands remotely if both of the following are true:
 
 For more information about running the script, see the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) script’s help by using “Get-Help Get-WindowsAutoPilotInfo.ps1”.
 
->[!IMPORTANT]
->Do not connect devices to the Internet prior to capturing the hardware hash and creating an Autopilot device profile. This includes collecting the hardware hash, uploading the .CSV into MSfB or Intune, assigning the profile, and confirming the profile assignment. Connecting the device to the Internet before this process is complete will result in the device downloading a blank profile that is stored on the device until it's explicity removed. In Windows 10 version 1809, you can clear the cached profile by restarting OOBE. In previous versions, the only way to clear the stored profile is to re-install the OS, reimage the PC, or run **sysprep /generalize /oobe**. <br>
->After Intune reports the profile ready to go, only then should the device be connected to the Internet.
 
->[!NOTE]
->If OOBE is restarted too many times it can enter a recovery mode and fail to run the Autopilot configuration. You can identify this scenario if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE displays each of these on a separate page. The following value key tracks the count of OOBE retries: <br>
->**HKCU\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserOOBE** <br>
->To ensure OOBE has not been restarted too many times, you can change this value to 1.
 
 
 ## Add devices
