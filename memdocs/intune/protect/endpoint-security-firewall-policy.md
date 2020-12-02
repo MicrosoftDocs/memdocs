@@ -94,7 +94,7 @@ This view provides:
 
 ### Windows 10 MDM devices with firewall off
 
-This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center], and then go to **Endpoint security** > **Firewall** >  **Windows 10 MDM devices with firewall off**.
+This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **Windows 10 MDM devices with firewall off**.
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
 
@@ -109,12 +109,15 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 ### Windows 10 MDM Firewall status
 
-An organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
+*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status)*.
+
+As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)
 
-Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices.
+Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
+
 Status details include:
 
 - **Enabled** – The firewall on, and successfully reporting.
