@@ -39,16 +39,16 @@ If Company Portal behaves unexpectedly, you can report the problem to Microsoft 
 ## Upload logs    
 
 1. Open the Company Portal app.
-2. (Optional) Try to reproduce the event you experienced. This step ensures that the Company Portal details appear at the top of the logs when uploaded. 
+2. Try to reproduce the event you experienced. This step is optional but ensures that the Company Portal details appear at the top of the logs when uploaded. 
 
-3. 4. Use one of the following methods to initiate the upload:
+3. Use one of the following methods to initiate the upload:  
     * When you receive an error message, tap **Report**.   
     * Tap **More** > **Get Help**. 
     * Shake your device. Then tap **Send Diagnostic Report**. 
 
-5. Wait while Company Portal uploads the logs. 
+5. Wait while Company Portal uploads the logs.   
 
-6. Save the incident ID for your records. 
+6. Save the incident ID for your records.  
 
 
 ## Next steps  
