@@ -80,7 +80,7 @@ More resources:
 To discover build versions for all Windows 10 Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows 10 release information](/windows/release-information). Be sure to include the 10.0. prefix before the build numbers, as the following examples illustrate.
 
 - **Minimum OS version**:  
-  Enter the minimum allowed version in the **major.minor.build.CU number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
+  Enter the minimum allowed version in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
@@ -104,15 +104,16 @@ To discover build versions for all Windows 10 Feature Updates and Cumulative Upd
   When a device is using an OS version later than the version entered, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until the rule is changed to allow the OS version.
 
 - **Valid operating system builds**:  
-  Valid operating system builds provides additional flexibility when compared against minimum and maximum OS version. Consider a scenario where minimum OS version is set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version is set to 10.0.18363.xxx (Windows 10 1909). This configuration can allow a Windows 10 1903 device that doesn't have recent cumulative updates installed to be identified as compliant. Minimum and maximum OS version may be suitable if you have standardised on a single Windows 10 release, but might not address your requirements if you need to use multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, which allows multiple builds to be specified as per the example.
+  Valid operating system builds provides additional flexibility when compared against minimum and maximum OS versions. Consider a scenario where minimum OS version is set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version is set to 10.0.18363.xxx (Windows 10 1909). This configuration can allow a Windows 10 1903 device that doesn't have recent cumulative updates installed to be identified as compliant. Minimum and maximum OS versions might be suitable if you have standardised on a single Windows 10 release, but might not address your requirements if you need to use multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, which allows multiple builds to be specified as per the following example.
 
-  Specify a range for the acceptable operating systems versions, including a minimum and maximum. You can also **Export** a comma-separated values (CSV) file list of these acceptable OS build numbers. The first column can contain any decription, while the second and third columns must adhere to valid OS build versions in the **major.minor.build.revision number** format.
+  **Example**:  
+  The following table is an exammple of the range for the acceptable operating systems versions for diferent WIndows 10 releases. The table includes a first column that includes any text you want to describe the entry, followed by the minimum and maximum OS version for each entry. The second and third columns must adhere to valid OS build versions in the **major.minor.build.revision number** format You can also **Export** a comma-separated values (CSV) file list of these acceptable OS build numbers.  
 
-  | Windows version             | Minimum build    | Maximum build     |
-  |-----------------------------|------------------|-------------------|
-  | Win 10 2004 (Jun-Sept 2020) | 10.0.19041.329   | 10.0.19041.508    |
-  | Win 10 1909 (Jun-Sept 2020) | 10.0.18363.900   | 10.0.18363.1110   |
-  | Win 10 1809 (Jun-Sept 2020) | 10.0.17763.1282  | 10.0.17763.1490   |
+  | Description  | Minimum OS version | Maximum OS version |
+  |--------------|--------------------|--------------------|
+  | Win 10 2004  | 10.0.19041.329     | 10.0.19041.508     |
+  | Win 10 1909  | 10.0.18363.900     | 10.0.18363.1110    |
+  | Win 10 1809  | 10.0.17763.1282    | 10.0.17763.1490    |
 
 ## Configuration Manager Compliance
 
