@@ -164,8 +164,7 @@ To view the reports, in the [Microsoft Endpoint Manager admin center](https://go
 In addition to reports detailed in the following sections, additional reports for Microsoft Defender Antivirus are found in the Reports node of the Microsoft Endpoint Manager admin center, as documented in the Intune Reports article:
 
 - [Antivirus agent status report (Organizational)](../fundamentals/reports.md#antivirus-agent-status-report-organizational)
-[- Detected malware report (Organizational)](../fundmanetals/reports.md#detected-malware-report-organizational)
-
+[- Detected malware report (Organizational)](../fundamentals/reports.md#detected-malware-report-organizational)
 
 ### Summary
 
