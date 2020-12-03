@@ -2,12 +2,12 @@
 # required metadata
 
 title: Wi-Fi settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10 and later devices in Microsoft Intune. You can configure Basic settings, or enterprise-level settings. 
+description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10 and later devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 12/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,6 +37,8 @@ This article describes these settings.
 
 Create a [Windows 10 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
+These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
+
 ## Basic profile
 
 Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a pre-shared key to authenticate the connection.
@@ -53,7 +55,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 
     For example, you create a **ContosoCorp** Wi-Fi network, and use **ContosoCorp** within this configuration profile. You also have a **ContosoGuest** Wi-Fi network within range. When your corporate devices are within range, you want them to automatically connect to **ContosoCorp**. In this scenario, set the **Connect to more preferred network if available** property to **No**.
 
-  - **Connect to this network, even when it is not broadcasting its SSID**: Choose **Yes** for the configuration profile to automatically connect to your network, even when the network is hidden (meaning, its SSID isn't broadcast publicly). Choose **No** if you don't want this configuration profile to connect to your hidden network.
+  - **Connect to this network, even when it is not broadcasting its SSID**: Choose **Yes** to automatically connect to your network, even when the network is hidden. Meaning, its service set identifier (SSID) isn't broadcast publicly. Choose **No** if you don't want this configuration profile to connect to your hidden network.
 
 - **Metered Connection Limit**: An administrator can choose how the network's traffic is metered. Applications can then adjust their network traffic behavior based on this setting. Your options:
 
