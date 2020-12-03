@@ -2,7 +2,7 @@
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -44,10 +44,7 @@ The user account needs the following permissions:
    - Apply the permission to both targeted device collections and targeted user collections.
 - The **Read** permission for **Application** in Configuration Manager.
 - The **Approve** permission for **Application** in Configuration Manager.
-- The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
-  - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
-   > [!TIP]
-   > The [Application Administrator role in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) has sufficient permissions to add a user to the application's **Admin User** role.
+- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## <a name="bkmk_deploy"></a> Deploy an application to a device
 
