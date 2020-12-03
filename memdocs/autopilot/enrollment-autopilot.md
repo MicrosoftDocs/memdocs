@@ -115,7 +115,6 @@ Prerequisites: Azure Active Directory Company Portal has been configured and Win
 
 4. Choose **Ok**.
 
-
 ## Delete Autopilot devices
 
 You can delete Windows Autopilot devices that aren't enrolled into Intune:

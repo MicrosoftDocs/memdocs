@@ -323,7 +323,7 @@ After the task sequence has completed, the device will boot into OOBE and provid
 ### Register the device for Windows Autopilot
 
 Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot. 
-After updating to Windows 10, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+After updating to Windows 10, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 

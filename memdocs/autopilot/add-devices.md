@@ -122,4 +122,4 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 
 ## Next steps
 
-[Create device groups](enrollment-autopilot.md): Create an Autopilot device group.
+[Create device groups](enrollment-autopilot.md): Device groups are used to apply Autopilot deployment profiles.
