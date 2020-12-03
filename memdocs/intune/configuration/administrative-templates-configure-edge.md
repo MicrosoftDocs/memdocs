@@ -23,7 +23,9 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Edge policy settings in Microsoft Intune
 
-Using Administrative Templates in Microsoft Intune, you can create and manage Microsoft Edge policy settings on your Windows 10 devices. Administrative Templates use the ADMX templates for Microsoft Edge. You can configure specific Microsoft Edge settings, such as adding download restrictions, using autofill, showing the favorites bar, and more. These settings are created in an Intune policy, and then deployed to Windows 10 devices in your organization.
+Using Administrative Templates in Microsoft Intune, you can create and manage Microsoft Edge policy settings on your Windows 10 devices. Administrative Templates use the ADMX templates for Microsoft Edge.
+
+You can configure specific Microsoft Edge settings, such as adding download restrictions, using autofill, showing the favorites bar, and more. These settings are created in an Intune policy, and then deployed to Windows 10 devices in your organization.
 
 This article applies to:
 
@@ -35,7 +37,7 @@ When you use Intune to manage and enforce policies, it's similar to using Active
 This article shows you how to configure Microsoft Edge policy settings using administrative templates in Microsoft Intune.
 
 > [!TIP]
-> For information on managing Microsoft Edge version 45 and earlier, see [Manage web access by using Microsoft Edge with Intune](../apps/manage-microsoft-edge.md). The article is specific to Microsoft Edge version 45 and earlier. It may have information and references that don't apply to Microsoft Edge Enterprise version 77 and newer.
+> For information on managing Microsoft Edge version 45 and earlier, see [Manage web access by using Microsoft Edge with Intune](../apps/manage-microsoft-edge.md). It may have information and references that don't apply to Microsoft Edge Enterprise version 77 and newer.
 >
 > For information on how to configure Microsoft Edge on macOS using Intune, see [Configure for macOS](configure-microsoft-edge-on-mac.md).
 
@@ -75,26 +77,26 @@ This article shows you how to configure Microsoft Edge policy settings using adm
    - **Computer configuration**: Settings apply to the computer, even if no one is signed in.
    - **User configuration**: Settings apply to all users signed in to the device.
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/all-settings-computer-configuration-user-configuration.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/all-settings-computer-configuration-user-configuration.png" alt-text="See all ADMX settings, user configuration, and computer configuration in Microsoft Intune and Endpoint Manager admin center.":::
 
 8. Select **Computer Configuration** > **Microsoft Edge** > **Allow download restrictions**. The policy description and values are shown:
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/allow-download-restrictions-microsoft-edge.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/allow-download-restrictions-microsoft-edge.png" alt-text="Select Microsoft Edge ADMX template and select a sample setting in Microsoft Intune and Endpoint Manager admin center.":::
 
    > [!NOTE]
    > See [Microsoft Edge – Policies](/DeployEdge/microsoft-edge-policies) and [Microsoft Edge – Update policies](/DeployEdge/microsoft-edge-update-policies) for the list of the available settings.
 
 9. Close the policy description. Use search to find a specific setting you want to configure. For example, search for "home page":
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/search-home-page-microsoft-edge.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/search-home-page-microsoft-edge.png" alt-text="Use the search to filter ADMX settings in Microsoft Intune and Endpoint Manager admin center.":::
 
 10. Select **Configure the home page URL** > **Enabled**, and set its value to `https://www.bing.com`:
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/set-home-page-url-microsoft-edge.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/set-home-page-url-microsoft-edge.png" alt-text="Set the ADMX home page URL to a web site in Microsoft Intune and Endpoint Manager admin center.":::
 
 11. Select **OK**. The **State** now shows **Enabled**:
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/state-enabled.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/state-enabled.png" alt-text="When you configure an ADMX setting, the state shows enabled in Microsoft Intune and Endpoint Manager admin center.":::
 
 12. Select **Next**. In **Scope tags**, select **Next**.
 
@@ -104,7 +106,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 
     Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select an Azure Active Directory (Azure AD) group that includes users or devices that should receive this policy. For information and guidance on assigning policies, see [Assign user and device profiles in Intune](device-profile-assign.md).
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/add-azure-ad-group-assign-policy.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/add-azure-ad-group-assign-policy.png" alt-text="Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Endpoint Manager admin center.":::
 
 14. In **Review + create**, see the summary of your changes. Select **Create**.
 
@@ -112,7 +114,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 
     Your new Microsoft Edge policy is shown in the list:
 
-    :::image type="content" source="./media/administrative-templates-configure-edge/saved-profile.png" alt-text="Alt text here.":::
+    :::image type="content" source="./media/administrative-templates-configure-edge/saved-profile.png" alt-text="The ADMX policy setting is show in the list in Microsoft Intune and Endpoint Manager admin center.":::
 
 For more information about ADMX administrative templates, see:
 
