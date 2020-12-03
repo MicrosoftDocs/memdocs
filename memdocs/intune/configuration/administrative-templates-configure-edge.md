@@ -7,7 +7,7 @@ manager: dougeby
 ms.date: 12/03/2020
 audience: ITPro
 ms.topic: how-to
-ms.prod: microsoft-intune
+ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 
@@ -39,7 +39,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 > [!TIP]
 > For information on managing Microsoft Edge version 45 and earlier, see [Manage web access by using Microsoft Edge with Intune](../apps/manage-microsoft-edge.md). It may have information and references that don't apply to Microsoft Edge Enterprise version 77 and newer.
 >
-> For information on how to configure Microsoft Edge on macOS using Intune, see [Configure for macOS](configure-microsoft-edge-on-mac.md).
+> For information on how to configure Microsoft Edge on macOS using Intune, see [Configure for macOS](/DeployEdge/configure-microsoft-edge-on-mac).
 
 ## Prerequisites
 
