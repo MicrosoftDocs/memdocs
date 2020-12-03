@@ -151,9 +151,11 @@ To see a generated report of device state, you can use the following steps:
 For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
 ## Antivirus agent status report (Organizational)
+
 The **Antivirus agent status** report provides the agent status of your organization's devices. 
 
 The report is available from the primary **Microsoft Defender Antivirus** workload, and provides filtering, searching, paging, and sorting. The data found in this report is timely and shows the following details:
+
 - If a device has real-time or network protection, as well as the state
 - The status of Windows Defender
 - If Tamper protection is enabled
@@ -165,21 +167,34 @@ This report shows data visualizations as a pie chart for a breakdown of agent st
 You can view the **Antivirus agent status** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Microsoft Defender Antivirus** > **Reports** tab > **Antivirus agent status**.
-3. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Reports** > **Microsoft Defender Antivirus** to open the default reports view which is the **Summary** page. The Summary page displays aggregate details for the Antivirus reports, supports a *Refresh*, and reflects the data found in Antivirus agent status report.
+3. Select the **Reports** tab > **Antivirus agent status** to open the report.
+4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 The information for this report is based on details available from the [Defender CSP](/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
 
+Additional reports for Microsoft Defender Antivirus include:
+
+- [Detected malware report](#detected-malware-report-organizational), an organizational report detailed in this article.
+- [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports) which are available in the Antivirus node under Endpoint security in the Microsoft Endpoint Manager admin center.
+
 ## Detected malware report (Organizational)
-The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report show a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
+
+The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report show a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting.
 
 You can view the **Detected malware** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Microsoft Defender Antivirus** > **Reports** tab > **Detected malware**.
-3. Click **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Reports** > **Microsoft Defender Antivirus** to open the default reports view which is the Summary page. The Summary page displays aggregate details for the Antivirus reports, supports a *Refresh*, and reflects the data found in the [Antivirus agent status](#antivirus-agent-status-report-organizational) report.
+3. Select the **Reports** tab > **Detected malware** to open the report.
+4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 The information for this report is based on details available from the [Defender CSP](/windows/client-management/mdm/defender-csp), which is documented in the Windows client-management documentation.
+
+Additional reports for Microsoft Defender Antivirus include:
+
+- [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
+- [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports) which are available in the Antivirus node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
 ## Windows 10 feature updates (Organizational)
 
