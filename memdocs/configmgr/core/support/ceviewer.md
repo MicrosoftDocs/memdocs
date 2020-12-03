@@ -2,7 +2,7 @@
 title: Collection Evaluation Viewer
 titleSuffix: Configuration Manager
 description: Use the Collection Evaluation Viewer to view and troubleshoot the collection evaluation process in Configuration Manager.
-ms.date: 11/18/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Collection Evaluation Viewer
@@ -19,6 +17,9 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 Collection Evaluation Viewer is one of the [Configuration Manager tools](tools.md). Use it to view and troubleshoot the collection evaluation process on the primary site server.
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2010, this standalone tool is deprecated.<!-- 8509484 --> Its functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
 
 The tool displays the following information:  
 

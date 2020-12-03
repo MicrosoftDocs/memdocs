@@ -215,7 +215,6 @@ To configure Azure AD user discovery, see [Configure Azure Services](azure-servi
 
 ## <a name="bkmk_azuregroupdisco"></a> Azure Active Directory user group discovery
 <!--3611956-->
-*(Introduced as a [pre-release feature](../../manage/pre-release-features.md) in version 1906)*
 
 You can discover user groups and members of those groups from Azure Active directory (Azure AD). Azure AD user group discovery can find the following attributes:
 

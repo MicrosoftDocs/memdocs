@@ -220,7 +220,7 @@ Task sequence media can now download cloud-based content. For example, you send 
 > [!NOTE]
 > The device still needs an intranet connection to the management point.
 
-For more information, see [Use bootable media to deploy Windows over the network](../../../osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+For more information, see [Bootable media support for cloud-based content](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ### Improvements to task sequences via CMG
 

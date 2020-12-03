@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,7 +59,7 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
-  - **Microsoft Tunnel**
+  - **Microsoft Tunnel** *(Microsoft Tunnel isn't supported with* Android Enterprise dedicated *devices.)*
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
