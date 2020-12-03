@@ -3,10 +3,10 @@ title: Troubleshooting iOS/iPadOS device enrollment problems in Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll iOS/iPadOS devices in Intune.
 keywords:
-author: ErikjeMS
+author: v-miegge
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -203,6 +203,90 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
+### Expired or invalid token
+
+**Cause:** The token may be expired, revoked, or malformed.
+
+#### Resolution
+
+Expired tokens can be renewed, Invalid token will need to have a new token created in Intune.
+
+> [!NOTE]
+> The new token can be used on an existing MDM Server in Apple Business Manager/Apple School Manager (ABM/ASM), via the Edit option, MDM Server settings, Upload public key.
+
+### Access denied
+
+**Cause:** Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in ABM/ASM. The token has possibly expired.
+
+#### Resolution
+
+- Verify whether your token has expired, and if a new token was created.
+- Check to see if Intune is in the MDM server list.
+
+### Terms and conditions not accepted
+
+**Cause:** New terms and conditions (T&C) need to be accepted in ABM/ASM.
+
+#### Resolution
+
+Accept the new T&C in Apple ABM/ASM Portal.
+
+> [!NOTE]
+> This must be done by a user with the Administrator role in ABM/ASM.
+
+### Internal server error
+
+#### Resolution
+
+Contact Microsoft support, as additional logs are needed.
+
+### Invalid support phone number
+
+**Cause:** The support phone number is invalid.
+
+#### Resolution
+
+Edit the support phone number for your profiles.
+
+### Invalid configuration profile name
+
+**Cause:** The configuration profile name is either invalid, empty, or too long.
+
+#### Resolution
+
+Edit the name of the profile.
+
+### Invalid cursor
+
+**Cause:** The cursor was rejected by Apple or not found.
+
+#### Resolution
+
+Contact support so they can retry to sync from Intune's side.
+
+### Cursor expired
+
+**Cause:** The cursor is expired on Intune's side.
+
+#### Resolution
+
+Contact support so they can retry to sync from Intune's side.
+
+### Apple profile not found
+
+**Cause:** There are a variety of reasons why a profile is not found.
+
+#### Resolution
+
+Create a new profile, and assign the profile to devices.
+
+### Invalid department entry
+
+**Cause:** The department field entry is invalid.
+
+#### Resolution
+
+Edit the department field for your profiles.
 
 ## Other issues
 
@@ -233,7 +317,7 @@ Government users signing in from another device are redirected to the public clo
 #### Resolution 
 Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
 
-Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.  
+Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.
 
 ## Next steps
 
@@ -241,3 +325,5 @@ Open the **Settings** app and select Company Portal. In the Company Portal setti
 - [Ask a question on the Intune forum](/answers/products/mem)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
+- [Overall Token Sync errors](https://developer.apple.com/documentation/devicemanagement/device_assignment/authenticating_with_a_device_enrollment_program_dep_server/interpreting_error_codes)
+- [Profile creation errors](https://developer.apple.com/documentation/devicemanagement/define_a_profile)
