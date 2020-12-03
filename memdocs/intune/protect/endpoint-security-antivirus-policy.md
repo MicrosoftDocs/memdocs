@@ -161,6 +161,12 @@ Antivirus policy reports display status details about your endpoint security Ant
 
 To view the reports, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to  Endpoint security and select **Antivirus**. Selecting Antivirus opens the Summary page. Additional report and status views are available as additional pages.
 
+In addition to reports detailed in the following sections, additional reports for Microsoft Defender Antivirus are found in the Reports node of the Microsoft Endpoint Manager admin center, as documented in the Intune Reports article:
+
+- [Antivirus agent status report (Organizational)](../fundamentals/reports.md#antivirus-agent-status-report-organizational)
+[- Detected malware report (Organizational)](../fundmanetals/reports.md#detected-malware-report-organizational)
+
+
 ### Summary
 
 On the **Summary** page, you can [create new policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
