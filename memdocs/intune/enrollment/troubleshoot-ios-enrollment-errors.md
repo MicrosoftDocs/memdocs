@@ -203,39 +203,6 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
-## Other issues
-
-### ADE enrollment doesn't start
-When you turn on a ADE-managed device that is assigned an enrollment profile, the Intune enrollment process isn't initiated.
-
-**Cause:** The enrollment profile is created before the ADE token is uploaded to Intune.
-
-#### Resolution
-
-1. Edit the enrollment profile. You can make any change to the profile. The purpose is to update the modification time of the profile.
-2. Synchronize ADE-managed devices: In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
-
-### ADE enrollment stuck at user login
-When you turn on a ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
-
-**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices.
-
-#### Resolution
-Disable MFA, and then re-enroll the device.
-
-### Authentication doesn’t redirect to the government cloud 
-
-Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
-
-**Cause:** Azure AD does not yet support redirecting to the government cloud when signing in from another device. 
-
-#### Resolution 
-Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
-
-Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.
-
-## ABM/ASM Sync Errors for iOS/iPadOS and macOS Automated Device Enrollment Tokens
-
 ### Expired or invalid token
 
 **Cause:** The token may be expired, revoked, or malformed.
@@ -320,6 +287,37 @@ Create a new profile, and assign the profile to devices.
 #### Resolution
 
 Edit the department field for your profiles.
+
+## Other issues
+
+### ADE enrollment doesn't start
+When you turn on a ADE-managed device that is assigned an enrollment profile, the Intune enrollment process isn't initiated.
+
+**Cause:** The enrollment profile is created before the ADE token is uploaded to Intune.
+
+#### Resolution
+
+1. Edit the enrollment profile. You can make any change to the profile. The purpose is to update the modification time of the profile.
+2. Synchronize ADE-managed devices: In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Sync now**. A sync request is sent to Apple.
+
+### ADE enrollment stuck at user login
+When you turn on a ADE-managed device that is assigned an enrollment profile, the initial setup sticks after you enter credentials.
+
+**Cause:** Multi-Factor authentication (MFA) is enabled. Currently MFA doesn't work during enrollment on ADE devices.
+
+#### Resolution
+Disable MFA, and then re-enroll the device.
+
+### Authentication doesn’t redirect to the government cloud 
+
+Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
+
+**Cause:** Azure AD does not yet support redirecting to the government cloud when signing in from another device. 
+
+#### Resolution 
+Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
+
+Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.
 
 ## Next steps
 
