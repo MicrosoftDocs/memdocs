@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -108,6 +108,15 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 - Azure Active Directory (Azure AD)-joined, workgroup clients, or clients in untrusted domains aren't supported. BitLocker management in Configuration Manager only supports devices that are joined to on-premises Active Directory. Hybrid Azure AD-joined devices are also supported. This configuration is to authenticate with the recovery service to escrow keys.
 
 - Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management. This improvement supports domain-joined and hybrid domain-joined devices.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
+
+    > [!NOTE]
+    > If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
+    >
+    > 1. In the Configuration Manager console, open the properties of the existing policy.
+    > 1. Switch to the **Client Management** tab.
+    > 1. Select **OK** or **Apply** to save the policy.
+    >
+    > This action revises the policy so that it's available to clients over the CMG.
 
 > [!TIP]
 > By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
