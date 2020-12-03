@@ -28,7 +28,7 @@ ms.collection:
 Ideally, registration of a device with Windows Autopilot is performed by the OEM, reseller, or distributor from which the device was purchased. However it is also possible to register devices manually. You might need to register a device manually if:
 - The device was obtained from a non-participant device manufacturer or reseller.
 - The device is a virtual machine (VM).
-- The device does not otherwise qualify for automatic registraton, such as an existing legacy device.
+- The device does not otherwise qualify for automatic registration, such as an existing legacy device.
 
 The following diagram shows how you might use manual registration and OEM registration to deploy both new and existing devices with Windows Autopilot.
 

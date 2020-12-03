@@ -28,7 +28,7 @@ ms.collection:
 
 Windows Autopilot device registration can be done within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-value (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows 10. Therefore, this process is intended primarily for testing and evaluation scenarios.
 
-Device owners can only register thier devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
+Device owners can only register their devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
 This article provides step by step guidance to perform manual registration. For an overview of registration and manual registration, see the following topics:
 - [Registration overview](registration-overview.md)
