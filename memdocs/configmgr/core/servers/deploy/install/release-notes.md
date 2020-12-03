@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -36,6 +36,25 @@ For information about the new features in Desktop Analytics, see [What's new in 
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 ## Set up and upgrade
+
+### Site server in passive mode fails to update to version 2010
+
+<!-- 8896585 -->
+
+_Applies to version 2010_
+
+If you have a [highly available site server](../configure/site-server-high-availability.md), when you update to version 2010, the site server in passive mode fails to update. This issue is due to a change in the Microsoft Monitoring Agent (MMA) for Microsoft Defender Advanced Threat Protection. The required MMA files aren't copied to all necessary locations.
+
+To work around this issue:
+
+1. Go to the Configuration Manager installation directory on the site server. In the `.\CMUStaging\D5054056-F41C-4E61-90A7-4F135B76F806\Redist` folder, copy both **MMASetup-amd64.exe** and **MMASetup-i386.exe** to the `.\cd.latest\redist` folder.
+
+1. If you have a management point role installed on another server, copy the following files to the following folders in the Configuration Manager installation folder on the site system server:
+
+    1. Copy **MMASetup-amd64.exe** to the `.\sms\client\x64` folder.
+    1. Copy **MMASetup-i386.exe** to the `.\sms\client\i386` folder.
+
+1. Retry the update to version 2010.
 
 ### Client automatic upgrade happens immediately for all clients
 
