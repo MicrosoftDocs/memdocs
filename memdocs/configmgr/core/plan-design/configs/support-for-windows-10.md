@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -50,7 +50,7 @@ The following table lists the versions of Windows 10 that you can use as a clien
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 | **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **20H2**<br>(10.0.19042)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **20H2**<br>(10.0.19042)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> | ![Supported](media/green_check.png) <sup>[Note](#bkmk_20h2)</sup> |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -87,6 +87,16 @@ Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform 
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
 
 To provide feedback on Windows Insider, use the [Feedback Hub](/windows-insider/at-work-pro/wip-4-biz-feedback).
+
+### <a name="bkmk_20h2"></a> Sysprep and Windows 10 version 20H2
+
+If you manually customize a reference computer that runs Windows 10 version 20H2, and then use [capture media](../../../osd/deploy-use/create-capture-media.md), Windows Sysprep fails with the following entry in the sysprep.log: `Failed to clean the package repository database: 0x80070005.` This issue happens when you sign in to the device and create a user profile.
+
+To work around this issue, choose one of the following options:
+
+- [Create a task sequence to capture an OS](../../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
+- Remove appx packages for the signed-in user before you use capture media. For more information, see [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](/troubleshoot/windows-client/deployment/sysprep-fails-remove-or-update-store-apps).
+- Manually run Sysprep, and then boot to the capture media to capture the image.
 
 ## Windows 10 ADK
 
