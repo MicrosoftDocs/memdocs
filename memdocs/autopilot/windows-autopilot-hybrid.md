@@ -161,7 +161,7 @@ Select one of the following ways to enroll your Autopilot devices.
 1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**. 
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
-For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+For more information, see [Create an Autopilot deployment profile](profiles.md).
 
 ### Register Autopilot devices that aren't enrolled
 
