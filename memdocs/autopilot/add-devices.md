@@ -2,7 +2,7 @@
 title: Manually register devices with Windows Autopilot
 ms.reviewer: 
 manager: laurawi
-description: How to add devices to Windows Autopilot
+description: How to manually add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -92,7 +92,7 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
-    ![Screenshot of Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device.png)
+    ![Screenshot of Windows Autopilot devices](images/autopilot-import-device.png)
 
 2. Under **Add Windows Autopilot devices**, browse to a CSV file listing the devices that you want to add. The CSV file should list:
     - Serial numbers.

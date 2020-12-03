@@ -2,7 +2,7 @@
 title: Reseller, distributor, or partner registration
 ms.reviewer: 
 manager: laurawi
-description: How to add devices to Windows Autopilot
+description: How partners add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
 ms.mktglfcycl: deploy

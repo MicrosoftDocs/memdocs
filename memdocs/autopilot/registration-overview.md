@@ -2,7 +2,7 @@
 title: Windows Autopilot registration overview
 ms.reviewer: 
 manager: laurawi
-description: How to add devices to Windows Autopilot
+description: Overview of Windows Autopilot device registration
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
 ms.mktglfcycl: deploy
