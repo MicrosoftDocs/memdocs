@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -34,7 +34,7 @@ Community hub supports the following objects:
 ## Prerequisites
 
 - The device running the Configuration Manager console used to access the community hub needs the following items:
-   - .NET Framework version 4.6 or higher
+   - .NET Framework version 4.6.2 or higher
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported prior to version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server. For more information, see [Community hub on Windows Server operating systems](#bkmk_hub_os). <!--3555940, 8625943, 8717639 -->
    - The logged-in user account can't be the built-in administrator account
