@@ -51,7 +51,7 @@ After the hardware hashes have been captured from existing devices, they can be 
 - [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 - [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
 
-A summary of each platform's capabilities is provided below.<br>
+A summary of each platform's capabilities is provided below.
 
 | Platform/Portal | Register devices? | Create/Assign profile | Acceptable Device ID |
 | --- | --- | -- | -- |
@@ -60,7 +60,7 @@ A summary of each platform's capabilities is provided below.<br>
 | [Intune](add-devices.md) | YES - 500 at a time max | YES<sup>12</sup> | 4K HH |
 | [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles) | YES - 1000 at a time max | YES<sup>4</sup> | 4K HH |
 | [Microsoft 365 Business Premium](/microsoft-365/business/create-and-edit-autopilot-profiles) | YES - 1000 at a time max | YES<sup>3</sup> | 4K HH |
-<br>
+
 ><b><sup>1</sup></b>Microsoft recommended platform to use<br>
 ><b><sup>2</sup></b>Intune license required<br>
 ><b><sup>3</sup></b>Feature capabilities are limited<br>
