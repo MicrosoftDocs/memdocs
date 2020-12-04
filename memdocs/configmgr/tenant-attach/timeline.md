@@ -2,7 +2,7 @@
 title: Tenant attach - Device timeline (preview)
 titleSuffix: Configuration Manager
 description: "View the timeline for Configuration Manager devices from the admin center."
-ms.date: 10/30/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -40,8 +40,7 @@ The user account needs the following permissions:
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission under **Collection** in Configuration Manager.
 - The **Notify Resource** permission under **Collection** in Configuration Manager. <!--7984188-->
-- The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
-  - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
+- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## Generate events
 

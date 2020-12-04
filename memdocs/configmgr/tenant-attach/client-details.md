@@ -2,7 +2,7 @@
 title: Tenant attach - ConfigMgr client details (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "View client details for Configuration Manager devices from the admin center."
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -37,10 +37,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 The user account accessing tenant attach features within the Microsoft Endpoint Manager admin center needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
-- The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
-  - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
-   > [!TIP]
-   > The [Application Administrator role in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) has sufficient permissions to add a user to the application's **Admin User** role.
+- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## View ConfigMgr client details
 
