@@ -1,5 +1,5 @@
 ---
-title: Reseller, distributor, or partner registration
+title: Reseller, distributor, or partner registration of Windows Autopilot devices
 ms.reviewer: 
 manager: laurawi
 description: How partners add devices to Windows Autopilot

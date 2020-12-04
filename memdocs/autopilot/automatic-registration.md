@@ -1,5 +1,5 @@
 ---
-title: Automatic registration of existing devices
+title: Automatic registration of existing devices - Windows Autopilot
 ms.reviewer: 
 manager: laurawi
 description: Automatically add devices to Windows Autopilot
@@ -25,6 +25,8 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
+## Requirements
+
 You can automatically register an existing device if it's:
 - running a [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel, and
 - enrolled in an MDM service such an Intune
@@ -35,6 +37,8 @@ For devices that meet both these requirements, the MDM service can ask the devic
 For more information on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
 
 ![Convert all targeted devices](images/convert-devices.png)
+
+## Windows Autopilot for existing devices
 
 When using the [Windows Autopilot for existing devices](existing-devices.md) scenario, you don't need to pre-register the devices with Windows Autopilot. Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used. The device can then be registered with Windows Autopilot using the same **Convert all targeted devices to Autopilot** setting.
 

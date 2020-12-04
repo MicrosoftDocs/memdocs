@@ -1,5 +1,5 @@
 ---
-title: Manual registration
+title: Manual registration of devices for Windows Autopilot
 ms.reviewer: 
 manager: laurawi
 description: Manual registration overview
@@ -32,7 +32,7 @@ Ideally, registration of a device with Windows Autopilot is performed by the OEM
 
 The following diagram shows how you might use manual registration and OEM registration to deploy both new and existing devices with Windows Autopilot.
 
-<img src="./images/image2.png" width="511" height="249" alt="process" />
+![Windows Autopilot device registration process](images/image2.png)
 
 For a list of participant device manufacturers and device resellers, see [Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896).
 
@@ -45,59 +45,22 @@ To [manually register a device](add-devices.md), you must first capture its hard
 
 After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
 
-- [Microsoft Intune](enrollment-autopilot.md). This is the preferred mechanism for all customers.
+- [Microsoft Intune](add-devices.md). This is the preferred mechanism for all customers.
   - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
 - [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). This is used by CSP partners to register devices on behalf of customers.
 - [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 - [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
 
 A summary of each platform's capabilities is provided below.<br>
+
+| Platform/Portal | Register devices? | Create/Assign profile | Acceptable Device ID |
+| --- | --- | -- | -- |
+| OEM Direct API | YES - 1000 at a time max | NO | Tuple or PKID |
+| [Partner Center](/partner-center/autopilot) | YES - 1000 at a time max | YES<sup>34</sup> | Tuple or PKID or 4K HH |
+| [Intune](add-devices.md) | YES - 500 at a time max | YES<sup>12</sup> | 4K HH |
+| [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles) | YES - 1000 at a time max | YES<sup>4</sup> | 4K HH |
+| [Microsoft 365 Business Premium](/microsoft-365/business/create-and-edit-autopilot-profiles) | YES - 1000 at a time max | YES<sup>3</sup> | 4K HH |
 <br>
-<table>
-<tr>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Platform/Portal</font></td>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Register devices?</font></td>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Create/Assign profile</font></td>
-<td BGCOLOR="#a0e4fa"><B><font color="#000000">Acceptable DeviceID</font></td>
-</tr>
-
-<tr>
-<td>OEM Direct API</td>
-<td>YES - 1000 at a time max</td>
-<td>NO</td>
-<td>Tuple or PKID</td>
-</tr>
-
-<tr>
-<td><a href="/partner-center/autopilot">Partner Center</a></td>
-<td>YES - 1000 at a time max</td>
-<td>YES<b><sup>34</sup></b></td>
-<td>Tuple or PKID or 4K HH</td>
-</tr>
-
-<tr>
-<td><a href="enrollment-autopilot.md">Intune</a></td>
-<td>YES - 500 at a time max<b><sup>1</sup></b></td> 
-<td>YES<b><sup>12</sup></b></td> 
-<td>4K HH</td>
-</tr>
-
-<tr>
-<td><a href="/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles">Microsoft Store for Business</a></td>
-<td>YES - 1000 at a time max</td>
-<td>YES<b><sup>4</sup></b></td>
-<td>4K HH</td>
-</tr>
-
-<tr>
-<td><a href="/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Business Premium</a></td>
-<td>YES - 1000 at a time max</td>
-<td>YES<b><sup>3</sup></b></td>
-<td>4K HH</td>
-</tr>
-
-</table>
-
 ><b><sup>1</sup></b>Microsoft recommended platform to use<br>
 ><b><sup>2</sup></b>Intune license required<br>
 ><b><sup>3</sup></b>Feature capabilities are limited<br>
