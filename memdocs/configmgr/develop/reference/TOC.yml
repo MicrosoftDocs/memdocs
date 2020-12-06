@@ -861,6 +861,10 @@
       href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
     - name: FindMachineSite method
       href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
+    - name: GetDependency method
+      href: core/clients/collections/getdependency-method-in-class-sms_collection.md
+    - name: GetDependent method
+      href: core/clients/collections/getdependent-method-in-class-sms_collection.md
     - name: GetNumResults method
       href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
     - name: GenerateCCRByName method
@@ -916,6 +920,18 @@
     href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
   - name: SMS_FullCollectionMembership server WMI class
     href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
+  - name: SMS_CollectionEvaluationFull server WMI class
+    href: core/clients/collections/sms_collectionevaluationfull-server-wmi-class.md
+  - name: SMS_CollectionEvaluationIncremental server WMI class
+    href: core/clients/collections/sms_collectionevaluationincremental-server-wmi-class.md
+  - name: SMS_CollectionInfoInFullEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinfullevaluationqueue-server-wmi-class.md
+  - name: SMS_CollectionInfoInManualEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinmanualevaluationqueue-server-wmi-class.md
+  - name: SMS_CollectionInfoInNewEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinnewevaluationqueue-server-wmi-class.md
+  - name: SMS_CollectionInfoInIncrementalEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinincrementalevaluationqueue-server-wmi-class.md
 - name: Compliance settings server WMI classes
   items:
   - name: About compliance settings server WMI classes

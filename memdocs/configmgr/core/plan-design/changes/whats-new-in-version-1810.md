@@ -264,7 +264,7 @@ For more information, see [Manage drivers](../../../osd/get-started/manage-drive
 <!--3098809, 3113836, 3204570 -->
 Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
 
-For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#BKMK_ServicingPlan).
+For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#windows-10-servicing-plan).
 
 ### New task sequence variable for last action name
 

@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -41,7 +41,7 @@ Clients use a boundary group for:
     > [!NOTE]  
     > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](boundary-group-procedures.md#bkmk_proc-prefer).  
 
-  - Cloud management gateway (starting in version 1902)
+  - Cloud management gateway
 
 ## Boundary groups and relationships
 
@@ -192,8 +192,10 @@ The task sequence tries to acquire content in the following order:
 
 3. Distribution points in a *neighbor* boundary group  
 
-    > [!Important]  
-    > Due to the real-time nature of task sequence processing, it doesn't wait for the failover time on a neighbor boundary group. It uses the failover times for prioritizing the neighbor boundary groups. For example, if the task sequence fails to acquire content from a distribution point in its current boundary group, it immediately tries a distribution point in a neighbor boundary group with the shortest failover time. If that process fails, it then fails over to a distribution point in a neighbor boundary group with a larger failover time.  
+    > [!IMPORTANT]
+    > Due to the real-time nature of task sequence processing, it doesn't wait for the failover time on a neighbor boundary group. It uses the failover times for prioritizing the neighbor boundary groups. For example, if the task sequence fails to acquire content from a distribution point in its current boundary group, it immediately tries a distribution point in a neighbor boundary group with the shortest failover time. If that process fails, it then fails over to a distribution point in a neighbor boundary group with a larger failover time.
+    >
+    > For content like applications, which are downloaded by the client and not the task sequence engine, the client behaves as normal. In other words, if you install applications from a task sequence, when the client tries to download the content it will wait for boundary group failover.<!-- 7594647 -->
 
 4. Distribution points in the *site default* boundary group  
 
@@ -298,16 +300,14 @@ By default, the management point prioritizes peer cache sources at the top of th
 > [!TIP]
 > This behavior applies to the Configuration Manager client. It doesn't apply when the task sequence downloads content. When the task sequence runs, it prefers peer cache sources over distribution points.<!-- SCCMDocs#1376 -->
 
-#### <a name="bkmk_bgoptions4"></a> Prefer cloud distribution points over distribution points
+#### <a name="bkmk_bgoptions4"></a> Prefer cloud based sources over on-premise sources
 
-If you have a branch office with a faster internet link, you can now prioritize cloud content.  
-
-In version 1902, this setting is now titled **Prefer cloud based sources over on-premise sources**. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
+If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
 
 - Cloud distribution points
-- Microsoft Update (added in version 1902)
+- Microsoft Update
 
-## <a name="bkmk_sup"></a> Software update points 
+## <a name="bkmk_sup"></a> Software update points
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
@@ -423,15 +423,25 @@ Preferred management points enable a client to identify a management point that'
 > [!NOTE]  
 > Client roaming means it changes its network locations. For example, when a laptop travels to a remote office location. When a client roams, it might use a management point from the local site before attempting to use a server from its assigned site. This list of servers from its assigned site includes the preferred management points. For more information, see [Understand how clients find site resources and services](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
-## Overlapping boundaries  
+## <a name="overlapping-boundaries"></a> Overlapping boundaries and boundary groups
 
-Configuration Manager supports overlapping boundary configurations for content location. When the client's network location belongs to more than one boundary group:
+Configuration Manager supports overlapping boundary and boundary group configurations for content and service location requests. Overlapping occurs when a client's location maps to multiple boundary groups. This happens for one of two reasons:
 
-- When a client requests content, Configuration Manager sends the client a list of all distribution points that have the content.  
+- You add the same boundary to multiple boundary groups.
 
-- When a client requests a server to send or receive its state migration information, Configuration Manager sends the client a list of all state migration points associated with a boundary group that includes the current network location of the client.  
+- You add separate boundaries that include the client's location to different boundary groups.
 
-This behavior enables the client to select the nearest server from which to transfer the content or state migration information.  
+When overlapping occurs, Configuration Manager creates a list of all site systems referenced by all boundary groups that include a client's location. Configuration Manager sends this list to a client in response to a content or service location request. Configuration Manager doesn't apply any precedence or deterministic ordering to this list based on overlapping boundaries and boundary groups. Instead, the client chooses at random from this list.
+
+For client content requests, Configuration Manager includes only distribution points that have the requested content in the list of site systems returned. For other service location requests, Configuration Manager includes only site systems that host the type of role requested which may be one of the following:
+
+- State migration point
+
+- Software update point
+
+- Management point
+
+This behavior enables the client to select the nearest server to communicate with for each request type.
 
 ## Example of using boundary groups
 

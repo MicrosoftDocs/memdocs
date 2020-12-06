@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Enroll devices in Intune by using a device enrollment manager account
 
-You can enroll up to 1,000 mobile devices with a single Azure Active Directory account by using a device enrollment manager (DEM) account. DEM is an Intune permission that can be applied to an AAD user account and lets the user enroll up to 1,000 devices. A DEM account is useful for scenarios where devices are enrolled and prepared before handing them out to the users of the devices. By design, there's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.
+You can enroll up to 1,000 mobile devices with a single Azure Active Directory account by using a device enrollment manager (DEM) account. DEM is an Intune permission that can be applied to an Azure AD user account and lets the user enroll up to 1,000 devices. A DEM account is useful for scenarios where devices are enrolled and prepared before handing them out to the users of the devices. By design, there's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.
 
 ## Limitations of devices that are enrolled with a DEM account
 
@@ -45,7 +45,7 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Devices can install VPP apps if they have Apple VPP device licenses.
 - Devices are blocked for Conditional Access with the exception of Windows 10 1803+
 - Every device enrolled with DEM accounts needs to be properly licensed to be managed by Intune. The license could be an Intune user license or an Intune device license.
-- If you're [enrolling Android Enterprise work profile devices](android-work-profile-enroll.md) by using a DEM account, there is a limit of 10 devices that can be enrolled per account.
+- If you're [enrolling Android Enterprise personally-owned work profile](android-work-profile-enroll.md) or [corporate-owned](android-corporate-owned-work-profile-enroll.md) work profile devices by using a DEM account, there is a limit of 10 devices that can be enrolled per account.
 - [Enrolling Android Enterprise fully managed devices](android-fully-managed-enroll.md) with DEM accounts isn't supported.
 - Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.
 
@@ -55,7 +55,7 @@ You can use the following methods to enroll devices using DEM accounts:
 
 - [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- DEM initiated via Company Portal
+- [DEM initiated via Company Portal](../user-help/use-managed-devices-to-get-work-done.md)
 
 ## Add a device enrollment manager
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/28/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -90,7 +90,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Android enterprise**.
+    - **Platform**: Select **Android Enterprise**.
     - **Profile**: Select **OEMConfig**.
 
 4. Select **Create**.
@@ -173,7 +173,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Lenovo | com.lenovo.oemconfig.rel | |
 | LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
-| Motorola | com.motorolasolution.lexoemconfig | |
+| Motorola | com.motorolasolutions.lexoemconfig | |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |

@@ -34,7 +34,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
 ## Microsoft Defender Firewall
 
 - **Certificate revocation list verification (Device)**  
-  CSP: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
+  CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)
 
    Specify how certificate revocation list (CRL) verification is enforced.
   - **Not configured** (*default*) - Use the client default, which is to disable CRL verification.
@@ -43,14 +43,14 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
   - **Require**
 
 - **Disable Stateful Ftp (Device)**  
-  CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)
+  CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Not configured** (*default*)
   - **True** - Stateful FTP is disabled
   - **False** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections.
 
 - **Enable Packet Queue (Device)**  
-  CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
+  CSP: [MdmStore/Global/EnablePacketQueue](/windows/client-management/mdm/firewall-csp#enablepacketqueue)
 
   Select from the following options to configure scaling for the software on the receive side for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This ensures the packet order is preserved. By default, no options are selected.
 
@@ -59,7 +59,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
   - **Queue Outbound**
 
 - **IPsec Exceptions (Device)**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+  CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
   Select from the following options to configure IPsec exceptions.
 
@@ -76,14 +76,14 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
   - **False**
 
 - **Preshared Key Encoding (Device)**  
-  CSP: [MdmStore/Global/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)
+  CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
 
   - **Not configured** (*default*)
   - **None**
   - **UTF8**
 
 - **Security association idle time (Device)**  
-  CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
+  CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)
 
   Specify a time in seconds between **300** and **3600**, for how long the security associations are kept after network traffic isn't seen.
   If you don't specify any value, the system deletes a security association after it's been idle for *300* seconds.
@@ -91,7 +91,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
 ## Domain Profile
 
 - **Enable Domain Network Firewall (Device)**  
-  CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+  CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
   - **True** - The Microsoft Defender Firewall for the network type of **domain** is turned on and enforced.
@@ -171,7 +171,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
 ## Private Profile
 
 - **Enable Private Network Firewall (Device)**  
-  CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+  CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
   - **True** - The Microsoft Defender Firewall for the network type of **private** is turned on and enforced.
@@ -251,7 +251,7 @@ View the Microsoft Windows Defender Firewall settings you can manage with the **
 ## Public Profile
 
 - **Enable Public Network Firewall (Device)**  
-  CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+  CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
   - **True** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced.

@@ -30,6 +30,7 @@
 
 ### Update device settings 
 #### [Move to new device management setup](move-to-new-device-management-setup.md)
+#### [Allow Wi-Fi control](allow-wi-fi-control-android.md)  
 #### [Encrypt your device](encrypt-your-device-android.md)
 #### [Fix encryption problems](your-device-appears-encrypted-but-cp-says-otherwise-android.md)  
 #### [Set your PIN or password](set-your-pin-or-password-android.md)
@@ -49,8 +50,9 @@
 
 ### Get Android apps  
 #### [Get work or school apps](use-managed-apps-on-your-device-android.md)  
-#### [Install Company Portal app in China](install-company-portal-android-china.md)  
 #### [Get Microsoft Tunnel for Android](use-microsoft-tunnel-android.md)
+#### [Install Company Portal app in China](install-company-portal-android-china.md)  
+#### [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md)   
 
 ### Resolve a threat in MTD app  
 #### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
@@ -106,6 +108,7 @@
 #### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)  
 
 ### Get help 
+#### [Retrieve iOS app logs](retrieve-ios-app-logs.md)
 #### [Report problem to IT support](send-errors-to-your-it-admin-ios.md)
 #### [Share logs with Microsoft developers](send-logs-to-microsoft-ios.md)  
 

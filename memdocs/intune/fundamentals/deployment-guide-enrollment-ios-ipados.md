@@ -118,7 +118,7 @@ This task list provides an overview. For more specific information, see [Apple B
   - **Already enrolled devices**: If devices are already enrolled, if you have VPP or not, then use an app configuration policy:
 
     1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
-    2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
+    2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     3. Deploy the app configuration policy to the same device group as the enrollment profile.
     4. When devices check in with the Intune service, it receives your profile, and the Company Portal app installs.
 
@@ -221,7 +221,7 @@ This task list provides an overview. For more specific information, see [Apple C
   - **Already enrolled devices**: If devices are already enrolled, then use an app configuration policy:
 
     1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
-    2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
+    2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     3. Deploy the app configuration policy to the same device group as the enrollment profile.
     4. When devices check in with the Intune service, it receives your profile, and the Company Portal app installs.
 
@@ -341,7 +341,7 @@ This task list provides an overview. For more specific information, see [Set up 
 
 Your users must do the following steps. For the specific user experience, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
 
-1. Go to the Apple app store, and [install the Intune Company Portal app](../user-help/install-and-sign-in-to-the-intune-company-portal-app-ios.md).
+1. Go to the Apple app store, and [install the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md).
 2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users may have to enter more information. For more specific steps, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 

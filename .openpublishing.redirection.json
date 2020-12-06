@@ -267,6 +267,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/autopilot/autopilot-update.md",
+            "redirect_url": "/mem/autopilot/index",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/core/misc/whats-new-endpoint-analytics.md",
             "redirect_url": "/mem/analytics/whats-new",
             "redirect_document_id": false
@@ -442,6 +447,46 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/configmgr/apps/get-started/creating-linux-and-unix-server-applications.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/linux-and-unix-clients-technical-reference.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/monitor-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/manage-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/analytics/whats-new.md",
             "redirect_url": "/mem/analytics/overview",
             "redirect_document_id": false
@@ -604,6 +649,16 @@
         {
             "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-reporting.md",
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/manage/use-alerts-and-the-status-system.md",
+            "redirect_url": "/mem/configmgr/core/servers/manage/use-status-system",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
+            "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
         }
     ]

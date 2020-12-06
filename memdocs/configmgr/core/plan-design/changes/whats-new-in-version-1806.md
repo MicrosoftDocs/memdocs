@@ -571,7 +571,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) and [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) and [Product feedback](../../understand/product-feedback.md).
 
 
 

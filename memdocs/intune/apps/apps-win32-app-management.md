@@ -33,13 +33,17 @@ Microsoft Intune allows Win32 app management capabilities. Although it's possibl
 
 ## Prerequisites
 
-To use Win32 app management, be sure you meet the following criteria:
+To use Win32 app management, be sure the following criteria are met:
 
-- Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
-- Devices must be joined to Azure Active Directory (Azure AD) and auto-enrolled. The Intune management extension supports devices that are Azure AD joined, hybrid domain joined, and group policy enrolled. 
+- Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
+- Devices must be enrolled in Intune and either:
+  - [Azure AD joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)
+  - [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)
+  - [Azure AD registered](../fundamentals/whats-new.md#win32-app-support-for-workplace-join-wpj-devices-)
+- Windows application size must not be greater than 8 GB per app.
+
   > [!NOTE]
-  > For the scenario of group policy enrollment, the user uses the local user account to Azure AD join their Windows 10 device. The user must log on to the device by using their Azure AD user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
-- Windows application size is capped at 8 GB per app.
+  > Intune will automatically install the Intune Management Extension (IME) on the device if a PowerShell script or a Win32 app is targeted to the user or device.
 
 ## Prepare the Win32 app content for upload
 
@@ -49,14 +53,17 @@ Before you can add a Win32 app to Microsoft Intune, you must prepare the app by 
 
 After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.md) by using the Microsoft Win32 Content Prep Tool, you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](apps-win32-add.md).
 
+> [!NOTE]
+> Windows application size is limited to 8 GB per app.
+
 ## Delivery optimization
 
 Windows 10 1709 and later clients will download Intune Win32 app content by using a delivery optimization component on the Windows 10 client. Delivery optimization provides peer-to-peer functionality that's turned on by default. 
 
-You can configure the Delivery Optimization agent to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured by group policy and via Intune device configuration. For more information, see [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+You can configure the Delivery Optimization agent to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured by group policy and via Intune device configuration. For more information, see [Delivery Optimization for Windows 10](/windows/deployment/update/waas-delivery-optimization). 
 
 > [!NOTE]
-> You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+> You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
 
 ## Install required and available apps on devices
 

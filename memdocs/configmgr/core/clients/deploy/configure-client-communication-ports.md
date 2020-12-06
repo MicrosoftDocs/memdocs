@@ -31,9 +31,6 @@ You can change the request port numbers that Configuration Manager clients use t
 
  To make sure that clients do not become unmanaged after you change the request port numbers, clients must be configured to use the new request port numbers. When you change the request ports on a primary site, any attached secondary sites automatically inherit the same port configuration. Use the procedure in this topic to configure the request ports on the primary site.  
 
-> [!NOTE]  
->  For information about how to configure the request ports for clients on computers that run Linux and UNIX, see [Configure Request Ports for the Client for Linux and UNIX](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigLnUClientCommuincations).  
-
  When the Configuration Manager site is published to Active Directory Domain Services, new and existing clients that can access this information will automatically be configured with their site port settings and you do not need to take further action. Clients that cannot access this information published to Active Directory Domain Services include workgroup clients, clients from another Active Directory forest, clients that are configured for Internet-only, and clients that are currently on the Internet. If you change the default port numbers after these clients have been installed, reinstall them and install any new clients by using one of the following methods:  
 
 - Reinstall the clients by using the Client Push Installation Wizard. Client push installation automatically configures clients with the current site port configuration. For more information about how to use the Client Push Installation Wizard, see [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  

@@ -203,7 +203,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Azure Active Directory (AD) Premium** includes several features that are key to managing devices, including:
 
-  - [Windows Autopilot](../enrollment/enrollment-autopilot.md): Windows 10 devices can automatically enroll in Intune, and automatically receive your policies.
+  - [Windows Autopilot](../../autopilot/enrollment-autopilot.md): Windows 10 devices can automatically enroll in Intune, and automatically receive your policies.
   - [Multi-factor authentication](../enrollment/multi-factor-authentication.md) (MFA): Users must enter two or more verification methods, such as a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, or organization-owned devices that require extra security.
   - [Conditional access](../protect/conditional-access.md): If users and devices follow your rules, such as a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
   - [Dynamic user groups and dynamic device groups](../fundamentals/groups-add.md): Add users or devices automatically to groups when they meet criteria, such as a city, job title, OS type, OS version, and more.
@@ -411,7 +411,7 @@ Include your IT support and helpdesk in the early stages of Intune deployment pl
 
 - Determine who will support end users. Organizations may have different tiers or levels (1-3). For example, tier 1 and 2 may be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
 
-  Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](get-support.md) may be considered as tier 4.
+  Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](../../get-support.md) may be considered as tier 4.
 
   - In the initial rollout phases, be sure all tiers in your support team document issues and resolutions. Look for patterns, and adjust your communications for the next rollout phase. For example:
     - If different users or groups are hesitant about enrolling their personal devices, consider a Teams calls to answer common questions.

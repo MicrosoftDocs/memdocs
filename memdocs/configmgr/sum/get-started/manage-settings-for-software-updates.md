@@ -2,7 +2,7 @@
 title: Manage settings for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
-ms.date: 06/04/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -24,11 +24,14 @@ After you synchronize software updates in Configuration Manager, configure and v
 After you install the software update point, software updates is enabled on clients by default, and the settings on the **Software Updates** page in client settings have default values. The client settings are used site-wide and affect when software updates are scanned for compliance, and how and when software updates are installed on client computers. Before you deploy software updates, verify that the client settings are appropriate for software updates at your site.  
 
 > [!IMPORTANT]  
->  The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client.  
+> - The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client.
+>
+> - Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md). 
 
 For information about how to configure client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
-For more information about the client settings, see [About client settings](../../core/clients/deploy/about-client-settings.md).  
+For more information about the client settings, see [About client settings](../../core/clients/deploy/about-client-settings.md). 
+
 
 ##  <a name="BKMK_GroupPolicy"></a> Group policy settings for software updates  
 There are specific group policy settings that are used by Windows Update Agent (WUA) on client computers to connect to WSUS that runs on the software updates point. These group policy settings are also used to successfully scan for software update compliance, and to automatically update the software updates and the WUA.

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 11/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,7 +49,7 @@ Depending on the settings you choose, not all values in the following list are c
 - **Connection type**: Select the VPN connection type. Your options:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
-  - **F5 Edge Client**
+  - **F5 Access**
   - **Pulse Secure**
 
 <!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
@@ -90,11 +90,11 @@ Depending on the settings you choose, not all values in the following list are c
 
 - **Split tunneling**: **Enable** lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing. If you want all traffic to use the VPN tunnel when the VPN connection is active, then set to **Disable**.
 
-## Proxy settings
+## Proxy
 
-- **Automatic configuration script**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`.
-- **Address**: Enter the proxy server address, such as an IP address or `vpn.contoso.com`.
-- **Port number**: Enter the TCP port number used by your proxy server.
+- **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
+- **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
+- **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 - **Automatically detect proxy settings**: If your VPN server requires a proxy server for the connection, choose if you want devices to automatically detect the connection settings. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Enable**: Automatically detects the connection settings.

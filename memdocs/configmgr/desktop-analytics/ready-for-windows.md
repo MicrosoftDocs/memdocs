@@ -44,14 +44,14 @@ Many customers have challenges with getting and staying current with Windows 10 
 
 The *Ready for modern desktop* directory listed software solutions that are supported and in-use on commercial devices running Windows 10 and Microsoft 365 Apps for enterprise. The directory helps IT managers who are considering the latest versions of Windows 10 and Microsoft 365 for their deployments.
 
-Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](https://aka.ms/dadocs) and [Microsoft 365 Apps readiness features](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Microsoft 365 Apps for enterprise upgrade projects. 
+Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](./overview.md) and [Microsoft 365 Apps readiness features](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Microsoft 365 Apps for enterprise upgrade projects. 
 
 > [!Note]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 ### What is Desktop Analytics?
 
-[Desktop Analytics](https://aka.ms/dadocs) is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows endpoints. It combines the data specific to your organization with aggregated insights from the millions of Windows devices connected to Microsoft's cloud services.
+[Desktop Analytics](./overview.md) is a cloud-based service that integrates with Configuration Manager. The service provides insight and intelligence for you to make more informed decisions about the update readiness of your Windows endpoints. It combines the data specific to your organization with aggregated insights from the millions of Windows devices connected to Microsoft's cloud services.
 
 -    Get a comprehensive view into the endpoints, applications, and drivers under management in your organization.
 

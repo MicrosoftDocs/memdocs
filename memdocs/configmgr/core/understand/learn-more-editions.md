@@ -125,3 +125,7 @@ To learn more about product licensing details, use the following resources.
 - [Where to look up your active Software Assurance agreement](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (starting at 43 seconds)  
 
 - [How to get permissions for VLSC](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4). You can delegate VLSC read and write permissions to other people in your organization.
+
+## Next steps
+
+[Frequently asked questions for Configuration Manager branches and licensing](product-and-licensing-faq.md)

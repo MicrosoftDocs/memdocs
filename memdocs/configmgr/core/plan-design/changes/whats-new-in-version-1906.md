@@ -158,7 +158,7 @@ You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-relea
 
 You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone) and [Pre-release features](../../servers/manage/pre-release-features.md#bkmk_table).
+For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone) and [Pre-release features](../../servers/manage/pre-release-features.md#list-of-pre-release-features).
 
 ### Added permissions to the Security Administrator role
 
