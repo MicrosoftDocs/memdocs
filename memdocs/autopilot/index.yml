@@ -27,6 +27,10 @@ landingContent:
       links:
       - text: Overview of Windows Autopilot
         url:  windows-autopilot.md
+      - text: Device registration overview
+        url:  registration-overview.md
+      - text: Enrollment Status Page
+        url: enrollment-status.md
       - text: Requirements
         url:  software-requirements.md
       - text: What's new
@@ -77,16 +81,16 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Register devices
+      - text: Manually register devices
         url: add-devices.md
-      - text: Enroll devices in Intune
+      - text: Create device groups
         url: enrollment-autopilot.md
+      - text: Create deployment profiles
+        url: profiles.md
       - text: Deploy hybrid devices
         url: windows-autopilot-hybrid.md
       - text: Configure device profiles
         url: profiles.md
-      - text: Enrollment Status Page
-        url: enrollment-status.md
       - text: BitLocker encryption
         url: bitlocker.md
       - text: DFCI management

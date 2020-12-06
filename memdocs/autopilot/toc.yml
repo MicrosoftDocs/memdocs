@@ -24,6 +24,8 @@
   items:
   - name: Scenarios and capabilities
     href: windows-autopilot-scenarios.md
+  - name: Enrollment Status Page
+    href: enrollment-status.md
   - name: Deployment scenarios
     items:
     - name: User-driven mode
