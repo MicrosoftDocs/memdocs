@@ -59,8 +59,6 @@
       href: profiles.md
     - name: Deploy hybrid Azure AD-joined devices
       href: windows-autopilot-hybrid.md
-    - name: Enrollment Status Page
-      href: enrollment-status.md
     - name: BitLocker encryption
       href: bitlocker.md
     - name: DFCI management
