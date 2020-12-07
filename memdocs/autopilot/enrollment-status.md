@@ -26,7 +26,11 @@ ms.topic: conceptual
 
 When a user signs into a device for the first time, the Enrollment Status Page (ESP) displays the device's configuration progress. The ESP also makes sure the device is in the expected state before the user can access the desktop for the first time.
 
-The ESP tracks the installation of applications, security policies, certificates, and network connections. An administrator can deploy ESP profiles to a licensed Intune user and configure specific settings within the ESP profile. A few of these settings are:
+The ESP tracks the installation of applications, security policies, certificates, and network connections. 
+
+## ESP profiles
+
+An administrator can deploy ESP profiles to a licensed Intune user and configure specific settings within the ESP profile. A few of these settings are:
 - Force the installation of specified applications.
 - Allow users to collect troubleshooting logs.
 - Specify what a user can do if device setup fails.
