@@ -2,12 +2,12 @@
 # required metadata
 
 title: Windows 10 VPN settings in Microsoft Intune - Azure | Microsoft Docs
-description: Learn and read about all the available VPN settings in Microsoft Intune, what they are used for, and what they do. See the traffic rules, Conditional Access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
+description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, conditional access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/10/2020
+ms.date: 12/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 and Windows Holographic device settings to add VPN connections using Intune
 
-You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes common settings and features when creating virtual private networks (VPNs). These VPN settings and features are used in device configuration profiles in Intune that are pushed or deployed to devices.
+You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes the settings and features you can configure when creating virtual private networks (VPNs). These VPN settings are used in device configuration profiles, and then pushed or deployed to devices.
 
 As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a VPN vendor, enabling always on, using DNS, adding a proxy, and more.
 
@@ -43,6 +43,8 @@ These settings apply to devices running:
 Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
+
+These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## Base VPN
 
@@ -197,7 +199,7 @@ For more information about creating custom EAP XML, see [EAP configuration](/win
 
   DNS suffixes are resolved in the order listed, and the order can be changed. For example, `colorado.contoso.com` and `utah.contoso.com` are in the DNS suffix list, and both have a resource called `DEV-comp`. Since `colorado.contoso.com` is first in the list, it resolves as `DEV-comp.colorado.contoso.com`.
   
-  To change the order, click the dots to the left of the DNS suffix, and then drag the suffix to the top:
+  To change the order, select the dots to the left of the DNS suffix, and then drag the suffix to the top:
 
   ![Select the three dots, and click-and-drag to move the dns suffix](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 

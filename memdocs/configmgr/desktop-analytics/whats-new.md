@@ -31,6 +31,14 @@ To get notified when this page is updated, copy and paste the following URL into
 
 In the Desktop Analytics portal, the **Security updates** tile on the home page and the **Security updates** page are deprecated. They'll be retired in March 2021. To monitor your devices' Windows updates and Microsoft Defender status, use [Update Compliance](/windows/deployment/update/update-compliance-get-started).
 
+### Windows 10, version 20H2, now available in Desktop Analytics
+
+<!-- 8630465 -->
+
+In the Desktop Analytics portal, when you monitor security and feature updates, you'll now see Windows 10, version 20H2. When you create a deployment plan, you can select Windows 10, version 20H2, as the target version.
+
+For more information, see the FAQ [Why aren't new Windows releases available immediately in Desktop Analytics?](faq.md#why-arent-new-windows-releases-available-immediately-in-desktop-analytics)
+
 ## August 2020
 
 ### Apps deployed from Configuration Manager are important by default
