@@ -27,8 +27,8 @@ Here is a summary of the significant changes in MDT build 8456.
 
 ### Supported configuration updates
 
-- Windows ADK for Windows 10, version 1809
-- Windows 10, version 1809
+- Windows ADK for Windows 10, version 2004
+- Windows 10, version 20H2
 - Configuration Manager, version 1810
 
 ### Major changes
@@ -52,6 +52,9 @@ Unlike Configuration Manager with a predetermined release schedule, MDT only rel
 
 The following OS versions are supported for deployment with MDT:
 
+- Windows 10, version 2004
+- Windows 10, version 1909
+- Windows 10, version 1903
 - Windows 10, version 1809
 - Windows 10, version 1803
 - Windows 10, version 1709
