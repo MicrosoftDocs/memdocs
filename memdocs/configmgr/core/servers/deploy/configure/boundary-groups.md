@@ -195,7 +195,7 @@ The task sequence tries to acquire content in the following order:
     > [!IMPORTANT]
     > Due to the real-time nature of task sequence processing, it doesn't wait for the failover time on a neighbor boundary group. It uses the failover times for prioritizing the neighbor boundary groups. For example, if the task sequence fails to acquire content from a distribution point in its current boundary group, it immediately tries a distribution point in a neighbor boundary group with the shortest failover time. If that process fails, it then fails over to a distribution point in a neighbor boundary group with a larger failover time.
     >
-    > For content like applications, which are downloaded by the client and not the task sequence engine, the client behaves as normal. In other words, if you install applications from a task sequence, when the client tries to download the content it will wait for boundary group failover.<!-- 7594647 -->
+    > For content like applications and software updates, which are downloaded by the client and not the task sequence engine, the client behaves as normal. In other words, if you install applications or software updates from a task sequence, when the client tries to download the content it will wait for boundary group failover.<!-- 7594647 -->
 
 4. Distribution points in the *site default* boundary group  
 
