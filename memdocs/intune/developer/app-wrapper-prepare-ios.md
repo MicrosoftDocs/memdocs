@@ -297,10 +297,11 @@ If the app wrapping tool fails to finish successfully, one of the following erro
 Use the following steps to get logs for your wrapped applications during troubleshooting.
 
 1. Go to the iOS Settings app on your device and select your LOB app.
-2. Toggle the **Diagnostics Console** to **On**.
-3. Launch your LOB application.
-4. Click on the "Get Started" link.
-5. You can now share logs through email or copying them to a OneDrive location.
+2. Select **Microsoft Intune**.
+3. Toggle the **Display Diagnostics Console** setting to **On**.
+4. Launch your LOB application.
+5. Click on the "Get Started" link.
+6. You can now share logs through email or copying them to a OneDrive location.
 
 > [!NOTE]
 > The logging functionality is enabled for apps that have wrapped with the Intune App Wrapping Tool version 7.1.13 or above.
