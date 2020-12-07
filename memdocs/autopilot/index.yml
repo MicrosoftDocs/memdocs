@@ -27,12 +27,14 @@ landingContent:
       links:
       - text: Overview of Windows Autopilot
         url:  windows-autopilot.md
+      - text: Device registration overview
+        url:  registration-overview.md
+      - text: Enrollment Status Page
+        url: enrollment-status.md
       - text: Requirements
         url:  software-requirements.md
       - text: What's new
         url:  windows-autopilot-whats-new.md
-      - text: Windows Autopilot for HoloLens 2
-        url:  https://docs.microsoft.com/hololens/hololens2-autopilot
 
   # Card (optional)
   - title: Deployment scenarios
@@ -41,8 +43,6 @@ landingContent:
       links:
       - text: Windows Autopilot scenarios and capabilities
         url: windows-autopilot-scenarios.md
-      - text: Windows Autopilot update
-        url: autopilot-update.md
     - linkListType: learn
       links:
       - text: User-driven mode
@@ -77,16 +77,14 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Register devices
+      - text: Manually register devices
         url: add-devices.md
-      - text: Enroll devices in Intune
+      - text: Create device groups
         url: enrollment-autopilot.md
+      - text: Create deployment profiles
+        url: profiles.md
       - text: Deploy hybrid devices
         url: windows-autopilot-hybrid.md
-      - text: Configure device profiles
-        url: profiles.md
-      - text: Enrollment Status Page
-        url: enrollment-status.md
       - text: BitLocker encryption
         url: bitlocker.md
       - text: DFCI management
@@ -121,3 +119,5 @@ landingContent:
         url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
       - text: Windows Autopilot and Surface devices
         url: /surface/windows-autopilot-and-surface-devices
+      - text: Windows Autopilot for HoloLens 2
+        url:  https://docs.microsoft.com/hololens/hololens2-autopilot
