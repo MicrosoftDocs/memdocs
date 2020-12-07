@@ -2,7 +2,7 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 11/30/2020
+ms.date: 12/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -31,12 +31,11 @@ The following table lists the updates for each component on supported OS version
 
 | OS version | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
+| Windows 10 20H2 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4581839) |
 | Windows 10 2004 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4555932) |
 | Windows 10 1909 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4498140) |
 | Windows 10 1809 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
 | Windows 10 1803 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Note 2](#bkmk_note2)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Note 3](#bkmk_note3)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009469) |
 
