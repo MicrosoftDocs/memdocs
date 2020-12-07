@@ -83,13 +83,13 @@ This feature applies to:
 - Automated device enrollment (supervised)
 
 > [!NOTE]
-> Only add an app once to the dock, page, or folder on a page. Adding the same app in all places prevents the app from showing on devices, and may show reporting errors.
+> Only add an app once to the dock, page, or folder on a page or in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
 >
 > For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 
 ### Home screen
 
-Use this feature to add apps, and see how these apps look on pages, the dock, and within folders. It also shows you the app icons for the apps you add.
+Use this feature to add apps, and see how these apps look on pages, the dock, and within folders. It also shows you the app icons for the apps you add. VPP apps and web link apps (web app URLs) are populated from your client apps. 
 
 - **+**: Select the add button to add apps.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
@@ -101,11 +101,11 @@ Use this feature to add apps, and see how these apps look on pages, the dock, an
 
     You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page. You can add any combination of VPP apps, web links (web apps), store apps, and system apps.
 
 ### Dock
 
-Add up to six items (apps and folders combined) to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. So, only the first four items you add are shown.
+Add up to four items for iPhones and up to six items for iPads (apps and folders combined) to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. So, only the first four items you add are shown.
 
 - **+**: Select the add button to add apps or folders to the dock.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
@@ -118,7 +118,7 @@ Add up to six items (apps and folders combined) to the dock on the screen. Many 
 
     You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages on the dock.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages in a folder on the dock. You can add any combination of VPP apps, web links (web apps), store apps, and system apps.
 
 > [!NOTE]
 > When you use the Home Screen Layout settings to add pages, or add pages and apps to the dock, the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
