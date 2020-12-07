@@ -125,7 +125,7 @@ Applies to:
 
 ## Home screen layout
 
-These settings configure the app layout and folders on the home screens and dock on iOS and iPadOS devices. You can also see in real time how most apps and their icons look. Specifically:
+These settings configure the app layout and folders on the home screen and dock. You can also see in real time how most apps and their icons look. Specifically:
 
 - Use the **Home screen** settings to add apps and folders to the home screen on devices.
 - Use the **Dock** settings to add apps or folders to the dock on the screen. For example, show Safari and the Mail app on the device dock.
