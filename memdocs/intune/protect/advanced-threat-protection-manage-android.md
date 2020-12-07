@@ -44,7 +44,7 @@ Intune supports turning off all or part of the web protection feature. The metho
 
 - **Android Enterprise Personally-Owned Work Profile**: Use an app configuration profile and the *configuration designer* to disable web protection. This method and enrollment type support disabling all web protection capabilities but doesn't support disabling only the use of VPNs. For general information about app configuration policies, see [Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
-- **Android Enterprise Fully Managed**: Use an app configuration profile and the configuration designer to disable the entire web protection feature or to disable only the use of VPNs.   
+- **Android Enterprise Fully Managed**: Use an app configuration profile and the [configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.   
 
 To configure web protection on devices, use the following procedures to create and deploy the applicable configuration.
 
