@@ -51,7 +51,7 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 The following files are relevant to apps/extensions that contain no Swift code:
 
-* **IntuneMAM.framework**: The Intune App SDK framework. It is recommended that you link this framework to your app/extensions to enable Intune client application management. However some developers may prefer the performance benefits of the static library. See the following.
+* **IntuneMAM.framework**: The Intune App SDK framework. It is recommended that you link this framework to your app/extensions to enable Intune client application management. However, some developers may prefer the performance benefits of the static library. See the following:
 
 * **libIntuneMAM.a**: The Intune App SDK static library. Developers may choose to link the static library instead of the framework. Because static libraries are embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, integrating it into your app is a more complicated process. If your app includes any extensions, linking the static library to the app and extensions will result in a larger app bundle size, as the static library will be embedded into each app/extension binary. When using the framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
 
