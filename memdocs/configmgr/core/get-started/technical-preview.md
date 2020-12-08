@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 12/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -116,16 +116,20 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2011
+### Technical preview version 2012
 
-- [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
-- [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
-- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
-- [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
-- [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
-- [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
-- [Improvements to OS deployment](2020/technical-preview-2011.md#bkmk_osd) <!--8764365-->
-- [Update PowerShell help](2020/technical-preview-2011.md#bkmk_pwsh) <!--7774961-->
+- [3555940](2020/technical-preview-2012.md) <!--3555940-->
+- [4639895](2020/technical-preview-2012.md) <!--4639895-->
+- [6991505](2020/technical-preview-2012.md) <!--6991505-->
+- [7137169](2020/technical-preview-2012.md) <!--7137169-->
+- [7898885](2020/technical-preview-2012.md) <!--7898885-->
+- [7983035](2020/technical-preview-2012.md) <!--7983035-->
+- [8116426](2020/technical-preview-2012.md) <!--8116426-->
+- [8354812](2020/technical-preview-2012.md) <!--8354812-->
+- [8655543](2020/technical-preview-2012.md) <!--8655543-->
+- [8888218](2020/technical-preview-2012.md) <!--8888218-->
+- [8364465](2020/technical-preview-2012.md) <!--8364465-->
+- [8706717](2020/technical-preview-2012.md) <!--8706717-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -143,7 +147,16 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2010.2 -->
+### Technical preview version 2011
+
+- [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
+- [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
+- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
+- [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
+- [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
+- [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
+- [Improvements to OS deployment](2020/technical-preview-2011.md#bkmk_osd) <!--8764365-->
+- [Update PowerShell help](2020/technical-preview-2011.md#bkmk_pwsh) <!--7774961-->
 
 ## Features in previous technical previews
 
