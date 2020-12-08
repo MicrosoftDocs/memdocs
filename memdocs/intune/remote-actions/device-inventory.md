@@ -117,7 +117,7 @@ Depending on the carrier used by the devices, not all details might be collected
 > Phone number is not inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.
 
 > [!Note]  
-> For Windows 10 devices that are registered with [Windows Autopilot service](https://docs.microsoft.com/en-us/mem/autopilot/add-devices), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
+> For Windows 10 devices that are registered with [Windows Autopilot service](https://docs.microsoft.com/mem/autopilot/add-devices), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.
