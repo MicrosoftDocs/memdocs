@@ -59,8 +59,7 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
-  - **NetMotion Mobility**
-  - **Microsoft Tunnel**
+  - **Microsoft Tunnel** (Not supported on Android Enterprise dedicated devices.)
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
