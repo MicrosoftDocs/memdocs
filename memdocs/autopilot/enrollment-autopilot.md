@@ -123,7 +123,7 @@ You can delete Windows Autopilot devices that aren't enrolled into Intune:
 
 Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. These deletions can all be done from Intune:
 
-1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
 
 2. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
 
