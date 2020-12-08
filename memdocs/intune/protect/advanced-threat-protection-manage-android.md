@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manage Microsoft Defender ATP web protection for Android devices in Microsoft Intune - Azure | Microsoft Docs
-description: Configure Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) web protection for Android in Intune.
+title: Manage Microsoft Defender for Endpoint web protection for Android devices in Microsoft Intune - Azure | Microsoft Docs
+description: Configure Microsoft Defender for Endpoint web protection for Android in Intune.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/07/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,15 +28,15 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Defender for Endpoint on Android devices you manage with Intune
 
-When you integrate Microsoft Intune and Microsoft Defender for Endpoint (Defender for Endpoint), you can use device configuration profiles to modify some settings of Defender for Endpoint on Android devices.
+When you integrate Microsoft Intune and Microsoft for Endpoint, you can use device configuration profiles to modify some settings of Microsoft Defender for Endpoint on Android devices.
 
-Before proceeding, you must successfully [Configure Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Defender for Endpoint.
+Before preceding, you must successfully [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Microsoft Defender for Endpoint.
 
 ## Configure web protection on devices that run Android
 
-By default, Defender for Endpoint on Android includes and enables the web protection feature. [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and protect users from phishing attacks.
+By default, Microsoft Defender for Endpoint for Android includes and enables the web protection feature. [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and protect users from phishing attacks.
 
-While enabled by default, there are valid reasons to disable this protection on some Android devices. For example, you might choose to use only the Defender for Endpoint app scan feature, or to prevent web protection from using your VPN while it scans for harmful URLs.
+While enabled by default, there are valid reasons to disable this protection on some Android devices. For example, you might choose to use only the Microsoft Defender for Endpoint app scan feature, or to prevent web protection from using your VPN while it scans for harmful URLs.
 
 Intune supports turning off all or part of the web protection feature. The method you use and the capabilities you can disable depend on how the Android device is enrolled with Intune:
 
@@ -80,7 +80,7 @@ To configure web protection on devices, use the following procedures to create a
        > Enter **1** to enable web protection, which is the default for web protection.
 
    - **Disable only the use of VPN by web protection**:
-     - **Name**: Enter a unique name for this OMA-URI setting so you can easily find it. For example, *Disable Defender for Endpoint web protection VPN*
+     - **Name**: Enter a unique name for this OMA-URI setting so you can easily find it. For example, *Disable Microsoft Defender for Endpoint web protection VPN*
      - **Description**: (Optional) Enter a description that gives an overview of the setting, and any other important details.
      - **OMA-URI**: Enter **./Vendor/MSFT/DefenderATP/Vpn**
      - **Data type**: Use the drop-down, and select **Integer**
@@ -105,13 +105,13 @@ To configure web protection on devices, use the following procedures to create a
 
 3. On **Basics**, enter the following details:
 
-   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, *Android app configuration for Defender for Endpoint web protection*.
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, *Android app configuration for Microsoft Defender for Endpoint web protection*.
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
    - **Platform**: Select **Android Enterprise**
    - **Profile Type**: Select **Personally-Owned Work Profile Only**
    - **Targeted app**: Click on **Select app**.
 
-4. On **Associated app**, find and select **Microsoft Defender ATP**, and then select **OK** > **Next**.
+4. On **Associated app**, find and select **Defender for Endpoint**, and then select **OK** > **Next**.
 
 5. On **Settings**, use the drop-down for **Configuration settings format**, select **Use configuration designer**, and then click **Add**. The JSON editor opens.
 
@@ -154,8 +154,9 @@ Select **Next** to continue.
 ## Next steps
 
 - [Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
-- [Use security tasks with ATPs Vulnerability Management to remediate issues on devices](../protect/atp-manage-vulnerabilities.md)
+- [Use security tasks with Defender for Endpoints Vulnerability Management to remediate issues on devices](../protect/atp-manage-vulnerabilities.md)
 
-Learn more from the Defender for Endpoint documentation:
-- [Defender for Endpoint Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Defender for Endpoint risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+Learn more from the Microsoft Defender for Endpoint documentation:
+
+- [Microsoft Defender for Endpoint Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender for Endpoint risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/01/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -125,10 +125,10 @@ Applies to:
 
 ## Home screen layout
 
-These settings configure the app layout and folders on the dock and home screens on iOS and iPadOS devices. You can:
+These settings configure the app layout and folders on the home screen and dock. You can also see in real time how most apps and their icons look. Specifically:
 
-- Use the **Dock** settings to add apps or folders to the screen. For example, show Safari and the Mail app on the device dock.
-- Add **Pages** you want shown on the home screen, and the apps you want shown on each page. For example, add a **Contoso** page, and add the Settings app on this page.
+- Use the **Home screen** settings to add apps and folders to the home screen on devices.
+- Use the **Dock** settings to add apps or folders to the dock on the screen. For example, show Safari and the Mail app on the device dock.
 
 For a list of the settings you can configure in Intune, see [Home screen layout on iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 

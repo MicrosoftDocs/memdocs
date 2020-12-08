@@ -158,7 +158,7 @@ When users select the push notification on their device, the Company Portal or I
 The documentation for Intune [Endpoint Security](../protect/endpoint-security.md) is now available. In the endpoint security node of the Microsoft Endpoint Manager admin center you can:
 
 - Create and deploy focused security policies to your managed devices
-- Configure integration with Microsoft Defender Advanced Threat Protection, and manage security tasks help remediate risks for at-risk devices as identified by your ATP team
+- Configure integration with Microsoft Defender for Endpoint, and manage security tasks help remediate risks for at-risk devices as identified by your Defender for Endpoint team
 - Configure security baselines
 - Manage device compliance and conditional access policies
 - View compliance status for all your devices from both Intune and Configuration Manager when Configuration Manager is configured for client attach.
@@ -192,9 +192,9 @@ Support for Android Enterprise Fully Managed devices is coming soon.
 
 For more information about this support, see [Sensitivity labeling and protection in Outlook for iOS and Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) in the Exchange documentation.
 
-#### Use Endpoint detection and response policy to onboard devices to Defender ATP<!-- 7130165  -->
+#### Use Endpoint detection and response policy to onboard devices to Defender for Endpoint<!-- 7130165  -->
 
-Use endpoint security [policy for Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) to onboard and configure devices for your deployment of Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supports policy for Windows devices managed by Intune (MDM), and a separate policy for Windows devices managed by Configuration Manager. 
+Use endpoint security [policy for Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) to onboard and configure devices for your deployment of Microsoft Defender for Endpoint. EDR supports policy for Windows devices managed by Intune (MDM), and a separate policy for Windows devices managed by Configuration Manager. 
 
 To use the policy for Configuration Manager devices, you must [set up Configuration Manager to support the EDR policy](../protect/tenant-attach-intune.md). Set up includes:
 
@@ -589,7 +589,7 @@ The following are the new policy types that are all in preview, and their availa
 
 - **Antivirus (Preview)**:
   - macOS:
-    - **Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS to manage [Microsoft Defender ATP for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
+    - **Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS to manage [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
 
   - Windows 10 and later:
     - **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for cloud protection, Antivirus exclusions, remediation, scan options, and more.
@@ -634,8 +634,8 @@ The following are the new policy types that are all in preview, and their availa
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### Microsoft Defender Advanced Threat Protection (ATP) app for macOS<!-- 5424618 -->
-Intune provides an easy way to deploy the Microsoft Defender Advanced Threat Protection (ATP) app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](../apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender Advanced Threat Protection for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
+#### Microsoft Defender for Endpoint app for macOS<!-- 5424618 -->
+Intune provides an easy way to deploy the Microsoft Defender for Endpoint app for macOS to managed Mac devices. For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](../apps/apps-advanced-threat-protection-macos.md) and [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
 
 #### macOS Company Portal user experience improvements<!-- 5568987 -->
 We have made improvements to the macOS device enrollment experience and the Company Portal app for Mac. You will see the following improvements:
@@ -1319,8 +1319,8 @@ For more information about these improvements, see the [Enterprise Mobility + Se
 **Endpoint Security** node is now generally available in Microsoft 365 Device Management specialist workspace at https://endpoint.microsoft.com, which groups together the capabilities to secure endpoints such as:
 
 - Security Baselines:  Pre'configured group of settings that help you apply known group of settings and default values that are recommended by Microsoft.
-- Security Tasks: Take advantage of Microsoft Defender ATPs Threat and Vulnerability Management (TVM) and use Intune to remediate endpoint weaknesses.
-- Microsoft Defender ATP: Integrated Microsoft Defender Advanced Threat Protection (ATP) to help prevent security breaches.""
+- Security Tasks: Take advantage of Microsoft Defender for Endpoints Threat and Vulnerability Management (TVM) and use Intune to remediate endpoint weaknesses.
+- Microsoft Defender for Endpoint: Integrated Microsoft Defender for Endpoint to help prevent security breaches.""
 
 These settings will continue to be accessible from other applicable nodes such as devices, and current configured state will be the same no matter where you access and enable these capabilities.
 
@@ -2066,8 +2066,8 @@ Admins will see these four apps automatically added to their Intune apps list at
 #### Updated PFX Certificate Connector for Microsoft Intune<!-- 1533038 -->
 We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) that addresses an issue where existing PFX certificates continue to be reprocessed, which causes the connector to stop processing new requests.
 
-#### Intune security tasks for Defender ATP (In public preview)<!-- 3208597 -->
-In public preview, you can use Intune to manage [security tasks for Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). This integration with ATP and adds a risk-based approach to discover, prioritize, and remediate endpoint vulnerabilities and misconfigurations, while reducing the time between discovery to mitigation.
+#### Intune security tasks for Defender for Endpoint (In public preview)<!-- 3208597 -->
+In public preview, you can use Intune to manage [security tasks for Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md). This integration with Defender for Endpoint and adds a risk-based approach to discover, prioritize, and remediate endpoint vulnerabilities and misconfigurations, while reducing the time between discovery to mitigation.
 
 #### Check for a TPM chipset in a Windows 10 device compliance policy<!-- 3617671   -->
 Many Windows 10 and later devices have Trusted Platform Module (TPM) chipsets. This update includes a new compliance setting that checks the TPM chip version on the device.
@@ -2100,8 +2100,8 @@ To see the available settings, go to [App Store, Doc Viewing, Gaming iOS setting
 
 Applies to: iOS
 
-#### Microsoft Defender Advanced Threat Protection  baseline  (Preview)<!--  3754134 -->
-We've added a security baseline Preview for [Microsoft Defender Advanced Threat Protection](../protect/security-baseline-settings-defender-atp.md) settings. This baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection.md#prerequisites).
+#### Microsoft Defender for Endpoint  baseline  (Preview)<!--  3754134 -->
+We've added a security baseline Preview for [Microsoft Defender for Endpoint](../protect/security-baseline-settings-defender-atp.md) settings. This baseline is available when your environment meets the prerequisites for using [Microsoft Defender Afor Endpoint](../protect/advanced-threat-protection.md#prerequisites).
 
 #### Outlook signature and biometric settings for  iOS and Android devices<!-- 4050557 -->
 You can now specify if the default signature is enabled in Outlook on iOS and Android devices. Additionally, you can choose to allow users to change the biometric setting in Outlook on iOS.
@@ -2408,7 +2408,7 @@ You can now search for an exact device name. Go to **Intune** > **Devices** > **
 ### Monitor and troubleshoot
 
 #### Support for additional connectors on the Tenant Status page<!-- 3617202  -->
-The [Tenant Status page](tenant-status.md) now displays status information for additional connectors, including *Windows Defender Advanced Threat Protection* (ATP) and other Mobile Threat Defense connectors.
+The [Tenant Status page](tenant-status.md) now displays status information for additional connectors, including *Windows Defender for Endpoint* and other Mobile Threat Defense connectors.
 
 #### Support for the Power BI Compliance app from the Data Warehouse blade in Microsoft Intune<!-- 4260871 -->
 Previously, the **Download Power BI file** link in the **Intune Data Warehouse** blade downloaded an Intune Data Warehouse report (.pbix file). This report has been replaced with the Power BI Compliance app. The Power BI Compliance app will not require special loading or setup. It will open directly in the Power BI online portal and display data specifically for your Intune tenant based on your credentials. In Intune, select the **Set up Intune Data Warehouse** link on the right side of the Intune blade. Then, click **Get Power BI App**. For more information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
@@ -2747,7 +2747,7 @@ Applies to: Windows 10 and later
 
 #### Use Microsoft-recommended settings with Security Baselines (Public Preview)<!-- 2055484   -->
 
-Intune integrates with other services that focus on security, including Windows Defender ATP and Office 365 ATP. Customers are asking for a common strategy and a cohesive set of end-to-end security workflows across the Microsoft 365 services. Our goal is to align strategies to build solutions that bridge security operations and common administrator tasks. 
+Intune integrates with other services that focus on security, including Windows Defender for Endpoint and Office 365 Defender for Endpoint. Customers are asking for a common strategy and a cohesive set of end-to-end security workflows across the Microsoft 365 services. Our goal is to align strategies to build solutions that bridge security operations and common administrator tasks. 
 In Intune, we aim to accomplish this goal by publishing a set of Microsoft recommended "Security baselines" (**Intune** > **Security baselines**).  An administrator can create security policies directly from these baselines, and then deploy them to their users. You can also customize the best practice recommendations to meet the needs of your organization. Intune makes sure that devices stay in compliance with these baselines, and notifies administrators of users or devices that aren't in compliance.
 
 This feature is in public preview so any profiles created now will not move over to Security Baselines templates that are generally available (GA). You shouldn't plan to use these preview templates in your production environment.
@@ -3297,8 +3297,8 @@ With this feature update, you can create a device configuration profile that swi
 [Introducing Windows 10 in S mode](https://www.microsoft.com/windows/s-mode) provides more information on S mode.
 Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
 
-#### Windows Defender ATP configuration package automatically added to configuration profile<!-- 2144658 -->
-When using [Advanced Threat Protection and onboarding](../protect/advanced-threat-protection-configure.md#onboard-devices) devices in Intune, you previously had to download a configuration package, and add it to your configuration profile. With this update, Intune automatically gets the package from Windows Defender Security Center, and adds it to your profile.
+#### Windows Defender for Endpoint configuration package automatically added to configuration profile<!-- 2144658 -->
+When using [Defender for Endpoint and onboarding](../protect/advanced-threat-protection-configure.md#onboard-devices) devices in Intune, you previously had to download a configuration package, and add it to your configuration profile. With this update, Intune automatically gets the package from Windows Defender Security Center, and adds it to your profile.
 Applies to Windows 10 and later.
 
 #### Require users to connect during device setup<!--2311457-->
@@ -3799,13 +3799,13 @@ On the Enrollment Overview page, you can view the trend of enrollment failures a
 
 ### Device management
 
-#### Advanced Threat Protection (ATP) and Intune are fully integrated<!-- 1629303 -->
+#### Defender for Endpoint and Intune are fully integrated<!-- 1629303 -->
 
-[Advanced Threat Protection (ATP)](/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection) shows the risk level of Windows 10 devices. In Windows Defender Security Center (ATP portal), you can create a connection to Microsoft Intune. Once created, an Intune compliance policy is used to determine an acceptable threat level. If the threat level is exceeded, an Azure Active Directory (AD) Conditional Access policy can then block access to different apps within your organization.
+[Defender for Endpoint](/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection) shows the risk level of Windows 10 devices. In Windows Defender Security Center, you can create a connection to Microsoft Intune. Once created, an Intune compliance policy is used to determine an acceptable threat level. If the threat level is exceeded, an Azure Active Directory (AD) Conditional Access policy can then block access to different apps within your organization.
 
-This feature allows ATP to scan files, detect threats, and report any risk on your Windows 10 devices.
+This feature allows Defender for Endpoint to scan files, detect threats, and report any risk on your Windows 10 devices.
 
-See [Enable ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+See [Enable DefendDefender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
 #### Support for user-less devices<!-- 1637553 -->
 Intune supports the ability to evaluate compliance on a user-less device, such as the Microsoft Surface Hub. Compliance policy can target specific devices. So compliance (and noncompliance) can be determined for devices that don't have an associated user.
@@ -4537,8 +4537,8 @@ The following data is not retained:
 #### Window 10 update ring assignments are displayed<!-- 1621837 -->
 When you are **Troubleshooting,** for the user you are viewing, you are able to see any Windows 10 update rings assignments.  
 
-#### Windows Defender Advanced Threat Protection reporting frequency settings <!-- 1455974  -->
-Windows Defender Advanced Threat Protection (WDATP) service allows admins to manage reporting frequency for managed devices. With the new **Expedite telemetry reporting frequency** option, WDATP collects data and assesses risks more frequently. The default for reporting optimizes speed and performance. Increasing the frequency of reporting can be valuable for high-risk devices. This setting can be found in the **Windows Defender ATP** profile in **Device configurations**.
+#### Windows Defender for Endpoint reporting frequency settings <!-- 1455974  -->
+Defender for Endpoint service allows admins to manage reporting frequency for managed devices. With the new **Expedite telemetry reporting frequency** option, Defender for Endpoint collects data and assesses risks more frequently. The default for reporting optimizes speed and performance. Increasing the frequency of reporting can be valuable for high-risk devices. This setting can be found in the **Windows Defender for Endpoint** profile in **Device configurations**.
 
 #### Audit updates<!-- 1412961 -->  
 Intune auditing provides a record of change operations related to Intune.  All create, update, delete, and remote task operations are captured and retained for one year.  The Azure portal provides a view of the last 30 days of audit data in each workload, and is filterable.  A corresponding Graph API allows retrieval of the auditing data stored for the last year.
