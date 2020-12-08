@@ -209,7 +209,7 @@ The Intune App SDK uses the [Microsoft Authentication Library](https://github.co
 
 Typically, MSAL require apps to register with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your app already uses MSAL to authenticate users, the app must use its existing registration values and override the Intune App SDK default values. This ensures that users are not prompted for authentication twice (once by the Intune App SDK and once by the app).
 
-If your app does not already use MSAL, and you do not need to access any AAD resource, you do not need to set up a client app registration in AAD if you choose to integrate MSAL. If you decide to integrate MSAL, you will need to configure an app registration and override the default Intune client ID and redirect URI.  
+If your app does not already use MSAL, you will need to configure an app registration in AAD and specify the client ID and redirect URI that the Intune SDK should use.  
 
 It is recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
@@ -223,9 +223,14 @@ Follow [these instructions](https://github.com/AzureAD/microsoft-authentication-
 
 3. In the case you are explicitly setting the MSAL shared cache keychain group, make sure it is set to `<appidprefix>.com.microsoft.adalcache`. MSAL will set this for you unless you override it. If you want to specify a custom keychain group to replace `com.microsoft.adalcache`, specify that in the Info.plist file under IntuneMAMSettings, by using the key `ADALCacheKeychainGroupOverride`.
 
+### If your app does not use MSAL
+
+If your app does not already use MSAL for its own authentication mechanism, then you will need create an app registration in AAD with a custom redirect URI in the format specified [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). 
+
+
 ### Configure MSAL settings for the Intune App SDK
 
-If your app already uses MSAL for authentication and has its own Azure Active Directory settings, you can force the Intune App SDK to use the same settings during authentication against AAD. This ensures that the app will not double-prompt the user for authentication. See [Configure settings for the Intune App SDK](#configure-settings-for-the-intune-app-sdk) for information on populating the following settings:  
+Once an app registration has been configured for your application in AAD, you can configure the Intune App SDK to use the settings from your app registration during authentication against AAD. See [Configure settings for the Intune App SDK](#configure-settings-for-the-intune-app-sdk) for information on populating the following settings:  
 
 * ADALClientId
 * ADALAuthority
@@ -233,33 +238,22 @@ If your app already uses MSAL for authentication and has its own Azure Active Di
 * ADALRedirectScheme
 * ADALCacheKeychainGroupOverride
 
-If your app already uses MSAL, the following configurations are required:
+The following configurations are required:
 
 1. In the project's Info.plist file, under the **IntuneMAMSettings** dictionary with the key name `ADALClientId`, specify the client ID to be used for MSAL calls.
 
-2. Also under the **IntuneMAMSettings** dictionary with the key name `ADALAuthority`, specify the Azure AD authority.
+2. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
 
-3. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
+Alternatively, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
 
-Additionally, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
-
-4. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
+3. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
 > The Info.plist approach is recommended for all settings which are static and do not need to be determined at runtime. Values assigned to the `IntuneMAMSettings` class properties at runtime take precedence over any corresponding values specified in the Info.plist, and will persist even after the app is restarted. The SDK will continue to use them for policy check-ins until the user is unenrolled or the values are cleared or changed.
 
-### If your app does not use MSAL
+### Special considerations when using MSAL for app-initiated authentication
 
-As previously mentioned, the Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios. If **your app does not use MSAL for its own authentication mechanism**, then you may need to configure custom AAD settings:
-
-* Developers need to create an app registration in AAD with a custom redirect URI in the format specified [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). 
-* Developers should set the `ADALClientId` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class. 
-* Developers should also ensure they follow step 4 in the previous section, to give their app registration access to the Intune app protection service.
-
-### Special considerations when using MSAL 
-
-1. **Check your Webview** - It is recommended that applications do not use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request). If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. WARNING: This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application should not show corporate data in any of those webview types.
-2. **Linking both ADAL and MSAL** - Developers must opt in if they want Intune to prefer MSAL over ADAL in this scenario. By default, Intune will prefer supported ADAL versions to supported MSAL versions, if both are linked at runtime. Intune will only prefer a supported MSAL version when, at the time of Intune's first authentication operation, `IntuneMAMUseMSALOnNextLaunch` is `true` in `NSUserDefaults`. If `IntuneMAMUseMSALOnNextLaunch` is `false` or not set, Intune will fall back to the default behavior. As the name suggests, a change to `IntuneMAMUseMSALOnNextLaunch` will take effect on the next launch.
+It is recommended that applications do not use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request). If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. WARNING: This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application should not show corporate data in any of those webview types.
 
 
 ## Configure settings for the Intune App SDK
@@ -285,7 +279,7 @@ AutoEnrollOnLaunch| Boolean| Specifies whether the app should attempt to automat
 MAMPolicyRequired| Boolean| Specifies whether the app will be blocked from starting if the app does not have an Intune app protection policy. Defaults to NO. <br><br> Notes: Apps cannot be submitted to the App Store with MAMPolicyRequired set to YES. When setting MAMPolicyRequired to YES, AutoEnrollOnLaunch should also be set to YES. | Optional. Defaults to no. |
 MAMPolicyWarnAbsent | Boolean| Specifies whether the app will warn the user during launch if the app does not have an Intune app protection policy. <br><br> Note: Users will still be allowed to use the app without policy after dismissing the warning. | Optional. Defaults to no. |
 MultiIdentity | Boolean| Specifies whether the app is multi-identity aware. | Optional. Defaults to no. |
-SafariViewControllerBlockedOverride | Boolean| Disables Intune's SafariViewController hooks to enable MSAL auth via SFSafariViewController, SFAuthSession or ASWebAuthSession. | Optional. Defaults to no. WARNING: can result in data leakage if used improperly. Enable only if absolutely necessary. See [special considerations when using MSAL](#special-considerations-when-using-msal) for details.  |
+SafariViewControllerBlockedOverride | Boolean| Disables Intune's SafariViewController hooks to enable MSAL auth via SFSafariViewController, SFAuthSession or ASWebAuthSession. | Optional. Defaults to no. WARNING: can result in data leakage if used improperly. Enable only if absolutely necessary. For more information, see [Special considerations when using MSAL for app-initiated authentication](#special-considerations-when-using-msal-for-app-initiated-authentication).  |
 SplashIconFile <br>SplashIconFile~ipad | String  | Specifies the Intune splash (startup) icon file. | Optional. |
 SplashDuration | Number | Minimum amount of time, in seconds, that the Intune startup screen will be shown at application launch. Defaults to 1.5. | Optional. |
 BackgroundColor| String| Specifies the background color for the Intune SDK's UI components. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.   | Optional. Defaults to the system background color, which may vary across versions of iOS and according to the iOS Dark Mode setting. |
@@ -364,7 +358,7 @@ Example:
 
 ### Let Intune handle authentication and enrollment at launch
 
-If you want the Intune SDK to handle all authentication using ADAL/MSAL and enrollment before your app finishes launching, and your app always requires APP policy, you don't have to use `loginAndEnrollAccount` API. You can simply set the two settings below to YES in the IntuneMAMSettings dictionary in the app's Info.plist.
+If you want the Intune SDK to handle all authentication with ADAL/MSAL and enrollment before your app finishes launching, and your app always requires APP policy, you don't have to use `loginAndEnrollAccount` API. You can simply set the two settings below to YES in the IntuneMAMSettings dictionary in the app's Info.plist.
 
 Setting  | Type  | Definition |
 --       |  --   |   --       |  
