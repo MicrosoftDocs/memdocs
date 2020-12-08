@@ -83,7 +83,7 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
   - Change requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  If you are a Microsoft Managed Desktop customer, selecting that tile for Microsfot Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
+  If you are a Microsoft Managed Desktop customer, selecting that tile for Microsoft Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
