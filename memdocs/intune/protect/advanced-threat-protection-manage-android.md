@@ -120,8 +120,8 @@ To configure web protection on devices, use the following procedures to create a
 7. For **Configuration values** of both the configuration keys (Anti-Phishing, VPN), enter **0** to disable web protection. 
 
    > [!NOTE]
-   > Configuration key **Web Protection** is deprecated. If you have configured with this key in the past, follow above steps to add both keys to enable or disable
-     web protection. 
+   > Configuration key **Web Protection** is deprecated. If you have configured with this key in the past, please follow above steps to re-configure this setting
+   by adding add both keys **Anti-Phishing, VPN** to enable or disable web protection. 
 
    > [!NOTE]
    > Enter **1** for both the configuration values (Anti-Phishing, VPN) to enable web protection. This is the default configuration. 
