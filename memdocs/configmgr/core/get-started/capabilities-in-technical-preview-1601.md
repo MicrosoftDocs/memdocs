@@ -135,8 +135,9 @@ A client is online if it is currently connected to a Configuration Manager manag
 ### Prerequisites  
  Client online status has no prerequisites. You can start using it as soon as Configuration Manager technical preview 1601 is installed.  
 
-### Limitations  
- Client online status is only available for Windows computers with the  Configuration Manager client installed. Client online status is not supported for Mac computers, Linux or UNIX computer, or devices managed with On\-premises Mobile Device Management.  
+### Limitations
+
+Client online status is only available for Windows computers with the Configuration Manager client installed. Client online status isn't supported for macOS computers, or devices managed with on-premises MDM.  
 
 ### To view client online status  
 

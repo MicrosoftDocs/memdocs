@@ -43,9 +43,7 @@ Before you [extend the Active Directory schema](/sccm/core/plan-design/network/e
 
 -   Mobile devices that are managed by the Exchange Server connector  
 
--   The client for Mac computers  
-
--   The client for Linux and UNIX servers  
+-   The client for macOS computers  
 
 -   Mobile devices that are enrolled by Configuration Manager  
 
@@ -53,9 +51,9 @@ Before you [extend the Active Directory schema](/sccm/core/plan-design/network/e
 
 -   Mobile device legacy clients  
 
--   Windows clients that are configured for Internet-only client management  
+-   Windows clients that are configured for internet-only client management  
 
--   Windows clients that are detected by Configuration Manager to be on the Internet  
+-   Windows clients that are detected by Configuration Manager to be on the internet  
 
 ## Capabilities that benefit from extending the schema  
 **Client computer installation and site assignment** - When a Windows computer installs a new client, the client searches Active Directory Domain Services for installation properties.  

@@ -340,7 +340,7 @@ This capability allows customers to manage both Intune MDM and Configuration Man
 
 - In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md).
+    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data over the network](../../../protect/deploy-use/bitlocker/encrypt-recovery-data-transit.md).
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -375,7 +375,7 @@ When you Send a smile or Send a frown, a status message is created when the feed
 
 A status message with an ID of 53900 is a successful submission and 53901 is a failed submission.
 
-For more information, see [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Product feedback](../../understand/product-feedback.md).
 
 ### Search all subfolders for configuration items and configuration baselines
 

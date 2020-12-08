@@ -2,7 +2,7 @@
 title: Extended interoperability client
 titleSuffix: Configuration Manager
 description: Learn about using the extended interoperability client for long-term support of a static Configuration Manager client with a current branch site.
-ms.date: 08/27/2019
+ms.date: 12/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,13 +10,11 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site
 
-*Applies to: Configuration Manager (current branch)*  
+*Applies to: Configuration Manager (current branch)*
 
 Business requirements might not allow you to regularly update the Configuration Manager client on some devices. For example, you need to follow change management policies, or the device is mission-critical. Accommodate these needs by installing a new client for long-term use, called the extended interoperability client (EIC). Only use the EIC for specific devices that can't be frequently updated, like kiosk or point-of-sale devices. Continue to use [automatic client upgrade](../clients/manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate) for most of your clients.
 
@@ -30,9 +28,8 @@ The following table lists the versions of the Configuration Manager client that 
 
 | Version | Availability date | Support end date |
 |---------|---------|---------|
-| 1902<br/>5.00.8790 | March 27, 2019 | No earlier than March 27, 2021 |
-| 1802<br/>5.00.8634 | May 1, 2018 | No earlier than May 1, 2020 |
-| 1606<br/>5.00.8412 | November 18, 2016 | May 1, 2019 |
+| 1902<br/>5.00.8790 | March 27, 2019 | No earlier than March 27, 2022 |
+| 1802<br/>5.00.8634 | May 1, 2018 | April 30, 2021 |
 
 > [!TIP]  
 > The EIC is supported for at least two years from the date of release. For more information on release dates, see [Support for Configuration Manager current branch versions](../servers/manage/current-branch-versions-supported.md).  

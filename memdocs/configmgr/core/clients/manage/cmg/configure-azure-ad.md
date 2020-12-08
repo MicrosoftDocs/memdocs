@@ -2,7 +2,7 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 09/28/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -109,14 +109,57 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 
 When the wizard closes, you'll see the new connection in the **Azure Services** node. You can also view the tenant and app registrations in the **Azure Active Directory Tenants** node of the Configuration Manager console.
 
+### Disable Azure AD authentication for non-device or user tenants
+<!--8537319-->
+
+If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices.
+
+1. Open the properties of the **Cloud Management** service.
+
+1. Switch to the **Applications** tab.
+
+1. Select the option to **Disable Azure Active Directory authentication for this tenant**.
+
+For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).
+
 ## Configure Azure resource providers
+
+The CMG service requires that you register specific resource providers in your Azure subscription. The providers vary depending upon how you deploy the CMG:
+
+- [Virtual machine scale set](#virtual-machine-scale-set)
+- [Cloud service (classic)](#cloud-service-classic)
+
+You need an Azure **global administrator** to register these providers.
+
+For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+
+### Virtual machine scale set
+
+Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, register the following resource providers:
+
+- Microsoft.KeyVault
+- Microsoft.Storage
+- Microsoft.Network
+- Microsoft.Compute
+
+### Cloud service (classic)
 
 The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
 
-- **Microsoft.ClassicCompute**
-- **Microsoft.Storage**
+- Microsoft.ClassicCompute
+- Microsoft.Storage
 
-For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+## Automate with PowerShell
+
+Starting in version 2010, you can optionally automate aspects of these configurations using PowerShell.<!--6978300-->
+
+1. Use the [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication) cmdlet to define the Azure AD web/server app in Configuration Manager.
+
+1. Use the [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication) cmdlet to define the Azure AD native/client app in Configuration Manager.
+
+1. Use the [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication) cmdlet to get the imported app objects.
+
+1. Then pass the app objects to the [New-CMCloudManagementAzureService](/powershell/module/configurationmanager/New-CMCloudManagementAzureService) cmdlet to create the Azure service for **Cloud Management** in Configuration Manager.
 
 ## Next steps
 
