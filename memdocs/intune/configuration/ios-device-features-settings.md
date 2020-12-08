@@ -83,13 +83,13 @@ This feature applies to:
 - Automated device enrollment (supervised)
 
 > [!NOTE]
-> Only add an app once to the dock, page, or folder on a page or in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
+> Only add an app once to the dock, page, folder on a page, or folder in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
 >
 > For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 
 ### Home screen
 
-Use this feature to add apps, and see how these apps look on pages, the dock, and within folders. It also shows you the app icons for the apps you add. VPP apps and web link apps (web app URLs) are populated from your client apps. 
+Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md). 
 
 - **+**: Select the add button to add apps.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
@@ -105,7 +105,7 @@ Use this feature to add apps, and see how these apps look on pages, the dock, an
 
 ### Dock
 
-Add up to four items for iPhones and up to six items for iPads (apps and folders combined) to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. So, only the first four items you add are shown.
+Add up to four (4) items for iPhones, and up to six (6) items for iPads (apps and folders combined) to the dock on the screen. Many devices support fewer items. For example, iPhone devices support up to four items. So, only the first four items you add are shown.
 
 - **+**: Select the add button to add apps or folders to the dock.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
