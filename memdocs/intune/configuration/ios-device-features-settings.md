@@ -89,7 +89,7 @@ This feature applies to:
 
 ### Home screen
 
-Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md). 
+Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of business apps, and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md). 
 
 - **+**: Select the add button to add apps.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
@@ -101,7 +101,7 @@ Use this feature to add apps. And, see how these apps look on pages, the dock, a
 
     You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page. You can add any combination of VPP apps, web links (web apps), store apps, and system apps.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. You can only have one page in a folder. As a work around, add nine (9) or more apps to the folder. Apps are automatically moved to the next page. You can add any combination of VPP apps, web links (web apps), store apps, line-of-business apps, and system apps.
 
 ### Dock
 
@@ -118,7 +118,7 @@ Add up to four (4) items for iPhones, and up to six (6) items for iPads (apps an
 
     You can also search for apps by the app name, such as `authenticator` or `drive`. Or, search by the app publisher, such as `Microsoft` or `Apple`.
 
-    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages in a folder on the dock. You can add any combination of VPP apps, web links (web apps), store apps, and system apps.
+    Apps are arranged from left to right, and in the same order as shown. Apps can be moved to other positions. If you add more apps than can fit on a page, then the apps are automatically moved to another page. You can add up to 20 pages in a folder on the dock. You can add any combination of VPP apps, web links (web apps), store apps, line-of-business apps, and system apps.
 
 > [!NOTE]
 > When you use the Home Screen Layout settings to add pages, or add pages and apps to the dock, the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
