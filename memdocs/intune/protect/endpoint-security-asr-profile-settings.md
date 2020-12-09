@@ -125,7 +125,7 @@ Supported platforms and profiles:
 
   Configure certificate thumbprints to automatically transfer the matching root certificate to the  Microsoft Defender Application Guard container.
 
-  To add thumbprints one at a time, select **Add**. You can use **Import** to specify a .CSV file that contains multiple thumbprint entries which are added to the profile at the same time. When you use a .CSV file, each thumbprint must be separated by a comma. For example: `b4e72779a8a362c860c36a6461f31e3aa7e58c14,1b1d49f06d2a697a544a1059bd59a7b058cda924`
+  To add thumbprints one at a time, select **Add**. You can use **Import** to specify a .CSV file that contains multiple thumbprint entries that are all added to the profile at the same time. When you use a .CSV file, each thumbprint must be separated by a comma. For example: `b4e72779a8a362c860c36a6461f31e3aa7e58c14,1b1d49f06d2a697a544a1059bd59a7b058cda924`
 
 - **Windows network isolation policy**  
   
