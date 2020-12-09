@@ -127,7 +127,7 @@ Supported platforms and profiles:
 
   To add thumbprints one at a time, select **Add**. You can use **Import** to specify a .CSV file that contains multiple thumbprint entries that are all added to the profile at the same time. When you use a .CSV file, each thumbprint must be separated by a comma. For example: `b4e72779a8a362c860c36a6461f31e3aa7e58c14,1b1d49f06d2a697a544a1059bd59a7b058cda924`
 
-  All entries that are listed in the profile are active. You do not need to select a checkbox for a thumbprint entry to make it active. Instead, use the checkboxes to help you manage the entries that have been added to the profile. For example, you can select the checkboxe for one or more certificate thumbprint entries and then **Delete** those entries from the profile with a single action.
+  All entries that are listed in the profile are active. You do not need to select a checkbox for a thumbprint entry to make it active. Instead, use the checkboxes to help you manage the entries that have been added to the profile. For example, you can select the checkbox of one or more certificate thumbprint entries and then **Delete** those entries from the profile with a single action.
 
 - **Windows network isolation policy**  
   
