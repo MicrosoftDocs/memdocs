@@ -93,6 +93,13 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Allow users to download files from the virtualized browser onto the host operating system​.
 
+  - **Application Guard allow camera and microphone access**  
+    CSP: [AllowCameraMicrophoneRedirection](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowcameramicrophoneredirection)
+
+    - **Not configured** (*default*) <!--  Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. -->
+    - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
+    - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device.
+
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
@@ -112,6 +119,11 @@ Supported platforms and profiles:
 
   - **Not configured** (*default*)
   - **Yes** - - Allow printing print to XPS.
+
+- **Application Guard allow use of Root Certificate Authorities from the user's device**  
+  CSP: [CertificateThumbprints](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#certificatethumbprints)
+
+  Select **Add** to specify a certificate thumbprint which is transferred into the Microsoft Defender Application Guard container. You can *Add* multiple certificates one at a time, or **Import** a .CSV file that contains multiple entries that are each separated by a comma. For Example, to add two entries, the .CSV file should be formatted as: `b4e72779a8a362c860c36a6461f31e3aa7e58c14,1b1d49f06d2a697a544a1059bd59a7b058cda924`
 
 - **Windows network isolation policy**  
   
