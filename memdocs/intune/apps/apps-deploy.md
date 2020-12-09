@@ -74,10 +74,13 @@ The following table lists the various options for assigning apps to users and de
      > **For iOS/iPadOS apps only**:
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
+     > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**. 
+	 >
+     > **For Android apps only**: 
+	 > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
      >
-     > **For Android apps only**: If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
-     >
-     > For **Available for enrolled devices**: The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
+     > **For Available for enrolled devices**: 
+	 > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
 
 7. To select the groups of users that are affected by this app assignment, select **Included Groups**.
 8. After you have selected one or more groups to include, select **Select**.
