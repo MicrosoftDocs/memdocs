@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/17/2020
+ms.date: 12/10/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
