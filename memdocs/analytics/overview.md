@@ -47,7 +47,6 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
-   - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 ### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager requires:
