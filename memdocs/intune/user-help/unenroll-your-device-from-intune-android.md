@@ -46,7 +46,8 @@ Remove an enrolled Android device so that it's no longer managed by your organiz
 ## Remove Android device via Company Portal app
 1. Sign in to Company Portal.
 2. Go to **Devices** and then select your Android device. 
-3. Tap the menu or (if using the Windows app) **Actions** and select the remove option. This option varies depending on which Company Portal app you're using and may appear as **Remove** or **Remove device**.  
+3. Tap the menu or (if using the Windows app) tap **Actions**.
+4. Select the remove option. This option varies depending on which Company Portal app you're using and may appear as **Remove** or **Remove device**.  
 4. When prompted to, confirm your decision (tap **OK** or **Remove**, depending on the app you're using) to finish removing your device.  
 
 ## Disable Company Portal device management 
