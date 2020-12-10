@@ -50,7 +50,6 @@ Endpoint analytics is included in the following plans:
 ### Endpoint analytics permissions
 
 - The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
-   - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
