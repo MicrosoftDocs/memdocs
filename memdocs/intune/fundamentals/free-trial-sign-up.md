@@ -48,28 +48,32 @@ Trying out Intune is free for 30 days. If you already have a work or school acco
 > [!IMPORTANT]
 > You can't combine an existing work or school account after you sign up for a new account.
 
-1. Go to the [Microsoft Intune Trial](https://go.microsoft.com/fwlink/?linkid=2019088) page and fill out the form.
+1. Go to the [Microsoft Intune Trial](https://go.microsoft.com/fwlink/?linkid=2019088) page and enter your work or school email address. Then, click **Next**.
 
-    ![Screenshot of the Microsoft Intune Trial account sign-up web page](./media/free-trial-sign-up/account-sign-up-site-full-browser.png)
+    ![Screenshot of the Microsoft Intune Trial account sign-up web page - Step 1](./media/free-trial-sign-up/free-trial-sign-up-01.png)
 
-    If most of your IT operations and users are in a different locale than you, you may want to select that locale under **Country or region**. Azure uses your regional information to deliver the right services. This setting can't be changed later.
+2. Enter details about yourself and your company. Once you are ready, click **Next**.
 
-2. Create an account using your company name followed by **.onmicrosoft.com**. 
+   > [!NOTE]
+   > If most of your IT operations and users are in a different locale than you, you may want to select that locale under **Country or region**. Intune uses your regional information to deliver the right services. This setting can't be changed later.
 
-    ![Screenshot of the Intune trial account new credential process](./media/free-trial-sign-up/account-sign-up-site-user-id.png)
+    ![Screenshot of the Microsoft Intune Trial account sign-up web page - Step 2](./media/free-trial-sign-up/free-trial-sign-up-02.png)
 
-    If your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change that in the Microsoft 365 admin center described later in this article.
+3. Create your account by checking for an available domain name based on your company name. Your account name will be similar to your company name followed by **.onmicrosoft.com**. 
 
-3. View your new account information at the end of the sign-up process.
+    ![Screenshot of the Microsoft Intune Trial account sign-up web page - Step 3](./media/free-trial-sign-up/free-trial-sign-up-03.png)
 
-    ![Image of your account information](./media/free-trial-sign-up/intune-end-of-sign-up-process.png) 
+   > [!NOTE]
+   > If your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change that in the Microsoft 365 admin center described later in this article.
 
-## Sign in to Intune in the Microsoft Endpoint Manager
+4. Click **Sign up** to complete the process and create your new account.
+
+## Sign in to Intune in the Microsoft Endpoint Manager admin center
 
 If you're not already signed in to the portal, complete the following steps:
 
-1. Open a new browser window and enter **https://endpoint.microsoft.com** in the address bar. 
-2. Use the user ID that you were given in the steps above to sign in (*yourID@yourdomain*.onmicrosoft.com).
+1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
+2. Use the user ID that you were given in the steps above to sign in <*yourID@yourdomain*.onmicrosoft.com>.
 
     ![Image of the portal sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -80,7 +84,7 @@ When you sign up for a trial, you will also receive an email message that contai
 
 ## Confirm the MDM authority in Intune
 
-By default, the MDM authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
+By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
 1. If you're not already signed in, sign in to the Microsoft Endpoint Manager.
 2. Click **Tenant administration**.
