@@ -252,7 +252,7 @@ To use the readiness tool:
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
-2. To validate your network configuration, as root run the script with the following commands to first set the execute permissions on the script and then to validate the Tunnel can connect to the correct endpoints:
+2. To validate your network configuration, run the script with the following commands to first set the execute permissions on the script and then to validate the Tunnel can connect to the correct endpoints:
 
    - `sudo chmod +x ./mst-readiness`
    - `sudo ./mst-readiness network`
