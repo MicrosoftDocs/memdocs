@@ -2,7 +2,7 @@
 # required metadata
 
 title: Send errors from your Mac device to your company support | Microsoft Docs
-description:
+description: Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
 keywords:
 author: lenewsad
 
@@ -32,11 +32,11 @@ ms.collection:
 
 # Report Company Portal app problems  
 
-Sometimes unexplained errors occur in the Company Portal app. When it happens, you can get help by emailing your IT support person. Company Portal provides you with an email template and helps you upload the diagnostic details so that your IT team has context and can better support you. 
+Sometimes unexplained errors occur in the Company Portal app. When it happens, you can get help by emailing your IT support person. Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
 
 ## Report problem to IT support person 
 
-1. When you receibe an error message, select **Report**.
+1. When you receive an error message, select **Report**.
 
 2. Select the **Help** menu > **Save Diagnostic Report**. Choose a location to save the file. 
 
