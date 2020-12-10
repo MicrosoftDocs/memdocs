@@ -39,6 +39,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > - Better Mobile (Android,iOS/iPadOS)
 > - Check Point Sandblast (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
+> - MVISION Mobile (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
