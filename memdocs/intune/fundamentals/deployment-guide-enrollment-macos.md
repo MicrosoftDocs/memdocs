@@ -37,7 +37,7 @@ You have the following options when enrolling macOS devices:
 - [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
 
 > [!NOTE]
-> Apple Configurator is available for iOS/iPadOS devices. It's not available for macOS devices.
+> Apple Configurator is available for iOS/iPadOS devices. It's not available for macOS devices. Go to iOS/iPadOS enrollment to create an enrollment profile for Apple Configurator for iOS/iPadOS devices. Do not do so in the macOS enrollment space in the MEM console. 
 
 This article:
 
