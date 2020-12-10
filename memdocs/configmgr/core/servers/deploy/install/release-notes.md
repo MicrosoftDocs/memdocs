@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/02/2020
+ms.date: 12/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -54,7 +54,12 @@ To work around this issue:
     1. Copy **MMASetup-amd64.exe** to the `.\sms\client\x64` folder.
     1. Copy **MMASetup-i386.exe** to the `.\sms\client\i386` folder.
 
+1. Delete the file `inboxes\failovermgr.box\siteserver.pkg` on the site server.
+
 1. Retry the update to version 2010.
+
+> [!NOTE]
+> This issue can also occur when you add a new site server in passive mode after updating to version 2010.
 
 ### Client automatic upgrade happens immediately for all clients
 
