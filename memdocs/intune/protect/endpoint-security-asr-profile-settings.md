@@ -45,13 +45,15 @@ Supported platforms and profiles:
 
 ### App and browser isolation
 
-- **Turn on Application Guard for Edge (Options)**  
+- **Turn on Application Guard**  
   CSP: [AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
-  - **Not configured** (*default*)
+  - **Not configured** (*default*) - Microsoft Defender Application Guard is not configured for Microsoft Edge or isolated Windows environments.
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
+  - **Enabled for isolated Windows environments** - Application Guard is turned on for any applications enabled for App Guard within Windows.
+  - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
 
-  When set to *Enabled for Edge*, the following settings are available:
+  When set to *Enabled for Edge* or *Enabled for Edge AND isolated Windows environments*, the following settings are available, which apply to Edge:
   
   - **Clipboard behavior**  
     CSP: [ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
