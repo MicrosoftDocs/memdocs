@@ -1,25 +1,22 @@
 ---
-title: Extend and Migrate on-premises site to Microsoft Azure
+title: Extend and Migrate an on-premises site to Microsoft Azure
 titleSuffix: Configuration Manager
 description: Learn about how to use the migration tool to programmatically create Azure virtual machines for Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 12/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
-# Extend and migrate on-premises site to Microsoft Azure
+# Extend and migrate an on-premises site to Microsoft Azure
 
-*Applies to: Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-
-This tool, introduced in version 1910, helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. <!--3556022--> It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role.
+Starting in version 1910, this tool helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. <!--3556022--> It can install with default settings site roles like a passive site server, management points, and distribution points. Once you validate the new roles, use them as additional site systems for high availability. You can also remove the on-premises site system role and only keep the Azure VM role.
 
 ## Prerequisites
 
@@ -27,7 +24,7 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
 
 - Azure virtual network with ExpressRoute gateway
 
-<!-- - A standalone primary site. A hierarchy with a central administration site isn't currently supported. can comment this out because TP only supports a standalone primary!-->
+- A standalone primary site.
 
 - Your user account needs to be a Configuration Manager **Full Administrator** and have administrator rights on the primary site server.
 
@@ -35,37 +32,36 @@ This tool, introduced in version 1910, helps you to programmatically create Azur
 
 ### Required Azure permissions
 
-You'll need the following permissions in Azure when you run the tool: 
+You'll need the following permissions in Azure when you run the tool:
 <!--5789222-->
-Microsoft.Resources/subscriptions/resourceGroups/read <br>
-Microsoft.Resources/subscriptions/resourceGroups/write <br>
-Microsoft.Resources/deployments/read <br>
-Microsoft.Resources/deployments/write <br>
-Microsoft.Resources/deployments/validate/action <br>
-Microsoft.Compute/virtualMachines/extensions/read <br>
-Microsoft.Compute/virtualMachines/extensions/write <br>
-Microsoft.Compute/virtualMachines/read <br>
-Microsoft.Compute/virtualMachines/write <br>
-Microsoft.Network/virtualNetworks/read <br>
-Microsoft.Network/virtualNetworks/subnets/read <br>
-Microsoft.Network/virtualNetworks/subnets/join/action <br>
-Microsoft.Network/networkInterfaces/read <br>
-Microsoft.Network/networkInterfaces/write <br>
-Microsoft.Network/networkInterfaces/join/action <br>
-Microsoft.Network/networkSecurityGroups/write <br>
-Microsoft.Network/networkSecurityGroups/read <br>
-Microsoft.Network/networkSecurityGroups/join/action <br>
-Microsoft.Storage/storageAccounts/write <br>
-Microsoft.Storage/storageAccounts/read <br>
-Microsoft.Storage/storageAccounts/listkeys/action <br>
-Microsoft.Storage/storageAccounts/listServiceSas/action <br>
-Microsoft.Storage/storageAccounts/blobServices/containers/write <br>
-Microsoft.Storage/storageAccounts/blobServices/containers/read <br>
-Microsoft.KeyVault/vaults/deploy/action <br>
-Microsoft.KeyVault/vaults/read <br>
+- Microsoft.Resources/subscriptions/resourceGroups/read
+- Microsoft.Resources/subscriptions/resourceGroups/write
+- Microsoft.Resources/deployments/read
+- Microsoft.Resources/deployments/write
+- Microsoft.Resources/deployments/validate/action
+- Microsoft.Compute/virtualMachines/extensions/read
+- Microsoft.Compute/virtualMachines/extensions/write
+- Microsoft.Compute/virtualMachines/read
+- Microsoft.Compute/virtualMachines/write
+- Microsoft.Network/virtualNetworks/read
+- Microsoft.Network/virtualNetworks/subnets/read
+- Microsoft.Network/virtualNetworks/subnets/join/action
+- Microsoft.Network/networkInterfaces/read
+- Microsoft.Network/networkInterfaces/write
+- Microsoft.Network/networkInterfaces/join/action
+- Microsoft.Network/networkSecurityGroups/write
+- Microsoft.Network/networkSecurityGroups/read
+- Microsoft.Network/networkSecurityGroups/join/action
+- Microsoft.Storage/storageAccounts/write
+- Microsoft.Storage/storageAccounts/read
+- Microsoft.Storage/storageAccounts/listkeys/action
+- Microsoft.Storage/storageAccounts/listServiceSas/action
+- Microsoft.Storage/storageAccounts/blobServices/containers/write
+- Microsoft.Storage/storageAccounts/blobServices/containers/read
+- Microsoft.KeyVault/vaults/deploy/action
+- Microsoft.KeyVault/vaults/read
 
-
-For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](/azure/role-based-access-control/role-assignments-portal).
+For more information about permissions and assigning roles, see [Add or remove Azure role assignments using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## Run the tool
 
@@ -78,17 +74,17 @@ For more information about permissions and assigning roles, see [Manage access t
     > [!TIP]
     > You may need to add `https://*.microsoft.com` to your trusted websites list to correctly sign in.
 
-    [ ![Azure Information tab in the Extend and Migrate tool](./media/3556022-azure-information-tab.png)](./media/3556022-azure-information-tab.png#lightbox)
+    :::image type="content" source="media/3556022-azure-information-tab.png" alt-text="Azure Information tab in the Extend and Migrate tool" lightbox="media/3556022-azure-information-tab.png":::
 
 1. After you sign in, select your **Subscription ID** and **Virtual network**. The tool only lists networks with an ExpressRoute gateway.
 
-## Site Server High Availability
+## Site server high availability
 
 1. On the **Site Server High Availability** tab, select **Check** to evaluate your site's readiness.
 
     If any of the checks fail, select **More detail** to determine how to remediate the problem. For more information about these prerequisites, see [Site server high availability](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
 
-2. If you want to extend or migrate your site server to Azure, select **Create a site server in Azure**. Then fill in the following fields:
+1. If you want to extend or migrate your site server to Azure, select **Create a site server in Azure**. Then fill in the following fields:
 
     |Name|Description|
     |---|---|
@@ -123,9 +119,9 @@ For more information about permissions and assigning roles, see [Manage access t
 
 1. Once the site adds the site server in passive mode, the **Site Server High Availability** tab shows the status.
 
-   [![Passive site server added to Site Server High Availability tab](./media/3556022-site-server-passive-mode.png)](./media/3556022-site-server-passive-mode.png#lightbox)
+    :::image type="content" source="media/3556022-site-server-passive-mode.png" alt-text="Passive site server added to Site Server High Availability tab in Azure migration tool" lightbox="media/3556022-site-server-passive-mode.png":::
 
-1. Next, go to the [Deployments in Azure](#bkmk_deploy-azure) tab to finish the deployment.
+1. Next, switch to the [Deployments in Azure](#deployments-in-azure) tab to finish the deployment.
 
 ## Site database
 
@@ -139,7 +135,7 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
 
 1. Switch to the **Site System Roles** tab. To provision a new site system role with the default settings, select **Create new**. You can provision roles such as the management point, distribution point, and software update point. Not all roles are currently available in the tool.
 
-    [![Site System Roles tab in the Extend and Migrate tool](./media/3556022-site-system-roles-tab.png)](./media/3556022-site-system-roles-tab.png#lightbox)
+    :::image type="content" source="media/3556022-site-system-roles-tab.png" alt-text="Site System Roles tab in the Extend and Migrate tool" lightbox="media/3556022-site-system-roles-tab.png":::
 
 1. In the provisioning window, fill in the fields to provision the site role's VM in Azure. These details are similar to the above list for the site server.
 
@@ -150,26 +146,28 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
 
 1. Repeat this process to add more site system roles.
 
-1. Next, go to the [Deployments in Azure](#bkmk_deploy-azure) tab to finish the deployment.
+1. Next, go to the [Deployments in Azure](#deployments-in-azure) tab to finish the deployment.
 
 1. When the deployment finishes, go to the Configuration Manager console to make additional changes to the site role.
 
-## <a name="bkmk_deploy-azure"></a> Deployments in Azure
+## Deployments in Azure
 
 1. Once Azure creates the VM, switch to the **Deployments in Azure** tab in the tool. Select **Deploy** to configure the role with the default settings.
 
 1. Select **Run** to start the PowerShell script.
 
-    [![Deploy site roles by running the generated PowerShell script](./media/3556022-run-powershell-script-deployment.png)](./media/3556022-run-powershell-script-deployment.png#lightbox)
+    :::image type="content" source="media/3556022-run-powershell-script-deployment.png" alt-text="Deploy site roles by running the generated PowerShell script" lightbox="media/3556022-run-powershell-script-deployment.png":::
 
 1. Repeat this process to configure more roles.
 
-## <a name="bkmk_add_role"></a> Add site roles to an existing virtual machine deployment
+## Add site roles to an existing VM
 <!--5665775, 6307931-->
-Starting in Configuration Manager version 2002, the extend and migrate on-premises site to Microsoft Azure tool supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed. To add a new role to an existing virtual machine, do the following steps:
-1. On the **Deployments in Azure** tab, click on a virtual machine deployment that has a **Completed** status.
-1. Click the **Create new** button to add an additional role to the virtual machine.
 
+Starting in Configuration Manager version 2002, the tool supports provisioning multiple site system roles on a single Azure VM. You can add site system roles after the initial Azure VM deployment has completed. To add a new role to an existing VM, do the following steps:
+
+1. On the **Deployments in Azure** tab, select on a virtual machine deployment that has a **Completed** status.
+
+1. Select **Create new** to add an additional role to the virtual machine.
 
 ## Next steps
 
