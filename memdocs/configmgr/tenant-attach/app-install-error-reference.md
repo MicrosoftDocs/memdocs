@@ -33,8 +33,8 @@ select-string -Path "c:\windows\ccm\*.mof" -Pattern 'CacheInfoEx'
 select-string -Path "c:\windows\ccm\logs\*.log" -Pattern 'CacheInfoEx.CacheId="ccfe8120-4b9b-4f6e-b8fb-f8c1b1fd74d8'
 ```
 ## <a name="bkmk_configmgr"></a> Configuration Manager errors
-
-When an application fails to install and the error source is **Configuration Manager**, typically, following the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) and using the [general troubleshooting tips](#bkmk_general) helps you resolve the error. You may also want to use [Support Center for Configuration Manager](../core/support/support-center.md) to help troubleshoot and review information about your clients. 
+</br>
+</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -64,6 +64,9 @@ When an application fails to install and the error source is **Configuration Man
 |[0x87D103E8](#0x87d103e8)|Configuration Manager| Error Unknown|
 |[0x87D1076C](#0x87d1076c)|Configuration Manager| Application was successfully installed|
 
+### <a name="bkmk_general-configmgr"></a> General Windows Update Agent troubleshooting tips
+
+When an application fails to install and the error source is **Configuration Manager**, typically, following the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) and using the [general troubleshooting tips](#bkmk_general) helps you resolve the error. You may also want to use [Support Center for Configuration Manager](../core/support/support-center.md) to help troubleshoot and review information about your clients. 
 
 <!-- template
 
@@ -233,10 +236,8 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 
 ## <a name="bkmk_msi"></a> MSI errors
-
-When errors are encountered from MSI, typically you'll need to [Enable Windows Installer logging](/troubleshoot/windows-client/application-management/enable-windows-installer-logging). After the logging is enabled, you can retry the problem installation and Windows Installer will track the progress and post it to the `%temp%` folder. The new log's file name is random. However, the first letters are `Msi` and the file name has a .log extension.
-
-The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes) and [Windows Installer Action Return Values](/windows/win32/msi/logging-of-action-return-values) lists are useful when reviewing a Windows Installer log as are the [general troubleshooting tips](#bkmk_general).
+</br>
+</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -247,6 +248,13 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 |[1633](#1633)|MSI| This installation package is not supported by this processor type. Contact your product vendor|
 |[1638](#1638)| MSI| Another version of this product is already installed.  Installation of this version cannot continue.  To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel|
 |[1642](#1642)| MSI| The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch|
+
+### <a name="bkmk_general-msi"></a> General MSI troubleshooting tips
+
+When errors are encountered from MSI, typically you'll need to [Enable Windows Installer logging](/troubleshoot/windows-client/application-management/enable-windows-installer-logging). After the logging is enabled, you can retry the problem installation and Windows Installer will track the progress and post it to the `%temp%` folder. The new log's file name is random. However, the first letters are `Msi` and the file name has a .log extension.
+
+The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes) and [Windows Installer Action Return Values](/windows/win32/msi/logging-of-action-return-values) lists are useful when reviewing a Windows Installer log as are the [general troubleshooting tips](#bkmk_general).
+
 ### 1602
 
 **Message**: User cancel installation
@@ -290,8 +298,8 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 **Additional information for error resolution**: Verify the device meets the product versioning prerequisites for the installation.
 
 ## <a name="bkmk_windows"></a> Windows errors
-
-Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article. Using the Windows event logs 
+</br>
+</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -306,6 +314,8 @@ Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-
 |[0x80040154](#0x80040154)|Windows| Class not registered|
 |[0x80091007](#0x80091007)|Windows| The hash value is not correct|
 |[0xC0000142](#0xc0000142)|Windows| Initialization of the dynamic link library failed. The process is terminating abnormally|
+### <a name="bkmk_general-windows"></a> General Windows troubleshooting tips
+Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article. Using the Windows event logs can also help identify the cause of these errors. 
 ### 1
 
 **Message**: Incorrect function
@@ -386,7 +396,8 @@ Additional tips for file permissions in Windows operating systems:
 **Additional information for error resolution**: If there is a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application.
 
 ## <a name="bkmk_wmi"></a> Windows Management Instrumentation (WMI) errors
-
+</br>
+</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -459,14 +470,17 @@ WMI resources:
 **Additional information for error resolution**: The namespace specified could not be found. Verify the target computer can connect to WMI by following the [General WMI troubleshooting tips](#bkmk_general-wmi). Verify namespace specified exists.
 
 ## <a name="bkmk_wua"></a> Windows Update Agent errors
-
-The errors for the installation originated from the Windows Update Agent. In may cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update for Business, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) to help determine the cause of the issue.
+</br>
+</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
 |[0x00240006](#0x00240006)|Windows Update Agent| The update to be installed is already installed on the system|
 |[0x80240017](#0x80240017)|Windows Update Agent | Operation was not performed because there are no applicable updates|
 
+### <a name="bkmk_general-wua"></a> General Windows Update Agent troubleshooting tips
+
+The errors for the installation originated from the Windows Update Agent. In many cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update for Business, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) to help determine the cause of the issue.
 ### 0x00240006
 
 **Message**: The update to be installed is already installed on the system
