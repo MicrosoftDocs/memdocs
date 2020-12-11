@@ -1,7 +1,6 @@
 ---
 # required metadata
 
-
 title: Get support in Microsoft Endpoint Manager admin center 
 titleSuffix: Microsoft Intune
 description: Get online and telephone support for Microsoft Intune and other device management cloud services from within Microsoft Endpoint Manager admin center. 
@@ -15,8 +14,7 @@ ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
-ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-
+ms.assetid: 
 # optional metadata
  
 #audience:
