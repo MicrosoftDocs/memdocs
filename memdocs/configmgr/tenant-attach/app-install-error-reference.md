@@ -427,10 +427,9 @@ Verify the namespace exists on the target and that you can query it properly. Ru
 Verify the repository:
 1. From an elevated command prompt, run `winmgmt /verifyrepository`. Verifying is typically useful for invalid class errors especially if you had to recently recompile a .mof file using [mofcomp](/windows/win32/wmisdk/mofcomp). 
 1. If problems are found during verification, you can try to salvage using `winmgmt /salvagerepository`
-1. Typically, you won't use /resetrepository unless it's truly needed an no other alternative exists. Some namespaces won't automatically rebuild and you'll need to either reinstall the software associated with the missing namespace or mofcomp the application's .mof files to rebuild them. 
+1. Typically, you won't use /resetrepository unless it's truly needed an no other alternative exists. Some namespaces won't automatically rebuild and you'll need to either reinstall the software associated with the missing namespace or mofcomp the application's .mof files to rebuild them.
 
-
-Additional WMI resources:
+WMI resources:
 - [Introduction to wbemtest](../develop/core/understand/introduction-to-wbemtest.md)
 - [Winmgmt service](/windows/win32/wmisdk/winmgmt)
 - [WMI Log Files](/windows/win32/wmisdk/wmi-log-files)
@@ -441,28 +440,23 @@ Additional WMI resources:
 - [WMI troubleshooting](/windows/win32/wmisdk/wmi-troubleshooting)
 - [Ask The Performance Team: WMI](https://techcommunity.microsoft.com/t5/ask-the-performance-team/bg-p/AskPerf/label-name/wmi)
 
-
 ### 0x80041001
 
 **Message**: WBEM_E_FAILED
 
-**Additional information for error resolution**: WBEM_E_FAILED is a generic WMI failure error. The error can be caused by a number of things. The error will sometimes tell you which method or instance failed. You'll probably also see related log entires around the same time if you merge logs together based on similar function. For instance, if you see the error related to content for an application, you may want to merge together CAS.log, ContentTransferManager.log and DataTransfer.log. If the error happened on a site server not a client, you may want to review SMSProv.log for additional information.
+**Additional information for error resolution**: WBEM_E_FAILED is a generic WMI failure error. The error can be caused by a number of things. The error will sometimes tell you which method or instance failed. You'll probably also see related log entires around the same time if you merge logs together based on similar function. For instance, if you see the error related to content for an application, you may want to merge together CAS.log, ContentTransferManager.log and DataTransfer.log. If the error happened on a site server not a client, you may want to review SMSProv.log for additional information. Use the [General WMI troubleshooting tips](#bkmk_general-wmi) to help identify the issue along with the application installation logs.
 
 ### 0x80041009
 
 **Message**: WBEM_E_NOT_AVAILABLE
 
-**Additional information for error resolution**: 
+**Additional information for error resolution**: The resource, in many cases a remote machine, isn't currently available. Verify the device is online. Use the [General WMI troubleshooting tips](#bkmk_general-wmi) to help verify connectivity to WMI on the device.
 
 ### 0x8004100E
 
 **Message**: WBEM_E_INVALID_NAMESPACE
 
-**Additional information for error resolution**: Verify the target computer can connect to WMI by following the [General WMI troubleshooting tips](#bkmk_general-wmi).
-
-[Enable trace and debug logging for WMI events](/windows/win32/wmisdk/tracing-wmi-activity#obtaining-wmi-events-through-event-viewer) to gather more information.
-   - Ensure you change the default log size to cover your troubleshooting session.
-   - Once you have finished troubleshooting, remember to disable the trace and debug logging.
+**Additional information for error resolution**: The namespace specified could not be found. Verify the target computer can connect to WMI by following the [General WMI troubleshooting tips](#bkmk_general-wmi). Verify namespace specified exists.
 
 ## <a name="bkmk_wua"></a> Windows Update Agent errors
 
