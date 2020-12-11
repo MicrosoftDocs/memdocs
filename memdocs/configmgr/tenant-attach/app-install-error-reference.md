@@ -460,6 +460,8 @@ WMI resources:
 
 ## <a name="bkmk_wua"></a> Windows Update Agent errors
 
+The errors for the installation originated from the Windows Update Agent. In may cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update for Business, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) to help determine the cause of the issue.
+
 |Error code|Error source|Error message|
 |----|----|----|
 |[0x00240006](#0x00240006)|Windows Update Agent| The update to be installed is already installed on the system|
@@ -469,13 +471,13 @@ WMI resources:
 
 **Message**: The update to be installed is already installed on the system
 
-**Additional information for error resolution**:
+**Additional information for error resolution**: The update is already installed on the device.
 
 ### 0x80240017
 
 **Message**: Operation was not performed because there are no applicable updates
 
-**Additional information for error resolution**:
+**Additional information for error resolution**: The update isn't applicable to the device. Verify that the device meets the requirements of the update. In cases where a superseding update has been installed, it's very rare that the superseded update would be applicable to the device.
 
 <!-- template
 
