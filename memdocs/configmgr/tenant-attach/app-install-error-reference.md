@@ -33,7 +33,6 @@ select-string -Path "c:\windows\ccm\*.mof" -Pattern 'CacheInfoEx'
 select-string -Path "c:\windows\ccm\logs\*.log" -Pattern 'CacheInfoEx.CacheId="ccfe8120-4b9b-4f6e-b8fb-f8c1b1fd74d8'
 ```
 ## <a name="bkmk_configmgr"></a> Configuration Manager errors
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -235,7 +234,6 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 
 ## <a name="bkmk_msi"></a> MSI errors
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -296,7 +294,6 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 **Additional information for error resolution**: Verify the device meets the product versioning prerequisites for the installation.
 
 ## <a name="bkmk_windows"></a> Windows errors
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -394,7 +391,6 @@ Additional tips for file permissions in Windows operating systems:
 **Additional information for error resolution**: If there is a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application.
 
 ## <a name="bkmk_wmi"></a> Windows Management Instrumentation (WMI) errors
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -467,7 +463,6 @@ WMI resources:
 **Additional information for error resolution**: The namespace specified could not be found. Verify the target computer can connect to WMI by following the [General WMI troubleshooting tips](#bkmk_general-wmi). Verify namespace specified exists.
 
 ## <a name="bkmk_wua"></a> Windows Update Agent errors
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
