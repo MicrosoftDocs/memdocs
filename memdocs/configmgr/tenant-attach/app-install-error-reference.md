@@ -34,7 +34,6 @@ select-string -Path "c:\windows\ccm\logs\*.log" -Pattern 'CacheInfoEx.CacheId="c
 ```
 ## <a name="bkmk_configmgr"></a> Configuration Manager errors
 </br>
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -64,7 +63,7 @@ select-string -Path "c:\windows\ccm\logs\*.log" -Pattern 'CacheInfoEx.CacheId="c
 |[0x87D103E8](#0x87d103e8)|Configuration Manager| Error Unknown|
 |[0x87D1076C](#0x87d1076c)|Configuration Manager| Application was successfully installed|
 
-### <a name="bkmk_general-configmgr"></a> General Windows Update Agent troubleshooting tips
+### <a name="bkmk_general-configmgr"></a> General Configuration Manager troubleshooting tips
 
 When an application fails to install and the error source is **Configuration Manager**, typically, following the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) and using the [general troubleshooting tips](#bkmk_general) helps you resolve the error. You may also want to use [Support Center for Configuration Manager](../core/support/support-center.md) to help troubleshoot and review information about your clients. 
 
@@ -237,7 +236,6 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 ## <a name="bkmk_msi"></a> MSI errors
 </br>
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -299,7 +297,6 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 ## <a name="bkmk_windows"></a> Windows errors
 </br>
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -315,7 +312,9 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 |[0x80091007](#0x80091007)|Windows| The hash value is not correct|
 |[0xC0000142](#0xc0000142)|Windows| Initialization of the dynamic link library failed. The process is terminating abnormally|
 ### <a name="bkmk_general-windows"></a> General Windows troubleshooting tips
-Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article. Using the Windows event logs can also help identify the cause of these errors. 
+
+Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article. Using the Windows event logs and the [general troubleshooting tips](#bkmk_general) can also help identify the cause of these errors.
+
 ### 1
 
 **Message**: Incorrect function
@@ -331,6 +330,7 @@ Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-
 - If the missing file is an application file, you can repair or uninstall and reinstall the application to replace the missing file. 
 - If you're unsure which file is missing and the logs aren't listing it, you may want to use [Process Monitor](/sysinternals/downloads/procmon) to help identify the problematic file. 
    - You can launch Process Monitor without capturing events and filters by using `ProcMon.exe /NoConnect /NoFilter /AcceptEULA`
+
 ### 692
 
 **Message**: Debugger terminated process
@@ -375,13 +375,11 @@ Additional tips for file permissions in Windows operating systems:
 
 **Additional information for error resolution**: Review the Windows event logs around the time of the failure in combination with the installation logs to determine the possible cause of the error.
 
-
 ### 0x80040154
 
 **Message**: Class not registered
 
 **Additional information for error resolution**: This is typically a configuration-related DCOM error. Review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there's a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application. 
-
 
 ### 0x80091007 
 
@@ -396,7 +394,6 @@ Additional tips for file permissions in Windows operating systems:
 **Additional information for error resolution**: If there is a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application.
 
 ## <a name="bkmk_wmi"></a> Windows Management Instrumentation (WMI) errors
-</br>
 </br>
 
 |Error code|Error source|Error message|
@@ -471,7 +468,6 @@ WMI resources:
 
 ## <a name="bkmk_wua"></a> Windows Update Agent errors
 </br>
-</br>
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -480,7 +476,7 @@ WMI resources:
 
 ### <a name="bkmk_general-wua"></a> General Windows Update Agent troubleshooting tips
 
-The errors for the installation originated from the Windows Update Agent. In many cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update for Business, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) to help determine the cause of the issue.
+The errors for the installation originated from the Windows Update Agent. In many cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update for Business, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) and [general troubleshooting tips](#bkmk_general) to help determine the cause of the issue.
 ### 0x00240006
 
 **Message**: The update to be installed is already installed on the system
