@@ -51,6 +51,7 @@ The following table lists CMG support for Configuration Manager features:
 | Software distribution (device-targeted) | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration) | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Supported](media/green_check.png) |
+| BitLocker Management | ![Supported](media/green_check.png) (2010) |
 | Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
 | Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
 | Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (1910) |
@@ -67,7 +68,6 @@ The following table lists CMG support for Configuration Manager features:
 | macOS clients | ![Not supported](media/Red_X.png) |
 | Peer cache | ![Not supported](media/Red_X.png) |
 | On-premises MDM | ![Not supported](media/Red_X.png) |
-| BitLocker Management | ![Not supported](media/Red_X.png) |
 | Alternate content providers | ![Not supported](media/Red_X.png) |
 
 |Key|

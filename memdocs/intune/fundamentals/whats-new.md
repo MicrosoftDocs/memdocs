@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 12/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,30 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## Week of December 7, 2020
+
+### App management
+
+#### Browser access enabled automatically during Android personally-owned work profile enrollment<!-- 5411101  -->
+
+During new Android Enterprise personally-owned work profile enrollments, browser access is now automatically enabled on the device. With this change, compliant devices can use the browser to access resources that are protected by conditional access without needing to take additional actions. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, and then click **Enable**.
+
+This change has no impact on devices that are already enrolled.
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 8766223 -->
+The following protected apps are now available for Microsoft Intune:
+- Dynamics 365 Remote Assist
+- Box - Cloud Content Management
+- STid Mobile ID
+- FactSet 3.0
+- Notate for Intune
+- Field Service (Dynamics 365)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 <!-- ########################## -->
 ## Week of November 23, 2020
