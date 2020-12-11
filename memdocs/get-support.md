@@ -10,7 +10,8 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 10/23/2020
 ms.topic: how-to
-ms.service: mem
+ms.service: microsoft-intune
+#ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
