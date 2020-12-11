@@ -20,15 +20,19 @@ Starting in version 1910, this tool helps you to programmatically create Azure v
 
 ## Prerequisites
 
+<!-- 7812857 for 2010 revisions-->
+
 - An Azure subscription
 
-- Azure virtual network with ExpressRoute gateway
+- Starting in version 2010, it supports environments with virtual networks other than ExpressRoute. In version 2006 and earlier, it requires an Azure virtual network with ExpressRoute gateway.
 
-- A standalone primary site.
+- Starting in version 2010, you can use the tool in a hierarchy or a standalone primary site. In version 2006 and earlier, it only works with a standalone primary site.
+
+- Starting in version 2010, it supports a site with a collocated site database. In version 2006 and earlier, it requires the database to be on a remote SQL Server.
 
 - Your user account needs to be a Configuration Manager **Full Administrator** and have administrator rights on the primary site server.
 
-- To add a passive server, the primary site must meet the [site server high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/the-content-library.md#bkmk_remote).
+- To add a site server in passive mode, the site server must meet the [high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/the-content-library.md#bkmk_remote).
 
 ### Required Azure permissions
 
@@ -63,9 +67,17 @@ You'll need the following permissions in Azure when you run the tool:
 
 For more information about permissions and assigning roles, see [Add or remove Azure role assignments using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
+### Virtual network support
+
+Starting in version 2010, to support other virtual networks other than ExpressRoute, make the following configurations:
+
+- In the configuration of the virtual network, go to the **DNS servers** settings. Add a **Custom** DNS server with the IP address of a domain controller.
+
+- On the site server where you'll run the tool, set the following registry value: `HKCU\Software\Microsoft\ConfigMgr10\ExtendToAzure, SkipVNetCheck = 1`
+
 ## Run the tool
 
-1. Sign on to the primary site server and run the following tool in the Configuration Manager installation directory: `Cd.Latest\SMSSETUP\TOOLS\ExtendMigrateToAzure\ExtendMigrateToAzure.exe`
+1. Sign on to the site server and run the following tool in the Configuration Manager installation directory: `Cd.Latest\SMSSETUP\TOOLS\ExtendMigrateToAzure\ExtendMigrateToAzure.exe`
 
 1. Review the information on the **General** tab, and then switch to the **Azure Information** tab.
 
@@ -76,7 +88,10 @@ For more information about permissions and assigning roles, see [Add or remove A
 
     :::image type="content" source="media/3556022-azure-information-tab.png" alt-text="Azure Information tab in the Extend and Migrate tool" lightbox="media/3556022-azure-information-tab.png":::
 
-1. After you sign in, select your **Subscription ID** and **Virtual network**. The tool only lists networks with an ExpressRoute gateway.
+1. After you sign in, select your **Subscription ID** and **Virtual network**.
+
+    > [!NOTE]
+    > In version 2006 and earlier, the tool only lists networks with an ExpressRoute gateway.
 
 ## Site server high availability
 
