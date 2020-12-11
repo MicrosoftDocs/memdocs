@@ -96,8 +96,8 @@ To configure web protection on devices, use the following procedures to create a
 
 ### Disable web protection for Android Enterprise Personally-Owned Work Profile
    > [!NOTE]
-   > You cannot disable web protection for Android Enterprise Personally-Owned Work Profile, if you have configured **Auto Setup of Always-on VPN, Device
-     configuration policy** on the enrolled devices
+   > You cannot disable web protection for Android Enterprise Personally-Owned Work Profile, if you have configured [**Auto Setup of Always-on VPN, Device
+     configuration policy**](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/android-intune#auto-setup-of-always-on-vpn) on the enrolled devices
    
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -138,7 +138,7 @@ To configure web protection on devices, use the following procedures to create a
         - **0** for **VPN** 
         - **1** for **Anti-phishing**
       > [!NOTE]
-      > You cannot disable **VPN** for **Android Enterprise Fully Managed Profile**, if you have configured **Auto Setup of Always-on VPN, Device configuration             policy** on the enrolled devices
+      > You cannot disable **VPN** for **Android Enterprise Fully Managed Profile**, if you have configured [**Auto Setup of Always-on VPN, Device configuration             policy**](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/android-intune#auto-setup-of-always-on-vpn) on the enrolled devices
       
       > [!NOTE]
       > Enter **1** for both the configuration values (Anti-Phishing, VPN) to enable web protection. This is the default configuration. 
