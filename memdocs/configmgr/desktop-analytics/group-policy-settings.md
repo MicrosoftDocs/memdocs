@@ -64,7 +64,7 @@ The relevant group policy settings are at the following path: **Computer Configu
 Group policy settings only modify registry settings in the following key: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
 > [!IMPORTANT]
-> When you use group policy settings to enable complex scenarios, pay special attention to policy settings that can cause configuration conflicts. Configuration Manager only configures [Windows settings](#windows-settings) *if the value doesn't already exist*. Group policy settings take precedence over Configuration Manager settings, so certain group policy configurations could cause issues with Desktop Analytics.
+> When you use group policy settings to enable complex scenarios, pay special attention to policy settings that can cause configuration conflicts. Configuration Manager only configures [Windows settings](#windows-settings) *if the value doesn't already exist*. Mobile device management (MDM) policies and group policy settings take precedence over Configuration Manager settings, so certain policy configurations could cause issues with Desktop Analytics.
 
 ### Group policy settings that could conflict with Configuration Manager settings for Desktop Analytics
 

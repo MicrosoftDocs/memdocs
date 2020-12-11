@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/20/2020
+ms.date: 12/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,9 +65,6 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 ### Configure whether a required iOS app is removable<!-- 8391462  -->
 You will be able to configure whether a required iOS app is installed as a removable app by end users. The new setting will apply to iOS store, LOB and built-in apps. You will be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > **Add**. When setting the app assignments, you will be able to select **Install as removable**. The default value is **yes**, which means the app is removable. Existing required installs on iOS 14 will be updated to the default (removable) setting value when this setting is implemented. For more information about iOS apps, see [Microsoft Intune app management](..\apps\app-management.md).
-
-### Browser access enabled automatically during Android work profile enrollment<!-- 5411101  -->
-Soon, during Android Enterprise personally-owned work profile enrollments, browser access will be automatically enabled. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, then click **Enable**. 
 
 ### Scope tag support for customization policies<!--6182440  -->
 You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options.
