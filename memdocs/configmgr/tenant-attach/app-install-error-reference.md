@@ -26,7 +26,7 @@ Generally, if an application installs successfully on a device with the given co
 1. This opens a new command prompt window running interactively in the system context. Check that you're in the system context by running a `whoami` command.
 1. Run the install from the new windows with the installation command line. For example, `msiexec /i "My App.msi" /q` would be a quiet install of the "My App" msi file.  
 
-You may also find that searching through multiple files for a specific string is useful. For instance, you might want to search all the client mof files for a specific class, or you might want to search logs. Use the [select-string cmdlet](/powershell/module/Microsoft.PowerShell.Utility/Select-String) in those instances. 
+You may also find that searching through multiple files for a specific string is useful. For instance, you might want to search all the client .`mof` files for a specific class, or you might want to search logs. Use the [select-string cmdlet](/powershell/module/Microsoft.PowerShell.Utility/Select-String) in those instances. 
 
 ```powershell
 select-string -Path "c:\windows\ccm\*.mof" -Pattern 'CacheInfoEx'
@@ -77,13 +77,13 @@ Verify that the Configuration Manager client is running on the target device. Ve
 **Message**: Parsing error
 
 **Additional information for error resolution**:  ¯&#92;\_(ツ)_/¯
-This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This could be something missing for the application, an old package version or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components which support application installation. 
+This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This error could stem from something missing for the application, an old package version, or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components that support application installation. 
 
 ### 0x87D00213
 
 **Message**: Timeout occurred
 
-**Additional information for error resolution**: Increase the [**Maximum allowed run time (minutes)**](../apps/deploy-use/create-applications.md) for the application. Ensure that the maintenance window on the client is large enough to support the runtime. For additional information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+**Additional information for error resolution**: Increase the [**Maximum allowed run time (minutes)**](../apps/deploy-use/create-applications.md) for the application. Ensure that the maintenance window on the client is large enough to support the runtime. For more information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
 
 ### 0x87D00215
 
@@ -94,7 +94,7 @@ Verify that the following exist and are accessible to the client:
 - The [application deployment](../apps/understand/device-deployment-technical-reference.md) exists and the client sees the policy.
 - The [application content exists and is available](../apps/understand/deployment-download-technical-reference.md) to the client
 
-For additional information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+For more information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
 
 ### 0x87D00235
 
@@ -116,12 +116,12 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 **Message**: CI documents download timed out
 
-**Additional information for error resolution**: The CI documents activity can be tracked in **CIAgent.log**, **CIDownloader.log** and **DataTransferService.log**. For more information, see the [CI Agent section](../apps/understand/client-components-technical-reference.md#ci-agent) of the application troubleshooting guide.
+**Additional information for error resolution**: The CI documents activity can be tracked in **CIAgent.log**, **CIDownloader.log**, and **DataTransferService.log**. For more information, see the [CI Agent section](../apps/understand/client-components-technical-reference.md#ci-agent) of the application troubleshooting guide.
 ### 0x87D00289
 
 **Message**: Failed to decompress CI documents
 
-**Additional information for error resolution**:  The CI documents activity can be tracked in **CIAgent.log**, **CIDownloader.log** and **DataTransferService.log**. For more information, see the [CI Agent section](../apps/understand/client-components-technical-reference.md#ci-agent) of the application troubleshooting guide.
+**Additional information for error resolution**:  The CI documents activity can be tracked in **CIAgent.log**, **CIDownloader.log**, and **DataTransferService.log**. For more information, see the [CI Agent section](../apps/understand/client-components-technical-reference.md#ci-agent) of the application troubleshooting guide.
 
 ### 0x87D00314
 
@@ -133,7 +133,7 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 **Message**: The script execution has timed out
 
-**Additional information for error resolution**: Check the ***AppEnforce.log** for details. You may need to increase the [**Maximum allowed run time (minutes)**](../apps/deploy-use/create-applications.md) for the application. Ensure that the maintenance window on the client is large enough to support the run time. For additional information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+**Additional information for error resolution**: Check the ***AppEnforce.log** for details. You may need to increase the [**Maximum allowed run time (minutes)**](../apps/deploy-use/create-applications.md) for the application. Ensure that the maintenance window on the client is large enough to support the run time. For more information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
 
 ### 0x87D00324
 
@@ -145,7 +145,7 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 **Message**: Application was still detected after uninstall completed
 
-**Additional information for error resolution**: Verify the correct uninstall command was was used in the **AppEnforce.log**. Review the **AppDiscovery.log** and the **CIAgent.log**. Once an uninstall is completed, the [application detection](../apps/understand/deployment-evaluation-technical-reference.md) is used again to [verify the uninstall](../apps/understand/deployment-install-technical-reference.md#installation-verification).  
+**Additional information for error resolution**: Verify the correct uninstall command was used in the **AppEnforce.log**. Review the **AppDiscovery.log** and the **CIAgent.log**. Once an uninstall is completed, the [application detection](../apps/understand/deployment-evaluation-technical-reference.md) is used again to [verify the uninstall](../apps/understand/deployment-install-technical-reference.md#installation-verification).  
 
 ### 0x87D00327
 
@@ -230,7 +230,7 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 ## <a name="bkmk_msi"></a> MSI errors
 
-When errors are encountered from MSI, typically you'll need to [Enable Windows Installer logging](/troubleshoot/windows-client/application-management/enable-windows-installer-logging). After the logging is enabled, you can retry the problem installation and Windows Installer will track the progress and post it to the `%temp%` folder. The new log's file name is random. However, the first letters are Msi and the file name has a .log extension.
+When errors are encountered from MSI, typically you'll need to [Enable Windows Installer logging](/troubleshoot/windows-client/application-management/enable-windows-installer-logging). After the logging is enabled, you can retry the problem installation and Windows Installer will track the progress and post it to the `%temp%` folder. The new log's file name is random. However, the first letters are `Msi` and the file name has a .log extension.
 
 The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes) and [Windows Installer Action Return Values](/windows/win32/msi/logging-of-action-return-values) lists are useful when reviewing a Windows Installer log as are the [general troubleshooting tips](#bkmk_general).
 
@@ -265,7 +265,7 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 **Message**: Another program is being installed. Please wait until that installation is complete, and then try installing this software again
 
-**Additional information for error resolution**: Wait for the prior installation to complete before running a new one. If the prior installation is hung, you can attempt to stop the installation or terminate the installation process. Terminating a process might have undesired results.
+**Additional information for error resolution**: Wait for the prior installation to complete before running a new one. If the prior installation is hung, you can attempt to stop the installation or terminate the process. Terminating a process might have undesired results.
 
 ### 1633
 
@@ -277,7 +277,7 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 **Message**: Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel
 
-**Additional information for error resolution**: Uninstall the the the unwanted version of the product. If you aren't using Configuration Manager, a script, or another management tool to uninstall, uninstall from the device manually. For Windows 10 clients,  use **Windows Settings** > **Apps** to uninstall the unwanted version of the product. For earlier versions of Windows, use **Programs and Features** from the Control Panel to uninstall the unwanted version of the product.
+**Additional information for error resolution**: Uninstall the the unwanted version of the product. If you aren't using Configuration Manager, a script, or another management tool to uninstall, uninstall from the device manually. For Windows 10 clients,  use **Windows Settings** > **Apps** to uninstall the unwanted version of the product. For earlier versions of Windows, use **Programs and Features** from the Control Panel to uninstall the unwanted version of the product.
 
 ### 1642
 
@@ -287,7 +287,7 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 ## <a name="bkmk_windows"></a> Windows errors
 
-Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes which aren't listed in this article.
+Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article.
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -339,7 +339,7 @@ Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-
 
 **Message**: General access denied error
 
-**Additional information for error resolution**: If the issue isn't apparent from the logs, using `eventvwr.msc` to review Windows event logs and [Process Monitor](/sysinternals/downloads/procmon) can help identify problematic files or processes. If needed, use the Windows user interface or [icacls](/windows-server/administration/windows-commands/icacls) to modify permissions on the problematic file.
+**Additional information for error resolution**: If the issue isn't clear from the logs, using `eventvwr.msc` to review Windows event logs and [Process Monitor](/sysinternals/downloads/procmon) can help identify problematic files or processes. If needed, use the Windows user interface or [icacls](/windows-server/administration/windows-commands/icacls) to modify permissions on the problematic file.
 
 Additional tips for file permissions in Windows operating systems:
 - Deny permissions always take precedence over Allow permissions.
@@ -367,7 +367,7 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 **Message**: Class not registered
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯ This is typically a configuration related DCOM error. You can review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there is a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application. 
+**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯ This is typically a configuration-related DCOM error. Review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there's a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application. 
 
 
 ### 0x80091007 
@@ -417,13 +417,13 @@ Verify the namespace exists on the target and that you can query it properly. Ru
 1. Set the superclass info to **Recursive** and select **OK** to verify classes list for the problematic namespace.
 1. Launch the object editor for one of the classes by double-clicking on it. 
    - If you're using the `root\ccm` namespace, select a class that starts with "CCM_" such as CCM_ClientIdentificationInformation. 
-   - If you're using `root\cimv2` choose one that starts with "Win32_" such as Win32_BIOS.
-1. Select **Instances** to verify the instances of the selected class load. For some classes, it's ok if there aren't any instances, you want to make sure that the **Query Result** window states **Done**. Long running queries to list of instances or queries that never finish may indicate a problem.
+   - If you're using `root\cimv2`, choose one that starts with "Win32_" such as Win32_BIOS.
+1. Select **Instances** to verify the instances of the selected class load. For some classes, it's ok if there aren't any instances, just make sure that the **Query Result** window states **Done**. Long running queries to list of instances or queries that never finish may indicate a problem.
 
 
 Verify the repository:
 1. From an elevated command prompt, run `winmgmt /verifyrepository`. Verifying is typically useful for invalid class errors especially if you had to recently recompile a .mof file using [mofcomp](/windows/win32/wmisdk/mofcomp). 
-1. If problems are found in the verify, you can try to salvage using `winmgmt /salvagerepository`
+1. If problems are found during verification, you can try to salvage using `winmgmt /salvagerepository`
 1. Typically, you won't use /resetrepository unless it's truly needed an no other alternative exists. Some namespaces won't automatically rebuild and you'll need to either reinstall the software associated with the missing namespace or mofcomp the application's .mof files to rebuild them. 
 
 
@@ -443,7 +443,7 @@ Additional WMI resources:
 
 **Message**: WBEM_E_FAILED
 
-**Additional information for error resolution**: WBEM_E_FAILED is a generic WMI failure error. The error can be caused by a number of things. The error will sometimes tell you which method or instance failed. You will probably also see related log entires around the same time if you merge logs together based on similar function. For instance, it you see the error related to content for an application, you may want to merge together CAS.log, ContentTransferManager.log and DataTransfer.log. If the error happened on a site server not a client, you may want to review SMSProv.log for additional information.
+**Additional information for error resolution**: WBEM_E_FAILED is a generic WMI failure error. The error can be caused by a number of things. The error will sometimes tell you which method or instance failed. You'll probably also see related log entires around the same time if you merge logs together based on similar function. For instance, if you see the error related to content for an application, you may want to merge together CAS.log, ContentTransferManager.log and DataTransfer.log. If the error happened on a site server not a client, you may want to review SMSProv.log for additional information.
 
 ### 0x80041009
 
