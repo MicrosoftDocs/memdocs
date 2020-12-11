@@ -77,7 +77,7 @@ Verify that the Configuration Manager client is running on the target device. Ve
 **Message**: Parsing error
 
 **Additional information for error resolution**:  ¯&#92;\_(ツ)_/¯
-This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This could be something missing for the application, an old package version or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to  review additional logs for components
+This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This could be something missing for the application, an old package version or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components which support application installation. 
 
 ### 0x87D00213
 
