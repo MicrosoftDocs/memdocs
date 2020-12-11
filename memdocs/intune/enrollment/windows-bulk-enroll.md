@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 5/21/2018
+ms.date: 11/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -64,7 +64,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. In the **Use this account everywhere on this device** page, select **This app only**.
+8. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**.
 
 9. Click **Next** when **Bulk Token** is fetched successfully.
 

@@ -17,4 +17,6 @@
         - name: Fundamentals
           tocHref: /mem/intune/fundamentals/
           topicHref: /mem/index
-
+        - name: Fundamentals
+          tocHref: /mem/intune/fundamentals/
+          topicHref: /troubleshoot/mem/intune/

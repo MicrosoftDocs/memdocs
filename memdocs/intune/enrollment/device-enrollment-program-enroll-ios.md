@@ -41,6 +41,8 @@ To enable ADE, you use both the Intune and [Apple Business Manager (ABM)](https:
 > [!NOTE]
 > ADE sets device configurations that can't necessarily be removed by the end user. Therefore, before using ADE, the device must be wiped to return it to an out-of-box (new) state. For more information, see [Deployment guide: Enroll iOS and iPadOS devices](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
+If you experience any sync issues during this process, you can check for resolution options at [Troubleshoot iOS/iPadOS device enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).
+
 ## Automated Device Enrollment and the Company Portal
 
 ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device, to use modern authentication to complete the enrollment process, or to provide a staged enrollment in which the device is enrolled and receives device policies prior to a user authenticating in the Company Portal. 

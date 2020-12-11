@@ -217,15 +217,15 @@
       - name: Help users troubleshoot problems
         href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
-        href: troubleshoot-app-install.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-install
       - name: App installation error reference
-        href: app-install-error-codes.md
+        href: /troubleshoot/mem/intune/app-install-error-codes
       - name: Troubleshoot mobile application management
-        href: troubleshoot-mam.md
+        href: /troubleshoot/mem/intune/troubleshoot-mam
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
       - name: Troubleshooting app protection policy deployment
-        href: troubleshoot-app-protection-policy-deployment.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK

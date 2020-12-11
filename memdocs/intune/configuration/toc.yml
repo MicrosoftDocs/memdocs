@@ -60,6 +60,8 @@
       href: administrative-templates-windows.md
     - name: Update Office using administrative templates
       href: administrative-templates-update-office.md
+    - name: Create Microsoft Edge policy
+      href: administrative-templates-configure-edge.md
   - name: BIOS settings on Windows
     href: device-firmware-configuration-interface-windows.md
     displayName: dfci, firmware
