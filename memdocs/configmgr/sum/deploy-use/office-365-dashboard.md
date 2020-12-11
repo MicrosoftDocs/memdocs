@@ -144,7 +144,7 @@ The following video is a session from Ignite 2019, which includes more informati
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3090]
 
-[Best practices for compatibility assessment and Microsoft Office 365 ProPlus upgrades using Office Readiness in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
+[Best practices for compatibility assessment and Microsoft Office 365 ProPlus upgrades using Office Readiness in Configuration Manager](https://myignite.microsoft.com/archives/IG19-BRK3090)
 
 ### Using the Microsoft 365 Apps upgrade readiness dashboard
 

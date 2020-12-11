@@ -35,7 +35,7 @@ The following video is a session from Ignite 2019, which includes more informati
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3085]
 
-[Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.techcommunity.microsoft.com/sessions/81689?source=sessions)
+[Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.microsoft.com/archives/IG19-BRK3085)
 
 Skip to 10:00 for an in-depth demo.
 

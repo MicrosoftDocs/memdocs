@@ -60,6 +60,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- ########################## -->
 ## Week of December 7, 2020
 
+### App management
+
+#### Browser access enabled automatically during Android personally-owned work profile enrollment<!-- 5411101  -->
+
+During new Android Enterprise personally-owned work profile enrollments, browser access is now automatically enabled on the device. With this change, compliant devices can use the browser to access resources that are protected by conditional access without needing to take additional actions. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, and then click **Enable**.
+
+This change has no impact on devices that are already enrolled.
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 8766223 -->
