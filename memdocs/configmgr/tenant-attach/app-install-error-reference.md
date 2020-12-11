@@ -460,7 +460,7 @@ Additional WMI resources:
 
 **Additional information for error resolution**: Verify the target computer can connect to WMI by following the [General WMI troubleshooting tips](#bkmk_general-wmi).
 
-[Enable trace and debug logging for WMI events](/windows/win32/wmisdk/tracing-wmi-activity#obtaining-wmi-events-through-event-viewer) to gather more information on 
+[Enable trace and debug logging for WMI events](/windows/win32/wmisdk/tracing-wmi-activity#obtaining-wmi-events-through-event-viewer) to gather more information.
    - Ensure you change the default log size to cover your troubleshooting session.
    - Once you have finished troubleshooting, remember to disable the trace and debug logging.
 
