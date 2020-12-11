@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/17/2020
+ms.date: 12/10/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,7 +51,7 @@ Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fw
 
 You will create a group that will be used later in this quickstart series. To create a group:
 
-1. Once you've opened the **Microsoft Endpoint Manager**, select **Groups** > **New group**.
+1. Once you've opened the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 2. In the **Group type** dropdown box, select **Security**.
 3. In the **Group name** field, enter the name for the new group (for example, **Contoso Testers**).
 4. Add a **Group description** for the group.
