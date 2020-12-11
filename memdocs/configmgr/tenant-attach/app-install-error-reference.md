@@ -26,7 +26,7 @@ Generally, if an application installs successfully on a device with the given co
 1. This opens a new command prompt window running interactively in the system context. Check that you're in the system context by running a `whoami` command.
 1. Run the install from the new windows with the installation command line. For example, `msiexec /i "My App.msi" /q` would be a quiet install of the "My App" msi file.  
 
-You may also find that searching through multiple files for a specific string is useful. For instance, you might want to search all the client .`mof` files for a specific class, or you might want to search logs. Use the [select-string cmdlet](/powershell/module/Microsoft.PowerShell.Utility/Select-String) in those instances. 
+You may also find that searching through multiple files for a specific string is useful. For instance, you might want to search all the client `.mof` files for a specific class, or you might want to search logs for a specific ID. Using a specific ID when searching can give you an understanding of how components are related to each other. Use the [select-string cmdlet](/powershell/module/Microsoft.PowerShell.Utility/Select-String) in those instances.
 
 ```powershell
 select-string -Path "c:\windows\ccm\*.mof" -Pattern 'CacheInfoEx'
@@ -63,6 +63,17 @@ When an application fails to install and the error source is **Configuration Man
 |[0x87D01290](#0x87d01290)|Configuration Manager| An error occurred when querying the App-V WMI provider|
 |[0x87D103E8](#0x87d103e8)|Configuration Manager| Error Unknown|
 |[0x87D1076C](#0x87d1076c)|Configuration Manager| Application was successfully installed|
+
+
+<!-- template
+
+### code
+
+**Message**: 
+
+**Additional information for error resolution**:
+
+-->
 ### 0x87D00202
 
 **Message**: Service is shutting down
@@ -76,8 +87,7 @@ Verify that the Configuration Manager client is running on the target device. Ve
 
 **Message**: Parsing error
 
-**Additional information for error resolution**:  ¯&#92;\_(ツ)_/¯
-This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This error could stem from something missing for the application, an old package version, or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components that support application installation. 
+**Additional information for error resolution**: This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This error could stem from something missing for the application, an old package version, or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components that support application installation. Searching for specific IDs or error codes in the logging may help you identify the problem. For more information, see [general troubleshooting tips](#bkmk_general).
 
 ### 0x87D00213
 
@@ -100,17 +110,13 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 **Message**: Syntax error occurred while parsing
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯
-
-Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error. 
+**Additional information for error resolution**: This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This error could stem from something missing for the application, an old package version, or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components that support application installation. Searching for specific IDs or error codes in the logging may help you identify the problem. For more information, see [general troubleshooting tips](#bkmk_general).
 
 ### 0x87D00244
 
 **Message**: The object or subsystem has not been initialized
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯
-
-Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+**Additional information for error resolution**: This error generally occurs in one of the Configuration Manager components when a piece of data is invalid. This error could stem from something missing for the application, an old package version, or a number of other general errors. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components that support application installation. Searching for specific IDs or error codes in the logging may help you identify the problem. For more information, see [general troubleshooting tips](#bkmk_general).
 
 ### 0x87D0027C
 
@@ -217,15 +223,13 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 **Message**: Error Unknown
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯ 
-
-Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+**Additional information for error resolution**: Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help locate the error and resolve it. It may be necessary to review additional logs for components that support application installation. Searching for specific IDs or error codes in the logging may help you identify the problem. For more information, see [general troubleshooting tips](#bkmk_general).
 
 ### 0x87D1076C
 
 **Message**: Application was successfully installed
 
-**Additional information for error resolution**: The application was successfully installed. 
+**Additional information for error resolution**: The application was successfully installed.
 
 
 ## <a name="bkmk_msi"></a> MSI errors
@@ -287,7 +291,7 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 ## <a name="bkmk_windows"></a> Windows errors
 
-Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article.
+Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-499-) list or [Download the Microsoft Error Lookup Tool](/windows/win32/debug/system-error-code-lookup-tool) for looking up additional codes that aren't listed in this article. Using the Windows event logs 
 
 |Error code|Error source|Error message|
 |----|----|----|
@@ -306,7 +310,7 @@ Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-
 
 **Message**: Incorrect function
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯
+**Additional information for error resolution**: Review the Windows event logs around the time of the failure in combination with the installation logs to determine the possible cause of the error.
 
 ### 2
 
@@ -327,7 +331,7 @@ Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-
 
 **Message**: One or more arguments are invalid
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯
+**Additional information for error resolution**: Review the Windows event logs around the time of the failure in combination with the installation logs to determine the possible cause of the error.
 
 ### 0x80000007L
 
@@ -359,15 +363,14 @@ Additional tips for file permissions in Windows operating systems:
 
 **Message**: Catastrophic failure
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯
-Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+**Additional information for error resolution**: Review the Windows event logs around the time of the failure in combination with the installation logs to determine the possible cause of the error.
 
 
 ### 0x80040154
 
 **Message**: Class not registered
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯ This is typically a configuration-related DCOM error. Review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there's a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application. 
+**Additional information for error resolution**: This is typically a configuration-related DCOM error. Review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there's a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application. 
 
 
 ### 0x80091007 
@@ -380,7 +383,7 @@ Follow the [application troubleshooting guide](../apps/understand/app-deployment
 
 **Message**: Initialization of the dynamic link library failed. The process is terminating abnormally
 
-**Additional information for error resolution**: ¯&#92;\_(ツ)_/¯ If there is a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application.
+**Additional information for error resolution**: If there is a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application.
 
 ## <a name="bkmk_wmi"></a> Windows Management Instrumentation (WMI) errors
 
