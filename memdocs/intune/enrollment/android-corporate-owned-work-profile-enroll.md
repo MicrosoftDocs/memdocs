@@ -61,7 +61,8 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 ### Create an enrollment profile
 
 > [!NOTE]
-> Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token , the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states. 
+> - Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token , the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
+> - For corporate-owned work profile devices, token entry through the afw#setup enrollment method is only supported on devices running Android 8-10 and is not available on Android 11.
 
 You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
 
