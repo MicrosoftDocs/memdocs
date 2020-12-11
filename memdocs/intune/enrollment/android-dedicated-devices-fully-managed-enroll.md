@@ -59,6 +59,9 @@ For Android 6 and later devices, you can use the token to enroll the device. And
 8. On the **Enroll this device** screen, allow your device to scan the QR code or choose to enter the token manually.
 9. Follow the on-screen prompts to complete enrollment.
 
+> [!NOTE]
+> For corporate-owned work profile devices, token entry through the afw#setup enrollment method is only supported on devices running Android 8-10 and is not available on Android 11.
+
 ## Enroll by using a QR code
 
 On Android 7 and later devices, you can scan the QR code from the enrollment profile to enroll the device.
