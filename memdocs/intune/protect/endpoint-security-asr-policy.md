@@ -92,7 +92,7 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
 
   Device control profiles support [policy merge](#policy-merge-for-settings) for USB device IDs.
 
-  To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender ATfor EndpointP documentation.
+  To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
 

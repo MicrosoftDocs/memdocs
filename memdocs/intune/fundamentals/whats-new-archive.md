@@ -2101,7 +2101,7 @@ To see the available settings, go to [App Store, Doc Viewing, Gaming iOS setting
 Applies to: iOS
 
 #### Microsoft Defender for Endpoint  baseline  (Preview)<!--  3754134 -->
-We've added a security baseline Preview for [Microsoft Defender for Endpoint](../protect/security-baseline-settings-defender-atp.md) settings. This baseline is available when your environment meets the prerequisites for using [Microsoft Defender Afor Endpoint](../protect/advanced-threat-protection.md#prerequisites).
+We've added a security baseline Preview for [Microsoft Defender for Endpoint](../protect/security-baseline-settings-defender-atp.md) settings. This baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md#prerequisites).
 
 #### Outlook signature and biometric settings for  iOS and Android devices<!-- 4050557 -->
 You can now specify if the default signature is enabled in Outlook on iOS and Android devices. Additionally, you can choose to allow users to change the biometric setting in Outlook on iOS.
@@ -3805,7 +3805,7 @@ On the Enrollment Overview page, you can view the trend of enrollment failures a
 
 This feature allows Defender for Endpoint to scan files, detect threats, and report any risk on your Windows 10 devices.
 
-See [Enable DefendDefender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+See [Enable Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
 #### Support for user-less devices<!-- 1637553 -->
 Intune supports the ability to evaluate compliance on a user-less device, such as the Microsoft Surface Hub. Compliance policy can target specific devices. So compliance (and noncompliance) can be determined for devices that don't have an associated user.
