@@ -39,7 +39,7 @@ The User Access Control settings help prevent potentially harmful programs and s
 1. Go to **Start** and open **Control Panel**.
 2. Select **System and Security**.
 3. Under **Security and Maintenance**, select **Change User Account Control settings**.
-3. Move the the slider to one of the following levels: 
+3. Move the slider to one of the following levels: 
    * **Notify me when apps try to make changes to my computer**
    * **Always notify**  
 4. Select **OK** to save your changes. 
