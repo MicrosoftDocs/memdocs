@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,7 +53,7 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 - Learn more about [Supported browsers with Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
-> When you enable Device Based Access for SharePoint Online or browser-based access to Exchange Online, users on Android devices enrolled as personally-owned work profiles before December 2020 must enable the **Enable Browser Access** option on the enrolled device as follows:  
+> On Android devices, when you enable Device Based Access for SharePoint Online or browser-based access to Exchange Online, users must enable the **Enable Browser Access** option on the enrolled device as follows:  
 >
 > 1. Launch the **Company Portal app**.
 > 2. Go to the **Settings** page from the triple dots (...) or the hardware menu button.
