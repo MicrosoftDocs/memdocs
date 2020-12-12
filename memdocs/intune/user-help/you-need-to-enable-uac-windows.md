@@ -30,11 +30,11 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Adjust User Access Control level  
+# Change User Access Control setting  
 
 The User Access Control settings help prevent potentially harmful programs and software from making changes to your device. If you've received a message about adjusting these controls, it means that your organization requires your device to have more protection from User Access Control.
 
-## Edit User Access Control settings    
+## Adjust protection level    
 
 1. Go to **Start** and open **Control Panel**.
 2. Select **System and Security**.
