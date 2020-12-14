@@ -114,6 +114,8 @@
       href: understand/deployment-download-technical-reference.md
     - name: Application installation
       href: understand/deployment-install-technical-reference.md
+    - name: Common error codes for application installation
+      href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
     href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
   - name: Troubleshoot Package Conversion Manager
