@@ -217,7 +217,7 @@ To use the report:
    - **Other**:
      - **Needs attention**: The device has some issue and needs attention.
 
-    ````````````````````
+    
 
 ### Use the Feature update failures (Operational) report
 
