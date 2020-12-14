@@ -140,7 +140,7 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 **Message**: The script execution has timed out
 
-**Additional information for error resolution**: Check the ***AppEnforce.log** for details. You may need to increase the [**Maximum allowed run time (minutes)**](../apps/deploy-use/create-applications.md) for the application. Ensure that the maintenance window on the client is large enough to support the run time. For more information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
+**Additional information for error resolution**: Check the **AppEnforce.log** for details. You may need to increase the [**Maximum allowed run time (minutes)**](../apps/deploy-use/create-applications.md) for the application. Ensure that the maintenance window on the client is large enough to support the run time. For more information, see the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
 
 ### 0x87D00324
 
