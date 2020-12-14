@@ -89,6 +89,7 @@ When co-management isn't enabled, use the instructions below to enable device up
    [![All devices in Microsoft Endpoint Manager admin center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Select a device to load its **Overview** page.
 1. Choose any of the following actions:
+   - **Trigger Co-Management**
    - **Sync Machine Policy**
    - **Sync User Policy**
    - **App Evaluation Cycle**
