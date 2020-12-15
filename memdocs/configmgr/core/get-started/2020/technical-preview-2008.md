@@ -10,6 +10,7 @@ ms.assetid: fee18280-bbd8-43d4-b59a-97fc50e717fb
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 2008
