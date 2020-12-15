@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 08/19/2020
+ms.date: 12/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -42,6 +42,9 @@ The **Apps** tab shows all installed apps that the service detects on your Windo
 
 The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working with a deployment plan. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
+> [!TIP]
+> To enable sort and filter on additional columns in the list, turn on **App versions details**.<!-- MEMDocs#1131 -->
+
 Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
 
 Configure the **Importance** of apps by setting one of the following categories:
@@ -75,6 +78,8 @@ Identifying **Importance** and **Upgrade Decision** is critical for all notewort
 >
 >    - For store apps, filter **Type** as **Modern**
 >    - For system apps, filter **Category** as **Background process** or **Windows component**
+>
+> To filter on these attributes, first turn on **App versions details**.<!-- MEMDocs#1131 -->
 
 In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
