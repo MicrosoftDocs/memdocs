@@ -148,6 +148,9 @@ You'll be able to set Automated Device Enrollment (ADE) profiles to hide these S
 - Software Update Completed, for iOS/iPadOS 14.0+.
 - Accessibility, for macOS 11+ (the mac device must be connected to an Ethernet).
 
+### Browser access enabled automatically during Android work profile enrollment<!-- 5411101 IDReady -->  
+Soon, during Android Enterprise personally-owned work profile enrollments, browser access will be automatically enabled. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, then click **Enable**. 
+
 <!-- ***********************************************-->
 ## Device management
 
