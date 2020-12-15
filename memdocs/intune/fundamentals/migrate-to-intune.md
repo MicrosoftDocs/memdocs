@@ -39,9 +39,9 @@ After migrating to Intune, the existing device security policies deployed with B
 
 Migrating to Intune requires the following three major steps:
 
-1.	[Prepare](#prepare): Review your Intune licenses, Basic Mobility and Security policies, group memberships, and devices to streamline the migration.
-2.	[Migrate policies](#migrate-policies): Use the migration evaluation tool to get Intune policy and group recommendations to replace the Basic Mobility and Security policies.
-3.	[Migrate users and devices](#migrate-users-and-devices): Assign licenses to users or groups, which will automatically switch the users to Intune device management at the next refresh cycle.
+1. **Prepare**: Review your Intune licenses, Basic Mobility and Security policies, group memberships, and devices to streamline the migration.
+2. **Migrate policies**: Use the migration evaluation tool to get Intune policy and group recommendations to replace the Basic Mobility and Security policies.
+3. **Migrate users and devices**: Assign licenses to users or groups, which will automatically switch the users to Intune device management at the next refresh cycle.
 
 ## Prepare
 
