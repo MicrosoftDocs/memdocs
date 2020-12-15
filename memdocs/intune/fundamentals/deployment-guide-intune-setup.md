@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2020
+ms.date: 12/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -104,7 +104,7 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 
 ## Currently use Configuration Manager
 
-Configuration Manager supports Windows and macOS devices, and Windows Servers. If you're using other platforms, you may need to reset the devices, and then enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+Configuration Manager supports Windows and macOS devices, and Windows Servers. If you're using other platforms, you may need to reset the devices, and then enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md). For related information, see [cloud attach](https://techcommunity.microsoft.com/t5/configuration-manager-blog/cloud-attach-your-future-part-ii-quot-the-big-3-quot/ba-p/1750664). 
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
