@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/14/2020
+ms.date: 12/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,18 +118,16 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2012
 
-- [3555940](2020/technical-preview-2012.md) <!--3555940-->
-- [4639895](2020/technical-preview-2012.md) <!--4639895-->
-- [6991505](2020/technical-preview-2012.md) <!--6991505-->
-- [7137169](2020/technical-preview-2012.md) <!--7137169-->
-- [7898885](2020/technical-preview-2012.md) <!--7898885-->
-- [7983035](2020/technical-preview-2012.md) <!--7983035-->
-- [8116426](2020/technical-preview-2012.md) <!--8116426-->
-- [8354812](2020/technical-preview-2012.md) <!--8354812-->
-- [8655543](2020/technical-preview-2012.md) <!--8655543-->
-- [8888218](2020/technical-preview-2012.md) <!--8888218-->
-- [8364465](2020/technical-preview-2012.md) <!--8364465-->
-- [8706717](2020/technical-preview-2012.md) <!--8706717-->
+- [Windows 10 Servicing dashboard changes](2020/technical-preview-2012.md#bkmk_dashboard) <!--3555940-->
+- [Tenant Attach: Application details](2020/technical-preview-2012.md#bkmk_mem) <!--8364465-->
+- [Get console extensions from the Community hub](2020/technical-preview-2012.md#bkmk_hubext) <!--8116426-->
+- [Community hub support for application content](2020/technical-preview-2012.md#bkmk_hubapp) <!--7983035-->
+- [Task sequence error shows more check readiness details](2020/technical-preview-2012.md#bkmk_tscheck) <!--8888218-->
+- [Disable application deployments](2020/technical-preview-2012.md#bkmk_disableapp) <!--8354812-->
+- [Access the top queries shared in the Community hub from CMPivot](2020/technical-preview-2012.md#bkmk_cmpivot_hub) <!--7137169-->
+- [Improved user experience and security with Software Center custom tabs](2020/technical-preview-2012.md#bkmk_swctr) <!--8655543-->
+- [OneTrace support for jump lists](2020/technical-preview-2012.md#bkmk_jumplist) <!--6991505-->
+- [PowerShell release notes preview](2020/technical-preview-2012.md#bkmk_powershell) <!--8706717-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
