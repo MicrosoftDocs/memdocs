@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: How to enable User Account Control | Microsoft Docs
-description: Learn how to enable UAC to access company resources.
+title: Change User Access Control setting | Microsoft Docs
+description: Learn how to change the User Access Control protection level to get access to work resources.
 keywords:
 author: lenewsad
 
