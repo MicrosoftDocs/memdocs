@@ -2,7 +2,7 @@
 title: Technical preview 2012
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2012.
-ms.date: 12/14/2020
+ms.date: 12/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,18 +24,16 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2012/1234567.md)] -->
 
-[!INCLUDE [3555940](includes/2012/3555940.md)]
-[!INCLUDE [4639895](includes/2012/4639895.md)]
-[!INCLUDE [6991505](includes/2012/6991505.md)]
-[!INCLUDE [7137169](includes/2012/7137169.md)]
-[!INCLUDE [7898885](includes/2012/7898885.md)]
-[!INCLUDE [7983035](includes/2012/7983035.md)]
-[!INCLUDE [8116426](includes/2012/8116426.md)]
-[!INCLUDE [8354812](includes/2012/8354812.md)]
-[!INCLUDE [8655543](includes/2012/8655543.md)]
-[!INCLUDE [8888218](includes/2012/8888218.md)]
-[!INCLUDE [8364465](includes/2012/8364465.md)]
-[!INCLUDE [8706717](includes/2012/8706717.md)]
+[!INCLUDE [Windows 10 Servicing dashboard changes](includes/2012/3555940.md)]
+[!INCLUDE [Tenant Attach: Application details](includes/2012/8364465.md)]
+[!INCLUDE [Get console extensions from the Community hub](includes/2012/8116426.md)]
+[!INCLUDE [Community hub support for application content](includes/2012/7983035.md)]
+[!INCLUDE [Task sequence error shows more check readiness details](includes/2012/8888218.md)]
+[!INCLUDE [Disable application deployments](includes/2012/8354812.md)]
+[!INCLUDE [Access the top queries shared in the Community hub from CMPivot](includes/2012/7137169.md)]
+[!INCLUDE [Improved user experience and security with Software Center custom tabs](includes/2012/8655543.md)]
+[!INCLUDE [OneTrace support for jump lists](includes/2012/6991505.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2012/8706717.md)]
 
 <!--
 ## General known issues
