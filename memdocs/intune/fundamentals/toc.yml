@@ -79,6 +79,8 @@
         items:
         - name: Setup deployment guide
           href: deployment-guide-intune-setup.md
+        - name: Migrate from Basic Mobility and Security
+          href: migrate-to-intune.md
         - name: Use conditional access
           href: migration-guide-drive-adoption.md
       - name: Enroll devices
