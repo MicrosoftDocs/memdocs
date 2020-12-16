@@ -26,7 +26,7 @@ Autopilot reduces the time, resources, and complexity associated with deploying,
 
 Windows Autopilot supports several scenarios, all of which are maximized with co-management:
 
-- Users can drive their own deployments of new devices into either Active Directory with hybrid Azure AD join, or Azure Active Directory (Azure AD)  
+- Users can drive their own deployments of new devices into Azure Active Directory (Azure AD)  
 
 - You can set up self-deploying new device deployments into Azure AD for shared devices and kiosks  
 
