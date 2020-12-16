@@ -5,6 +5,7 @@ description: On Windows 10 devices, use or configure endpoint protection setting
 keywords:
 author: brenduns
 ms.author: brenduns
+ms.date: 12/16/2020
 manager: dougeby
 ms.topic: reference
 ms.technology:
