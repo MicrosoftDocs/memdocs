@@ -6,7 +6,8 @@ titleSuffix:
 description: Use Windows Autopilot to enroll hybrid Azure AD-joined devices in Microsoft Intune.
 keywords:
 author: ErikjeMS
-ms.author: erikjemanager: dougeby
+ms.author: erikje
+manager: dougeby
 ms.date: 11/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
