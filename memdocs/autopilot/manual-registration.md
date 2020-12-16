@@ -11,7 +11,7 @@ ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
-ms.author: greglin
+ms.author: greglinms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop

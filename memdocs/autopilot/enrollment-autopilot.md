@@ -6,8 +6,7 @@ titleSuffix: Microsoft Intune
 description: Learn how to enroll Windows 10 devices using Windows Autopilot.
 keywords:
 author: ErikjeMS
-ms.author: erikje
-manager: dougeby
+ms.author: erikjemanager: dougeby
 ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
