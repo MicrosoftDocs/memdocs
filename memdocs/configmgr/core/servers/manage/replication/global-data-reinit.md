@@ -5,7 +5,7 @@ description: Use this diagram to start troubleshooting SQL Server replication re
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: referemce
+ms.topic: reference
 ms.assetid: d36622c0-776c-493b-971a-4a586fc394d4
 author: aczechowski
 ms.author: aaroncz
