@@ -46,6 +46,8 @@
     href: troubleshoot-client-details.md
   - name: Application installation (preview)
     href: troubleshoot-applications.md
+  - name: Common error codes for application installation
+    href: app-install-error-reference.md
   - name: Timeline (preview)
     href: troubleshoot-timeline.md
   - name: Resource explorer (preview)

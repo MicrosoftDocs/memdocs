@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 12/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -116,16 +116,18 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2011
+### Technical preview version 2012
 
-- [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
-- [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
-- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
-- [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
-- [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
-- [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
-- [Improvements to OS deployment](2020/technical-preview-2011.md#bkmk_osd) <!--8764365-->
-- [Update PowerShell help](2020/technical-preview-2011.md#bkmk_pwsh) <!--7774961-->
+- [Windows 10 Servicing dashboard changes](2020/technical-preview-2012.md#bkmk_dashboard) <!--3555940-->
+- [Tenant Attach: Application details](2020/technical-preview-2012.md#bkmk_mem) <!--8364465-->
+- [Get console extensions from the Community hub](2020/technical-preview-2012.md#bkmk_hubext) <!--8116426-->
+- [Community hub support for application content](2020/technical-preview-2012.md#bkmk_hubapp) <!--7983035-->
+- [Task sequence error shows more check readiness details](2020/technical-preview-2012.md#bkmk_tscheck) <!--8888218-->
+- [Disable application deployments](2020/technical-preview-2012.md#bkmk_disableapp) <!--8354812-->
+- [Access the top queries shared in the Community hub from CMPivot](2020/technical-preview-2012.md#bkmk_cmpivot_hub) <!--7137169-->
+- [Improved user experience and security with Software Center custom tabs](2020/technical-preview-2012.md#bkmk_swctr) <!--8655543-->
+- [OneTrace support for jump lists](2020/technical-preview-2012.md#bkmk_jumplist) <!--6991505-->
+- [PowerShell release notes preview](2020/technical-preview-2012.md#bkmk_powershell) <!--8706717-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -143,7 +145,16 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2010.2 -->
+### Technical preview version 2011
+
+- [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
+- [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
+- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
+- [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
+- [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
+- [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
+- [Improvements to OS deployment](2020/technical-preview-2011.md#bkmk_osd) <!--8764365-->
+- [Update PowerShell help](2020/technical-preview-2011.md#bkmk_pwsh) <!--7774961-->
 
 ## Features in previous technical previews
 
