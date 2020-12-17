@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows Autopilot
+title: Windows Autopilot troubleshooting process
 description: Learn how to handle issues as they arise during the Windows Autopilot deployment process.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
@@ -18,21 +18,17 @@ ms.topic: troubleshooting
 ---
 
 
-# Troubleshoot Windows Autopilot
+# Troubleshooting Windows Autopilot
 
 **Applies to: Windows 10**
 
-Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. Review the following information to assist with troubleshooting efforts.
+Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. Review the information in this topic to understand:
 
-The following topics are available to help you understand and troubleshoot specific issues with Windows Autopilot deployment:
+- The Windows Autopilot [process flow](#windows-autopilot-flow)
+- How Windows Autopilot [device profiles](#profile-download) are downloaded
+- [Key activities](#key-troubleshooting-activities) to perform for troubleshooting purposes
 
-- [Troubleshoot device enrollment](troubleshoot-device-enrollment.md)
-- [Troubleshoot OOBE issues](troubleshoot-oobe.md)
-- [Troubleshoot AAD join issues](troubleshoot-aad-join.md)
-- [Policy conflicts](policy-conflicts.md)
-- [Known issues](known-issues.md)
-
-## The troubleshooting process
+## Windows Autopilot flow
 
 Whether you're performing user-driven or self-deploying device deployments, the troubleshooting process is about the same. It's useful to understand the flow for a specific device:
 
@@ -43,17 +39,7 @@ Whether you're performing user-driven or self-deploying device deployments, the 
 5. Automatic MDM enrollment occurs. As part of the Azure AD join process, the device will enroll in the MDM service configured in Azure AD (for example, Microsoft Intune).
 6. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings will be applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
 
-For troubleshooting, key activities to perform are:
-
-- Configuration: Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
-- Network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
-- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Azure AD credentials page customized with organization-specific details as expected?
-- Azure AD join issues: Is the device able to [join Azure Active Directory](troubleshoot-aad-join.md)?
-- MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
-
 ## Profile download
-
-Before you begin troubleshooting, you should also understand how the Windows Autopilot service works with device profiles.
 
 When an Internet-connected Windows 10 device boots up, it will attempt to connect to the Autopilot service and download an Autopilot profile. Note: It's important that a profile exists at this stage so that a blank profile isn't cached locally on the PC. To remove the currently cached local profile in Windows 10 version 1803 and earlier, it's necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. In Windows 10 version 1809 and later, you can retrieve a new profile by rebooting the PC.
 
@@ -70,6 +56,26 @@ If you need to reboot a computer during OOBE:
 - Enter **shutdown /r /t 0** to restart immediately, or **shutdown /s /t 0** to shut down immediately.
 
 For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+
+## Key troubleshooting activities
+
+For troubleshooting, key activities to perform are:
+
+- Review configuration: Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
+- Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
+- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Azure AD credentials page customized with organization-specific details as expected?
+- Azure AD join issues: Is the device able to [join Azure Active Directory](troubleshoot-aad-join.md)?
+- MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
+
+## Next steps
+
+See the following topics for help troubleshooting specific issues:
+
+- [Troubleshoot device enrollment](troubleshoot-device-enrollment.md)
+- [Troubleshoot OOBE issues](troubleshoot-oobe.md)
+- [Troubleshoot AAD join issues](troubleshoot-aad-join.md)
+- [Policy conflicts](policy-conflicts.md)
+- [Known issues](known-issues.md)
 
 ## Related topics
 
