@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Configurations policy mapping from Basic Mobility and Security to Intune
 
-This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps Office 365 Security and Compliance portal Configurations policies to the equivalent polices in Microsoft Endpoint Manager admin center. Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
+This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps Office 365 Security and Compliance portal Configurations policies to the equivalent policies in Microsoft Endpoint Manager admin center. Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
 
 If you’re migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
@@ -42,7 +42,7 @@ To see these settings in the Office 365 Security and Compliance portal, sign in 
 This setting was never supported for Windows or Android in Basic Mobility and Security.
 
 One configuration profile:
-- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Compliance settings Edit** > **Cloud an Storage** > **Force encrypted backup**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Compliance settings Edit** > **Cloud and Storage** > **Force encrypted backup**
 
 ## Block cloud backup
 This setting was never supported for Windows or Android in Basic Mobility and Security.
@@ -123,7 +123,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 
 Two configuration profiles:
 - **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Removable storage**
-- **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cloud and Stoarge** > **Removable storage (Samsung Knox only)**
+- **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cloud and Storage** > **Removable storage (Samsung Knox only)**
 
 ## Block Bluetooth connection
 This setting was never supported for iOS/iPadOS in Basic Mobility and Security.
