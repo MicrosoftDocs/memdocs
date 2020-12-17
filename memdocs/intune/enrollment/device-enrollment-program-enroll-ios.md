@@ -354,9 +354,17 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.
 
 ## Distribute devices
-You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
-See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
+You enabled management and syncing between Apple and Intune, and assigned a profile so your ADE devices can enroll. Now, you're ready to distribute devices to users. Be familiar with the licensing requirements:
+
+- Devices enrolled with user affinity require each user be assigned an Intune license.
+- Devices enrolled without user affinity typically don't have any associated users. So, the devices must have an Intune device license. If devices enrolled without user affinity will be used by an Intune-licensed user, then a device license isn't needed.
+
+To summarize, if a device has a user, then the user must have an Intune license. If the device doesn't have an Intune-licensed user, then the device must have an Intune device license.
+
+An activated device can't apply an enrollment profile until the device is wiped.
+
+See [Enroll your iOS/iPadOS device in Intune using automated device enrollment (ADE)](../user-help/enroll-your-device-dep-ios.md).
 
 > [!NOTE]
 > You might see the following error during setup while enrolling iOS/iPadOS devices with Automated Device Enrollment iOS/iPadOS and user affinity:
