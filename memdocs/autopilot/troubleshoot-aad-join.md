@@ -13,17 +13,16 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
 
-## Troubleshoot Azure AD join issues
+# Troubleshoot Azure Active Directory join issues
 
 **Applies to: Windows 10**
 
-The most common issue joining a device to Azure AD is related to Azure AD permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD. Errors can also happen if the user exceeds the number of devices that they're allowed to join. This limit is configured in Azure AD.
+The most common issue joining a device to Azure Active Directory (Azure AD) is related to Azure AD permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD. Errors can also happen if the user exceeds the number of devices that they're allowed to join. This limit is configured in Azure AD.
 
 An Azure AD device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Azure AD for group membership and targeting (including the profile). Deleting it may lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
 

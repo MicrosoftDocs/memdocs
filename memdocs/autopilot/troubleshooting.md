@@ -48,8 +48,8 @@ For troubleshooting, key activities to perform are:
 - Configuration: Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
 - Network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
 - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Azure AD credentials page customized with organization-specific details as expected?
-- Azure AD join issues: Is the device able to [join Azure Active Directory](#troubleshoot-aad-join.md)?
-- MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](#troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
+- Azure AD join issues: Is the device able to [join Azure Active Directory](troubleshoot-aad-join.md)?
+- MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
 
 ## Profile download
 
