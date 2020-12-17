@@ -289,6 +289,11 @@ We'll be adding two new settings to the App and browser isolation profile of Int
 ### Update to MDATP and MDM baseline settings<!-- 8391335, 8377369 -->
 As part of endpoint security in Intune, we'll be updating the Microsoft Defender Advanced Threat Protection and Mobile Device Management (MDM) protection baselines settings to the latest version. For related information, see [Microsoft Defender Advanced Threat Protection baseline settings for Intune](../protect/security-baseline-settings-defender-atp.md?pivots=atp-sept-2020).
 
+### App protection policy support on Android and iOS/iPadOS for additional Mobile Threat Defense partners<!-- 8846351 idready-->
+In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. We'll be expanding this support to the following partner for using an app protection policy to block or selectively wipe a user’s corporate data based on the health of the device:
+
+- **McAfee MVision Mobile** on Android, iOS and iPadOS
+
 
 <!-- ***********************************************-->
 ## Notices
