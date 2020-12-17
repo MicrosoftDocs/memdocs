@@ -80,7 +80,7 @@ One configuration profile:
     | --- | --- |
     | AllowAll | Allow All Movies |
     | DontAllow | Don’t Allow Movies |
-    | $null |  |
+    | $null | Allow All Movies |
     | AURatingG | G |
     | AURatingPG | PG |
     | AURatingM | M |
@@ -143,7 +143,7 @@ One configuration profile:
     | --- | --- |
     | AllowAll | Allow All TV Shows |
     | DontAllow | Don’t Allow TV Shows |
-    | $null |  |
+    | $null | Allow All TV Shows |
     | AURatingP | P |
     | AURatingC | C |
     | AURatingG | G |
