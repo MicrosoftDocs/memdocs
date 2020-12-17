@@ -22,9 +22,11 @@ ms.topic: troubleshooting
 
 **Applies to: Windows 10**
 
-The most common issue joining a device to Azure Active Directory (Azure AD) is related to Azure AD permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD. Errors can also happen if the user exceeds the number of devices that they're allowed to join. This limit is configured in Azure AD.
+The most common issue joining a device to Azure Active Directory (Azure AD) is related to Azure AD permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD. Errors can also happen if the user exceeds the [number of devices](/mem/intune/enrollment/device-limit-intune-azure) that they're allowed to join. This limit is configured in Azure AD.
 
 An Azure AD device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Azure AD for group membership and targeting (including the profile). Deleting it may lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
+
+## Error code 801C0003
 
 Error code 801C0003 will typically be reported on an error page titled "Something went wrong". This error means that the Azure AD join failed.
 
