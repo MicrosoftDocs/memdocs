@@ -51,7 +51,7 @@ These settings are backed by the conditional access policy GraphAggregatorServic
 
 One conditional access policy:
 
-- **Endpoint security** > **Conditional access** > **Classic policies** > **[GraphAggregatorService] Device policy** > **Conditions** > **Client apps (Preview) > **Mobile apps and desktop clients > **Exchange ActiveSync clients** > **Apply policy only to supported platform**
+- **Endpoint security** > **Conditional access** > **Classic policies** > **[GraphAggregatorService] Device policy** > **Conditions** > **Client apps (Preview)** > **Mobile apps and desktop clients** > **Exchange ActiveSync clients** > **Apply policy only to supported platform**
 
 ### Are there any security groups you want to exclude from access control?
 
