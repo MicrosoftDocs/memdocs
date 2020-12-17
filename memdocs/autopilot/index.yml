@@ -95,7 +95,7 @@ landingContent:
     linkLists:
     - linkListType: reference
       links:
-      - text: Troubleshooting Windows Autopilot
+      - text: Troubleshooting overview
         url: troubleshooting.md
       - text: Policy conflicts
         url: policy-conflicts.md
