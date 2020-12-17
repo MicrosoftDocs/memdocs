@@ -354,20 +354,33 @@ You can pick a default profile to be applied to all devices enrolling with a spe
 2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.
 
 ## Distribute devices
-You have enabled management and syncing between Apple and Intune, and assigned a profile to  let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device can't apply an enrollment profile until the device is wiped.
 
-See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
+You enabled management and syncing between Apple and Intune, and assigned a profile so your ADE devices can enroll. Now, you're ready to distribute devices to users. Some things to know: 
 
-> [!NOTE]
-> You might see the following error during setup while enrolling iOS/iPadOS devices with Automated Device Enrollment iOS/iPadOS and user affinity:
-> "The SCEP server returned an invalid response."
-> To resolve this error, you must factory reset the device. This is because of a 15-minute time limit on SCEP certificates due to security reasons. 
- 
+- Devices enrolled with user affinity require each user be assigned an Intune license.
+- Devices enrolled without user affinity typically don't have any associated users. So, the devices must have an Intune device license. If devices enrolled without user affinity will be used by an Intune-licensed user, then a device license isn't needed.
+
+  To summarize, if a device has a user, then the user must have an assigned Intune license. If the device doesn't have an Intune-licensed user, then the device must have an Intune device license.
+
+  For more information on Intune licensing, see [Microsoft Intune licensing](../fundamentals/licenses.md) and the [Intune planning guide](../fundamentals/intune-planning-guide.md).
+
+- A device that's been activated must be wiped before it can enroll in Intune. After it's been wiped, the enrollment profile can be applied.
+
+- When enrolling with ADE and user affinity, the following error can happen during setup. To resolve this error, you must factory reset the device. Due to security reasons, this error occurs because of a 15-minute time limit on SCEP certificates.
+
+  `The SCEP server returned an invalid response.`
+  
+For information on the end user experience, see [Enroll your iOS/iPadOS device in Intune using ADE](../user-help/enroll-your-device-dep-ios.md).
 
 ## Renew an Automated Device Enrollment token  
 
-> [!NOTE]
-> In addition to renewing your ADE token yearly, you'll need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
+You need to renew your tokens:
+
+- Renew your ADE token yearly. The Endpoint Manager admin center shows the expiration date.
+- If the Apple ID password changes for the user who set up the token in Apple Business Manager, then renew your enrollment program token within Intune and Apple Business Manager.
+- If the user who set up the token in Apple Business Manager leaves the organization, then renew your enrollment program token within Intune and Apple Business Manager.
+
+### Renew your tokens
 
 1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.
 2. Choose **Settings** > under **MDM Servers** choose your MDM server associated with the token file that you want to renew > **Download Token**.
