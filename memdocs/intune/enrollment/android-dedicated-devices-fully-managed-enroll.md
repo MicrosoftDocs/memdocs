@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 9/11/2020
+ms.date: 12/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -43,20 +43,28 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 
 ## Enroll by using Near Field Communication (NFC)
 
-For devices 6 and later that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
+For devices 6 and newer that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## Enroll by using a token
+
+This feature applies to:
+
+- Android Enterprise 6 and newer: You can use the token value, such as `123456`.
+- Android Enterprise 6.1 and newer: You can use the token value, and QR scanning code with **afw#setup**.
+- Android Enterprise versions 8-10 corporate owned work profile (COPE): You can use the token value, and QR scanning code with **afw#setup**.
+
+  On Android Enterprise 11 and newer, **afw#setup** isn't available.
 
 For Android 6 and later devices, you can use the token to enroll the device. Android 6.1 and later versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
 
 1. Turn on your wiped device.
 2. On the **Welcome** screen, select your language.
-3. Connect to your **Wifi** and then choose **NEXT**.
-4. Accept the Google Terms and conditions and then choose **NEXT**.
+3. Connect to your **Wifi**, and then choose **NEXT**.
+4. Accept the Google Terms and conditions, and then choose **NEXT**.
 5. On the Google sign-in screen, enter **afw#setup** instead of a Gmail account, and then choose **NEXT**.
 6. Choose **INSTALL** for the **Android Device Policy** app.
-7. Continue installation of this policy.  Some devices may require additional terms acceptance.
-8. On the **Enroll this device** screen, allow your device to scan the QR code or choose to enter the token manually.
+7. Continue installation of this policy. Some devices may require additional terms acceptance.
+8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, choose to enter the token manually.
 9. Follow the on-screen prompts to complete enrollment.
 
 > [!NOTE]
@@ -64,13 +72,13 @@ For Android 6 and later devices, you can use the token to enroll the device. And
 
 ## Enroll by using a QR code
 
-On Android 7 and later devices, you can scan the QR code from the enrollment profile to enroll the device.
+On Android 7 and newer devices, you can scan the QR code from the enrollment profile to enroll the device.
 
 > [!Note]
 > Browser zoom can cause devices to not be able to scan QR code. Increasing the browser zoom resolves the issue.
 
 1. To launch a QR read on the Android device, tap multiple times on the first screen you see after a wipe.
-2. For Android 7 and 8 devices, you'll be prompted to install a QR reader. Android 9 and later devices already have a QR reader installed.
+2. For Android 7 and 8 devices, you'll be prompted to install a QR reader. Android 9 and newer devices already have a QR reader installed.
 3. Use the QR reader to scan the enrollment profile QR code and then follow the on-screen prompts to enroll.
 
 ## Enroll by using Google Zero Touch
