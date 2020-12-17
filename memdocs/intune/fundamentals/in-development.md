@@ -294,6 +294,16 @@ In October of 2019, Intune app protection policy added the capability to use dat
 
 - **McAfee MVision Mobile** on Android, iOS and iPadOS
 
+### Intune support for Microsoft Defender Application Guard to include isolated Windows environments<!-- 8274282  -->
+In the future, when you configure **Turn on Application Guard**  in an Intune [App and browser isolation profile](../protect/endpoint-security-asr-profile-settings.md#app-and-browser-isolation) in Endpoint security Attack surface reduction policy, you'll be able to choose from the following options when you enable Application Guard:
+
+- **Microsoft Edge** - *Currently available*
+- **Isolated Windows environments** - *New with this update*
+- **Microsoft Edge** ***and*** **isolated Windows environments** - *New with this update*
+
+The setting is currently named *Turn on Application Guard for Edge (Options)*.
+
+The new options for this setting expand Application Guard support beyond just URL’s for Edge. You can also enable Application Guard to help protect devices by opening potential threats in a hardware isolated Windows VM environment (container). For example, with support for isolated Windows environments, Application Guard can open untrusted Office documents in an isolated Windows VM. 
 
 <!-- ***********************************************-->
 ## Notices
