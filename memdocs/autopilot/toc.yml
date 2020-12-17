@@ -72,7 +72,7 @@
         href: troubleshoot-device-enrollment.md
       - name: Troubleshoot OOBE issues
         href: troubleshoot-oobe.md
-      - name: Troubleshoot AAD join issues
+      - name: Troubleshoot Azure AD-join issues
         href: troubleshoot-aad-join.md
       - name: Policy conflicts
         href: policy-conflicts.md
