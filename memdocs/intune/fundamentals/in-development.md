@@ -281,13 +281,13 @@ We're adding a new setting to the Attack surface reduction rule profile, part of
 This new setting can help protect against fileless malware threats that abuse the WMI repository and event model to stay hidden. For more information see [Block persistence through MI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-persistence-through-wmi-event-subscription) in the Windows security documentation.
 
 ### New Application Guard settings in Attack surface reduction policy<!-- 8274336 -->
-We'll be adding two new settings to the App and browser isolation profile of Intune’s [Endpoint security Attack surface reduction policy](../protect/endpoint-security-asr-policy):
+We'll be adding two new settings to the App and browser isolation profile of Intune’s [Endpoint security Attack surface reduction policy](../protect/endpoint-security-asr-policy.md):
 
 - **Application Guard allow camera and microphone access** – Manage access by Application Guard apps to a devices camera and microphone.
 - **Application Guard allow use of Root Certificate Authorities from the user's device** – When you specify one or more root certificate thumbprints, the matching certificates are transferred to the Microsoft Defender Application Guard container.
 
 ### Update to MDATP and MDM baseline settings<!-- 8391335, 8377369 -->
-As part of endpoint security in Intune, we'll be updating the Microsoft Defender Advanced Threat Protection and Mobile Device Management (MDM) protection baselines settings to the latest version. For related information, see [Microsoft Defender Advanced Threat Protection baseline settings for Intune](../protect/security-baseline-settings-defender-atp?pivots=atp-sept-2020).
+As part of endpoint security in Intune, we'll be updating the Microsoft Defender Advanced Threat Protection and Mobile Device Management (MDM) protection baselines settings to the latest version. For related information, see [Microsoft Defender Advanced Threat Protection baseline settings for Intune](../protect/security-baseline-settings-defender-atp.md?pivots=atp-sept-2020).
 
 
 <!-- ***********************************************-->
