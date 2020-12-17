@@ -238,7 +238,7 @@ Windows email was never supported for Windows 10 in Basic Mobility and Security.
 
 For Android, this setting was only supported on Samsung Knox devices in Basic Mobility and Security.
 
-Intune requires additional settings be configured when deploying email that weren’t available in device security policies. See details.
+Intune requires additional settings be configured when deploying email that weren’t available in device security policies. For more information, see [Additional settings required by Intune for email profiles](#additional-settings-required-by-intune-for-email-profiles).
 
 [!INCLUDE [blockorallow](../includes/block-or-allow.md)]
 
@@ -277,8 +277,24 @@ Three configuration profiles and one compliance policy
     | SSL | Enable |
 
 
+### Additional settings required by Intune for email profiles
 
+The following settings aren't deployed by device security policies, but Intune requires that they have a value when deploying email profiles.
 
+| Platform | Setting | Value in migration |
+| --- | --- | --- |
+| Android | Require S/mime | false |
+| Android | Sync Contacts | true |
+| Android | Sync Calendar | true |
+| Android | Sync Tasks | true |
+| Android | Sync Notes | false |
+| iOS | Block moving messages to other email accounts | false |
+| iOS | Block sending Email from third party addresses | false |
+| iOS | Block syncing recently used email addresses | false |
+| iOS | Require S/mime | false |
+| Windows 10 | Sync Contacts | true |
+| Windows 10 | Sync Calendar | true |
+| Windows 10 | Sync Tasks | true |
 
 
 
