@@ -1,4 +1,4 @@
-- name: User help for Intune
+- name: Device user help for Microsoft Intune
   items:
   - name: What is device enrollment?
     href: use-managed-devices-to-get-work-done.md
