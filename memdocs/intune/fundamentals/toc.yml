@@ -221,6 +221,10 @@
       href: policy-map-between-basic-mobility-security-intune.md
     - name: Access requirements policy mapping
       href: policy-map-access-requirements.md
+    - name: Configurations policy mapping
+      href: policy-map-configurations.md
+    - name: Exchange PowerShell policy mapping
+      href: policy-map-exchange-powershell.md
 - name: Resources
   items:
   - name: Archive
