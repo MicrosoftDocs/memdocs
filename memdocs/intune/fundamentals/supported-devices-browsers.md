@@ -46,6 +46,9 @@ You can manage devices running the following operating systems:
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
+> [!NOTE]
+> Intune does not currently support managing UWF enabled devices. See [Unified Write Filter (UWF) feature](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/unified-write-filter) for more information.
+
 ### Supported Samsung Knox Standard devices
 
 To avoid Knox activation errors that prevent MDM enrollment, the Company Portal app only attempts Samsung Knox activation during MDM enrollment if the device appears in the [list of supported Knox devices](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Devices that don't support Samsung Knox activation enroll as standard Android devices. A Samsung device might have some model numbers that support Knox, while others don't. Verify Knox compatibility with your device reseller before you buy and deploy Samsung devices.
