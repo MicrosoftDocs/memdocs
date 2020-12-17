@@ -133,3 +133,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 Two configuration profiles:
 - **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > > **Cellular and connectivity** > **Bluetooth**
 - **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cellular and connectivity** > **Bluetooth (Samsung Knox only)**
+
+## Next steps
+
+To migrate these policies, you can use the  [Migration evaluation tool](migrate-to-intune.md).

@@ -307,3 +307,6 @@ One configuration profile:
     | Block | Yes |
     | Not configured | Not configured |
 
+## Next steps
+
+To migrate these policies, you can use the  [Migration evaluation tool](migrate-to-intune.md).
