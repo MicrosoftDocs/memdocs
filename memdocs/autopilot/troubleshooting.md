@@ -1,5 +1,5 @@
 ---
-title: Windows Autopilot troubleshooting process
+title: Windows Autopilot troubleshooting overview
 description: Learn how to handle issues as they arise during the Windows Autopilot deployment process.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
@@ -19,15 +19,15 @@ ms.topic: troubleshooting
 ---
 
 
-# Troubleshooting Windows Autopilot
+# Troubleshooting overview
 
 **Applies to: Windows 10**
 
-Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. Review the information in this topic to understand:
+Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. When troubleshooting an issue, it is helpful to understand:
 
 - The Windows Autopilot [process flow](#windows-autopilot-flow)
 - How Windows Autopilot [device profiles](#profile-download) are downloaded
-- [Key activities](#key-troubleshooting-activities) to perform for troubleshooting purposes
+- [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
 
 ## Windows Autopilot flow
 

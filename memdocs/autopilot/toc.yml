@@ -66,7 +66,7 @@
        
     - name: Troubleshoot Windows Autopilot
       items:
-      - name: The troubleshooting process
+      - name: Troubleshooting overview
         href: troubleshooting.md
       - name: Troubleshoot device enrollment
         href: troubleshoot-device-enrollment.md
