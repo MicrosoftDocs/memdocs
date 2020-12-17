@@ -24,7 +24,7 @@ ms.topic: troubleshooting
 
 When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
 
-### Windows 10 version 1803 and above
+## Windows 10 version 1803 and above
 
 Windows 10 version 1803 and above adds event log entries. You can use the log entries to see details related to the Autopilot profile settings and OOBE flow. These entries can be viewed using Event Viewer. Review the information at **Application and Services Logs –> Microsoft –> Windows –> Provisioning-Diagnostics-Provider –> Autopilot** for versions before 1903. For version 1903 and later, see **Application and Services Logs –> Microsoft –> Windows –> ModernDeployment-Diagnostics-Provider –> Autopilot**. The following events may be recorded, depending on the scenario and profile configuration:
 
@@ -45,7 +45,7 @@ Windows 10 version 1803 and above adds event log entries. You can use the log en
 
 In addition to the event log entries, the registry and ETW trace options below work with Windows 10 version 1803 and above.
 
-### Windows 10 version 1709 and above
+## Windows 10 version 1709 and above
 
 Autopilot profile settings received from the Autopilot deployment service are stored in the device's registry. This information can be found at **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Available registry entries include:
 
@@ -58,7 +58,7 @@ Autopilot profile settings received from the Autopilot deployment service are st
 | TenantMatched | This entry is set to 1 if the user's tenant ID matches the tenant ID that the device was registered with. If this registry value is 0, the user would be shown an error and forced to start over. |
 | CloudAssignedOobeConfig | A bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16 |
 
-### Windows 10 semi-annual channel supported versions
+## Windows 10 semi-annual channel supported versions
 
 On devices running a [supported version](/windows/release-information/) of Windows 10 semi-annual channel, you can use ETW tracing to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
