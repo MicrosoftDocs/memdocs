@@ -9,4 +9,4 @@ ms.author: dougeby
 ms.custom: include file
 ms.collection: M365-identity-device-management
 ---
-If **If a device doesn't meet the requirements above, then…** is set to **Block access and report violation**, use Intune compliance policies as shown below. If it’s set to **Allow…**, use configuration profiles instead.
+When **If a device doesn't meet the requirements above, then…** is set to **Block access and report violation**, use Intune compliance policies as shown below. If the setting is set to **Allow…**, use configuration profiles instead.
