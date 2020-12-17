@@ -67,7 +67,7 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 You'll be able to configure whether a required iOS app is installed as a removable app by end users. The new setting will apply to iOS store, LOB and built-in apps. You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > **Add**. When setting the app assignments, You'll be able to select **Install as removable**. The default value is **yes**, which means the app is removable. Existing required installs on iOS 14 will be updated to the default (removable) setting value when this setting is implemented. For more information about iOS apps, see [Microsoft Intune app management](..\apps\app-management.md).
 
 ### Scope tag support for customization policies<!--6182440  -->
-You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where You'll see **Scope tags** configuration options.
+You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you'll see **Scope tags** configuration options.
 
 ### Android Enterprise system app support in work profiles<!-- 5291507  -->
 You'll be able to deploy Android Enterprise system apps for Android Enterprise Work Profile devices. System apps are apps that do not appear in the Managed Google Play Store and come pre-installed on the device. Once a system app is deployed, You'll be unable to uninstall, hide, or otherwise remove the system app. Note that this feature is planned to be released on or near the 2101 release timeframe. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
@@ -193,9 +193,6 @@ We'll be updating the Android Company Portal app icon to create a more modern lo
 ### End users can restart an app install from the Company Portal<!-- 652935  -->
 Using the Company Portal, end users will be able to restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
 
-### Update to Android Company Portal app icon<!-- 7114401  -->
-We'll update the Android Company Portal app icon to create a more modern look and feel. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
-
 ### Application icon update for iOS, macOS, and web Company Portal<!-- 7113985 -->
 We'll be updating the app icon used by the Company Portal for iOS, macOS, and web. This new icon is currently used by the Company Portal for Windows. End users will see the new icon in their device's application launcher and home screen, in Apple's App Store, and experiences within the Company Portal apps.
 
@@ -237,8 +234,8 @@ When you use the Graph API to export Intune reports without selecting any column
 ### Additional Data Warehouse beta properties<!-- 8612282 -->
 Additional properties will be available using the Intune Data Warehouse beta API. The following properties will be exposed via the [devices](../developer/reports-ref-devices.md) entity in the beta API:
 
-- `SubnetAddressV4Wifi` - The subnet address for IPV4 Wifi connection.
-- `IpAddressV4Wifi` - The IP address for IPV4 Wifi connection.
+- `SubnetAddressV4Wifi` - The subnet address for IPV4 Wi-FI connection.
+- `IpAddressV4Wifi` - The IP address for IPV4 Wi-Fi connection.
 
 For related information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
@@ -282,6 +279,16 @@ We’re streamlining the conditional access flow on Surface Duo devices. These c
 We're adding a new setting to the Attack surface reduction rule profile, part of Attack surface reduction policy, to help prevent malware from abusing WMI to gain persistence on a device. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Attack surface reduction rule**)
 
 This new setting can help protect against fileless malware threats that abuse the WMI repository and event model to stay hidden. For more information see [Block persistence through MI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-persistence-through-wmi-event-subscription) in the Windows security documentation.
+
+### New Application Guard settings in Attack surface reduction policy<!-- 8274336 -->
+We'll be adding two new settings to the App and browser isolation profile of Intune’s [Endpoint security Attack surface reduction policy](../protect/endpoint-security-asr-policy):
+
+- **Application Guard allow camera and microphone access** – Manage access by Application Guard apps to a devices camera and microphone.
+- **Application Guard allow use of Root Certificate Authorities from the user's device** – When you specify one or more root certificate thumbprints, the matching certificates are transferred to the Microsoft Defender Application Guard container.
+
+### Update to MDATP and MDM baseline settings<!-- 8391335, 8377369 -->
+As part of endpoint security in Intune, we'll be updating the Microsoft Defender Advanced Threat Protection and Mobile Device Management (MDM) protection baselines settings to the latest version. For related information, see [Microsoft Defender Advanced Threat Protection baseline settings for Intune](../protect/security-baseline-settings-defender-atp?pivots=atp-sept-2020).
+
 
 <!-- ***********************************************-->
 ## Notices
