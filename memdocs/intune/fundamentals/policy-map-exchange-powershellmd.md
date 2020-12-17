@@ -31,29 +31,29 @@ ms.collection: M365-identity-device-management
 
 # Exchange PowerShell settings mapping from Basic Mobility and Security to Intune
 
-This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps ExchangePowerShell policies to the equivalent polices in Microsoft Endpoint Manager admin center. Because Intune offers more flexibility, each Basic Mobility and Security policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
+This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps ExchangePowerShell policies to the equivalent policies in Microsoft Endpoint Manager admin center. Because Intune offers more flexibility, each Basic Mobility and Security policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
 
 If you’re migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
-For information on the Exchange PowerShell script, see [New-DeviceConfigurationRule]( https://docs.microsoft.com/powershell/module/exchange/new-deviceconfigurationrule?view=exchange-ps).
+For information on the Exchange PowerShell script, see [New-DeviceConfigurationRule]( https://docs.microsoft.com/powershell/module/exchange/new-deviceconfigurationrule.md?view=exchange-ps).
 
 ## CameraEnabled
-For iOS/iPadOS, this is only supported on iOS 7.1+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 7.1+ in Basic Mobility and Security.
 
 For Android, this setting is only supported on the following devices in Basic Mobility and Security:
 - Samsung Knox
 - Android 5 through Android 9
 
 Three configuration policies:
-- **Devices** -> **Windows** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **General** -> **Camera**
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Built-in Apps** -> **Block camera**
-- **Devices** -> **Android** -> **Configuration profiles** -> choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** -> **General** -> **Camera**
+- **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Camera**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Built-in Apps** > **Block camera**
+- **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **General** > **Camera**
 
 ## RegionRatings
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **App Store, Doc Viewing, Gaming ** -> **Ratings region**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App Store, Doc Viewing, Gaming** > **Ratings region**
 
     | Exchange PowerShell setting value |  Ratings region value |
     | --- | --- |
@@ -69,12 +69,12 @@ One configuration profile:
     | us |  United States |
 
 ## MoviesRating
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 The **Ratings region** setting must be set to something other than **Not region configured** to see **Movies**.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **App Store, Doc Viewing, Gaming** -> **Ratings region** must be set to a region > **Movies**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App Store, Doc Viewing, Gaming** > **Ratings region** must be set to a region > **Movies**
 
     | Exchange PowerShell setting value |  Movies value |
     | --- | --- |
@@ -132,12 +132,12 @@ One configuration profile:
     | USRatingNC17 | NC17 |
 
 ## TVShowsRating
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 The **Ratings region** setting must be set to something other than **Not region configured** to see **TV Shows**.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **App Store, Doc Viewing, Gaming** -> **Ratings region** must be set to a region > **TV Shows**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App Store, Doc Viewing, Gaming** > **Ratings region** must be set to a region > **TV Shows**
 
     | Exchange PowerShell setting value |  TV Shows value |
     | --- | --- |
@@ -187,10 +187,10 @@ One configuration profile:
     | USRatingTVMA | TV-MA |
 
 ## AppsRating
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **App Store, Doc Viewing, Gaming** -> **Ratings region** must be set to a region > **Apps**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App Store, Doc Viewing, Gaming** > **Ratings region** must be set to a region > **Apps**
 
     | Exchange PowerShell setting value |  Apps value |
     | --- | --- |
@@ -202,12 +202,12 @@ One configuration profile:
     | Rating17Plus | 17+ |
 
 ## AllowVoiceDialing
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, setting supported on iOS 6+ in Basic Mobility and Security.
 
 Intune doesn’t offer an **Allow** value. Use the **Not configured** instead, which leaves the decision to the end user.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Wireless** -> **Block voice dialing while device is locked**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Wireless** > **Block voice dialing while device is locked**
 
     | Exchange PowerShell setting value |  Block voice dialing while device is locked value |
     | --- | --- |
@@ -216,12 +216,12 @@ One configuration profile:
     | $null |  Not configured |
 
 ## AllowVoiceAssistant
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 Intune doesn’t offer an **Allow** value. Use the **Not configured** instead, which leaves the decision to the end user.
 
 One configuration policy:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Built-in Apps** -> **Block Siri**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Built-in Apps** > **Block Siri**
 
     | Exchange PowerShell setting value |  Block Siri value |
     | --- | --- |
@@ -230,12 +230,12 @@ One configuration policy:
     | $null |  Not configured |
 
 ## AllowAssistantWhileLocked
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 Intune doesn’t offer an **Allow** value. Use the **Not configured** instead, which leaves the decision to the end user.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Built-in Apps** -> **Block Siri while device is locked**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Built-in Apps** > **Block Siri while device is locked**
 
     | Exchange PowerShell setting value |  Block Siri while device is locked value |
     | --- | --- |
@@ -244,12 +244,12 @@ One configuration profile:
     | $null |  Not configured |
 
 ## AllowPassbookWhileLocked
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 Intune doesn’t offer an **Allow** value. Use the **Not configured** instead, which leaves the decision to the end user.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Locked Screen Experience ** -> **Block Wallet notifications in lock screen**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Locked Screen Experience ** > **Block Wallet notifications in lock screen**
 
     | Exchange PowerShell setting value |  Block Wallet notifications in lock screen value |
     | --- | --- |
@@ -258,10 +258,10 @@ One configuration profile:
     | $null |  Not configured |
 
 ## MaxPasswordGracePeriod
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Password** -> **Maximum minutes after screen lock before password is required**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Password** > **Maximum minutes after screen lock before password is required**
 
     | Exchange PowerShell setting value |  Maximum minutes after screen lock before password is required value |
     | --- | --- |
@@ -274,14 +274,14 @@ One configuration profile:
     | 4+ hours | 4 hours |
 
 ## PasswordQuality
-For Android, this is only supported on Android 4+ in Basic Mobility and Security.
+For Android, this setting is only supported on Android 4+ in Basic Mobility and Security.
 
 In Intune, 6 is the highest value.
 
 Several password settings shown in Office 365 Security and Compliance portal depend upon this setting have certain minimum values.
 
 One configuration profile:
-- **Devices** -> **Android** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **Password** -> **Required password type**
+- **Devices** > **Android** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Password** > **Required password type**
 
     | Exchange PowerShell setting value |  Required password type value| Description |
     | --- | --- | --- |
@@ -297,10 +297,10 @@ One configuration profile:
     | >7 | 6 | At least alphanumeric with symbols, password containing at least a letter, a numeric, a symbol. |
 
 ## SystemSecurityTLS
-For iOS/iPadOS, this is only supported on iOS 6+ in Basic Mobility and Security.
+For iOS/iPadOS, this setting is only supported on iOS 6+ in Basic Mobility and Security.
 
 One configuration profile:
-- **Devices** -> **iOS/iPadOS** -> **Configuration profiles** -> profile name > **Properties** > **Configuration settings Edit** -> **General** -> **Block untrusted TLS certificates**
+- **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Block untrusted TLS certificates**
 
     | Exchange PowerShell setting value |  Block untrusted TLS certificates value |
     | --- | --- |
