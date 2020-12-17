@@ -35,7 +35,7 @@ This article provides mapping details between Basic Mobility and Security to Int
 
 If you’re migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
-For information on the Exchange PowerShell script, see [New-DeviceConfigurationRule]( https://docs.microsoft.com/powershell/module/exchange/new-deviceconfigurationrule.md?view=exchange-ps).
+For information on the Exchange PowerShell script, see [New-DeviceConfigurationRule]( https://docs.microsoft.com/powershell/module/exchange/new-deviceconfigurationrule.md).
 
 ## CameraEnabled
 For iOS/iPadOS, this setting is only supported on iOS 7.1+ in Basic Mobility and Security.
