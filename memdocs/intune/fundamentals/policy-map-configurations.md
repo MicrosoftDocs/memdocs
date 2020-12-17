@@ -111,7 +111,7 @@ Three configuration profiles:
 ## Require password when accessing application store
 This setting was never supported for Windows or Android in Basic Mobility and Security.
 
-Apple does not block accessing the app store without a password, but blocks purchases without a password.
+Apple doesn't block accessing the app store without a password, but blocks purchases without a password.
 
 One configuration profile:
 - **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App store, Doc Viewing, Gaming** > **Require iTunes Store password for all purchases**
