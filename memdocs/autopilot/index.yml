@@ -93,12 +93,10 @@ landingContent:
   # Card (optional)
   - title: Troubleshoot Windows Autopilot
     linkLists:
-    - linkListType: how-to-guide
+    - linkListType: reference
       links:
       - text: Troubleshooting Windows Autopilot
         url: troubleshooting.md
-    - linkListType: reference
-      links:
       - text: Policy conflicts
         url: policy-conflicts.md
       - text: Known issues

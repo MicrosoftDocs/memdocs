@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Autopilot device import
-description: Troubleshoot issues that can occur during Autopilot device import
+title: Troubleshoot Autopilot device import and enrollment
+description: Troubleshoot issues that can occur during Autopilot device import and enrollment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
@@ -18,13 +18,15 @@ ms.topic: troubleshooting
 ---
 
 
-## Troubleshoot Autopilot device import
+# Troubleshoot Autopilot device import and enrollment
 
 **Applies to: Windows 10**
 
-Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. Review the following information to assist with troubleshooting efforts.
+See the following topics for information about issues that can occur when importing and enrolling devices into Intune.
 
-## Clicking Import after selecting CSV does nothing, '400' error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'"**
+## Device import issues
+
+### Clicking Import after selecting CSV does nothing, '400' error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'"**
 
 This error points to the device hash being incorrectly formatted. Anything that corrupts the collected hash can cause this error. One possibility is that the hash itself (even if it's valid) fails to be decoded.
 
@@ -61,6 +63,16 @@ Looping the logic above on the previous example hash, we get the following permu
 - **Q29udG9zbwAAAA==** (This one has valid padding)
 
 Replace the collected hash with this new padded hash then try to import again.
+
+## Intune enrollment issues
+
+See [this knowledge base article](https://support.microsoft.com/help/4089533/troubleshooting-windows-device-enrollment-problems-in-microsoft-intune) for assistance with Intune enrollment issues. Common issues can include"
+- incorrect or missing licenses assigned to the user.
+- too many devices enrolled for the user.
+
+Error code 80180018 will typically be reported on an error page titled "Something went wrong". This error means that the MDM enrollment failed.
+
+If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
 
 ## Related topics
 

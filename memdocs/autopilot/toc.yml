@@ -66,8 +66,14 @@
        
     - name: Troubleshoot Windows Autopilot
       items:
-      - name: Troubleshooting Windows Autopilot
+      - name: The troubleshooting process
         href: troubleshooting.md
+      - name: Troubleshoot device enrollment
+        href: troubleshoot-device-enrollment.md
+      - name: Troubleshoot OOBE issues
+        href: troubleshoot-oobe.md
+      - name: Troubleshoot AAD join issues
+        href: troubleshoot-aad-join.md
       - name: Policy conflicts
         href: policy-conflicts.md
       - name: Known issues
