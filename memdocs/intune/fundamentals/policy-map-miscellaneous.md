@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 ---
 
 # Miscellaneous policy mapping from Basic Mobility and Security to Intune
-This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps the following Office 365 Security and Compliance portal policies to the equivalent polices in Microsoft Endpoint Manager admin center:
+This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps the following Office 365 Security and Compliance portal policies to the equivalent policies in Microsoft Endpoint Manager admin center:
 - Manage organization-wide device access settings 
 - Policy name and description
 - Device view settings
@@ -51,7 +51,7 @@ These settings are backed by the conditional access policy GraphAggregatorServic
 
 One conditional access policy:
 
-- **Endpoint security** > **Conditional access** > **Classic policies** > **[GraphAggregatorService] Device policy** > **Conditions** > **Client apps (Preview) > **Mobile apps and desktop clients > **Exchange ActiveSync clients** > **Apply policy only to spported platform**
+- **Endpoint security** > **Conditional access** > **Classic policies** > **[GraphAggregatorService] Device policy** > **Conditions** > **Client apps (Preview) > **Mobile apps and desktop clients > **Exchange ActiveSync clients** > **Apply policy only to supported platform**
 
 ### Are there any security groups you want to exclude from access control?
 
@@ -88,7 +88,7 @@ To see these settings, sign in to the [Microsoft 365 admin center](https://porta
 - **Devices** > **All devices** > device name > **Overview** > **Operating system**
 
 ### State
-This is not a default column in the Intune portal device list. You can show it by using the **Columns** picker.
+This isn't a default column in the Intune portal device list. You can show it by using the **Columns** picker.
 - **Devices** > **All devices** > **Device state** column
 
 ### OS version
