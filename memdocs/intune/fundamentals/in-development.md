@@ -75,8 +75,8 @@ You'll be able to deploy Android Enterprise system apps for Android Enterprise W
 ### New app categories to target app protection policies more easily<!-- 4802581  -->
 We've improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we'll dynamically update these categories to include those apps as appropriate, and your policies will be automatically apply to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
 
-### Line-of-business apps supported on Shared iPad devices<!-- 8834566  -->
-You will be able to deploy line-of-business (LOB) apps to Shared iPad devices. The line-of-business app must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create policy** > **iOS/iPadOS**. For related information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
+### Line-of-business apps supported on Shared iPad devices<!-- 8834566 idready -->
+You'll be able to deploy line-of-business (LOB) apps to Shared iPad devices. The line-of-business app must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For related information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -234,7 +234,7 @@ When you use the Graph API to export Intune reports without selecting any column
 ### Additional Data Warehouse beta properties<!-- 8612282 -->
 Additional properties will be available using the Intune Data Warehouse beta API. The following properties will be exposed via the [devices](../developer/reports-ref-devices.md) entity in the beta API:
 
-- `SubnetAddressV4Wifi` - The subnet address for IPV4 Wi-FI connection.
+- `SubnetAddressV4Wifi` - The subnet address for IPV4 Wi-Fi connection.
 - `IpAddressV4Wifi` - The IP address for IPV4 Wi-Fi connection.
 
 For related information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
