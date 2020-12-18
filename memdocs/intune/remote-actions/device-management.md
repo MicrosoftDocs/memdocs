@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/9/2020
+ms.date: 12/17/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -58,7 +58,8 @@ Not all device actions are available for every platform or device. Available act
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
 
 ## Available device actions
-The actions available depend on the device platform, and the configuration of the device.
+
+The available actions depend on the device platform, and the device configuration. The following list includes some common device actions. For a complete list of what can be done on your devices, select **All devices**, and select a specific device. The available actions are shown at the top. **Device actions status** also shows the status of the action you select. 
 
 - [View device inventory](device-inventory.md)
 - Run the remote device actions:
@@ -86,5 +87,4 @@ The actions available depend on the device platform, and the configuration of th
 
 ## Next steps
 
-- In **All devices**, select a device to view more details about that specific device.
-- Choose **Device actions** to see the status of actions taken on devices you manage.
+[Remotely run device actions with Intune](/mem/intune/remote-actions).
