@@ -2,7 +2,7 @@
 title: Group policy settings
 titleSuffix: Configuration Manager
 description: Understand the local and group policy settings in Windows used by Configuration Manager and Desktop Analytics
-ms.date: 04/15/2020
+ms.date: 12/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -38,6 +38,15 @@ Configuration Manager sets Windows policies in one or both of the following regi
 | **CommercialDataOptIn** | Local | Windows 8.1 and earlier | Desktop Analytics requires a value of `1`. For more information, see [Commercial Data Opt-in in Windows 7](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 | **RequestAllAppraiserVersions** | Both | Windows 8.1 and earlier | Desktop Analytics requires a value of `1` for data collection to work correctly. |
 | **DisableEnterpriseAuthProxy** | GPO | All Windows versions | If your environment requires a user-authenticated proxy with Windows Integrated Authentication for internet access, Desktop Analytics requires a value of `0` for data collection to work correctly. For more information, see [Proxy server authentication](enable-data-sharing.md#proxy-server-authentication). |
+
+Starting in version 2010, <!--6979470-->Configuration Manager can configure the **Optional (limited)** level on the devices running Windows build version 19577 or later. For more information, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection#behaviorial-changes). For this diagnostic data level, Configuration Manager sets the following settings:<!-- 8229653 -->
+
+| Policy | Value |
+|--------|-------|
+| **AllowTelemetry** | `3` for **Optional (limited)** |
+| **LimitDumpCollection** | `1` |
+| **LimitDiagnosticLogCollection** | `1` |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | `1` |
 
 > [!IMPORTANT]
 > In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](enroll-devices.md#conflict-resolution).
