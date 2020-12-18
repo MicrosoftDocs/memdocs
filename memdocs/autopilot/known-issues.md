@@ -31,7 +31,7 @@ ms.topic: troubleshooting
 <td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. In the future, it will be possible to instead target the ESP profile to device groups to avoid this issue.</tr>
 
 <tr><td>That username looks like it belongs to another organization. Try signing in again or start over with a different account.</td>
- <td>Confirm that all of your information is correct at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot. For more information, see <a href="troubleshooting.md#windows-10-version-1709-and-above">Troubleshooting Windows Autopilot</a>.</td></tr>
+ <td>Confirm that all of your information is correct at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot. For more information, see <a href="troubleshoot-oobe.md#windows-10-version-1709-and-above">Troubleshoot OOBE issues</a>.</td></tr>
 
 <tr><td>Windows Autopilot user-driven Hybrid Azure AD deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile.</td>
 <td>This issue will occur when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create an additional local account that is a member of the Administrators group. To ensure this works properly, don't create an additional account until after the Windows Autopilot process has completed.</tr>
