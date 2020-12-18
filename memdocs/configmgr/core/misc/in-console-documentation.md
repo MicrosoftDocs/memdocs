@@ -120,16 +120,18 @@ For more information, see [Microsoft Endpoint Configuration Manager troubleshoot
 
 ## New and updated support articles
 
-Support articles that are new or updated between July 18 and October 15, 2020.
+Support articles that are new or updated between October 16 and December 18, 2020.
 
-- [KB 4584759 Clients report Desktop Analytics configuration errors in Configuration Manager, version 2006](https://support.microsoft.com/help/4584759)
-- [KB 4580678 Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678)
-- [KB 4578830 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830)
-- [KB 4576791 Update for Microsoft Endpoint Configuration Manager version 2006, early update ring](https://support.microsoft.com/help/4576791)
-- [KB 4578123 CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123)
-- [KB 4576785 Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782)
-- [KB 4575774 New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002](https://support.microsoft.com/help/4575774)
-- [KB 4575339 Devices appear twice in Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4575339)
+- [KB 4578605 Update Rollup for Microsoft Endpoint Configuration Manager version 2006](https://support.microsoft.com/help/4578605)
+- [KB 4575784 Office updates fail to download in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4575784)
+- [KB 4575783 Office updates fail to download in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4575783)
+- [KB 4575786 Configuration Manager console terminates unexpectedly on Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575786)
+- [KB 4575785 November 2020 Update for Asset Intelligence authentication certificate in Configuration Manager](https://support.microsoft.com/help/4575785)
+- [KB 4575787 Co-management enrollment takes longer than expected for Configuration Manager clients](https://support.microsoft.com/help/4575787)
+- [KB 4575789 Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789)
+- [KB 4575790 Client setup is unable to download contents from a cloud distribution point in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575790)
+- [KB 4594176 Update for Microsoft Endpoint Configuration Manager version 2010, early update ring](https://support.microsofot.com/help/4594176)
+- [KB 4599924 Console terminates unexpectedly in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599924)
 
 Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com and support.office.com are moving to a new consolidated site. Existing Configuration Manager articles are migrated to the new site below and still accessible using their original URLs.
 
