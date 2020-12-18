@@ -27,4 +27,4 @@ If your environment has proxy rules to allow only specific certificate revocatio
 - `http://ocsp.msocsp.com`
 - `http://www.microsoft.com/pkiops`
 
-<!-- list from https://docs.microsoft.com/en-us/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me -->
+<!-- list from https://docs.microsoft.com/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me -->
