@@ -100,3 +100,6 @@ This isn't a default column in the Intune portal device list. You can show it by
 ### Remove company data
 - **Devices** > **All devices** > device name > **Overview** > **Retire**
 
+## Next steps
+
+To migrate these policies, you can use the  [Migration evaluation tool](migrate-to-intune.md).

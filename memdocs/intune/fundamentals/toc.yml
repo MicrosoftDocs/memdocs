@@ -225,6 +225,8 @@
       href: policy-map-configurations.md
     - name: Exchange PowerShell policy mapping
       href: policy-map-exchange-powershell.md
+    - name: Miscellaneous policy mapping
+      href: policy-map-miscellaneous.md
 - name: Resources
   items:
   - name: Archive
