@@ -24,6 +24,10 @@ ms.topic: troubleshooting
 
 When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
 
+## Can't connect to MDM terms of use error
+
+If you receive an error during OOBE that **Something went wrong** and **Can't connect to the URL of your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.** This is often due to a licensing issue. Check that the user who is signing into the device has a valid Intune, EMS, or M365 license.
+
 ## Windows 10 version 1803 and above
 
 Windows 10 version 1803 and above adds event log entries. You can use the log entries to see details related to the Autopilot profile settings and OOBE flow. These entries can be viewed using Event Viewer. Review the information at **Application and Services Logs –> Microsoft –> Windows –> Provisioning-Diagnostics-Provider –> Autopilot** for versions before 1903. For version 1903 and later, see **Application and Services Logs –> Microsoft –> Windows –> ModernDeployment-Diagnostics-Provider –> Autopilot**. The following events may be recorded, depending on the scenario and profile configuration:
