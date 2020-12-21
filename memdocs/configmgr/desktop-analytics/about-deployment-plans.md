@@ -95,7 +95,7 @@ In the details of the app, you can also see the following information: Recommend
 The apps that Desktop Analytics shows as *noteworthy* are based on the low install count threshold for the readiness rules of the deployment plan. For more information, see [Readiness rules](create-deployment-plans.md#readiness-rules).
 
    > [!Tip]
-   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
+   > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#automatic-upgrade-decision-of-system-and-store-apps). <!-- 3587232 -->
 
 The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working at the global assets level. For more information, see [About assets - Apps](about-assets.md#apps).
 

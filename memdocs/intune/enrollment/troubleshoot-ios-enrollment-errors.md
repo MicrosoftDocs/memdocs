@@ -277,7 +277,15 @@ Contact support so they can retry to sync from Intune's side.
 
 #### Resolution
 
-Contact support so they can retry to sync from Intune's side.
+Contact the [Intune support team](/mem/get-support). They can retry syncing from the Intune service.
+
+### Required cursor
+
+**Cause:** The cursor was not initially set by Intune during the sync.
+
+#### Resolution
+
+Contact support so they can fix the sync from Intune's side to return the cursor. 
 
 ### Apple profile not found
 
