@@ -6,7 +6,7 @@ keywords:
 author: v-miegge
 ms.author: erikje
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 12/21/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -272,7 +272,15 @@ Contact support so they can retry to sync from Intune's side.
 
 #### Resolution
 
-Contact support so they can retry to sync from Intune's side.
+Contact the [Intune support team](/mem/get-support). They can retry syncing from the Intune service.
+
+### Required cursor
+
+**Cause:** The cursor was not initially set by Intune during the sync.
+
+#### Resolution
+
+Contact support so they can fix the sync from Intune's side to return the cursor. 
 
 ### Apple profile not found
 
