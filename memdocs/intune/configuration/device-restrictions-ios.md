@@ -54,7 +54,7 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
   > [!NOTE]
   > When this setting is blocked (set to **Yes**), third party keyboards installed from the App Store are also blocked.
 
-  - **Allow unmanaged apps to read from managed contacts accounts**: **Yes** lets unmanaged apps, such as the built-in iOS/iPadOS Contacts app, to read and access contact information from managed apps, including the Outlook mobile app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent reading, including removing duplicates, from the built-in Contacts app on devices.  
+  - **Allow unmanaged apps to read from managed contacts accounts**: **Yes** lets unmanaged apps, such as the built-in iOS/iPadOS Contacts app, to read and access contact information from managed apps, including the Outlook mobile app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent reading from the built-in Contacts app on devices.  
   
     This setting allows or prevents reading contact information. It doesn't control syncing contacts between the apps.
   
