@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: shthilla, chmaguir
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,23 +41,20 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 | Zero Touch  | 8.0<br><br> On participating manufacturers. |
 | [Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> On Samsung Knox 2.8 or higher devices only. |
 
+> [!TIP]
+> Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
+
 ## Enroll by using Near Field Communication (NFC)
 
 For devices 6 and newer that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## Enroll by using a token
 
-FOLLOWING TEXT PROPOSED BY MANDI
--------
-This feature applies to:
+- For Android 6 and newer devices, you can use the token value, such as `12345`, to enroll the device.
+- Android 6.1 and newer versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
+- For corporate-owned work profile (COPE) devices, token entry through the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11.
 
-- Android Enterprise 6 and newer: You can use the token value, such as `123456`.
-- Android Enterprise 6.1 and newer: You can use the token value, and **afw#setup**.
-- Android Enterprise versions 8-10 corporate owned work profile (COPE): You can use the token value, and **afw#setup**.
-- Android Enterprise 11 and newer corporate owned work profile (COPE): **afw#setup** isn't available.
--------
-
-For Android 6 and later devices, you can use the token to enroll the device. Android 6.1 and later versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
+### Steps
 
 1. Turn on your wiped device.
 2. On the **Welcome** screen, select your language.
@@ -68,9 +65,6 @@ For Android 6 and later devices, you can use the token to enroll the device. And
 7. Continue installation of this policy. Some devices may require additional terms acceptance.
 8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, choose to enter the token manually.
 9. Follow the on-screen prompts to complete enrollment.
-
-> [!NOTE]
-> For corporate-owned work profile devices, token entry through the afw#setup enrollment method is only supported on devices running Android 8-10 and is not available on Android 11.
 
 ## Enroll by using a QR code
 
@@ -111,5 +105,6 @@ To use Google's Zero Touch system, the device must support it and be affiliated 
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 6 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).
 
 ## Next steps
+
 - [Deploy Android apps](../apps/apps-deploy.md)
 - [Add Android configuration policies](../configuration/device-profiles.md)
