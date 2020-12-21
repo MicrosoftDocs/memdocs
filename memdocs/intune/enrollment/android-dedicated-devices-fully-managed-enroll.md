@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/17/2020
+ms.date: 12/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -47,13 +47,15 @@ For devices 6 and newer that support NFC, you can provision your devices by crea
 
 ## Enroll by using a token
 
+FOLLOWING TEXT PROPOSED BY MANDI
+-------
 This feature applies to:
 
 - Android Enterprise 6 and newer: You can use the token value, such as `123456`.
-- Android Enterprise 6.1 and newer: You can use the token value, and QR scanning code with **afw#setup**.
-- Android Enterprise versions 8-10 corporate owned work profile (COPE): You can use the token value, and QR scanning code with **afw#setup**.
-
-  On Android Enterprise 11 and newer, **afw#setup** isn't available.
+- Android Enterprise 6.1 and newer: You can use the token value, and **afw#setup**.
+- Android Enterprise versions 8-10 corporate owned work profile (COPE): You can use the token value, and **afw#setup**.
+- Android Enterprise 11 and newer corporate owned work profile (COPE): **afw#setup** isn't available.
+-------
 
 For Android 6 and later devices, you can use the token to enroll the device. Android 6.1 and later versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
 
