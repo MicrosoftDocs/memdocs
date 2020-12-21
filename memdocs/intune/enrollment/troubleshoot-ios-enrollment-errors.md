@@ -6,7 +6,7 @@ keywords:
 author: v-miegge
 ms.author: erikje
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 12/21/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -203,7 +203,12 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
-Errors when syncing tokens between Intune for Automated Device Enrollment and Apple Business Manager/Apple School Manager
+## Sync token errors between Intune and ADE (DEP)
+
+This section includes token sync errors with:
+
+- Apple Business Manager (ABM)
+- Apple School Manager (ASM)
 
 ### Expired or invalid token
 
