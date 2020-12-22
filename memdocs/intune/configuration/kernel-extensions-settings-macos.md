@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -124,7 +124,7 @@ This feature applies to:
   >
   > and note the output:
   >
-  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender ATP Network Extension`
+  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender for Endpoint Network Extension`
   >
   > The first entry is the Team ID you need. `UBF8T346G9` in our example
 

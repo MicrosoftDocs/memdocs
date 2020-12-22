@@ -248,9 +248,6 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
    - **Intended purpose**: Specify the intended purpose of the certificates that are imported for this profile. Administrators can import certificates with different intended purposes (like S/MIME signing or S/MIME encryption). The intended purpose selected in the certificate profile matches the certificate profile with the right imported certificates. Intended purpose is a tag to group imported certificates together and doesn't guarantee that certificates imported with that tag will meet the intended purpose.  
 
-   <!-- Not in new UI:
-   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
-   -->
    - **Key storage provider (KSP)**: For Windows, select where to store the keys on the device.
 
 8. Select **Next**.
