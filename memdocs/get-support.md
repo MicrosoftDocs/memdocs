@@ -83,7 +83,7 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
   - Change requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  If you are a Microsoft Managed Desktop (MMD) customer, selecting the MMD tile for MMD related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support.md?view=o365-worldwide&preserve-view=true).
+  If you are a Microsoft Managed Desktop customer, selecting that tile for Microsfot Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
@@ -92,7 +92,7 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
 >
 > The error details include a *Session ID*, *Extension* details, and more.
 >
-> This problem occurs when you've not authenticated your new tenant account through either the **Microsoft 365 Admin Center** at [https://admin.microsoft.com](https://admin.microsoft.com), or the **Office 365 portal** at [https://portal.office.com](https://portal.office.com). To resolve this problem, select the link for *Microsoft 365 Admin Center* in the message, or visit [https://portal.office.com](https://portal.office.com), and sign in. Following authentication at either site, *Help and Support* for Intune becomes accessible.
+> This problem occurs when you've not authenticated and accessed the Need Help from your new tenant account through either the **Microsoft 365 Admin Center** at [https://admin.microsoft.com](https://admin.microsoft.com), or the **Office 365 portal** at [https://portal.office.com](https://portal.office.com). To resolve this problem, select the link for *Microsoft 365 Admin Center* in the message, or visit [https://portal.office.com](https://portal.office.com), and sign in. Following authentication at either site, go to the Admin area and click the Need Help icon in the lower right.  After completeing these steps *Help and Support* for Intune becomes accessible.
 
 ## The support experience
 

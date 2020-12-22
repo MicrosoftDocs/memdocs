@@ -25,8 +25,6 @@
       href: get-started/creating-mac-computer-applications.md
     - name: Create Windows applications
       href: get-started/creating-windows-applications.md
-    - name: Create Linux and UNIX server applications
-      href: get-started/creating-linux-and-unix-server-applications.md
     - name: Create Windows Embedded applications
       href: get-started/creating-windows-embedded-applications.md
     - name: Create global conditions
@@ -116,6 +114,8 @@
       href: understand/deployment-download-technical-reference.md
     - name: Application installation
       href: understand/deployment-install-technical-reference.md
+    - name: Common error codes for application installation
+      href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
     href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
   - name: Troubleshoot Package Conversion Manager

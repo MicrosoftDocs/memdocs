@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,7 +47,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
    - **Platform**: Choose the platform of your devices.
    - **Profile**: Select **SCEP certificate**
 
-     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Fully Managed, Dedicated, and Corporate-Owned Work Profile* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
+     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Fully Managed, Dedicated, and Corporate-Owned Work Profile* and *Personally-Owned Work Profile*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
 
      SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 

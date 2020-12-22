@@ -85,13 +85,18 @@ Required data collected by Intune may include, but is not limited to:
   - Active Directory ID of each customer IT admin
   - Payment data for customer billing
   - Subscription key
+- Admin created data, like
+  - Profile names
+  - Compliance policies
+  - Group policy
+  - PowerShell scripts
+  - Line-of-Business (LOB) application
 - Application inventory, like
   - app name
   - version
   - app ID
   - size
   - installation location
-  - Admin uploaded Line-of-Business (LOB) app
   - Application inventory data is only collected when marked by the Admin as a corporate-owned device or the compliant app feature is turned on.  
 - Customer third party tenant IDs (like Apple ID)
 - Device data

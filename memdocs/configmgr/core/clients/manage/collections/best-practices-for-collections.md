@@ -2,7 +2,7 @@
 title: Collections best practices
 titleSuffix: Configuration Manager
 description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
-ms.date: 06/05/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -94,6 +94,9 @@ Exclude:
 ## Use CEViewer to monitor collection evaluation
 
 You can use the [Collection Evaluation Viewer (CEViewer)](../../../support/ceviewer.md) to monitor how many collections are being evaluated and how long each collection is taking to update. The CEViewer is in the *CD.Latest* folder on the site server.
+
+> [!Tip]
+> Starting in Configuration Manager version 2010, this functionality is built-in to the console. For more information, see, [How to view collection evaluation](collection-evaluation-view.md).
 
 To manually perform a similar check with SQL, you can use the following query:
 

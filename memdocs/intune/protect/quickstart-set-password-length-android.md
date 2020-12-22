@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/10/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,25 +48,23 @@ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.co
 
 Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android devices.
 
-1. In Intune, select **Devices** > **Compliance Policies** > **Create Policy**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance Policies** > **Create Policy**.
 
-2. Add **Android compliance** as the  **Name**. Also, add a **Description**.
+2.  For **Platform**, select **Android Enterprise**.
 
-3. For **Platform**, select **Android Enterprise**.
+3. For **Policy type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
 
-4. For **Profile type**, select **Work profile**.
+4. On **Basics** step, enter **Android compliance** as the *Name*. Adding a *Description* is optional. Click **Next**.
 
-5. Select **Settings** > **System Security** to display the Android **System Security** blade.
+5. On **Compliance settings** step, expand **System Security** and configure the following:
 
-6. For **Require a password to unlock mobile devices**, select **Require**.
-
-7. For **Required password type**, select **At least numeric**.
-
-8. For **Minimum password length**, enter **6**.
+   - For **Require a password to unlock mobile devices**, select **Require**.
+   - For **Required password type**, select **At least numeric**.
+   - For **Minimum password length**, enter **6**.
 
     ![Screenshot of creating a group in Microsoft Intune](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-9. When done, select **OK** > **OK** > **Create** to create the policy.
+6. When done, select **Next** until you reach the **Review + create** step. Then, click **Create** to create the policy.
 
 When you've successfully created the policy, it appears in your list of device complice policies.
 

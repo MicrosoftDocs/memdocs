@@ -2,16 +2,14 @@
 title: Package Conversion Manager
 titleSuffix: Configuration Manager
 description: Learn about Package Conversion Manager to convert packages to applications in Configuration Manager. 
-ms.date: 03/27/2019
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Package Conversion Manager
@@ -20,15 +18,12 @@ manager: dougeby
 
 <!--1357861-->
 
-Starting in version 1806, Package Conversion Manager helps you convert Configuration Manager legacy packages into applications. Applications have additional benefits such as dependencies, requirement rules, detection methods, and user device affinity.
-
-> [!Tip]  
-> This feature was first introduced in version 1806 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 1810, this feature is no longer a pre-release feature.  
-
+Package Conversion Manager helps you convert Configuration Manager legacy packages into applications. Applications have additional benefits such as dependencies, requirement rules, detection methods, and user device affinity.
 
 A Configuration Manager application contains files and programs that you deploy to client devices. However, unlike legacy packages and programs, an application provides additional user-centric functionality. For example, an application might contain deployment types for a local installation of a software package, a virtual application package, or a version of the application for mobile devices.
 
-For more information, see the following articles: 
+For more information, see the following articles:
+
 - [Introduction to application management](../understand/introduction-to-application-management.md)  
 - [Packages and programs](../deploy-use/packages-and-programs.md)  
 
@@ -36,14 +31,6 @@ For more information, see the following articles:
 > If you previously installed an older version of Package Conversion Manager, first uninstall it before upgrading your site. This integrated version doesn't require installation, but may conflict with existing versions.  
 
 This integrated version of Package Conversion Manager works on packages in the Configuration Manager current branch site. It's not a standalone tool. If you have packages and programs in an older version of Configuration Manager, first migrate the packages into your current branch site. For more information, see [Migrate data between hierarchies](../../core/migration/migrate-data-between-hierarchies.md).
-
-<!-- SCCMDocs-pr issue #3357 -->
-Configuration Manager version 1902 includes the following improvements:
-- Scheduled package analysis runs every 7 days by default
-- PowerShell cmdlets for analyzing and converting packages
-- General bug fixes and improvements
-
-
 
 ## Planning
 
@@ -224,8 +211,6 @@ Test the applications, either in your test environment or your production enviro
 - Investigate the programs in your packages known as wrappers. Use the Package Conversion Manager plug-in to convert their functions into the equivalent Configuration Manager functionality.  
 
 - Ensure that you thoroughly test each converted application before you deploy it in a production environment.  
-
-
 
 ## Next steps
 

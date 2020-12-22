@@ -60,7 +60,7 @@ For more information, see [Configure Windows diagnostic data in your organizatio
 > You can also set the Windows 10 data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later. The Enhanced (Limited) level includes metrics from the Basic level, as well as a subset of data collected from the Enhanced level relevant to Windows Analytics.
 
 #### Windows 8.1 and earlier telemetry   
-For more information, see [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965).
+For more information, see [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields).
 
 #### Enable Windows 8.1 and earlier Internet Explorer data collection
 On devices running Windows 8.1 or earlier, Internet Explorer can collect data about web apps. This data can allow Upgrade Readiness to detect web application incompatibilities that could prevent a smooth upgrade to Windows 10. Enable Internet Explorer data collection based on the internet zone. For more information about internet zones, see [About URL Security Zones](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183\(v=vs.85\)).

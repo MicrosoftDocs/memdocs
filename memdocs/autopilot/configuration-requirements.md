@@ -12,6 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ms.custom: 
@@ -22,7 +23,13 @@ ms.custom:
 
 # Windows Autopilot configuration requirements
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 10
+- Windows Holographic, version 2004 or later
+
+> [!NOTE]
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios. 
 

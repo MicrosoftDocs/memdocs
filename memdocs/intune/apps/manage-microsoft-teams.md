@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -76,7 +76,7 @@ App configuration can be delivered either through the mobile device management (
 - Only allow work or school accounts
 
 > [!IMPORTANT]
-> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Teams for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Teams for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 

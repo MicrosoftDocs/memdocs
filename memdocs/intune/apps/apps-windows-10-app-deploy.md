@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 12/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -110,7 +110,7 @@ Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business a
   - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
-> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](/windows/deployment/windows-autopilot/white-glove).
+> When used in combination with an Autopilot pre-provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context. 

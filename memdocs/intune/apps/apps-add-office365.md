@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 11/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,6 +37,8 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 > 
 > You must use Microsoft 365 Apps licenses to activate Microsoft 365 Apps apps deployed through Microsoft Intune. Microsoft 365 Apps for business edition is supported by Intune, however you must configure the app suite of the Microsoft 365 Apps for business edition using XML data. For more information, see [Configure app suite using XML data](apps-add-office365.md#step-2---option-2-configure-app-suite-using-xml-data).
+>
+> Deploying OneDrive through Intune after removal of the native OneDrive client is not supported. If the native OneDrive client is removed, Intune is not able to redeploy OneDrive. Deployment of OneDrive through Intune is not supported.
 
 ## Before you start
 
@@ -168,7 +170,10 @@ Under the *Microsoft Office 15* directory, the Office Click-to-Run installation 
 The installation will be in silent mode if the assignment of Microsoft 365 is configured as required. The downloaded installation files will be deleted once the installation succeeded. If the assignment is configured as **Available**, the Office applications will appear in the Company Portal application so that end-users can trigger the installation manually.
 
 ## Troubleshooting
-Intune uses the [Office Deployment Tool](/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Office 365 ProPlus to your client computers using the [Office 365 CDN](/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Office 365 endpoints](/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
+Intune uses the [Office Deployment Tool](/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Microsoft 365 Apps to your client computers using the [Office 365 CDN](/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Office 365 endpoints](/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
+
+> [!IMPORTANT]
+> For custom Office Deployment Tool XML installs, the install status only reflects the result of the installation attempt. The install status does not reflect whether the app is currently installed on the machine.
 
 Run the [Microsoft Support and Recovery Assistant for Microsoft 365](https://diagnostics.office.com) on a targeted device if you encounter installation or run-time issues.
 

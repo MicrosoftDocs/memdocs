@@ -32,7 +32,9 @@ ms.collection:
 
 # Upload and email logs using a USB cable
 
-Email company support about a problem you experienced in the Company Portal app. Error details are recorded and stored on your device in a special document called a _diagnostic log_. This article describes how to upload the logs from your device to your computer. You'll need a USB cable to complete these steps.   
+ When you experience a problem in Company Portal, the error details are recorded and stored on your device in a special document called a _diagnostic log_. This article describes how to upload the logs from your device to your computer. This is especially useful for when you need to email additional information to your IT support person. 
+ 
+  A USB cable is required to complete these steps.   
 
 > [!Note]
 > Before you start, make sure that you have your support team's email address handy. Find the contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and in the Company Portal app. 

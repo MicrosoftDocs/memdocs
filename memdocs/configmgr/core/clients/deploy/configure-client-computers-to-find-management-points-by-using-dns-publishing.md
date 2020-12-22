@@ -20,9 +20,6 @@ manager: dougeby
 
 Clients in Configuration Manager must locate a management point to complete site assignment and as an on-going process to remain managed. Active Directory Domain Services provides the most secure method for clients on the intranet to find management points. However, if clients cannot use this service location method (for example, you have not extended the Active Directory schema, or clients are from a workgroup), use DNS publishing as the preferred alternative service location method.  
 
-> [!NOTE]  
->  When you install the client for Linux and UNIX, you must specify a management point to use as an initial point of contact. For information about how to install the client for Linux and UNIX, see  [How to deploy clients to UNIX and Linux servers](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
-
  Before you use DNS publishing for management points, make sure that DNS servers on the intranet have service location resource records (SRV RR) and corresponding host (A or AAA) resource records for the site's management points. The service location resource records can be created automatically by Configuration Manager or manually, by the DNS administrator who creates the records in DNS.  
 
  For more information about DNS publishing as a service location method for Configuration Manager clients, see [Understand how clients find site resources and services for Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  

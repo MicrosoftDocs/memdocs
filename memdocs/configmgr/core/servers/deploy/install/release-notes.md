@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/17/2020
+ms.date: 12/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -16,26 +16,50 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.  
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.
 
-Feature-specific documentation includes information about known issues that affect core scenarios.  
+Feature-specific documentation includes information about known issues that affect core scenarios.
 
-This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md)  
+This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md).
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
 - [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [What's new in version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
-- [What's new in version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 
 For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
-> [!Tip]  
+> [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
-## Set up and upgrade  
+## Set up and upgrade
+
+### Site server in passive mode fails to update to version 2010
+
+<!-- 8896585 -->
+
+_Applies to version 2010 early update ring_
+
+If you have a [highly available site server](../configure/site-server-high-availability.md), when you update to version 2010, the site server in passive mode fails to update. This issue is due to a change in the Microsoft Monitoring Agent (MMA) for Microsoft Defender Advanced Threat Protection. The required MMA files aren't copied to all necessary locations.
+
+To work around this issue:
+
+1. Go to the Configuration Manager installation directory on the site server. In the `.\CMUStaging\D5054056-F41C-4E61-90A7-4F135B76F806\Redist` folder, copy both **MMASetup-amd64.exe** and **MMASetup-i386.exe** to the `.\cd.latest\redist` folder.
+
+1. If you have a management point role installed on another server, copy the following files to the following folders in the Configuration Manager installation folder on the site system server:
+
+    1. Copy **MMASetup-amd64.exe** to the `.\sms\client\x64` folder.
+    1. Copy **MMASetup-i386.exe** to the `.\sms\client\i386` folder.
+
+1. Delete the file `inboxes\failovermgr.box\siteserver.pkg` on the site server.
+
+1. Retry the update to version 2010.
+
+> [!NOTE]
+> This issue can also occur when you add a new site server in passive mode after updating to version 2010.
 
 ### Client automatic upgrade happens immediately for all clients
 
@@ -86,6 +110,14 @@ If you then expand a standalone primary site to a hierarchy with a central admin
 To work around this issue, renew the key associated with the app registration in Azure AD. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 
 ## Role based administration
+
+### Only Full Administrator can delete collections
+<!--8864728-->
+*Applies to version 2010*
+
+When trying to delete a collection, there is a query to check for Automatic Deployment Rules (ADR) that are referencing the collection. If you don't have permissions on ADRs, you will be unable to perform the deletion.
+
+To work around this issue, if you need to delete a collection, ensure you have full administrator permissions to do it. You can also grant **Read** permission to the **Software Update** object to your accounts, since that grants access to ADRs but note those accounts would be able to delete collections too.
 
 ### Security scopes for certain folders don't replicate from CAS to primary sites
 <!--6306759-->
@@ -146,7 +178,7 @@ There are two instances in which task sequences can't run on a device that commu
 ### Security roles are missing for phased deployments
 
 <!--3479337, SCCMDocs-pr issue 3095-->
-*Applies to: Configuration Manager versions 1810, 1902*
+*Applies to: Configuration Manager versions 1810 and later*
 
 The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
 
@@ -188,24 +220,6 @@ If you have a hierarchy, and enable **Hardware inventory** site data for [distri
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
 To work around this issue, disable **Hardware inventory** site data for distributed views on every site replication link.
-
-### Console unexpectedly closes when removing collections
-
-<!-- 4749443 -->
-*Applies to: Configuration Manager version 1902 with update rollup*
-
-After you connect the site to [Desktop Analytics](../../../../desktop-analytics/connect-configmgr.md), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
-
-To work around this issue, when you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
-
-### Pilot status tile shows some devices as 'undefined'
-
-<!-- 4547783 -->
-*Applies to: Configuration Manager version 1902 with update rollup*
-
-When you use the Configuration Manager console to monitor your pilot deployment status, pilot devices that are up-to-date on the target version of Windows for that deployment plan show as **undefined** in the Pilot status tile.  
-
-These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
 
 ## Cloud services
 

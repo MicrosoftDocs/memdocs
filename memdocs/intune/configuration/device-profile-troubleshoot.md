@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 12/09/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -101,9 +101,16 @@ When you assign a custom policy, confirm that the configured settings don't conf
 When you delete a profile, or you remove a device from a group that has the profile, then the profile and settings are removed from the device as described:
 
 - Wi-Fi, VPN, certificate, and email profiles: These profiles are removed from all supported enrolled devices.
-- All other profile types:  
+- All other profile types:
 
-  - **Windows and Android devices**: Settings aren't removed from the device
+  - **Android devices**: Settings aren't removed from the device
+  - **iOS/iPadOS**: All settings are removed, except:
+
+    - Allow voice roaming
+    - Allow data roaming
+    - Allow automatic synchronization while roaming
+
+  - **Windows devices**: Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
   - **Windows Phone 8.1 devices**: The following settings are removed:  
   
     - Require a password to unlock mobile devices
@@ -131,12 +138,6 @@ When you delete a profile, or you remove a device from a group that has the prof
     - Allow Bluetooth
     - Allow NFC
     - Allow Wi-Fi
-
-  - **iOS/iPadOS**: All settings are removed, except:
-  
-    - Allow voice roaming
-    - Allow data roaming
-    - Allow automatic synchronization while roaming
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 

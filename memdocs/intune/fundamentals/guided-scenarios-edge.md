@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,8 +58,8 @@ This guided scenario will automatically enable **MyApps** to appear in the Micro
 
 We'll ask you about the workplace favorites your users need, and the filters you require for web browsing. Make sure you complete the following tasks before you continue:
 
-- Add users to Azure AD groups. For more information, see [Create a basic group and add members using Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2102458).
-- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](https://go.microsoft.com/fwlink/?linkid=2102547).
+- Add users to Azure AD groups. For more information, see [Create a basic group and add members using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](../enrollment/device-enrollment.md).
 - Gather a list of workplace favorites to add in Microsoft Edge.
 - Gather a list of website filters to enforce in Microsoft Edge.
 

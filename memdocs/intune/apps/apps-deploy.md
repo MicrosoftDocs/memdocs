@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/30/2020
+ms.date: 11/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -126,11 +126,12 @@ For Android devices in a non-enrolled App Protection Policy Without Enrollment (
 
 Steps to assign a Managed Google Play app to unmanaged devices:
 
-1. Connect your Intune tenant to managed Google Play. If you have already done this in order to manage Android Enterprise work profile, dedicated, fully managed, or corporate-owned work profile devices, you do not need to do it again.
+1. Connect your Intune tenant to managed Google Play. If you have already done this in order to manage Android Enterprise personally-owned, dedicated, fully managed, or corporate-owned work profile devices, you do not need to do it again.
 2. Add apps from managed Google Play to your Intune console.
 3. Target managed Google Play apps as **Available with or without enrollment** to the desired user group. **Required** and **Uninstall** app targeting are not supported for non-enrolled devices.
 4. Assign an App Protection Policy to the user group.
-5. The next time the end user opens the Company Portal app and completes the log in process, they will see a message indicating in the Apps section that there are apps available for them. The user can select this notification to navigate to the Play Store.
+5. User logs in any protected app.
+6. The next time the end user opens the Company Portal app and completes the log in process, they will see a message indicating in the Apps section that there are apps available for them. The user can select this notification to navigate to the Play Store.
 
    > [!NOTE]
    > You can configure [device enrollment setting options](./company-portal-app.md#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting will prevent user from unintentionally enrolling their device or receiving notifications to enroll their device after they logged in to the Company Portal.

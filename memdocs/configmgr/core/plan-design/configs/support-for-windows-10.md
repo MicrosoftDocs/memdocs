@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients or for OSD with Configuration Manager
-ms.date: 08/11/2020
+ms.date: 12/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -43,15 +43,13 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+| Windows 10 version | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 |
 |---------------------|-----|-----|-----|-----|-----|-----|
-| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
-| **20H2**<br>(10.0.19042)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) |
+| **1803**<br>(10.0.17134)   <!--05/11/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **20H2**<br>(10.0.19042)   <!--12/14/2021-->   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -59,7 +57,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise 2016 LTSB** <!--10/13/2026-->
 - **Enterprise LTSC 2019** <!--01/09/2029-->
 
-For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows).
 
 | Key |
 |--|
@@ -68,9 +66,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 ### <a name="bkmk_win10-notes"></a> Windows 10 client support notes
 
-- Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, and Pro Education.  
-
-- Starting in version 1906, Configuration Manager supports Windows 10 Pro for Workstation.
+- Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
 - For Windows 10, version 1909, OS deployment media shows the version as 10.0.18362.418.
 
@@ -87,7 +83,7 @@ Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform 
 
 ### <a name="bkmk_WIfB-support"></a> Support for Windows Insider
 
-Starting in Configuration Manager version 1906, you can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
+You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
 
 To provide feedback on Windows Insider, use the [Feedback Hub](/windows-insider/at-work-pro/wip-4-biz-feedback).
 
@@ -106,13 +102,13 @@ When you deploy operating systems with Configuration Manager, the Windows ADK is
 
 The following table lists the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager.
 
-| Windows 10 ADK version  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+| Windows 10 ADK version  | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 | ConfigMgr 2010 |
 |--------------------|-----|-----|-----|-----|-----|-----|
-| **1709**<br>(10.1.16299) | ![Not supported](media/Red_X.png)   | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
-| **1803**<br>(10.1.17134) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
-| **1809**<br>(10.1.17763) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
-| **1903**<br>(10.1.18362) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) |
-| **2004**<br>(10.1.19041) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+| **1809**<br>(10.1.17763) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) |
+| **1903**<br>(10.1.18362) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Backwards compatible](media/blue_compat.png) | ![Backwards compatible](media/blue_compat.png) |
+| **2004**<br>(10.1.19041) | ![Not supported](media/Red_X.png) | ![Not supported](media/Red_X.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) |
+
+<!-- Keep 1903 ADK until CM 1910 is out of support. Even though Win10 v1903 is end of service, it was also the official ADK for Win10 v1909 -->
 
 |Key|
 |--|

@@ -2,7 +2,7 @@
 title: Create Windows applications
 titleSuffix: Configuration Manager
 description: Learn more information about creating and deploying Windows applications in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -113,13 +113,13 @@ After signing the app, create a new deployment type on the application in Config
 
 Starting in version 2002, you can install complex applications using task sequences via the application model. Add a task sequence deployment type to an app either to install or uninstall the app. This deployment type provides the following behaviors:
 
-<!-- - Deploy an app task sequence to a user collection -->
-
 - Display the app task sequence with an icon in Software Center. An icon makes it easier for users to find and identify the app task sequence.
 
 - Define additional metadata for the app task sequence, including localized information
 
-You can only add a non-OS deployment task sequence as a deployment type on an app. High-impact, OS deployment, or OS upgrade task sequences aren't supported. <!--A user-targeted deployment still runs in the user context of the local System account.-->
+- Starting in version 2010, deploy an app task sequence to a user collection<!--8018255-->
+
+You can only add a non-OS deployment task sequence as a deployment type on an app. High-impact, OS deployment, or OS upgrade task sequences aren't supported. A user-targeted deployment still runs in the context of the local System account.
 
 When you add this deployment type to an app, configure its properties on the **Task Sequence** page. For more information, see [Deployment type **Task Sequence** options](../deploy-use/create-applications.md#bkmk_dt-ts).
 
@@ -146,9 +146,9 @@ When you create the application, to add a task sequence deployment type, your us
 
 ### Known issues for a task sequence deployment type
 
-- You can't yet deploy an app task sequence to a user collection
-
 - Don't use the **Install Application** step in this task sequence. Use the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step to install apps.
+
+- In version 2006 and earlier, you can't yet deploy an app task sequence to a user collection. This issue was resolved in version 2010.
 
 ## <a name="bkmk_uwp"></a> Support for Universal Windows Platform (UWP) apps  
 

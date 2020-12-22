@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/02/2020
+ms.date: 11/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -76,6 +76,7 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Kiosk](kiosk-settings.md)
 - [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
+- [Network boundary (Windows)](network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
 - [PKCS certificate](../protect/certificates-pfx-configure.md)
 - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
@@ -87,6 +88,7 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Trusted certificate](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Windows health monitoring](windows-health-monitoring.md)
 - [Wired networks (macOS)](wired-network-settings-macos.md)
 
 For example, if you select **iOS/iPadOS** for the platform, your profile options look similar to the following profile:

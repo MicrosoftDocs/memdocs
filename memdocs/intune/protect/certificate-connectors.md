@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2020
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,13 +49,20 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 >
 > - Android Enterprise – Fully Managed
 > - Android Enterprise – Dedicated
-> - Android Enterprise – Corporate Owned Work Profile  
+> - Android Enterprise – Corporate-Owned Work Profile  
 >
 > The functionality of the Microsoft Intune Connector isn't deprecated and you can continue use it with PKCS certificate profiles for some platforms. However, if you do not use SCEP or otherwise require use of NDES, you can switch to the PFX Certificate Connector and remove NDES from your servers.
 
 **The PFX Certificate Connector**:
 
 - Supports multiple instances of this connector for each Intune tenant. Each instance of the connector must install on a Windows Server and have access to the private key used to encrypt the passwords of the uploaded PFX files.
+  > [!NOTE]
+  > All connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
+  >
+  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  >
+  > The same applies to certificate revocation.
+  >
 - Can install on the same server that hosts an instance of the *Microsoft Intune Connector*.
 - Supports [automatic updates](#automatic-update) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
@@ -86,9 +93,16 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
 - Can be used to issue PKCS certificates to most device platforms, but not all. This connector doesn't support issuing of PKCS certificates to:
   - Android Enterprise – Fully Managed
   - Android Enterprise – Dedicated
-  - Android Enterprise – Corporate Owned Work Profile
+  - Android Enterprise – Corporate-Owned Work Profile
 
   To support those platforms, use the *PFX Certificate Connector*, which supports issuing PKCS certificates to all device platforms. If you don’t use SCEP, you can then uninstall this connector, and use only the PFX Certificate Connector.
+  > [!NOTE]
+  > With PKCS, all connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
+  >
+  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  >
+  > The same applies to certificate revocation.
+  >
 
 - Installs on a Windows server, which can also host an instance of the *PFX Certificate Connector*.
 - Supports up to 100 instances of this connector per tenant, with each instance on a separate Windows server. When you use multiple connectors:

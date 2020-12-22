@@ -36,7 +36,7 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "brand": "Microsoft Endpoint Manager",
-      "searchScope": ["Intune"],       
+      "searchScope": ["Intune"],     
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -78,13 +78,16 @@
         "tfosmark",
         "sdwheeler",
         "meganbradley"
-      ]      
+      ]          
     },
     "fileMetadata": {
       "feedback_product_url": {
         "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
-        "intune/**/*.md": "https://microsoftintune.uservoice.com/"
+        "intune/**/*.md": "https://microsoftintune.uservoice.com/"     
       },
+      "ms.date": {
+        "autopilot/**/*.md": "12/16/2020"
+      }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"]        
@@ -100,6 +103,13 @@
     },
     "template": [],
     "dest": "memdocs",
-    "markdownEngineName": "markdig"
+    "markdownEngineName": "markdig",
+    "rules": {
+        "docs-link-absolute": {
+            "exclude": [
+                "memdocs/configmgr/core/misc/in-console-documentation.md"
+            ]
+        }
+    }
   }
 }
