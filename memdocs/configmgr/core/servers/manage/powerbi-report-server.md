@@ -112,6 +112,12 @@ Only use this process if you don't already have a reporting services point in th
 
 In the Configuration Manager console, you see the new report in the list of Power BI Reports. If you don't see your reports, verify that you saved the reports to the `ConfigMgr_<SiteCode>` folder.
 
+There are sample reports available for download. For more information, see [Install Power BI sample reports](powerbi-sample-reports.md).
+
+## Known issues
+
+There's a known issue with Power BI Report Server and email subscriptions. After you configure the email settings in the Reporting Server Configuration Manager, when you try to create a new subscription, the option to deliver a report by **Email** isn't available. To work around this issue, restart the Power BI Report Server service.<!-- 7698019 -->
+
 ## Next steps
 
 After you create a report, use the following actions in the Configuration Manager console:
