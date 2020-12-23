@@ -2,10 +2,10 @@
 title: Integrate with Power BI Report Server
 titleSuffix: Configuration Manager
 description: Integrate Power BI Report Server with Configuration Manager reporting for modern visualization and better performance.
-ms.date: 04/08/2020
+ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
@@ -34,13 +34,14 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 - Download [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271), or later.
 
     > [!IMPORTANT]
+    >
     > - Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/), don't use a version from the Microsoft Store.
     > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI integration uses the same role-based administration for reporting.
+
     > [!NOTE]
-    > Power BI Report Server does not support RBAC enabled reports therefore all viewers of the reports will see the same results 
-    > regardless of their assigned scope.
+    > Power BI Report Server doesn't support reports that are enabled for role-based access. All report viewers will see the same results, whatever their assigned scope.
 
 ## Configure the reporting services point
 
