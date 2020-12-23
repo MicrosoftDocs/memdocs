@@ -58,6 +58,9 @@ When you install a new distribution point, you use an installation wizard that w
 
 - Install Internet Information Services (IIS) on the Windows server that hosts the distribution point. Or, when you install the site system role, Configuration Manager can install and configure IIS for you.
 
+> [!TIP]
+> To prevent Configuration Manager from installing on a specific drive, create an empty file named **NO_SMS_ON_DRIVE.SMS** and copy it to the root folder of the drive before you install the distribution point.
+
 ### Procedure to install a distribution point
 
 Use this procedure to add a new distribution point. To change the configuration of an existing distribution point, see the [Configure a distribution point](#bkmk_configs) section.
@@ -83,6 +86,16 @@ Start with the general procedure to [Install site system roles](install-site-sys
 For more information on the pages of the wizard specific to the distribution point role, see the [Configure a distribution point](#bkmk_configs) section. For example, if you want to install the distribution point as a [pull-distribution point](#bkmk_config-pull), choose the option to **Enable this distribution point to pull content from other distribution points**. Then make the other configurations that pull-distribution points require.
 
 After you finish the Create Site System Server wizard, the site adds the distribution point role to the site system server.
+
+> [!NOTE]
+> You can use PowerShell to automate the installation of a distribution point. For more information, see [Add-CMDistributionPoint](/powershell/module/configurationmanager/add-cmdistributionpoint).
+
+To help you troubleshoot, review the following log files on the site server:
+
+- distmgr.log
+- SMSdpmon.log
+
+For more information, see [Log file reference](../../../plan-design/hierarchy/log-files.md).
 
 ## <a name="bkmk_manage"></a> Manage distribution point groups
 
@@ -125,6 +138,9 @@ The next sections list the procedures for the following actions to manage distri
 
 8. In the Create New Distribution Point Group window, choose **OK** to create the group.
 
+> [!NOTE]
+> You can use PowerShell to automate this process. For more information, see [New-CMDistributionPointGroup](/powershell/module/configurationmanager/new-cmdistributionpointgroup).
+
 #### Create a new group from an existing distribution point
 
 1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Distribution Points** node. Select one or more distribution points to add to a new distribution point group.
@@ -145,6 +161,9 @@ This process automatically populates the **Members** tab of the Create New Distr
 
 5. Choose **OK** to save changes to the distribution point group.
 
+> [!NOTE]
+> You can use PowerShell to automate this process. For more information, see [Set-CMDistributionPointGroup](/powershell/module/configurationmanager/set-cmdistributionpointgroup).
+
 ### <a name="bkmk_dpgroup-addexist"></a> Procedure to add selected distribution points to existing distribution point groups
 
 1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Distribution Points** node. Select one or more distribution points to add to an existing group.
@@ -152,6 +171,9 @@ This process automatically populates the **Members** tab of the Create New Distr
 2. In the ribbon, select **Add Selected Items**, and then select **Add Selected Items to Existing Distribution Point Groups**.
 
 3. In the **Available distribution point groups**, select the groups to which the selected distribution points are added as members. Then choose **OK**.
+
+> [!NOTE]
+> You can use PowerShell to automate this process. For more information, see [Add-CMDistributionPointToGroup](/powershell/module/configurationmanager/add-cmdistributionpointtogroup).
 
 ## <a name="bkmk_reassign"></a> Reassign a distribution point
 
@@ -199,6 +221,9 @@ After reassigning a distribution point, refresh the server's certificate. The ne
 - If the server is also a Configuration Manager client, make sure to also reassign the client to the new primary site. This step is especially critical for pull-distribution points, which use client components to download content.
 
 - This process removes the distribution point from the old site's default boundary group. You need to manually add it to the new site's default boundary group, if necessary. All other boundary group assignments remain the same.
+
+> [!NOTE]
+> You can use PowerShell to automate this process. For more information, see the **ReassignSiteCode** parameter of the [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint#example-3--reassign-a-distribution-point-to-a-new-site) cmdlet.
 
 ## <a name="bkmk_maint"></a> Maintenance mode
 
@@ -271,6 +296,9 @@ The following sections describe the distribution point configurations when you'r
 3. Use the information in the following sections when you're editing the properties of the distribution point.
 
 4. After you make the changes that you want, select **OK** to save your settings and close the distribution point properties.
+
+> [!NOTE]
+> You can use PowerShell to automate this process. For more information, see [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint).
 
 ### <a name="bkmk_config-general"></a> General
 
