@@ -21,7 +21,7 @@ For more information, see [Microsoft Deployment Toolkit support life cycle](/tro
 
 ## <a name="bkmk_version"></a> Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?
 
-We primarily tested this build of MDT with the configuration listed in the [supported platforms list](release-notes#supported-platforms). Unless there are any explicit [known issues](known-issues.md), anything outside of the above configuration has a high probability of still working. Your mileage may vary as we haven't explicitly tested other combinations.
+We primarily tested this build of MDT with the configuration listed in the [supported platforms list](release-notes.md#supported-platforms). Unless there are any explicit [known issues](known-issues.md), anything outside of the above configuration has a high probability of still working. Your mileage may vary as we haven't explicitly tested other combinations.
 
 ## How do I get help with MDT?
 
