@@ -1,12 +1,14 @@
 - name: Microsoft Deployment Toolkit (MDT) documentation
   href: index.yml
   items:
-  - name: Release notes
-    href: release-notes.md
-  - name: Known issues
-    href: known-issues.md
-  - name: Frequently asked questions (FAQ)
-    href: faq.md
+  - name: Overview
+    items:
+    - name: Release notes
+      href: release-notes.md
+    - name: Known issues
+      href: known-issues.md
+    - name: Frequently asked questions (FAQ)
+      href: faq.md
   - name: How-to guides
     items:
     - name: MDT user guide
