@@ -488,6 +488,9 @@ Choose one of the following options for this setting:
 
   - Download additional policy and content for required deployments at the installation deadline
 
+    > [!NOTE]
+    > On an application deployment, enable the option to **Allow clients on a metered Internet connection to download content after the installation deadline**. This option is only available for deployments with a purpose of **Required**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md).<!-- 8510020 -->
+
   If the client reaches the data transfer limit for the metered internet connection, the client no longer communicates with the site.
 
 - **Block**: When the device is on a metered internet connection, the Configuration Manager client doesn't try to communicate with the site. This option is the default.
