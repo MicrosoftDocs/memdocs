@@ -281,6 +281,8 @@ Consider the following points when you export and import task sequences:
 
 - When you export a task sequence with the **Set Dynamic Variables** step, Configuration Manager doesn't export values for variables that you configure with the **Secret value** setting. Reenter the values for these variables after you import the task sequence.  
 
+- When you export a task sequence with the **Run task sequence** step, Configuration Manager doesn't export the child task sequence. Export and import any dependent task sequences separately.<!-- 8915013 -->
+
 - When you have multiple primary sites, import task sequences at the central administration site.  
 
 ### Process to export task sequences  
