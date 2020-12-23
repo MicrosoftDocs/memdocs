@@ -76,9 +76,6 @@ If you choose **Yes**, then specify:
 
 ### Enable as peer cache source
 
-> [!Note]  
-> In version 1902 and earlier, this setting was named **Enable Configuration Manager client in full OS to share content**. The behavior of the setting didn't change.
-
 Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
 - **Port for initial network broadcast** (default UDP 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
@@ -90,13 +87,12 @@ Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Confi
 ### Minimum duration before cached content can be removed (minutes)
 
 <!--4485509-->
-Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
+Specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
 
 By default this value is 1,440 minutes (24 hours).
 The maximum value for this setting is 10,080 minutes (one week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
-
 
 ## Client policy  
 
@@ -118,7 +114,7 @@ If this setting is **No**, users don't receive required applications that you de
 
 This setting applies to users when their computer is on either the intranet or the internet. It must be **Yes** if you also want to enable user policies on the internet.  
 
-> [!Note]  
+> [!NOTE]
 > Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You can't install new application catalog roles.
 >
 > If you're still using the application catalog, it receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the application catalog. If this setting is **No**, users can't install the applications that they see in the application catalog.  
@@ -669,34 +665,16 @@ When you enable this option, applications that are already installed no longer s
 
 Specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
-> [!Important]  
+> [!IMPORTANT]
 > The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 
 ### Software Center tab visibility
 
-#### Starting in version 1906
 <!--4063773-->
 
-Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons. 
+Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons.
 
 Available tabs:
-- **Applications**
-- **Updates**
-- **Operating Systems**
-- **Installation Status**
-- **Device Compliance**
-- **Options**
-- Add up to five custom tabs by clicking the **Add tab** button.
-  - Specify the **Tab name** and **Content URL** for your custom tab.
-  - Select **Delete Tab** to remove a custom tab.  
-
-  >[!Important]  
-  > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
-  > - Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
-
-#### Version 1902 and earlier
-
-Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 
 - **Applications**
 - **Updates**
@@ -704,20 +682,21 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- **Specify a custom tab for Software Center** <!--1358132-->
-    - **Tab name**
-    - **Content URL**
 
-    >[!Important]  
-    > Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
-    >
-    > Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
+You can also add up to five custom tabs:
 
-For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
+- Select **Add tab**.
+- Specify the **Tab name** and **Content URL** for your custom tab.
+
+Select **Delete Tab** to remove a custom tab.  
+
+> [!IMPORTANT]
+> Some website features may not work in a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+>
+> Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
 
 ### <a name="bkmk_swctr_defaults"></a> Configure default views in Software Center
 <!--3612112-->
-*(Introduced in version 1902)*
 
 - Configure the **Default application filter** as either **All** or only **Required** applications.  
 
@@ -726,7 +705,6 @@ For example, if your organization doesn't use compliance policies, and you want 
 - Set the **Default application view** as either **Tile view** or **List view**.
 
   - If a user changes this configuration, Software Center persists the user's preference in the future.
-
 
 ## Software deployment  
 
@@ -883,21 +861,19 @@ Use this setting to specify the period of time for the previous setting. You can
 
 ### Allow clients to download delta content when available
 
-*(Introduced in version 1902)*
-
-Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it. 
+Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
 
 - Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
- - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
- - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
-    - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587--> 
 
+- This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+
+- Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
+
+  When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587-->
 
 ### Port that clients use to receive requests for delta content
 
-*(Introduced in version 1902)*
-
-This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall. 
+This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall.
 
 > [!NOTE]
 >This client setting replaces **Port used to download content for Express installation files**.
@@ -940,11 +916,10 @@ For example, you configure the following maintenance windows:
 
 By default, the client only installs software updates during the second maintenance window. It ignores the maintenance window for all deployments in this scenario. When you change this setting to **Yes**, the client installs software updates between 02:00 - 06:00.
 
-
 ### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
 
 <!--3734525-->
-Starting in Configuration Manager version 1902, you can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows 10 in-place upgrade task sequences.
+You can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows 10 in-place upgrade task sequences.
 
 This client setting provides the following options:
 
@@ -952,12 +927,11 @@ This client setting provides the following options:
 
 - **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
 
-    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+  Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.  
 
-    - Removes the `/Priority` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
-
+   Removes the `/Priority` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
 
 ### Enable third party software updates
 
@@ -965,7 +939,7 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 
 ### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
 <!--4062619-->
-Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+Use this setting to configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10.
