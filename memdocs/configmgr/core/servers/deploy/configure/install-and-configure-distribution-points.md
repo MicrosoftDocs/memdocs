@@ -275,7 +275,7 @@ Individual distribution points support different kinds of configurations. Howeve
 
 - [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)
 
-The following sections describe the distribution point configurations when you're [installing a new one](#install-a-distribution-point-procedure) or [editing an existing one](#bkmk_change-procedure):
+The following sections describe the distribution point configurations when you're [installing a new one](#procedure-to-install-a-distribution-point) or [editing an existing one](#bkmk_change-procedure):
 
 - [General settings](#bkmk_config-general)
 - [Communication](#bkmk_config-comm)
@@ -309,7 +309,7 @@ The following settings are on the **Distribution point** page of the Create Site
 - **Install and configure IIS if required by Configuration Manager**: If IIS isn't already installed on the server, Configuration Manager installs and configures it. Configuration Manager requires IIS on all distribution points. If you don't choose this setting, and IIS isn't installed on the server, first install IIS before Configuration Manager can successfully install the distribution point.
 
     > [!NOTE]
-    > This option is only on the **Distribution point** page of the Create Site System Server wizard. It's available only when you're [installing a new distribution point](#install-a-distribution-point-procedure).
+    > This option is only on the **Distribution point** page of the Create Site System Server wizard. It's available only when you're [installing a new distribution point](#procedure-to-install-a-distribution-point).
 
 - **Enable and configure BranchCache for this distribution point**: Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information, see [BranchCache](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).
 

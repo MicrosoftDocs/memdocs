@@ -157,7 +157,7 @@ Only modify the CMG from the Configuration Manager console. Making modifications
 
 ## Renew Azure service secret key
 
-When you first configure Azure Active Directory (Azure AD) for the CMG to create the **Cloud Management** Azure service, you specify a secret key validity period on the web (server) app registration. By default, the secret key is valid for one year, or you can specify two years. Before the secret key expires, make sure to renew it. For more information, see [Renew secret key](../../..servers/deploy/configure/azure-services-wizard.md#bkmk_renew).<!-- MEMDocs#916 -->
+When you first configure Azure Active Directory (Azure AD) for the CMG to create the **Cloud Management** Azure service, you specify a secret key validity period on the web (server) app registration. By default, the secret key is valid for one year, or you can specify two years. Before the secret key expires, make sure to renew it. For more information, see [Renew secret key](../../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).<!-- MEMDocs#916 -->
 
 ## Delete the service
 
