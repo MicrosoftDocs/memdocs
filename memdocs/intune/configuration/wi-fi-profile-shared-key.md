@@ -260,6 +260,8 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
         `key=clear` exports the key in plain text, which is required to successfully use the profile.
+        
+    - If the exported Wi-Fi profile <name></name> element contains a space it will produce a syncml 500 error when assigned. Removing the space will allow WiFi policy to be successfully managed.
 
 After you have the XML file, copy and paste the XML syntax into OMA-URI settings > **Data type**. [Create a custom profile](#create-a-custom-profile) (in this article) lists the steps.
 
