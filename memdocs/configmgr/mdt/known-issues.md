@@ -23,6 +23,14 @@ When you use MDT build 8456 with the Windows ADK for Windows 10, version 2004, t
 
 Starting with Windows 10 version 1809, language interface packs (LIPs) are delivered as local experience packs (LXPs). LXPs are AppX bundles. When specified in the unattend.xml file, they aren't automatically selected, and the deployment fails. Don't set LXPs as default. Users should select an applied LXP from Windows settings.
 
+## Security risk when run over the network
+
+<!-- 2835722 -->
+
+Binaries or scripts that run over the network aren't verified against a digital signature. This issue increases the risk of an attacker tampering with the binaries and injecting malicious code.
+
+To mitigate this issue, protect the network connection with IPsec or SMB signing.
+
 ## Next steps
 
 [Release notes](release-notes.md)
