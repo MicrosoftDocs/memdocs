@@ -221,13 +221,13 @@ For more information, review M365AHandler.log on the client.
 ### Minimum compatibility update
 
 <!--18,19,32-->
-The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics, 10.0.17763.
+The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics, 10.0.17673.
 
 Install the latest compatibility update. For more information, see [Compatibility updates](enroll-devices.md#update-devices).
 
 ### Appraiser version
 
-This property displays the current version of the Appraiser component on the device. It shows the file version on `%windir%\System32\appraiser.dll`, without the decimal points. For example, file version 10.0.17763 displays as 10017763.
+This property displays the current version of the Appraiser component on the device. It shows the file version on `%windir%\System32\appraiser.dll`, without the decimal points. For example, file version 10.0.17673 displays as 10017673.
 
 ### Last successful full run of Appraiser
 

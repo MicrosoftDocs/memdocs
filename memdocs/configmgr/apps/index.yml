@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 01/28/2020
+  ms.date: 12/18/2020
 
 landingContent:
   - title: About app management
@@ -63,5 +63,7 @@ landingContent:
         links:
           - text: Troubleshoot app deployments
             url: understand/app-deployment-technical-reference.md
+          - text: Common error codes for app installation
+            url: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
           - text: Packages and programs
             url: deploy-use/packages-and-programs.md
