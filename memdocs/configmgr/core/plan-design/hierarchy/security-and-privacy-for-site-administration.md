@@ -2,7 +2,7 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 04/27/2020
+ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Security and privacy for site administration in Configuration Manager
@@ -297,6 +295,15 @@ For example, remove the following virtual directories for a distribution point:
 
 Identify and follow the general guidance for your version of IIS Server. Take into consideration any requirements that Configuration Manager has for specific site system roles. For more information, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).  
 
+### Configure IIS custom headers
+
+Configure the following custom headers to disable MIME sniffing:<!-- 8540255 -->
+
+`x-content-type-options: nosniff`
+
+For more information, see [Custom Headers](/iis/configuration/system.webserver/httpprotocol/customheaders).
+
+If other services use the same IIS instance, make sure these custom headers are compatible.
 
 ## <a name="BKMK_Security_ManagementPoint"></a> Security guidance for the management point
 
