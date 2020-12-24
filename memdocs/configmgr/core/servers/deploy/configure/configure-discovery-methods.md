@@ -292,7 +292,7 @@ To enable discovery when configuring a new **Cloud Management** Azure service:
 Configuration Manager enables the Heartbeat Discovery method when you install a primary site. If you want to use the default schedule of every seven days, there's nothing else to configure. Otherwise, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point.  
 
 > [!NOTE]  
-> If you enable both client push installation and the site maintenance task for **Clear Install Flag** at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. For more information about site maintenance tasks, see [Maintenance tasks](../../manage/maintenance-tasks.md).  
+> If you enable both client push installation and the site maintenance task for **Clear Install Flag** at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. By default, this task runs every 21 days. Heartbeat discovery should run more frequently than the task, or clients will unnecessarily reinstall. For more information about site maintenance tasks, see [Maintenance tasks](../../manage/maintenance-tasks.md).<!-- 7355291 -->
 
 ### Configure the Heartbeat Discovery schedule  
 
