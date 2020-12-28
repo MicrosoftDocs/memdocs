@@ -65,7 +65,7 @@ Having problems finding something? [File feedback!](#about-feedback) When you fi
 
 With many modern web browsers, you can create a custom search engine. Use this feature to quickly and easily search `docs.microsoft.com`. For example, with Microsoft Edge, version 77 and later, use the following process:
 
-1. In Microsoft Edge, version 77 and later, open [Settings](edge://settings/profiles).
+1. In Microsoft Edge, version 77 and later, open **Settings**.
 1. In the left menu, select **Privacy, search, and services**.
 1. Scroll to the bottom of the **Services** group and select **Address bar and search**.
 1. Select **Manage search engines**.
@@ -73,7 +73,11 @@ With many modern web browsers, you can create a custom search engine. Use this f
 
     - **Search engine**: Enter a friendly name to identify it in the list of search engines. For example, `Microsoft docs`.
     - **Keyword**: Specify a short term to use in the address bar to activate this search engine. For example, `memdocs`.
-    - **URL with `%s` in place of query**: For example, `https://docs.microsoft.com/en-us/search/index?search=%s&scope=ConfigMgr`
+    - **URL with `%s` in place of query**: For example,
+
+        ```url
+        https://docs.microsoft.com/en-us/search/index?search=%s&scope=ConfigMgr
+        ```
 
         > [!NOTE]
         > This example is specific to the `ConfigMgr` scope. You can remove the scope variable to search all `docs.microsoft.com` or use a different scope.
@@ -82,7 +86,7 @@ With many modern web browsers, you can create a custom search engine. Use this f
 
     :::image type="content" source="media/docs-search-engine.png" alt-text="Add to Microsoft Edge a custom search engine for Microsoft Docs":::
 
-After you add this search engine, type your keyword in the browser address bar, press `Space`, then type your search terms, and press `Enter`. It will automatically search Microsoft Docs for your specified terms using the defined scope.
+After you add this search engine, type your keyword in the browser address bar, press `Tab`, then type your search terms, and press `Enter`. It will automatically search Microsoft Docs for your specified terms using the defined scope.
 
 ## About feedback
 
