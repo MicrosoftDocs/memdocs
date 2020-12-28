@@ -163,6 +163,15 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
+     - Android device administrator
+     - Android Enterprise:
+       - Fully Managed
+       - Dedicated
+       - Corporate-Owned Work Profile
+       - Personally-Owned Work Profile
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 and later
    - **Profile**: Select **Trusted certificate**
 
 4. Select **Create**.
