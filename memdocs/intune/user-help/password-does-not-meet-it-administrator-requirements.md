@@ -26,7 +26,7 @@ ROBOTS:
 #ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser, contperfq1
+ms.custom: intune-enduser, contperf-fy21q1
 ms.collection: 
 ---
  

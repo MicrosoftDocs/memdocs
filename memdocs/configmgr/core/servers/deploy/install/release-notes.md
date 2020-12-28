@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/02/2020
+ms.date: 12/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -41,7 +41,7 @@ For information about the new features in Desktop Analytics, see [What's new in 
 
 <!-- 8896585 -->
 
-_Applies to version 2010_
+_Applies to version 2010 early update ring_
 
 If you have a [highly available site server](../configure/site-server-high-availability.md), when you update to version 2010, the site server in passive mode fails to update. This issue is due to a change in the Microsoft Monitoring Agent (MMA) for Microsoft Defender Advanced Threat Protection. The required MMA files aren't copied to all necessary locations.
 
@@ -54,7 +54,12 @@ To work around this issue:
     1. Copy **MMASetup-amd64.exe** to the `.\sms\client\x64` folder.
     1. Copy **MMASetup-i386.exe** to the `.\sms\client\i386` folder.
 
+1. Delete the file `inboxes\failovermgr.box\siteserver.pkg` on the site server.
+
 1. Retry the update to version 2010.
+
+> [!NOTE]
+> This issue can also occur when you add a new site server in passive mode after updating to version 2010.
 
 ### Client automatic upgrade happens immediately for all clients
 

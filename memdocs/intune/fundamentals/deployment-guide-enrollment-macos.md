@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -37,7 +37,7 @@ You have the following options when enrolling macOS devices:
 - [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
 
 > [!NOTE]
-> Apple Configurator is available for iOS/iPadOS devices. It's not available for macOS devices.
+> Enrollment through Apple Configurator is available for iOS/iPadOS devices. It's not available for macOS devices. When you create a macOS enrollment profile, it appears that Apple Configurator is an option. This behavior is a known issue, and will be fixed in a future release (no ETA). Do not create a macOS enrollment profile with Apple Configurator. It doesn't work.
 
 This article:
 

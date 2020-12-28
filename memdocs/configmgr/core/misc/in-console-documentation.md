@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 11/10/2020
+ms.date: 12/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -24,7 +24,7 @@ All docs.ms links should include `?WT.mc_id=configmgr-console` campaign ID at th
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: November 10, 2020*
+*Last update: December 16, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -58,22 +58,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between October 1 and October 31, 2020.
+The most popular articles between November 1 and November 30, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 23193 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
-| 17752 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
-| 17738 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
-| 16504 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
-| 16081 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
-| 15089 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
-| 13276 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
-| 12940 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway?WT.mc_id=configmgr-console) |
-| 12706 | [What's new in version 2006](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006?WT.mc_id=configmgr-console) |
-| 11213 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
+| 20342 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client?WT.mc_id=configmgr-console) |
+| 16855 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files?WT.mc_id=configmgr-console) |
+| 15633 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction?WT.mc_id=configmgr-console) |
+| 15190 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center?WT.mc_id=configmgr-console) |
+| 15187 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2?WT.mc_id=configmgr-console) |
+| 13877 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports?WT.mc_id=configmgr-console) |
+| 11863 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview?WT.mc_id=configmgr-console) |
+| 11634 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates?WT.mc_id=configmgr-console) |
+| 11485 | [What's new in version 2006](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006?WT.mc_id=configmgr-console) |
+| 10184 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway?WT.mc_id=configmgr-console) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr) received 34,802 page views in this time period.
+In this time period, the [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console) received 32,713 page views and the [Configuration Manager PowerShell cmdlets overview page](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console) received 3,662 page views.
 
 ## Recently updated
 
@@ -81,33 +81,30 @@ Articles with a recent and significant update:
 
 | Last reviewed | Title |
 |---------------|-------|
-| 10/30/2020 | [Technical preview 2010.2](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2010-2?WT.mc_id=configmgr-console) |
-| 10/28/2020 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection?WT.mc_id=configmgr-console) |
-| 10/12/2020 | [Internet access requirements](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints?WT.mc_id=configmgr-console) |
-| 10/12/2020 | [Optimize Windows 10 update delivery](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console) |
-| 10/9/2020 | [Deploy content](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/deploy-and-manage-content?WT.mc_id=configmgr-console) |
-| 10/9/2020 | [CNG v3 certificates overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/cng-certificates-overview?WT.mc_id=configmgr-console) |
-| 10/8/2020 | [Failover cluster instance](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database?WT.mc_id=configmgr-console) |
-| 10/8/2020 | [Prepare to use an availability group](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database?WT.mc_id=configmgr-console) |
-| 10/7/2020 | [Azure AD authentication workflow](https://docs.microsoft.com/mem/configmgr/core/clients/manage/azure-ccmsetup?WT.mc_id=configmgr-console) |
-| 10/2/2020 | [Technical preview 2010](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2010?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [What's new in version 2010](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2010?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [Product feedback](https://docs.microsoft.com/mem/configmgr/core/understand/product-feedback?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [Console changes and tips](https://docs.microsoft.com/mem/configmgr/core/servers/manage/admin-console-tips?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [How to view collection evaluation](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/collection-evaluation-view?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [Deploy a task sequence over the internet](https://docs.microsoft.com/mem/configmgr/osd/deploy-use/deploy-task-sequence-over-internet?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [Monitor scenario health](https://docs.microsoft.com/mem/configmgr/core/servers/manage/scenario-health?WT.mc_id=configmgr-console) |
+| 11/25/2020 | [Technical preview 2011](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2011?WT.mc_id=configmgr-console) |
+| 11/24/2020 | [Revise and supersede applications](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/revise-and-supersede-applications?WT.mc_id=configmgr-console) |
+| 11/19/2020 | [FAQ for Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/faq?WT.mc_id=configmgr-console) |
+| 11/16/2020 | [Tenant attach - Deploy endpoint security policies from the Microsoft Endpoint Manager admin center  (preview)](https://docs.microsoft.com/mem/configmgr/tenant-attach/deploy-antivirus-policy?WT.mc_id=configmgr-console) |
 
 PowerShell cmdlet articles with recent updates:
 
 | Last reviewed | Title |
 |---------------|-------|
-| 10/30/2020 | [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember?WT.mc_id=configmgr-console) |
-| 10/28/2020 | [New-CMTSStepConditionQueryWmi](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepconditionquerywmi?WT.mc_id=configmgr-console) |
-| 10/28/2020 | [Start-CMTaskSequenceDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/start-cmtasksequencedeployment?WT.mc_id=configmgr-console) |
-| 10/28/2020 | [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepdownloadpackagecontent?WT.mc_id=configmgr-console) |
-| 10/1/2020 | [Get-CMDevice](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmdevice?WT.mc_id=configmgr-console) |
-| 10/1/2020 | [Get-CMResource](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmresource?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [Get started with Configuration Manager cmdlets](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console) |
+| 11/30/2020 | [Configuration Manager cmdlet library changes for version 2010](https://docs.microsoft.com/powershell/sccm/2010-release-notes?WT.mc_id=configmgr-console) |
 
 ## Troubleshooting articles
 
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 
 - [Troubleshoot application deployments](https://docs.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference?WT.mc_id=configmgr-console)
+- [Application installation common error codes reference](https://docs.microsoft.com/mem/configmgr/tenant-attach/app-install-error-reference?WT.mc_id=configmgr-console)
 - [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612)
 - [Understand and troubleshoot Updates and Servicing in Configuration Manager](https://support.microsoft.com/help/4490424)
 - [Troubleshooting software update synchronization issues](https://support.microsoft.com/help/10059)
@@ -123,16 +120,18 @@ For more information, see [Microsoft Endpoint Configuration Manager troubleshoot
 
 ## New and updated support articles
 
-Support articles that are new or updated between July 18 and October 15, 2020.
+Support articles that are new or updated between October 16 and December 18, 2020.
 
-- [KB 4584759 Clients report Desktop Analytics configuration errors in Configuration Manager, version 2006](https://support.microsoft.com/help/4584759)
-- [KB 4580678 Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678)
-- [KB 4578830 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830)
-- [KB 4576791 Update for Microsoft Endpoint Configuration Manager version 2006, early update ring](https://support.microsoft.com/help/4576791)
-- [KB 4578123 CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123)
-- [KB 4576785 Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782)
-- [KB 4575774 New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002](https://support.microsoft.com/help/4575774)
-- [KB 4575339 Devices appear twice in Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4575339)
+- [KB 4578605 Update Rollup for Microsoft Endpoint Configuration Manager version 2006](https://support.microsoft.com/help/4578605)
+- [KB 4575784 Office updates fail to download in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4575784)
+- [KB 4575783 Office updates fail to download in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4575783)
+- [KB 4575786 Configuration Manager console terminates unexpectedly on Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575786)
+- [KB 4575785 November 2020 Update for Asset Intelligence authentication certificate in Configuration Manager](https://support.microsoft.com/help/4575785)
+- [KB 4575787 Co-management enrollment takes longer than expected for Configuration Manager clients](https://support.microsoft.com/help/4575787)
+- [KB 4575789 Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789)
+- [KB 4575790 Client setup is unable to download contents from a cloud distribution point in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575790)
+- [KB 4594176 Update for Microsoft Endpoint Configuration Manager version 2010, early update ring](https://support.microsofot.com/help/4594176)
+- [KB 4599924 Console terminates unexpectedly in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599924)
 
 Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com and support.office.com are moving to a new consolidated site. Existing Configuration Manager articles are migrated to the new site below and still accessible using their original URLs.
 

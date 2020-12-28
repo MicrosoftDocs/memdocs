@@ -2,7 +2,7 @@
 title: What's new in version 2010
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
-ms.date: 11/30/2020
+ms.date: 12/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -105,9 +105,7 @@ For more information, see [Desktop Analytics prerequisites](../../../desktop-ana
 
 ### Monitor scenario health
 
-Configuration Manager is complicated to troubleshoot. It's especially complex to understand system latency and the backlog between components. Cloud service-attached features increase that complexity.
-
-You can now use Configuration Manager to monitor the health of end-to-end scenarios. It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation.
+You can now use Configuration Manager to monitor the health of end-to-end scenarios. Monitoring scenario health enhances awareness of system latency and component backlogs which are critical for cloud service-attached features. Configuration Manager simulates activities to expose performance metrics and failure points. It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation.
 
 This release includes the following two scenarios:
 
@@ -413,9 +411,9 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 <!-- For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md). -->
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4578830).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599442).
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 ### Hotfixes
@@ -433,11 +431,10 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2010 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2010.md#early-update-ring).
-
-<!-- 
-As of August 31, 2020, version 2010 is globally available for all customers to install.
+<!-- At this time, version 2010 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2010.md#early-update-ring).
  -->
+
+As of December 11, 2020, version 2010 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2010](../../servers/manage/checklist-for-installing-update-2010.md).
 
