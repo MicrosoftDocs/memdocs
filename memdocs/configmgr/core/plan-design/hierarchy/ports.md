@@ -851,4 +851,10 @@ For more information, see the following articles:
 
 The following diagram shows the connections between the main components that are in a typical Configuration Manager site. It currently doesn't include all connections.
 
-:::image type="content" source="media/ports.png" alt-text="Diagram of Configuration Manager connections" lightbox="media/ports.svg":::
+:::image type="content" source="media/ports.svg" alt-text="Diagram of Configuration Manager connections":::
+
+## Next steps
+
+[Proxy server support](../network/proxy-server-support.md)
+
+[Internet access requirements](../network/internet-endpoints.md)
