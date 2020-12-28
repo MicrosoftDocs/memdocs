@@ -130,7 +130,7 @@ Support articles that are new or updated between October 16 and December 18, 202
 - [KB 4575787 Co-management enrollment takes longer than expected for Configuration Manager clients](https://support.microsoft.com/help/4575787)
 - [KB 4575789 Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789)
 - [KB 4575790 Client setup is unable to download contents from a cloud distribution point in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575790)
-- [KB 4594176 Update for Microsoft Endpoint Configuration Manager version 2010, early update ring](https://support.microsofot.com/help/4594176)
+- [KB 4594176 Update for Microsoft Endpoint Configuration Manager version 2010, early update ring](https://support.microsoft.com/help/4594176)
 - [KB 4599924 Console terminates unexpectedly in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599924)
 
 Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com and support.office.com are moving to a new consolidated site. Existing Configuration Manager articles are migrated to the new site below and still accessible using their original URLs.
