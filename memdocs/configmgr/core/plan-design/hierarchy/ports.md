@@ -846,3 +846,9 @@ For more information, see the following articles:
 - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
 
 - [How to configure a firewall for domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
+
+## Diagram
+
+The following diagram shows the connections between the main components that are in a typical Configuration Manager site. It currently doesn't include all connections.
+
+:::image type="content" source="media/ports.png" alt-text="Diagram of Configuration Manager connections" lightbox="media/ports.svg":::
