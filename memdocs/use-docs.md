@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search the docs, provide doc feedback, and contribute to the docs for Microsoft Endpoint Manager. These docs include Configuration Manager, Intune, and Autopilot.
-ms.date: 10/27/2020
+ms.date: 12/28/2020
 ms.service: mem
 ms.subservice: fundamentals
 ms.topic: how-to
@@ -60,6 +60,33 @@ Use the following search tips to help you find the information that you need:
     :::image type="content" source="media/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter":::
 
 Having problems finding something? [File feedback!](#about-feedback) When you file an issue about search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
+
+### Add a custom search engine
+
+With many modern web browsers, you can create a custom search engine. Use this feature to quickly and easily search `docs.microsoft.com`. For example, with Microsoft Edge, version 77 and later, use the following process:
+
+1. In Microsoft Edge, version 77 and later, open **Settings**.
+1. In the left menu, select **Privacy, search, and services**.
+1. Scroll to the bottom of the **Services** group and select **Address bar and search**.
+1. Select **Manage search engines**.
+1. Select **Add** and specify the following information:
+
+    - **Search engine**: Enter a friendly name to identify it in the list of search engines. For example, `Microsoft docs`.
+    - **Keyword**: Specify a short term to use in the address bar to activate this search engine. For example, `memdocs`.
+    - **URL with `%s` in place of query**: For example,
+
+        ```url
+        https://docs.microsoft.com/en-us/search/index?search=%s&scope=ConfigMgr
+        ```
+
+        > [!NOTE]
+        > This example is specific to the `ConfigMgr` scope. You can remove the scope variable to search all `docs.microsoft.com` or use a different scope.
+        >
+        > The Microsoft Docs search engine requires a locale in the address. For example, `en-us`. You can change your entry to use a different locale.
+
+    :::image type="content" source="media/docs-search-engine.png" alt-text="Add to Microsoft Edge a custom search engine for Microsoft Docs":::
+
+After you add this search engine, type your keyword in the browser address bar, press `Tab`, then type your search terms, and press `Enter`. It will automatically search Microsoft Docs for your specified terms using the defined scope.
 
 ## About feedback
 
