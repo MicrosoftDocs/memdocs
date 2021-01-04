@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 12/07/2020
+ms.date: 01/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -22,6 +22,14 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## January 2021
+
+### Change to required permissions for administrator role
+
+<!-- 9049337 -->
+
+By the end of March 2021, the [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator-permissions) role in Azure Active Directory will no longer require permissions for actions in the `microsoft.office365` service. These permissions aren't currently used by this role. There's no action required at this time, this notice is a deprecation announcement.
 
 ## December 2020
 
