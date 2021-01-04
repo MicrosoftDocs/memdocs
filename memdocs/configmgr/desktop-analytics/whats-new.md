@@ -29,7 +29,15 @@ To get notified when this page is updated, copy and paste the following URL into
 
 <!-- 9049337 -->
 
-By the end of March 2021, the [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator-permissions) role in Azure Active Directory will no longer require permissions for actions in the `microsoft.office365` service. These permissions aren't currently used by this role. There's no action required at this time, this notice is a deprecation announcement.
+By the end of March 2021, the [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator-permissions) role in Azure Active Directory will no longer require the following permissions:
+
+- `microsoft.office365.webPortal/allEntities/basic/read`
+- `microsoft.office365.serviceHealth/allEntities/allTasks`
+- `microsoft.office365.supportTickets/allEntities/allTasks`
+
+These permissions aren't currently used by this role.
+
+There's no action required at this time, this notice is a deprecation announcement.
 
 ## December 2020
 
