@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll devices with Windows Autopilot
+title: Enroll devices with Windows Autopilot - Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Windows 10 devices using Windows Autopilot.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 12/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -45,26 +45,37 @@ ms.collection:
 
 ## Create an Autopilot device group using Intune
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Groups** > **New group**.
-2. In the **Group** blade:
-    1. For **Group type**, choose **Security**.
-    2. Type a **Group name** and **Group description**.
-    3. For **Membership type**, choose either **Assigned** or **Dynamic Device**.
-3. If you chose **Assigned** for **Membership type** in the previous step, then in the **Group** blade, choose **Members** and add Autopilot devices to the group.
- Autopilot devices that aren't yet enrolled are devices where the name equals the serial number of the device.
-4. If you chose **Dynamic Devices** for **Membership type** above, then in the **Group** blade, choose **Dynamic device members** and type any of the following code in the **Advanced rule** box. These rules only gather Autopilot devices because they target only Autopilot device attributes. Creating a group based off non-autopilot attributes won't guarantee that devices included in the group are registered to Autopilot.
-    - If you want to create a group that includes all of your Autopilot devices, type: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
-    - Intune's group tag field maps to the OrderID attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device OrderID), type: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
-    - If you want to create a group that includes all of your Autopilot devices with a specific Purchase Order ID, type: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
- 
-    After adding the **Advanced rule** code, choose **Save**.
-5. Choose **Create**. 
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+2. In **New Group**, configure the following properties:
 
+    - **Group type**: Select **Security**.
+    - **Group name** and **Group description**: Enter a name and description for your group.
+    - **Azure AD roles can be assigned to the group (Preview)**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to the this group.
+
+      For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
+
+    - **Membership type**: Choose how devices become members of this group. Select **Assigned**, **Dynamic user**, or **Dynamic Device**. For more information, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
+    - **Owners**: Select users that own the group. Owners can also delete this group.
+    - **Members**: Select Autopilot devices that belong to this group. Autopilot devices that aren't enrolled show the serial number for the device name.
+    - **Dynamic device members**: Select **Add dynamic query** > **Add expression**.
+
+      Create rules using Autopilot device attributes. Autopilot devices that meet these rules are automatically added to the group. Creating an expression using non-autopilot attributes doesn't guarantee that devices included in the group are registered to Autopilot.
+
+      When creating expressions:
+      
+      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`.
+      - Intune's group tag field maps to the `OrderID` attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
+      - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
+ 
+      **Save** your expressions.
+
+3. Select **Create**.
 
 ## Edit Autopilot device attributes
+
 After you've uploaded an Autopilot device, you can edit certain attributes of the device.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431),select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
 2. Select the device you want to edit.
 3. In the pane on the right of the screen, you can edit:
     - Device name.

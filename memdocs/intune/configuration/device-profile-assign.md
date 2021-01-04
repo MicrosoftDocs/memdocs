@@ -24,7 +24,7 @@ ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, contperfq1
+ms.custom: intune-azure, contperf-fy21q1
 ms.collection: M365-identity-device-management
 ---
 

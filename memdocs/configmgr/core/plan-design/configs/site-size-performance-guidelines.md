@@ -119,19 +119,19 @@ The relationship between cores and memory is also important. In general, having 
 > [!NOTE]
 > All testing sets machine power plans to allow maximum CPU power consumption and performance.
 
-#### <a name="bkmk_note2"></a> Note 2: IOPS: Inboxes and IOPS: SQL
-
-These values refer to the IOPS needs for the Configuration Manager and SQL Server logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL Server files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL Server disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
-
-Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
-
-#### <a name="bkmk_note3"></a> Note 3: SQL Server memory allocation
+#### <a name="bkmk_note2"></a> Note 2: SQL Server memory allocation
 
 <!-- MEMDocs#570 -->
 
 Use this value to configure the **Maximum server memory (in MB)** in the properties of the SQL Server. It's the percentage of the total amount of memory available on the server.
 
 Don't configure the minimum and maximum values the same. This guidance is specifically for the maximum memory that you should allow SQL Server to allocate.
+
+#### <a name="bkmk_note3"></a> Note 3: IOPS: Inboxes and IOPS: SQL
+
+These values refer to the IOPS needs for the Configuration Manager and SQL Server logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive where the Configuration Manager inbox directories reside. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL Server files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL Server disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
+
+Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest impact on site performance, and improvements here will give the most payback on investment.
 
 #### <a name="bkmk_note4"></a> Note 4: Storage space required
 
