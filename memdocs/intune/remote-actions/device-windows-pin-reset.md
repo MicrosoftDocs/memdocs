@@ -58,11 +58,11 @@ To reset the passcode on Windows devices, onboard the PIN reset service to your 
 4. After you have logged in, choose **Accept** to give consent for the PIN reset client to access your account.
   ![Accept the PIN Reset Client request for permissions](./media/device-windows-pin-reset/pin-reset-client-home-screen.png)
 
-> [!NOTE]
-> After you have accepted the PIN reset service and client requests, you may get a `You do not have permission to view this directory or page.` message, or it may appear as if nothing happens. This behavior is normal. Be sure to confirm that the two PIN Reset applications are listed for your tenant.
-
 5. In the [Azure portal](https://portal.azure.com), verify that the Microsoft PIN Reset Service and Microsoft PIN Reset Client are integrated from the Enterprise applications (All applications) blade. Filter the Application status drop down to "Enabled", and both Microsoft Pin Reset Service Production and Microsoft Pin Reset Client Production are enabled in your tenant.
   ![PIN reset service permissions page](./media/device-windows-pin-reset/pin-reset-service-application.png)
+
+> [!NOTE]
+> After you have accepted the PIN reset service and client requests, you may get a `You do not have permission to view this directory or page.` message, or it may appear as if nothing happens. This behavior is normal. Be sure to confirm that the two PIN Reset applications are listed for your tenant.
 
 ## Configure Windows devices to use PIN reset
 
