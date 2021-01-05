@@ -13,7 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 01/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
