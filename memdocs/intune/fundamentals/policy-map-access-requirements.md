@@ -43,9 +43,8 @@ To see these settings in the office 365 Security and Compliance portal, sign in 
 ## If a device doesn't meet the requirements above, then...
 This setting determines if you should use compliance policies or configuration profiles in Intune for all the access requirement settings.
 
-The Basic Mobility and Security setting is backed by two separate Azure AD conditional access policy settings.
-
-Office 365 Security and Compliance never supported enforcing conditional access on Windows.
+> [!NOTE]
+> Basic Mobility and Security never supported enforcing conditional access on Windows.
 
 ### Allow access and report violation (one-time enrollment will still be enforced)
 All Access Requirements will be deployed in an Intune device configuration profile.
@@ -59,14 +58,16 @@ All Access Requirements will be deployed in an Intune compliance policy and the 
 - [Outlook Service for OneDrive] Device policy.
 
 ## Require a password
-All password-related settings only impact local Windows accounts. User accounts sourced from Azure Active Directory are not managed by these policies.
+
+> [!NOTE]
+> All password-related settings only impact local accounts on Windows. User accounts sourced from Azure Active Directory are not managed by these policies.
 
 [!INCLUDE [blockorallow](../includes/block-or-allow.md)]
 
 Three compliance policies:
-- **Devices** > **Windows** > **Compliance policies** > policy name > **Properties** >  **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
-- **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name > **Properties** > **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
-- **Devices** > **Android** > **Compliance policies** > policy name > **Properties** > **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
+- **Devices** > **Windows** > **Compliance policies** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
+- **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
+- **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
 
 ## Prevent simple passwords
 For Android devices, this setting and multiple other Office settings are covered by one Android compliance setting. So this setting alone doesn't determine a specific Android compliance value.
@@ -74,9 +75,9 @@ For Android devices, this setting and multiple other Office settings are covered
 [!INCLUDE [blockorallow](../includes/block-or-allow.md)]
 
 Three compliance policies:
-- **Devices** > **Windows** > **Compliance policies** > policy name > **Properties** >  **Compliance settings Edit** > **System Security** > **Simple passwords**
-- **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name > **Properties** > **Compliance settings Edit** > **System Security** > **Simple passwords**
-- **Devices** > **Android** > **Compliance policies** > policy name > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**.
+- **Devices** > **Windows** > **Compliance policies** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Simple passwords**
+- **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Simple passwords**
+- **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**.
     - If **Prevent simple passwords** is selected, choose **Numeric complex**, **Alphabetic**, **Alphanumeric**, or **Alphanumeric with symbols** (based on other Office settings).
     - If **Prevent simple passwords** isn't selected, choose **Numeric** or a higher type in the list (based on other Office settings).
 
