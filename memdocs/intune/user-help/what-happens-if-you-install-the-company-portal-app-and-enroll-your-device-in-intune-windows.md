@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: What to expect after enrolling Windows device in Intune  | Microsoft Docs
-description: Describes the changes you can expect to your device and access after you've enrolled your device in Intune. 
+title: About Windows device enrollment - Microsoft Intune  | Microsoft Docs
+description: Describes what happens to your device and access after you've enrolled your device in Intune. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 01/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,9 +30,11 @@ ms.collection:
 ---
 
 
-# What to expect after enrolling Windows device in Intune  
+# About Windows device enrollment with Intune Company Portal  
 
-The Company Portal app enables you to securely access work or school from anywhere, while keeping your device secure. After you enroll in Intune, Company Portal will continually monitor changes to your device settings to make sure it meets your organization's requirements. This article describes the kind of changes you can expect once you've enrolled your device. 
+By enrolling your device in Intune, you get secure access to work or school apps on your mobile device, and access to apps in Intune Company Portal. The Company Portal app also monitors your device settings to make sure they meet your organization's requirements and syncs things (like apps, policies, and updates) from your organization to your device. 
+
+This article describes what else to expect once you've enrolled your device. 
 
 ## What happens on all devices after enrollment  
 After you enroll any Windows device (mobile or desktop) in Intune:  
