@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
-description: Configure Microsoft Defenderfor Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
+description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
 keywords:
 author: brenduns 
 ms.author: brenduns
@@ -137,10 +137,10 @@ In addition to device configuration policy, you can onboard devices using:
 9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
  **OK**, and then **Create** to save your changes, which creates the profile.
 
-### Onboard MacOS devices
-After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard MacOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level. 
+### OnboardmacOS devices
+After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard macOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level. 
 
-For MacOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for MacOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
+For macOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
 
 ### Onboard Android devices
 

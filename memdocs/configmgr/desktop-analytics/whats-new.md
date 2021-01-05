@@ -180,15 +180,11 @@ To help reduce your efforts in annotating noteworthy apps, certain types of apps
 
 - Apps managed and updated from the Microsoft Store
 
-For more information, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp).
+For more information, see [Automatic upgrade decision of system and store apps](about-assets.md#automatic-upgrade-decision-of-system-and-store-apps).
 
 ## What's new in Configuration Manager
 
-The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see the following articles:
-
-<!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
-
-- [What's new in version 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see [What's new in Configuration Manager incremental versions](../core/plan-design/changes/whats-new-incremental-versions.md).
 
 ## Deprecated features
 

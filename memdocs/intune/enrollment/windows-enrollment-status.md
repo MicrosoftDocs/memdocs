@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 12/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -166,7 +166,10 @@ The following are known issues related to the Enrollment Status Page.
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
-- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration defined in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. This delay gives time for the on-prem AD connector to create the new device record to Azure AD. 
+- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes.
+
+  This delay gives time for the on-prem AD connector to create the new device record to Azure AD.
+  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase

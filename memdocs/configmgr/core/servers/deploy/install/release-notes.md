@@ -41,7 +41,7 @@ For information about the new features in Desktop Analytics, see [What's new in 
 
 <!-- 8896585 -->
 
-_Applies to version 2010_
+_Applies to version 2010 early update ring_
 
 If you have a [highly available site server](../configure/site-server-high-availability.md), when you update to version 2010, the site server in passive mode fails to update. This issue is due to a change in the Microsoft Monitoring Agent (MMA) for Microsoft Defender Advanced Threat Protection. The required MMA files aren't copied to all necessary locations.
 

@@ -115,7 +115,7 @@ Following is an example workflow for an application. This same general workflow 
 
 6. After completing the remediation steps, open the security task and select **Complete Task**.  This action updates the security task status in both Intune and Defender for Endpoint.
 
-After remediation is successful, the risk exposure score in ADDefender for Endpoint can drop, based on new information from the remediated devices.
+After remediation is successful, the risk exposure score in Microsoft Defender for Endpoint can drop, based on new information from the remediated devices.
 
 ## Next Steps
 

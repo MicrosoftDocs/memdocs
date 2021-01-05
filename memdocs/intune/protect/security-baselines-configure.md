@@ -25,7 +25,7 @@ ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: 
    - intune-azure
-   - contperfq1
+   - contperf-fy21q1
 ms.collection: M365-identity-device-management
 ---
  
