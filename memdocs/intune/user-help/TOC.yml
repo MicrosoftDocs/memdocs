@@ -83,14 +83,14 @@
       href: samsung-knox-errors-android.md
   - name: Get Android apps
     items:
-    - name: Get work or school apps
+    - name: Where to find work or school apps for Android
       href: use-managed-apps-on-your-device-android.md
-    - name: Get Microsoft Tunnel for Android
-      href: use-microsoft-tunnel-android.md
-    - name: Install Company Portal app in China
-      href: install-company-portal-android-china.md
     - name: Introduction to Android work profile
       href: what-happens-when-you-create-a-work-profile-android.md
+    - name: Get Microsoft Tunnel for Android
+      href: use-microsoft-tunnel-android.md
+    - name: Installing Company Portal app in China 
+      href: install-company-portal-android-china.md
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work
@@ -109,11 +109,11 @@
       href: send-logs-to-microsoft-android.md
     - name: Send logs via USB cable
       href: send-logs-to-your-it-admin-using-cable-android.md
-- name: iOS device management
+- name: iOS/iPadOS device management
   items:
   - name: Enrollment
     items:
-    - name: Enroll iOS device
+    - name: Enroll iOS/iPadOS device
       href: enroll-your-device-in-intune-ios.md
     - name: Enroll company-provided iOS device
       href: enroll-your-device-dep-ios.md
@@ -127,17 +127,17 @@
         href: enroll-ios-device-disa-purebred.md
     - name: Unenroll iOS device
       href: unenroll-your-device-from-intune-ios.md
-  - name: Company Portal app for iOS
+  - name: Company Portal app for iOS/iPadOS
     items:
-    - name: Manually sync iOS device
+    - name: Manually sync iOS/iPadOS device
       href: sync-your-device-manually-ios.md
-    - name: Reset iOS device
+    - name: Reset iOS/iPadOS device
       href: effects-of-device-reset-company-portal-ios.md
     - name: Turn off Microsoft usage data collection
       href: turn-off-microsoft-usage-data-collection-ios.md
-  - name: Get iOS apps
+  - name: Get iOS/iPadOS apps
     items:
-    - name: Get work or school apps (iOS)
+    - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
       href: use-microsoft-tunnel-iOS.md
@@ -155,15 +155,15 @@
       href: you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md
     - name: Locate your serial number
       href: how-do-i-find-the-serial-number-on-my-device-ios.md
-    - name: Update iOS version
+    - name: Update iOS/iPadOS version
       href: you-need-to-update-your-ios-device.md
-    - name: Update your device to install Outlook
+    - name: Update iOS device for Outlook
       href: update-device-outlook-ios.md
-    - name: My version of iOS isn't yet supported
+    - name: iOS/iPadOS version isn't supported 
       href: your-ios-version-isnt-yet-supported.md
   - name: Resolve a threat in MTD app
     items:
-    - name: Lookout for Work
+    - name: Lookout for Work 
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-ios.md
@@ -173,7 +173,7 @@
       href: you-need-to-resolve-a-threat-found-by-zips-ios.md
   - name: Get help
     items:
-    - name: Retrieve iOS app logs
+    - name: Retrieve iOS/iPadOS logs
       href: retrieve-ios-app-logs.md
     - name: Report problem to IT support
       href: send-errors-to-your-it-admin-ios.md

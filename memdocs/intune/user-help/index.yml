@@ -57,11 +57,11 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: About iOS device enrollment
+      - text: About iOS/iPadOS device enrollment
         url: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md 
     - linkListType: how-to-guide
       links: 
-      - text: Enroll iOS device 
+      - text: Enroll iOS/iPadOS device 
         url: enroll-your-device-in-intune-ios.md
       - text: Enroll an organization-provided device 
         url: enroll-your-device-dep-ios.md
@@ -69,11 +69,11 @@ landingContent:
         url: sync-your-device-manually-ios.md
       - text: Set device passcode  
         url: set-or-change-your-passcode-ios.md
-      - text: Remove Company Portal from iOS device 
+      - text: Remove Company Portal from iOS/iPadOS device 
         url: unenroll-your-device-from-intune-ios.md 
     - linkListType: concept
       links:
-      - text: Where to find work and school apps for iOS  
+      - text: Where to find work and school apps for iOS/iPadOS  
         url: use-managed-apps-on-your-device-ios.md
  
 
