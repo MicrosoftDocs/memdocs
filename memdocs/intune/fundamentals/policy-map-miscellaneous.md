@@ -92,7 +92,7 @@ To see these settings in the office 365 Security and Compliance portal, sign in 
 
 ### Name
 
-Up to three compliance policies and up to six configuration profiles (three for restirctions and three for email):
+Up to three compliance policies and up to six configuration profiles (three for restrictions and three for email):
 - **Devices** > **Windows** > **Compliance policies** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Basics Edit** > **Name**
 - **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
@@ -104,7 +104,7 @@ Up to three compliance policies and up to six configuration profiles (three for 
 - **Devices** > **Android** > **Configuration profiles** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Name**
 
 ### Description
-Up to three compliance policies and up to six configuration profiles (three for restirctions and three for email):
+Up to three compliance policies and up to six configuration profiles (three for restrictions and three for email):
 - **Devices** > **Windows** > **Compliance policies** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Basics Edit** > **Description**
 - **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
