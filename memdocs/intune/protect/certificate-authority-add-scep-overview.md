@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 01/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,6 +68,8 @@ The following diagram shows a detailed flow of third-party SCEP integration with
 
 Before integrating third-party certification authorities with Intune, confirm that the CA you're using supports Intune. [Third-party CA partners](#third-party-certification-authority-partners) (in this article) includes a list. You can also check your certification authority's guidance for more information. The CA may include setup instructions specific to their implementation.
 
+> [!NOTE]
+> To support Android Enterprise Device Owner devices, the CA must support use of an HTTPS URL when you configure the *HTTP Server URL* for the [SCEP certificate profile](certificates-profile-scep).
 ### Authorize communication between CA and Intune
 
 To allow a third-party SCEP server to run custom challenge validation with Intune, create an app in Azure AD. This app gives delegated rights to Intune to validate SCEP requests.
