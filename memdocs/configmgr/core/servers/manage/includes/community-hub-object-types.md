@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.topic: include
 ms.date: 01/07/2021
 ---
-<!--This file is shared by community-hub.md and community-hub-contribute.md. Headings are context driven by the article-->
+<!--This file is shared by the community-hub and community-hub-contribute .md files. Headings are context driven by the article-->
 - CMPivot queries
 - Applications
 - Task sequences
