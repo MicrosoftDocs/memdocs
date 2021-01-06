@@ -16,11 +16,11 @@ Prerequisites for direct links:
 - Configuration Manager console version 2006 or later
 - You can't use the local built-in administrator account when following a community hub link.
 
-To share an item:
+Share an item:
 1. Go the item in the hub and select **Share**.
 1. Paste the copied link and share it with others.
 
-To open a shared link:
+Open a shared link:
 1. Open the link from a machine that has the Configuration Manager console installed.
    - For example, use this link to share the [Configure Microsoft Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
 1. Select **Launch the Community hub** when prompted.
