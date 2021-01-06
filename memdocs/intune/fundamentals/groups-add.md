@@ -111,3 +111,4 @@ For configuration profile recommendations and guidance, see [Assign policies to 
 
 - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
 - [Manage access to resources with Azure AD groups](/azure/active-directory/active-directory-manage-groups)
+- [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md)
