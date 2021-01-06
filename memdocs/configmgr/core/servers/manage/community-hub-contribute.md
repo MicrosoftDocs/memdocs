@@ -14,7 +14,7 @@ manager: dougeby
 
 # Contribute to the community hub
 <!--3555935, 3555936-->
-The community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the community:  
+[Community hub](community-hub.md) fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the Configuration Manager community:  
 
 [!INCLUDE [Community hub object type information](includes/community-hub-object-types.md)]
 
