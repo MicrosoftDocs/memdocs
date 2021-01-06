@@ -192,6 +192,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
 
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+        
+      > [!IMPORTANT]
+      > All apps that are added to a multi-app policy must be assigned to the multi-app devices as required. If any app is not assigned as required the device may be locked out with a screen that states "Contact your IT admin this phone will be erased". 
 
       - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
         - Not configured 
