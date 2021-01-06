@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 01/06/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -261,7 +261,7 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
 
         `key=clear` exports the key in plain text, which is required to successfully use the profile.
         
-    - If the exported Wi-Fi profile <name></name> element contains a space it will produce a syncml 500 error when assigned. Removing the space will allow WiFi policy to be successfully managed.
+    - If the exported Wi-Fi profile `<name></name>` element includes a space, then it returns a syncml 500 error when assigned. To resolve the error, remove the space.
 
 After you have the XML file, copy and paste the XML syntax into OMA-URI settings > **Data type**. [Create a custom profile](#create-a-custom-profile) (in this article) lists the steps.
 
