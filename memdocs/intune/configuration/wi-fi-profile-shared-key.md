@@ -121,7 +121,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 ``` xml
 <!--
 <hex>53534944</hex> = The hexadecimal value of <name><SSID of wifi profile></name>
-<Name of wifi profile> = Name of profile shown to users. It could be <name>Your Company's Network</name>.
+<Name of wifi profile> = Name of profile shown to users. For example, enter <name>ContosoWiFi</name>.
 <SSID of wifi profile> = Plain text of SSID. Does not need to be escaped. It could be <name>Your Company's Network</name>.
 <nonBroadcast><true/false></nonBroadcast>
 <Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
@@ -261,7 +261,9 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
 
         `key=clear` exports the key in plain text, which is required to successfully use the profile.
         
-    - If the exported Wi-Fi profile `<name></name>` element includes a space, then it returns a syncml 500 error when assigned. To resolve the error, remove the space.
+    - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return a `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.
+    
+      To resolve this issue, remove the space.
 
 After you have the XML file, copy and paste the XML syntax into OMA-URI settings > **Data type**. [Create a custom profile](#create-a-custom-profile) (in this article) lists the steps.
 
