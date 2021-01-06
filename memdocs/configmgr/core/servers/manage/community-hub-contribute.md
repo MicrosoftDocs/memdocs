@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby 
 ---
 
-# Contribute to the Configuration Manager community hub
+# Contribute to the community hub
 <!--3555935, 3555936-->
 The community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the community:  
 
