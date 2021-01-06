@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Enroll iOS/iPadOS devices using Automated Device Enrollment in Microsoft Intune | Microsoft Docs
+title: Enroll iOS/iPadOS devices using Automated Device Enrollment
 titleSuffix: Microsoft Intune
 description: Learn how to enroll corporate-owned iOS/iPadOS devices using the Automated Device Enrollment (ADE), previously known as device enrollment program (DEP)
 keywords:
