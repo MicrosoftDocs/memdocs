@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/10/2020
+ms.date: 01/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -34,6 +34,21 @@ For information about the new features in Desktop Analytics, see [What's new in 
 > [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+
+## Client management
+
+### Client notification actions apply to entire collection
+
+<!-- 9021554 -->
+
+_Applies to version 2010_
+
+When you use a [client notification](../../../clients/manage/client-notification.md) action on a device in a collection, the action applies to all devices in the collection. For example, in the Configuration Manager console, **Assets and Compliance** workspace, and **Device Collections** node, you select the default **Show Members** action on a collection. You select a device in the collection, then in the ribbon on the **Home** tab, select **Client Notification** and choose an action such as **Restart**. This action applies to all members of the collection, not just the selected client.
+
+To work around this issue, use the **Devices** node. Find the device in the list and start the action from there.
+
+> [!NOTE]
+> This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods.
 
 ## Set up and upgrade
 
