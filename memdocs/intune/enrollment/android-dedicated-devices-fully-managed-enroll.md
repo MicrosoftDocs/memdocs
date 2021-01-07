@@ -44,6 +44,9 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 > [!TIP]
 > Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
 
+> [!NOTE]
+> If you have an Azure AD Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Azure AD Conditional Access documentation](/azure/active-directory/conditional-access/).
+
 ## Enroll by using Near Field Communication (NFC)
 
 For devices 6 and newer that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
