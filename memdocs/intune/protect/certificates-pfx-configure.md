@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 01/04/2021
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -142,7 +142,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
    - The connector service runs under the local system account. If a proxy is required for internet access, confirm that the local service account can access the proxy settings on the server.
 
-5. The PFX Certificate Connector for Microsoft Intune opens the **Enrollment** tab after installation. To enable the connection to Intune, **Sign In**, and enter an account with Azure global administrator or Intune administrator permissions.
+5. The PFX Certificate Connector for Microsoft Intune opens the **Enrollment** tab after installation. To enable the connection to Intune, **Sign In**, and enter an account with Azure global administrator or Intune administrator permissions. This account must have a license for Intune.
 
    > [!WARNING]
    > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Office 365.
@@ -163,6 +163,15 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
+     - Android device administrator
+     - Android Enterprise:
+       - Fully Managed
+       - Dedicated
+       - Corporate-Owned Work Profile
+       - Personally-Owned Work Profile
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 and later
    - **Profile**: Select **Trusted certificate**
 
 4. Select **Create**.
