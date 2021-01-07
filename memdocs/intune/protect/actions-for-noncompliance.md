@@ -156,7 +156,7 @@ When you specify multiple messages and locales, non-compliant end-users receive 
    - **Company Portal Website Link** (default = *Disable*) - When set to *Enable*, the email includes a link to the Company Portal website.
 
    > [!div class="mx-imgBorder"]
-   > ![Example of the basics page for a notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.png)
+   > ![Example of the basics page for a notification message in Intune](./media/actions-for-noncompliance/actions-for-noncompliance-1.png)
 
    Select **Next** to continue.
 
@@ -169,7 +169,7 @@ When you specify multiple messages and locales, non-compliant end-users receive 
    Before continuing, you must select the checkbox for *Is Default* for one of the messages. Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Example of the Notification message temmplate page in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-2.png)
+   > ![Example of the Notification message temmplate page in Intune](./media/actions-for-noncompliance/actions-for-noncompliance-2.png)
 
    Select **Next** to continue.
 
