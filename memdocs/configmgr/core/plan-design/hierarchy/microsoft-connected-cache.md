@@ -194,6 +194,8 @@ When you install a Microsoft Connected Cache on a Configuration Manager distribu
 
 To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost). To use Intune to configure this policy, use the **Cache server host names** setting. For more information, see [Delivery Optimization settings for Windows 10 devices in Intune](../../../../intune/configuration/delivery-optimization-settings.md#local-server-caching).
 
+When you enable this policy for cloud-managed devices, either type of device can request the server to cache content, and either can download the content. If multiple devices request the same content, no matter their management authority, they download supported and available content from the Microsoft Connected Cache.
+
 ## See also
 
 [Optimize Windows 10 updates with Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)
