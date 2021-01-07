@@ -43,12 +43,22 @@ For information about the new features in Desktop Analytics, see [What's new in 
 
 _Applies to version 2010_
 
-When you use a [client notification](../../../clients/manage/client-notification.md) action on a device in a collection, the action applies to all devices in the collection. For example, in the Configuration Manager console, **Assets and Compliance** workspace, and **Device Collections** node, you select the default **Show Members** action on a collection. You select a device in the collection, then in the ribbon on the **Home** tab, select **Client Notification** and choose an action such as **Restart**. This action applies to all members of the collection, not just the selected client.
+When you use a [client notification](../../../clients/manage/client-notification.md) action on a device in a collection, the action applies to all devices in the collection.
+
+For example:
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
+
+1. Select a collection, and then choose the **Show Members** action.
+
+1. Select a device in the collection. In the ribbon on the **Home** tab, select **Client Notification**, and choose an action such as **Restart**.
+
+    Due to this issue, this action applies to all members of the collection, not just the selected client.
 
 To work around this issue, use the **Devices** node. Find the device in the list and start the action from there.
 
 > [!NOTE]
-> This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods.
+> This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods, if you don't include a collection object or ID.
 
 ## Set up and upgrade
 
