@@ -46,6 +46,8 @@
     - name: Configure Wi-Fi
       href: wi-fi-settings-configure.md
       displayName: wifi, wireless
+    - name: Import Wi-Fi settings
+      href: wi-fi-settings-import-windows-8-1.md
     - name: Wi-Fi with a pre-shared key
       href: wi-fi-profile-shared-key.md
       displayName: psk, oma-uri, eap
@@ -244,8 +246,6 @@
         href: device-restrictions-windows-8-1.md
       - name: VPN
         href: vpn-settings-windows-8-1.md
-      - name: Wi-Fi import
-        href: wi-fi-settings-import-windows-8-1.md
     - name: Windows Phone 8.1
       items:
       - name: Custom
