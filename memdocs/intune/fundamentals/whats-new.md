@@ -65,6 +65,8 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Win32 app download progress bar<!-- 5145837 -->
 End users will now see a progress bar in the Windows Company Portal while a Win32 app is being downloaded. This feature will help customers better understand the app installation progress.
 
+## Week of December 7, 2020
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 8766223 -->
