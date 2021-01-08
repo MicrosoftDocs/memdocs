@@ -22,7 +22,7 @@ Use the steps in this article to set up the administration service on your SMS P
 
 Configure the administration service to use a secure HTTPS connection to protect the data in transit across the network.
 
-Starting in version 2010,<!--8613105--> you no longer need to enable IIS on the SMS Provider for the administration service. The site creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS. If you previously had IIS installed on the SMS Provider, you can remove it. Then restart the SMS_REST_PROVIDER component.
+Starting in version 2010,<!--8613105--> you no longer need to enable IIS on the SMS Provider for the administration service. The site creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS. If you previously had IIS installed on the SMS Provider, you can remove it. Then restart the SMS_REST_PROVIDER component. Remember that you need to open HTTPS port 443 on your firewall. 
 
 Starting in version 2002,<!--5728365--> the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. You can still manually bind a PKI-based server authentication certificate. If you've already bound a PKI certificate to port 443 on the SMS Provider server, the administration service uses that existing certificate.
 
