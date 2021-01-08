@@ -63,7 +63,10 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### App management
 
 #### Win32 app download progress bar<!-- 5145837 -->
-End users will now see a progress bar in the Windows Company Portal while a Win32 app is being downloaded. This feature will help customers better understand the app installation progress.
+End users will now see a progress bar in the Windows Company Portal while a Win32 app is being downloaded. This feature will help customers better understand the app installation progress.  
+
+#### Update to Company Portal for Android app icon<!-- 7114401 -->
+We've updated the Company Portal for Android app icon to create a more modern look and feel for device users. To see what the new icon looks like, go to the [Intune Company Portal listing on Google Play](https://go.microsoft.com/fwlink/?linkid=2151341).  
 
 ## Week of December 7, 2020
 
