@@ -2,7 +2,7 @@
 title: Monitor connection health
 titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 01/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -376,9 +376,7 @@ There's a different ID for the device. This registry key is used by group policy
 :::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal" lightbox="media/commercial-id.png":::
 
 > [!Important]  
-> Only **Get new ID key** when you can't use the current one. Regenerating your CommercialID cannot be undone and will result in temporary functionality and data loss for all solutions and devices that have the current CommercialID until the new CommercialID is deployed to devices. If you regenerate the commercial ID, [re-enroll your devices with the new Id](enroll-devices.md#device-enrollment). If you are using [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), confirm the new CommercialId has been updated in the settings page and re-enroll devices if necessary. 
-
-<!--9053615-->
+> Only use the option to **Get new ID key** when you can't use the current one. You can't undo the action to regenerate your commercial ID. Until devices receive the new commercial ID, this action results in temporary functionality and data loss for all solutions and devices that have the current commercial ID. If you regenerate the commercial ID, [re-enroll your devices with the new ID](enroll-devices.md#device-enrollment). If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), confirm that it has the new commercial ID in the settings page. If necessary, re-enroll devices.<!--9053615-->
 
 ### Windows commercial data opt-in
 
