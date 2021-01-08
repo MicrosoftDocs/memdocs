@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/22/2020
+ms.date: 01/08/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -78,6 +78,8 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 ## Data transfer exemptions
 
 There are some exempt apps and platform services that Intune app protection policy may allow data transfer to and from in certain scenarios. This list is subject to change and reflects the services and apps considered useful for secure productivity.
+
+Third party unmanaged apps can be added to the exemptions list which can allow data transfer exceptions. For additional details and examples, see [How to create exceptions to the Intune App Protection Policy (APP) data transfer policy](../apps/app-protection-policies-exception.md). The exempt unmanaged app must be invoked based on iOS URL protocol. For example, when data transfer exemption is added for an unmanaged app, it would still prevent users from cut, copy, and paste operations, if restricted by policy. This type of exemption would also prevent users from using **Open-in** action within a managed app to copy data to exempt app since it is not based on iOS URL protocol. For more information about **Open-in**, see [Use app protection with iOS apps](../apps/data-transfer-between-apps-manage-ios.md#use-app-protection-with-ios-apps).
 
 | App/service name(s) | Description |
 | ---- | --- |
