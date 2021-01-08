@@ -46,7 +46,7 @@ manager: dougeby
 Once you've accepted the invitation, you can contribute content.
 
 1. Go to **Community** > **Community hub** > **Your hub**.
-1. Select **Add an Item** to open the contribution wizard.
+1. Select **Add an Item** to open the **Contribute item wizard**.
       ![Add an item to the community hub](./media/3555935-add-community-hub.png)
 1. Specify the **Type** of object you want to share from the drop-down menu. The following object types are available:
 
@@ -56,6 +56,9 @@ Once you've accepted the invitation, you can contribute content.
 1. Edit the following information to reflect what the community should see for your contribution:
    - **Name:** Name of your object
    - **Description:** The description of the object you're contributing.
+1. On the **Organization** page, select the **GitHub Organization** to use for [organization branding](#bkmk_brand) if needed.
+   - **None** is the default.
+   - If your organization isn't listed, verify that the [membership visibility](https://docs.github.com/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/publicizing-or-hiding-organization-membership) is set to **Public** in your GitHub profile.
 1. Select **Next** to submit the contribution.
 1. Once the contribution is complete, you'll see the GitHub pull request (PR) link. The link is also emailed to you. You can paste the link into a browser to view the PR. Your PR will go though the standard GitHub merge process.
    - PRs should be submitted through the Configuration Manager console, not directly to the GitHub repository.
@@ -73,6 +76,21 @@ You can update content you've contributed to the community hub.
 1. Once the item is uploaded, you'll be given the pull request URL of the change for monitoring.
 1. Select **Close** when you're done to exit the wizard.
 
+## <a name="bkmk_brand"></a> Personalization and organization branding of contributed content
+
+Starting in January 2021, your contributions are personalized. By default, your contributions include your personal GitHub profile picture. The default [GitHub Identicon](https://github.blog/2013-08-14-identicons/) is used if you don't have a profile picture. All contributions you've submitted before January 2021 are automatically personalized using this default.
+
+&lt;placeholder for public profile contribution>
+
+Community hub also allows new contributions to be branded instead of using the default personalization. You can brand a contribution to one of your organization memberships in GitHub that's publicly visible. When you choose to brand your contribution, the organization's profile picture is used rather than your personal profile picture. The organization's web page, Twitter handle, and company bio are included on the contribution. Branding to the organization identity allows for uniformity regardless of which user is submitting the contribution.
+
+&lt;placeholder for branded contribution>
+
+To use branding:
+- The [visibility of the organization membership](https://docs.github.com/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/publicizing-or-hiding-organization-membership) must be set to **Public** from the contributor's GitHub profile.
+- On the **Organization** page in the **Contribute item wizard**, select the **GitHub Organization** to use for branding. For more information, see the [Contribute content](#contribute-content) section.
+
+&lt;placeholder for contribute item wizard>
 ## <a name="bkmk_deeplink"></a> Directly link to community hub items
 <!--4224406-->
 [!INCLUDE [Community hub direct link information](includes/community-hub-links.md)]
