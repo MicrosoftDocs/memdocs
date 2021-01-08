@@ -32,18 +32,26 @@ ms.collection:
 
 # Remove device from Company Portal for macOS app
 
-You can use the Company Portal app for macOS to unenroll a device that you no longer need for work or school. Removing a device unenrolls it from Intune and removes any device restrictions put into place by your organization. 
+You can use the Company Portal app for macOS to unenroll a device that you no longer need for work or school.
 
-After you remove the device, it will no longer be associated with your work or school account. So you won't be able to use it to access internal resources, such as file shares and work apps.  
+After you remove a device:
 
-This article describes how to remove a device from Intune in the Company Portal app, and how to uninstall the app on a macOS device. 
+- The device is removed from Intune.
+- The device loses access to Company Portal features. For example, you can't install apps for the device from the Company Portal.   
+- You lose access to internal file shares and websites from your device.  
+- You lose access to internal apps on your device.    
+- You might be blocked from connecting to your org's network over Wi-Fi or virtual private network (VPN).  
+- Work and school email profiles are removed from the device.   
+- Device restrictions previously enforced by Intune (for example, disabling the camera or requiring a certain password length) are no longer required. 
+
+This article describes how to remove a device from within the Company Portal app, and then how to uninstall the app.  
 
 ## Remove a device 
-Follow these steps to remove a device you no longer need for work or school from Intune.   
+Follow these steps to remove a device you no longer need for work or school.    
 
 1. Sign in to the Company Portal for macOS.
 2. Go to **Devices** and select the device you want to unenroll.
-3. From the toolbar menu, select **Devices** > **Remove**. 
+3. From the app toolbar, select the **Devices** menu > **Remove**. 
 4. When asked to confirm the removal, select **Remove**. The device is immediately removed from Intune. 
 
 
