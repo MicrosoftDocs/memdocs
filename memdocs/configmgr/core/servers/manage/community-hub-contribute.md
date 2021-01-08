@@ -2,7 +2,7 @@
 title: Contribute to the community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager community hub
-ms.date: 01/07/2021
+ms.date: 01/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -77,20 +77,21 @@ You can update content you've contributed to the community hub.
 1. Select **Close** when you're done to exit the wizard.
 
 ## <a name="bkmk_brand"></a> Personalization and organization branding of contributed content
-
+<!--8928812-->
 Starting in January 2021, your contributions are personalized. By default, your contributions include your personal GitHub profile picture. The default [GitHub Identicon](https://github.blog/2013-08-14-identicons/) is used if you don't have a profile picture. All contributions you've submitted before January 2021 are automatically personalized using this default.
 
-&lt;placeholder for public profile contribution>
+![Public profile contribution screenshot](./media/8928812-contribution-personalized.png)
 
 Community hub also allows new contributions to be branded instead of using the default personalization. You can brand a contribution to one of your organization memberships in GitHub that's publicly visible. When you choose to brand your contribution, the organization's profile picture is used rather than your personal profile picture. The organization's web page, Twitter handle, and company bio are included on the contribution. Branding to the organization identity allows for uniformity regardless of which user is submitting the contribution.
 
-&lt;placeholder for branded contribution>
+![Branded contribution screenshot](./media/8928812-contribution-branded.png)
 
 To use branding:
 - The [visibility of the organization membership](https://docs.github.com/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/publicizing-or-hiding-organization-membership) must be set to **Public** from the contributor's GitHub profile.
 - On the **Organization** page in the **Contribute item wizard**, select the **GitHub Organization** to use for branding. For more information, see the [Contribute content](#contribute-content) section.
 
-&lt;placeholder for contribute item wizard>
+![Organization page in the Contribute item wizard](./media/8928812-organization-contribute-item-wizard.png)
+
 ## <a name="bkmk_deeplink"></a> Directly link to community hub items
 <!--4224406-->
 [!INCLUDE [Community hub direct link information](includes/community-hub-links.md)]
