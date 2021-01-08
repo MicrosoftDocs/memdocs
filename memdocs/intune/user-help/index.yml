@@ -49,7 +49,7 @@ landingContent:
         url: enroll-windows-10-device.md
       - text: Install apps for work or school   
         url: install-apps-cpapp-windows.md 
-      - text: Remove Windows device from Intune 
+      - text: Remove device from Company Portal App for Windows
         url: unenroll-your-device-from-intune-windows.md
 
   # Card (optional)
@@ -117,7 +117,7 @@ landingContent:
         url: enroll-company-device-macos.md 
       - text: Store personal recovery key 
         url: store-recovery-key.md
-      - text: Remove Company Portal from Mac device 
+      - text: Remove device from Company Portal for macOS 
         url: unenroll-your-device-from-intune-macos.md
 
   # Card (optional)
