@@ -376,7 +376,9 @@ There's a different ID for the device. This registry key is used by group policy
 :::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal" lightbox="media/commercial-id.png":::
 
 > [!Important]  
-> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](enroll-devices.md#device-enrollment). This process might result in loss of diagnostic data during the transition.  
+> Only **Get new ID key** when you can't use the current one. Regenerating your CommercialID cannot be undone and will result in temporary functionality and data loss for all solutions and devices that have the current CommercialID until the new CommercialID is deployed to devices. If you regenerate the commercial ID, [re-enroll your devices with the new Id](enroll-devices.md#device-enrollment). If you are using [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), confirm the new CommercialId has been updated in the settings page and re-enroll devices if necessary. 
+
+<!--9053615-->
 
 ### Windows commercial data opt-in
 
