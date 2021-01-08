@@ -125,8 +125,6 @@
         href: enroll-ios-device-intercede.md
       - name: Enroll with DISA Purebred
         href: enroll-ios-device-disa-purebred.md
-    - name: Unenroll iOS device
-      href: unenroll-your-device-from-intune-ios.md
   - name: Company Portal app for iOS/iPadOS
     items:
     - name: Manually sync iOS/iPadOS device
@@ -135,6 +133,8 @@
       href: effects-of-device-reset-company-portal-ios.md
     - name: Turn off Microsoft usage data collection
       href: turn-off-microsoft-usage-data-collection-ios.md
+    - name: Remove device from Intune
+      href: unenroll-your-device-from-intune-ios.md
   - name: Get iOS/iPadOS apps
     items:
     - name: Where to find work or school apps for iOS/iPadOS
@@ -185,12 +185,10 @@
     items:
     - name: What happens when you enroll a macOS device?
       href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md
-    - name: Enroll your macOS device (standard)
+    - name: Enroll your macOS device 
       href: enroll-your-device-in-intune-macos-cp.md
     - name: Enroll your organization-provided macOS device
       href: enroll-company-device-macos.md
-    - name: Unenroll macOS device
-      href: unenroll-your-device-from-intune-macos.md
   - name: Company Portal for macOS
     items:
     - name: Manually sync macOS device
@@ -213,6 +211,8 @@
       href: device-limit-wpj-macos.md
     - name: Help for JAMF-managed devices in Intune
       href: device-little-different-jamf.md
+    - name: Remove device from Intune 
+      href: unenroll-your-device-from-intune-macos.md
   - name: Get help
     items:
     - name: Report Company Portal problems
