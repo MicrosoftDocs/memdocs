@@ -49,23 +49,10 @@ This article describes how to remove a device from within the Company Portal app
 ## Remove a device 
 Follow these steps to remove a device you no longer need for work or school.    
 
-1. Sign in to the Company Portal for macOS.
+1. Sign in to Company Portal for macOS.
 2. Go to **Devices** and select the device you want to unenroll.
 3. From the app toolbar, select the **Devices** menu > **Remove**. 
-4. When asked to confirm the removal, select **Remove**. The device is immediately removed from Intune. 
-
-
-### What happens after device removal  
-
-After you remove a device:
-
-- The device is removed from Intune and Company Portal.   
-- You can't install apps for the device from the Company Portal.   
-- You lose access to internal file shares and websites from your device.  
-- You lose access to internal apps on your device.    
-- You might be blocked from connecting to your org's network over Wi-Fi or virtual private network (VPN).  
-- Work and school email profiles are removed from the device.   
-- Device restrictions previously enforced by Intune (for example, disabling the camera or requiring a certain password length) are no longer required.   
+4. When asked to confirm the removal, select **Remove**. The device is immediately removed from Intune.  
 
 ## Uninstall Company Portal app  
 To uninstall the Company Portal app from a macOS device:
@@ -74,7 +61,7 @@ To uninstall the Company Portal app from a macOS device:
 2. Select and drag the Company Portal app to **Trash** (located in your dock). Or select the app and then choose **File** > **Move to Trash**.  
 
     ![Example screenshot of macOS Finder, Applications folder, Company Portal app, highlighting "Move to Trash" option in the app menu.](./media/intune-company-portal-move-to-trash.png)  
-3. If prompted to, enter your device username and password to uninstall the app. 
+3. If prompted to, enter your device username and password to confirm the move.  
 
 ## Next steps  
 
