@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/07/2021
+ms.date: 01/08/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,16 +46,16 @@ This article shows you how to export Wi-Fi settings from a Windows device, and t
 
 ## Export Wi-Fi settings from a Windows device
 
-Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by Intune. The key must be exported in plain text to successfully use the profile. On a Windows computer that has the WiFi profile, use the following steps:
+Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by Intune. On a Windows computer that has the WiFi profile, use the following steps:
 
 1. Create a local folder for the exported Wi-Fi profiles, such as **c:\WiFi**.
 2. Open a command prompt as an administrator.
-3. Run the `netsh wlan show profiles` command. Note the name of the profile you'd like to export. In this example, the profile name is **WiFiName**.
-4. Run the `netsh wlan export profile name="ProfileName" folder=c:\Wifi` command. This command creates a Wi-Fi profile file named **Wi-Fi-WiFiName.xml** in your target folder.
+3. Run the `netsh wlan show profiles` command. Note the name of the profile you'd like to export. In this example, the profile name is **ContosoWiFi**.
+4. Run the `netsh wlan export profile name="ProfileName" folder=c:\Wifi` command. This command creates a Wi-Fi profile file named **Wi-Fi-*ProfileName*.xml** in your target folder. In our example, the file name is **Wi-Fi-ContosoWiFi.xml**.
 
 > [!IMPORTANT]
 >
-> - If you're exporting a Wi-Fi profile that includes a pre-shared key, you **must** add `key=clear` to the command. For example, enter:
+> - If you're exporting a Wi-Fi profile that includes a pre-shared key, you **must** add `key=clear` to the command. The key must be exported in plain text to successfully use the profile. For example, enter:
 >
 >   `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
 >
