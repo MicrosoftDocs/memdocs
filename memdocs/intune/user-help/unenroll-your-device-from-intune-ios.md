@@ -56,7 +56,7 @@ Follow these steps to remove a device you no longer need for work or school from
 
     |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/cp_ios_unenroll_after_1804_001.png)|
 
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)|
+    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)|  
 
 
 ## Remove data collected by the Company Portal app
