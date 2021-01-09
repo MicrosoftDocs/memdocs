@@ -235,7 +235,7 @@ Now that you've installed your token, you can create an enrollment profile for A
      > [!NOTE]
      > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](http://help.apple.com/configurator/mac/2.3).
 
-11. For **Locked enrollment**, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. To use this option, the device must have the **Supervised** management option set to **Yes**. 
+11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. To use this option, the device must have the **Supervised** management option set to **Yes**. 
 
     > [!NOTE]
     > If a device is enrolled with locked enrollment, the user won't be able to use **Remove Device** or **Factory Reset** in the Company Portal app. The options will be unavailable to the user. Also, the user won't be able to remove the device on the [Company Portal website](https://portal.manage.microsoft.com).
@@ -244,78 +244,81 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). If you select **Yes** for **Shared iPad**, multiple users will be able to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later.
 
-    If you chose to configure your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32 GB or 64 GB device. If you choose a very low number, it may take a while for your user’s data to come down to the device after sign-in. If you choose a very high number, your users may not have enough disk space.  
+    If configured your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users might not have enough disk space.  
 
     > [!NOTE]
-    > If you want to set up Apple Shared iPad for Business, set the following: 
-    > - **User affinity** = **Enroll without User Affinity**. 
-    > - **Supervised** = **Yes**. 
-    > - **Shared iPad** = **Yes **.
-    > Temporary sessions are enabled by default and allow your users to log into a Shared iPad without a Managed Apple ID account. You can disable temporary sessions on Shared iPad by configuring iOS/iPadOS Shared iPad [device restriction settings](../configuration/device-restrictions-ios.md).  
+    > If you want to set up Apple Shared iPad for Business, configure these settings: 
+    > - In the **User Affinity** list, select **Enroll without User Affinity**.
+    > - In the **Supervised** list, select **Yes**. 
+    > - In the **Shared iPad** list, select **Yes**.
+    >
+    > Temporary sessions are enabled by default and allow your users to sign in to a shared iPad without a Managed Apple ID account. You can disable temporary sessions on shared iPads by configuring iOS/iPadOS Shared iPad [device restriction settings](../configuration/device-restrictions-ios.md).  
 
-13. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**. For iOS/iPadOS 13.0 and newer, this setting was deprecated by Apple. 
+13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**. For iOS/iPadOS 13.0 and later, Apple deprecated this setting. 
 
      > [!NOTE]
-     > If **Sync with computers** is set to **Deny all**, the port will be limited on iOS and iPadOS devices. The port can only be used for charging and nothing else. The port will be blocked from using iTunes or Apple Configurator 2.
-       If **Sync with computers** is set to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can access later. You won't be able to make changes to the uploaded copy and it is important to retain this certificate to be accessible in the future. To connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device that was enrolled with the Automated Device Enrollment profile with this configuration and certificate.
+     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
+    >      
+    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
-14. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
+14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.
 
-15. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. Device name template includes support for the iPhone, the iPad, and the iPod Touch. 
-16. Choose **Next: Setup Assistant Customization**.
+15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. 
 
-17. On the **Setup Assistant customization** page, configure the following profile settings:
+1. Select **Next: Setup Assistant Customization**.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/setupassistantcustom.png" alt-text="Customize Setup Assistant in iOS and iPadOS enrollment profile in Microsoft Intune and Endpoint Manager admin center.":::
+17. On the **Setup Assistant Customization** tab, configure the following profile settings:
 
-    | Department settings | Description |
+    :::image type="content" source="./media/device-enrollment-program-enroll-ios/setupassistantcustom.png" alt-text="Screenshot that shows the Setup Assistant Customization tab.":::
+
+    | Department setting | Description |
     |---|---|
-    | <strong>Department Name</strong> | Appears when users tap <strong>About Configuration</strong> during activation. |
+    | <strong>Department</strong> | Appears when users tap <strong>About Configuration</strong> during activation. |
     |    <strong>Department Phone</strong>     | Appears when the user clicks the <strong>Need Help</strong> button during activation. |
 
     You can choose to hide Setup Assistant screens on the device during user setup.
-    - If you choose **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go in to the **Settings** menu to set up the feature.
-    - If you choose **Show**, the screen will be displayed during setup. The user can sometimes skip the screen without taking action. But they can then later go into the device's **Settings** menu to set up the feature. 
+    - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
+    - If you select **Show**, the screen will be displayed during setup. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature. 
 
 
-    | Setup Assistant screen settings | If you choose **Show**, during setup the device will... |
+    | Setup Assistant Screens setting | If you select Show, during setup the device will... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Passcode</strong> | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). For iOS/iPadOS 7.0 and later. |
-    | <strong>Location Services</strong> | Prompt the user for their location. For macOS 10.11 and later and iOS/iPadOS 7.0 and later. |
-    | <strong>Restore</strong> | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Passcode</strong> | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
+    | <strong>Location Services</strong> | Prompt the user for their location. For macOS 10.11 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Restore</strong> | Display the **Apps & Data** screen. This screen gives users the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>iCloud and Apple ID</strong> | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
-    | <strong>Terms and Conditions</strong> | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Terms and conditions</strong> | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Touch ID</strong> | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
     | <strong>Apple Pay</strong> | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Zoom</strong> | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
     | <strong>Siri</strong> | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
-    | <strong>Diagnostic Data</strong> | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Diagnostic Data</strong> | Display the **Diagnostics** screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Display Tone</strong> | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
-    | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
-    | <strong>Android Migration</strong> | Give the user the option to migrate date from an Android device. For iOS/iPadOS 9.0 and later.|
+    | <strong>Privacy</strong> | Display the **Privacy** screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
+    | <strong>Android Migration</strong> | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
     | <strong>iMessage and FaceTime</strong> | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |
-    | <strong>Onboarding</strong> | Display onboarding informational screens for user education, such as Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |
+    | <strong>Onboarding</strong> | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |
     | <strong>Watch Migration</strong> | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
-    | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
+    | <strong>Screen Time</strong> | Display the **Screen Time** screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | <strong>Software Update</strong> | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |
     | <strong>SIM Setup</strong> | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
-    | <strong>Appearance</strong> | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
-    | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from their old device to this device. For iOS/iPadOS 13.0 and later. |
-    | <strong>Registration</strong> | Display the registration screen to the user. For macOS 10.9 and later. |
-    | <strong>FileVault</strong> | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |
-    | <strong>iCloud diagnostics</strong> | Display the iCloud Analytics screen to the user. For macOS 10.12.4 and later. |
-    | <strong>iCloud Storage</strong> | Display the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
+    | <strong>Appearance</strong> | Display the **Appearance** screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
+    | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. |
+    | <strong>Registration</strong> | Display the registration screen. For macOS 10.9 and later. |
+    | <strong>FileVault</strong> | Display the FileVault 2 encryption screen. For macOS 10.10 and later. |
+    | <strong>iCloud diagnostics</strong> | Display the **iCloud Analytics** screen. For macOS 10.12.4 and later. |
+    | <strong>iCloud Storage</strong> | Display the **iCloud Documents and Desktop** screen. For macOS 10.13.4 and later. |
     
 
-18. Choose **Next** to go to the **Review + Create** page.
+18. Select **Next** to go to the **Review + create** tab.
 
-19. To save the profile, choose **Create**.
+19. To save the profile, select **Create**.
 
 > [!NOTE]
-> If you need to re-enroll your Automated Device Enrolled device, you must first [add the serial number of that device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting an issue, like the device not receiving policy. In this case, you would:
+> If you need to re-enroll your Automated Device Enrollment device, you need to first [add the serial number of the device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting a problem, like the device not receiving policy. In this case, you would:
 > 1. Retire the device from the Intune console.
 > 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
-> 3. Re-enroll the device by downloading the Company Portal and going through device enrollment.
+> 3. Re-enroll the device by downloading Company Portal and completing device enrollment.
 
 
 ### Dynamic groups in Azure Active Directory
@@ -432,4 +435,4 @@ You can delete enrollment profile tokens from Intune as long as
 
 [Backup and restore scenarios for iOS/iPadOS](backup-restore-ios.md)
 
-[iOS/iPadOS enrollment overview](ios-enroll.md).
+[iOS/iPadOS enrollment overview](ios-enroll.md). 
