@@ -54,7 +54,9 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
     > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
 
-- Both site servers must be joined to the same Active Directory domain.  
+- Both site servers must be joined to the same Active Directory domain.
+
+- Both site servers must be have **Full Control** permissions to Active Directory's **System - System Management** container and all descendant objects. 
 
 - Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
 
