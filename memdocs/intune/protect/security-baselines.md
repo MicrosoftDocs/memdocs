@@ -113,7 +113,7 @@ In addition, security baselines often manage the same settings you might set wit
 
 Use the information at the following links to help identify and resolve conflicts:
 
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Q & A

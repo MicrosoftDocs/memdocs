@@ -114,7 +114,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> For Windows 10 devices that are registered with [Windows Autopilot service](https://docs.microsoft.com/mem/autopilot/add-devices), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
+> For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

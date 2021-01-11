@@ -198,10 +198,10 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: concept
           text: Use audit logs to track and monitor events
-        - url: ./apps/troubleshoot-app-install.md
+        - url: /troubleshoot/mem/intune/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: ./configuration/troubleshoot-policies-in-microsoft-intune.md
+        - url: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
     - title: Developer

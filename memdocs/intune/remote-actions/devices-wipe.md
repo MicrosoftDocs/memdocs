@@ -74,7 +74,7 @@ A wipe is useful for resetting a device before you give the device to a new user
     |User data outside of the user profile||
     |User autologon|| 
     
-7. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](troubleshoot-device-actions.md#wipe-action).        
+7. The **Wipe device, and continue to wipe even if device loses power.** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations this action may leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).        
 8. To confirm the wipe, select **Yes**.
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.
