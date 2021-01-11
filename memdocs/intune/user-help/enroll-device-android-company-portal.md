@@ -2,7 +2,7 @@
 # required metadata
 
 title: Enroll Android device with Intune Company Portal | Microsoft Docs
-description: Describes how to enroll an Android device with Intune Company Portal
+description: Describes how to enroll an Android device in Intune with the Company Portal app. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -23,7 +23,7 @@ ROBOTS:
 #audience:
 
 ms.reviewer: esmich
-ms.suite: ems
+ms.suite: ems  
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
