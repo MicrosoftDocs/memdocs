@@ -242,8 +242,4 @@ Configure:
 - [Security baselines](../protect/security-baselines.md)
 - [Compliance policies](../protect/device-compliance-get-started.md)
 - [Conditional access policies](#configure-conditional-access)
-<<<<<<< HEAD
-- [Integration with Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-=======
 - [Integration with Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
->>>>>>> 860f98b405d59852c344b4e27809ab29be46d431

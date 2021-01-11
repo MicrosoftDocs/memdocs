@@ -146,8 +146,4 @@ Strictly speaking, no. The Microsoft security team consults organizations, such 
 
 - View the settings in the latest versions of the available baselines:
   - [MDM security baseline](security-baseline-settings-mdm-all.md)
-<<<<<<< HEAD
-  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)
-=======
   - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
->>>>>>> 860f98b405d59852c344b4e27809ab29be46d431
