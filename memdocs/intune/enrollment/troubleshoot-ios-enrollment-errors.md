@@ -277,7 +277,7 @@ Contact support so they can retry to sync from Intune's side.
 
 #### Resolution
 
-Contact the [Intune support team](/mem/get-support). They can retry syncing from the Intune service.
+Contact the [Intune support team](../../get-support.md). They can retry syncing from the Intune service.
 
 ### Required cursor
 
@@ -336,7 +336,7 @@ Open the **Settings** app and select Company Portal. In the Company Portal setti
 
 ## Next steps
 
-- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
+- [Troubleshoot device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)
 - [Ask a question on the Intune forum](/answers/products/mem)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

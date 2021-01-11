@@ -2,12 +2,12 @@
 # required metadata
 
 title: Enroll Android device with Intune Company Portal | Microsoft Docs
-description: Describes how to enroll an Android device with Intune Company Portal
+description: Describes how to enroll an Android device in Intune with the Company Portal app. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 01/11/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -23,7 +23,7 @@ ROBOTS:
 #audience:
 
 ms.reviewer: esmich
-ms.suite: ems
+ms.suite: ems  
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
@@ -43,15 +43,11 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 
 1. Tap **Home** > **Play Store**.
 
-2. Search for **Intune company portal**. Then tap the app to open it. 
+2. Search for and install **Intune Company Portal**.  
 
-    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+    ![android-search-company-portal](./media/android-search-company-portal-2101.png)  
 
-4. Tap **INSTALL**.
-
-5. When prompted about app permissions, tap **ACCEPT**.  
-
-    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
+3. When prompted about app permissions, tap **ACCEPT**.  
 
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
