@@ -60,9 +60,9 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
 
-6. Depending on your version of Android, you might see an additional screen that explains the type of apps you need to use. Wait to be redirected and signed in to the Company Portal app.  
+6. On devices running certain Android versions, you'll see another informational screen about the type of apps you need. Wait to be redirected and signed in to the Company Portal app.  
 
-7. On the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
+    When you get to the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
 
     ![Screenshot of Company Access Setup showing work profile is created.](./media/work-profile-complete-1911.png)  
 
