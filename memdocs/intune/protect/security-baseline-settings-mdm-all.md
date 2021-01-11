@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/21/2021
+ms.date: 01/25/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
