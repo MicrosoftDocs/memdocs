@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 01/07/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,9 +56,9 @@ Some settings are not supported by all enrollment types. To see which settings a
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="See the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune and Endpoint Manager.":::
 
-Some settings only apply at the work profile level for corporate-owned devices with a work profile. For fully managed and dedicated devices, these settings apply device-wide. These settings have **(work profile-level)** in the setting.
+For corporate-owned devices with a work profile, some settings only apply in the work profile. For fully managed and dedicated devices, these settings apply device-wide. These settings have **(work profile-level)** in the setting name.
 
-:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise Applications settings that apply at the corporate-owned work profile level in Microsoft Intune and Endpoint Manager.":::
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune and Endpoint Manager.":::
 
 ### General
 
@@ -192,6 +192,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
 
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+        
+        > [!IMPORTANT]
+        > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices may lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
 
       - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
         - Not configured 
@@ -402,14 +405,14 @@ End of comment -->
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
 
-- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md).
+- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They can't access [client apps](../apps/apps-add-android-for-work.md) that aren't assigned to them. For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
   
-  - Force users to only access the apps the administrator makes available in the Google Play store, or apps required in [Client Apps](../apps/apps-add-android-for-work.md). 
-  - Automatically uninstall any apps that are detected as being installed by users outside of the Google Play store.
+  - Only show apps in the managed Google Play store that are approved, or apps that are required.
+  - Uninstall apps that were installed outside of the managed Google Play store.
 
-  If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
+If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
 
 ### Connectivity
 

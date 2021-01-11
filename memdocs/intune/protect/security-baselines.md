@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 01/04/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -126,7 +126,7 @@ The Microsoft security team has years of experience working directly with Window
 
 The same Microsoft security team chose and organized the settings for each baseline. Intune includes all the relevant settings in the Intune security baseline. There are some settings in the group policy baseline that are specific to an on-premises domain controller. These settings are excluded from Intune's recommendations. All the other settings are the same.
 
-### Are the Intune security baselines CIS or NSIT compliant?
+### Are the Intune security baselines CIS or NIST compliant?
 
 Strictly speaking, no. The Microsoft security team consults organizations, such as CIS, to compile its recommendations. But, there isn't a one-to-one mapping between "CIS-compliant" and Microsoft baselines.
 
