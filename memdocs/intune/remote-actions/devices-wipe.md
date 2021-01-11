@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 2/27/2020
+ms.date: 1/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -91,7 +91,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 
 |Data type|iOS|
 |-------------|-------|
-|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use mobile app management and were installed from App Store:** For apps that are not managed by the Company Portal, company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed. Personal app data and the apps are not removed.|
+|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use App Protection Policies and were installed from App Store:** When a Retire action is initiated against an enrolled device, Intune also initiates a [selective wipe](../apps/apps-selective-wipe.md) for apps (including those installed from the App Store) that have work or school account data protected by an [App Protection Policy](../apps/app-protection-policy.md). The next time the app is launched, the selective wipe removes the protected work or school account data. In order for the selective wipe to occur, an App Protection Policy check-in must occur between the MDM enrollment and retire events. Personal app data and the apps are not removed after a selective wipe.|
 |Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|
 |Certificate profile settings|Certificates are removed and revoked.|
