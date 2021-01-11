@@ -43,13 +43,11 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 
 1. Tap **Home** > **Play Store**.
 
-2. Search for **Intune company portal**. 
+2. Search for and install **Intune company portal**.  
 
-    ![android-search-company-portal](./media/android-search-company-portal-2101.png)
+    ![android-search-company-portal](./media/android-search-company-portal-2101.png)  
 
-4. Tap **INSTALL**.
-
-5. When prompted about app permissions, tap **ACCEPT**.  
+3. When prompted about app permissions, tap **ACCEPT**.  
 
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
