@@ -197,4 +197,4 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 
 - [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
 
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
