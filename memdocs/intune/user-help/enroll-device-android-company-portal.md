@@ -51,8 +51,6 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 
 5. When prompted about app permissions, tap **ACCEPT**.  
 
-    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
-
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
 
