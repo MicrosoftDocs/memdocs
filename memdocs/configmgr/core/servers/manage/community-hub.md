@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use community hub in Configuration Manager
-ms.date: 01/08/2021 
+ms.date: 01/12/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -16,9 +16,6 @@ manager: dougeby
 <!--3555935, 3555936-->
 
 The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Community hub** in Configuration Manager where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
-
-> [!Note]  
-> Community hub is an optional cloud-based feature. It was first introduced in June 2020. For information on how to opt into **Community hub**, see [Optional features](install-in-console-updates.md#bkmk_options).
 
 ## About community hub
 
