@@ -8,7 +8,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
+<<<<<<< HEAD
 ms.date: 01/11/2021
+=======
+ms.date: 12/18/2020
+>>>>>>> 860f98b405d59852c344b4e27809ab29be46d431
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,7 +64,7 @@ These settings are added to a device configuration profile in Intune, and then a
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add preference file that configures Microsoft Defender ATP on devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add preference file that configures Microsoft Defender for Endpoint on devices**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -69,7 +73,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
     - **Preference domain name**: Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge`, or `com.microsoft.wdav`.
 
-      Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created.
+      Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created.
 
     - **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure Microsoft Defender ATP in Microsoft Intune - Azure | Microsoft Docs
-description: Configure Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) in Intune, including connecting to ATP, onboarding devices, assigning compliance for risk levels, and conditional access policies.
+title: Configure Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
+description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,28 +27,28 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Configure Microsoft Defender ATP in Intune
+# Configure Microsoft Defender for Endpoint in Intune
 
-The information and procedures in this article will help you to configure integration of Microsoft Defender ATP with Intune. Configuration includes the following general steps:
+The information and procedures in this article will help you to configure integration of Microsoft Defender for Endpoint with Intune. Configuration includes the following general steps:
 
-- Enable Microsoft Defender ATP for your tenant
-- Onboard devices that run Android, iOS/iPadOS, MacOS and Windows 10
+- Enable Microsoft Defender for Endpoint for your tenant
+- Onboard devices that run Android, iOS/iPadOS, and Windows 10
 - Use compliance policies to set device risk levels
 - Use conditional access policies to block devices that exceed your expected risk levels
 
-Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender ATP with Intune.
+Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
 
-## Enable Microsoft Defender ATP in Intune
+## Enable Microsoft Defender for Endpoint in Intune
 
-The first step you take is to set up the service-to-service connection between Intune and Microsoft Defender ATP. Set up requires administrative access to both the Microsoft Defender Security Center, and to Intune.
+The first step you take is to set up the service-to-service connection between Intune and Microsoft Defender for Endpoint. Set up requires administrative access to both the Microsoft Defender Security Center, and to Intune.
 
-You only need to enable Microsoft Defender ATP a single time per tenant.
+You only need to enable Microsoft Defender for Endpoint a single time per tenant.
 
-### To enable Microsoft Defender ATP
+### To enable Microsoft Defender for Endpoint
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Microsoft Defender ATP**, and then select **Open the Microsoft Defender Security Center**.
+2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and then select **Open the Microsoft Defender Security Center**.
 
    ![Select to open the Microsoft Defender Security Center](./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png)
 
@@ -60,20 +60,17 @@ You only need to enable Microsoft Defender ATP a single time per tenant.
 
    3. Select **Save preferences**.
 
-4. Return to **Microsoft Defender ATP** in the Microsoft Endpoint Manager admin center. Under **MDM Compliance Policy Settings**, depending on your organization's needs:
-   - Set **Connect Android devices of version 6.0.0 and above to Microsoft Defender ATP** to **On**
-   - Set **Connect iOS devices version 8.0 and above to Microsoft Defender Advanced Threat Protection** to **On**
-   - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On**
+4. Return to **Microsoft Defender for Endpoint** in the Microsoft Endpoint Manager admin center. Under **MDM Compliance Policy Settings**, depending on your organization's needs:
+   - Set **Connect Android devices of version 6.0.0 and above to Microsoft Defender for Endpoint** to **On**
+   - Set **Connect iOS devices version 8.0 and above to Microsoft Defender for Endpoint** to **On**
+   - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint** to **On**
 
-   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender ATP for the purpose of compliance. 
-   
-   > [!NOTE]
-   > MacOS does not currently support device compliance with Microsoft Intune. 
+   After setting these configurations to *On*, applicable devices that are already managed with Intune, as well as devices you enroll in the future, will be connected to Microsoft Defender for Endpoint for the purpose of compliance.
 
 5. Select **Save**.
 
 > [!TIP]
-> When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender ATP](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
+> When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
 >
 > If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This recreates the classic policy. Its not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 >
@@ -88,13 +85,13 @@ You only need to enable Microsoft Defender ATP a single time per tenant.
 
 ## Onboard devices
 
-When you enabled support for Microsoft Defender ATP in Intune, you establish a service-to-service connection between Intune and Microsoft Defender ATP. You can then onboard devices you manage with Intune to Microsoft Defender ATP, which enables collection of data about device risk levels.
+When you enabled support for Microsoft Defender for Endpoint in Intune, you establish a service-to-service connection between Intune and Microsoft Defender for Endpoint. You can then onboard devices you manage with Intune to Microsoft Defender for Endpoint, which enables collection of data about device risk levels.
 
 ### Onboard Windows devices
 
-When you established the connection between Intune and Microsoft Defender ATP, Intune received a Microsoft Defender ATP onboarding configuration package from Microsoft Defender ATP. You deploy this configuration package to your Windows devices with a device configuration profile for Microsoft Defender ATP.
+When you established the connection between Intune and Microsoft Defender for Endpoint, Intune received a Microsoft Defender for Endpoint onboarding configuration package from Microsoft Defender for Endpoint. You deploy this configuration package to your Windows devices with a device configuration profile for Microsoft Defender for Endpoint.
 
-The configuration package configures devices to communicate with [Microsoft Defender ATP services](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) to scan files and detect threats. The device is also configured to report to Microsoft Defender ATP the devices risk level based on compliance policies you'll create.
+The configuration package configures devices to communicate with [Microsoft Defender for Endpoint services](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) to scan files and detect threats. The device is also configured to report to Microsoft Defender for Endpoint the devices risk level based on compliance policies you'll create.
 
 After you onboard a device using the configuration package, you don't need to do it again.
 
@@ -104,7 +101,7 @@ In addition to device configuration policy, you can onboard devices using:
 - [Group policy or Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 > [!TIP]
-> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender ATP), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ### Create the device configuration profile to onboard Windows devices
 
@@ -125,39 +122,43 @@ In addition to device configuration policy, you can onboard devices using:
 
    - **Sample sharing for all files**: Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
 
-   - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender ATP service more frequently.
+   - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
 
-     [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on these Microsoft Defender ATP settings.
+     [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on these Microsoft Defender for Endpoint settings.
 
 7. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
 8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-   When deploying to user groups, a user must sign-in on a device before the policy applies and the device can onboard to Defender ATP. 
+   When deploying to user groups, a user must sign-in on a device before the policy applies and the device can onboard to Defender for Endpoint. 
 
    Select **Next**.
 
 9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
  **OK**, and then **Create** to save your changes, which creates the profile.
 
-### Onboard MacOS devices
-After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard MacOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level. 
+### OnboardmacOS devices
+After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard macOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level. 
 
+<<<<<<< HEAD
 For MacOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for MacOS](/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
+=======
+For macOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
+>>>>>>> 860f98b405d59852c344b4e27809ab29be46d431
 
 ### Onboard Android devices
 
-After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard Android devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about the devices risk level.
+After you establish the service-to-service connection between Intune and Microsoft Defender for Endpoint, you can onboard Android devices to Microsoft Defender for Endpoint. Onboarding configures devices to communicate with Defender for Endpoint, which then collects data about the devices risk level.
 
-Unlike for Windows devices, there isn't a configuration package for devices that run Android. Instead, see [Overview of Microsoft Defender ATP for Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender ATP documentation for prerequisites and onboarding instructions for Android.
+Unlike for Windows devices, there isn't a configuration package for devices that run Android. Instead, see [Overview of Microsoft Defender for Endpoint for Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender for Endpoint documentation for prerequisites and onboarding instructions for Android.
 
-For devices that run Android, you can also use Intune policy to modify Microsoft Defender ATP on Android. For more information, see [Microsoft Defender ATP web protection](../protect/advanced-threat-protection-manage-android.md).
+For devices that run Android, you can also use Intune policy to modify Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/advanced-threat-protection-manage-android.md).
 
 ### Onboard iOS/iPadOS devices
 
-After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard iOS/iPadOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about the devices risk level. 
+After you establish the service-to-service connection between Intune and Microsoft Defender for Endpoint, you can onboard iOS/iPadOS devices to Microsoft Defender for Endpoint. Onboarding configures devices to communicate with Defender for Endpoint, which then collects data about the devices risk level. 
 
-Unlike for Windows devices, there isn't a configuration package for devices that run iOS/iPadOS. Instead, see [Overview of Microsoft Defender Advanced Threat Protection for iOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-ios) in the Microsoft Defender ATP documentation for prerequisites and onboarding instructions for iOS/iPadOS.
+Unlike for Windows devices, there isn't a configuration package for devices that run iOS/iPadOS. Instead, see [Overview of Microsoft Defender for Endpoint for iOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-ios) in the Microsoft Defender for Endpoint documentation for prerequisites and onboarding instructions for iOS/iPadOS.
 
 For devices that run iOS/iPadOS (in Supervised Mode), there is specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through a App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. 
 
@@ -197,7 +198,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 
 For Android, iOS/iPadOS, and Windows devices, the compliance policy determines the level of risk that you consider as acceptable for a device.
 
-If you're not familiar with creating compliance policy, reference the [Create a policy](../protect/create-compliance-policy.md#create-the-policy) procedure from the *Create a compliance policy in Microsoft Intune* article. The following information is specific to configuring Microsoft Defender ATP as part of a compliance policy.
+If you're not familiar with creating compliance policy, reference the [Create a policy](../protect/create-compliance-policy.md#create-the-policy) procedure from the *Create a compliance policy in Microsoft Intune* article. The following information is specific to configuring Microsoft Defender for Endpoint as part of a compliance policy.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -213,11 +214,11 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 
 4. Specify a **Name** that helps you identify this policy later. You can also choose to specify a **Description**.
   
-5. On the **Compliance settings** tab, expand the **Microsoft Defender ATP** group and set the option **Require the device to be at or under the machine risk score** to your preferred level.
+5. On the **Compliance settings** tab, expand the **Microsoft Defender for Endpoint** group and set the option **Require the device to be at or under the machine risk score** to your preferred level.
 
-   Threat level classifications are [determined by Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
+   Threat level classifications are [determined by Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Clear**: This level is the most secure. The device can't have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant. (Microsoft Defender ATP uses the value *Secure*.)
+   - **Clear**: This level is the most secure. The device can't have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant. (Microsoft Defender for Endpoint uses the value *Secure*.)
    - **Low**: The device is compliant if only low-level threats exist. Devices with medium or high threat levels aren't compliant.
    - **Medium**: The device is compliant if the threats found on the device are low or medium. If high-level threats are detected, the device is determined as noncompliant.
    - **High**: This level is the least secure and allows all threat levels. Devices with high, medium, or low threat levels are considered compliant.
@@ -226,7 +227,7 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 
 ## Create a conditional access policy
 
-Conditional access policies can use data from Microsoft Defender ATP to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
+Conditional access policies can use data from Microsoft Defender for Endpoint to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
 
 > [!TIP]
 > Conditional access is an Azure Active Directory (Azure AD) technology. The *Conditional access* node found in the Microsoft Endpoint Manager admin center is the node from *Azure AD*.
@@ -253,15 +254,20 @@ Conditional access policies can use data from Microsoft Defender ATP to block ac
 
 ## Next steps
 
-- [Configure Microsoft Defender ATP settings on Android](../protect/advanced-threat-protection-manage-android.md)
+- [Configure Microsoft Defender for Endpoint settings on Android](../protect/advanced-threat-protection-manage-android.md)
 - [Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
 
 Learn more from the Intune documentation:
 
-- [Use security tasks with ATPs Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md)
+- [Use security tasks with Defender for Endpoints Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md)
 - [Get started with device compliance policies](device-compliance-get-started.md)
 
-Learn more from the Microsoft Defender ATP documentation:
+Learn more from the Microsoft Defender for Endpoint documentation:
 
+<<<<<<< HEAD
 - [Microsoft Defender ATP Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
 - [Microsoft Defender ATP risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+=======
+- [Microsoft Defender for Endpoint Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender for Endpoint risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+>>>>>>> 860f98b405d59852c344b4e27809ab29be46d431

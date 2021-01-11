@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/28/2020
+ms.date: 12/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,7 +56,7 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
-- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender ATP.
+- **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
 
 ### Custom roles
 You can create your own roles with custom permissions. For more information about custom roles, see [Create a custom role](create-custom-role.md).
