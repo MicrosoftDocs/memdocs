@@ -51,6 +51,6 @@ landingContent:
           - text: Toolkit reference
             url: toolkit-reference.md
           - text: Troubleshoot MDT
-            url: troubleshooting-reference.md
+            url: /troubleshoot/mem/configmgr/troubleshooting-reference
           - text: UDI developer's guide
             url: user-driven-installation-developers-guide.md
