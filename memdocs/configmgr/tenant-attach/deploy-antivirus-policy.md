@@ -2,7 +2,7 @@
 title: Tenant attach - Deploy endpoint security policies from the Microsoft Endpoint Manager admin center  (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy endpoint security policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 01/05/2021
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
