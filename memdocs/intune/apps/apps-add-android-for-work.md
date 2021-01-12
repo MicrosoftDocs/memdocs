@@ -148,7 +148,7 @@ For more information about Managed Google Play private apps including a FAQ, see
     > If you are signing in for the first time, you must register and pay a fee to become a member of the Google Developer program.
 
 2. In the console, add new application. For details, see Google's support doc: [Publish Private apps](https://support.google.com/googleplay/android-developer/answer/9874937).
-3. You upload and provide information about your app in the same way as you publish any app to the Google Play store. However, you must specifically add your organization withing the Google Play Console. For details, see Google's support doc [Publish to your own organization](https://support.google.com/googleplay/android-developer/answer/9874937#zippy=%2Cpublish-to-your-own-organization).
+3. You upload and provide information about your app in the same way as you publish any app to the Google Play store. However, you must specifically add your organization using the Google Play Console. For details, see Google's support doc [Publish to your own organization](https://support.google.com/googleplay/android-developer/answer/9874937#zippy=%2Cpublish-to-your-own-organization).
 
     > [!NOTE]
     > Follow Google's support documentation to make the app available only to your organization. The app won't be available on the public Google Play store.
