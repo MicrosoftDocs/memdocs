@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 01/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -316,15 +316,15 @@ The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendo
 
 For example, you can use the following values in **Add or edit OMA-URI Setting**:
 
-- **Setting Name**: Windows Analytics Commercial ID
-- **Setting Description**: Configuring commercial ID for Windows Analytics solutions
-- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
-- **Data Type**: String
-- **Value**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
+- **Setting Name**: Update Compliance Commercial ID
+- **Setting Description**: Configure devices with the Commercial ID for Update Compliance solutions
+- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID`
 
-> [!NOTE]
-> For more information about MS DM Server, see [DMClient configuration service provider (CSP)](/windows/client-management/mdm/dmclient-csp).
+  For more information about this configuration service provider (CSP) and the Provider ID *MS DM Server*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
+- **Data Type**: Select *String*. When you String, you can then specify a Value.
+- **Value**: Specify the GUID for your *CommercialID*, which you get from your Update Compliance Settings in Microsoft Azure.
 
+ 
 ## Next steps
 
 [Manage software updates in Intune](windows-update-for-business-configure.md)
