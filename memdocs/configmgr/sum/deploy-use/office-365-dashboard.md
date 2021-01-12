@@ -5,7 +5,7 @@ description: "Review Microsoft 365 Apps client information from the Office 365 C
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -45,7 +45,7 @@ The Office 365 Client Management dashboard starts displaying data as hardware in
 
 Your top level site server needs access to the following endpoint to download the readiness file:
 
-`https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
+`https://contentstorage.omex.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
 
 > [!NOTE]
 > Internet connectivity isn't required for the client devices for any of these scenarios.
