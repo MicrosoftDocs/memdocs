@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/01/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,11 +29,14 @@ ms.collection: M365-identity-device-management
 
 # macOS device feature settings in Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 Intune includes built-in settings to customize features on your macOS devices. For example, administrators can add AirPrint printers, choose how users sign in, configure the power controls, use single sign-on authentication, and more.
 
 Use these features to control macOS devices as part of your mobile device management (MDM) solution.
 
-This article lists these settings, and describes what each setting does. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
+This article describes some of these settings. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
 
 > [!NOTE]
 > The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.

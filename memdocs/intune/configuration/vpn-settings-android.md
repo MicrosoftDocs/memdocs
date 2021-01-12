@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Android device settings to configure VPN in Intune
 
-This article lists and describes the different VPN connection settings you can control on Android devices. As part of your mobile device management (MDM) solution, use these settings to create a VPN connection, choose how the VPN authenticates, select a VPN server type, and more.
+This article describes the different VPN connection settings you can control on Android devices. As part of your mobile device management (MDM) solution, use these settings to create a VPN connection, choose how the VPN authenticates, select a VPN server type, and more.
 
 This feature applies to:
 
