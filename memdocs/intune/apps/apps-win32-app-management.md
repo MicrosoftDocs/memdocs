@@ -39,7 +39,6 @@ To use Win32 app management, be sure the following criteria are met:
 - Devices must be enrolled in Intune and either:
   - [Azure AD joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)
   - [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)
-  - [Azure AD registered](../fundamentals/whats-new.md#win32-app-support-for-workplace-join-wpj-devices-)
 - Windows application size must not be greater than 8 GB per app.
 
   > [!NOTE]

@@ -143,7 +143,7 @@ In addition to device configuration policy, you can onboard devices using:
 ### Onboard MacOS devices
 After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard MacOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level. 
 
-For MacOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for MacOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
+For MacOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for MacOS](/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
 
 ### Onboard Android devices
 
