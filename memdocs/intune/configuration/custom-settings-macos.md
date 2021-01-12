@@ -29,6 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Use custom settings for macOS devices in Microsoft Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 Using Microsoft Intune, you can add or create custom settings for your macOS devices using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 When using macOS devices, there are two ways to get custom settings into Intune:

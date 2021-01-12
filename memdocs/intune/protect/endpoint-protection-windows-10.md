@@ -5,9 +5,8 @@ description: On Windows 10 devices, use or configure endpoint protection setting
 keywords:
 author: brenduns
 ms.author: brenduns
-ms.date: 12/16/2020
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.technology:
 ms.service: microsoft-intune
@@ -28,7 +27,10 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 (and later) settings to protect devices using Intune
 
-Microsoft Intune includes many settings to help protect your devices. This article describes all the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
 
 To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
 

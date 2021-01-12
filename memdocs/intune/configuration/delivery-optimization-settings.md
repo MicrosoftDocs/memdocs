@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2021
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,10 @@ ms.collection: M365-identity-device-management
 
 # Delivery Optimization settings for Windows 10 devices in Intune
 
-This article lists the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.  
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.  
 
 Most options in the Intune console directly map to Delivery Optimization settings that are covered in-depth in the Windows documentation. These options include links to relevant content.  Settings or options that are specific to Intune don't contain links to additional content.  
 

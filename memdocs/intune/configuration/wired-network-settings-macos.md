@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,9 +30,12 @@ ms.collection: M365-identity-device-management
 
 # Add wired network settings for macOS devices in Microsoft Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 You can create a profile with specific wired network settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a SCEP certificate, and more.
 
-This article describes the settings you can configure.
+This article describes some of the settings you can configure.
 
 ## Before you begin
 

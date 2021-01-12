@@ -4,7 +4,7 @@ description: Add or create settings using ADMX administrative templates to confi
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 01/29/2021
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
