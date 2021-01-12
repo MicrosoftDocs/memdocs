@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 12/18/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -164,7 +164,7 @@ This feature supports:
 
 [Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
 
-To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 
@@ -214,9 +214,9 @@ This feature supports:
 
 - Android device administrator
 
-## Microsoft Defender ATP
+## Microsoft Defender for Endpoint
 
-[Microsoft Defender advanced threat protection (ATP)](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 
