@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 01/12/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -35,12 +35,11 @@ ms.collection:
 
 Remotely lock a lost or stolen device from the Company Portal website. If supported on your device, this setting locks your device's screen, no matter where the device is. A person must enter the correct passcode before the device can be unlocked and used again.   
 
-The remote lock setting works for:
+You can remote lock the following types of devices from Company Portal:
 
 * Android
 * iOS
 * macOS
-* Windows 10  
 
 1. On the [Company Portal website](https://portal.manage.microsoft.com), select the __Menu__ button > __Devices__.  
 
