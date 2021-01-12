@@ -204,6 +204,6 @@ Windows 10 BitLocker:
 ## Next steps
 
 - [Manage BitLocker policy](../protect/encrypt-devices.md)
-- [Troubleshooting BitLocker policy](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Manage FileVault policy](encrypt-devices-filevault.md)
 
