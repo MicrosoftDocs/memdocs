@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,7 +49,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 - **Permissions to Azure AD** - To complete setup of tenant attach, you’ll need an account with Global Administrator permissions to your Azure subscription.
 
-- **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 
 ### Configuration Manager version requirements for Intune endpoint security policies
 
@@ -61,7 +61,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 ## Set up Configuration Manager to support Intune policies
 
-Before you deploy Intune policies to Configuration Manager devices, complete the configurations detailed in the following sections. These configurations onboard your Configuration Manager devices with Microsoft Defender ATP, and enable them to work with the Intune policies.
+Before you deploy Intune policies to Configuration Manager devices, complete the configurations detailed in the following sections. These configurations onboard your Configuration Manager devices with Microsoft Defender for Endpoint, and enable them to work with the Intune policies.
 
 The following tasks are completed in the Configuration Manager console. If you’re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
@@ -71,9 +71,9 @@ The following tasks are completed in the Configuration Manager console. If you�
 4. [Enable collections to support Intune policies](#task-4-enable-collections-for-endpoint-security-policies)
 
 > [!TIP]
-> To learn more about using Microsoft Defender ATP with Configuration Manager, see the following articles in the Configuration Manager content:
+> To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
 >
-> - [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
 > - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Confirm your Configuration Manage environment
@@ -163,7 +163,7 @@ When tenant attach is configured, you can select collections to sync. If you hav
 
 ### Task 4: Enable collections for endpoint security policies
 
-After you configure collections to sync to Microsoft Endpoint Manager admin center, enable those collections to work with endpoint security policies. When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender ATP.
+After you configure collections to sync to Microsoft Endpoint Manager admin center, enable those collections to work with endpoint security policies. When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender for Endpoint.
 
 #### Enable collections for use with endpoint security policies
 
@@ -173,4 +173,4 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 - [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy) for *Antivirus* and *Endpoint detection and response*.
 
-- Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
+- Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender for Endpoint documentation.

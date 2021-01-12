@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 01/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,6 +29,15 @@ ms.collection: M365-identity-device-management
 # Create VPN profiles to connect to VPN servers in Intune
 
 Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
+
+This feature applies to:
+
+- Android device administrator
+- Android Enterprise personally-owned devices with a work profile
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+- Windows 8.1 and newer
 
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
@@ -103,6 +112,8 @@ You can create VPN profiles using the following connection types:
 - NetMotion Mobility
   - iOS/iPadOS
   - macOS
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
 
 - Palo Alto Networks GlobalProtect
   - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
@@ -152,7 +163,7 @@ You can create VPN profiles using the following connection types:
       - **macOS**
       - **Windows 10 and later**
       - **Windows 8.1 and later**
-    - **Profile**: Select **VPN**.
+    - **Profile**: Select **VPN**. Or, select **Templates** > **VPN**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

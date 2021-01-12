@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
 > [!NOTE]
-> This article is about 3rd party Mobile Threat Defense vendors, for more information on Microsoft Defender, see [Microsoft Defender ATP](../protect/advanced-threat-protection.md).
+> This article is about 3rd party Mobile Threat Defense vendors, for more information on Microsoft Defender, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
