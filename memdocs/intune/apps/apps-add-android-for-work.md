@@ -140,7 +140,7 @@ For more information about Managed Google Play private apps including a FAQ, see
 >[!IMPORTANT]
 >Private apps added using this method can never be made public. Only use this publishing option if you are sure that this app will always be private to your organization.
 
-### Managed Google Play private (LOB) app publishing using the Google Play Developer Console
+### Managed Google Play private (LOB) app publishing using the Google Developer Console
 
 1. Sign in to the [Google Play Developer Console](https://play.google.com/apps/publish) with the same account you used to configure the connection between Intune and Android Enterprise.
 
