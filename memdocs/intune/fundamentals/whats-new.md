@@ -166,7 +166,7 @@ Applies to:
 To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally-owned devices with a work profile" or *personally-owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
 
 #### Windows Autopilot for HoloLens 2 (preview)<!--6305220   -->
-Windows Autopilot for HoloLens 2 devices is now in public preview. Admins no longer have to register their tenants for flighting. For more information on using Autopilot for HoloLens, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+Windows Autopilot for HoloLens 2 devices is now in public preview. Admins no longer have to register their tenants for flighting. For more information on using Autopilot for HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 #### Ending support for iOS 11<!--7327321  -->
 Intune enrollment and the Company Portal now support iOS versions 12 and later. Older versions aren't supported but will continue to receive policies.
