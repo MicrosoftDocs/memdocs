@@ -48,7 +48,8 @@ Your top level site server needs access to the following endpoint to download th
 `https://contentstorage.omex.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
 
 > [!NOTE]
-> Internet connectivity isn't required for the client devices for any of these scenarios.
+> - The location of this file changed the *last week January 2021* <!--edit this, placeholder line-->. For more information, see [Placeholder community post URL](https://techcommunity.microsoft.com/t5/office-365-blog/bg-p/Office365Blog).
+> - Internet connectivity isn't required for the client devices for any of these scenarios.
 
 ### Enable data collection for Microsoft 365 Apps
 
