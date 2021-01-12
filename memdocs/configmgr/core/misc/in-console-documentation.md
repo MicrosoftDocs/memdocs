@@ -58,7 +58,7 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between December 1 and December 30, 2020.
+The most popular articles between December 1 and December 31, 2020.
 
 | Page views | Title |
 |------------|-------|
@@ -96,7 +96,8 @@ PowerShell cmdlet articles with recent updates:
 |---------------|-------|
 | 12/21/2020 | [Get-CMCollectionEvaluationStatus (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionevaluationstatus?WT.mc_id=configmgr-console) |
 | 12/21/2020 | [Get-CMCollectionDependency (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondependency?WT.mc_id=configmgr-console) |
-| 12/4/2020 | [Get-CMMicrosoftEdgeBrowserProfiles (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmicrosoftedgebrowserprofiles?WT.mc_id=configmgr-console) || 12/4/2020 | [Get-CMOneDriveBusinessProfile (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmonedrivebusinessprofile?WT.mc_id=configmgr-console) |
+| 12/4/2020 | [Get-CMMicrosoftEdgeBrowserProfiles (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmicrosoftedgebrowserprofiles?WT.mc_id=configmgr-console) |
+| 12/4/2020 | [Get-CMOneDriveBusinessProfile (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmonedrivebusinessprofile?WT.mc_id=configmgr-console) |
 | 12/3/2020 | [Get-CMApplicationGroupDeployment (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmapplicationgroupdeployment?WT.mc_id=configmgr-console) |
 
 ## Troubleshooting articles
