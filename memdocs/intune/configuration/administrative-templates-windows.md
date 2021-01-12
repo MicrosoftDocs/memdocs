@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 01/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,7 +56,7 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Administrative Templates**.
+    - **Profile**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

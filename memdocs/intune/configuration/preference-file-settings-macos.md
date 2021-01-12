@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/11/2021
+ms.date: 01/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -55,7 +55,7 @@ These settings are added to a device configuration profile in Intune, and then a
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**
-    - **Profile**: Select **Preference file**.
+    - **Profile**: Select **Templates** > **Preference file**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
