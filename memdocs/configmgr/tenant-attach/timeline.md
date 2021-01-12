@@ -80,6 +80,12 @@ Devices send events once a day to the admin center. Only events collected after 
 
    :::image type="content" source="./media/7141381-timeline.png" alt-text="Timeline of events for a device" lightbox="./media/7141381-timeline.png":::
 
+## Known issues
+
+You will receive a time out error if any of the following conditions apply:
+- You are opening the **Timeline** page for the very first time
+- You directly navigate to the **Timeline** page without loading another page in Microsoft Endpoint Manager first
+
 ## Next steps
 
 [Troubleshoot the device timeline](troubleshoot-timeline.md)
