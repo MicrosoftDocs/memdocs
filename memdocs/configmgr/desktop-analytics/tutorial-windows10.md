@@ -270,6 +270,11 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
         For more information on how Desktop Analytics makes these recommendations, select the information icon in the top right corner of the **Identify pilot** pane.
 
+9. On the deployment plan menu, in the **Prepare** group, select **Prepare pilot"** 
+
+    1. Review the assets with [Microsoft Known issues](compat-assessment.md#microsoft-known-issues) across the **Apps** and **Drivers** tabs 
+
+    2. Change the Upgrade Decision to 'Ready' or 'Ready (with remediation)' to unblock your pilot devices.
 
 
 ## Deploy Windows 10 in Configuration Manager
