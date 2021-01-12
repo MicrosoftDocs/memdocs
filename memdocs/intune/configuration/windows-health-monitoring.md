@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 01/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,13 +41,6 @@ This feature applies to:
 
 This article shows you how to create the profile, and enable the monitoring.
 
-## Before you begin
-
-These settings use the following CSPs:
-
-- [DeviceHealthMonitoring/AllowDeviceHealthMonitoring](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
-- [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
-
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -55,10 +48,10 @@ These settings use the following CSPs:
 3. Enter the following properties:
 
     - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Select **Windows health monitoring**.
+    - **Profile**: Select **Templates** > **Windows health monitoring**.
 
     > [!NOTE]
-    > 
+    >
     > If you don't see **Windows health monitoring** in the list, then:
     >
     > 1. Go to **Reports** > **Endpoint Analytics** > **Settings**.
@@ -77,9 +70,14 @@ These settings use the following CSPs:
       - **Not configured**: Intune doesn't change or update this setting.
       - **Enable**: Event information is collected from the devices, and sent to Microsoft for analytics and insights.
       - **Disable**: Event information isn't collected from the devices.
+
+      [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
+
     - **Scope**: Choose the event information you want collected and evaluated. Your options:
       - **Windows updates**
       - **Endpoint analytics**
+
+      [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
 
 8. Select **Next**.
 

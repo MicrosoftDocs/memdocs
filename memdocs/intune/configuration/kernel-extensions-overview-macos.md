@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 01/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -97,12 +97,12 @@ For more information on kernel extensions, see [kernel extensions](https://devel
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**
-    - **Profile**: Select **Extensions**.
+    - **Profile**: Select **Templates** > **Extensions**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add antivirus scanning to kernel extensions on devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add AV scanning to kernel extensions on devices**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -124,4 +124,4 @@ For more information on kernel extensions, see [kernel extensions](https://devel
 
 ## Next steps
 
-After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

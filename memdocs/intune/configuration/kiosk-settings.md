@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 01/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ On Windows 10 devices, use Intune to run devices as a kiosk, sometimes known as 
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 10 and newer
 - Windows Holographic for Business
 
 To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
@@ -50,7 +50,7 @@ This article shows you how to create a device configuration profile. For a list 
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Kiosk**.
+   - **Profile**: Select **Templates** > **Kiosk**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -90,7 +90,7 @@ The next time each device checks in, the policy is applied.
 
 After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-You can create kiosk profiles for devices that run the following platforms:
+You can also create kiosk profiles for devices that run the following platforms:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
