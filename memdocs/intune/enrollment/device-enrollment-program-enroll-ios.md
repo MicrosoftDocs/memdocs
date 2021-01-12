@@ -139,7 +139,7 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 ### Step 3: Save the Apple ID
 
 1. In your web browser, go back to the **Add enrollment program token** page in Intune. You should have kept this page open, as noted in [Step 1: Download the Intune public key certificate](#step-1-download-the-intune-public-key-certificate) (in this article).
-2. In **Apple ID**, enter your ID. This step saves the ID. It can be used in the future.
+2. In **Apple ID**, enter your ID. This step saves the ID. The ID can be used in the future.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image03.png" alt-text="Sreenshot that shows the Apple ID box on the Basics tab.":::
 
@@ -204,7 +204,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (**Intune** > **Client Apps**). 
  
-   To ensure that user interaction isn't required, you'll probably want to have Company Portal as an iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for Company Portal. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID. 
+   To ensure that user interaction isn't required, you'll probably want to make Company Portal an iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for Company Portal. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID. 
 
     > [!NOTE]
     > If you set the authentication method to **Company Portal**, make sure that the device enrollment process is completed within the first 24 hours of the Company Portal download to the ADE device. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
@@ -225,7 +225,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
 
-    Supervised devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices. Apple Shared iPad for Business devices must be supervised.
+    Supervised devices give you more management options and disabled Activation Lock by default. Microsoft recommends that you use ADE as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices. Apple Shared iPad for Business devices must be supervised.
 
     Users are notified that their devices are supervised in two ways:
 
@@ -244,7 +244,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). If you select **Yes** for **Shared iPad**, multiple users will be able to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later.
 
-    If configured your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users might not have enough disk space.  
+    If you configured your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users might not have enough disk space.  
 
     > [!NOTE]
     > If you want to set up Apple Shared iPad for Business, configure these settings: 
@@ -274,7 +274,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     | Department setting | Description |
     |---|---|
     | <strong>Department</strong> | Appears when users tap <strong>About Configuration</strong> during activation. |
-    |    <strong>Department Phone</strong>     | Appears when the user selects the <strong>Need Help</strong> button during activation. |
+    |    <strong>Department Phone</strong>     | Appears when users tap the <strong>Need Help</strong> button during activation. |
 
     You can choose to hide Setup Assistant screens on the device during user setup.
     - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
@@ -315,7 +315,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 19. To save the profile, select **Create**.
 
 > [!NOTE]
-> If you need to re-enroll your Automated Device Enrollment device, you need to first [add the serial number of the device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting a problem, like the device not receiving policy. To re-enroll:
+> If you need to re-enroll your Automated Device Enrollment device, you need to first [add the serial number of the device as a corporate identifier](corporate-identifiers-add.md). You might need to re-enroll your ADE device if you're troubleshooting a problem, like if the device isn't receiving policy. To re-enroll:
 > 1. Retire the device from the Intune console.
 > 2. [Add the device's serial number as a corporate device identifier](corporate-identifiers-add.md).
 > 3. Re-enroll the device by downloading Company Portal and completing device enrollment.
@@ -323,13 +323,13 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 ### Dynamic groups in Azure Active Directory
 
-You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory. For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory (Azure AD). For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
 You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
 
 For the fastest policy delivery on ADE devices that have user affinity, make sure the enrolling user is a member, before device setup, of an Azure AD user group. 
 
-If you assign dynamic groups to enrollment profiles, there can be a delay in delivering applications and policies to devices after the enrollment.
+If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
 
 
 ## Sync managed devices
@@ -351,7 +351,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 Before devices can be enrolled, you need to assign an enrollment program profile to them.
 
 >[!NOTE]
->You can also assign serial numbers to profiles on the **Apple Serial Numbers** pane.
+>You can also assign serial numbers to profiles in the **Apple Serial Numbers** pane.
 
 1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**. Select a token in the list.
 2. Select **Devices**. Select devices in the list, and then select **Assign profile**.
@@ -377,9 +377,11 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
 - A device that's been activated needs to be wiped before it can enroll in Intune. After it's been wiped, you can apply the enrollment profile.
 
-- If you're enrolling with ADE and user affinity, the following error can happen during setup. To resolve this error, you need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
+- If you're enrolling with ADE and user affinity, the following error can happen during setup:
 
   `The SCEP server returned an invalid response.`
+
+   To resolve this error, you need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
   
 For information on the end user experience, see [Enroll your iOS/iPadOS device in Intune by using ADE](../user-help/enroll-your-device-dep-ios.md).
 
