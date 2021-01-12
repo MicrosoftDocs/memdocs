@@ -415,15 +415,15 @@ Aside from new features, this release also includes additional changes such as b
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
+-->
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4580678](https://support.microsoft.com/help/4580678) | Tenant attach rollup for Configuration Manager current branch, version 2010 | September 18, 2020 | Yes |
-| [4584759](https://support.microsoft.com/help/4584759) | Clients report Desktop Analytics configuration errors in Configuration Manager, version 2010 | October 2, 2020 | Yes |
+| [4594177](https://support.microsoft.com/help/4594177) | Client notifications sent to all collection members in Configuration Manager current branch, version 2010 | January 12, 2021 | Yes |
+
 <!--
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
