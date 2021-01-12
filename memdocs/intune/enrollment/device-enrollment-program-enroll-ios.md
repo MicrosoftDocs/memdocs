@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 # Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment
 
 > [!IMPORTANT]
-> Apple recently changed from using the Apple Device Enrollment Program (DEP) to using Apple Automated Device Enrollment (ADE). Microsoft Intune is in the process of updating the Intune user interface to reflect that change. Until these changes are complete, you'll continue to see *Device Enrollment Program* in the Intune portal. Wherever you see references to DEP, Intune now uses Automated Device Enrollment.
+> Apple recently changed from using the Apple Device Enrollment Program (DEP) to using Apple Automated Device Enrollment (ADE). The Microsoft Intune user interface doesn't currently reflect that change. Currently, you'll still see *Device Enrollment Program* in the Intune portal. Wherever you see references to DEP, Intune now uses Automated Device Enrollment.
 
 You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com). Automated Device Enrollment lets you enroll large numbers of devices without ever touching them. Devices like iPhones, iPads, and MacBooks can be shipped directly to users. When a user turns on the device, Setup Assistant, which includes the typical out-of-box-experience for Apple products, runs with preconfigured settings and the device enrolls into management.
 
@@ -58,7 +58,7 @@ To enable Company Portal to update automatically and provide the Company Portal 
 
 Apple introduced supervised mode in iOS/iPadOS 5. An iOS/iPadOS device in supervised mode provides more management control, like blocking of screen captures and blocking of the installation of apps from App Store. So it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part of ADE.
 
-Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPadOS 11 and later, ADE-configured devices should always be supervised. The ADE *is_supervised* flag will be ignored on iOS/iPadOS 13.0 and later. All iOS/iPadOS devices with version 13.0 and later are automatically supervised when enrolled with Automated Device Enrollment. 
+Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPadOS 11 and later, ADE-configured devices should always be supervised. The ADE *is_supervised* flag will be ignored in iOS/iPadOS 13.0 and later. All iOS/iPadOS devices with version 13.0 and later are automatically supervised when enrolled with Automated Device Enrollment. 
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -139,7 +139,7 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 ### Step 3: Save the Apple ID
 
 1. In your web browser, go back to the **Add enrollment program token** page in Intune. You should have kept this page open, as noted in [Step 1: Download the Intune public key certificate](#step-1-download-the-intune-public-key-certificate) (in this article).
-2. In **Apple ID**, enter your Apple ID. This step saves your Apple ID. The ID can be used in the future.
+2. In **Apple ID**, enter your ID. This step saves the ID. It can be used in the future.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image03.png" alt-text="Sreenshot that shows the Apple ID box on the Basics tab.":::
 
@@ -151,7 +151,7 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 
 2. Select **Next**.
 
-3. Optional. If you want to apply [scope tags](../fundamentals/scope-tags.md) to this ADE token, click **Select scope tags**, and then select existing scope tags. Scope tags applied to a token are inherited by profiles and devices added to the token.
+3. (Optional.) If you want to apply [scope tags](../fundamentals/scope-tags.md) to this ADE token, click **Select scope tags**, and then select existing scope tags. Scope tags applied to a token are inherited by profiles and devices added to the token.
 
     For more information on scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
@@ -159,7 +159,7 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 
 3. On the **Review + create** tab, select **Create**.
 
-With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policies to enrolled mobile devices. Intune automatically synchronizes with Apple to see your enrollment program account.
+With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policies to enrolled mobile devices. Intune automatically synchronizes with Apple to access your enrollment program account.
 
 ## Create an Apple enrollment profile
 
