@@ -79,7 +79,8 @@ There is an additional migration scenario to consider, which should not be impac
             - Add Corporate device identifiers as described [here](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile:~:text=If%20you%20need%20to%20re-enroll%20your,Portal%20and%20going%20through%20device%20enrollment). Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
             - Use a script to modify the OwnershipType from Personal to Corporate. A sample script which leverages an exported list (.csv) of device serial numbers (taken from your current EMM vendor) as input, is located [here](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).
 
-[!NOTE] If you use enrollment restrictions to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
+> [!NOTE] 
+> If you use enrollment restrictions to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
 
 ## Next steps
 
