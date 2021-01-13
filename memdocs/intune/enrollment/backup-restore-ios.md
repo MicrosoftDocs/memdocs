@@ -78,8 +78,7 @@ o	These devices will enroll into MEM/Intune as ‘personal’ devices, rather th
 	If you wish to designate these migrated devices as corporate devices, you can do either of the following:
 NOTE: If you use enrollment restrictions to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
 •	Add Corporate device identifiers as described here. Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
-•	Use a script to modify the OwnershipType from Personal to Corporate. A sample script which leverages an exported list (.csv) of device serial numbers (taken from your current EMM vendor) as input, is located here.
-https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership
+•	Use a script to modify the OwnershipType from Personal to Corporate. A sample script which leverages an exported list (.csv) of device serial numbers (taken from your current EMM vendor) as input, is located [here](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).
 
 ## Next steps
 
