@@ -70,7 +70,7 @@ While it links files and documents, it does not typically restore any user data 
 ### Migrating without wiping the device
 
 There is an additional migration scenario to consider, which should not be impacted by any of the above.
-- In the event that a migration is performed from one MDM vendor to another without a device wipe (such as through the use of a tool such as EBF onboarder for example), there should be no negative impact to the device, as it is never restored. Instead, the device is ‘off-boarded/unenrolled’ from one MDM vendor and has the management profile removed, and then enrolls manually into Intune using the Company Portal app. The users iCloud account is not removed and no backup is restored as setup assistance is not involved in this scenario.
+- In the event that a migration is performed from one MDM vendor to another without a device wipe (such as through the use of a tool such as EBF Onboarder for example), there should be no negative impact to the device, as it is never restored. Instead, the device is ‘off-boarded/unenrolled’ from one MDM vendor and has the management profile removed, and then enrolls manually into Intune using the Company Portal app. The users iCloud account is not removed and no backup is restored as setup assistance is not involved in this scenario.
 - There are some additional considerations in a scenario where the device is migrated without performing a device wipe:
     - If the device was supervised under the current EMM vendor, the supervised state will be maintained
     - The new management profile (MEM/Intune) cannot be ‘locked’ – meaning the user is able to remove the management profile in Settings.
