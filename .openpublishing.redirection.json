@@ -2,6 +2,10 @@
     "redirections": [
 
         {
+            "source_path": "memdocs/intune/fundamentals/tutorial-walkthrough-intune-portal.md",
+            "redirect_url": "/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager",
+            "redirect_document_id": false
+        },          {
             "source_path": "memdocs/intune/fundamentals/migration-guide-communication-plan.md",
             "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
             "redirect_document_id": false
