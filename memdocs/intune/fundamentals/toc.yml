@@ -33,8 +33,6 @@
   items:
   - name: Walkthrough Intune in Microsoft Endpoint Manager
     href: tutorial-walkthrough-endpoint-manager.md 
-  - name: Walkthrough Intune in the Azure portal
-    href: tutorial-walkthrough-intune-portal.md     
 - name: Concepts
   items:
   - name: What is Intune for Education?
