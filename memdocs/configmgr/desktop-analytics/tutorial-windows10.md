@@ -2,7 +2,7 @@
 title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
-ms.date: 06/13/2019
+ms.date: 01/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -270,7 +270,11 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
         For more information on how Desktop Analytics makes these recommendations, select the information icon in the top right corner of the **Identify pilot** pane.
 
+9. On the deployment plan menu, in the **Prepare** group, select **Prepare pilot**.
 
+    1. Review the assets with [Microsoft known issues](compat-assessment.md#microsoft-known-issues) across the **Apps** and **Drivers** tabs.
+
+    2. To unblock your pilot devices, change the **Upgrade Decision** to **Ready** or **Ready (with remediation)**.
 
 ## Deploy Windows 10 in Configuration Manager
 
