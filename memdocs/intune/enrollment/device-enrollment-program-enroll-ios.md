@@ -407,9 +407,8 @@ You'll sometimes need to renew your tokens:
     > [!NOTE]
     > As it says in the prompt, don't select **Download Server Token** if you don't intend to renew the token. Doing so will invalidate the token being used by Intune (or any other MDM solution). If you already downloaded the token, be sure to continue with the next steps until the token is renewed.
 
-4. After you download the token, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens**. Select the token:
+4. After you download the token, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens**. Select the token.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png" alt-text="Screenshot that shows the Apple enrollment program token in Microsoft Endpoint Manager admin center.":::
 
 5. Select **Renew token**. Enter the **Apple ID** used to create the original token (if it's not automatically populated):  
 
