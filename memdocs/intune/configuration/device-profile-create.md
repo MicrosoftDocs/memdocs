@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -74,7 +74,7 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Extensions (macOS)](kernel-extensions-overview-macos.md)
 - [Identity protection (Windows)](../protect/identity-protection-configure.md)
 - [Kiosk](kiosk-settings.md)
-- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [Microsoft Defender for Endpoint (Windows)](../protect/advanced-threat-protection.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
 - [Network boundary (Windows)](network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
