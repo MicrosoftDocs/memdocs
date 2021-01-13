@@ -82,7 +82,7 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## Known issues
 <!--9114968, 9102454-->
-You will receive a time out error if any of the following condition applies:
+You will receive a time out error if the following condition applies:
 
 - You're opening **Timeline** for the very first time after restarting SMSExecutive on the service connection point's on-premises server. 
 
