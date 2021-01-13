@@ -82,10 +82,9 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## Known issues
 
-You will receive a time out error if any of the following conditions apply:
+You will receive a time out error if any of the following condition applies:
 
 - You're opening **Timeline** for the very first time after SMSExecutive is started on the service connection point's on-premises server.
-- You directly navigate to the **Timeline** without loading another page in Microsoft Endpoint Manager first
 
 To workaround the issue, reload the **Timeline** page.
 
