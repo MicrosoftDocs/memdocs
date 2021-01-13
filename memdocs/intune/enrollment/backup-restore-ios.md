@@ -74,11 +74,12 @@ There is an additional migration scenario to consider, which should not be impac
 - There are some additional considerations in a scenario where the device is migrated without performing a device wipe:
     - If the device was supervised under the current EMM vendor, the supervised state will be maintained
     - The new management profile (MEM/Intune) cannot be ‘locked’ – meaning the user is able to remove the management profile in Settings.
-    - These devices will enroll into MEM/Intune as ‘personal’ devices, rather than ‘corporate’ devices. This will have an impact on the app inventory gathered from the device, the displayed phone number, etc as described here.
+    - These devices will enroll into MEM/Intune as ‘personal’ devices, rather than ‘corporate’ devices. This will have an impact on the app inventory gathered from the device, the displayed phone number, etc as described [here](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune).
         - If you wish to designate these migrated devices as corporate devices, you can do either of the following:
-NOTE: If you use enrollment restrictions to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
             - Add Corporate device identifiers as described [here](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile:~:text=If%20you%20need%20to%20re-enroll%20your,Portal%20and%20going%20through%20device%20enrollment). Provided you can obtain a list of serial numbers from your current EMM vendor and this is imported prior to enrolling the devices in Intune, this is the simplest option and avoids scripting.
             - Use a script to modify the OwnershipType from Personal to Corporate. A sample script which leverages an exported list (.csv) of device serial numbers (taken from your current EMM vendor) as input, is located [here](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).
+
+[!NOTE] If you use enrollment restrictions to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
 
 ## Next steps
 
