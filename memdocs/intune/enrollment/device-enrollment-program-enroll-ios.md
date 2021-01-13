@@ -87,6 +87,9 @@ Before you can enroll iOS/iPadOS devices with ADE, you need an ADE token (.p7m) 
 You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) portal to create a token. You also use the ABM or ASM portal to assign devices to Intune for management.
 
 > [!NOTE]
+> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals. 
+
+> [!NOTE]
 > If you delete the token from the Intune classic portal before you migrate to Azure, Intune might restore a deleted Apple ADE token. You can delete the ADE token again from the Azure portal.
 
 ### Step 1: Download the Intune public key certificate
@@ -269,7 +272,6 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 17. On the **Setup Assistant Customization** tab, configure the following profile settings:
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/setupassistantcustom.png" alt-text="Screenshot that shows the Setup Assistant Customization tab.":::
 
     | Department setting | Description |
     |---|---|
