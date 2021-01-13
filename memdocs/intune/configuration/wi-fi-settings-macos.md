@@ -29,14 +29,11 @@ ms.collection: M365-identity-device-management
 
 # Add Wi-Fi settings for macOS devices in Microsoft Intune
 
-> [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
-
 You can create a profile with specific Wi-Fi settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise settings.
 
-This article describes some of these settings.
+This article describes these settings.
 
 ## Before you begin
 
