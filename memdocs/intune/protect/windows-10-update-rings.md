@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 01/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,7 +62,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create**.
+2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create profile**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring](./media/windows-10-update-rings/basics-tab.png)
