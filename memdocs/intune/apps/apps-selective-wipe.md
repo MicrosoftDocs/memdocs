@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 When a device is lost or stolen, or if the employee leaves your company, you want to make sure company app data is removed from the device. But you might not want to remove personal data on the device, especially if the device is an employee-owned device.
 
 >[!NOTE]
-> The iOS/iPadOS, Android, and Windows 10 platforms are the only platforms currently supported for wiping corporate data from Intune managed apps. Intune managed apps are applications that include the Intune APP SDK, and have at least one enabled and licensed user account in your organization. Deployment of Application Protection Policies are not required to enable app selective wipe.
+> The iOS/iPadOS, Android, and Windows 10 platforms are the only platforms currently supported for wiping corporate data from Intune managed apps. Intune managed apps are applications that include the Intune APP SDK, and have at least one enabled and licensed user account in your organization. Deployment of Application Protection Policies are  required to enable app selective wipe on Android and iOS.
 
 To selectively remove company app data, create a wipe request by using the steps in this topic. After the request is finished, the next time the app runs on the device, company data is removed from the app. In addition to creating a wipe request, you can configure a selective wipe of your organization's data as a new action when the conditions of Application Protection Policies (APP) Access settings are not met. This feature helps you automatically protect and remove sensitive organization data from applications based on pre-configured criteria.
 
