@@ -78,7 +78,7 @@ Before you create a profile, review the following articles that detail the endpo
 
    Select **Next**.
 
-9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](/configuration/device-profile-create).
+9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../configuration/device-profile-create.md).
 
    Select **Next**.
 
@@ -134,7 +134,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
    Select **Next**.
 
-9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](/configuration/device-profile-create).
+9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../configuration/device-profile-create.md).
 
    Select **Next**.
 
