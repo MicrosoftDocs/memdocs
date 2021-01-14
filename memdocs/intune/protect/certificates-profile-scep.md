@@ -333,4 +333,4 @@ Consider the following before you continue:
 
 [Assign profiles](../configuration/device-profile-assign.md)
 
-[Troubleshoot deployment of SCEP certificate profiles](../protect/troubleshoot-scep-certificate-profiles.md)
+[Troubleshoot deployment of SCEP certificate profiles](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)

@@ -240,6 +240,18 @@ Status details include:
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/intune-reports/firewall-status.png)
 
+## Co-managed workloads report (Organizational)
+
+The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+
+To see a generated report of device state, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Cloud attached devices** > **Reports** tab >  **Co-Managed Workloads**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
+For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
+
 ## Device compliance trend report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 

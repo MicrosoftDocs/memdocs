@@ -122,7 +122,7 @@ At each site, you deploy site system roles to provide the services that you want
 
 To provide redundancy for reporting on sites and clients, install multiple instances of the reporting services point.
 
-Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#unsupported-and-removed-features). To provide redundancy for software update points, use software update point switching. This allows clients to connect to a new software update point server if one fails or becomes unavailable. For more information, see [Sofware update point switching](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching)  
+Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features). To provide redundancy for software update points, use software update point switching. This allows clients to connect to a new software update point server if one fails or becomes unavailable. For more information, see [Sofware update point switching](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching)  
 
 ### Built-in site backup
 
@@ -290,4 +290,4 @@ While this site system role is critical for keeping Configuration Manager curren
 
 - [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md)  
 
-- [Site failure impacts](../../manage/site-failure-impacts.md)  
+- [Site failure impacts](../../manage/site-failure-impacts.md)

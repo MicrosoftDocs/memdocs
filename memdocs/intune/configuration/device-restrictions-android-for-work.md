@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise device settings to allow or restrict features using Intune
 
-This article lists and describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
 
 This feature applies to:
 
