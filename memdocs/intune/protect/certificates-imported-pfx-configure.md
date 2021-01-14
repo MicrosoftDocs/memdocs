@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -234,7 +234,7 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices.
-   - **Profile**: Select **PKCS imported certificate**
+   - **Profile**: Select **PKCS imported certificate**. Or, select **Templates** > **PKCS imported certificate**.
 
 4. Select **Create**.
 
@@ -252,21 +252,17 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    Select **Next**.
-
-11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+10. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
     For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
     Select **Next**.
 
-12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Support for third-party partners
 
@@ -286,4 +282,4 @@ To learn more about KeyTalk’s integration with Intune, see https://keytalk.com
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. [Assign](../configuration/device-profile-assign.md) the new device profile.
+[Use SCEP for certificates](certificates-scep-configure.md)
