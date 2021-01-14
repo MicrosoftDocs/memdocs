@@ -117,7 +117,7 @@
     - name: Common error codes for application installation
       href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
-    href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    href: /troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration
   - name: Troubleshoot Package Conversion Manager
     items:
     - name: Troubleshoot Package Conversion Manager
