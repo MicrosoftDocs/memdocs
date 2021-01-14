@@ -88,7 +88,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create**.
+2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create profile**.
 
 3. Under **Basics**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
 

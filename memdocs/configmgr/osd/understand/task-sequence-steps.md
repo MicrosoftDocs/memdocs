@@ -643,7 +643,7 @@ If you want to save and restore user state settings from a state migration point
 
 This step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options using the **OSDMigrateAdditionalCaptureOptions** task sequence variable.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
+This task sequence step runs in either Windows PE or the full OS.
 
 To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**.
 
