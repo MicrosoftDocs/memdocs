@@ -130,7 +130,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
    Select **Next**.
 
-8. In **Assignments**, select the device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/configuration/device-profile-assign).
+8. In **Assignments**, select the device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 

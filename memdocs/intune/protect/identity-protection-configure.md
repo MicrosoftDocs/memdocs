@@ -80,14 +80,14 @@ This article shows you how to create a device configuration profile. For a list 
 
    Select **Next** to continue.
 
-7. In **Assignments**, select the user and device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/configuration/device-profile-assign).
+7. In **Assignments**, select the user and device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    > [!IMPORTANT]
    > To allow multiple users to be provisioned to a device, specify that the Windows Hello for Business policy be applied to the devices. If the policy is applied only to users, only one user can be provisioned to a device.
 
    Select **Next**.
 
-8. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](/configuration/device-profile-create).
+8. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../configuration/device-profile-create.md).
 
    Select Next.
 
