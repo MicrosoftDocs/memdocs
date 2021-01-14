@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 09/22/2020
+ms.date: 01/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -50,9 +50,11 @@ This issue impacts some Windows Server devices that are managed by Configuration
 **Mitigation:**
 This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
 
-### Error code -2016281112 (Remediation failed)
+### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
-There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
+  - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+  - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
 ### Hardware inventory may fail to process
 <!--7535675-->
@@ -84,7 +86,7 @@ First, ensure devices meet the prerequisites:
 For Intune or co-managed devices configured with the Intune data collection policy:
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
 1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
-   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information see the [Error code -2016281112](#bkmk_2016281112) section.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
 1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 

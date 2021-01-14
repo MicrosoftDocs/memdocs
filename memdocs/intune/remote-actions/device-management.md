@@ -87,4 +87,4 @@ The available actions depend on the device platform, and the device configuratio
 
 ## Next steps
 
-[Remotely run device actions with Intune](/mem/intune/remote-actions).
+[Remotely run device actions with Intune](./index.yml).

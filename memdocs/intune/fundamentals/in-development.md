@@ -66,9 +66,6 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 ### Configure whether a required iOS app is removable<!-- 8391462  -->
 You'll be able to configure whether a required iOS app is installed as a removable app by end users. The new setting will apply to iOS store, LOB and built-in apps. You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > **Add**. When setting the app assignments, you'll be able to select **Install as removable**. The default value is **yes**, which means the app is removable. Existing required installs on iOS 14 will be updated to the default (removable) setting value when this setting is implemented. For more information about iOS apps, see [Microsoft Intune app management](..\apps\app-management.md).
 
-### Scope tag support for customization policies<!--6182440  -->
-You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you'll see **Scope tags** configuration options.
-
 ### Android Enterprise system app support in work profiles<!-- 5291507  -->
 You'll be able to deploy Android Enterprise system apps for Android Enterprise Work Profile devices. System apps are apps that do not appear in the Managed Google Play Store and come pre-installed on the device. Once a system app is deployed, you'll be unable to uninstall, hide, or otherwise remove the system app. Note that this feature is planned to be released on or near the 2101 release timeframe. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
 
@@ -156,9 +153,6 @@ You'll be able to set Automated Device Enrollment (ADE) profiles to hide these S
 - Restore Completed, for iOS/iPadOS 14.0+.
 - Software Update Completed, for iOS/iPadOS 14.0+.
 - Accessibility, for macOS 11+ (the mac device must be connected to an Ethernet).
-
-### Browser access enabled automatically during Android work profile enrollment<!-- 5411101 IDReady -->  
-Soon, during Android Enterprise personally-owned work profile enrollments, browser access will be automatically enabled. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, then click **Enable**. 
 
 <!-- ***********************************************-->
 ## Device management

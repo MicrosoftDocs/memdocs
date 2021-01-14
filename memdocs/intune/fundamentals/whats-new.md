@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/07/2021
+ms.date: 01/14/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,19 +58,35 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
-## Week of January 4, 2021
+## Week of January 11, 2021
 
 ### App management
 
 #### Deleting Win32 apps in a dependency relationship<!-- 8997490 -->
 Win32 apps added to Intune cannot be removed if they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
+#### Scope tag support for customization policies<!--6182440  -->
+You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. This feature is not yet available for Intune for Government or Intune operated by 21Vianet.
+
+<!-- ########################## -->
+## Week of January 4, 2021
+
+### App management
+
+#### Browser access enabled automatically during Android work profile enrollment<!-- 5411101  -->
+
+During new Android Enterprise personally-owned work profile enrollments, browser access is now automatically enabled on the device. With this change, compliant devices can use the browser to access resources that are protected by conditional access without needing to take additional actions. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, and then click **Enable**.
+
+This change has no impact on devices that are already enrolled.
+
+<!-- ########################## -->
 #### Win32 app download progress bar<!-- 5145837 -->
 End users will now see a progress bar in the Windows Company Portal while a Win32 app is being downloaded. This feature will help customers better understand the app installation progress.  
 
 #### Update to Company Portal for Android app icon<!-- 7114401 -->
 We've updated the Company Portal for Android app icon to create a more modern look and feel for device users. To see what the new icon looks like, go to the [Intune Company Portal listing on Google Play](https://go.microsoft.com/fwlink/?linkid=2151341).  
 
+<!-- ########################## -->
 ## Week of December 7, 2020
 
 ### Intune apps
@@ -161,7 +177,7 @@ Applies to:
 To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally-owned devices with a work profile" or *personally-owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
 
 #### Windows Autopilot for HoloLens 2 (preview)<!--6305220   -->
-Windows Autopilot for HoloLens 2 devices is now in public preview. Admins no longer have to register their tenants for flighting. For more information on using Autopilot for HoloLens, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+Windows Autopilot for HoloLens 2 devices is now in public preview. Admins no longer have to register their tenants for flighting. For more information on using Autopilot for HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 #### Ending support for iOS 11<!--7327321  -->
 Intune enrollment and the Company Portal now support iOS versions 12 and later. Older versions aren't supported but will continue to receive policies.
