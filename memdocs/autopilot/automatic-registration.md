@@ -29,7 +29,7 @@ ms.collection:
 ## Requirements
 
 You can automatically register an existing device if it's:
-- running a [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel, and
+- running a [supported version](/windows/release-information/) of Windows 10 semi-annual channel, and
 - enrolled in an MDM service such an Intune
 - a corporate device that is not already registered with Windows Autopilot
 

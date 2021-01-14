@@ -46,7 +46,7 @@ For more information, see [Product feedback](product-feedback.md).
 
 ## Product documentation
 
-To access the most current product documentation, start at the [library index](/mem/configmgr/).
+To access the most current product documentation, start at the [library index](../../index.yml).
 
 For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](../../../use-docs.md).
 

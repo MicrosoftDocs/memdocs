@@ -203,7 +203,7 @@ When you need to uninstall an app from user's devices, use the following steps.
 
 ## App installation errors
 
-For details about Intune app installation errors, see [App installation errors](troubleshoot-app-install.md).
+For details about Intune app installation errors, see [App installation errors](/troubleshoot/mem/intune/troubleshoot-app-install).
 
 ## Next steps
 
