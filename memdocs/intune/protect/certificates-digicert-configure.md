@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -245,30 +245,9 @@ The PKCS certificates you'll deploy for Intune managed devices must be chained w
 
    d. Select **Download root certificate** to download the trusted root certificate.
 
-2. Create a trusted certificate profile in the Intune portal:
+2. Create a trusted certificate profile in the Intune portal. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
 
-   a. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-   b. Select **Devices** > **Configuration profiles** > **Create profile**.
-
-   c. Enter the following properties:
-
-      - **Name** for the profile
-      - Optionally set a **Description**
-      - **Platform** to deploy the profile to
-      - Set **Profile type** to **Trusted certificate**
-
-   d. Select **Settings**, and then browse to the trusted root CA certificate .cer file you exported for use with this certificate profile, and then select **OK**.
-
-   e. For Windows 8.1 and Windows 10 devices only, select the **Destination Store** for the trusted certificate from:
-      - **Computer certificate store - Root**
-      - **Computer certificate store - Intermediate**
-      - **User certificate store - Intermediate**
-
-   f. When you're done, select **OK**, go back to the **Create profile** pane, and select **Create**.  
-
-  The profile appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.  Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
-
+   After you create the profile, it appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.  
 
 ## Get the certificate profile OID  
 
@@ -292,12 +271,17 @@ The certificate profile OID is associated with a certificate profile template in
 
 3. Enter the following properties:
 
-   - **Name** for the profile
-   - Optionally set a **Description**
-   - **Platform** to deploy the profile to
-   - Set **Profile type** to **PKCS certificate**
+   - **Platform**: Choose the platform of your devices.
+   - **Profile**: Select **PKCS certificate**. Or, select **Templates** > **PKCS certificate**.
 
-4. In the **PKCS Certificate** pane, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through Intune Certificate Connector.
+4. Select **Create**.
+
+5. In **Basics**, enter the following properties:
+
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. In **Configuration settings**, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through Intune Certificate Connector.
 
    |PKCS certificate parameter | Value | Description |
    | --- | --- | --- |
@@ -310,10 +294,10 @@ The certificate profile OID is associated with a certificate profile template in
    > [!NOTE]
    > The PKCS certificate profile for Windows platforms doesn't need to associate with a trusted certificate profile. But it is required for non-Windows platform profiles such as Android.
 
-5. Complete the configuration of the profile to meet your business needs, and then select **Create** to save the profile.
+7. Complete the configuration of the profile to meet your business needs, and then select **Create** to save the profile.
 
-6. On the *Overview* page of the new profile, select **Assignments** and configure an appropriate group that will receive this profile. At least one user or device must be part of the assigned group.
- 
+8. On the *Overview* page of the new profile, select **Assignments** and configure an appropriate group that will receive this profile. At least one user or device must be part of the assigned group.
+
 After you complete the previous steps, Intune Certificate Connector will issue PKCS certificates from the DigiCert CA to Intune-managed devices in the assigned group. These certificates will be available in the **Personal** store of the **Current User** certificate store on the Intune-managed device.
 
 ### Supported attributes for the PKCS certificate profile
