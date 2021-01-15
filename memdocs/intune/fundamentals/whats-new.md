@@ -74,7 +74,7 @@ You can now assign scope tags to Customization policies. To do so, go to [Micros
 
 We’ve released a new version of the PFX Certificate Connector, version **6.2009.1.9**. This new connector version:
 
-- Improvements to renewal of the connector.
+- Improvements to the renewal of the connector certificate.
 
 For more information about certificate connectors, including a list of connector releases for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md).
 
