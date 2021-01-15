@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/12/2021
+ms.date: 01/15/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,8 +62,21 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ### App management
 
+#### Deleting Win32 apps in a dependency relationship<!-- 8997490 -->
+Win32 apps added to Intune cannot be removed if they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
 #### Scope tag support for customization policies<!--6182440  -->
 You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. This feature is not yet available for Intune for Government or Intune operated by 21Vianet.
+
+### Device configuration
+
+#### New version of the PFX Certificate Connector<!-- 9139477 -->
+
+We’ve released a new version of the PFX Certificate Connector, version **6.2009.1.9**. This new connector version:
+
+- Improvements to renewal of the connector.
+
+For more information about certificate connectors, including a list of connector releases for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md).
 
 <!-- ########################## -->
 ## Week of January 4, 2021

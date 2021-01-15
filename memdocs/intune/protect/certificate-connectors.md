@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 01/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -190,6 +190,12 @@ Updates for the two certificate connectors are released periodically. When we up
 ### PFX Certificate Connector release history
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
+
+#### January 15, 2021
+
+**Version 6.2009.1.9** - Changes in this release:
+
+- Improvements to renewal of the connector.
 
 #### October 2, 2020
 
