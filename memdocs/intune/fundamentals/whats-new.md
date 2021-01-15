@@ -70,7 +70,7 @@ You can now assign scope tags to Customization policies. To do so, go to [Micros
 
 ### Device configuration
 
-#### New version of the PFX Certificate Connector<!-- 9139477 -->
+#### New version of the PFX Certificate Connector<!-- 9139477 -->  
 
 We’ve released a new version of the PFX Certificate Connector, version **6.2009.1.9**. This new connector version:
 
