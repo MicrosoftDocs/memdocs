@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/14/2021
+ms.date: 01/15/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,16 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 ## Week of January 11, 2021
+
+### Device configuration
+
+#### New version of the PFX Certificate Connector<!-- TBD -->
+
+We’ve released a new version of the PFX Certificate Connector, version **6.2009.1.9**. This new connector version:
+
+- Improvements to renewal of the connector.
+
+For more information about certificate connectors, including a list of connector releases for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md).
 
 ### App management
 
