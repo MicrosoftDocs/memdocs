@@ -23,7 +23,7 @@ The **Third-Party Software Update Catalogs** node in the Configuration Manager c
 
 
 ## Prerequisites 
-- Sufficient disk space on the top-level software update point's WSUSContent folder to store the source binary content for third-party software updates.
+- Sufficient disk space on the top-level software update point's WSUS Content folder to store the source binary content for third-party software updates.
     - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
     - If you need to move the WSUSContent folder to another drive with more free space, see the [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog post.
 - The third-party software update synchronization service requires internet access.
