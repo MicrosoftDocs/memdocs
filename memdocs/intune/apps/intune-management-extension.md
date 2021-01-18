@@ -133,6 +133,8 @@ The Intune management extension has the following prerequisites. Once they're me
 
         > [!NOTE]
         > PowerShell scripts in Intune can be targeted to Azure AD device security groups or Azure AD user security groups.
+        > However, when targeting workplace joined (WPJ) devices, only Azure AD device security groups can be used (user targeting will be ignored). Further details are
+          available [here](https://docs.microsoft.com/en-us/mem/intune/fundamentals/whats-new#win32-app-support-for-workplace-join-wpj-devices-).
 
     2. Select **Next**.
 
