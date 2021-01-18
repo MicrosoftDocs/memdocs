@@ -70,10 +70,9 @@ The Intune management extension has the following prerequisites. Once they're me
   
 - Devices joined to Azure Active Directory (AD), including:  
   
-  - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+  - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AAD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
   
-  > [!TIP]
-  > Be sure devices are [joined](/azure/active-directory/user-help/user-help-join-device-on-network) to Azure AD. Devices that are only [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD won't receive your scripts.  
+- Azure AD registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), as described [here](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS). TYpically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.    
 
 - Devices enrolled in Intune, including:
 
