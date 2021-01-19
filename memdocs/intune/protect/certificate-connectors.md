@@ -195,7 +195,7 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 
 **Version 6.2009.1.9** - Changes in this release:
 
-- Improvements to renewal of the connector.
+- Improvements to the renewal of the connector certificate.
 
 #### October 2, 2020
 
