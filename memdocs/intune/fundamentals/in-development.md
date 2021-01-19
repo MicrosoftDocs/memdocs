@@ -7,8 +7,8 @@ description: Microsoft Intune features in development
 keywords:
 author: ErikjeMS 
 ms.author: erikje
-manager: dou/geby
-ms.date: 01/08/2021
+manager: dougeby
+ms.date: 12/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
