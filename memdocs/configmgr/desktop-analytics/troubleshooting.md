@@ -84,7 +84,7 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
     - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
 
-    - **Supported account types**: **Accounts in this organizational directory only (Contoso)**
+    - **Supported account types**: **Accounts in this organizational directory only (Contoso only - Single tenant)**
 
     - **Redirect URI (optional)**: **Web**  
 
@@ -94,14 +94,19 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
 3. Select the app, note the **Application (client) ID** and **Directory (tenant) ID**. The values are GUIDs that are used to configure the Configuration Manager connection.  
 
-4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
+4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. 
+
+    > [!TIP]
+    > If you select an expiration date other than **Never**, take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service. 
+
+5. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
     > [!Important]  
-    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
+    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.   
     >
     > Save the key value in a secure location.  
 
-5. In the **Manage** menu, select **API permissions**.  
+6. In the **Manage** menu, select **API permissions**.  
 
     1. On the **API permissions** panel, select **Add a permission**.  
 
@@ -113,7 +118,7 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
     5. Select **Add permissions**.  
 
-6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
+7. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
 
 #### Import app in Configuration Manager
 

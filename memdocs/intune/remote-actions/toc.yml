@@ -62,7 +62,7 @@
   - name: Troubleshooting
     items:
     - name: Troubleshoot device actions
-      href: troubleshoot-device-actions.md    
+      href: /troubleshoot/mem/intune/troubleshoot-device-actions
 
 - name: Resources
   items:

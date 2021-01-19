@@ -66,7 +66,7 @@ Be sure the file is less than 1 MB and has a proper unicode encoding. If the exp
 
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
-    - **MDM Support**: Shows the percentage of group policy settings in the GPO that has the same setting in Intune.
+    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
 

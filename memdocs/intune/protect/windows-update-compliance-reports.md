@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 01/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -89,7 +89,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune. Instead, it's collected through Endpoint analytics, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
-To enable data collection through [Endpoint analytics](/mem/analytics/overview) in the Microsoft Endpoint Manager admin center, enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
+To enable data collection through [Endpoint analytics](../../analytics/overview.md) in the Microsoft Endpoint Manager admin center, enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
 
 ### Enable data collection
 
@@ -120,7 +120,7 @@ To enable data collection through [Endpoint analytics](/mem/analytics/overview) 
 It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.  
 
 > [TIP]  
-> If you use [Endpoint Analytics](/mem/analytics/overview), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+> If you use [Endpoint Analytics](../../analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
 
 ### About reporting data latency
 
@@ -316,15 +316,15 @@ The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendo
 
 For example, you can use the following values in **Add or edit OMA-URI Setting**:
 
-- **Setting Name**: Windows Analytics Commercial ID
-- **Setting Description**: Configuring commercial ID for Windows Analytics solutions
-- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
-- **Data Type**: String
-- **Value**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
+- **Setting Name**: Update Compliance Commercial ID
+- **Setting Description**: Configure devices with the Commercial ID for Update Compliance solutions
+- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID`
 
-> [!NOTE]
-> For more information about MS DM Server, see [DMClient configuration service provider (CSP)](/windows/client-management/mdm/dmclient-csp).
+  For more information about this configuration service provider (CSP) and the Provider ID *MS DM Server*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
+- **Data Type**: Select *String*. When you String, you can then specify a Value.
+- **Value**: Specify the GUID for your *CommercialID*, which you get from your Update Compliance Settings in Microsoft Azure.
 
+ 
 ## Next steps
 
 [Manage software updates in Intune](windows-update-for-business-configure.md)
