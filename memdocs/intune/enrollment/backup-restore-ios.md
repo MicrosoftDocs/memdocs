@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/29/2020
+ms.date: 01/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
