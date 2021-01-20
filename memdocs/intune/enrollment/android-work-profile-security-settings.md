@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,7 +41,7 @@ For personally-owned work profile devices, there are two recommended security co
 - [Personally-owned work profile high security (level 3)](#personally-owned-work-profile-high-security) 
 
 > [!Note]
-> Because of the settings available for personaly-owned work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
+> Because of the settings available for personally-owned work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
 
 ## Personally-owned work profile basic security
 
@@ -51,7 +51,7 @@ Level 1 is the recommended minimum security configuration for personal devices w
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Require the device to be at or under the machine risk score | Not configured ||
+| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Not configured ||
 | Device Health | Rooted devices | Block ||
 | Device Health | Require the device to be at or under the Device Threat Level | Not configured||
 | Device Health | Google Play Services is configured | Require ||
@@ -115,7 +115,7 @@ Level 1 is the recommended minimum security configuration for personal devices w
 ## Personally-owned work profile high security
 
 Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries merit the additional constraints described below. This configuration expands upon the configuration in Level 1 by:
-- implementing mobile threat defense or Microsoft Defender ATP.
+- implementing mobile threat defense or Microsoft Defender for Endpoint.
 - restricting personally-owned work profile data scenarios.
 - enacting stronger password policies.
 
@@ -125,8 +125,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender ATP. For more information, see Enforce compliance for [Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p>Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both. |
-| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both.|
+| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both. |
+| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both.|
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 8.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 8.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
 | System Security | Number of days until password expires | 365 | Organizations may need to update this setting to match their password policy. |
 | System Security | Number of previous passwords to prevent use | 5 | Organizations may need to update this setting to match their password policy. |

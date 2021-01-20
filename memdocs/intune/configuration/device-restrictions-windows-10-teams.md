@@ -3,12 +3,12 @@
 
 title: Surface Hub Windows 10 Team device restrictions in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Use Intune to add or configure Surface Hub devices settings running Windows 10 Team.
+description: Add or configure Surface Hub devices settings running Windows 10 Team. Add a wake up screen, create a maintenance window, use Miracast, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,10 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 Team settings to allow or restrict features on Surface Hub devices using Intune
 
-This article shows you the Microsoft Intune device restrictions settings that you can configure for devices running Windows 10 Team, including the Surface Hub devices.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+This article describes some of the Microsoft Intune device restrictions settings that you can configure for devices running Windows 10 Team, including the Surface Hub devices.
 
 ## Before you begin
 
