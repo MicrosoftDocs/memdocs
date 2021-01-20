@@ -17,6 +17,8 @@
   items:
   - name: Profile overview
     href: device-profile-create.md
+  - name: Settings catalog
+    href: settings-catalog.md
   - name: Custom settings
     displayName: oma-uri, csp
     items:

@@ -32,14 +32,18 @@ This article applies to:
 - Windows 10 and newer
 - Microsoft Edge version 77 and newer
 
+  For Microsoft Edge version 45 and earlier, see [Microsoft Edge Browser device restrictions](device-restrictions-windows-10.md#microsoft-edge-browser).
+
 When you use Intune to manage and enforce policies, it's similar to using Active Directory group policy, or configuring local Group Policy Object (GPO) settings on user devices. But, Intune is 100% cloud.
 
 This article shows you how to configure Microsoft Edge policy settings using administrative templates in Microsoft Intune.
 
 > [!TIP]
-> For information on managing Microsoft Edge version 45 and earlier, see [Manage web access by using Microsoft Edge with Intune](../apps/manage-microsoft-edge.md). It may have information and references that don't apply to Microsoft Edge Enterprise version 77 and newer.
->
-> For information on how to configure Microsoft Edge on macOS using Intune, see [Configure for macOS](/DeployEdge/configure-microsoft-edge-on-mac).
+> 
+> -  For information on adding the Microsoft Edge version 77+ app on Windows 10, see [Add Edge app on Windows 10 devices](../apps/apps-windows-edge.md).
+> -  For information on adding and configuring Microsoft Edge version 77+ app on macOS, see [Add Edge app](../apps/apps-edge-macos.md), and [Configure Edge app using plist](/DeployEdge/configure-microsoft-edge-on-mac).
+> -  For a list of the Microsoft Edge updates, including new policies, see the [Release notes for Microsoft Edge](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
+> 
 
 ## Prerequisites
 
