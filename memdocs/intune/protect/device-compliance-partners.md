@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 12/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,8 +47,10 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 ## Supported device compliance partners
 
-In public preview:
+The following partners are supported as generally available:
 
+- JAMF Pro
+- MobileIron Device Compliance On-prem
 - VMware Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites
@@ -76,7 +78,7 @@ Enable support for a device compliance partner to use compliance state data from
 
    - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
 
-   Next, select the drop-down for **Platform**, and select the platform. macOS is not supported with this preview.
+   Next, select the drop-down for **Platform**, and select the platform. macOS is not supported.
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 
@@ -105,7 +107,7 @@ Your configuration now appears on the Partner compliance management page.
    To manually sync from Azure Services:
    1. Sign in to your VMware Workspace ONE UEM console.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
-   3. For *Sync Azure Services*, click **SYNC**.
+   3. For *Sync Azure Services*, select **SYNC**.
 
       All the changes you’ve made since the initial configuration or the last manual synchronization are synchronized from Azure Services to UEM.  
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,7 +38,7 @@ For more information on this feature, see [Upgrade Windows 10 editions or enable
 
 ## Before you begin
 
-[Create the profile](edition-upgrade-configure-windows-10.md#create-the-profile).
+Create a [Windows 10 edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
 
 ## Edition upgrade
 

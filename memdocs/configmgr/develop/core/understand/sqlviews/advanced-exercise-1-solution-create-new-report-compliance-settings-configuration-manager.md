@@ -19,7 +19,7 @@ manager: dougeby
 Use the following procedure to create the report in [Advanced exercise 1: Create a new report for compliance settings in Configuration Manager](advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md).
 
 > [!NOTE]
-> Depending on your experience at creating SQL reports, there are numerous paths you can use to create a report. You can use your preferred method of creating reports if you prefer.
+> Depending on your experience at creating SQL Server reports, there are numerous paths you can use to create a report. You can use your preferred method of creating reports if you prefer.
 
 ## To create the status of configuration baselines deployed to a specified computer report
 

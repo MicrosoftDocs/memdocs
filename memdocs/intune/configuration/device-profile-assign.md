@@ -24,7 +24,7 @@ ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, contperfq1
+ms.custom: intune-azure, contperf-fy21q1
 ms.collection: M365-identity-device-management
 ---
 
@@ -39,7 +39,7 @@ This article shows you how to assign a profile, and includes some information on
 >
 > To change a setting to a different value, create a new profile, configure the setting to **Not configured**, and assign the profile. Once applied to the device, users should have control to change the setting to their preferred value.
 >
-> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/planning-guide-rollout-plan.md).
+> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/intune-planning-guide.md).
 
 ## Before you begin
 

@@ -117,7 +117,7 @@ For more information about permissions and assigning roles, see [Manage access t
     > [!TIP]
     > You can also use the [Azure portal](https://portal.azure.com) to check the status, find errors, and determine potential fixes.
 
-1. When the deployment finishes, go to your SQL servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
+1. When the deployment finishes, go to your SQL Servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
 
 1. To add the Azure VM as a site server in passive mode, select **Add site server in passive mode**.
 
@@ -129,11 +129,11 @@ For more information about permissions and assigning roles, see [Manage access t
 
 ## Site database
 
-The tool doesn't currently have any tasks to migrate the database from on-premises to Azure. You can choose to move the database from an on-premises SQL server to an Azure SQL Server VM. The tool lists the following articles on the **Site Database** tab to help:
+The tool doesn't currently have any tasks to migrate the database from on-premises to Azure. You can choose to move the database from an on-premises SQL Server to an Azure SQL Server VM. The tool lists the following articles on the **Site Database** tab to help:
 
 - [Backup and restore the database](../servers/manage/backup-and-recovery.md)
-- [Configure SQL Always On and allow the data to replicate](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup)
-- [Migrate a SQL database to an Azure SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+- [Configure a SQL Server Always On availability group and allow the data to replicate](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup)
+- [Migrate a SQL Server database to an Azure SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
 
 ## Site system roles
 

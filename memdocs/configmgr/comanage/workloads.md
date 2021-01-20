@@ -107,6 +107,8 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 - There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager.  
 
+Updates can be managed using [Administrative Templates in Microsoft Endpoint Manager](/intune/configuration/administrative-templates-update-office) or [Software Update management in Microsoft Endpoint Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates).
+
 For more information on the Intune feature, see [Assign Microsoft 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365).
 
 ## Client apps
@@ -116,6 +118,9 @@ For more information on the Intune feature, see [Assign Microsoft 365 apps to Wi
 Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
 For more information on the Intune feature, see [What is Microsoft Intune app management?](/intune/app-management).
+
+> [!NOTE]
+> In Windows 10 version 1903 and later, PowerShell scripts still run on co-managed devices even if you haven't switched the **Client Apps** workload to Intune.
 
 > [!Tip]  
 > This feature was first introduced in version 1806 as a [pre-release feature](../core/servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  

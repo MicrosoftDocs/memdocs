@@ -2,7 +2,7 @@
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
 description: "Troubleshoot client details for Configuration Manager tenant attach"
-ms.date: 07/08/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -25,13 +25,13 @@ Use the following to troubleshoot ConfigMgr client details in the Microsoft Endp
 
 When viewing the ConfigMgr client details, you may run across one of these errors.  
 
-### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
+### <a name="bkmk_intune"></a> You don’t have access to view this information
+<!--7980141-->
+**Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Error message:** The necessary configuration is missing in Azure Active Directory. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Azure AD.
+**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 
-**Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
-
-### <a name="bkmk_noinfo"></a> Unable to get device or collection information
+### <a name="bkmk_noinfo"></a> Unable to get device information
 
 **Error message 1:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
@@ -39,7 +39,7 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
@@ -62,16 +62,19 @@ When viewing the ConfigMgr client details, you may run across one of these error
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
 1. Verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
+1. Verify the device is in the security scope for the administrator's security role. For more information, see [Fundamentals of role-based administration](../core/understand/fundamentals-of-role-based-administration.md).
+
+### Results timed out
+
+**Scenario**: You see a timeout error in the admin center.<!-- 8974697 -->
+
+**Possible causes**:
+
+- Make sure the hierarchy is still tenant-attached and connected. For more information, see the **CMGatewayNotificationWorker.log** file.
+
+- Your network proxy or firewall is blocking required URLs. For more information, see [Internet endpoints](device-sync-actions.md#internet-endpoints).
 
 ## Known issues
-
-### Getting results timed out
-
-**Scenario:** If you have a remote service connection point and you installed 2002 early update ring before March 30, 2020, you'll see a timeout error in the admin center.
-
-**Error message:** Getting results timed out. Make sure the Configuration Manager service connection point is operational and has a connection to the cloud.
-
-**Workaround:** Copy the `Microsoft.ConfigurationManagement.ManagementProvider.dll` from site server's `bin\x64` folder to the remote service connection point's `bin\x64` folder.  Restart the `SMS_EXECUTIVE` service on the service connection point server.
 
 ### Boundary groups list is empty
 

@@ -2,7 +2,7 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 02/07/2020
+ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -51,18 +51,20 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > [!NOTE]
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
-    >   - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
-    >   - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
+    > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
+    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
 
-- Both site servers must be joined to the same Active Directory domain.  
+- Both site servers must be joined to the same Active Directory domain.
+
+- Both site servers must be have **Full Control** permissions to Active Directory's **System - System Management** container and all descendant objects. 
 
 - Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
 
 - Both site servers must use the same site database.  
 
-  - The database can be remote from each site server. Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
+  - The database can be remote from each site server. The Configuration Manager setup process doesn't blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
 
-  - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](use-a-sql-server-cluster-for-the-site-database.md), or a [SQL Server Always On availability group](sql-server-alwayson-for-a-highly-available-site-database.md).  
+  - The SQL Server that hosts the site database can use a default instance, named instance, [failover cluster instance](use-a-sql-server-cluster-for-the-site-database.md), or an [availability group](sql-server-alwayson-for-a-highly-available-site-database.md).
 
   - Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
 
@@ -248,3 +250,17 @@ When you have a site server in passive mode, monitor it daily. Make sure its Sta
 
 > [!NOTE]
 > When you update the site to a new version of Configuration Manager, it also updates the site server in passive mode. <!-- SCCMDocs-pr#4293 -->
+
+## Remove a site server in passive mode
+
+<!-- 8918311 -->
+
+The process to remote a site server in passive mode is the same as any site system role. Remove the **Site server** role from the server in passive mode. For more information, see [Procedure to remove a site system role](../install/uninstall-sites-and-hierarchies.md#procedure-to-remove-a-site-system-role).
+
+When you remove any other site system role, the site component manager (sitecomp) processes the request. When you remove a site server in passive mode, the failover manager processes the request. For status, monitor the **SMS_FAILOVER_MANAGER** component.
+
+## Next steps
+
+[Flowchart - Set up a site server in passive mode](passive-site-server-flowchart.md)
+[Flowchart - Promote site server (planned)](promote-site-server-flowchart.md)
+[Flowchart - Promote site server (unplanned)](promote-site-server-unplanned-flowchart.md)

@@ -87,7 +87,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.** Turns on and runs the real-time monitoring service.
 
 - **Enable on access protection**  
-  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
+  CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
   Configure virus protection that's continuously active, as opposed to on demand.
 
@@ -96,7 +96,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.**
 
 - **Monitoring for incoming and outgoing files**  
-  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+  CSP: [Defender/RealTimeScanDirection](/windows/client-management/mdm/policy-csp-defender)
 
   Configure this setting to determine which NTFS file and program activity is monitored.
   - **Monitor all files (bi-directional).** (*default*)
@@ -104,7 +104,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Monitor outgoing files.**
 
 - **Turn on behavior monitoring**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+  CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
   By default, Defender on Windows 10 desktop devices uses the Behavior Monitoring functionality.
 
@@ -118,7 +118,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.**
 
 - **Scan all downloaded files and attachments**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   Configure Defender to scan all downloaded files and attachments.
 
@@ -127,7 +127,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.**
 
 - **Scan scripts that are used in Microsoft browsers**  
-  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
+  CSP: [AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender)
 
   Configure Defender to scan scripts.
 
@@ -136,7 +136,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.**
 
 - **Scan network files**  
-  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
+  CSP: [AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
   Configure Defender to scan network files.
 
@@ -145,7 +145,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.** Scans network files.
 
 - **Scan emails**  
-  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+  CSP: [AllowEmailScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
   Configure Defender to scan incoming email.
 
@@ -156,7 +156,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 ## Remediation
 
 - **Number of days (0-90) to keep quarantined malware**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
+  CSP: [DaysToRetainCleanedMalware](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
   Specify a number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and does not automatically remove them.
 
@@ -169,7 +169,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Send all samples automatically.**
 
 - **Action to take on potentially unwanted apps**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
+  CSP: [PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
 
@@ -184,7 +184,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Not Configured**
 
 - **Actions for detected threats**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
+  CSP: [ThreatSeverityDefaultAction](/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
   Specify the action that Defender takes for detected malware based on the malware's threat level.
   
@@ -207,7 +207,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 ## Scan
 
 - **Scan archive files**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
+  CSP: [AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
   Configure Defender to scan archive files, like ZIP or CAB files.
 
@@ -217,7 +217,7 @@ Learn more
   - **Allowed.** Scans the archive files.
 
 - **Enable low CPU priority for scheduled scans**  
-  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
+  CSP: [EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)
 
   Configure CPU priority for scheduled scans.
   - **Not configured** (*default*) - The setting returns to the system default, in which no changes to CPU priority are made.
@@ -225,7 +225,7 @@ Learn more
   - **Enabled**
 
 - **Disable catch-up full scan**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
+  CSP: [DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupfullscan)
 
   Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that starts because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
@@ -234,7 +234,7 @@ Learn more
   - **Enabled**
 
 - **Disable catchup quick scan**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
+  CSP: [DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupquickscan)
 
   Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that starts because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
@@ -243,12 +243,12 @@ Learn more
   - **Enabled**
 
 - **CPU usage limit (0-100 percent) per scan**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
+  CSP: [AvgCPULoadFactor](/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)
 
   Specify as a percent from zero to 100, the average CPU load factor for the Defender scan.
 
 - **Enable mapped network drives be scanned during a full scan**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
+  CSP: [AllowFullScanOnMappedNetworkDrives](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
   Configure Defender to scan mapped network drives.
 
@@ -257,13 +257,13 @@ Learn more
   - **Allowed.** Scans mapped network drives.
 
 - **Run daily quick scan at**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
+  CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
   Select the time of day that Defender quick scans run.
   By default, this option is **Not configured**
 
 - **Scan type**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
+  CSP: [ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
 
   Select the type of scan that Defender runs.
 
@@ -295,7 +295,7 @@ Learn more
 ## Updates
 
 - **Enter how often (0-24 hours) to check for security intelligence updates**  
-  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  CSP: [SignatureUpdateInterval](/windows/client-management/mdm/policy-csp-defender)
 
   Specify the interval from zero to 24 (in hours) that is used to check for signatures. A value of zero results in no check for new signatures. A value of 2 will check every two hours, and so on.
 

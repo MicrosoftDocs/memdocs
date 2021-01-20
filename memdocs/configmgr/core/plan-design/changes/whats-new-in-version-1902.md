@@ -10,8 +10,7 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
@@ -93,7 +92,7 @@ When you install or update to version 1902, Configuration Manager setup now incl
 <!--3735092-->
 Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service.
 
-For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#bkmk_stop).
+For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#stop-cmg-when-it-exceeds-threshold).
 
 ### Use Azure Resource Manager for cloud services
 
@@ -117,7 +116,7 @@ For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-c
 ### Run CMPivot from the central administration site
 
 <!--3610960-->
-Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
+Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL Server replication between sites.
 
 For more information, see [CMPivot for real-time data](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
@@ -428,9 +427,9 @@ For more information, see [Configuration Manager console notifications](../../se
 ### Confirmation of console feedback
 
 <!--3556010-->
-When you send [feedback](../../understand/find-help.md#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
+When you send [feedback](../../understand/product-feedback.md) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-For more information, see [Product feedback](../../understand/find-help.md#bkmk_feedbackid).
+For more information, see [Product feedback](../../understand/product-feedback.md#confirmation-of-console-feedback).
 
 ### View recently connected consoles
 

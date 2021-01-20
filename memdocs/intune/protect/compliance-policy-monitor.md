@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 11/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 ---
 # Monitor Intune Device compliance policies
 
-Compliance reports help you review device compliance, and troubleshoot compliance-related issues in your organization. Using these reports, you can view information on:
+Compliance reports help you review device compliance and troubleshoot compliance-related issues in your organization. Using these reports, you can view information on:
 
 - The overall compliance states of devices
 - The compliance status for an individual setting
@@ -71,7 +71,7 @@ Descriptions of the different device compliance policy states:
 
 - **Compliant**: The device successfully applied one or more device compliance policy settings.
 
-- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This means the device is not-compliant, but it's in the grace-period defined by the admin.
+- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace-period defined by the admin.
 
   - Learn more about [Actions for noncompliant devices](actions-for-noncompliance.md).
 
@@ -101,7 +101,7 @@ In the **Device compliance status** chart, select a status. For example, select 
 
 ![Choose the not compliant status](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-That action opens the **Device compliance** window, and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
+That action opens the **Device compliance** window and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
 ![Dashboard image shows more details on the device in that specific state](./media/compliance-policy-monitor/drill-down-details.png)
 
 If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user's e-mail.
@@ -139,7 +139,7 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 - With the **Mark devices with no compliance policy assigned as** security setting, it's important to identify devices without a compliance policy. Then you can assign at least one compliance policy to them.
 
-  The security setting is configurable in the Intune portal. To to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
+  The security setting is configurable in the Intune portal. Go to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
 
   Read more about this [security enhancement in the Intune service](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -170,6 +170,7 @@ In addition to using the charts on *Compliance status*, you can go to **Reports*
    - Devices without compliance policy
    - Setting compliance
    - Policy compliance
+   - Noncompliant policies (preview)
    - Windows health attestation report
    - Threat agent status
 

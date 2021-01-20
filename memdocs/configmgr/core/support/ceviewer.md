@@ -2,7 +2,7 @@
 title: Collection Evaluation Viewer
 titleSuffix: Configuration Manager
 description: Use the Collection Evaluation Viewer to view and troubleshoot the collection evaluation process in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Collection Evaluation Viewer
@@ -19,6 +17,9 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 Collection Evaluation Viewer is one of the [Configuration Manager tools](tools.md). Use it to view and troubleshoot the collection evaluation process on the primary site server.
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2010, this standalone tool is deprecated.<!-- 8509484 --> Its functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
 
 The tool displays the following information:  
 
@@ -83,11 +84,11 @@ Run **CEViewer.exe**. The main menu of the tool contains the following tabs:
 
 ### <a name="bkmk_connect"></a> Connect tab
 
-This tab allows you to establish the initial connection to the primary site server. The tool also establishes a connection to the SQL server that hosts the site database.
+This tab allows you to establish the initial connection to the primary site server. The tool also establishes a connection to the SQL Server that hosts the site database.
 
-The connections to both primary site server and SQL servers use the current signed-in user credential. Connections to the central administration site or a secondary site aren't supported. No collection evaluation process runs on those sites.
+The connections to both primary site server and SQL Servers use the current signed-in user credential. Connections to the central administration site or a secondary site aren't supported. No collection evaluation process runs on those sites.
 
-Once the tool successfully establishes a connection, see a notification at the bottom of the Collection Evaluation Viewer that confirms the tool's connection to the SQL server. 
+Once the tool successfully establishes a connection, see a notification at the bottom of the Collection Evaluation Viewer that confirms the tool's connection to the SQL Server.
 
 
 ### <a name="bkmk_full-eval"></a> Full Evaluation tab

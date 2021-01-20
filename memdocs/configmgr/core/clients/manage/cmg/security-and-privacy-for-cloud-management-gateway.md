@@ -5,7 +5,7 @@ description: Learn about guidance and recommendations for security and privacy w
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -16,7 +16,7 @@ ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 
 *Applies to: Configuration Manager (current branch)*
 
-This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md).
+This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Overview of cloud management gateway](overview.md).
 
 ## CMG security details
 
@@ -49,6 +49,8 @@ The CMG connection point uses the following methods:
 - Reports connection status to show service health status in the console.
 
 - Reports traffic per endpoint every five minutes.
+
+Starting in version 2010, Configuration Manager rotates the storage account key for the CMG. This process happens automatically every 180 days.<!-- 8613077 -->
 
 ### Configuration Manager client-facing roles
 
@@ -91,9 +93,6 @@ This CMG option verifies the client authentication certificate.
 <!--503739-->
 Each Configuration Manager site includes a list of trusted root certification authorities, the certificate trust list (CTL). View and modify the list by going to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select a site, and then select **Properties** in the ribbon. Switch to the **Communication Security** tab, and then select **Set** under Trusted Root Certification Authorities.
 
-> [!Note]
-> In version 1902 and earlier, this tab is called **Client Computer Communication**.<!-- SCCMDocs#1645 -->
-
 Use a more restrictive CTL for a site with a CMG using PKI client authentication. Otherwise, clients with client authentication certificates issued by any trusted root that already exists on the management point are automatically accepted for client registration.
 
 This subset provides administrators with more control over security. The CTL restricts the server to only accept client certificates that are issued from the certification authorities in the CTL. For example, Windows ships with a number of well-known third-party certification authority (CA) certificates, such as VeriSign and Thawte. By default, the computer running IIS trusts certificates that chain to these well-known CAs. Without configuring IIS with a CTL, any computer that has a client certificate issued from these CAs are accepted as a valid Configuration Manager client. If you configure IIS with a CTL that didn't include these CAs, client connections are refused if the certificate chained to these CAs.
@@ -102,15 +101,8 @@ This subset provides administrators with more control over security. The CTL res
 
 <!-- SCCMDocs-pr#4021 -->
 
-Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
+Use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 
 ### Use token-based authentication
 
 Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure AD, and don't have a method to install a PKI-issued certificate. The site automatically issues tokens for devices that register on the internal network. You can create a bulk registration token for internet-based devices. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).<!-- SCCMDocs#2331 -->
-
-## Next steps
-
-- [Plan for cloud management gateway](plan-cloud-management-gateway.md)
-- [Set up cloud management gateway](setup-cloud-management-gateway.md)
-- [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)
-- [Certificates for cloud management gateway](certificates-for-cloud-management-gateway.md)

@@ -1,8 +1,8 @@
 ---
 title: PowerShell scripts for Proactive remediations
 titleSuffix: Configuration Manager
-description: PoserShell script reference for Proactive remediations in Endpoint analytics.
-ms.date: 06/25/2020
+description: PowerShell script reference for Proactive remediations in Endpoint analytics.
+ms.date: 10/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
@@ -14,11 +14,6 @@ manager: dougeby
 
 # PowerShell scripts for Proactive remediations
 
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
-
 Use the following information to create script packages for [Proactive remediations](proactive-remediations.md).
 
 
@@ -28,7 +23,7 @@ This table shows the script names, descriptions, detections, remediations, and c
 
 |Script name|Description|
 |---|---|
-|**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: Yes|
 |**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 |**Update stale Group Policies** (built-in) </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>This script package is included with Proactive remediations, but a copy is provided if you want to change the threshold. Customize the seven day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
@@ -202,36 +197,34 @@ This script package detects if last Group Policy refresh is greater than `7 days
 #
 # Script Name:     Detect_stale_Group_Policies.ps1
 # Description:     Detect if Group Policy has been updated within number of days
-# Notes:           Remediate if "Match", $numDays default value of 7, change as appropriate
+# Notes:           Remediate if "Match", $lastGPUpdateDays default value of 7, change as appropriate
 #
 #=============================================================================================================================
 
 # Define Variables
-$numDays = 7
 
 try {
-    $gpResult = gpresult /R | Select-String -pattern "Last time Group Policy was applied:" | Select-Object -last 1
-
-    if ($gpResult){
+    $gpResult = [datetime]::FromFileTime(([Int64] ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeHi) -shl 32) -bor ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeLo))
+    $lastGPUpdateDate = Get-Date ($gpResult[0])
     [int]$lastGPUpdateDays = (New-TimeSpan -Start $lastGPUpdateDate -End (Get-Date)).Days
-        if ($lastGPUpdateDays -gt $numDays){
-            #We want within last $numDays so we get "Match"
-            Write-Host "Match"
-            exit 1
-        }
-        else {
-            #Script succeeds but > $numDays since last update so remediate
-            #Exit 1 for Intune and "Match" for ConfigMan
-            Write-Host "No_Match"
-            exit 0
-        }
+        
+    if ($lastGPUpdateDays -gt 7){
+        #Exit 1 for Intune. We want it to be within the last 7 days "Match" to remediate in SCCM
+        Write-Host "Match"
+        exit 1
+    }
+    else {
+        #Exit 0 for Intune and "No_Match" for SCCM, only remediate "Match"
+        Write-Host "No_Match"
+        exit 0
     }
 }
 catch {
     $errMsg = $_.Exception.Message
-    Write-Error $errMsg
+    return $errMsg
     exit 1
 }
+
 ```
 
 ### Remediate_stale_GroupPolicies.ps1
@@ -245,14 +238,23 @@ catch {
 #
 #=============================================================================================================================
 
-try{
-    $compGP = gpupdate /target:computer /force | out-string
-    $userGP = gpupdate /target:user /force | out-string
-    exit 0
+try {
+    $compGPUpd = gpupdate /force
+    $gpResult = [datetime]::FromFileTime(([Int64] ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeHi) -shl 32) -bor ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeLo))
+    $lastGPUpdateDate = Get-Date ($gpResult[0])
+    [int]$lastGPUpdateDays = (New-TimeSpan -Start $lastGPUpdateDate -End (Get-Date)).Days
+
+    if ($lastGPUpdateDays -eq 0){
+        Write-Host "gpupdate completed successfully"
+        exit 0
+    }
+    else{
+        Write-Host "gpupdate failed"
+        }
 }
 catch{
     $errMsg = $_.Exception.Message
-    Write-Error $errMsg
+    return $errMsg
     exit 1
 }
 ```

@@ -3,7 +3,7 @@ title: Security and privacy for software updates
 titleSuffix: "Configuration Manager"
 description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -38,7 +38,9 @@ This topic contains security and privacy information for software updates in Con
 
 -   Enable SSL on WSUS and follow the best practices for securing Windows Server Update Services (WSUS).  
 
-     Identify and follow the security best practices for the version of WSUS that you use with Configuration Manager.  
+     Identify and follow the security best practices for the version of WSUS that you use with Configuration Manager. 
+
+     For more information on enabling SSL, see the [Configure a software update point to use TLS/SSL with a PKI certificate tutorial](../get-started/software-update-point-ssl.md). 
 
     > [!IMPORTANT]  
     >  If you configure the software update point to enable SSL communications for the WSUS server, you must configure virtual roots for SSL on the WSUS server.  

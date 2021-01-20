@@ -85,9 +85,9 @@ For more information about the Windows Insider program, see [Getting started wit
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates. Choose either Semi-Annual Channel (Targeted), Semi-Annual Channel, or a Windows Insider build.
 
         > [!NOTE]
-        > Deploy policies for **Semi-Annual Channel (Targeted)** to Windows 10, *version 1903 or later*. Deploy policies for **Semi-Annual Channel** to Windows 10, *version 1809 or earlier*.
+        > Deploy policies for **Semi-Annual Channel** to Windows 10, *version 1903 or later*. Deploy policies for **Semi-Annual Channel (Targeted)** to Windows 10, *version 1809 or earlier*.
         >
-        > If you deploy a policy for **Semi-Annual Channel** to Windows 10, version 1903 or later, the deployment fails with the error **0x8004100c**.<!-- 5593139 -->
+        > If you deploy a policy for **Semi-Annual Channel (Targeted)** to Windows 10, version 1903 or later, the deployment fails with the error **0x8004100c**.<!-- 5593139 -->
 
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for up to 365 days from their release.
     - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.

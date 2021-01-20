@@ -27,7 +27,7 @@ This article provides the steps in Configuration Manager to upgrade the OS on a 
 - Is faster and more resilient than traditional OS deployments
 
 > [!Note]  
-> The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
+> The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet. For more information, see [Deploy Windows 10 in-place upgrade via CMG](deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
 
 
 ## Supported versions
@@ -59,7 +59,7 @@ For more information, see [Windows 10 upgrade paths](/windows/deployment/upgrade
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 
-For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
+For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview).
 
 
 ## <a name="BKMK_Plan"></a> Plan  

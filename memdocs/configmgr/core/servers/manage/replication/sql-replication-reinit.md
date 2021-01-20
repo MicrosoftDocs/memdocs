@@ -1,26 +1,24 @@
 ---
-title: SQL replication reinit
+title: SQL Server replication reinit
 titleSuffix: Configuration Manager
-description: Use this diagram to start troubleshooting SQL replication reinitialization between Configuration Manager sites
+description: Use this diagram to start troubleshooting SQL Server replication reinitialization between Configuration Manager sites
 ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: ce4a1ca8-6433-4447-819f-19dd5faa6f46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
 
-# SQL replication reinit
+# SQL Server replication reinit
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
+In a multi-site hierarchy, Configuration Manager uses SQL Server replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
-Use the following diagram to start troubleshooting SQL replication reinitialization (reinit):
+Use the following diagram to start troubleshooting SQL Server replication reinitialization (reinit):
 
-![Diagram to troubleshoot SQL replication reinit](media/sql-replication-reinit.svg)
+![Diagram to troubleshoot SQL Server replication reinit](media/sql-replication-reinit.svg)
 
 ## Queries
 
@@ -64,4 +62,4 @@ AND rg.ReplicationPattern=N'Site'
 
 - [Global data reinit](global-data-reinit.md)
 - [Site data reinit](site-data-reinit.md)
-- [SQL configuration](sql-configuration.md)
+- [SQL Server configuration](sql-configuration.md)

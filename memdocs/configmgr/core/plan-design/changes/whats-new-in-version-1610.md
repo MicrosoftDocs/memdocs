@@ -245,7 +245,7 @@ For details, see [Configuration items for devices managed without the Configurat
 - **Minutes of inactivity before password is required**
 - **Remember password history**
 
-### New settings for Mac OS X devices
+### New settings for macOS X devices
 #### Password settings
 - **Number of complex characters required in password**
 - **Allow simple passwords**

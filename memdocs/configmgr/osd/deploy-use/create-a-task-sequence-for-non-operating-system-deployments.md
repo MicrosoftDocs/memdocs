@@ -2,7 +2,7 @@
 title: Create a task sequence for non-OS deployments
 titleSuffix: Configuration Manager
 description: Create task sequences that aren't for deploying an OS, such as distributing software or automating tasks
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -22,6 +22,8 @@ Task sequences in Configuration Manager are used to automate different kinds of 
 
     > [!NOTE]
     > Starting in version 2002, install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. For more information, see [Create Windows applications](../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).<!-- 3555953 -->
+
+    Starting in version 2010, use the task sequence deployment type of an application to deploy a task sequence to a user-based collection.<!-- 8018255 -->
 
 - [Software updates installation](../../sum/understand/software-updates-introduction.md)
 

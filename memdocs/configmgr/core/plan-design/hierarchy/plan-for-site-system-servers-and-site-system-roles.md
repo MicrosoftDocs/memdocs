@@ -103,7 +103,7 @@ Each certificate registration point requires access to a separate NDES instance.
 
 ### Cloud management gateway connection point
 
-A site system role for communicating with the [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).  
+A site system role for communicating with the [cloud management gateway](../../clients/manage/cmg/overview.md).  
 
 ### Data warehouse service point
 

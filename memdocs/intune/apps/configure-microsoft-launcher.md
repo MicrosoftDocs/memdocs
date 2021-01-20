@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 12/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,7 +66,7 @@ The following table lists the Microsoft Launcher available configuration keys, v
 
 |    Configuration Key    |    Value type    |    Default value    |    Description     |
 |---------------------------------------------------|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Enrollment Type    |    String     |    Default    |    Allows you to set   the enrollment type this policy should apply to. Currently, the value **Default** refers to **CorporateOwnedBuisnessOnly**. There are no other supported   enrollment types at present.        JSON key name: management_mode_key        |
+|    Enrollment Type    |    String     |    Default    |    Allows you to set   the enrollment type this policy should apply to. Currently, the value **Default** refers to **CorporateOwnedBusinessOnly**. There are no other supported   enrollment types at present.        JSON key name: management_mode_key        |
 |    Home Screen App Order User Change   Allowed    |    Boolean    |    True    |    Allows you to specify if the **Home Screen App Order** setting can be changed by the end user.<ul><li>If set to **True**, the app order defined in the policy will only be enforced for the initial deployment. Subsequently, the policy will not be enforced to respect any changes the user may have made.</li><li>If set to **False**, the app order will be enforced on every sync.</li></ul><br>**Note:** The Home Screen App order can only be configured via the JSON editor.<br><br>JSON key name:<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
 |    Set Grid Size    |    String    |    Auto    |    Allows you to   set the grid size for apps to be positioned on the home screen. You can set   the number of app rows and columns to define grid size in the following format: `columns;rows`. If you   define the grid size, the maximum number of apps that will be shown in a row   on the home screen would be the number of rows you set and the maximum number   of apps that will be shown in a column in the home screen would be the number   of columns you set.<br><br>        JSON key name:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
 |    Set Device Wallpaper    |    String    |    Null    |    Allows you to set a wallpaper of your choice by   entering the URL of the image that you want to set as a wallpaper.<br><br>JSON key name:<br>`com.microsoft.launcher.Wallpaper.URL`    |

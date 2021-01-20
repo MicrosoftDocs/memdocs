@@ -39,9 +39,9 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
 - In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
 
-- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+- Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/configure-authentication.md#bkmk_mphttps).
 
-- Optionally set up a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
+- Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Azure AD, you don't need a CMG.  
 
 > [!TIP]
 > Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
@@ -53,6 +53,9 @@ Connect your Configuration Manager site to Azure AD as the first step. For detai
 Enable [Azure AD User Discovery](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc) as part of onboarding to **Cloud Management**.
 
 After you complete these actions, your Configuration Manager site is connected to Azure AD.
+
+> [!NOTE]
+> If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. For more information, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
 
 ## Configure client settings
 

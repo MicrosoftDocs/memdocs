@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 08/21/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -103,7 +103,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
         - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
 
-        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](encrypt-recovery-data.md).
+        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
 
     For more information on these and other settings on this page, see [Settings reference - Client management](../../tech-ref/bitlocker/settings.md#client-management).
 
@@ -130,7 +130,9 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 > [!IMPORTANT]
-> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins.
+> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
+> Alternatively, you can remotely connect to the console session of the device via the remote desktop protocol using the `/admin` switch. For example:
+> `mstsc.exe /admin /v:<IP Address of device>`
 
 Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
@@ -166,9 +168,12 @@ Use the following logs to monitor and troubleshoot:
 
 The BitLocker recovery service is a server component that receives BitLocker recovery data from Configuration Manager clients. The site deploys the recovery service when you create a BitLocker management policy. Configuration Manager automatically installs the recovery service on each management point with an HTTPS-enabled website.
 
-Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text.
+Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
 
-For more information, see [Encrypt recovery data](encrypt-recovery-data.md).
+Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When domain-joined clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
+
+> [!IMPORTANT]
+> The message processing engine channel only escrows keys for OS and fixed drive volumes. It currently doesn't support recovery keys for removable drives or the TPM password hash.
 
 ## Migration considerations
 
@@ -195,6 +200,8 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - If you need to migrate this information to the Configuration Manager recovery service, clear the TPM on the device. After it restarts, it will upload the new TPM password hash to the recovery service.
 
+Uploading of the TPM password hash mainly pertains to versions of Windows prior to Windows 10. Windows 10 by default does not save the TPM password hash so therefore does not normally upload the TPM password hash. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
+
 ### Re-encryption
 
 Configuration Manager doesn't re-encrypt drives that are already protected with BitLocker Drive Encryption. If you deploy a BitLocker management policy that doesn't match the drive's current protection, it reports as non-compliant. The drive is still protected.
@@ -209,12 +216,13 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
 
-When you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption) .
+> [!NOTE]
+> Switching encryption management authorities while maintaining the desired encryption algorithm doesn't require any additional actions on the client. However, if you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption).
 
 For more information about managing BitLocker with Intune, see the following articles:
 
 - [Use device encryption with Intune](../../../../intune/protect/encrypt-devices.md)
-- [Troubleshoot BitLocker policies in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
+- [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 
 ## Next steps
 

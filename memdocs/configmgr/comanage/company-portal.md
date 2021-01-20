@@ -116,7 +116,12 @@ To help troubleshoot issues with installation of Configuration Manager apps, go 
 
 ### <a name="bkmk_ver-prereq"></a> I'm using Configuration Manager version 2002, why is the new Company Portal showing Configuration Manager apps?
 
-Company Portal version 11.0.8980.0 or later shows Configuration Manager-deployed applications for all co-managed clients that use it. Configuration Manager version 2006 is the prerequisite because it adds the client setting to control notifications. If you install the Company Portal on a co-managed device of a earlier version or don't configure the client setting, then users will see notifications from both portals. This experience may be confusing for users.
+Company Portal version 11.0.8980.0 or later shows Configuration Manager-deployed applications for all co-managed clients that use it. Configuration Manager version 2006 is the prerequisite because it adds the client setting to control notifications. If you install the Company Portal on a co-managed device of a earlier version or don't configure the client setting, it causes behavior that may be confusing to users. Notifications from Configuration Manager launch Software Center, while notifications from Intune launch the Company Portal.
+
+Microsoft recommends:
+
+- Use Company Portal version 11.0.8980.0 or later on co-managed clients running Configuration Manager version 2006 or later.
+- Configure the client setting **Select the user portal** to **Company Portal**
 
 ### Does Company Portal support applications deployed as software updates from Configuration Manager?
 

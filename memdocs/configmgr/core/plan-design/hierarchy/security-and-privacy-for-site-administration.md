@@ -2,7 +2,7 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 04/27/2020
+ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Security and privacy for site administration in Configuration Manager
@@ -209,7 +207,7 @@ When you increase the access to the Configuration Manager site database server, 
 
 ### Configure SQL Server to use Windows authentication
 
-Although Configuration Manager accesses the site database by using a Windows account and Windows authentication, it's still possible to configure SQL Server to use SQL Server mixed mode. SQL Server mixed mode allows additional SQL sign-ins to access the database. This configuration isn't required and increases the attack surface.  
+Although Configuration Manager accesses the site database by using a Windows account and Windows authentication, it's still possible to configure SQL Server to use SQL Server mixed mode. SQL Server mixed mode allows additional SQL Server sign-ins to access the database. This configuration isn't required and increases the attack surface.  
 
 ### Update SQL Server Express at secondary sites
 
@@ -225,7 +223,7 @@ Periodically run Windows Update for all installed versions of SQL Server. This p
 
 Identify and follow the general guidance for your version of SQL Server. However, take into consideration the following requirements for Configuration Manager:  
 
-- The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision administrator principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Users group.  
+- The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision administrator principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Server Users group.  
 
 - If you install SQL Server by using a domain user account, make sure that the site server computer account is configured for a Service Principal Name (SPN) that's published to Active Directory Domain Services. Without the SPN, Kerberos authentication fails and Configuration Manager setup fails.  
 
@@ -297,6 +295,15 @@ For example, remove the following virtual directories for a distribution point:
 
 Identify and follow the general guidance for your version of IIS Server. Take into consideration any requirements that Configuration Manager has for specific site system roles. For more information, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).  
 
+### Configure IIS custom headers
+
+Configure the following custom headers to disable MIME sniffing:<!-- 8540255 -->
+
+`x-content-type-options: nosniff`
+
+For more information, see [Custom Headers](/iis/configuration/system.webserver/httpprotocol/customheaders).
+
+If other services use the same IIS instance, make sure these custom headers are compatible.
 
 ## <a name="BKMK_Security_ManagementPoint"></a> Security guidance for the management point
 

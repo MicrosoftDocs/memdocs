@@ -39,10 +39,10 @@ Steps to workaround, if any.
 
 ### <a name="ki_sqlncli"></a> Clients don't automatically update
 <!--518760-->
-When updating to version 1806.2, the site also updates the SQL Native Client, which may cause a pending restart on the site server. This delay causes certain files to not update, which impacts automatic client upgrade.
+When updating to version 1806.2, the site also updates the SQL Server Native Client, which may cause a pending restart on the site server. This delay causes certain files to not update, which impacts automatic client upgrade.
 
 #### Workarounds
-Avoid this issue by manually upgrading the SQL Native Client *before updating* Configuration Manager to version 1806.2. For more information, see the [latest servicing update for SQL Server 2012 Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
+Avoid this issue by manually upgrading the SQL Server Native Client *before updating* Configuration Manager to version 1806.2. For more information, see the [latest servicing update for SQL Server 2012 Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
 
 If you already updated your site, automatic client upgrade and client push won't work. You need to update clients to fully test most new features. Manually update your technical preview clients using the following process:  
 

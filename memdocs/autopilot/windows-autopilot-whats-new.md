@@ -3,7 +3,7 @@ title: Windows Autopilot what's new
 ms.reviewer: 
 manager: laurawi
 description: Read news and resources about the latest updates and past versions of Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
+keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -13,6 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: article
 ---
@@ -23,12 +24,18 @@ ms.topic: article
 **Applies to**
 
 - Windows 10
+- Windows Holographic, version 2004
 
-## Windows Autopilot update history
 
-The following [Windows Autopilot updates](autopilot-update.md) are available. **Note**: Updates are automatically downloaded and applied during the Windows Autopilot deployment process. 
+## Windows Autopilot for HoloLens 2
 
-No updates are available yet. Check back here later for more information.
+Windows Autopilot now enables you to configure HoloLens 2 devices! For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+
+## Feature name change
+
+September, 2020
+
+The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in our documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in [this article](pre-provision.md).
 
 ## New in Windows 10, version 2004
 
@@ -38,7 +45,7 @@ If you configure the language settings in the Autopilot profile and the device i
 
 ## New in Windows 10, version 1903
 
-[Windows Autopilot for white glove deployment](white-glove.md) is new in Windows 10, version 1903. See the following video:
+[Windows Autopilot pre-provisioning](pre-provision.md) is new in Windows 10, version 1903. See the following video:
 
 <br>
 

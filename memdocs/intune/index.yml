@@ -36,15 +36,21 @@ conceptualContent:
   items:
     - title: Plan for Intune adoption
       links:
-        - url: ./fundamentals/planning-guide.md
-          itemType: concept
-          text: Intune planning guide 
         - url: ./fundamentals/migration-guide.md
           itemType: concept
-          text: Intune migration guide
-        - url: ./fundamentals/migration-guide-communication-plan.md
+          text: Overview
+        - url: ./fundamentals/intune-planning-guide.md
           itemType: concept
-          text: Communication plan for your users
+          text: Planning guide
+        - url: ./fundamentals/deployment-guide-enrollment-android.md
+          itemType: concept
+          text: Android enrollment guide
+        - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
+          itemType: concept
+          text: iOS/iPadOS enrollment guide
+        - url: ./fundamentals/deployment-guide-enrollment-windows.md
+          itemType: concept
+          text: Windows enrollment guide
       footerLink:
         text: See more
         url: ./fundamentals/index.yml          
@@ -183,7 +189,7 @@ conceptualContent:
         url: ./apps/index.yml            
     - title: Help and support
       links:
-        - url: ./fundamentals/get-support.md
+        - url: ../get-support.md
           itemType: concept
           text: How to get support for Microsoft Intune?
         - url: ./fundamentals/help-desk-operators.md
@@ -192,10 +198,10 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: concept
           text: Use audit logs to track and monitor events
-        - url: ./apps/troubleshoot-app-install.md
+        - url: /troubleshoot/mem/intune/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: ./configuration/troubleshoot-policies-in-microsoft-intune.md
+        - url: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
     - title: Developer
@@ -249,7 +255,7 @@ additionalContent:
       - title: Azure Active Directory
         links: 
         - text: User management documentation
-          url: /azure/active-directory/users-groups-roles/
+          url: /azure/active-directory/fundamentals/active-directory-manage-groups
         - text: Authentication documentation
           url: /azure/active-directory/authentication/
         - text: Device identity documentation
@@ -261,7 +267,7 @@ additionalContent:
         # Card
         - title: Intune technical forums
           summary: Ask technical questions in the product forums
-          url: https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc
+          url: /answers/products/mem
         # Card
         - title: UserVoice product feedback
           summary: Share product ideas with the engineering team
@@ -279,4 +285,4 @@ additionalContent:
           summary: Get help on the Intune Customer Success site  
           url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
 
-  footer: "Have feedback or want to contribute to docs? [See this resource](./fundamentals/use-docs.md)!"
+  footer: "Have feedback or want to contribute to docs? [See this resource](../use-docs.md)!"

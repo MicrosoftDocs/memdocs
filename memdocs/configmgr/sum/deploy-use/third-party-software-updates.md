@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 04/29/2019
+ms.date: 01/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -10,18 +10,16 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
-# Enable third-party updates 
+# Enable third-party updates
 
 *Applies to: Configuration Manager (current branch)*
 
-Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
+The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
 > [!Note]  
-> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+> In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
 ## Prerequisites 
@@ -234,11 +232,13 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
      - For more information, see status messages 11523 and 11524 in the below status message table.
 -  When the third-party software update synchronization service on the top-level software update point requires a proxy server for internet access, digital signature checks may fail. To mitigate this issue, configure the WinHTTP proxy settings on the site system. For more information, see [Netsh commands for WinHTTP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
+- If the catalog provider has changed the catalog’s signing certificate since you last approved it or subscribed, the catalog sync will fail until the certification is approved in the **Certificates** node. For more information, see MessageID 11508 in [status messages](#status-messages) table.
 
 ## Status messages
 
 | MessageID       | Severity           | Description | Possible cause| Possible solution
 | ------------- |-------------| -----|----|----|
+|11508 | Error| Failure when checking signature for catalog &lt;catalog name> to WSUS. Make sure the catalog is subscribed and the catalog certificate &lt;certificate> is not blocked.  See SMS_ISVUPDATES_SYNCAGENT.log for further details.|The signing certification on the catalog may have changed since it was originally subscribed or last approved.|Make sure to review and approve the certificate in the **Certificates** node to allow the catalog to synchronize.|
 | 11516     | Error |Failed to publish content for update "Update ID" because the content is unsigned.  Only content with valid signatures can be published.  |Configuration Manager doesn't allow unsigned updates to be published.| Publish the update in an alternate way. </br></br>See if a signed update is available from the vendor.|
 | 11523  | Warning |  Catalog "X" does not include content signing certificates, attempts to publish update content for updates from this catalog may be unsuccessful until content signing certificates are added and approved. | This message can occur when you import a catalog that is using an older version of the cab file format.|Contact the catalog provider to obtain an updated catalog that includes the content signing certificates. </br> </br> The certificates for the binaries aren't included in the cab file so the content will fail to publish. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.|
 | 11524| Error  | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager.| Synchronize the update with Configuration Manager before attempting to publish it's content.  </br> </br>If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content.|

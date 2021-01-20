@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -90,7 +90,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Android enterprise**.
+    - **Platform**: Select **Android Enterprise**.
     - **Profile**: Select **OEMConfig**.
 
 4. Select **Create**.
@@ -151,7 +151,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
 
 > [!NOTE]
-> The OEMConfig standard doesn't currently include status reporting. So, by default, profiles show a **Pending** status.
+> Intune currently shows the status of an OEMConfig policy based on OEMConfig app install status. For example, a **Success** status on an OEMConfig profile means that the corresponding OEMConfig app for that profile was successfully installed on the device.
 
 ## Supported OEMConfig apps
 
@@ -163,6 +163,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | --- | --- | ---|
 | Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
+| Bartec | com.bartec.oemconfig | |
 | Bluebird | com.bluebird.android.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
@@ -172,6 +173,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Lenovo | com.lenovo.oemconfig.rel | |
 | LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Motorola | com.motorolasolutions.lexoemconfig | |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |

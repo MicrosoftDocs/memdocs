@@ -24,9 +24,12 @@ In the Desktop Analytics portal, view the status of security and feature updates
 
 ## Security updates
 
+> [!IMPORTANT]
+> Starting in December 2020, this tile and page are deprecated.<!-- 8509484 --> They'll be retired in March 2021. To monitor your devices' Windows updates and Microsoft Defender status, use [Update Compliance](/windows/deployment/update/update-compliance-get-started).
+
 To review the current status of security updates, select **Security updates** in the **Monitor** section of Desktop Analytics:
 
-![Security updates node of Desktop Analytics](media/security-updates.png)
+:::image type="content" source="media/security-updates.png" alt-text="Security updates node of Desktop Analytics" lightbox="media/security-updates.png":::
 
 This view summarizes *security* updates for devices that are running Windows 10. Devices in the bar chart are categorized by the following labels:
 
@@ -56,16 +59,11 @@ To review the deployment status for security updates, select **See all**. This v
 - Needs attention - Devices (sorted by device name)
 - Needs attention - Issues (sorted by issue type)
 
-To show devices with new information that the service is still processing, select **View recent data**. Desktop Analytics will show this information after its next full data refresh.
-
-  > [!IMPORTANT]
-  > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
-
 ## Feature updates
 
 To review the current status of feature updates, select **Feature updates** in the **Monitor** section of Desktop Analytics:
 
-![Feature updates node of Desktop Analytics](media/feature-updates.png)
+:::image type="content" source="media/feature-updates.png" alt-text="Feature updates node of Desktop Analytics" lightbox="media/feature-updates.png":::
 
 This view summarizes *feature* updates for devices that are running Windows 10.
 

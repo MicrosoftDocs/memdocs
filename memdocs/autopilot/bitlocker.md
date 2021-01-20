@@ -12,8 +12,9 @@ ms.localizationpriority: medium
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
-ms.topic: article
+ms.topic: how-to
 ---
 
 

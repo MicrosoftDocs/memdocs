@@ -111,7 +111,7 @@ In Configuration Manager 1802, the following insights are available:
 
 ### Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. For more information, see [CMG topology design](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
+When creating an instance of the [cloud management gateway](../../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. For more information, see [CMG topology design](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
 > [!IMPORTANT]
 > This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -125,7 +125,6 @@ When creating an instance of the [cloud management gateway](../../clients/manage
     - [Cloud management gateway size and scale numbers](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Security and privacy for cloud management gateway](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
     - [Frequently asked questions about the cloud management gateway](../../clients/manage/cmg/cloud-management-gateway-faq.md)
-    - [Certificates for cloud management gateway](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)
     - [Set up cloud management gateway](../../clients/manage/cmg/setup-cloud-management-gateway.md)  
 
 
@@ -196,7 +195,7 @@ Starting in this release, when a user requests an application that requires appr
 
 ### Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
-The Windows 10 [in-place upgrade task sequence](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](../../../osd/deploy-use/deploy-a-task-sequence.md).
+The Windows 10 [in-place upgrade task sequence](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../../clients/manage/cmg/overview.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. For more information, see [Deploy a task sequence](../../../osd/deploy-use/deploy-a-task-sequence.md).
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->

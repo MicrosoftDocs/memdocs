@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 08/11/2020
+ms.date: 01/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -408,16 +408,13 @@ Specify the product key to use for the Windows installation on the destination c
 
 #### Server licensing
 
-Specify the server licensing mode.
-
-- Select **Per server** or **Per user** as the licensing mode.  
-- If you select **Per server**, also specify the maximum number of connections permitted per your license agreement.  
-- If the destination computer isn't a server, or you don't want to specify the licensing mode, select **Do not specify**.  
+> [!NOTE]
+> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 --> Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.<!-- 7035424 -->
 
 #### Maximum connections
 
 > [!NOTE]
-> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 -->
+> This setting only applies to legacy versions of Windows that are no longer supported.<!-- #4833 --> Starting in version 2010, the setting is no longer visible in the task sequence editor. Existing task sequences that still use this setting will continue to function the same.<!-- 7035424 -->
 
 #### Randomly generate the local administrator password and disable the account on all supported platforms (recommended)  
 
@@ -646,7 +643,7 @@ If you want to save and restore user state settings from a state migration point
 
 This step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options using the **OSDMigrateAdditionalCaptureOptions** task sequence variable.  
 
-This task sequence step runs only in Windows PE. It doesn't run in the full OS.  
+This task sequence step runs in either Windows PE or the full OS.
 
 To add this step in the task sequence editor, select **Add**, select **User State**, and select **Capture User State**.
 
@@ -940,7 +937,7 @@ To add this step in the task sequence editor, select **Add**, select **Disks**, 
 
 ### Variables for Disable BitLocker
 
-Starting in version 1906, use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:  
 
 - [OSDBitLockerRebootCount](task-sequence-variables.md#OSDBitLockerRebootCount)  
 - [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride)  
@@ -969,7 +966,7 @@ Disables BitLocker on a specific drive. Use the drop-down list to specify the dr
 #### Resume protection after Windows has been restarted the specified number of times
 
 <!-- 4512937 -->
-Starting in version 1906, use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15.
+Use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15.
 
 You can set and modify this behavior with the task sequence variables [OSDBitLockerRebootCount](task-sequence-variables.md#OSDBitLockerRebootCount) and [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride).
 
@@ -1091,8 +1088,9 @@ If the hard drive is already encrypted, but BitLocker is disabled, then the **En
 
 Use the following task sequence variables with this step:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### Cmdlets for Enable BitLocker
 
@@ -1348,7 +1346,7 @@ This setting specifies that the step continues when an individual application in
 #### Clear application content from cache after installing
 
 <!--4485675-->
-Starting in version 1906, delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
+Delete the app content from the client cache after the step runs. This behavior is beneficial on devices with small hard drives or when installing lots of large apps in succession.
 
 
 ### Options for Install Application
@@ -1587,12 +1585,20 @@ Use this step to remove or configure the Configuration Manager client on the ref
 
 This step completely removes the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured OS image, it installs a new Configuration Manager client each time.  
 
-> [!Note]  
-> The task sequence engine only removes the client during the **Build and capture a reference operating system image** task sequence. The task sequence engine doesn't remove the client during other capture methods, such as capture media or a custom task sequence.  
+> [!TIP]
+> By default, the task sequence engine only removes the client during the **Build and capture a reference operating system image** task sequence. The task sequence engine doesn't remove the client during other capture methods, such as capture media or a custom task sequence. You can overide this behavior for an OS deployment task sequence. Set the task sequence variable **SMSTSUninstallCCMClient** to **TRUE** before the **Prepare ConfigMgr Client for Capture** step. This variable and behavior only applies to OS deployment task sequences. It removes the client after the next restart of the device.
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Prepare ConfigMgr Client for Capture**.
+
+
+### Variables for Prepare ConfigMgr Client for Capture
+
+Use the following task sequence variables with this step:  
+
+- SMSTSUninstallCCMClient
+
 
 ### Cmdlets for Prepare ConfigMgr Client for Capture
 
@@ -1942,7 +1948,7 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [OSDDoNotLogCommand](task-sequence-variables.md#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
+- [OSDDoNotLogCommand](task-sequence-variables.md#OSDDoNotLogCommand)<!--3654172-->  
 - [SMSTSDisableWow64Redirection](task-sequence-variables.md#SMSTSDisableWow64Redirection)  
 - [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName)  
 - [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword)  
@@ -2046,7 +2052,7 @@ The script must meet the following criteria:
 
 - It shouldn't interact with the desktop. The script must run silently or in an unattended mode.  
 
-- It must not initiate a restart on its own. The sscript must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the script does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.
+- It must not initiate a restart on its own. The script must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the script does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.
 
 This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](../get-started/manage-boot-images.md).  
 
@@ -2062,7 +2068,7 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
+- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters)<!--3556028-->  
 - [SMSTSRunPowerShellAsUser](task-sequence-variables.md#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
 - [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)  
 - [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)  
@@ -2094,7 +2100,7 @@ Specifies the name of the PowerShell script to run. This field is required.
 #### Enter a PowerShell script
 
 <!-- 3556028 -->
-Starting in version 1902, directly enter Windows PowerShell code in this step. This feature lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
+Directly enter Windows PowerShell code in this step. This feature lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
 When you add or edit a script, the PowerShell script window provides the following actions:  
 
@@ -2143,7 +2149,7 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 #### Output to task sequence variable
 
 <!-- 3556028 -->
-Starting in version 1902, save the script output to a custom task sequence variable.
+Save the script output to a custom task sequence variable.
 
 > [!Note]  
 > Starting in version 1910, Configuration Manager limits this output to the last 1000 characters.
@@ -2153,7 +2159,7 @@ For an example of how to use this step property, see [How to set variables](usin
 #### Start in
 
 <!-- 3556028 -->
-Starting in version 1902, specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
+Specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
 
 > [!NOTE]  
 > The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.  
@@ -2161,7 +2167,7 @@ Starting in version 1902, specify the starting folder for the script, up to 127 
 #### Time-out
 
 <!-- 3556028 -->
-Starting in version 1902, specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
+Specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
 
 > [!IMPORTANT]  
 > If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.  
@@ -2169,7 +2175,7 @@ Starting in version 1902, specify a value that represents how long Configuration
 #### Run this step as the following account
 
 <!-- 3556028 -->
-Starting in version 1902, specify that the PowerShell script is run as a Windows user account other than the Local System account.  
+Specify that the PowerShell script is run as a Windows user account other than the Local System account.  
 
 > [!NOTE]  
 > To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.  
@@ -2177,7 +2183,7 @@ Starting in version 1902, specify that the PowerShell script is run as a Windows
 #### Account
 
 <!-- 3556028 -->
-Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The specified account must be a local administrator on the system and the script runs with the permissions of this account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
+Specify the Windows user account this step uses to run the PowerShell script. The specified account must be a local administrator on the system and the script runs with the permissions of this account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
@@ -2189,7 +2195,7 @@ Besides the default options, configure the following additional settings on the 
 #### Success codes
 
 <!-- 3556028 -->
-Starting in version 1902, include other exit codes from the script that the step should evaluate as success.
+Include other exit codes from the script that the step should evaluate as success.
 
 
 
@@ -2226,7 +2232,7 @@ Consider the following points when you add a child task sequence to a task seque
 
 ### Cmdlets for Run Task Sequence
 
-Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#1118 -->
+Manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#1118 -->
 
 - [Get-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/get-cmtsstepruntasksequence)
 - [New-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/new-cmtsstepruntasksequence)

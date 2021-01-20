@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,6 +57,8 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 ## EDR profiles
 
+### Devices managed by Intune
+
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
 
 **Intune** – The following are supported for devices you manage with Intune:
@@ -64,10 +66,9 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 - Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
 - Profile: **Endpoint detection and response (MDM)**
 
-**Configuration Manager** - The following are supported for devices you manage with Configuration Manager:
+### Devices managed by Configuration Manager
 
-- Platform: **Windows 10 and Windows Server (ConfigMgr)** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
-- Profile: **Endpoint detection and response (ConfigMgr)**
+[!INCLUDE [EDR policy prerequisites](../includes/tenant-attach-edr-prerequisites.md)]
 
 ## Set up Configuration Manager to support EDR policy
 
@@ -123,13 +124,6 @@ The following are supported for devices you manage with Intune:
 - Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
   - Profile: **Endpoint detection and response (MDM)**
 
-### Devices managed by Configuration Manager *(In preview)*
-
-The following are supported for devices you manage with Configuration Manager through the *tenant attach* scenario:
-
-- Platform: **Windows 10 and Windows Server (ConfigMgr)** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
-  - Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
-
 ## Create and deploy EDR policies
 
 When you integrate your Microsoft Defender ATP subscription with Intune, you can create and deploy EDR policies. There are two distinct types of EDR policy you can create. One policy type for devices you manage with Intune through MDM. The second type is for devices you manage with Configuration Manager.
@@ -138,6 +132,10 @@ You choose the type of policy to create while configuring a new EDR policy, by c
 
 Before you can deploy policy to devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Endpoint Manager admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
+> [!TIP]
+> In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender ATP. However, device configuration policies don't support tenant attached devices.
+>
+> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender ATP), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ### Create EDR policies
 

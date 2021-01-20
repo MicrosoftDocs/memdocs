@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 12/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -75,29 +75,33 @@ Depending on the carrier used by the devices, not all details might be collected
 
 |Detail|Description|Platform| 
 |--------------|----------------------|----|  
-|Name|The name of the device.|Windows, iOS|
-|Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, iOS|
+|Name|The name of the device.|Windows, iOS, Android|
+|Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, iOS, Android|
 |UDID|The device's Unique Device identifier.|Windows, iOS|
-|Intune Device ID|A GUID that uniquely identifies the device.|Windows, iOS|
-|Serial number|The device's serial number from the manufacturer.|Windows, iOS|
+|Intune Device ID|A GUID that uniquely identifies the device.|Windows, iOS, Android|
+|Serial number|The device's serial number from the manufacturer.|Windows, iOS, Android|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
 |User approved enrollment|If **Yes**, then the device has user approved enrollment that lets admins manage certain security settings on the device.|Windows, iOS|
-|Operating system|The operating system used on the device.|Windows, iOS|
-|Operating system version|The version of the operating system on the device.|Windows, iOS|
-|Operating system language|The language set for the operating system on the device.|Windows, iOS|
+|Operating system|The operating system used on the device.|Windows, iOS, Android|
+|Operating system version|The version of the operating system on the device.|Windows, iOS, Android|
+|Operating system language|The language set for the operating system on the device.|Windows, iOS,Android|
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
+| PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
+| Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
+| Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
+| Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 |IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, iOS/iPadOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android*|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/>Phone number isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
 |Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
-|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android|
+|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
@@ -110,7 +114,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
+> For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

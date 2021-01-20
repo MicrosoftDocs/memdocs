@@ -88,7 +88,7 @@ If you update the site before you update the Windows ADK, see [Update distributi
 **Review the site and hierarchy status and verify that there are no unresolved issues:** 
 Before you update a site, resolve all operational issues for the site server, the site database server, and site system roles that are installed on remote computers. A site update can fail due to existing operational problems.
 
-For more information, see [Use alerts and the status system for Configuration Manager](use-alerts-and-the-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 **Review file and data replication between sites:**   
 Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update.
@@ -104,8 +104,8 @@ Configuration Manager cannot successfully update a primary site that has a datab
 
 For more information, see [Database replicas for management points for Configuration Manager](../deploy/configure/database-replicas-for-management-points.md).
 
-**Set SQL Server AlwaysOn availability groups to manual failover:**   
-If you use an availability group, ensure that the availability group is set to manual failover before you start the update installation. After the site has  updated, you can restore failover to be automatic. For more information see [SQL Server AlwaysOn for a site database](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+**Set SQL Server Always On availability groups to manual failover:**   
+If you use an availability group, ensure that the availability group is set to manual failover before you start the update installation. After the site has  updated, you can restore failover to be automatic. For more information see [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 **Reconfigure software update points that use NLBs:**   
 Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.

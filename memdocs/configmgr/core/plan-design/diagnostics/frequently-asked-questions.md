@@ -42,7 +42,7 @@ No. Diagnostics and usage data is only sent after the site is installed and oper
 
 ## <a name="bkmk_frequency"></a> How frequently is the data sent?
 
-The SQL stored procedures run every seven days from the date you installed the site.
+The SQL Server stored procedures run every seven days from the date you installed the site.
 
 - In online mode, the service connection point uploads the data after the queries run.
 
@@ -54,9 +54,9 @@ No. This data doesn't include any network details, such as IP addresses or detai
 
 The data does include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy.
 
-## <a name="bkmk_tables"></a> Can you see data in custom SQL tables?
+## <a name="bkmk_tables"></a> Can you see data in custom SQL Server tables?
 
-No. Configuration Manager collects diagnostics and usage data via SQL stored procedures. These stored procedures run against default product tables in the database. All of these SQL tables are prefixed with **TEL_**. As part of the SQL schema detection query, all table names are hashed for comparison against the known defaults. This behavior determines that custom tables exist in the database. The presence of custom tables informs Microsoft that you extended the database schema from the default. It doesn't include any of the data stored within those tables.
+No. Configuration Manager collects diagnostics and usage data via SQL Server stored procedures. These stored procedures run against default product tables in the database. All of these SQL Server tables are prefixed with **TEL_**. As part of the SQL Server schema detection query, all table names are hashed for comparison against the known defaults. This behavior determines that custom tables exist in the database. The presence of custom tables informs Microsoft that you extended the database schema from the default. It doesn't include any of the data stored within those tables.
 
 ## <a name="bkmk_databases"></a> Can you see other databases?
 

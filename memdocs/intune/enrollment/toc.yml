@@ -65,7 +65,7 @@
       displayName: wpj
     - name: Connect Intune to Android Enterprise
       href: connect-intune-android-enterprise.md
-    - name: Android Enterprise work profile enrollment
+    - name: Android personally-owned work profile enrollment
       href: android-work-profile-enroll.md
     - name: Android Enterprise dedicated device enrollment
       href: android-kiosk-enroll.md
@@ -81,7 +81,7 @@
       href: android-enterprise-overview.md 
     - name: Enroll Android Enterprise corporate-owned work profile devices
       href: android-corporate-owned-work-profile-enroll.md       
-    - name: Move device administrator devices to work profile management
+    - name: Move device administrator devices to personally-owned work profile management
       href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
       href: android-samsung-knox-mobile-enroll.md
@@ -96,7 +96,7 @@
           href: device-enrollment-restrictions.md
         - name: Set app configuration policies
           href: android-app-configuration-policies.md
-        - name: Android work profile security settings
+        - name: Android personally-owned work profile security settings
           href: android-work-profile-security-settings.md
         - name: Android fully managed-security settings
           href: android-fully-managed-security-settings.md         
@@ -106,6 +106,8 @@
     - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-ios.md
       displayName: dep; ade; bulk enroll
+    - name: Back up and restore
+      href: backup-restore-ios.md      
     - name: User and Device enrollment
       items:
       - name: Create the profile
@@ -129,13 +131,13 @@
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment
-      href: troubleshoot-device-enrollment-in-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
       displayName: sso    
     - name: Troubleshoot iOS/iPadOS device enrollment
       href: troubleshoot-ios-enrollment-errors.md
     - name: Troubleshoot Windows device enrollment
-      href: troubleshoot-windows-enrollment-errors.md
+      href: /troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors
     - name: Troubleshoot Windows auto-enrollment
       href: troubleshoot-windows-auto-enrollment.md
     - name: Troubleshoot Android device enrollment
-      href: troubleshoot-android-enrollment.md
+      href: /troubleshoot/mem/intune/troubleshoot-android-enrollment

@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 07/28/2020
+ms.date: 01/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -15,11 +15,6 @@ manager: dougeby
 
 
 # <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 The sections below can be used to assist in troubleshooting issues you may come across.
 
@@ -45,41 +40,21 @@ This issue impacts co-managed devices. Devices enrolled only via Intune or only 
 **Workaround:**
 The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
 
-### Startup processes data not available for some devices
+### Some Servers are appearing in Endpoint analytics reports
 
-Startup processes data, which power the "time to responsive desktop" insights, may not be available for some devices that are enrolled via Configuration Manager.
-
-**Impacted devices:** 
-If a device is enrolled in Endpoint analytics via Configuration Manager and machine local time is set to a time zone "behind" UTC (such as UTC-7), startup processes will not be available for that device. Co-managed devices and devices enrolled via Intune are not impacted by this issue.
-
-**Mitigation:**
-This issue is resolved in the Configuration Manager version 2002 update rollup (available around mid-July).
-
-### Device suddenly stops showing boot or logon events
-
-Devices enrolled via Configuration Manager may stop sending boot and logon events to Endpoint analytics if the device's event log is cleared. This can occur when a user manually triggers the action or after certain events, such as a Windows feature update.
-
-**Impacted devices:** 
-Only devices enrolled via Configuration Manager are impacted. 
-
-**Mitigation:**
-This issue is resolved in the Configuration Manager version 2002 update rollup (available around mid-July).
-
-### OS Version is not appearing for some devices
-
-Some devices may not show a value for OS Version in the [**All devices** blade of the Microsoft Endpoint Manager admin console](../configmgr/tenant-attach/device-sync-actions.md#perform-device-actions). 
+Some devices running Windows Server are unexpectedly appearing in Endpoint analytics reports, such as **Startup performance** and **Recommended software**.
 
 **Impacted devices:**
-Devices enrolled via Configuration Manager that contained null values for certain OS version properties at the time of onboarded are impacted.
+This issue impacts some Windows Server devices that are managed by Configuration Manager with tenant attach enabled.
 
 **Mitigation:**
-While some devices may not show OS Version data in the **All devices** view, up-to-date OS version information is available for any individual device in the **User experience** blade for that device. This is accessible from the **Startup performance** report in Endpoint Analytics by selecting the **Device performance** tab and then clicking on any device name.
+This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
 
-The fix for this issue is available in the Configuration Manager version 2002 update rollup (available around mid-July).
+### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
-### Error code -2016281112 (Remediation failed)
-
-There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
+  - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+  - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
 ### Hardware inventory may fail to process
 <!--7535675-->
@@ -97,11 +72,7 @@ Rollback transaction: XXXX
 
 ### Script requirements for Proactive remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
-- Encoded in UTF-8 not UTF-8 BOM
-- Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
-   - Currently, the encoding and line breaks are a known issue.
+If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
@@ -115,7 +86,7 @@ First, ensure devices meet the prerequisites:
 For Intune or co-managed devices configured with the Intune data collection policy:
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
 1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
-   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information see the [Error code -2016281112](#bkmk_2016281112) section.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
 1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
@@ -201,6 +172,10 @@ The scripts exit with a code of 1 to signal to Intune that remediation should oc
 
 0x87D00321 is a script execution timeout error. This error typically occurs with machines that are connected remotely. A potential mitigation might be to only deploy to a dynamic collection of machines that have internal network connectivity.
 
+### What is the output size limit for proactive remediation scripts?
+
+The maximum allowed output size limit for proactive remediation scripts is 2048 characters.
+
 ## Next steps
 
-For more information on changes to Endpoint analytics, see [What's new](whats-new.md).
+Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.

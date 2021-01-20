@@ -1,8 +1,8 @@
 ---
-title: What is Endpoint analytics (preview)?
+title: What is Endpoint analytics?
 titleSuffix: Configuration Manager
-description: Overview for Endpoint analytics preview.
-ms.date: 08/12/2020
+description: Overview for Endpoint analytics.
+ms.date: 10/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -13,14 +13,9 @@ manager: dougeby
 #Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
 ---
 
-# <a name="bkmk_overview"></a> What is Endpoint analytics (preview)?
+# <a name="bkmk_overview"></a> What is Endpoint analytics?
 
-Endpoint analytics is part of the [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score). These analytics give you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and proactively make changes without disrupting end users or generating a help desk ticket. For more information on the Microsoft Productivity Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).
-
-> [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
->
-> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
+Endpoint analytics is part of the [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score). These analytics give you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and proactively make changes without disrupting end users or generating a help desk ticket. For more information on the Microsoft Productivity Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/en-us/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).<!-- see MEMDocs#955, this link requires "en-us" locale -->
 
 ## Endpoint analytics overview
 
@@ -40,24 +35,23 @@ This initial release, focuses on three things:
 - [**Proactive remediation scripting**](proactive-remediations.md): Fix common support issues before end-users notice issues
 - [**Start up performance**](startup-performance.md): Help IT get users from power-on to productivity quickly without lengthy boot and sign in delays
 
-This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
-
 ## <a name="bkmk_prereq"></a> Prerequisites
 
-For this preview, you can enroll devices via Configuration Manager or Microsoft Intune.
+You can enroll devices via Configuration Manager or Microsoft Intune.
 
-### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune, this preview requires:
+### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune requires:
 - Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
-   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro and Windows 10 long-term servicing channel (LTSC) aren't supported.
+   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) and isn't supported.
+      -  Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+      - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
-   - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
-### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
-- Configuration Manager version 2002 or newer
-- Clients upgraded to version 2002 or newer
+### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager requires:
+- A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
+- The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 - [Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager](enroll-configmgr.md#bkmk_cm_upload).
 
@@ -69,10 +63,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 
 ## Licensing Prerequisites
 
-Endpoint analytics is included in the following plans:
-
-- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+Devices enrolled in Endpoint analytics need a valid Microsoft Endpoint Manager license. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 Proactive remediations also require one of the following licenses for the managed devices:
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
@@ -83,12 +74,21 @@ Proactive remediations also require one of the following licenses for the manage
 
 ### Endpoint analytics permissions
 
-The following permissions are used for Endpoint analytics:
-- **Read** under the **Device configurations** category.
-- **Read** under the **Organization** category. <!--temporary for pp-->
-- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
+[!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 
-A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+### Built-in role permissions
+
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
+
+|Role name|Azure Active Directory role|Intune role|Endpoint analytics permissions|
+|---|---|---|---|
+|Global Administrator|Yes||Read/write|
+|Intune Service Administrator|Yes||Read/write|
+|School Administrator||Yes|Read/write|
+|Endpoint Security Manager||Yes|Read only|
+|Help Desk Operator||Yes|Read only|
+|Read Only Operator||Yes|Read only|
+|Reports Reader|Yes||Read only|
 
 ### Proactive remediations permissions
 

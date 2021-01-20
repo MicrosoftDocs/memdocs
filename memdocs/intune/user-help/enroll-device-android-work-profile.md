@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020  
+ms.date: 01/11/2021  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -60,24 +60,22 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
 
-   Depending on your version of Android, you might see an additional screen. It will indicate that you're halfway through setup. If you see this screen, wait a few moments until you're redirected and signed in to the Company Portal app.  
+6. On devices running certain Android versions, you'll see another informational screen about the type of apps you need. Wait to be redirected and signed in to the Company Portal app.  
 
-    ![Screenshot of "You're halfway there" screen with redirection message.](./media/android-wp-05b-1908.png)  
-
-6. On the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
+    When you get to the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
 
     ![Screenshot of Company Access Setup showing work profile is created.](./media/work-profile-complete-1911.png)  
 
-7. Check that your work profile is active. Then tap **CONTINUE**. 
+8. Check that your work profile is active. Then tap **CONTINUE**. 
 
     ![Screenshot of Company Access Setup showing work profile is active.](./media/work-profile-active-1911.png)  
 
-8. Your organization might require you to update your device settings. Tap **RESOLVE** to adjust a setting. When you're done updating settings, tap **CONTINUE**.    
+9. Your organization might require you to update your device settings. Tap **RESOLVE** to adjust a setting. When you're done updating settings, tap **CONTINUE**.    
 
     ![Example image of Company Portal, Update device settings screen, highlighting Resolve and Continue buttons.](./media/resolve-settings-1911.png) 
 
 
-9. When setup is complete, tap **DONE**.  
+10. When setup is complete, tap **DONE**.  
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 

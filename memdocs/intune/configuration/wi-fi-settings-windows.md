@@ -2,12 +2,12 @@
 # required metadata
 
 title: Wi-Fi settings for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10 and later devices in Microsoft Intune. You can configure Basic settings, or enterprise-level settings. 
+description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10 and later devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 12/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,9 @@ This article describes these settings.
 
 ## Before you begin
 
-[Create a device profile](wi-fi-settings-configure.md).
+Create a [Windows 10 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+
+These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
 
 ## Basic profile
 
@@ -53,7 +55,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 
     For example, you create a **ContosoCorp** Wi-Fi network, and use **ContosoCorp** within this configuration profile. You also have a **ContosoGuest** Wi-Fi network within range. When your corporate devices are within range, you want them to automatically connect to **ContosoCorp**. In this scenario, set the **Connect to more preferred network if available** property to **No**.
 
-  - **Connect to this network, even when it is not broadcasting its SSID**: Choose **Yes** for the configuration profile to automatically connect to your network, even when the network is hidden (meaning, its SSID isn't broadcast publicly). Choose **No** if you don't want this configuration profile to connect to your hidden network.
+  - **Connect to this network, even when it is not broadcasting its SSID**: Choose **Yes** to automatically connect to your network, even when the network is hidden. Meaning, its service set identifier (SSID) isn't broadcast publicly. Choose **No** if you don't want this configuration profile to connect to your hidden network.
 
 - **Metered Connection Limit**: An administrator can choose how the network's traffic is metered. Applications can then adjust their network traffic behavior based on this setting. Your options:
 
@@ -97,6 +99,29 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **Unrestricted**: Default. The connection isn't metered and there are no restrictions on traffic.
   - **Fixed**: Use this option if the network is configured with fixed limit for network traffic. After this limit is reached, network access is prohibited.
   - **Variable**: Used this option if network traffic is costed per byte.
+
+- **Authentication mode**: Choose how the Wi-Fi profile authenticates with the Wi-Fi server. Your options:
+  - **Not configured**: Intune doesn't change or update this setting. By default, **User or machine** authentication is used.
+  - **User**: The user account signed in to the device authenticates to the Wi-Fi network.
+  - **Machine**: Device credentials authenticate to the Wi-Fi network.
+  - **User or machine**: When a user is signed in to the device, user credentials authenticate to the Wi-Fi network. When no users are signed in, then device credentials authenticate.
+  - **Guest**: No credentials are associated with the Wi-Fi network. Authentication is either open, or handled externally, such as through a web page.
+
+- **Remember credentials at each logon**: Choose to cache user credentials, or if users must enter them every time when connecting to Wi-Fi. Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable this feature, and cache the credentials.
+  - **Enable**: Caches user credentials when entered the first time users connect to the Wi-Fi network. Cached credentials are used for future connections, and users don't need to reenter them.
+  - **Disable**: User credentials aren't remembered or cached. When connecting to Wi-Fi, users must enter their credentials every time.
+
+- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
+
+- **Authentication retry delay period**: Enter the number of seconds between a failed authentication attempt and the next authentication attempt, from 1-3600. If you leave this value empty or blank, then `1` second is used.
+
+- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds is used.
+
+- **Maximum EAPOL-start**: Enter the number of EAPOL-Start messages, from 1 and 100. If you leave this value empty or blank, then a maximum of `3` messages are sent.
+
+- **Maximum authentication failures**: Enter the maximum number of authentication failures for this set of credentials to authenticate, from 1-100. If you leave this value empty or blank, then `1` attempt is used.
 
 - **Single sign-on (SSO)**: Allows you to configure single sign-on (SSO), where credentials are shared for computer and Wi-Fi network sign-in. Your options are:
   - **Disable**: Disables SSO behavior. The user needs to authenticate to the network separately.

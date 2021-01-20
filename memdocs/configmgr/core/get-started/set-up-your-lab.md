@@ -42,7 +42,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
     -   **SQL_Latin1_General_CP1_CI_AS** as the **SQL Collation** class.  
 
-    -   **Windows authentication**, [rather than SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode), is required.  
+    -   **Windows authentication**, [rather than SQL Server authentication](/sql/relational-databases/security/choose-an-authentication-mode), is required.  
 
     -   A dedicated **SQL Server instance** is required.  
 
@@ -347,7 +347,7 @@ Before you begin the installation, launch the  [Prerequisite Checker](../servers
     |Step 7:  **Prerequisite Downloads**|Select **Download required files** and specify your predefined location.|  
     |Step 10: **Site and Installation Settings**|-   **Site code:LAB**<br />-   **Site name:Evaluation**<br />-   **Installation folder:** specify your predefined location.|  
     |Step 11: **Primary Site Installation**|Select **Install the primary site as a stand-alone site**, then click **Next**.|  
-    |Step 12: **Database Installation**|-   **SQL Server name (FQDN):** input your FQDN here.<br />-   **Instance name:** leave this blank, as you will use the default instance of SQL that you previously installed.<br />-   **Service Broker Port:** leave as default port of 4022.|  
+    |Step 12: **Database Installation**|-   **SQL Server name (FQDN):** input your FQDN here.<br />-   **Instance name:** leave this blank, as you will use the default instance of SQL Server that you previously installed.<br />-   **Service Broker Port:** leave as default port of 4022.|  
     |Step 13: **Database Installation**|Leave these settings as default.|  
     |Step 14: **SMS Provider**|Leave these settings as default.|  
     |Step 15: **Client Communication Settings**|Confirm that **All site system roles accept only HTTPS communication from clients** is not selected|  

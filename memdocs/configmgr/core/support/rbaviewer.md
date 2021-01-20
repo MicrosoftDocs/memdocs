@@ -34,7 +34,7 @@ The Role-based Administration and Auditing Tool is one of the [Configuration Man
 
 - Assign your account to the **All** security scope and all collections  
 
-- (*Optional*) To analyze report folder security, you must have SQL access  
+- (*Optional*) To analyze report folder security, you must have SQL Server access  
 
 - (*Optional*) To analyze report drill-through, run this tool on the site system server with the reporting point role
 

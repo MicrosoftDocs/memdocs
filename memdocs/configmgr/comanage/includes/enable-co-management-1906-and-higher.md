@@ -29,6 +29,8 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
 
       - **Pilot** - Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled to Intune.
       - **All** - Enable automatic enrollment for all Windows 10, version 1709 or later, clients.
+      - **None** - Disable automatic enrollment for all clients.
+
 
    - **Intune Auto Enrollment** - This collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
 
@@ -44,6 +46,9 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
       > - If you already have devices enrolled to co-management, new devices now enroll immediately once they meet the [prerequisites](../overview.md#prerequisites).<!--4321130-->
 
 1. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You'll use this command line to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
+
+    > [!TIP]
+    > The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.<!-- MEMDocs#635 -->
 
 1. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](../workloads.md). If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](../how-to-switch-workloads.md).  
 

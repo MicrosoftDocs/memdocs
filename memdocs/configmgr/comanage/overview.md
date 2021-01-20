@@ -92,7 +92,7 @@ Co-management requires Configuration Manager version 1710 or later.
 
 Starting in Configuration Manager version 1806, you can connect multiple Configuration Manager instances to a single Intune tenant. <!--1357944-->  
 
-Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management](../core/servers/deploy/configure/azure-services-wizard.md).
+Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](../core/clients/manage/cmg/overview.md) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management](../core/servers/deploy/configure/azure-services-wizard.md).
 
 ### Azure AD
 
