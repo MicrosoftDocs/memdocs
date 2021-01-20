@@ -31,14 +31,14 @@ ms.collection: M365-identity-device-management
 
 Settings catalog lists the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings.
 
-Use the settings catalog as part of your mobile device management (MDM) solution to manage and secure devices in your organization.
-
 When you create the policy, you start from scratch. You add only the settings you want to control and manage. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings, and all in one place in Intune.
+
+Use the settings catalog as part of your mobile device management (MDM) solution to manage and secure devices in your organization.
 
 This feature applies to:
 
-- **macOS**: Configure Microsoft Edge version 77 and newer
-- **Windows 10 and newer**: Configure thousands of settings based on Windows CSPs
+- **macOS**
+- **Windows 10 and newer**
 
 For Windows devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
@@ -63,7 +63,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
 6. Select **Next**.
 
-7. In **Configuration settings**, select **Add settings**. In the Settings Picker, select a category to see all the available settings.
+7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
     For example, if you chose the **Windows 10 and later** platform, select **Authentication** to see all the settings in this category:
 
@@ -73,13 +73,13 @@ This article lists the steps to create a policy, and shows how to search and fil
 
     :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, choose select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
 
-    Close the settings picker. All the settings are shown, and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, then select the minus:
+    After you add your settings, close the settings picker. All the settings are shown, and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, then select the minus:
 
     :::image type="content" source="./media/settings-catalog/default-setting-value-minus-not-configured.png" alt-text="In Settings Catalog, the default value in Microsoft Intune and Endpoint Manager admin center is the same as the OS default value.":::
 
     When you select the minus:
 
-    - Intune doesn't change or update this setting. The minus is the same as **Not configured** when you use a template.
+    - Intune doesn't change or update this setting. The minus is the same as **Not configured**.
     - The next time you open your policy, the setting isn't shown. You can add it again.
 
     > [!TIP]
@@ -100,7 +100,7 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Find some settings
 
-There are thousands of settings available in the setting catalog. To make it easier to find specific settings, use the built-in features:
+There are thousands of settings available in the settings catalog. To make it easier to find specific settings, use the built-in features:
 
 - In your policy, use **Add settings** > **Search** to find specific settings. You can search by category, such as `browser`, search for a keyword, such as `office`, and search for specific settings.
 
@@ -108,13 +108,13 @@ There are thousands of settings available in the setting catalog. To make it eas
 
   :::image type="content" source="./media/settings-catalog/search-internet-explorer.png" alt-text="In Settings Catalog, search for Internet Explorer to see all the settings in Microsoft Intune and Endpoint Manager admin center.":::
 
-- In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value. In **value**, you can filter to only show the settings that apply to Holographic for Business, Windows Enterprise, and so on:
+- In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value. In **value**, you can filter to only show the settings that apply to Holographic for Business, Windows Enterprise, and other editions:
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
 
 ## Conflicts
 
-Conflicts will happen if the same setting is updated to different values. The same happens with policies configured using the settings catalog. For more information on conflict resolution, see:
+Conflicts will happen if the same setting is updated to different values. The same conflicts happen with policies configured using the settings catalog. For more information on conflict resolution, see:
 
 - [Monitor device profiles](device-profile-monitor.md#view-conflicts)
 - [Common questions and answers with device policies](device-profile-troubleshoot.md)
