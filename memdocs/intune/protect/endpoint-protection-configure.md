@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,32 +56,33 @@ Before you create a profile, review the following articles that detail the endpo
         - **macOS**
         - **Windows 10 and later**
 
-    - **Profile**: Select **Endpoint protection**.
+    - **Profile**: Select **Templates** > **Endpoint protection**.
 
 4. Select **Create**.
+
 5. In **Basics**, enter the following properties:
 
    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
-
    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-6. Select **Next**.
+   Select **Next**.
 
-7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
+6. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
    - [macOS settings](endpoint-protection-macos.md)
    - [Windows 10 settings](endpoint-protection-windows-10.md)
 
-8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. Select **Next**.
 
-    Select **Next**.
+8. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   Select **Next**.
 
-    Select **Next**.
+9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../configuration/device-profile-create.md).
 
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+   Select **Next**.
+
+10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Add custom Firewall rules for Windows 10 devices
 
@@ -103,22 +104,42 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 2. Select **Devices** > **Configuration profiles** > **Create Profile**.
 
-3. For *Platform*, select **Windows 10 and later**, and then for *Profile* select **Endpoint protection**.
+3. Enter the following properties:
 
-    Select **Create**.
+    - **Platform**: Choose **Windows 10 and later**.
 
-4. Enter a **Name** for your profile > **Next**.
-5. In **Configuration settings**, select **Microsoft Defender Firewall**. For *Firewall rules*, select **Add** to open the **Create Rule** page.
+    - **Profile**: Select **Templates** > **Endpoint protection**.
 
-6. Specify settings for the Firewall rule, and then select **OK** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+4. Select **Create**.
+
+5. In **Basics**, enter the following properties:
+
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+   Select **Next**.
+
+6. In **Configuration settings**, expand **Microsoft Defender Firewall**. Next, for *Firewall rules*, select **Add** to open the **Create Rule** page.
+
+7. Specify settings for the Firewall rule, and then select **Save** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
     1. The rule appears on the *Microsoft Defender Firewall* page in the list of rules.
     2. To modify a rule, select the rule from the list, to open the **Edit Rule** page.
     3. To delete a rule from a profile, select the ellipsis **(…)** for the rule, and then select **Delete**.
     4. To change the order in which rules display, select the *up arrow, down arrow* icon at the top of the rule list.
 
-7. Select **Next** until you get to **Review + create**. When you select **Create**, your changes are saved and the profile is assigned. The policy is also shown in the profiles list.
+   Select **Next**.
+
+8. In **Assignments**, select the device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   Select **Next**.
+
+9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../configuration/device-profile-create.md).
+
+   Select **Next**.
+
+10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
+[Monitor the profile status](../configuration/device-profile-monitor.md).

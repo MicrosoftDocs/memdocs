@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2021
+ms.date: 01/29/2021
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -172,7 +172,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
      - iOS/iPadOS
      - macOS
      - Windows 10 and later
-   - **Profile**: Select **Trusted certificate**
+   - **Profile**: Select **Trusted certificate**. Or, select **Templates** > **Trusted certificate**.
 
 4. Select **Create**.
 
@@ -222,10 +222,11 @@ Before you begin, [review requirements for the connector](certificate-connectors
      - iOS/iPadOS
      - macOS
      - Windows 10 and later
-   - **Profile**: Select **PKCS certificate**
+   - **Profile**: Select **PKCS certificate**. Or, select **Templates** > **PKCS certificate**.
 
    > [!NOTE]
    > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
+
 4. Select **Create**.
 
 5. In **Basics**, enter the following properties:
@@ -242,7 +243,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
    |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
+   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
    |**Key storage provider (KSP)**   |<ul><li>Windows 10  |For Windows, select where to store the keys on the device. |
    |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
    |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority". |
@@ -256,15 +257,11 @@ Before you begin, [review requirements for the connector](certificate-connectors
  
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    Select **Next**.
-
-11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+10. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ### Subject name format
 
