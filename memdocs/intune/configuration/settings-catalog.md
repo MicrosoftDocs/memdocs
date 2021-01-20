@@ -86,7 +86,7 @@ This article lists the steps to create a policy, and shows how to search and fil
     > In the Windows setting tooltips, **Learn more** links to the CSP.
 
 9. Select **Next**.
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -122,3 +122,5 @@ Conflicts will happen if the same setting is updated to different values. The sa
 ## Next steps
 
 Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+
+For more information on device configuration policies, see [Device configuration overview](device-profiles.md) and [Create a device profile](device-profile-create.md).
