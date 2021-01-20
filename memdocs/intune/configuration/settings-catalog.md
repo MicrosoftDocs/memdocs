@@ -37,8 +37,8 @@ Use the settings catalog as part of your mobile device management (MDM) solution
 
 This feature applies to:
 
-- **macOS**
-- **Windows 10 and newer**
+- macOS
+- Windows 10 and newer
 
 For Windows devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
@@ -121,4 +121,4 @@ Conflicts will happen if the same setting is updated to different values. The sa
 
 ## Next steps
 
-Be sure to [assign the profile)](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
