@@ -122,7 +122,7 @@ Supported platforms and profiles:
 
     For non-silent enablement and Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
 
-- **Enable client-driven recovery password for**  
+- **Configure client-driven recovery password rotation**  
   CSP: [BitLocker - ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)
 
   Add Work Account (AWA, formally Workplace Joined) devices aren't supported for key rotation.
