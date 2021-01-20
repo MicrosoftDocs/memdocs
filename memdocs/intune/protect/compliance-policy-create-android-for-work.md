@@ -7,7 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
+<<<<<<< HEAD
 ms.date: 01/20/2021
+=======
+ms.date: 12/18/2020
+>>>>>>> a2e4d8209a867b26e5a0f08317939314415986e5
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,11 +56,11 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-### Microsoft Defender ATP
+### Microsoft Defender for Endpoint
 
 - **Require the device to be at or under the machine risk score**  
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -166,10 +170,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Personally-Owned Work Profile
 
-### Microsoft Defender ATP - *for Personally-Owned Work Profile*
+### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
 
 - **Require the device to be at or under the machine risk score**  
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**

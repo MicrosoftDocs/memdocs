@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,13 +26,13 @@ ms.reviewer: samyada
 
 ---
 
-# Settings for Microsoft Defender ATP for Mac in Microsoft Intune
+# Settings for Microsoft Defender for Endpoint for Mac in Microsoft Intune
 
-View the *Antivirus* profile settings you can configure for Microsoft Defender ATP for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender Advanced Threat Protection for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
+View the *Antivirus* profile settings you can configure for Microsoft Defender for Endpoint for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
 
 Learn about using [Endpoint security policies](../protect/endpoint-security-policy.md) in Intune.
 
-**Microsoft Defender ATP**
+**Microsoft Defender for Endpoint**
 
 - **Real-time protection**  
   Require Defender on macOS devices to use the real-time Monitoring functionality. Real-time monitoring locates and stops malware from installing or running on your device. You can turn off this setting for a short time before it turns back on automatically.
