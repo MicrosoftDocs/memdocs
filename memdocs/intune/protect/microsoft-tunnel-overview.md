@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 01/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -95,7 +95,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 - **Linux distribution** - The following are supported:
 
   - CentOS 7.4+(CentOS 8+ isn’t supported)
-  - Red Hat (RHEL) 7.4+ (RHEL 8+ isn't supported)
+  - Red Hat (RHEL) 7.4+
+  - Red Hat (RHEL) 8
   - Ubuntu 18.04
   - Ubuntu 20.04
 
