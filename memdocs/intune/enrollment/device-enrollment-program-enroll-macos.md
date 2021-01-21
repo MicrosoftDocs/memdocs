@@ -159,11 +159,7 @@ Now that you've installed your token, you can create an enrollment profile for d
     | <strong>Registration</strong> | Display the registration screen to the user. For macOS 10.9 and later. |
     | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
-    | <strong>Accessibility</strong> | Display the Accessibility screen to the user. If this screen is hidden, the user won't be able to automatically hear voice over. Voice over is only supported on devices that:
-        - Run macOS 11.
-        - Are connected to the internet using Ethernet.
-        - Are enrolled in an MDM solution.
-        - Have the serial number appear in Apple School Manager or Apple Business Manager. |
+    | <strong>Accessibility</strong> | Display the Accessibility screen to the user. If this screen is hidden, the user won't be able to automatically hear voice over. Voice over is only supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Are enrolled in an MDM solution.<br>- Have the serial number appear in Apple School Manager or Apple Business Manager. |
     
 9. Select **Next** to go to the **Review + create** page.
 
