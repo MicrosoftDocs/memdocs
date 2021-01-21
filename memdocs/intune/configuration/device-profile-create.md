@@ -59,6 +59,8 @@ This article:
 
 Profiles are created in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
 
+:::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="In Endpoint Manager and Microsoft Intune, select Devices to see what you can configure and manage.":::
+
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
 - **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows 10 Update Rings** and **PowerShell scripts**.
@@ -107,9 +109,13 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Windows health monitoring](windows-health-monitoring.md)
 - [Wired networks (macOS)](wired-network-settings-macos.md)
 
-For example, if you select **iOS/iPadOS** for the platform, your profile options look similar to the following profile:
+For example, if you select **iOS/iPadOS** for the platform, your options look similar to the following profile:
 
-:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Create an iOS/iPadOS profile in Microsoft Intune.":::
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Create an iOS/iPadOS device configuration policy and profile in Endpoint Manager and Microsoft Intune.":::
+
+If you select **Windows 10 and later** for the platform, your options look similar to the following profile:
+
+:::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Create a Windows device configuration policy and profile in Endpoint Manager and Microsoft Intune.":::
 
 ## Scope tags
 
@@ -152,7 +158,7 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 1. Select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
-    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune.":::
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Add an applicability rule to a Windows 10 device configuration profile in Endpoint Manager and Microsoft Intune.":::
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
@@ -198,7 +204,7 @@ When creating profiles, consider the following recommendations:
 
   The following image shows an example of a setting that can apply to users, apply to devices, or apply to both:
 
-  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices.":::
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices in Endpoint Manager and Microsoft Intune.":::
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 

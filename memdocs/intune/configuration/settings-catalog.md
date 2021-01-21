@@ -40,9 +40,9 @@ This feature applies to:
 - macOS
 - Windows 10 and newer
 
-For Windows devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+For **Windows** devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
-For macOS devices, you can configure Microsoft Edge version 77 and newer using a configuration profile. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) to configure Microsoft Edge version 77+.
+For **macOS** devices, you can configure Microsoft Edge version 77 and newer using a configuration profile. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) to configure Microsoft Edge version 77+.
 
 This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
