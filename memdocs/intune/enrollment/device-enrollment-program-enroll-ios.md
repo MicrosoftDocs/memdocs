@@ -280,7 +280,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     You can choose to hide Setup Assistant screens on the device during user setup.
     - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
-    - If you select **Show**, the screen will be displayed during setup. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature. 
+    - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
 
 
     | Setup Assistant Screens setting | If you select Show, during setup the device will... |
