@@ -40,9 +40,9 @@ This feature applies to:
 - macOS
 - Windows 10 and newer
 
-For Windows devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+For **Windows** devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
-For macOS devices, you can configure Microsoft Edge version 77 and newer using a configuration profile. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) to configure Microsoft Edge version 77+.
+For **macOS** devices, you can configure Microsoft Edge version 77 and newer using a configuration profile. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) to configure Microsoft Edge version 77+.
 
 This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
@@ -86,7 +86,7 @@ This article lists the steps to create a policy, and shows how to search and fil
     > In the Windows setting tooltips, **Learn more** links to the CSP.
 
 9. Select **Next**.
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -122,3 +122,5 @@ Conflicts will happen if the same setting is updated to different values. The sa
 ## Next steps
 
 Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+
+For more information on device configuration policies, see [Device configuration overview](device-profiles.md) and [Create a device profile](device-profile-create.md).
