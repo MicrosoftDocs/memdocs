@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,13 +47,13 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Domain Join (preview)**.
+    - **Profile**: Select **Templates** > **Domain Join**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Domain join profile that includes on-premises domain information to enroll hybrid AD joined devices with Windows Autopilot**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Windows Autopilot domain join**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended. For example, enter **Windows 10: Domain join profile that includes on-premises domain information to enroll hybrid AD joined devices with Windows Autopilot**.
 
 6. Select **Next**.
 7. In **Configuration settings**, enter the following properties:
