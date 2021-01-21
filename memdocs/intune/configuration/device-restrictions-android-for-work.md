@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/07/2021
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -178,8 +178,8 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       > [!IMPORTANT]
       > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
       >
-      >   - [Added in Intune](../apps/apps-add-android-for-work.md)
-      >   - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
+      > - [Added in Intune](../apps/apps-add-android-for-work.md)
+      > - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
       >
       > The **Managed Home Screen** app isn't required to be in the configuration profile, but it's required to be added as an app. When the **Managed Home Screen** app is added, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
       >
@@ -187,14 +187,25 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       >
       > For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
+      - **Custom app layout**: **Enable** lets you put apps and folders in different places on the Managed Home Screen. When set to **Not configured**, Intune doesn't change or update this setting. By default, the apps and folders you add are shown on the home screen in alphabetical order.
+
+        - **Grid size**: Select the size of your home screen. An app or folder takes one place on the grid.
+        - **Home screen**: Select the add button, and select an app from the list. Select the **Folder** option to create a folder, enter the **Folder name**, and add apps from your list to the folder.
+
+          When you add items, select the context menu to remove items, or move them to different positions:
+
+          :::image type="content" source="./media/device-restrictions-android-for-work/custom-layout-context-menu.png" alt-text="Move your apps and folders to different locations on Android Enterprise dedicated devices running in multi-app mode in Microsoft Intune and Endpoint Manager.":::
+
       - **Add**: Select your apps from the list.
 
         If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
 
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
-        
+
         > [!IMPORTANT]
         > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices may lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
+
+      - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
       - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
         - Not configured 
