@@ -86,6 +86,8 @@ After you extend the schema, create a container named **System Management** in A
 
     1. Switch to the **Security** tab. Select **Add**, and then add the site server's computer account with the **Full Control** permission.
 
+        Add the computer account for each Configuration Manager site server in this domain. If you use [site server high availability](../../servers/deploy/configure/site-server-high-availability.md), make sure to include the computer account of the site server in passive mode.
+
     1. Select **Advanced**, select the site server's computer account, and then select **Edit**.
 
     1. In the **Apply onto** list, select **This object and all descendant objects**.
