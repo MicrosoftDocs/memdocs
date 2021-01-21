@@ -37,7 +37,7 @@ This feature applies to:
 
 Property list files include information about macOS applications. For more information, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website) and [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
-This article describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add the app's .plist file.
+This article describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add the app's `.plist` file.
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
@@ -47,6 +47,9 @@ These settings are added to a device configuration profile in Intune, and then a
 - If you're not sure how to enter an app key, change the setting within the app. Then, review the app's preference file using [Xcode](https://developer.apple.com/xcode/) to see how the setting is configured. Apple recommends removing non-manageable settings using Xcode before importing the file.
 - Only some apps work with managed preferences, and might not allow you to manage all settings.
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
+- If you're configuring the Microsoft Edge version 77 and newer app, then use the [Settings catalog](settings-catalog.md). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
+
+  Be sure macOS is listed as a supported version. If some settings aren't available in the settings catalog, then it's recommended to continue using the preference file.
 
 ## Create the profile
 
@@ -70,6 +73,9 @@ These settings are added to a device configuration profile in Intune, and then a
     - **Preference domain name**: Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge`, or `com.microsoft.wdav`.
 
       Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created.
+
+      > [!TIP]
+      > For Microsoft Edge version 77 and newer, you can use the settings catalog. You don't have to use a preference file. For more information, see [Settings catalog](settings-catalog.md).
 
     - **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
 
