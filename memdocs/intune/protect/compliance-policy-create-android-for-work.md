@@ -8,10 +8,14 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 <<<<<<< HEAD
+<<<<<<< HEAD
 ms.date: 01/20/2021
 =======
 ms.date: 12/18/2020
 >>>>>>> a2e4d8209a867b26e5a0f08317939314415986e5
+=======
+ms.date: 01/20/2021
+>>>>>>> dde96bf07f237c8d3c040c3558544268c80630ef
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
