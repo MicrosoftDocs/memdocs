@@ -1082,7 +1082,7 @@ only resources which cannot be CA-protected, you may skip these steps.
 1. [Register your application with Azure Active Directory].
     * This will generate a Client ID for your application.
 2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
-3. Set the manifest meta-data parameters per [Common MSAL configurations](#Common-MSAL-configurations) for [App Integrates MSAL](#2.-app-integrates-msal), see above.
+3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
 4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
     - That sign-in to your app prompts for installation and enrollment of the Intune Company Portal
     - That after enrollment, sign-in to your app completes successfully.
@@ -2301,7 +2301,7 @@ See the [Testing Guide](app-sdk-android-testing-guide.md).
 <!-- Azure Active Directory -->
 [Microsoft Azure Active Directory]: https://azure.microsoft.com/documentation/articles/active-directory-whatis/
 [Register your application with Azure Active Directory]: /azure/active-directory/active-directory-app-registration
-[AAD redirect URI]: https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-client-application-configuration#redirect-uri
+[AAD redirect URI]: https://docs.microsoft.com/azure/active-directory/develop/msal-client-application-configuration#redirect-uri
 
 <!-- ADAL -->
 [ADAL]: https://docs.microsoft.com/azure/active-directory/azuread-dev/active-directory-authentication-libraries
