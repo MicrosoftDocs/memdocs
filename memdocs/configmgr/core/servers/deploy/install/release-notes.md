@@ -143,7 +143,7 @@ To work around this issue, renew the key associated with the app registration in
 
 ### Only Full Administrator can delete collections
 <!--8864728-->
-*Applies to version 2010*
+*Applies to version 2010 early update ring*
 
 When trying to delete a collection, there is a query to check for Automatic Deployment Rules (ADR) that are referencing the collection. If you don't have permissions on ADRs, you will be unable to perform the deletion.
 
