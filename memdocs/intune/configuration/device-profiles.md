@@ -246,7 +246,6 @@ This feature supports:
 This feature supports:
 
 - Windows 10 and later
-- Windows Holographic for Business
 
 ## Preference file
 
