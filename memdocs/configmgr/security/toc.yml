@@ -1,0 +1,53 @@
+- name: Security documentation
+  href: index.yml
+- name: Fundamentals
+  items:
+  - name: Security in Configuration Manager
+    href: ../core/understand/fundamentals-of-security.md
+  - name: Role-based administration
+    href: ../core/understand/fundamentals-of-role-based-administration.md
+- name: Concepts
+  items:
+  - name: Plan for security
+    href: ../core/plan-design/security/plan-for-security.md
+  - name: Best practices
+    href: ../core/plan-design/security/security-best-practices-and-privacy-information.md
+  - name: 
+- name: How-to guides
+  items:
+  - name: Configure security
+    href: ../core/plan-design/security/configure-security.md
+  - name: Enable TLS 1.2
+    items:
+    - name: About enabling TLS 1.2 
+      href: plan-design/security/enable-tls-1-2.md
+    - name: Enable TLS 1.2 on clients
+      href: plan-design/security/enable-tls-1-2-client.md
+    - name: Enable TLS 1.2 on site servers and remote site systems
+      href: plan-design/security/enable-tls-1-2-server.md
+    - name: Common issues when enabling TLS 1.2
+      href: plan-design/security/enable-tls-1-2-troubleshoot.md
+- Name: Feature guidance
+  items:
+  - name: OS deployment
+    href: ../osd/plan-design/security-and-privacy-for-operating-system-deployment.md
+  - name: App management
+    href: ../apps/plan-design/security-and-privacy-for-application-management.md
+  - name: Software update management
+    href: ../sum/plan-design/security-and-privacy-for-software-updates.md
+- name: Reference
+  items:
+  - name: Cryptographic controls technical reference
+    href: ../core/plan-design/security/cryptographic-controls-technical-reference.md
+  - name: Accounts
+    href: ../core/plan-design/hierarchy/accounts.md
+  - name: Ports
+    href: ../core/plan-design/hierarchy/ports.md
+  - name: Internet access requirements
+    href: ../core/plan-design/network/internet-endpoints.md
+  - name: CNG v3 certificates overview
+    href: ../core/plan-design/network/cng-certificates-overview.md
+  - name: PKI certificate requirements
+    href: ../core/plan-design/network/pki-certificate-requirements.md
+  - name: Example PKI certificate deployment
+    href: ../core/plan-design/network/example-deployment-of-pki-certificates.md
