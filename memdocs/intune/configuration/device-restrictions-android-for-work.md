@@ -116,13 +116,13 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 - **Power button menu**: **Block** hides the power options when users hold down the power button when in kiosk mode. Hiding these options prevents users from accidentally or intentionally shutting down devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when users hold down the power button on a device, they're shown power options, such as Restart and Power off.
 
- This setting applies to:
+  This setting applies to:
 
   - Android 9.0 and newer
 
 - **System error warnings**: **Allow** shows system warnings on the screen when in kiosk mode, including unresponsive apps and system warnings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might hide these warnings. When one of these events occurs, the system forces the app to close.
 
- This setting applies to:
+  This setting applies to:
 
   - Android 9.0 and newer
 
