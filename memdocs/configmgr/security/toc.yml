@@ -34,6 +34,34 @@
     href: ../apps/plan-design/security-and-privacy-for-application-management.md
   - name: Software update management
     href: ../sum/plan-design/security-and-privacy-for-software-updates.md
+  - name: Compliance settings
+    href: ../compliance/plan-design/security-and-privacy-for-compliance-settings.md
+  - name: Site administration
+    href: ../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md
+  - name: Content management
+    href: ../core/plan-design/hierarchy/security-and-privacy-for-content-management.md
+  - name: Clients
+    href: ../core/clients/deploy/plan/security-and-privacy-for-clients.md
+  - name: Collections
+    href: ../core/clients/manage/collections/security-and-privacy-for-collections.md
+  - name: Cloud management gateway
+    href: ../core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+  - name: Queries
+    href: ../core/servers/manage/security-and-privacy-for-queries.md
+  - name: Power management
+    href: ../core/clients/manage/power/security-and-privacy-for-power-management.md
+  - name: Remote control
+    href: ../core/clients/manage/remote-control/security-and-privacy-for-remote-control.md
+  - name: Migration
+    href: ../core/migration/security-and-privacy-for-migration.md
+  - name: Hardware inventory
+    href: ../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
+  - name: Software inventory
+    href: ../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md
+  - name: Asset Intelligence
+    href: ../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
+  - name: Reporting
+    href: ../core/servers/manage/planning-for-reporting.md#security-and-privacy
 - name: Reference
   items:
   - name: Cryptographic controls technical reference
