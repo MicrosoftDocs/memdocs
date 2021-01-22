@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2021
+ms.date: 01/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -115,11 +115,11 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **Enable**: Caches user credentials when entered the first time users connect to the Wi-Fi network. Cached credentials are used for future connections, and users don't need to reenter them.
   - **Disable**: User credentials aren't remembered or cached. When connecting to Wi-Fi, users must enter their credentials every time.
 
-- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds are used.
+- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
 
 - **Authentication retry delay period**: Enter the number of seconds between a failed authentication attempt and the next authentication attempt, from 1-3600. If you leave this value empty or blank, then `1` second is used.
 
-- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds are used.
+- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds is used.
 
 - **Maximum EAPOL-start**: Enter the number of EAPOL-Start messages, from 1 and 100. If you leave this value empty or blank, then a maximum of `3` messages are sent.
 
@@ -130,7 +130,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **Enable before user signs into device**: Use SSO to authenticate to the network just before the user sign-in process.
   - **Enable after user signs into device**: Use SSO to authenticate to the network immediately after the user sign-in process completes.
   - **Maximum time to authenticate before timeout**: Enter the maximum number of seconds to wait before authenticating to the network, from 1-120 seconds.
-  - **Allow Windows to prompt user for additional authentication credentials**: Select **Yes** allows the Windows system to prompt the user for more credentials, if the authentication method requires it. Select **No** to hide these prompts.
+  - **Allow Windows to prompt user for additional authentication credentials**: **Yes** allows the Windows system to prompt the user for more credentials, if the authentication method requires it. Select **No** to hide these prompts.
 
 - **Enable pairwise master key (PMK) caching**: Select **Yes** to cache the PMK used in authentication. This caching typically allows authentication to the network to complete faster. Select **No** to force the authentication handshake when connecting to the Wi-Fi network every time.
 
@@ -207,7 +207,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
 - **Company Proxy settings**: Select to use the proxy settings within your organization. Your options:
   - **None**: No proxy settings are configured.
-  - **Manually configure**: Enter the **Proxy server IPaddress** and its **Port number**.
+  - **Manually configure**: Enter the **Proxy server IP address** and its **Port number**.
   - **Automatically configure**: Enter the URL pointing to a proxy auto configuration (PAC) script. For example, enter `http://proxy.contoso.com/proxy.pac`.
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
