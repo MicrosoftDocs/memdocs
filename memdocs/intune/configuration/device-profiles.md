@@ -77,6 +77,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
+- Windows 10 and later
 
 ## Delivery optimization
 
