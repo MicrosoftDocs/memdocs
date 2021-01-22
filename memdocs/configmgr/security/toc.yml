@@ -12,7 +12,6 @@
     href: ../core/plan-design/security/plan-for-security.md
   - name: Best practices
     href: ../core/plan-design/security/security-best-practices-and-privacy-information.md
-  - name: 
 - name: How-to guides
   items:
   - name: Configure security
@@ -20,13 +19,13 @@
   - name: Enable TLS 1.2
     items:
     - name: About enabling TLS 1.2 
-      href: plan-design/security/enable-tls-1-2.md
+      href: ../core/plan-design/security/enable-tls-1-2.md
     - name: Enable TLS 1.2 on clients
-      href: plan-design/security/enable-tls-1-2-client.md
+      href: ../core/plan-design/security/enable-tls-1-2-client.md
     - name: Enable TLS 1.2 on site servers and remote site systems
-      href: plan-design/security/enable-tls-1-2-server.md
+      href: ../core/plan-design/security/enable-tls-1-2-server.md
     - name: Common issues when enabling TLS 1.2
-      href: plan-design/security/enable-tls-1-2-troubleshoot.md
+      href: ../core/plan-design/security/enable-tls-1-2-troubleshoot.md
 - Name: Feature guidance
   items:
   - name: OS deployment
