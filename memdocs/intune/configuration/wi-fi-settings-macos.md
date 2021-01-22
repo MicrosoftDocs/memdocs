@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2021
+ms.date: 01/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Select **Enable** to automatically connect to this network when the device is in range. Select **Disable** to prevent devices from automatically connecting.
-- **Hidden network**: ChoSelectose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
+- **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
 
 - **EAP type**: Select the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
