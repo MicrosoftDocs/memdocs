@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 11/30/2020
+ms.date: 01/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -45,7 +45,7 @@ Microsoft recommends that you enable the **Optional (limited)** diagnostic data 
 For more information about diagnostic data shared with Microsoft with **Optional (limited)**, see [Windows 10 enhanced diagnostic data events and fields](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!IMPORTANT]
-> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (EEA and Switzerland).
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom).
 
 For more information, see [Desktop Analytics privacy](privacy.md).
 

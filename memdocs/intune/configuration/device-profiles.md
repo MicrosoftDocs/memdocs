@@ -79,6 +79,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
+- Windows 10 and later
 
 ## Delivery optimization
 
@@ -246,8 +247,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and newer
-- Windows Holographic for Business
+- Windows 10 and later
 
 ## Preference file
 

@@ -58,7 +58,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
   > **Unsupported versions and editions**:  
   > *Windows 10 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 
-### Create and assign update rings
+## Create and assign update rings
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -79,7 +79,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
 
-### Manage your Windows 10 Update rings
+## Manage your Windows 10 Update rings
 
 In the portal, navigate to **Devices** > **Windows** > **Windows 10 Update Rings** and select the policy that you want to manage.  The policy opens to its **Overview** page.
 
@@ -93,23 +93,23 @@ From this page, you can view the rings assignment status and select the followin
 
 ![Available actions](./media/windows-10-update-rings/overview-actions.png)
 
-#### Delete
+### Delete
 
 Select **Delete** to stop enforcing the settings of the selected Windows 10 update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.
 
 Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from additional update rings that remain active.
 
-##### To delete a ring
+#### To delete a ring
 
 1. While viewing the overview page for an Update Ring, select **Delete**.
 2. Select **OK**.
 
-#### Pause
+### Pause
 
 Select **Pause** to prevent assigned devices from receiving feature or quality updates for up to 35 days from the time you pause the ring. After the maximum days have passed, pause functionality automatically expires and the device scans Windows Updates for applicable updates. Following this scan, you can pause the updates again.
 If you resume a paused update ring, and then pause that ring again, the pause period resets to 35 days.
 
-##### To pause a ring
+#### To pause a ring
 
 1. While viewing the overview page for an Update Ring, select **Pause**.
 2. Select either **Feature** or **Quality** to pause that type of update, and then select **OK**.
@@ -120,27 +120,27 @@ When an update type is paused, the Overview pane for that ring displays how many
 > [!IMPORTANT]
 > After you issue a pause command, devices receive this command the next time they check into the service. It's possible that before they check in, they might install a scheduled update. Additionally, if a targeted device is turned off when you issue the pause command, when you turn it on, it might download and install scheduled updates before it checks in with Intune.
 
-#### Resume
+### Resume
 
 While an update ring is paused, you can select **Resume** to restore feature and quality updates for that ring to active operation. After you resume an update ring, you can pause that ring again.
 
-##### To resume a ring
+#### To resume a ring
 
 1. While viewing the overview page for a paused Update Ring, select **Resume**.
 2. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.
 3. After resuming one update type, you can select Resume again to resume the other update type.
 
-#### Extend  
+### Extend  
 
 While an update ring is paused, you can select **Extend** to reset the pause period for both feature and quality updates for that update ring to 35 days.
 
-##### To Extend the pause period for a ring
+#### To Extend the pause period for a ring
 
 1. While viewing the overview page for a paused Update Ring, select **Extend**.
 2. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.
 3. After extending the pause for one update type, you can select Extend again to extend the other update type.
 
-#### Uninstall  
+### Uninstall  
 
 An Intune administrator can use **Uninstall** to uninstall (roll back) the latest *feature* update or the latest *quality* update for an active or paused update ring. After uninstalling one type, you can then uninstall the other type. Intune doesn't support or manage the ability of users to uninstall updates.  
 
@@ -170,7 +170,7 @@ Consider the following when you use Uninstall:
 
 For more information about Windows Update policies, see [Update CSP](/windows/client-management/mdm/update-csp) in the Windows client management documentation.
 
-##### To uninstall the latest Windows 10 update
+#### To uninstall the latest Windows 10 update
 
 1. While viewing the overview page for a paused Update Ring, select **Uninstall**.
 2. Select from the available options to uninstall either **Feature** or **Quality** updates, and then select **OK**.
