@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How to reset your passcode from the Company Portal website | Microsoft Docs
+title: Reset device passcode from Intune Company Portal website | Microsoft Docs
 description:
 keywords:
 author: lenewsad
@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How to reset your device passcode from the Company Portal website
+# Reset device passcode from Company Portal website
 
 If you lose your device PIN or password, you can use the [Company Portal website](https://portal.manage.microsoft.com) to reset it. 
 
