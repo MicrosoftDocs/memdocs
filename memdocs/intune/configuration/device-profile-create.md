@@ -40,9 +40,14 @@ Device profiles allow you to add and configure settings, and then push these set
 
   For more information, see [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On Windows 10 and newer devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and newer settings. To configure earlier versions of Microsoft Edge or Edge browser settings that are not in settings catalog, continue using the preference file upload.
+- **Settings catalog**: On Windows 10 and newer devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and newer settings. 
 
   For more information, see [Settings catalog](settings-catalog.md).
+
+  On macOS, continue using the [preference file](/deployedge/configure-microsoft-edge-on-mac) to:
+  
+  - Configure earlier versions of Microsoft Edge
+  - Configure Edge browser settings that aren't in settings catalog
 
 - **Templates**: On Android, iOS/iPadOS, macOS, and Windows devices, the templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
