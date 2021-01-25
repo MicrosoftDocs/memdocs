@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 06/10/2020
+ms.date: 01/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -213,7 +213,7 @@ Select **OK** to create the native app in Azure AD and close the Create Client A
 
 ## Configuration or Discovery
 
-After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
+After specifying the web and native apps on the **Apps** page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
@@ -223,15 +223,15 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
-## <a name="bkmk_SRVAppSettings"></a> Update Application settings
+## <a name="bkmk_SRVAppSettings"></a> Update application settings
 
-To allow your Configuration Manager Clients to request an **Azure AD device token**  and to enable the **Reading directory data** permissions, you must Update the Server Application Settings.
-
+To allow your Configuration Manager clients to request an **Azure AD device token**  and to enable the **Reading directory data** permissions, you need to update the web server application settings.
 ### Update Application Settings
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
-2. On the Details pane, select the Azure AD tenant for the app. And on the Applications section, right click on the Azure AD (web) Server Application.
-3. On the message prompt, click OK to confirm you want to update the application with the latest settings.
+1. Select the Azure AD tenant for the application you want to update.
+1. In the **Applications** section, select your Azure AD web server application, then select **Update Application Settings** from the ribbon.
+1. When prompted for confirmation, select **Yes** to confirm you want to update the application with the latest settings.
 
 ## <a name="bkmk_renew"></a> Renew secret key
 
