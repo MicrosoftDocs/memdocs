@@ -49,7 +49,7 @@ These settings are added to a device configuration profile in Intune, and then a
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
 - If you're configuring the Microsoft Edge version 77 and newer app, then use the [Settings catalog](settings-catalog.md). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
 
-  Be sure macOS is listed as a supported version. If some settings aren't available in the settings catalog, then it's recommended to continue using the preference file.
+  Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the preference file.
 
 ## Create the profile
 
