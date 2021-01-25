@@ -2,11 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-<<<<<<< HEAD
 ms.date: 01/25/2021
-=======
-ms.date: 11/30/2020
->>>>>>> 80733fc535431e8cfe26634a1987815988298625
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -15,7 +11,6 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ---
-
 # Configure Azure services for use with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
