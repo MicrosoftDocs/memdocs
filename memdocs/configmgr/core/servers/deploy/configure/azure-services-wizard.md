@@ -225,7 +225,7 @@ Finally, complete the Azure Services Wizard through the Summary, Progress, and C
 
 ## <a name="bkmk_SRVAppSettings"></a> Update application settings
 
-To allow your Configuration Manager clients to request an **Azure AD device token**  and to enable the **Reading directory data** permissions, you need to update the web server application settings.
+To allow your Configuration Manager clients to request an **Azure AD device token** and to enable the **Reading directory data** permissions, you need to update the web server application settings.
 ### Update Application Settings
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
