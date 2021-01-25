@@ -36,7 +36,7 @@ ms.collection:
 
 The Company Portal app gives you access to:
 
-- Your organizations' network, email, and work files.
+- Your organization's network, email, and work files.
 
 - Work or school-related apps.
 
