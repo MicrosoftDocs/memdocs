@@ -295,8 +295,8 @@ Now that you've installed your token, you can create an enrollment profile for A
     | <strong>Zoom</strong> | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
     | <strong>Siri</strong> | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Diagnostics Data</strong> | Display the **Diagnostics** screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | <strong>Restore Completed</strong> | Display the **Restore Completed** screen after a backup and restore is performed on the device. |
-    | <strong>Software Update Completed</strong> | Display the **Software Update Completed** screen after a backup and restore is performed on the device. If this screen isn't shown, the user can’t see whether a software update is performed during Setup Assistant.|
+    | <strong>Restore Completed</strong> | Display the **Restore Completed** screen after a backup and restore is performed on the device. If this screen isn't shown, the user can't see whether a restore from backup was completed during Setup Assistant. |
+    | <strong>Software Update Completed</strong> | Display the **Software Update Completed** screen if a software update is performed during Setup Assistant. If this screen isn't shown, the user can’t see whether a software update is performed during Setup Assistant.|
     | <strong>Display Tone</strong> | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
     | <strong>Privacy</strong> | Display the **Privacy** screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
     | <strong>Android Migration</strong> | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
