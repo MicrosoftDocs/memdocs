@@ -223,6 +223,16 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
+## <a name="bkmk_SRVAppSettings"></a> Update Application settings
+
+To allow your Configuration Manager Clients to request an **Azure AD device token**  and to enable the **Reading directory data** permissions, you must Update the Server Application Settings.
+
+### Update Application Settings
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
+2. On the Details pane, select the Azure AD tenant for the app. And on the Applications section, right click on the Azure AD (web) Server Application.
+3. On the message prompt, click OK to confirm you want to update the application with the latest settings.
+
 ## <a name="bkmk_renew"></a> Renew secret key
 
 ### Renew key for created app
