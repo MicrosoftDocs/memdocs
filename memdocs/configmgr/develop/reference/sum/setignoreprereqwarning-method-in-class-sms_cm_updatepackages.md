@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 843a2227-7adb-4472-a907-e4f02fb13bf2
 author: aczechowski
 ms.author: aaroncz
@@ -34,8 +34,8 @@ SInt32 SetIgnorePrereqWarning(
 
  Flag to ignore the  pre-requisites  warning flag of the update packages. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Flag |  
+| ----- | ---- |  
 |0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there is a prerequisite warning.|  
 |1|PREREQ_ONLY. Run only the prerequisite.|  
 |2|CONTINUE_ON_PREREQ_WARNING. During installation, ignore the prerequisite warning.|  

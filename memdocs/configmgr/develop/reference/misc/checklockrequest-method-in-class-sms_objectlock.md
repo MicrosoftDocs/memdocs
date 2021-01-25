@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 54032c44-cfa7-48cf-92bb-7f8bc482f822
 author: aczechowski
 ms.author: aaroncz
@@ -55,8 +55,8 @@ SInt32 CheckLockRequest(
 
  The state of the lock request. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Request state |
+| ----- | ------------- |
 |0|Unknown|  
 |2|Requested|  
 |3|RequestCanceled|  
@@ -80,8 +80,8 @@ SInt32 CheckLockRequest(
 
  Indicates the current state of the requested lock. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Lock state |
+| ----- | ---------- |
 |0|Unassigned|  
 |1|Assigned|  
 |2|Requested|  

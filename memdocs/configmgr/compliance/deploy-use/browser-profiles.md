@@ -2,8 +2,8 @@
 title: Configure Microsoft Edge settings
 titleSuffix: Configuration Manager
 description: Configure settings for the Microsoft Edge Legacy web browser on Windows 10 clients
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 06/02/2020
 ms.topic: how-to
@@ -22,11 +22,11 @@ ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
 *Applies to: Configuration Manager (current branch)*
 
 <!-- 1357310 -->
-For customers who use the [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
+For customers who use the [Microsoft Edge Legacy](/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
 
 This policy only applies to clients on Windows 10, version 1703 or later, and Microsoft Edge Legacy version 45 and earlier. <!--511552-->
 
-For more information on managing Microsoft Edge version 77 or later with Configuration Manager, see [Deploy Microsoft Edge, version 77 and later](../../apps/deploy-use/deploy-edge.md). For more information on configuring policies for Microsoft Edge version 77 or later, see [Microsoft Edge - Policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
+For more information on managing Microsoft Edge version 77 or later with Configuration Manager, see [Deploy Microsoft Edge, version 77 and later](../../apps/deploy-use/deploy-edge.md). For more information on configuring policies for Microsoft Edge version 77 or later, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies).
 
 ## Policy settings
 
@@ -34,42 +34,42 @@ This policy currently includes the following settings:
 
 - **Set Microsoft Edge browser as default**: configures the Windows 10 default app setting for web browser to Microsoft Edge
 
-- **Allow address bar drop-down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Allow address bar drop-down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
 
-- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
 
-- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
 
-- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
 
-- **Allow autofill**: For more information, see [AllowAutofill browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Allow autofill**: For more information, see [AllowAutofill browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
 
-- **Allow cookies**: For more information, see [AllowCookies browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Allow cookies**: For more information, see [AllowCookies browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
 
-- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
 
-- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
 
-- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
 
-- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
 
-- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
 
-- **Allow extensions**: For more information, see [AllowExtensions browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 > [!TIP]
-> For more information on using group policy to configure these and other settings, see [Microsoft Edge Legacy group policies](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+> For more information on using group policy to configure these and other settings, see [Microsoft Edge Legacy group policies](/microsoft-edge/deploy/group-policies/).
 
 ### Configure Windows Defender SmartScreen settings for Microsoft Edge Legacy
 <!--1353701-->
-This policy adds three settings for [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). The policy now includes the following additional settings on the **SmartScreen Settings** page:
+This policy adds three settings for [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). The policy now includes the following additional settings on the **SmartScreen Settings** page:
 
-- **Allow SmartScreen**: Specifies whether Windows Defender SmartScreen is allowed. For more information, see the [AllowSmartScreen browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Allow SmartScreen**: Specifies whether Windows Defender SmartScreen is allowed. For more information, see the [AllowSmartScreen browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
 
-- **Users can override SmartScreen prompt for sites**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about potentially malicious websites. For more information, see the [PreventSmartScreenPromptOverride browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Users can override SmartScreen prompt for sites**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about potentially malicious websites. For more information, see the [PreventSmartScreenPromptOverride browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
 
-- **Users can override SmartScreen prompt for files**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about downloading unverified files. For more information, see the [PreventSmartScreenPromptOverrideForFiles browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+- **Users can override SmartScreen prompt for files**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about downloading unverified files. For more information, see the [PreventSmartScreenPromptOverrideForFiles browser policy](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 ## Create the browser profile
 

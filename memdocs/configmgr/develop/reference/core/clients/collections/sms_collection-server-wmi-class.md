@@ -1,407 +1,541 @@
 ---
-title: "SMS_Collection Class"
-titleSuffix: "Configuration Manager"
-ms.date: "12/14/2017"
-ms.prod: "configuration-manager"
+title: SMS_Collection class
+titleSuffix: Configuration Manager
+description: WMI class for collection objects.
+ms.date: 11/30/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7b900446-4a60-4343-9f8b-2d6ecc7ac951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_Collection Server WMI Class
-The `SMS_Collection` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager. It represents a collection of resources related logically by rules along with collection information.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_Collection server WMI class
+
+The `SMS_Collection` WMI class is an SMS Provider server class in Configuration Manager. It represents a collection of resources related logically by rules along with collection information.
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
 ## Syntax  
 
-```  
-Class SMS_Collection : SMS_BaseClass   
-{   
-   String CollectionID;   
-   SMS_CollectionRule CollectionRules[];   
-   UInt32 CollectionType;   
-   SInt32 CollectionVariablesCount;   
-   String Comment;   
-   UInt32 CurrentStatus;  
-   Boolean HasProvisionedMember;   
-   SInt32 IncludeExcludeCollectionsCount;   
-   Boolean IsBuiltIn;   
-   Boolean IsReferenceCollection;  
-   UInt8 ISVData[];   
-   UInt32 ISVDataSize;   
-   String ISVString;  
-   DateTime LastChangeTime;   
-   DateTime LastMemberChangeTime;   
-   DateTime LastRefreshTime;   
-   String LimitToCollectionID;   
-   String LimitToCollectionName;   
-   SInt32 LocalMemberCount;   
-   String MemberClassName;   
-   SInt32 MemberCount;   
-   UInt32 MonitoringFlags;   
-   String Name;   
-   Boolean OwnedByThisSite;   
-   SInt32 PowerConfigsCount;   
-   SMS_ScheduleToken RefreshSchedule[];   
-   UInt32 RefreshType;   
-   Boolean ReplicateToSubSites;   
-   SInt32 ServiceWindowsCount;   
-   Boolean UseCluster;  
-};  
-```  
-
-## Methods  
- The following table lists the methods in the `SMS_Collection` class.  
-
-|Method|Description|  
-|------------|-----------------|  
-|[AddMembershipRule Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/addmembershiprule-method-in-class-sms_collection.md)|Adds one new rule to the `CollectionRules` property of `SMS_Collection`.|  
-|[AddMembershipRules Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/addmembershiprules-method-in-class-sms_collection.md)|Adds multiple new rules to the `CollectionRules` property of `SMS_Collection`.|  
-|[ApproveClients Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/approveclients-method-in-class-sms_collection.md)|Approves specified client computers to join the site.|  
-|[BlockClients Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/blockclients-method-in-class-sms_collection.md)|Blocks specified client computers from communicating with the site.|  
-|[ChangeOwnership Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/changeownership-method-in-class-sms_collection.md)|Changes ownership of machines to a device owner.|  
-|[ClearDeploymentLocksForCollection Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/cleardeploymentlocksforcollection-method-in-class-sms_collection.md)|Clears deployment locks for a selected collection.|  
-|[ClearDeviceCategory Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/cleardevicecategory-method-in-class-sms_collection.md)|Clears a category from a set of devices.|  
-|[ClearLastNBSAdvForCollection Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md)|Clears the last Network Boot advertisement for a selected collection.|  
-|[ClearLastNBSAdvForMachines Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md)|Clears the last Network Boot advertisement for selected client computers.|  
-|[ClientEditions Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/clienteditions-method-in-class-sms_collection.md)|Retrieves a list of client editions.|  
-|[CreateCCR Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/createccr-method-in-class-sms_collection.md)|Creates a client configuration request (CCR) for a particular resource.|  
-|[CreateCCRs Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/createccrs-method-in-class-sms_collection.md)|Generates client configuration requests (CCRs) for the computers in the collection.|  
-|[DeleteAllMembers Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/deleteallmembers-method-in-class-sms_collection.md)|Deletes all members, that is, resources and discovery data, for the collection.|  
-|[DeleteMembershipRule Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/deletemembershiprule-method-in-class-sms_collection.md)|Deletes a membership rule from the collection.|  
-|[DeleteMembershipRules Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/deletemembershiprules-method-in-class-sms_collection.md)|Deletes multiple membership rules from the collection.|  
-|[FindResourceSite Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/findresourcesite-method-in-class-sms_collection.md)|Gets site code information for a computer from SQL.|  
-|[FindMachineSite Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/findmachinesite-method-in-class-sms_collection.md)|Gets site code information for resources from SQL.|  
-|[GetNumResults Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/getnumresults-method-in-class-sms_collection.md)|Gets a count of all members in a collection, excluding subcollections.|  
-|[GenerateCCRByName Method in Class SMS_Collecton](../../../../../develop/reference/core/clients/collections/generateccrbyname-method-in-class-sms_collecton.md)|Generates a client configuration request by computer name.|  
-|[GetTotalNumResults Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/gettotalnumresults-method-in-class-sms_collection.md)|Gets a count of all members in a collection, including subcollections.|  
-|[ReassignClientsToSite Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/reassignclientstosite-method-in-class-sms_collection.md)|Reassigns the site for the clients in the list.|  
-|[RequestRefresh Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md)|Triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.|  
-|[SetDeviceCategory Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/setdevicecategory-method-in-class-sms_collection.md)|Assigns a category to a set of devices.|  
-|[SetMemberOrder Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/setmemberorder-method-in-class-sms_collection.md)|Sets the order of the members of a collection.|  
-|[UpdateVisibilityInEPDashBoard in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/updatevisibilityinepdashboard-in-class-sms_collection.md)|Show this collection in the EndPoint Protection dashboard.|  
-|[VerifyNoCircularDependencies Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/verifynocirculardependencies-method-in-class-sms_collection.md)|Verifies that no circular dependencies are formed if one collection is the parent of another.|  
-
-## Properties  
- `CollectionID`  
- Data type: `String`  
-
- Access type: Read-only  
-
- Qualifiers: [key, read]  
+```MOF
+Class SMS_Collection : SMS_BaseClass
+{
+   String CollectionID;
+   SMS_CollectionRule CollectionRules[];
+   UInt32 CollectionType;
+   SInt32 CollectionVariablesCount;
+   String Comment;
+   UInt32 CurrentStatus;
+   Uint32 FullEvaluationRunTime;
+   Uint32 FullEvaluationMemberChanges;
+   DateTime FullEvaluationMemberChangeTime;
+   DateTime FullEvaluationLastRefreshTime;
+   DateTime FullEvaluationNextRefreshTime;
+   Boolean HasProvisionedMember;
+   SInt32 IncludeExcludeCollectionsCount;
+   Uint32 IncrementalEvaluationRunTime;
+   Uint32 IncrementalEvaluationMemberChanges;
+   DateTime IncrementalEvaluationMemberChangeTime;
+   DateTime IncrementalEvaluationLastRefreshTime;
+   Boolean IsBuiltIn;
+   Boolean IsReferenceCollection;
+   UInt8 ISVData[];
+   UInt32 ISVDataSize;
+   String ISVString;
+   DateTime LastChangeTime;
+   DateTime LastMemberChangeTime;
+   DateTime LastRefreshTime;
+   String LimitToCollectionID;
+   String LimitToCollectionName;
+   SInt32 LocalMemberCount;
+   String MemberClassName;
+   SInt32 MemberCount;
+   UInt32 MonitoringFlags;
+   String Name;
+   Boolean OwnedByThisSite;
+   SInt32 PowerConfigsCount;
+   SMS_ScheduleToken RefreshSchedule[];
+   UInt32 RefreshType;
+   Boolean ReplicateToSubSites;
+   SInt32 ServiceWindowsCount;
+   Boolean UseCluster;
+};
+```
+
+## Methods
+
+The following methods are available in the `SMS_Collection` class:
 
- Unique auto-generated ID containing eight characters. The default value is "".  
+- [AddMembershipRule method](addmembershiprule-method-in-class-sms_collection.md): Adds one new rule to the `CollectionRules` property of `SMS_Collection`.
+- [AddMembershipRules method](addmembershiprules-method-in-class-sms_collection.md): Adds multiple new rules to the `CollectionRules` property of `SMS_Collection`.
+- [ApproveClients method](approveclients-method-in-class-sms_collection.md): Approves specified client computers to join the site.
+- [BlockClients method](blockclients-method-in-class-sms_collection.md): Blocks specified client computers from communicating with the site.
+- [ChangeOwnership method](changeownership-method-in-class-sms_collection.md): Changes ownership of machines to a device owner.
+- [ClearDeploymentLocksForCollection method](cleardeploymentlocksforcollection-method-in-class-sms_collection.md): Clears deployment locks for a selected collection.
+- [ClearDeviceCategory method](cleardevicecategory-method-in-class-sms_collection.md): Clears a category from a set of devices.
+- [ClearLastNBSAdvForCollection method](clearlastnbsadvforcollection-method-in-class-sms_collection.md): Clears the last PXE deployment for a selected collection.
+- [ClearLastNBSAdvForMachines method](clearlastnbsadvformachines-method-in-class-sms_collection.md): Clears the last PXE deployment for selected client computers.
+- [ClientEditions method](clienteditions-method-in-class-sms_collection.md): Retrieves a list of client editions.
+- [CreateCCR method](createccr-method-in-class-sms_collection.md): Creates a client configuration request (CCR) for a particular resource.
+- [CreateCCRs method](createccrs-method-in-class-sms_collection.md): Generates client configuration requests (CCRs) for the computers in the collection.
+- [DeleteAllMembers method](deleteallmembers-method-in-class-sms_collection.md): Deletes all members, that is, resources and discovery data, for the collection.
+- [DeleteMembershipRule method](deletemembershiprule-method-in-class-sms_collection.md): Deletes a membership rule from the collection.
+- [DeleteMembershipRules method](deletemembershiprules-method-in-class-sms_collection.md): Deletes multiple membership rules from the collection.
+- [FindResourceSite method](findresourcesite-method-in-class-sms_collection.md): Gets site code information for a computer from the site database.
+- [FindMachineSite method](findmachinesite-method-in-class-sms_collection.md): Gets site code information for resources from the site database.
+- [GetDependency method](getdependency-method-in-class-sms_collection.md): Starting in version 2010, get the collection relationship info which the input collection depends on.
+- [GetDependent method](getdependent-method-in-class-sms_collection.md): Starting in version 2010, get the collection relationship info which depends on the input collection.
+- [GetNumResults method](getnumresults-method-in-class-sms_collection.md): Gets a count of all members in a collection, excluding subcollections.
+- [GenerateCCRByName method](generateccrbyname-method-in-class-sms_collecton.md): Generates a client configuration request by computer name.
+- [GetTotalNumResults method](gettotalnumresults-method-in-class-sms_collection.md): Gets a count of all members in a collection, including subcollections.
+- [ReassignClientsToSite method](reassignclientstosite-method-in-class-sms_collection.md): Reassigns the site for the clients in the list.
+- [RequestRefresh method](requestrefresh-method-in-class-sms_collection.md): Triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.
+- [SetDeviceCategory method](setdevicecategory-method-in-class-sms_collection.md): Assigns a category to a set of devices.
+- [SetMemberOrder method](setmemberorder-method-in-class-sms_collection.md): Sets the order of the members of a collection.
+- [UpdateVisibilityInEPDashBoard method](updatevisibilityinepdashboard-in-class-sms_collection.md): Show this collection in the endpoint protection dashboard.
+- [VerifyNoCircularDependencies method](verifynocirculardependencies-method-in-class-sms_collection.md): Verifies that no circular dependencies are formed if one collection is the parent of another.
 
- The format of the collection ID is the site code that created the collection followed by a five-digit hexadecimal serial number, for example, "JAX0002C". The default Configuration Manager collections, created during the installation, use the "SMS" prefix, for example, "SMS00001".  
+## Properties
 
- `CollectionRules`  
- Data type: `SMS_CollectionRule` Array  
+### `CollectionID`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: [lazy]  
+Access type: Read-only
 
- SMS_CollectionRule Server WMI Class objects defining the membership criteria for the collection.  
+Qualifiers: [key, read]
 
- `CollectionType`  
- Data type: `UInt32`  
+The unique autogenerated ID for this collection that contains eight characters.
 
- Access type: Read-only  
+The format of the collection ID is the site code that created the collection followed by a five-digit hexadecimal serial number, for example, `JAX0002C`. The default Configuration Manager collections use the prefix **SMS**, for example, `SMS00001`.
 
- Qualifiers: [read, enumeration]  
+### `CollectionRules`
 
- The type of the collection. When creating or modifying collections, the collection type must be the same for all included, excluded, and LimitTo collections. Mismatched collection types are not allowed. <!--SMS442380-->
+Data type: `SMS_CollectionRule` array
 
-|||  
-|-|-|  
-|0|OTHER|  
-|1|USER|  
-|2|DEVICE|  
+Access type: Read/Write
 
- `CollectionVariablesCount`  
- Data type: `SInt32`  
+Qualifiers: [lazy]
 
- Access type: Read-only  
+SMS_CollectionRule server WMI class objects defining the membership criteria for the collection.
 
- Qualifiers: [read]  
+### `CollectionType`
 
- Count of collection variables.  
+Data type: `UInt32`
 
- `Comment`  
- Data type: `String`  
+Access type: Read-only
 
- Access type: Read/Write  
+Qualifiers: [read, enumeration]
 
- Qualifiers: None  
+The type of the collection. When creating or modifying collections, the collection type must be the same for all included, excluded, and limited collections. Mismatched collection types aren't allowed. <!--SMS442380-->
 
- General comment or note that documents the collection. The default value is "".  
+| Value | Collection type |
+| ----- | --------------- |
+| `0` | Other |
+| `1` | User |
+| `2` | Device |
 
- `CurrentStatus`  
- Data type: `UInt32`  
+### `CollectionVariablesCount`
 
- Access type: Read-only  
+Data type: `SInt32`
 
- Qualifiers: [read, enumeration]  
+Access type: Read-only
 
- Current status of the collection. Possible values are:  
+Qualifiers: [read]
 
-|||  
-|-|-|  
-|0|NONE|  
-|1|READY|  
-|2|REFRESHING|  
-|3|SAVING|  
-|4|EVALUATING|  
-|5|AWAITING_REFRESH|  
-|6|DELETING|  
-|7|APPENDING_MEMBER|  
-|8|QUERYING|  
+Count of collection variables.
 
- `HasProvisionedMember`  
- Data type: `Boolean`  
+### `Comment`
 
- Access type: Read-only  
+Data type: `String`
 
- Qualifiers: [read]  
+Access type: Read/Write
 
- `true` if this collection has provisioned members.  
+Qualifiers: None
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+General comment or note that documents the collection.
 
- `IncludeExcludeCollectionsCount`  
- Data type: `SInt32`  
+### `CurrentStatus`
 
- Access type: Read-only  
+Data type: `UInt32`
 
- Qualifiers: [read]  
+Access type: Read-only
 
- Count of collections that are included and excluded with this one.  
+Qualifiers: [read, enumeration]
 
- `IsBuiltIn`  
- Data type: `Boolean`  
+Current status of the collection. Possible values are:
 
- Access type: Read-Only  
+| Value | Current status |
+| ----- | -------------- |
+| `0` | None|
+| `1` | Ready |
+| `2` | Refreshing |
+| `3` | Saving |
+| `4` | Evaluating |
+| `5` | Awaiting refresh |
+| `6` | Deleting |
+| `7` | Appending member |
+| `8` | Querying |
 
- Qualifiers: [read]  
+### `FullEvaluationRunTime`
 
- This value, when set to true, denotes that the collection is built in.  
+Data type: `Uint32`
 
- `IsReferenceCollection`  
- Data type: `Boolean`  
+Access type: Read-only
 
- Access type: Read-only  
+Qualifiers: [read]
 
- Qualifiers: [read]  
+Starting in version 2010, the full evaluation run time in seconds.
 
- This value, when set to true, denotes that the collection is not limited by another collection.  
+### `FullEvaluationMemberChanges`
 
- `ISVData`  
- Data type: `UInt8[]`  
+Data type: `Uint32`
 
- Access type: Read/Write  
+Access type: Read-only
 
- Qualifiers: [large, lazy]  
+Qualifiers: [read]
 
- A data space for Partner extensibility.  
+Starting in version 2010, the number of member changes from full evaluation.
 
- `ISVDataSize`  
- Data type: `UInt32`  
+### `FullEvaluationMemberChangeTime`
 
- Access type: Read/Write  
+Data type: `Datetime`
 
- Qualifiers: [lazy]  
+Access type: Read-only
 
- The ISVData size.  
+Qualifiers: [read]
 
- `ISVString`  
- Data type: `String`  
+Starting in version 2010, the last time that membership changed from full evaluation.
 
- Access type: Read/Write  
+### `FullEvaluationLastRefreshTime`
 
- Qualifiers: none  
+Data type: `Datetime`
 
- A string for Partner extensibility.  
+Access type: Read-only
 
- `LastChangeTime`  
- Data type: `DateTime`  
+Qualifiers: [read]
 
- Access type: Read/Write  
+Starting in version 2010, the full evaluation last refresh time.
 
- Qualifiers: None  
+### `FullEvaluationNextRefreshTime`
 
- Date and time of when the collection was last altered in any way.  
+Data type: `Datetime`
 
- `LastMemberChangeTime`  
- Data type: `DateTime`  
+Access type: Read-only
 
- Access type: Read/Write  
+Qualifiers: [read]
 
- Qualifiers: None  
+Starting in version 2010, the full evaluation next refresh time.
 
- Date and time of when the collection membership was last altered.  
+### `HasProvisionedMember`
 
- `LastRefreshTime`  
- Data type: `DateTime`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read-only
 
- Qualifiers: None  
+Qualifiers: [read]
 
- Date and time of when the collection membership was last refreshed.  
+`true` if this collection has provisioned members.
 
- `LimitToCollectionID`  
- Data type: `String`  
+### `IncludeExcludeCollectionsCount`
 
- Access type: Read/Write  
+Data type: `SInt32`
 
- Qualifiers: None  
+Access type: Read-only
 
- The CollectionID of the collection to limit the query results to.  
+Qualifiers: [read]
 
- `LimitToCollectionName`  
- Data type: `DateTime`  
+Count of collections that are included and excluded with this one.
 
- Access type: Read/Write  
+### `IncrementalEvaluationRunTime`
 
- Qualifiers: None  
+Data type: `Uint32`
 
- The Name of the collection to limit the query results to.  
+Access type: Read-only
 
- `LocalMemberCount`  
- Data type: `SInt32`  
+Qualifiers: [read]
 
- Access type: Read-only  
+Starting in version 2010, the incremental evaluation run time in seconds.
 
- Qualifiers: [read]  
+### `IncrementalEvaluationMemberChanges`
 
- Count of members visible at the local site.  
+Data type: `Uint32`
 
- `MemberClassName`  
- Data type: `String`  
+Access type: Read-only
 
- Access type: Read-only  
+Qualifiers: [read]
 
- Qualifiers: [read]  
+Starting in version 2010, the number of member changes from incremental evaluation.
 
- Class name having instances that are the members of the collection. The collection membership is not contained in `SMS_Collection` but is instead contained in the class name specified by this property. The class name is generated dynamically and is derived from [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md).  
+### `IncrementalEvaluationMemberChangeTime`
 
- `MemberCount`  
- Data type: `SInt32`  
+Data type: `Datetime`
 
- Access type: Read-only  
+Access type: Read-only
 
- Qualifiers: [read]  
+Qualifiers: [read]
 
- A count of the collection members.  
+Starting in version 2010, the last time that membership changed from incremental evaluation.
 
- `MonitoringFlags`  
- Data type: `UInt32`  
+### `IncrementalEvaluationLastRefreshTime`
 
- Access type: Read-only  
+Data type: `Datetime`
 
- Qualifiers: [read]  
+Access type: Read-only
 
- Enables the collection for certain kinds of monitoring.  
+Qualifiers: [read]
 
- `Name`  
- Data type: `String`  
+Starting in version 2010, the incremental evaluation last refresh time.
 
- Access type: Read/Write  
+### `IsBuiltIn`
 
- Qualifiers: [Not_null]  
+Data type: `Boolean`
 
- The name of the collection. This value represents the collection in the Configuration Manager console and should be unique. The default value is "New Collection".  
+Access type: Read-Only
 
- `OwnedByThisSite`  
- Data type: `Boolean`  
+Qualifiers: [read]
 
- Access type: Read/Write  
+When this value is `true`, the collection is built in. For example, **All Systems**.
 
- Qualifier: None  
+### `IsReferenceCollection`
 
- `true` if the collection originated at the local Configuration Manager site. The default value is `false`.  
+Data type: `Boolean`
 
- `PowerConfigsCount`  
- Data type: `SInt32`  
+Access type: Read-only
 
- Access type: Read-only  
+Qualifiers: [read]
 
- Qualifier: [read]  
+When this value is `true`, the collection isn't limited by another collection.
 
- A count of the power configurations.  
+### `ISVData`
 
- `RefreshSchedule`  
- Data type: `SMS_ScheduleToken` Array  
+Data type: `UInt8[]`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [max(15), lazy]  
+Qualifiers: [large, lazy]
 
- [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects indicating an update or refresh schedule for the collection. The collection membership is only updated if your application specifies a schedule or calls the [RequestRefresh Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md) method. For the collection evaluator to use the schedule, the `RefreshType` property must be set to PERIODIC.  
+A data space for partner extensibility.
 
- `RefreshType`  
- Data type: `UInt32`  
+### `ISVDataSize`
 
- Access type: Read/Write  
+Data type: `UInt32`
 
- Qualifiers: [lazy, enumeration]  
+Access type: Read/Write
 
- Refresh type indicating how Configuration Manager refreshes the collection. Possible values are listed below. The default value is MANUAL (1).  
+Qualifiers: [lazy]
 
-|||  
-|-|-|  
-|1|MANUAL|  
-|2|PERIODIC|  
-|4|CONSTANT_UPDATE|  
+The ISVData size.
 
- Set this property to PERIODIC to base the refresh on the schedule specified in `RefreshSchedule`. A setting of MANUAL manually updates the collection by using the [RequestRefresh Method in Class SMS_Collection](../../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md).  
+### `ISVString`
 
- `ReplicateToSubSites`  
- This property is not implemented.  
+Data type: `String`
 
- `ServiceWindowsCount`  
- Data type: `SInt32`  
+Access type: Read/Write
 
- Access type: Read-only  
+Qualifiers: none
 
- Qualifiers: [read]  
+A string for partner extensibility.
 
- Count of maintenance windows.  
+### `LastChangeTime`
 
- `UseCluster`  
- Data type: `Boolean`  
+Data type: `DateTime`
 
- Access type: Read-only  
+Access type: Read/Write
 
- Qualifiers: [read]  
+Qualifiers: None
 
- Specifies that this collection is a server group.  
+Date and time of when the collection was last altered in any way.
 
-## Remarks  
- Class qualifiers for this class include:  
+### `LastMemberChangeTime`
 
-- Secured  
+Data type: `DateTime`
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Access type: Read/Write
 
-  Collection information represented by this class includes the refresh schedule and the members, represented by [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) objects. Your application can use a collection to target resources for software distribution.  
+Qualifiers: None
 
-  When you run a query against a dynamic collection represented by `SMS_Collection`, ensure that the SMS Provider is loaded or that another method or query has already run.  
+Date and time of when the collection membership was last altered.
 
-  The application should use the `SMS_Collection` methods to add, update, or delete membership rules defined by the `CollectionRules` property. This property is not retrieved when your application enumerates `SMS_Collection`. To obtain the collection rules for a collection, your application must use `IWbemServices::GetObject` or `SWbemServices::Get`. For more information, see Configuration Manager Context Qualifiers.  
+### `LastRefreshTime`
+
+Data type: `DateTime`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+Date and time of when the collection membership was last refreshed.
+
+### `LimitToCollectionID`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The ID of the limiting collection.
+
+### `LimitToCollectionName`
+
+Data type: `DateTime`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+The name of the limiting collection.
+
+### `LocalMemberCount`
+
+Data type: `SInt32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Count of members visible at the local site.
+
+### `MemberClassName`
+
+Data type: `String`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+The name of the class that contains the members of this collection. Configuration Manager doesn't store collection members in **SMS_Collection**. The site dynamically generates the member class name, and is derived from [SMS_CM_RES_COLL_CollectionID server WMI class](sms_cm_res_coll_collectionid-server-wmi-class.md).
+
+### `MemberCount`
+
+Data type: `SInt32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+The count of the collection members.
+
+### `MonitoringFlags`
+
+Data type: `UInt32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Enables the collection for certain kinds of monitoring.
+
+### `Name`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: [Not_null]
+
+The name of the collection. This value represents the collection in the Configuration Manager console and should be unique.
+
+### `OwnedByThisSite`
+
+Data type: `Boolean`
+
+Access type: Read/Write
+
+Qualifier: None
+
+`true` if the collection originated at the local Configuration Manager site. The default value is `false`.
+
+### `PowerConfigsCount`
+
+Data type: `SInt32`
+
+Access type: Read-only
+
+Qualifier: [read]
+
+A count of the power configurations.
+
+### `RefreshSchedule`
+
+Data type: `SMS_ScheduleToken` array
+
+Access type: Read/Write
+
+Qualifiers: [max(15), lazy]
+
+[SMS_ScheduleToken server WMI class](../../servers/configure/sms_scheduletoken-server-wmi-class.md) objects indicating an update or refresh schedule for the collection. The site only updates collection membership if your application specifies a schedule or calls the [RequestRefresh method](requestrefresh-method-in-class-sms_collection.md) in the **SMS_Collection** class. For the collection evaluator to use the schedule, set the `RefreshType` property to periodic (`2`).
+
+### `RefreshType`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: [lazy, enumeration]
+
+This value indicates how Configuration Manager refreshes the collection. The default value is manual (`1`). Possible values:
+
+| Value | Refresh type |
+| ----- | ------------ |
+| `1` | Manual |
+| `2` | Periodic |
+| `4` | Constant update |
+
+To base the refresh on the schedule specified in `RefreshSchedule`, set this property to periodic (`2`). If you set this property to manual (`1`), manually update the collection with the [RequestRefresh method](requestrefresh-method-in-class-sms_collection.md).
+
+### `ReplicateToSubSites`
+
+This property isn't implemented.
+
+### `ServiceWindowsCount`
+
+Data type: `SInt32`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Count of maintenance windows for this collection.
+
+### `UseCluster`
+
+Data type: `Boolean`
+
+Access type: Read-only
+
+Qualifiers: [read]
+
+Specifies that this collection is a server group.
+
+## Remarks
+
+Class qualifiers for this class include:
+
+- Secured
+
+For more information about both the class qualifiers and the property qualifiers included in the properties section, see [Configuration Manager class and property qualifiers](../../../misc/class-and-property-qualifiers.md).
+
+Collection information represented by this class includes the refresh schedule and the members, represented by [SMS_CM_RES_COLL_CollectionID server WMI class](sms_cm_res_coll_collectionid-server-wmi-class.md) objects. Your application can use a collection to target resources for software distribution.
+
+When you run a query against a dynamic collection represented by `SMS_Collection`, make sure that the SMS Provider is loaded or that another method or query has already run.
+
+The application should use the `SMS_Collection` methods to add, update, or delete membership rules defined by the `CollectionRules` property. This property isn't retrieved when your application enumerates `SMS_Collection`. To obtain the collection rules for a collection, your application must use `IWbemServices::GetObject` or `SWbemServices::Get`. For more information, see [Configuration Manager context qualifiers](../../../../core/understand/context-qualifiers.md).
 
 ## Requirements  
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).
 
-## See Also  
- [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md)   
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).
+
+## See also
+
+[SMS_CollectionRule server WMI class](sms_collectionrule-server-wmi-class.md)

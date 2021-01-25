@@ -5,7 +5,7 @@ description: Information to find out what SQL statement is used in a Configurati
 ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: e596b1be-c09e-4e44-a400-43345ab0f71b

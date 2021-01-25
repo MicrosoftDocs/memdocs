@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,6 @@ Windows Hello for Business is a method for signing in to Windows devices by repl
 This feature applies to device running:
 
 - Windows 10 and later
-- Windows 10 Mobile
 - Windows Holographic for Business
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to user and device groups in your organization.
@@ -61,11 +60,11 @@ This article shows you how to create a device configuration profile. For a list 
 
    - **Configure Windows Hello for Business**: Choose how you want to configure Windows Hello for Business:
 
-     - **Not configured** (default): [Provisions Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) on the device. When assigning identity protection profiles to users only, the device context defaults to **Not configured**.
+     - **Not configured** (default): [Provisions Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) on the device. When assigning identity protection profiles to users only, the device context defaults to **Not configured**.
 
      - **Disabled**: If you don't want to use Windows Hello for Business, select this option. This option disables Windows Hello for Business for all users.
 
-     - **Enabled**: Choose this option to [provision](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), and configure Windows Hello for Business settings in Intune. Enter the settings you want to configure. For a list of all settings, and what they do, see - [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
+     - **Enabled**: Choose this option to [provision](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), and configure Windows Hello for Business settings in Intune. Enter the settings you want to configure. For a list of all settings, and what they do, see - [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
 
    - **Use security keys for sign-in**: Enable Windows Hello security key as a logon credential for all PCs in the tenant.
 

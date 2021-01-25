@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c714a1cf-86af-4de2-9160-af360a484895
 author: aczechowski
 ms.author: aaroncz
@@ -93,10 +93,9 @@ public void RunQuery(WqlConnectionManager connection, string queryId)
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`queryID`|-   Managed: `String`<br />-   VBScript: `String`|A query identifier. For more information see the `SMS_Query` class `QueryID` property.|  
 
 ## Compiling the Code  

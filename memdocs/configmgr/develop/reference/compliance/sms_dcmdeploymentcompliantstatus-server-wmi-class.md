@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 15f5c573-86b5-477f-a3a5-082e7f23765e
 author: aczechowski
 ms.author: aaroncz
@@ -142,7 +142,7 @@ Class SMS_DCMDeploymentCompliantStatus : SMS_BaseClass
 
  Status of the deployment from the targeted asset. Possible values are:  
 
-|||  
+|Value|Deployment status|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

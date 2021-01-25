@@ -33,7 +33,7 @@ Using Microsoft Intune, you can add or create custom settings for your Windows H
 
 Windows Holographic for Business custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to configure different features. These settings are typically used by mobile device manufacturers to control features on the device.
 
-Windows Holographic for Business makes many configuration service providers (CSPs) settings available. For a CSP overview, see [Introduction to configuration service providers (CSPs) for IT pros](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers). For specific CSPs supported by Windows Holographic, see [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens).
+Windows Holographic for Business makes many configuration service providers (CSPs) settings available. For a CSP overview, see [Introduction to configuration service providers (CSPs) for IT pros](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). For specific CSPs supported by Windows Holographic, see [CSPs supported in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens).
 
 If you're looking for a specific setting, remember that the [Windows Holographic for Business device restriction profile](device-restrictions-windows-holographic.md) includes many built-in settings. So, you may not need to enter custom values.
 
@@ -68,91 +68,91 @@ After you add some settings, you can select **Export**. **Export** creates a lis
 
 The following settings are useful for devices running Windows Holographic for Business:
 
-### [AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
+### [AllowFastReconnect](/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Integer<br/>0 - not allowed<br/>1 - allowed (default)|
 
-### [AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+### [AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Integer<br/>0 – Update service is not allowed <br/>1  – Update service is allowed (default).|
 
-### [AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
+### [AllowVPN](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Integer<br/>0 - not allowed<br/>1 - allowed (default)|
 
-### [RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+### [RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>Integer<br/>0 – Not configured. The device installs all applicable updates.<br/>1 – The device only installs updates that are both applicable and on the Approved Updates list. Set this policy to 1 if IT wants to control the deployment of updates on devices, such as when testing is required prior to deployment.|
 
-### [ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
+### [ScheduledInstallTime](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/ScheduledInstallTime|Integer 0-23, where 0=12AM and 23=11PM<br/>Default value is 3.|
 
-### [UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+### [UpdateServiceURL](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
 
-### [ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
+### [ApprovedUpdates](/windows/client-management/mdm/update-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
-> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Important**<br/>You must read and accept the update EULAs on behalf of your end users. Failure to do so is a breach of legal or contractual obligations.|Node for update approvals and EULA acceptance on behalf of the end user.<br/><br/>For more information, see [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
+> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Important**<br/>You must read and accept the update EULAs on behalf of your end users. Failure to do so is a breach of legal or contractual obligations.|Node for update approvals and EULA acceptance on behalf of the end user.<br/><br/>For more information, see [Update CSP](/windows/client-management/mdm/update-csp).|
 
-### [ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+### [ApplicationLaunchRestrictions](/windows/client-management/mdm/applocker-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |----|---|
-> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Important**<br/>The AppLocker CSP article uses escaped XML examples. To configure the settings with Intune custom profiles, you must use plain XML.|String<br/>For more information, see [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Important**<br/>The AppLocker CSP article uses escaped XML examples. To configure the settings with Intune custom profiles, you must use plain XML.|String<br/>For more information, see [AppLocker CSP](/windows/client-management/mdm/applocker-csp).|
 
-### [DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### [DeletionPolicy](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/DeletionPolicy|Integer<br/>0 - delete immediately when the device returns to a state with no currently active users<br/>1 - delete at storage capacity threshold (default)<br/>2 - delete at both storage capacity threshold and profile inactivity threshold|
 
-### [EnableProfileManager](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### [EnableProfileManager](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/EnableProfileManager|Boolean<br/>True - enable<br/>False - disable (default)|
 
-### [ProfileInactivityThreshold](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### [ProfileInactivityThreshold](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Integer<br/>Default value is 30.|
 
-### [StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### [StorageCapacityStartDeletion](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStartDeletion|Integer<br/>Default value is 25.|
 
-### [StorageCapacityStopDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### [StorageCapacityStopDeletion](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
@@ -161,9 +161,9 @@ The following settings are useful for devices running Windows Holographic for Bu
 
 ## Find the policies you can configure
 
-You can find a complete list of all configuration service providers (CSPs) that Windows Holographic supports in [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens). Not all settings are compatible with all Windows Holographic versions. The table in [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) lists the supported versions for each CSP.
+You can find a complete list of all configuration service providers (CSPs) that Windows Holographic supports in [CSPs supported in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens). Not all settings are compatible with all Windows Holographic versions. The table in [CSPs supported in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens) lists the supported versions for each CSP.
 
-Additionally, Intune doesn't support all of the settings listed in [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add** or **Replace** operations.
+Additionally, Intune doesn't support all of the settings listed in [CSPs supported in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add** or **Replace** operations.
 
 ## Next steps
 

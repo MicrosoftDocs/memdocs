@@ -56,20 +56,20 @@ With Intune, you can manage multiple devices per person, and the different platf
 **[Common scenarios](common-scenarios.md)** is a great resource to see how Intune answers common questions when working with mobile devices. You'll find scenarios about:  
 
 - Protecting email with on-premises Exchange
-- Accessing Office 365 safely and securely
+- Accessing Microsoft 365 safely and securely
 - Using personal devices to access organizational resources
 
 For more information about Intune, see [What is Intune](what-is-intune.md).
 
 ## Co-management
 
-Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [running remote actions](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [using Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), and more.
+Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](../../configmgr/comanage/quickstart-conditional-access.md), [running remote actions](../../configmgr/comanage/quickstart-remote-actions.md), [using Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md), and more.
 
-[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) is a solution platform that unifies several services. It includes [Microsoft Intune](what-is-intune.md) for cloud-based device management, and [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) for cloud-attach device management.
+[Microsoft Endpoint Manager](../../endpoint-manager-overview.md) is a solution platform that unifies several services. It includes [Microsoft Intune](what-is-intune.md) for cloud-based device management, and [Configuration Manager + Intune](../../configmgr/comanage/overview.md) for cloud-attach device management.
 
 If you use Configuration Manager, and you're ready to move some tasks to the cloud, then co-management is your answer.
 
-For more information about cloud-attaching your Configuration Manager, see [What is co-management](https://docs.microsoft.com/mem/configmgr/comanage/overview).
+For more information about cloud-attaching your Configuration Manager, see [What is co-management](../../configmgr/comanage/overview.md).
 
 ## Integration with secure-and-protect services
 
@@ -112,11 +112,11 @@ On the Device Management admin center, you can:
 - Manage software updates
   - [Manage Windows 10 updates](../protect/windows-update-for-business-configure.md)  
   - [Manage iOS/iPadOS updates](../protect/software-updates-ios.md)  
-- [Azure active directory](https://docs.microsoft.com/azure/active-directory)  
-- [Manage users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [Manage groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Azure active directory](/azure/active-directory)  
+- [Manage users](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Manage groups and members](/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [Troubleshoot](help-desk-operators.md)
 
 ## Next steps
 
-When you're ready to get started with an MDM or MAM solution, walk through the different steps to set up Intune, enroll devices, and start creating policies. [Mobile device management for Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) is also a great resource.
+When you're ready to get started with an MDM or MAM solution, walk through the different steps to set up Intune, enroll devices, and start creating policies. [Mobile device management for Microsoft 365](/microsoft-365/enterprise/mobility-infrastructure) is also a great resource.

@@ -7,7 +7,7 @@ services: microsoft-intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/30/2019
+ms.date: 12/10/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -91,11 +91,11 @@ Before enrolling your Windows 10 Desktop, you must confirm the version of Window
 
    ![Screenshot of newly added account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    If you followed the previous steps, but still can't access your work or school email account and files, follow the steps in [Troubleshooting steps to follow if you see Access work or school](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    If you followed the previous steps, but still can't access your work or school email account and files, follow the steps in [Troubleshoot Windows 10 device access](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
 ## Confirm your device enrollment in Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
 2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
 3. Verify that you have an additional device enrolled within Intune.
 

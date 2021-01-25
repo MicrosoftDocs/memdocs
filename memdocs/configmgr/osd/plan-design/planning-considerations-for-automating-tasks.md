@@ -177,7 +177,7 @@ For more information about how to deploy task sequences, see the [Deploy a task 
 
 Configuration Manager lets you export and import task sequences. When you export a task sequence, you can include the objects that are referenced by the task sequence.
 
-For more information, see [Export and import task sequences](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ExportImport).  
+For more information, see [Export and import task sequences](../deploy-use/manage-task-sequences-to-automate-tasks.md#export-and-import).  
 
 ## <a name="BKMK_TSRun"></a> Run a task sequence  
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
 author: aczechowski
 ms.author: aaroncz
@@ -167,7 +167,7 @@ public void EnumerateCollectionMembers(WqlConnectionManager connection)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  The C# example requires:  

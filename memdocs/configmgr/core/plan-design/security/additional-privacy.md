@@ -32,7 +32,7 @@ For more information about collected information and how it's used, see [Usage d
 Configuration Manager collects diagnostics and usage data about itself, which Microsoft uses to improve the installation experience, quality, and security of future releases.
 Diagnostics and usage data is enabled for each Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.
 
-Configuration Manager collects data only from the site's SQL server database, and it doesn't collect data directly from clients or site servers.
+Configuration Manager collects data only from the site's SQL Server database, and it doesn't collect data directly from clients or site servers.
 
 Administrators can change the level of data that's collected by going to the **Usage Data** section of the Configuration Manager console.
 
@@ -44,7 +44,7 @@ For more information about usage data levels and settings, see [Diagnostics and 
 
 The Log Analytics Connector syncs data, such as collections, from Configuration Manager to the Azure cloud service. The Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Azure Active Directory client secret and the Azure workspace shared key are stored in the on-premises Configuration Manager database. All communications between Configuration Manager and Azure use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized diagnostics and usage data. 
 
-For more information about the information that Log Analytics collects, see [Log analytics data security](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security).
+For more information about the information that Log Analytics collects, see [Log analytics data security](/azure/log-analytics/log-analytics-data-security).
 
 
 
@@ -64,7 +64,7 @@ Asset Intelligence isn't enabled by default in Configuration Manager. Uploading 
 
 Microsoft Cloud Protection Service was formerly known as Microsoft Active Protection Service or MAPS.
 
-The applicable products are System Center Endpoint Protection and the Endpoint Protection feature of Configuration Manager (to manage System Center Endpoint Protection and Windows Defender for Windows 10). This feature isn't implemented for System Center Endpoint Protection for Linux or System Center Endpoint Protection for Mac.
+The applicable products are System Center Endpoint Protection and the Endpoint Protection feature of Configuration Manager (to manage System Center Endpoint Protection and Windows Defender for Windows 10).
 
 The Microsoft Cloud Protection Service antimalware community is a voluntary worldwide online community that includes System Center Endpoint Protection users. When you join Microsoft Cloud Protection Service, System Center Endpoint Protection automatically sends information to Microsoft. Microsoft uses the information to determine software to investigate for potential threats and to help improve the effectiveness of System Center Endpoint Protection. This community helps stop the spread of new malicious software infections. If a Microsoft Cloud Protection Service report includes details about malware or potentially unwanted software that the Endpoint Protection client may be able to remove, Microsoft Cloud Protection Service downloads the latest signature to address it. Microsoft Cloud Protection Service can also find "false positives" and fix them. (False positives are where something originally identified as malware turns out not to be.) 
 
@@ -85,6 +85,9 @@ For more information, see [Endpoint Protection](../../../protect/deploy-use/endp
 
 
 ## Site Hierarchy – Geographical View with Bing Maps
+
+> [!IMPORTANT]
+> Starting in August 2020, this feature is deprecated. Use the **Hierarchy Diagram** option.<!--8116777-->
 
 In the Configuration Manager console, go to the **Monitoring** workspace, select the **Site Hierarchy** node, and switch to the **Geographical View**. This view lets you use maps that Microsoft Bing Maps provides to view your Configuration Manager physical server topology. To enable this feature, location information that you provide is sent from your server to the Bing Maps Web service.
 

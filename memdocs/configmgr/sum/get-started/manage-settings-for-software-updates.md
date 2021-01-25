@@ -2,7 +2,7 @@
 title: Manage settings for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
-ms.date: 06/04/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -24,11 +24,14 @@ After you synchronize software updates in Configuration Manager, configure and v
 After you install the software update point, software updates is enabled on clients by default, and the settings on the **Software Updates** page in client settings have default values. The client settings are used site-wide and affect when software updates are scanned for compliance, and how and when software updates are installed on client computers. Before you deploy software updates, verify that the client settings are appropriate for software updates at your site.  
 
 > [!IMPORTANT]  
->  The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client.  
+> - The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client.
+>
+> - Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md). 
 
 For information about how to configure client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
-For more information about the client settings, see [About client settings](../../core/clients/deploy/about-client-settings.md).  
+For more information about the client settings, see [About client settings](../../core/clients/deploy/about-client-settings.md). 
+
 
 ##  <a name="BKMK_GroupPolicy"></a> Group policy settings for software updates  
 There are specific group policy settings that are used by Windows Update Agent (WUA) on client computers to connect to WSUS that runs on the software updates point. These group policy settings are also used to successfully scan for software update compliance, and to automatically update the software updates and the WUA.
@@ -37,7 +40,7 @@ There are specific group policy settings that are used by Windows Update Agent (
 When the software update point is created for a site, clients receive a machine policy that provides the software update point server name and configures the **Specify intranet Microsoft update service location** local policy on the computer. The WUA retrieves the server name that is specified in the **Set the intranet update service for detecting updates** setting, and then it connects to this server when it scans for software updates compliance. When a domain policy is created for the **Specify intranet Microsoft update service location** setting, it overrides the local policy, and the WUA might connect to a server other than the software update point. If this happens, the client might scan for software update compliance based on different products, classifications, and languages. Therefore, you should not configure the Active Directory policy for client computers.  
 
 ### Allow Signed Content from Intranet Microsoft Update Service Location group policy  
-You must enable the **Allow signed content from intranet Microsoft update service location** Group Policy setting before the WUA on computers will scan for software updates that were created and published with System Center Updates Publisher. When the policy setting is enabled, WUA will accept software updates that are received through an intranet location if the software updates are signed in the **Trusted Publishers** certificate store on the local computer. For more information about the Group Policy settings that are required for Updates Publisher, see [Updates Publisher 2011 Documentation Library](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+You must enable the **Allow signed content from intranet Microsoft update service location** Group Policy setting before the WUA on computers will scan for software updates that were created and published with System Center Updates Publisher. When the policy setting is enabled, WUA will accept software updates that are received through an intranet location if the software updates are signed in the **Trusted Publishers** certificate store on the local computer. For more information about the Group Policy settings that are required for Updates Publisher, see [Updates Publisher 2011 Documentation Library](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### Automatic updates configuration  
 Automatic Updates allows security updates and other important downloads to be received on client computers. Automatic Updates is configured through the **Configure Automatic Updates** Group Policy setting or through the Control Panel on the local computer. When Automatic Updates is enabled, client computers will receive update notifications and, depending on the configured settings, the client computers will download and install the required updates. When Automatic Updates coexists with software updates, each client computer might display notification icons and popup display notifications for the same update. Also, when a restart is required, each client computer might display a restart dialog box for the same update.  
@@ -136,4 +139,4 @@ If used, CRL checking must be enabled on the Configuration Manager consoles that
 #### To enable CRL checking  
 On the computer performing the CRL check, from the product DVD, run the following from a command prompt: **\SMSSETUP\BIN\X64\\**<*language*>**\UpdDwnldCfg.exe /checkrevocation**.  
 
-For example, for English (US) run **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
+For example, for English (US) run **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**

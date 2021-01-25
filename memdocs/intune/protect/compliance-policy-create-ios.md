@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 12/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -92,7 +92,7 @@ For details about email profiles, see [configure access to organization email us
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device.
 
-- **Maximum OS build version*  
+- **Maximum OS build version**  
   *Supported for iOS 8.0 and later*
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device.
@@ -153,7 +153,10 @@ For details about email profiles, see [configure access to organization email us
   You can restrict apps by adding their bundle IDs to the policy. If a device has the app installed, the device is marked as non-compliant.
 
   - **App name** - Enter a user-friendly name to help you identify the bundle ID.
-  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider. To find the bundle ID, see [How to find the bundle ID for an iOS/iPadOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (opens another Microsoft web site).  
+  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider. To find the bundle ID, see [Bundle IDs for native iOS and iPadOS apps](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) at Support.apple.com, or contact the software vendor of the app.
+  
+  > [!NOTE]
+  > The *Restricted apps* setting applies to un-managed applications that are installed outside of management context.
 
 ## Next steps
 

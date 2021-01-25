@@ -91,7 +91,7 @@ Operating system images in Configuration Manager are WIM files and represent a c
     > [!IMPORTANT]  
     >  The [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) task sequence step attempts to reset the local administrator password on the reference computer to a blank value before Sysprep runs. If the Local Security policy **Password must meet complexity requirements** is enabled, this task sequence step fails to reset the administrator password. In this scenario, disable this policy before you run the task sequence.  
 
-     For more information about Sysprep, see [Sysprep (System Preparation) overview](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+     For more information about Sysprep, see [Sysprep (System Preparation) overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Appropriate tools and scripts required to mitigate installation scenarios**  
 
@@ -127,4 +127,4 @@ Operating system images in Configuration Manager are WIM files and represent a c
 ##  <a name="BKMK_UseTSToBuildReference"></a> Use a task sequence to build a reference computer  
  You can automate the process to create a reference computer by using a task sequence to deploy the operating system, drivers, applications, and so on.  Use the following steps to build the reference computer and then to capture the operating system image from the reference computer.  
 
--   Use a task sequence to build and capture the operating system image from the reference computer.  For detailed steps, see [Use a task sequence to build and capture a reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
+-   Use a task sequence to build and capture the operating system image from the reference computer.  For detailed steps, see [Use a task sequence to build and capture a reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).

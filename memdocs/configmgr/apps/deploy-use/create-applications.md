@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -234,7 +234,10 @@ On the **Content** page, specify the following information:
     > [!IMPORTANT]  
     > The System account of the site server computer must have permissions to the specified content location.  
 
-  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.  
+  - **Persist content in the client cache**: The Configuration Manager client indefinitely keeps in its cache the deployment type content. The client persists the content even if the app is already installed. This option is useful with some deployments, like Windows Installer–based software. Windows Installer needs a local copy of the source content for applying updates. This option reduces the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache doesn't have sufficient available space.
+
+    > [!TIP]
+    > This option persists the specific version of content that the client installs. If you update the content for this app, the client doesn't automatically cache this content again. Once an action happens that requires the new content, the client downloads the new content version.<!-- MEMDocs#684 -->
 
 - **Installation program**: Specify the name of the installation program and any required installation parameters.  
 
@@ -306,7 +309,7 @@ This procedure sets up a detection method that indicates the presence of the dep
 
         - **File or folder name** (Required): Specify the specific file or folder name to detect in the above path. If the client detects this file or folder on the device, it considers the application as installed on the device.  
 
-        - **This file or folder is associated with a 32-bit application on 64-bit systems**: This option is selected by default. The client first checks 32-bit file locations for the specified file or folder. If the file or folder isn't found, the client then searches 64-bit locations.  
+        - **This file or folder is associated with a 32-bit application on 64-bit systems**: The client first checks 32-bit file locations for the specified file or folder. If the file or folder isn't found, the client then searches 64-bit locations.  
 
     - **Registry**: Detect whether a specified registry key or registry value exists on a client device. This detection indicates that the application is installed. Specify the following additional details:  
 
@@ -535,7 +538,7 @@ Configuration Manager verifies these requirements on devices before installing t
 
 3. In the **Condition** drop-down list, select the condition to assess whether the user or device meets the installation requirements. The contents of this list vary depending on the selected category.  
 
-4. In the **Operator** drop-down list, select the operator to use. This operator compares the selected condition to the specified value. It assesses whether the user or device meets the installation requirement. The available operators vary depending on the selected condition.  
+4. In the **Operator** drop-down list, select the operator to use. This operator compares the selected condition to the specified value. It assesses whether the user or device meets the installation requirement. The available operators vary depending on the selected condition. When using the `One Of` operator, the Values field has validation that you have to enter one entry per row.
 
     > [!Note]  
     > The available requirements differ depending on the device type that the deployment type uses.  
@@ -683,7 +686,7 @@ Use the following procedure to import an application into Configuration Manager:
 The new application appears in the **Applications** node.  
 
 > [!TIP]  
-> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication).  
 
 For more information about how to export an application, see [Management tasks for applications](management-tasks-applications.md).
 
@@ -701,7 +704,7 @@ Configuration Manager supports the following deployment types for applications:
 | **Microsoft Application Virtualization 5** | A Microsoft App-V v5 package file. |  
 | **Windows Phone app package (\*.xap file)** | A Windows Phone app package file. |  
 | **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
-| **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
+| **macOS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
 | **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
 | **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
@@ -728,5 +731,4 @@ For more information about creating applications on different OS platforms, see 
 
 - [Create Windows applications](../get-started/creating-windows-applications.md)
 - [Create Mac applications](../get-started/creating-mac-computer-applications.md)
-- [Create Linux and UNIX server applications](../get-started/creating-linux-and-unix-server-applications.md)
 - [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md)

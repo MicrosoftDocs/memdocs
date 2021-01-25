@@ -20,9 +20,9 @@ manager: dougeby
 
 The Run Meter Summarization Tool is one of the [Configuration Manager tools](tools.md). Use it to immediately trigger the maintenance tasks for software metering summarization on primary sites. By default, these tasks run as scheduled in **Site Maintenance** tasks, which start after 12:00 AM every day. 
 
-These tasks summarize the data in the **MeterData** SQL table, and write the summary results into the **FileUsageSummary** and **MonthlyUsageSummary** tables. Then you see the summarized result in software metering reports. Any Configuration Manager administrative user who can connect to the primary site database can use this tool to run summarization. 
+These tasks summarize the data in the **MeterData** SQL Server table, and write the summary results into the **FileUsageSummary** and **MonthlyUsageSummary** tables. Then you see the summarized result in software metering reports. Any Configuration Manager administrative user who can connect to the primary site database can use this tool to run summarization. 
 
-This tool runs the **File Usage Summary** and **Monthly Usage Summary** software metering data summarization tasks. It summarizes all existing meter data without the usual 12-hour waiting period. Run it on the SQL server that hosts the site database. If summarization is successful, the exit code is set to `0`. If there was an error, the exit code is `1`.
+This tool runs the **File Usage Summary** and **Monthly Usage Summary** software metering data summarization tasks. It summarizes all existing meter data without the usual 12-hour waiting period. Run it on the SQL Server that hosts the site database. If summarization is successful, the exit code is set to `0`. If there was an error, the exit code is `1`.
 
 
 
@@ -36,7 +36,7 @@ This tool runs the **File Usage Summary** and **Monthly Usage Summary** software
 ### Options
 
 #### Database name
-The name of the site database on the SQL server.
+The name of the site database on the SQL Server.
 
 #### Delay in hours for summarization
 The tool summarizes the software metering usage generated before the delay. By default, this delay is zero.

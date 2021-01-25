@@ -86,7 +86,7 @@ landingContent:
       - text: Managed apps without device enrollment
         url: app-configuration-policies-managed-app.md
       - text: Configure the Managed Browser
-        url: app-configuration-managed-browser.md
+        url: ./manage-microsoft-edge.md
       - text: Manage VPP apps and books
         url: vpp-apps.md
 
@@ -116,8 +116,8 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Troubleshoot app installation problems
-        url: troubleshoot-app-install.md
+        url: /troubleshoot/mem/intune/troubleshoot-app-install
       - text: Troubleshoot mobile application management
-        url: troubleshoot-mam.md
+        url: /troubleshoot/mem/intune/troubleshoot-mam
       - text: Review app protection logs
         url: app-protection-policy-settings-log.md

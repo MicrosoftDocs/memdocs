@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
 author: aczechowski
 ms.author: aaroncz
@@ -40,7 +40,7 @@ public void RenameCollection(WqlConnectionManager connection, string collectionI
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |collectionID|-   Managed: `String`<br />-   VBScript: `String`|Unique auto-generated ID containing eight characters. For more information, see the CollectionID property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
 |name|-   Managed: `String`<br />-   VBScript: `String`|An example collection property. The property value is modified in the code snippet.|  
 |comment|-   Managed: `String`<br />-   VBScript: `String`|An example collection property. The property value is modified in the code snippet.|  

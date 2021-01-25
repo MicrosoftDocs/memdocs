@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2020
+ms.date: 10/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 When a device is lost or stolen, or if the employee leaves your company, you want to make sure company app data is removed from the device. But you might not want to remove personal data on the device, especially if the device is an employee-owned device.
 
 >[!NOTE]
-> The iOS/iPadOS, Android, and Windows 10 platforms are the only platforms currently supported for wiping corporate data from Intune managed apps. Intune managed apps are applications that include the Intune APP SDK and have a licensed user account for your organization. Deployment of Application Protection Policies are not required to enable app selective wipe.
+> The iOS/iPadOS, Android, and Windows 10 platforms are the only platforms currently supported for wiping corporate data from Intune managed apps. Intune managed apps are applications that include the Intune APP SDK, and have at least one enabled and licensed user account in your organization. Deployment of Application Protection Policies is required to enable app selective wipe on Android and iOS.
 
 To selectively remove company app data, create a wipe request by using the steps in this topic. After the request is finished, the next time the app runs on the device, company data is removed from the app. In addition to creating a wipe request, you can configure a selective wipe of your organization's data as a new action when the conditions of Application Protection Policies (APP) Access settings are not met. This feature helps you automatically protect and remove sensitive organization data from applications based on pre-configured criteria.
 
@@ -70,8 +70,7 @@ The service creates and tracks a separate wipe request for each protected app on
 By adding a user to the User-level wipe we will automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
-   Select **User-Level Wipe**
+2. Select **Apps** > **App selective wipe** > **User-Level Wipe**
 3. Click **Add** and **Select user** pane is displayed.
 4. Chose the user whose app data you would like to wipe and click **Select**.
 

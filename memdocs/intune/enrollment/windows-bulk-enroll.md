@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 5/21/2018
+ms.date: 11/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -64,7 +64,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. In the **Use this account everywhere on this device** page, select **This app only**.
+8. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**.
 
 9. Click **Next** when **Bulk Token** is fetched successfully.
 
@@ -81,10 +81,10 @@ Azure AD users are standard users on these devices and receive assigned Intune p
    - Place the provisioning package on a USB drive, insert the USB drive into the device you'd like to bulk enroll, and apply it during initial setup
    - Place the provisioning package on a network folder, and apply it after initial setup
 
-   For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
+   For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. After you apply the package, the device will automatically restart in one minute.
-   ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
+   ![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
 
 4. When the device restarts, it connects to the Azure Active Directory and enrolls in Microsoft Intune.
 
@@ -103,4 +103,5 @@ You can check for success/failure of the settings in your package in the **Provi
 When not using an open network, you must use [device-level certificates](../protect/certificates-configure.md) to initiate connections. Bulk enrolled devices are unable to use to user-targeted certificates for network access. 
 
 ### Conditional Access
-Conditional Access is not available for Windows devices enrolled using bulk enrollment.
+
+Conditional Access is available for Windows 10 1803+ devices enrolled using bulk enrollment.

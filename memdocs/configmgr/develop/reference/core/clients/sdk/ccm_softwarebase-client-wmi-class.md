@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d01a7ab7-5edd-4534-926d-161ec05d813d
 author: aczechowski
 ms.author: aaroncz
@@ -98,7 +98,7 @@ Class CCM_SoftwareBase :
 
  Software enforcement state, such as downloading content, waiting servicewindow, and so on.  
 
-||||  
+|Value|Software enforcement state|State description|  
 |-|-|-|  
 |0|Unknown|No state information is available.|  
 |1|Enforced|Application is enforced to desired/resolved state.|  

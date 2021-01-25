@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 11/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -42,7 +42,7 @@ You _**do not need**_ to register your app. For internal [line-of-business (LOB)
 
 ### If your app will be released to a public app store, like the Apple App Store or Google Play:
 
-You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Intune protected partner app](../apps/apps-supported-intune-apps.md#partner-apps).
+You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Partner productivity apps](../apps/apps-supported-intune-apps.md#partner-productivity-apps).
 
 Until registration has been finished and confirmed by the Microsoft Intune team, Intune administrators will not have the option to apply app protection policy to your app's deep link. Microsoft will also add your app to its [Microsoft Intune Partners page](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). There, the app's icon will be displayed to show that it supports Intune app protection policies.
 
@@ -98,9 +98,9 @@ You will need one of the following developer guides to help you integrate the In
 
 In addition to enabling your app for app protection policy, the following is required for your app to properly function with Azure ActiveDirectory (AAD) app based Conditional Access:
 
-* App is built with the [Azure ActiveDirectory Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) and enabled for AAD broker authentication.
+* App is built with the [Azure ActiveDirectory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) and enabled for AAD broker authentication.
 
-* The [AAD Client ID](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
+* The [AAD Client ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
 
 ## Configure Telemetry for your app
 
@@ -112,7 +112,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 * **Intune App SDK for Android**: The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we do not collect any personally identifiable information (PII). 
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## Line-of-business app version numbers
 
@@ -170,7 +170,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 * **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but is not listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting 'Custom Apps'. 
 
-* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](../apps/troubleshoot-app-install.md). 
+* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install). 
 
 ### Give your app access to the Intune app protection service (optional)
 

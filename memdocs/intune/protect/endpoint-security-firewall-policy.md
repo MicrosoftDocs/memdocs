@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 10/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,6 +45,8 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 ## Firewall profiles
 
+### Devices managed by Intune
+
 **macOS profiles**:
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
@@ -55,13 +57,17 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 - **Microsoft Defender Firewall rules** *(Preview)* - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
 
+### Devices managed by Configuration Manager
+
+[!INCLUDE [Firewall policy prerequisites](../includes/tenant-attach-firewall-prerequisites.md)]
+
 ## Firewall rule mergers and policy conflicts
 
 Plan for Firewall policies to be applied to a device using only one policy. Use of a single policy instance and policy type helps avoid having two separate policies apply different configurations to the same setting, which creates conflicts. When a conflict exists between two policy instances or types of policy that manage the same setting with different values, the setting isn't sent to the device.
 
 - That form of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
 
-  Microsoft *Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
+  *Microsoft Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
 
 When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device.
 

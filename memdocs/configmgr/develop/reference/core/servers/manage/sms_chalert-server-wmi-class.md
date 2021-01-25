@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8f534910-a91f-4c04-83e5-c6ae1f8dbed2
 author: aczechowski
 ms.author: aaroncz
@@ -72,8 +72,8 @@ Class SMS_CHAlert : SMS_AlertBase
 
  Current state of this alert.  
 
-|||  
-|-|-|  
+| Value | Alert state |
+| ----- | ----------- |
 |0|Active|  
 |1|Postponed|  
 |2|Canceled|  
@@ -171,8 +171,8 @@ Class SMS_CHAlert : SMS_AlertBase
 
  A feature group is a set of one or more feature areas.  
 
-|||  
-|-|-|  
+| Value | Feature group |
+| ----- | ------------- |
 |1|Administration|  
 |2|Resources|  
 |3|Deployment|  
@@ -307,8 +307,8 @@ Class SMS_CHAlert : SMS_AlertBase
 
  State of the underlying condition.  
 
-|||  
-|-|-|  
+| Value | Rule state |
+| ----- | ---------- |
 |0|Bad|  
 |1|Good|  
 |2|Unknown|  
@@ -322,8 +322,8 @@ Class SMS_CHAlert : SMS_AlertBase
 
  The impact of this alert.  
 
-|||  
-|-|-|  
+| Value | Severity |
+| ----- | -------- |
 |1|Error|  
 |2|Warning|  
 |3|Informational|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c0fc7232-fd4e-44f2-8aec-f1ae80d6fc90
 author: aczechowski
 ms.author: aaroncz
@@ -71,8 +71,8 @@ Class SMS_TaskSequencePackageReference : SMS_BaseClass
 
  Reference object type.  
 
-|||  
-|-|-|  
+| Value | Object type |
+| ----- | ----------- |  
 |0|PKG_TYPE_REGULAR|  
 |3|PKG_TYPE_DRIVER|  
 |5|PKG_TYPE_SWUPDATES|  

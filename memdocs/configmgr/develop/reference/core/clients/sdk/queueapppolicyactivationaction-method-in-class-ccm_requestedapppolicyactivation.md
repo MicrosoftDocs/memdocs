@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 5c07606b-0f9f-4f1a-ae0f-2dfc2eaaab43
 author: aczechowski
 ms.author: aaroncz
@@ -58,7 +58,7 @@ uint32 QueueAppPolicyActivationAction
 
  Activation action. Possible values are:  
 
-|||  
+|Value|Activation action|  
 |-|-|  
 |0|default|  
 |1|By-pass activation.|  

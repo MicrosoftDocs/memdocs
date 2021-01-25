@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,30 +53,32 @@ If you'll use the connector with only the DigiCert CA, you can use the instructi
 
 1. Save the following code snippet as in a file named **certreq.ini** and update it as required (for example: *Subject name in CN format*).
 
-        [Version] 
-        Signature="$Windows NT$" 
-        
-        [NewRequest] 
-        ;Change to your,country code, company name and common name 
-        Subject = "Subject Name in CN format"
-        
-        KeySpec = 1 
-        KeyLength = 2048 
-        Exportable = TRUE 
-        MachineKeySet = TRUE 
-        SMIME = False 
-        PrivateKeyArchive = FALSE 
-        UserProtected = FALSE 
-        UseExistingKeySet = FALSE 
-        ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-        ProviderType = 12 
-        RequestType = PKCS10 
-        KeyUsage = 0xa0 
-        
-        [EnhancedKeyUsageExtension] 
-        OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
-        
-        ;----------------------------------------------- 
+   ```
+   [Version] 
+   Signature="$Windows NT$" 
+
+   [NewRequest] 
+   ;Change to your,country code, company name and common name 
+   Subject = "Subject Name in CN format"
+
+   KeySpec = 1 
+   KeyLength = 2048 
+   Exportable = TRUE 
+   MachineKeySet = TRUE 
+   SMIME = False 
+   PrivateKeyArchive = FALSE 
+   UserProtected = FALSE 
+   UseExistingKeySet = FALSE 
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
+   ProviderType = 12 
+   RequestType = PKCS10 
+   KeyUsage = 0xa0 
+
+   [EnhancedKeyUsageExtension] 
+   OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
+
+   ;----------------------------------------------- 
+   ```
 
 2. Open an elevated command prompt and generate a certificate signing request (CSR) by using the following command:
 
@@ -84,13 +86,14 @@ If you'll use the connector with only the DigiCert CA, you can use the instructi
 
 3. Open the request.csr file in Notepad and copy the CSR content that's in the following format:
 
-        -----BEGIN NEW CERTIFICATE REQUEST-----
-        MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
-        …
-        …
-        fzpeAWo=
-        -----END NEW CERTIFICATE REQUEST-----
-
+   ``` 
+   -----BEGIN NEW CERTIFICATE REQUEST-----
+   MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
+   …
+   …
+   fzpeAWo=
+   -----END NEW CERTIFICATE REQUEST-----
+   ```
 
 4. Sign in to the DigiCert CA and browse to **Get an RA Cert** from the tasks.
 
@@ -138,7 +141,7 @@ If you'll use the connector with only the DigiCert CA, you can use the instructi
 
    g. Record a copy the RA certificate thumbprint without any spaces. The following is an example of the thumbprint:
 
-        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
+      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
 
     > [!NOTE]
     > For assistance in getting the RA certificate from the DigiCert CA, contact [DigiCert customer support](mailto:enterprise-pkisupport@digicert.com).
@@ -198,8 +201,10 @@ By default, Intune Certificate Connector is installed in **%ProgramFiles%\Micros
 
    a. Update the `RACertThumbprint` key value with the certificate thumbprint value that you copied in the previous section. For example:
 
-        <add key="RACertThumbprint"
-        value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
+      <add key="RACertThumbprint"
+      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
 
    b. Save and close the file.
 
@@ -274,7 +279,7 @@ The certificate profile OID is associated with a certificate profile template in
 3. Select the certificate profile that you want to use.
 4. Copy the certificate profile OID. It looks similar to the following example:
 
-       Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
+   `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
 > If you need help to get the certificate profile OID, contact [DigiCert customer support](mailto:enterprise-pkisupport@digicert.com).
@@ -320,7 +325,7 @@ After you complete the previous steps, Intune Certificate Connector will issue P
 
 ## Troubleshooting
 
-Intune Certificate Connector service logs are available in **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** on the NDES Connector machine. Open the logs in [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) and search for exceptions or error messages.
+Intune Certificate Connector service logs are available in **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** on the NDES Connector machine. Open the logs in [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) and search for exceptions or error messages.
 
 | Issue/error message | Resolution steps |
 | --- | --- |
@@ -334,6 +339,7 @@ Intune Certificate Connector service logs are available in **%ProgramFiles%\Micr
 | DigiCert Provider - Policy verification failed. <br><br> The attribute doesn't fall under the DigiCert supported certificate template attributes list. | The DigiCert CA shows this message when there's a discrepancy between the DigiCert certificate profile template and the Intune certificate profile. This issue likely happened due to attribute mismatch in **SubjectName** or **SubjectAltName**. <br><br> To resolve this issue, select Intune supported attributes for **SubjectName** and **SubjectAltName** in the DigiCert certificate profile template. For more information, see the Intune supported attributes in the **Certificate Parameters** section. |
 | Some user devices are not receiving PKCS certificates from the DigiCert CA. | This issue happens when the user UPN contains special characters like an underscore (example: `global_admin@intune.onmicrosoft.com`). <br><br> The DigiCert CA doesn't support special characters in **mail_firstname** and **mail_lastname**. <br><br> The following steps help resolve this issue: <br><br> 1. Sign in to the DigiCert CA admin portal. <br> 2. Go to **Manage Certificate Profiles**. <br> 3. Select the certificate profile used for Intune. <br> 4. Select the **Customize options** link. <br> 5. Select the **Advanced options** button. <br> 6. Under **Certificate fields – Subject DN**, add a **Common Name (CN)** field and delete the existing **Common Name (CN)** field. Add and delete operations must be performed together. <br> 7. Select **Save**. <br><br> With the preceding change, the DigiCert certificate profile requests **"CN=<upn>"** instead of **mail_firstname** and **mail_lastname**. |
 | User manually deleted already deployed certificate from the device. | Intune redeploys the same certificate during the next check-in or policy enforcement. In this case, NDES Connector doesn't receive a PKCS certificate request. |
+| Digicert profile shows error for a device that was previously working and the certificate is not currently present on the device | Digicert may not issue a duplicate certificate to a specific host name. If the certificate is no longer on the device revoke the previously issued certificate in the Digicert admin console. This includes if the certificate was removed from the device and if the device was factory reset. On next check-in or policy enforcement the device will recieve a new certificate from Digicert. 
 
 ## Next steps
 

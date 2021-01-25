@@ -31,7 +31,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve a threat found by Lookout for Work  
+# Resolve a threat found by Lookout for Work on Android
 
 The Lookout for Work app is a Mobile Threat Defender service that identifies potential threats on your Android devices. These threats are reported to the Company Portal app, and appear there as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:
 

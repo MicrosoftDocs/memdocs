@@ -1,30 +1,31 @@
 ---
-title: "SMS_TaskSequence_InstallApplicationAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_InstallApplicationAction class
+titleSuffix: Configuration Manager
+ms.date: 08/11/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a22fb031-891f-44ef-86d2-32291a2c64fd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_InstallApplicationAction Server WMI Class
-The `SMS_TaskSequence_InstallApplicationAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that installs an application.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_InstallApplicationAction server WMI class
 
-## Syntax  
+The `SMS_TaskSequence_InstallApplicationAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that installs an application.
 
-```  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
+
+## Syntax
+
+```MOF
 Class SMS_TaskSequence_InstallApplicationAction : SMS_TaskSequence_Action  
 {  
     SMS_TaskSequence_ApplicationInfo AppInfo[];  
     String ApplicationName;  
     String BaseVariableName;  
+    boolean ClearCache;
     SMS_TaskSequence_Condition Condition;  
     Boolean ContinueOnError;  
     Boolean ContinueOnInstallError;  
@@ -38,140 +39,168 @@ Class SMS_TaskSequence_InstallApplicationAction : SMS_TaskSequence_Action
 };  
 ```  
 
-## Methods  
- The `SMS_TaskSequence_InstallApplicationAction` class does not define any methods.  
+## Methods
 
-## Properties  
- `AppInfo`  
- Data type: `SMS_TaskSequence_ApplicationInfo` Array  
+The `SMS_TaskSequence_InstallApplicationAction` class doesn't define any methods.  
 
- Access type: Read/Write  
+## Properties
 
- Qualifiers: [variablename]  
+### `AppInfo`
 
- An array of [SMS_TaskSequence_ApplicationInfo Server WMI Class](../../../develop/reference/osd/sms_tasksequence_applicationinfo-server-wmi-class.md) class objects. Each element contains application details, such as display name, name (model name of the application) and description.  
+Data type: `SMS_TaskSequence_ApplicationInfo` Array  
 
- `ApplicationName`  
- Data type: `String`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: `[variablename]`
 
- Qualifiers: [commandlinearg, tasksequenceapplication]  
+An array of [SMS_TaskSequence_ApplicationInfo server WMI class](../../../develop/reference/osd/sms_tasksequence_applicationinfo-server-wmi-class.md) class objects. Each element contains application details, such as display name, model name of the application, and description.
 
- Comma separated list of applications (application model names) that needs to be installed as part of the step.  
+### `ApplicationName`
 
- `BaseVariableName`  
- Data type: `String`  
+Data type: `String`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: [commandlinearg, requiredifnull]  
+Qualifiers: `[commandlinearg, tasksequenceapplication]`
 
- This variable specifies the base name for a set of task sequence variables that are defined for a collection or for a computer. These variables specify the applications that will be installed for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 01. The value for each variable must contain the name of the application and nothing else.  
+Comma-separated list of application model names for the step to install.
 
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+### `BaseVariableName`
 
- Access type: Read/Write  
+Data type: `String`  
 
- Qualifiers: none  
+Access type: Read/Write  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: `[commandlinearg, requiredifnull]`
 
- `ContinueOnError`  
- Data type: `Boolean`  
+This variable specifies the base name for a set of task sequence variables specified for a collection or a computer. These variables specify the applications that the step installs for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at `01`. The value for each variable must contain the name of the application and nothing else.
 
- Access type: Read/Write  
+### `ClearCache`
 
- Qualifiers: none  
+Data type: `Boolean`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/write
 
- `ContinueOnInstallError`  
- Data type: `Boolean`  
+Set to `true` to clear application content from the cache after installing. This value is `false` by default.
 
- Access type: Read/Write  
+### `Condition`
 
- Qualifiers: [commandlinearg, requiredifnotnull]  
+Data type: `SMS_TaskSequence_Condition`  
 
- `true` to continue if there is an installation error. This property is required.  
+Access type: Read/Write  
 
- `Description`  
- Data type: `String`  
+Qualifiers: none  
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Qualifiers: [allowedlen]  
+### `ContinueOnError`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `Boolean`  
 
- `Enabled`  
- Data type: `Boolean`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: none  
 
- Qualifiers: none  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `ContinueOnInstallError`
 
- `Name`  
- Data type: `String`  
+Data type: `Boolean`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: [allowedlen]  
+Qualifiers: `[commandlinearg, requiredifnotnull]`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Set `true` to continue if there's an installation error. This property is required.
 
- `NumApps`  
- Data type: `UInt32`  
+### `Description`
 
- Access type: Read/Write  
+Data type: `String`  
 
- Qualifiers: [variablename]  
+Access type: Read/Write  
 
- Size of the array indicated by the `AppInfo` property. The task sequence variable associated with this property is `OSDAppCount`.  
+Qualifiers: `[allowedlen]`
 
- `RetryCount`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Access type: Read/Write  
+### `Enabled`
 
- Qualifiers: [retrycount]  
+Data type: `Boolean`  
 
- The number of retries. The default value is 2.  
+Access type: Read/Write  
 
- `SupportedEnvironment`  
- Data type: `String`  
+Qualifiers: none  
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Qualifiers: [not_null, valuemap]  
+### `Name`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `String`  
 
- `Timeout`  
- Data type: `UInt32`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: `[allowedlen]`
 
- Qualifiers: none  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `NumApps`
 
-## Remarks  
- Class qualifiers for this class include:  
+Data type: `UInt32`  
 
- [CommandLine("smsappinstall.exe /app:%1 /basevar:%2 /continueOnError:%3"),  
+Access type: Read/Write  
 
- ActionCategory{"Software,1,2"},     ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "InstallApplicationControl", "TaskSequenceOptionControl"}]  
+Qualifiers: `[variablename]`
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Size of the array indicated by the `AppInfo` property. The task sequence variable associated with this property is `OSDAppCount`.  
 
-## Requirements  
+### `RetryCount`
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+Data type: `String`  
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
+Access type: Read/Write  
+
+Qualifiers: `[retrycount]`
+
+The number of retries. The default value is `2`.
+
+### `SupportedEnvironment`
+
+Data type: `String`  
+
+Access type: Read/Write  
+
+Qualifiers: `[not_null, valuemap]`
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+
+### `Timeout`
+
+Data type: `UInt32`  
+
+Access type: Read/Write  
+
+Qualifiers: none  
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+
+## Remarks
+
+Class qualifiers for this class include:
+
+```
+[CommandLine("smsappinstall.exe /app:%1 /basevar:%2 /continueOnError:%3"),  
+
+ActionCategory{"Software,1,2"},     ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "InstallApplicationControl", "TaskSequenceOptionControl"}]  
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+## Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+## Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).

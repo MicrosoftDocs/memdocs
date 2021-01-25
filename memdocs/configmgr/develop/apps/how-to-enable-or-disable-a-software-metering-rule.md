@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 13812f78-4627-4427-a32c-7c8bfe64a307
 author: aczechowski
 ms.author: aaroncz
@@ -95,10 +95,9 @@ public void EnableDisableSoftwareMeteringRule(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingSWMRuleID`|-   Managed: `String`<br />-   VBScript: `String`|Identifies a specific software metering rule. In this case, identifies the specific software metering rule that will be enabled or disabled.|  
 |`enableDisableSWMRule`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Enables or disables the software metering rule.<br /><br /> `true` - Enabled<br /><br /> `false` - Disabled|  
 

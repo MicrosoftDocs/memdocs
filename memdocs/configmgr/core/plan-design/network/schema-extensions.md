@@ -21,7 +21,7 @@ You can extend the Active Directory schema to support Configuration Manager. Thi
 
 -   It's a good idea to extend the Active Directory schema, but it's not required.  
 
-Before you [extend the Active Directory schema](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), you should be familiar with Active Directory Domain Services and comfortable with [modifying the Active Directory schema](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
+Before you [extend the Active Directory schema](/sccm/core/plan-design/network/extend-the-active-directory-schema), you should be familiar with Active Directory Domain Services and comfortable with [modifying the Active Directory schema](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## Considerations for extending the Active Directory schema for Configuration Manager  
 
@@ -43,9 +43,7 @@ Before you [extend the Active Directory schema](https://docs.microsoft.com/sccm/
 
 -   Mobile devices that are managed by the Exchange Server connector  
 
--   The client for Mac computers  
-
--   The client for Linux and UNIX servers  
+-   The client for macOS computers  
 
 -   Mobile devices that are enrolled by Configuration Manager  
 
@@ -53,9 +51,9 @@ Before you [extend the Active Directory schema](https://docs.microsoft.com/sccm/
 
 -   Mobile device legacy clients  
 
--   Windows clients that are configured for Internet-only client management  
+-   Windows clients that are configured for internet-only client management  
 
--   Windows clients that are detected by Configuration Manager to be on the Internet  
+-   Windows clients that are detected by Configuration Manager to be on the internet  
 
 ## Capabilities that benefit from extending the schema  
 **Client computer installation and site assignment** - When a Windows computer installs a new client, the client searches Active Directory Domain Services for installation properties.  
@@ -138,4 +136,4 @@ When you extend the schema for Configuration Manager, the following classes and 
 > - Attribute: cn=MS-SMS-Site-Boundaries  
 >   -   Class: cn=MS-SMS-Server-Locator-Point  
 
-You can ensure the preceding lists are current by viewing the **ConfigMgr_ad_schema.LDF** file from the **\SMSSETUP\BIN\x64** folder of the Configuration Manager installation media.  
+You can ensure the preceding lists are current by viewing the **ConfigMgr_ad_schema.LDF** file from the **\SMSSETUP\BIN\x64** folder of the Configuration Manager installation media.

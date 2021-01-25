@@ -2,7 +2,7 @@
 title: Admin service release notes
 titleSuffix: Configuration Manager
 description: Information about changes to the administration service with each Configuration Manager release
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -16,10 +16,15 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
+## <a name="bkmk_2006"></a> Changes in version 2006
+
+<!-- 7463616 -->
+The WMI route is now case-insensitive. For example, in version 2002, you had to specify `AdminService/wmi/SMS_Site`. Now in version 2006, you can also use `AdminService/wmi/sms_site`
+
 ## <a name="bkmk_2002"></a> Changes in version 2002
 
 <!-- 5728365 -->
-Starting in version 2002, the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. For more information, see [Enable secure HTTPS communication](set-up.md#bkmk_https).
+Starting in version 2002, the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. For more information, see [Enable secure HTTPS communication](set-up.md#enable-secure-https-communication).
 
 New properties for the v1.0 Device class:<!-- 6060390 -->
 

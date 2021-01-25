@@ -5,7 +5,7 @@ description: Learn how clients can download OS deployment content before a user 
 ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
@@ -58,7 +58,7 @@ Create [OS images](../get-started/manage-operating-system-images.md) for specifi
 
 #### Driver package
 
-Create [driver packages](../get-started/manage-drivers.md#BKMK_ManagingDriverPackages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
+Create [driver packages](../get-started/manage-drivers.md#driver-packages) for specific hardware models. Specify the **Model** on the **General** tab of its properties.
 
 To determine which driver package it downloads during pre-caching, the client evaluates the model against the **Name** property of the **Win32_ComputerSystemProduct** WMI class.
 

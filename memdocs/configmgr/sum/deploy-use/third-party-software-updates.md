@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 04/29/2019
+ms.date: 01/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -10,34 +10,33 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
-# Enable third-party updates 
+# Enable third-party updates
 
 *Applies to: Configuration Manager (current branch)*
 
-Beginning with version 1806, the **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
+The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients.  <!--1357605, 1352101, 1358714-->
 
 > [!Note]  
-> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
+> In version 2006 and earlier, Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Enable third party update support on clients**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
 ## Prerequisites 
 - Sufficient disk space on the top-level software update point's WSUSContent folder to store the source binary content for third-party software updates.
     - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
-    - If you need to move the WSUSContent folder to another drive with more free space, see the [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog post.
+    - If you need to move the WSUSContent folder to another drive with more free space, see the [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog post.
 - The third-party software update synchronization service requires internet access.
     - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed. 
     -  Internet access to any third-party catalogs and update content files. Additional ports other than 443 may be needed.
     - Third-party updates use the same proxy settings as the SUP.
+- For Configuration Manager versions prior to 1910, the **Software Updates Manager** security role can't sync third-party catalogs. You'll need the **Full Administrator** security role to sync the catalogs.
 
 
 ## Additional requirements when the SUP is remote from the top-level site server 
 
 1. SSL must be enabled on the SUP when it's remote. This requires a server authentication certificate generated from an internal certificate authority or via a public provider.
-    - [Configure SSL on WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Configure SSL on WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - When you configure SSL on WSUS, note some of the web services and the virtual directories are always HTTP and not HTTPS. 
         - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -89,7 +88,7 @@ If you need to manually configure the certificate, such as needing to use a PKI 
 
 
 ## Enable third-party updates on the clients
-Enable third-party updates on the clients in the client settings. The setting sets the Windows Update agent policy for [Allow signed updates for an intranet Microsoft update service location](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). This client setting also installs the WSUS signing certificate to the Trusted Publisher store on the client. The certificate management logging is seen in `updatesdeployment.log` on the clients.  Run these steps for each custom client setting you want to use for third-party updates. For more information, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
+Enable third-party updates on the clients in the client settings. The setting sets the Windows Update agent policy for [Allow signed updates for an intranet Microsoft update service location](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). This client setting also installs the WSUS signing certificate to the Trusted Publisher store on the client. The certificate management logging is seen in `updatesdeployment.log` on the clients.  Run these steps for each custom client setting you want to use for third-party updates. For more information, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
 
 1. In the Configuration Manager console, go to the **Administration** workspace and select the **Client Settings** node.
 2. Select an existing custom client setting or create a new one. 
@@ -121,7 +120,7 @@ When you subscribe to a third-party catalog in the Configuration Manager console
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.  
 2. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon. 
-    ![Third-party updates add custom catalog](media/third-party-updates-subscribe.png)
+    ![Third-party updates subscribe to catalog](media/third-party-updates-subscribe.png)
 3. Review and approve the catalog certificate.  
    > [!NOTE]
    > 
@@ -231,13 +230,15 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 -  Configuration Manager has a new version for the catalog cab file format. The new version includes the certificates for the vendor's binary files. These certificates are added to the **Certificates** node under **Security** in the **Administration** workspace once you approve and trust the catalog.  
      - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.
      - For more information, see status messages 11523 and 11524 in the below status message table.
--  When the third-party software update synchronization service on the top-level software update point requires a proxy server for internet access, digital signature checks may fail. To mitigate this issue, configure the WinHTTP proxy settings on the site system. For more information, see [Netsh commands for WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
+-  When the third-party software update synchronization service on the top-level software update point requires a proxy server for internet access, digital signature checks may fail. To mitigate this issue, configure the WinHTTP proxy settings on the site system. For more information, see [Netsh commands for WinHTTP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
+- If the catalog provider has changed the catalog’s signing certificate since you last approved it or subscribed, the catalog sync will fail until the certification is approved in the **Certificates** node. For more information, see MessageID 11508 in [status messages](#status-messages) table.
 
 ## Status messages
 
 | MessageID       | Severity           | Description | Possible cause| Possible solution
 | ------------- |-------------| -----|----|----|
+|11508 | Error| Failure when checking signature for catalog &lt;catalog name> to WSUS. Make sure the catalog is subscribed and the catalog certificate &lt;certificate> is not blocked.  See SMS_ISVUPDATES_SYNCAGENT.log for further details.|The signing certification on the catalog may have changed since it was originally subscribed or last approved.|Make sure to review and approve the certificate in the **Certificates** node to allow the catalog to synchronize.|
 | 11516     | Error |Failed to publish content for update "Update ID" because the content is unsigned.  Only content with valid signatures can be published.  |Configuration Manager doesn't allow unsigned updates to be published.| Publish the update in an alternate way. </br></br>See if a signed update is available from the vendor.|
 | 11523  | Warning |  Catalog "X" does not include content signing certificates, attempts to publish update content for updates from this catalog may be unsuccessful until content signing certificates are added and approved. | This message can occur when you import a catalog that is using an older version of the cab file format.|Contact the catalog provider to obtain an updated catalog that includes the content signing certificates. </br> </br> The certificates for the binaries aren't included in the cab file so the content will fail to publish. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.|
 | 11524| Error  | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager.| Synchronize the update with Configuration Manager before attempting to publish it's content.  </br> </br>If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content.|

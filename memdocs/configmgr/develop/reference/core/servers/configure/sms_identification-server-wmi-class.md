@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1310f54d-03a1-4c14-a017-09625250c6fa
 author: aczechowski
 ms.author: aaroncz
@@ -62,7 +62,7 @@ Class SMS_Identification : SMS_BaseClass
 
  License type of the installation. Possible values are:  
 
-|||  
+|Value|License type|  
 |-|-|  
 |0|Evaluation|  
 |1|Non-evaluation|  

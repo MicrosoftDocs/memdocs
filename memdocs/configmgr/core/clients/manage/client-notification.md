@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 04/01/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,7 +118,11 @@ Trigger clients to switch to the next available software update point. For more 
 
 ### Evaluate device health attestation
 
-Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).  
+Trigger Windows 10 clients to check and send their latest device health state. For more information, see [Health attestation](../../servers/manage/health-attestation.md).
+
+### Check conditional access compliance
+
+Trigger clients to check compliance for conditional access policies. For more information, see [Conditional access](../../../comanage/quickstart-conditional-access.md).
 
 ### Wake Up
 
@@ -149,9 +153,6 @@ For more information about these settings, see [About log files](../../plan-desi
 
 Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
-> [!Tip]
-> Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. There's no defined limit to the number of versions. The [Delete Aged Collected Files](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) site maintenance task deletes the files on a schedule, which by default is every 90 days.
-
 ### Prerequisites - Client diagnostics
 
 - Update the target client to the latest version.
@@ -165,6 +166,13 @@ Track the status of the task in the **diagnostics.log** on the client. When clie
 
   Add this permission to any custom roles that need to use client notification actions.
 
+### Cleanup aged client diagnostic files
+<!--6503308-->
+Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. There's no defined limit to the number of versions. The maintenance task to delete aged diagnostic files varies depending on you Configuration Manager version.
+  - Configuration Manager 2010 and later uses the **Delete Aged Collected Diagnostic Files** site maintenance task to delete diagnostic files
+  - Configuration Manager 2006 and earlier uses the **Delete Aged Collected Files** site maintenance task to delete diagnostic files
+
+For more information, see [Reference for maintenance tasks in Configuration Manager](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files).
 
 ## Endpoint Protection
 
@@ -196,7 +204,13 @@ Trigger Endpoint Protection or Windows Defender to run a *quick* antimalware sca
 
 Trigger Endpoint Protection or Windows Defender to download the latest antimalware definitions.  
 
-## See also
+## Monitor client operations
+
+Monitor the operations sent to clients by using the **Client Operations** node under the **Monitoring** workspace. For some instances, you can cancel the operation by using the **Cancel** option in the ribbon. Use the **Delete** option to remove the operation from the console's view.
+
+:::image type="content" source="media/client-operations-node.png" alt-text="Client Operations node in the Monitoring workspace" lightbox="media/client-operations-node.png":::
+
+## Next steps
 
 - [How to manage clients](manage-clients.md)
 - [How to manage collections](collections/manage-collections.md)

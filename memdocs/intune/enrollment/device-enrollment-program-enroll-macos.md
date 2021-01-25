@@ -57,7 +57,7 @@ Neither Apple Business Manager enrollment or Apple School Manager work with the 
 
 ## Get an Apple ADE token
 
-Before you can enroll macOS devices with ADE or Apple School Manager, you need a token (.p7m) file from Apple. This token lets Intune sync information about the devices that your organization owns. It also lets Intune upload enrollment profiles to Apple and to these profiles to devices.
+Before you can enroll macOS devices with ADE or Apple School Manager, you need a token (.p7m) file from Apple. This token lets Intune sync information about the devices that your organization owns. It also lets Intune upload enrollment profiles to Apple and assign these profiles to devices.
 
 You use the Apple portal to create a token. You also use the Apple portal to assign devices to Intune for management.
 
@@ -66,8 +66,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 
 ### Step 1. Download the Intune public key certificate required to create the token
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS enrollment**. 
-> **Enrollment Program Tokens** > **Add**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS enrollment** > **Enrollment Program Tokens** > **Add**.
 
     ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -110,11 +109,11 @@ In the **Apple token** box, browse to the certificate (.pem) file, choose **Open
 Now that you've installed your token, you can create an enrollment profile for devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS Enrollment** > **Enrollment program tokens**.
-2. Select a token, choose **Profiles**, and then choose **Create profile**.
+2. Select a token, choose **Profiles**, and then choose **Create profile** > **macOS**.
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this **Name** field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this **Name** field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Profile name and description.](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
@@ -123,17 +122,15 @@ Now that you've installed your token, you can create an enrollment profile for d
 5. Select **Next** to go to the **Management Settings** page.
 
 6. For **User Affinity**, choose whether or not devices with this profile must enroll with or without an assigned user.
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal app for services like installing apps. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints). [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).Multifactor authentication is not supported for macOS ADE devices with user affinity.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal app for services like installing apps. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).Multifactor authentication is not supported for macOS ADE devices with user affinity.
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-6. If you chose **Enroll with User Affinity**, under **Authentication Method** you choose **Setup Assistant (legacy)** or **Setup Assistant with modern authentication**.
+6. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
 
-7. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
+7. Select **Next** to go to the **Setup Assistant** page.
 
-8. Select **Next** to go to the **Setup Assistant** page.
-
-9. On the **Setup Assistant** page, configure the following profile settings:
+8. On the **Setup Assistant** page, configure the following profile settings:
 
     ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -148,14 +145,12 @@ Now that you've installed your token, you can create an enrollment profile for d
 
     | Setup Assistant screen settings | If you choose **Show**, during setup the device will... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Passcode</strong> | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). For iOS/iPadOS 7.0 and later. |
     | <strong>Location Services</strong> | Prompt the user for their location. For macOS 10.11 and later and iOS/iPadOS 7.0 and later. |
     | <strong>Restore</strong> | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Apple ID</strong> | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
     | <strong>Terms and Conditions</strong> | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Touch ID</strong> | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
     | <strong>Apple Pay</strong> | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
-    | <strong>Zoom</strong> | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
     | <strong>Siri</strong> | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>Diagnostic Data</strong> | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | <strong>FileVault</strong> | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |
@@ -167,9 +162,9 @@ Now that you've installed your token, you can create an enrollment profile for d
     | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
     
-10. Select **Next** to go to the **Review + create** page.
+9. Select **Next** to go to the **Review + create** page.
 
-11. To save the profile, choose **Create**.
+10. To save the profile, choose **Create**.
 
 ## Sync managed devices
 
@@ -182,6 +177,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 
    To comply with Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
    - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. After an Enrollment Program device is deleted from Intune portal without being unassigned from the Apple MDM server in the Apple portal, it won't be re-imported to Intune until the full sync is run.   
+    - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they are automatically deleted within 30-45 days. 
    - A sync is run automatically every 24 hours. You can also sync by clicking the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server.
 
 ## Assign an enrollment profile to devices
@@ -201,25 +197,52 @@ You can pick a default macOS and iOS/iPadOS profile to be applied to all devices
 
 ## Distribute devices
 
-You have enabled management and syncing between Apple and Intune, and assigned a profile to let your devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. An activated device cannot apply an enrollment profile until the device is wiped.
+You have enabled management and syncing between Apple and Intune, and assigned a profile to let your devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license. 
+
+Devices registered with ABM/ASM and assigned a profile in Intune can be enrolled:
+
+- During Setup Assistant for new devices or wiped devices.
+- After Setup Assistant using the profiles command.
+
+### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment during Setup Assistant
+Devices configured in ABM/ASM will automatically enroll into management with Intune during Setup Assistant with a Remote Management prompt.
+
+> [!NOTE]
+> If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal for Azure AD registration and Conditional Access.
+
+
+### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant
+
+For macOS 10.13 and later devices, you can follow these steps to enroll.
+
+1. In the Apple Business Manager or Apple School Manager portal, import the device.
+2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the device is assigned a macOS enrollment profile with or without user affinity. 
+3. Log in to the device as a local administrator account.
+4. To trigger enrollment, on the **Home** page, open **Terminal** and run the following command:
+    sudo profiles renew -type enrollment
+5. Enter your device password for the local administrator account.
+6. In the **Device enrollment** window, choose **Details**.
+7. In the **System preferences** window, choose **Profiles**. 
+8. Follow the prompts that will download the management profile, certs, and policies from Intune. You can view the profiles on the device anytime by going to **System Preferences** > **Profiles**.   
+9. If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal for Azure AD registration and Conditional Access. 
+
 
 ## Renew an ADE token
 
-1. Go to deploy.apple.com.  
-2. Under **Manage Servers**, choose your MDM server associated with the token file that you want to renew.
-3. Choose **Generate New Token**.
+1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.
+2. Choose **Settings** > under **MDM Servers** choose your MDM server associated with the token file that you want to renew > **Download Token**.
 
-    ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-macos/generatenewtoken.png)
+    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-macos/download-token.png)
 
-4. Choose **Your Server Token**.  
-5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
+3. Choose **Download Server Token**.
+4. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Choose **Renew token** and enter the Apple ID used to create the original token.  
+5. Choose **Renew token** and enter the Apple ID used to create the original token.  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Upload the newly downloaded token.  
-8. Choose **Renew token**. You'll see the confirmation that the token was renewed.
+6. Upload the newly downloaded token.  
+7. Choose **Renew token**. You'll see the confirmation that the token was renewed.
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-macos/confirmation.png)
 
 ## Next steps

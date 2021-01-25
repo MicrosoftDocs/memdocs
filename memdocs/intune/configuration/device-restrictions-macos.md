@@ -3,12 +3,12 @@
 
 title: macOS device settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Add, configure, or create settings on macOS devices to restrict features, including setting password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser in Microsoft Intune.
+description: Add, configure, or create settings on macOS devices to restrict features in Microsoft Intune. Set password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 10/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: kakyker; annovich
+ms.reviewer: mikedano, kakyker; annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,7 +38,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a macOS device restrictions configuration profile](device-restrictions-configure.md).
+Create a [macOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
@@ -103,24 +103,34 @@ These settings are added to a device configuration profile in Intune, and then a
   This feature applies to:  
   - macOS 10.13 and newer
 
-- **Defer software updates**: **Yes** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show updates on devices as Apple releases them. For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date. Seed build updates are allowed without delay.  
+- **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. When the delay expires, users get a notification to update to the earliest version of the OS available when the delay was triggered.
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
+
+- **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
+
+  By default, the OS might show updates on devices as Apple releases them. By default, software updates aren't delayed. If you configure this setting, then OS and non-OS software updates are delayed, depending on the options you select. The drop-down does exactly what you choose. It can delay both, delay neither, or delay one of them.
+
+  For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows on devices around the release date. Seed build updates are allowed without delay.  
+
+  - **Delay visibility of software updates**: Enter a value from 0-90 days. By default, updates are delayed for `30` days. This value applies to the **Defer software updates** options you select. If you only select **Operating system updates**, then only OS updates are delayed for 30 days. If you select **Operating system updates** and **Non operating system updates**, then both are delayed for 30 days.
+
+    When the delay expires, users get a notification to update to the earliest version available when the delay was triggered.
 
     For example, if a macOS update is available on **January 1**, and **Delay visibility** is set to **5 days**, then the update isn't shown as an available update. On the **sixth day** following the release, that update is available, and users can install it.
 
     This feature applies to:  
     - macOS 10.13.4 and newer
 
-- **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
+### Settings apply to: Automated device enrollment
 
-  - **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
+- **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
 
-    To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
+  To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
 
-  - **Allow Classroom app to perform AirPlay and view screen without prompting**: **Yes** lets teachers see their students' screens without requiring students to agree. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students to agree before teachers can see the screens.
+- **Allow Classroom app to perform AirPlay and view screen without prompting**: **Yes** lets teachers see their students' screens without requiring students to agree. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students to agree before teachers can see the screens.
 
-    To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
+  To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
 
 - **Require teacher permission to leave Classroom app unmanaged classes**: **Yes** forces students enrolled in an unmanaged Classroom course to get teacher approval to leave the course. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow students to leave the course whenever the student chooses.
 
@@ -129,6 +139,13 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.
 
 ## Password
+
+These settings use the [Passcode payload](https://developer.apple.com/documentation/devicemanagement/passcode) (opens Apple's web site).
+
+> [!IMPORTANT]
+> On macOS devices running 10.14.2 to 11 (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced.
+>
+> Also, any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to Big Sur (macOS 11), users need to change the device password before they can sign in.
 
 ### Settings apply to: All enrollment types
 
@@ -148,6 +165,19 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Maximum minutes after screen lock before password is required**: Enter the length of time devices must be inactive before a password is required to unlock it. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Password expiration (days)**: Enter the number of days until the device password must be changed, from 1-65535. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Prevent reuse of previous passwords**: Restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+  - **Maximum allowed sign-in attempts**: Enter the maximum number of times that users can consecutively try to sign in before the device locks users out, from 2-11. When this number is exceeded, the device is locked. We recommend not setting this value to a low number, such as `2` or `3`. It's common for users to enter the wrong password. We recommend setting to a higher value.
+
+    For example, enter `5` so users can enter the wrong password up to five times. After the fifth attempt, the device is locked. If you leave this value blank, or don't change it, then `11` is used by default.    
+
+    After six failed attempts, macOS automatically forces a time delay before a passcode can be entered again. The delay increases with each attempt. Set the **Lockout duration** to add a delay before the next passcode can be entered.
+
+    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
+
+      If you leave this value blank, or don't change it, then `30` minutes is used by default.
+
+      This setting applies to:
+
+      - macOS 10.10 and newer
 
 - **Block user from modifying passcode**: **Yes** stops the passcode from being changed, added, or removed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
 
@@ -179,7 +209,7 @@ This feature applies to:
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
-  - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft Office 365`.
+  - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft 365`.
   
   - **Identifier type**: Your options:
     - **Bundle ID**: Select this option for apps.
@@ -312,7 +342,7 @@ This feature applies to:
   - **Apple events**: This setting allows apps to send a restricted Apple event to another app or process. Select **Add** to add a receiving app or process. Enter the following information of the receiving app or process:
 
     - **Identifier type**: Select **Bundle ID** if the receiving identifier is an application. Select **Path** if the receiving identifier is a process or executable.
-    
+
     - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
 
     - **Code requirement**: Enter the code signature for the receiving application or process.

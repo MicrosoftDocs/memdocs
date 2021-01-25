@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a3bfa9cf-2aa0-4fcc-be1e-50983a1fb432
 author: aczechowski
 ms.author: aaroncz
@@ -593,7 +593,7 @@ Class SMS_R_System : SMS_Resource
 
  Wipe status of the device, as reported through Exchange Active Sync (EAS).  
 
-|||  
+|Value|Wipe status|  
 |-|-|  
 |1|Wipe Pending|  
 |2|Wipe Cancelling|  

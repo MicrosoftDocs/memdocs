@@ -27,7 +27,7 @@ When you use Configuration Manager to manage virtual applications, you gain the 
 
 -   Operating system deployment, software and hardware inventory, software metering, and asset intelligence to support virtual applications  
 
-For more information about how to create and sequence applications with Microsoft Application Virtualization (App-V), see [Application Virtualization 4 documentation](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
+For more information about how to create and sequence applications with Microsoft Application Virtualization (App-V), see [Application Virtualization 4 documentation](/microsoft-desktop-optimization-pack/appv-v4/).  
 
 In addition to the other Configuration Manager requirements and procedures for creating an application, you must take the following considerations into account when you create and deploy virtual applications:
 
@@ -61,9 +61,9 @@ In addition to the other Configuration Manager requirements and procedures for c
 
 For more information about App-V in Windows 10, see the following topics:
 
-- [What's new in App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
-- [Getting Started with App-V for Windows 10](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
-- [Upgrading to App-V for Windows 10 from an existing installation](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [What's new in App-V](/windows/application-management/app-v/appv-about-appv)
+- [Getting Started with App-V for Windows 10](/windows/application-management/app-v/appv-getting-started)
+- [Upgrading to App-V for Windows 10 from an existing installation](/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  Steps to manage App-V virtual applications  
  To manage App-V virtual applications, follow these steps:  
@@ -143,7 +143,7 @@ For you to use this feature with Configuration Manager, both packages must be de
 For more information about App-V Dynamic Suite Composition, see your App-V documentation.  
 
 ##  Converting App-V 4.6 applications to App-V 5 applications  
-The application package format has changed between App-V 4.6 and App-V 5. Applications that have been sequenced by using App-V 4.6 are no longer supported. But App-V 5 has a package converter tool that you can use to convert applications. For more information, see [How to convert a package created in a previous version of App-V](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
+The application package format has changed between App-V 4.6 and App-V 5. Applications that have been sequenced by using App-V 4.6 are no longer supported. But App-V 5 has a package converter tool that you can use to convert applications. For more information, see [How to convert a package created in a previous version of App-V](/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 Use the following steps to convert App-V 4.6 applications to App-V 5 applications:  
 
@@ -174,7 +174,7 @@ The deployment configuration file has settings that apply to the computer, like 
 
 If you want to deploy App-V 5 virtual applications with Configuration Manager, all three files must be present in the same folder when you create the App-V 5 deployment type. If there are multiple files in the folder, Configuration Manager will use the most recent.  
 
-For more information, see your [About App-V 5.0 dynamic configuration](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
+For more information, see your [About App-V 5.0 dynamic configuration](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
 
 ##  App-V local interaction  
 In some application deployment scenarios, applications are installed locally on client computers, and other applications are deployed as virtual applications to the same client computer. By default, the applications that were locally installed cannot see or communicate directly with virtualized applications. This is the intended behavior of the application isolation that App-V provides. Local interaction is a feature of the App-V Client that you can enable for each application to allow locally installed applications that run on a client computer to see and communicate with virtualized applications. Configuration Manager and App-V fully support local interaction.  
@@ -182,7 +182,7 @@ In some application deployment scenarios, applications are installed locally on 
 For more information about the App-V local interaction feature, see your App-V documentation.  
 
 ##  App-V 5 Shared Content Store  
-Configuration Manager supports the App-V 5 Shared Content Store feature. For more information, see [Planning for the App-V 5.0 Shared Content Store (SCS)](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
+Configuration Manager supports the App-V 5 Shared Content Store feature. For more information, see [Planning for the App-V 5.0 Shared Content Store (SCS)](/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  Monitoring virtual applications  
 
@@ -202,4 +202,4 @@ You can use the following reports to monitor App-V in your Configuration Manager
 ### Log files  
 Configuration Manager records information about virtual application deployments in log files. For information about the log files that virtual applications and Configuration Manager application management use, see [Log files](../../core/plan-design/hierarchy/log-files.md).  
 
-For Windows 8.1, find logs for the App-V client in C:\ProgramData\Microsoft\Application Virtualization Client.  
+For Windows 8.1, find logs for the App-V client in C:\ProgramData\Microsoft\Application Virtualization Client.

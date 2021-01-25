@@ -4,13 +4,11 @@ titleSuffix: Configuration Manager
 ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2c84a3bd-f8d8-46a4-9591-07186ca5fe65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # IProgressUI interface
@@ -25,6 +23,7 @@ The `IProgressUI` automation interface in Configuration Manager represents the u
 |[IProgressUI::ShowActionProgress](iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|  
 |[IProgressUI::ShowErrorDialog](iprogressui--showerrordialog-method.md)|Displays customizable error information in a dialog box.|
 |[IProgressUI::ShowMessage](iprogressui--showmessage-method.md)|Displays customizable dialog box.|
+|[IProgressUI::ShowMessageEx](iprogressui--showmessageex-method.md)|Displays customizable dialog box and captures an integer result variable.|
 |[IProgressUI::ShowRebootDialog](iprogressui--showrebootdialog-method.md)|Displays customizable reboot warning dialog box.|
 |[IProgressUI::ShowSwapMediaDialog](iprogressui--showswapmediadialog-method.md)|Displays message box to prompt a user to swap media.|
 |[IProgressUI::ShowTSProgress](iprogressui--showtsprogress-method.md)|Displays custom task sequence progress information in a dialog box.|

@@ -2,10 +2,10 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/21/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
@@ -76,9 +76,6 @@ If you choose **Yes**, then specify:
 
 ### Enable as peer cache source
 
-> [!Note]  
-> In version 1902 and earlier, this setting was named **Enable Configuration Manager client in full OS to share content**. The behavior of the setting didn't change.
-
 Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Configuration Manager clients. Choose **Yes**, and then specify the port through which the client communicates with the peer computer.
 
 - **Port for initial network broadcast** (default UDP 8004): Configuration Manager uses this port in Windows PE or the full Windows OS. The task sequence engine in Windows PE sends the broadcast to get content locations before it starts the task sequence.<!--SCCMDocs issue 910-->
@@ -90,13 +87,12 @@ Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Confi
 ### Minimum duration before cached content can be removed (minutes)
 
 <!--4485509-->
-Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
+Specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
 
 By default this value is 1,440 minutes (24 hours).
 The maximum value for this setting is 10,080 minutes (one week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
-
 
 ## Client policy  
 
@@ -107,7 +103,6 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Windows computers (for example, desktops, servers, laptops)  
 - Mobile devices that Configuration Manager enrolls  
 - Mac computers  
-- Computers that run Linux or UNIX  
 
 This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With many clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
@@ -119,7 +114,7 @@ If this setting is **No**, users don't receive required applications that you de
 
 This setting applies to users when their computer is on either the intranet or the internet. It must be **Yes** if you also want to enable user policies on the internet.  
 
-> [!Note]  
+> [!NOTE]
 > Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You can't install new application catalog roles.
 >
 > If you're still using the application catalog, it receives the list of available software for users from the site server. Thus, this setting doesn't have to be **Yes** for users to see and request applications from the application catalog. If this setting is **No**, users can't install the applications that they see in the application catalog.  
@@ -128,13 +123,13 @@ This setting applies to users when their computer is on either the intranet or t
 
 Set this option to **Yes** for users to receive the user policy on internet-based computers. The following requirements also apply:  
 
-- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md).  
+- The client and site are configured for [internet-based client management](../manage/plan-internet-based-client-management.md) or a [cloud management gateway](../manage/cmg/overview.md).  
 
 - The **Enable user policy on clients** setting is **Yes**.  
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -162,11 +157,11 @@ Set this option to **Yes** for clients to obtain content from a cloud distributi
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory
 
-When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### Enable clients to use a cloud management gateway
 
-By default, all internet-roaming clients use any available [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
+By default, all internet-roaming clients use any available [cloud management gateway](../manage/cmg/overview.md). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
 
 
 
@@ -239,7 +234,7 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### Use new Software Center
 
@@ -324,6 +319,11 @@ If you want to give users more time to install required application or software 
 
 Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
+
+### Enable Endpoint analytics data collection
+
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../analytics/enroll-configmgr.md).
+
 ## Computer restart
 
 For more information about these settings, see [Device restart notifications](device-restart-notifications.md).<!-- 7182335 -->
@@ -331,11 +331,11 @@ For more information about these settings, see [Device restart notifications](de
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
 
 > [!Note]
 > - Delivery Optimization is only available on Windows 10 clients.
-> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
@@ -400,7 +400,7 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ### Polling interval for mobile device legacy clients
 
-Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, macOS, and Unix or Linux.
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, or macOS.
 
 ### Polling interval for modern devices (minutes)
 
@@ -458,41 +458,43 @@ For a MIF file to be collected by hardware inventory, it must be in the correct 
 > [!NOTE]  
 > This setting is available only in the default client settings.
 
+## Metered internet connections
 
+Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you're on a metered internet connection.
 
-## Metered internet connections  
-
-Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered internet connection.  
-
-> [!NOTE]  
-> The configured client setting isn't applied in the following scenarios:  
+> [!NOTE]
+> The configured client setting isn't applied in the following scenarios:
 >
 > - If the computer is on a roaming data connection, the Configuration Manager client doesn't perform any tasks that require data to be transferred to Configuration Manager sites.  
 > - If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
 
 ### Client communication on metered internet connections
 
-Choose one of the following options for this setting:  
+Choose one of the following options for this setting:
 
-- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.  
+- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.
 
-- **Limit**: Only the following client communications are allowed over the metered internet connection:  
+- **Limit**: The client only communicates over the metered internet connection for the following behaviors:
 
-    - Client policy retrieval  
+  - Download client policy
 
-    - Client state messages to send to the site  
+  - Send client state messages
 
-    - Software installation requests from Software Center  
+  - Request software installs from Software Center
 
-    - Required deployments (when the installation deadline is reached)  
+  - Download additional policy and content for required deployments at the installation deadline
 
-    If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
+    > [!NOTE]
+    > On an application deployment, enable the option to **Allow clients on a metered Internet connection to download content after the installation deadline**. This option is only available for deployments with a purpose of **Required**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md).<!-- 8510020 -->
 
-- **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
+  If the client reaches the data transfer limit for the metered internet connection, the client no longer communicates with the site.
 
-> [!IMPORTANT]  
+- **Block**: When the device is on a metered internet connection, the Configuration Manager client doesn't try to communicate with the site. This option is the default.
+
+> [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
+Starting in version 2006, client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -632,6 +634,15 @@ Set this option to **Yes** to use network-level authentication (NLA) to establis
 
 ## Software Center
 
+### Select the user portal
+
+<!--CMADO-3601237,INADO-4297660-->
+Starting in version 2006, if you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that notifications from Configuration Manager and Intune both launch the Company Portal. If a Configuration Manager notification is for a scenario that the Company Portal doesn't support, selecting the notification launches Software Center.
+
+If you install the Company Portal on a co-managed device, but configure this setting to **Software Center**, then notifications from Configuration Manager launch Software Center. Notifications from Intune launch the Company Portal. This behavior may be confusing to users to interact with different portals.
+
+The behavior of the Company Portal depends upon your co-management workload configuration. For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
+
 ### Select these new settings to specify company information
 
 Set this option to **Yes**, and then specify the following settings to brand Software Center for your organization:
@@ -654,34 +665,16 @@ When you enable this option, applications that are already installed no longer s
 
 Specify the visibility of the application catalog web site link in Software Center. When this option is set, users won't see the application catalog web site link in the Installation status node of Software Center. <!--1358214-->
 
-> [!Important]  
+> [!IMPORTANT]
 > The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
 
 ### Software Center tab visibility
 
-#### Starting in version 1906
 <!--4063773-->
 
-Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons. 
+Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons.
 
 Available tabs:
-- **Applications**
-- **Updates**
-- **Operating Systems**
-- **Installation Status**
-- **Device Compliance**
-- **Options**
-- Add up to five custom tabs by clicking the **Add tab** button.
-  - Specify the **Tab name** and **Content URL** for your custom tab.
-  - Select **Delete Tab** to remove a custom tab.  
-
-  >[!Important]  
-  > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
-  > - Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
-
-#### Version 1902 and earlier
-
-Configure the additional settings in this group to **Yes** to make the following tabs visible in Software Center:
 
 - **Applications**
 - **Updates**
@@ -689,20 +682,21 @@ Configure the additional settings in this group to **Yes** to make the following
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- **Specify a custom tab for Software Center** <!--1358132-->
-    - **Tab name**
-    - **Content URL**
 
-    >[!Important]  
-    > Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
-    >
-    > Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
+You can also add up to five custom tabs:
 
-For example, if your organization doesn't use compliance policies, and you want to hide the Device Compliance tab in Software Center, set **Enable Device Compliance tab** to **No**.
+- Select **Add tab**.
+- Specify the **Tab name** and **Content URL** for your custom tab.
+
+Select **Delete Tab** to remove a custom tab.  
+
+> [!IMPORTANT]
+> Some website features may not work in a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+>
+> Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
 
 ### <a name="bkmk_swctr_defaults"></a> Configure default views in Software Center
 <!--3612112-->
-*(Introduced in version 1902)*
 
 - Configure the **Default application filter** as either **All** or only **Required** applications.  
 
@@ -711,7 +705,6 @@ For example, if your organization doesn't use compliance policies, and you want 
 - Set the **Default application view** as either **Tile view** or **List view**.
 
   - If a user changes this configuration, Software Center persists the user's preference in the future.
-
 
 ## Software deployment  
 
@@ -850,6 +843,12 @@ Adjust this schedule based on company policy for software update compliance, and
 > [!NOTE]  
 > If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
 
+### Allow user proxy for software update scans
+<!--8379199-->
+*(Introduced in version 2010)*
+
+Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. Set this option to **Yes** to allow these connections if you require a user proxy despite the security trade-offs. By default, this setting is set to **No**. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
+
 ### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
 Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client starts installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
@@ -862,29 +861,40 @@ Use this setting to specify the period of time for the previous setting. You can
 
 ### Allow clients to download delta content when available
 
-*(Introduced in version 1902)*
-
-Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it. 
+Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
 
 - Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
- - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
- - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
-    - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587--> 
 
+- This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+
+- Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
+
+  When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587-->
 
 ### Port that clients use to receive requests for delta content
 
-*(Introduced in version 1902)*
-
-This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall. 
+This setting configures the local port for the HTTP listener to download delta content. It's set to 8005 by default. You don't need to open this port in the client firewall.
 
 > [!NOTE]
 >This client setting replaces **Port used to download content for Express installation files**.
 
+### If content is unavailable from distribution points in the current boundary group, immediately fallback to a neighbor or the site default
 
+*(Introduced in version 2010)*
+
+If delta content is unavailable from distribution points in the current boundary group, you can allow immediate fallback to a neighbor or the site default boundary group distribution points. This setting is useful when using delta content for software updates since the timeout setting per download job is 5 minutes. The following options are available:
+
+- **Yes**: For delta content, the client doesn't wait to reach the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback). Clients immediately fall back to a neighbor or the site default content distribution points when both of the following conditions are met:
+      - Delta content is unavailable from distribution points in the current boundary group.
+      - The software update deployment allows fallback.
+
+- **No** (default): The client honors the fallback time (in minutes) defined by the [Boundary Group relationship](../../servers/deploy/configure/boundary-group-procedures.md#bkmk_bg-fallback) when it's allowed on the software update deployment. Delta download content may fail with a timeout even if the update content is available on a neighbor or the site default distribution point group.
+
+> [!NOTE]
+> This setting is for delta content only.
 ### Enable management of the Office 365 Client Agent
 
-When you set this option to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
@@ -906,11 +916,10 @@ For example, you configure the following maintenance windows:
 
 By default, the client only installs software updates during the second maintenance window. It ignores the maintenance window for all deployments in this scenario. When you change this setting to **Yes**, the client installs software updates between 02:00 - 06:00.
 
-
 ### <a name="bkmk_thread-priority"></a> Specify thread priority for feature updates
 
 <!--3734525-->
-Starting in Configuration Manager version 1902, you can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows 10 in-place upgrade task sequences.
+You can adjust the priority with which Windows 10 version 1709 or later clients install a feature update through [Windows 10 servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). This setting has no impact on Windows 10 in-place upgrade task sequences.
 
 This client setting provides the following options:
 
@@ -918,12 +927,11 @@ This client setting provides the following options:
 
 - **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
 
-    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+  Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.  
 
-    - Removes the `/Priority` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
-
+   Removes the `/Priority` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
 
 ### Enable third party software updates
 
@@ -931,7 +939,7 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 
 ### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
 <!--4062619-->
-Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+Use this setting to configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10.
@@ -970,9 +978,16 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
 
-## Windows Analytics
+> [!NOTE]
+> Default values are:
+> - User device affinity usage threshold (minutes): 2880
+> - User device affinity usage threshold (days): 30
+> - Automatically configure user device affinity from usage data: No
+> - Allow user to define their primary devices: No
 
-> [!Important]  
-> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+## Windows Diagnostic Data
+
+> [!IMPORTANT]
+> This group was previously called **Windows Analytics**. Microsoft retired the Windows Analytics service on January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
+> Desktop Analytics is the evolution of Windows Analytics. Use Desktop Analytics to manage Windows diagnostic data settings. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).

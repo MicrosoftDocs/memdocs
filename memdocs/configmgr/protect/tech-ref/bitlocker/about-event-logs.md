@@ -5,9 +5,7 @@ description: Learn about how to work with BitLocker information in the Windows E
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
-
-
+ms.topic: troubleshooting
 ms.assetid: a9ece9e8-37ec-441d-937c-be4941afce7f
 author: aczechowski
 ms.author: aaroncz

@@ -78,7 +78,7 @@ Other examples include:
 
 - Nestlé, who uses app-based Conditional Access for over 150,000 employees  
 
-- The automation software company, Cadence, who can now make sure that "only managed devices have access to Office 365 apps like Teams and the company's intranet." They can also offer their workforce "safer access to other cloud-based apps, such as Workday and Salesforce." For more information about Cadence's experience with Intune, see [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
+- The automation software company, Cadence, who can now make sure that "only managed devices have access to Microsoft 365 Apps like Teams and the company's intranet." They can also offer their workforce "safer access to other cloud-based apps, such as Workday and Salesforce." For more information about Cadence's experience with Intune, see [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
 
 Intune is also fully integrated with partners like Cisco ISE, Aruba Clear Pass, and Citrix NetScaler. With these partners, you can maintain access controls based on the Intune enrollment and the device compliance state across these other platforms.
 
@@ -105,12 +105,11 @@ Conditional Access is easy to use when you [enable co-management](how-to-enable.
 
 For more information about using Conditional Access, see the following articles: 
 
-- [Conditional Access in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Conditional Access in Azure AD](/azure/active-directory/conditional-access/overview)  
 
-- [Intune device compliance policies](https://docs.microsoft.com/intune/device-compliance)  
+- [Intune device compliance policies](/intune/device-compliance)  
 
-- [App-based Conditional Access with Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [App-based Conditional Access with Intune](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Conditional Access features become available immediately for hybrid Azure AD-joined devices. These features include multi-factor authentication and hybrid Azure AD join access control. This behavior is because they're based on Azure AD properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.  
-
+> Conditional Access features become available immediately for hybrid Azure AD-joined devices. These features include multi-factor authentication and hybrid Azure AD join access control. This behavior is because they're based on Azure AD properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.

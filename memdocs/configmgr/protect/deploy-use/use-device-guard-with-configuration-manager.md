@@ -2,7 +2,7 @@
 title: How to manage Windows Defender Application Control
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage Windows Defender Application Control.
-ms.date: 11/19/2019
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -23,7 +23,7 @@ Windows Defender Application Control is designed to protect PCs against malware 
 
 Windows Defender Application Control is a software-based security layer that enforces an explicit list of software that is allowed to run on a PC. On its own, Application Control does not have any hardware or firmware prerequisites. Application Control policies deployed with Configuration Manager enable a policy on PCs in targeted collections that meet the minimum Windows version and SKU requirements outlined in this article. Optionally, hypervisor-based protection of Application Control policies deployed through Configuration Manager can be enabled through Group Policy on capable hardware.
 
-To learn more about Windows Defender Application Control, read the [Windows Defender Application Control deployment guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+To learn more about Windows Defender Application Control, read the [Windows Defender Application Control deployment guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
    > [!NOTE]
    > - Beginning with Windows 10, version 1709, configurable code integrity policies are known as Windows Defender Application Control.
@@ -62,15 +62,23 @@ When you deploy a policy, typically, the following executables can run:
 >[!IMPORTANT]
 >These items do not include any software that is *not* built-into Windows that automatically updates from the internet or third-party software updates whether they are installed via any of the update mechanisms mentioned previously, or from the internet. Only software changes that are deployed though the Configuration Manager client can run.
 
+## <a name="bkmk_os"></a> Supported operating systems
+
+To use Windows Defender Application Control with Configuration Manager, devices you manage must be running:
+- Windows 10 Enterprise version 1703, or later.
+- Windows Server 2019, or later (Introduced in version 2010) <!--7752243, 8581848-->
+
+> [!Tip]
+> Create new policies to target Windows Server operating systems after installation of Configuration Manager 2010 and installing the updated client. Existing Windows Defender Application Control polices created prior to installing 2010 won't work with Windows Server operating systems.
+
 ## Before you start
 
 Before you configure or deploy Windows Defender Application Control policies, read the following information:
 
-- Windows Defender Application Control management is a pre-release feature for Configuration Manager, and is subject to change.
-- To use Windows Defender Application Control with Configuration Manager, PCs you manage must be running the Windows 10 Enterprise version 1703, or later.
 - Once a policy is successfully processed on a client PC, Configuration Manager is configured as a Managed Installer on that client. Software deployed through it, after the policy processes, is automatically trusted. Software installed by Configuration Manager before the Windows Defender Application Control policy processes is not automatically trusted.
 - The default compliance evaluation schedule for Application Control policies, configurable during deployment, is every one day. If issues in policy processing are observed, it may be beneficial to configure the compliance evaluation schedule to be shorter, for example every hour. This schedule dictates how often clients reattempt to process a Windows Defender Application Control policy if a failure occurs.
 - Regardless of the enforcement mode you select, when you deploy a Windows Defender Application Control policy, client PCs cannot run HTML applications with the extension .hta.
+- Create new policies to target Windows Server operating systems after installation of Configuration Manager 2010 and installing the updated client. Existing Windows Defender Application Control polices created prior to installing 2010 won't work with Windows Server operating systems.
 
 ## How to create a Windows Defender Application Control policy
 1. In the Configuration Manager console, click **Assets and Compliance**.
@@ -128,7 +136,7 @@ To verify the specific software being blocked or audited, see the following loca
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -138,18 +146,14 @@ You can let locked-down devices run software with a good reputation as determine
 
 ## Security and privacy information for Windows Defender Application Control
 
-- In this pre-release version, do not deploy Windows Defender Application Control policies with the enforcement mode **Audit Only** in a production environment. This mode is intended to help you test the capability in a lab setting only.
 - Devices that have a policy deployed to them in **Audit Only** or **Enforcement Enabled** mode that have not been restarted to enforce the policy, are vulnerable to untrusted software being installed.
 In this situation, the software might continue to be allowed to run even if the device restarts, or receives a policy in **Enforcement Enabled** mode.
 - To ensure that the Windows Defender Application Control policy is effective, prepare the device in a lab environment. Then, deploy the **Enforcement Enabled** policy, and finally, restart the device before you give the device to an end user.
 - Do not deploy a policy with **Enforcement Enabled**, and then later deploy a policy with **Audit Only** to the same device. This configuration might result in untrusted software being allowed to run.
-- When you use Configuration Manager to enable Windows Defender Application Control on client PCs, the policy does not prevent users with local administrator rights from circumventing the Application Control policies or otherwise executing untrusted software. 
+- When you use Configuration Manager to enable Windows Defender Application Control on client PCs, the policy does not prevent users with local administrator rights from circumventing the Application Control policies or otherwise executing untrusted software.
 - The only way to prevent users with local administrator rights from disabling Application Control is to deploy a signed binary policy. This deployment is possible through Group Policy but not currently supported in Configuration Manager.
 - Setting up Configuration Manager as a Managed Installer on client PCs uses AppLocker policy. AppLocker is only used to identify Managed Installers and all enforcement happens with Windows Defender Application Control. 
 
 ## Next steps
 
  [Manage antimalware policies and firewall settings](endpoint-antimalware-firewall.md)
-
-
-

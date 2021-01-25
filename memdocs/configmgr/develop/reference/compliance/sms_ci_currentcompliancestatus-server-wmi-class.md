@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d36889ae-8c02-441e-996d-64f98c970eae
 author: aczechowski
 ms.author: aaroncz
@@ -91,7 +91,7 @@ Class SMS_CI_CurrentComplianceStatus : SMS_BaseClass
 
  The readable name of the compliance state. Possible values are:  
 
-|||  
+|Value|Compliance state|  
 |-|-|  
 |0|Compliance State Unknown|  
 |1|Compliant|  
@@ -134,7 +134,7 @@ Class SMS_CI_CurrentComplianceStatus : SMS_BaseClass
 
  The enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  

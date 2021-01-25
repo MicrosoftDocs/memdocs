@@ -5,15 +5,14 @@ description: "Learn about the levels of diagnostics and usage data that Configur
 ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1706 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -88,7 +87,8 @@ For Configuration Manager version 1706, this level includes the following:
 
      - Version of post-upgrade script
 
-- SQL version, service pack level, edition, collation ID, and character set     
+- SQL Server version, service pack level, edition, collation ID, and character set
+
 - Telemetry stats (when run, runtime, errors)
 
 - Use of Network Discovery (enabled or disabled)
@@ -133,7 +133,7 @@ For Configuration Manager version 1706, this level includes the following:
 
    - ***[New]*** Count of distinct branding for application catalog
 
-   - ***[New]*** Count of Office 365 applications created using dashboard
+   - ***[New]*** Count of Microsoft 365 applications created using dashboard
 
    - Count of packages by type  
 
@@ -367,7 +367,7 @@ For Configuration Manager version 1706, this level includes the following:
 
     - Configurations that are used for active Windows 10 servicing plans  
 
-    - Count of deployed Office 365 updates  
+    - Count of deployed Microsoft 365 updates  
 
     - ***[New]*** Count of Microsoft Surface drivers synced
 
@@ -412,11 +412,11 @@ For Configuration Manager version 1706, this level includes the following:
 
     - Discovery types, enabled and schedule (full, incremental)
 
-    - SQL AlwaysOn replica information, usage, and health status
+    - SQL Server Always On availability group replica information, usage, and health status
 
-    - SQL change tracking performance issues, retention period, and auto-cleanup state
+    - SQL Server change tracking performance issues, retention period, and auto-cleanup state
 
-    - SQL change tracking retention period
+    - SQL Server change tracking retention period
 
     - State and status message performance statistics including most common and most expensive message types
 
@@ -428,7 +428,7 @@ For Configuration Manager version 1706, this level includes the following:
 
     - ***[New]*** Count of Scripts and run statistics
 
-    - Count of sites with Wake On Lan (WOL)
+    - Count of sites with Wake on LAN (WOL)
 
     - Reporting usage and performance statistics  
 

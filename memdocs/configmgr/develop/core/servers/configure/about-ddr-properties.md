@@ -19,8 +19,8 @@ In Configuration Manager, the architecture for a resource is defined in both the
 
 ## Property Flags  
 
-||||  
-|-|-|-|  
+| Name | Value | Description |
+| ---- | ----- | ----------- |  
 |DISCOVERY_FLAG_FULL_REPLACE<br />DISCOVERY_FLAG_LOW_CONFIDENCE|0x00000001|Replace all array values with those from the DDR. Set only the scalar value if the value is `null`.|  
 |DISCOVERY_FLAG_GUID|0x00000002|Configuration Manager unique ID, usually specified in the database.|  
 |DISCOVERY_FLAG_KEY|0x00000008|A key property, which if present, uniquely identifies the item.|  
@@ -58,11 +58,9 @@ In Configuration Manager, the architecture for a resource is defined in both the
 #### Property Type  
  The property type defines the data type of the property. Each property type can be either a scalar or an array property. Currently used and accepted ones are:  
 
-|||  
-|-|-|  
-|Integer|8|  
-|String|11|  
-|Date/Time|12|  
+* Integer: 8
+* String: 11
+* Date/Time: 12
 
  The property type in the architecture must match the type in the DDR.  
 

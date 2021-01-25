@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4e8a8dbb-bf0a-4331-846c-0f121bb396ff
 author: aczechowski
 ms.author: aaroncz
@@ -92,7 +92,7 @@ Class SMS_MigrationCollectionInfo : SMS_BaseClass
 
  The type of the collection.  
 
-|||  
+|Value|Collection type|  
 |-|-|  
 |0|Mixed|  
 |1|User|  

@@ -16,7 +16,7 @@ manager: dougeby
 
 # Upgrade Windows 10 for co-management
 
-As you work towards onboarding your organization to co-management, getting current is a significant hurdle for some customers. Co-management requires [Windows 10 version 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) or later. Once you update Windows and configure auto-enrollment, your clients are automatically enrolled to co-management.
+As you work towards onboarding your organization to co-management, getting current is a significant hurdle for some customers. Co-management requires [Windows 10 version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later. Once you update Windows and configure auto-enrollment, your clients are automatically enrolled to co-management.
 
 In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo upgrading to Windows 10 for co-management:
 
@@ -28,7 +28,7 @@ In the following video, senior program manager Rob York and product marketing ma
 
 Among other platform advancements, Windows 10 version 1709 and later supports auto-enrollment. This behavior makes a device automatically enroll to Intune when it joined Azure Active Directory (Azure AD). 
 
-For more information, see [Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+For more information, see [Enable Windows 10 automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
 ## How to do it
@@ -41,7 +41,7 @@ Here are some tips we've learned from helping thousands of customers get current
 
 - Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-for-post-processing).  
 
-- If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [Deploy Windows 10 in-place upgrade via CMG](../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg).  
+- If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [Deploy Windows 10 in-place upgrade via CMG](../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).  
 
 - Offer an opt-in to co-management for users who want to be early adopters. This approach accelerates initial adoption. By identifying these people in advance, you can make sure good coverage in the early days of a rollout. You also receive validation and feedback from users that are happy for change and interested in more frequent releases. Early adopter programs generate interest in the new technologies and grow in size over time.  
 
@@ -58,5 +58,4 @@ A large European software manufacturer successfully uses an early adopter group.
 
 If you need assistance with your Windows 10 upgrade at any point in the process, go to [Microsoft FastTrack](https://Microsoft.com/FastTrack/), sign in, and request assistance. 
 
-For more information, see [Get help from FastTrack](quickstart-fasttrack.md). 
-
+For more information, see [Get help from FastTrack](quickstart-fasttrack.md).

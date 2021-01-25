@@ -36,10 +36,9 @@ The **Sync** device action forces the selected device to immediately check in wi
 ## Supported platforms
 
 - Windows
-- Windows Phone
 - iOS
 - macOS
-- Android
+- Android (Device administrator and Android for work only)
 
 ## Sync a device
 

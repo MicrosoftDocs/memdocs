@@ -1,25 +1,26 @@
 ---
-title: "CreateRelationship Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CreateRelationship method
+titleSuffix: Configuration Manager
+description: Use this WMI class method to add a user device affinity.
+ms.date: 08/26/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 17717f11-feaa-413c-aeae-948c1492c836
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# CreateRelationship Method in Class SMS_UserMachineRelationship
-The `CreateRelationship` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a relationship between a user and a device.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+# CreateRelationship method in class SMS_UserMachineRelationship
+
+The `CreateRelationship` WMI class method creates a relationship between a user and a device.
+
+The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
 ## Syntax  
 
-```  
+```
 sint32 CreateRelationship (  
      uint32 MachineResourceId,  
      string UserAccountName,  
@@ -28,7 +29,8 @@ sint32 CreateRelationship (
 );  
 ```  
 
-#### Parameters  
+## Parameters
+
  `MachineResourceId`  
  Data type: `UInt32`  
 
@@ -41,7 +43,7 @@ sint32 CreateRelationship (
 
  Qualifiers: `[in]`  
 
- User account name.  
+ User account name. For example, `contoso\jqpublic`.
 
  `SourceId`  
  Data type: `UInt32`  
@@ -50,36 +52,40 @@ sint32 CreateRelationship (
 
  Source object identifier for dependency.  
 
-|||  
-|-|-|  
-|Software Catalog|The end user enabled the relationship by selecting the option in the AppCatalog Web page.|  
-|Administrator|An administrator created the relationship manually in the UI.|  
-|User|Unused/deprecated.|  
-|Usage Agent|The threshold of activity triggered a relationship to be created.|  
-|Device Management|The user/device were tied together during enrollment.|  
-|OSD|The user/device were tied together as part of OSD imaging.|  
-|Fast Install|The user/device were tied together temporarily to enable an on-demand install from the catalog if no UDA relationship installed before the Install was triggered.|  
-|Exchange Server connector|The device was provisioned through EAS.|  
+|Value|Name|Description|  
+|-|-|-|
+|`1`|Self-service portal|The end user enabled the relationship by selecting the option in Software Center.|  
+|`2`|Administrator|An administrator created the relationship manually in the console.|  
+|`3`|User|Unused/deprecated.|  
+|`4`|Usage agent|The threshold of activity triggered a relationship to be created.|  
+|`5`|Device management|The user and device were tied together during on-prem MDM enrollment.|  
+|`6`|OSD|The user and device were tied together as part of an OS deployment task sequence.|  
+|`7`|Fast install|The user/device were tied together temporarily to enable an on-demand install from the catalog if no UDA relationship installed before the Install was triggered.|  
+|`8`|Exchange Server connector|The device was provisioned through Exchange ActiveSync.|  
 
  `TypeId`  
  Data type: `UInt32`  
 
  Qualifiers: `[in, optional]`  
 
- Type identifier.  
+An array of types for this relationship. For a value of `1`, the **UniqueUserName** is the primary user. If the value is null, they aren't the primary user.
 
-## Return Values  
+## Return values
+
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## Requirements  
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager server runtime requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
-## See Also  
- [SMS_Application Server WMI Class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)   
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+
+## See also
+
+[SMS_Application server WMI class](../../../../../develop/reference/apps/sms_application-server-wmi-class.md)

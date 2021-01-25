@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 11/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,7 +46,7 @@ Supported platforms and profiles:
 ### App and browser isolation
 
 - **Turn on Application Guard for Edge (Options)**  
-  CSP: [AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
+  CSP: [AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
   - **Not configured** (*default*)
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
@@ -54,7 +54,7 @@ Supported platforms and profiles:
   When set to *Enabled for Edge*, the following settings are available:
   
   - **Clipboard behavior**  
-    CSP: [ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
+    CSP: [ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
 
     Choose what copy and paste actions are allowed from the local PC and an Application Guard virtual browser.
     - **Not configured** (*default*)
@@ -64,31 +64,31 @@ Supported platforms and profiles:
     - **Allow copy and paste between PC and browser**
 
   - **Block external content from non-enterprise approved sites**  
-    CSP: [BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
+    CSP: [BlockNonEnterpriseContent](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#blocknonenterprisecontent)
 
     - **Not configured** (*default*)
     - **Yes** - Block content from unapproved websites from loading.
 
   - **Collect logs for events that occur within an Application Guard browsing session**  
-    CSP: [AuditApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872418)
+    CSP: [AuditApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#auditapplicationguard)
 
     - **Not configured** (*default*)
     - **Yes** - Collect logs for events that occur within an Application Guard virtual browsing session.
 
   - **Allow user-generated browser data to be saved**  
-    CSP: [AllowPersistence](https://go.microsoft.com/fwlink/?linkid=872419)
+    CSP: [AllowPersistence](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowpersistence)
 
     - **Not configured** (*default*)
     - **Yes** - Allow user data that is created during an Application Guard virtual browsing session to be saved. Examples of user data include passwords, favorites, and cookies.
 
   - **Enable hardware graphics acceleration**  
-    CSP: [AllowVirtualGPU](https://go.microsoft.com/fwlink/?linkid=872420)
+    CSP: [AllowVirtualGPU](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowvirtualgpu)
 
     - **Not configured** (*default*)
     - **Yes** - Within the Application Guard virtual browsing session, use a virtual graphics processing unit to load graphics-intensive websites faster.
 
   - **Allow users to download files onto the host**  
-    CSP: [SaveFilesToHost](https://go.microsoft.com/fwlink/?linkid=872421)
+    CSP: [SaveFilesToHost](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#savefilestohost)
 
     - **Not configured** (*default*)
     - **Yes** - Allow users to download files from the virtualized browser onto the host operating system​.
@@ -96,7 +96,7 @@ Supported platforms and profiles:
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
-  - **Yes** - Allow printing print to local printers.
+  - **Yes** - Allow printing to local printers.
 
 - **Application guard allow print to network printers**  
 
@@ -118,7 +118,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes** - Configure Windows network isolation policy.  
   
-  When set to *Configure*, you can configure the following settings.
+  When set to *Yes*, you can configure the following settings.
 
   - **IP ranges**  
     Expand the dropdown, select **Add**, and then specify a *lower address* and then an *upper address*.
@@ -151,7 +151,7 @@ Supported platforms and profiles:
 ### Web Protection
 
 - **Enable network protection**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   - **Not configured** (*default*) - The setting returns to the Windows default, which is disabled.
   - **User defined**
@@ -159,19 +159,19 @@ Supported platforms and profiles:
   - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
 
 - **Require SmartScreen for Microsoft Edge**  
-  CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
+  CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   - **Yes** - Use SmartScreen to protect users from potential phishing scams and malicious software.
   - **Not configured** (*default*)
 
 - **Block malicious site access**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)  
 
   - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
   - **Not configured** (*default*)
 
 - **Block unverified file download**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
   - **Not configured** (*default*)
@@ -181,21 +181,23 @@ Supported platforms and profiles:
 ### Microsoft Defender Application Control
 
 - **App locker application control**  
+  CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
+
   - **Not configured** (*default*)
   - **Enforce Components and Store Apps**
   - **Audit Components and Store Apps**
   - **Enforce Components, Store Apps, and Smartlocker**
-  - **Audit Components, Store Apps, and SMartlocker**
+  - **Audit Components, Store Apps, and Smartlocker**
+   
 
 - **Block users from ignoring SmartScreen warnings**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
 
-  This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
-  - **Not configured** (*default*) - Returns the setting to the Windows default, which allows the user override.
-  - **Yes** - - SmartScreen won't present an option for the user to disregard the warning and run the app. The warning is presented, but the user won't able to bypass it.
+  - **Not configured** (*default*) - Users can ignore SmartScreen warnings for files and malicious apps.
+  - **Yes** - SmartScreen is enabled and users can't bypass warnings for files or malicious apps.
 
 - **Turn on Windows SmartScreen**  
-  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+  CSP: [SmartScreen/EnableSmartScreenInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
   - **Not configured** (*default*) - Return the setting to Windows default, which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
   - **Yes** - Enforce the use of SmartScreen for all users.
@@ -206,113 +208,135 @@ Supported platforms and profiles:
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
   <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **User defined**
   - **Enable** - Attempts to steal credentials via lsass.exe are blocked.
   - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Adobe Reader from creating child processes**  
-  [Reduce attack surfaces with attack surface reduction rules](https://go.microsoft.com/fwlink/?linkid=853979)
+  [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
   
   This ASR rule is controlled via the following GUID: 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c
   - **Not configured** (*default*) - The Windows default is restored, is to not block creation of child processes.
   - **User defined**
   - **Enable** - Adobe Reader is blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Office applications from injecting code into other processes**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872974)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from injecting code into other processes.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block Office applications from creating executable content**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872975)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: 3B576869-A4EC-4529-8536-B80A7769E899
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from creating executable content.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block all Office applications from creating child processes**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872976)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Office applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block Win32 API calls from Office macro**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872977)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block**  - Office macro's are blocked from using Win32 API calls.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block Office communication apps from creating child processes**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)  
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)  
 
   This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
   - **Not configured** (*default*) - The Windows default is restored, which is to not block creation of child processes.
   - **User defined**
   - **Enable** - Office communication applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872978)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Defender blocks execution of obfuscated scripts.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block JavaScript or VBScript from launching downloaded executable content**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872979)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
    This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Defender blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Disable** - This setting is turned off.
 
 - **Block process creations originating from PSExec and WMI commands**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874500)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: d1e49aac-8f56-4280-b9ba-993a6d77406c
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Process creation by PSExec or WMI commands is blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block untrusted and unsigned processes that run from USB**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874502)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Untrusted and unsigned processes that run from a USB drive are blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block executable files from running unless they meet a prevalence, age, or trusted list criteria**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874503)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: 01443614-cd74-433a-b99e-2ecdc07bfc25e
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block**
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Block executable content download from email and webmail clients**  
-  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872980)
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Executable content downloaded from email and webmail clients is blocked.
   - **Audit mode** - Windows events are raised instead of blocking.
+  - **Warn** - For Windows 10 version 1809 or later, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
+  - **Disable** - This setting is turned off.
 
 - **Use advanced protection against ransomware**  
-   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874504)
+   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -321,7 +345,7 @@ Supported platforms and profiles:
   - **Audit mode** - - Windows events are raised instead of blocking.
 
 - **Enable folder protection**  
-  CSP: [EnableControlledFolderAccess](https://go.microsoft.com/fwlink/?linkid=872614)
+  CSP: [EnableControlledFolderAccess](/windows/client-management/mdm/policy-csp-defender#defender-enablecontrolledfolderaccess)
 
   - **Not configured** (*default*) - This setting returns to its default, which is no read or writes are blocked.
   - **Enable** - For untrusted apps, Defender blocks attempts to modify or delete files in protected folders, or write to disk sectors. Defender automatically determines which applications can be trusted. Alternatively, you can define your own list of trusted applications.
@@ -329,8 +353,18 @@ Supported platforms and profiles:
   - **Block disk modification** - Only attempts to write to disk sectors are blocked.
   - **Audit disk modification** - Windows events are raised instead of blocking attempts to write to disk sectors.
   
+- **List of additional folders that need to be protected**  
+  CSP: [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
+
+  Define a list of disk locations that will be protected from untrusted applications.
+
+- **List of apps that have access to protected folders**  
+  CSP: [ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
+
+  Define a list of apps that have access to read/write to controlled locations.
+
 - **Exclude files and paths from attack surface reduction rules**  
-  CSP: [AttackSurfaceReductionOnlyExclusions](https://go.microsoft.com/fwlink/?linkid=872981)
+  CSP: [AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
 
   Expand the dropdown and then select **Add** to define a **Path** to a file or folder to exclude from your attack surface reduction rules.
 
@@ -338,64 +372,161 @@ Supported platforms and profiles:
 
 ### Device Control
 
-- **Hardware device installation by device identifiers**  
-  [PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
-  
-  This setting allows you to specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device.  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+- **Allow hardware device installation by device identifiers**  
+  - **Not configured** *(default)*
+  - **Yes** - Windows can install or update any device whose Plug and Play hardware ID or compatible ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-  - **Not configured**
-  - **Allow hardware device installation** - Devices can be installed and updated as allowed or prevented by other policy settings.
-  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose hardware ID or compatible ID appears in a list you define.
+  When set to *Yes* you can configure the following options:
+  - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-  When set to *Block hardware device installation* you can configure the following settings:
+- **Block hardware device installation by device identifiers**  
+  CSP: [AllowInstallationOfMatchingDeviceIDs](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdeviceids)
 
-  - **Remove matching hardware devices**
+  - **Not configured** *(default)*
+  - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+  When set to *Yes* you can configure the following options:  
+  - **Remove matching hardware devices**  
     - **Yes**
-    - **Not configured**
+    - **Not configured** *(default)*
 
-  - **Hardware device identifiers that are blocked**  
+  - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+- **Allow hardware device installation by setup class**  
+  - **Not configured** *(default)*
+  - **Yes** - Windows can install or update device drivers whose device setup class GUIDs appear in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-    Select **Add**, and then specify the hardware device identifier you want to block.
+  When set to *Yes* you can configure the following options:
+  - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-- **Hardware device installation by setup classes**  
-  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
-  
-  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+- **Block hardware device installation by setup classes**  
+  CSP: [AllowInstallationOfMatchingDeviceSetupClasses](/windows/client-management/mdm/policy-csp-deviceinstallation)
 
-  - **Not configured**
-  - **Allow hardware device installation** - Windows can install and update devices as allowed or prevented by other policy settings.
-  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose setup class GUIDs appear in a list you define.
+  - **Not configured** *(default)*
+  - **Yes** - Specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-  When set to *Block hardware device installation* you can configure *Remove matching hardware devices* and *Hardware device identifiers that are blocked*.
-
-  - **Remove matching hardware devices**
-
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+  When set to *Yes* you can configure the following options:  
+  - **Remove matching hardware devices**  
     - **Yes**
-    - **Not configured**
+    - **Not configured** *(default)*
 
-  - **Hardware device identifiers that are blocked**
+  - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+- **Allow hardware device installation by device instance identifiers**  
+  - **Not configured** *(default)*
+  - **Yes** - Windows is allowed to install or update any device whose Plug and Play device instance ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
 
-    Select **Add**, and then specify the hardware device identifier you want to block.
+  When set to *Yes* you can configure the following options:
+  - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
+
+- **Block hardware device installation by device instance identifiers**  
+  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **Not configured** *(default)*
+  - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+  - **No**
+
+  When set to *Yes* you can configure the following options:  
+  - **Remove matching hardware devices**  
+    - **Yes**
+    - **Not configured** *(default)*
+
+  - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
+
+- **Block write access to removable storage**  
+  CSP: [RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess)
+
+  - **Not configured** *(default)*
+  - **Yes** - Write access is denied to removable storage.
+  - **No** - Write access is allowed.
 
 - **Scan removable drives during full scan**  
-  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
   - **Not configured** (*default*) - The setting returns to client default, which scans removable drives, however the user can disable this scan.
   - **Yes** - During a full scan, removable drives (like USB flash drives) are scanned.
-  
+
+- **Block direct memory access**  
+  CSP: [DataProtection/AllowDirectMemoryAccess](/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+
+  This policy setting is only enforced when BitLocker or device encryption is enabled.
+
+  - **Not configured** (*default*)
+  - **Yes** - block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. After a user logs in, Windows enumerates the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices that were already enumerated when the machine was unlocked will continue to function until unplugged.
+
+- **Enumeration of external devices incompatible with Kernel DMA Protection**  
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  This policy can provide additional security against external DMA capable devices. It allows for more control over the enumeration of external DMA capable devices incompatible with DMA Remapping/device memory isolation and sandboxing.
+
+  This policy only takes effect when Kernel DMA Protection is supported and enabled by the system firmware. Kernel DMA Protection is a platform feature that must be supported by the system at the time of manufacturing. To check if the system supports Kernel DMA Protection, check the Kernel DMA Protection field in the Summary page of MSINFO32.exe.
+
+  - **Not configured** - (*default*)
+  - **Block all**
+  - **Allow all**
+
+- **Block bluetooth connections**  
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **Not configured** (*default*)
+  - **Yes** - Block bluetooth connections to and from the device.
+
+- **Block bluetooth discoverability**  
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **Not configured** (*default*)
+  - **Yes** - Prevents the device from being discoverable by other Bluetooth-enabled devices.
+
+- **Block bluetooth pre-pairing**  
+  CSP: [Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+
+  - **Not configured** (*default*)
+  - **Yes** - Prevents specific Bluetooth devices from automatically pairing with the host device.
+
+- **Block bluetooth advertising**  
+  CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+  - **Not configured** (*default*)
+  - **Yes** - Prevents the device from sending out Bluetooth advertisements.  
+
+- **Block bluetooth proximal connections**  
+  CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  Block users from using Swift Pair and other proximity-based scenarios
+
+  - **Not configured** (*default*)
+  - **Yes** - Prevents a device user from using Swift Pair and other proximity-based scenarios.  
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+
+- **Bluetooth allowed services**  
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  For more information on the service list, see [ServicesAllowedList usage guide](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
+
+  - **Add** - Specify allowed Bluetooth services and profiles as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
+  - **Import** - Import a .csv file that contains a list of bluetooth services and profiles, as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+
+- **Removable storage**  
+  CSP: [Storage/RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess) 
+
+  - **Block** (*default*) - Prevent users from using external storage devices, like SD cards with the device.
+  - **Not configured**
+
+- **USB connections (HoloLens only)**  
+  CSP: [Connectivity/AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
+  - **Block** - Prevent use of a USB connection between the device and a computer to sync files, or to use developer tools to deploy or debug applications. USB charging isn't affected.
+  - **Not configured** (*default*)
+
 ## Exploit protection profile
 
 ### Exploit protection
 
 - **Upload XML**  
-  CSP: [ExploitProtectionSettings](https://go.microsoft.com/fwlink/?linkid=2067035)
+  CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)
 
   Enables the IT admin to push out a configuration representing the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML file. Exploit protection can help protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings. You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.
 
@@ -404,7 +535,7 @@ Supported platforms and profiles:
   - **Yes**
 
 - **Block users from editing the Exploit Guard protection interface**  
-  CSP: [DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
+  CSP: [DisallowExploitProtectionOverride](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride)
 
   - **Not configured** (*default*) - Local users can make changes in the exploit protection settings area.
   - **Yes** - Prevent users from making changes to the exploit protection settings area in the Microsoft Defender Security Center.

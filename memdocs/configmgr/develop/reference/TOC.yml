@@ -484,6 +484,8 @@
           href: core/clients/client-classes/iprogressui--showerrordialog-method.md
         - name: IProgressUI ShowMessage method
           href: core/clients/client-classes/iprogressui--showmessage-method.md
+        - name: IProgressUI ShowMessageEx method
+          href: core/clients/client-classes/iprogressui--showmessageex-method.md
         - name: IProgressUI ShowRebootDialog method
           href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
         - name: IProgressUI ShowSwapMediaDialog method
@@ -859,6 +861,10 @@
       href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
     - name: FindMachineSite method
       href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
+    - name: GetDependency method
+      href: core/clients/collections/getdependency-method-in-class-sms_collection.md
+    - name: GetDependent method
+      href: core/clients/collections/getdependent-method-in-class-sms_collection.md
     - name: GetNumResults method
       href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
     - name: GenerateCCRByName method
@@ -914,6 +920,18 @@
     href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
   - name: SMS_FullCollectionMembership server WMI class
     href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
+  - name: SMS_CollectionEvaluationFull server WMI class
+    href: core/clients/collections/sms_collectionevaluationfull-server-wmi-class.md
+  - name: SMS_CollectionEvaluationIncremental server WMI class
+    href: core/clients/collections/sms_collectionevaluationincremental-server-wmi-class.md
+  - name: SMS_CollectionInfoInFullEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinfullevaluationqueue-server-wmi-class.md
+  - name: SMS_CollectionInfoInManualEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinmanualevaluationqueue-server-wmi-class.md
+  - name: SMS_CollectionInfoInNewEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinnewevaluationqueue-server-wmi-class.md
+  - name: SMS_CollectionInfoInIncrementalEvaluationQueue server WMI class
+    href: core/clients/collections/sms_collectioninfoinincrementalevaluationqueue-server-wmi-class.md
 - name: Compliance settings server WMI classes
   items:
   - name: About compliance settings server WMI classes
@@ -1609,6 +1627,8 @@
       href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
     - name: SMS_TaskSequence_PrepareSMSClientAction server WMI class
       href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+    - name: SMS_TaskSequence_PrestartCheckAction server WMI class
+      href: osd/sms_tasksequence_prestartcheckaction-server-wmi-class.md
     - name: SMS_TaskSequence_RebootAction server WMI class
       href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
     - name: SMS_TaskSequence_Reference server WMI class
@@ -1623,6 +1643,8 @@
       href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
     - name: SMS_TaskSequence_RunCommandLineAction server WMI class
       href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+    - name: SMS_TaskSequence_RunPowerShellScriptAction server WMI class
+      href: osd/sms_tasksequence_runpowershellscriptaction-server-wmi-class.md
     - name: SMS_TaskSequence_SetupWindowsAndSMSAction server WMI class
       href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
     - name: SMS_TaskSequence_SetVariableAction server WMI class

@@ -51,7 +51,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 #### <a name="bkmk_note1"></a> Note 1: Collocated SQL
 
-When you install the site server and SQL Server on the same computer, the deployment supports the maximum [sizing and scale numbers](size-and-scale-numbers.md) for sites and clients. This configuration can limit [high availability options](../../servers/deploy/configure/high-availability-options.md), like using a SQL Server cluster. If you have a larger environment, because of the higher I/O requirements to support both roles on the same computer, consider using a remote SQL Server.
+When you install the site server and SQL Server on the same computer, the deployment supports the maximum [sizing and scale numbers](size-and-scale-numbers.md) for sites and clients. This configuration can limit [high availability options](../../servers/deploy/configure/high-availability-options.md), like using a SQL Server Always On failover cluster instance. If you have a larger environment, because of the higher I/O requirements to support both roles on the same computer, consider using a remote SQL Server.
 
 ### <a name="bkmk_RemoteSiteSystem"></a> Remote site system servers
 
@@ -128,16 +128,6 @@ The following additional minimum hardware requirements are for optional function
 - **Software Center:** At least a 500-MHz processor
 
 - **Remote Control:** For an optimal experience, at least a Pentium 4 Hyper-Threaded 3 GHz (single core) or comparable CPU, with at least 1-GB RAM.
-
-### Client for Linux and UNIX
-
-The following minimum requirements are for Linux and UNIX servers that you manage with Configuration Manager.
-
-|Requirement|Details|  
-|-----------------|-------------|  
-|Processor and memory|Refer to the processor and RAM requirements for the computer's OS.|  
-|Disk space|500 MB of available disk space, with 5 GB recommended for the Configuration Manager client cache.|  
-|Network connectivity|Configuration Manager client computers must have network connectivity to Configuration Manager site systems to enable management.|  
 
 ## <a name="bkmk_ScaleConsole"></a> Configuration Manager console
 

@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -44,9 +44,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
          - The **Patch Tuesday** template provides common settings to use when you deploy software updates on a monthly cycle.  
 
-         - The **Office 365 Client Updates** template provides common settings to use when you deploy updates for Office 365 Pro Plus clients.
+         - The **Office 365 Client Updates** template provides common settings to use when you deploy updates for Microsoft 365 Apps clients.
              > [!Note]
-             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information on modifying your ADRs for the title change, see [Update channels for Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_channel). For more information about the name change, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information on modifying your ADRs for the title change, see [Update channels for Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_channel). For more information about the name change, see [Name change for Office 365 ProPlus](/deployoffice/name-change).
 
          - The **SCEP and Windows Defender Antivirus Updates** template provides common settings to use when you deploy Endpoint Protection definition updates.  
 
@@ -194,9 +194,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         -  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses this priority when it sends the package to distribution points. Deployment packages are sent in priority order: high, medium, or low. Packages with identical priorities are sent in the order in which they were created. If there's no backlog, the package processes immediately regardless of its priority.  
 
-        - **Enable binary differential replication**: Enable this setting to minimize network traffic between sites. Binary differential replication (BDR) only updates the content that has changed in the package, instead of updating the entire package contents. For more information, see [Binary differential replication](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
+        - **Enable binary differential replication**: Enable this setting to use binary differential replication for the deployment package. For more information, see [Binary differential replication](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Office updates.<!--1357933-->  
+    - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Microsoft 365 Apps updates.<!--1357933-->  
 
         > [!Note]  
         > Once you select this option and apply the settings, it can no longer be changed. The other options are greyed out.<!--SCCMDocs-pr issue 3003-->  
@@ -241,7 +241,7 @@ After you create an ADR, add additional deployments to the rule. This action hel
      - Alerts
      - Download Settings  
 
-Deployments can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
+Deployments can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 

@@ -1,7 +1,7 @@
 ---
 title: Pull-distribution point
 titleSuffix: Configuration Manager
-description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager."
+description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager.
 ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -135,6 +135,9 @@ When you configure the pull-distribution point, specify one or more source distr
 
 - When the pull-distribution point transfers content, it uses the **Background Intelligent Transfer Service** (BITS) built into Windows. A pull-distribution point doesn't require that you install the BITS Extension for IIS Server.<!--sms.503672 -Clarified BITS use-->
 
+    > [!NOTE]
+    > If you install a pull-distribution point on a workstation OS, the client enables BITS with the default settings. This behavior happens even if the client settings are set to disable BITS. These default settings may not be optimum for a pull-distribution point. Review the client settings and group policies for BITS that you apply to devices that you enable as a pull-distribution point.<!-- SCCMDocs#2142 -->
+
 - For operational details, see the following log files on the pull-distribution point:  
 
   - **DataTransferService.log**
@@ -146,7 +149,7 @@ When you configure the pull-distribution point, specify one or more source distr
 > 1. On the source distribution point, set the following registry value: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. Restart the source distribution point server.
 >
-> Then the pull distribution point should start downloading content from the source. For more information on this registry key, see [Overview of TLS - SSL (Schannel SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
+> Then the pull distribution point should start downloading content from the source. For more information on this registry key, see [Overview of TLS - SSL (Schannel SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
 
 ## See also  
 

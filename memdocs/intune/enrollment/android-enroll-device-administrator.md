@@ -37,6 +37,9 @@ Therefore, to avoid such reduced functionality, we advise against enrolling new 
 
 For the same reasons, we also recommend that you migrate devices off of device administrator management if the devices are going to update to Android 10. 
 
+> [!IMPORTANT]
+> In areas where Android Enterprise is available, Google is encouraging movement off device administrator (DA) management by decreasing its management support in new Android releases. However, where Android Enterprise or Google Mobile Services (GMS) are unavailable, you'll want to use device administrator and familiarize yourself with these changes. For more information, see [Is Android Enterprise available in my country](https://support.google.com/work/android/answer/6270910)?
+
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.  
 
 For more information about Google's Android Enterprise features, see these articles:
@@ -53,7 +56,7 @@ After a user has enrolled, you can begin managing their devices in Intune, inclu
 
 For information about other user tasks, see these articles:
 - [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
-- [Using your Android device with Intune](https://docs.microsoft.com/mem/intune/user-help/why-enroll-android-device)
+- [Using your Android device with Intune](../user-help/why-enroll-android-device.md)
 
 
 ## Block device administrator enrollment

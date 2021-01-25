@@ -42,7 +42,7 @@ Select the appropriate option, and you will receive a notification to install th
 ## Enroll into Datalert using your Microsoft work or school account
 
 > [!NOTE]
-> You need to have the [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) app installed and active on your phone to enroll this way.
+> You need to have the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) app installed and active on your phone to enroll this way.
 
 1. Select __Enroll with Microsoft account__.
 

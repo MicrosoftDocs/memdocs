@@ -2,13 +2,13 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune - Azure | Microsoft Docs
-description: Overview of the different Microsoft Intune device profiles. Get info on features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 11/18/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,11 +44,11 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates
+## Administrative templates and Group policy
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
 
-These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
 
 This feature supports:
 
@@ -64,7 +64,6 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 and later
 
@@ -78,7 +77,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- Windows 10 and later
 
 ## Delivery optimization
 
@@ -147,7 +146,7 @@ This feature supports:
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
@@ -160,14 +159,13 @@ This feature supports:
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 and later
 
 ## Endpoint protection
 
 [Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
 
-To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 
@@ -192,7 +190,7 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 and Windows 10 Mobile devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 
@@ -225,6 +223,14 @@ This feature supports:
 
 - Windows 10 and later
 
+## Network boundary
+
+[Network boundary](network-boundary-windows.md) creates a list of sites that are trusted by your organization. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
+
+This feature supports:
+
+- Windows 10 and later
+
 ## OEMConfig
 
 On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard that allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
@@ -240,7 +246,6 @@ This feature supports:
 This feature supports:
 
 - Windows 10 and later
-- Windows Holographic for Business
 
 ## Preference file
 
@@ -283,7 +288,6 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 and later
 
@@ -298,6 +302,14 @@ This feature supports:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (import only)
+- Windows 10 and later
+
+## Windows health monitoring
+
+[Windows health monitoring](windows-health-monitoring.md) lets your data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+
+This feature supports:
+
 - Windows 10 and later
 
 ## Wired networks

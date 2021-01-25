@@ -1,8 +1,8 @@
 ---
-title: "Configure client status"
-titleSuffix: "Configuration Manager"
-description: "Select client status settings in Configuration Manager."
-ms.date: 04/23/2017
+title: Configure client status
+titleSuffix: Configuration Manager
+description: Select client status settings in Configuration Manager.
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,96 +10,95 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # How to configure client status in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you can monitor Configuration Manager client status and remediate problems that are found, you must configure your site to specify the parameters that are used to mark clients as inactive and configure options to alert you if client activity falls below a specified threshold. You can also disable computers from automatically remediating any problems that client status finds.  
+Before you can monitor Configuration Manager clients and remediate problems, configure the site's client status settings. These settings specify the parameters that the site uses to mark clients as inactive. Also configure options to alert you if client activity falls below a specified threshold.
 
-##  <a name="BKMK_1"></a> To Configure Client Status  
+## Configure client status
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Client Status** node. On the **Home** tab of the ribbon, in the **Client Status** group, select **Client Status Settings**.
 
-2.  In the **Monitoring** workspace, click **Client Status**, then, in the **Home** tab, in the **Client Status** group, click **Client Status Settings**.  
+1. Configure the following settings:
 
-3.  In the **Client Status Settings Properties** dialog box, specify the following values to determine client activity:  
+    > [!NOTE]
+    > If a client doesn't meet any of the settings, the site marks it as inactive.
 
-    > [!NOTE]  
-    >  If none of the settings are met, the client will be marked as inactive.  
+    - **Client policy requests during the following days:** Specify the number of days since the client requested policy from the site. The default value is `7` days.
 
-    -   **Client policy requests during the following days:** Specify the number of days since a client requested policy. The default value is **7** days.  
+      Compare this value to the **Client policy polling interval** setting in the **Client Policy** group of client settings. Its default is 60 minutes. In other words, a client should poll the site for policy every hour. If it doesn't request policy after one week, the site marks it as inactive.
 
-    -   **Heartbeat discovery during the following days:** Specify the number of days since the client computer sent a heartbeat discovery record to the site database. The default value is **7** days.  
+    - **Heartbeat discovery during the following days:** Specify the number of days since the client sent a heartbeat discovery record to the site. The default value is `7` days.
 
-    -   **Hardware inventory during the following days:** Specify the number of days since the client computer has sent a hardware inventory record to the site database. The default value is **7** days.  
+      Compare this value to the schedule for the [Heartbeat discovery method](../../servers/deploy/configure/about-discovery-methods.md). By default, the site runs heartbeat discovery once a week.
 
-    -   **Software inventory during the following days:** Specify the number of days since the client computer has sent a software inventory record to the site database. The default value is **7** days.  
+    - **Hardware inventory during the following days:** Specify the number of days since the client sent a hardware inventory record to the site. The default value is `7` days.
 
-    -   **Status messages during the following days:** Specify the number of days since the client computer has sent status messages to the site database. The default value is **7** days.  
+      Compare this value to the **Hardware inventory schedule** setting in the **Hardware Inventory** group of client settings. Its default is seven days.
 
-4.  In the **Client Status Settings Properties** dialog box, specify the following value to determine how long client status history data is retained:  
+    - **Software inventory during the following days:** Specify the number of days since the client sent a software inventory record to the site. The default value is `7` days.
 
-    -   **Retain client status history for the following number of days:** Specify how long you want the client status history to remain in the site database. The default value is **31** days.  
+      Compare this value to the **Schedule software inventory and file collection** setting in the **Software Inventory** group of client settings. Its default is seven days.
 
-5.  Click **OK** to save the properties and to close the **Client Status Settings Properties** dialog box.  
+    - **Status messages during the following days:** Specify the number of days since the client sent any status messages to the site. The default value is `7` days. The client can send status messages for different kinds of activities, such as running a task sequence. The site deletes old status messages as part of the maintenance task, **Delete Aged Status Messages**.
 
-##  <a name="BKMK_Schedule"></a> To Configure the Schedule for Client Status  
+1. Specify the following value to determine how long the site keeps client status history data:
 
-1.  In the Configuration Manager console, click **Monitoring**.  
+    - **Retain client status history for the following number of days:** By default, the site keeps client status information for `31` days. This setting doesn't have any impact on client or site behavior. It's similar to a maintenance task for client status history.
 
-2.  In the **Monitoring** workspace, click **Client Status**, then, in the **Home** tab, in the **Client Status** group, click **Schedule Client Status Update**.  
+## Configure the schedule
 
-3.  In the **Schedule Client Status Update** dialog box, configure the interval at which you want client status to update and then click OK.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Client Status** node. On the **Home** tab of the ribbon, in the **Client Status** group, select **Schedule Client Status Update**.
 
-    > [!NOTE]  
-    >  When you change the schedule for client status updates, the update will not take effect until the next scheduled client status update (for the previously configured schedule).  
+1. Configure the interval at which you want client status to update.
 
-##  <a name="BKMK_2"></a> To Configure Alerts for Client Status  
+    > [!NOTE]
+    > When you change the schedule for client status updates, it doesn't take effect until the next scheduled client status update on the previous schedule.
 
-1. In the Configuration Manager console, click **Assets and Compliance**.  
+## Configure alerts
 
-2. In the **Assets and Compliance** workspace, click **Device Collections**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
 
-3. In the **Device Collections** list, select the collection for which you want to configure alerts and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
+1. Select the collection for which you want to configure alerts. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
 
-   > [!NOTE]  
-   >  You cannot configure alerts for user collections.  
+    > [!NOTE]
+    > You can't configure alerts for user collections.
 
-4. On the **Alerts** tab of the <em>&lt;collection Name\></em>**Properties** dialog box, click **Add**.  
+1. Switch to the **Alerts** tab, and select **Add**.
 
-   > [!NOTE]  
-   >  The **Alerts** tab is only visible if the security role you are associated with has permissions for alerts.  
+   > [!TIP]
+   > You can only view the **Alerts** tab if your security role has permissions for alerts.
 
-5. In the **Add New Collection Alerts** dialog box, choose the alerts that you want generated when client status thresholds fall below a specific value, then click **OK**.  
+    Choose the alerts that you want the site to generate for client status thresholds, and select **OK**.
 
-6. In the **Conditions** list of the **Alerts** tab, select each client status alert and then specify the following information.  
+1. In the **Conditions** list of the **Alerts** tab, select each client status alert, and then specify the following information:
 
-   -   **Alert Name** - Accept the default name or enter a new name for the alert.  
+    - **Alert Name**: Accept the default name or enter a new name for the alert.
 
-   -   **Alert Severity** - From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
+    - **Alert Severity**: Choose the alert level that the Configuration Manager console displays.
 
-   -   **Raise alert** - Specify the threshold percentage for the alert.  
+    - **Raise alert**: Specify the threshold percentage for the alert.
 
-7. Click **OK** to close the <em>&lt;collection Name\></em>**Properties** dialog box.  
+## Automatic remediation exclusion
 
-##  <a name="BKMK_3"></a> To Exclude Computers from Automatic Remediation  
+1. On the client computer where you want to disable automatic remediation, open the registry editor.
 
-1. Open the registry editor on the client computer for which you want to disable automatic remediation.  
+    > [!WARNING]
+    > If you use the registry editor incorrectly, you can cause serious problems that could require you to reinstall Windows. Microsoft can't guarantee that you can solve problems that result from using the registry editor incorrectly. Use it at your own risk.
 
-   > [!WARNING]  
-   >  If you use the Registry Editor incorrectly, you might cause serious problems that could require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using the Registry Editor incorrectly. Use the Registry Editor at your own risk.  
+1. Navigate to the registry key **HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\CcmEval**.
 
-2. Navigate to **HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\CcmEval\NotifyOnly**.  
+1. Change the value for the **NotifyOnly** entry:
 
-3. Enter one of the following values for this registry key:  
+    - `TRUE`: The client won't automatically remediate any problems that it finds. The site still notifies you in the **Monitoring** workspace about any problems with this client.
 
-   -   **True** - The client computer will not automatically remediate any problems that are found. However, you will still be alerted in the **Monitoring** workspace about any problems with this client.  
+    - `FALSE`: This setting is the default. The client automatically remediates problems when it finds them, and the site notifies you in the **Monitoring** workspace.
 
-   -   **False** - The client computer will automatically remediate problems when they are found and you will be alerted in the **Monitoring** workspace. This is the default setting.  
+When you install clients, you can exclude them from automatic remediation with the **NotifyOnly** installation property. For more information, see [About client installation properties](about-client-installation-properties.md).
 
-4. Close the registry editor.  
+## Next steps
 
-   You can also install clients using the CCMSetup **NotifyOnly** installation property to exclude them from automatic remediation. For more information about this client installation property, see [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
+[Monitor clients](../manage/monitor-clients.md)

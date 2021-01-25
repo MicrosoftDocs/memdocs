@@ -1,7 +1,7 @@
 ---
 title: Setup wizard
 titleSuffix: Configuration Manager
-ms.date: 07/26/2019
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -9,8 +9,7 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+description: Use the Configuration Manager setup wizard to install a new site.
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites
@@ -32,10 +31,9 @@ Install a secondary site from within the Configuration Manager console. Secondar
 > - [**Download System Center Updates Publisher**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Download clients for additional operating systems**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
->   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Release notes**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Read documentation**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
-> - **Obtain installation assistance**: [TechNet Forums: Configuration Manager (Current Branch) – Site and Client Deployment](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
+> - [**Read documentation**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - **Obtain installation assistance**: [Microsoft Q&A: Configuration Manager site and client deployment](/answers/topics/mem-cm-site-deployment.html) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager community**: [System Center Community: How to Participate](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager home**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
 
@@ -165,17 +163,17 @@ If you're installing a central administration site as part of a site expansion s
 
         If you use a custom port, add that port to the FQDN of the SQL Server. Follow the FQDN of the SQL Server with a comma and then the port number. For example, for server *SQLServer1.fabrikam.com*, use the following to specify port *1551*: `SQLServer1.fabrikam.com,1551`  
 
-    - **Instance name**: By default, this value is blank. It uses the default instance of SQL on the site server computer.  
+    - **Instance name**: By default, this value is blank. It uses the default instance of SQL Server on the site server computer.  
 
     - **Database name**: By default, this value is set to `CM_<Sitecode>`. You can customize this value.  
 
-    - **Service Broker Port**: By default, this value is set to use the default SQL Server Service Broker (SSB) port of 4022. SQL uses it to communicate directly to the site database at other sites.  
+    - **Service Broker Port**: By default, this value is set to use the default SQL Server Service Broker (SSB) port of 4022. SQL Server uses it to communicate directly to the site database at other sites.  
 
 13. On the second **Database Information** page, you can specify custom locations for the SQL Server data file and the SQL Server log file for the site database:  
 
     - By default, it uses the default file locations for SQL Server.  
 
-    - When you use a SQL Server cluster, the option to specify custom file locations isn't available.  
+    - When you use a SQL Server Always On failover cluster instance, the option to specify custom file locations isn't available.  
 
     - The prerequisite checker doesn't run a check for free disk space for custom file locations.  
 
@@ -238,8 +236,9 @@ If you're installing a central administration site as part of a site expansion s
 
     - You can connect a Configuration Manager console to the site before Setup is complete. This console connects as read-only, and lets you view objects and settings, but you can't modify anything.  
 
-    - After Setup completes, you can connect a console that can edit objects and settings.  
-
+    - After Setup completes, you can connect a console that can edit objects and settings.
+      
+    - Starting in Configuration Manager version 2010, you'll be given a **Report update error to Microsoft** option if setup fails. For more information, see [Report setup and upgrade failures to Microsoft](../../manage/install-in-console-updates.md#bkmk_report).
 
 ## <a name="bkmk_expand"></a> Expand a stand-alone primary site
 
@@ -415,4 +414,4 @@ Use the Configuration Manager console to install a secondary site.
 2. Select the secondary site that you're installing, and then choose **Show Install Status** in the ribbon.  
 
     > [!TIP]  
-    > When you install more than one secondary site at a time, the Prerequisite Checker runs against a single site at a time. It must finish a site before it starts to check the next site.  
+    > When you install more than one secondary site at a time, the Prerequisite Checker runs against a single site at a time. It must finish a site before it starts to check the next site.

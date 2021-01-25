@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 27015eb9-af08-4882-aa3a-53dac2d6ec24
 author: aczechowski
 ms.author: aaroncz
@@ -45,9 +45,8 @@ public void SetAllowResponse(WqlConnectionManager connection,                   
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|-|-|-|
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
 |`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`.|  

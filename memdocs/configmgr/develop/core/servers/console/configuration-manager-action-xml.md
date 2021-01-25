@@ -34,7 +34,7 @@ Every Configuration Manager action is defined by an `ActionDescription` XML elem
 |**ImageDescription**|Information about the action's icon.|  
 |**SelectionMode**|Determines when the action is displayed, as follows:<br /><br /> Single (default). Action is shown only when the selection set contains a single item.<br /><br /> Multiple. Action is shown when the selection set contains more than one item.<br /><br /> Both. Action is shown when one or more items are selected.|  
 
- For a complete list of attributes, see [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx).  
+ For a complete list of attributes, see [ActionDescription](/previous-versions/system-center/developer/cc147252(v=msdn.10)).  
 
  There are a number of child elements for any given action type.  
 

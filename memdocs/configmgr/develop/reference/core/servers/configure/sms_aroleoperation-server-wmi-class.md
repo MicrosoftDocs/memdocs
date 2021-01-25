@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0631a5e5-4f9c-4e14-b662-684439588b55
 author: aczechowski
 ms.author: aaroncz
@@ -40,7 +40,7 @@ Class SMS_ARoleOperation : SMS_BaseClass
 
  A bit mask representing the granted operations. Possible values are:  
 
-||||  
+|N|2^N|Granted operation|  
 |-|-|-|  
 |0|1|Read|  
 |1|2|Modify|  

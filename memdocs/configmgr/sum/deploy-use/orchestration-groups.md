@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -31,9 +31,9 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 - As the software updates administrator, you manage all updates for your organization.
 - You have one large collection for all servers and one large collection for all clients. You deploy all updates to these collections.
-- The SQL administrators want to control all the software installed on the SQL servers. They want to patch five servers in a specific order. Their current process is to manually stop specific services before installing updates, and then restart the services afterwards.
-- You create an orchestration group and add all five SQL servers. You also add pre- and post-scripts, using the PowerShell scripts provided by the SQL administrators.
-- During the next update cycle, you create and deploy the software updates as normal to the large collection of servers. The SQL administrators run the deployment, and the orchestration group automates the order and services.
+- The SQL Server administrators want to control all the software installed on the SQL Servers. They want to patch five servers in a specific order. Their current process is to manually stop specific services before installing updates, and then restart the services afterwards.
+- You create an orchestration group and add all five SQL Servers. You also add pre- and post-scripts, using the PowerShell scripts provided by the SQL Server administrators.
+- During the next update cycle, you create and deploy the software updates as normal to the large collection of servers. The SQL Server administrators run the deployment, and the orchestration group automates the order and services.
 
 ## Prerequisites
 
@@ -84,7 +84,7 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
 
 1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
 
-1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs. The behavior is otherwise the same as the PreScript.
+1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
 
 1. Complete the wizard.
 
@@ -118,7 +118,8 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
        - Enter a PowerShell script that runs on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
        
    - **Post-Script**:
-      - Enter a PowerShell script to run on each device *after* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
+      - Enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The script should return a value of `0` for success, or `3010` for success with restart.
+  
    > [!WARNING]
    > Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
 

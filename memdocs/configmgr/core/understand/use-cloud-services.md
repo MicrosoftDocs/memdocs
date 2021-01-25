@@ -75,4 +75,4 @@ These additional capabilities do not require you to have an Azure subscription. 
 ##  <a name="BKMK_CloudSec"></a> Security for cloud-based services  
  Configuration Manager uses certificates to provision and access your content in Azure, and to manage the services that you use. Configuration Manager encrypts the data that you store in Azure, but does not introduce additional security or data controls beyond those that Azure provides.  
 
- For more information, see the details for the different cloud-based resource scenarios. Also see an [Introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview).
+ For more information, see the details for the different cloud-based resource scenarios. Also see an [Introduction to Azure security](/azure/security/fundamentals/overview).

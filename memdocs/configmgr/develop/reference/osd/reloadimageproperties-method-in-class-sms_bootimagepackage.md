@@ -1,10 +1,10 @@
 ---
-title: "ReloadImageProperties Method"
+title: ReloadImageProperties method in class SMS_BootImagePackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 91abc6f0-6ed7-485e-af9c-e4e8f2832f16
 author: aczechowski
 ms.author: aaroncz
@@ -34,7 +34,7 @@ SInt32 ReloadImageProperties();
 ## Remarks  
  The application uses this method if the administrator changes the boot image source .wim file outside of the Configuration Manager console. The application should:  
 
-1.  Establish a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](../../core/understand/sms-provider-fundamentals.md).  
+1.  Establish a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../core/understand/sms-provider-fundamentals.md).  
 
 2.  Obtain the [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object to update.  
 

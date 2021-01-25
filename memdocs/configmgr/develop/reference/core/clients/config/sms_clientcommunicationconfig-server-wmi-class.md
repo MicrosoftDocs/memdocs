@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a9007fe8-9150-40cc-9f37-6430e49718f4
 author: aczechowski
 ms.author: aaroncz
@@ -40,7 +40,7 @@ Class SMS_ClientCommunicationConfig : SMS_ClientAgentConfig_BaseClass
 
  Set metered network usage behavior. Possible values are:  
 
-|||  
+|Value|Metered network usage policy|  
 |-|-|  
 |1|Allow metered network use.|  
 |2|Only use the metered network for deployments that are marked to allow use of the metered network. This means meta-data such as policy will always use the metered network. And based on the policy, the client will decide whether or not to use the metered network for the deployment.|  

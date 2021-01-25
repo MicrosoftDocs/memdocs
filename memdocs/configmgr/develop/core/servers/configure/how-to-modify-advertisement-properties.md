@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22
 author: aczechowski
 ms.author: aaroncz
@@ -100,7 +100,7 @@ public void ModifySWDAdvertisement(WqlConnectionManager connection, string exist
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingAdvertisementID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the advertisement to modify.|  
 |`newAdvertisementComment`|-   Managed: `String`<br />-   VBScript: `String`|The new comment for the advertisement.|  
 

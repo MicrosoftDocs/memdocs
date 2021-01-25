@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ee4170d1-a439-4032-a134-a7c3b34cd9d9
 author: aczechowski
 ms.author: aaroncz
@@ -79,8 +79,8 @@ Class SMS_ImageUpdateHistory : SMS_BaseClass
 
  Software update installation status.  
 
-|||  
-|-|-|  
+| Value | Installation status |  
+| ----- | ------------------- |  
 |2|Success|  
 |3|Failed|  
 

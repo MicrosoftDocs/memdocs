@@ -1,10 +1,10 @@
 ---
-title: "CreateCCRs Method"
+title: CreateCCRs method in class SMS_Collection
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4c3288fd-a973-4300-b9c5-475867c26fc5
 author: aczechowski
 ms.author: aaroncz

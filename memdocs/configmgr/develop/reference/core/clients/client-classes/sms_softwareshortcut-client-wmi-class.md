@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a65b6385-f80f-4aa2-8e55-b8dc119e9673
 author: aczechowski
 ms.author: aaroncz
@@ -190,8 +190,8 @@ Class SMS_SoftwareShortcut
 
  The type of shortcut. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Shortcut type |
+| ----- | ------------- |
 |1|Shortcut to Folder|  
 |2|Shortcut to File (EXE or DLL)|  
 |3|Application Reference (.appref-ms)|  

@@ -2,7 +2,7 @@
 title: Use boundaries and boundary groups
 titleSuffix: Configuration Manager
 description: Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Define site boundaries and boundary groups
@@ -26,6 +24,7 @@ A hierarchy can include any number of boundary groups. Each boundary group can c
 - Active Directory site name  
 - IPv6 prefix  
 - IP address range  
+- VPN (starting in version 2006)
 
 Clients on the intranet evaluate their current network location and then use that information to identify boundary groups to which they belong.  
 
@@ -37,8 +36,7 @@ Clients use boundary groups to:
 
 Clients that are on the internet or configured as internet-only clients don't use boundary information. These clients can't use automatic site assignment. They can download content from an internet-based distribution point from their assigned site or a cloud-based distribution point.  
 
-Starting in version 1902, you can associate a cloud management gateway (CMG) with a boundary group. For more information, see [CMG hierarchy design](../../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design).<!--3640932-->
-
+During OS deployment, while a device is running Windows PE, the site can convert Active Directory site boundary information to IP subnet information. This behavior is only during this process, and specifically for the purpose of these devices. In other words, if your site only has Active Directory site boundaries, Windows PE clients during an OS deployment will still be in a boundary.<!-- SCCMDocs#2086 -->
 
 ## <a name="BKMK_BoundaryBestPractices"></a> Recommendations
 
@@ -57,7 +55,6 @@ Although each boundary group supports both site assignment and site system refer
 - For a boundary that's a member of two different boundary groups with different site assignments, clients randomly select a site to join. This behavior might not be for the site you want the client to join. This configuration is called *overlapping boundaries*.  
 
     Overlapping boundaries isn't a problem for content location. It can be a useful configuration that provides clients additional resources or content locations they can use.  
-
 
 ## Next steps
 

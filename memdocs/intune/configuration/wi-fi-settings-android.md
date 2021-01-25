@@ -3,12 +3,12 @@
 
 title: Configure Wi-Fi settings for Android devices in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create or add a WiFi device configuration profile for Android. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune.
+description: Create or add a WiFi device configuration profile for Android device administrator. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,17 +28,19 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for devices running Android in Microsoft Intune
+# Add Wi-Fi settings for devices running Android device administrator in Microsoft Intune
 
 You can create a profile with specific WiFi settings, and then deploy this profile to your Android devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKS or SCEP certificate, and more.
 
-These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
+This feature applies to:
 
-This article describes these settings.
+- Android device administrator (DA)
+
+These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings. This article describes these settings.
 
 ## Before you begin
 
-[Create a device profile](wi-fi-settings-configure.md).
+Create an [Android device administrator Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
 ## Basic
 

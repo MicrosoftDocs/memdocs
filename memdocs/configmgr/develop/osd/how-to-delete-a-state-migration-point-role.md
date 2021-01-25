@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 69475541-e5e3-45c4-8989-142cf986d94c
 author: aczechowski
 ms.author: aaroncz
@@ -140,9 +140,8 @@ public bool DeleteSmpOK(IResultObject selectedResultObject)
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|-|-|-|
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
 |`nalPath`|Managed: `String`|The NAL path to the state migration point. For example `["Display=\\SERVERNAME\"]MSWNET:["SMS_SITE=SITECODE"]\\SERVERNAME\`|  

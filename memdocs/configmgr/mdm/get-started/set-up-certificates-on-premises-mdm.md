@@ -29,7 +29,7 @@ For bulk-enrolled devices, you can include the certificate in the enrollment pac
 If you use a well-known public CA like Verisign or GoDaddy to issue the server certificates, you can avoid having to manually install the trusted root certificate on each device. Most devices natively trust these public authorities. This method is a useful alternative for user-enrolled devices, instead of installing the certificate through other means.
 
 > [!IMPORTANT]  
-> There are many ways to set up the certificates for trusted communications between devices and the site system servers for on-premises MDM. The information in this article is an example of one way to do it. This method requires Active Directory Certificate Services, with a certification authority and the certification authority web enrollment role. For more information, see [Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
+> There are many ways to set up the certificates for trusted communications between devices and the site system servers for on-premises MDM. The information in this article is an example of one way to do it. This method requires Active Directory Certificate Services, with a certification authority and the certification authority web enrollment role. For more information, see [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
 ## <a name="bkmk_configCa"></a> Publish the CRL
 
@@ -68,7 +68,7 @@ The CA uses the web server certificate template to issue certificates for the se
 1. In the **Duplicate Template** window, select **Windows 2003 Server, Enterprise Edition** or **Windows 2008 Server, Enterprise Edition**, and then select **OK**.
 
     > [!TIP]
-    > Configuration Manager supports Windows 2008 Server certificate templates, also known as V3 or Cryptography: Next Generation (CNG) certificates. For more information, see [CNG certificates overview](../../core/plan-design/network/cng-certificates-overview.md).
+    > Configuration Manager supports Windows 2008 Server certificate templates, also known as V3 or Cryptography: Next Generation (CNG) certificates. For more information, see [CNG v3 certificates overview](../../core/plan-design/network/cng-certificates-overview.md).
 
     If your CA runs on Windows Server 2012 or later, this window doesn't show the option for certificate template version. After you duplicate the template, select the version on the **Compatibility** tab of the template properties.
 

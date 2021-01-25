@@ -1,10 +1,10 @@
 ---
-title: "AddSiteSystem Method"
+title: AddSiteSystem method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4a422493-79e2-4d5e-92bd-4252403de149
 author: aczechowski
 ms.author: aaroncz
@@ -41,7 +41,7 @@ SInt32 AddSiteSystem(
 
  Identifies the network connection speed between the site system server and the connecting clients. Possible values are:  
 
-|||  
+|Value|Connection speed|  
 |-|-|  
 |0|Fast|  
 |1|Slow|  

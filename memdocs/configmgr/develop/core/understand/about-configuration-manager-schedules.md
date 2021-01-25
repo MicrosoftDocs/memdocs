@@ -59,4 +59,4 @@ In Configuration Manager, scheduling information is configured by using schedule
 - [SMS_ScheduleMethods Server WMI Class](../../../develop/reference/core/servers/configure/sms_schedulemethods-server-wmi-class.md)
 - [ReadFromString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md)
 - [WriteToString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md)
-- [Microsoft.ConfigurationManagement.Messaging.Framework.Scheduler namespace](https://docs.microsoft.com/previous-versions/system-center/developer/mt746124\(v=cmsdk.12\))
+- [Microsoft.ConfigurationManagement.Messaging.Framework.Scheduler namespace](/previous-versions/system-center/developer/mt746124\(v=cmsdk.12\))

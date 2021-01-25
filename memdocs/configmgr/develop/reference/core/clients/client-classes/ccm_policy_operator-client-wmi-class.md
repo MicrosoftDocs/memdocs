@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 509e390b-cd50-44ae-8ed4-dacf59c512ea
 author: aczechowski
 ms.author: aaroncz
@@ -37,8 +37,8 @@ class CCM_Policy_Operator : CCM_Policy_Config
 
  The type of operator. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |`AND`|A logical `AND` operator. The result of the compound expression is only `true` if all of its operands evaluate to `true`.|  
 |`OR`|A logical `OR` operator. The result of the compound expression is `true` if any one of its operands evaluates to `true`.|  
 |`NOT`|A logical `NOT` operator. This operator can only have a single operand. The result of the expression is `true` only if the operand evaluates to `false`.|  

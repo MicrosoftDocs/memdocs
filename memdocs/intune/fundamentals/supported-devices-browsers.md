@@ -33,9 +33,9 @@ ms.collection: M365-identity-device-management
 
 Before setting up Microsoft Intune, review the supported operating systems and browsers.
 
-For help installing Intune on your device, see [using managed devices to get work done](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) and [Intune network bandwidth usage](network-bandwidth-use.md).
+For help installing Intune on your device, see [using managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md) and [Intune network bandwidth usage](network-bandwidth-use.md).
 
-For more information on configuration service provider support, visit the [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
 > Intune now requires Android 5.x (Lollipop) or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported. 
@@ -45,6 +45,9 @@ For more information on configuration service provider support, visit the [Confi
 You can manage devices running the following operating systems:
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
+
+> [!NOTE]
+> Intune does not currently support managing UWF enabled devices. See [Unified Write Filter (UWF) feature](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter) for more information.
 
 ### Supported Samsung Knox Standard devices
 
@@ -94,12 +97,12 @@ The following list of Samsung device models do not support Knox. They are enroll
 
 ### Windows PC software client
 
-An [Intune software client](manage-windows-pcs-with-microsoft-intune.md) can be deployed and installed on Windows PCs as an alternate enrollment method. This functionality is only available using the Intune classic portal. You can use the Intune software client to manage 10 and later PCs with the exception of Windows 10 Home edition.
+An [Intune software client](./intune-legacy-pc-client.md) can be deployed and installed on Windows PCs as an alternate enrollment method. This functionality is only available using the Intune classic portal. You can use the Intune software client to manage 10 and later PCs with the exception of Windows 10 Home edition.
 
 > [!Note]
 > Microsoft announced that Windows 7 support ends on January 14th 2020. On this date, Intune also retires support for devices running Windows 7.
 >
-> For more information, see [Intune plan for change: end of support for Windows 7](whats-new.md#windows-7-ends-extended-support).
+> For more information, see [Intune plan for change: end of support for Windows 7](whats-new-archive.md#windows-7-ends-extended-support).
 >
 > Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent).
 >
@@ -107,7 +110,7 @@ An [Intune software client](manage-windows-pcs-with-microsoft-intune.md) can be 
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Microsoft 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## Intune supported web browsers
 
@@ -126,7 +129,7 @@ The following browsers are supported for these portals:
 
 ### Intune classic portal
 
-The Intune classic portal is only used for managing devices enrolled with the Intune PC software client (https://manage.microsoft.com). The Intune classic portal requires Silverlight browser support.
+The Intune classic portal is only used for managing devices enrolled with the Intune PC software client (https://admin.manage.microsoft.com). The Intune classic portal requires Silverlight browser support.
 
 The following Silverlight browsers support the Intune console:
 
@@ -135,6 +138,6 @@ The following Silverlight browsers support the Intune console:
 - Mozilla Firefox with Silverlight enabled (versions prior to version 56)
 
 > [!Note]
-> Microsoft Edge and mobile browsers are not supported for the Intune classic portal because they do not support [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
+> Microsoft Edge and mobile browsers are not supported for the Intune classic portal because they do not support [Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95)).
 
 Only users with service administrator permissions or tenant administrators with the global administrator role can sign in to this portal. To access the administration console, your account must have a license to use Intune and a sign-in status of **Allowed**.

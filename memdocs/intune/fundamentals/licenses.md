@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 ---
 
 # Microsoft Intune licensing
-Microsoft Intune is available for different customer needs and organization sizes, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. Most licenses that include Microsoft Intune also grant the rights to use Microsoft Endpoint Configuration Manager, as long as the subscription remains active. An admin must have a license assigned to them to administer Intune.
+Microsoft Intune is available for different customer needs and organization sizes, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. Most licenses that include Microsoft Intune also grant the rights to use Microsoft Endpoint Configuration Manager, as long as the subscription remains active. An admin must have a license assigned to them to administer Intune (unless you [allow unlicensed admins](unlicensed-admins.md)).
 
 ## Microsoft Intune
 Intune is included in the following licenses:
@@ -53,7 +53,7 @@ Intune for Education is included in the following licenses:
 ## Additional information
 - A Microsoft Intune user and device subscription is available as a standalone, in addition to the bundles listed above.
 - A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features.
-- The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use).
+- The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune isn't included in licenses not in the previous tables.
 
 Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page for the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.  

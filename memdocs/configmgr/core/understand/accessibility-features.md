@@ -23,7 +23,7 @@ Configuration Manager includes features to help make it accessible for everyone.
 > [!Note]  
 > Starting in version 1902, to improve the accessibility features of the Configuration Manager console, update .NET to version 4.7 or later on the computer running the console. <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> For more information on the accessibility changes made in .NET 4.7.1 and 4.7.2, see [What's new in accessibility in the .NET Framework](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility).  
+> For more information on the accessibility changes made in .NET 4.7.1 and 4.7.2, see [What's new in accessibility in the .NET Framework](/dotnet/framework/whats-new/whats-new-in-accessibility).  
 
 
 
@@ -93,5 +93,4 @@ For more information on the fundamentals of navigating Configuration Manager use
 - [Software Center user guide](software-center.md)
 
 > [!NOTE]  
-> The information in this article might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](https://www.microsoft.com/accessibility/) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  
-
+> The information in this article might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](https://www.microsoft.com/accessibility/) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.

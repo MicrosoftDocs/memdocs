@@ -46,7 +46,7 @@ Use CMPivot to immediately query online devices, then filter and group the data 
 
 ## Application management
 
-Helps you create, manage, deploy, and monitor applications to a range of different devices that you manage. Deploy, update, and manage Office 365 from the Configuration Manager console. Additionally, Configuration Manager integrates with the Microsoft Store for Business and Education to deliver cloud-based apps. For more information, see [Introduction to application management](../../../apps/understand/introduction-to-application-management.md).
+Helps you create, manage, deploy, and monitor applications to a range of different devices that you manage. Deploy, update, and manage Microsoft 365 Apps from the Configuration Manager console. Additionally, Configuration Manager integrates with the Microsoft Store for Business and Education to deliver cloud-based apps. For more information, see [Introduction to application management](../../../apps/understand/introduction-to-application-management.md).
 
 ## OS deployment
 

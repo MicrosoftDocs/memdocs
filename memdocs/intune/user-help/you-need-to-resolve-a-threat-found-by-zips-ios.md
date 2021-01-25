@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve a threat found by Zimperium zIPS
+# Resolve a threat found by Zimperium zIPS on iOS
 
 Zimperium zIPS is a Mobile Threat Defender service that identifies potential threats on your iOS devices. These threats are reported to the Company Portal app, and appear as unresolved, noncompliant issues. If your device is identified as being noncompliant, you may be unable to:
 

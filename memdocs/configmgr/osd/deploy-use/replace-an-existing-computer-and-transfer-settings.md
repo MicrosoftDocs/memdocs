@@ -5,15 +5,13 @@ description: In Configuration Manager, choose from deployment methods, such as b
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
-
 ---
+
 # Replace an existing computer and transfer settings with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*

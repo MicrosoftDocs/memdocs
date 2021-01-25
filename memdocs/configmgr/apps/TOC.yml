@@ -25,8 +25,6 @@
       href: get-started/creating-mac-computer-applications.md
     - name: Create Windows applications
       href: get-started/creating-windows-applications.md
-    - name: Create Linux and UNIX server applications
-      href: get-started/creating-linux-and-unix-server-applications.md
     - name: Create Windows Embedded applications
       href: get-started/creating-windows-embedded-applications.md
     - name: Create global conditions
@@ -42,7 +40,7 @@
     - name: Deploy applications
       href: deploy-use/deploy-applications.md
     - name: Create a phased deployment
-      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
     - name: Approve applications
       href: deploy-use/app-approval.md
     - name: Install applications for a device
@@ -56,13 +54,13 @@
     - name: Deploy App-V virtual applications
       href: get-started/deploying-app-v-virtual-applications.md
     - name: Troubleshooting tips for app deployment
-      href: deploy-use/troubleshoot-application-deployment.md
+      href: /troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Monitor applications
     items:
     - name: Monitor applications from the console
       href: deploy-use/monitor-applications-from-the-console.md
     - name: Manage and monitor phased deployments
-      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
     - name: Monitor app usage with software metering
       href: deploy-use/monitor-app-usage-with-software-metering.md
   - name: Manage applications
@@ -116,8 +114,10 @@
       href: understand/deployment-download-technical-reference.md
     - name: Application installation
       href: understand/deployment-install-technical-reference.md
+    - name: Common error codes for application installation
+      href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
-    href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    href: /troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration
   - name: Troubleshoot Package Conversion Manager
     items:
     - name: Troubleshoot Package Conversion Manager

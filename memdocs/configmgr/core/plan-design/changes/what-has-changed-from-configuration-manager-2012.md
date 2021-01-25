@@ -129,7 +129,7 @@ Be aware of the following changes to compliance settings:
 
     - Windows 10 devices managed with the Configuration Manager client  
 
-    - Mac OS X devices managed with the Configuration Manager client  
+    - mac OS X devices managed with the Configuration Manager client  
 
     - Windows desktop and server computers managed with the Configuration Manager client  
 
@@ -137,7 +137,7 @@ Be aware of the following changes to compliance settings:
 
     For more information, see [How to create configuration items](../../../compliance/deploy-use/create-configuration-items.md).  
 
-- Support for managing settings on Mac OS X computers that are managed without the Configuration Manager client.
+- Support for managing settings on macOS X computers that are managed without the Configuration Manager client.
 
 ### On-premises mobile device management  
 

@@ -3,7 +3,7 @@ title: "Bind Configuration Manager Data to a Form"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c8ae07f8-0d77-4cf2-850f-c13fc140eab6
 author: aczechowski
 ms.author: aaroncz

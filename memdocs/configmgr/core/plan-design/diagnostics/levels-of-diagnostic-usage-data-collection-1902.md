@@ -5,11 +5,12 @@ description: Learn about the specific data that Configuration Manager collects a
 ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Diagnostic and usage data for version 1902
@@ -77,7 +78,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
     - Version of post-upgrade script  
 
-- SQL version, service pack level, edition, collation ID, and character set  
+- SQL Server version, service pack level, edition, collation ID, and character set  
 
 - Diagnostics and usage data statistics: when run, runtime, errors  
 
@@ -149,7 +150,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
 - Count of distinct branding for application catalog  
 
-- Count of Office 365 applications created using dashboard  
+- Count of Microsoft 365 applications created using dashboard  
 
 - Count of packages by type  
 
@@ -436,7 +437,7 @@ For Configuration Manager version 1902, this level includes the following data:
 
 - Configurations that are used for active Windows 10 servicing plans  
 
-- Count of deployed Office 365 updates  
+- Count of deployed Microsoft 365 updates  
 
 - Count of Microsoft Surface drivers synced  
 
@@ -493,11 +494,11 @@ For Configuration Manager version 1902, this level includes the following data:
 
 - Discovery types, enabled, and schedule (full, incremental)  
 
-- SQL AlwaysOn replica information, usage, and health status  
+- SQL Server Always On availability group replica information, usage, and health status  
 
-- SQL change tracking performance issues, retention period, and autocleanup state  
+- SQL Server change tracking performance issues, retention period, and autocleanup state  
 
-- SQL change tracking retention period  
+- SQL Server change tracking retention period  
 
 - State and status message performance statistics including most common and most expensive message types  
 

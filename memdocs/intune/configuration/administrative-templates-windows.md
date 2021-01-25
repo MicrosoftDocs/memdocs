@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 12/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,7 @@ This feature applies to:
 
 - Windows 10 and newer
 
-The Windows settings are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) that use XML. The Office and Microsoft Edge settings are ADMX-ingested, and use the ADMX settings in [Office administrative template files](https://www.microsoft.com/download/details.aspx?id=49030) and [Microsoft Edge administrative template files](https://www.microsoftedgeinsider.com/enterprise). And, the Intune templates are 100% cloud-based. They offer a simple and straight-forward way to configure the settings, and find the settings you want.
+The Windows settings are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML. The Office and Microsoft Edge settings are ADMX-ingested, and use the ADMX settings in [Office administrative template files](https://www.microsoft.com/download/details.aspx?id=49030) and [Microsoft Edge administrative template files](https://www.microsoftedgeinsider.com/enterprise). And, the Intune templates are 100% cloud-based. They offer a simple and straight-forward way to configure the settings, and find the settings you want.
 
 **Administrative Templates** are built in to Intune, and don't require any customizations, including using OMA-URI. As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows 10 devices.
 
@@ -47,7 +47,7 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 
 - Some of these settings are available starting with Windows 10 version 1709 (RS2/build 15063). Some settings aren't included in all the Windows editions. For the best experience, it's suggested to use Windows 10 Enterprise version 1903 (19H1/build 18362) and newer.
 
-- The Windows settings use [Windows policy CSPs](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
+- The Windows settings use [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## Create the template
 
@@ -61,20 +61,18 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Admin template: Windows 10 admin template that configures xyz settings in Microsoft Edge**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Windows 10 admin template that configures xyz settings in Microsoft Edge**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
 
 7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
 
-    > [!div class="mx-imgBorder"]
-    > ![Apply ADMX template settings to users and devices in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Endpoint Manager admin center.":::
 
 8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
 
-    > [!div class="mx-imgBorder"]
-    > ![See a sample list of settings and use previous and next buttons](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use previous and next buttons in Endpoint Manager admin center and Microsoft Intune.":::
 
 9. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
 
@@ -85,8 +83,7 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 
     For example, select **Computer configuration** > **Windows components** > **Internet Explorer** to see all the device settings that apply to Internet Explorer:
 
-    > [!div class="mx-imgBorder"]
-    > ![See all device settings that apply to Internet Explorer in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png" alt-text="See all device settings that apply to Internet Explorer in Microsoft Intune and Endpoint Manager admin center":::
 
 11. Select **OK** to save your changes.
 
@@ -125,8 +122,7 @@ There are thousands of settings available in these templates. To make it easier 
 
 - In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, select **All settings**, and search for `copy`. All the settings with `copy` are shown:
 
-  > [!div class="mx-imgBorder"]
-  > ![Search for copy to show all the device settings in administrative templates in Intune](./media/administrative-templates-windows/search-copy-settings.png) 
+  :::image type="content" source="./media/administrative-templates-windows/search-copy-settings.png" alt-text="Search for copy to show all the device settings in administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
 
   In another example, search for `microsoft word`. You see the settings you can set for the Microsoft Word program. Search for `explorer` to see the Internet Explorer settings you can add to your template.
 
@@ -138,8 +134,8 @@ There are thousands of settings available in these templates. To make it easier 
 
 ## Next steps
 
-The template is created, but may not be doing anything yet. Next, [assign the template (also called a profile)](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Update [Office 365 using administrative templates](administrative-templates-update-office.md).
+Update [Microsoft 365 using administrative templates](administrative-templates-update-office.md).
 
 [Tutorial: Use the cloud to configure group policy on Windows 10 devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

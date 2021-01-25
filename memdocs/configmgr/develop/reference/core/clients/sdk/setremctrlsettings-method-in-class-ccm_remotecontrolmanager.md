@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: df307c37-020a-4972-8d7a-df0a57377ead
 author: aczechowski
 ms.author: aaroncz
@@ -69,7 +69,7 @@ uint32 SetRemCtrlSettings
 
  Access level allowed. Possible values are:   
 
-|||  
+|Value|Access level|  
 |-|-|  
 |0|No access|  
 |1|View only|  
@@ -82,7 +82,7 @@ uint32 SetRemCtrlSettings
 
  Value indicating if a control beep should be sounded during a remote control session to signify that the computer is being remotely controlled. This is only for Remote Control, not Remote Assistance. Possible values are:   
 
-|||  
+|Value|Remote control beep|  
 |-|-|  
 |0|None|  
 |1|Beginning and end of session|  

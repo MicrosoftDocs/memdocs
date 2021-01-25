@@ -5,7 +5,7 @@ description: Follow these steps to configure software update classifications and
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -42,7 +42,7 @@ Software updates metadata is retrieved during the synchronization process in Con
      - **Tools**: Specifies a utility or feature that helps to complete one or more tasks.  
      - **Update Rollups**: Specifies a tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. An update rollup generally addresses a specific area, such as a security or product component.  
      - **Updates**: Specifies a widely released fix for a specific problem. An update addresses a non-critical, non-security-related bug.  
-     - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
+     - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. These updates are also known as feature updates for Windows 10 operating systems. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
     
     > [!NOTE]
     > You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 or later to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports. For more information, see [Manage Surface drivers with Configuration Manager](../deploy-use/surface-drivers.md).
@@ -125,7 +125,7 @@ For more information about support for Windows Insider in Configuration Manager,
 ### Prerequisites
 
 - Configuration Manager version 1906 or higher, configured for [software update management](../plan-design/plan-for-software-updates.md).
-- Windows 10 devices running [Windows Insider Preview build](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started).
+- Windows 10 devices running [Windows Insider Preview build](/windows-insider/at-work-pro/wip-4-biz-get-started).
 - A collection containing the Windows Insider devices.
 
 ### Enable Windows Insider upgrades and updates
@@ -156,7 +156,7 @@ Deploy Feature Updates for Windows Insider to your target collection just like a
 - There are license terms, your deployment must accept the terms in order to install.
 - Consider using the [thread priority in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority).
 - Dynamic Update automatically installs critical updates, including the latest Cumulative Update, directly from Microsoft Update. This behavior started with Feature Updates for Windows 10 version 1903. 
-  - You can explicitly [disable Dynamic Update in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_du) or with a [setupconfig.ini file](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - You can explicitly [disable Dynamic Update in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_du) or with a [setupconfig.ini file](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - For more information, see the [Windows 10 Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) blog post.
 
 For more information on how to deploy upgrades, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).
@@ -164,7 +164,7 @@ For more information on how to deploy upgrades, see [Manage Windows as a service
 
 ### Keeping Insider devices up-to date
 
-Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows 10 version 1903 Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](../deploy-use/automatically-deploy-software-updates.md) or [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows 10 version 1903 Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](../deploy-use/automatically-deploy-software-updates.md) or [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
@@ -174,6 +174,8 @@ Products that are beyond their support lifecycle aren't supported for use with C
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
+> [!Tip]
+> Starting in Configuration Manager 2010, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates. For more information, see [Console notifications](../../core/servers/manage/admin-console-notifications.md#bkmk_2010). This information is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update or license compliance. Be sure to verify the accuracy of the information provided to you.
 
 ## Next steps
 

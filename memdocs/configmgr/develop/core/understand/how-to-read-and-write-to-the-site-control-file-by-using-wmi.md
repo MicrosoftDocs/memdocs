@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 815a4ee8-b211-48de-ba9f-6eff7497dd2b
 author: aczechowski
 ms.author: aaroncz
@@ -256,7 +256,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   `String`|The site code for the Configuration Manager site.|  
 
 ## Compiling the Code  
@@ -289,4 +289,4 @@ End Sub
 ## See Also  
  [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
- [How to Read a Configuration Manager Site Control File Embedded Property List](../../../develop/core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md)   
+ [How to Read a Configuration Manager Site Control File Embedded Property List](../../../develop/core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md)

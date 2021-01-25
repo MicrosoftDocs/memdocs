@@ -5,7 +5,7 @@ description: Learn how to customize an OS deployment task sequence to prepare a 
 ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
@@ -86,7 +86,7 @@ Windows 10 includes a simple conversion tool, **MBR2GPT**. It automates the proc
     > [!TIP]
     > You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full OS. Add a step to restart the computer to Windows PE before the step to run the MBR2GPT.EXE tool. Then remove the **/AllowFullOS** option from the command line.
 
-    For more information about the tool and available options, see [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    For more information about the tool and available options, see [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 
     1. Add a step to run the OEM tool that converts the firmware from BIOS to UEFI. This step is typically **Run Command Line**, with a command line to run the OEM tool.
 

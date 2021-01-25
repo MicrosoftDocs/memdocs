@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39e
 author: aczechowski
 ms.author: aaroncz
@@ -155,10 +155,9 @@ public void DCMCreateAssignment(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|-   `connection`<br />-   `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|-   `connection`<br />-   `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`applyToSubTargets`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|`true` to apply the configuration item assignment to a subcollection.|  
 |`assignmentAction`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Action associated with the configuration item assignment.|  
 |`assignmentName`|-   Managed: `String`<br />-   VBScript: `String`|assignmentName|  

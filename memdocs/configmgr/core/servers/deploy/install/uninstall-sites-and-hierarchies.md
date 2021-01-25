@@ -80,7 +80,7 @@ You can't move or reassign a secondary site to another primary site. When you re
 
 Use this option to remove a functional secondary site that's accessible from the network. This option uninstalls Configuration Manager from the secondary site server. It then deletes all information about the site and its resources from the Configuration Manager site.
 
-If Configuration Manager installed SQL Server Express for the secondary site, Configuration Manager uninstalls SQL Express as well. If you installed SQL Server Express before you installed the secondary site, Configuration Manager doesn't uninstall SQL Server Express.
+If Configuration Manager installed SQL Server Express for the secondary site, Configuration Manager uninstalls SQL Server Express as well. If you installed SQL Server Express before you installed the secondary site, Configuration Manager doesn't uninstall SQL Server Express.
 
 #### Delete the secondary site
 

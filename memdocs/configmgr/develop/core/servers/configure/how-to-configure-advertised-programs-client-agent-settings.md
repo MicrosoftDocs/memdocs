@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5a5ffe1b-6e82-480f-97e8-2840ba704170
 author: aczechowski
 ms.author: aaroncz
@@ -360,7 +360,7 @@ try
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`<br /><br /> `siteToChange`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`enableDisableSWDClientAgent`|-   Managed: `String`<br />-   VBScript: `String`|Flag to enable or disable the client agent.|  

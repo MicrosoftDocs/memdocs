@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -31,7 +31,7 @@ ms.collection:
 
 # Enroll Windows 10 devices with Intune Company Portal
 
-Use Intune Company Portal to enroll your Windows 10 device under your organization's management. This article describes how to enroll devices with Windows 10 version 1607 and later, and Windows 10 version 1511 and earlier. Before you begin, make sure you [verify the version on your device](windows-enrollment-company-portal.md#find-windows-10-version-number) so that you can follow the correct steps.  
+Use Intune Company Portal to enroll your Windows 10 device under your organization's management. This article describes how to enroll devices with Windows 10 version 1607 and later, and Windows 10 version 1511 and earlier. Before you begin, make sure you [verify the version on your device](using-your-windows-device-with-intune.md) so that you can follow the correct steps.  
 
 Windows 10 is supported across various device types including desktop, phone, and tablet. The enrollment steps are the same on whichever device you're using. However, your screen may look a little different from the images shown in this article.  
 </br>
@@ -40,7 +40,7 @@ Windows 10 is supported across various device types including desktop, phone, an
 ## Enroll Windows 10 version 1607 and later device 
 These steps describe how to enroll a device that runs on Windows 10, version 1607 and later.  
 
-1. Go to **Start**. If you are on a Windows 10 Mobile device, continue to the  **All Apps** list.
+1. Go to **Start**. 
 
 2. Open the **Settings** app. If the app isn't readily available in your apps list, go to the search bar and type "settings."
 
@@ -68,14 +68,10 @@ These steps describe how to enroll a device that runs on Windows 10, version 160
 8. To double-check your connection, go back to **Settings** > **Accounts** > **Access work or school**.  Your account should now be listed.  
 
 
-    ![Validate that the connection was set up correctly](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-Still can't access your work or school email, files, or other data? Learn how to [troubleshoot account problems](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
-
 ## Enroll Windows 10 version 1511 and earlier device  
 These steps describe how to enroll a device that runs on Windows 10, version 1511 and earlier.  
 
-1. Go to **Start**. If you are on a Windows 10 Mobile device, continue to the  **All Apps** list.
+1. Go to **Start**. 
 
 2. Open the **Settings** app. If the app isn't readily available in your apps list, go to the search bar and type "settings."
 
@@ -94,7 +90,10 @@ These steps describe how to enroll a device that runs on Windows 10, version 151
 
     ![Sign in](./media/W10-enroll-4-sign-in.png)  
 
-Still can't access your work or school email, files, or other data? Learn how to [troubleshoot account-related problems](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) during enrollment.  
+
+## Troubleshooting 
+For a non-exhaustive list of error messages and other connection remedies, see [Troubleshoot Windows 10 device access](troubleshoot-your-windows-10-device-windows.md).  
+
 
 ## IT administrator support   
 

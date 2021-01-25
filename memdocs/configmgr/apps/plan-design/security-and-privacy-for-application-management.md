@@ -179,7 +179,7 @@ When you install the application catalog website point site system role, the cli
 
 If you set the **Allow Silverlight applications to run in elevated trust mode** setting to **No**, clients don't remove the Microsoft signing certificate.  
 
-For more about trusted applications in Silverlight, see [Trusted Applications](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
+For more about trusted applications in Silverlight, see [Trusted Applications](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
 
 
 ## Privacy information for application management  
@@ -236,4 +236,4 @@ The following features help efficient software deployment:
 
 - The application catalog lets the Configuration Manager admin publish any application or program or script for users to run. Configuration Manager has no control over the types of programs or scripts that are published in the catalog or the type of information that they transmit.  
 
-- Configuration Manager might transmit information between clients and the application catalog site system roles. The information might identify the computer and sign-in accounts. The information that's transmitted between the client and servers isn't encrypted, unless these site system roles are configured to require clients connect by using HTTPS.  
+- Configuration Manager might transmit information between clients and the application catalog site system roles. The information might identify the computer and sign-in accounts. The information that's transmitted between the client and servers isn't encrypted, unless these site system roles are configured to require clients connect by using HTTPS.

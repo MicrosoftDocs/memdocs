@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,13 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Add wired network settings for macOS devices in Microsoft Intune
 
-You can create a profile with specific wired network settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
+You can create a profile with specific wired network settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a SCEP certificate, and more.
 
 This article describes the settings you can configure.
 
 ## Before you begin
 
-[Create a wired network device configuration profile](wired-networks-configure.md).
+Create a [macOS wired network device configuration profile](wired-networks-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
@@ -67,7 +67,7 @@ This article describes the settings you can configure.
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window shown on user devices when they connect to this network.
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server. It's used to authenticate the connection.
-    - **Client Authentication** - **Certificates**: Select the SCEP or PKCS client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+    - **Client Authentication** - **Certificates**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported.
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
   - **EAP-TTLS**: Also enter:
@@ -81,7 +81,7 @@ This article describes the settings you can configure.
           - **Challenge Handshake Authentication Protocol (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP Version 2 (MS-CHAP v2)**
-      - **Certificates**: Select the SCEP or PKCS client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - **Certificates**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported.
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
   - **LEAP**
@@ -92,7 +92,7 @@ This article describes the settings you can configure.
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server. It's used to authenticate the connection.
     - **Client Authentication**: Select an **Authentication method**. Your options:
       - **Username and Password**: Prompts the user for a user name and password to authenticate the connection.
-      - **Certificates**: Select the SCEP or PKCS client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - **Certificates**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported.
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
 ## Next steps

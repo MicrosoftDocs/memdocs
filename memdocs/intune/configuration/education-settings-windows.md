@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,7 +38,7 @@ After you've configured the profile, assign and deploy it to your students.
 
 ## Before you begin
 
-[Create a device configuration profile](education-settings-configure.md#create-a-device-profile).
+Create a [Windows 10 secure assessment education device configuration profile](education-settings-configure.md#create-a-device-profile).
 
 ## Take a test settings
 
@@ -53,7 +53,7 @@ After you've configured the profile, assign and deploy it to your students.
   - `user@contoso.com`
   - `computerName\username`
 - **Account name**: To set up a local guest account type, enter the name of the account used with the Take a Test app. The account name will appear as a tile on the sign-in screen. Students click the tile to launch the test.​  
-- **Assessment URL**: Enter the URL of the test you want users to take. For more information on getting the URL, see the [Take a Test documentation](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Assessment URL**: Enter the URL of the test you want users to take. For more information on getting the URL, see the [Take a Test documentation](/education/windows/take-tests-in-windows-10).
 - **Printer connection**: **Require** only allows access to the Take a Test app from devices that are connected to a printer. This setting also makes the app's print button available to test-takers. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS may allow students to access the app from devices that aren't connected to a printer.​  
 - **Screen monitoring**: **Allow** monitors the screen activity while users are taking a test. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS may prevent you from monitoring the screen during the test.
 - **Text suggestions**: Choose **Allow** so test takers can see text suggestions. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS may block text suggestions while users are taking a test.

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f46e48ff-60cd-4a68-a36e-9ece153d93c3
 author: aczechowski
 ms.author: aaroncz
@@ -119,9 +119,9 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [notnull]  
 
- Indicates if the settings is applied to regular `SMS_ClientSettings` or `SMS_AntimalwareSettings`. The default value is 2 when you create `SMS_ClientSettings`. Possible values are:  
+ Indicates if the settings are applied to regular `SMS_ClientSettings` or `SMS_AntimalwareSettings`. The default value is 2 when you create `SMS_ClientSettings`. Possible values are:  
 
-|||  
+|Value|Settings type|  
 |-|-|  
 |1|SMS_AntimalwareSettings|  
 |2|SMS_ClientSettings|  
@@ -189,7 +189,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Type indicates whether the settings is applied to Device or User. The default value is 1 (Device).  
 
-|||  
+|Value|Settings type|  
 |-|-|  
 |1|Device|  
 |2|User|  

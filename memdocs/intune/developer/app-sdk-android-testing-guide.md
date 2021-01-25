@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 01/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 The Microsoft Intune App SDK for Android testing guide is designed to help you test your Intune-managed Android app.
 
 ## Demo tenant setup
-If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) to access Microsoft CDX. To create a new account:
+If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner](https://partner.microsoft.com/business-opportunities/why-microsoft) to access Microsoft CDX. To create a new account:
 1. Navigate to the [Microsoft CDX tenant creation site](https://cdx.transform.microsoft.com/my-tenants/create-tenant) and create a Microsoft 365 Enterprise tenant.
 2. [Set up Intune](../fundamentals/setup-steps.md) to enable mobile device management (MDM).
 3. [Create users](../fundamentals/users-add.md).
@@ -58,11 +58,11 @@ You can require a PIN to access corporate resources. Also, you can enforce corpo
 1. Set **Require PIN for access** and **Require corporate credentials for access** to **Yes**. For more information, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Confirm the following conditions:
     - App launch should present a prompt for PIN input, or the production user that was used during enrollment with the Company Portal.
-    - Failure to present a valid sign-in prompt might be due to an incorrectly configured Android manifest, specifically the values for Azure Active Directory Authentication Library (ADAL) integration (SkipBroker, ClientID, and Authority).
+    - Failure to present a valid sign-in prompt might be due to an incorrectly configured Android manifest, specifically the values for MSAL integration (SkipBroker, ClientID, and Authority).
     - Failure to present any prompt might be due to an incorrectly integrated `MAMActivity` value. For more information about `MAMActivity`, see [Microsoft Intune App SDK for Android developer guide](app-sdk-android.md).
 
 > [!NOTE] 
-> If the preceding test isn't working, the following tests will likely also fail. Review [SDK](app-sdk-android.md#sdk-integration) and [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) integration.
+> If the preceding test isn't working, the following tests will likely also fail. Review [SDK](app-sdk-android.md#sdk-integration) and [MSAL configuration](app-sdk-android.md#configure-microsoft-authentication-library-msal) integration.
 
 ### Restrict transferring and receiving data with other apps
 You can control data transfer between corporate managed applications, as follows:
@@ -75,7 +75,6 @@ Use of intents and content providers are affected by these policies.
     - Opening from an unmanaged app into your app functions correctly.
     - Sharing content between your app and managed apps is allowed.
     - Sharing from your app to non-managed apps (for example, Chrome) is blocked.
-
 
 #### Restrict receiving data from other apps
 

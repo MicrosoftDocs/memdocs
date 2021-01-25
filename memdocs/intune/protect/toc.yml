@@ -23,6 +23,8 @@
   - name: Privacy and personal data
     href: privacy-personal-data.md
     items:
+    - name: Optional diagnostic data in client apps
+      href: client-apps-optional-data.md
     - name: Data collection
       href: privacy-data-collect.md
     - name: Data storage and processing
@@ -60,6 +62,8 @@
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
       href: compliance-policy-monitor.md
+    - name: Device compliance partners
+      href: device-compliance-partners.md    
   - name: Endpoint security
     href: endpoint-security.md
     items:
@@ -67,8 +71,10 @@
       href: endpoint-security-manage-devices.md
     - name: Security baselines
       items: 
-      - name: Security baselines 
+      - name: Security baselines overview
         href: security-baselines.md
+      - name: Manage security baselines 
+        href: security-baselines-configure.md  
       - name: Monitor your baselines
         href: security-baselines-monitor.md
     - name: Security tasks
@@ -90,7 +96,19 @@
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
     - name: Microsoft Defender ATP
-      href: advanced-threat-protection.md  
+      items:
+      - name: Microsoft Defender ATP
+        href: advanced-threat-protection.md  
+      - name: Configure Defender ATP
+        href: advanced-threat-protection-configure.md
+      - name: Android web protection
+        href: advanced-threat-protection-manage-android.md
+      - name: Monitor Defender ATP
+        href: advanced-threat-protection-monitor.md
+    - name: Firewall rule migration
+      href: endpoint-security-firewall-rule-tool.md  
+    - name: Tenant attach
+      href: tenant-attach-intune.md
     - name: Encrypt disks
       items:
       - name: Manage BitLocker policy
@@ -99,6 +117,14 @@
         href: encrypt-devices-filevault.md
       - name: Monitor disk encryption
         href: encryption-monitor.md
+  - name: Microsoft Tunnel
+    items:
+    - name: Microsoft Tunnel overview
+      href: microsoft-tunnel-overview.md
+    - name: Configure Microsoft Tunnel
+      href: microsoft-tunnel-configure.md
+    - name: Monitor Microsoft Tunnel
+      href: microsoft-tunnel-monitor.md
   - name: Identity protection
     items:
     - name: Windows Hello
@@ -169,6 +195,11 @@
         items:
         - name: Lookout and Intune integration
           href: lookout-mtd-connector-integration.md
+      - name: Set up MVISION Mobile
+        href: mcafee-mobile-threat-defense-connector.md
+        items:
+        - name: MVISION Mobile and Intune integration
+          href: mcafee-mtd-connector-integration.md 
       - name: Set up Pradeo
         href: pradeo-mobile-threat-defense-connector.md
         items:
@@ -193,13 +224,17 @@
         href: zimperium-mobile-threat-defense-connector.md
         items:
         - name: Zimperium and Intune integration
-          href: zimperium-mtd-connector-integration.md     
+          href: zimperium-mtd-connector-integration.md 
   - name: Network access control
     href: network-access-control-integrate.md
   - name: Certificates
     items: 
     - name: Use certificates for authentication
       href: certificates-configure.md
+    - name: Trusted certificate profiles
+      href: certificates-trusted-root.md
+    - name: Certificate connectors
+      href: certificate-connectors.md
     - name: SCEP  
       items:
       - name: SCEP infrastructure
@@ -212,7 +247,7 @@
     - name: PKCS
       items:
       - name: PKCS
-        href: certficates-pfx-configure.md
+        href: certificates-pfx-configure.md
         displayName: ksp
       - name: Imported PKCS
         href: certificates-imported-pfx-configure.md
@@ -230,8 +265,12 @@
     items:
     - name: Windows updates
       items:
-      - name: Windows Update for Business settings
-        href: windows-update-for-business-configure.md    
+      - name: Use Windows Update for Business
+        href: windows-update-for-business-configure.md
+      - name: Update rings policy
+        href: windows-10-update-rings.md
+      - name: Feature updates policy
+        href: windows-10-feature-updates.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
@@ -239,39 +278,39 @@
   - name: Troubleshoot
     items:
     - name: Troubleshoot policies and profiles
-      href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?toc=/intune/protect/toc.json&bc=/protect/breadcrumb/toc.json
+      href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?bc=%2fprotect%2fbreadcrumb%2ftoc.json&toc=%2fintune%2fprotect%2ftoc.json
     - name: Troubleshoot Conditional Access
-      href: troubleshoot-conditional-access.md
+      href: /troubleshoot/mem/intune/troubleshoot-conditional-access
     - name: Troubleshoot certificate connector
-      href: troubleshoot-certificate-connector-events.md
+      href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events
     - name: Troubleshoot SCEP certificate profiles
       items:
       - name: Troubleshoot SCEP certificate profiles
-        href: troubleshoot-scep-certificate-profiles.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles
       - name: Profile deployment to devices
-        href: troubleshoot-scep-certificate-profile-deployment.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment
       - name: Device to NDES communication
-        href: troubleshoot-scep-certificate-device-to-ndes.md	
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes
       - name: NDES operations
-        href: troubleshoot-scep-certificate-ndes-policy-module.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module
       - name: Certificate delivery to devices
-        href: troubleshoot-scep-certificate-delivery.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery
       - name: Reporting for certificate deployment
-        href: troubleshoot-scep-certificate-reporting.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting
     - name: Troubleshoot PKCS certificate profiles
-      href: troubleshoot-pkcs-certificate-profiles.md
+      href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles
     - name: Troubleshoot Exchange connectors
       items:
       - name: Troubleshoot Exchange connectors
-        href: troubleshoot-exchange-connector.md
+        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
       - name: Common problems 
-        href: troubleshoot-exchange-connector-common-problems.md
+        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems
       - name: Common errors   
-        href: troubleshoot-exchange-connector-common-errors.md
+        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
     - name: Troubleshoot BitLocker policies
-      href: troubleshoot-bitlocker-policies.md
+      href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
     - name: Troubleshoot Jamf Pro integration
-      href: troubleshoot-jamf.md
+      href: /troubleshoot/mem/intune/troubleshoot-jamf
 - name: Reference
   items:
   - name: API to add third-party certificate authority
@@ -290,22 +329,26 @@
       href: compliance-policy-create-windows.md
     - name: Compliance policy settings - Windows 8.1
       href: compliance-policy-create-windows-8-1.md
-    - name: Compliance policy settings - Windows Phone 8.1
-      href: compliance-policy-create-windows-8-1.md
   - name: Endpoint security policy settings
     items:
     - name: Antivirus policy settings
       items:
       - name: macOS Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-macos.md
-      - name: Windows 10 Microsoft Defender Antivirus settings
+      - name: Windows 10 Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows.md
+      - name: Tenant attach Defender Antivirus settings
+        href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
+      - name: Tenant attach Windows Security settings
+        href: antivirus-windows-security-settings-windows-tenant-attach.md
       - name: Windows Security experience settings
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
       href: endpoint-security-disk-encryption-profile-settings.md
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
+    - name: Tenant attach Firewall settings    
+      href: endpoint-security-firewall-profile-settings-tenant-attach.md
     - name: Endpoint detection and response profile settings
       href: endpoint-security-edr-profile-settings.md 
     - name: Attack surface reduction profile settings
@@ -320,6 +363,8 @@
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
+  - name: Microsoft Tunnel command-line tools
+    href: microsoft-tunnel-reference.md
   - name: Windows update settings
     href: windows-update-settings.md
   - name: Error codes and descriptions
@@ -333,4 +378,4 @@
   - name: Prevent unauthorized access
     href: data-outside-protect.md
   - name: Prevent data leaks on non-managed devices
-    href: data-leak-prevention.md  
+    href: data-leak-prevention.md

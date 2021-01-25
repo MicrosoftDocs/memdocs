@@ -28,9 +28,9 @@ The Windows Assessment and Deployment Kit (ADK) is a set of tools and documentat
 
 For more information, see the following articles:  
 
-- [Windows ADK for Windows 10 scenarios for IT Pros](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [Windows ADK for Windows 10 scenarios for IT Pros](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Download the Windows ADK for Windows 10](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > Make sure to download both the **Windows ADK for Windows 10** and the **Windows PE add-on for the ADK**.
@@ -74,7 +74,7 @@ Configuration Manager uses a USMT package that includes the USMT 10 source files
 
 For more information, see the following articles:  
 
-- [Common Migration Scenarios for USMT 10](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [Common Migration Scenarios for USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [Manage user state](../get-started/manage-user-state.md)  
 

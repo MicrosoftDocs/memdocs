@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ Microsoft Edge lets users cut through the clutter of the web with built-in featu
 > If you have blocked users from enrolling either iOS/iPadOS or Android devices, this scenario will not enable enrollment, and the users will need to install Edge for themselves.
 The following Microsoft Edge enterprise features that are enabled by Intune policies include:
 
-- **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is similar to the architecture and experience in Office 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account.
+- **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is similar to the architecture and experience in Microsoft 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account.
 - **Intune app protection policy integration** - Admins can now target app protection policies to Microsoft Edge, including the control of cut, copy, and paste, preventing screen captures, and ensuring that user-selected links open only in other managed apps.
 - **Azure Application Proxy integration** - Admins can control access to SaaS apps and web apps, helping ensure browser-based apps only run in the secure Microsoft Edge browser, whether end users connect from the corporate network or connect from the Internet.
 - **Managed Favorites and Home Page shortcuts** - For ease of access, admins can set URLs to appear under favorites when end users are in their corporate context. Admins can set a homepage shortcut, which will show as the primary shortcut when the corporate user opens a new page or a new tab in Microsoft Edge.
@@ -58,8 +58,8 @@ This guided scenario will automatically enable **MyApps** to appear in the Micro
 
 We'll ask you about the workplace favorites your users need, and the filters you require for web browsing. Make sure you complete the following tasks before you continue:
 
-- Add users to Azure AD groups. For more information, see [Create a basic group and add members using Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2102458).
-- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](https://go.microsoft.com/fwlink/?linkid=2102547).
+- Add users to Azure AD groups. For more information, see [Create a basic group and add members using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](../enrollment/device-enrollment.md).
 - Gather a list of workplace favorites to add in Microsoft Edge.
 - Gather a list of website filters to enforce in Microsoft Edge.
 

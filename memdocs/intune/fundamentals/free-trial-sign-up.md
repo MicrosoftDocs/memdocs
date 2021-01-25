@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 12/09/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -48,28 +48,32 @@ Trying out Intune is free for 30 days. If you already have a work or school acco
 > [!IMPORTANT]
 > You can't combine an existing work or school account after you sign up for a new account.
 
-1. Go to the [Microsoft Intune Trial](https://go.microsoft.com/fwlink/?linkid=2019088) page and fill out the form.
+1. Go to the [Microsoft Intune Trial](https://go.microsoft.com/fwlink/?linkid=2019088) page and enter your work or school email address. Then, click **Next**.
 
-    ![Screenshot of the Microsoft Intune Trial account sign-up web page](./media/free-trial-sign-up/account-sign-up-site-full-browser.png)
+    ![Screenshot of the Microsoft Intune Trial account sign-up web page - Step 1](./media/free-trial-sign-up/free-trial-sign-up-01.png)
 
-    If most of your IT operations and users are in a different locale than you, you may want to select that locale under **Country or region**. Azure uses your regional information to deliver the right services. This setting can't be changed later.
+2. Enter details about yourself and your company. Once you are ready, click **Next**.
 
-2. Create an account using your company name followed by **.onmicrosoft.com**. 
+   > [!NOTE]
+   > If most of your IT operations and users are in a different locale than you, you may want to select that locale under **Country or region**. Intune uses your regional information to deliver the right services. This setting can't be changed later.
 
-    ![Screenshot of the Intune trial account new credential process](./media/free-trial-sign-up/account-sign-up-site-user-id.png)
+    ![Screenshot of the Microsoft Intune Trial account sign-up web page - Step 2](./media/free-trial-sign-up/free-trial-sign-up-02.png)
 
-    If your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change that in the Microsoft 365 admin center described later in this article.
+3. Create your account by checking for an available domain name based on your company name. Your account name will be similar to your company name followed by **.onmicrosoft.com**. 
 
-3. View your new account information at the end of the sign-up process.
+    ![Screenshot of the Microsoft Intune Trial account sign-up web page - Step 3](./media/free-trial-sign-up/free-trial-sign-up-03.png)
 
-    ![Image of your account information](./media/free-trial-sign-up/intune-end-of-sign-up-process.png) 
+   > [!NOTE]
+   > If your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change that in the Microsoft 365 admin center described later in this article.
 
-## Sign in to Intune in the Microsoft Endpoint Manager
+4. Click **Sign up** to complete the process and create your new account.
+
+## Sign in to Intune in the Microsoft Endpoint Manager admin center
 
 If you're not already signed in to the portal, complete the following steps:
 
-1. Open a new browser window and enter **https://endpoint.microsoft.com** in the address bar. 
-2. Use the user ID that you were given in the steps above to sign in (*yourID@yourdomain*.onmicrosoft.com).
+1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
+2. Use the user ID that you were given in the steps above to sign in. The user ID will look similar to the following: *yourID@yourdomain.onmicrosoft.com*.
 
     ![Image of the portal sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -78,24 +82,23 @@ When you sign up for a trial, you will also receive an email message that contai
 > [!TIP]
 > When working with the Microsoft Endpoint Manager, you may have better results working with a browser in regular mode, rather than private mode.
 
-## Confirm the MDM authority in Intune
+## Confirm the MDM authority in Microsoft Endpoint Manager
 
-By default, the MDM authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
+By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
-1. If you're not already signed in, sign in to the Microsoft Endpoint Manager.
+1. If you're not already signed in, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 2. Click **Tenant administration**.
 3. View the tenant details. The **MDM authority** should be set to **Microsoft Intune**.
 
 If after signing in to the Microsoft Endpoint Manager, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before users can enroll devices for management.
 
-### To set the MDM authority to Intune, follow these steps:
+### Set the MDM authority to Intune
 
-1. Open a new browser window and enter **https://portal.azure.com** in the address bar. 
-2. Choose **All services** > **Microsoft Intune**.
-3. Select the banner indicating that you haven't enabled device management, or if you don't immediately see the banner, select **Device enrollment**. The **Choose MDM Authority** blade will be displayed if you haven't enabled device management yet.
+1. If you do not have the MEM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). 
+2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
 
     > [!NOTE]
-    > If you have set the MDM Authority, you will see the MDM authority value on the **Device enrollment** blade. The orange banner is only displayed if you haven't yet set the MDM authority. 
+    > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority. 
 
     ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png) 
 
@@ -125,7 +128,7 @@ As mentioned above, if your organization has its own custom domain that you want
    ![Screenshot of Microsoft 365 admin center - Verify domain](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
-   > For TXT record verification details, see [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
+   > For TXT record verification details, see [Create DNS records at any DNS hosting provider for Microsoft 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
 
 ## Admin experiences
 

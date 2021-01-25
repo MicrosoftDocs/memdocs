@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8973d915-1d74-46cd-a20d-a19de59a677a
 author: aczechowski
 ms.author: aaroncz
@@ -63,7 +63,7 @@ Class SMS_Content : SMS_BaseClass
 
  This specifies additional attributes for content instance.  
 
-|||  
+|Value|Content flag|  
 |-|-|  
 |8|DOWNLOAD_ON_DEMAND_FROM_LOCAL_DP|  
 |12|DOWNLOAD_FROM_LOCAL_DISPPOINT|  

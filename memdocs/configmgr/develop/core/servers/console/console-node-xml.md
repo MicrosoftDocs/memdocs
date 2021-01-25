@@ -29,11 +29,11 @@ The node XML for the Configuration Manager console is in workspace XML files loc
 
 |Element|Description|  
 |-------------|-----------------|  
-|[RootNodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.aspx)|Describes the root node for the node.|  
+|[RootNodeDescription](/previous-versions/system-center/developer/cc147277(v=msdn.10))|Describes the root node for the node.|  
 |[Configuration Manager Console RootNodes Element](../../../../develop/core/servers/console/console-rootnodes-element.md)|Root node for describing the node.|  
-|[NodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.nodedescription.aspx)|Parent for nodes describing the tree view and result pane.|  
-|[RootNodeDescription.resourceAssembly](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.resourceassembly.aspx)|The assembly from which to load resources for this node instance.|  
-|[ActionDescription.imageDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.imagedescription.aspx)|The assembly containing the icon and other image resources used by the node.|  
+|[NodeDescription](/previous-versions/system-center/developer/cc147269(v=msdn.10))|Parent for nodes describing the tree view and result pane.|  
+|[RootNodeDescription.resourceAssembly](/previous-versions/system-center/developer/cc144054(v=msdn.10))|The assembly from which to load resources for this node instance.|  
+|[ActionDescription.imageDescription](/previous-versions/system-center/developer/cc143957(v=msdn.10))|The assembly containing the icon and other image resources used by the node.|  
 |**ActionDescription.viewAssemblyDescription**|The view type of the node.|  
 
 ## Node hierarchy

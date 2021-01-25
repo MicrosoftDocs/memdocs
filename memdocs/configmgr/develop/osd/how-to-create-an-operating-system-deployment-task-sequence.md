@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 10cdc1b1-22b6-4d26-83e8-6f42580c985e
 author: aczechowski
 ms.author: aaroncz
@@ -103,7 +103,7 @@ public void CreateInstallSoftwareTaskSequence(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript:  `String`|The task sequence step name.|  
 |`description`|-   VBScript:  `String`|The task sequence step description.|  
 |`packageID`|-   Managed: `String`<br />-   VBScript:  `String`|The package identifier containing the software to be installed. Obtained from `SMS_Package.PackageID`.|  

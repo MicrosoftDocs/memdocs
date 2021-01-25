@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: eef96176-cbf5-4163-bb81-047c22443527
 author: aczechowski
 ms.author: aaroncz
@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Add a Configuration Manager Context Qualifier by Using Managed Code
-In Configuration Manager, to add a context qualifier by using the managed SMS Provider, use the [Context](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.context.aspx) property which is a `Dictionary` object that holds context qualifiers.  
+In Configuration Manager, to add a context qualifier by using the managed SMS Provider, use the [Context](/previous-versions/system-center/developer/cc147087(v=msdn.10)) property which is a `Dictionary` object that holds context qualifiers.  
 
  Typically you will add your application name to the ApplicationName context qualifier, along with the computer name (MachineName) and Locale identifier (LocaleID).  
 
@@ -21,7 +21,7 @@ In Configuration Manager, to add a context qualifier by using the managed SMS Pr
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)  
 
-2.  Get the [SmsNamedValuesDictionary](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object from the *WqlConnectionManager* object that you get from step 1.  
+2.  Get the [SmsNamedValuesDictionary](/previous-versions/system-center/developer/cc147435(v=msdn.10)) object from the *WqlConnectionManager* object that you get from step 1.  
 
 3.  Add the context qualifiers as required.  
 
@@ -84,7 +84,7 @@ public void AddContextQualifiers(WqlConnectionManager connection)
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## See Also  
  [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)   

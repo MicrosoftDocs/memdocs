@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c02c7824-d46e-4a7a-b96d-8d1aa695fbbc
 author: aczechowski
 ms.author: aaroncz
@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Read a Configuration Manager Object by Using Managed Code
-To read a Configuration Manager object instance by using the managed SMS Provider, use *WqlConnectionManager.GetInstance*. The [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) method takes a string that identifies a specific object instance and returns an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that is used to access the object.  
+To read a Configuration Manager object instance by using the managed SMS Provider, use *WqlConnectionManager.GetInstance*. The [GetInstance](/previous-versions/system-center/developer/cc146190(v=msdn.10)) method takes a string that identifies a specific object instance and returns an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object that is used to access the object.  
 
  The following example function shows the name and description for a supplied package identifier.  
 
@@ -21,9 +21,9 @@ To read a Configuration Manager object instance by using the managed SMS Provide
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
-2.  Call WqlConnectionManager class [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) method to get the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object for the object you want.  
+2.  Call WqlConnectionManager class [GetInstance](/previous-versions/system-center/developer/cc146190(v=msdn.10)) method to get the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object for the object you want.  
 
-3.  Display the properties of the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx).  
+3.  Display the properties of the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)).  
 
 ## Example  
  The following code example shows how to read a Configuration Manager object.  
@@ -75,7 +75,7 @@ public void DisplayPackageName(WqlConnectionManager connection, string packageID
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## See Also  
  [Objects overview](configuration-manager-objects-overview.md)
@@ -86,4 +86,4 @@ public void DisplayPackageName(WqlConnectionManager connection, string packageID
  [How to Modify a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
- [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)   
+ [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)

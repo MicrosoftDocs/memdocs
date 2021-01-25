@@ -40,7 +40,7 @@ This feature applies to:
 
 Windows 10 custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to configure different features. These settings are typically used by mobile device manufacturers to control features on the device.
 
-Windows 10 makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+Windows 10 makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
 If you're looking for a specific setting, remember that the [Windows 10 device restriction profile](device-restrictions-windows-10.md) includes many built-in settings. So, you may not need to enter custom values.
 
@@ -71,11 +71,11 @@ After you add some settings, you can select **Export**. **Export** creates a lis
 
 ## Find the policies you can configure
 
-There's a complete list of all configuration service providers (CSPs) that Windows 10 supports in the [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
+There's a complete list of all configuration service providers (CSPs) that Windows 10 supports in the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
-Not all settings are compatible with all Windows 10 versions. [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) tells you which versions are supported for each CSP.
+Not all settings are compatible with all Windows 10 versions. [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) tells you which versions are supported for each CSP.
 
-Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
+Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
 
 ## Next steps
 

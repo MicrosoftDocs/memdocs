@@ -18,18 +18,18 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 <!-- 1351960 -->  
-You can create and deploy [Microsoft Defender Application Guard (Application Guard)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) policies by using the Configuration Manager endpoint protection. These policies help protect your users by opening untrusted web sites in a secure isolated container that isn't accessible by other parts of the operating system.
+You can create and deploy [Microsoft Defender Application Guard (Application Guard)](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) policies by using the Configuration Manager endpoint protection. These policies help protect your users by opening untrusted web sites in a secure isolated container that isn't accessible by other parts of the operating system.
 
 ## Prerequisites
 
-To create and deploy a Microsoft Defender Application Guard policy, you must use the Windows 10 Fall Creator's Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a [network isolation policy](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). For more information, see the [Microsoft Defender Application Guard overview](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+To create and deploy a Microsoft Defender Application Guard policy, you must use the Windows 10 Fall Creator's Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a [network isolation policy](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). For more information, see the [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## Create a policy, and to browse the available settings
 
 1. In the Configuration Manager console, choose **Assets and Compliance**.
 2. In the **Assets and Compliance** workspace, choose **Overview** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. In the **Home** tab, in the **Create** group, click **Create Windows Defender Application Guard Policy**.
-4. Using the [article](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) as a reference, you can browse and configure the available settings. Configuration Manager allows you to set certain policy settings:
+4. Using the [article](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) as a reference, you can browse and configure the available settings. Configuration Manager allows you to set certain policy settings:
    - [Host interaction settings](#bkmk_HIS)
    - [Application behavior](#bkmk_ABS)
    - [File management](#bkmk_FM)
@@ -41,7 +41,7 @@ To create and deploy a Microsoft Defender Application Guard policy, you must use
     >  - one from Windows Information Protection
     >  - one from Microsoft Defender Application Guard
     >
-    > If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail. For more information, see the [Windows Information Protection documentation](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    > If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail. For more information, see the [Windows Information Protection documentation](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. When you're finished, complete the wizard, and deploy the policy to one or more Windows 10 1709 devices.
 
@@ -75,7 +75,7 @@ Configures application behavior inside the Application Guard session. Before Con
 
 ### <a name="bkmk_FM"></a> File management
 <!--3555858-->
-Starting in Configuration Manager version 1906, There's a policy setting that enables users to trust files that normally open in Application Guard. Upon successful completion, the files will open on the host device instead of in Application Guard. For more information about the Application Guard policies, see [Configure Microsoft Defender Application Guard policy settings](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
+Starting in Configuration Manager version 1906, There's a policy setting that enables users to trust files that normally open in Application Guard. Upon successful completion, the files will open on the host device instead of in Application Guard. For more information about the Application Guard policies, see [Configure Microsoft Defender Application Guard policy settings](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
 
 - **Allow users to trust files that open in Windows Defender Application Guard** - Enable the user to mark files as trusted. When a file is trusted, it opens on the host rather than in Application Guard. Applies to Windows 10 version 1809 or higher clients.
   - **Prohibited:** Don't allow users to mark files as trusted (default).
@@ -100,5 +100,5 @@ Devices running Windows 10, version 2004 will show failures in compliance report
 ## Next steps
 
 For more information about Microsoft Defender Application Guard, see
- - [Microsoft Defender Application Guard Overview](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
-- [Microsoft Defender Application Guard FAQ](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).
+ - [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+- [Microsoft Defender Application Guard FAQ](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).

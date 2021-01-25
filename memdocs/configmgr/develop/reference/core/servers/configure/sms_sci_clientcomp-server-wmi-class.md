@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f3c963c8-a0a0-4ff6-8999-69138f534023
 author: aczechowski
 ms.author: aaroncz
@@ -65,7 +65,7 @@ Class SMS_SCI_ClientComp : SMS_SiteControlItem
 
  Client component flag identifying whether a component is enabled or not. Possible values are:  
 
-|||  
+|Value|Enabled flag|  
 |-|-|  
 |0|Not enabled|  
 |1|Enabled|  

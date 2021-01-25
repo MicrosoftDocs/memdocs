@@ -2,7 +2,7 @@
 title: Packages and programs
 titleSuffix: Configuration Manager
 description: Support deployments that use legacy packages and programs with Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
 ---
 
 # Packages and programs in Configuration Manager
@@ -32,9 +30,7 @@ When you migrate packages from an earlier version of Configuration Manager, you 
 You can modify and deploy these packages in the same way you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when you migrate from Configuration Manager 2007 to a Configuration Manager hierarchy.  
 
 > [!NOTE]  
-> Use Package Conversion Manager to convert packages and programs into Configuration Manager applications.  
->
-> Starting in version 1806, Package Conversion Manager is integrated with Configuration Manager. For more information, see [Package Conversion Manager](../pcm/package-conversion-manager.md).  
+> Use Package Conversion Manager to convert packages and programs into Configuration Manager applications. Package Conversion Manager is integrated with Configuration Manager. For more information, see [Package Conversion Manager](../pcm/package-conversion-manager.md).  
 
 Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. You can't deploy Microsoft Application Virtualization (App-V) applications with packages and programs in Configuration Manager. To distribute virtual applications, create them as Configuration Manager applications. For more information, see [Deploy App-V virtual applications](../get-started/deploying-app-v-virtual-applications.md).  
 
@@ -64,7 +60,9 @@ Packages can use some new features of Configuration Manager, including distribut
     - **Source folder**: If the package contains source files, choose **Browse** to open the **Set Source Folder** dialog box, and then specify the location of the source files for the package.  
 
         > [!NOTE]  
-        > The computer account of the site server must have read access permissions to the source folder that you specify.  
+        > The computer account of the site server must have read access permissions to the source folder that you specify.
+        >
+        > Windows limits the source path to 256 characters or less. This limit applies to package source as well as applications. For more information, see [Naming Files, Paths, and Namespaces](/windows/win32/fileio/naming-a-file).
 
     - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
@@ -272,8 +270,6 @@ Opens the **Create Program Wizard**, to create a new program for this package.
 
 Opens the **Export Package Wizard**, to export the selected package and its content to a file. Use this file to import the file to another hierarchy.
 
-For information about how to import packages and programs, see [Create packages and programs](#create-a-package-and-program).
-
 ### Deploy
 
 Opens the **Deploy Software Wizard**, to deploy the selected package and program to a collection. For more information, see [Deploy packages and programs](#deploy-packages-and-programs).
@@ -282,12 +278,18 @@ Opens the **Deploy Software Wizard**, to deploy the selected package and program
 
 Opens the **Distribute Content Wizard**, to send the content for a package and program to selected distribution points or distribution point groups.
 
+### Import
+
+Opens the **Import Package Wizard**, to import a previously exported package from a .zip file.
+
+> [!TIP]
+> Starting in version 2010, when you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node.<!--6601203-->
+
 ### Update distribution points
 
 Updates distribution points with the latest content for the selected package and program.
 
-
-## See also
+## Next steps
 
 - [Scripts](create-deploy-scripts.md)
 

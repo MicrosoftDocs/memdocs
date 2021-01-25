@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a4e9896-549e-4a20-92fc-30bf9ae6e1c8
 author: aczechowski
 ms.author: aaroncz
@@ -91,8 +91,8 @@ public IResultObject AddTaskSequenceGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
 |`Name`|-   Managed: `String`<br />-   VBScript: `String`|A name for the new group.|  
 |`Description`|-   Managed: `String`<br />-   VBScript: `String`|A description for the new group.|  
 

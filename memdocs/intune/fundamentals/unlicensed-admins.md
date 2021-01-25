@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Sign up or sign in to Microsoft Intune
-description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
+title: Unlicensed admins in Microsoft Intune | Microsoft Docs
+description: Learn how to give unlicensed admins permissions to access Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 12/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,20 +28,25 @@ ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 
-
 # Unlicensed admins
 
-You can grant Intune/Microsoft Endpoint Manager admin center access to admins without Intune licenses.
+You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on. Other features or services, such as those in Azure Active Directory (AD) Premium, may require a license for the administrator.
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Administrator licensing**.
-2. Choose **Allow access to unlicensed admins** > **Yes**.
-    >[!WARNING]
-    >You can’t undo this setting after clicking **Yes**.
+## Allow access
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** > **Administrator licensing**.
+2. Select **Allow access to unlicensed admins** > **Yes**.
+
+    > [!WARNING]
+    > You can’t undo this setting after clicking **Yes**.
 
 3. From now on, users who sign in to the Microsoft Endpoint Manager admin center don’t require an Intune license. Their scope of access is defined by the roles assigned to them.
 
-Intune supports up to 350 unlicensed admins per security group. Admins above this limit will experience unpredictable behavior.
+Intune supports up to 350 unlicensed admins per security group, and only applies to direct members. Admins above this limit will experience unpredictable behavior.
 
+## Next steps
 
+[Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
 
+[Microsoft Intune licensing](licenses.md)
 

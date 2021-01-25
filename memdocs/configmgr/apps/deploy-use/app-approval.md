@@ -44,7 +44,7 @@ After you've approved an application for installation, you can **Deny** the requ
 
 Starting in version 1906, if you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  <!-- 4224910 -->
 
-Automate the approval process with the [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
+Automate the approval process with the [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
 
 Starting in 1906, you can see which deployments require approval. Select an app in the **Applications** node. In the details pane, switch to the **Deployments** tab. There's a new column displayed by default, **Requires Approval**.
 
@@ -102,7 +102,7 @@ With these prerequisites, recipients receive an email with notification of the r
 
 - Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
 
-- Configure [email notification for alerts](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
+- Configure [email notification for alerts](../../core/servers/manage/configure-alerts.md#configure-email-notification-for-alerts).  
 
     > [!NOTE]
     > The administrative user that deploys the application needs permission to create an alert and subscription. If this user doesn't have these permissions, they'll see an error at the end of the **Deploy Software Wizard**: "You do not have security rights to perform this operation."<!-- 2810283 -->
@@ -127,7 +127,7 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - The SMS Provider requires **.NET 4.5.2** or later.  
 
-- Set up a [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+- Set up a [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 

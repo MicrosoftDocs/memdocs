@@ -50,5 +50,7 @@
     href: how-to-prepare-Win10.md
   - name: Switch workloads to Intune
     href: how-to-switch-workloads.md
+  - name: Apps in Company Portal
+    href: company-portal.md
   - name: Monitor co-management
     href: how-to-monitor.md

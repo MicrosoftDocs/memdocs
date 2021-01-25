@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ed49e823-f076-42b8-957d-2132638aac32
 author: aczechowski
 ms.author: aaroncz
@@ -77,10 +77,9 @@ public void ClearPxeAdvertisementCollection(WqlConnectionManager connection, str
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|The resource identifier. You can obtain this from the `SMS_Collection` class CollectionID property.|  
 
 ## Compiling the Code  

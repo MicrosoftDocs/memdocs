@@ -2,7 +2,7 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -73,27 +73,15 @@ These support numbers are based on using the recommended hardware for Configurat
 
 ### <a name="bkmk_cmg"></a> Cloud management gateway
 
-- You can install multiple instances of the cloud management gateway (CMG) at primary sites, or the central administration site.  
-
-    > [!Tip]  
-    > In a hierarchy, create the CMG at the central administration site.  
-
-  - One CMG supports one to 16 virtual machine (VM) instances in the Azure cloud service.  
-
-  - Each CMG VM instance supports 6,000 simultaneous client connections. When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.  
+[!INCLUDE [Size and scale for cloud management gateway](includes/scale-cmg.md)]
 
 For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
 
 ### Cloud management gateway connection point
 
-- You can install multiple instances of the CMG connection point at primary sites.  
-
-- One CMG connection point can support a CMG with up to four VM instances. If the CMG has more than four VM instances, add a second CMG connection point for load balancing. A CMG with 16 VM instances should be linked with four CMG connection points.
+[!INCLUDE [Size and scale for cloud management gateway connection point](includes/scale-cmgcp.md)]
 
 For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
-
-> [!NOTE]
-> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](recommended-hardware.md#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
 
 ### Distribution point  
 
@@ -132,7 +120,7 @@ For more information, see CMG [Performance and scale](../../clients/manage/cmg/p
 For information about the number of clients and devices that a management point can support, see the [Management points](#bkmk_mp) section.  
 
 > [!NOTE]
-> If you enable the management point to support a [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), it services internet-based client requests per normal. Sizing guidance for a management point doesn't change whether it services on-premises or internet-based clients.
+> If you enable the management point to support a [cloud management gateway](../../clients/manage/cmg/overview.md), it services internet-based client requests per normal. Sizing guidance for a management point doesn't change whether it services on-premises or internet-based clients.
 
 ### Software update point  
 
@@ -144,7 +132,7 @@ Use the following recommendations as a baseline. This baseline helps you determi
 - The other site system roles installed on the server  
 
 > [!NOTE]
-> If you enable the software update point to support a [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), it services internet-based client requests per normal. Sizing guidance for a software update point doesn't change whether it services on-premises or internet-based clients.
+> If you enable the software update point to support a [cloud management gateway](../../clients/manage/cmg/overview.md), it services internet-based client requests per normal. Sizing guidance for a software update point doesn't change whether it services on-premises or internet-based clients.
 
 #### <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
 
@@ -157,7 +145,7 @@ The number of supported clients depends on the version of Windows Server Update 
   IIS Application Pools:
 
   - Increase the WsusPool Queue Length to 2000
-  - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://www.phoenixtekk.com/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
+  - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see [WSUS best practices](/troubleshoot/mem/configmgr/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits).
 
     For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#bkmk_ScaleSieSystems).  
 
@@ -179,6 +167,8 @@ Limit the number of security scopes on automatic deployment rules (ADRs) to less
 Each instance of the SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available to Windows, and the available resources on the server to service the connection requests.
 
 For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md).
+
+The administration service is a REST API on every instance of the SMS Provider. It supports up to 5,000 requests per second, and 200 requests per client IP address.
 
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
@@ -215,7 +205,7 @@ A stand-alone primary site supports the following number of devices:
 
 - 175,000 total clients and devices, not to exceed:  
 
-  - 150,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
+  - 150,000 Windows clients. Also see, support for [embedded devices](#embedded).
 
   - 25,000 devices that run Mac and Windows CE 7.0
 
@@ -231,7 +221,7 @@ Primary sites support Windows Embedded devices that have File-Based Write Filter
 
 Secondary sites support the following number of devices:  
 
-- 15,000 desktops (computers that run Windows, Linux, and UNIX)  
+- 15,000 Windows clients
 
 ### <a name="bkmk_mp"></a> Management points
 
@@ -239,10 +229,10 @@ Each management point can support the following number of devices:
 
 - 25,000 total clients and devices, not to exceed:  
 
-  - 25,000 desktops (computers that run Windows, Linux, and UNIX)  
+  - 25,000 Windows clients
 
   - One of the following (not both):  
 
     - 10,000 devices that are managed by using on-premises MDM  
 
-    - 10,000 devices that run Mac and Windows CE 7.0 clients
+    - 10,000 devices that run macOS and Windows CE 7.0 clients

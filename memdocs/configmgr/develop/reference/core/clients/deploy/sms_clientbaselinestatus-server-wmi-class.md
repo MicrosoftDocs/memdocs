@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: fbc0259a-4be5-4157-985d-fb387060e4f1
 author: aczechowski
 ms.author: aaroncz
@@ -49,7 +49,7 @@ Class SMS_ClientBaselineStatus: SMS_BaseClass
 
  The client baseline type. Possible values are:  
 
-|||  
+|Value|Client baseline type|  
 |-|-|  
 |1|Production|  
 |2|Staging|  
@@ -99,7 +99,7 @@ Class SMS_ClientBaselineStatus: SMS_BaseClass
 
  The status of the client against the client baseline. Possible values are:  
 
-|||  
+|Value|Client status|  
 |-|-|  
 |1|Compliant|  
 |2|InProgress|  

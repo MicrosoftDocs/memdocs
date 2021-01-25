@@ -1,8 +1,8 @@
 ---
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
-description: Enable and use Community hub in Configuration Manager
-ms.date: 06/12/2020
+description: Enable and use community hub in Configuration Manager
+ms.date: 01/12/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -15,42 +15,38 @@ manager: dougeby
 # Community hub and GitHub
 <!--3555935, 3555936-->
 
-The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Configuration Manager Community hub** where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager Console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft. In the future, IT Admins will be able to upload content on their own, using their own GitHub account.
+The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Community hub** in Configuration Manager where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
 
-> [!Note]  
-> Community hub is an optional cloud-based feature. It was first introduced in June 2020. For information on how to opt into Community hub, see [Optional features](install-in-console-updates.md#bkmk_options).
-
-## About Community hub
+## About community hub
 
 Community hub supports the following objects:
-- PowerShell Scripts
-- Reports
-- Task sequences
-- Applications
-- Configuration items  
+
+[!INCLUDE [Community hub object type information](includes/community-hub-object-types.md)]
 
 ## Prerequisites
 
-- The device running the Configuration Manager console used to access the Community hub needs the following items:
+- The device running the Configuration Manager console used to access the community hub needs the following items:
    - .NET Framework version 4.6 or higher
+     - .NET Framework version 4.6.2 or higher is required starting in Configuration Manager 2010
    - Windows 10 build 17110 or higher
-      - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
+      - Windows Server isn't supported prior to version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server. For more information, see [Community hub on Windows Server operating systems](#bkmk_hub_os). <!--3555940, 8625943, 8717639 -->
    - The logged-in user account can't be the built-in administrator account
 
-- To download reports, you need to turn on the option **Use Configuration Manager-generated certificates for HTTP site systems** at the site you're importing into. For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Go to **Administration** > **Site Configuration** > **Sites**.
-   1. Select the site and choose **Properties** in the ribbon.
-   1. On the **Communication Security** tab, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
+- The [administration service](../../../develop/adminservice/set-up.md) in Configuration Manager needs to be set up and functional.
 
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
+
+- A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information see, [Contribute to Community hub](community-hub-contribute.md).
 
 ## Permissions
 
 - To import a script: **Create** permission for **SMS_Scripts** class.
 - To import a report: Full Administrator security role.
+- Starting in version 2010, Full Administrators can opt in the hierarchy for unreviewed content via hierarchy settings. Lower hierarchy administrators can't opt in the hierarchy for unreviewed hub items. For more information, see the [Categorize community hub content](#bkmk_category) section.
 
+[!INCLUDE [Community hub security role information](includes/community-hub-security-roles.md)]
 
-## Use the Community hub
+## Use the community hub
 
 1. Go to the **Community hub** node in the **Community** workspace.
 1. Select an item to download.
@@ -58,17 +54,81 @@ Community hub supports the following objects:
     - To import a script: **Create** permission for SMS_Scripts class.
     - To import a report: Full Administrator security role.
 1. Downloaded reports are deployed to a report folder called **hub** on the reporting services point. Downloaded scripts can be seen in the **Run Scripts** node.
-1. View all items downloaded from the hub by your organization by clicking on **Your downloads** from the **Community hub** node.
+1. View all items downloaded from the hub by your organization by selecting **Your downloads** from the **Community hub** node.
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+## <a name="bkmk_deeplink"></a> Direct links to community hub items
+<!--4224406-->
+[!INCLUDE [Community hub direct link information](includes/community-hub-links.md)]
+
+## <a name="bkmk_category"></a> Categorize community hub content
+<!--8052494-->
+*(Introduced in version 2010)*
+
+Starting in Configuration Manager version 2010, community hub content is grouped into a Microsoft, curated, or unreviewed category to allow admins to choose the types of content their environment displays. Admins can choose from the different categories of content that are provided in the **Community hub** to match their risk profile and their willingness to share and use content from those outside Microsoft and outside their own company. Only **Full Administrators** can opt in the hierarchy for unreviewed content via hierarchy settings.
+
+Community hub content has three categories for content sources:
+- **Microsoft curated**: Content provided by Microsoft
+- **Community curated**: Content provided by the community that gets reviewed by Microsoft
+- **Community unreviewed**: General content from the community that doesn't get reviewed by Microsoft
+
+:::image type="content" source="./media/8052494-community-hub-content-sources.png" alt-text="The three categories for content sources in community hub":::
+
+Admins can choose the types of content their environment displays from the following options:
+
+- **Display Microsoft content**: Selecting this option means that only content created by Microsoft will be shown in the community hub. This content has had some basic testing and scanning validation to confirm no malware and inappropriate text.
+- **Display Microsoft and curated community content**: Show curated content from both Microsoft and community partners with basic level of review. Selecting this option means that only content that has been curated will be shown. The curation process includes basic review to confirm that the content doesn’t have malware and inappropriate text, but hasn’t necessarily been tested. It will include content from the community, not just from Microsoft.
+- **Display all content including unreviewed content**:  Selecting this option means that all content is shown. This option includes unreviewed open-source type samples from the community, meaning that the content hasn’t necessarily been reviewed at all. It's provided as-is as open-source type sample content. Doing your own inspection and testing before using is highly encouraged, which is good practice on any content, but especially this class of content.
+
+:::image type="content" source="./media/8052494-community-hub-content-hierarchy-settings.png" alt-text="Hierarchy settings for allowed content sources for the community hub":::
+
+Since the content is *open-source* style content, admins should always review what is provided before consuming it. The new curation process is intended to vet the material to make sure there aren't obvious quality or compliance issues, but it will be somewhat of a cursory review. All content stored within GitHub and accessed from the community hub isn’t supported by Microsoft. Microsoft doesn’t validate content collected from or shared by the general community. For more information, see [GitHub Terms of Service](https://help.github.com/terms) and [GitHub Privacy Statement](https://help.github.com/privacy).
+
+### Select the content categories to display in community hub for the environment
+
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Sites**.
+1. Select the top-level site in your hierarchy and select **Hierarchy Settings** from the ribbon.
+1. On the **General** tab, change the **Community hub** setting to **Display Microsoft content**.
+1. Select **Ok** when you're finished changing the hierarchy setting.
+1. Open the **Community hub** node in the **Community** workspace.
+1. Ensure that only Microsoft content is displayed and available for download.
+1. Go back to **Hierarchy Settings** and select another option such as **Display all content, including unreviewed content**.
+1. Confirm that only the type of content is displayed and able to be downloaded from the community hub, that matches the corresponding hierarchy setting category.
+
+## <a name="bkmk_hub_os"></a> Community hub on Windows Server operating systems
+<!--3555940, 8625943, 8717639 -->
+*(Introduced in version 2010)*
+
+Starting in Configuration Manager version 2010, You can now display the **Community hub** on Windows Server operating systems. Follow the instructions below to enable Windows Server 2012 and later to load the community hub:
+
+1. In the upper-right corner of the console, select the bell icon to display Configuration Manager console notifications.
+
+   :::image type="content" source="./media/3555909-notification.png" alt-text="Notifications in the Configuration Manager console":::
+
+1. The notification will say **New custom console extensions are available**.
+
+   :::image type="content" source="./media/3555909-extension-notification.png" alt-text="New custom console extensions are available notification":::
+
+1. Select the link **Install custom console extensions** to launch the install.
+1. When the install completes, select **Close** to restart the console.
+
+    :::image type="content" source="./media/3555909-extension-installed.png" alt-text="Console extension completed install":::
+
+1. Confirm that you can view the **Community hub** node from the machine running the Windows Server operating system.
+   - You may also notice that a new folder `AdminConsole\bin\Microsoft.WebView2.FixedVersionRuntime.<version>.x86` was created.
+   - The files are automatically downloaded from https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section with the other redistributable files.
+
+## <a name="bkmk_known"></a> Known issues
+
+### Unable to access community hub node when running console as a different user
+<!--7826897-->
+If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.
+
+### Downloaded reports don't get removed from your downloads page
+<!--7851305-->
+If you delete a downloaded report from the **Monitoring** > **Reports** node, the report isn't deleted from the **Community hub** > **Your downloads** page and you're unable to download the report again.
 
 ## Next steps
 
-Learn more about creating and using the following objects:
-
-- [Create and run PowerShell scripts](../../../apps/deploy-use/create-deploy-scripts.md)
-- [Introduction to reporting](introduction-to-reporting.md)
-- [Create and manage task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
-- [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md)
-- [Create configuration items](../../../compliance/deploy-use/create-configuration-items.md)
+[Contribute to the Configuration Manager Community hub](community-hub-contribute.md)

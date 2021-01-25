@@ -2,10 +2,10 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 05/21/2020
+ms.date: 01/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
@@ -16,26 +16,80 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.  
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.
 
-Feature-specific documentation includes information about known issues that affect core scenarios.  
+Feature-specific documentation includes information about known issues that affect core scenarios.
 
-This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md)  
+This article contains release notes for the current branch of Configuration Manager. For information on the technical preview branch, see [Technical Preview](../../../get-started/technical-preview.md).
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
+- [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [What's new in version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
-- [What's new in version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [What's new in version 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
-> [!Tip]  
+> [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
-## Set up and upgrade  
+## Client management
+
+### Client notification actions apply to entire collection
+
+<!-- 9021554 -->
+
+_Applies to version 2010_
+
+When you use a [client notification](../../../clients/manage/client-notification.md) action on a device in a collection, the action applies to all devices in the collection.
+
+For example:
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
+
+1. Select a collection, and then choose the **Show Members** action.
+
+1. Select a device in the collection. In the ribbon on the **Home** tab, select **Client Notification**, and choose an action such as **Restart**.
+
+    Due to this issue, this action applies to all members of the collection, not just the selected client.
+
+    > [!NOTE]
+    > This issue doesn't apply to the **Start CMPivot** or **Run Script** options.
+
+To work around this issue, install the following hotfix: [Client notifications sent to all collection members in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4594177).
+
+Alternatively, use the **Devices** node. Find the device in the list and start the action from there.
+
+> [!NOTE]
+> This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods, if you don't include a collection object or ID.
+
+## Set up and upgrade
+
+### Site server in passive mode fails to update to version 2010
+
+<!-- 8896585 -->
+
+_Applies to version 2010 early update ring_
+
+If you have a [highly available site server](../configure/site-server-high-availability.md), when you update to version 2010, the site server in passive mode fails to update. This issue is due to a change in the Microsoft Monitoring Agent (MMA) for Microsoft Defender Advanced Threat Protection. The required MMA files aren't copied to all necessary locations.
+
+To work around this issue:
+
+1. Go to the Configuration Manager installation directory on the site server. In the `.\CMUStaging\D5054056-F41C-4E61-90A7-4F135B76F806\Redist` folder, copy both **MMASetup-amd64.exe** and **MMASetup-i386.exe** to the `.\cd.latest\redist` folder.
+
+1. If you have a management point role installed on another server, copy the following files to the following folders in the Configuration Manager installation folder on the site system server:
+
+    1. Copy **MMASetup-amd64.exe** to the `.\sms\client\x64` folder.
+    1. Copy **MMASetup-i386.exe** to the `.\sms\client\i386` folder.
+
+1. Delete the file `inboxes\failovermgr.box\siteserver.pkg` on the site server.
+
+1. Retry the update to version 2010.
+
+> [!NOTE]
+> This issue can also occur when you add a new site server in passive mode after updating to version 2010.
 
 ### Client automatic upgrade happens immediately for all clients
 
@@ -87,6 +141,14 @@ To work around this issue, renew the key associated with the app registration in
 
 ## Role based administration
 
+### Only Full Administrator can delete collections
+<!--8864728-->
+*Applies to version 2010 early update ring*
+
+When trying to delete a collection, there is a query to check for Automatic Deployment Rules (ADR) that are referencing the collection. If you don't have permissions on ADRs, you will be unable to perform the deletion.
+
+To work around this issue, if you need to delete a collection, ensure you have full administrator permissions to do it. You can also grant **Read** permission to the **Software Update** object to your accounts, since that grants access to ADRs but note those accounts would be able to delete collections too.
+
 ### Security scopes for certain folders don't replicate from CAS to primary sites
 <!--6306759-->
 *Applies to version 1910*
@@ -109,6 +171,20 @@ To work around this issue, create a folder called `scripts` in the `AdminConsole
 
 ## OS deployment
 
+### Client policy error when you deploy a task sequence
+
+<!-- 7970134 -->
+
+*Applies to: Configuration Manager version 2006 early update ring*
+
+When you deploy a task sequence to a client, a required task sequence doesn’t install at the deadline, and an available task sequence doesn’t appear in Software Center. You see status message 10803 with a description similar to the following error message:
+
+*The client failed to download policy. The data transfer service returned "BITS error: 'The server's response was not valid. The server was not following the defined protocol. (-2145386469).*
+
+This issue occurs when you configure the management point for HTTPS, and the device uses Configuration Manager client version 1906 or earlier.
+
+To work around this issue, update the Configuration Manager client on the device to version 1910 or later.
+
 ### Task sequences can't run over CMG
 
 *Applies to: Configuration Manager version 2002*
@@ -117,31 +193,22 @@ There are two instances in which task sequences can't run on a device that commu
 
 - You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
 
-    To work around this issue, configure the management point for HTTPS.
+    To work around this issue, update to version 2006. Alternatively, configure the management point for HTTPS.
 
 - You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
 
-    To work around this issue, use one of the following authentication methods:
+    To work around this issue, update to version 2006. Alternatively, use one of the following authentication methods:
 
   - Pre-register the device on the internal network
   - Configure the device with a client authentication certificate
   - Join the device to Azure AD
-
-### After passive site server is promoted, the default boot image packages still have package source on the previous active server
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Applies to: Configuration Manager version 1810*
-
-If you have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
-
-There's no workaround for this issue.
 
 ## Software updates
 
 ### Security roles are missing for phased deployments
 
 <!--3479337, SCCMDocs-pr issue 3095-->
-*Applies to: Configuration Manager versions 1810, 1902*
+*Applies to: Configuration Manager versions 1810 and later*
 
 The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
 
@@ -167,7 +234,7 @@ For more information, see [Create custom security roles](../configure/configure-
 ### <a name="dawin7-diagtrack"></a> An extended security update for Windows 7 causes them to show as **Unable to enroll**
 
 <!-- 7283186 -->
-_Applies to: Configuration Manager versions 1902, 1906, 1910, and 2002_
+_Applies to: Configuration Manager versions 2002 and earlier_
 
 The April 2020 extended security update (ESU) for Windows 7 changed the minimum required version of the diagtrack.dll from 10586 to 10240. This change causes Windows 7 devices to show as **Unable to enroll** in the Desktop Analytics **Connection Health** dashboard. When you drill down to the device view for this status, the **DiagTrack service configuration** property displays the following state: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
@@ -183,24 +250,6 @@ If you have a hierarchy, and enable **Hardware inventory** site data for [distri
 `Unexpected exception 'System.Data.SqlClient.SqlException' Remote access is not supported for transaction isolation level "SNAPSHOT".:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action'1 wrapCloseInAction)`
 
 To work around this issue, disable **Hardware inventory** site data for distributed views on every site replication link.
-
-### Console unexpectedly closes when removing collections
-
-<!-- 4749443 -->
-*Applies to: Configuration Manager version 1902 with update rollup*
-
-After you connect the site to [Desktop Analytics](../../../../desktop-analytics/connect-configmgr.md), you can **Select specific collections to synchronize with Desktop Analytics**. If you remove a collection and apply the changes, immediately adding a new collection causes an unhandled exception. The console unexpectedly closes.
-
-To work around this issue, when you remove a collection, select **OK** to close the properties window. Then open the properties again to add a new collection on the **Desktop Analytics Connection** tab.
-
-### Pilot status tile shows some devices as 'undefined'
-
-<!-- 4547783 -->
-*Applies to: Configuration Manager version 1902 with update rollup*
-
-When you use the Configuration Manager console to monitor your pilot deployment status, pilot devices that are up-to-date on the target version of Windows for that deployment plan show as **undefined** in the Pilot status tile.  
-
-These **undefined** devices are **up-to-date** with the target version of the OS for that deployment plan. No further action is necessary.
 
 ## Cloud services
 

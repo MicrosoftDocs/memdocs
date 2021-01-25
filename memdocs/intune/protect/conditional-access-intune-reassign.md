@@ -56,7 +56,7 @@ If you're ready to move to the Azure portal, follow the steps in this topic to r
 
 ### To verify your device-based Conditional Access policies in the Intune classic portal
 
-1. Go to the [Intune classic portal](https://manage.microsoft.com), and sign in with your credentials.
+1. Go to the [Intune classic portal](https://admin.manage.microsoft.com), and sign in with your credentials.
 
 2. Choose **Policy** from the left menu.
 
@@ -72,7 +72,7 @@ The **Intune App Protection** blade in the Azure portal enables admins to set ap
   - You should set your Conditional Access policy by using the [Azure Active Directory Conditional Access blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) and the [Intune App Protection blade](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 <br /><br />
 - Require a compliant device **OR** use the approved app.
-  - You should set your Conditional Access policy by using the [Intune classic portal](https://manage.microsoft.com) and the [Intune App Protection blade](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - You should set your Conditional Access policy by using the [Intune classic portal](https://admin.manage.microsoft.com) and the [Intune App Protection blade](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 
 > [!TIP] 
 > This topic provides screenshots comparing the user experience in both the Intune classic portal and the Azure portal.
@@ -207,4 +207,4 @@ Since MDM has been removed from the Intune Classic Portal, the following link ha
 
 - [Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md)
 - [app-based Conditional Access with Intune](app-based-conditional-access-intune.md)
-- [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

@@ -43,7 +43,7 @@ You can create multiple sets of terms and assign them to different groups, such 
 
 There are two ways to create your company terms and conditions:
 - by using Intune as described in this article.
-- by using the [Azure Active Directory terms of use feature](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou)
+- by using the [Azure Active Directory terms of use feature](/azure/active-directory/governance/active-directory-tou)
 
 To learn which method is best for you, check out the [Choosing the right Terms solution for your organization blog post](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ As a Security Admin, use the *Endpoint security* node in Intune to configure dev
 
 The Endpoint security node groups the tools that are available through Intune that you’ll use to keep devices secure:
 
-- **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level and then drill into specific devices to understand which compliance policies aren't met so you can resolve them.
+- **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level. Then, drill-in to specific devices to understand which compliance policies aren't met so you can resolve them.
 
 - **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a known group of settings and default values that the relevant security teams recommend.
 
@@ -80,7 +80,7 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies you can configure device security without the overhead of navigating the larger body and range of settings from device configuration profiles and security baselines.
+As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without the overhead of navigating the larger body and range of settings from device configuration profiles and security baselines.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
@@ -193,7 +193,14 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
 - **Remote assistance**
   - Read
 - **Remote tasks**
-  - Get FileVault key.
+  - Get FileVault key
+  - Initiate Configuration Manger action
+  - Microsoft Defender
+  - Reboot now
+  - Remote lock
+  - Rotate BitLockerKeys (Preview)
+  - Rotate FileVault key
+  - Sync devices
 - **Roles**
   - Read
 - **Security baselines**
@@ -225,7 +232,7 @@ One way to avoid conflicts is to not use different baselines, instances of the s
 
 If conflicts happen, you can use Intune's built-in tools to identify and resolve the source of those conflicts. For more information, see:
 
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Next steps

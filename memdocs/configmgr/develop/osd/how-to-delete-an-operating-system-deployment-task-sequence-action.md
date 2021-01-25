@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 32db0107-f390-4324-9c36-e60976edf9eb
 author: aczechowski
 ms.author: aaroncz
@@ -103,8 +103,8 @@ public void RemoveAction(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|The task sequence containing the action to be deleted.|  
+|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](/windows/win32/wmisdk/swbemobject)|The task sequence containing the action to be deleted.|  
 |`actionName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the action to be deleted. This can be obtained from the `SMS_TaskSequenceAction.Name` property.|  
 
 ## Compiling the Code  

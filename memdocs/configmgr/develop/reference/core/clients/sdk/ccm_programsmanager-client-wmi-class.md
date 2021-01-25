@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e31c3acb-6d31-43c9-a760-06d59c49e5b3
 author: aczechowski
 ms.author: aaroncz
@@ -26,9 +26,8 @@ class CCM_ProgramsManager();
 ## Methods  
  The following table shows the methods in the `CCM_ProgamsManager` class.  
 
-|||  
+|Method|Description|  
 |-|-|  
-|**Method**|**Description**|  
 |[CancelDownload Method in Class CCM_ProgramsManager](../../../../../develop/reference/core/clients/sdk/canceldownload-method-in-class-ccm_programsmanager.md)|Cancels jobs that are downloading content that is required for legacy software distribution programs.|  
 |[ExecuteProgram Method in Class CCM_ProgramsManager](../../../../../develop/reference/core/clients/sdk/executeprogram-method-in-class-ccm_programsmanager.md)|Manages the download of a legacy software distribution program.|  
 |[ExecutePrograms Method in Class CCM_ProgramsManager](../../../../../develop/reference/core/clients/sdk/executeprograms-method-in-class-ccm_programsmanager.md)|Manages the download of a group of legacy software distribution programs.|  

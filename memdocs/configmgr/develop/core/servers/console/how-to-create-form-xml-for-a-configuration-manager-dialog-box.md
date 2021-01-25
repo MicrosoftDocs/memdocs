@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 811546e7-ae62-4b2a-af78-29293d81f182
 author: aczechowski
 ms.author: aaroncz
@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Create Form XML for a Configuration Manager Dialog Box
-In Configuration Manager, to create the form XML for a Configuration Manager dialog box, you create an XML file that describes a [SmsFormData](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smsformdata.aspx).  
+In Configuration Manager, to create the form XML for a Configuration Manager dialog box, you create an XML file that describes a [SmsFormData](/previous-versions/system-center/developer/cc147304(v=msdn.10)).  
 
  The form XML is similar to the property sheet form XML with the following exceptions:  
 

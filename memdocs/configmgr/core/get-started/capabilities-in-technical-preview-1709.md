@@ -109,22 +109,22 @@ After you enable co-management, Configuration Manager continues to manage all wo
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access.
 
 #### Windows Update for Business policies
-Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### Remote actions available in Intune on Azure for co-managed devices
 When a Windows 10 device is enabled for co-management, you have the following remote actions available to you from Intune on Azure:  
-- [Factory reset](https://docs.microsoft.com/intune/devices-wipe#wipe)
-- [Selective wipe](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [Delete devices](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [Restart device](https://docs.microsoft.com/intune/device-restart)
-- [Fresh start](https://docs.microsoft.com/intune/device-fresh-start)
+- [Factory reset](/intune/devices-wipe#wipe)
+- [Selective wipe](/intune/apps-selective-wipe)
+- [Delete devices](/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [Restart device](/intune/device-restart)
+- [Fresh start](/intune/device-fresh-start)
 
 ### Prepare Intune for co-management
 Before you switch workloads from Configuration Manager to Intune, create the profiles and policies you need in Intune to ensure your devices continue to be protected.
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
-<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
-- [Windows Update for Business policies](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-- [Device configuration profiles](https://docs.microsoft.com/intune/device-profile-create)  
+<!-- - [Device compliance policies](/intune/compliance-policy-create-windows)  -->
+- [Windows Update for Business policies](/intune/windows-update-for-business-configure)  
+- [Device configuration profiles](/intune/device-profile-create)  
 
 ### Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.
@@ -181,17 +181,17 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 
 #### New Windows 10 devices
 For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience, which includes joining the device to AD and Azure AD, as well as enrolling the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.  
-1. Enable AutoPilot for the new Windows 10 devices. For details, see [Overview of Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
-2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).
-3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
+1. Enable AutoPilot for the new Windows 10 devices. For details, see [Overview of Windows AutoPilot](/windows/deployment/windows-10-auto-pilot).  
+2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).
+3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### Windows 10 devices not enrolled in Intune or a Configuration Manager client
 For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
-1. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
-2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+1. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).  
+2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### Windows 10 devices enrolled in Intune
-For Windows 10 devices that are already enrolled in Intune, create an app in Intune to deploy the Configuration Manager client. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+For Windows 10 devices that are already enrolled in Intune, create an app in Intune to deploy the Configuration Manager client. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### Switch Configuration Manager workloads to Intune
 In the previous section, you prepared Windows 10 devices for co-management. These devices are now joined to AD and Azure AD, and they are enrolled in Intune and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
@@ -215,4 +215,4 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
 ## See also
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md). 
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).

@@ -26,7 +26,7 @@ Existing WMI and PowerShell cmdlets are still supported and will continue to wor
 
 ### What if an existing WMI class or method doesn't work over the administration service?
 
-If you find an existing WMI class or method that doesn't GET or PUT as expected, send a frown to inform the engineering team. For more information, see [Find help for Configuration Manager](../../core/understand/find-help.md#send-a-smile-or-send-a-frown).
+If you find an existing WMI class or method that doesn't GET or PUT as expected, send a frown to inform the engineering team. For more information, see [Product feedback](../../core/understand/product-feedback.md).
 
 ### Are Swagger definitions available?
 
@@ -36,7 +36,7 @@ No, the administration service currently doesn't publish an [OpenAPI (Swagger) d
 
 ### Can I use the administration service with internet-based client management?
 
-No, internet-based client management (IBCM) doesn't support exposing the SMS Provider role to the internet. For internet access to the administration service, you need a cloud management gateway. For more information, see [Enable internet access](set-up.md#bkmk_cmg).
+No, internet-based client management (IBCM) doesn't support exposing the SMS Provider role to the internet. For internet access to the administration service, you need a cloud management gateway. For more information, see [Enable internet access](set-up.md#enable-internet-access).
 
 ### Isn't it too risky to open this API to the internet?
 
@@ -46,11 +46,11 @@ It depends upon your organization's risk level, and what controls you use or put
 
 - Control access to the web service with the certificate trust. If a device doesn't trust the certificate chain, a user on that device can't query the administration service.
 
-- Add additional security layers. For example, [Azure App Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- Add additional security layers. For example, [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
 
 ### Can I use it with conditional access?
 
-Yes, and that configuration is easiest if you use [Azure App Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+Yes, and that configuration is easiest if you use [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
 
 ## Miscellaneous
 

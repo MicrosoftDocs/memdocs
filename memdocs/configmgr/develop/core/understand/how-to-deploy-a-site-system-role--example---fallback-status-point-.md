@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4
 author: aczechowski
 ms.author: aaroncz
@@ -53,10 +53,9 @@ public void CreateRole(WqlConnectionManager connection, string computerName, str
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`computerName`|`String`|The name of the site server.|  
 |`siteCode`|`String`|The site code.|  
 |`domainName`|`String`|The fully qualified domain name of the site server.|  

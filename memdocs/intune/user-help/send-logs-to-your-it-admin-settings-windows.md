@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Send logs to your company support for Windows 10 devices | Microsoft Docs
+title: Send logs using the Settings app for Windows
 description: Enroll a Windows 10 1511 device into Intune
 keywords:
 author: lenewsad

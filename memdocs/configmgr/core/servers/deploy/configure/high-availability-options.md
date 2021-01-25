@@ -2,7 +2,7 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 11/29/2019
+ms.date: 12/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -75,15 +75,15 @@ Move the site's content library to a remote location that provides highly availa
 
 All software content in Configuration Manager requires a package source location on the network. Use centralized, highly available storage to host a common package source location for all content.
 
-### Use a SQL Server Always On availability group to host the site database
+### Use a SQL Server Always On solution for the site database
 
-Host the site database at primary sites and the central administration site on SQL Server Always On availability groups. For more information, see [SQL Server Always On for a highly available site database](sql-server-alwayson-for-a-highly-available-site-database.md).  
+Configuration Manager supports the following SQL Server Always On solutions for the site database:
 
-### Use a SQL Server cluster to host the site database
+- Host the site database at primary sites and the central administration site in an availability group. For more information, see [Prepare to use a SQL Server Always On availability group](sql-server-alwayson-for-a-highly-available-site-database.md).
 
-When you use a SQL Server cluster for the database at a central administration site or primary site, you use the fail-over support built into SQL Server.  
+- Use a failover cluster instance for the database at a central administration site or primary site. For more information, see [Use a SQL Server Always On failover cluster instance](use-a-sql-server-cluster-for-the-site-database.md).
 
-Secondary sites can't use a SQL Server cluster, and don't support backup or restoration of their site database. Recover a secondary site by reinstalling the secondary site from its parent primary site.  
+Secondary sites can't use SQL Server Always On, and don't support backup or restoration of their site database. Recover a secondary site by reinstalling the secondary site from its parent primary site.
 
 ### Deploy a hierarchy of sites with a central administration site, and one or more child primary sites
 
@@ -122,7 +122,7 @@ At each site, you deploy site system roles to provide the services that you want
 
 To provide redundancy for reporting on sites and clients, install multiple instances of the reporting services point.
 
-For failover support with the software update point, use Windows PowerShell to install this role on a Windows network load balancing (NLB) cluster.  
+Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features). To provide redundancy for software update points, use software update point switching. This allows clients to connect to a new software update point server if one fails or becomes unavailable. For more information, see [Sofware update point switching](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching)  
 
 ### Built-in site backup
 
@@ -290,4 +290,4 @@ While this site system role is critical for keeping Configuration Manager curren
 
 - [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md)  
 
-- [Site failure impacts](../../manage/site-failure-impacts.md)  
+- [Site failure impacts](../../manage/site-failure-impacts.md)

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7f338a23-33c5-44c0-adc2-a8d44ceaa179
 author: aczechowski
 ms.author: aaroncz
@@ -100,8 +100,8 @@ Class SMS_Processor
 
  Processor architecture used by the platform. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Architecture |
+| ----- | ------------ |
 |0 (0x0)|x86|  
 |1 (0x1)|MIPS|  
 |2 (0x2)|Alpha|  
@@ -118,8 +118,8 @@ Class SMS_Processor
 
  Availability and status of the device. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Availability and status |
+| ----- | ----------------------- |
 |1 (0x1)|Other|  
 |2 (0x2)|Unknown|  
 |3 (0x3)|Running or Full Power|  
@@ -165,8 +165,8 @@ Class SMS_Processor
 
  Windows API Configuration Manager error code. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Configuration Manager error code |
+| ----- | -------------------------------- |
 |0 (0x0)|Device is working properly.|  
 |1 (0x1)|Device is not configured correctly.|  
 |2 (0x2)|Windows cannot load the driver for this device.|  
@@ -236,8 +236,8 @@ Class SMS_Processor
 
  Current status of the processor. Possible values are listed below. Status changes indicate processor usage, but not the physical condition of the processor.  
 
-|||  
-|-|-|  
+| Value | CPU status |
+| ----- | ---------- |
 |0 (0x0)|Unknown|  
 |1 (0x1)|CPU Enabled|  
 |2 (0x2)|CPU Disabled by User via BIOS Setup|  
@@ -339,8 +339,8 @@ Class SMS_Processor
 
  Processor family type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Family type |
+| ----- | ----------- |
 |1 (0x1)|Other|  
 |2 (0x2)|Unknown|  
 |3 (0x3)|8086|  
@@ -621,8 +621,8 @@ Class SMS_Processor
 
  Specific power-related capabilities of a logical device. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Power-related capabilities |
+| ----- | -------------------------- |
 |0 (0x0)|Unknown|  
 |1 (0x1)|Not Supported|  
 |2 (0x2)|Disabled|  
@@ -659,8 +659,8 @@ Class SMS_Processor
 
  Primary function of the processor. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Processor type |
+| ----- | -------------- |
 |1 (0x1)|Other|  
 |2 (0x2)|Unknown|  
 |3 (0x3)|Central Processor|  
@@ -737,8 +737,8 @@ Class SMS_Processor
 
   State of the logical device. Possible values are listed below. If this property does not apply to the logical device, the property is set to "Not Applicable".  
 
-|||  
-|-|-|  
+| Value | Logical device status |
+| ----- | --------------------- |
 |1 (0x1)|Other|  
 |2 (0x2)|Unknown|  
 |3 (0x3)|Enabled|  
@@ -781,8 +781,8 @@ Class SMS_Processor
 
  CPU socket information, including the method by which the processor can be upgraded, if upgrades are supported. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Upgrade method |
+| ----- | -------------- |
 |1 (0x1)|Other|  
 |2 (0x2)|Unknown|  
 |3 (0x3)|Daughter Board|  
@@ -820,8 +820,8 @@ Class SMS_Processor
 
  Voltage capabilities of the processor. Possible values are listed below. If the property is set to `null`, the voltage capabilities are unknown.  
 
-|||  
-|-|-|  
+| Value | Voltage capabilities |
+| ----- | -------------------- |
 |1 (0x1)|5 volts|  
 |2 (0x2)|3.3 volts|  
 |4 (0x4)|2.9 volts|  

@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 05/01/2020
+ms.date: 12/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -26,7 +26,10 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|
 |-----------|---|--------------|
-| Desktop Analytics option to **View recent data** for device enrollment and security updates.<!-- 7080949 --> For more information, see [Data latency](../../../../desktop-analytics/troubleshooting.md#data-latency).|May 2020|July 2020|
+| Desktop Analytics tile and page for **Security Updates**<!-- 8099536 --> | December 2020 | March 2021 |
+| The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->, which is integrated in version 2010. The standalone tool is still available with the [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).| November 2020 | The first release after March 1, 2021 |
+| [Log Analytics connector for Azure Monitor.](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 --> This feature is called the *OMS Connector* in the Azure Services node. | November 2020 | The first release after July 1, 2021 |
+|The geographical view in the **Site Hierarchy** node of the **Monitoring** workspace in the Configuration Manager console.<!--8116777-->|August 2020|TBD|
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 
@@ -40,6 +43,7 @@ The following features are no longer supported. In some cases, they're no longer
 
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
+| Desktop Analytics option to **View recent data** for device enrollment and security updates.<!-- 7080949 --> For more information, see [Data latency](../../../../desktop-analytics/troubleshooting.md#data-latency).|May 2020|July 2020|
 | Windows Analytics and Upgrade Readiness integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
 | Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).| July 3, 2019 | Version 1910 |
 | The Configuration Manager Company Portal app | May 21, 2019 | Version 1910 |
@@ -75,7 +79,7 @@ With Configuration Manager, native support for AMT-based computers from within t
 
 Configuration Manager has removed support for Network Access Protection. The feature has been deprecated in Windows Server 2012 R2, and is removed from Windows 10.  
 
-For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
+For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
 
 ## See also
 

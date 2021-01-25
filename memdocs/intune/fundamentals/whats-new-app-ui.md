@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: UI updates for Intune end-user apps
+title: UI updates for Intune end-user apps | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Find out what has changed in UI for apps that work on end-user devices with Microsoft Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020 
+ms.date: 11/11/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -21,22 +21,64 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 #ROBOTS:
 #audience:
 
-ms.reviewer: priyar
+ms.reviewer: esalter
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
-# UI updates for Intune end-user apps
+# UI updates for Intune end-user apps  
 
 Learn about the most recent updates to the Microsoft Intune apps. We regularly add to and improve the Intune Company Portal app and website. If you're an Intune administrator or support person, this article provides the information you need to:
 
 * Alert students and employees to app and enrollment changes.
 * Update your organization's documentation or helpdesk procedures.  
 
-If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
+If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
 
+## Week of November 9, 2020  
+
+### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->  
+
+We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. After the work profile setup flow, users see a new informational screen explaining where to find work apps, with links to help documentation.   
+
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal **Your new work setup** screen.](./media/whats-new-app-ui/new-work-profile-company-portal-2011.png)  
+
+When a user accidentally re-enables the Company Portal app in the personal profile, they'll see a screen (formerly **Your device now has a profile just for work**) that guides them to their work apps, with links to help documentation.   
+
+|Updated|Previous|   
+|---|---|   
+|<img alt="Screenshot of Company Portal **Find your work apps** screen." src="./media/whats-new-app-ui/find-work-apps-cp-2011.png" width="300"> |<img alt="Example image of previous Company Portal work profile screen before." src="./media/whats-new-app-ui/intune-company-portal-after-work-profile-2009.png" width="300">|  
+
+When they swipe right, they'll learn how to get more work apps from the Google Play Store.  `
+
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal **Get more apps for work** screen.](./media/whats-new-app-ui/get-more-apps-cp-2011.png)  
+
+Finally, on the **Help** page > **Frequently Asked Questions** section, there's a new link to a Microsoft Docs article about how to find work profile apps.  
+
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal Help screen highlighting the new FAQ doc link.](./media/whats-new-app-ui/company-portal-work-profile-link.png)  
+
+## Week of September 28, 2020  
+
+### Improved work profile messaging in Company Portal for Android  
+The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users will see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They may also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).  
+
+|Updated|Previous|   
+|---|---|   
+|![Example image of updated Company Portal work profile screen.](./media/whats-new-app-ui/intune-company-portal-after-work-profile-2009.png)|![Example image of previous Company Portal work profile screen.](./media/whats-new-app-ui/intune-company-portal-before-work-profile-2009.png)| 
+
+
+## Week of August 10, 2020
+
+### Improvement to Update device settings page in Company Portal app for Android to shows descriptions<!-- 7414768 -->
+
+In the Company Portal app on Android devices, the **Update device settings** page lists the settings that need updated to be compliant. Users expand the issue to see more information, and see the **Resolve** button.
+
+This user experience is improved. The listed settings are expanded by default to show the description, and show the **Resolve** button, when applicable. Previously, the issues were collapsed by default. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
 
 ## Week of June 8, 2020 
 
@@ -189,7 +231,7 @@ The Company Portal for iOS enrollment screens and steps have been updated to ali
 * Open the Settings app to install the management profile on their device.  
 * Return to the Company Portal app to complete enrollment.  
 
-For updated enrollment steps and screens, see [Enroll iOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
+For updated enrollment steps and screens, see [Enroll iOS device in Intune](../user-help/enroll-your-device-in-intune-ios.md).  
 
 ### User experience update for the Company Portal app for iOS <!-- 2536024 -->
 The home page of the Company Portal app for iOS devices has been redesigned. With this change, the home page will better follow iOS UI patterns, and also provide improved discoverability for apps and ebooks.  
@@ -213,7 +255,7 @@ As the Microsoft Intune admin, you can upload a custom brand image which will be
 ## Week of August 27, 2018  
 
 ### New user experience update for the Company Portal website <!--2000968 -->  
-We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) has been updated to reflect these changes.   
+We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](../user-help/using-the-intune-company-portal-website.md) has been updated to reflect these changes.   
 
 Updates you'll see include:  
 
@@ -253,7 +295,7 @@ Example screenshot showing the Details view:
 
 ## Week of April 23, 2018
 ### Updated navigation view in the Company Portal app for Windows 10 <!-- 1195010 -->
-The Intune Company Portal app for Windows 10 has been updated with the [Fluent Design System's navigation view](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Along the side of the app, you'll notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This is the first of several updates you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune. 
+The Intune Company Portal app for Windows 10 has been updated with the [Fluent Design System's navigation view](/windows/uwp/design/basics/navigation-basics). Along the side of the app, you'll notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This is the first of several updates you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune. 
 
 ![Screenshot of the Company Portal app dashboard showing the Fluent Design navigation view](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 
@@ -271,17 +313,17 @@ You'll also see:
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/cp_iosRedesign_before_1803_01.png)|![01](./media/whats-new-app-ui/cp_iosRedesign_after_1803_01.png)|
-|*Combined with previous step*|![02](./media/whats-new-app-ui/cp_iosRedesign_after_1803_02.png)|
-|![03](./media/whats-new-app-ui/cp_iosRedesign_before_1803_02.png)|![03](./media/whats-new-app-ui/cp_iosRedesign_after_1803_03.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Apps and My Devices.](./media/whats-new-app-ui/cp_iosRedesign_before_1803_01.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, Apps.](./media/whats-new-app-ui/cp_iosRedesign_after_1803_01.png)|
+|*Combined with previous step*|![Screenshot shows Company Portal app for i O S / i Pad O S after update, My Devices.](./media/whats-new-app-ui/cp_iosRedesign_after_1803_02.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Device Details.](./media/whats-new-app-ui/cp_iosRedesign_before_1803_02.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, Devices.](./media/whats-new-app-ui/cp_iosRedesign_after_1803_03.png)|
 
 ### Improvements to the language in the Company Portal app for Windows <!-- 1683758 -->
 We've improved the language in the Company Portal for Windows 10 to be more user-friendly and specific to your company.
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/windows_enroll_before_1803.png)|![01](./media/whats-new-app-ui/windows_enroll_after_1803.png)|
-|![02](./media/whats-new-app-ui/windows_view_policy_issues_before_1803.png)|![02](./media/whats-new-app-ui/windows_view_policy_issues_after_1803.png)
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, previous wording.](./media/whats-new-app-ui/windows_enroll_before_1803.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, new wording.](./media/whats-new-app-ui/windows_enroll_after_1803.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, previous wording for policy issues.](./media/whats-new-app-ui/windows_view_policy_issues_before_1803.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update new wording for policy issues.](./media/whats-new-app-ui/windows_view_policy_issues_after_1803.png)
 
 ## Week of March 12, 2018
 
@@ -291,13 +333,13 @@ We've updated the Company Portal app for Android to follow Android's [Material D
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/android_about_before_1803.png)|![01](./media/whats-new-app-ui/androidCP_about_after_1803.png)|
-|![02](./media/whats-new-app-ui/android_contact_it_before_1803.png)|![02](./media/whats-new-app-ui/android_contact_it_after_1803.png)|
-|![03](./media/whats-new-app-ui/android_devices_before_1803.png)|![03](./media/whats-new-app-ui/androidCP_devicelist_after_1803.png)|
-|![04](./media/whats-new-app-ui/android_device_details_before_1803.png)|![05](./media/whats-new-app-ui/androidCP_devicedetails_1_after1803.png)|
-|![05](./media/whats-new-app-ui/android_device_details_update_settings_before_1803.png)|![05](./media/whats-new-app-ui/androidCP_devicedetails_red_box_2_after1803.png)|
-|![06](./media/whats-new-app-ui/android_profile_before_1803.png)|![06](./media/whats-new-app-ui/android_profile_after_1803.png)|
-|![07](./media/whats-new-app-ui/androidCP_Setup01_before_1803.png)|![07](./media/whats-new-app-ui/androidCP_Setup01_after_1803.png)|
+|![Screenshot shows Company Portal app for Android, About screen.](./media/whats-new-app-ui/android_about_before_1803.png)|![Screenshot shows Company Portal app for Android, About screen, updated.](./media/whats-new-app-ui/androidCP_about_after_1803.png)|
+|![Screenshot shows Company Portal app for Android, CONTACT I D screen.](./media/whats-new-app-ui/android_contact_it_before_1803.png)|![Screenshot shows Company Portal app for Android, CONTACT I D screen, updated.](./media/whats-new-app-ui/android_contact_it_after_1803.png)|
+|![Screenshot shows Company Portal app for Android, DEVICES screen.](./media/whats-new-app-ui/android_devices_before_1803.png)|![Screenshot shows Company Portal app for Android, DEVICES screen, updated.](./media/whats-new-app-ui/androidCP_devicelist_after_1803.png)|
+|![Screenshot shows Company Portal app for Android, Device Details screen.](./media/whats-new-app-ui/android_device_details_before_1803.png)|![Screenshot shows Company Portal app for Android, Device Details screen, updated.](./media/whats-new-app-ui/androidCP_devicedetails_1_after1803.png)|
+|![Screenshot shows Company Portal app for Android, Device Details with update option.](./media/whats-new-app-ui/android_device_details_update_settings_before_1803.png)|![Screenshot shows Company Portal app for Android, Device Details with update option, updated.](./media/whats-new-app-ui/androidCP_devicedetails_red_box_2_after1803.png)|
+|![Screenshot shows Company Portal app for Android, My Profile screen.](./media/whats-new-app-ui/android_profile_before_1803.png)|![Screenshot shows Company Portal app for Android, My Profile screen, updated.](./media/whats-new-app-ui/android_profile_after_1803.png)|
+|![Screenshot shows Company Portal app for Android, Access Setup screen.](./media/whats-new-app-ui/androidCP_Setup01_before_1803.png)|![Screenshot shows Company Portal app for Android, Access Setup screen, updated.](./media/whats-new-app-ui/androidCP_Setup01_after_1803.png)|
 
 
 ## Week of November 27, 2017
@@ -319,13 +361,13 @@ We've improved the device setup workflow in the Company Portal app for iOS/iPadO
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/ios_cp_enroll_01_before_1711.png)|![01](./media/whats-new-app-ui/ios_cp_enroll_01_after_1711.png)|
-|![02](./media/whats-new-app-ui/ios_cp_enroll_02_before_1711.png)|*Combined with previous step*|
-|![03](./media/whats-new-app-ui/ios_cp_enroll_03_before_1711.png)|![03](./media/whats-new-app-ui/ios_cp_enroll_03_after_1711.png)|
-|![04](./media/whats-new-app-ui/ios_cp_enroll_04_before_1711.png)|![04](./media/whats-new-app-ui/ios_cp_enroll_04_after_1711.png)|
-|![05](./media/whats-new-app-ui/ios_cp_enroll_05_before_1711.png)|![05](./media/whats-new-app-ui/ios_cp_enroll_05_after_1711.png)|
-|![06](./media/whats-new-app-ui/ios_cp_enroll_06_before_1711.png)|![06](./media/whats-new-app-ui/ios_cp_enroll_06_after_1711.png)|
-|![07](./media/whats-new-app-ui/ios_cp_enroll_07_before_1711.png)|![07](./media/whats-new-app-ui/ios_cp_enroll_07_after_1711.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Company Access Setup screen.](./media/whats-new-app-ui/ios_cp_enroll_01_before_1711.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, Set up access screen.](./media/whats-new-app-ui/ios_cp_enroll_01_after_1711.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Why enroll your device screen.](./media/whats-new-app-ui/ios_cp_enroll_02_before_1711.png)|*Combined with previous step*|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, privacy information.](./media/whats-new-app-ui/ios_cp_enroll_03_before_1711.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, privacy information.](./media/whats-new-app-ui/ios_cp_enroll_03_after_1711.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, What comes next screen.](./media/whats-new-app-ui/ios_cp_enroll_04_before_1711.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, What's next screen.](./media/whats-new-app-ui/ios_cp_enroll_04_after_1711.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Checking compliance message.](./media/whats-new-app-ui/ios_cp_enroll_05_before_1711.png)|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Confirming device settings.](./media/whats-new-app-ui/ios_cp_enroll_05_after_1711.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Resolve Compliance Issues screen.](./media/whats-new-app-ui/ios_cp_enroll_06_before_1711.png)|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Update device settins screen.](./media/whats-new-app-ui/ios_cp_enroll_06_after_1711.png)|
+|![Screenshot shows Company Portal app for i O S / i Pad O S before update, Company Access Setup screen, completed.](./media/whats-new-app-ui/ios_cp_enroll_07_before_1711.png)|![Screenshot shows Company Portal app for i O S / i Pad O S before update, You're all set screen.](./media/whats-new-app-ui/ios_cp_enroll_07_after_1711.png)|
 
 
 ## Week of November 6, 2017
@@ -335,7 +377,7 @@ The Settings page in the Company Portal app for Windows 10 has been updated to m
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/w10-share-logs.png)|![02](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
+|![Screenshot shows Settings page in the Company Portal app for Windows 10 before update.](./media/whats-new-app-ui/w10-share-logs.png)|![Screenshot shows Settings page in the Company Portal app for Windows 10 after update.](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
 
 
 ### Search improvements to the Company Portal apps and website <!-- 1418189 -->
@@ -364,19 +406,19 @@ We've improved the device setup workflow in the Company Portal app for Android. 
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_1709_new.png)|
+|![Screenshot shows Company Portal app for Android before update, Company Access Setup screen.](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_1709_new.png)|
 |![01a](./media/whats-new-app-ui/android_cp_enroll_01_before_1710.png)| *Combined with previous step* |
-|![02](./media/whats-new-app-ui/android_cp_enroll_02_before_1710.png)|![02](./media/whats-new-app-ui/android_cp_enroll_02_after_1710.png)|
-|![03](./media/whats-new-app-ui/android_cp_enroll_03_before_1710.png)|![03](./media/whats-new-app-ui/android_cp_enroll_03_after_1710.png)|
+|![Screenshot shows Company Portal app for Android before update, privacy information.](./media/whats-new-app-ui/android_cp_enroll_02_before_1710.png)|![02](./media/whats-new-app-ui/android_cp_enroll_02_after_1710.png)|
+|![Screenshot shows Company Portal app for Android before update, What comes next screen.](./media/whats-new-app-ui/android_cp_enroll_03_before_1710.png)|![03](./media/whats-new-app-ui/android_cp_enroll_03_after_1710.png)|
 
 Additional steps have been improved on Android work profile devices.
 
 |Before|After|
 |---|---|
-|![04](./media/whats-new-app-ui/android_work_cp_enroll_01_before_1710.png)|![04](./media/whats-new-app-ui/android_work_cp_enroll_01_after_1710.png)|
+|![Screenshot shows Company Portal app for Android work profile devices before update, Company Access Setup screen.](./media/whats-new-app-ui/android_work_cp_enroll_01_before_1710.png)|![Screenshot shows Company Portal app for Android work profile devices after update, Access Setup screen.](./media/whats-new-app-ui/android_work_cp_enroll_01_after_1710.png)|
 |![05](./media/whats-new-app-ui/android_work_cp_enroll_02_before_1710.png)| *Combined with previous step* |
-|![06](./media/whats-new-app-ui/android_work_cp_enroll_03_before_1710.png)|![06](./media/whats-new-app-ui/android_work_cp_enroll_03_after_1710.png)|
-|![07](./media/whats-new-app-ui/android_work_cp_enroll_04_before_1710.png)|![07](./media/whats-new-app-ui/android_work_cp_enroll_04_after_1710.png)|
+|![Screenshot shows Company Portal app for Android work profile devices before update, What comes next screen.](./media/whats-new-app-ui/android_work_cp_enroll_03_before_1710.png)|![Screenshot shows Company Portal app for Android work profile devices after update, What's next screen.](./media/whats-new-app-ui/android_work_cp_enroll_03_after_1710.png)|
+|![Screenshot shows Company Portal app for Android work profile devices before update, Company Access Setup completed screen.](./media/whats-new-app-ui/android_work_cp_enroll_04_before_1710.png)|![Screenshot shows Company Portal app for Android work profile devices after update, You're all set screen.](./media/whats-new-app-ui/android_work_cp_enroll_04_after_1710.png)|
 |![08](./media/whats-new-app-ui/android_work_cp_enroll_05_before_1710.png)| *Combined with previous step* |
 
 
@@ -384,7 +426,7 @@ We've also updated the Conditional Access email activation screen.
 
 |Before|After|
 |---|---|
-|![06](./media/whats-new-app-ui/android_conditional_access_email_before_1710.png)|![06](./media/whats-new-app-ui/android_conditional_access_email_after_1710.png)
+|![Screenshot shows Company Portal app for Android before update, Conditional Access email activation screen.](./media/whats-new-app-ui/android_conditional_access_email_before_1710.png)|![Screenshot shows Company Portal app for Android after update, Conditional Access email activation screen.](./media/whats-new-app-ui/android_conditional_access_email_after_1710.png)
 
 ## Week of September 11, 2017
 
@@ -394,11 +436,11 @@ The enrollment process for the Company Portal app for Android has been simplifie
 
 |Before|After|
 |---|---|
-|![01](./media/whats-new-app-ui/android_cp_enroll_01_before_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|
-|![02](./media/whats-new-app-ui/android_cp_enroll_02_before_1709.png)|![02](./media/whats-new-app-ui/android_cp_enroll_02_post_1709.png)|
-|![03](./media/whats-new-app-ui/android_cp_enroll_03_before_1709.png)|![03](./media/whats-new-app-ui/android_cp_enroll_03_post_1709.png)|
-|![04](./media/whats-new-app-ui/android_cp_enroll_04_before_1709.png)|![04](./media/whats-new-app-ui/android_cp_enroll_04_post_1709.png)|
-|![05](./media/whats-new-app-ui/android_cp_enroll_05_before_1709.png)|![05](./media/whats-new-app-ui/android_cp_enroll_05_post_1709.png)|
+|![Screenshot shows Company Portal app for Android text before update, Company Access Setup screen.](./media/whats-new-app-ui/android_cp_enroll_01_before_1709.png)|![Screenshot shows Company Portal app for Android text after update, Company Access Setup screen.](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|
+|![Screenshot shows Company Portal app for Android text before update, Why enroll your device screen.](./media/whats-new-app-ui/android_cp_enroll_02_before_1709.png)|![Screenshot shows Company Portal app for Android text after update, Benefits of device management screen.](./media/whats-new-app-ui/android_cp_enroll_02_post_1709.png)|
+|![Screenshot shows Company Portal app for Android text before update, Resolve Compliance Issues screen.](./media/whats-new-app-ui/android_cp_enroll_03_before_1709.png)|![Screenshot shows Company Portal app for Android text after update, Update device settings screen.](./media/whats-new-app-ui/android_cp_enroll_03_post_1709.png)|
+|![Screenshot shows Company Portal app for Android text before update, Device Details screen.](./media/whats-new-app-ui/android_cp_enroll_04_before_1709.png)|![Screenshot shows Company Portal app for Android text after update, Device Details screen.](./media/whats-new-app-ui/android_cp_enroll_04_post_1709.png)|
+|![Screenshot shows Company Portal app for Android text before update, Company Access Setup screen with Work Profile Setup.](./media/whats-new-app-ui/android_cp_enroll_05_before_1709.png)|![Screenshot shows Company Portal app for Android text after update, Company Access Setup screen with Work Profile Setup.](./media/whats-new-app-ui/android_cp_enroll_05_post_1709.png)|
 
 
 ## August 2017

@@ -53,11 +53,11 @@
           href: windows-store-for-business.md
         - name: Managed Google Play apps
           href: apps-add-android-for-work.md
-      - name: Office 365 Suite
+      - name: Microsoft 365 Suite
         items:
-        - name: Office 365 apps for Windows 10
+        - name: Microsoft 365 apps for Windows 10
           href: apps-add-office365.md
-        - name: Office 365 apps for macOS
+        - name: Microsoft 365 apps for macOS
           href: apps-add-office365-macos.md
       - name: Android Enterprise system apps
         href: apps-ae-system.md
@@ -79,17 +79,27 @@
         - name: Sideload Windows LOB apps
           href: app-sideload-windows.md
         - name: macOS LOB apps
-          href: lob-apps-macos.md     
+          href: lob-apps-macos.md
         - name: Win32 app management
-          href: apps-win32-app-management.md
-        - name: Win32 app S mode devices
-          href: apps-win32-s-mode.md
+          items:
+          - name: Win32 app management overview
+            href: apps-win32-app-management.md
+          - name: Prepare a Win32 app
+            href: apps-win32-prepare.md
+          - name: Add a Win32 app
+            href: apps-win32-add.md
+          - name: Troubleshoot a Win32 app
+            href: apps-win32-troubleshoot.md
+          - name: Win32 app S mode devices
+            href: apps-win32-s-mode.md
       - name: Add specific apps
         items:
         - name: Company Portal app - Autopilot
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
           href: store-apps-company-portal-app.md
+        - name: Company Portal app - macOS
+          href: apps-company-portal-macos.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
@@ -147,7 +157,7 @@
           href: manage-microsoft-teams.md
         - name: Configure Google Chrome for Android
           href: apps-configure-chrome-android.md
-        - name: Configure a VPN for Android Enterprise
+        - name: VPN and per-app VPN on Android Enterprise
           href: app-configuration-vpn-ae.md          
       - name: Volume-purchased apps and books
         items:
@@ -199,21 +209,23 @@
         - name: Manage data transfer between iOS apps
           href: data-transfer-between-apps-manage-ios.md
       - name: Review app protection logs
-        href: app-protection-policy-settings-log.md          
+        href: app-protection-policy-settings-log.md
+    - name: Policies for Office apps
+      href: app-office-policies.md        
     - name: Troubleshoot
       items:
       - name: Help users troubleshoot problems
         href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
-        href: troubleshoot-app-install.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-install
       - name: App installation error reference
-        href: app-install-error-codes.md
+        href: /troubleshoot/mem/intune/app-install-error-codes
       - name: Troubleshoot mobile application management
-        href: troubleshoot-mam.md
+        href: /troubleshoot/mem/intune/troubleshoot-mam
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
       - name: Troubleshooting app protection policy deployment
-        href: troubleshoot-app-protection-policy-deployment.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK

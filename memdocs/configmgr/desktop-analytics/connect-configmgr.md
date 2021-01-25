@@ -68,6 +68,9 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
+    > [!TIP]
+    > Take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service. 
+
     Select **Sign in** . After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
     > [!NOTE]
@@ -79,8 +82,11 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Commercial ID**: this value should automatically populate with your organization's ID. If it doesn't, make sure your proxy server is configured to allow all required [endpoints](enable-data-sharing.md#endpoints) before continuing. Alternatively, retrieve your Commercial ID manually from the [Desktop Analytics portal](monitor-connection-health.md#bkmk_ViewCommercialID).
 
-    - **Windows 10 diagnostic data level**: select at least **Basic**. See [Diagnostic data levels](enable-data-sharing.md#diagnostic-data-levels)
-  
+    - **Windows 10 diagnostic data level**: select at least **Required**. For more information, see [Diagnostic data levels](enable-data-sharing.md#diagnostic-data-levels).
+
+        > [!TIP]
+        > In Configuration Manager version 2002 and earlier, this value was called **Basic**.<!-- 7363467 -->
+
     - **Allow Device Name in diagnostic data**: select **Enable**
 
         > [!NOTE]

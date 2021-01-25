@@ -1,10 +1,10 @@
 ---
-title: "FindResourceSite Method"
+title: FindResourceSite method in class SMS_Query
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 27d9cf32-728f-4834-97f3-4c9f28268fba
 author: aczechowski
 ms.author: aaroncz

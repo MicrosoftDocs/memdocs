@@ -27,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/1903/1234567.md)] -->
 
-[!INCLUDE [Office 365 ProPlus upgrade readiness dashboard](includes/1904/4021125.md)]
+[!INCLUDE [Microsoft 365 Apps for enterprise upgrade readiness dashboard](includes/1904/4021125.md)]
 
 [!INCLUDE [Configure dynamic update during feature updates](includes/1904/4062619.md)]
 

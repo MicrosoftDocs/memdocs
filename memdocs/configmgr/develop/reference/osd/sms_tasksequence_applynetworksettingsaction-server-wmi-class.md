@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 58711e92-36da-48f3-affe-9d095a45b1cc
 author: aczechowski
 ms.author: aaroncz
@@ -179,8 +179,8 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
  The type of network join supported by the target computer. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Network join type |  
+| ----- | ----------------- |  
 |0|Domain|  
 |1|Workgroup|  
 

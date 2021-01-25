@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7fc4e08d-bccf-4616-a789-71070d3c6f7b
 author: aczechowski
 ms.author: aaroncz
@@ -16,19 +16,19 @@ manager: dougeby
 To write to the Configuration Manager site control file by using the managed SMS Provider, you get the site definition file by querying for the required resource or component. You then update the embedded property, embedded property list, or multi-string list as required.  
 
 > [!NOTE]
->  You can also use connection manager [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) to get the required resource or component.  
+>  You can also use connection manager [GetInstance](/previous-versions/system-center/developer/cc146190(v=msdn.10)) to get the required resource or component.  
 
- The managed Configuration Manager manages the connection session to the site control file automatically for you. Therefore you treat the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects returned from the query in the same way as you treat [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects retrieved from the SMS Provider.  
+ The managed Configuration Manager manages the connection session to the site control file automatically for you. Therefore you treat the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) objects returned from the query in the same way as you treat [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) objects retrieved from the SMS Provider.  
 
 ### To read and write to the site control file  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
-2.  Use the Connection Manager **QueryProcessor** object *ExecQuery* or *GetInstance* method to get the required site control file resource or component [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object.  
+2.  Use the Connection Manager **QueryProcessor** object *ExecQuery* or *GetInstance* method to get the required site control file resource or component [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object.  
 
-3.  Using the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) update the site control file.  
+3.  Using the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) update the site control file.  
 
-4.  Use the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object [Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method to commit the changes.  
+4.  Use the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object [Put](/previous-versions/system-center/developer/cc146500(v=msdn.10)) method to commit the changes.  
 
 ## Example  
  The following C# example accesses the client agent component of the site control file and creates a dummy property, property list and multi-string list. It then removes the updates that were made. The example demonstrates how to query the site control file, make updates, and commit changes to the site control file.  
@@ -216,7 +216,7 @@ public void ReadWriteSCF(WqlConnectionManager connection,string siteCode)
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## See Also  
  [SMS Provider fundamentals](sms-provider-fundamentals.md)

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Intune operated by 21Vianet only supports standalone deployments. Support for co-management with System Center Configuration Manager is currently in development.
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
 - The tenant attach feature (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
+- Derived Credentials are not supported with Intune operated by 21Vianet.
 - Intune operated by 21Vianet doesn't support the Intune agent and so doesn't support legacy PC management.
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
@@ -51,20 +52,20 @@ Because the China services are operated by a partner from inside China, there ar
   - Google Play Protect capabilities such as SafetyNet device attestation.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
-- Mobile Application Management (MAM) availability is conditional on those apps being available in mainland China.
+- Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
 
 ## You control customer data
 
-In Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you have full control of your data:
+In Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you have full control of your data:
 - You know where customer data is located.
 - You control access to your customer data.
 - You control your customer data if you leave the service.
 - You have options to control the security of your customer data.
 
-With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you’re the owner of your data:
+With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you’re the owner of your data:
 - 21Vianet doesn’t use customer data for advertising.
 - You control who has access to your customer data.
 - We use logical isolation to segregate each customer’s data.
@@ -75,8 +76,8 @@ With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you
 
 The Tenant Administrator role for Intune operated by 21Vianet can request data for data subjects in the following ways:
 
-- Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services. For more information, see [Azure Data Subject Requests - Delete](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export. For more information, see [Azure Data Subject Requests - Export](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services. For more information, see [Azure Data Subject Requests - Delete](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export. For more information, see [Azure Data Subject Requests - Export](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## Next steps
 

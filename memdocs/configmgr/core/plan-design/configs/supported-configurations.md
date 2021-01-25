@@ -41,7 +41,7 @@ Learn about configurations that are required on a Windows Server to support diff
 Learn about which operating systems you can use as a site server or site system server.
 
 -  [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)  
-Learn about which operating systems you can manage with Configuration Manager, including Windows, Windows Embedded, Linux and UNIX, Mac, and mobile devices.
+Learn about which operating systems you can manage with Configuration Manager, including Windows, Windows Embedded, macOS, and mobile devices.
 
 -  [Supported operating systems for the console](../../../core/plan-design/configs/supported-operating-systems-consoles.md)  
 Learn about which operating systems can host the Configuration Manager console to provide a point of access for managing your deployment.  

@@ -1,7 +1,8 @@
 ---
 title: Application approval process
 titleSuffix: Configuration Manager
-ms.date: 04/15/2020
+description: Learn about the application approval process. See scenarios with code examples and view known issues.
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -64,6 +65,9 @@ The ApplicationID is the ModelName property of the SMS_Application instance. Thi
 - `Comments` - Comments for the approved request to be displayed in the Software Center. By default, it specifies an empty string.
 - `AutoInstall` - Install the application immediately after the request is approved. By default, this parameter is true.
 
+    > [!NOTE]
+    > In version 2006 and earlier, you could only call this method once for a specific app. Starting in version 2010, you can call this method more than once. If the **AutoInstall** parameter is `$true`, the client tries to install the app again.<!-- 7353824 -->
+
 The following code sample is a Windows PowerShell script that shows how to invoke the WMI method for a specific user, machine, and application:
 
 ```powershell
@@ -104,7 +108,7 @@ If the admin revokes the approval, or the application is no longer in use, unins
 
 The admin revokes the approval of the application using the Configuration Manager console, a PowerShell script, or WMI. Even if the application was already approved, the admin can use the Deny option. Revoking the approval prevents the user from installing the application on their device. The same action also causes uninstallation of the application on the user's device if the application was previously installed.
 
-Learn more about the [Deny-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/Deny-CMApprovalRequest) cmdlet.
+Learn more about the [Deny-CMApprovalRequest](/powershell/module/configurationmanager/Deny-CMApprovalRequest) cmdlet.
 
 ### Prerequisites to revoke app approvals
 
@@ -115,7 +119,7 @@ Learn more about the [Deny-CMApprovalRequest](https://docs.microsoft.com/powersh
 
  You can use the `CreateApprovedRequest` API to create a pre-approved request for a device with no user required. This action allows you to install and uninstall applications in real time.  Currently this functionality is only available in the SDK. For machine-based pre-approved requests to work, you must also enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
-Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
+Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
 
 ```powershell
 New-CMApplicationDeployment -CollectionName "All Systems" -Name "Test app" -DeployAction Install -DeployPurpose Available -ApprovalRequired $true -DistributionPointName 'DistributionPoint.domain.com" -DistributeContent
@@ -180,7 +184,7 @@ Administrators can configure email notifications for application approval reques
 
 1. The server with the SMS Provider role must have .NET version 4.5.2 or higher installed.
 1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
-1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Client Computer Communication** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
+1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Communication Security** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
 
    > [!NOTE]
    > This checkbox is per primary site but if the checkbox is enabled on **any** of the primary sites, then Configuration Manager-generated certificates will be used on all providers, including the CAS and other primary sites.
@@ -190,7 +194,7 @@ Administrators can configure email notifications for application approval reques
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration** -> **Sites**.
 1. Select the top-level site in your hierarchy and select **Configure Site Components** in the ribbon.
 1. Select **Email Notification** to open the **Properties** dialog.
-1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Office 365, you can use the [Office 365 SMTP server](https://docs.microsoft.com/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3#option-3-configure-a-connector-to-send-mail-using-office-365-smtp-relay).
+1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Microsoft 365, you can use the [Microsoft 365 SMTP server](/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
 1. Enter the FQDN or IP address of the SMTP server.
 1. Select to **Specify an account**, select **Set**, then select **New Account**.
 1. Provide a username and password for the new account and click **OK**.
@@ -207,7 +211,7 @@ Administrators can configure email notifications for application approval reques
 To approve application requests outside of the internal network, additional settings are required:
 
 1. Enable Allow Configuration Manager cloud management gateway traffic in **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider** > **Properties**.
-1. Configure the [Cloud Management Gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
+1. Configure the [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 1. Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 1. Configure the following settings for this native app (client app) in Azure AD. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
    - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.

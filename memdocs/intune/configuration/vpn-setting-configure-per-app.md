@@ -44,6 +44,9 @@ This article shows you how to create a per-app VPN profile, and assign this prof
 Some VPNs allow username and password authentication with per-app VPN. Meaning, users need to enter a username and password to connect to the VPN.
 
 > [!IMPORTANT]
+> There's a known issue in iOS 13 preventing per-app VPN profiles from connecting in user enrollment environments when certificate-based authentication is used. Apple plans to fix this in a future release of iOS.
+
+> [!IMPORTANT]
 > Per-app VPN is not supported for IKEv2 VPN profiles for iOS/iPadOS.
 
 ## Per-app VPN with Zscaler
@@ -101,7 +104,7 @@ The trusted root certificate profile allows the device to automatically trust th
 To configure and assign the client authentication certificate, see one of the following articles:
 
 - [Configure infrastructure to support SCEP with Intune](../protect/certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](../protect/certficates-pfx-configure.md)
+- [Configure and manage PKCS certificates with Intune](../protect/certificates-pfx-configure.md)
 
 Be sure to configure the certificate for client authentication. You can set client authentication directly in SCEP certificate profiles (**Extended key usage** list > **Client authentication**). For PKCS, set client authentication in the certificate template in the certificate authority (CA).
 

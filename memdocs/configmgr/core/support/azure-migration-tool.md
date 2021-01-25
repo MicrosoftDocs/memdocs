@@ -65,7 +65,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](/azure/role-based-access-control/role-assignments-portal).
 
 ## Run the tool
 
@@ -102,22 +102,22 @@ For more information about permissions and assigning roles, see [Manage access t
     |**Subnet**|Select the subnet to use. If you need to create a new subnet, use the [Azure portal](https://portal.azure.com).|
     |**Machine name**|Enter the name of the passive site server VM in Azure. It's the same name shown in the [Azure portal](https://portal.azure.com).|
     |**Local admin username**|Enter the name of the local administrative user that the Azure VM creates before it joins the domain.|
-    |**Local admin password**|The password of the local administrative user. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
+    |**Local admin password**|The password of the local administrative user. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
     |**Domain FQDN**|The fully qualified domain name for the Active Directory domain to join. By default, the tool gets this value from your current machine.|
     |**Domain username**|The name of the domain user allowed to join the domain. By default, the tool uses the name of the currently signed in user.|
-    |**Domain password**|The password of the domain user to join the domain. The tool verifies it after you select **Start**. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
+    |**Domain password**|The password of the domain user to join the domain. The tool verifies it after you select **Start**. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
     |**Domain DNS IP**|Used for joining the domain. By default, the tool uses the current DNS from your current machine.|
     |**Type**|Read only. It shows *Passive Site Server* as the type.|
 
     > [!IMPORTANT]
-    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in the [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in the [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](/windows-server/get-started/azure-hybrid-benefit).
 
 1. To start provisioning the Azure VM, select **Start**. To monitor the deployment status, switch to the **Deployments in Azure** tab in the tool. To get the latest status, select **Refresh deployment status**.
 
     > [!TIP]
     > You can also use the [Azure portal](https://portal.azure.com) to check the status, find errors, and determine potential fixes.
 
-1. When the deployment finishes, go to your SQL servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
+1. When the deployment finishes, go to your SQL Servers, and grant permissions for the new Azure VM. For more information, see [Site server high availability - Prerequisites](../servers/deploy/configure/site-server-high-availability.md#prerequisites).
 
 1. To add the Azure VM as a site server in passive mode, select **Add site server in passive mode**.
 
@@ -129,11 +129,11 @@ For more information about permissions and assigning roles, see [Manage access t
 
 ## Site database
 
-The tool doesn't currently have any tasks to migrate the database from on-premises to Azure. You can choose to move the database from an on-premises SQL server to an Azure SQL Server VM. The tool lists the following articles on the **Site Database** tab to help:
+The tool doesn't currently have any tasks to migrate the database from on-premises to Azure. You can choose to move the database from an on-premises SQL Server to an Azure SQL Server VM. The tool lists the following articles on the **Site Database** tab to help:
 
 - [Backup and restore the database](../servers/manage/backup-and-recovery.md)
-- [Configure SQL Always On and allow the data to replicate](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup)
-- [Migrate a SQL database to an Azure SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+- [Configure a SQL Server Always On availability group and allow the data to replicate](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup)
+- [Migrate a SQL Server database to an Azure SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
 
 ## Site system roles
 
