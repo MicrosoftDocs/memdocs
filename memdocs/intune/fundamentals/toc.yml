@@ -33,8 +33,6 @@
   items:
   - name: Walkthrough Intune in Microsoft Endpoint Manager
     href: tutorial-walkthrough-endpoint-manager.md 
-  - name: Walkthrough Intune in the Azure portal
-    href: tutorial-walkthrough-intune-portal.md     
 - name: Concepts
   items:
   - name: What is Intune for Education?
@@ -250,8 +248,8 @@
     - name: Legacy Intune PC software client
       href: intune-legacy-pc-client.md
     - name: Troubleshoot software updates
-      href: troubleshoot-software-updates-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
     - name: Endpoint protection common errors
-      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
   - name: Intune end-user documentation
     href: ../user-help/use-managed-devices-to-get-work-done.md

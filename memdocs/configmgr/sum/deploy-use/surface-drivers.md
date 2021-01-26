@@ -5,7 +5,7 @@ description: Configuration Manager synchronizes Surface driver updates for deplo
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 01/15/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -90,6 +90,7 @@ The following table contains the Surface models and versions of Windows 10 on wh
 |Surface Pro 4|Yes| Yes| Yes |Yes|Yes|Yes|Yes|
 |Surface Pro 6|N/A| Yes| Yes |Yes|Yes|Yes|Yes|
 |Surface Pro 7|N/A| N/A| N/A |Yes|Yes|Yes|Yes|
+|Surface Pro 7+ |N/A| N/A| N/A |N/A|N/A|N/A|Yes|
 |Surface Pro X|N/A| N/A| N/A |Yes|Yes|Yes|Yes|
 |Surface Pro X with SQ2 chip|N/A| N/A| N/A | N/A| N/A | Yes |Yes|
 |Surface Book|Yes| Yes| Yes |Yes|Yes|Yes|Yes|

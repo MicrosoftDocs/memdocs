@@ -132,8 +132,6 @@ Now that you've installed your token, you can create an enrollment profile for d
 
 8. On the **Setup Assistant** page, configure the following profile settings:
 
-    ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
-
     | Department settings | Description |
     |---|---|
     | <strong>Department Name</strong> | Appears when users tap <strong>About Configuration</strong> during activation. |
@@ -161,6 +159,7 @@ Now that you've installed your token, you can create an enrollment profile for d
     | <strong>Registration</strong> | Display the registration screen to the user. For macOS 10.9 and later. |
     | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
+    | <strong>Accessibility</strong> | Display the Accessibility screen to the user. If this screen is hidden, the user won't be able to automatically hear voice over. Voice over is only supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have the serial number appear in Apple School Manager or Apple Business Manager. |
     
 9. Select **Next** to go to the **Review + create** page.
 
@@ -177,6 +176,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 
    To comply with Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
    - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. After an Enrollment Program device is deleted from Intune portal without being unassigned from the Apple MDM server in the Apple portal, it won't be re-imported to Intune until the full sync is run.   
+    - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they are automatically deleted within 30-45 days. 
    - A sync is run automatically every 24 hours. You can also sync by clicking the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server.
 
 ## Assign an enrollment profile to devices

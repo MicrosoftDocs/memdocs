@@ -29,7 +29,7 @@ ms.custom:
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
-> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios. 
 

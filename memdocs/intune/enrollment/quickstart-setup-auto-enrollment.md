@@ -72,7 +72,7 @@ For this example, you'll use MDM enrollment so that both corporate and bring-you
 
 6. Select **Some** from the **MAM Users scope** to manage data on your workforce's devices.
 
-    ![Select the group to enroll](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
+    ![Select the MAM Users scope](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 
 7. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group. 
 8. Use the default values for the remaining configuration values.

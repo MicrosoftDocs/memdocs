@@ -150,6 +150,18 @@ To see a generated report of device state, you can use the following steps:
 
 For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
+## Co-management eligibility report (Organizational)
+
+The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+
+To see a generated report of device state, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Cloud attached devices** > **Reports** tab > **Co-management eligibility**.
+1. Click **Generate report** (or **Generate again**) to retrieve current data.
+
+For related information, see [What is co-management?](../../configmgr/comanage/overview.md).
+
 ## Antivirus agent status report (Organizational)
 
 The **Antivirus agent status** report provides the agent status of your organization's devices. 
@@ -239,6 +251,18 @@ Status details include:
 
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/intune-reports/firewall-status.png)
+
+## Co-managed workloads report (Organizational)
+
+The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+
+To see a generated report of device state, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Cloud attached devices** > **Reports** tab >  **Co-Managed Workloads**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
+For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
 
 ## Device compliance trend report (Historical)
 
