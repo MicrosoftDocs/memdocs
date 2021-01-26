@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -494,6 +494,28 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 
 ## Device Installation
 
+::: zone-end
+::: zone pivot="december-2020"
+
+- **Block hardware device installation by setup classes**:  
+  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclassess)
+
+  **Default**: Yes
+  
+  When *Yes* is selected, the following settings are available.
+
+  - **Remove matching hardware devices**:  
+    This setting is available only when *Block hardware device installation by setup classes* is set to *Yes*.
+
+    **Default**: Yes
+
+  - **Block list**
+    Manage a list of tup class globally unique identifiers that for device drivers that Windows is prevented from installing. 
+ 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+
 For more information, see [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) in the Windows documentation.
 
 - **Hardware device installation by device identifiers**:  
@@ -532,6 +554,8 @@ For more information, see [Policy CSP - DeviceInstallation](/windows/client-mana
 
     **Default**: *No default configuration*
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,december-2020"
 ## Device Lock
 
 For more information, see [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.
@@ -668,6 +692,8 @@ For more information, see [Policy CSP - Experience](/windows/client-management/m
 
     **Default**: Not configured
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 ## Exploit Guard
 
 For more information, see [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.
@@ -678,6 +704,8 @@ For more information, see [Policy CSP - ExploitGuard](/windows/client-management
 
   **Default**: *Sample xml is provided*
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,december-2020"
 ## File Explorer
 
 For more information, see [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) in the Windows documentation.  

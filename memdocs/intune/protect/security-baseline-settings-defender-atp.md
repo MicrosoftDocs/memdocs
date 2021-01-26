@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
