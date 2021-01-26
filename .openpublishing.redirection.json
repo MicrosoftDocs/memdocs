@@ -664,6 +664,11 @@
             "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
             "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/conditional-access-intune-reassign.md",
+            "redirect_url": "/mem/intune/protect/conditional-access.",
+            "redirect_document_id": false
         }
     ]
 }
