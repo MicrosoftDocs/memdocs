@@ -62,6 +62,9 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ### App management
 
+#### Application icon update for iOS, macOS, and web Company Portal<!-- 7113985 -->
+We have updated the app icon for the Company Portal for iOS, macOS, and web. This icon is also used by the Company Portal for Windows. End users will see the new icon in their device's application launcher and home screen, in Apple's App Store, and in experiences within the Company Portal apps.
+
 #### Android Enterprise system app support in personally-owned work profiles<!-- 5291507 -->
 You can now deploy Android Enterprise system apps to Android Enterprise personally-owned work profile devices. System apps are apps that do not appear in the Managed Google Play Store and often come pre-installed on the device. Once a system app is deployed, you will be unable to uninstall, hide, or otherwise remove the system app. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
 
