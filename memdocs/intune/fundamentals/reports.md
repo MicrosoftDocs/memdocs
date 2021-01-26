@@ -271,7 +271,7 @@ You can customize your own reports to get the data you want. The data in your re
 > [!NOTE]
 > Complex reporting functionality require an Azure subscription.
 
-An example specialist report would corelate device details and ownership data with platform enrollment data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Azure Active Directory portal.
+An example specialist report would corelate most device details and ownership data with platform enrollment data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Azure Active Directory portal.
 
 You can create and view custom reports using the following steps:
 
