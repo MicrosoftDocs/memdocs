@@ -57,8 +57,8 @@ Remove an enrolled device so that it's no longer managed by your organization. A
 
     ![Screenshot of Company Portal app, "Remove this device?" confirmation, highlighting the "OK" option.](./media/remove-device-from-company-portal-2101-03.png)  
 
-## Disable Company Portal device management 
-Another way to remove your device, is to disable the Company Portal app. When you're ready to enable the app again, you'll also need to re-enroll your device.    
+## Disable Company Portal app  
+Another way to remove your device from Intune is to disable the Company Portal app. This doesn't uninstall the app, but it does removes its device management capabilities so that it can't run on your device. If you decide to enable the app again later, you'll also need to re-enroll your device.    
 
 1. Sign in to Company Portal.  
 2. Tap the main menu.    
