@@ -496,7 +496,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     Select **Add**, and then specify the hardware device identifier you want to block.
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,december-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Hardware device installation by setup classes**  
   CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses)  
@@ -521,6 +521,27 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
     Select **Add**, and then specify the hardware device identifier you want to block.
 
+::: zone-end
+::: zone pivot="december-2020"
+
+- **Block hardware device installation by setup classes**:  
+  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.  
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclassess)
+
+  **Default**: Yes
+  
+  When *Yes* is selected, the following settings are available.
+
+  - **Remove matching hardware devices**:  
+    This setting is available only when *Block hardware device installation by setup classes* is set to *Yes*.
+
+    **Default**: Yes
+
+  - **Block list**
+    Manage a list of tup class globally unique identifiers that for device drivers that Windows is prevented from installing. 
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,december-2020"
 ## DMA Guard
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
