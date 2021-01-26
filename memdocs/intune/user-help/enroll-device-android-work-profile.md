@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Enroll Android work profile with Intune Company Portal | Microsoft Docs
+title: Enroll device and create Android work profile - Microsoft Intune | Microsoft Docs
 description: How create a work profile and enroll device with Intune Company Portal.
 keywords:
 author: lenewsad

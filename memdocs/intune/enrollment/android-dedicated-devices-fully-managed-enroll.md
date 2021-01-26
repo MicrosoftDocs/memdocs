@@ -57,7 +57,7 @@ For corporate-owned work profile (COPE) devices, the NFC enrollment method is on
 
 - For Android 6 and newer devices, you can use the token value, such as `12345`, to enroll the device.
 - Android 6.1 and newer versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
-- For corporate-owned work profile (COPE) devices, token entry through the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
 
 ### Steps
 
