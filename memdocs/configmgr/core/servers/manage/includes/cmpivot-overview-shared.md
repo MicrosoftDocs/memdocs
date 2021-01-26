@@ -82,7 +82,7 @@ Entities are objects that can be queried from the client. We currently support t
 |NetworkClient|Network Client|
 |NetworkLoginProfile|Network Login Profile|
 |NTEventlogFile|NT Eventlog File|
-|Office365ProPlusConfigurations|Office 365 ProPlus Configurations|
+|Office365ProPlusConfigurations|Office 365 Apps Configurations|
 |OfficeAddin|Office add-ins|
 |OfficeClientMetric|Office Client Metric|
 |OfficeDeviceSummary|Office Device Summary|

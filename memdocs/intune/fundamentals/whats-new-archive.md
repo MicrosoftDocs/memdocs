@@ -20,7 +20,7 @@ ms.assetid: 9ba01d60-4a03-4e3e-9aba-8be905c0054c
 ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 
-ms.reviewer:
+ms.reviewer: lebacon
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -5096,7 +5096,7 @@ For more information, see [How to add Microsoft 365 apps for Windows 10](../apps
 #### Support for offline apps from the Microsoft Store for Business<!-- 777044 -->
 Offline apps you purchased from the Microsoft Store for Business will now be synchronized to the Azure portal. You can then deploy these apps to device groups, or user groups. Offline apps are installed by Intune, and not by the store.
 
-#### Microsoft teams is now part of the App-based CA list of approved apps  <!-- 1257019 -->
+#### Microsoft Teams is now part of the App-based CA list of approved apps  <!-- 1257019 -->
 The Microsoft Teams app for iOS and Android is now part of approved apps for app-based Conditional Access policies for Exchange and SharePoint Online. The app can be configured through the Intune App Protection blade in the Azure portal to all tenants currently using app-based Conditional Access.
 
 #### Managed browser and app proxy integration<!-- 1287310 -->

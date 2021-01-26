@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2021
+ms.date: 01/25/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,13 +56,15 @@ Security baselines can help you to have an end-to-end secure workflow when worki
 
 The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
 
-- **MDM Security Baseline**
+- **MDM Security Baseline**  
+  - [MDM Security Baseline for December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
   - [MDM Security Baseline for August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
   - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
-- **Microsoft Defender for Endpoint baseline**
+- **Microsoft Defender for Endpoint baseline**  
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
+  - [Microsoft Defender for Endpoint baseline for December 2020 - version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
   - [Microsoft Defender for Endpoint baseline for August 2020 - version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
   - [Microsoft Defender for Endpoint baseline for April 2020 - version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Microsoft Defender for Endpoint baseline for March 2020 - version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
