@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: How to remove your Android device from Intune | Microsoft Docs
-description: Remove your Android device from Intune Company Portal.
+title: Remove device from Intune Company Portal for Android | Microsoft Docs
+description: Learn how to remove a device from Company Portal for Android and uninstall the Company Portal app.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -22,16 +22,16 @@ searchScope:
 ROBOTS:   
 #audience:
 
-ms.reviewer: arnab
+ms.reviewer: esalter
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Remove Android device from Intune 
+# Remove device from Company Portal for Android
 
-Remove an enrolled Android device so that it's no longer managed by your organization. After you remove the device:  
+Remove an enrolled device so that it's no longer managed by your organization. After you remove the device:  
 
 * The device loses access to your organization's internal apps and websites.  
 * The device no longer appears in Company Portal.
@@ -49,11 +49,11 @@ Remove an enrolled Android device so that it's no longer managed by your organiz
 
     ![Screenshot of Company Portal app, highlighting a device called "My Android".](./media/remove-device-from-company-portal-2101-01.png) 
 
-3. Select the menu > **Remove Device**. If using the Windows version of Company Portal, select **Actions** > **Remove**.  
+3. Select the menu > **Remove Device**.  
 
     ![Screenshot of Company Portal app, highlighting the menu button and "Remove Device" option.](./media/remove-device-from-company-portal-2101-02.png)  
 
-4. Select **OK** or **Remove**, (depending on the app you're using) to finish removing your device.  
+4. Select **OK** to finish removing your device.  
 
     ![Screenshot of Company Portal app, "Remove this device?" confirmation, highlighting the "OK" option.](./media/remove-device-from-company-portal-2101-03.png)  
 
