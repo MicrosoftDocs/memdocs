@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/19/2021
+ms.date: 01/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,28 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
+## Week of January 25, 2021
+
+### App management
+
+#### Application icon update for iOS, macOS, and web Company Portal<!-- 7113985 -->
+We have updated the app icon for the Company Portal for iOS, macOS, and web. This icon is also used by the Company Portal for Windows. End users will see the new icon in their device's application launcher and home screen, in Apple's App Store, and in experiences within the Company Portal apps.
+
+#### Android Enterprise system app support in personally-owned work profiles<!-- 5291507 -->
+You can now deploy Android Enterprise system apps to Android Enterprise personally-owned work profile devices. System apps are apps that do not appear in the Managed Google Play Store and often come pre-installed on the device. Once a system app is deployed, you will be unable to uninstall, hide, or otherwise remove the system app. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
+
+### Device configuration
+
+#### New version of the PFX Certificate Connector<!-- 9202990  -->
+
+We’ve released a new version of the PFX Certificate Connector, version **6.2009.2.0**. This new connector version:
+
+- Improves upgrade of the Connector to persist accounts that run Connector Services.
+
+For more information about certificate connectors, including a list of connector releases for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md).
+
+
+
 ## Week of January 18, 2021
 
 ### Device configuration
