@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/19/2021
+ms.date: 01/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,13 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
+## Week of January 25, 2021
+
+### App management
+
+#### Android Enterprise system app support in personally-owned work profiles<!-- 5291507 -->
+You can now deploy Android Enterprise system apps to Android Enterprise personally-owned work profile devices. System apps are apps that do not appear in the Managed Google Play Store and often come pre-installed on the device. Once a system app is deployed, you will be unable to uninstall, hide, or otherwise remove the system app. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
+
 ## Week of January 18, 2021
 
 ### Device configuration
