@@ -37,7 +37,7 @@ The reset passcode option might not appear for a corporate-enrolled device. In t
 
 Passcode reset can't be used on the following types of enrolled devices:
 
-* Personally-owned device with a work profie, running Android 7.0 and later  
+* Personally-owned device with a work profile, running Android 7.0 and later  
 * Android Enterprise dedicated device, running Android 7.0 and later  
 * Android device administrator device, running Android 7.0 and later  
 
