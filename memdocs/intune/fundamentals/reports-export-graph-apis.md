@@ -7,7 +7,7 @@ keywords:
 ms.author: erikre
 author: Erikre
 manager: dougeby
-ms.date: 12/11/2020
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,39 +40,6 @@ Microsoft Endpoint Manager will export reports based on the following Microsoft 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
-
-## Default columns verse specific columns
-
-When you use the Graph API to export Intune reports without selecting any columns for a report, you will receive the default column set. For example, you can request the default column set of the `Devices` report using the following HTTP request:
-
-```http
-{
-    "reportName": "Devices",
-    "filter": "", 
-    "select": "" 
-}
-```
-
-If you need specific columns that are not included in the default column set, such as `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`, you can explicitly retrieve these columns. 
-
-> [!NOTE]
-> If you have previously built automation around the default columns of the device export, and that automation uses columns that are no longer available as default columns, you need to refactor your processes to explicitly select these and any other relevant columns. 
-
-For example, you can explicitly select columns of the `Devices` report using the following HTTP request:
-
-```http
-{
-    "reportName": "Devices", 
-    "filter": "", 
-    "select": [
-        "PhoneNumberE164Format", 
-        "_ComputedComplianceState", 
-        "_OS", 
-        "OSDescription"
-    ]
-} 
-```
-
 ## Example devices report request and response
 
 When making the request, you must provide a `reportName` parameter as part of the request body based on the report that you would like to export. Below is an example of an export request for the **Devices** report. You must use the POST HTTP method on your request. The POST method is used to create a new resource or perform an action.
