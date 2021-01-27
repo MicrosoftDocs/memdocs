@@ -60,6 +60,11 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- ########################## -->
 ## Week of January 25, 2021
 
+### Monitor and troubleshoot
+
+#### Update when exporting Intune reports using the Graph API<!-- 8764428 -->
+When you use the `exportJobs` Graph API to export Intune reports without selecting any columns for the devices report, you will receive the default column set. To reduce confusion, we have removed columns from the default column set. The removed columns are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns are still available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+
 ### App management
 
 #### Application icon update for iOS, macOS, and web Company Portal<!-- 7113985 -->
