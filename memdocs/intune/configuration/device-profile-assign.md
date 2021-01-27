@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 01/27/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -127,11 +127,11 @@ When you assign your profiles, use the following table when including and exclud
 
   As a result, it's not recommended to assign profiles to mixed groups.
 
-- Use caution when excluding dynamic device groups from any policy assignment and consider the latency associated with Azure AD dynamic device group calculation.  
+- Use caution when excluding dynamic device groups from any policy assignment. Consider the latency associated with an Azure AD dynamic device group calculation.  
 
-  For example, you have a device policy that you assign to **All devices**. Later you have a requirement that new marketing devices do not receive this policy so you create a dynamic device group called **Marketing devices** based on the enrollmentProfilename property (device.enrollmentProfileName -eq "Marketing_devices"). You add **Marketing devices** dynamic group as an excluded group for the policy. 
+  For example, you have a device policy that's assigned to **All devices**. Later, you have a requirement that new marketing devices don't receive this policy. So, you create a dynamic device group called **Marketing devices** based on the `enrollmentProfilename` property (`device.enrollmentProfileName -eq "Marketing_devices"`). In the policy, you add the **Marketing devices** dynamic group as an excluded group.
   
-  When a new marketing device enrolls for the first time, a new Azure AD device object is created and then the dynamic grouping process will place it into the **Marketing device**s group with a possible delayed calculation. In parallel, the device has enrolled into Intune and will start receiving all applicable policy. Because Intune policy may be delivered before a device is placed into the exclusion group there is a case that that the unwanted policy (or app) will be delivered to **Marketing devices**, which is unintended. 
+  A new marketing device enrolls in Intune for the first time, and a new Azure AD device object is created. The dynamic grouping process puts the device into the **Marketing device**s group with a possible delayed calculation. In parallel, the device enrolls into Intune, and starts receiving all applicable policies. The Intune policy may be deployed before the device is put in the exclusion group. This behavior results in an unwanted policy (or app) being deployed to the **Marketing devices** group.
 
   As a result, it's not recommended to use dynamic device groups for exclusions in latency sensitive scenarios.
 
