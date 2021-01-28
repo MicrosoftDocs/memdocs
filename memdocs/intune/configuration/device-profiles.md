@@ -48,7 +48,7 @@ This article gives an overview of the different types of profiles you can create
 
 ## Administrative templates and Group policy
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group-policy, and they're 100% cloud-based.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
 
 [Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
 
@@ -165,7 +165,7 @@ This feature supports:
 
 ## Endpoint protection
 
-[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
+[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
 To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
@@ -207,7 +207,7 @@ This feature supports:
 
 - Windows 10 and newer
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## MX profile (Zebra)
 
@@ -351,4 +351,4 @@ This feature supports:
 
 ## Next steps
 
-Choose your platform, and get started.
+Choose a profile, and get started.
