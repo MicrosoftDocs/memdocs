@@ -21,7 +21,7 @@ There are two primary ways for you to set up co-management. It's important to un
 1. [Auto-enroll existing Configuration Manager-managed devices into Intune](#bkmk_path1)  
 2. [Bootstrap the Configuration Manager client with modern provisioning](#bkmk_path2)  
 
-![Diagram of co-management paths](media/co-management-paths.png)
+
 
 
 
