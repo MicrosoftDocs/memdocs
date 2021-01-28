@@ -269,7 +269,8 @@ Export and import task sequences with or without their related objects. This ref
 - Boot images  
 - Packages like the client install package  
 - Driver packages  
-- Applications with dependencies  
+- Applications with dependencies
+- Other task sequences referenced with the **Run task sequence** step<!-- 8915013 -->
 
 Consider the following points when you export and import task sequences:  
 
@@ -295,7 +296,7 @@ Consider the following points when you export and import task sequences:
 
     - **File**: Specify the location and name of the export file. If you enter the file name directly, be sure to include the .zip extension to the file name. If you browse for the export file, the wizard automatically adds this file name extension.  
 
-    - If you don't want to export task sequence dependencies, deselect the option to **Export all task sequence dependencies**. By default, the wizard scans for all the related objects and exports them with the task sequence. These dependencies include any for applications.  
+    - If you don't want to export task sequence dependencies, deselect the option to **Export all task sequence dependencies**. By default, the wizard scans for all the related objects and exports them with the task sequence. These dependencies include any for applications and child task sequences.  
 
     - If you don't want to copy the content from the package source to the export location, deselect the option to **Export all content for the selected task sequences and dependencies**. If you select this option, the Import Task Sequence Wizard uses the import path as the new package source location.  
 

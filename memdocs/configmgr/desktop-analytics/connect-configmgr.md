@@ -68,6 +68,9 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 
     - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
+    > [!TIP]
+    > Take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service. 
+
     Select **Sign in** . After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
     > [!NOTE]

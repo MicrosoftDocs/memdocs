@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 12/10/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,19 +52,19 @@ Create a device compliance policy to require your workforce's Android users to e
 
 2.  For **Platform**, select **Android Enterprise**.
 
-3. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then select **Create**.
+3. For **Policy type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
 
-4. On *Basics*, enter **Android compliance** as the *Name*. Adding a *Description* is optional.
+4. On **Basics** step, enter **Android compliance** as the *Name*. Adding a *Description* is optional. Click **Next**.
 
-5. On Compliance settings, expand *System Security* and configure the following:
+5. On **Compliance settings** step, expand **System Security** and configure the following:
 
-   - For *Require a password to unlock mobile devices*, select **Require**.
-   - For *Required password type*, select **At least numeric**.
-   - For *Minimum password length*, enter **6**.
+   - For **Require a password to unlock mobile devices**, select **Require**.
+   - For **Required password type**, select **At least numeric**.
+   - For **Minimum password length**, enter **6**.
 
     ![Screenshot of creating a group in Microsoft Intune](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-6. When done, select **Next** > **Next** > > **Next**> **Create** to create the policy.
+6. When done, select **Next** until you reach the **Review + create** step. Then, click **Create** to create the policy.
 
 When you've successfully created the policy, it appears in your list of device complice policies.
 

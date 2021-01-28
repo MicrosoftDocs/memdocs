@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/11/2020
+ms.date: 12/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -97,11 +97,11 @@ Depending on the carrier used by the devices, not all details might be collected
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, iOS/iPadOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android*|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/>Phone number isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
 |Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
-|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android|
+|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
@@ -114,10 +114,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Phone number is not inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.
-
-> [!Note]  
-> For Windows 10 devices that are registered with [Windows Autopilot service](https://docs.microsoft.com/mem/autopilot/add-devices), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
+> For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

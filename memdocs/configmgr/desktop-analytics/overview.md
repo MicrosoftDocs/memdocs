@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 01/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -35,7 +35,7 @@ The following video is a session from Ignite 2019, which includes more informati
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/IG19-BRK3085]
 
-[Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.techcommunity.microsoft.com/sessions/81689?source=sessions)
+[Using Desktop Analytics and Configuration Manager to reduce Windows TCO through data-driven insights for management, servicing, and support](https://myignite.microsoft.com/archives/IG19-BRK3085)
 
 Skip to 10:00 for an in-depth demo.
 
@@ -114,7 +114,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [Internet endpoints to enable data sharing](enable-data-sharing.md#endpoints).
 
 > [!IMPORTANT]
-> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom):
 >
 > - Windows diagnostic data from Windows 8.1 devices
 > - App usage data for Windows 7

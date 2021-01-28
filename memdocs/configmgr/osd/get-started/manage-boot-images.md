@@ -60,10 +60,12 @@ You can reload the boot image with the latest version of WinPE from the Windows 
 
 If the versions in the boot image are out of date, use the option to **Reload this boot image with the current Windows PE version from the Windows ADK**.
 
-> [!Important]  
+> [!IMPORTANT]
 > This action is available for both default and custom boot images. During this process to reload the boot image, the site doesn't retain any manual customizations made outside of Configuration Manager. These customizations include third-party extensions. This option rebuilds the boot image using the latest version of WinPE and the latest client version. Only the configurations that you specify on the properties of the boot image are reapplied. <!--SCCMDocs issue #1283-->
 
 The **Boot Images** node also includes a new column for (**Client Version**). Use this column to quickly view the Configuration Manager client version in each boot image.
+
+After you update the Windows ADK on the site server, the console won't immediately show the new version. If you use one these actions to update a boot image, the site uses the latest ADK version. To get the console to display the current ADK version, restart the WMI service. For more information, see [Starting and Stopping the WMI Service](/windows/win32/wmisdk/starting-and-stopping-the-wmi-service).<!-- 2839864 -->
 
 ## <a name="BKMK_BootImageCustom"></a> Customize a boot image  
 

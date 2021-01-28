@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 01/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -84,6 +84,8 @@ These settings are added to a device configuration profile in Intune, and then a
     <false/>
     ...
     ```
+
+    To see some property list file examples, go to [Set preferences for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/mac-preferences).
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).

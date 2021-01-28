@@ -6,7 +6,7 @@ keywords:
 author: v-miegge
 ms.author: erikje
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 12/21/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -203,7 +203,12 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
-## Resolutions when syncing tokens between Intune and ABM/ASM for automated device enrollment 
+## Sync token errors between Intune and ADE (DEP)
+
+This section includes token sync errors with:
+
+- Apple Business Manager (ABM)
+- Apple School Manager (ASM)
 
 ### Expired or invalid token
 
@@ -272,7 +277,15 @@ Contact support so they can retry to sync from Intune's side.
 
 #### Resolution
 
-Contact support so they can retry to sync from Intune's side.
+Contact the [Intune support team](../../get-support.md). They can retry syncing from the Intune service.
+
+### Required cursor
+
+**Cause:** The cursor was not initially set by Intune during the sync.
+
+#### Resolution
+
+Contact support so they can fix the sync from Intune's side to return the cursor. 
 
 ### Apple profile not found
 
@@ -323,7 +336,7 @@ Open the **Settings** app and select Company Portal. In the Company Portal setti
 
 ## Next steps
 
-- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
+- [Troubleshoot device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)
 - [Ask a question on the Intune forum](/answers/products/mem)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

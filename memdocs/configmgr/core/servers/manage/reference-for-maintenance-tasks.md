@@ -5,13 +5,11 @@ description: Details for each of the Configuration Manager site maintenance task
 ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Reference for maintenance tasks in Configuration Manager
@@ -46,10 +44,13 @@ Use this task to maintain consistency of software titles between software invent
 
 ### Clear Undiscovered Clients
 
-> [!Tip]
+> [!TIP]
 > You may also see this task in the console named **Clear Install Flag**.
 
-Use this task to remove the installed flag for clients that don't submit a Heartbeat Discovery record during the **Client Rediscovery** period. The installed flag prevents automatic client push installation to a computer that might have an active Configuration Manager client.  
+Use this task to remove the installed flag for clients that don't submit a Heartbeat Discovery record during the **Client Rediscovery** period. The installed flag prevents automatic client push installation to a computer that might have an active Configuration Manager client. The default value is 21 days.
+
+> [!IMPORTANT]
+> Make sure this value is greater than the interval for [Heartbeat discovery](../deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc), which by default is seven days. Otherwise, clients will unnecessarily reinstall.<!-- 7355291 -->
 
 | Site type | Status |
 | --------- | ------ |

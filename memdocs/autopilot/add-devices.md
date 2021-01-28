@@ -12,6 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -34,7 +35,7 @@ This article provides step by step guidance to perform manual registration. For 
 - [Registration overview](registration-overview.md)
 - [Manual registration overview](manual-registration.md)
 
-For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
+For more information about registering HoloLens 2 devices with Windows Autopilot, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
 > [!IMPORTANT]
 > In Windows 10, version 1809 and earlier, it is important to not connect devices to the Internet prior to capturing the hardware hash and creating an Autopilot device profile. This includes collecting the hardware hash, uploading the .CSV into MSfB or Intune, assigning the profile, and confirming the profile assignment. Connecting the device to the Internet before this process is complete will result in the device downloading a blank profile that is stored on the device until it's explicity removed. In Windows 10 version 1809, you can clear the cached profile by restarting OOBE. In previous versions, the only way to clear the stored profile is to re-install the OS, reimage the PC, or run **sysprep /generalize /oobe**. <br>

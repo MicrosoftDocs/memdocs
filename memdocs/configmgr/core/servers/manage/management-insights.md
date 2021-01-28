@@ -153,6 +153,13 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
   - **Collections with no query rules and schedule full evaluation selected**<!-- 8A401207-5A7C-4200-A1DB-990A197458FA -->
 
+> [!NOTE]
+> For more information on managing collections and collection evaluation, see the following articles:<!-- MEMDocs#967 -->
+>
+> - [Best practices for collections](../../clients/manage/collections/best-practices-for-collections.md)
+> - [Collection evaluation](../../clients/manage/collections/collection-evaluation.md)
+> - [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md)
+
 ### Configuration Manager Assessment
 
 <!--3607758-->
