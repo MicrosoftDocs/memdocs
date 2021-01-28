@@ -2,7 +2,7 @@
 title: What's new in version 2010
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
-ms.date: 12/11/2020
+ms.date: 01/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -139,6 +139,18 @@ The Configuration Manager REST API, the administration service, requires a secur
 Starting in this release, you no longer need to enable IIS on the SMS Provider for the administration service. When you enable the site for enhanced HTTP, it creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS.
 
 For more information, see [Prerequisites for the administration service](../../../develop/adminservice/overview.md#prerequisites).
+
+### Improvements to the Azure migration tool
+
+<!-- 7812857 -->
+
+The tool to extend and migrate an on-premises site to Microsoft Azure now includes the following improvements:
+
+- Support environments with virtual networks other than ExpressRoute
+- Support a hierarchy
+- Support a site with a collocated site database
+
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md).
 
 ## Client management
 
