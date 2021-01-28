@@ -84,8 +84,9 @@ To turn on the Enrollment Status Page, follow the steps below.
 2. Provide a **Name** and **Description**.
 3. Choose **Create**.
 4. Choose the new profile in the **Enrollment Status Page** list.
-5. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
-6. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
+5. Optionally, on the **Scope tags** page, you can add the scope tags that you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with Enrollment Status Page profiles, users can only re-order profiles for which they have scope. Also, they can only reorder for the profile positions for which they have scope. Users see the true profile priority number on each policy. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles.
+6. Choose **Assignments** > **Select groups** > choose the groups that you want to adopt this profile > **Select** > **Save**.
+7. Choose **Settings** > choose the settings you want to apply to this profile > **Save**.
 
 ## Set the enrollment status page priority
 
