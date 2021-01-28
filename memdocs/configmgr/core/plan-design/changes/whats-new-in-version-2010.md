@@ -2,7 +2,7 @@
 title: What's new in version 2010
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
-ms.date: 12/10/2020
+ms.date: 01/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
