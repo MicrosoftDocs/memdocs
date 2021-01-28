@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 12/23/2020
+ms.date: 01/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -143,6 +143,9 @@ For more detailed information, see [Troubleshoot Microsoft Connected Cache in Co
 
 Starting in version 1910, when you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
 
+> [!TIP]
+> All other content that Intune-managed devices download from Microsoft with Delivery Optimization can also be cached on Microsoft Connected Cache. This content includes software updates for Windows, Microsoft 365 apps, and Microsoft Edge.
+
 ### Prerequisites
 
 #### Client
@@ -180,11 +183,6 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 - This feature only supports the Intune Win32 app type.
 
   - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Intune Win32 app management](/intune/apps/apps-win32-app-management).
-
-  - The app needs to be at least 100 MB in size.
-  
-    > [!TIP]
-    > Use the following group policy setting: Computer Configuration > Administrative Templates > Windows Components > Delivery Optimization > **Minimum Peer Caching Content File Size (in MB)**.
 
 ## Support for cloud-managed devices
 
