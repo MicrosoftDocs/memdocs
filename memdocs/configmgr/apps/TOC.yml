@@ -54,7 +54,7 @@
     - name: Deploy App-V virtual applications
       href: get-started/deploying-app-v-virtual-applications.md
     - name: Troubleshooting tips for app deployment
-      href: deploy-use/troubleshoot-application-deployment.md
+      href: /troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Monitor applications
     items:
     - name: Monitor applications from the console
@@ -114,8 +114,10 @@
       href: understand/deployment-download-technical-reference.md
     - name: Application installation
       href: understand/deployment-install-technical-reference.md
+    - name: Common error codes for application installation
+      href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
-    href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    href: /troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration
   - name: Troubleshoot Package Conversion Manager
     items:
     - name: Troubleshoot Package Conversion Manager

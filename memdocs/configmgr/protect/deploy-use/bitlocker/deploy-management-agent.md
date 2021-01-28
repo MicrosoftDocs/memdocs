@@ -131,6 +131,8 @@ You can create multiple deployments of the same policy. To view additional infor
 
 > [!IMPORTANT]
 > The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
+> Alternatively, you can remotely connect to the console session of the device via the remote desktop protocol using the `/admin` switch. For example:
+> `mstsc.exe /admin /v:<IP Address of device>`
 
 Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
@@ -220,7 +222,7 @@ The Configuration Manager client handler for BitLocker is co-management aware. I
 For more information about managing BitLocker with Intune, see the following articles:
 
 - [Use device encryption with Intune](../../../../intune/protect/encrypt-devices.md)
-- [Troubleshoot BitLocker policies in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
+- [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 
 ## Next steps
 

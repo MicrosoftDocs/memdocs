@@ -302,9 +302,13 @@ Configure the following prerequisites to enable this functionality:
 
 - The site has discovered the user by _both_ [Active Directory](../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 
+> [!NOTE]
+> If you apply a [software restriction policy](/windows-server/identity/software-restriction-policies/administer-software-restriction-policies) to the device, it can block the authentication prompt in Windows. Review any domain or local group policies that you apply to the device. Then remove any that might interfere with this Software Center behavior.
+
 ## Next steps
 
 - [Monitor applications](monitor-applications-from-the-console.md)
-- [Troubleshoot application deployments](troubleshoot-application-deployment.md)
+- [Troubleshoot application deployments](/troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
 - [Management tasks for applications](management-tasks-applications.md)
 - [Software Center user guide](../../core/understand/software-center.md)

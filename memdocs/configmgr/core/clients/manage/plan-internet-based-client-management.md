@@ -120,6 +120,8 @@ IBCM in Configuration Manager has the following dependencies:
 
 - Register public DNS host entries for the internet fully qualified domain names (FQDN) of site systems that support IBCM.
 
+- Enable the option to **Use PKI client certificate (client authentication capability) when available** on the **Communication Security** tab of the site properties. Starting with the [update rollup for version 2006](https://support.microsoft.com/help/4578605), this option is required.<!-- MEMDocs#1010 -->
+
 ### Client communication requirements
 
 Intervening firewalls or proxy servers must allow the client communication for internet-based site systems:

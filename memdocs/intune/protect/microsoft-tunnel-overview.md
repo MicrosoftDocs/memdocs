@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2020
+ms.date: 01/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -95,7 +95,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 - **Linux distribution** - The following are supported:
 
   - CentOS 7.4+(CentOS 8+ isn’t supported)
-  - Red Hat (RHEL) 7.4+ (RHEL 8+ isn't supported)
+  - Red Hat (RHEL) 7.4+
+  - Red Hat (RHEL) 8
   - Ubuntu 18.04
   - Ubuntu 20.04
 
@@ -252,9 +253,13 @@ To use the readiness tool:
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
-2. To validate your network configuration, run the script as **root**. For example, you might use the following command line: `sudo chmod +x ./mst-readiness network`
+2. To validate your network configuration, run the script with the following commands to first set the execute permissions on the script and then to validate the Tunnel can connect to the correct endpoints:
 
-   The script runs the following actions and reports on success or error for both:
+   - `sudo chmod +x ./mst-readiness`
+   - `sudo ./mst-readiness network`
+
+   The second command runs the following actions and reports on success or error for both:
+
    - Tries to connect to each Microsoft endpoint the tunnel will use.
    - Checks that the required ports are open in your firewall.
 
@@ -277,12 +282,6 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 2. Download the PowerShell script named **mst-CA-readiness.ps1** from [aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
 
 3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
-
-   > [!CAUTION]
-   > During the Microsoft Tunnel preview, *mst-CA-readiness.ps1* is an unsigned script. To enable an unsigned script to run, use the following command: **Set-ExecutionPolicy -executionPolicy Unrestricted**. Use of this command can reduce security in your environment. Therefore, if you use the command to enable use of *mst-CA-readiness.ps1*, plan to restore a stronger level of PowerShell security to your environment after the your use of the readiness script is complete. For more information, see [set-executionpolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy?preserve-view=true&view=powershell-7) in the PowerShell documentation.
-   >
-   > In a future update, *mst-CA-readiness.ps1* will be signed, which will remove the need to set ExecutionPolicy to *Unrestricted*.
-
 
    The script modifies your tenant by creating a service principle with the following details:
 

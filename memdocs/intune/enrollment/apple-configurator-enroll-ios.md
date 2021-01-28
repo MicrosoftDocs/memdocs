@@ -38,6 +38,7 @@ Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](
 - **Direct enrollment** - Does not wipe the device and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
 Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).
+Note- Enrolling devices with Apple Configurator is only applicable to iOS/iPadOS Devices. This method does not work for enrolling macOS devices. 
 
 ## Prerequisites
 

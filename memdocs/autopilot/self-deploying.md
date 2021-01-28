@@ -13,6 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -25,7 +26,7 @@ ms.topic: how-to
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
-> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+> For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 Windows Autopilot self-deploying mode lets you deploy a device with little to no user interaction. For devices with an Ethernet connection, no user interaction is required. For devices connected via Wi-fi, the user must only:
 - Choose the language, locale, and keyboard.

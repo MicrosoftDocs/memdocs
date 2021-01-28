@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 01/04/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,7 +25,7 @@ ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: 
    - intune-azure
-   - contperfq1
+   - contperf-fy21q1
 ms.collection: M365-identity-device-management
 ---
 
@@ -113,7 +113,7 @@ In addition, security baselines often manage the same settings you might set wit
 
 Use the information at the following links to help identify and resolve conflicts:
 
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Q & A
@@ -126,7 +126,7 @@ The Microsoft security team has years of experience working directly with Window
 
 The same Microsoft security team chose and organized the settings for each baseline. Intune includes all the relevant settings in the Intune security baseline. There are some settings in the group policy baseline that are specific to an on-premises domain controller. These settings are excluded from Intune's recommendations. All the other settings are the same.
 
-### Are the Intune security baselines CIS or NSIT compliant?
+### Are the Intune security baselines CIS or NIST compliant?
 
 Strictly speaking, no. The Microsoft security team consults organizations, such as CIS, to compile its recommendations. But, there isn't a one-to-one mapping between "CIS-compliant" and Microsoft baselines.
 

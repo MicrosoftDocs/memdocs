@@ -30,10 +30,6 @@ When you first set up Desktop Analytics, the reports in Configuration Manager an
 - To confirm that active devices are properly configured, use the [Connection Health dashboard](monitor-connection-health.md). This dashboard doesn't update in real time.
 - Make sure devices are sending diagnostic data to the Desktop Analytics service. For more information, see [Enable data sharing](enable-data-sharing.md).
 - Provision [Azure AD applications](troubleshooting.md#bkmk_AzureADApps) on your Azure AD.
-- Check devices that you've associated with your organization in the last seven days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected services** pane. Select **Enroll devices**, and **View recent data**
-
-  > [!IMPORTANT]
-  > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
 
 If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.serviceshub.microsoft.com/supportforbusiness).
 
@@ -68,7 +64,8 @@ Yes. For more information, see [Convert from BIOS to UEFI during an in-place upg
 
 ### Can I use Desktop Analytics with Windows 10 LTSC?
 
-Desktop Analytics doesn't support Windows 10 Long-Term Servicing Channel (LTSC) devices. For more information, see [Windows as a service overview](/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) 2019 devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans to shift from LTSC to the semi-annual servicing channel.<!--6107649-->
+  
 
 ### Can I reduce the amount of time it takes for data to refresh in my Desktop Analytics portal?
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 12/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -48,7 +48,7 @@ Additionally, you can synchronize, manage, and assign books you purchased from A
 Location tokens are volume purchase licenses that were commonly known as Volume Purchase Program (VPP) tokens. These location tokens are used to assign and manage licenses purchased using Apple Business Manager. Content Managers can purchase and associate licenses with location tokens they have permissions to in Apple Business Manager. These location tokens are then downloaded from Apple Business Manager and uploaded in Microsoft Intune. Microsoft Intune supports uploading multiple location tokens per tenant. Each token is valid for one year.
 
 > [!NOTE]
-> The Apple Volume Purchase Program (VPP) has been integrated into Apple Business Manager. Apple Business Manager is a portal for admins to deploy Apple devices and buy content in volume. Content may include apps, books, and custom apps. Location tokens are used to assign and manage licenses purchased using Apple Business Manager. VPP is now called legacy VPP tokens.
+> The Apple Volume Purchase Program (VPP) has been integrated into Apple Business Manager. Apple Business Manager is a portal for admins to deploy Apple devices and acquire content in volume. Content may include apps, books, and custom apps. Location tokens are used to assign and manage licenses purchased using Apple Business Manager. VPP is now called legacy VPP tokens.
 
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
@@ -68,8 +68,8 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 
 ## What app types are supported?
 You can purchase and distribute public as well as private apps using Apple Business Manager.
-- **Store apps:** Using Apple Business Manager, Content Managers can buy both free and paid apps that are available in the App Store.
-- **Custom Apps:** Using Apple Business Manager, Content Managers can also buy Custom Apps made available privately to your organization. These apps are tailored to your organization's specific needs by developers with whom you work directly. Learn more about [how to distribute Custom Apps](https://developer.apple.com/business/custom-apps/).
+- **Store apps:** Using Apple Business Manager, Content Managers can acquire both free and paid apps that are available in the App Store.
+- **Custom Apps:** Using Apple Business Manager, Content Managers can also acquire Custom Apps made available privately to your organization. These apps are tailored to your organization's specific needs by developers with whom you work directly. Learn more about [how to distribute Custom Apps](https://developer.apple.com/business/custom-apps/).
 
 ## Prerequisites
 - An [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) account for your organization. 
@@ -115,7 +115,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         > Changing the country/region will update the apps metadata and App Store URL on next sync with the Apple service for apps created with this token. The app will not be updated if it does not exist in the new country/region store.
 
    - **Type of VPP account** - Choose from **Business** or **Education**.
-   - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
+   - **Automatic app updates** - Choose from **Yes** or **No** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
         > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
@@ -241,4 +241,4 @@ Yes. The Intune admin can oversubscribe an app. For example, if the admin purcha
 
 See [How to monitor apps](apps-monitor.md) for information to help you monitor app assignments.
 
-See [How to troubleshoot apps](troubleshoot-app-install.md) for information on troubleshooting app-related issues.
+See [How to troubleshoot apps](/troubleshoot/mem/intune/troubleshoot-app-install) for information on troubleshooting app-related issues.

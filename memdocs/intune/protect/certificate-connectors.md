@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 01/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,6 +56,13 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 **The PFX Certificate Connector**:
 
 - Supports multiple instances of this connector for each Intune tenant. Each instance of the connector must install on a Windows Server and have access to the private key used to encrypt the passwords of the uploaded PFX files.
+  > [!NOTE]
+  > All connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
+  >
+  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  >
+  > The same applies to certificate revocation.
+  >
 - Can install on the same server that hosts an instance of the *Microsoft Intune Connector*.
 - Supports [automatic updates](#automatic-update) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
@@ -89,6 +96,13 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
   - Android Enterprise – Corporate-Owned Work Profile
 
   To support those platforms, use the *PFX Certificate Connector*, which supports issuing PKCS certificates to all device platforms. If you don’t use SCEP, you can then uninstall this connector, and use only the PFX Certificate Connector.
+  > [!NOTE]
+  > With PKCS, all connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
+  >
+  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  >
+  > The same applies to certificate revocation.
+  >
 
 - Installs on a Windows server, which can also host an instance of the *PFX Certificate Connector*.
 - Supports up to 100 instances of this connector per tenant, with each instance on a separate Windows server. When you use multiple connectors:
@@ -177,6 +191,18 @@ Updates for the two certificate connectors are released periodically. When we up
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
 
+#### January 26, 2021
+
+**Version 6.2009.2.0** - Changes in this release:
+
+- Improves upgrade of the Connector to persist accounts that run Connector Services.
+
+#### January 15, 2021
+
+**Version 6.2009.1.9** - Changes in this release:
+
+- Improvements to the renewal of the connector certificate.
+
 #### October 2, 2020
 
 **Version 6.2008.60.612** - Changes in this release:
@@ -199,6 +225,9 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 
 - Added S/MIME support for PFX Import.  
 
+<!-- Rolling Archive for PFX Certificate Connector release history
+ that are five or more releases old:
+
 #### May 17, 2019
 
 **Version 6.1905.0.404** - Changes in this release:
@@ -217,6 +246,8 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 
 - This connector now supports automatic update.
 - Fixed an issue where the connector might fail to enroll to Intune after signing in to the connector with a global administrator account.
+
+End of PFX Certificate Connector release history archive -->
 
 ### Microsoft Intune Connector release history
 

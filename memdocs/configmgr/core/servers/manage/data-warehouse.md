@@ -188,6 +188,8 @@ Cannot create a connection to data source 'AutoGen__39B693BB_524B_47DF_9FDB_9000
 A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
 ```
 
+This issue should only occur when the site database and data warehouse database are on separate SQL Servers.<!-- 7760751 -->
+
 To work around this issue, use the following steps to configure certificates:
 
 1. On the server that hosts the data warehouse database:
