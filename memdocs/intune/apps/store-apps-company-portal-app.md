@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 01/28/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -42,19 +42,17 @@ To manage devices and install apps, your users can install the Company Portal ap
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 ## Configure settings to show offline apps
-1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
+1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account. Ensure that you sign into the Microsoft Store for Business using the same tenant account you use to sign into Intune. Your Microsoft Store for Business account must be associated with Intune. For more information, see [Associate your Microsoft Store for Business account with Intune](../apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune.md).  
 2. Select the **Manage** tab near the top of the window.
 3. In the left pane, select **Settings**.
-4. Under **Shopping experience**, set **Show offline apps** to **On**.  
-    The offline licensed apps are displayed.
+4. Select the **Shop** tab. Then,under **Shopping experience**, set **Show offline apps** to **On**.  
 
 ## Download the offline Company Portal app
-1. Search for and then select the **Company Portal** app.
+1. Search for and then select the **Company Portal** app. 
 2. Set the **License type** to **Offline**.
-3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory.
-4. On the **Company portal** app page, select **Manage**.
-5. For **Platform**, select **Windows 10 all devices**, and then select the appropriate **Minimum version**, **Architecture**, and **Download app metadata** values. 
-6. Select **Download** under **Package details** to save the file to your local machine.
+3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory. If you already have the offline app, you can select the **Manage** option.
+4. For **Platform**, select **Windows 10 all devices**, and then select the appropriate **Minimum version**, **Architecture**, and **Download app metadata** values. 
+5. Select **Download** to save the file to your local machine.
 
     ![Windows 10 devices, where architecture equals X86, is selected](./media/app-sideload-windows/Win10CP-all-devices.png)
 
