@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -120,12 +120,15 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | PIN type  | Numeric  | iOS/iPadOS, Android  |   |
 | Simple PIN  | Allow  | iOS/iPadOS, Android  |   |
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
-| Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
-| Override biometric instead of PIN for access  | Require  | iOS/iPadOS, Android  |   |
+| Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
+| Fingerprint instead of PIN for access (Android 6.0+)  | Allow  | Android  |   |
+| Override biometrics with PIN after timeout  | Require  | iOS/iPadOS  |   |
+| Override fingerprint with PIN after timeout  | Require  | Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
-| Face ID instead of PIN for access  | Allow  | iOS/iPadOS  |   |
-| Biometrics instead of PIN for access  | Allow  | Android  |   |
+| Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
+| Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
+| Select number of previous PIN values to maintain  | 0  | Android  |   |
 | App PIN when device PIN is set  | Require  | iOS/iPadOS, Android  | If the device is enrolled in Intune, administrators can consider setting this to "Not required" if they are enforcing a strong device PIN via a device compliance policy.  |
 | Work or school account credentials for access  | Not required  | iOS/iPadOS, Android  |   |
 | Recheck the access requirements after (minutes of inactivity)  | 30  | iOS/iPadOS, Android  |   |

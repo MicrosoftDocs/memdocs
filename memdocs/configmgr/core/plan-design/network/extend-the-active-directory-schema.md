@@ -1,103 +1,101 @@
 ---
-title: "Publishing and the Active Directory schema"
-titleSuffix: "Configuration Manager"
-description: "Extend the Active Directory schema for Configuration Manager to simplify the process of deploying and configuring clients."
-ms.date: 09/22/2019
+title: Publishing and the Active Directory schema
+titleSuffix: Configuration Manager
+description: Extend the Active Directory schema for Configuration Manager to simplify the process of deploying and configuring clients.
+ms.date: 01/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Prepare Active Directory for site publishing
 
 *Applies to: Configuration Manager (current branch)*
 
-When you extend the Active Directory schema for Configuration Manager, you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
+When you extend the Active Directory schema for Configuration Manager, you introduce new structures to Active Directory. Configuration Manager sites use these new structures to publish key information in a secure location where clients can easily access it.
 
-It's a good idea to use Configuration Manager with an extended Active Directory schema when you manage on-premises clients. An extended schema can simplify the process of deploying and setting up clients. An extended schema also lets clients efficiently locate resources like content servers and additional services that the different Configuration Manager site system roles provide.  
+When you manage on-premises clients, you should extend the Active Directory schema for Configuration Manager. An extended schema can simplify the process of deploying and setting up clients. An extended schema also lets clients efficiently locate resources like content servers. Extending the schema is a one-time action for any forest.
 
--   If you're not familiar with what extended schema provides for a Configuration Manager deployment, you can read about [Schema extensions for Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
+If you're not familiar with the benefits of an extended schema for Configuration Manager, see [Schema extensions for Configuration Manager](../../../core/plan-design/network/schema-extensions.md).
 
--   When you don't use an extended schema, you can set up other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more, read [Understand how clients find site resources and services for Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
+When you don't use an extended schema, you can set up other methods like DNS to locate services and site system servers. These methods of service location require other configurations and aren't the preferred method for service location by clients. For more information, see [Understand how clients find site resources and services for Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).
 
--   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don't need to do more. The schema extensions are unchanged and will already be in place.  
+If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don't need to do more. The schema extensions are unchanged and are already in place.
 
-Extending the schema is a one-time action for any forest. To extend, and then use the extended Active Directory schema, follow these steps:  
+## Step 1: Extend the schema
 
-## Step 1. Extend the schema  
-To extend the schema for Configuration Manager:  
+To extend the schema for Configuration Manager:
 
--   Use an account that is a member of the Schema Admins security group.  
+- Use an account that's a member of the **Schema Admins** security group.
 
--   Be signed in to the schema master domain controller.  
+- Sign in with that account to the schema master domain controller.
 
--   Run the **Extadsch.exe** tool, or use the LDIFDE command-line utility with the **ConfigMgr_ad_schema.ldf** file. Both the tool and file are in the **SMSSETUP\BIN\X64** folder on the Configuration Manager installation media.  
+Then use one of the following options to add the new classes and attributes to the Active Directory schema.
 
-#### Option A: Use Extadsch.exe  
+### Option A: Use the extadsch.exe tool
 
-1.  Run **extadsch.exe** to add the new classes and attributes to the Active Directory schema.  
+This tool is in the **SMSSETUP\BIN\X64** folder on the Configuration Manager installation media.
 
-    > [!TIP]  
-    >  Run this tool from a command line to view feedback while it runs.  
+1. Open a command line, and run **extadsch.exe**.
 
-2.  Verify that the schema extension was successful by reviewing extadsch.log in the root of the system drive.  
+    > [!TIP]
+    > Run this tool from a command line to view feedback while it runs.
 
-#### Option B: Use the LDIF file  
+1. To verify that the schema extension was successful, review **extadsch.log** in the root of the system drive.
 
-1.  Edit the **ConfigMgr_ad_schema.ldf** file to define the Active Directory root domain that you want to extend:  
+### Option B: Use the LDIF file
 
-    -   Replace all instances of the text, **DC=x**, in the file with the full name of the domain to extend.  
+This file is in the **SMSSETUP\BIN\X64** folder on the Configuration Manager installation media.
 
-    -   For example, if the full name of the domain to extend is named widgets.microsoft.com, change all instances of DC=x in the file to **DC=widgets, DC=microsoft, DC=com**.  
+1. Make a copy of the **ConfigMgr_ad_schema.ldf** file. Edit it in Notepad, and define the Active Directory root domain that you want to extend. Replace all instances of the text `DC=x` in the file with the full name of the domain to extend. For example, if the full name of the domain to extend is named **widgets.contoso.com**, change all instances of `DC=x` in the file to `DC=widgets, DC=contoso, DC=com`.
 
-2.  Use the LDIFDE command-line utility to import the contents of the **ConfigMgr_ad_schema.ldf** file to Active Directory Domain Services:  
+1. Use the **LDIFDE** command-line utility to import the contents of the **ConfigMgr_ad_schema.ldf** file to Active Directory Domain Services. For example, the following command-line imports the schema extensions, turns on verbose logging, and creates a log file in the temp directory:
 
-    -   For example, the following command line imports the schema extensions to Active Directory Domain Services, turns on verbose logging, and creates a log file during the import process: **ldifde -i -f ConfigMgr_ad_schema.ldf -v -j &lt;location to store log file\>**.  
+    `ldifde -i -f ConfigMgr_ad_schema.ldf -v -j "%temp%"`
 
-3.  To verify that the schema extension was successful, review a log file created by the command line used in the previous step.  
+    For more information, see [Command-line reference: Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)).
 
-## Step 2.  Create the System Management container and grant sites permissions to the container  
- After you extend the schema, you must create a container named **System Management** in Active Directory Domain Services (AD DS):  
+1. To verify that the schema extension was successful, review the ldifde log file.
 
--   You create this container one time in each domain that has a primary or secondary site that will publish data to Active Directory.  
+## Step 2: The System Management container
 
--   For each container, you grant permissions to the computer account of each primary and secondary site server that will publish data to that domain. Each account needs **Full Control** to the container with the advanced permission, **Apply onto**, equal to **This object and all descendant objects**.  
+After you extend the schema, create a container named **System Management** in Active Directory Domain Services. Create this container once in each domain that has a Configuration  site that will publish data to Active Directory. For each container, you need to grant permissions to the computer account of each site server that will publish data to that domain.
 
-#### To add the container  
+1. Use an account that has the **Create All Child Objects** permission on the **System** container in Active Directory Domain Services.
 
-1.  Use an account that has the **Create All Child Objects** permission on the **System** container in Active Directory Domain Services.  
+1. Run **ADSI Edit** (adsiedit.msc), and connect to the site server's domain.
 
-2.  Run **ADSI Edit** (adsiedit.msc), and connect to the site server's domain.  
+1. Create the container:
 
-3.  Create the container:  
+    1. Expand the fully qualified domain name, and expand the distinguished name. Right-click **CN=System**, choose **New**, and then select **Object**.
 
-    -   Expand **Domain** &lt;computer fully qualified domain name\>, expand &lt;distinguished name\>, right-click **CN=System**, choose **New**, and then choose **Object**.  
+    1. In the **Create Object** window, select **Container**, and then select **Next**.
 
-    -   In the **Create Object** dialog box, choose **Container**, and then choose **Next**.  
+    1. In the **Value** box, enter `System Management`, and then select **Next**.
 
-    -   In the **Value** box, enter **System Management**, and then choose **Next**.  
+1. Assign permissions:
 
-4.  Assign permissions:  
+    > [!NOTE]
+    > If you prefer, you can use other tools like the Active Directory Users and Computers administrative tool (dsa.msc) to add permissions to the container.
 
-    > [!NOTE]  
-    >  If you prefer, you can use other tools like the Active Directory Users and Computers administrative tool (dsa.msc) to add permissions to the container.  
+    1. Right-click **CN=System Management**, and select **Properties**.
 
-    -   Right-click **CN=System Management**, and then choose **Properties**.  
+    1. Switch to the **Security** tab. Select **Add**, and then add the site server's computer account with the **Full Control** permission.
 
-    -   Choose the **Security** tab, choose **Add**, and then add the site server computer account with the **Full Control** permission.  
+        Add the computer account for each Configuration Manager site server in this domain. If you use [site server high availability](../../servers/deploy/configure/site-server-high-availability.md), make sure to include the computer account of the site server in passive mode.
 
-    -   Choose **Advanced**, choose the site server's computer account, and then choose **Edit**.  
+    1. Select **Advanced**, select the site server's computer account, and then select **Edit**.
 
-    -   In the **Apply onto** list, choose **This object and all descendant objects**.  
+    1. In the **Apply onto** list, select **This object and all descendant objects**.
 
-5.  Choose **OK** to close the console and save the configuration.  
+    1. Select **OK** to save the configuration.
 
-## Step 3. Set up sites to publish to Active Directory Domain Services  
- After the container is set up, permissions are granted, and you have installed a Configuration Manager primary site, you can set up that site to publish data to Active Directory.  
+## Next steps
 
- For more about publishing, see [Publish site data for Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md).  
+After you create the container and grant permissions, configure the Configuration Manager site to publish data to Active Directory.
+
+[Publish site data for Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md)

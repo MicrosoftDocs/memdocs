@@ -116,7 +116,7 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
-
+   - `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab` is needed at the top-level site server to download the readiness file
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:

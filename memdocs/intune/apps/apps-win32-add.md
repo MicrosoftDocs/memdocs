@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -248,6 +248,8 @@ You can choose whether or not to install each dependent app automatically. By de
 
 It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies does not follow a specific order at a dependency level.
 
+Win32 apps added to Intune cannot be removed while they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. 
+
 ### Select the dependencies
 
 On the **Dependencies** page, select applications that must be installed before your Win32 app can be installed:
@@ -264,7 +266,7 @@ The user will see Windows notifications indicating that dependent apps are being
 - One or more dependent app requirements are not met​.
 - One or more dependent apps are pending a device reboot.
 
-If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](troubleshoot-app-install.md#win32-app-installation-troubleshooting).​
+If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).​
 
 Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule.​ Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
 

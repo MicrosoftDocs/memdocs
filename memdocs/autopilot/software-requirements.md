@@ -36,7 +36,7 @@ Windows Autopilot depends on specific features available in Windows 10, Azure Ac
 
 ### HoloLens
 
-- Windows Autopilot for HoloLens 2 requires Windows Holographic, version 2004 or later.  For more information, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+- Windows Autopilot for HoloLens 2 requires Windows Holographic, version 2004 or later.  For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 ### Windows 10
 

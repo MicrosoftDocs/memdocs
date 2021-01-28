@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use Windows Health Monitoring profile on Windows devices in Microsoft Intune
 
-Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint Analytics](/mem/analytics/overview) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
+Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint Analytics](../../analytics/overview.md) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
 
 In Intune, you can create a Windows Health Monitoring device configuration profile to enable this data collection, and then deploy this profile to your devices.
 
@@ -103,4 +103,4 @@ The next time each device checks in, the policy is applied.
 
 After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
 
-[What is Endpoint analytics](/mem/analytics/overview)
+[What is Endpoint analytics](../../analytics/overview.md)

@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 01/07/2021
+ms.date: 01/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -55,7 +55,12 @@ For example:
 
     Due to this issue, this action applies to all members of the collection, not just the selected client.
 
-To work around this issue, use the **Devices** node. Find the device in the list and start the action from there.
+    > [!NOTE]
+    > This issue doesn't apply to the **Start CMPivot** or **Run Script** options.
+
+To work around this issue, install the following hotfix: [Client notifications sent to all collection members in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4594177).
+
+Alternatively, use the **Devices** node. Find the device in the list and start the action from there.
 
 > [!NOTE]
 > This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods, if you don't include a collection object or ID.
@@ -138,7 +143,7 @@ To work around this issue, renew the key associated with the app registration in
 
 ### Only Full Administrator can delete collections
 <!--8864728-->
-*Applies to version 2010*
+*Applies to version 2010 early update ring*
 
 When trying to delete a collection, there is a query to check for Automatic Deployment Rules (ADR) that are referencing the collection. If you don't have permissions on ADRs, you will be unable to perform the deletion.
 
