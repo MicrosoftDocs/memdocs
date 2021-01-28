@@ -109,7 +109,18 @@
             "exclude": [
                 "memdocs/configmgr/core/misc/in-console-documentation.md"
             ]
-        }
+        },
+      "sensitive-language-bl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      },
+       "sensitive-language-wl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      } 
+      
     }
   }
 }
