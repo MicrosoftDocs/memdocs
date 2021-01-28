@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 01/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -191,6 +191,18 @@ Updates for the two certificate connectors are released periodically. When we up
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
 
+#### January 26, 2021
+
+**Version 6.2009.2.0** - Changes in this release:
+
+- Improves upgrade of the Connector to persist accounts that run Connector Services.
+
+#### January 15, 2021
+
+**Version 6.2009.1.9** - Changes in this release:
+
+- Improvements to the renewal of the connector certificate.
+
 #### October 2, 2020
 
 **Version 6.2008.60.612** - Changes in this release:
@@ -213,6 +225,9 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 
 - Added S/MIME support for PFX Import.  
 
+<!-- Rolling Archive for PFX Certificate Connector release history
+ that are five or more releases old:
+
 #### May 17, 2019
 
 **Version 6.1905.0.404** - Changes in this release:
@@ -231,6 +246,8 @@ The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates
 
 - This connector now supports automatic update.
 - Fixed an issue where the connector might fail to enroll to Intune after signing in to the connector with a global administrator account.
+
+End of PFX Certificate Connector release history archive -->
 
 ### Microsoft Intune Connector release history
 

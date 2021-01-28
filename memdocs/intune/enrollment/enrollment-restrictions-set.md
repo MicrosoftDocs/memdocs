@@ -170,6 +170,10 @@ By default, Intune classifies iOS/iPadOS devices as personally-owned. To be clas
 - [Registered with a serial number](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
 
+> [!NOTE]
+> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).
+>
+
 
 ## Change enrollment restriction priority
 

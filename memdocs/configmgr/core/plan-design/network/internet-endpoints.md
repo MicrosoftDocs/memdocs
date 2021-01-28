@@ -117,6 +117,7 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 
+- `https://contentstorage.omex.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB` is needed at the top-level site server to download the readiness file
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:

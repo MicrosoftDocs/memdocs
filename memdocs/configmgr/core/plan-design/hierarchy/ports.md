@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 12/28/2020
+ms.date: 01/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -273,6 +273,11 @@ The Configuration Manager console uses internet access for the following actions
 |-----------------|---------|---------|
 |RPC Endpoint Mapper|135|135|
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
+|HTTPS|--|443 <sup>[*Note](#bkmk_adminsvc)</sup>|
+
+#### <a name="bkmk_adminsvc"></a> Note for administration service
+
+Any device that makes a call to the administration service on the SMS Provider uses HTTPS port 443. For more information, see [What is the administration service?](../../../develop/adminservice/overview.md)
 
 ### <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager Network Device Enrollment Service (NDES) policy module `-->` Certificate registration point
 

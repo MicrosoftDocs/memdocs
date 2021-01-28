@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: srink
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

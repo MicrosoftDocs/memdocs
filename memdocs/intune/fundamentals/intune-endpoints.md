@@ -20,7 +20,7 @@ ms.assetid: b8d9aef2-8757-4e22-9b24-a0833d27304c
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: srink
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

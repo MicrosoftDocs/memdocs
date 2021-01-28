@@ -115,4 +115,4 @@ With your DFCI profile settings, you may see the following states:
 ## Next steps
 
 [Common questions, issues, and resolutions with device profiles](device-profile-troubleshoot.md)  
-[Troubleshoot policies and profiles and in Intune](troubleshoot-policies-in-microsoft-intune.md)
+[Troubleshoot policies and profiles and in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
