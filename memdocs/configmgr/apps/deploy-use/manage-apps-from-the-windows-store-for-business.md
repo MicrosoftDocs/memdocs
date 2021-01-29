@@ -162,4 +162,4 @@ After the Microsoft Store for Business and Education administrator acquires an o
 
 ## See also
 
-[Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager](troubleshoot-microsoft-store-for-business-integration.md)
+[Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager](/troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration)

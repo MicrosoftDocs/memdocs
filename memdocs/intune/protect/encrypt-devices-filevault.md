@@ -75,7 +75,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
    - **Platform**: macOS
    - **Profile**: Endpoint protection
 
-   ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
+   ![Select the Endpoint protection profile](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
 4. On the **Basics** page, enter the following properties:
 

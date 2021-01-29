@@ -72,7 +72,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   > **Unsupported versions and editions**:  
   > *Windows 10 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 
-### Limitations for Windows 10 feature updates policy
+## Limitations for Windows 10 feature updates policy
 
 - When you deploy a *Windows 10 feature updates* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
@@ -84,11 +84,11 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
-### Create and assign Windows 10 feature updates policy
+## Create and assign Windows 10 feature updates policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create**.
+2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create profile**.
 
 3. Under **Basics**, specify a name, a description (optional), and for **Feature update to deploy**, select the version of Windows with the feature set you want, and then select **Next**.
 
@@ -96,7 +96,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 5. Under **Review + create**, review the settings. When ready to save the Windows 10 feature updates policy, select **Create**.  
 
-### Manage Windows 10 feature updates policy
+## Manage Windows 10 feature updates policy
 
 In the admin center, go to **Devices** > **Windows** > **Windows 10 Feature updates** and select the policy that you want to manage. The policy opens to its **Overview** pane.
 
