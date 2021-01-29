@@ -61,9 +61,6 @@ Before you can enroll macOS devices with ADE or Apple School Manager, you need a
 
 You use the Apple portal to create a token. You also use the Apple portal to assign devices to Intune for management.
 
-> [!NOTE]
-> If you delete the token from the Intune classic portal before migrating to Azure, Intune might restore a deleted Apple token. You can delete the token again from the Azure portal.
-
 ### Step 1. Download the Intune public key certificate required to create the token
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS enrollment** > **Enrollment Program Tokens** > **Add**.

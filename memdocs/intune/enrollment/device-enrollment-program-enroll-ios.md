@@ -89,9 +89,6 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
 > [!NOTE]
 > You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals. 
 
-> [!NOTE]
-> If you delete the token from the Intune classic portal before you migrate to Azure, Intune might restore a deleted Apple ADE token. You can delete the ADE token again from the Azure portal.
-
 ### Step 1: Download the Intune public key certificate
 
 1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**:
