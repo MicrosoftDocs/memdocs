@@ -63,7 +63,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ### App management
 
-#### Microsoft Endpoint Configuration Manager connector <!-- 9229333, CM7138634 wnready-->
+#### Microsoft Endpoint Configuration Manager connector <!-- 9229333, CM7138634 -->
 The connector for Microsoft Endpoint Configuration Manager now displays in the admin center. To review the connector, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**.
 ## Week of January 25, 2021
 
