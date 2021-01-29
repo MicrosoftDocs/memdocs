@@ -19,7 +19,7 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
