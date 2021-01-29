@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Upgrade HoloLens (1st gen) devices running Windows Holographic to Windows Holographic for Business
 
-Microsoft Intune includes many settings to help manage and protect your devices. This article lists and describes the settings to upgrade HoloLens (1st gen) devices running Windows Holographic devices to Windows Holographic for Business.
+Microsoft Intune includes many settings to help manage and protect your devices. This article lists and describes the settings to upgrade HoloLens (1st gen) devices running Windows Holographic to Windows Holographic for Business.
 
 This article applies to:
 
