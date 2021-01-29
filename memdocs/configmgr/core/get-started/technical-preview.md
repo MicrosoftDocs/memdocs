@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 01/21/2021
+ms.date: 01/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,18 +118,17 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2101
 
-- [3555906](2021/technical-preview-2101.md) <!--3555906-->
-- [3555909](2021/technical-preview-2101.md) <!--3555909-->
-- [3607457](2021/technical-preview-2101.md) <!--3607457-->
-- [4316341](2021/technical-preview-2101.md) <!--4316341-->
-- [4639895](2021/technical-preview-2101.md) <!--4639895-->
-- [7898885](2021/technical-preview-2101.md) <!--7898885-->
-- [7983121](2021/technical-preview-2101.md) <!--7983121-->
-- [8655575](2021/technical-preview-2101.md) <!--8655575-->
-- [8693068](2021/technical-preview-2101.md) <!--8693068-->
-- [8795301](2021/technical-preview-2101.md) <!--8795301-->
-- [8845996](2021/technical-preview-2101.md) <!--8845996-->
-- [8868628](2021/technical-preview-2101.md) <!--8868628-->
+- [Console extension installation](2021/technical-preview-2101.md#bkmk_extensions) <!--3555909-->
+- [Deploy a feature update with a task sequence](2021/technical-preview-2101.md#bkmk_futs) <!--3555906-->
+- [Tenant Attach: Required application deployments display in Microsoft Endpoint Manager admin center](2021/technical-preview-2101.md#bkmk_apps) <!--8795301-->
+- [Client setting for displaying Software Center custom tabs](2021/technical-preview-2101.md#bkmk_webview) <!--9142301-->
+- [Simplified CMPivot permissions requirements](2021/technical-preview-2101.md#bkmk_permission) <!--7898885-->
+- [Allow exclusion of organizational units (OU) from Active Directory User Discovery](2021/technical-preview-2101.md#bkmk_disco) <!--5193509-->
+- [Changes to Support Center](2021/technical-preview-2101.md#bkmk_support) <!--8693068-->
+- [Prerequisite rule for deprecated Azure Monitor connector](2021/technical-preview-2101.md#bkmk_oms) <!--8269855-->
+- [Manage aged distribution point messages](2021/technical-preview-2101.md#bkmk_distmsg) <!--8561493-->
+- [Encryption algorithm to capture and restore user state](2021/technical-preview-2101.md#bkmk_usmt) <!--9171505-->
+- [PowerShell release notes preview](2021/technical-preview-2101.md#bkmk_powershell) <!--8905809-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.

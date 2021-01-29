@@ -2,7 +2,7 @@
 title: Technical preview 2101
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2101.
-ms.date: 01/21/2021
+ms.date: 01/29/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,25 +24,17 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2101/1234567.md)] -->
 
-[!INCLUDE [3555906](includes/2101/3555906.md)]
-[!INCLUDE [3555909](includes/2101/3555909.md)]
-[!INCLUDE [3607457](includes/2101/3607457.md)]
-[!INCLUDE [4316341](includes/2101/4316341.md)]
-[!INCLUDE [4639895](includes/2101/4639895.md)]
-[!INCLUDE [7898885](includes/2101/7898885.md)]
-[!INCLUDE [7983121](includes/2101/7983121.md)]
-[!INCLUDE [8655575](includes/2101/8655575.md)]
-[!INCLUDE [8693068](includes/2101/8693068.md)]
-[!INCLUDE [8795301](includes/2101/8795301.md)]
-[!INCLUDE [8845996](includes/2101/8845996.md)]
-[!INCLUDE [8868628](includes/2101/8868628.md)]
-[!INCLUDE [8868628](includes/2101/8269855.md)]
-[!INCLUDE [8868628](includes/2101/9171505.md)]
-[!INCLUDE [8868628](includes/2101/9142301.md)]
-[!INCLUDE [8868628](includes/2101/8561493.md)]
-[!INCLUDE [8868628](includes/2101/8905809.md)]
-
-[!INCLUDE [5193509](includes/2101/5193509.md)]
+[!INCLUDE [Console extension installation](includes/2101/3555909.md)]
+[!INCLUDE [Deploy a feature update with a task sequence](includes/2101/3555906.md)]
+[!INCLUDE [Tenant Attach: Required application deployments display in Microsoft Endpoint Manager admin center](includes/2101/8795301.md)]      
+[!INCLUDE [Client setting for displaying Software Center custom tabs](includes/2101/9142301.md)]
+[!INCLUDE [Simplified CMPivot permissions requirements](includes/2101/7898885.md)]
+[!INCLUDE [Allow exclusion of organizational units (OU) from Active Directory User Discovery](includes/2101/5193509.md)]
+[!INCLUDE [Changes to Support Center](includes/2101/8693068.md)]
+[!INCLUDE [Prerequisite rule for deprecated Azure Monitor connector](includes/2101/8269855.md)]
+[!INCLUDE [Manage aged distribution point messages](includes/2101/8561493.md)]
+[!INCLUDE [Encryption algorithm to capture and restore user state](includes/2101/9171505.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2101/8905809.md)]
 
 <!--
 ## General known issues
