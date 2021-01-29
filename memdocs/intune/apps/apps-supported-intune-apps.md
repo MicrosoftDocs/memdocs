@@ -6,14 +6,14 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 1/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 003ce5af-7ee1-43fb-8d16-9d08c7957a85
-ms.reviewer: aanavath
+ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -106,7 +106,8 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Dynamics CRM|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
 |Microsoft Dynamics CRM|[iOS](https://apps.apple.com/app/microsoft-dynamics-crm/id678800460)|✔|No settings|
 |Microsoft Kaizala|[Android](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)|✔|No settings|
-|Microsoft Kaizala|[iOS](https://apps.apple.com/in/app/microsoft-kaizala/id1112208399)|✔|No settings|
+|Microsoft Kaizala|[iOS](https://apps.apple.com/app/microsoft-kaizala/id1112208399)|✔|No settings|
+|Microsoft Lists|[iOS]https://apps.apple.com/app/microsoft-lists/id1530637363)|✔|No settings|
 |Microsoft PowerApps|[Android](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|✔|No settings|
 |Microsoft PowerApps|[iOS](https://apps.apple.com/us/app/powerapps/id1047318566)|✔|No settings|
 |Microsoft Power Automate|[Android](https://play.google.com/store/apps/details?id=com.microsoft.flow)|✔|No settings|
