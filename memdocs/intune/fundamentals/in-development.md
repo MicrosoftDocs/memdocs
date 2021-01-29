@@ -7,8 +7,8 @@ description: Microsoft Intune features in development
 keywords:
 author: ErikjeMS 
 ms.author: erikje
-manager: dou/geby
-ms.date: 01/08/2021
+manager: dougeby
+ms.date: 12/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.assetid: 25b3c26e-cf4e-4152-8306-bf4be4af2ad1
 
 #audience:
 
-ms.reviewer: cacampbell
+ms.reviewer: lebacon
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -65,9 +65,6 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 ### Configure whether a required iOS app is removable<!-- 8391462  -->
 You'll be able to configure whether a required iOS app is installed as a removable app by end users. The new setting will apply to iOS store, LOB and built-in apps. You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > **Add**. When setting the app assignments, you'll be able to select **Install as removable**. The default value is **yes**, which means the app is removable. Existing required installs on iOS 14 will be updated to the default (removable) setting value when this setting is implemented. For more information about iOS apps, see [Microsoft Intune app management](..\apps\app-management.md).
-
-### Scope tag support for customization policies<!--6182440  -->
-You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you'll see **Scope tags** configuration options.
 
 ### Android Enterprise system app support in work profiles<!-- 5291507  -->
 You'll be able to deploy Android Enterprise system apps for Android Enterprise Work Profile devices. System apps are apps that do not appear in the Managed Google Play Store and come pre-installed on the device. Once a system app is deployed, you'll be unable to uninstall, hide, or otherwise remove the system app. Note that this feature is planned to be released on or near the 2101 release timeframe. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).

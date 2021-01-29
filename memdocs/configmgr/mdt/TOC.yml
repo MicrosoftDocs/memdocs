@@ -28,6 +28,6 @@
     - name: Toolkit reference
       href: toolkit-reference.md
     - name: Troubleshooting reference
-      href: troubleshooting-reference.md
+      href: /troubleshoot/mem/configmgr/troubleshooting-reference
     - name: UDI developers guide
       href: user-driven-installation-developers-guide.md
