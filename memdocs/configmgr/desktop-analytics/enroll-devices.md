@@ -78,7 +78,7 @@ If your organization doesn't apply "Monthly Quality Rollup" updates to Windows 7
 The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. These settings control to which Desktop Analytics instance the device should send its data, and other configuration options.
 
 > [!Note]  
-> If you previously used Windows Analytics, use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+> If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance.
 >
 > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
 

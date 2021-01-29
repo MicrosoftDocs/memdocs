@@ -2,7 +2,7 @@
 title: Support Center quickstart
 titleSuffix: Configuration Manager
 description: Quickly capture the state of a Configuration Manager client for troubleshooting.
-ms.date: 11/27/2018
+ms.date: 01/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -84,6 +84,14 @@ Beyond these basic capabilities, Support Center can also collect a wide variety 
 - **Client WMI**: Client configuration information from WMI. Support Center doesn't collect client policy.  
 
 - **Troubleshooting**: Real-time troubleshooting data to help diagnose common client problems with Active Directory, management points, networking, policy assignments, and registration.  
+    > [!NOTE]  
+    > This data type isn't supported when you make a remote connection to another client.
 
 - **Debug dumps**: Perform debug dump of client and related processes. Debug dumps can be large. Only enable this option when troubleshooting issues with client performance.  
 
+    > [!WARNING]  
+    > Collecting debug dumps will cause data bundles to become very large (in some cases, several hundred MB).  
+    >  
+    > Debug dumps contain may contain sensitive information, including passwords, cryptographic secrets, or user data. Debug dumps should only be collected on the recommendation of Microsoft Support personnel. Data bundles that contain debug dumps should be handled carefully to protect them from unauthorized access.  
+    >  
+    > This data type isn't supported when you make a remote connection to another client.
