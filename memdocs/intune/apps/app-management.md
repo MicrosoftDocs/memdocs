@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 02/01/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -125,6 +125,7 @@ The following items within the console provide app related functionality:
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
 - **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate.
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).
+- **Microsoft Endpoint Configuration Manager**: Displays information about the Configuration Manager connector including last successful synchronization time and the connection status. 
 - **Apple Business Manager location tokens**: Apply and view your iOS/iPadOS volume purchased licenses. For more information, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](vpp-apps-ios.md).
 - **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
 - **Customization**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).
