@@ -69,12 +69,7 @@ To grant access to administer the service for users with other permissions, then
 
 Microsoft Endpoint Manager admin center: https://endpoint.microsoft.com
 
-Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
-
 Intune for Education: https://intuneeducation.portal.azure.com
-
-Intune classic portal: https://admin.manage.microsoft.com
-The Intune classic portal is only used for managing devices enrolled with the Intune PC software client
 
 ### URLs for Intune services provided by Microsoft 365
 
