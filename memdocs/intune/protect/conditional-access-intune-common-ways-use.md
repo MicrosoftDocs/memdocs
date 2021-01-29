@@ -60,6 +60,11 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 > 3. Press the **Enable Browser Access** button.
 > 4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.
 
+### Applications available in Conditional Access for controlling Microsoft Intune
+> When you are configuring conditional access in the Azure Active Directory portal, you have two applications available:
+> 1. **Microsoft Intune** - This application controls access to the Microsoft Endpoint Manager Console. Configure grants/controls on this application when you want to target the Microsoft Endpoint Manager Console
+> 2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information see [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
+
 ### Conditional access based on network access control
 
 Intune integrates with partners like Cisco ISE, Aruba Clear Pass, and Citrix NetScaler to provide access controls based on the Intune enrollment and the device compliance state.
