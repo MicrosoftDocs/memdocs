@@ -36,6 +36,36 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Encryption algorithm to capture and restore user state](includes/2101/9171505.md)]
 [!INCLUDE [PowerShell release notes preview](includes/2101/8905809.md)]
 
+
+## Known issues
+### Unable to upload files when sending a frown through the console
+<!--9238008-->
+When filing a frown from the Configuration Manager console, files won't be uploaded.  
+
+**Mitigation:** To work around this issue, you'll need to edit the `microsoft.configurationmanagement.exe.config` file located in the admin console installation directory. Use the instruction below to work around the issue:
+
+1. Open **Notepad** as administrator.
+1. From Notepad, choose **File** then **Open**.
+1. Browse to the Configuration Manager console installation directory and open the file named `Microsoft.ConfigurationManagement.exe.config`. 
+   - The default location is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+1. In the `<runtime>` section, add the following text:
+
+   ```text
+       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+         <dependentAssembly>
+           <assemblyIdentity name="Microsoft.WindowsAzure.Storage" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+           <bindingRedirect oldVersion="0.0.0.0-8.7.0.0" newVersion="6.2.0.0" />
+         </dependentAssembly>
+       </assemblyBinding>
+   ```
+      :::image type="content" source="media/9238008-config-file.png" alt-text="Notepad with line added to the runtime section highlighted. The next non-highlighted line starts with &lt;AppContextSwitchOverrides" lightbox="media/9238008-config-file.png":::
+
+1. Save the config file then reopen the Configuration Manager console and file your feedback. 
+ 
+
+
+
 <!--
 ## General known issues
 
