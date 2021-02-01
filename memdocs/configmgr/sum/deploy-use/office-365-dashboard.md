@@ -5,7 +5,7 @@ description: "Review Microsoft 365 Apps client information from the Office 365 C
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 01/12/2021
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -43,12 +43,13 @@ The Office 365 Client Management dashboard starts displaying data as hardware in
 
 *(Introduced in version 1906 as a prerequisite)*
 
-Your top-level site server needs access to the following endpoint to download the readiness file:
+Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
 
-`https://contentstorage.omex.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
+Starting March 2, 2021: `https://omex.cdn.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
+Location prior to March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
 
 > [!NOTE]
-> - The location of this file changed the *last week January 2021* <!--edit this, placeholder line-->. For more information, see [Placeholder community post URL](https://techcommunity.microsoft.com/t5/office-365-blog/bg-p/Office365Blog).
+> - The location of this file is changing *March 2, 2021* <!--edit this, placeholder line-->. For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
 > - Internet connectivity isn't required for the client devices for any of these scenarios.
 
 ### Enable data collection for Microsoft 365 Apps
