@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,8 +66,6 @@ You can view the **Noncompliant devices** report using the following steps:
 
 ## Noncompliant policies (Operational)
 
-*This report is in preview*
-
 The **Noncompliant policies** report can help you troubleshoot policies that have compliance errors or conflicts.
 
 When you select the report, it displays a list of compliance policies that have one or more devices with an error or a non-compliant status. The details include the count for each of those categories and the device platform. Use this report to drill in on individual entries to discover more information, and at each level you can sort and filter across records.
@@ -83,6 +81,8 @@ To view the Noncompliant policies report:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Noncompliant policies**.
 
+> [!NOTE]
+> *This report is in preview.*
 
 ## Windows 10 unhealthy endpoints report (Operational)
 The **Windows 10 unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of a number of settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
@@ -115,11 +115,14 @@ To view the **Feature update failures** report, use the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Feature update failures**.
 
+> [!NOTE]
+> *This report is in preview.*
+
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - [Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organizational)
-> - Feature update failures report (Operational) *(this report)*  
+> - **[Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organizational)**
+> - **Feature update failures report (Operational)** *(this report)*  
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
 
@@ -129,7 +132,10 @@ The **Assignment failures** operational report helps you troubleshoot errors and
 You can view the **Assignment failures** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** **Assignment failures**.
+2. Select **Devices** > **Monitor** > **Assignment failures**.
+
+> [!NOTE]
+> *This report is in preview.*
 
 
 ## Device compliance report (Organizational)
