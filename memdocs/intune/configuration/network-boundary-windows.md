@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,7 +52,7 @@ This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/poli
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Network boundary**.
+    - **Profile**: Select **Templates** > **Network boundary**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

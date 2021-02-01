@@ -133,7 +133,7 @@ The VPN profile includes the SCEP or PKCS certificate that has the client creden
 6. In **Configuration settings**, configure the following settings:
 
     - **Connection type**: Select your VPN client app.
-    - **Base VPN**: Configure your settings. [iOS/iPadOS VPN settings](vpn-settings-ios.md) lists and describes all the settings. When using per-app VPN, be sure you set the following properties as listed:
+    - **Base VPN**: Configure your settings. [iOS/iPadOS VPN settings](vpn-settings-ios.md) describes all the settings. When using per-app VPN, be sure you set the following properties as listed:
 
       - **Authentication method**: Select **Certificates**. 
       - **Authentication certificate**: Select an existing SCEP or PKCS certificate > **OK**.

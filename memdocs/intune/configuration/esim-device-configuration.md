@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -98,6 +98,7 @@ When working with the csv file with the activation codes, be sure you or your mo
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
+>
 > - Only devices are targeted, users aren't targeted.
 > - We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 

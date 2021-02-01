@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/21/2021
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,11 +27,14 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Windows 10 and later devices in Intune
+# Add Wi-Fi settings for Windows 10 and newer devices in Intune
 
-You can create a profile with specific WiFi settings. Then, deploy this profile to your Windows 10 and later devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes these settings.
+You can create a profile with specific WiFi settings. Then, deploy this profile to your Windows 10 and newer devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
+
+This article describes some of these settings.
 
 ## Before you begin
 
