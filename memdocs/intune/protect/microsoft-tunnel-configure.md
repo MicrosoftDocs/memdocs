@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2020
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -114,7 +114,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    - Environment file: **/etc/mstunnel/env.sh**. For more information on these variables, see [Environment variables](../protect/microsoft-tunnel-reference.md#environment-variables) in the reference for Microsoft Tunnel article.
 
-5. When prompted, copy the full chain of your TLS certificate file to the Linux server. The script displays the correct location to use on the Linux server.
+5. When prompted, copy the full chain of your Transport Layer Security (TLS) certificate file to the Linux server. The script displays the correct location to use on the Linux server.
 
    The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the IP address or FQDN of the Tunnel Gateway server in its SAN.
 
@@ -236,6 +236,15 @@ When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrad
 
 Because the tunnel update is automatic, but also updates only a single server per Site at a time, consider assigning two or more servers to each Microsoft Tunnel Site to mitigate the tunnel being unavailable during the update.
 
+## Update the TLS certificate on the Linux server
+
+You can use the **./mst-cli** command line tool to update the TLS certificate on the server:  
+
+1. Copy the new certificate to **/etc/mstunnel/certs/site.crt**
+2. Copy the private key to **/etc/mstunnel/private/site.key**
+3. Run: `mst-cli import_cert`
+
+For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md).
 ## Uninstall the Microsoft Tunnel
 
 To uninstall the product, run **./mst-cli uninstall** from the Linux server as root.
