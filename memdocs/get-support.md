@@ -1,7 +1,6 @@
 ---
 # required metadata
 
-
 title: Get support in Microsoft Endpoint Manager admin center 
 titleSuffix: Microsoft Intune
 description: Get online and telephone support for Microsoft Intune and other device management cloud services from within Microsoft Endpoint Manager admin center. 
@@ -15,8 +14,7 @@ ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
-ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-
+ms.assetid: 
 # optional metadata
  
 #audience:
@@ -83,7 +81,7 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
   - Change requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  If you are a Microsoft Managed Desktop customer, selecting that tile for Microsfot Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
+  If you are a Microsoft Managed Desktop customer, selecting that tile for Microsoft Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
 
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
