@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 02/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -76,7 +76,7 @@ To enable the Intune App SDK, follow these steps:
    **Option 2 - Static Library**:  Link `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
 
 
-    ![Intune App SDK iOS: linked frameworks and libraries](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries_framework_staticlib.png)
+    ![Intune App SDK iOS: linked libraries](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries_framework_staticlib.png)
 
      Add the `IntuneMAMResources.bundle` resource bundle to the project by dragging the resource bundle under **Copy Bundle Resources** within **Build Phases**.
 
