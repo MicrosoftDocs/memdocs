@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 10/12/2020
+ms.date: 02/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -116,7 +116,15 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
-   - `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab` is needed at the top-level site server to download the readiness file
+
+Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
+
+- Starting March 2, 2021: `https://omex.cdn.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
+   - Location prior to March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
+
+> [!NOTE]
+> The location of this file is changing *March 2, 2021* <!--edit this, placeholder line-->. For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
+
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
