@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -171,7 +171,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       - **Select an app to use for kiosk mode**: Select the managed Google Play app from the list.
 
       > [!IMPORTANT]
-      > When using single-app kiosk mode, dialer/phone apps may not work properly.
+      > When using single-app kiosk mode, to use dialer/phone apps, then enable system notifications. This feature is available on Android devices running 9.0 and newer. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
   
     - **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
@@ -183,7 +183,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       >
       > The **Managed Home Screen** app isn't required to be in the configuration profile, but it's required to be added as an app. When the **Managed Home Screen** app is added, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
       >
-      > When using multi-app kiosk mode, dialer/phone apps may not function properly.
+      > When using multi-app kiosk mode, to use dialer/phone apps, then enable system notifications. This feature is available on Android devices running 9.0 and newer. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
       >
       > For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
@@ -281,6 +281,19 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
           **Export** your current list to a .csv file.
 
         - **SSID**: You can also enter the Wi-Fi network names (SSID) that Managed Home Screen users can connect to. Be sure to enter valid SSIDs.
+
+        > [!IMPORTANT]
+        > In the October 2020 release, the Managed Home Screen API was updated to be compliant with the Google Play Store requirements. The following changes impact Wi-Fi configuration policies in the Managed Home Screen:
+        > 
+        > - Users can't enable or disable Wi-Fi connections on devices. Users can switch between Wi-Fi networks, but can't turn Wi-Fi on or off.
+        >
+        > - If a Wi-Fi network is password protected, then users must enter the password. After they enter the password, the configured network automatically connects. If they disconnect and then reconnect to the Wi-Fi network, then users may need to enter the password again.
+        >
+        > - On Android 11 devices, when users connect to a network using the Managed Home Screen, they're prompted to consent. This prompt comes from Android, and isn't specific to the Managed Home Screen.
+        >
+        > - On Android 10 devices, when users connect to a network using the Managed Home Screen, a notification prompts them to consent. So, users need access to the status bar and notifications to consent. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
+        >
+        > - On Android 10 devices, when users connect to a password protected Wi-Fi network using the Managed Home Screen, they're prompted for the password. If the device is connected to an unstable network, then the Wi-Fi network changes. This behavaior happens even when users enter the correct password.
 
       - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
 

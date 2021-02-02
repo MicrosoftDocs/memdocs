@@ -340,6 +340,18 @@ When dealing with different types of settings, an Intune SDK version requirement
 
 ## App protection experience for Android devices
 
+ > [!NOTE]
+ > App protection policies are not supported on Intune managed Android Enterprise dedicated devices. If your users on Android Enterprise dedicated devices have APP policies
+ > applied for another device, then you'll want to take the following steps: 
+ > 
+ > 1. Ensure that the devices you want target are only Intune managed dedicated devices. The block policy does not take effect if the device is managed by a 3rd party MDM
+ > provider.
+ > 
+ > 2. Ensure that Company Portal is installed on the dedicated device. This is required for the APP block policy to take effect. No end-user interaction is needed in Company
+ > Portal app on dedicated devices to block APP functionality, so there is no requirement to make the Company Portal app launchable by end users. The Company Portal simply needs
+ > to be installed on the device. For example, you don't need to allow-list it on top of Managed Home Screen.
+ > 
+ > Note that users targeted with APP policies on non-dedicated devices will not be impacted.
 ### Device biometric authentication
 For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.
 
