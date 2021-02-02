@@ -287,13 +287,13 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         > 
         > - Users can't enable or disable Wi-Fi connections on devices. Users can switch between Wi-Fi networks, but can't turn Wi-Fi on or off.
         >
-        > - If a Wi-Fi network is password protected, then users must enter the password. After they enter the password, the configured network automatically connects. If they disconnect and then reconnect to the Wi-Fi network, then users must enter the password again.
+        > - If a Wi-Fi network is password protected, then users must enter the password. After they enter the password, the configured network automatically connects. If they disconnect and then reconnect to the Wi-Fi network, then users may need to enter the password again.
         >
-        > - On Android 11 and newer devices, when users connect to a network using the Managed Home Screen, they're prompted to consent. This prompt comes from Android, and isn't specific to the Managed Home Screen.
+        > - On Android 11 devices, when users connect to a network using the Managed Home Screen, they're prompted to consent. This prompt comes from Android, and isn't specific to the Managed Home Screen.
         >
         > - On Android 10 devices, when users connect to a network using the Managed Home Screen, a notification prompts them to consent. So, users need access to the status bar and notifications to consent. To enable system notifications, see [General settings for dedicated devices](#dedicated-devices) (in this article).
         >
-        > - On Android 10 and newer devices, when users connect to a password protected Wi-Fi network using the Managed Home Screen, they're prompted for the password. If the device is connected to an unstable network, then the Wi-Fi network changes. This behavaior happens even when users enter the correct password.
+        > - On Android 10 devices, when users connect to a password protected Wi-Fi network using the Managed Home Screen, they're prompted for the password. If the device is connected to an unstable network, then the Wi-Fi network changes. This behavaior happens even when users enter the correct password.
 
       - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
 
