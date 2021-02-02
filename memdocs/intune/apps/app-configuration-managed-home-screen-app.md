@@ -81,7 +81,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Configuration   Key | Value Type | Default Value | Description | Available in device   configuration  |
 |-|-|-|-|-|
 | Show Managed Setting | bool | TRUE | "Managed Setting" is a Managed Home   Screen app that appears only if you've configured any settings for quick   access. These settings can include the Show Wi-Fi Setting, Show Bluetooth   setting, Show volume setting, and show flashlight setting. These   settings can also be accessed by swiping-down on the screen. Set this key   to False to hide the "Managed Setting" app and have   end-users access settings only via swiping-down. | ✔️ |
-| Show Wi-Fi setting | bool | FALSE | Turning this setting to True allows the end user to turn on or off Wi-Fi, or to   connect to different Wi-Fi networks. | ✔️ |
+| Show Wi-Fi setting | bool | FALSE | Turning this setting to True allows the end user to connect to different Wi-Fi networks. | ✔️ |
 | Enable Wi-Fi allow-list | bool | FALSE | True fills out the Wi-Fi   allow-list key to restrict what Wi-Fi   networks are shown within Managed Home Screen. Set to False to show all possible   available Wi-Fi networks the device has discovered. This setting is   only relevant if show Wi-Fi setting has been set to True and the Wi-Fi allow-list has been filled out. | ✔️ |
 | Wi-Fi allow-list | bundleArray | See **Enter JSON Data** section of this document. | Allows you to list all the SSIDs of what Wi-Fi   networks you want the device to show within Managed Home Screen. This list is   only relevant if show Wi-Fi setting and Enable Wi-Fi   allow-list have been set to True. If either setting has been   set to False, then   you don't need to modify this configuration. | ✔️ |
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
@@ -92,6 +92,25 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
 | Battery and Signal Strength   indicator bar | bool | TRUE | Turning this setting to True shows the   battery and signal strength indicator bar. | ❌ |
+
+	> [!IMPORTANT]
+	> In its October release, Managed Home Screen updated it's API level in copliance with the Google Play Store's reqquirements. In doing so, there were some changes to how
+	> Wi-Fi configuration works from Managed Home Screen. The changes you will see include: 
+	> Being unable to enable or disable the Wi-Fi connection for the device. Users will be able to switch between networks, but will not be able to turn on/off Wi-Fi. 
+	>
+	> Being unable to automatically connect to a configured Wi-Fi network that requires a password for the first time. The configured network will automatically connect
+	> after you enter the password the first time.
+	>
+	> On Android devices running OS 11, when an end-user tries to connect to a network via MHS, they will get prompted with a consent pop-up. This pop-up comes from the
+	> Android platform, and is not specific to MHS. Additionally, when an end-user tries to connect to a password protected network via MHS, they will get asked to input the
+	> password. Even if the password is correct, the network will only change if the device is not already connected to a stable network. 
+	>
+	> On Android devices running OS 10, when an end-user tries to connect to a network via MHS, they will get prompted with a consent via notifications. Because of this,
+	> users on OS 10 will need to have access to the status bar and notifications in order to complete the consent step. Use the [General settings for dedicated devices](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-android-for-work#dedicated-devices)
+	> to make status bar and notifications available to your end-users, if appropriate. Additionally, when an end-user tries to connect to a password protected network via
+	> MHS, they will get asked to input the password. Even if the password is correct, the network will only change if the device is not already connected to a stable
+	> network.
+	>
 
 **Configurations for a custom screensaver**: 
 
