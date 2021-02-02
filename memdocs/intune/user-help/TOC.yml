@@ -27,7 +27,7 @@
       href: enroll-device-android-microsoft-intune-app.md
     - name: Enroll with derived credentials
       items:
-      - name: Enroll with Entrust Datacard
+      - name: Enroll with Entrust
         href: enroll-android-device-entrust-datacard.md
       - name: Enroll with Intercede
         href: enroll-android-device-intercede.md
@@ -119,7 +119,7 @@
       href: enroll-your-device-dep-ios.md
     - name: Enroll with derived credentials
       items:
-      - name: Enroll with Entrust Datacard
+      - name: Enroll with Entrust
         href: enroll-ios-device-entrust-datacard.md
       - name: Enroll with Intercede
         href: enroll-ios-device-intercede.md

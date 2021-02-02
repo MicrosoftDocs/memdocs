@@ -337,7 +337,7 @@ Derived credentials rely on the use of a Personal Identity Verification (PIV) or
 You can use derived credentials as the authentication method for device configuration profiles for VPN and WiFi. You can also use them for app authentication, and S/MIME signing and encryption for applications that support it.
 
 Intune now supports the following derived credential providers with Android:
-- Entrust Datacard
+- Entrust
 - Intercede
 
 A third provider, DISA Purebred, will be available for Android in a future release.
@@ -1292,7 +1292,7 @@ Derived credentials rely on the use of a Personal Identity Verification (PIV) or
 
 Intune supports the following derived credential providers:
 - DISA Purebred
-- Entrust Datacard
+- Entrust
 - Intercede
 
 You use derived credentials as the authentication method for device configuration profiles for VPN, Wi-Fi, and email. You can also use them for app authentication, and S/MIME signing and encryption.  
