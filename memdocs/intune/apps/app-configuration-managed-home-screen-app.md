@@ -94,23 +94,13 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Battery and Signal Strength   indicator bar | bool | TRUE | Turning this setting to True shows the   battery and signal strength indicator bar. | ❌ |
 
 > [!IMPORTANT]
-> In its October release, Managed Home Screen updated it's API level in copliance with the Google Play Store's reqquirements. In doing so, there were some changes to how
-> Wi-Fi configuration works from Managed Home Screen. The changes you will see include: 
-> Being unable to enable or disable the Wi-Fi connection for the device. Users will be able to switch between networks, but will not be able to turn on/off Wi-Fi. 
->
-> Being unable to automatically connect to a configured Wi-Fi network that requires a password for the first time. The configured network will automatically connect
-> after you enter the password the first time.
->
-> On Android devices running OS 11, when an end-user tries to connect to a network via MHS, they will get prompted with a consent pop-up. This pop-up comes from the
-> Android platform, and is not specific to MHS. Additionally, when an end-user tries to connect to a password protected network via MHS, they will get asked to input the
-> password. Even if the password is correct, the network will only change if the device is not already connected to a stable network. 
->
-> On Android devices running OS 10, when an end-user tries to connect to a network via MHS, they will get prompted with a consent via notifications. Because of this,
-> users on OS 10 will need to have access to the status bar and notifications in order to complete the consent step. Use the [General settings for dedicated devices](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-android-for-work#dedicated-devices)
-> to make status bar and notifications available to your end-users, if appropriate. Additionally, when an end-user tries to connect to a password protected network via
-> MHS, they will get asked to input the password. Even if the password is correct, the network will only change if the device is not already connected to a stable
-> network.
->
+> The Managed Home Screen app has been updated at the API level to better adhere with the Google Play Store's requirements. In doing so, there were some changes to how Wi-Fi configuration works from Managed Home Screen. The changes include the following: 
+> - Being unable to change (enable or disable) the Wi-Fi connection for the device. Users will be able to switch between networks, but will not be able to turn on/off Wi-Fi.
+> - Being unable to automatically connect to a configured Wi-Fi network that requires a password for the first time. The configured network will automatically connect after you enter the password the first time.
+> 
+> On Android devices running OS 11, when an end-user tries to connect to a network via the Managed Home Screen app, they will get prompted with a consent pop-up. This pop-up comes from the Android platform, and is not specific to the Managed Home Screen app. Additionally, when an end-user tries to connect to a password protected network via the Managed Home Screen app, they will be asked to input the password. Even if the password is correct, the network will only change if the device is not connected to a network. Devices that are already connected to a stable network will not be able connect to a password protected network via the Managed Home Screen app.
+> 
+> On Android devices running OS 10, when an end-user tries to connect to a network via the Managed Home Screen app, they will get prompted with a consent via notifications. Because of this prompt, users on OS 10 will need to have access to the status bar and notifications in order to complete the consent step. Use the [General settings for dedicated devices](../configuration/device-restrictions-android-for-work.md#dedicated-devices) to make status bar and notifications available to your end-users, if appropriate. Additionally, when an end-user tries to connect to a password protected network via the Managed Home Screen app, they will be asked to input the password. Even if the password is correct, the network will only change if the device is not already connected to a stable network.
 
 **Configurations for a custom screensaver**: 
 
