@@ -9491,7 +9491,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIAuthorizeDHCP.wsf"></a> ZTIAuthorizeDHCP.wsf  
  This script uses the Netsh tool to configure the target computer so that it is an authorized DHCP server in AD DS.  
 
- For more information about authorizing DHCP servers, see [How to Use Netsh.exe to Authorize, Unauthorize and List DHCP Servers in Active Directory](https://support.microsoft.com/kb/303351).  
+ For more information about authorizing DHCP servers, see [How to Use Netsh.exe to Authorize, Unauthorize and List DHCP Servers in Active Directory](https://web.archive.org/web/20150311053731/http://support.microsoft.com:80/kb/303351).  
 
 |**Value**|**Description**|  
 |-|-|
