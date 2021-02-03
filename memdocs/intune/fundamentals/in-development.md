@@ -87,21 +87,9 @@ After iOS 14 releases, Intune enrollment and the Company Portal app will support
 ### Ending support for macOS 10.12<!--7327326 -->
 After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
 
-### Hide more Apple Automated Device Enrollment Setup Assistant Screens<!--7786092 -->
-You'll be able to set Automated Device Enrollment (ADE) profiles to hide these Setup Assistant Screens for iOS/iPadOS 14.0+ and macOS 11+ devices:
-- Restore Completed, for iOS/iPadOS 14.0+.
-- Software Update Completed, for iOS/iPadOS 14.0+.
-- Accessibility, for macOS 11+ (the mac device must be connected to an Ethernet).
 
 <!-- ***********************************************-->
 ## Device management
-
-### Log Analytics will include device details log<!--6014987  -->
-Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
-
-
-### Subnet ID and IP addresses on Properties page for corporate-owned Windows devices<!--5265589 -->
-Subnet ID and IP addresses will be displayed on the **Properties** page for corporate-owned Windows devices. To see them, go to [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > choose a corporate-owned Windows device > **Properties**.
 
 ### Windows 10 Enterprise multi-session support (public preview)<!--8666391 -->
 This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user M365 licensing. This upcoming support will let you:
@@ -113,11 +101,7 @@ This support will give users a familiar Windows 10 experience while you get the 
 <!-- ***********************************************-->
 ## Intune apps
 
- 
-### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
-The Company Portal app will store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications will be able to view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [Device ownership notifications](../apps/company-portal-app.md#device-ownership-notification).
-
-### Win32 app download progress bar<!-- 5145837  -->
+ ### Win32 app download progress bar<!-- 5145837  -->
 End users will see a progress bar in the Windows Company Portal while a Win32 app is being downloaded. This feature will help customer better understand the app installation progress.
 
 ### Update to Android Company Portal app icon<!-- 7114401  -->
@@ -137,12 +121,6 @@ We'll be updating the app icon used by the Company Portal for iOS, macOS, and we
 We’re reworking the endpoint security Account protection policy to use the new APIs for Windows Hello for Business. The new APIs will result in a more consistent experience. The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts.   This API replaces the use of  *./User/Vendor/MSFT/PassportForWork*.  (**Endpoint security** > **Account protection**)
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
-
-### New co-management eligibility organizational report<!-- 7854306  -->
-The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. You'll be able to view a summary for this report in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Reports** > **Co-management eligibility**. For related report information, see [Intune reports](../fundamentals/reports.md).
-
-### New co-management device workloads organizational report<!-- 7854306  -->
-The **Co-management device workloads** report provides a report of devices that are currently co-managed. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. You'll be able to view a summary for this report in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Reports** > **Co-management device workloads**. For related report information, see [Intune reports](../fundamentals/reports.md).
 
 ### Summary view for Windows Defender Antivirus reports<!-- 8846877  -->
 We’re adding a **Summary** tab to the Windows Defender Antivirus reports. (**Endpoint security** > **Reports** > **Microsoft defender antivirus** ).
@@ -184,13 +162,6 @@ Soon, you'll be able to use a single email template in a compliance policy that 
 
 Supporting multiple languages won't require separate templates and policies for each locale. Non-compliant end-users will receive the appropriate localized email notification based on their O365 preferred language. If the preferred language isn't specified by the end-user you can use the *Is Default* checkbox to send the appropriate localized message.  
 
-### Migrate device security polices from Basic Mobility and Security to Intune<!--6306140 -->
-The policy migration tool will let you permanently move Mobile Device Management (MDM) device security policies deployed by Basic Mobility and Security (formerly MDM for Office 365 or Office MDM) to standard Intune MDM configuration profiles and compliance policies. Using this tool will disable all future policy creation and edits in Basic Mobility and Security device security policies.
-
-To use the tool, you must:
-- Already have purchased (but not yet assigned) Intune licenses for all the users of devices managed by Basic Mobility.
-- Contact support to check eligibility if you have purchased an Intune for Education subscription. 
-
 ### Increased certificate validity period for SCEP and PKCS profiles<!-- 8629805   -->
 You'll soon be able to use a **Certificate validity period** of up to **24** months in certificate profiles for Simple Certificate Enrollment Protocol (SCEP) and 
 Public Key Cryptography Standards (PKCS). This is an increase from the current support  for a period of up to 12 months.  This support is coming to Windows and Android. Certificate validity periods are ignored by iOS/iPad OS and macOS.  (**Devices** > **Configuration profiles** > **Create profile** > *SCEP certificate* or *PKCS certificate*).
@@ -219,17 +190,6 @@ As part of endpoint security in Intune, we'll be updating the Microsoft Defender
 In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. We'll be expanding this support to the following partner for using an app protection policy to block or selectively wipe a user’s corporate data based on the health of the device:
 
 - **McAfee MVision Mobile** on Android, iOS and iPadOS
-
-### Intune support for Microsoft Defender Application Guard to include isolated Windows environments<!-- 8274282  -->
-In the future, when you configure **Turn on Application Guard**  in an Intune [App and browser isolation profile](../protect/endpoint-security-asr-profile-settings.md#app-and-browser-isolation) in Endpoint security Attack surface reduction policy, you'll be able to choose from the following options when you enable Application Guard:
-
-- **Microsoft Edge** - *Currently available*
-- **Isolated Windows environments** - *Available in a future update*
-- **Microsoft Edge** ***and*** **isolated Windows environments** - *Available in a future update*
-
-The setting is currently named *Turn on Application Guard for Edge (Options)*.
-
-The new options for this setting expand Application Guard support beyond just URL’s for Edge. You can also enable Application Guard to help protect devices by opening potential threats in a hardware isolated Windows VM environment (container). For example, with support for isolated Windows environments, Application Guard can open untrusted Office documents in an isolated Windows VM. 
 
 <!-- ***********************************************-->
 ## Notices
