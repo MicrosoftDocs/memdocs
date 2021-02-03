@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 12/17/2020
+ms.date: 3/5/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -74,7 +74,7 @@ We've improved the UX of Microsoft Endpoint Manager by creating categories of ap
 <!-- ***********************************************-->
 ## Device configuration
 
-### Use Cisco AnyConnect as a VPN connection type for Windows 10 and newer<!-- 2605377 idready-->
+### Use Cisco AnyConnect as a VPN connection type for Windows 10 and newer<!-- 2605377 -->
 You'll be able to create VPN profiles using Cisco AnyConnect as a connection type (**Devices** > **Device configuration** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Cisco AnyConnect** for connection type) without needing to use custom profiles.
 
 This policy configures the Cisco AnyConnect app available in the Microsoft store. It doesn't configure the Cisco AnyConnect desktop application.
@@ -85,7 +85,7 @@ Applies to:
 - Windows 10 and newer
 - Windows Holographic for Business
  
-### Run Microsoft Edge version 87 and newer in single app kiosk mode on Windows 10 devices<!-- 8271248 idready-->
+### Run Microsoft Edge version 87 and newer in single app kiosk mode on Windows 10 devices<!-- 8271248 -->
 On Windows 10 and newer devices, you configure a device to run as a kiosk that runs one app, or runs many apps (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Kiosk** for profile). When you select single app mode, you can:
 
 - Run Microsoft Edge version 87 and newer.
@@ -105,7 +105,7 @@ After iOS 14 releases, Intune enrollment and the Company Portal app will support
 ### Ending support for macOS 10.12<!--7327326 -->
 After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
 
-### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248 idready-->
+### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248 -->
 In a future update, Microsoft Endpoint Manager will stop supporting Android 5.x devices.
 
 
@@ -119,7 +119,7 @@ This support will give users a familiar Windows 10 experience while you get the 
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
 - Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with OS scope policies and apps.
  
-### Collect logs remote actions<!--2167272 idready -->
+### Collect logs remote actions<!--2167272  -->
 A new remote action, *Collect logs*, will let you collect the logs from corporate devices without interrupting or waiting for the end user. Collected logs will include MDM, Autopilot, event viewers, key, Configuration Manager client, networking, and other critical troubleshooting logs.
 
 The new remote action will be located at [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **All devices** > choose a device > **Collect logs**.
@@ -139,7 +139,7 @@ Using the Company Portal, end users will be able to restart an app installation 
 ### Application icon update for iOS, macOS, and web Company Portal<!-- 7113985 -->
 We'll be updating the app icon used by the Company Portal for iOS, macOS, and web. This new icon is currently used by the Company Portal for Windows. End users will see the new icon in their device's application launcher and home screen, in Apple's App Store, and experiences within the Company Portal apps.
 
-### Company Portal website improved load performance<!-- 8765415 idready -->
+### Company Portal website improved load performance<!-- 8765415  -->
 To improve page load performance, app icons will load in batches. End users may see a placeholder icon for some of their applications when visiting the Company Portal website. The related icons will load shortly after. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md) and [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -150,7 +150,7 @@ We’re reworking the endpoint security Account protection policy to use the new
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Organizational report focused on device configuration<!-- 8455708 idready --> 
+### Organizational report focused on device configuration<!-- 8455708  --> 
 We will be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or pending. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
 
 
