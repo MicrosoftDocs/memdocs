@@ -111,41 +111,12 @@ When you delete a profile, or you remove a device from a group that has the prof
     - Allow automatic synchronization while roaming
 
   - **Windows devices**: Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
-  - **Windows Phone 8.1 devices**: The following settings are removed:  
-  
-    - Require a password to unlock mobile devices
-    - Allow simple passwords
-    - Minimum password length
-    - Required password type
-    - Password expiration (days)
-    - Remember password history
-    - Number of repeated sign-in failures to allow before the device is wiped
-    - Minutes of inactivity before password is required
-    - Required password type – minimum number of character sets
-    - Allow camera
-    - Require encryption on mobile device
-    - Allow removable storage
-    - Allow web browser
-    - Allow application store
-    - Allow screen capture
-    - Allow geolocation
-    - Allow Microsoft account
-    - Allow copy and paste
-    - Allow Wi-Fi tethering
-    - Allow automatic connection to free Wi-Fi hotspots
-    - Allow Wi-Fi hotspot reporting
-    - Allow wipe
-    - Allow Bluetooth
-    - Allow NFC
-    - Allow Wi-Fi
+
+- If a profile applies to a user group at and at a later point in time a user is removed from the assignment group, it may take up to 7 hours for settings to be removed, this is in addition to platform-specific policy refresh cycles.
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 
-Once set, Windows Phone devices don't allow security policies set using MDM or EAS to be reduced in security. For example, you set a **Minimum number of character password** to 8. You try to reduce it to 4. The more restrictive profile is already applied to the device.
-
-To change the profile to a less secure value, then reset security policies. For example, in Windows 8.1, on the desktop, swipe in from right > select **Settings** > **Control Panel**. Select the **User Accounts** applet. In the left-hand navigation menu, there's a **Reset Security Policies** link (toward the bottom). Select it, and then choose **Reset Policies**.
-
-Other MDM devices, such as Android, Windows Phone 8.1 and later, iOS/iPadOS, and Windows 10 may need to be retired, and re-enrolled in to Intune to apply a less restrictive profile.
+Some devices, such as Android, iOS/iPadOS and Windows 10 may need to be retired and re-enrolled in to Intune to apply a less restrictive profile.
 
 ## Some settings in a Windows 10 profile return "Not Applicable"
 
