@@ -100,7 +100,7 @@ Select the VPN connection type from the following list of vendors:
 
   - Confirm you're using Citrix Gateway 12.0.59 or higher.
   - Confirm your users have Citrix SSO 1.1.6 or later installed on their devices.
-  - Integrate Citrix Gateway with Intune for NAC. See the [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) Citrix deployment guide.
+  - Integrate Citrix Gateway with Intune for NAC. See the [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://docplayer.net/47400257-Integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler-ldap-otp-scenario.html) Citrix deployment guide.
   - Enable NAC in the VPN profile.
 
   **When using F5 Access**, be sure to:
