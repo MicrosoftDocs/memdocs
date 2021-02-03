@@ -85,7 +85,7 @@ Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform 
 
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
 
-To provide feedback on Windows Insider, use the [Feedback Hub](/windows-insider/at-work-pro/wip-4-biz-feedback).
+To provide feedback on Windows Insider, use the [Feedback Hub](/windows-insider/business/feedback).
 
 ### <a name="bkmk_20h2"></a> Sysprep and Windows 10 version 20H2
 
