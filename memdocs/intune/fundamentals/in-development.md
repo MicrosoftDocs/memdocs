@@ -124,6 +124,12 @@ A new remote action, *Collect logs*, will let you collect the logs from corporat
 
 The new remote action will be located at [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **All devices** > choose a device > **Collect logs**.
 
+### New options for export device data<!--6330532-->
+You'll have the following options when exporting device data:
+- Only include selected columns in the exported file.
+- Include all inventory data in the exported file.
+To see these options, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Export**.
+
 <!-- ***********************************************-->
 ## Intune apps
 
