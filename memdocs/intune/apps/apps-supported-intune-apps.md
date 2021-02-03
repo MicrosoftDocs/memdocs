@@ -6,14 +6,14 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 1/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 003ce5af-7ee1-43fb-8d16-9d08c7957a85
-ms.reviewer: aanavath
+ms.reviewer: smithre4
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -68,8 +68,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|
 |Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✔|N/A|✖|✖|N/A|
 |Microsoft OneNote|[iOS](https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246)|✔|No settings|✔|N/A|✖|✖|N/A|
-|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✖|✖|
-|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✖|✔|
+|Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✔|✖|
+|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✔|✔|
 |Microsoft Planner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.planner)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|
@@ -106,7 +106,8 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Dynamics CRM|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
 |Microsoft Dynamics CRM|[iOS](https://apps.apple.com/app/microsoft-dynamics-crm/id678800460)|✔|No settings|
 |Microsoft Kaizala|[Android](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)|✔|No settings|
-|Microsoft Kaizala|[iOS](https://apps.apple.com/in/app/microsoft-kaizala/id1112208399)|✔|No settings|
+|Microsoft Kaizala|[iOS](https://apps.apple.com/app/microsoft-kaizala/id1112208399)|✔|No settings|
+|Microsoft Lists|[iOS](https://apps.apple.com/app/microsoft-lists/id1530637363)|✔|No settings|
 |Microsoft PowerApps|[Android](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|✔|No settings|
 |Microsoft PowerApps|[iOS](https://apps.apple.com/us/app/powerapps/id1047318566)|✔|No settings|
 |Microsoft Power Automate|[Android](https://play.google.com/store/apps/details?id=com.microsoft.flow)|✔|No settings|

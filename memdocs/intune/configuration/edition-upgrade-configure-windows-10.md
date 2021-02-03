@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,8 +38,8 @@ See some [commonly-asked questions](https://support.microsoft.com/help/4020089/w
 
 This feature applies to:
 
-- Windows 10 and later
-- Windows 10 1809 or later for S mode
+- Windows 10 and newer
+- Windows 10 1809 and newer for S mode
 - Windows Holographic for Business
 
 These features are available in Intune, and are configurable by the administrator. Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you can then push or deploy the profile to Windows 10 devices in your organization. When you deploy the profile, Intune automatically upgrades the devices or switches out of S mode.
@@ -55,7 +55,7 @@ Before you upgrade devices, be sure you have the following prerequisites:
 
 - A valid product key to install the updated Windows version on all devices that you target with the policy (for Windows 10 Desktop editions). You can use either Multiple Activation Keys (MAK) or Key Management Server (KMS) keys.
 - For Windows 10 Holographic editions, you can use a Microsoft license file. The license file includes the licensing information to install the updated edition on all devices that you target with the policy.
-- The Windows 10 devices you assign the policy are enrolled in Microsoft Intune. You can't use the edition upgrade policy with PCs that run the Intune PC software client software.
+- The Windows 10 devices you assign the policy are enrolled in Microsoft Intune. 
 
 ## Supported upgrade paths
 
@@ -102,7 +102,7 @@ The following table lists the supported upgrade paths for the Windows 10 edition
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Edition upgrade**.
+    - **Profile**: Select **Templates** > **Edition upgrade and mode switch**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
