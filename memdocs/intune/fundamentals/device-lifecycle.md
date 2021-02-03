@@ -34,7 +34,7 @@ All devices that you manage have a *lifecycle*. Intune can help you manage this 
 
 ## Enroll
 
-Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and Mac OS X). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](../enrollment/device-enrollment.md). You can also manage Windows PCs by enrolling them with Intune (MDM) or by [installing the Intune client software](./intune-legacy-pc-client.md).
+Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and Mac OS X). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](../enrollment/device-enrollment.md). You can also manage Windows PCs by enrolling them with Intune (MDM).
 
 ## Configure
 
