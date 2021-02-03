@@ -63,8 +63,6 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 <!-- ***********************************************-->
 ## App management
 
-### Configure whether a required iOS app is removable<!-- 8391462  -->
-You'll be able to configure whether a required iOS app is installed as a removable app by end users. The new setting will apply to iOS store, LOB and built-in apps. You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > **Add**. When setting the app assignments, you'll be able to select **Install as removable**. The default value is **yes**, which means the app is removable. Existing required installs on iOS 14 will be updated to the default (removable) setting value when this setting is implemented. For more information about iOS apps, see [Microsoft Intune app management](..\apps\app-management.md).
 
 ### Android Enterprise system app support in work profiles<!-- 5291507  -->
 You'll be able to deploy Android Enterprise system apps for Android Enterprise Work Profile devices. System apps are apps that do not appear in the Managed Google Play Store and come pre-installed on the device. Once a system app is deployed, you'll be unable to uninstall, hide, or otherwise remove the system app. Note that this feature is planned to be released on or near the 2101 release timeframe. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
@@ -72,38 +70,13 @@ You'll be able to deploy Android Enterprise system apps for Android Enterprise W
 ### New app categories to target app protection policies more easily<!-- 4802581  -->
 We've improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we'll dynamically update these categories to include those apps as appropriate, and your policies will be automatically apply to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
 
-### Line-of-business apps supported on Shared iPad devices<!-- 8834566 idready -->
-You'll be able to deploy line-of-business (LOB) apps to Shared iPad devices. The line-of-business app must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For related information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
 
 <!-- ***********************************************-->
 ## Device configuration
 
 
-### Settings catalog and Templates when creating device configuration profiles for macOS and Windows 10 devices<!-- 8673623 8254609  -->
-
-There are UI updates when creating device configuration profiles for macOS and Windows 10 devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** or **Windows 10 and later** for platform).
-
-The profile shows **Settings catalog - preview** and **Templates**:
-
-- **Settings catalog - preview**: Use this option to start from scratch and select settings you want from the library of available settings. For macOS, the Settings catalog contains settings to configure the Microsoft Edge browser. Settings catalog for Windows 10 includes many existing settings, and some new settings, all in one place.
-- **Templates**: Use this option to configure all the existing profiles, such as device restrictions, device features, VPN, Wi-Fi, and more.
-
-This is only a UI change, and doesn't impact existing profiles.
-
-Applies to:
-- macOS device configuration
-- Windows 10 device configuration
 
 
-### Limit Apple's personalized advertising on iOS/iPadOS devices<!-- 8518601  -->
-On iOS/iPadOS devices, you can configure Apple's personalized advertising. When enabled, personalized ads are limited in the App Store, Apple News, and Stocks apps (**Devices** > **Device Configuration** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **General** > **Limit Apple personalized advertising**).
-
-This setting only impacts personalized ads. Configuring this setting sets Settings > Privacy > Apple Advertising to off. It doesn't impact non-personalized ads in the App Store, Apple News, and Stocks apps. For more information on Apple's advertising policy, see [Apple Advertising & Privacy](https://support.apple.com/HT205223) (opens Apple's web site).
-
-To see the current settings you can configure in Intune, go to [iOS and iPadOS device settings to allow or restrict features](../configuration/device-restrictions-ios.md).
-
-Applies to:
-- iOS/iPadOS 14.0 and newer, devices enrolled with device enrollment or automated device enrollment
  
 <!-- ***********************************************-->
 ## Device enrollment
@@ -191,13 +164,6 @@ The new Summary view:
 ### Update when exporting Intune reports using the Graph API<!-- 8764428  -->
 When you use the Graph API to export Intune reports without selecting any columns for the devices report, you'll receive the default column set. To reduce confusion, we'll be removing columns from the default column set starting January 2021. The columns being removed are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns will still be available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
-### Additional Data Warehouse beta properties<!-- 8612282 -->
-Additional properties will be available using the Intune Data Warehouse beta API. The following properties will be exposed via the [devices](../developer/reports-ref-devices.md) entity in the beta API:
-
-- `SubnetAddressV4Wifi` - The subnet address for IPV4 Wi-Fi connection.
-- `IpAddressV4Wifi` - The IP address for IPV4 Wi-Fi connection.
-
-For related information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 ### Export localized Intune report data using Graph APIs<!-- 8612346 -->
 You'll be able to specify that the report data that you export from the Microsoft Endpoint Manager reporting export [API](../fundamentals/reports-export-graph-apis.md) can contain localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports, which will prevent breaking changes. For more information about reports, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
