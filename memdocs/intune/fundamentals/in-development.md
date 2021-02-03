@@ -78,28 +78,6 @@ You'll be able to deploy line-of-business (LOB) apps to Shared iPad devices. The
 <!-- ***********************************************-->
 ## Device configuration
 
-### Use NetMotion Mobility as a VPN connection type for Android Enterprise devices<!-- 7764263 -->
-When you create a VPN profile, NetMotion Mobility is available as a VPN connection type (**Devices** > **Device configuration** > **Create profile** > **Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile** or **Android Enterprise Work Profile** for platform > **VPN** for profile > **NetMotion** for connection type).
-
-For more information on VPN profiles in Intune, see [Create VPN profiles to connect to VPN servers](../configuration/vpn-settings-configure.md).
-
-Applies to:
-- Android Enterprise Work Profile
-- Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
-
-### Use the settings catalog to configure Microsoft Edge browser on macOS devices - public preview <!-- 4552197  -->
-Currently on macOS devices, you configure the Microsoft Edge browser using a .plist preference file (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Preference file** for profile).
-
-There's an updated UI to configure the Microsoft Edge browser: **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile. Select the settings you want, and then configure them. In your profile, you can also add more settings, or remove existing settings.
-
-To see a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies). Be sure macOS is listed as a supported version. If some settings aren't available in the settings catalog, then it's recommended to continue using the preference file only. 
-
-For more information on .plist files, see [Add a property list file to macOS devices using Intune](../configuration/preference-file-settings-macos.md)
-
-To see the policies you have configured, open Microsoft Edge, and go to `edge://policy`.
-
-Applies to:
-- Microsoft Edge browser on macOS
 
 ### Settings catalog and Templates when creating device configuration profiles for macOS and Windows 10 devices<!-- 8673623 8254609  -->
 
@@ -116,18 +94,6 @@ Applies to:
 - macOS device configuration
 - Windows 10 device configuration
 
-### Home screen layout updates on supervised iOS/iPadOS devices<!-- 8710594 7978976  -->
-
-On iOS/iPadOS devices, you can configure the Home Screen layout (**Devices** > **Device Configuration** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Home screen layout**). In Intune, the Home Screen Layout feature is updated. You can:
-
-- <!-- 8710594 --> You'll see an updated design for the home screen layout feature. This feature allows admins to see in real time how the apps you add look on pages, the dock, and within folders. You can also see the app icons for the apps you add. You can't have multiple separate pages within a folder from the control itself. But, you can add 9 or more apps to a folder and then those apps will go on the next page. 
-
-  Existing policies are not impacted, and don't need to be changed. The setting values are transferred to the new UI without any negative effects. The setting behavior on devices is the same. 
-
-- <!-- 7978976 -->Add URLs as web apps to pages, or to the dock. Be sure you add a specific URL only once. Existing policies are not impacted, and don't need to be changed. This new URL setting is blank for new and existing policies until it's configured.
-
-Applies to:
-- iOS/iPadOS supervised devices
 
 ### Limit Apple's personalized advertising on iOS/iPadOS devices<!-- 8518601  -->
 On iOS/iPadOS devices, you can configure Apple's personalized advertising. When enabled, personalized ads are limited in the App Store, Apple News, and Stocks apps (**Devices** > **Device Configuration** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **General** > **Limit Apple personalized advertising**).
