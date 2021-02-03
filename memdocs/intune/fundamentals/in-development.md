@@ -72,11 +72,9 @@ We've improved the UX of Microsoft Endpoint Manager by creating categories of ap
 
 
 <!-- ***********************************************-->
+<!--
 ## Device configuration
-
-
-
-
+-->
  
 <!-- ***********************************************-->
 ## Device enrollment
@@ -122,14 +120,6 @@ We’re reworking the endpoint security Account protection policy to use the new
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-### Summary view for Windows Defender Antivirus reports<!-- 8846877  -->
-We’re adding a **Summary** tab to the Windows Defender Antivirus reports. (**Endpoint security** > **Reports** > **Microsoft defender antivirus** ).
-
-The new Summary view:
-- Displays aggregate details for the Antivirus reports. 
-- Includes a *Refresh* option that updates the counts of devices in each antivirus state. 
-- Reflects the same data as found in the [Agent Status organizational](../fundamentals/reports.md#antivirus-agent-status-report-organizational) report. 
-
 
 <!-- ***********************************************-->
 <!--
@@ -149,23 +139,6 @@ You'll be able to specify that the report data that you export from the Microsof
 <!-- ***********************************************-->
 ## Security
 
-### New Endpoint Security Firewall reports <!-- 5653366   -->
-We're adding two new reports that are dedicated to Firewall policies in Endpoint Security:
-
-- The first, under Endpoint security, will show the list of Windows 10 devices with Firewall turned off. This report will show for each device the device name, device ID, user information, and the Firewall status. (**Endpoint security** > **Firewall** > ***Windows 10 MDM devices with firewall off***).
-- The second, under Reports, will be an organizational report which lists Windows 10 devices with their firewall status. This report will display status information about device firewalls that include if the firewall is enabled, disabled, limited, or temporarily disabled.  (**Reports** > **Firewall** > ***Windows 10 MDM Firewall status***).
-
-### Locale support in email notifications for non-compliance<!--7604191    -->
-Soon, you'll be able to use a single email template in a compliance policy that supports multiple locales for sending email notifications for non-compliance.
-
-(**Devices** > **Compliance policies** > **Notifications** > **Create notification** > **Notification message templates**). 
-
-Supporting multiple languages won't require separate templates and policies for each locale. Non-compliant end-users will receive the appropriate localized email notification based on their O365 preferred language. If the preferred language isn't specified by the end-user you can use the *Is Default* checkbox to send the appropriate localized message.  
-
-### Increased certificate validity period for SCEP and PKCS profiles<!-- 8629805   -->
-You'll soon be able to use a **Certificate validity period** of up to **24** months in certificate profiles for Simple Certificate Enrollment Protocol (SCEP) and 
-Public Key Cryptography Standards (PKCS). This is an increase from the current support  for a period of up to 12 months.  This support is coming to Windows and Android. Certificate validity periods are ignored by iOS/iPad OS and macOS.  (**Devices** > **Configuration profiles** > **Create profile** > *SCEP certificate* or *PKCS certificate*).
-
 ### Improved flow for conditional access on Surface Duo devices<!-- 7552043  -->
 We’re streamlining the conditional access flow on Surface Duo devices. These changes happen automatically and won't require any configuration updates by administrators. (**Endpoint security** > **Conditional access**)
 
@@ -176,20 +149,6 @@ We’re streamlining the conditional access flow on Surface Duo devices. These c
 We're adding a new setting to the Attack surface reduction rule profile, part of Attack surface reduction policy, to help prevent malware from abusing WMI to gain persistence on a device. (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Attack surface reduction rule**)
 
 This new setting can help protect against fileless malware threats that abuse the WMI repository and event model to stay hidden. For more information see [Block persistence through MI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-persistence-through-wmi-event-subscription) in the Windows security documentation.
-
-### New Application Guard settings in Attack surface reduction policy<!-- 8274336 -->
-We'll be adding two new settings to the App and browser isolation profile of Intune’s [Endpoint security Attack surface reduction policy](../protect/endpoint-security-asr-policy.md):
-
-- **Application Guard allow camera and microphone access** – Manage access by Application Guard apps to a devices camera and microphone.
-- **Application Guard allow use of Root Certificate Authorities from the user's device** – When you specify one or more root certificate thumbprints, the matching certificates are transferred to the Microsoft Defender Application Guard container.
-
-### Update to MDATP and MDM baseline settings<!-- 8391335, 8377369 -->
-As part of endpoint security in Intune, we'll be updating the Microsoft Defender Advanced Threat Protection and Mobile Device Management (MDM) protection baselines settings to the latest version. For related information, see [Microsoft Defender Advanced Threat Protection baseline settings for Intune](../protect/security-baseline-settings-defender-atp.md?pivots=atp-sept-2020).
-
-### App protection policy support on Android and iOS/iPadOS for additional Mobile Threat Defense partners<!-- 8846351 idready-->
-In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners. We'll be expanding this support to the following partner for using an app protection policy to block or selectively wipe a user’s corporate data based on the health of the device:
-
-- **McAfee MVision Mobile** on Android, iOS and iPadOS
 
 <!-- ***********************************************-->
 ## Notices
