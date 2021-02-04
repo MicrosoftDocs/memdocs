@@ -102,7 +102,7 @@ In addition to the core requirements for user driven Hybrid Azure AD Join mentio
 - The device must be running Windows 10, version 1809 or later. 
 - The device must have access to an Active Directory domain controller. It must be connected to the organization's network. It must be able to resolve the DNS records for the AD domain and the AD domain controller. It must be able to communicate with the domain controller to authenticate the user.
 
-## User-driven mode for hybrid Azure Active Directory join with VPN support
+## User-driven mode for hybrid Azure Active Directory join with VPN support (Preview)
 
 Devices joined to Active Directory require connectivity to an Active Directory domain controller for many activities. These activities include user sign-in (validating the user's credentials) and Group Policy application. As a result, the Windows Autopilot user-driven Hybrid Azure AD Join process would validate that the device is able to contact an Active Directory domain controller by pinging that domain controller.
 
