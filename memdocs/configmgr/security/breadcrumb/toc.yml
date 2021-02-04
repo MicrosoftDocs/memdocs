@@ -16,7 +16,7 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/core/
-          topicHref: /mem/configmgr/security/index
+          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
 
 - name: Docs
   tocHref: /
@@ -36,7 +36,7 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/osd/
-          topicHref: /mem/configmgr/security/index
+          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
 
 - name: Docs
   tocHref: /
@@ -56,7 +56,7 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/apps/
-          topicHref: /mem/configmgr/security/index
+          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
 
 - name: Docs
   tocHref: /
@@ -76,5 +76,5 @@
         items:
         - name: Security
           tocHref: /mem/configmgr/compliance/
-          topicHref: /mem/configmgr/security/index
+          topicHref: /mem/configmgr/osd/plan-design/security-and-privacy-for-operating-system-deployment
 

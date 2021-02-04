@@ -127,7 +127,7 @@ For more information, see [Configure role-based administration](../../core/serve
 
 To create virtual applications in Configuration Manager, install App-V 4.6 SP1 or later on devices.
 
-Before you deploy virtual applications, also update the App-V client with the hotfix described in the [Microsoft Support article 2645225](https://support.microsoft.com/help/2645225).  
+Before you deploy virtual applications, also update the App-V client with the hotfix described in the [Microsoft Support article 2645225](https://web.archive.org/web/20141223110122/http://support.microsoft.com/kb/2645225).  
 
 
 ### Application catalog
