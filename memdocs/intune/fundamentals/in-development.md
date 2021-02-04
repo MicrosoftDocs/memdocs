@@ -155,6 +155,9 @@ We'll be updating the app icon used by the Company Portal for iOS, macOS, and we
 ### Company Portal website improved load performance<!-- 8765415  -->
 To improve page load performance, app icons will load in batches. End users may see a placeholder icon for some of their applications when visiting the Company Portal website. The related icons will load shortly after. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md) and [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
 
+### Microsoft Launcher configuration keys<!-- 8980621 -->
+For Android Enterprise fully managed devices, the Microsoft Launcher for Intune app will provide additional customization. You'll be able to configure the set of apps and weblinks, as well as the order, that are displayed in Launcher. The app set and position (order) of app configurations have been merged together to simplify home screen customization. For related information, see [Configure Microsoft Launcher](../apps/configure-microsoft-launcher.md).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
