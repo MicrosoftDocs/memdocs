@@ -72,7 +72,7 @@ While not a best practice, some organizations create hundreds or even thousands 
 
 Remember that Configuration Manager creates policies for all objects in your collections when you target tasks like deployments to them. Membership changes, either through scheduled refresh or incremental updates, can create a lot of other work for the whole system. The latest current branch builds have special policy optimizations for the All Systems and All Users collections. When targeting your entire enterprise, use the built-in collections instead of a clone of these built-in collections.
 
-To investigate collection performance even deeper, you can use the Collection Evaluation Viewer (CEViewer) in the [Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).
+To investigate collection performance even deeper, you can use the Collection Evaluation Viewer (CEViewer) in the [Configuration Manager Toolkit](https://mindmajix.com/system-center-2012-r2-configuration-manager-toolkit).
 
 ### Discovery methods
 For baseline performance testing, run server-based discovery methods once a week, enabling delta discovery as appropriate to keep the data fresh during the week. The tests should discover an object quantity proportional to the simulated enterprise size. The performance baseline test for heartbeat discovery should also run once a week.

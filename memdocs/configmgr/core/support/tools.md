@@ -23,7 +23,7 @@ Starting in Configuration Manager version 1806, these tools are included in the 
 All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) are supported for use with these tools.
 
 > [!Note]  
-> The [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012) is still available from the Microsoft Download Center. For Configuration Manager version 1806 and later, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included in version 1806. These legacy tools are no longer supported.
+> The [System Center 2012 R2 Configuration Manager Toolkit](/windows-insider/business/feedback) is still available from the Microsoft Download Center. For Configuration Manager version 1806 and later, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included in version 1806. These legacy tools are no longer supported.
 
 
 ## Client tools
