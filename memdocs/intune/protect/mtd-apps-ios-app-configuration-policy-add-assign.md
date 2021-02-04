@@ -118,10 +118,10 @@ Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead,
 
 ### SEP Mobile app configuration policy
 
-Use the same Azure AD account previously configured in the [Symantec Endpoint Protection Management console](https://aad.skycure.com), which should be the same account used to sign in to the Intune.
+Use the same Azure AD account previously configured in the [Symantec Endpoint Protection Management console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html), which should be the same account used to sign in to the Intune.
 
 - **Download** the iOS app configuration policy file:
-  - Go to [Symantec Endpoint Protection Management console](https://aad.skycure.com) and sign in with your admin credentials.
+  - Go to [Symantec Endpoint Protection Management console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html) and sign in with your admin credentials.
 
   - Go to **Settings**, and under **Integrations**, choose **Intune**. Choose **EMM Integration Selection**. Choose **Microsoft**, and then save your selection.
 
