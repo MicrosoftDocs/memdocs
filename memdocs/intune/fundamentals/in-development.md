@@ -74,7 +74,6 @@ We've improved the UX of Microsoft Endpoint Manager by creating categories of ap
 <!-- ***********************************************-->
 <!--
 ## Device configuration
-<<<<<<< HEAD
 
 ### Use Cisco AnyConnect as a VPN connection type for Windows 10 and newer<!-- 2605377 -->
 You'll be able to create VPN profiles using Cisco AnyConnect as a connection type (**Devices** > **Device configuration** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Cisco AnyConnect** for connection type) without needing to use custom profiles.
@@ -97,9 +96,6 @@ For more information on the settings you can configure in kiosk mode, see [Kiosk
 
 Applies to:
 - Windows 10 and newer in single-app kiosk mode
-=======
--->
->>>>>>> 53d040453dadb063941bd8abcb4d2ff4d256fc4c
  
 <!-- ***********************************************-->
 ## Device enrollment
@@ -110,12 +106,9 @@ After iOS 14 releases, Intune enrollment and the Company Portal app will support
 ### Ending support for macOS 10.12<!--7327326 -->
 After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
 
-<<<<<<< HEAD
 ### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248 -->
 In a future update, Microsoft Endpoint Manager will stop supporting Android 5.x devices.
 
-=======
->>>>>>> 53d040453dadb063941bd8abcb4d2ff4d256fc4c
 
 <!-- ***********************************************-->
 ## Device management
@@ -170,12 +163,9 @@ We’re reworking the endpoint security Account protection policy to use the new
  
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
-<<<<<<< HEAD
 ### Organizational report focused on device configuration<!-- 8455708  --> 
 We will be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or pending. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
 
-=======
->>>>>>> 53d040453dadb063941bd8abcb4d2ff4d256fc4c
 
 <!-- ***********************************************-->
 <!--
