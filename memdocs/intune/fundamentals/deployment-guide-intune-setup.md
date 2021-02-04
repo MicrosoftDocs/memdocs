@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 02/04/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,7 +51,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 If you currently don't use any MDM or MAM provider, then you have some options:
 
-- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, and app features in Intune, and the benefits of the Endpoint Manager admin center.
+- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, and app features in Intune. You also get the benefits of the Endpoint Manager admin center.
 
   Next, [deploy Intune](#deploy-intune) (in this article).
   
@@ -191,6 +191,65 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Endpoint Manager, you import your GPOs, and see which policies are available (and not available) in Intune.
 
 Next, [deploy Intune](#deploy-intune) (in this article).
+
+## Tenant to tenant migration
+
+A tenant is your organization in Azure Active Directory (AD), such as Contoso. It includes a dedicated Azure AD service instance that Contoso receives when it signs up for a Microsoft cloud service, such as Microsoft Intune or Microsoft 365. Azure AD is used by Intune and Microsoft 365 to identify users and devices, control access to the Intune policies you create, and more.
+
+In Intune, you can export and import some of your policies using [Microsoft Graph](/graph/api/resources/intune-graph-overview) and Windows PowerShell. Users must unenroll from Intune, and then re-enroll in Intune.
+
+For example, you create a Microsoft Intune trial subscription. In this subscription trial tenant, you have policies that configure apps and features, check compliance, and more. You're ready to move these policies to another tenant.
+
+> [!WARNING]
+>
+> - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be run using a non-production or "test" tenant account. They're not intended for production use. Use at your own risk.
+> - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
+> - Users **must** unenroll from Intune, and then re-enroll in Intune.
+
+This section includes an overview of the steps. Use these steps as guidance, and know that your specific steps may be different.
+
+1. Download the samples, and use Windows PowerShell to export your policies:
+
+    1. Go to [microsoftgraph/powershell-intune-samples](https://github.com/microsoftgraph/powershell-intune-samples), select **Code** > **Download ZIP**. Extract the contents of the `.zip` file.
+    2. Open the Windows PowerShell app as administrator, and change the directory to your folder. For example, enter the following command:
+
+        `cd C:\psscripts\powershell-intune-samples-master`
+
+    3. Install the AzureAD PowerShell module:
+
+        `Install-Module AzureAD`
+
+        Select **Y** to install the module from an untrusted repository. The install can take a few minutes.
+
+    4. Change the directory to the folder with the script you want to run. For example, change the directory to the `CompliancePolicy` folder:
+
+        `cd C:\psscripts\powershell-intune-samples-master\powershell-intune-samples-master\CompliancePolicy`
+
+    5. Run the export script. For example, enter the following command:
+
+        `.\CompliancePolicy_Export.ps1`
+
+        Sign in with your account. When prompted, enter the path to put the policies. For example, enter:
+
+        `C:\psscripts\ExportedIntunePolicies\CompliancePolicies`
+
+    In your folder, the policies are exported.
+
+2. Import your policies in your new tenant:
+
+    1. Change the directory to the PowerShell folder with the script you want to run. For example, change the directory to the `CompliancePolicy` folder:
+
+        `cd C:\psscripts\powershell-intune-samples-master\powershell-intune-samples-master\CompliancePolicy`
+
+    2. Run the import script. For example, enter the following command:
+
+        `.\CompliancePolicy_Import_FromJSON.ps1`
+
+        Sign in with your account. When prompted, enter the path to the policy `.json` file you want to import. For example, enter:
+
+        `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
+
+3. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
 
 ## Deploy Intune
 
