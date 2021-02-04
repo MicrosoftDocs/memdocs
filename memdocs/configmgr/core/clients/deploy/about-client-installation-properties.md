@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 08/11/2020
+ms.date: 02/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -622,16 +622,16 @@ Use the following process:
     > [!TIP]
     > The deployment's purpose can be either available or required. Since you specify the deployment ID as the property value, the purpose doesn't matter.<!-- MEMDocs#843 -->
 
-1. [Install the Configuration Manager client](deploy-clients-to-windows-computers.md#BKMK_Manual) on a device, and include the following property: `PROVISIONTS=PRI20001`. Set the value of this property as the task sequence deployment ID.
+1. [Install the Configuration Manager client](deploy-clients-to-windows-computers.md#BKMK_Manual) on a device using **ccmsetup.msi**, and include the following property: `PROVISIONTS=PRI20001`. Set the value of this property as the task sequence deployment ID.
 
     - If you're installing the client from Intune during co-management enrollment, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md).
 
       > [!NOTE]
       > This method may have additional prerequisites. For example, enrolling the site to Azure Active Directory, or creating a content-enabled cloud management gateway.
+      >
+      > Regardless the method, only use this property with **ccmsetup.msi**.<!-- 9277971 -->
 
 After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
-
-
 
 ### RESETKEYINFORMATION
 
