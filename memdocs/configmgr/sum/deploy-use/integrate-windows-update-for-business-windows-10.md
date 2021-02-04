@@ -69,7 +69,7 @@ Beginning in Configuration Manager version 1706, you can configure deferral poli
 
 > [!NOTE]
 > Beginning in Configuration Manager version 1802, you can set deferral policies for Windows Insider. <!--507201-->  
-For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](/windows/deployment/update/waas-windows-insider-for-business).
+For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](/windows-insider/business/server-get-started).
 
 ### Prerequisites for deferral policies
 

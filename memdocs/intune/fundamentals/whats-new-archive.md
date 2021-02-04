@@ -3295,7 +3295,7 @@ You can now enable Federal Information Processing Standards (FIPS) mode for Ente
 #### Control S-mode on Windows 10 and later devices - public preview<!-- 1958649 -->
 With this feature update, you can create a device configuration profile that switches a Windows 10 device out of S-mode, or prevent users from switching the device out of S-mode. This feature is in Intune > **Device configuration** > **Profiles** >  **Windows 10 and later** > **Edition upgrade and mode switch**.
 [Introducing Windows 10 in S mode](https://www.microsoft.com/windows/s-mode) provides more information on S mode.
-Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
+Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### Windows Defender for Endpoint configuration package automatically added to configuration profile<!-- 2144658 -->
 When using [Defender for Endpoint and onboarding](../protect/advanced-threat-protection-configure.md#onboard-devices) devices in Intune, you previously had to download a configuration package, and add it to your configuration profile. With this update, Intune automatically gets the package from Windows Defender Security Center, and adds it to your profile.
@@ -3303,7 +3303,7 @@ Applies to Windows 10 and later.
 
 #### Require users to connect during device setup<!--2311457-->
 You can now set device profiles to require that the device connects to a network before proceeding past the Network page during Windows 10 setup. While this feature is in preview, a Windows Insider build 1809 or later is required to use this setting.
-Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
+Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### Restricts apps, and block access to company resources on iOS and Android Enterprise devices<!-- 2451462 -->
 In **Device compliance** > **Policies** > **Create policy** > **iOS** > **System Security**, there is a new **Restricted applications** setting. This new setting uses a compliance policy to block access to company resources if certain apps are installed on the device. The device is considered non-compliant until the restricted apps are removed from the device.
@@ -3336,7 +3336,7 @@ You now have the option to run the Company Portal in Single App mode if you auth
 
 #### Assign a user and friendly name to an Autopilot device<!--1346521 -->
 You can now [assign a user to a single Autopilot device](../../autopilot/enrollment-autopilot.md). Admins will also be able to give friendly names to greet the user when setting up their device with Autopilot.
-Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
+Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### Use VPP device licenses to pre-provision the Company Portal during DEP enrollment<!-- 1608345 -->
 You can now use Volume Purchase Program (VPP) device licenses to pre-provision the Company Portal during Device Enrollment Program (DEP) enrollments. To do so, when you [create or edit an enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile), specify the VPP token that you want to use to install the Company Portal. Make sure that your token doesn't expire and that you have enough licenses for the Company Portal app. In cases where the token expires or runs out of licenses, Intune will push the App Store Company Portal instead (this will prompt for an Apple ID).
@@ -3348,11 +3348,11 @@ A confirmation is now required to delete a Volume Purchase Program (VPP) token i
 You can [block Windows personal devices](../enrollment/enrollment-restrictions-set.md) from enrolling with [mobile device management](../enrollment/windows-enroll.md) in Intune. Devices enrolled with [Intune PC agent](./intune-legacy-pc-client.md) can't be blocked with this feature. This feature is rolling out over the next couple weeks so you might not see it immediately in the user interface.
 
 #### Specify machine name patterns in an Autopilot profile<!--1849855-->
-You can [specify a computer name template](../../autopilot/profiles.md) to generate and set the [computer name](/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
+You can [specify a computer name template](../../autopilot/profiles.md) to generate and set the [computer name](/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### For Windows Autopilot profiles, hide the change account options on the company sign-in page and domain error page<!--1901669 -->
 There are [new Windows Autopilot profile options](../../autopilot/profiles.md) for admins to hide the change account options on the company sign-in and domain error pages. Hiding these options requires Company Branding to be configured in Azure Active Directory. 
-Applies to: the most recent [Windows Insider](/windows-insider/at-work-pro/) build (while in preview).
+Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 ### macOS support for Apple Device Enrollment Program<!-- 747651 -->
 Intune now supports enrolling macOS devices into the Apple Device Enrollment Program (DEP). For more information, see [Automatically enroll macOS devices with Apple's Device Enrollment Program](../enrollment/device-enrollment-program-enroll-macos.md).
