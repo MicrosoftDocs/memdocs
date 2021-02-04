@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 02/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,12 +37,13 @@ Use the settings catalog as part of your mobile device management (MDM) solution
 
 This feature applies to:
 
-- macOS
-- Windows 10 and newer
+- **macOS**
 
-For **Windows** devices, you have thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+  Configure Microsoft Edge version 77 and newer. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
-For **macOS** devices, you can configure Microsoft Edge version 77 and newer using a configuration profile. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website) to configure Microsoft Edge version 77+. For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
+- **Windows 10 and newer**
+
+  There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
