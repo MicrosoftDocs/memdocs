@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,6 +35,10 @@ Device profiles allow you to add and configure settings, and then push these set
 - **Administrative templates**: On Windows 10 and newer devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune and Endpoint Manager.
 
   For more information, see [Administrative Templates](administrative-templates-windows.md)
+
+- **Cloud configuration**: You can create a cloud configuration that configures a Windows 10 and newer device into a cloud-optimized device. These devices focus on web browsing, and are commonly used by frontline workers, remote workers, and students. In the Microsoft Endpoint Manager, you configure Microsoft documented and recommended settings, and then deploy these settings to your devices. You can use a cloud configuration on new devices, or re-purpose existing devices.
+
+  For more information, including an overview and setup guide, see [Windows 10 in cloud configuration](https://aka.ms/cloud-config) (opens another Microsoft web site).
 
 - **Baselines**: On Windows 10 and newer devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
