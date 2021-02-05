@@ -147,7 +147,7 @@ Using [Community hub](community-hub.md), you can share Power BI report templates
     > 1. Close the data source settings window, and then select **Apply changes**.
 
 1. When the report data is loaded, select **File** > **Save As**, then select **Power BI Report Server**.
-1. Save the report to the report to a folder on the root Configuration Manager reporting folder on the reporting point. You may want to create a `Downloaded Reports` folder for these items.
+1. Save the report to a folder on the root Configuration Manager reporting folder on the reporting point. You may want to create a `Downloaded Reports` folder for these items.
 1. Repeat the steps for any other report templates that were downloaded. When you're done, close Microsoft Power BI Desktop (Optimized for Power BI Report Server).
 ## Known issues
 
