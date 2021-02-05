@@ -45,6 +45,8 @@
     href: device-lifecycle.md
   - name: App lifecycle
     href: ../apps/app-lifecycle.md
+  - name: Windows 10 in cloud configuration
+    href: cloud-configuration.md
   - name: Guided scenarios
     items: 
     - name: Guided scenarios overview
