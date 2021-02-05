@@ -530,7 +530,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 - During LTI deployments to new computers, some pages (such as the **User Locale** and **Keyboard Locale** pages) do not display text correctly if required fonts are not installed in Windows PE. In the Refresh Computer scenario, the same symptoms appear if required fonts are not installed in the operating system being replaced.  
 
-- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see the Microsoft Support article [How to add Input Method Editor (IME) support to Windows PE 2.0](https://web.archive.org/web/20130130162658/http://support.microsoft.com:80/kb/926181).  
+- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see [Custom Input Method Editor (IME) requirements](/windows/uwp/design/input/input-method-editor-requirements).
 
 - A maximum of two WINS server addresses can be added when configuring static IP configuration settings for a network adapter. If more than two WINS server addresses are added using MDT, only the first two WINS server addresses are used.  
 
