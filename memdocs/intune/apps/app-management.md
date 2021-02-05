@@ -35,8 +35,7 @@ As an IT admin, you can use Microsoft Intune to manage the client apps that your
 - You might need to manage apps on both company devices and users' personal devices.
 - You must ensure that your network and your data remain secure.
 
-Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.
-
+Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.<p>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MRyj]
 
