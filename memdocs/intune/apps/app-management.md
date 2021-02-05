@@ -37,6 +37,7 @@ As an IT admin, you can use Microsoft Intune to manage the client apps that your
 
 Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.
 
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MRyj]
 
 ## Mobile Application Management (MAM) basics
