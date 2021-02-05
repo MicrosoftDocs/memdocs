@@ -40,16 +40,6 @@ This issue impacts co-managed devices. Devices enrolled only via Intune or only 
 **Workaround:**
 The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
 
-### Some Servers are appearing in Endpoint analytics reports
-
-Some devices running Windows Server are unexpectedly appearing in Endpoint analytics reports, such as **Startup performance** and **Recommended software**.
-
-**Impacted devices:**
-This issue impacts some Windows Server devices that are managed by Configuration Manager with tenant attach enabled.
-
-**Mitigation:**
-This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
-
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
 Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro. Windows 10 long-term servicing channel (LTSC) isn't supported.
