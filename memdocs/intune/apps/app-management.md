@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 02/05/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,6 +36,8 @@ As an IT admin, you can use Microsoft Intune to manage the client apps that your
 - You must ensure that your network and your data remain secure.
 
 Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MRyj]
 
 ## Mobile Application Management (MAM) basics
 
