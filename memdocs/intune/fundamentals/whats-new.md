@@ -264,12 +264,6 @@ Intune now supports a **Certificate validity period** of up to **24** months in 
 This support applies to Windows and Android. Certificate validity periods are ignored by iOS/iPadOS and macOS.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
-### Intune apps
-
-#### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
-The Company Portal app can now store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Monitor and troubleshoot
 
 #### New co-management eligibility organizational report<!-- 7854306  -->
