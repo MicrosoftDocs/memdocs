@@ -115,7 +115,7 @@ In the Configuration Manager console, you see the new report in the list of Powe
 
 There are sample reports available for download. For more information, see [Install Power BI sample reports](powerbi-sample-reports.md).
 
-## <a name="bkmk_community_hub></a> Power BI report templates in Community hub
+## <a name="bkmk_community_hub"></a> Power BI report templates in Community hub
 <!--5679831-->
 Using [Community hub](community-hub.md), you can share Power BI report templates you've created and download templates that others have shared.
 ### Contributing a Power BI report template (PBIT) files to Community hub
