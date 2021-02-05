@@ -2,7 +2,7 @@
 title: Plan for application management
 titleSuffix: Configuration Manager
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 02/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Plan for and configure application management in Configuration Manager
@@ -122,18 +120,16 @@ For more information, see the following articles:
 
 For more information, see [Configure role-based administration](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
-
 ### App-V 4.6 SP1 or later client to run virtual applications
 
 To create virtual applications in Configuration Manager, install App-V 4.6 SP1 or later on devices.
 
-Before you deploy virtual applications, also update the App-V client with the hotfix described in the [Microsoft Support article 2645225](https://web.archive.org/web/20141223110122/http://support.microsoft.com/kb/2645225).  
-
+App-V is included with all supported versions of Windows 10 Enterprise edition. For more information, see [Getting started with App-V for Windows 10](/windows/application-management/app-v/appv-getting-started).
 
 ### Application catalog
 
 > [!Important]  
-> Support ends for the application catalog roles with version 1910.. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](#bkmk_remove-appcat).  
 
 #### Application catalog web service point
 
