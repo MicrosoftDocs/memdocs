@@ -204,6 +204,9 @@ This new setting can help protect against fileless malware threats that abuse th
 ### Additional functionality for your MAM conditional launch policy<!-- 6486982   7362746  -->
 You'll be able to configure a setting within your MAM conditional launch policy to include **Max allowed threat level** signals from Microsoft Defender for Endpoint on iOS devices and Android devices. You will be able to choose to **Block Access** or **Wipe Data** based on whether or not the device meets the expected threat level. End users will be prompted to install and set up the **Microsoft Defender for Endpoint** app from the App Store. As a prerequisite, you must set up your **Microsoft Defender for Endpoint** connector and switch on the toggle to send risk data to your app protection policies. For related information, see [App protection policies overview](../apps/app-protection-policy.md) and [Use Microsoft Defender for Endpoint in Microsoft Intune](..\protect\advanced-threat-protection.md).
 
+#### Maximum OS version setting for app conditional launch<!-- 7764870 ideady -->
+Using Intune app protection policies, you'll be able to add a new conditional launch setting to ensure end users are not using any pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
+
 <!-- ***********************************************-->
 ## Notices
 
