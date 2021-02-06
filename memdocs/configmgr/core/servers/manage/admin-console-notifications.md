@@ -108,7 +108,7 @@ You can configure each site to show non-critical notifications in the properties
 Starting in version 2006, you can choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
 
 > [!NOTE]
-> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](../../plan-design/network/internet-endpoints.md#bkmk_scp-updates), so you may have already allowed it.
+> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](../../plan-design/network/internet-endpoints.md#updates-and-servicing), so you may have already allowed it.
 
 ### Configure notification settings for Microsoft messages
 

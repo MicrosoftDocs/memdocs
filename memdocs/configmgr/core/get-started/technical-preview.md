@@ -46,6 +46,9 @@ For most product prerequisites, use the information in the [Supported configurat
 
 - The service connection point installs to online mode. It doesn't support offline mode.
 
+    > [!NOTE]
+    > You may need to allow specific internet URLs, some of which are specific to the technical preview branch. For more information, see [Internet access requirements](../plan-design/network/internet-endpoints.md).
+
 - The separate articles for each specific version of the technical preview include additional limitations or requirements, as applicable.
 
 - The following features aren't supported with the technical preview branch:
