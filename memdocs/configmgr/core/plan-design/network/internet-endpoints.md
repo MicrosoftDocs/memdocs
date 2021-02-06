@@ -70,6 +70,8 @@ For more information, see [Updates and servicing](../../../servers/manage/update
 
 - `*-umwatsonc.events.data.microsoft.com`
 
+- `cmupdatepackppe.blob.core.windows.net` (technical preview branch only)<!-- 9287396 -->
+
 ## Windows 10 servicing
 
 For more information, see [Manage Windows as a service](../../../../osd/deploy-use/manage-windows-as-a-service.md).
