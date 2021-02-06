@@ -1,7 +1,7 @@
 ---
-title: Restart frequency in Endpoint Analytics
+title: Restart frequency in endpoint analytics
 titleSuffix: Configuration Manager
-description: Get details about device restart frequency in Endpoint Analytics
+description: Get details about device restart frequency in endpoint analytics
 ms.date: 02/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -13,7 +13,8 @@ manager: dougeby
 ROBOTS: NOINDEX,NOFOLLOW
 ---
 
-# Overview
+# Restart frequency in endpoint analytics
+
 In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
 
 There are no extra prerequisites for using this feature beyond what is already required for endpoint analytics startup performance. This feature doesn't have a dependency on Windows Diagnostics data, so will work regardless of how you've configured the telemetry level or Windows Error Reporting. This initial release is focused on providing restart frequency metrics within your tenant. Currently, deeper insights to help reduce excess restarts aren't available. For more information, see the [Known issues](#known-issues) section.
