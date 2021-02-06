@@ -33,10 +33,10 @@ For more information, see [About the service connection point](../../servers/dep
 
 ## Updates and servicing
 
-For more information, see [Updates and servicing](../../../servers/manage/updates.md).
+For more information, see [Updates and servicing](../../servers/manage/updates.md).
 
 > [!TIP]
-> Enable these endpoints for the [management insight](../../../servers/manage/management-insights.md) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
+> Enable these endpoints for the [management insight](../../servers/manage/management-insights.md) rule, **Connect the site to the Microsoft cloud for Configuration Manager updates**.
 
 - `*.akamaiedge.net`  
 
@@ -74,7 +74,7 @@ For more information, see [Updates and servicing](../../../servers/manage/update
 
 ## Windows 10 servicing
 
-For more information, see [Manage Windows as a service](../../../../osd/deploy-use/manage-windows-as-a-service.md).
+For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
 - `download.microsoft.com`  
 
@@ -84,7 +84,7 @@ For more information, see [Manage Windows as a service](../../../../osd/deploy-u
 
 ## Azure services
 
-For more information, see [Configure Azure services for use with Configuration Manager](../../../servers/deploy/configure/azure-services-wizard.md).
+For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
 - `management.azure.com` (Azure public cloud)
 - `management.usgovcloudapi.net` (Azure US Government cloud)
