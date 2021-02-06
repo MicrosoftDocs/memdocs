@@ -45,13 +45,13 @@ The difference between **Shutdown (no update)** and **Restart (no update)** is t
 
 In the device performance tab, two default columns have been added so you can review the total number of restarts and the number of blue screens (stop errors) each device had in the last 14 days. Sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot below has 31 records, meaning 31 devices have sent restart data.
 
-:::image type="content" source="media/device-performance-tab.png" alt-text="Device performance tab under Startup Performance":::
+:::image type="content" source="media/device-performance-tab.png" alt-text="Device performance tab under Startup Performance" lightbox="media/device-performance-tab.png":::
 
 ## Model performance tab
 
 In the model performance tab, two default columns have been added so you can review both the average number of restarts and the average number of blue screens (stop errors) per model over the last 14 days. Sort by these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
 
-:::image type="content" source="media/model-performance-tab.png" alt-text="Model performance tab under Startup Performance":::
+:::image type="content" source="media/model-performance-tab.png" alt-text="Model performance tab under Startup Performance" lightbox="media/model-performance-tab.png":::
 
 ## Restart frequency tab
 
@@ -63,7 +63,7 @@ The new restart frequency tab shows aggregates of restart frequency counts for e
 
 The trend chart indicates how the rolling 14-day average changes over time. If there is a regression you'll be able to see it and identify when it started. Clicking through the metrics table will take you to the [**Device performance** tab](#device-performance-tab), sorted by number of restarts, so you can quickly identify the devices with the most restarts.
 
-:::image type="content" source="media/restart-frequency-tab.png" alt-text="Restart frequency tab under Startup Performance":::
+:::image type="content" source="media/restart-frequency-tab.png" alt-text="Restart frequency tab under Startup Performance" lightbox="media/restart-frequency-tab.png":::
 
 ## Devices page
 
@@ -75,7 +75,7 @@ The **OS restart history** table has the following information:
    - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2), also called the bug check code
    - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 
-:::image type="content" source="media/device-page-os-restart-history.png" alt-text="OS restart history under the Device page":::
+:::image type="content" source="media/device-page-os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="media/device-page-os-restart-history.png":::
 
 The **OS restart history** table is truncated to the 10 most recent restarts that occurred in the last 2 months. The table is low latency, so new restarts typically show up here before they appear in the daily aggregates shown in the **Device performance** tab.
 
