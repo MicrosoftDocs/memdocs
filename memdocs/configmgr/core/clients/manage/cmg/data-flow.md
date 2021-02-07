@@ -80,6 +80,6 @@ If there are two or more VM instances, the CMG connection point uses HTTPS 10124
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the CMG connection point and service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_cloud).
+For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#cloud-services).
 
 [!INCLUDE [Internet endpoints for cloud services](../../../plan-design/network/includes/internet-endpoints-cloud-services.md)]
