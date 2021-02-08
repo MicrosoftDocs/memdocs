@@ -84,5 +84,6 @@ The **OS restart history** table is truncated to the 10 most recent restarts tha
 - The count of restarts in a device's restart history in the [**Devices page**](#devices-page) may not match the count shown in the **Device performance** tab. This is by design. The differences are: 
    - The aggregates in the [**Device performance** tab](#device-performance-tab) are computed daily to show counts for the last 14 days
 	- The restart history in the [**Devices page**](#devices-page) is truncated to the 10 most recent restarts and goes back up to the last 2 months. This page also has low latency, so new restarts will typically show up here before they make their way into the daily aggregates shown in the **Device performance** tab. The [**Device performance** tab](#device-performance-tab) doesn't have that truncation and goes back for the last 14 days.
+
 - Currently, there isn't an aggregation of blue screens by *driver* or *failure bucket ID*.
 
