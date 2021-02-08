@@ -287,5 +287,5 @@ The initial public preview release of Microsoft Tunnel.
 
 ## Next steps
 
-[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)
+[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  
 [Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)
