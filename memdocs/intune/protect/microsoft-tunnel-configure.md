@@ -226,7 +226,7 @@ When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrad
 
 - Intune upgrades the Microsoft Tunnel servers in a Site one server at a time. During upgrade, the Microsoft Tunnel on the server isn't available for use.
 
-- Intune starts updating the first server in a Site as soon as 10 minutes after the release becomes available, or after the server is turned on if it has been off.
+- Intune starts updating the first server in a Site as soon as 10 minutes after the release becomes available, or after the server turns on if it has been off.
 
 - After a successful upgrade of a server, Intune waits a short period of time before starting the upgrade of the next server.
 
@@ -249,9 +249,9 @@ To uninstall the product, run **./mst-cli uninstall** from the Linux server as r
 
 ## Microsoft Tunnel updates
 
-Updates for the Microsoft Tunnel are released periodically. When we update the tunnel version, you can read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version is released, you shouldn’t have to take action to benefit from the new version.
+Updates for the Microsoft Tunnel are released periodically. When we update the tunnel version, you can read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version is released, you should automatically benefit from the new version.
 
-After an update releases, it rolls out to tenants over the following days. Therefore, your tunnel servers might not start the process to update for a few days.
+After an update releases, it rolls out to tenants over the following days. This means your tunnel servers might not start the process to update for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 

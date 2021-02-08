@@ -35,7 +35,7 @@ To support integration of Conditional Access and the Microsoft Tunnel, you’ll 
 
 ## Provision your tenant
 
-Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. This requires you to use the Azure Active Directory PowerShell module and run a PowerShell script that modifies your tenant to add **Microsoft Tunnel Gateway** as a cloud app. After adding the tunnel as a cloud app you can then select it as part of a Conditional Access policy.
+Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. Use the Azure Active Directory PowerShell module and run a PowerShell script to modify your tenant to add **Microsoft Tunnel Gateway** as a cloud app.  After the tunnel is added as a cloud app, you can select it as part of a Conditional Access policy.
 
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
@@ -54,7 +54,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 ## Create Conditional Access policy to limit access to Microsoft Tunnel
 
-If you choose to configure Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
+If you'll use Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional access** > **New policy**.
 
@@ -73,7 +73,7 @@ If you choose to configure Conditional Access policy to limit user access, we re
 
 7. Select **Create**.
 
-For more information about creating create policies for Conditional Access, see [Create a device-based Conditional Access policy](../protect/create-conditional-access-intune.md).
+For more information about creating policies for Conditional Access, see [Create a device-based Conditional Access policy](../protect/create-conditional-access-intune.md).
 
 ## Next steps
 
