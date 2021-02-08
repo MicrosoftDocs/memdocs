@@ -88,7 +88,7 @@ After you review and possibly change the migrated policies, you can assign the p
 To migrate policies from Basic Mobility and Security to Intune, follow these steps:
 
 1. Complete the steps under the [Prepare](#prepare) section above. 
-2. Open the [Migration evaluation tool](https://endpoint.microsoft.com/blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > choose **Start**. It will take a few minutes to complete the evaluation.
+2. Open the [Migration evaluation tool](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > choose **Start**. It will take a few minutes to complete the evaluation.
     >[!NOTE]
     > If you navigate away from the Migration evaluation tool, the only way to return is to use the link above.
     > [!IMPORTANT]
