@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 02/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,20 +27,18 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-This article can help you install the Microsoft Tunnel VPN gateway for Microsoft Intune. You install the tunnel software on a Linux server, and then use Microsoft Endpoint Manager admin center to configure the tunnel for use with your infrastructure. You also configure Intune VPN profiles to deploy the tunnel configuration to supported devices, and must provision devices with the Microsoft Tunnel app.
+Configuration of the Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process that requires the use of the Microsoft Endpoint Manager admin center and running a script that installs the tunnel software on a Linux server. While this article walks you through the steps to configure the Microsoft Tunnel for use, you must already have the Linux server with Docker installed. Installation of Docker and Linux is beyond the scope of this article.
 
 *Microsoft Tunnel is in public preview*.
 
-To Install Microsoft Tunnel Gateway, you’ll need at least one Linux server with Docker installed, which runs either on-premises or in the cloud. Depending on your environment and infrastructure, additional configurations and software like Azure ExpressRoute might be needed.
+When installing the Microsoft Tunnel, you’ll start in the Microsoft Endpoint Manager admin center to define both Servers and Sites. Then, you run the tunnel installation script on a Linux server that has Docker installed. The script installs containers to support the tunnel server, pulls information from Intune about the tunnel Sites you’ve defined for your tenant, and then installs the Tunnel server. The Linux server can run on-premises or in the cloud. Depending on your environment and infrastructure, extra configurations and software, like Azure ExpressRoute, might be needed.
 
-Before you start installation be sure to complete the following tasks:
+Before you continue, be sure to complete the following tasks:
 
-- Review and [Configure prerequisites for Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#configure-prerequisites-for-microsoft-tunnel).
-- Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-overview.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
+- Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
+- Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
 After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
-
-When you install Microsoft Tunnel, it pulls information from Intune about the tunnel Sites you’ve defined for your tenant. This information includes the Server configurations for those Sites. Therefore, you must configure at least one Site and one Server configuration before you install Microsoft Tunnel on a Linux server.
 
 ## Create a Server configuration
 
@@ -162,7 +160,7 @@ For more information on deploying apps with Intune, see  Add apps to Microsoft I
 
 ## Create a VPN profile
 
-After the Microsoft Tunnel installs on a server, and devices have installed the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with a connection type of Microsoft Tunnel.
+After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with a connection type of Microsoft Tunnel.
 
 - The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
 - The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
@@ -171,7 +169,7 @@ After the Microsoft Tunnel installs on a server, and devices have installed the 
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 
-2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Profile**, and then select **Create**.
+2. For *Platform*, select **Android Enterprise**. For *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Profile**, and then select **Create**.
 
    > [!NOTE]
    > *Android Enterprise dedicated* devices aren't supported by the Microsoft Tunnel.
@@ -238,7 +236,7 @@ Because the tunnel update is automatic, but also updates only a single server pe
 
 ## Update the TLS certificate on the Linux server
 
-You can use the **./mst-cli** command line tool to update the TLS certificate on the server:  
+You can use the **./mst-cli** command-line tool to update the TLS certificate on the server:  
 
 1. Copy the new certificate to **/etc/mstunnel/certs/site.crt**
 2. Copy the private key to **/etc/mstunnel/private/site.key**
@@ -289,4 +287,5 @@ The initial public preview release of Microsoft Tunnel.
 
 ## Next steps
 
+[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)
 [Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)
