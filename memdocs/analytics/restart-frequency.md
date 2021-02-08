@@ -1,5 +1,5 @@
 ---
-title: Restart frequency in endpoint analytics
+title: Restart frequency (preview) in endpoint analytics
 titleSuffix: Configuration Manager
 description: Get details about device restart frequency in endpoint analytics
 ms.date: 02/24/2021
@@ -13,11 +13,9 @@ manager: dougeby
 ROBOTS: NOINDEX,NOFOLLOW
 ---
 
-# Restart frequency in endpoint analytics
-
+# Restart frequency (preview) in endpoint analytics
+<!--IN6225459-->
 In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
-
-This initial release is focused on providing restart frequency metrics within your tenant. Currently, deeper insights to help reduce excess restarts aren't available. For more information, see the [Known issues](#known-issues) section.
 
 ## Prerequisites
 
@@ -86,5 +84,5 @@ The **OS restart history** table is truncated to the 10 most recent restarts tha
 - The count of restarts in a device's restart history in the [**Devices page**](#devices-page) may not match the count shown in the **Device performance** tab. This is by design. The differences are: 
    - The aggregates in the [**Device performance** tab](#device-performance-tab) are computed daily to show counts for the last 14 days
 	- The restart history in the [**Devices page**](#devices-page) is truncated to the 10 most recent restarts and goes back up to the last 2 months. This page also has low latency, so new restarts will typically show up here before they make their way into the daily aggregates shown in the **Device performance** tab. The [**Device performance** tab](#device-performance-tab) doesn't have that truncation and goes back for the last 14 days.
-- Currently, there isn't a *failure bucket ID* for use with Microsoft or OEM support and there isn't an aggregation of blue screens by *blame module*, such as a driver that caused the blue screen.
-- The look back period is 14 days currently
+- Currently, there isn't an aggregation of blue screens by *driver* or *failure bucket ID*.
+
