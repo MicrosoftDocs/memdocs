@@ -2,7 +2,7 @@
 title: Contribute to the community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager community hub
-ms.date: 01/08/2021
+ms.date: 02/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

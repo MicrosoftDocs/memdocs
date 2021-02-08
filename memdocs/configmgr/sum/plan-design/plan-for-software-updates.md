@@ -282,7 +282,7 @@ The connection to Microsoft Update is always configured to use port 80 for HTTP 
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the active software update point to access internet endpoints. Then WSUS and Automatic Updates can communicate with the Microsoft Update cloud service.
 
-For more information, see [Internet access requirements](../../core/plan-design/network/internet-endpoints.md#bkmk_sum).
+For more information, see [Internet access requirements](../../core/plan-design/network/internet-endpoints.md#software-updates).
 
 
 ##  <a name="BKMK_SyncSettings"></a> Plan for synchronization settings  
