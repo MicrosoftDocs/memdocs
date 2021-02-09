@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 01/12/2021
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -91,6 +91,8 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2103](checklist-for-installing-update-2103.md)
+
 - [Checklist for installing update 2010](checklist-for-installing-update-2010.md)
 
 - [Checklist for installing update 2006](checklist-for-installing-update-2006.md)
@@ -98,8 +100,6 @@ Review the applicable update checklist for actions to take before you start the 
 - [Checklist for installing update 2002](checklist-for-installing-update-2002.md)
 
 - [Checklist for installing update 1910](checklist-for-installing-update-1910.md)  
-
-- [Checklist for installing update 1906](checklist-for-installing-update-1906.md)  
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -353,7 +353,7 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 - **Retry**: When you **Retry** from **Site Servicing Status**, you restart the installation of the update at only that site. Unlike running **Retry** from the **Updates and Servicing** node, this retry doesn't ignore prerequisite warnings.  
 
-- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings. 
+- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.
 
 ## <a name="bkmk_report"></a> Report setup and upgrade failures to Microsoft
 <!--5622909-->
@@ -378,6 +378,8 @@ To report upgrade failures to Microsoft:
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 2103](checklist-for-installing-update-2103.md#post-update-checklist)
+
 - [Post-update checklist for version 2010](checklist-for-installing-update-2010.md#post-update-checklist)
 
 - [Post-update checklist for version 2006](checklist-for-installing-update-2006.md#post-update-checklist)
@@ -385,8 +387,6 @@ After the site updates, review the post-update checklist for the applicable vers
 - [Post-update checklist for version 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Post-update checklist for version 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
-
-- [Post-update checklist for version 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
@@ -446,3 +446,7 @@ If you can't find a specific update in your console after a successful sync with
     If you think you have the required configurations and prerequisites for a missing update, confirm the service connection point is in online mode. Then, use the **Check for Updates** option in the **Updates and Servicing** node to force a check. If your service connection point is in offline mode, use the service connection tool to manually sync with the cloud service.  
 
 - Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console. For more information, see [Permissions to manage updates](#assign-permissions-to-view-and-manage-updates-and-features).
+
+### Why did the current branch name change with version 2103?
+
+To better align with other releases within Microsoft Endpoint Manager, starting in the year 2021 the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.
