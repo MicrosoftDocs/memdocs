@@ -183,7 +183,7 @@ Intune will automatically reinstall, update, or remove a required app based on t
 - If the admin deploys uninstall intent and the app is present on the device and failed to uninstall, Intune evaluates compliance and uninstalls the app when this schedule elapses.   
 
 > [!NOTE]
-> Using the Company Portal, end users can restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
+> Using the Windows Company Portal, end users can restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
 
 ## Uninstall an app
 
