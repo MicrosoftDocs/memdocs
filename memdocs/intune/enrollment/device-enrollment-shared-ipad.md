@@ -51,7 +51,7 @@ Follow these steps to set up Shared iPads in your environment:
 
 ## Configure temporary sessions on Shared iPads
 
-In iPadOS 13.4 or later, users can initiate a [temporary session](https://support.apple.com/guide/mdm/mdm6c592d817/web) without the need for a username or password by tapping Guest at the login screen. All their data — including browsing history — is deleted when the user signs out. Temporary sessions allow users to sign in as Guest, and users are not required to enter a Managed Apple ID or password. This can be configured using iOS Device Restrictions in Endpoint Manager. For more inforamtion, see [Shared iPad - Automated device enrollment (supervised)](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised-10) as mentioned in this document. Temporary sessions are allowed by default on Shared iPads.
+In iPadOS 13.4 or later, users can initiate a [temporary session](https://support.apple.com/guide/mdm/mdm6c592d817/web) without the need for a username or password by tapping Guest at the login screen. All their data — including browsing history — is deleted when the user signs out. Temporary sessions allow users to sign in as Guest, and users are not required to enter a Managed Apple ID or password. This can be configured using iOS Device Restrictions in Endpoint Manager. For more information, see [Shared iPad - Automated device enrollment (supervised)](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised-10) as mentioned in this document. Temporary sessions are allowed by default on Shared iPads.
 
 ## Add Apps on Shared iPads
 
