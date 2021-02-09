@@ -58,7 +58,7 @@ In iPadOS 13.4 or later, users can initiate a [temporary session](https://suppor
 You can deploy volume-purchased (VPP) apps or custom apps or web apps to Shared iPads. 
 1. To deploy a VPP or custom app to Endpoint Manager, add the apps in Apple Business Manager or Apple School Manager and synchronize the VPP token and assign it in Intune. For more information, see [Synchronize a VPP token](../apps/vpp-apps-ios.md#synchronize-a-vpp-token).
 2. To add a line-of-business app in Endpoint Manager and assign it to Azure AD group. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
-3. To add a web app in Endpoint Manager and assign it to Azure AD groups. For more information, see [Add a web app to Intune](../apps/web-app#add-a-web-app-to-intune.md). 
+3. To add a web app in Endpoint Manager and assign it to Azure AD groups. For more information, see [Add a web app to Intune](../apps/web-app.md#add-a-web-app-to-intune). 
 4. For assigning apps to shared iPads, you should use Azure AD device groups. Using Azure AD user groups for assignment to Shared iPads is currently not supported. 
 
 > [!NOTE]
