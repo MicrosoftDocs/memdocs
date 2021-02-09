@@ -1,44 +1,44 @@
 ---
-title: Checklist for 1906
+title: Checklist for 2103
 titleSuffix: Configuration Manager
-description: Learn about actions to take before updating to Configuration Manager version 1906.
-ms.date: 08/27/2019
+description: Learn about actions to take before updating to Configuration Manager version 2103.
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: e6837956-1f1e-4104-a348-ac2266199f60
+ms.assetid: c012ed7d-dba6-4075-9db2-61d0939d07a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
-# Checklist for installing update 1906 for Configuration Manager
+# Checklist for installing update 2103 for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 1906 to update your hierarchy from a previous version. <!-- baseline only statement:(Because version 1902 is also available as [baseline media](updates.md#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2103 to update your hierarchy from a previous version. <!-- baseline only statement:--> Version 2103 is also available as [baseline media](updates.md#bkmk_Baselines), so you can use the installation media to install the first site of a new hierarchy.
 
-To get the update for version 1906, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
+To get the update for version 2103, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 1906, review the following information [about installing update 1906](#about-installing-update-1906) and the [checklist](#checklist) for configurations to make before starting the update.
+After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
+
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2103, review the following information [about installing update 2103](#about-installing-update-2103) and the [checklist](#checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
-    - The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
+  - The dmpdownloader.log may indicate that the dmpdownloader process is waiting for an interval before checking for updates. To restart the download of the update's redistribution files, restart the **SMS_Executive** service on the site server.
 
-    - Another common download issue occurs when proxy server settings prevent downloads from `silverlight.dlservice.microsoft.com`, `download.microsoft.com`, and `go.microsoft.com`.
+  - Another common download issue occurs when proxy server settings prevent downloads from [required internet endpoints](../../plan-design/network/internet-endpoints.md#updates-and-servicing).
 
 For more information about installing updates, see [In-console updates and servicing](updates.md#bkmk_inconsole).
 
 For more information about current branch versions, see [Baseline and update versions](updates.md#bkmk_Baselines).
 
-
-## About installing update 1906
+## About installing update 2103
 
 ### Sites
 
-Install update 1906 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
+Install update 2103 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
 
 - Child primary sites install the update automatically after the CAS finishes the installation of the update. You can use service windows to control when a site installs the update. For more information, see [Service windows for site servers](service-windows.md).
 
@@ -63,39 +63,39 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-As of August 16, 2019, version 1906 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+<!-- As of December 11, 2020, version 2103 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
 
-<!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 1906: 
+At this time, version 2103 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2103:
 
-[Version 1906 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2103 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
-> [!Note]  
-> The version 1906 update is only applicable to sites running version 1802 or later.
+> [!NOTE]
+> The version 2103 update is only applicable to sites running version 1910 or later.
 
 To opt-in to the early update ring:
 
-1. Open Windows PowerShell and **Run as administrator**
-1. Run the **EnableEarlyUpdateRing1906.ps1** script, using the following syntax:
+1. Open a Windows PowerShell session **as administrator**.
 
-    `EnableEarlyUpdateRing1906.ps1 <SiteServer_Name> | SiteServer_IP>`
+1. Run the **EnableEarlyUpdateRing2103.ps1** script, using the following syntax:
 
-    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing1906.ps1 cmprimary01`
+    `EnableEarlyUpdateRing2103.ps1 <SiteServer_Name> | SiteServer_IP>`
+
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2103.ps1 cmprimary01`
 
 1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-The version 1906 update should now be available in the console.
+The version 2103 update should now be available in the console.
 
-> [!Important]  
-> This script only adds your site to the early update ring for version 1906. It's not a permanent change. -->
-
+> [!IMPORTANT]
+> This script only adds your site to the early update ring for version 2103. It's not a permanent change.
 
 ## Checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 1906. To update to 1906, you must use version 1802 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation of update 2103. To update to 2103, you must use version 1910 or later.
 
 ### Review the status of your product licensing
 
@@ -120,7 +120,7 @@ For more information, see [Site and site system prerequisites](../../plan-desig
 
 ### Review the version of the Windows ADK for Windows 10
 
-The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 1906. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2103. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
@@ -216,13 +216,13 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 1906. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](../../../mdt/release-notes.md).
+If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 2103. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](../../../mdt/release-notes.md).
 
 ### Run the setup prerequisite checker
 
 When the console lists the update as **Available**, you can run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 1906** update package, and select **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2103** update package, and select **Run prerequisite check** in the ribbon.
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
 
@@ -237,14 +237,13 @@ You may plan to install the update outside of normal business hours. Determine w
 
 For more information, see [Updates for Configuration Manager](updates.md).
 
-
 ## Post-update checklist
 
 After the site updates, use the following checklist to complete common tasks and configurations.
 
 ### Confirm version and restart (if necessary)
 
-Make sure each site server and site system role is updated to version 1906. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
+Make sure each site server and site system role is updated to version 2103. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
 
 Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers successfully restarted. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
@@ -287,7 +286,7 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Third-party extensions
 
-If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 1906.
+If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 2103.
 
 ### Update custom boot images and media
 
