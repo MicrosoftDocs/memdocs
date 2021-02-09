@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2021
+ms.date: 02/08/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,6 +62,9 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Low**
   - **Medium**
   - **High**
+
+> [!NOTE]
+> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
 
 ### Device Health
 
