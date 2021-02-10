@@ -102,7 +102,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 4. On the **Configuration settings** page, expand **Windows Encryption**.
 
-   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
+   :::image type="content" source="./media/encrypt-devices/bitlocker-settings.png" alt-text="Select Windows encryption settings":::
 
 5. Configure settings for BitLocker to meet your business needs.
 
