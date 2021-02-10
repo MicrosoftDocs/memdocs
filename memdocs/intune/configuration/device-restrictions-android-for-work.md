@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/02/2021
+ms.date: 02/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,7 +56,7 @@ Some settings are not supported by all enrollment types. To see which settings a
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="See the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune and Endpoint Manager.":::
 
-For corporate-owned devices with a work profile, some settings only apply in the work profile. For fully managed and dedicated devices, these settings apply device-wide. These settings have **(work profile-level)** in the setting name.
+For corporate-owned devices with a work profile, some settings only apply in the work profile. These settings have **(work profile-level)** in the setting name. For fully managed and dedicated devices, these settings apply device-wide. 
 
 :::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune and Endpoint Manager.":::
 
