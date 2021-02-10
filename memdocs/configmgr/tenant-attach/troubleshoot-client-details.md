@@ -2,7 +2,7 @@
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
 description: "Troubleshoot client details for Configuration Manager tenant attach"
-ms.date: 01/21/2021
+ms.date: 02/10/2021
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
