@@ -273,7 +273,7 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 **Message**: Another program is being installed. Please wait until that installation is complete, and then try installing this software again
 
-**Additional information for error resolution**: Wait for the prior installation to complete before running a new one. If the prior installation is hung, you can attempt to stop the installation or terminate the process. Terminating a process might have undesired results.
+**Additional information for error resolution**: Wait for the prior installation to complete before running a new one. If the prior installation stops responding, you can attempt to stop the installation or terminate the process. Terminating a process might have undesired results.
 
 ### 1633
 

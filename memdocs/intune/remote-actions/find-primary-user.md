@@ -53,6 +53,8 @@ After the primary user is updated, it will also be updated in Intune and Azure A
 >1. Updates to the primary user across Endpoint Manager and and Azure AD can take up to 10 minutes to be reflected.
 >2. Changing the primary user of the device does not make any changes to local group membership such as adding or removing users from the "Administrators" local group
 >3. Changing the primary user does not change the "Enrolled by" user. 
+>4. To change or remove the Primary user of a device requires the permission **Managed devices/Set primary user**.
+
 
 
 ## What is the primary user?

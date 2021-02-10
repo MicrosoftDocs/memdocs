@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2020
+ms.date: 02/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,15 +100,15 @@ Use one of the following procedures to create the policy type you prefer.
 
    ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
-4. Select **Settings** > **Windows Encryption**.
+4. On the **Configuration settings** page, expand **Windows Encryption**.
 
-   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
+   :::image type="content" source="./media/encrypt-devices/bitlocker-settings.png" alt-text="Select Windows encryption settings":::
 
 5. Configure settings for BitLocker to meet your business needs.
 
    If you want to enable BitLocker silently, see [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices), in this article for additional prerequisites and the specific setting configurations you must use.
 
-6. Select **OK**.
+6. Select **Next** to continue.
 
 7. Complete configuration of additional settings, and then save the profile.
 
@@ -200,3 +200,4 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 - [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
 - [Monitor disk encryption](../protect/encryption-monitor.md)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)

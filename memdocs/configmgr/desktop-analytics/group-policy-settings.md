@@ -2,7 +2,7 @@
 title: Group policy settings
 titleSuffix: Configuration Manager
 description: Understand the local and group policy settings in Windows used by Configuration Manager and Desktop Analytics
-ms.date: 04/15/2020
+ms.date: 01/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -38,6 +38,21 @@ Configuration Manager sets Windows policies in one or both of the following regi
 | **CommercialDataOptIn** | Local | Windows 8.1 and earlier | Desktop Analytics requires a value of `1`. For more information, see [Commercial Data Opt-in in Windows 7](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 | **RequestAllAppraiserVersions** | Both | Windows 8.1 and earlier | Desktop Analytics requires a value of `1` for data collection to work correctly. |
 | **DisableEnterpriseAuthProxy** | GPO | All Windows versions | If your environment requires a user-authenticated proxy with Windows Integrated Authentication for internet access, Desktop Analytics requires a value of `0` for data collection to work correctly. For more information, see [Proxy server authentication](enable-data-sharing.md#proxy-server-authentication). |
+
+Starting in version 2006, <!--8402852--> Configuration manager sets the following Windows policies in preparation to support an upcoming option for [enterprise customers to control their Windows diagnostic data](https://blogs.microsoft.com/eupolicy/2020/07/23/introducing-new-option-customers-control-windows-10-diagnostic-data):
+
+| Policy | Path | Applies to | Value |
+|--------|------|------------|-------|
+| **AllowDesktopAnalyticsProcessing** | GPO | Windows 10, version 1809 and later | Desktop Analytics requires a value of `2` for data collection to work correctly. |
+
+Starting in version 2010, <!--6979470-->Configuration Manager can configure the **Optional (limited)** level on the devices running Windows build version 19577 or later. For more information, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection#behaviorial-changes). For this diagnostic data level, Configuration Manager sets the following settings:<!-- 8229653 -->
+
+| Policy | Value |
+|--------|-------|
+| **AllowTelemetry** | `3` for **Optional (limited)** |
+| **LimitDumpCollection** | `1` |
+| **LimitDiagnosticLogCollection** | `1` |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | `1` |
 
 > [!IMPORTANT]
 > In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](enroll-devices.md#conflict-resolution).
@@ -77,6 +92,8 @@ The group policy settings in the following table have the greatest potential to 
 | **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | This policy is dependent upon the prior AllowTelemetry setting. Depending upon the level you set in Configuration Manager or with group policy, this policy can change the diagnostic data level on the device to **Enhanced** or **Enhanced (Limited)**. This policy only applies if AllowTelemetry is set to `2` (**Enhanced**). |
 | **Allow device name to be sent in Windows diagnostic data** | AllowDeviceNameInTelemetry | If you opt-in to send device names in Configuration Manager, you can override it by configuring this policy to Disabled. When you disable this setting, device names appear as "Unknown" in Desktop Analytics. For more information, see [Device name](enroll-devices.md#device-name). |
 | **Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service** | DisableEnterpriseAuthProxy | If you configure Configuration Manager devices to use user-authenticated proxy (`0`), if you then configure this policy to **Disable Authenticated Proxy usage** (`1`), then the device sends diagnostic data in the system context instead of the user's context. If you don't configure the device with a proxy in system context, or the device can't authenticate to the proxy, Windows can't send diagnostic data to Desktop Analytics. |
+| **Allow Desktop Analytics Processing** | Allow Desktop Analytics Processing | If you configure this policy to **Disabled** (`0`), devices may not appear in Desktop Analytics. |
+
 
 > [!NOTE]
 > The legacy policy **Configure Connected User Experiences and Telemetry** (TelemetryProxy) allows Windows to forward diagnostic data to a dedicated proxy, instead of using the user (WinINET) or device (WinHTTP) proxy. Some Windows components don't support this policy. If you use this policy, it may cause data quality issues in Desktop Analytics.

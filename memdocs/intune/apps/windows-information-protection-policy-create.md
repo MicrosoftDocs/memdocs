@@ -158,16 +158,6 @@ After you turn off WIP, an attempt is made to decrypt any WIP-tagged files on th
 
 1. Select a setting and then choose **Save**.
 
-### Use WIP Learning
-
-1. Open the [Azure portal](https://portal.azure.com). Choose **All services**. Type **Intune** in the text box filter.
-
-3. Choose **Intune** > **Apps**.
-
-4. Choose **App protection status** > **Reports** > **Windows Information Protection learning**.  
-
-    Once you have the apps showing up in the WIP Learning logging report, you can add them to your app protection policies.
-
 ## Allow Windows Search Indexer to search encrypted items
 Allows or disallows the indexing of items. This switch is for the Windows Search Indexer, which controls whether it indexes items that are encrypted, such as the Windows Information Protection (WIP) protected files.
 
@@ -185,8 +175,6 @@ In addition to setting the **Allow Windows Search Indexer to search encrypted it
 
 > [!IMPORTANT]
 > This information applies for WIP without device enrollment.
-
-<!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
 
 After you created your WIP app protection policy, you need to deploy it to your organization using MAM.
 

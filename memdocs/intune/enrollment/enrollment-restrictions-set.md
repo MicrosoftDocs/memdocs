@@ -131,7 +131,7 @@ During BYOD enrollments, users see a notification that tells them when they've m
 
 ## Change enrollment restrictions
 
-You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. Devices enrolled with [Intune PC agent](../fundamentals/intune-legacy-pc-client.md) can't be blocked with this feature.
+You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
@@ -169,6 +169,10 @@ The following personal enrollment methods will also be blocked:
 By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
 - [Registered with a serial number](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
+
+> [!NOTE]
+> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).
+>
 
 
 ## Change enrollment restriction priority

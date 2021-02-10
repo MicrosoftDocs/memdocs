@@ -153,6 +153,13 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
   - **Collections with no query rules and schedule full evaluation selected**<!-- 8A401207-5A7C-4200-A1DB-990A197458FA -->
 
+> [!NOTE]
+> For more information on managing collections and collection evaluation, see the following articles:<!-- MEMDocs#967 -->
+>
+> - [Best practices for collections](../../clients/manage/collections/best-practices-for-collections.md)
+> - [Collection evaluation](../../clients/manage/collections/collection-evaluation.md)
+> - [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md)
+
 ### Configuration Manager Assessment
 
 <!--3607758-->
@@ -246,7 +253,7 @@ Insights for improving the security of your infrastructure and devices.
 
 Insights that help you simplify the day-to-day management of your environment.
 
-- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This insight makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#bkmk_scp-updates).<!-- AC662C91-54DF-4B43-B09A-B19D2766144B -->
+- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This insight makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#updates-and-servicing).<!-- AC662C91-54DF-4B43-B09A-B19D2766144B -->
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md).<!-- 450090EA-DF71-428C-AB49-6DEBB85A004C -->
 

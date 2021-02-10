@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 02/04/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -120,12 +120,15 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | PIN type  | Numeric  | iOS/iPadOS, Android  |   |
 | Simple PIN  | Allow  | iOS/iPadOS, Android  |   |
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
-| Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
-| Override biometric instead of PIN for access  | Require  | iOS/iPadOS, Android  |   |
+| Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
+| Fingerprint instead of PIN for access (Android 6.0+)  | Allow  | Android  |   |
+| Override biometrics with PIN after timeout  | Require  | iOS/iPadOS  |   |
+| Override fingerprint with PIN after timeout  | Require  | Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
-| Face ID instead of PIN for access  | Allow  | iOS/iPadOS  |   |
-| Biometrics instead of PIN for access  | Allow  | Android  |   |
+| Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
+| Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
+| Select number of previous PIN values to maintain  | 0  | Android  |   |
 | App PIN when device PIN is set  | Require  | iOS/iPadOS, Android  | If the device is enrolled in Intune, administrators can consider setting this to "Not required" if they are enforcing a strong device PIN via a device compliance policy.  |
 | Work or school account credentials for access  | Not required  | iOS/iPadOS, Android  |   |
 | Recheck the access requirements after (minutes of inactivity)  | 30  | iOS/iPadOS, Android  |   |
@@ -140,6 +143,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
 | Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
+| Device conditions  |       Require device lock  |        N/A / Block   access  |         Android  |          This   setting ensures that Android devices have a device PIN, password, or pattern are set to enable a device lock.  This condition does not distinguish between lock options or the complexity.                |
 
 #### Level 2 enterprise enhanced data protection
 
@@ -168,7 +172,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       App   conditions  |          Disabled account  |        N/A / Block access  |          iOS/iPadOS,   Android        |  |
 | Device conditions  |       Min   OS version  |          *Format: Major.Minor.Build <br>Example:   13.7* / Block access |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 5.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 5.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Min patch   version  |          *Format:   YYYY-MM-DD <br> Example: 2020-01-01* / Block access  |          Android        | Android devices can receive monthly security patches, but the   release is dependent on OEMs and/or carriers. Organizations should ensure   that deployed Android devices do receive security updates before implementing   this setting. See [Android Security Bulletins](https://source.android.com/security/bulletin/) for the latest patch   releases.  |
 
 #### Level 3 enterprise high data protection 
@@ -205,7 +209,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 8.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 9.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](../protect/mtd-enable-unenrolled-devices.md).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](../protect/mtd-device-compliance-policy-create.md).</p> |
 

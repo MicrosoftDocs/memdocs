@@ -318,7 +318,7 @@ $LogPath = $tsenv.Value("_SMSTSLogPath")
 $tsenv.GetVariables() | % { Set-Variable -Name "$_" -Value "$($tsenv.Value($_))" }
 
 # Write a message to a log file
-Write-Output "Hello world!" | Out-File -FilePath "$_SMSTSLogPath\mylog.log" -Encoding "Default" -Append
+Write-Output "Hello world!" | Out-File -FilePath "$LogPath\mylog.log" -Encoding "Default" -Append
 
 # Set a custom variable "startTime" to the current time
 $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"

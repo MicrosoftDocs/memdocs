@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -44,15 +44,20 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 > [!TIP]
 > Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
 
+> [!NOTE]
+> If you have an Azure AD Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Azure AD Conditional Access documentation](/azure/active-directory/conditional-access/).
+
 ## Enroll by using Near Field Communication (NFC)
 
-For devices 6 and newer that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
+For Android devices 6 and newer devices that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
+
+For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android 8-10. It's not available on Android 11
 
 ## Enroll by using a token
 
 - For Android 6 and newer devices, you can use the token value, such as `12345`, to enroll the device.
 - Android 6.1 and newer versions can also leverage QR code scanning when using the **afw#setup** enrollment method.
-- For corporate-owned work profile (COPE) devices, token entry through the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11.
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is only supported on devices running Android 8-10. It's not available on Android 11. For further details, refer to the Google developer docs [here](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).
 
 ### Steps
 

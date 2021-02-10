@@ -28,7 +28,7 @@ manager: dougeby
 |--------------|-----------------|  
 |[Microsoft Deployment Toolkit Samples Guide](samples-guide.md)|Provides scenario-based samples of how to solve common deployment issues using MDT. Most samples include example configuration files and step-by-step processes for implementing the solution. Use this document to help solve difficult deployment problems.|  
 |[Toolkit Reference](toolkit-reference.md)|Provides information about the task sequence steps, properties, support files, utilities, and databases used in MDT deployments. Use this document to help customize MDT deployments for your organization.|  
-|[Troubleshooting Reference](troubleshooting-reference.md)|Provides information to assist in troubleshooting common problems with MDT deployments, including lists of known issues, reviewing logs, and identifying issues by error code.|  
+|[Troubleshooting Reference](/troubleshoot/mem/configmgr/troubleshooting-reference)|Provides information to assist in troubleshooting common problems with MDT deployments, including lists of known issues, reviewing logs, and identifying issues by error code.|  
 
  This document is organized to help you through the planning, building, and deploying processes in your organization. The following sections in this guide help you perform LTI, ZTI, and UDI deployments and customize the deployment process. Table 2 lists each section in this guide, with a brief overview of each.  
 
@@ -530,7 +530,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 - During LTI deployments to new computers, some pages (such as the **User Locale** and **Keyboard Locale** pages) do not display text correctly if required fonts are not installed in Windows PE. In the Refresh Computer scenario, the same symptoms appear if required fonts are not installed in the operating system being replaced.  
 
-- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see the Microsoft Support article [How to add Input Method Editor (IME) support to Windows PE 2.0](https://support.microsoft.com/kb/926181).  
+- Some keyboard layouts might require language packs or input method editors that MDT does not automatically include in the Windows PE startup image. MDT does not verify that the keyboard layout is valid. For more information, see [Custom Input Method Editor (IME) requirements](/windows/uwp/design/input/input-method-editor-requirements).
 
 - A maximum of two WINS server addresses can be added when configuring static IP configuration settings for a network adapter. If more than two WINS server addresses are added using MDT, only the first two WINS server addresses are used.  
 

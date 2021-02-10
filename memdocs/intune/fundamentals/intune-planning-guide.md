@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 12/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,9 +69,9 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 **Task**: Determine how you want to secure your devices, and minimize the impact of malicious activity. Some considerations:
 
-- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) and Intune together.
+- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) and Intune together.
 
-  [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
+  [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
 
 - If a device is compromised, you'll want to limit the impact using [conditional access](../protect/conditional-access.md). For example:
 
@@ -79,7 +79,7 @@ When data is stored on mobile devices, it should be protected from malicious act
 
   - Conditional access helps protect your network and resources from devices, even devices that aren't enrolled with Intune.
 
-    For example, Intune integrates with Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP scans a device, and determines if it's compromised. Then, conditional access can automatically block access on this device from organization resources, including email.
+    For example, Intune integrates with Microsoft Defender for Endpoint. Microsoft Defender for Endpoint scans a device, and determines if it's compromised. Then, conditional access can automatically block access on this device from organization resources, including email.
 
 - Updates to the device, the operating system, and apps also help keep your data secure. Create a plan on how and when updates are installed. There are policies in Intune that help you manage updates, including updates to store apps.
 
@@ -210,7 +210,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Office 365** includes the apps that users rely on, including Outlook, Word, SharePoint, Teams, OneDrive, and more. You can deploy these apps to devices using Intune.
 
-- **Microsoft Defender Advanced Threat Protection** (ATP) helps monitor and scan your Windows 10 devices for malicious activity. You can also set an acceptable threat level. When combined with conditional access, you can block access to organization resources if the threat level is exceeded.
+- **Microsoft Defender for Endpoint** helps monitor and scan your Windows 10 devices for malicious activity. You can also set an acceptable threat level. When combined with conditional access, you can block access to organization resources if the threat level is exceeded.
 
 - **Azure Information Protection** classifies and protects documents and emails by applying labels. On Office apps, you can use this service to [prevent unauthorized access to organization data](../protect/data-outside-protect.md), including apps on personal devices.
 
