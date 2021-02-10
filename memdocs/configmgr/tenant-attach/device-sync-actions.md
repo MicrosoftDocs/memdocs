@@ -140,6 +140,8 @@ From the Microsoft Endpoint Manager admin center, you can review the status of y
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Endpoint Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
+> [!NOTE]
+>Some information is not available if the hierarchy is running Configuration Manager version 2006. 
 
 ## Next steps
 
