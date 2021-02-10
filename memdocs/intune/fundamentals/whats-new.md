@@ -57,10 +57,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
-
-
-
-
 <!-- ########################## -->
 ## Week of February 1, 2021 (2101 Service release)
 
@@ -72,6 +68,9 @@ You can now configure whether a required iOS/iPadOS app is installed as a remova
 
 #### Line-of-business apps supported on Shared iPad devices<!-- 8834566  -->
 You can now deploy line-of-business (LOB) apps to Shared iPad devices. The line-of-business app must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For related information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
+
+#### Microsoft Endpoint Configuration Manager connector <!-- 9229333, CM7138634 -->
+The connector for Microsoft Endpoint Configuration Manager now displays in the admin center. To review the connector, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Device configuration
@@ -263,12 +262,6 @@ For more information, see [Create Mobile Threat Defense app protection policy wi
 Intune now supports a **Certificate validity period** of up to **24** months in certificate profiles for [Simple Certificate Enrollment Protocol](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) (SCEP) and [Public Key Cryptography Standards](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) (PKCS). This is an increase from the previous support period of up to 12 months.
 
 This support applies to Windows and Android. Certificate validity periods are ignored by iOS/iPadOS and macOS.
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
-### Intune apps
-
-#### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
-The Company Portal app can now store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Monitor and troubleshoot

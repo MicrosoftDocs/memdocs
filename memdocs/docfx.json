@@ -90,8 +90,10 @@
       }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
-        "configmgr/core/**/*.md": ["ConfigMgr"]        
-      }, 
+        "configmgr/core/**/*.md": ["ConfigMgr"],
+        "analytics/**/*.md": ["Analytics"],
+        "autopilot/**/*.md": ["Autopilot"]
+      },
       "featureFlags": {
         "*.md" : [
           "show_binary_rating"
