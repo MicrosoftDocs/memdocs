@@ -106,6 +106,12 @@
     - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-ios.md
       displayName: dep; ade; bulk enroll
+    - name: Shared iOS/iPadOS devices
+      items:      
+      - name: Shared device overview
+        href: device-enrollment-shared-ios.md
+      - name: Shared iPad
+        href: device-enrollment-shared-ipad.md      
     - name: Back up and restore
       href: backup-restore-ios.md      
     - name: User and Device enrollment
