@@ -51,6 +51,8 @@ This issue happens because Windows 10, version 1903 and 1909 deletes the Autopil
  
 <tr><td>TPM attestation fails on Windows 10 1903 because of missing AKI extension in EK certificate. (An additional validation added in Windows 10 1903 to check that the TPM EK certs had the proper attributes according to the TCG specifications uncovered that a number of them don’t, so that validation will be removed).
 <td>Download and install the <a href="https://support.microsoft.com/help/4517211/windows-10-update-kb4517211">KB4517211 update</a>.
+<tr><td>PushButtonReset (PBR) is taking machines to recovery mode with secure boot enabled: BSOD 0xC000000F.
+<td>The “Enable with UEFI Lock” setting causes this behavior, and is enabled in the Intune Security Baseline. Issue occurs with 1909, this is fixed with later versions of Windows.
 <tr><td>The following known issues are resolved by installing the August 30, 2019 KB4512941 update (OS Build 18362.329):
 
 - Windows Autopilot for existing devices feature doesn't properly suppress “Activities” page during OOBE. (Because of this issue, you’ll see that extra page during OOBE).
