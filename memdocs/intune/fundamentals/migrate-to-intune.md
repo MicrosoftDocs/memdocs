@@ -111,7 +111,7 @@ To migrate policies from Basic Mobility and Security to Intune, follow these ste
 7. To assign the recommended groups to the policy, choose **Properties** > **Edit** (next to **Assignments**) > use the assignments workflow to assign the groups.
     - Optionally, you can first assign a group of test users who have devices enrolled in Basic Mobility and Security. In this case, instead of assigning the actual suggested groups to the policy, assign a test group and confirm that the policies behave as expected.
 8. Enable [coexistence](../fundamentals/mdm-authority-set.md#coexistence). After enabling coexistence, all users that are or get assigned an Intune license will immediately migrate to Intune.
-9. Assign Intune [licenses](https://docs.microsoft.com/azure/active-directory/fundamentals/license-users-groups.md) to the users. The new policies will begin affecting the users' devices after the next [refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+9. Assign Intune [licenses](https://docs.microsoft.com/azure/active-directory/fundamentals/license-users-groups) to the users. The new policies will begin affecting the users' devices after the next [refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 
 ### Known issues
