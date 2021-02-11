@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/09/2021
+ms.date: 02/11/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,24 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### End users can restart an app install from the Windows Company Portal<!-- 652935 -->
 Using the Windows Company Portal, end users can restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Device configuration
+
+#### Google’s compliance screens are automatically shown on Android Enterprise 9.0+ dedicated devices running in kiosk mode<!-- 9323100 wnready -->
+
+In Intune, you can create a device configuration password policy and a device compliance password policy on Android Enterprise devices.
+
+When you create the policies, Android Enterprise dedicated devices running in kiosk mode automatically use Google’s compliance screens. These screens guide and force users to set a password that meets your policy rules.
+
+For more information on creating password and kiosk policies, see:
+
+- [Android Enterprise settings to mark devices as compliant or not compliant](../protect/compliance-policy-create-android-for-work.md)
+- [Android Enterprise device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md)
+
+Applies to:
+
+- Android Enterprise 9 and newer in kiosk mode
 
 <!-- ########################## -->
 ## Week of February 1, 2021 (2101 Service release)
