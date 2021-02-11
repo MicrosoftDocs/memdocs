@@ -50,13 +50,13 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
 2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and then select **Open the Microsoft Defender Security Center**.
 
-   ![Select to open the Microsoft Defender Security Center](./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png)
+   :::image type="content" source="./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
 
 3. In **Microsoft Defender Security Center**:
    1. Select **Settings** > **Advanced features**.
    2. For **Microsoft Intune connection**, choose **On**:
 
-      ![Enable the connection to Intune](./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png)
+      :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
 
    3. Select **Save preferences**.
 
@@ -117,8 +117,7 @@ In addition to device configuration policy, you can onboard devices using:
 
    [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on the Microsoft Defender for Endpoint settings.  
 
-   [!div class="mx-imgBorder"]
-   ![Image of Microsoft Endpoint Manager portal](./media/advanced-threat-protection-configure/automatic-package-configuration.png)
+   :::image type="content" source="./media/advanced-threat-protection-configure/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
 
    > [!NOTE]
    > The preceding screen capture shows your configuration options after you’ve configured a connection between Intune and Microsoft Defender for Endpoint. When connected, the details for the onbording and offboarding blobs are automatically generated and transferred to Intune.
