@@ -1,7 +1,0 @@
-### YamlMime:ContextObject
-###
-### STOP! This is a context file used for contextual TOCs and should only be modified by members of the EMMDocs team. 
-### 
-brand: Microsoft Endpoint Manager
-breadcrumb_path: ../breadcrumb/toc.yml
-toc_rel: ../toc.yml
