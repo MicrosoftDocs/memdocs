@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/09/2021
+ms.date: 02/11/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -381,11 +381,9 @@ End of comment -->
   > [!NOTE]
   > Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   > 
-  > On dedicated devices running OS 9 or later, users will be prompted to set a password if the device is set up with single or multi-app kiosk mode. The user will be guided
-  > through screens that force them to create a compliant password before resuming use on the device. 
+  > On dedicated devices running OS 9 and newer, users are prompted to set a password if the device is set up with single or multi-app kiosk mode. Screens force and guide users to create a compliant password before they can continue using the device.
   >
-  > On dedicated devices running OS 8 or earlier OR that are not using kiosk mode, users will not be notified of any password requirement. In this case, the user would need to
-  > set the password manually. The policy would report as failed until the user sets a password that meets your requirements. 
+  > On dedicated devices running OS 8 and older, or dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
 
 - **Disabled lock screen features**: When the device is locked, choose the features that can't be used. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
 
