@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 02/08/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -140,6 +140,8 @@ From the Microsoft Endpoint Manager admin center, you can review the status of y
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Endpoint Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
+> [!NOTE]
+> Some information isn't available if the hierarchy is running Configuration Manager version 2006.
 
 ## Next steps
 
