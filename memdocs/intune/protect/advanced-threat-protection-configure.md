@@ -122,7 +122,7 @@ In addition to device configuration policy, you can onboard devices using:
    > [!NOTE]
    > The preceding screen capture shows your configuration options after you’ve configured a connection between Intune and Microsoft Defender for Endpoint. When connected, the details for the onbording and offboarding blobs are automatically generated and transferred to Intune.
    >
-   > If you haven’t configured this connection successfully, the setting *Microsoft Defender for Endpoint client configuration package type* displays with options to specify onboarding and offboarding blobs. The display of these optoion is a UI bug which will be resoled in a future update.
+   > If you haven’t configured this connection successfully, the setting *Microsoft Defender for Endpoint client configuration package type* displays with options to specify onboarding and offboarding blobs.
 
 7. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
