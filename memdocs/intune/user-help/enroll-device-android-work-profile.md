@@ -42,6 +42,9 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
 ## Create work profile and enroll device
 
+> [!NOTE]
+> To create a work profile on your device, you must be using the primary user account on your device. Creating a work profile on a secondary user account is not supported. 
+
 1. Open the Company Portal app and sign in with your work or school account. If you haven't installed the free app, install it from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
 
 2. On the **Company Access Setup** screen, tap **BEGIN**.  
