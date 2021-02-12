@@ -74,10 +74,10 @@ For details, see [Get started with device compliance](../protect/device-complian
 Intune app protection policies and mobile application management (MAM) access settings let you to specify the minimum operating system version at the app layer. This lets you inform and encourage, or require, your end users to update their operating system to a specified minimum version.
  
 You have two different options: 
-- **Warn** - Warn informs the end user that they should upgrade if they open an app with an application protection policy or MAM access settings on a device with an operating system version below the specified version. Access is allowed for the app and organizational data.
+- **Warn** - Warn informs the end user that they should upgrade if they open an app with an application protection policy or MAM access settings on a device with an operating system version below the specified version. Access is allowed for the app and organizational data.  
   ![Image of the Android update warning dialog](./media/manage-os-versions/os-version-update-warning.png)
 
-- **Block** - Block informs the end user that they must upgrade when they open an app with an application protection policy or MAM access settings on a device with an operating system version below the specified version. Access is not allowed for app and organizational data.
+- **Block** - Block informs the end user that they must upgrade when they open an app with an application protection policy or MAM access settings on a device with an operating system version below the specified version. Access is not allowed for app and organizational data.  
   ![Image of the App access blocked dialog](./media/manage-os-versions/os-version-access-blocked.png)
 
 ### In practice
