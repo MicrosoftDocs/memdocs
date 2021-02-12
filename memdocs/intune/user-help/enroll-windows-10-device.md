@@ -31,7 +31,7 @@ ms.collection:
 
 # Enroll Windows 10 devices in Intune  
 
-Enroll your Windows 10 device in Intunet to get access to work or school things such as email, apps, and internal websites. This article describes how to enroll devices running on Windows 10, version 1607 and later, and Windows 10, version 1511 and earlier. Before you begin, make sure you [verify the version on your device](using-your-windows-device-with-intune.md) so that you can follow the correct set of instructions.  
+Enroll your Windows 10 device in Intune to get mobile access to work or school apps, email, and Wi-Fi. This article describes how to set up devices running on Windows 10, version 1607 and later; and Windows 10, version 1511 and earlier. Before you begin, make sure you [verify the version on your device](using-your-windows-device-with-intune.md) so that you can follow the correct set of instructions.  
 
 Windows 10 is supported across various device types including desktop, laptop, and tablet. The enrollment steps are the same on all device types but your screen may look a little different from the images shown in this article.  
 </br>
