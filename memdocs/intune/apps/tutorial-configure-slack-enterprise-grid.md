@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/10/2021
+ms.date: 02/12/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -64,10 +64,6 @@ Add Slack for EMM as a managed iOS/iPadOS app in Intune and assign your Slack us
 3. Click **Search the App Store**. Enter the search term "Slack for EMM" and select the app. Click **Select** in the **Search the App Store** pane.
 4. In the **App information** step, configure any changes as you see fit. Select **Next** to set your app information.
 5. In the **Assignments** step, click **Add group** under the **Required** section. Select one or more groups to assign the app to. When complete, click **Next** to continue. 
-    > [!NOTE]
-    > Depending on who you chose to be affected when you turned on EMM for Slack, under **Assignment type** you may wish to select:
-    - **Available for enrolled devices** if you chose "All members (including guests)" OR
-    - **Available with or without enrollment** if you chose "All members (excluding guests)" or "Optional".
 6. In the **Review + create** step, click **Create** once you have verified the app details. 
 
 ### Add an iOS/iPadOS app configuration policy for the Slack for EMM app
@@ -118,10 +114,6 @@ Add Slack as a Managed Google Play app in Intune and assign your Slack users. Ap
 5. Next to **Assignments**, click **Edit**.
 6. configure any changes as you see fit. Select **Next** to set your app information.
 7. Click **Add group** under the **Required** section. Select one or more groups to assign the app to. When complete, click **Review + save**. 
-    > [!NOTE]
-    > Depending on who you chose to be affected when you turned on EMM for Slack, under **Assignment type** you may wish to select:
-    - **Available for enrolled devices** if you chose "All members (including guests)" OR
-    - **Available with or without enrollment** if you chose "All members (excluding guests)" or "Optional".
 8. In the **Review + save** step, click **Save** once you have verified the app details. 
 
 ### Add an Android app configuration policy for Slack
