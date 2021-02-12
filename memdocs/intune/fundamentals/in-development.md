@@ -97,12 +97,6 @@ Applies to:
 <!-- ***********************************************-->
 ## Device enrollment
 
-### Ending support for iOS 11<!--7327321 -->
-After iOS 14 releases, Intune enrollment and the Company Portal app will support iOS versions 12 and later. Older versions won't be supported but will continue to receive policies.
-
-### Ending support for macOS 10.12<!--7327326 -->
-After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
-
 ### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248 -->
 In a future update, Microsoft Endpoint Manager will stop supporting Android 5.x devices.
 
@@ -131,17 +125,11 @@ To see these options, go to [Microsoft Endpoint Manager admin center](https://go
 <!-- ***********************************************-->
 ## Intune apps
 
- ### Win32 app download progress bar<!-- 5145837  -->
-End users will see a progress bar in the Windows Company Portal while a Win32 app is being downloaded. This feature will help customer better understand the app installation progress.
-
 ### Update to Android Company Portal app icon<!-- 7114401  -->
 We'll be updating the Android Company Portal app icon to create a more modern look and feel. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### End users can restart an app install from the Company Portal<!-- 652935  -->
 Using the Company Portal, end users will be able to restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
-
-### Application icon update for iOS, macOS, and web Company Portal<!-- 7113985 -->
-We'll be updating the app icon used by the Company Portal for iOS, macOS, and web. This new icon is currently used by the Company Portal for Windows. End users will see the new icon in their device's application launcher and home screen, in Apple's App Store, and experiences within the Company Portal apps.
 
 ### Company Portal website improved load performance<!-- 8765415  -->
 To improve page load performance, app icons will load in batches. End users may see a placeholder icon for some of their applications when visiting the Company Portal website. The related icons will load shortly after. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md) and [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
@@ -180,7 +168,7 @@ When you use the Graph API to export Intune reports without selecting any column
 You'll be able to specify that the report data that you export from the Microsoft Endpoint Manager reporting export [API](../fundamentals/reports-export-graph-apis.md) can contain localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports, which will prevent breaking changes. For more information about reports, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ### Role-based access permissions update for Microsoft Tunnel Gateway<!-- 8554762 -->
-We’re adding a new permissions group that you’ll be able to add to custom roles to grant users permission to manage [Microsoft Tunnel Gateway](/protect/microsoft-tunnel-overview) configurations.  (**Tenant administration** > **Microsoft Tunnel Gateway**)
+We’re adding a new permissions group that you’ll be able to add to custom roles to grant users permission to manage [Microsoft Tunnel Gateway](/mem/intune/protect/microsoft-tunnel-overview) configurations.  (**Tenant administration** > **Microsoft Tunnel Gateway**)
  
 The new group will be scoped only to Microsoft Tunnel Gateway, and will support the actions to create, read, update or modify, and delete the Microsoft Tunnel Gateway components.
 
