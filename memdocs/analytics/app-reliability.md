@@ -21,10 +21,10 @@ The application reliability report provides insight into potential issues for de
 
 ## Prerequisites
 
-- Devices be enrolled in endpoint analytics.
+- Devices are enrolled in endpoint analytics.
    - [Enroll Configuration Manager devices](enroll-configmgr.md)
    - [Enroll Intune devices](enroll-intune.md)
-- Devices enrolled from Configuration Manager need client version 2006, or later installed.
+- Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## App reliability score
 
@@ -46,16 +46,23 @@ The **App performance** tab uses data from the past 14 days to show reliability 
 
 For each application in the report, the following data is provided:
 
-- **App name**: The app identifier in the file manifest provided by your client devices. The app name is typically in executable (or .exe) format.
-- **App display name**: The `friendly name` of the application reported in the file manifest. This column is hidden by default since the data isn't always available.
-- **App publisher**: The publisher of the executable reported in the file manifest. Limited cleanup occurs on the app publisher. For instance, `Microsoft Corporation` and `microsoft corporation` are collapsed during cleanup. However, app metadata isn't added or modified in cases where it's unavailable, null, or potentially inaccurate.
-- **Active devices (14 days)**: The total number of your tenant's enrolled devices that have launched this app at least once in the past 14 days.
-- **Total usage duration (14 days)**: The cumulative usage duration of the application across all your tenant's enrolled devices over the past 14 days. **Engagement time** is used to determine usage duration. **Engagement time** is composed of both:
+**App name**: The app identifier in the file manifest provided by your client devices. The app name is typically in executable (or .exe) format.
+
+**App display name**: The `friendly name` of the application reported in the file manifest. This column is hidden by default since the data isn't always available.
+
+**App publisher**: The publisher of the executable reported in the file manifest. Limited cleanup occurs on the app publisher. For instance, `Microsoft Corporation` and `microsoft corporation` are collapsed during cleanup. However, app metadata isn't added or modified in cases where it's unavailable, null, or potentially inaccurate.
+
+**Active devices (14 days)**: The total number of your tenant's enrolled devices that have launched this app at least once in the past 14 days.
+
+**Total usage duration (14 days)**: The cumulative usage duration of the application across all your tenant's enrolled devices over the past 14 days. **Engagement time** is used to determine usage duration. **Engagement time** is composed of both:
    -  Interactive time: The time when the user is actively engaging with an application, such as browsing the web
    - Keep-alive time: Time when the application is requesting a keep-alive from the OS, such as when  presenting a PowerPoint or watching a video.
-- **Total crashes (14 days)**: The total number of application crash events reported across all enrolled devices in your tenant over the past 14 days.
-- **Mean time to failure**: The average amount of engagement time that an end user is able to use the application before a crash occurs over the past 14 days. This value is calculated by dividing **Total usage duration (14 days)** by **Total crashes (14 days)**. By relating usage duration and crash counts, the frequency of crashes across different applications is normalized. Applications without crash events in your tenant over the past 14 days are given a mean time to failure value of `No crash events`.
-- **App reliability score**: A score between 0 and 100 that represents the relative reliability of the application in your tenant. This score is calculated based on **Mean time to failure** and **Total usage duration (14 days)**. A score of 0 represents an unreliable app that is likely hampering end-user productivity. A score of 100 represents a reliable app that is likely contributing to end-user productivity.
+
+**Total crashes (14 days)**: The total number of application crash events reported across all enrolled devices in your tenant over the past 14 days.
+
+**Mean time to failure**: The average amount of engagement time that an end user is able to use the application before a crash occurs over the past 14 days. This value is calculated by dividing **Total usage duration (14 days)** by **Total crashes (14 days)**. By relating usage duration and crash counts, the frequency of crashes across different applications is normalized. Applications without crash events in your tenant over the past 14 days are given a mean time to failure value of `No crash events`.
+
+**App reliability score**: A score between 0 and 100 that represents the relative reliability of the application in your tenant. This score is calculated based on **Mean time to failure** and **Total usage duration (14 days)**. A score of 0 represents an unreliable app that is likely hampering end-user productivity. A score of 100 represents a reliable app that is likely contributing to end-user productivity.
 
 > [!NOTE]
 > A maximum of 10 application crash events per application, per device, per day is used. This prevents excessive data collections from devices with severe application issues and helps prevent outlier devices from having undue influence over the reliability scores for individual applications.
@@ -79,7 +86,7 @@ Selecting a device name opens the **Application reliability (preview)** tab for 
 
 ## Known issues
 
-### Some eligible, enrolled devices aren't appearing in the Application reliability (preview) report due to a client certificate issue
+### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
 **Scenario**: In certain uncommon situations, devices may be missing from the **Application reliability (preview)** report. You can determine how many devices are reporting application reliability data by looking at the number of records in the table on the **Device performance** tab of the **Application reliability (preview)** report.
 
