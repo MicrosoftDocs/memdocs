@@ -44,6 +44,8 @@ The **App performance** tab uses data from the past 14 days to show reliability 
 - Foreground applications with a measurable amount of usage in your organization. This ensures that the report is focused on end-user impacting issues.
 - Applications with either an active device count that's greater than 5, or a count greater than 2% of the total number of your tenant's enrolled devices, whichever is larger. This helps filter out noise and ensures that calculations are made across a sufficient number of devices to be meaningful.
 
+:::image type="content" source="media/5659073-app-performance-tab.png" alt-text="Application performance tab in endpoint analytics" lightbox="media/5659073-app-performance-tab.png":::
+
 For each application in the report, the following data is provided:
 
 **App name**: The app identifier in the file manifest provided by your client devices. The app name is typically in executable (or .exe) format.
@@ -74,7 +76,7 @@ Selecting an app name in the table from **App performance** opens the **App perf
 - **App versions**: This tab allows you to compare the **Mean time to failure** across different versions of the application. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You may also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
 - **OS versions**: This tab compares the **Mean time to failure** for the application across different versions of Windows. This information can be helpful for identifying potential correlations between OS version and application issues.
 
-:::image type="content" source="media/5659073-app-performance.png" alt-text="Application performance details in endpoint analytics" lightbox="media/5659073-app-performance.png":::
+:::image type="content" source="media/5659073-app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="media/5659073-app-performance-details.png":::
 ## Model performance and OS versions performance tabs
 
 The **Device performance** tab displays application reliability insights for each eligible, enrolled device in your tenant. The **Total app crashes (14 days)** column represents the total number of app crash events from any app reported by the device over the past 14 days. These crash events can be associated with any application installed on the device and aren't necessarily all from the same application.
