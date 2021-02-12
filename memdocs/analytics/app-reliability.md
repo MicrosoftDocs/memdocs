@@ -22,6 +22,20 @@ The application reliability report provides insight into potential issues for de
 ## Prerequisites
 
 - Devices be enrolled in endpoint analytics.
+   - [Enroll Configuration Manager devices](enroll-configmgr.md)
+   - [Enroll Intune devices](enroll-intune.md)
 - Devices enrolled from Configuration Manager need client version 2006, or later installed.
 
+## App reliability score
+
+The **App reliability score** provides a high-level view of desktop application robustness across your environment. As with other endpoint analytics scores, the **App reliability score** is a number between 0 and 100. The score is calculated from the app reliability scores of each desktop application in your environment that's found in the **App performance** tab. 
+
+Each application on the **App performance** tab is assigned an **App reliability score** based on:
+
+- **Total usage duration**: Factoring in the usage duration when calculating an app's reliability score helps ensure the most disruptive application issues are prioritized.
+- **Crash frequency**: For each of app, the total number of crashes and the total usage duration over a 14 day rolling window is used to calculate the **Mean time to failure** value. This calculation normalizes the crash rate allowing for direct comparison of the relative frequency of crash events across different applications. This value is the primary contributor to an app's reliability score.
+
+> [!NOTE]
+> The **Application reliability** report is currently in preview. While this report is in preview, you'll see your **App reliability score** on the **Overview** page. However, the score won't contribute to your overall endpoint analytics score.
 ## App performance tab
+
