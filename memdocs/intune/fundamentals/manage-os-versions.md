@@ -90,11 +90,11 @@ You can use the Intune capabilities described in this article to help you move y
 1. Use enrollment restrictions to require operating system v2 as the minimum version to enroll the device. This ensures new end-user devices are compliant at enrollment time.
 2. Use Intune app protection policies to warn users when the app opens or resumes that operating system v2 is required.
 3. Use device compliance policies to require operating system v2 as the minimum version for a device to be compliant. Use **Actions** for noncompliance to allow a seven-day grace period and to send end users an email notification with your timeline and requirements.
-  - These policies will inform end users that existing devices need to be updated through email, the Intune Company Portal, and when the app is opened for apps enabled with an app protection policy.
-  - You can run a compliance report to identify users that are out of compliance. 
-4. **Step 3a**: Use Intune app protection policies to block users when an app opens or resumes if the device is not running operating system v2.
-5. **Step 3b**: Use device compliance policies to require operating system v2 as the minimum version for a device to be compliant.
-  - These policies require devices to be updated for them to continue to access organizational data. Protected services are blocked when used with device Conditional Access. Apps enabled with an app protection policy are blocked when opened or when they access organizational data.
+- These policies will inform end users that existing devices need to be updated through email, the Intune Company Portal, and when the app is opened for apps enabled with an app protection policy.
+- You can run a compliance report to identify users that are out of compliance. 
+4. Use Intune app protection policies to block users when an app opens or resumes if the device is not running operating system v2.
+5. Use device compliance policies to require operating system v2 as the minimum version for a device to be compliant.
+- These policies require devices to be updated for them to continue to access organizational data. Protected services are blocked when used with device Conditional Access. Apps enabled with an app protection policy are blocked when opened or when they access organizational data.
 
 ## Next steps
 
