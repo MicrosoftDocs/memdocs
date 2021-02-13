@@ -49,7 +49,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 
 ## Download the offline Company Portal app
 1. Search for and then select the **Company Portal** app. 
-2. Set the **License type** to **Offline**.
+2. Set the **License type** to **Offline**. Offline apps are managed by Intune, whereas online apps are managed by the store. Use offline apps when you need to install and maintain a specific app version.
 3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory. If you already have the offline app, you can select the **Manage** option.
 4. For **Platform**, select **Windows 10 all devices**, and then select the appropriate **Minimum version**, **Architecture**, and **Download app metadata** values. 
 5. Select **Download** to save the file to your local machine.
