@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage Defender for Endpoint on Android devices in Intune - Azure 
-description: Configure Microsoft Defender for Endpoint web protection on Android devices that you manage by using Microsoft Intune.
+description: Configure Microsoft Defender for Endpoint web protection on Android devices managed by Microsoft Intune.
 keywords:
 author: brenduns 
 ms.author: brenduns
@@ -26,11 +26,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Configure Microsoft Defender for Endpoint on Android devices that you manage by using Intune
+# Configure Microsoft Defender for Endpoint on Android devices managed by Intune
 
 When you integrate Microsoft Intune and Microsoft Defender for Endpoint, you can use device configuration profiles to modify some Defender for Endpoint settings on Android devices.
 
-Before you precede, you must successfully [configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Defender for Endpoint.
+Before you begin, you must successfully [configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Defender for Endpoint.
 
 ## Configure web protection on devices that run Android
 
@@ -38,13 +38,13 @@ By default, Microsoft Defender for Endpoint for Android includes and enables the
 
 While this protection is enabled by default, there are valid reasons to disable it on some Android devices. For example, you might decide to use only the Defender for Endpoint app scan feature or to prevent web protection from using your VPN while it scans for harmful URLs.
 
-Intune allows you to turn off all or some of the web protection feature. The method you use and the capabilities you can disable depend on how the Android device is enrolled with Intune:
+Intune allows you to turn off all or part of the web protection feature. The method you use and the capabilities you can disable depend on how the Android device is enrolled with Intune:
 
-- **Android device administrator**. Use a configuration profile to set custom OMA-URI settings on the device to disable the entire web protection feature or to disable only the use of VPNs. For general information about custom settings for Android devices, see [Custom settings](../configuration/custom-settings-android.md).
+- **Android device administrator**. Use a configuration profile to set custom OMA-URI settings on the device that disable the entire web protection feature or that disable only the use of VPNs. For general information about custom settings for Android devices, see [Custom settings](../configuration/custom-settings-android.md).
 
 - **Android Enterprise personally owned work profile**. Use an app configuration profile and the configuration designer to disable web protection. This method and enrollment type support disabling all web protection capabilities but don't support disabling only the use of VPNs. For general information about app configuration policies, see [Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
-- **Android Enterprise Fully Managed**. Use an app configuration profile and the [configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.   
+- **Android Enterprise Fully Managed profile**. Use an app configuration profile and the [configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.   
 
 To configure web protection on devices, use the following procedures to create and deploy the applicable configuration.
 
@@ -63,7 +63,7 @@ To configure web protection on devices, use the following procedures to create a
 
 4. In **Basics**, enter these details:
 
-   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, **Android custom profile for  Defender for endpoint web protection**.
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, **Android custom profile for  Defender for Endpoint web protection**.
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
 
 5. In **Configuration settings**, select **Add**.
@@ -72,7 +72,7 @@ To configure web protection on devices, use the following procedures to create a
 
    - **Disable web protection**:
      - **Name**: Enter a unique name for this OMA-URI setting so you can find it easily. For example, **Disable Defender for Endpoint web protection**.
-     - **Description**: (Optional) Enter a description that provides an overview of the setting, and any other important details.
+     - **Description**: (Optional) Enter a description that provides an overview of the setting and any other important details.
      - **OMA-URI**: Enter **./Vendor/MSFT/DefenderATP/AntiPhishing**.
      - **Data type**: Select **Integer** in the drop-down list.
      - **Value**: Enter **0** to disable web protection, including the VPN-based scan.
@@ -81,7 +81,7 @@ To configure web protection on devices, use the following procedures to create a
 
    - **Disable only the use of VPN by web protection**:
      - **Name**: Enter a unique name for this OMA-URI setting so you can find it easily. For example, **Disable Microsoft Defender for Endpoint web protection VPN**.
-     - **Description**: (Optional) Enter a description that provides an overview of the setting, and any other important details.
+     - **Description**: (Optional) Enter a description that provides an overview of the setting and any other important details.
      - **OMA-URI**: Enter **./Vendor/MSFT/DefenderATP/Vpn**.
      - **Data type**: Select **Integer** in the drop-down list. 
      - **Value**: Enter **0** to disable the VPN-based scan.
@@ -123,7 +123,7 @@ To configure web protection on devices, use the following procedures to create a
    > The **Web Protection** configuration key is deprecated. If you've used this key in the past, complete the previous steps to re-configure the setting by setting the keys **Anti-Phishing** and **VPN** to enable or disable web protection. 
 
    > [!NOTE]
-   > Enter **1** for both configuration values (**Anti-Phishing** and **VPN**) to enable web protection. This configuration is the default. 
+   > Enter **1** for both configuration values (**Anti-Phishing** and **VPN**) to enable web protection. This setting is the default. 
      
    Select **Next** to continue.
 
@@ -143,7 +143,7 @@ To configure web protection on devices, use the following procedures to create a
    > You can't disable VPN for the Android Enterprise Fully Managed profile if you've configured the Auto Setup of Always-on VPN device configuration     policy on the enrolled devices.
       
    > [!NOTE]
-   > Enter **1** for both configuration values (**Anti-Phishing** and **VPN**) to enable web protection. This configuration is the default. 
+   > Enter **1** for both configuration values (**Anti-Phishing** and **VPN**) to enable web protection. This setting is the default. 
  
    Select **Next** to continue. 
 
