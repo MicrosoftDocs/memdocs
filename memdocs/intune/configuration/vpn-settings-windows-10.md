@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,11 +43,9 @@ These settings apply to devices running:
 
 ## Before you begin
 
-Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
+- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
-The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
-
-These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+- These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## Base VPN
 
