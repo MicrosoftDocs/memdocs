@@ -66,15 +66,29 @@ Runs only one app on the device.
 
 - **Application type**: Select the application type. Your options:
 
-  - **Add Microsoft Edge browser**: Select **Microsoft Edge browser**, and choose the **Microsoft Edge kiosk mode type**:
+  - **Add Microsoft Edge browser**: Select this option for Microsoft Edge version 87 and newer.
 
-    - **Digital/Interactive signage**: Opens a URL full screen, and only shows the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
-    - **Public browsing (InPrivate)**: Runs a limited multi-tab version of Microsoft Edge. Users can browse publically or end their browsing session.
+    These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-windows.md).
+
+    - **Edge Kiosk URL**: Enter a default webpage that opens when Microsoft Edge browser opens and restarts. For example, enter `https://www.contoso.com` or `http://bing.com`.
+    - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
+      - **Public Browsing (InPrivate)**: Runs a limited multi-tab version of Microsoft Edge. Users can browse publicly, or end their browsing session.
+      - **Digital/Interactive Signage (InPrivate)**: Opens a URL full screen, and only shows the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
+
+    For more information on these options, see [Support policies for kiosk mode](/deployedge/microsoft-edge-configure-kiosk-mode#support-policies-for-kiosk-mode).
+
+    - **Refresh browser after idle time**: Enter the idle time when the browser should restart, from 0-1440 minutes. The idle time is the user's last interaction.
+
+  - **Add Microsoft Edge Legacy browser**: Select this option for Microsoft Edge version 77 and older.
+
+    This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile, and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-browser).
+
+    - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
+
+      - **Digital/Interactive signage**: Opens a URL full screen, and only shows the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
+      - **Public browsing (InPrivate)**: Runs a limited multi-tab version of Microsoft Edge. Users can browse publicly, or end their browsing session.
 
     For more information on these options, see [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
-
-    > [!NOTE]
-    > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-browser) describes the available settings.
 
   - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) from the Store, add it to Intune as a [Client App](../apps/apps-add.md). Then, assign the app to the kiosk devices.
 
