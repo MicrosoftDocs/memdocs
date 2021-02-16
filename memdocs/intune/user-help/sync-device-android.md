@@ -32,9 +32,9 @@ ms.collection:
 
 # Manually sync Android device with Intune  
 
- A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, the sync feature ensures that you can get any updates you missed when you return.   
+ A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you're connected to Wi-Fi. If you've been disconnected from Wi-Fi for an extended period of time, you can sync your device to get the policies and updates you missed.    
  
-Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
+Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, or if you're missing a work app that you know you're supposed to have, try syncing your device.   
 
 
 ## Sync device  
