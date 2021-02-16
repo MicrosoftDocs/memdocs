@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,6 +41,8 @@ This feature applies to:
 
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
+This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
+
 > [!NOTE]
 >
 > - User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
@@ -52,6 +54,9 @@ For example, you want to configure all iOS/iPadOS devices with the required sett
 >   - Windows Holographic for Business
 
 ## VPN connection types
+
+> [!IMPORTANT]
+> Before you can use VPN profiles assigned to a device, you must install the VPN app for the profile. To help you assign the app using Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).  
 
 You can create VPN profiles using the following connection types:
 
@@ -145,9 +150,6 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
-
-> [!IMPORTANT]
-> Before you can use VPN profiles assigned to a device, you must install the applicable VPN app for the profile. To help you assign the app using Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).  
 
 ## Create the profile
 
