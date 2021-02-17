@@ -81,7 +81,7 @@ Runs only one app on the device, such as a web browser or Store app.
 
   - **Add Microsoft Edge Legacy browser**: Select this option for Microsoft Edge version 77, and version 45 and older.
 
-    This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge version 77 and newer settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](aadministrative-templates-configure-edge.md). To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+    This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge version 77 and newer settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-configure-edge.md). To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
 
@@ -197,7 +197,7 @@ Runs multiple app on the device. Apps in this mode are available on the start me
 
       - **Application name**: Required. Enter a name for the application.
       - **Local path to app executable file**: Required. Enter the path to the executable, such as `C:\Program Files (x86)\Microsoft VS Code\Code.exe` or `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **Application user model ID (AUMID) for the Win32 app**: Enter the Application user model ID (AUMID) of the Win32 app. This setting determines the start layout of the tile on the desktop. To get this ID, see [Get-StartApps](/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **Application user model ID (AUMID) for the Win32 app**: Enter the Application user model ID (AUMID) of the Win32 app. This setting determines the start layout of the tile on the desktop. To get this ID, see [Get-StartApps](/powershell/module/startlayout/get-startapps).
 
     - **Add by AUMID**: Use this option to add inbox Windows apps, such as Notepad or Calculator. Enter the following properties:
 
