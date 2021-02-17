@@ -43,19 +43,19 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 
 - Create a [Windows 10 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
-- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-browser). To summarize:
+- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
   1. Create this kiosk profile to run the device in kiosk mode.
-  2. Create the [device restrictions profile](device-restrictions-windows-10.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
+  2. Create the [device restrictions profile](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older), and configure specific features and settings allowed in Microsoft Edge.
 
 - Be sure that any files, scripts, and shortcuts are on the local system. For more information, including other Windows requirements, see [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
-> Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-10.md#microsoft-edge-browser).
+> Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
 ## Single app, full-screen kiosk
 
-Runs only one app on the device.
+Runs only one app on the device, such as a web browser or Store app.
 
 - **Select a kiosk mode**: Choose **Single app, full-screen kiosk**.
 
@@ -68,7 +68,7 @@ Runs only one app on the device.
 
   - **Add Microsoft Edge browser**: Select this option for Microsoft Edge version 87 and newer.
 
-    These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-windows.md).
+    These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-configure-edge.md).
 
     - **Edge Kiosk URL**: Enter a default webpage that opens when Microsoft Edge browser opens and restarts. For example, enter `https://www.contoso.com` or `http://bing.com`.
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
@@ -79,9 +79,9 @@ Runs only one app on the device.
 
     - **Refresh browser after idle time**: Enter the idle time when the browser should restart, from 0-1440 minutes. The idle time is the user's last interaction.
 
-  - **Add Microsoft Edge Legacy browser**: Select this option for Microsoft Edge version 77 and older.
+  - **Add Microsoft Edge Legacy browser**: Select this option for Microsoft Edge version 77, and version 45 and older.
 
-    This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile, and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-browser).
+    This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge version 77 and newer settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](aadministrative-templates-configure-edge.md). To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
 
@@ -137,7 +137,7 @@ Runs only one app on the device.
 
 ## Multi-app kiosk
 
-Apps in this mode are available on the start menu. These apps are the only apps the user can open. If an app has a dependency on another app, both must be included in the allowed apps list. For example, Internet Explorer 64-bit has a dependency on Internet Explorer 32-bit, so you must allow both "C:\Program Files\internet explorer\iexplore.exe" and "C:\Program Files (x86)\Internet Explorer\iexplore.exe". 
+Runs multiple app on the device. Apps in this mode are available on the start menu. These apps are the only apps the user can open. If an app has a dependency on another app, then add both apps to the allowed apps list. For example, Internet Explorer 64-bit has a dependency on Internet Explorer 32-bit. So, you must allow `C:\Program Files\internet explorer\iexplore.exe` and `C:\Program Files (x86)\Internet Explorer\iexplore.exe`.
 
 - **Select a kiosk mode**: Select **Multi app kiosk**.
 
@@ -158,7 +158,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
   - **Browsers**
 
-    - **Add Microsoft Edge**: Microsoft Edge is added to the app grid, and all applications can run on this kiosk. Select the **Microsoft Edge kiosk mode type**:
+    - **Add Microsoft Edge Legacy**: Select this option for Microsoft Edge version 77 and older. Microsoft Edge is added to the app grid, and all applications can run on this kiosk. Select the **Microsoft Edge kiosk mode type**:
 
       - **Normal mode (full version of Microsoft Edge)**: Runs a full-version of Microsoft Edge with all browsing features. User data and state are saved between sessions.
       - **Public browsing (InPrivate)**: Runs a multi-tab version of Microsoft Edge InPrivate with a tailored experience for kiosks that run in full-screen mode.
@@ -166,7 +166,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       For more information on these options, see [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Configuration profiles** > **Create profile** > > **Windows 10** for platform > **Device Restrictions** >  **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-browser) describes the available settings.
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Configuration profiles** > **Create profile** > > **Windows 10** for platform > **Device Restrictions** >  **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older) describes the available settings.
 
     - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../apps/apps-add.md).
 
