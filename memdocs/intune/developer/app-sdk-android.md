@@ -100,7 +100,7 @@ If [ProGuard](http://proguard.sourceforge.net/) (or any other shrinking/obfuscat
 the SDK has additional configuration rules which must be included. When including the *.AAR* in your build, our rules are 
 automatically integrated into the proguard step and the necessary class files are kept.
 
-The [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
+The [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
 
 ### Policy enforcement
 The Intune App SDK is an Android library which allows your app to
@@ -2296,29 +2296,29 @@ See the [Testing Guide](app-sdk-android-testing-guide.md).
 [MAMActivity.onMAMCompanyPortalRequired1]: http://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#onMAMCompanyPortalRequired(java.lang.String)
 
 <!-- Intune -->
-["Give your app access to the Intune app protection service (optional)"]: https://docs.microsoft.com/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
+["Give your app access to the Intune app protection service (optional)"]: ./app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional
 
 <!-- Azure Active Directory -->
-[Microsoft Azure Active Directory]: https://azure.microsoft.com/documentation/articles/active-directory-whatis/
+[Microsoft Azure Active Directory]: /azure/active-directory/fundamentals/active-directory-whatis
 [Register your application with Azure Active Directory]: /azure/active-directory/active-directory-app-registration
-[AAD redirect URI]: https://docs.microsoft.com/azure/active-directory/develop/msal-client-application-configuration#redirect-uri
+[AAD redirect URI]: /azure/active-directory/develop/msal-client-application-configuration#redirect-uri
 
 <!-- ADAL -->
-[ADAL]: https://docs.microsoft.com/azure/active-directory/azuread-dev/active-directory-authentication-libraries
+[ADAL]: /azure/active-directory/azuread-dev/active-directory-authentication-libraries
 
 <!-- MSAL-->
-[MSAL]: https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries
+[MSAL]: /azure/active-directory/develop/reference-v2-libraries
 [MSAL repository on GitHub]: https://github.com/AzureAD/microsoft-authentication-library-for-android
 [MSAL Wiki]: https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki
-[Overview of Microsoft Authentication Library (MSAL)]: https://docs.microsoft.com/azure/active-directory/develop/msal-overview
+[Overview of Microsoft Authentication Library (MSAL)]: /azure/active-directory/develop/msal-overview
 [Update your applications to use Microsoft Authentication Library (MSAL)]: https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363
-[Migrate Android ADAL to MSAL]: https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal
-[Differences between ADAL and MSAL]: https://docs.microsoft.com/azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
+[Migrate Android ADAL to MSAL]: /azure/active-directory/develop/migrate-android-adal-msal
+[Differences between ADAL and MSAL]: /azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
 [Using MSAL]: https://github.com/AzureAD/microsoft-authentication-library-for-android#using-msal
-[Configure MSAL to use a broker]: https://docs.microsoft.com/azure/active-directory/develop/brokered-auth#configure-msal-to-use-a-broker
+[Configure MSAL to use a broker]: /azure/active-directory/develop/brokered-auth#configure-msal-to-use-a-broker
 [`IAccount`]: https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAccount.java
 [`IAuthenticationResult`]: https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAuthenticationResult.java
 
 <!-- Sovereign Cloud -->
 [sovereign cloud aware]: https://www.microsoft.com/trustcenter/cloudservices/nationalcloud
-[MSAL configuration file]: https://docs.microsoft.com/azure/active-directory/develop/msal-configuration#multiple_clouds_supported
+[MSAL configuration file]: /azure/active-directory/develop/msal-configuration#multiple_clouds_supported
