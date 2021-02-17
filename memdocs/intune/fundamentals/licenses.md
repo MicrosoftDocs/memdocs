@@ -56,6 +56,9 @@ Intune for Education is included in the following licenses:
 - The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune isn't included in licenses not in the previous tables.
 
+## Unlicensed admins
+For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](/unlicensed-admins.md).
+
 Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page for the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.  
 
 For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](licenses-assign.md).
