@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2021
+ms.date: 02/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -64,7 +64,7 @@ The Intune App SDK consists of the following files:
 
 ### Android versions
 The SDK fully supports Android API 21 (Android 5.0) through Android
-API 29 (Android 10.0). It may be built into an app with an Android
+API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android
 minSDKVersion as low as 14, but on those older OS versions it will be
 impossible to install the Intune Company Portal app or use MAM
 policies.
