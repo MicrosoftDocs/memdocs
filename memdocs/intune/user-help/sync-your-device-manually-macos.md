@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manually sync your macOS device with Intune Company Portal
-description:  Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations.
+description:  Sync your Mac from the Intune Company Portal to get the latest updates and requirements from your organization.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 02/16/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,11 +30,15 @@ ms.collection:
 ---
 
 
-# Sync your macOS device manually
+# Manually sync macOS device with Intune  
 
-Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations. During a sync, Company Portal checks in with your device to make sure it's meeting your organization's requirements. It syncs your device with policies or updates that you may not have yet and can help resolve downloads or other processes that are in progress.  
+ A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, the sync feature ensures that you can get any updates you missed when you return. 
+ 
+Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
-Company Portal regularly checks in with your device, but you can use the following steps to start a sync anytime from the app. 
+## Sync device 
+
+ To force a sync:  
 
 1. Open the Company Portal app.
 
