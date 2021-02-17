@@ -102,7 +102,7 @@ Selecting a device name opens the **Application reliability (preview)** tab for 
 
 Use the following script to determine if a device is impacted by this issue:
 
-```vbscript
+```powershell
 $query = "SELECT * FROM CCM_PendingPolicyState WHERE PolicyID=""B27D9CFC-84AD-0AF8-9DF1-23EE05E8C05D"""
 $obj = Get-WmiObject -Query $query -Namespace "root\ccm\policyagent"
  
