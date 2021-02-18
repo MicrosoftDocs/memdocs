@@ -38,4 +38,4 @@ Configuration Manager can collect resource information from discovery or invento
 
 For more information about collections, see [Introduction to collections](introduction-to-collections.md).
 
-For more information about other security features in Configuration Manager, see the [Security documentation hub](../../../../../security/index.yml).
+For more information about other security features in Configuration Manager, see the [Security documentation hub](../../../../security/index.yml).
