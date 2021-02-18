@@ -350,8 +350,6 @@
       href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
     - name: Add a context qualifier by using WMI
       href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
-  - name: Secure Configuration Manager applications
-    href: core/understand/securing-configuration-manager-applications.md
 - name: Application management
   items:
   - name: Create an application with the script deployment type
