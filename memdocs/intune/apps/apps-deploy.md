@@ -56,6 +56,8 @@ The following table lists the various options for assigning apps to users and de
 > Currently, you can assign iOS/iPadOS and Android apps (line-of-business and store-purchased apps) to devices that aren't enrolled with Intune.
 >
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
+> 
+> *Available assignments* are only valid for user groups, not device groups.
 
 ## Assign an app
 
