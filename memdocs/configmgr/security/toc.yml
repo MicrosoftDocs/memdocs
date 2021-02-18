@@ -10,8 +10,6 @@
   items:
   - name: Plan for security
     href: ../core/plan-design/security/plan-for-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
-  - name: Best practices
-    href: ../core/plan-design/security/security-best-practices-and-privacy-information.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
 - name: How-to guides
   items:
   - name: Configure security

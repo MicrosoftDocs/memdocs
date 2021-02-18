@@ -664,6 +664,21 @@
             "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
             "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/security-best-practices-and-privacy-information.md",
+            "redirect_url": "/mem/configmgr/security/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/security-and-privacy.md",
+            "redirect_url": "/mem/configmgr/security/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/securing-configuration-manager-applications.md",
+            "redirect_url": "/mem/configmgr/develop/core/servers/configure/role-based-administration",
+            "redirect_document_id": false
         }
     ]
 }
