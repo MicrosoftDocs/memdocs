@@ -4,7 +4,7 @@ description: Add or create settings using ADMX administrative templates to confi
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 01/19/2021
+ms.date: 01/29/2021
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -62,7 +62,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Administrative Templates**.
+    - **Profile**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
