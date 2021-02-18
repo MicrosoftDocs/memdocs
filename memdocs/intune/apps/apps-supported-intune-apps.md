@@ -125,7 +125,7 @@ The below apps support the core Intune App Protection Policy settings.
 
 The following apps support the core Intune App Protection Policy settings. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Contact the app vendor for specific details app Intune related support. 
 
 
