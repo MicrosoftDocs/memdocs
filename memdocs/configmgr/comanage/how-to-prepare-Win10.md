@@ -73,7 +73,7 @@ Decide which command-line properties you require for your environment:
   - CCMHOSTNAME  
   - SMSSITECODE  
 
-- The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:  
+- Prior to version 1810, the following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates. Starting in version 1810 these properties are not requried for Azure AD authenicated installation:  
   - AADCLIENTAPPID  
   - AADRESOURCEURI  
 
