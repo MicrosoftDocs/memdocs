@@ -61,7 +61,7 @@
   - name: Asset Intelligence
     href: ../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
   - name: Reporting
-    href: ../core/servers/manage/planning-for-reporting.md#security-and-privacy?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+    href: ../core/servers/manage/planning-for-reporting.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json#security-and-privacy
 - name: Reference
   items:
   - name: Cryptographic controls technical reference
