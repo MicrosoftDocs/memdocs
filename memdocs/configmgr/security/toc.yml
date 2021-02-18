@@ -62,6 +62,12 @@
     href: ../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
   - name: Reporting
     href: ../core/servers/manage/planning-for-reporting.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json#security-and-privacy
+  - name: Remote connection profiles
+    href: ../compliance/deploy-use/create-remote-connection-profiles.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json#security-and-privacy-considerations
+  - name: Certificate profiles
+    href: ../protect/plan-design/security-and-privacy-for-certificate-profiles.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+  - name: Wi-Fi and VPN profiles
+    href: ../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
 - name: Reference
   items:
   - name: Cryptographic controls technical reference
