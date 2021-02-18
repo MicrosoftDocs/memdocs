@@ -143,7 +143,7 @@ Not all devices can support content hashing. The exceptions include:
  These PKI certificates are automatically requested, generated, and installed by Microsoft Intune.  
 
 ### CRL checking for PKI certificates  
- A PKI certificate revocation list (CRL) increases administrative and processing overhead but it is more secure. However, if CRL checking is enabled but the CRL is inaccessible, the PKI connection fails. For more information, see [Security and privacy for Configuration Manager](security-and-privacy.md).  
+ A PKI certificate revocation list (CRL) increases administrative and processing overhead but it is more secure. However, if CRL checking is enabled but the CRL is inaccessible, the PKI connection fails.
 
  Certificate revocation list (CRL) checking is enabled by default in IIS, so if you are using a CRL with your PKI deployment, there is nothing additional to configure on most Configuration Manager site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.  
 
