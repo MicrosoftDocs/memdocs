@@ -160,7 +160,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Allow   users to save copies to selected services  |          OneDrive   for Business, SharePoint Online |          iOS/iPadOS,   Android  |                  |
-| Data Transfer |       Transfer telecommunication data to  |          All apps |          iOS/iPadOS,   Android  |                  |
+| Data Transfer |       Transfer telecommunication data to  |          Any dialer app |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Restrict   cut, copy, and paste between apps  |          Policy   managed apps with paste in  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Screen   capture and Google Assistant  |          Block  |          Android  |                  |
 | Functionality |       Restrict   web content transfer with other apps  |          Microsoft   Edge  |          iOS/iPadOS,   Android  |                  |
