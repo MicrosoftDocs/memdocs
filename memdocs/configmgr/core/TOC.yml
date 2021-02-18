@@ -232,12 +232,8 @@
       href: plan-design/diagnostics/frequently-asked-questions.md
   - name: Security and privacy for Configuration Manager
     items:
-    - name: Security and privacy overview
-      href: plan-design/security/security-and-privacy.md
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
-    - name: Security best practices and privacy information
-      href: plan-design/security/security-best-practices-and-privacy-information.md
     - name: Additional privacy information
       href: plan-design/security/additional-privacy.md
     - name: Configure security
@@ -254,6 +250,8 @@
         href: plan-design/security/enable-tls-1-2-server.md
       - name: Common issues when enabling TLS 1.2
         href: plan-design/security/enable-tls-1-2-troubleshoot.md
+    - name: Security documentation hub
+      href: ../security/index.yml
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
