@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2021
+ms.date: 02/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -66,6 +66,9 @@ The objective of the Intune App SDK for iOS is to add management capabilities to
 
 
 ## Build the SDK into your mobile app
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) for updates and incorporate into your software development release cycle  to ensure your apps support the latest App Protection Policy settings.
 
 To enable the Intune App SDK, follow these steps:
 

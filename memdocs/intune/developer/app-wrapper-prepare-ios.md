@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 02/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -173,6 +173,9 @@ You will need the following to distribute apps wrapped by Intune:
 3. Choose **Agree** to accept EULA, which mounts the package to your computer.
 
 ## Run the App Wrapping Tool
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Use terminal
 

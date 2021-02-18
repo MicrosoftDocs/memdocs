@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 02/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -72,6 +72,9 @@ Before running the tool, review [Security considerations for running the App Wra
 Note the folder to which you installed the tool. The default location is: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## Run the App Wrapping Tool
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 1. On the Windows computer where you installed the App Wrapping Tool, open a PowerShell window.
 

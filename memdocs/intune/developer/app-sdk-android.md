@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/12/2021
+ms.date: 02/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -70,6 +70,7 @@ impossible to install the Intune Company Portal app or use MAM
 policies.
 
 ### Company Portal app
+
 The Intune App SDK for Android relies on the presence of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal.
 
 > [!NOTE]
@@ -78,6 +79,9 @@ The Intune App SDK for Android relies on the presence of the [Company Portal](ht
 For app protection without device enrollment, the user is _**not**_ required to enroll the device by using the Company Portal app.
 
 ## SDK integration
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Sample app
 An example of how to integrate with the Intune App SDK properly is available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
