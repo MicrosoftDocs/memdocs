@@ -15,16 +15,15 @@ ms.reviewer: acabello
 
 # Enable data sharing for Desktop Analytics
 
-To enroll devices to Desktop Analytics, they need to send diagnostic data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
+To [enroll devices](enroll-devices.md) to Desktop Analytics, they need to send diagnostic data to Microsoft. Configuration Manager provides an integrated experience for managing and deploying settings to clients, including managing the diagnostic data level, and help [configure the proxy](#bkmk_diag-proxy) if your environment uses a proxy server. For the best experience, use Configuration Manager.
+
+> [!IMPORTANT]
+> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](group-policy-settings.md#bkmk_gp-conflict_res).
 
 ## Diagnostic data levels
 
 :::image type="content" source="media/diagnostic-data-levels.png" alt-text="Diagram of diagnostic data levels for Desktop Analytics":::
 
-When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager.
-
-> [!IMPORTANT]
-> In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](enroll-devices.md#conflict-resolution).
 
 The basic functionality of Desktop Analytics works at the **Required** [diagnostic data level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). If you don't configure the **Optional (limited)** level in Configuration Manager, you won't get the following features of Desktop Analytics:
 
@@ -43,6 +42,9 @@ Microsoft recommends that you enable the **Optional (limited)** diagnostic data 
 > Devices running Windows 10, version 1709 have this policy setting. However, when you configure the **Optional (limited)** setting in Configuration Manager, these devices also fall back to the **Required** level.
 
 For more information about diagnostic data shared with Microsoft with **Optional (limited)**, see [Windows 10 enhanced diagnostic data events and fields](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+
+> [!IMPORTANT]
+> When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, [**Configure telemetry opt-in setting user interface**](group-policy-settings.md#bkmk_gp-ux-settings).
 
 > [!IMPORTANT]
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom).
@@ -100,7 +102,7 @@ Starting in version 2010, the service connection point validates important inter
 
 [!INCLUDE [Internet endpoints for Desktop Analytics](../core/plan-design/network/includes/internet-endpoints-desktop-analytics.md)]
 
-## Proxy server authentication
+## <a name="bkmk_diag-proxy"></a> Proxy server authentication
 
 If your organization uses proxy server authentication for internet access, make sure that it doesn't block the diagnostic data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Desktop Analytics.
 
