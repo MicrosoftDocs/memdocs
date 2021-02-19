@@ -2,7 +2,7 @@
 title: Technical preview 2102
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2102.
-ms.date: 02/18/2021
+ms.date: 02/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,25 +24,18 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2102/1234567.md)] -->
 
-[!INCLUDE [9142301](includes/2102/9142301.md)]
-[!INCLUDE [3607457](includes/2102/3607457.md)]
-[!INCLUDE [9117629](includes/2102/9117629.md)]
-[!INCLUDE [4639895](includes/2102/4639895.md)]
-[!INCLUDE [5679831](includes/2102/5679831.md)]
-[!INCLUDE [6979225](includes/2102/6979225.md)]
-[!INCLUDE [7043245](includes/2102/7043245.md)]
-[!INCLUDE [7958749](includes/2102/7958749.md)]
-[!INCLUDE [7983121](includes/2102/7983121.md)]
-[!INCLUDE [8026172](includes/2102/8026172.md)]
-[!INCLUDE [8034298](includes/2102/8034298.md)]
-[!INCLUDE [8495588](includes/2102/8495588.md)]
-[!INCLUDE [8543508](includes/2102/8543508.md)]
-[!INCLUDE [8655575](includes/2102/8655575.md)]
-[!INCLUDE [8680235](includes/2102/8680235.md)]
-[!INCLUDE [8787410](includes/2102/8787410.md)]
-[!INCLUDE [8845996](includes/2102/8845996.md)]
-[!INCLUDE [8913032](includes/2102/8913032.md)]
-[!INCLUDE [9070525](includes/2102/9070525.md)]
+[!INCLUDE [Improvements to the collection relationships viewer](includes/2102/8543508.md)]
+[!INCLUDE [Improvements to BitLocker support via cloud management gateway](includes/2102/8845996.md)]
+[!INCLUDE [TLS certificate pinning for devices scanning HTTPS-configured WSUS servers](includes/2102/8913032.md)]
+[!INCLUDE [Improvements to collection evaluation view](includes/2102/8787410.md)]
+[!INCLUDE [Improvements to query preview](includes/2102/8680235.md)]
+[!INCLUDE [Add a report as a favorite](includes/2102/8034298.md)]
+[!INCLUDE [Download Power BI report templates from Community hub](includes/2102/5679831.md)]
+[!INCLUDE [Change foreground color for Software Center branding](includes/2102/8655575.md)]
+[!INCLUDE [Changes for CMPivot](includes/2102/7898885.md)]
+[!INCLUDE [Improvements to client setting for Software Center custom tabs](includes/2102/9142301.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2102/9117629.md)]
+[!INCLUDE [Change default maximum run time for software updates](includes/2102/7833866.md)]
 
 <!--
 ## General known issues
