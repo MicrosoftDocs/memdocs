@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2021
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,7 +63,7 @@ Like enrollment restrictions, device compliance policies include both minimum an
 
 :::image type="content" source="./media/manage-os-versions/os-version-actions-noncompliance.png" alt-text="Device compliance - actions for noncompliant devices":::
 
-For details, see [https://docs.microsoft.com/mem/intune/protect/device-compliance-get-started](../protect/device-compliance-get-started.md).
+For details, see [Get started with device compliance](../protect/device-compliance-get-started.md).
 
 ### In practice
 Organizations are using device compliance policies for the same scenarios as enrollment restrictions. These policies keep users on current, validated operating system versions in your organization. When end-user devices fall out of compliance, access to organizational resources can be blocked via Conditional Access until end users are within the supported operating system range for your organization. End users are notified that they are out of compliance and they are provided the steps to regain access.   
