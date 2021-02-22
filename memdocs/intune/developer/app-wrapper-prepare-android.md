@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/18/2021
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,6 +35,9 @@ Use the Microsoft Intune App Wrapping Tool for Android to change the behavior of
 The tool is a Windows command-line application that runs in PowerShell and creates a wrapper around your Android app. After the app is wrapped, you can change the app's functionality by configuring [mobile application management policies](../apps/app-protection-policies.md) in Intune.
 
 Before running the tool, review [Security considerations for running the App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). To download the tool, go to the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) on GitHub.
+
+> [!NOTE]
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/issues) on GitHub.
 
 ## Fulfill the prerequisites for using the App Wrapping Tool
 

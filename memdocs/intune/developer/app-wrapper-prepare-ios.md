@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/18/2021
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,6 +35,9 @@ Use the Microsoft Intune App Wrapping Tool for iOS to enable Intune app protecti
 The tool is a macOS command-line application that creates a wrapper around an app. Once an app is processed, you can change the app's functionality by deploying [app protection policies](../apps/app-protection-policies.md) to it.
 
 To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) on GitHub.
+
+> [!NOTE]
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/issues) on GitHub.
 
 ## General prerequisites for the App Wrapping Tool
 
