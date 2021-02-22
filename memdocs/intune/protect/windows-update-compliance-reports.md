@@ -91,7 +91,7 @@ The data that powers Intune’s Windows 10 feature updates reports isn’t colle
 
 #### Enable data collection
 
-To Configure this setting for your devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
+To Configure this setting for your devices, [Create a profile](../configuration/device-profile-create.md#create-the-profile) with  the following information: 
 
   - **Platform**: Select **Windows 10 and later**
   
@@ -107,7 +107,7 @@ To Configure this setting for your devices, [Create a profile](../intune/configu
     
        - **Scope**: Select *Windows Updates*.
 
-  - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later is supported for these reports.
+  - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later is supported for these reports.
         > [!div class="mx-imgBorder"]
       > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
     
