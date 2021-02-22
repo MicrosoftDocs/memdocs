@@ -191,7 +191,7 @@ Logs for the PFX Certificate Connector are available as Event logs on the server
 
 - **Event Viewer** > **Application and Service Logs** > **Microsoft** > **Intune** > **Certificate Connectors**
 
-The following logs are available:
+The following logs are available and default to 50 MB, with automatic archiving enabled:
 
 - **Admin Log** - This log contains one log event per request to the connector. Events include either a *success* with information about the request, or an *error* with information about the request and the error.
 - **Operational Log** - This log displays additional information than is found in the Admin log, and can be of use in debugging issues. This log also displays a ongoing operations for the PFX Certificate connector instead of single events.
