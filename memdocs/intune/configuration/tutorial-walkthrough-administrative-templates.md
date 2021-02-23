@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 02/26/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,6 +60,9 @@ By the end of this lab, you'll have the skills to start using Intune and Microso
 This feature applies to:
 
 - Windows 10 version 1709 and newer
+
+> [!TIP]
+> There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available. For the specific steps to use the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
 
 ## Prerequisites
 
