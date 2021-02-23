@@ -37,7 +37,7 @@ The tool is a Windows command-line application that runs in PowerShell and creat
 Before running the tool, review [Security considerations for running the App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). To download the tool, go to the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) on GitHub.
 
 > [!NOTE]
-> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/issues) on GitHub.
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/issues) on GitHub.
 
 ## Fulfill the prerequisites for using the App Wrapping Tool
 
