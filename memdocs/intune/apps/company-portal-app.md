@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/05/2021
+ms.date: 02/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -182,7 +182,10 @@ Upon selecting the Company Portal, the user will be directed to the correspondin
 - `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
 - *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
 
-If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal. 
+
+> [!NOTE]
+> To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
