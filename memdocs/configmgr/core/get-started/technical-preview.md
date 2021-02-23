@@ -129,7 +129,7 @@ The following features are available with the most recent Configuration Manager 
 - [Allow exclusion of organizational units (OU) from Active Directory User Discovery](2021/technical-preview-2101.md#bkmk_disco) <!--5193509-->
 - [Changes to Support Center](2021/technical-preview-2101.md#bkmk_support) <!--8693068-->
 - [Prerequisite rule for deprecated Azure Monitor connector](2021/technical-preview-2101.md#bkmk_oms) <!--8269855-->
-- [Manage aged distribution point messages](2021/technical-preview-2101.md#bkmk_distmsg) <!--8561493-->
+- [Manage aged distribution point messages](2021/technical-preview-2101.md#bkmk_distmsg) <!--8561493--> <!-- not in 2103 CB -->
 - [Encryption algorithm to capture and restore user state](2021/technical-preview-2101.md#bkmk_usmt) <!--9171505-->
 - [PowerShell release notes preview](2021/technical-preview-2101.md#bkmk_powershell) <!--8905809-->
 

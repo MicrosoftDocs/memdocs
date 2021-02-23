@@ -65,17 +65,10 @@ We continue to see broad adoption of native Azure Monitor log query groups as cu
 
 When you update to this release, a new prerequisite check warns about the presence of the [Log Analytics connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context). (This feature is called the *OMS Connector* in the Azure Services wizard.) This connector is deprecated, and will be removed from the product in a future release. At that time, this check will be an error that blocks upgrade.
 
-### Manage aged distribution point messages
 
-<!--8561493-->
 
-In some environments, a small number of error status messages for a distribution point can cause the entire server status to show an error state. This behavior could be due to a known issue when failing to distribute content. To help you better manage the state of distribution points, this release includes the following improvements:
+<!--don't include bug 8561493, replaced by user story 9388277. see bug 9383867 (and remove this comment before release!) -->
 
-- Delete a specific distribution point status message. Go to the **Monitoring** workspace, expand **Distribution Status**, and select **Distribution Point Configuration Status**. Select a server, and switch to the **Details** tab in the bottom pane. Select a message, and then in the ribbon, select **Delete**.
-
-- Delete aged status messages for a specific distribution point. In the same **Distribution Point Configuration Status** node, select a server. In the ribbon, select **Delete Aged Status Messages**. Then choose a timeframe for messages to delete: older than 30 days, older than 90 days, older than one year.
-
-- Configure a site maintenance task to **Delete Aged Distribution Point Messages**. For more general information on tasks, see [Maintenance tasks](../../servers/manage/maintenance-tasks.md).
 
 ## Client management
 
