@@ -2,7 +2,7 @@
 title: Restart frequency (preview) in endpoint analytics
 titleSuffix: Configuration Manager
 description: Get details about device restart frequency in endpoint analytics
-ms.date: 02/24/2021
+ms.date: 02/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -19,7 +19,12 @@ In endpoint analytics [startup performance](startup-performance.md), we've provi
 
 ## Prerequisites
 
-There are no extra prerequisites for using this feature beyond what is already required for endpoint analytics [startup performance](startup-performance.md). This feature doesn't have a dependency on Windows Diagnostics data, so will work regardless of how you've configured the telemetry level or Windows Error Reporting.
+- Devices are enrolled in endpoint analytics.
+   - [Enroll Configuration Manager devices](enroll-configmgr.md)
+   - [Enroll Intune devices](enroll-intune.md)
+- Devices meet the endpoint analytics [startup performance](startup-performance.md) requirements.
+- Devices enrolled from Configuration Manager need client version 2006, or later installed
+
 ## Restart categories
 
 Each restart is categorized into one of six categories. They're described as either abnormal shutdowns or normal shutdowns.
