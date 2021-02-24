@@ -586,7 +586,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/mem/intune/apps/app-install-error-codes.md",
+            "source_path": "memdocs/intune/apps/app-install-error-codes.md",
             "redirect_url": "/troubleshoot/mem/intune/app-install-error-codes",
             "redirect_document_id": false
         },
