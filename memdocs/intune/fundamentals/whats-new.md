@@ -1502,7 +1502,7 @@ Unchanged, from the Profiles pane you can select a profile to drill-in to view t
 
 #### Derived credentials support for Windows<!-- 4886090   -->
 You can now use derived credentials with your Windows devices. This will  expand on the existing support for iOS/iPadOS and Android, and will be available for the same derived credential providers:
-- Entrust Datacard
+- Entrust
 - Intercede
 - DISA Purebred
 
