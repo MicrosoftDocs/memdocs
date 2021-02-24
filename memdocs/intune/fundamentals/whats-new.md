@@ -58,6 +58,15 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
+
+## Week of March 1, 2021
+
+### Monitor and troubleshoot
+
+#### Endpoint analytics Application Reliability report<!-- IN5653073 -->
+A new **Application Reliability** report will be available in Endpoint analytics. This report provides insight into potential issues for desktop applications on managed PCs. You can quickly identify the top applications that are impacting end user productivity, as well as see aggregate app usage and app failure metrics for these applications. You'll be able to troubleshoot by drilling into a specific device and viewing a timeline of app reliability events. This report is expected to be available in public preview during March 2021. For more information, see [Endpoint analytics application reliability](../../analytics/app-reliability.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ## Week of February 8, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
