@@ -551,7 +551,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/memdocs/intune/enrollment/troubleshoot-ios-enrollment-errors.md",
+            "source_path": "memdocs/intune/enrollment/troubleshoot-ios-enrollment-errors.md",
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors",
             "redirect_document_id": false
         },
@@ -560,6 +560,11 @@
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors",
             "redirect_document_id": false
         },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-windows-auto-enrollment.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment",
+            "redirect_document_id": false
+        },        
         {
             "source_path": "memdocs/intune/fundamentals/troubleshoot-company-resource-access-problems.md",
             "redirect_url": "/troubleshoot/mem/intune/troubleshoot-company-resource-access-problems",
