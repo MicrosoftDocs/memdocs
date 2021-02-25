@@ -55,7 +55,7 @@ The **Collect diagnostics** remote action is supported for:
 ## Data collected
 
 No personal information is collected. Each collection contains the following data:
-- MDM logs (including Autopilot)
+- MDM logs (including Autopilot).
 - Some event viewer logs.
 - WMI and MDM ETLs.
 - HKLM policy registry keys.
