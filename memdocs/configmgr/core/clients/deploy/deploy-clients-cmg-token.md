@@ -43,6 +43,9 @@ This method requires the client to first register with the management point on t
 
 The site enables this behavior by default.
 
+> [!NOTE]
+> In HTTPS management point, the client must present a valid PKI issued cert, or an AAD token, or a bulk registration token to first register regardless of internet/intranet management point.
+
 ## Bulk registration token
 
 If you can't install and register clients on the internal network, create a bulk registration token. Use this token when the client installs on an internet-based device, and registers through the CMG. The bulk registration token has a short-validity period, and isn't stored on the client or the site. It allows the client to generate a unique token, which paired with its self-signed certificate, lets it authenticate with the CMG.
