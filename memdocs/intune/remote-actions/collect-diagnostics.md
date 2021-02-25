@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Collect diagnostics from a Windows device
 
-The **Collect diagnostics** remote action lets you collect and download Windows device logs without interrupting the user. Only non-user locations and file types can be captured, so no personally identifiable information (PII) is collected.
+The **Collect diagnostics** remote action lets you collect and download Windows device logs without interrupting the user. Only non-user locations and file types can be captured, so no personal information is collected.
 
 The diagnostic collection is stored for 30 days and then deleted. Each device can have up to 10 collections stored at one time.
 
@@ -52,7 +52,7 @@ The **Collect diagnostics** remote action is supported for:
 
 ## Data collected
 
-No PII is collected. Each collection contains the following data:
+No personal information is collected. Each collection contains the following data:
 - MDM logs (including Autopilot)
 - All event viewer logs
 - WMI and MDM ETLs
