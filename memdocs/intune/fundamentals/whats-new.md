@@ -58,7 +58,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
-## Week of February 8, 2021
+## Week of February 22, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
