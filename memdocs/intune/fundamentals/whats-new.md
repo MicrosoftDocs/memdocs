@@ -346,7 +346,7 @@ When you use the `exportJobs` Graph API to export Intune reports without selecti
 
 #### Microsoft Tunnel now supports Red Hat Enterprise Linux 8<!-- 8981769 -->
 
-You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#linux-server). To make use of for RHEL 8 you won't need to take any actions. Support has been added to the Docker containers which update automatically. In addition, this update also suppresses some extraneous logging.
+You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](../protect/microsoft-tunnel-prerequisites.md#linux-server). To make use of for RHEL 8 you won't need to take any actions. Support has been added to the Docker containers which update automatically. In addition, this update also suppresses some extraneous logging.
 
 <!-- ########################## -->
 ## Week of January 11, 2021
