@@ -122,7 +122,7 @@ The following features are available with the most recent Configuration Manager 
 ### Technical preview version 2102
 
 - [Improvements to the collection relationships viewer](2021/technical-preview-2102.md#bkmk_coll) <!--8543508-->
-- [Improvements to BitLocker support via cloud management gateway](2021/technical-preview-2102.md#bkmk_bitlocker) <!--8845996-->       
+- [Improvements to BitLocker support via cloud management gateway](2021/technical-preview-2102.md#bkmk_bitlocker) <!--8845996-->
 - [TLS certificate pinning for devices scanning HTTPS-configured WSUS servers](2021/technical-preview-2102.md#bkmk_wsus) <!--8913032-->
 - [Improvements to collection evaluation view](2021/technical-preview-2102.md#bkmk_colleval) <!--8787410-->
 - [Improvements to query preview](2021/technical-preview-2102.md#bkmk_query) <!--8680235-->
@@ -156,11 +156,11 @@ The following features were released with previous versions of the Configuration
 - [Deploy a feature update with a task sequence](2021/technical-preview-2101.md#bkmk_futs) <!--3555906-->
 - [Tenant Attach: Required application deployments display in Microsoft Endpoint Manager admin center](2021/technical-preview-2101.md#bkmk_apps) <!--8795301-->
 - [Client setting for displaying Software Center custom tabs](2021/technical-preview-2101.md#bkmk_webview) <!--9142301-->
-- [Simplified CMPivot permissions requirements](2021/technical-preview-2101.md#bkmk_permission) <!--7898885-->
+- [Simplified CMPivot permissions requirements](2021/technical-preview-2101.md#bkmk_permission) <!--7898885--> <!-- not in 2103 CB -->
 - [Allow exclusion of organizational units (OU) from Active Directory User Discovery](2021/technical-preview-2101.md#bkmk_disco) <!--5193509-->
 - [Changes to Support Center](2021/technical-preview-2101.md#bkmk_support) <!--8693068-->
 - [Prerequisite rule for deprecated Azure Monitor connector](2021/technical-preview-2101.md#bkmk_oms) <!--8269855-->
-- [Manage aged distribution point messages](2021/technical-preview-2101.md#bkmk_distmsg) <!--8561493-->
+- [Manage aged distribution point messages](2021/technical-preview-2101.md#bkmk_distmsg) <!--8561493--> <!-- not in 2103 CB -->
 - [Encryption algorithm to capture and restore user state](2021/technical-preview-2101.md#bkmk_usmt) <!--9171505-->
 - [PowerShell release notes preview](2021/technical-preview-2101.md#bkmk_powershell) <!--8905809-->
 
@@ -181,7 +181,7 @@ The following features were released with previous versions of the Configuration
 
 - [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
 - [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
-- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
+- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167--> <!-- not in 2103 CB -->
 - [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
 - [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
 - [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->

@@ -46,13 +46,6 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ## Site infrastructure
 
-### Simplified CMPivot permissions requirements
-<!--7898885-->
-We've simplified the CMPivot permissions requirements. The following changes have been made:
-- CMPivot no longer requires **SMS Scripts** read permission
-   - The [administration service](../../../develop/adminservice/overview.md) still requires this permission when falling back to use the SMS Provider when a 503 (Service Unavailable) error is received, as seen in the CMPivot.log
-- The **default scope** permission isn’t required.
-
 ### Allow exclusion of organizational units (OU) from Active Directory User Discovery
 <!--5193509-->
 You can now exclude OUs from [Active Directory User Discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_config-adud).
@@ -65,25 +58,18 @@ We continue to see broad adoption of native Azure Monitor log query groups as cu
 
 When you update to this release, a new prerequisite check warns about the presence of the [Log Analytics connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context). (This feature is called the *OMS Connector* in the Azure Services wizard.) This connector is deprecated, and will be removed from the product in a future release. At that time, this check will be an error that blocks upgrade.
 
-### Manage aged distribution point messages
 
-<!--8561493-->
 
-In some environments, a small number of error status messages for a distribution point can cause the entire server status to show an error state. This behavior could be due to a known issue when failing to distribute content. To help you better manage the state of distribution points, this release includes the following improvements:
+<!--don't include bug 8561493, replaced by user story 9388277. see bug 9383867 (and remove this comment before release!) -->
 
-- Delete a specific distribution point status message. Go to the **Monitoring** workspace, expand **Distribution Status**, and select **Distribution Point Configuration Status**. Select a server, and switch to the **Details** tab in the bottom pane. Select a message, and then in the ribbon, select **Delete**.
-
-- Delete aged status messages for a specific distribution point. In the same **Distribution Point Configuration Status** node, select a server. In the ribbon, select **Delete Aged Status Messages**. Then choose a timeframe for messages to delete: older than 30 days, older than 90 days, older than one year.
-
-- Configure a site maintenance task to **Delete Aged Distribution Point Messages**. For more general information on tasks, see [Maintenance tasks](../../servers/manage/maintenance-tasks.md).
 
 ## Client management
 
-### Software Center notifications display with logo
+### Change foreground color for Software Center branding
 
-<!--4993167-->
+<!--8655575-->
 
-If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications.
+Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
 
 ### Improved user experience and security with Software Center custom tabs
 
@@ -148,6 +134,29 @@ There are now three methods to open recent files in OneTrace:
 
 ## Collections
 
+### Improvements to the collection relationships viewer
+
+<!--8543508-->
+
+Starting in current branch version 2010, you can view [dependency relationships between collections](../../clients/manage/collections/manage-collections.md#view-collection-relationships) in a graphical format. The relationships for a collection were presented as two hierarchical trees, one for dependents and the other for dependencies. In this release, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+
+### Improvements to query preview
+<!--8680235-->
+You now have more options when using the collection query preview. The following improvements have been made to previewing collection queries:
+- Limit the number of rows returned
+   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows. 
+- Omit duplicate rows from the result set
+  - If the **Omit duplicate rows** option isn't selected, the original query statement will be executed as is, even if the query contains the word **distinct**.
+  - When the **Omit duplicate rows** option is selected, if the query already contains the word **distinct**, then the query runs as it is. When the query doesn't contain the word **distinct**, it's added to the query for the preview (mean override).
+- Review statistics for the query preview such as number of rows returned and elapsed time.
+
+### Improvements to collection evaluation view
+<!--8787410-->
+The following improvements were made to the collection evaluation view:
+- The central administration site (CAS) now displays a summary of collection evaluation status for all the primary sites in the hierarchy
+- Drill through from collection evaluation status queue to a collection
+- Copy text to the clipboard from the collection evaluation page
+- Configure the refresh interval for the collection evaluation statistics page
 
 ## Application management
 
@@ -215,13 +224,40 @@ This release includes the following improvements to OS deployment:
 
 ## Protection
 
+## Improvements to BitLocker support via cloud management gateway
+
+<!--8845996-->
+
+In current branch version 2010, you can manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). This support included a couple of limitations.
+
+Starting in this technical preview release, BitLocker management policies over a CMG support the following capabilities:
+
+- Recovery keys for removable drives
+
+- TPM password hash, otherwise known as TPM owner authorization
+
+For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
+
 
 ## Software updates
 
-## Approved scripts for orchestration groups
+### Approved scripts for orchestration groups
 <!--6991647-->
 You can now select from scripts that have already been approved when configuring pre and post-scripts for an [orchestration group](../../../sum/deploy-use/orchestration-groups.md). When in the **Create Orchestration Group Wizard**, you'll see a new page called **Script Picker**. Select your pre and post scripts from your list of scripts that are already approved. You can still add scripts manually on the pre and post-script pages. Additionally, you can also edit scripts that you pre-populated from the **Script Picker**.
 
+### Change default maximum run time for software updates
+<!--7833866-->
+Configuration Manager sets the following maximum run time for these categories of software updates:
+
+- **Feature updates for Windows**: 120 minutes
+- **Non-feature updates for Windows**: 60 minutes
+- **Updates for Microsoft 365 Apps** (Office 365 updates): 60 minutes
+
+All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in this technical preview, the default maximum run time for these updates is 60 minutes rather than 10 minutes.
+
+### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
+<!--8913038-->
+Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To enable this behavior, add certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients and enable certificate pinning through **Client Settings**. This setting ensures that your clients will only be able to communicate with WSUS when certificate pinning is successful.
 
 ## Configuration Manager console
 
@@ -230,6 +266,18 @@ You can now select from scripts that have already been approved when configuring
 <!--8116426-->
 
 The [Community hub](../../servers/manage/community-hub.md) now supports sharing extensions to the Configuration Manager console. When you get an extension from the hub, it's available in a new **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
+
+### Download Power BI report templates from Community hub
+<!--5679831-->
+Community hub now supports contributing and downloading Power BI report template files. This integration allows administrators to easily share and reuse Power BI reports. Contributing and downloading Power BI report template is also available for current branch versions of Configuration Manager.
+
+For more information, see [Power BI report templates in Community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using Community hub](../../servers/manage/community-hub.md).
+
+### Add a report as a favorite
+
+<!--8034298-->
+
+Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
 
 ### Console extension installation
 <!--3555909-->
