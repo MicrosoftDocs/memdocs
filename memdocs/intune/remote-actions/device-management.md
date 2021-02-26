@@ -65,6 +65,7 @@ The available actions depend on the device platform, and the device configuratio
 - Run the remote device actions:
   - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
+  - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
