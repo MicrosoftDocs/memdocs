@@ -2,7 +2,7 @@
 title: Application reliability (preview) in endpoint analytics
 titleSuffix: Configuration Manager
 description: Get details about application reliability in endpoint analytics
-ms.date: 02/24/2021
+ms.date: 03/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
