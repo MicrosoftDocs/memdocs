@@ -24,6 +24,7 @@ The application reliability report provides insight into potential issues for de
 - Devices are enrolled in endpoint analytics.
    - [Enroll Configuration Manager devices](enroll-configmgr.md)
    - [Enroll Intune devices](enroll-intune.md)
+   - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
 - Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## App reliability score
@@ -87,6 +88,17 @@ The **Device performance** tab displays application reliability insights for eac
 Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app hang events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 ## Known issues
+
+### Some devices may fail to upload application reliability data on days with abnormally high amounts of application usage
+
+**Scenario**: Application reliability data is uploaded from enrolled devices once per 24 hours. In cases where a device uses a substantial number of applications during the preceeding 24 hours, the data being uploaded can be larger than expected causing the upload to be rejected. When this issue occurs, data from failed uploads never makes it to the Intune cloud and is not included in the insights shown on the Application reliability report.
+
+> [!NOTE]
+> This issue affects the data upload process rather than the device itself. This means that application reliability data from a particular device may fail to upload on one day, but data from the same device is able to upload successfully the next day.
+
+**Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Devices enrolled in Endpoint analytics via both Configuration Manager and Intune can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
+
+**Mitigation**: We are releasing a client-side mitigation which will limit the size of the application reliability data package being uploaded. The mitigation will be included in an update rollup for Configuration Manager version 2010 to be released in March 2021. It will be available automatically for Intune-enrolled devices starting the week of March 1st, 2021. For more about how Intune deploys updates, see [What's new in Microsoft Intune](../intune/fundamentals/whats-new.md).
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 

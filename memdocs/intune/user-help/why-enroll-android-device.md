@@ -41,7 +41,7 @@ To skip this overview and go straight to the enrollment steps, select from one o
 * [Android work profile enrollment](enroll-device-android-work-profile.md)
 * [Microsoft Intune app enrollment](enroll-device-android-microsoft-intune-app.md)
 * Derived credentials enrollment (smart card users):  
-    * [Entrust datacard](enroll-android-device-entrust-datacard.md)  
+    * [Entrust](enroll-android-device-entrust-datacard.md)  
     * [Intercede](enroll-android-device-intercede.md)  
     * [DISA Purebred](enroll-android-device-disa-purebred.md)  
 

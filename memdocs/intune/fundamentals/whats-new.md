@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/11/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,34 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## Week of March 1, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Restart frequency (preview) in Endpoint analytics <!--IN6225459-->
+Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a preview report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency (preview) in endpoint analytics](../../analytics/restart-frequency.md).
+
+#### Endpoint analytics Application Reliability report<!-- IN5653073 -->
+A new **Application Reliability** report will be available in Endpoint analytics. This report provides insight into potential issues for desktop applications on managed PCs. You can quickly identify the top applications that are impacting end user productivity, as well as see aggregate app usage and app failure metrics for these applications. You'll be able to troubleshoot by drilling into a specific device and viewing a timeline of app reliability events. This report is expected to be available in public preview during March 2021. For more information, see [Endpoint analytics application reliability](../../analytics/app-reliability.md).
+
+## Week of February 22, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Device configuration
+
+#### New version of the PFX Certificate Connector<!-- 9333009 -->
+
+We’ve released a new version of the PFX Certificate Connector, version **6.2101.13.0**. This new connector version adds [improvements for logging](../protect/certificate-connectors.md#logging) to the PFX Connector:
+
+- New location for Event Logs, with logs broken down into Admin, Operational & Debug
+- Admin & Operational logs default to 50 MB - with auto archiving enabled.
+- EventIDs for PKCS Import, PKCS Create and Revocation.
+
+For more information about certificate connectors, including a list of connector releases for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md).
 
 <!-- ########################## -->
 ## Week of February 8, 2021
@@ -346,7 +374,7 @@ When you use the `exportJobs` Graph API to export Intune reports without selecti
 
 #### Microsoft Tunnel now supports Red Hat Enterprise Linux 8<!-- 8981769 -->
 
-You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#linux-server). To make use of for RHEL 8 you won't need to take any actions. Support has been added to the Docker containers which update automatically. In addition, this update also suppresses some extraneous logging.
+You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](../protect/microsoft-tunnel-prerequisites.md#linux-server). To make use of for RHEL 8 you won't need to take any actions. Support has been added to the Docker containers which update automatically. In addition, this update also suppresses some extraneous logging.
 
 <!-- ########################## -->
 ## Week of January 11, 2021
@@ -1502,7 +1530,7 @@ Unchanged, from the Profiles pane you can select a profile to drill-in to view t
 
 #### Derived credentials support for Windows<!-- 4886090   -->
 You can now use derived credentials with your Windows devices. This will  expand on the existing support for iOS/iPadOS and Android, and will be available for the same derived credential providers:
-- Entrust Datacard
+- Entrust
 - Intercede
 - DISA Purebred
 
