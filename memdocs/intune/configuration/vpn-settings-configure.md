@@ -113,13 +113,15 @@ You can create VPN profiles using the following connection types:
   - Windows 10
 
 - Microsoft Tunnel
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
 
 - NetMotion Mobility
-  - iOS/iPadOS
-  - macOS
   - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
+  - iOS/iPadOS
+  - macOS
 
 - Palo Alto Networks GlobalProtect
   - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/05/2021
+ms.date: 02/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -132,6 +132,7 @@ The following third-party certification authorities support Intune:
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
+- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 
