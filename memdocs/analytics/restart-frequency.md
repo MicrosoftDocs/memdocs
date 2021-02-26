@@ -2,7 +2,7 @@
 title: Restart frequency (preview) in endpoint analytics
 titleSuffix: Configuration Manager
 description: Get details about device restart frequency in endpoint analytics
-ms.date: 02/25/2021
+ms.date: 03/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
