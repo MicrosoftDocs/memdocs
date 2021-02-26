@@ -40,7 +40,7 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 The **Collect diagnostics** remote action is supported for:
 - Windows 10 version 1909 and later.
 - Microsoft HoloLens 2 2004 and later.
-- Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions.
+- Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions (under **Remote tasks**).
 - Corporate-owned devices.
 - Devices that are online and able to communicate with the service during diagnostics.
 
