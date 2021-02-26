@@ -24,6 +24,7 @@ The application reliability report provides insight into potential issues for de
 - Devices are enrolled in endpoint analytics.
    - [Enroll Configuration Manager devices](enroll-configmgr.md)
    - [Enroll Intune devices](enroll-intune.md)
+   - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
 - Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## App reliability score
