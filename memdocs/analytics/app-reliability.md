@@ -95,7 +95,7 @@ Selecting a device name opens the **Application reliability (preview)** tab for 
 > [!NOTE]
 > This issue affects the data upload process rather than the device itself. This means that application reliability data from a particular device may fail to upload on one day, but data from the same device is able to upload successfully the next day.
 
-**Impacted devices**: This issue affects a small subset of devices enrolled in Endpoint analytics via both Configuration Manager and Intune. While data volume varies based on how many applications are used, which applications are used, and the total application usage duration, this issue primarily occurs when a device has greater than about 20 distinct applications with active focus time during a 24 hour period.
+**Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Devices enrolled in Endpoint analytics via both Configuration Manager and Intune can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
 
 **Mitigation**: We are releasing a client-side mitigation which will limit the size of the application reliability data package being uploaded. The mitigation will be included in an update rollup for Configuration Manager version 2010 to be released in March 2021. It will be available automatically for Intune-enrolled devices starting the week of March 1st, 2021. For more about how Intune deploys updates, see [What's new in Microsoft Intune](../intune/fundamentals/whats-new.md).
 
