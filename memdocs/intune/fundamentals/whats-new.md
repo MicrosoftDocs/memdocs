@@ -7,11 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-<<<<<<< HEAD
 ms.date: 03/01/2021
-=======
-ms.date: 02/24/2021
->>>>>>> b663e88355e55a7917c19834005edff18cdf5f56
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
