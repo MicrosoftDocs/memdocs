@@ -14,6 +14,11 @@ manager: dougeby
 
 # Endpoint analytics page in Microsoft Productivity Score
 <!--IN8529842-->
- Understanding how your devices contribute to your end-user’s experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft productivity score to further your understanding. The Endpoint analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign in process or issues with applications unexpectedly stopping.  
+ Understanding how your devices contribute to your end user’s experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft productivity score to further your understanding. The Endpoint analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign-in process or issues with applications unexpectedly stopping.  
+
+## Who can see the Endpoint analytics information in Microsoft Productivity Score?
+
+Endpoint analytics contains great insights, but most people couldn't see them since it requires access to the Microsoft Endpoint Manager admin center. If you happened to be an Intune Admin or a Global Administrator, you could display the analytics. However, other users of Microsoft Productivity Score may have been unaware this information existed. Displaying these insights to Microsoft Productivity Score users allows them to use the data to help drive transformation efforts across your organization.  
+
 
 ## Next steps
