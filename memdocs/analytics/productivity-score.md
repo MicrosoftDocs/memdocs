@@ -14,10 +14,9 @@ manager: dougeby
 
 # Application reliability (preview) in endpoint analytics
 <!--IN8529842-->
- Understanding how your devices contribute to your end-user’s experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft productivity score to further your understanding. The Endpoint analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help you users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign in process or issues with applications unexpectedly stopping.  
+ Understanding how your devices contribute to your end-user’s experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft productivity score to further your understanding. The Endpoint analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign in process or issues with applications unexpectedly stopping.  
 
 
-
-The visibility and insights it provides in areas like device boot times and application reliability can help your users quickly capture an idea or join that first meeting on Monday morning on time and not suffer through an endless login process or lose the work they just did as an application unexpectedly shuts down.  
 The problem was that some of you could not see all these great insights.  Some of this detailed information was in the Endpoint Analytics section of the Microsoft Endpoint Manager (MEM) console.  If you were an Intune Admin or a Global Admin you could see this, but the rest of you who were using Productivity Score to drive your transformation efforts were in the dark.  Well, not anymore.  Based on your feedback we have created a new Endpoint Analytics page that shares these organizational insights with the other roles that already have access to Productivity Score.
 
+## Next steps
