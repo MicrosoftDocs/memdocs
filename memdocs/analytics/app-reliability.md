@@ -90,7 +90,7 @@ Selecting a device name opens the **Application reliability (preview)** tab for 
 
 ### Some devices may fail to upload application reliability data on days with abnormally high amounts of application usage
 
-**Scenario**: Application reliability data is uploaded from enrolled devices once per 24 hours. In cases where a device uses a substantial number of applications during the preceeding 24 hours, the data being uploaded can be larger than expected causing the upload to be rejected. When this issue occurs, data from failed uploads never makes it to the Intune cloud and is not included in the insights shown on the Application reliability report.
+**Scenario**: Application reliability data is uploaded from enrolled devices once per 24 hours. In cases where a device uses a substantial number of applications during the preceding 24 hours, the data being uploaded can be larger than expected causing the upload to be rejected. When this issue occurs, data from failed uploads never makes it to the Intune cloud and is not included in the insights shown on the Application reliability report.
 
 > [!NOTE]
 > This issue affects the data upload process rather than the device itself. This means that application reliability data from a particular device may fail to upload on one day, but data from the same device is able to upload successfully the next day.
