@@ -10,7 +10,6 @@ ms.assetid: 9fe09e0a-f8ff-4714-8cf9-453e3197760d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
 # Restart frequency (preview) in endpoint analytics
