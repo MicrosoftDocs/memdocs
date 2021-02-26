@@ -65,12 +65,6 @@ When you update to this release, a new prerequisite check warns about the presen
 
 ## Client management
 
-### Software Center notifications display with logo
-
-<!--4993167-->
-
-If you enable Software Center customizations, then notifications on Windows 10 devices display the logo that you configure in client settings. This change helps users to trust these notifications.
-
 ### Change foreground color for Software Center branding
 
 <!--8655575-->

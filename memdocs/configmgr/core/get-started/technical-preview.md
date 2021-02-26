@@ -181,7 +181,7 @@ The following features were released with previous versions of the Configuration
 
 - [Categorize Community hub content](2020/technical-preview-2011.md#bkmk_hub) <!--8052494-->
 - [Improvements to the product lifecycle dashboard](2020/technical-preview-2011.md#bkmk_lifedash) <!--8160460-->
-- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167-->
+- [Software Center notifications display with logo](2020/technical-preview-2011.md#bkmk_notify) <!--4993167--> <!-- not in 2103 CB -->
 - [Approved scripts for Orchestration Groups](2020/technical-preview-2011.md#bkmk_ogs) <!--6991647-->
 - [Community hub on Windows Server operating systems](2020/technical-preview-2011.md#bkmk_hub_os) <!--3555909-->
 - [Improvements to Support Center](2020/technical-preview-2011.md#bkmk_support) <!--8272488-->
