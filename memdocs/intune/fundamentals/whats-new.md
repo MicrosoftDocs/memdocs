@@ -7,11 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-<<<<<<< HEAD
 ms.date: 03/01/2021
-=======
-ms.date: 02/24/2021
->>>>>>> abda3d075d0c870198bb0a206ac99b1917c9bb8e
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -176,7 +172,7 @@ To improve page load performance, app icons will now load in batches. End users 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Monitor and troubleshoot
 
-#### Restart frequency (preview) in Endpoint analytics <!--IN6225459 -->
+#### Restart frequency (preview) in Endpoint analytics <!--6225459 -->
 Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a preview report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency (preview) in endpoint analytics](../../analytics/restart-frequency.md).
 
 
