@@ -31,10 +31,7 @@ For devices that do not meet the above criteria, you are able to [enroll via Con
 
 ## <a name="bkmk_score"></a> Startup score
 
-The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
-
-- **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
-- **Sign-in score**: Based on the time from when credentials have been entered until the user can access a responsive desktop (meaning the desktop has rendered and the CPU usage has fallen below 50% for at least 2 seconds). We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+[!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
 
 [![Endpoint analytics startup performance page](media/startup-performance.png)](media/startup-performance.png#lightbox)
 
