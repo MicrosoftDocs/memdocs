@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 2/5/2021
+ms.date: 2/25/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -93,12 +93,24 @@ For more information on the settings you can configure in kiosk mode, see [Kiosk
 
 Applies to:
 - Windows 10 and newer in single-app kiosk mode
+
+### More Microsoft Edge settings and categories temporarily removed in Settings Catalog for macOS devices<!-- 9220407 -->
+On macOS devices, you can use the Settings Catalog to configure Microsoft Edge version 77 and newer (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings Catalog**). More Microsoft Edge settings are added. Temporarily, the setting categories are removed. To find settings, use the search feature in the Settings Catalog. For a list of settings, [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) is a good resource.
+
+For more information on the Settings Catalog, see [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS 
+- Microsoft Edge 
  
 <!-- ***********************************************-->
 ## Device enrollment
 
 ### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248 -->
 In a future update, Microsoft Endpoint Manager will stop supporting Android 5.x devices.
+
+### Increasing recommended maximum number of iOS/iPadOS and macOS devices per enrollment token<!--8568668 -->
+Currently, we recommend that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. In a future update, this recommended limit will increase to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios#supported-volume.md).
 
 
 <!-- ***********************************************-->
@@ -122,11 +134,24 @@ You'll have the following options when exporting device data:
 - Include all inventory data in the exported file.
 To see these options, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Export**.
 
+### Use Intune policy to expedite installation of Windows 10 quality updates<!-- 5584682  -->
+As part of a public preview, you’ll soon be able to use Intune’s *Windows 10 quality updates* policy to expedite installation of the most recent Windows 10 updates to devices you manage with Intune. (**Devices** > **Windows 10 quality updates (preview)** > **Create profile**).
+
+When you expedite an update, devices can start the download and install of the update as soon as possible, without having to wait for the device to check in for updates. Other than expediting the install of the update, use of this policy leaves your existing update deployment policies and processes untouched.
+
+### Locate device remote action for Windows 10 devices<!--710717-->
+You'll be able to use a new locate device remote action to get the geographical location of a device. Supported devices include:
+- Windows 10 version 20H2 (10.0.19042.789) or later
+- Windows 10 version 2004 (10.0.19041.789) or later
+- Windows 10 version 1909 (10.0.18363.1350) or later
+- Windows 10 version 1809 (10.0.17763.1728) or later
+
+To see the new action, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > choose a Windows 10 > **Locate device**.
+
+This action will work in a similar manner as the current [Locate device action for Apple devices](..\remote-actions\device-locate.md) (but will not include any lost mode functionality).
+
 <!-- ***********************************************-->
 ## Intune apps
-
-### Update to Android Company Portal app icon<!-- 7114401  -->
-We'll be updating the Android Company Portal app icon to create a more modern look and feel. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### End users can restart an app install from the Company Portal<!-- 652935  -->
 Using the Company Portal, end users will be able to restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
@@ -137,8 +162,17 @@ To improve page load performance, app icons will load in batches. End users may 
 ### Microsoft Launcher configuration keys<!-- 8980621 -->
 For Android Enterprise fully managed devices, the Microsoft Launcher for Intune app will provide additional customization. You'll be able to configure the set of apps and weblinks, as well as the order, that are displayed in Launcher. The app set and position (order) of app configurations have been merged together to simplify home screen customization. For related information, see [Configure Microsoft Launcher](../apps/configure-microsoft-launcher.md).
 
-#### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429 idready -->
+### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
 The Company Portal app will store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications will be able to view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+### Microsoft Edge for macOS devices will be a universal app<!-- 9076329  -->
+When you deploy Microsoft Edge for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the app that runs natively on Apple Silicon Macs. The same deployment will install the x64 version of the app on Intel Macs. To add Microsoft Edge for macOS, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **All apps** > **Add**. In the **App type** list under **Microsoft Edge, version 77 and later**, select **macOS**. For related information, see [Add Microsoft Edge to macOS devices using Microsoft Intune](../apps/apps-edge-macos.md).
+
+### Additional configuration keys for the Microsoft Launcher app<!-- 9364310  -->
+You'll be able to set folder configuration settings for Microsoft Launcher on Android Enterprise corporate owned fully managed devices. By using an app configuration policy and configuration key values, you will be able to set values for folder shape, folder opened to full screen, and folder scroll direction. Also, you will now be able to position the folder on the home screen in addition to positioning apps and web links. Additionally, you can choose to allow end users to modify the folder style values within the app. For more information about Microsoft Launcher, see [Configure Microsoft Launcher for Android Enterprise with Intune](..\apps\configure-microsoft-launcher.md).
+
+### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
+When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
@@ -149,7 +183,13 @@ We’re reworking the endpoint security Account protection policy to use the new
 After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
 
 ### Organizational report focused on device configuration<!-- 8455708  --> 
-We will be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or pending. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
+We'll be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or pending. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
+
+### Update of column names in All devices view and Export report<!-- 8854380  -->
+We'll be updating the column names in the All devices view and the Export report to be "Primary User UPN", "Primary User email address", and "Primary User display name" to accurately reflect the data these columns provide.
+
+### Export Intune reports using Graph API v1.0 or beta<!-- 8090911  -->
+Intune reporting export API will be available in Graph v1.0, and will continue to be available in Graph beta. For related information, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md). 
 
 
 <!-- ***********************************************-->
@@ -189,7 +229,7 @@ This new setting can help protect against fileless malware threats that abuse th
 ### Additional functionality for your MAM conditional launch policy<!-- 6486982   7362746  -->
 You'll be able to configure a setting within your MAM conditional launch policy to include **Max allowed threat level** signals from Microsoft Defender for Endpoint on iOS devices and Android devices. You will be able to choose to **Block Access** or **Wipe Data** based on whether or not the device meets the expected threat level. End users will be prompted to install and set up the **Microsoft Defender for Endpoint** app from the App Store. As a prerequisite, you must set up your **Microsoft Defender for Endpoint** connector and switch on the toggle to send risk data to your app protection policies. For related information, see [App protection policies overview](../apps/app-protection-policy.md) and [Use Microsoft Defender for Endpoint in Microsoft Intune](..\protect\advanced-threat-protection.md).
 
-#### Maximum OS version setting for app conditional launch<!-- 7764870 ideady -->
+### Maximum OS version setting for app conditional launch<!-- 7764870 ideady -->
 Using Intune app protection policies, you'll be able to add a new conditional launch setting to ensure end users are not using any pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
 <!-- ***********************************************-->
