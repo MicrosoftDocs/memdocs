@@ -22,8 +22,6 @@
     href: restart-frequency.md    
   - name: Recommended software
     href: recommended-software.md
-  - name: Application reliability
-    href: app-reliability.md
 - name: How-to guides
   items:
   - name: Manage settings
