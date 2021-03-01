@@ -46,7 +46,7 @@ Selecting the **Learn more** link under the startup performance information give
 - **Average sign-in time in seconds**
    - **Total sign-in time**: Total time for the **Group Policy phase**, **Time to desktop**, and **Time to responsive desktop**
    - **Group Policy phase**: The time spent querying and processing Group Policy
-   - **Time to desktop**: The time it takes to reach the desktop but where background processes are still running and users experience slower performance
+   - **Time to desktop**: The time it takes to reach the desktop but where background processes are still running, and users experience slower performance
    - **Time to responsive desktop**: Time where background processes are complete and CPU utilization is less than 50%
 
 :::image type="content" source="media/8529842-startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="media/8529842-startup-performance-metrics.png":::
