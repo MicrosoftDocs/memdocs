@@ -161,9 +161,9 @@ For more information on deploying apps with Intune, see  Add apps to Microsoft I
 ## Create a VPN profile  
 
   > [!Important]
-  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone app)**. At this time, you should use the standalone option, not the **Microsoft Tunnel** connection type. 
+  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
-After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with the **Microsoft Tunnel (standalone app)** connection type.  
+After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with the **Microsoft Tunnel (standalone client)** connection type.  
 
 
 - The Android platform supports routing of traffic through a per-app VPN and split tunneling rules independently, or at the same time.
@@ -180,7 +180,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type* select **Microsoft Tunnel (standalone app)**, and then configure the following details:
+4. For *Connection type* select **Microsoft Tunnel (standalone client)**, and then configure the following details:
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
@@ -211,7 +211,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type* select **Microsoft Tunnel (standalone app)**, and then configure the following items:
+4. For *Connection type* select **Microsoft Tunnel (standalone client)**, and then configure the following items:
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.  

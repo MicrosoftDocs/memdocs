@@ -293,14 +293,14 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Per-app VPN
 
-These settings apply when you choose **Connection type** > **Microsoft Tunnel (standalone app)**.  
+These settings apply when you choose **Connection type** > **Microsoft Tunnel (standalone client)**.  
 
 - **Per-app VPN**: **Enable** associates a specific to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
   For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).  
 
   > [!Important]
-  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone app)**. At this time, you should use the standalone option, not the **Microsoft Tunnel** connection type. 
+  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 ## Proxy
 

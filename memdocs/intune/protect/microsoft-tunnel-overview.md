@@ -55,10 +55,10 @@ To connect to the tunnel, devices use the Microsoft Tunnel standalone app, which
 
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you’ll define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
-To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses the Microsoft Tunnel standalone app for its connection type.  
+To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses the Microsoft Tunnel standalone client for its connection type.  
 
   > [!Important]
-  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone app)**. At this time, you should use the standalone option, not the **Microsoft Tunnel** connection type. 
+  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 Features of the VPN profiles for the tunnel include:
 

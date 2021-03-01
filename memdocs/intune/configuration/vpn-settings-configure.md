@@ -112,13 +112,13 @@ You can create VPN profiles using the following connection types:
 - L2TP
   - Windows 10
 
-- Microsoft Tunnel (standalone app)
+- Microsoft Tunnel (standalone client)
   - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS  
 
   > [!Important]
-  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone app)**. At this time, you should use the standalone option, not the **Microsoft Tunnel** connection type. 
+  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile
