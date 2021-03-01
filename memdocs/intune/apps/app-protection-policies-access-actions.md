@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/04/2021
+ms.date: 02/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -82,6 +82,7 @@ For Android, you will be able to configure actions for the following settings us
 - Offline grace period
 - Jailbroken/rooted devices
 - Min OS version
+- Max OS version
 - Min app version
 - Min patch version
 - Device manufacturer(s)
