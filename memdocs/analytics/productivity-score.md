@@ -51,6 +51,14 @@ Selecting the **Learn more** link under the startup performance information give
 
 :::image type="content" source="media/8529842-startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="media/8529842-startup-performance-metrics.png":::
 
+## Known issues
+
+### Unsupported roles
+
+Currently, the following roles aren't supported:
+- Ecxhange Administrator
+- SharePoint Administrator
+- Lync Administrator
 ## Next steps
 
 For more information, see:
