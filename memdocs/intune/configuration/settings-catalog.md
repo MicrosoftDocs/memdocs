@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/04/2021
+ms.date: 02/24/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -88,6 +88,7 @@ This article lists the steps to create a policy, and shows how to search and fil
     When you select the minus:
 
     - Intune doesn't change or update this setting. The minus is the same as **Not configured**.
+    - The next time devices check-in, the previously set enforcement from assigned devices is removed.
     - The next time you open your policy, the setting isn't shown. You can add it again.
 
     > [!TIP]
@@ -120,9 +121,27 @@ There are thousands of settings available in the settings catalog. To make it ea
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
 
-## Conflicts
+## Reporting and conflicts
 
-Conflicts will happen if the same setting is updated to different values. The same conflicts happen with policies configured using the settings catalog. For more information on conflict resolution, see:
+You create the policy, and assign it to your groups. In the Endpoint Manager admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real-time.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Device configuration profiles**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
+
+3. When you select the policy, the device status shows. It shows a summary of your policy state and the policy properties. You can also change or update your policy:
+
+4. Select **View report**. The report shows detailed information, including the device name, the policy status, and more. You can also filter on the deployment status, and **Export** the report to a `.csv` file:
+
+5. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy due to an error or conflict, it'll show in this list. You can also **Export** to a `.csv` file:
+
+6. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code:
+
+> [!TIP]
+> [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.
+
+### Conflicts
+
+Conflicts happen when the same setting is updated to different values. Conflicts can also happen with policies configured using the settings catalog. For more information on conflict resolution, see:
 
 - [Monitor device profiles](device-profile-monitor.md#view-conflicts)
 - [Common questions and answers with device policies](device-profile-troubleshoot.md)
@@ -132,3 +151,5 @@ Conflicts will happen if the same setting is updated to different values. The sa
 Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 For more information on device configuration policies, see [Device configuration overview](device-profiles.md) and [Create a device profile](device-profile-create.md).
+
+For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
