@@ -84,7 +84,7 @@ Android Enterprise personally-owned work profiles are the core Android Enterpris
 
 This feature applies to:
 
-- Android 5.0 and later devices with Google Mobile Services
+- Android 6.0 and later devices with Google Mobile Services
 
 An Android Enterprise personally-owned work profile includes the following features:
 

@@ -59,7 +59,7 @@ These categories and their associated threat levels are configurable in Wandera'
 
 The following platforms are supported for Wandera when enrolled in Intune:
 
-- Android 5.0 and later  
+- Android 6.0 and later  
 - iOS 10.2 and later 
 
 For more information about platform and device, see the [Wandera website](https://www.wandera.com/mobile-threat-defense/).
