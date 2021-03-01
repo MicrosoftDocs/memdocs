@@ -108,8 +108,9 @@ To Configure this setting for your devices, [Create a profile](../configuration/
        - **Scope**: Select *Windows Updates*.
 
   - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later is supported for these reports.
-        > [!div class="mx-imgBorder"]
-      > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
+
+    > [!div class="mx-imgBorder"]
+    > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
     
 When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
 
