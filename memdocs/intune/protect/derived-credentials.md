@@ -75,7 +75,7 @@ Intune supports derived credentials on the following platforms:
 Intune supports a single derived credential issuer per tenant. You can configure Intune to work with the following issuers:
 
 - **DISA Purebred**: https://public.cyber.mil/pki-pke/purebred/
-- **Entrust Datacard**: https://www.entrustdatacard.com/
+- **Entrust**: https://www.entrust.com/
 - **Intercede**: https://www.intercede.com/
 
 For important details about using the different issuers, review guidance for that issuer. For more information, see [Plan for derived credentials](#plan-for-derived-credentials) in this article.
@@ -139,7 +139,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 For information getting and configuring the DISA Purebred app, see [Deploy the DISA Purebred app](#deploy-the-disa-purebred-app) later in this article.
 
-#### Entrust Datacard
+#### Entrust
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
@@ -211,8 +211,8 @@ Before you create policies that require use of a derived credential, set up a cr
 
 4. For **Derived credential issuer**, select the derived credential issuer that you have chosen for your tenant:
    - DISA Purebred (iOS only)
-   - Entrust Datacard
-   - Intercede  
+   - Entrust
+   - Intercede
 
 5. Specify a **Derived credential help URL** to provide a link to a location that includes custom instructions to help users get derived credentials for your organization. The instructions should be specific to your organization and to the workflow that's necessary to get a credential from your chosen issuer. The link appears in the Company Portal app and should be accessible from the device.
 
@@ -299,7 +299,7 @@ Users receive the app or email notification depending on the settings you specif
 You can use derived certificates as an authentication method for Wi-Fi and VPN profiles on Windows devices. The same providers that are supported by Android and iOS/iPadOS devices are supported as providers for Windows:
 
 - **DISA Purebred**
-- **Entrust Datacard**
+- **Entrust**
 - **Intercede**
 
 For Windows, users do not work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with Windows, complete the following configurations:
