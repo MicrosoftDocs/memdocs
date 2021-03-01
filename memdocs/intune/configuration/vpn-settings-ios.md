@@ -204,6 +204,10 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - AES-256 (default)
     - AES-128-GCM
     - AES-256-GCM
+
+    > [!NOTE]
+    > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
+
   - **Integrity algorithm**:  Select the algorithm you want:
     - SHA1-96
     - SHA1-160
@@ -222,7 +226,11 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - AES-256 (default)
     - AES-128-GCM
     - AES-256-GCM
-  - **Integrity algorithm**:  Select the algorithm you want:
+
+    > [!NOTE]
+    > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
+
+- **Integrity algorithm**:  Select the algorithm you want:
     - SHA1-96
     - SHA1-160
     - SHA2-256 (default)
