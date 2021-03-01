@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 03/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,16 +51,19 @@ Through the Microsoft Tunnel app, iOS/iPadOS and Android Enterprise devices:
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
-To connect to the tunnel, devices use the Microsoft Tunnel app, which is available from the iOS/iPadOS or Android app stores.
+To connect to the tunnel, devices use the Microsoft Tunnel standalone app, which is available from the iOS/iPadOS or Android app stores.
 
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you’ll define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
-To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses the Microsoft Tunnel for its connection type.
+To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses the Microsoft Tunnel standalone app for its connection type.  
+
+  > [!Important]
+  > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone app)**. At this time, you should use the standalone option, not the **Microsoft Tunnel** connection type. 
 
 Features of the VPN profiles for the tunnel include:
 
 - A friendly name for the VPN connection that your end users will see.
-- The Site that the VPN client connects to.
+- The site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
