@@ -31,7 +31,7 @@ After you've [added a Win32 app to Intune](apps-win32-add.md), you can use Intun
 > [!IMPORTANT]
 > Supersedence, which enables you to update and replace a version of a Win32 app, does not currently allow you to interchange the Win32 app with an app dependency. For more information about app dependencies, see [Dependencies](../apps/apps-win32-add.md#step-5-dependencies).
 
-Supersedence relationships can be created win adding or modify a Win32 app within Intune. The **Supersedence** steps allow you to specify any supersedence relationships related to the Win32 app.
+Supersedence relationships can be created when adding or modifying a Win32 app within Intune. The **Supersedence** steps allow you to specify any supersedence relationships related to the Win32 app.
 
    ![Screenshot of Win32 app supersedence step](./media/apps-win32-supersedence/apps-win32-supersedence-01.png)
 
@@ -77,7 +77,7 @@ Given that an app could have multiple superseded apps, it is possible for an app
 | App   update | IT admin wants to update an app   with a newer version of the same app. | The installer of the newer   version of the app (the superseding app) will automatically update the older   version of the app to the newer version. | Since the installer will   complete the updating, it is not necessary to send down an uninstall command   to the older version. Hence, the Uninstall previous version is toggled off. |
 | App   replacement | IT admin wants to replace an app   with an entirely different app. | The superseded app will be   uninstalled and the superseding app will be installed. Both install and   uninstall will be based on IT Pro’s defined install/uninstall command line. | Since the two apps are different,   the admin can turn the Uninstall previous version toggle on to uninstall the   older app from the device. |
 
-### Understand in-place app update verse supersedence app update
+### Understand in-place app update versus supersedence app update
 
 In the following scenarios, you should review app detection rules after performing either type of the following updates.
 
