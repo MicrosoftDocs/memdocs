@@ -42,7 +42,7 @@ Community hub supports the following objects:
 
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
-- A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information, see, [Contribute to Community hub](community-hub-contribute.md).
+- A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information, see [Contribute to Community hub](community-hub-contribute.md).
 
 ## Permissions
 
