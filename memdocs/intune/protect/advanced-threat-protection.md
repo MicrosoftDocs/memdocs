@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,9 +77,6 @@ To use Microsoft Defender for Endpoint with Intune, be sure you have the followi
   - Android
   - iOS/iPadOS
   - Windows 10 (Hybrid Azure Active Directory Joined or Azure Active Directory Joined)
-
-> [!NOTE]
-> Microsoft Defender for Endpoint is not supported with Intune app protection policies. See [Microsoft Defender for Android system requirements](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#system-requirements) to see which management modes are supported. 
 
 ## Next steps
 
