@@ -62,7 +62,7 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **Microsoft Tunnel (standalone client)** (Not supported on Android Enterprise dedicated devices.)  
 
     > [!Important]
-    > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.  
+    > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.  
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -115,7 +115,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **Microsoft Tunnel (standalone client)**  
 
     > [!Important]
-    > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
+    > In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
