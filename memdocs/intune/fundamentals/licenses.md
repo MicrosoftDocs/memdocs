@@ -43,6 +43,7 @@ Intune is included in the following licenses:
 - Microsoft 365 F3
 - Microsoft 365 Government G5
 - Microsoft 365 Government G3
+- Intune for Education
 
 ## Microsoft Intune for Education
 Intune for Education is included in the following licenses:
