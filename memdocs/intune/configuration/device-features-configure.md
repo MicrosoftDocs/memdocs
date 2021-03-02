@@ -205,7 +205,6 @@ In Intune, use these settings to configure an SSO app extension created by your 
   >
   > - The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
   >
-  > - There is a known issue with the macOS SSO app extension on already-enrolled macOS devices. We recommend that you wait to deploy the SSO app extension on already-enrolled macOS devices. If you configure these settings, and target already-enrolled devices, then users might need to unenroll, and reenroll to resolve the issue. The macOS SSO app extension works as expected on newly-enrolled devices.
 
 - The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
 
