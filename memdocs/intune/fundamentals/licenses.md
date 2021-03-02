@@ -57,7 +57,7 @@ Intune for Education is included in the following licenses:
 - Intune isn't included in licenses not in the previous tables.
 
 ## Unlicensed admins
-For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](/unlicensed-admins.md).
+For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](unlicensed-admins.md).
 
 Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page for the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.  
 

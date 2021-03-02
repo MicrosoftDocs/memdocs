@@ -72,7 +72,7 @@ When your company is successfully registered, you can create your MDM profile fo
 |Profile Name       | Yes       |Enter a profile name of your choice. |
 |Description        | No        |Enter text describing the Profile. |
 |MDM Information     | Yes        |Choose **Server URI not required for my MDM**.| 
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner| 
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme| 
 |Custom JSON        | Yes*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [dedicated devices](android-kiosk-enroll.md) and [fully managed devices](android-fully-managed-enroll.md). |
 |Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.|
 |Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.|
@@ -91,7 +91,7 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 |Profile Name       | Yes       |Enter a profile name of your choice.|
 |Description        | No        |Enter text describing the Profile.|
 |Pick your MDM | Yes | Choose Microsoft Intune. |
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme|
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner|
 |MDM Server URI     | No        |Leave this blank.|
 |Custom JSON Data        | No        |Leave this blank.|
 |Dual DAR | No | Leave this blank.|

@@ -136,14 +136,14 @@ To see these options, go to [Microsoft Endpoint Manager admin center](https://go
 ### Device security
 
 #### Use the variable CN={{UserPrincipalName}} in the subject and SAN of SCEP and PKCS certificate profiles for Android Enterprise devices<!-- 9290978   -->
-You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](/protect/certificates-pfx-configure#create-a-trusted-certificate-profile) or [SCEP certificate profile](/protect/certificates-profile-scep#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
+You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](/protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
 - Android Enterprise fully managed
 - Android Enterprise personally-owned work profile
 
 User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
 
 #### Use app protection policies for Defender for Endpoint on Android and iOS<!-- 6486982   7362746  -->
-You can now use [Microsoft Defender for Endpoint in app protection policies for devices that run Android or iOS](../protect/advanced-threat-protection-cofigure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
+You can now use [Microsoft Defender for Endpoint in app protection policies for devices that run Android or iOS](../protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
 - Configure your MAM conditional launch policy to include **Max allowed threat level** signals from Microsoft Defender for Endpoint on iOS devices and Android devices.
 - Choose to **Block Access** or **Wipe Data** based on whether or not the device meets the expected threat level.
 
@@ -154,7 +154,7 @@ You can now configure the rule named **Block persistence through WMI event subsc
  
 This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
  
-When configured as [setting for *Attack surface reduction*](,,/protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules-profile) policy for Endpoint security, the following options are available:
+When configured as [setting for *Attack surface reduction*](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules-profile) policy for Endpoint security, the following options are available:
 - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
 - **Block** – Persistence through WMI is blocked.
 - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
@@ -183,7 +183,7 @@ Endpoint analytics [startup performance](../../analytics/startup-performance.md)
 ### Role-based access control
 
 #### Role-based access permissions update for Microsoft Tunnel Gateway<!-- 8554762   -->
-To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](/intune/protect/microsoft-tunnel-prerequisites#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
+To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](/intune/protect/microsoft-tunnel-prerequisites.md#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
 
 - **Create** - Configure Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Update** (modify) - Update Microsoft Tunnel Gateway servers, server configurations, and sites.

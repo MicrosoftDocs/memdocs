@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -210,6 +210,9 @@ These settings use the [EnterpriseCloudPrint policy CSP](/windows/client-managem
       [Settings policy CSP](/windows/client-management/mdm/policy-csp-settings)
 
   - **Gaming**: **Block** prevents access to the Gaming area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+    [Settings/PageVisibilityList CSP](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)
+
   - **Ease of Access**: **Block** prevents access to the Ease of Access area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Privacy**: **Block** prevents access to the Privacy area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Update and Security**: **Block** prevents access to the Update & Security area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
