@@ -2,7 +2,7 @@
 title: Plan for security
 titleSuffix: Configuration Manager
 description: Get best practices and other information about security in Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -359,6 +359,9 @@ For more information on these installation properties, see [About client install
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> Plan for signing and encryption  
  
 When you use PKI certificates for all client communications, you don't have to plan for signing and encryption to help secure client data communication. If you set up any site systems that run IIS to allow HTTP client connections, decide how to help secure the client communication for the site.  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
 
 To help protect the data that clients send to management points, you can require clients to sign the data. You can also require the SHA-256 algorithm for signing. This configuration is more secure, but don't require SHA-256 unless all clients support it. Many operating systems natively support this algorithm, but older operating systems might require an update or hotfix. 
 

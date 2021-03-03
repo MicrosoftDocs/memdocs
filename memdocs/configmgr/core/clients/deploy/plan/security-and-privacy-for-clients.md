@@ -2,7 +2,7 @@
 title: Client security and privacy
 titleSuffix: Configuration Manager
 description: Learn about security and privacy for Configuration Manager clients.
-ms.date: 07/07/2019
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -34,6 +34,9 @@ The Configuration Manager site accepts data from devices that run the Configurat
 Mobile device clients and some internet-based clients require these certificates. Microsoft recommends these certificates for all client connections on the intranet.  
 
 For more information about the PKI certificate requirements and how they're used to help protect Configuration Manager, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for HTTPS or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../../manage/cmg/configure-authentication.md#bkmk_mphttps).
 
 ### Automatically approve client computers from trusted domains and manually check and approve other computers  
 

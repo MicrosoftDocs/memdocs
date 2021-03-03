@@ -67,6 +67,9 @@ To use HTTPS, configure one of the following options:
 
 When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../security/plan-for-security.md#BKMK_PlanningForSigningEncryption).  
 
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+
 ### <a name="bkmk_client2mp"></a> Client to management point communication
 
 There are two stages when a client communicates with a management point: authentication (transport) and authorization (message). This process varies depending upon the following factors:

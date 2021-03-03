@@ -1,8 +1,8 @@
 ---
-title: "Find site resources"
-titleSuffix: "Configuration Manager"
-description: "Learn how and when Configuration Manager clients use service location to find site resources."
-ms.date: 02/7/2017
+title: Find site resources
+titleSuffix: Configuration Manager
+description: Learn how and when Configuration Manager clients use service location to find site resources.
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,14 +10,13 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Learn how clients find site resources and services for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services (AD DS) and DNS. Or they can require you to configure more complex alternatives.  
+Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services and DNS. Or they can require you to configure more complex alternatives.  
 
 Examples of site system roles that provide services include:
 
@@ -25,9 +24,7 @@ Examples of site system roles that provide services include:
 - The management point.
 - Additional site system servers that the client can communicate with, like distribution points and software update points.  
 
-
-
-##  <a name="bkmk_fund"></a> Fundamentals of service location  
+## <a name="bkmk_fund"></a> Fundamentals of service location  
  A client evaluates its current network location, communication protocol preference, and assigned site when it is using service location to find a management point that it can communicate with.  
 
 **A client communicates with a management point to:**  
@@ -47,6 +44,9 @@ Examples of site system roles that provide services include:
 - To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
 - When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see  [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in the [Plan for security](../../../core/plan-design/security/plan-for-security.md).  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
 
 ##  <a name="BKMK_Plan_Service_Location"></a> Service location and how clients determine their assigned management point  
 When a client is first assigned to a primary site, it selects a default management point for that site. Primary sites support multiple management points, and each client independently identifies a management point as its default management point. This default management point then becomes that client's assigned management point. (You can also use client installation commands to set the assigned management point for a client when it's installed.)  
