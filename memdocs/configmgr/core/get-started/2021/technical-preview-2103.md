@@ -2,7 +2,7 @@
 title: Technical preview 2103
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2103.
-ms.date: 03/02/2021
+ms.date: 03/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,12 +24,11 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2103/1234567.md)] -->
 
-[!INCLUDE [7983121](includes/2103/7983121.md)]
-[!INCLUDE [7043245](includes/2103/7043245.md)]
-[!INCLUDE [7958749](includes/2103/7958749.md)]
-[!INCLUDE [9089764](includes/2103/9089764.md)]
-[!INCLUDE [9408265](includes/2103/9408265.md)]
-[!INCLUDE [9302248](includes/2103/9302248.md)]
+[!INCLUDE [Community hub support for configuration baselines](includes/2103/7983121.md)]
+[!INCLUDE [Tenant attach: Antivirus policy supports exclusions merge](includes/2103/9089764.md)]
+[!INCLUDE [Cloud attach during site upgrade](includes/2103/7958749.md)]
+[!INCLUDE [New CMG deployments use TLS 1.2](includes/2103/9408265.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2103/9302248.md)]
 
 <!--
 ## General known issues

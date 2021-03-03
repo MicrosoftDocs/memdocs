@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 03/02/2021
+ms.date: 03/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,11 +121,11 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2103
 
-- [7043245](2021/technical-preview-2103.md) <!--7043245-->
-- [7958749](2021/technical-preview-2103.md) <!--7958749-->
-- [9089764](2021/technical-preview-2103.md) <!--9089764-->
-- [9328605](2021/technical-preview-2103.md) <!--9328605-->
-- [9302248](2021/technical-preview-2103.md) <!--9302248-->
+- [Community hub support for configuration baselines](2021/technical-preview-2103.md#bkmk_hub) <!--7983121-->
+- [Tenant attach: Antivirus policy supports exclusions merge](2021/technical-preview-2103.md#bkmk_av) <!--9089764-->
+- [Cloud attach during site upgrade](2021/technical-preview-2103.md#bkmk_setup) <!--7958749-->
+- [New CMG deployments use TLS 1.2](2021/technical-preview-2103.md#bkmk_cmgtls) <!--9408265-->
+- [PowerShell release notes preview](2021/technical-preview-2103.md#bkmk_powershell) <!--9302248-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
