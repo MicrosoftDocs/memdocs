@@ -29,9 +29,11 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [9089764](includes/2103/9089764.md)]
 [!INCLUDE [9302248](includes/2103/9302248.md)]
 
+<!--
 ## General known issues
 
-[!INCLUDE [9328605](includes/2103/9328605.md)]
+[!INCLUDE [Azure AD authentication doesn't work](includes/2102/known-issue-7569264.md)]
+-->
 
 ## Next steps
 
