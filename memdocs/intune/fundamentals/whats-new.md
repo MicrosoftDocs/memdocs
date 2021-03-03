@@ -172,12 +172,14 @@ To improve page load performance, app icons will now load in batches. End users 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Monitor and troubleshoot
 
+#### Endpoint analytics in Microsoft Productivity Score  <!-- IN8529842 -->
+
+There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->
 A new **Application Reliability** report will be available in Endpoint analytics. This report provides insight into potential issues for desktop applications on managed PCs. You can quickly identify the top applications that are impacting end user productivity, as well as see aggregate app usage and app failure metrics for these applications. You'll be able to troubleshoot by drilling into a specific device and viewing a timeline of app reliability events. This report is expected to be available in public preview during March 2021. For more information, see [Endpoint analytics application reliability](../../analytics/app-reliability.md).
 
 #### Restart frequency (preview) in Endpoint analytics <!--6225459 -->
 Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a preview report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency (preview) in endpoint analytics](../../analytics/restart-frequency.md).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Role-based access control
