@@ -2,7 +2,7 @@
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender ATP from the Microsoft Endpoint Manager admin center (preview) 
 titleSuffix: Configuration Manager
 description: "Deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
-ms.date: 10/20/2020
+ms.date: 03/03/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -24,7 +24,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 ## Prerequisites
 
 - Access to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
-- An E5 license for [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- An E5 license for [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
 - A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
    - Upgrade the target devices to the latest version of the Configuration Manager client.
