@@ -54,17 +54,69 @@ The **Collect diagnostics** remote action is supported for:
 
 ## Data collected
 
-No personal information is collected. Each collection contains the following data:
-- MDM logs (including Autopilot).
-- Some event viewer logs.
-- WMI and MDM ETLs.
-- HKLM policy registry keys.
-- ipconfig information and firewall rules.
-- Ping testing of local network adapter.
-- Windows Update logs.
-- Windows data from MSINFO32, DSREGCMD, GPRESULT, and CertUtil.
-- Config Manager client logs.
-- mpcmdrun (Windows Defender ATP diagnostics).
+No personal information is collected. This list below is the same order as the diagnostic zip file.  Each collection contains the following data:
+
+Registry Keys:
+
+- HKLM\Software\Microsoft\IntuneManagementExtension
+- HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
+- HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
+- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
+- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
+- HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
+- HKLM\Software\Policies
+- HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
+- HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
+- HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+- HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+
+Commands:
+
+- %programfiles%\windows defender\mpcmdrun.exe -GetFiles
+- %windir%\system32\certutil.exe -store
+- %windir%\system32\certutil.exe -store -user my
+- %windir%\system32\Dsregcmd.exe /status
+- %windir%\system32\ipconfig.exe /all
+- %windir%\system32\mdmdiagnosticstool.exe 
+- %windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log
+- %windir%\system32\netsh.exe advfirewall show allprofiles
+- %windir%\system32\netsh.exe advfirewall show global
+- %windir%\system32\netsh.exe lan show profiles
+- %windir%\system32\netsh.exe winhttp show proxy
+- %windir%\system32\netsh.exe wlan show profiles
+- %windir%\system32\netsh.exe wlan show wlanreport
+- %windir%\system32\ping.exe -n 50 localhost
+- %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
+- %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
+
+Event Viewers:
+
+- Application
+- Microsoft-Windows-AppLocker/EXE and DLL
+- Microsoft-Windows-AppLocker/MSI and Script
+- Microsoft-Windows-AppLocker/Packaged app-Deployment
+- Microsoft-Windows-AppLocker/Packaged app-Execution
+- Microsoft-Windows-Bitlocker/Bitlocker Management
+- Microsoft-Windows-SENSE/Operational
+- Microsoft-Windows-SenseIR/Operational
+- Setup
+- System
+
+Files:
+ 
+- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+- %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+- %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+- %temp%\MDMDiagnostics\battery-report.html
+- %temp%\MDMDiagnostics\energy-report.html
+- %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+- %temp%\MDMDiagnostics\msinfo32.log
+- %windir%\ccm\logs\*.log
+- %windir%\ccmsetup\logs\*.log
+- %windir%\logs\CBS\cbs.log
+- %windir%\logs\measuredboot\*.*
+- %windir%\Logs\WindowsUpdate\*.etl
 
 ## Disable device diagnostics
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
