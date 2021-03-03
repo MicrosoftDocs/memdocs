@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Configuration Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 10/23/2020
+ms.date: 02/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -29,6 +29,8 @@ For devices enrolled via Intune, Startup performance insights are only available
 
 For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
+> [!Important]
+> Client devices require a restart to fully enable all analytics. <!--7698085-->
 ## <a name="bkmk_score"></a> Startup score
 
 [!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]

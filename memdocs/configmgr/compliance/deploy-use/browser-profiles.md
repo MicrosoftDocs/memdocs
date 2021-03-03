@@ -5,7 +5,7 @@ description: Configure settings for the Microsoft Edge Legacy web browser on Win
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 03/02/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -23,6 +23,9 @@ ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
 
 <!-- 1357310 -->
 For customers who use the [Microsoft Edge Legacy](/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
+
+> [!WARNING]
+> This feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). Support ends for the Microsoft Edge Legacy desktop application on March 9, 2021. With the April cumulative update for Windows 10, the new Microsoft Edge replaces Microsoft Edge Legacy. For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224).<!-- 9388900 -->
 
 This policy only applies to clients on Windows 10, version 1703 or later, and Microsoft Edge Legacy version 45 and earlier. <!--511552-->
 

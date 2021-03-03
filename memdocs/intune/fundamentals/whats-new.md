@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/24/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,7 +58,116 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
-## Week of March 1, 2021
+## Week of March 1, 2021 (Service release 2102)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### App management
+
+#### Support for Win32 app supersedence in Intune<!-- 8517457-->
+We've enabled a public preview of app supersedence in Intune. You can now create supersedence relationships between apps, which allows you to update and replace existing Win32 apps with newer versions of the same app, or entirely different Win32 apps. For more information, see [Win32 app supersedence](../apps/apps-win32-supersedence.md).
+
+#### Maximum OS version setting for app conditional launch on Android devices<!-- 7764870  -->
+Using Intune app protection policies, you can add a new conditional launch setting to ensure end users are not using any pre-release or beta OS build to access work or school account data on Android devices. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality on Android devices. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Device configuration
+
+#### Use Cisco AnyConnect as a VPN connection type for Windows 10 and Windows Holographic for Business<!-- 2605377 -->
+You can create VPN profiles using Cisco AnyConnect as a connection type (**Devices** > **Device configuration** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Cisco AnyConnect** for connection type) without needing to use custom profiles.
+
+This policy uses the Cisco AnyConnect app available in the Microsoft store. It doesn't use the Cisco AnyConnect desktop application.
+
+For more information on VPN profiles in Intune, see [Create VPN profiles to connect to VPN servers](../configuration/vpn-settings-configure.md).
+
+Applies to:
+
+- Windows 10 and newer
+- Windows Holographic for Business 
+
+#### Run Microsoft Edge version 87 and newer in single app kiosk mode on Windows 10 devices<!-- 8271248   -->
+On Windows 10 and newer devices, you configure a device to run as a kiosk that runs one app, or runs many apps (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Kiosk**). When you select single app mode, you can:
+- Run Microsoft Edge version 87 and newer.
+- Select **Add Microsoft Edge legacy browser** to run Microsoft Edge version 77 and older.
+
+For more information on the settings you can configure in kiosk mode, see [Kiosk settings for Windows 10 and newer devices](../configuration/kiosk-settings-windows.md).
+
+Applies to:
+- Windows 10 and newer in single-app kiosk mode
+- Microsoft Edge version 87 and newer
+- Microsoft Edge version 77 and older
+
+#### Administrative Templates is available in Settings Catalog, and has more settings<!-- 9262405 -->
+
+In Intune, you can use Administrative Templates to create policies (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Administrative Templates** for profile).
+
+In the Settings Catalog, Administrative Templates are also available, and has more settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog** for profile).
+
+With this release, admins can configure additional settings that only existed in on-premises group policy, and weren't available in cloud-based MDM. These settings are available for **Windows Insider** client endpoint builds, and may be backported to in-market Windows versions, such as 1909, 2004, or 2010.
+
+If you want to create Administrative Templates, and use all the available settings exposed by Windows, then use the Settings Catalog. 
+
+For more information, see:
+- [Use Windows 10 templates to configure group policy settings](../configuration/administrative-templates-windows.md)
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+
+Applies to:
+- Windows 10 and newer
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Device enrollment
+
+#### Sync status of enrollment program tokens<!-- 9235108  -->
+The sync status for automated device enrollment tokens listed on the **Enrollment program tokens** pane has been removed to minimize confusion. The per-token information continues to be displayed. Enrollment program tokens are used to manage automated device enrollment with Apple Business Manager and Apple School Manager. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can find the token list for iOS/iPadOS devices by selecting **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens**. To find the token list for macOS devices, select **Devices** > **macOS** > **macOS enrollment** > **Enrollment program tokens**. For related information, see [Automatically enroll iOS/iPadOS devices](../enrollment/device-enrollment-program-enroll-ios.md) and [Automatically enroll macOS devices](../enrollment/device-enrollment-program-enroll-macos.md).
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Device management
+
+#### Collect diagnostics remote action<!--2167272   -->
+A new remote action, **Collect diagnostics**, lets you collect the logs from corporate devices without interrupting or waiting for the end user. Collected logs include MDM, Autopilot, event viewers, key, Configuration Manager client, networking, and other critical troubleshooting logs. For more information see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md).
+
+#### New options for export device data<!--6330532   -->
+The following new options are available when exporting device data:
+- Only include selected columns in the exported file.
+- Include all inventory data in the exported file.
+To see these options, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Export**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Device security
+
+#### Use the variable CN={{UserPrincipalName}} in the subject and SAN of SCEP and PKCS certificate profiles for Android Enterprise devices<!-- 9290978   -->
+You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](/protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
+- Android Enterprise fully managed
+- Android Enterprise personally-owned work profile
+
+User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
+
+#### Use app protection policies for Defender for Endpoint on Android and iOS<!-- 6486982   7362746  -->
+You can now use [Microsoft Defender for Endpoint in app protection policies for devices that run Android or iOS](../protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
+- Configure your MAM conditional launch policy to include **Max allowed threat level** signals from Microsoft Defender for Endpoint on iOS devices and Android devices.
+- Choose to **Block Access** or **Wipe Data** based on whether or not the device meets the expected threat level.
+
+When configured, end users are prompted to install and set up the **Microsoft Defender for Endpoint** app from the applicable app store. As a prerequisite, you must set up your **Microsoft Defender for Endpoint** connector and switch on the toggle to send risk data to your app protection policies. For related information, see [App protection policies overview](../apps/app-protection-policy.md), and [Use Microsoft Defender for Endpoint in Microsoft Intune](..\protect\advanced-threat-protection.md).
+
+#### Configure Attack surface reduction rules to block malware from gaining persistence through WMI<!-- 8902661   -->
+You can now configure the rule named **Block persistence through WMI event subscription** as part of an [Attack surface reduction rules](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) profile in Endpoint security.
+ 
+This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
+ 
+When configured as [setting for *Attack surface reduction*](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-rules-profile) policy for Endpoint security, the following options are available:
+- **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
+- **Block** – Persistence through WMI is blocked.
+- **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
+- **Disable** - Turn this rule off. Persistence is not blocked.
+ 
+This rule doesn’t support the *Warn* option, and is also available as a Device configuration setting from the [Settings catalog](../configuration/settings-catalog.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Intune apps
+
+#### Company Portal website improved load performance<!-- 8765415  -->
+To improve page load performance, app icons will now load in batches. End users may see a placeholder icon for some of their applications when visiting the Company Portal website. The related icons will load shortly after. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md) and [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Monitor and troubleshoot
@@ -66,12 +175,33 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Endpoint analytics in Microsoft Productivity Score  <!-- IN8529842 -->
 
 There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
+#### Endpoint analytics Application Reliability report<!-- IN5653073 -->
+A new **Application Reliability** report will be available in Endpoint analytics. This report provides insight into potential issues for desktop applications on managed PCs. You can quickly identify the top applications that are impacting end user productivity, as well as see aggregate app usage and app failure metrics for these applications. You'll be able to troubleshoot by drilling into a specific device and viewing a timeline of app reliability events. This report is expected to be available in public preview during March 2021. For more information, see [Endpoint analytics application reliability](../../analytics/app-reliability.md).
+
+#### Restart frequency (preview) in Endpoint analytics <!--6225459 -->
+Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a preview report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency (preview) in endpoint analytics](../../analytics/restart-frequency.md).
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Role-based access control
+
+#### Role-based access permissions update for Microsoft Tunnel Gateway<!-- 8554762   -->
+To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](/intune/protect/microsoft-tunnel-prerequisites.md#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
+
+- **Create** - Configure Microsoft Tunnel Gateway servers, server configurations, and sites.
+- **Update** (modify) - Update Microsoft Tunnel Gateway servers, server configurations, and sites.
+- **Delete** - Delete Microsoft Tunnel Gateway servers, server configurations, and sites.
+- **Read** - View Microsoft Tunnel Gateway servers, server configurations, and sites.
+
+By default, Intune Administrators and Azure Active Directory administrators have these permissions. You can also add these permissions to [custom roles you create](/fundamentals/create-custom-role) for your Intune tenant.
+
+#### Scope tag support for customization policies for Intune for Government and 21Vianet<!--9419267  -->
+You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. 
 
 <!-- ########################## -->
 ## Week of February 22, 2021
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Device configuration
 
 #### New version of the PFX Certificate Connector<!-- 9333009 -->
@@ -96,7 +226,7 @@ Using the Windows Company Portal, end users can restart an app installation if t
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Device configuration
 
-#### Google’s compliance screens are automatically shown on Android Enterprise 9.0+ dedicated devices running in kiosk mode<!-- 9323100 wnready -->
+#### Google’s compliance screens are automatically shown on Android Enterprise 9.0+ dedicated devices running in kiosk mode<!-- 9323100  -->
 
 In Intune, you can create a device configuration password policy and a device compliance password policy on Android Enterprise devices.
 
@@ -373,7 +503,7 @@ When you use the `exportJobs` Graph API to export Intune reports without selecti
 
 #### Microsoft Tunnel now supports Red Hat Enterprise Linux 8<!-- 8981769 -->
 
-You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#linux-server). To make use of for RHEL 8 you won't need to take any actions. Support has been added to the Docker containers which update automatically. In addition, this update also suppresses some extraneous logging.
+You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](../protect/microsoft-tunnel-prerequisites.md#linux-server). To make use of for RHEL 8 you won't need to take any actions. Support has been added to the Docker containers which update automatically. In addition, this update also suppresses some extraneous logging.
 
 <!-- ########################## -->
 ## Week of January 11, 2021
@@ -385,7 +515,7 @@ You can now use Red Hat Enterprise Linux (RHEL) 8 with the [Microsoft Tunnel](..
 Win32 apps added to Intune cannot be removed if they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
 #### Scope tag support for customization policies<!--6182440  -->
-You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. This feature is not yet available for Intune for Government or Intune operated by 21Vianet.
+You can now assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. This feature is now available for Intune for Government or Intune operated by 21Vianet.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Device configuration
@@ -1529,7 +1659,7 @@ Unchanged, from the Profiles pane you can select a profile to drill-in to view t
 
 #### Derived credentials support for Windows<!-- 4886090   -->
 You can now use derived credentials with your Windows devices. This will  expand on the existing support for iOS/iPadOS and Android, and will be available for the same derived credential providers:
-- Entrust Datacard
+- Entrust
 - Intercede
 - DISA Purebred
 
