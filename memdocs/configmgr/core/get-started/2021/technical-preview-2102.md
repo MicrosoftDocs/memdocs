@@ -37,11 +37,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [PowerShell release notes preview](includes/2102/9117629.md)]
 [!INCLUDE [Change default maximum run time for software updates](includes/2102/7833866.md)]
 
-<!--
 ## General known issues
 
-[!INCLUDE [Azure AD authentication doesn't work](includes/2102/known-issue-7569264.md)]
--->
+[!INCLUDE [9328605](includes/2102/ki9328605.md)]
 
 ## Next steps
 
