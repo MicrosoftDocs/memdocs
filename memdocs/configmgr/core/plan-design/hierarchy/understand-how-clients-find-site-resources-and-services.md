@@ -12,52 +12,73 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Learn how clients find site resources and services for Configuration Manager
+# Learn how clients find site resources and services
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager clients use a process called *service location* to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use. Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client tasks. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services and DNS. Or they can require you to configure more complex alternatives.  
+Configuration Manager clients use a process called _service location_ to locate site system servers. Clients can communicate with these servers and they  provide services that clients can use. To better configure your sites to successfully support client tasks, you need to understand how and when clients use service location to find site resources. These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services and DNS. They can also require you to configure more complex alternatives.
 
-Examples of site system roles that provide services include:
+Some examples of site system roles that provide services include:
 
 - The core site system server for clients.
 - The management point.
-- Additional site system servers that the client can communicate with, like distribution points and software update points.  
+- Additional site system servers that the client can communicate with, like distribution points and software update points.
 
-## <a name="bkmk_fund"></a> Fundamentals of service location  
- A client evaluates its current network location, communication protocol preference, and assigned site when it is using service location to find a management point that it can communicate with.  
+## Fundamentals of service location
 
-**A client communicates with a management point to:**  
-- Download information about other management points for the site, so it can build a list of known management points (known as the *MP list*) for future service location cycles.  
-- Upload configuration details, like inventory and status.  
-- Download a policy that sets configurations on the client and can inform the client of software that it can or must install, and other related tasks.  
-- Request information about additional site system roles that provide services that the client has been configured to use. Examples include distribution points for software that the client can install, or a software update point from which to get updates.  
+A client evaluates its current network location, communication protocol preference, and assigned site when it is using service location to find a management point that it can communicate with.
 
-**A Configuration Manager client makes a service location request:**  
-- Every 25 hours of continuous operation.  
-- When the client detects a change in its network configuration or location.  
-- When the **ccmexec.exe** service on the computer (the core client service) starts.  
-- When the client must locate a site system role that provides a required service.  
+### Client communication with a management point
 
-**When a client is attempting to find servers that host site system roles**, it uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method available to them. Consider the following:  
+A client communicates with a management point (MP) to:
 
-- To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
+- Download information about other management points for the site. It then builds a list of known management points for future service location cycles. This list is also known as the *MP list*.
 
-- When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see  [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in the [Plan for security](../../../core/plan-design/security/plan-for-security.md).  
+- Upload configuration details, like inventory and status.
+
+- Download a policy that sets configurations on the client, informs it of software to install, and other related tasks.
+
+- Request information about additional site system roles that provide services that the client can use. For example, distribution points for software that the client can install, or a software update point for metadata about software updates.
+
+### Client service location requests
+
+A Configuration Manager client makes a service location request:
+
+- Every 25 hours of continuous operation.
+
+- When the client detects a change in its network configuration or location.
+
+- When the **ccmexec.exe** service on the computer starts. This Windows service is the core client service.
+
+- When the client needs to locate a site system role that provides a required service.
+
+### Client requests for site system roles
+
+When a client attempts to find servers that host roles, it uses service location. It tries to find a role that supports its communication protocol, either HTTP or HTTPS. By default, clients use the most secure method available to them.
+
+- To use HTTPS, you need a public key infrastructure (PKI) and install PKI certificates on clients and servers. For more information, see [PKI certificate requirements for Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).
+
+- When you deploy a role that uses Internet Information Services (IIS) and supports communication from clients, you configure it for HTTP or HTTPS. If you use HTTP, also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption).
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
 
-##  <a name="BKMK_Plan_Service_Location"></a> Service location and how clients determine their assigned management point  
-When a client is first assigned to a primary site, it selects a default management point for that site. Primary sites support multiple management points, and each client independently identifies a management point as its default management point. This default management point then becomes that client's assigned management point. (You can also use client installation commands to set the assigned management point for a client when it's installed.)  
+## Determine assigned management point
 
-A client selects a management point to communicate with based on the client's  current network location and boundary group configurations. Even though it has an assigned management point, this might not be the management point that the client uses.  
+Primary sites support multiple management points. Each client independently identifies a management point as its default. When a client first assigns to a primary site, it selects its default management point. This default management point then becomes that client's _assigned_ management point.
 
-> [!NOTE]  
-> A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.
+> [!TIP]
+> You can use client installation properties to set the assigned management point for a client. For more information, see [Client installation properties](../../clients/deploy/about-client-installation-properties.md#smsmp).
 
-You can use preferred management points. Preferred management points are management points from a client's assigned site that are associated with a boundary group that the client is using to find site system servers. A preferred management point's association with a boundary group as a site system server is similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it will try to use a preferred management point before using other management points from its assigned site.  
+A client selects a management point to communicate with based on the client's current network location and boundary group configurations. Even though it has an assigned management point, this may not be the management point that the client uses.
 
+> [!NOTE]
+> A client always uses the assigned management point for registration messages and certain policy messages. This behavior happens even when other communications are sent to a proxy or local management point.
+
+You can use preferred management points. Preferred management points are management points from a client's assigned site that are associated with a boundary group that the client uses to find site system servers. A preferred management point's association with a boundary group is similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it tries to use a preferred management point before using other management points from its assigned site.
+
+> [!TIP]
+> You can configure management point affinity with registry key 
 You can also use the information in the [management point affinity](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blog to configure management point affinity. Management point affinity overrides the default behavior for assigned management points and lets the client use one or more specific management points.  
 
 Each time a client needs to contact a management point, it checks the MP list, which it stores locally in Windows Management Instrumentation (WMI). The client creates an initial MP list when it's installed. The client then periodically updates the list with details about each management point in the hierarchy.  

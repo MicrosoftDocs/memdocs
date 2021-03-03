@@ -570,7 +570,7 @@ Specify a DNS domain for clients to locate management points that you publish in
 > [!NOTE]
 > You don't have to specify this property if the client is in the same domain as a published management point. In that case, the client's domain is automatically used to search DNS for management points.
 
-For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location).
+For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#determine-assigned-management-point).
 
 > [!NOTE]  
 > By default, Configuration Manager doesn't enable DNS publishing.
