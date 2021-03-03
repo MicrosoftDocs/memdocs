@@ -52,7 +52,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 4. After the script completes, you can use your normal process to create Conditional Access policies.
 
-## Create Conditional Access policy to limit access to Microsoft Tunnel
+## Conditional Access to limit access to Microsoft Tunnel
 
 If you'll use Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
 
