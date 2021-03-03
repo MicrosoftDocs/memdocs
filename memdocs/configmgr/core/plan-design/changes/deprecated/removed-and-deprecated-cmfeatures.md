@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 12/07/2020
+ms.date: 03/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -26,6 +26,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|
 |-----------|---|--------------|
+| Microsoft Edge legacy [browser profiles](../../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224) | March 2021 | April 2021 |
 | Desktop Analytics tile and page for **Security Updates**<!-- 8099536 --> | December 2020 | March 2021 |
 | The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->, which is integrated in version 2010. The standalone tool is still available with the [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).| November 2020 | The first release after March 1, 2021 |
 | [Log Analytics connector for Azure Monitor.](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 --> This feature is called the *OMS Connector* in the Azure Services node. | November 2020 | The first release after July 1, 2021 |
