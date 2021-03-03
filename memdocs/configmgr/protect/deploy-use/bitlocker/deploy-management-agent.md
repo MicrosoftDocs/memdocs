@@ -130,7 +130,7 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 > [!IMPORTANT]
-> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
+> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user using a domain account must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded. Logging in with a local non-domain account will not start BitLocker Drive Encryption.
 > Alternatively, you can remotely connect to the console session of the device via the remote desktop protocol using the `/admin` switch. For example:
 > `mstsc.exe /admin /v:<IP Address of device>`
 
