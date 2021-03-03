@@ -1,7 +1,7 @@
 ---
 title: Endpoint analytics page in Microsoft Productivity Score
 titleSuffix: Configuration Manager
-description: Get details about application reliability in endpoint analytics
+description: Get details about endpoint analytics in Microsoft Productivity Score
 ms.date: 03/03/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
