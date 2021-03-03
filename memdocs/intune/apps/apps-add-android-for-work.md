@@ -61,7 +61,7 @@ There are three types of apps that are available with Managed Google Play:
 There are two ways to browse and approve Managed Google Play store apps with Intune:
 
 1. Directly in the Intune console - browse and approve store apps in a view hosted within Intune. This opens directly in the Intune console and does not require you to reauthenticate with a different account.
-1. In Managed Google Play console - you can optionally open the Managed Google Play console directly and approve apps there. See [Sync a Managed Google Play app with Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune) for more information.  This requires a separate login using the account you used to connect your Intune tenant to Managed Google Play.
+1. In Managed Google Play console - you can optionally open the Managed Google Play console directly and approve apps there. See [Sync a Managed Google Play app with Intune](#sync-a-managed-google-play-app-with-intune) for more information.  This requires a separate login using the account you used to connect your Intune tenant to Managed Google Play.
 
 ### Add a Managed Google Play store app directly in the Intune console
 
@@ -108,7 +108,7 @@ If you prefer to synchronize a Managed Google Play app with Intune rather than a
 
     ![Options for handling new app permission requests](./media/apps-add-android-for-work/approve-app-settings.png)
 
-    The app is approved, and it is displayed in your IT admin console. Next, you can [Sync a Managed Google Play app with Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune).
+    The app is approved, and it is displayed in your IT admin console. Next, you can [Sync a Managed Google Play app with Intune](#sync-a-managed-google-play-app-with-intune).
 
 ## Managed Google Play private (LOB) apps
 
@@ -133,7 +133,7 @@ There are two ways to add LOB apps to Managed Google Play:
 10. Click **Sync** on the **App app** pane to sync with the Managed Google Play service. 
 
     > [!NOTE]
-    > Private apps may take several minutes to become available to sync. If the app does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync. You can also sync apps from the Manged Google Play store. For related information, see [Sync a Managed Google Play app with Intune](../apps/apps-add-android-for-work#sync-a-managed-google-play-app-with-intune).
+    > Private apps may take several minutes to become available to sync. If the app does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync. You can also sync apps from the Manged Google Play store. For related information, see [Sync a Managed Google Play app with Intune](#sync-a-managed-google-play-app-with-intune).
 
 For more information about Managed Google Play private apps including a FAQ, see Google's support article: https://support.google.com/googleplay/work/answer/9146439
 
