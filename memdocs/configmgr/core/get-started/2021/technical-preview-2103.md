@@ -34,7 +34,7 @@ The following sections describe the new features to try out in this version:
 <!--
 ## General known issues
 
-[!INCLUDE [Azure AD authentication doesn't work](includes/2103/known-issue-7569264.md)]
+[!INCLUDE [Azure AD authentication doesn't work](includes/2102/known-issue-7569264.md)]
 -->
 
 ## Next steps
