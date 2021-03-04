@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use community hub in Configuration Manager
-ms.date: 02/05/2021 
+ms.date: 03/02/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,6 +23,12 @@ Community hub supports the following objects:
 
 [!INCLUDE [Community hub object type information](includes/community-hub-object-types.md)]
 
+## <a name="bkmk_new"></a> What's new
+
+- Support for configuration baselines including child configuration items, added in March 2021 <!--7983121-->
+- Support for Power BI reports, added in February 2021 <!--5679831-->
+- Support for installing console extensions, added in January 2021 <!--3555909-->
+
 ## Prerequisites
 
 - The device running the Configuration Manager console used to access the community hub needs the following items:
@@ -36,7 +42,7 @@ Community hub supports the following objects:
 
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
-- A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information see, [Contribute to Community hub](community-hub-contribute.md).
+- A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information, see [Contribute to Community hub](community-hub-contribute.md).
 
 ## Permissions
 
@@ -53,7 +59,7 @@ Community hub supports the following objects:
 1. You'll need appropriate permissions in your Configuration Manager site to download objects from the hub and import them into the site.
     - To import a script: **Create** permission for SMS_Scripts class.
     - To import a report: Full Administrator security role.
-1. Downloaded reports are deployed to a report folder called **hub** on the reporting services point. Downloaded scripts can be seen in the **Run Scripts** node.
+1. Downloaded reports are deployed to a report folder called **hub** on the reporting services point. Downloaded scripts can be seen in the **Run Scripts** node. Typically, downloaded items are placed in the console node for which they're used.
 1. View all items downloaded from the hub by your organization by selecting **Your downloads** from the **Community hub** node.
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
