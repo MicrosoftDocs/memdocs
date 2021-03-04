@@ -1,5 +1,5 @@
 ---
-title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender ATP from the Microsoft Endpoint Manager admin center (preview) 
+title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview) 
 titleSuffix: Configuration Manager
 description: "Deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
 ms.date: 03/03/2021
