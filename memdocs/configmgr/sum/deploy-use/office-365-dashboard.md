@@ -185,6 +185,9 @@ This report can be used to identify which devices have recently used files which
 
 For more information about how to carry out the scan, see [Detailed macro readiness](#bkmk_ort).
 
+> [!TIP]
+> Macro inventory is populated by default based on the extensions. Macro compatibility and macro status are populated once the **Readiness Toolkit for Office** scan runs on the device.
+
 ## <a name="bkmk_pilot"></a> Office 365 Pilot and Health dashboard
 <!--4488272, 4488301-->
 *(Introduced in version 1910)*
