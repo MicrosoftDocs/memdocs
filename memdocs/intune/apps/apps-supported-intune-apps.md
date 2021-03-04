@@ -125,6 +125,10 @@ The below apps support the core Intune App Protection Policy settings.
 
 The following apps support the core Intune App Protection Policy settings. Apps are also capable of supporting advanced App Protection Policy and App Configuration Policy settings. For more information, contact the app vendor.
 
+> [!IMPORTANT]
+> Contact the app vendor for specific details app Intune related support. 
+
+
 | App   title | App description | App store links for supported   platform(s) | 
 |-------------------------------------------------|-------------------------|---------------------------------------------|
 | **Acronis Access**<p><img alt="Partner app - Acronis Access icon" src="./media/apps-supported-intune-apps/icon-p-acronis-access.png" width="100"> | Safely access your business files from anywhere and any device with Acronis Access. Easily share documents with colleagues, customers, and vendors while keeping files and data secure and private, where only you and your organization can touch them. The app is designed for extreme ease of use with unparalleled security, privacy, and management capabilities. | [App Store link (iOS)](https://apps.apple.com/us/app/acronis-access/id429704844?mt=8) |                       

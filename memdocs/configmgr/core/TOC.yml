@@ -232,12 +232,8 @@
       href: plan-design/diagnostics/frequently-asked-questions.md
   - name: Security and privacy for Configuration Manager
     items:
-    - name: Security and privacy overview
-      href: plan-design/security/security-and-privacy.md
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
-    - name: Security best practices and privacy information
-      href: plan-design/security/security-best-practices-and-privacy-information.md
     - name: Additional privacy information
       href: plan-design/security/additional-privacy.md
     - name: Configure security
@@ -254,6 +250,8 @@
         href: plan-design/security/enable-tls-1-2-server.md
       - name: Common issues when enabling TLS 1.2
         href: plan-design/security/enable-tls-1-2-troubleshoot.md
+    - name: Security documentation hub
+      href: ../security/index.yml
 - name: Get started
   items:
   - name: Evaluate Configuration Manager in a lab
@@ -268,16 +266,14 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2103 features
+      href: get-started/2021/technical-preview-2103.md
+    - name: 2102 features
+      href: get-started/2021/technical-preview-2102.md
     - name: 2101 features
       href: get-started/2021/technical-preview-2101.md
     - name: 2012 features
       href: get-started/2020/technical-preview-2012.md
-    - name: 2011 features
-      href: get-started/2020/technical-preview-2011.md
-    - name: 2010.2 features
-      href: get-started/2020/technical-preview-2010-2.md
-    - name: 2010 features
-      href: get-started/2020/technical-preview-2010.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview

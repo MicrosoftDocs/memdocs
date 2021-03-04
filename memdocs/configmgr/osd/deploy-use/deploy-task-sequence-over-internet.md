@@ -76,7 +76,7 @@ When you deploy an upgrade task sequence, use the following settings:
 
 <!--6209223-->
 
-Starting in version 2006, [bootable media](create-task-sequence-media.md#BKMK_PlanBootableMedia) can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
+Starting in version 2010, [bootable media](create-task-sequence-media.md#BKMK_PlanBootableMedia) can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
 
 > [!NOTE]
 > The device still needs an intranet connection to the management point.

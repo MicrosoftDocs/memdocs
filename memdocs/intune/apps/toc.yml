@@ -88,6 +88,8 @@
             href: apps-win32-prepare.md
           - name: Add a Win32 app
             href: apps-win32-add.md
+          - name: Win32 app supersedence
+            href: apps-win32-supersedence.md
           - name: Troubleshoot a Win32 app
             href: apps-win32-troubleshoot.md
           - name: Win32 app S mode devices
