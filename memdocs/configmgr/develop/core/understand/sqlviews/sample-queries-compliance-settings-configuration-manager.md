@@ -45,7 +45,7 @@ The following query retrieves the configuration baselines that have been evaluat
     ORDER BY [Baseline Name], [Computer Name] 
 ```
 
-## Joining compliance settings, status, and discovery views
+## Joining compliance settings, status, and assignment views
 
 The following query retrieves the names of computers that have been targeted for an assignment, the configuration item name assigned to the computer, the compliance state for the item, the assignment name that contains the item, and the target collection for the assignment. The results are sorted by the compliance state, assigned configuration item, and then the computer name. The query joins the **v_CICurrentComplianceStatus** status view to the **v_CIAssignmentToCI** compliance settings view by using the **CI_ID** column; joins the **v_CIAssignment** and **v_CIAssignmentToCI** compliance settings views by using the **AssignmentID** column; joins the **v_LocalizedCIProperties** compliance settings view to the **v_CICurrentComplianceStatus** view by using the **CI_ID** column; joins the **v_StateNames** and **v_CICurrentComplianceStatus** status views by using the **StateID** and **ComplianceState** columns, respectively; and joins the **v_R_System** discovery view to the **v_CICurrentComplianceStatus** view by using the **ResourceID** column. The retrieved information is filtered by the topic type of 401, which includes state messages for configuration item compliance.
 
