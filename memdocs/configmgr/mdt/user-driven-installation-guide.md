@@ -1759,7 +1759,7 @@ manager: dougeby
 
  For the purposes of this example, you will create a custom wizard page as illustrated in Figure 1.  
 
- ![QuickStartGuideforUDI](media/QuickStartGuideforUDI.jpg "QuickStartGuideforUDI")  
+ ![Figure 1. Custom wizard page to be created](media/QuickStartGuideforUDI.jpg)
 Figure 1. Custom wizard page to be created  
 
  **Figure 1. Custom wizard page to be created**  
