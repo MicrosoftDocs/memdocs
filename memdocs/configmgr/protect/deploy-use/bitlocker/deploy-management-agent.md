@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 11/30/2020
+ms.date: 03/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -130,9 +130,9 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
 > [!IMPORTANT]
-> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins and recovery keys and packages are uploaded.
-> Alternatively, you can remotely connect to the console session of the device via the remote desktop protocol using the `/admin` switch. For example:
-> `mstsc.exe /admin /v:<IP Address of device>`
+> If a remote desktop protocol (RDP) connection is active, the MBAM client doesn't start BitLocker Drive Encryption actions. Close all remote console connections and sign in to a console session with a domain user account. Then BitLocker Drive Encryption begins and the client uploads recovery keys and packages. If you sign in with a local user account, BitLocker Drive Encryption doesn't start.
+>
+> You can use RDP to remotely connect to the console session of the device with the `/admin` switch. For example: `mstsc.exe /admin /v:<IP address of device>`
 
 Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
