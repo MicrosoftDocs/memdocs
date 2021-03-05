@@ -348,7 +348,7 @@ Applies to:
 - iOS/iPadOS 14.0 and newer, devices enrolled with device enrollment or automated device enrollment
 
 #### Administrative templates includes new policies for Microsoft Edge version 88<!-- 9021341  -->
-You can configure and deploy new ADMX settings that apply to Microsoft Edge version 88. To see the new policies, go to [Microsoft Edge release notes](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
+You can configure and deploy new ADMX settings that apply to Microsoft Edge version 88. To see the new policies, go to [Microsoft Edge release notes](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
 
 For more information on this feature in Intune, see [Configure Microsoft Edge policy settings](../configuration/administrative-templates-configure-edge.md).
 
