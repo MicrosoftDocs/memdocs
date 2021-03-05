@@ -161,7 +161,7 @@ For more information on deploying apps with Intune, see  Add apps to Microsoft I
 ## Create a VPN profile  
 
 > [!Important]
-> In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
+> In preparation for the [public preview of Tunnel client functionality in the Microsoft Defender for Endpoint app](https://aka.ms/defendertunnel), the VPN profile connection type for the Microsoft Tunnel client app has been renamed to **Microsoft Tunnel (standalone client)**. At this time, you should use the **Microsoft Tunnel (standalone client)** connection type, not the **Microsoft Tunnel** connection type.   
 
 After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with the **Microsoft Tunnel (standalone client)** connection type.  
 
@@ -262,6 +262,19 @@ Updates for the Microsoft Tunnel are released periodically. When we update the t
 After an update releases, it rolls out to tenants over the following days. This means your tunnel servers might not start the process to update for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### January 19, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:227557e71b197c5c26baeed7633e5f89b476bbb8eb23fc82dec260890d5145f1
+
+- **serverImageDigest**:  sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
+
+Changes in this release:
+
+- Support for Red Hat Enterprise Linux 8.
+- Extraneous logging suppressed.
 
 ### October 29, 2020
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 1/21/2021
+ms.date: 3/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,9 @@ ms.collection: M365-identity-device-management
 
 Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 
-Edge for iOS is supported on iOS 12.0 and later. Edge for Android is supported on Android 5 and later.
+This feature applies to:
+- iOS 12.0 and newer
+- Android 5.0 and newer
 
 > [!NOTE]
 > Edge for iOS and Android doesn't consume settings that users set for the native browser on their devices, because Edge for iOS and Android can't access these settings.

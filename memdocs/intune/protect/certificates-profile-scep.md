@@ -197,7 +197,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
      - **Enroll to Trusted Platform Module (TPM) KSP if present, otherwise Software KSP**
      - **Enroll to Trusted Platform Module (TPM) KSP, otherwise fail**
-     - **Enroll to Passport, otherwise fail (Windows 10 and later)**
+     - **Enroll to Windows Hello for Business, otherwise fail (Windows 10 and later)**
      - **Enroll to Software KSP**
 
    - **Key usage**:
