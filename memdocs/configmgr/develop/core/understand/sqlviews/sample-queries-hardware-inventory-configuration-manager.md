@@ -18,7 +18,7 @@ manager: dougeby
 
 The following sample queries demonstrate how to join Configuration Manager hardware inventory views to other views that contain system data. Hardware inventory views use the **ResourceID** column when joining to other views.
 
-## Joining hardware inventory and resource views
+## List all client OS versions
 
 The following query lists all inventoried Configuration Manager client computers and the operating system and service pack that are running on the client computer. The **v_GS_OPERATING_SYSTEM** hardware inventory view and **v_R_System** discovery view are joined by using the **ResourceID** column, and the results are sorted by the computer name.
 
@@ -29,7 +29,7 @@ The following query lists all inventoried Configuration Manager client computers
     ORDER BY SYS.Netbios_Name0 
 ```
 
-## Joining hardware inventory and resource views
+## List clients with hardware inventory scans more than two days old
 
 The following query lists all active Configuration Manager clients that have not been scanned for hardware inventory in more than two days. The **v_GS_WORKSTATIONSTATUS** hardware inventory view and **v_RA_System_SMSInstalledSites** discovery view are joined to the **v_R_System** discovery view by using the **ResourceID** column.
 
@@ -47,4 +47,3 @@ The following query lists all active Configuration Manager clients that have not
 ## See also
 
 [Hardware inventory views in Configuration Manager](hardware-inventory-views-configuration-manager.md)
-

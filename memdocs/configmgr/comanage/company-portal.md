@@ -2,7 +2,7 @@
 title: Apps in Company Portal
 titleSuffix: Configuration Manager
 description: Provide a consistent user experience for co-managed devices to use the Company Portal app.
-ms.date: 09/03/2020
+ms.date: 02/18/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -123,9 +123,9 @@ Microsoft recommends:
 - Use Company Portal version 11.0.8980.0 or later on co-managed clients running Configuration Manager version 2006 or later.
 - Configure the client setting **Select the user portal** to **Company Portal**
 
-### Does Company Portal support applications deployed as software updates from Configuration Manager?
+### Can I use the Company Portal to deploy software updates?
 
-Yes. If you deploy an app using the software updates feature, the client treats it the same whether the user experience is Company Portal or Software Center.
+The Company Portal supports software updates. For more information, see: [Introduction to software updates in Configuration Manager](../sum/understand/software-updates-introduction.md).
 
 ### Can users repair, uninstall, and update Configuration Manager apps in Company Portal?
 

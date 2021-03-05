@@ -3476,7 +3476,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] DNSZones0FileName=MyNewZone.dns`|  
 
 ####  <a name="DNSZonesxMasterIP"></a> DNSZonesxMasterIP  
- A comma delimited list of IP addresses of the master servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.  
+ A comma delimited list of IP addresses of the main servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.  
 
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
@@ -3489,7 +3489,7 @@ cscript.exe LiteTouch.vbs /debug:true
 
 |**Value**|**Description**|  
 |-|-|
-|*IP1,IP2*|A comma-delimited list of IP addresses of the master servers|  
+|*IP1,IP2*|A comma-delimited list of IP addresses of the main servers|  
 
 |**Example**|  
 |-|   
