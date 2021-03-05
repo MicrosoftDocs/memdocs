@@ -44,7 +44,7 @@ User Driven Installation (UDI) helps simplify the deployment of Windows® client
 
  Figure 1 illustrates the relationship between the UDI Wizard Designer and the UDI Wizard.  
 
- ![UDIDevelopersGuide1](media/UDIDevelopersGuide1.jpg "UDIDevelopersGuide1")  
+ ![Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer](media/UDIDevelopersGuide1.jpg)
 Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer  
 
  **Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer**  
@@ -133,7 +133,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
      When completed, the folder structure beneath *local_folder* should look like the folder structure illustrated in Figure 2 (where *local_folder* is the folder you created earlier in the process and is shown as *UDIDevelopment* in the figure).  
 
-     ![UDIDevelopersGuide2](media/UDIDevelopersGuide2.jpg "UDIDevelopersGuide2")  
+     ![Figure 2. Folder structure for UDI development](media/UDIDevelopersGuide2.jpg)
 Figure 2. Folder structure for UDI development  
 
      **Figure 2. Folder structure for UDI development**  

@@ -136,8 +136,8 @@ To see these options, go to [Microsoft Endpoint Manager admin center](https://go
 ### Device security
 
 #### Use the variable CN={{UserPrincipalName}} in the subject and SAN of SCEP and PKCS certificate profiles for Android Enterprise devices<!-- 9290978   -->
-You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](/protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
-- Android Enterprise fully managed
+You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
+- Android Enterprise fully managed 
 - Android Enterprise personally-owned work profile
 
 User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
@@ -172,25 +172,27 @@ To improve page load performance, app icons will now load in batches. End users 
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Monitor and troubleshoot
 
+#### Endpoint analytics in Microsoft Productivity Score  <!-- IN8529842 -->
+
+There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->
 A new **Application Reliability** report will be available in Endpoint analytics. This report provides insight into potential issues for desktop applications on managed PCs. You can quickly identify the top applications that are impacting end user productivity, as well as see aggregate app usage and app failure metrics for these applications. You'll be able to troubleshoot by drilling into a specific device and viewing a timeline of app reliability events. This report is expected to be available in public preview during March 2021. For more information, see [Endpoint analytics application reliability](../../analytics/app-reliability.md).
 
 #### Restart frequency (preview) in Endpoint analytics <!--6225459 -->
 Endpoint analytics [startup performance](../../analytics/startup-performance.md) currently provides IT with insights to measure and optimize PC boot times. However, restart frequency can be just as impactful to the user experience since a device that reboots daily because of blue screens will have a poor user experience even if the boot times are fast. We have now included a preview report on restart frequencies within your organization to help you identify problematic devices. For more information, see [Restart frequency (preview) in endpoint analytics](../../analytics/restart-frequency.md).
 
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv --> 
 ### Role-based access control
 
 #### Role-based access permissions update for Microsoft Tunnel Gateway<!-- 8554762   -->
-To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](/intune/protect/microsoft-tunnel-prerequisites.md#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
+To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](../protect/microsoft-tunnel-prerequisites.md#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
 
 - **Create** - Configure Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Update** (modify) - Update Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Delete** - Delete Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Read** - View Microsoft Tunnel Gateway servers, server configurations, and sites.
 
-By default, Intune Administrators and Azure Active Directory administrators have these permissions. You can also add these permissions to [custom roles you create](/fundamentals/create-custom-role) for your Intune tenant.
+By default, Intune Administrators and Azure Active Directory administrators have these permissions. You can also add these permissions to [custom roles you create](create-custom-role.md) for your Intune tenant.
 
 #### Scope tag support for customization policies for Intune for Government and 21Vianet<!--9419267  -->
 You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. 
