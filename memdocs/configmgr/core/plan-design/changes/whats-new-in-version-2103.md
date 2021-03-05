@@ -327,7 +327,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 The following [features are now deprecated](deprecated/removed-and-deprecated-cmfeatures.md):
 
-- Microsoft Edge legacy [browser profiles](../../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)
+- Microsoft Edge legacy [browser profiles](../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)
 
 - The following compliance settings for **Company resource access**: <!-- 9315387 -->
   - [Certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md)
@@ -336,7 +336,7 @@ The following [features are now deprecated](deprecated/removed-and-deprecated-cm
   - [Windows Hello for Business settings](../../../protect/deploy-use/windows-hello-for-business-settings.md)
   - Email profiles
 
-  This deprecation includes the [co-management resource access workload](../../../comanage/workloads#resource-access-policies.md). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
+  This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
 
 - Site system roles that allow HTTP client connections. Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).<!-- 9390933 -->
 
