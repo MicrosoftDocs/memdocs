@@ -135,7 +135,6 @@ The following third-party certification authorities support Intune:
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 
-
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 
 - [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
