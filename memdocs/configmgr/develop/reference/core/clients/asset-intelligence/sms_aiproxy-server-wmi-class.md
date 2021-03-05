@@ -1,28 +1,29 @@
 ---
-title: "SMS_AIProxy Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_AIProxy Class
+titleSuffix: Configuration Manager
+description: Details of SMS_AIProxy server WMI class
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: dbd4b08e-979f-426e-979b-4dce5dce48dc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_AIProxy Server WMI Class
+
+# SMS_AIProxy server WMI class
+
 The `SMS_AIProxy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Asset Intelligence proxy computer.  
 
 > [!NOTE]
->  This class can be accessed only on the central administration site.  
+> This class can be accessed only on the central administration site.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
-```  
+```
 Class SMS_AIProxy : SMS_BaseClass   
 {   
       string CatalogWatermark;   
@@ -47,14 +48,16 @@ Class SMS_AIProxy : SMS_BaseClass
 };  
 ```  
 
-## Methods  
- The following table lists the methods in the `SMS_AIProxy` class.  
+## Methods
 
-|Method|Description|  
-|------------|-----------------|  
-|[RequestCatalogUpdate Method in Class SMS_AIProxy](../../../../../develop/reference/core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md)|Initiates a System Center Online (SCO) catalog.|  
+The following table lists the methods in the `SMS_AIProxy` class.
 
-## Properties  
+|Method|Description|
+|------------|-----------------|
+|[RequestCatalogUpdate Method in Class SMS_AIProxy](../../../../../develop/reference/core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md)|Initiates a System Center Online (SCO) catalog.|
+
+## Properties
+
  `CatalogWatermark`  
  Data type: `String`  
 
@@ -248,8 +251,9 @@ Class SMS_AIProxy : SMS_BaseClass
 
  An incrementing count of how many times the software title catalog from SCO has been changed since this proxy was installed.  
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+
+Class qualifiers for this class include:  
 
 - DisplayName("AI Proxy Table")  
 
@@ -259,22 +263,24 @@ Class SMS_AIProxy : SMS_BaseClass
 
 - Secured  
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../misc/class-and-property-qualifiers.md).
+
+## Return values
+
+An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+
+For information about handling returned errors, see [About Configuration Manager errors](../../../../core/understand/about-configuration-manager-errors.md).  
 
 ## Requirements  
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+### Runtime requirements
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).
 
-## Requirements  
+### Development requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## See also
 
-## See Also  
 [Initiate Asset Intelligence synchronization](../../../../core/clients/asset-intelligence/how-to-initiate-a-synchronization.md)
