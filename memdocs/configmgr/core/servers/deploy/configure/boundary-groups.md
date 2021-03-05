@@ -126,7 +126,7 @@ You can configure each boundary group with an assigned site for clients.
 
 - Changes to a boundary groups assigned site only apply to new site assignment actions. Clients that previously assigned to a site don't reevaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).  
 
-For more information about client site assignment, see [Using automatic site assignment for computers](../../../clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment).  
+For more information about client site assignment, see [Using automatic site assignment for computers](../../../clients/deploy/assign-clients-to-a-site.md#automatic-site-assignment).  
 
 For more information on how to configure site assignment, see the following procedures:
 

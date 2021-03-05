@@ -2,7 +2,7 @@
 title: Communications between endpoints
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
-ms.date: 10/25/2018
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -59,13 +59,13 @@ Clients initiate communication to site system roles, Active Directory Domain Ser
 
 Before a client can communicate with a site system role, the client uses service location to find a role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method that's available to them. For more information, see  [Understand how clients find site resources and services](understand-how-clients-find-site-resources-and-services.md).  
 
-To use HTTPS, configure one of the following options:  
+To help secure the communication between Configuration Manager clients and site servers, configure one of the following options:
 
-- Use a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements](../network/pki-certificate-requirements.md).  
+- Use a public key infrastructure (PKI) and install PKI certificates on clients and servers. Enable site systems to communicate with clients over HTTPS. For information about how to use certificates, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
 
-- Starting in version 1806, configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](enhanced-http.md).  
+- Configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see [Enhanced HTTP](enhanced-http.md).
 
-When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../security/plan-for-security.md#BKMK_PlanningForSigningEncryption).  
+When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../security/plan-for-security.md#BKMK_PlanningForSigningEncryption).
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
@@ -127,7 +127,7 @@ When you install site system servers in an untrusted Active Directory forest, th
 
 - Configure workgroup clients to use the Network Access Account so that these computers can retrieve content from distribution points.  
 
-- Provide an alternative mechanism for workgroup clients to find management points. Use DNS publishing, WINS, or directly assign a management point. These clients can't retrieve site information from Active Directory Domain Services.  
+- Provide an alternative mechanism for workgroup clients to find management points. Use DNS publishing or directly assign a management point. These clients can't retrieve site information from Active Directory Domain Services.  
 
 For more information, see the following articles:  
 
@@ -236,7 +236,7 @@ To publish site information to another Active Directory forest:
 
 - Specify the forest and then enable publishing to that forest in the **Active Directory Forests** node of the **Administration** workspace.  
 
-- Configure each site to publish its data to Active Directory Domain Services. This configuration enables clients in that forest to retrieve site information and find management points. For clients that can't use Active Directory Domain Services for service location, you can use DNS, WINS, or the client's assigned management point.  
+- Configure each site to publish its data to Active Directory Domain Services. This configuration enables clients in that forest to retrieve site information and find management points. For clients that can't use Active Directory Domain Services for service location, you can use DNS or the client's assigned management point.
 
 #### <a name="bkmk_xchange"></a> Scenario 4: Put the Exchange Server connector in a remote forest  
 

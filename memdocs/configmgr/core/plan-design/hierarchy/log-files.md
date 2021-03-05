@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 11/30/2020
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -266,7 +266,7 @@ The following table lists the log files that are on the Configuration Manager si
 |inboxmon.log|Records the processing of inbox files and performance counter updates.|Site server|  
 |invproc.log|Records the forwarding of MIF files from a secondary site to its parent site.|Site server|  
 |migmctrl.log|Records information for Migration actions that involve migration jobs, shared distribution points, and distribution point upgrades.|Top-level site in the Configuration Manager hierarchy, and each child primary site. In a multi-primary site hierarchy, use the log file that is created at the central administration site.|  
-|mpcontrol.log|Records the registration of the management point with Windows Internet Name Service (WINS). Records the availability of the management point every 10 minutes.|Site system server|  
+|mpcontrol.log|Records the registration of the management point. Records the availability of the management point every 10 minutes.|Site system server|  
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
@@ -373,7 +373,7 @@ The following table lists the log files that contain information related to the 
 |MP_Sinv.log|Records details about the conversion of XML software inventory records from clients and the copy of those files to the site server.|Site system server|  
 |MP_SinvCollFile.log|Records details about file collection.|Site system server|  
 |MP_Status.log|Records details about the conversion of XML.svf status message files from clients and the copy of those files to the site server.|Site system server|
-|mpcontrol.log|Records the registration of the management point with WINS. Records the availability of the management point every 10 minutes.|Site server|  
+|mpcontrol.log|Records the registration of the management point. Records the availability of the management point every 10 minutes.|Site server|  
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  

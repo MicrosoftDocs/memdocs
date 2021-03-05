@@ -62,14 +62,14 @@ The following features are no longer supported. In some cases, they're no longer
 |Upgrade Assessment Tool<br><br>The Upgrade Assessment Tool depends on both Configuration Manager and the Application Compatibility Toolkit (ACT) 6.x. The final version of ACT was shipped in the Windows 10 v1511 ADK. As there are no further updates to ACT, support for the Upgrade Assessment Tool is discontinued. Deprecation notice was added to the [download page for UAT](https://www.microsoft.com/software-download/windows10) on September 12, 2016. | September 12, 2016  | July 11, 2017 |
 |Software update points with a network load balancing (NLB) cluster | February 27, 2016 | Version 1702 |
 |Task sequences: <br /> - OSDPreserveDriveLetter  <br /><br /> During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting. Select **Specific logical drive letter** and choose the drive that you want to use. |June 20, 2016 |Version 1606 |
-|Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|July 10, 2015|Version 1511|  
-|Out of Band Management - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
+|[Network Access Protection](#network-access-protection) (NAP)  - as found in System Center 2012 Configuration Manager|July 10, 2015|Version 1511|  
+|[Out of Band Management](#out-of-band-management) - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
 
-### Features removed in version 1511
+### WINS
 
-The following sections include additional details for features removed with version 1511:
+Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service. It's a deprecated service. You should replace WINS with Domain Name System (DNS). For more information, see [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top).
 
-#### <a name="bkmk_amt"></a> Out of Band Management  
+### Out of Band Management  
 
 With Configuration Manager, native support for AMT-based computers from within the Configuration Manager console has been removed.  
 
@@ -77,7 +77,7 @@ With Configuration Manager, native support for AMT-based computers from within t
 
 - Out of Band Management in System Center 2012 Configuration Manager is not affected by this change.  
 
-#### <a name="bkmk_nap"></a> Network Access Protection
+### Network Access Protection
 
 Configuration Manager has removed support for Network Access Protection. The feature has been deprecated in Windows Server 2012 R2, and is removed from Windows 10.  
 

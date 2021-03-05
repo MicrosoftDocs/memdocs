@@ -91,7 +91,6 @@ When the client can't find a valid management point in its MP list, it searches 
 1. Management point
 2. Active Directory Domain Services (AD DS)
 3. DNS
-4. WINS
 
 After a client successfully locates and contacts a management point, it downloads the current list of available management points. It then updates its own local MP list.
 
@@ -109,7 +108,7 @@ During installation of the client, the client uses the following rules to build 
 
 - Query AD DS for published management points. The client identifies management points from AD DS that are in its assigned site and the same product version.
 
-- If it doesn't get any management points from the first two rules, the client checks DNS and WINS for published management points.
+- If it doesn't get any management points from the first two rules, the client checks DNS for published management points.
 
 ### MP list categories
 
@@ -195,8 +194,6 @@ By default, domain-joined clients search DNS for management point records from t
 
 For more information, see [How to configure client computers to find management points by using DNS publishing](../../../core/clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).
 
-If a client can't find a management point to use for service location from DNS, it attempts to use WINS.
-
 ### Publish management points to DNS
 
 To publish management points to DNS, the following two conditions must be true:  
@@ -269,11 +266,3 @@ If you use Windows Server DNS, use the following procedures to enter this DNS re
     - **Host offering this service**: Specify the intranet FQDN of the site system server with the management point role.
 
 Repeat these steps for each management point on the intranet that you want to publish to DNS.
-
-## WINS
-
-When other service location mechanisms fail, clients can find an initial management point by checking WINS.
-
-By default, a primary site publishes to WINS the first management point at the site that is configured for HTTP and the first management point that is configured for HTTPS.  
-
-If you don't want clients to find an HTTP management point in WINS, configure clients with the CCMSetup.exe Client.msi property **SMSDIRECTORYLOOKUP=NOWINS**.

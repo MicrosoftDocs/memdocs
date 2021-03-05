@@ -190,10 +190,10 @@
       href: plan-design/network/internet-endpoints.md
     - name: Active Directory schema
       items:
+      - name: About schema extensions
+        href: plan-design/network/schema-extensions.md
       - name: Prepare the Active Directory schema
         href: plan-design/network/extend-the-active-directory-schema.md
-      - name: Schema extensions
-        href: plan-design/network/schema-extensions.md
     - name: Prepare Windows Servers to support site systems
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
@@ -675,7 +675,7 @@
       href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
     - name: Security and privacy for clients
       href: clients/deploy/plan/security-and-privacy-for-clients.md
-    - name: Best practices for client deployment
+    - name: Recommendations for client deployment
       href: clients/deploy/plan/best-practices-for-client-deployment.md
     - name: Determine whether to block clients
       href: clients/deploy/plan/determine-whether-to-block-clients.md
