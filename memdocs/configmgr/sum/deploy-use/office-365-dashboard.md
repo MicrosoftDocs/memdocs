@@ -5,7 +5,7 @@ description: "Review Microsoft 365 Apps client information from the Office 365 C
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -184,6 +184,9 @@ Configuration Manager looks at the most recently used files on each device. It c
 This report can be used to identify which devices have recently used files which may contain macros. The **Readiness Toolkit for Office** can then be deployed using Configuration Manager to scan any devices where more detailed information is needed, and check if there are any potential compatibility concerns. For example, if the file uses a function that changed in a more recent version of Microsoft 365 Apps.
 
 For more information about how to carry out the scan, see [Detailed macro readiness](#bkmk_ort).
+
+> [!TIP]
+> Macro inventory is populated by default based on the document extensions in the MRU. Macro compatibility and macro status are populated once the **Readiness Toolkit for Office** scan runs on the device.
 
 ## <a name="bkmk_pilot"></a> Office 365 Pilot and Health dashboard
 <!--4488272, 4488301-->
