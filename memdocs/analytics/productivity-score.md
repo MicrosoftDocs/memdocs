@@ -56,7 +56,7 @@ Selecting the **Learn more** link under the startup performance information give
 ### Unsupported roles
 
 Currently, the following roles aren't supported:
-- Ecxhange Administrator
+- Exchange Administrator
 - SharePoint Administrator
 - Lync Administrator
 ## Next steps
