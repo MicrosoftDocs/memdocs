@@ -136,7 +136,7 @@ To see these options, go to [Microsoft Endpoint Manager admin center](https://go
 ### Device security
 
 #### Use the variable CN={{UserPrincipalName}} in the subject and SAN of SCEP and PKCS certificate profiles for Android Enterprise devices<!-- 9290978   -->
-You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](/protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
+You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
 - Android Enterprise fully managed
 - Android Enterprise personally-owned work profile
 
@@ -185,14 +185,14 @@ Endpoint analytics [startup performance](../../analytics/startup-performance.md)
 ### Role-based access control
 
 #### Role-based access permissions update for Microsoft Tunnel Gateway<!-- 8554762   -->
-To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](/intune/protect/microsoft-tunnel-prerequisites.md#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
+To help control who has rights to manage the Microsoft Tunnel, we've added [**Microsoft Tunnel Gateway**](../protect/microsoft-tunnel-prerequisites.md#permissions) as a new permissions group to Intune role-based access control. This new group includes the following permissions:
 
 - **Create** - Configure Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Update** (modify) - Update Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Delete** - Delete Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Read** - View Microsoft Tunnel Gateway servers, server configurations, and sites.
 
-By default, Intune Administrators and Azure Active Directory administrators have these permissions. You can also add these permissions to [custom roles you create](/fundamentals/create-custom-role) for your Intune tenant.
+By default, Intune Administrators and Azure Active Directory administrators have these permissions. You can also add these permissions to [custom roles you create](create-custom-role.md) for your Intune tenant.
 
 #### Scope tag support for customization policies for Intune for Government and 21Vianet<!--9419267  -->
 You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options. 
