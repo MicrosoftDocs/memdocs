@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 08/17/2020
+ms.date: 03/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -44,7 +44,7 @@ This method requires the client to first register with the management point on t
 The site enables this behavior by default.
 
 > [!NOTE]
-> In HTTPS management point, the client must present a valid PKI issued cert, or an AAD token, or a bulk registration token to first register regardless of internet/intranet management point.
+> With an HTTPS management point, the client needs to first register regardless of internet/intranet management point. The client needs to present a valid PKI-issued certificate, an Azure AD token, or a bulk registration token.
 
 ## Bulk registration token
 
