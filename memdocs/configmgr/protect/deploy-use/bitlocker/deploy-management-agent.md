@@ -156,7 +156,7 @@ Use the following logs to monitor and troubleshoot:
 
 - MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
 
-- **BitlockerMangementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
+- **BitlockerManagementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
 
 ### Management point logs (recovery service)
 
