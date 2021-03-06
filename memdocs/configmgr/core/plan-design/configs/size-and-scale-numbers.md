@@ -147,7 +147,7 @@ The number of supported clients depends on the version of Windows Server Update 
   - Increase the WsusPool Queue Length to 2000
   - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see [WSUS best practices](/troubleshoot/mem/configmgr/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits).
 
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#bkmk_ScaleSieSystems).  
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#site-systems).  
 
 #### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 

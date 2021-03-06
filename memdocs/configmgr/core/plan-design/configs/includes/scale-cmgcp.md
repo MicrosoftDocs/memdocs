@@ -12,4 +12,4 @@ ms.date: 09/17/2020
 - One CMG connection point can support a CMG with up to four VM instances. If the CMG has more than four VM instances, add a second CMG connection point for load balancing. A CMG with 16 VM instances should be linked with four CMG connection points.
 
 > [!NOTE]
-> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](../recommended-hardware.md#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
+> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](../recommended-hardware.md#remote-site-system-servers).<!-- SCCMDocs#2276 -->
