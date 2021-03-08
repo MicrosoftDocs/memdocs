@@ -36,7 +36,7 @@ Intune supports a wide range of app types. The available options differ for each
 | App types | Installation | Updates |
 |---|---|---|
 | Apps from the store (store apps) | Intune installs the app on the device.  | App updates are automatic. |
-| Apps written in-house (line-of-business) | Intune installs the app on the device (you supply the installation file). | You must update the app. |
+| Apps written in-house or as a custom app (line-of-business) | Intune installs the app on the device (you supply the installation file). | You must update the app. |
 | Apps that are built-in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps on the web (web link) | Intune creates a shortcut to the web app on the device home screen. | App updates are automatic. |
 | Apps from other Microsoft services  | Intune creates a shortcut to the app in the Company Portal. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). | App updates are automatic. |
@@ -71,7 +71,7 @@ The following table lists the specific app types and how you can add them in the
 You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Select app type** pane is displayed and allows you to select the **App type**. 
 
 >[!TIP]
-> An LOB app is one that you add from an app installation file. For example, to install an iOS/iPadOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Select app type** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house.
+> An LOB app is one that you add from an app installation file. For example, to install an iOS/iPadOS LOB app, you add the application by selecting **Line-of-business app** as the **App type** in the **Select app type** pane. You then select the app package file (extension .ipa). These types of apps are typically written in-house or as a custom app.
 
 ## Assess app requirements
 As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply.  
@@ -104,7 +104,7 @@ Use the [Intune deployment planning, design and implementation guide](../fundame
 
 You can choose from the following app types:
 - **Apps from the store**: Apps that have been uploaded to either the Microsoft store, the iOS/iPadOS store, or the Android store are store apps. The provider of a store app maintains and provides updates to the app. You select the app in the store list and add it by using Intune as an available app for your users.
-- **Apps written in-house (line-of-business)**: Apps that are created in-house are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS/iPadOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
+- **Apps written in-house or as a custom app (line-of-business)**: Apps that are created in-house or as a custom app are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS/iPadOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
 - **Apps on the web**: Web apps are client-server applications. The server provides the web app, which includes the UI, content, and functionality. Additionally, modern web hosting platforms commonly offer security, load balancing, and other benefits. This type of app is separately maintained on the web. You use Intune to point to this app type. You also assign which groups of users can access the app. Note that Android does not support web apps.
 - **Apps from other Microsoft services**: Apps that have been sourced from either Azure AD or Office Online. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). You can hide or show Azure AD Enterprise and Office Online applications to end-users in the Company Portal. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. Select to **Hide** or **Show** either **Azure AD Enterprise applications** or **Office Online applications** in the Company Portal for each end-user. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). 
 

@@ -48,7 +48,7 @@ To help you set up a complete security scenario, Microsoft introduced a new taxo
 
 ## Android Enterprise enrollment modes
 
-With Android 5.0, Google introduced Android Enterprise, which includes two  enrollment modes. The Android Enterprise security configuration framework provides recommendations for both modes.
+Google Android Enterprise includes two  enrollment modes. The Android Enterprise security configuration framework provides recommendations for both modes.
 - [Fully managed devices (device owner)](android-fully-managed-enroll.md): For corporate-owned that are associated with a single user. Such devices are  exclusively for work and not personal use.
 - [Personally-owned work profile](android-work-profile-enroll.md) and [Corporate-owned work profile](android-corporate-owned-work-profile-enroll.md) (profile owner): Typically, for personally owned devices where IT wants a clear boundary between work and personal data. Policies controlled by IT make sure that work data can't be transferred into the personal profile.
 

@@ -2,7 +2,7 @@
 title: Contribute to the community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager community hub
-ms.date: 02/05/2021
+ms.date: 03/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -95,6 +95,17 @@ To use branding:
 ## <a name="bkmk_deeplink"></a> Directly link to community hub items
 <!--4224406-->
 [!INCLUDE [Community hub direct link information](includes/community-hub-links.md)]
+
+## Object type information
+
+### Configuration baselines
+<!--7983121-->
+When you contribute a [configuration baseline](../../../compliance/deploy-use/create-configuration-baselines.md), each of the child configuration items is verified. The verification starts at the lowest nested level. This means that configuration items that are grandchildren are verified before direct child configuration items are. The following process occurs to ensure the configuration baseline is usable and complete:
+
+1. Check if the child configuration item is already in the community hub. If the configuration item doesn't exist, it's created.
+   - A configuration item with software updates or version-specific references will cause an error and the contribution will fail.
+1. If the configuration item already exists in the community hub, verify the contributor is the author. If the contributor isn't the author, a new configuration item is created in community hub.
+1. If the contributor is the author, check for local updates to the configuration item. If the configuration item changed, update the item in the community hub.
 
 ## Next steps
 

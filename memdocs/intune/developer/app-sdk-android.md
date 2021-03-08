@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2021
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,6 +35,8 @@ ms.collection: M365-identity-device-management
 > You might want to first read the [Intune App SDK overview](app-sdk.md), which covers the current features of the SDK and describes how to prepare for integration on each supported platform.
 >
 > To download the SDK, see [Download the SDK files](../developer/app-sdk-get-started.md#download-the-sdk-files).
+>
+> If you have issues with integrating the Intune App SDK into your apps, submit a [request for assistance](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/issues) on GitHub.
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
@@ -64,12 +66,13 @@ The Intune App SDK consists of the following files:
 
 ### Android versions
 The SDK fully supports Android API 21 (Android 5.0) through Android
-API 29 (Android 10.0). It may be built into an app with an Android
+API 30 (Android 11.0). In order to target Android API 30, you must use Intune App SDK v7.0 or later. It may be built into an app with an Android
 minSDKVersion as low as 14, but on those older OS versions it will be
 impossible to install the Intune Company Portal app or use MAM
 policies.
 
 ### Company Portal app
+
 The Intune App SDK for Android relies on the presence of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal.
 
 > [!NOTE]
@@ -78,6 +81,9 @@ The Intune App SDK for Android relies on the presence of the [Company Portal](ht
 For app protection without device enrollment, the user is _**not**_ required to enroll the device by using the Company Portal app.
 
 ## SDK integration
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Sample app
 An example of how to integrate with the Intune App SDK properly is available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). This example uses the [Gradle build plugin](#gradle-build-plugin).
@@ -100,7 +106,7 @@ If [ProGuard](http://proguard.sourceforge.net/) (or any other shrinking/obfuscat
 the SDK has additional configuration rules which must be included. When including the *.AAR* in your build, our rules are 
 automatically integrated into the proguard step and the necessary class files are kept.
 
-The [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
+The [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
 
 ### Policy enforcement
 The Intune App SDK is an Android library which allows your app to
@@ -2296,29 +2302,29 @@ See the [Testing Guide](app-sdk-android-testing-guide.md).
 [MAMActivity.onMAMCompanyPortalRequired1]: http://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#onMAMCompanyPortalRequired(java.lang.String)
 
 <!-- Intune -->
-["Give your app access to the Intune app protection service (optional)"]: https://docs.microsoft.com/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
+["Give your app access to the Intune app protection service (optional)"]: ./app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional
 
 <!-- Azure Active Directory -->
-[Microsoft Azure Active Directory]: https://azure.microsoft.com/documentation/articles/active-directory-whatis/
+[Microsoft Azure Active Directory]: /azure/active-directory/fundamentals/active-directory-whatis
 [Register your application with Azure Active Directory]: /azure/active-directory/active-directory-app-registration
-[AAD redirect URI]: https://docs.microsoft.com/azure/active-directory/develop/msal-client-application-configuration#redirect-uri
+[AAD redirect URI]: /azure/active-directory/develop/msal-client-application-configuration#redirect-uri
 
 <!-- ADAL -->
-[ADAL]: https://docs.microsoft.com/azure/active-directory/azuread-dev/active-directory-authentication-libraries
+[ADAL]: /azure/active-directory/azuread-dev/active-directory-authentication-libraries
 
 <!-- MSAL-->
-[MSAL]: https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries
+[MSAL]: /azure/active-directory/develop/reference-v2-libraries
 [MSAL repository on GitHub]: https://github.com/AzureAD/microsoft-authentication-library-for-android
 [MSAL Wiki]: https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki
-[Overview of Microsoft Authentication Library (MSAL)]: https://docs.microsoft.com/azure/active-directory/develop/msal-overview
+[Overview of Microsoft Authentication Library (MSAL)]: /azure/active-directory/develop/msal-overview
 [Update your applications to use Microsoft Authentication Library (MSAL)]: https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363
-[Migrate Android ADAL to MSAL]: https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal
-[Differences between ADAL and MSAL]: https://docs.microsoft.com/azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
+[Migrate Android ADAL to MSAL]: /azure/active-directory/develop/migrate-android-adal-msal
+[Differences between ADAL and MSAL]: /azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
 [Using MSAL]: https://github.com/AzureAD/microsoft-authentication-library-for-android#using-msal
-[Configure MSAL to use a broker]: https://docs.microsoft.com/azure/active-directory/develop/brokered-auth#configure-msal-to-use-a-broker
+[Configure MSAL to use a broker]: /azure/active-directory/develop/brokered-auth#configure-msal-to-use-a-broker
 [`IAccount`]: https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAccount.java
 [`IAuthenticationResult`]: https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAuthenticationResult.java
 
 <!-- Sovereign Cloud -->
 [sovereign cloud aware]: https://www.microsoft.com/trustcenter/cloudservices/nationalcloud
-[MSAL configuration file]: https://docs.microsoft.com/azure/active-directory/develop/msal-configuration#multiple_clouds_supported
+[MSAL configuration file]: /azure/active-directory/develop/msal-configuration#multiple_clouds_supported

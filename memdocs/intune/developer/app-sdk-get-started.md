@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/17/2020
+ms.date: 02/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -92,7 +92,8 @@ You will need one of the following developer guides to help you integrate the In
 
 * **[Intune App SDK Xamarin Bindings guide](app-sdk-xamarin.md)**: This document will help you build iOS and Android apps using Xamarin for Intune app protection policies.
 
-
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ## Enable your iOS or Android app for app based Conditional Access
 
