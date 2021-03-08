@@ -163,7 +163,7 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 - The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
 
-  - Enable **Allow peer downloads in this boundary group** option for the Boundary Group which contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+  - Enable **Allow peer downloads in this boundary group** option for the Boundary Group which contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 - Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
 
