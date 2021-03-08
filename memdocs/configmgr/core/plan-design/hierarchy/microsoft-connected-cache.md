@@ -163,12 +163,12 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 - The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
 
+  - Enable **Allow peer downloads in this boundary group** option for the Boundary Group which contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+
 - Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
 
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**
   - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
-
-- Enable the pre-release feature **Client apps for co-managed devices**. For more information, see [Pre-release features](../../servers/manage/pre-release-features.md).
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
