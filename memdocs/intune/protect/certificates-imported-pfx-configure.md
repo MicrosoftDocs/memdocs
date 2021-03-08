@@ -233,7 +233,7 @@ Select the Key Storage Provider that matches the provider you used to create the
    > ```
    > PrivateData = @{
    >     AuthURI = "login.microsoftonline.us"
-   >     GraphURI = "https://graph.microsoft.is"
+   >     GraphURI = "https://graph.microsoft.us"
    >     SchemaVersion = "beta"
    >     }
    > ```
