@@ -126,7 +126,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 >      <appSettings>
 >        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon" />
 >        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses" />
->        <add key="AccountPortalURL" value="https://manage.microsoft.us"
+>        <add key="AccountPortalURL" value="https://manage.microsoft.us" />
 >      </appSettings> 
 >      ```
 >
@@ -139,7 +139,6 @@ Before you begin, [review requirements for the connector](certificate-connectors
 >        <add key="TimerFrequency" value="30000" />
 >        <add key="PfxTimerFrequency" value="30000" />
 >        <add key="PfxImportRecryptionFrequency" value="30000" />
->        <!-- The CloudCAConnTimeoutInMilliseconds will be used to specify Web Service call connection timeout. -->
 >        <add key="CloudCAConnTimeoutInMilliseconds" value="30000" />
 >      ```
 >
