@@ -132,7 +132,7 @@ To migrate a user and their devices to Intune from Basic Mobility and Security, 
 1. Enable [coexistence]( ../fundamentals/mdm-authority-set.md#coexistence). Enabling coexistence will immediately migrate all devices whose users are assigned an Intune license.
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or License administrator rights.
 3. Assign Intune licenses to the users you want to migrate by using Users or Groups:
-    - Assign licenses to **Users**. For more information, see [Assign licenses to users]( https://docs.microsoft.com/azure/active-directory/fundamentals/license-users-groups.md).
+    - Assign licenses to **Users**. For more information, see [Assign licenses to users]( https:/en-us/azure/active-directory/fundamentals/license-users-groups).
     - Assign licenses to **Groups**. For more information, see [Assign licenses to a group]( https://docs.microsoft.com/azure/active-directory/enterprise-users/licensing-groups-assign).
 4. After a user is licensed for Intune, their devices will automatically switch to Intune management at the next device refresh cycle. See [Refresh cycles]( ../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
