@@ -1,65 +1,62 @@
 ---
-title: "Supported configurations"
-titleSuffix: "Configuration Manager"
-description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment."
-ms.date: 10/08/2019
+title: Supported configurations
+titleSuffix: Configuration Manager
+description: Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment.
+ms.date: 03/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Supported configurations for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-As an on-premises solution, Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server, and Azure.
+As an on-premises solution, Configuration Manager makes use of your servers, clients, network configurations, and other products like Microsoft Intune, SQL Server, and Azure.
 
-The information in this and the following topics is essential for helping you identify key configurations, requirements, and limitations, so that you can plan, deploy, and maintain a functional Configuration Manager deployment.  This information is specific to the infrastructure for Configuration Manager sites, hierarchies, and managed devices.
+This information can help you identify key configurations, requirements, and limitations. Use it to plan, deploy, and maintain a functional Configuration Manager deployment. This information is specific to the infrastructure for Configuration Manager sites, hierarchies, and managed devices.
 
-When a Configuration Manager feature or capability requires more specific configurations, that information is included with the feature-specific documentation, and is supplemental to the more general configuration details.  
+When a Configuration Manager feature or capability requires more specific configurations, see the feature-specific documentation. It's supplemental to the more general configuration details.
 
- The products and technologies that are described in the following topics are supported by Configuration Manager. However, their inclusion in this content does not imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager, including any products that are covered under the [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program. For more information about Microsoft Support Lifecycles, visit the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website. For more information about Extended Security Updates in Configuration Manager, see [Supported OS versions for clients and devices for Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+The products and technologies described in these articles are supported by Configuration Manager. However, their inclusion in this content doesn't imply an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This statement includes any products that are covered under the [Extended Security Updates (ESU)](/lifecycle/faq/extended-security-updates) program. For more information about Extended Security Updates in Configuration Manager, see [Supported OS versions for clients and devices for Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
-> [!NOTE]  
->  For information about Microsoft support lifecycle policy, go to the Microsoft Support Lifecycle Support Policy FAQ website at [Microsoft Support Lifecycle Policy FAQ](https://support.microsoft.com/lifecycle).  
+> [!NOTE]
+> For more general information, see the [Microsoft Support Lifecycle](/lifecycle).
 
- Additionally, products and product versions that are not listed in the following topics are not supported with Configuration Manager unless they have been announced on the [Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).  At times, the content on this blog precedes an update to this body of documentation.
+Products and product versions that aren't listed in these articles aren't supported with Configuration Manager unless they're announced on the [Configuration Manager blog](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog). The content on this blog may precede an update to this documentation.
 
+- [Site and site system prerequisites](site-and-site-system-prerequisites.md): Learn about required configurations on a Windows Server to support different site types and site system roles.
 
--  [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md)  
-Learn about how many sites, site system roles per site, and clients or devices are supported in different hierarchy designs for Configuration Manager.
+- [Supported operating systems for site system servers](supported-operating-systems-for-site-system-servers.md): Learn about which operating systems you can use as a site server or site system server.
 
--  [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  
-Learn about configurations that are required on a Windows Server to support different site types and site system roles.
+- [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md): Learn about which operating systems you can manage with Configuration Manager. These include Windows, Windows Embedded, macOS, and mobile devices.
 
--  [Supported operating systems for site system servers](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
-Learn about which operating systems you can use as a site server or site system server.
+- [Support for Windows 10 as a client](support-for-windows-10.md): Learn about the Windows 10 versions that are supported as clients or for OS deployment.
 
--  [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)  
-Learn about which operating systems you can manage with Configuration Manager, including Windows, Windows Embedded, macOS, and mobile devices.
+- [Supported operating systems for the console](supported-operating-systems-consoles.md): Learn about which operating systems can host the Configuration Manager console.
 
--  [Supported operating systems for the console](../../../core/plan-design/configs/supported-operating-systems-consoles.md)  
-Learn about which operating systems can host the Configuration Manager console to provide a point of access for managing your deployment.  
+- [Support for SQL Server versions](support-for-sql-server-versions.md): Learn about which versions of SQL Server can host the site database and reporting database. It also includes required and optional configurations that you can use with SQL Server.
 
--  [Support for SQL Server versions](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
-Learn about which versions of SQL Server can host the site database and reporting database, as well as about required configurations and optional configurations that you can use.
+- [High-availability options](../../servers/deploy/configure/high-availability-options.md): Learn about the options you can implement when designing your environment to help maintain a high level of available service for Configuration Manager.
 
--  [High-availability options](../../servers/deploy/configure/high-availability-options.md)  
-Learn about the options you can implement when designing your environment to help maintain a high level of available service for your Configuration Manager deployment.
+- [Support for Active Directory domains](support-for-active-directory-domains.md): Learn about the supported Active Directory domain configurations that Configuration Manager requires and supports.
 
--  [Recommended hardware](../../../core/plan-design/configs/recommended-hardware.md)  
-Learn about guidelines that can help you identify the right hardware and configurations to host your Configuration Manager sites and key services.
+- [Support for Windows features and networks](support-for-windows-features-and-networks.md): Learn about supported Windows technologies and limitations for use with Configuration Manager. For example, Windows BranchCache and data deduplication.
 
--  [Support for Active Directory domains](../../../core/plan-design/configs/support-for-active-directory-domains.md)  
-Learn about the supported Active Directory domain configurations that Configuration Manager requires and supports.
+- [Support for virtualization environments](support-for-virtualization-environments.md): Learn more about how to use supported virtual machine technologies.
 
--  [Support for Windows features and networks](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
-Learn about supported Windows technologies  (such as BranchCache and data deduplication) and limitations for their use with Configuration Manager.
+- [FAQ for Configuration Manager on Azure](../../understand/configuration-manager-on-azure.md): Answers to common questions about using Configuration Manager on an Azure environment.
 
--  [Support for virtualization environments](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
-Learn more about how to use supported virtual machine technologies.
+Use the following articles to understand Configuration Manager size, scale, and performance:
+
+- [Size and scale numbers](size-and-scale-numbers.md): Learn about how many sites, roles per site, and clients are supported in different hierarchy designs.
+
+- [Recommended hardware](recommended-hardware.md): Learn about guidelines that can help you identify the right hardware and configurations to host your Configuration Manager sites and key services.
+
+- [Site size and performance guidelines](site-size-performance-guidelines.md): Site size-related performance test results, methodology, and guidance.
+
+- [Site size and performance FAQ](../../understand/site-size-performance-faq.md): Answers to common Configuration Manager questions about site sizing and performance.
