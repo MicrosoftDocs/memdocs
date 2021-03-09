@@ -36,7 +36,7 @@ The following table describes known issues that can often be resolved by configu
  <td>Confirm that all of your information is correct at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot. For more information, see <a href="troubleshoot-oobe.md#windows-10-version-1709-and-above">Troubleshoot OOBE issues</a>.</td></tr>
 
 <tr><td>Windows Autopilot user-driven Hybrid Azure AD deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile.</td>
-<td>This issue will occur when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create an additional local account that is a member of the Administrators group. To ensure this works properly, don't create an additional account until after the Windows Autopilot process has completed.</tr>
+<td>This issue will occur when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create another local account that is a member of the Administrators group. To ensure this works properly, don't create another account until after the Windows Autopilot process has completed.</tr>
 
 <tr><td>Windows Autopilot device provisioning can fail with TPM attestation errors or ESP timeouts on devices where the real-time clock is off by a significant amount of time (for example, several minutes or more).</td>
 <td>To fix this issue: <ol><li>Boot the device to the start of the out-of-box experience (OOBE).
@@ -48,11 +48,11 @@ The following table describes known issues that can often be resolved by configu
 <br>&nbsp;<br>
 This issue happens because Windows 10, version 1903 and 1909 deletes the AutopilotConfigurationFile.json file.
 <td>To fix this issue: <ol><li>Edit the Configuration Manager task sequence and disable the <b>Prepare Windows for Capture</b> step.
-<li>Add a new <b>Run command line</b> step that runs <b>c:\windows\system32\sysprep\sysprep.exe /oobe /reboot</b>.</ol>
+<li>Add a new <b>Run command-line</b> step that runs <b>c:\windows\system32\sysprep\sysprep.exe /oobe /reboot</b>.</ol>
 <a href="https://oofhours.com/2019/09/19/a-challenge-with-windows-autopilot-for-existing-devices-and-windows-10-1903/">More information</a></tr>
  
 <tr><td>PushButtonReset (PBR) is taking machines to recovery mode with secure boot enabled: BSOD 0xC000000F.
-<td>The “Enable with UEFI Lock” setting causes this behavior, and is enabled in the Intune Security Baseline. Issue occurs with 1909, this is fixed with later versions of Windows.
+<td>The “Enable with UEFI Lock” setting causes this behavior, and is enabled in the Intune Security Baseline. Issue occurs with 1909, this issue is fixed with later versions of Windows.
 
 <tr><td>Windows Autopilot <a href="self-deploying.md">self-deploying mode</a> fails with an error code:
 <td><table>
