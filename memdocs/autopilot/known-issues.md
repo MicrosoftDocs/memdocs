@@ -58,7 +58,7 @@ This issue happens because Windows 10, version 1903 and 1909 deletes the Autopil
 - Windows Autopilot for existing devices feature doesn't properly suppress “Activities” page during OOBE. (Because of this issue, you’ll see that extra page during OOBE).
 - TPM attestation state isn't cleared by sysprep /generalize, causing TPM attestation failure during later OOBE flow. (This isn’t a particularly common issue, but you could run into it while testing if you're running sysprep /generalize and then rebooting or reimaging the device to go back through an Autopilot pre-provisioning or self-deploying scenario).
 - TPM attestation may fail if the device has a valid AIK cert but no EK cert. (This issue is related to the previous item).
-- If TPM attestation fails during the Windows Autopilot pre-provisioning process, the landing page appears to be hung. (Basically, the pre-provisioning landing page, where you click “Provision” to start the pre-provisioning process, isn’t reporting errors properly).
+- If TPM attestation fails during the Windows Autopilot pre-provisioning process, the landing page appears stop responding. (Basically, the pre-provisioning landing page, where you click “Provision” to start the pre-provisioning process, isn’t reporting errors properly).
 - TPM attestation fails on newer Infineon TPMs (firmware version > 7.69). (Before this fix, only a specific list of firmware versions was accepted).
 - Device naming templates may truncate the computer name at 14 characters instead of 15.
 - Assigned Access policies cause a reboot, which can interfere with the configuration of single-app kiosk devices.

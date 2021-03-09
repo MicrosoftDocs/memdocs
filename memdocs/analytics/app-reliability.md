@@ -84,7 +84,7 @@ The **Device performance** tab displays application reliability insights for eac
 > [!IMPORTANT]
 > App crash events are limited to 10 app crash events per application, per device, per day.
 
-Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app hang events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
+Selecting a device name opens the **Application reliability (preview)** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 ## Known issues
 
@@ -154,4 +154,3 @@ For Each wmiPendingPolicy In wmiObjs
     End If
 Next
 ```
-
