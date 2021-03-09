@@ -24,7 +24,7 @@ ms.topic: troubleshooting
 
 - Windows 10
 
-The following issues are resolved by installing Windows updates. For a list of issues that can be resolved through configuration changes, see [Windows Autopilot - known issues](known-issues).
+The following issues are resolved by installing Windows updates. For a list of issues that can be resolved through configuration changes, see [Windows Autopilot - known issues](known-issues.md).
 
 <table>
 <th>Cumulative update<th>Resolved issues
