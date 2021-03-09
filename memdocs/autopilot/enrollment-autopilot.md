@@ -40,7 +40,7 @@ ms.collection:
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
-> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot). **Assign to User** is not applicable for self-deployment Autopilot mode on Hololens 2.
 
 
 ## Create an Autopilot device group using Intune
