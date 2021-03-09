@@ -39,7 +39,7 @@ Not all updates can be expedited. Currently, only Windows 10 quality updates tha
 
 With expedited updates, you can speed installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
 
-To speed installation, expedite updates uses available services, like WNS and http://channels, to deliver the message to devices that there's an expedited update to install. This enables devices to start the download and install of the expedited update as soon as possible, without having to wait for the device to check in for updates.
+To speed installation, expedite updates uses available services, like WNS and http://channels, to deliver the message to devices that there's an expedited update to install. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
 
 The actual time that a device starts to update depends on the device being online, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
@@ -119,7 +119,7 @@ The following settings on devices should be configured as follows. Review and ap
 | MDM Setting Name  |  Equivalent Group Policy Name       |
 |-------------------|-------------------------------------|
 | **AllowUpdateService** - This policy enables the admin to specify whether they want devices to get updates from the Windows Update endpoint directly, or if they want to get updates only from their specified intranet Microsoft update service location. </br></br> Expedite is only applicable to devices scanning Windows Update directly. </br></br> Use one of the following options: </br> - **Not configured** </br> - **1 Update Service is Allowed** (default)  |  **CorpWuURL** - Specify intranet Microsoft update service location. </br></br> Use one of the following options: </br> - The intranet update location as blank string, or **Not configured** </br> - **1 - Update Service is Allowed** (default)      |
-|**AllowAutoUpdate** - This policy controls how the device downloads and installs updates. For a best experience, Microsoft recommends not configuring this value or configuring it to the default. This ensures that updates automatically download and install at a good time for the end user while having few negative impacts on compliance. </br></br> Expedite can only be effective when the device is automatically downloading and installing updates. If you require end-user interaction, such as notify to download or notify to install, you might be hurting your compliance goals. </br></br> Use one of the following options: </br> - **Not configured** </br> -**2 Auto install and restart** (default)  |  **AutoUpdateCfg** - Configure Automatic Updates. </br></br> Use one of the following options: </br> - **Not configured** </br> - **4 - Schedule an install time with *Scheduled install day* = 0** (every day), and ***Scheduled Install time*** **= Automatic**                                  |
+|**AllowAutoUpdate** - This policy controls how the device downloads and installs updates. For a best experience, Microsoft recommends not configuring this value or configuring it to the default. Use of either configuration ensures that updates automatically download and install at a good time for the end user while having few negative impacts on compliance. </br></br> Expedite can only be effective when the device is automatically downloading and installing updates. If you require end-user interaction, such as notify to download or notify to install, you might be hurting your compliance goals. </br></br> Use one of the following options: </br> - **Not configured** </br> -**2 Auto install and restart** (default)  |  **AutoUpdateCfg** - Configure Automatic Updates. </br></br> Use one of the following options: </br> - **Not configured** </br> - **4 - Schedule an install time with *Scheduled install day* = 0** (every day), and ***Scheduled Install time*** **= Automatic**                                  |
 | **BranchReadinessLevel** - This policy specifies which branch a device receives their updates from. </br></br> Use one of the following options: </br> - **Not configured** </br> - **16 - Semi-Annual Channel** (default)  |  **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received. </br></br> Use one of the following options: </br> - **Not configured** </br> - **Semi-Annual Channel**      |
 | **DisableDualScan** -This policy specifies whether the device gets its Windows Updates from Windows Update and all other updates from the specified server, or to get all updates from the specified server including Windows Updates. </br></br> For expedite to work, devices must scan against Windows Update directly for their Windows updates. </br></br> Use one of the following options: </br> - **Not configured** </br> -**0 – Allow scans against Windows Update**  |  **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update. </br></br> Use one of the following options: </br> - **Not configured** </br>  - **0 - Allow scan against Windows Update**       |
 | **RequireUpdateApproval** - This policy isn't supported for desktop devices. Instead of this policy, use the policy *Update CSP deferrals* or target versions to manage when and which updates are offered. </br></br> Set to: </br> - **Not configured**  |  *Not applicable*     |
@@ -160,22 +160,22 @@ The following settings on devices should be configured as follows. Review and ap
 
 5. In **Settings**, configure **Number of days to wait before forced reboot**. For this setting, select how soon after installing the update a device will automatically restart to complete the update installation. You can select from zero to two days. The automatic restart is canceled if a device manually restarts before the deadline. If an update doesn’t require a restart, this setting isn’t enforced.
 
-   - Setting this to **0 days** means that as soon as the device installs the update, the user is notified about the restart and has limited time to save their work.
+   - A setting of **0 days** means that as soon as the device installs the update, the user is notified about the restart and has limited time to save their work.
 
    > [!IMPORTANT]
    > This experience can impact user productivity. Consider using it for those devices or updates that must complete and restart the device as soon as possible.
 
-   - Setting this to **1 day** or **2 days** provides device users flexibility to manage a restart before it’s forced. These settings correspond to an automatic restart delay of 24 or 48 hours after the update installs on the device.
+   - A setting of **1 day** or **2 days** provides device users flexibility to manage a restart before it’s forced. These settings correspond to an automatic restart delay of 24 or 48 hours after the update installs on the device.
 
      :::image type="content" source="./media/windows-10-expedite-updates/select-reboot-time.png" alt-text="Screen capture of selecting days before forced reboot":::
 
 6. In **Assignments**, select **Add groups** and then select device or user groups to assign the policy.
 
-7. In **Review + create**, select **Create** to create and deploy the policy.
+7. In **Review + create**, select **Create**. After the policy is created it deploys to assigned groups.
 
 ## Identify the latest applicable update
 
-There are some scenarios when your policy to expedite an update results in the installation of a more recent update than specified in policy. This occurs when the newer update includes and surpasses the specified update, and that newer update is available before a device checks in to install the update specified in the expedite update policy. A detailed [example](#example-of-installing-an-expedited-update) of this scenario is provided later in this article.
+There are some scenarios when your policy to expedite an update results in the installation of a more recent update than specified in policy. This result occurs when the newer update includes and surpasses the specified update, and that newer update is available before a device checks in to install the update specified in the expedite update policy. A detailed [example](#example-of-installing-an-expedited-update) of this scenario is provided later in this article.
 
 The more recent quality update installs to help minimize disruptions to the device and device user, while ensuring the benefits of the intended quality update are applied. By only installing the most recent update instead of installing the original, followed by one or more later updates, a single reboot can be used instead of separate reboots for each update.
 
@@ -198,22 +198,22 @@ The following sequence of events provides an example of how two devices, named *
 
 2. On January 19, 2021, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
 
-3. On the 9th of February, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2021 – 2021.02 B Security Updates for Windows 10** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
+3. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2021 – 2021.02 B Security Updates for Windows 10** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
 
-4. On the March 9th patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows 10 update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14th.
+4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows 10 update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14th.
 
 5. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
 
-   - **Test-1** - On March 12th, *Test-1* is powered back on, connects to the network, and receives expedited update notifications:  
+   - **Test-1** - On March 12, *Test-1* is powered back on, connects to the network, and receives expedited update notifications:  
      1. Windows Update determines that *Test-1* still needs to expedite the update installation, per policy.
-     2. Because the March 9th update supersedes the February update, Windows Update could install the March 9th update.
-     3. There is an active deferral for the March update that won't expire until March 14th.
+     2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
+     3. There is an active deferral for the March update that won't expire until March 14.
 
      **Result**: With the deferral policy for the March update still active and blocking installation of that update, *Device-1* installs the February update as configured in policy.
 
-   - **Test-2** - On March 20th, *Test-2* is powered back on, connects to the network, and receives expedited update notifications:  
+   - **Test-2** - On March 20, *Test-2* is powered back on, connects to the network, and receives expedited update notifications:  
      1. Windows Update determines that *Test-2* still needs to expedite the update installation, per policy.
-     2. Because the March 9th update supersedes the February update, Windows Update could install the March 9th update.
+     2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
      3. There is no active deferral for the March update.
 
      **Result**: With the deferral policy for the March update having expired, *Test-2* installs the more recent March update, skipping over the February update and installing a later update than is specified in policy.
