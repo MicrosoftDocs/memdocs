@@ -171,13 +171,13 @@ The following settings on devices should be configured as follows. Review and ap
 
 6. In **Assignments**, select **Add groups** and then select device or user groups to assign the policy.
 
-7. In **Review + create**, select **Create**. After the policy is created it deploys to assigned groups.
+7. In **Review + create**, select **Create**. After the policy is created, it deploys to assigned groups.
 
 ## Identify the latest applicable update
 
-There are some scenarios when your policy to expedite an update results in the installation of a more recent update than specified in policy. This result occurs when the newer update includes and surpasses the specified update, and that newer update is available before a device checks in to install the update specified in the expedite update policy. A detailed [example](#example-of-installing-an-expedited-update) of this scenario is provided later in this article.
+There are some scenarios when your policy to expedite an update results in the installation of a more recent update than specified in policy. This result occurs when the newer update includes and surpasses the specified update, and that newer update is available before a device checks in to install the update that's specified in the expedite update policy. A detailed [example](#example-of-installing-an-expedited-update) of this scenario is provided later in this article.
 
-The more recent quality update installs to help minimize disruptions to the device and device user, while ensuring the benefits of the intended quality update are applied. By only installing the most recent update instead of installing the original, followed by one or more later updates, a single reboot can be used instead of separate reboots for each update.
+Installing the most recent quality update reduces disruptions to the device and user while applying the benefits of the intended update. This avoids having to install multiple updates, which each might require separate reboots.
 
 A more recent update is deployed when the following conditions are met:
 
@@ -188,35 +188,35 @@ A more recent update is deployed when the following conditions are met:
 
 - The device isn't targeted with a deferral policy that blocks installation of a more recent update. In this case, the most recently available update that isn't deferred is the update that installs.
 
-While expedite update policies will override a quality update deferral for the specific update version that’s specified in the policy, they don’t override deferrals that are in place for any other update version.
+While expedite update policies will override an update deferral for the update version that’s specified in the policy, they don’t override deferrals that are in place for any other update version.
 
 ### Example of installing an expedited update
 
-The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2* might receive a more recent update than is specified in the *Windows 10 quality update policy* that the device was assigned.
+The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *Windows 10 quality update policy* that's assigned to the devices.
 
-1. Each month, Intune administrators deploy the most recent Windows 10 quality updates on the fourth Tuesday of the month, giving themselves two weeks after the patch Tuesday event to validate the updates in their environment before installation is forced.
+1. Each month, Intune administrators deploy the most recent Windows 10 quality updates on the fourth Tuesday of the month. This period gives them two weeks after the patch Tuesday event to validate the updates in their environment before they force installation of the update.
 
 2. On January 19, 2021, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
 
 3. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2021 – 2021.02 B Security Updates for Windows 10** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
 
-4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows 10 update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14th.
+4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows 10 update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
 
 5. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
 
    - **Test-1** - On March 12, *Test-1* is powered back on, connects to the network, and receives expedited update notifications:  
      1. Windows Update determines that *Test-1* still needs to expedite the update installation, per policy.
      2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
-     3. There is an active deferral for the March update that won't expire until March 14.
+     3. There's an active deferral for the March update that won't expire until March 14.
 
      **Result**: With the deferral policy for the March update still active and blocking installation of that update, *Device-1* installs the February update as configured in policy.
 
    - **Test-2** - On March 20, *Test-2* is powered back on, connects to the network, and receives expedited update notifications:  
      1. Windows Update determines that *Test-2* still needs to expedite the update installation, per policy.
      2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
-     3. There is no active deferral for the March update.
+     3. There's no longer an active deferral for the March update.
 
-     **Result**: With the deferral policy for the March update having expired, *Test-2* installs the more recent March update, skipping over the February update and installing a later update than is specified in policy.
+     **Result**: With the deferral policy for the March update having expired, *Test-2* installs the more recent March update, skipping over the February update and installing a later update than was specified in policy.
 
 ## Manage policies to expedite quality updates
 
@@ -267,7 +267,7 @@ This report can help you find devices with alerts or errors and can help you tro
 | Pending    | Validating       | The device has been added to the policy in the service and validation that the device can be expedited has begun.  |
 | Pending    | Scheduled        | Device has passed validation and will be expedited. |
 | Offering   | OfferReady       | The expedite instructions have been sent to the device. |
-| Installing | OfferReceived    | Device scanned against Windows Update and the update is applicable but has not yet begun to download. |
+| Installing | OfferReceived    | Device scanned against Windows Update and the update is applicable but hasn't yet begun to download. |
 | Installing | DownloadStart    | The device has begun to download the update. |
 | Installing | DownloadComplete | The device has downloaded the update. |
 | Installing | InstallStart     | The device has begun to install the update. |
