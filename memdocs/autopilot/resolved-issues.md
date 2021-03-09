@@ -2,7 +2,7 @@
 title: Windows Autopilot resolved issues
 ms.reviewer: 
 manager: laurawi
-description: Inform yourself about known issues that may occur during Windows Autopilot deployment.
+description: Inform yourself about issues with Windows Autopilot deployment that can be resolved by applying the latest cumulative update.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
 ms.mktglfcycl: deploy
