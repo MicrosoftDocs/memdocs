@@ -245,6 +245,7 @@ For more information on BitLocker management over CMG, see [Deploy BitLocker man
 <!--6991647-->
 You can now select from scripts that have already been approved when configuring pre and post-scripts for an [orchestration group](../../../sum/deploy-use/orchestration-groups.md). When in the **Create Orchestration Group Wizard**, you'll see a new page called **Script Picker**. Select your pre and post scripts from your list of scripts that are already approved. You can still add scripts manually on the pre and post-script pages. Additionally, you can also edit scripts that you pre-populated from the **Script Picker**.
 
+For more information, see [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md).
 ### Change default maximum run time for software updates
 <!--7833866-->
 Configuration Manager sets the following maximum run time for these categories of software updates:
