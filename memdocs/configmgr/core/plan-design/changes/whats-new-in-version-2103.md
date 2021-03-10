@@ -181,6 +181,8 @@ For device-based deployments, when you disable the deployment or object, use the
 <!--3555940-->
 We've simplified the Windows 10 Servicing dashboard to make it more relevant. The new **Quality Update Versions** chart displays the top five revisions of Windows 10 across your devices. The **Latest Feature Update** chart shows the number of devices that installed the latest feature update. The **Windows 10 Usage** chart, showing the distribution of Windows 10 major releases, was renamed to **Feature Update Versions**. Servicing plan and Windows 10 ring information were removed from the dashboard.
 
+For more information, see [Windows 10 servicing dashboard](../../../osd/deploy-use/manage-windows-as-a-service.md#bkmk_2103-dashboard).
+
 ### Deploy a feature update with a task sequence
 
 <!--3555906-->
