@@ -2,7 +2,7 @@
 title: Changes to CMPivot
 titleSuffix: Configuration Manager
 description: Learn about changes made to CMPivot between Configuration Manager versions.
-ms.date: 08/11/2020
+ms.date: 03/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -16,6 +16,8 @@ manager: dougeby
 
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
 
+## <a name="bkmk_2103"></a> CMPivot changes for version 2103
+<!--7137169-->
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
 <!--6518631-->
 
