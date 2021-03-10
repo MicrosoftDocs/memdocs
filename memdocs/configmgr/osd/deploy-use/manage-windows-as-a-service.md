@@ -53,7 +53,7 @@ For more information about Windows 10 servicing options, see  [Overview of Windo
 <!--3555940-->
 (*Introduced in version 2103*)
 
-Starting in version 2103, the **Windows 10 Servicing** dashboard was simplified to make it more relevant. Servicing plan and Windows 10 ring information were removed from the dashboard. The following charts are displayed:
+Starting in version 2103, the **Windows 10 Servicing** dashboard was simplified to make it more relevant. Servicing plan and Windows 10 ring information were removed from the dashboard. The following charts are displayed for the selected **Collection**:
 
 **Feature Update Versions**: Displays the distribution of Windows 10 major releases. This chart as previously called **Windows 10 Usage**.
 
@@ -63,8 +63,7 @@ Starting in version 2103, the **Windows 10 Servicing** dashboard was simplified 
 
 **Collection Errors**: This tile shows the number of devices that failed with the specified error code. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
 
-**Errors Timeline**: 
-
+**Errors Timeline**: Displays the top errors and the number of devices with each error over the course of time for the chosen collection.
 
 :::image type="content" source="./media/3555940-servicing-dashboard.png" alt-text="The Windows 10 Servicing dashboard in Configuration Manager" lightbox="./media/3555940-servicing-dashboard.png":::
 
@@ -312,11 +311,12 @@ With the release of Windows 10, version 2004, the [SetupDiag](/windows/deploymen
 
 Starting in version 2010, Configuration Manager gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
 
-The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console now includes a tile for **Collection Errors**:
+The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console includes a tile for **Collection Errors**. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 
-:::image type="content" source="media/4385028-collection-errors-tile.jpg" alt-text="Collection Errors tile in Windows 10 Servicing dashboard":::
 
-You can scope the tile to a specific collection. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
+:::image type="content" source="media/4385028-collection-errors-tile.png" alt-text="Collection Errors tile in Windows 10 Servicing dashboard":::
+
+Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 
 ## Next steps
 
