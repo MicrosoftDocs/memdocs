@@ -17,7 +17,7 @@ manager: dougeby
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
 
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
-<!--7137169-->
+<!--7137169, 9442715-->
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
 <!--6518631-->
 
