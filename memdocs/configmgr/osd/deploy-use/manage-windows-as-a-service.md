@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 11/30/2020
+ms.date: 03/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -48,7 +48,30 @@ For more information about Windows 10 servicing options, see  [Overview of Windo
   - [Specify thread priority for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)
   - [Enable Dynamic Update for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_du)<!--4062619-->
 
-## Windows 10 servicing dashboard
+
+## <a name="bkmk_bkmk_2103-dashboard"></a> Windows 10 servicing dashboard in version 2103 or later
+<!--3555940-->
+(*Introduced in version 2103*)
+
+Starting in version 2103, the **Windows 10 Servicing** dashboard was simplified to make it more relevant. Servicing plan and Windows 10 ring information were removed from the dashboard. The following charts are displayed:
+
+**Feature Update Versions**: Displays the distribution of Windows 10 major releases. This chart as previously called **Windows 10 Usage**.
+
+**Quality Update Versions**: This chart displays the top five revisions of Windows 10 across your devices.
+
+**Latest Feature Update**: This chart shows the number of devices that installed the latest feature update.
+
+**Collection Errors**: This tile shows the number of devices that failed with the specified error code. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
+
+**Errors Timeline**: 
+
+
+:::image type="content" source="./media/3555940-servicing-dashboard.png" alt-text="The Windows 10 Servicing dashboard in Configuration Manager" lightbox="./media/3555940-servicing-dashboard.png":::
+
+> [!IMPORTANT]
+> - The information shown in the Windows 10 servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
+> - For more detailed information about Windows 10 builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
+## Windows 10 servicing dashboard in version 2010 and earlier
 
 The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, servicing plans, and compliance information. The data in the Windows 10 servicing dashboard is dependent on the service connection point. The dashboard has the following tiles:
 
