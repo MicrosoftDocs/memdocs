@@ -49,7 +49,7 @@ For more information about Windows 10 servicing options, see  [Overview of Windo
   - [Enable Dynamic Update for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_du)<!--4062619-->
 
 
-## <a name="bkmk_bkmk_2103-dashboard"></a> Windows 10 servicing dashboard in version 2103 or later
+## <a name="bkmk_2103-dashboard"></a> Windows 10 servicing dashboard in version 2103 or later
 <!--3555940-->
 (*Introduced in version 2103*)
 
