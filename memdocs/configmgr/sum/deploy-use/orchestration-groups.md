@@ -56,6 +56,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 - You can have up to 1000 orchestration group members.
 - Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#bkmk_mixed). <!--6389000-->
 - If updates are initiated by users from Software Center, orchestration will be bypassed. <!--6362887-->
+- Starting in Configuration Manager version 2103, updates in the **Definition** [classification](../get-started/configure-classifications-and-products.md) don't require orchestration and will always bypass orchestration group rules. <!--7706596-->
 
 ## Server groups are automatically updated to orchestration groups
 
@@ -147,6 +148,8 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
 
 1. Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
 1. You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
+1. If needed, select **Ignore all applicable windows for the members** to start the installation immediately and bypass maintenance windows. <!--8031298-->
+   - This option was introduced in Configuration Manager version 2103
 1. If an orchestration group is in a *Failed* state:
    1. Determine why the orchestration failed and resolve any issues.
    1. [Reset the orchestration state for group members](#bkmk_reset).
