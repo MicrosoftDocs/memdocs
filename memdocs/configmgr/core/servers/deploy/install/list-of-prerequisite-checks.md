@@ -636,7 +636,7 @@ The Configuration Manager computer is a member of a Windows domain.
 
 <!-- 9390933 -->
 
-Starting in version 2103, if you have site system roles that allow HTTP client connections, you'll see this warning. The most common roles with this configuration are management points and distribution points. To improve the security of client communications, Configuration Manager won't support this configuration in the future. Plan to enable these roles for a more secure communication method with [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+Starting in version 2103, if you have site system roles that allow HTTP client connections, you'll see this warning. The most common roles with this configuration are management points and distribution points. To improve the security of client communications, Configuration Manager won't support this configuration in the future. Plan to enable these roles for a more secure communication method with [HTTPS](../../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
 
 ### Firewall exception for SQL Server (standalone primary site)
 
@@ -784,7 +784,7 @@ _Applies to: Secondary site_
 
 Starting in version 2103, if you have a secondary site that uses SQL Server Express edition, this check warns if the version is earlier than SQL Server 2016 with service pack 2 (13.0.5026.0). If Configuration Manager didn't install SQL Server Express, then setup skips this check. Setup looks for the presence of the CONFIGMGRSEC instance.
 
-Microsoft recommends that you keep SQL Server Express up to date. For more information, see [Security for site administration](../hierarchy/security-and-privacy-for-site-administration.md#update-sql-server-express-at-secondary-sites).
+Microsoft recommends that you keep SQL Server Express up to date. For more information, see [Security for site administration](../../../plan-design/hierarchy/security-and-privacy-for-site-administration.md#update-sql-server-express-at-secondary-sites).
 
 ### SQL Server Native Client
 <!--SCCMDocs-pr issue 3094-->
