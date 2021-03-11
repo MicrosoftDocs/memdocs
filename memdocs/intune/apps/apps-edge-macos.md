@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 ## Prerequisites
 
-- The macOS device must be running macOS 10.12 or later before installing Microsoft Edge.
+- The macOS device must be running macOS 10.14 or later before installing Microsoft Edge.
 
 ## Add Microsoft Edge to Intune
 
