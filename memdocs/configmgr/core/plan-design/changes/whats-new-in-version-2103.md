@@ -301,12 +301,15 @@ This release continues to iterate on the scenario to share apps via the [Communi
 
 <!--8160460-->
 
-This release includes improvements to the [product lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) to make it more actionable for you.
+This release includes improvements to the product lifecycle dashboard to make it more actionable for you.
 
 - Customize the timeframe on the charts for your preference.
 - Search, sort, and filter the data.
 - View a list of devices with products that are near or at end of support, and you need to update.
 
+:::image type="content" source="media/8160460-product-lifecycle-timescale.png" alt-text="Product lifecycle dashboard highlighting new timescale control at 33 months":::
+
+For more information, see [product lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
 ## Content management
 
