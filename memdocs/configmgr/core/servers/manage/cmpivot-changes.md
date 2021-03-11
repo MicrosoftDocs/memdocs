@@ -17,7 +17,37 @@ manager: dougeby
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
 
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
-<!--7137169, 9442715-->
+<!--7137169, 9442715, 9310040, 9391017-->
+Starting in version 2103, the following improvements have been made for CMPivot:
+
+### <a name="bkmk_cmpivot_hub"></a> Access the top queries shared in the Community hub from CMPivot
+Starting in version 2103, you can access the top CMPivot queries shared in the Community hub from on-premises CMPivot. By leveraging pre-created CMPivot queries shared by the broader community, CMPivot users gain access to a wider variety of queries. On-premises CMPivot accesses the Community hub and returns a list of the top downloaded CMPivot queries. Users can review the top queries, customize them, and then run on-demand. This improvement gives a wider selection of queries for immediate usage without having to construct them and also allows information sharing on how to build queries for future reference.
+
+   > [!NOTE]
+   > These queries are available when you run CMPivot from the Configuration Manager console. They're not yet available from [standalone CMPivot](cmpivot.md#install-cmpivot-standalone). <!--9442715, 9310040, 9391017-->
+#### Prerequisites:
+- Meet all of the [CMPivot prerequisites and permissions](cmpivot.md#prerequisites)
+- Enable [Community hub](community-hub.md). You don't need a GitHub account to download content.
+- Verify which [content categories are displayed](community-hub.md#bkmk_category) for community hub
+- Install the Microsoft Edge WebView2 runtime extension from the [Configuration Manager console notification](community-hub.md#bkmk_hub_os)
+
+### Use CMPivot to access the top Community hub queries
+
+1. Go to the **Assets and Compliance** workspace then select the **Device Collections** node.
+1. Select a target collection, target device, or group of devices then select **Start CMPivot** in the ribbon to launch the tool.
+1. Use the Community hub icon on the menu.
+
+    :::image type="content" source="./media/7137169-hub-icon.png" alt-text="Community hub icon":::
+
+1. Review the list of top shared CMPivot queries.
+
+    :::image type="content" source="./media/7137169-cmpivot-hub-queries.png" alt-text="Top CMPivot queries from Community hub" lightbox="./media/7137169-cmpivot-hub-queries.png":::
+
+1. Select one of the top queries to load it into the query pane.
+1. Edit the [query](cmpivot-overview.md) if needed then select **Run Query**.
+1. Optionally, add the original query or your edited version to your favorites list to run later.
+1. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete. If the query has been sent, then clients still send a state message response to the server.
+
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
 <!--6518631-->
 
