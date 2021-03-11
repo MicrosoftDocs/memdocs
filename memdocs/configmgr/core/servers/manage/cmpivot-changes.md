@@ -19,9 +19,22 @@ Use the following information to learn about changes made to [CMPivot](cmpivot.m
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
 <!--7137169, 9442715, 9310040, 9391017-->
 Starting in version 2103, the following improvements have been made for CMPivot:
+- [Export CMPivot data option for when results are too large](#bkmk_export)
+- [Access the top queries shared in the Community hub from CMPivot](#bkmk_cmpivot_hub)
+
+### <a name="bkmk_export"></a> Export CMPivot data option for when results are too large
+<!-- 9306291, 7717129, 5431427-->
+You'll be given an option to export results to a `.csv` file in the warning message for the following scenarios:
+
+- Results are greater than 100,000 cells.
+   - For instance, the warning threshold is reached for 10,000 devices (rows) with 10 columns of entity data.
+- When more than 128 KB of data returned from a given device.
+   - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the limit. When the results are over 128 KB, they won't be returned from the client to the server.
+
+The warning message displayed in these scenarios is **Your query returned a large number of results. Narrow the results by modifying the query, or select this banner to export the results.**
 
 ### <a name="bkmk_cmpivot_hub"></a> Access the top queries shared in the Community hub from CMPivot
-Starting in version 2103, you can access the top CMPivot queries shared in the Community hub from on-premises CMPivot. By leveraging pre-created CMPivot queries shared by the broader community, CMPivot users gain access to a wider variety of queries. On-premises CMPivot accesses the Community hub and returns a list of the top downloaded CMPivot queries. Users can review the top queries, customize them, and then run on-demand. This improvement gives a wider selection of queries for immediate usage without having to construct them and also allows information sharing on how to build queries for future reference.
+Starting in version 2103, you can access the top CMPivot queries shared in the Community hub from on-premises CMPivot. By using pre-created CMPivot queries shared by the broader community, CMPivot users gain access to a wider variety of queries. On-premises CMPivot accesses the Community hub and returns a list of the top downloaded CMPivot queries. Users can review the top queries, customize them, and then run on-demand. This improvement gives a wider selection of queries for immediate usage without having to construct them and also allows information sharing on how to build queries for future reference.
 
    > [!NOTE]
    > These queries are available when you run CMPivot from the Configuration Manager console. They're not yet available from [standalone CMPivot](cmpivot.md#install-cmpivot-standalone). <!--9442715, 9310040, 9391017-->
@@ -31,7 +44,7 @@ Starting in version 2103, you can access the top CMPivot queries shared in the C
 - Verify which [content categories are displayed](community-hub.md#bkmk_category) for community hub
 - Install the Microsoft Edge WebView2 runtime extension from the [Configuration Manager console notification](community-hub.md#bkmk_hub_os)
 
-### Use CMPivot to access the top Community hub queries
+#### Use CMPivot to access the top Community hub queries
 
 1. Go to the **Assets and Compliance** workspace then select the **Device Collections** node.
 1. Select a target collection, target device, or group of devices then select **Start CMPivot** in the ribbon to launch the tool.
