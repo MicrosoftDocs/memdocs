@@ -291,6 +291,8 @@ You can now download console extensions from the [Community hub](../../servers/m
 
 You can now access the top CMPivot queries shared in the Community hub from on-premises CMPivot. By leveraging pre-created CMPivot queries shared by the broader community, CMPivot users gain access to a wider variety of queries. On-premises CMPivot accesses the Community hub and returns a list of the top downloaded CMPivot queries. Users can review the top queries, customize them, and then run on-demand. This improvement gives a wider selection of queries for immediate usage without having to construct them and also allows information sharing on how to build queries for future reference.
 
+For more information, see [Changes to CMPivot in version 2103](../../servers/manage/cmpivot-changes.md#bkmk_2103).
+
 ### Community hub support for application content
 
 <!--7983035-->
