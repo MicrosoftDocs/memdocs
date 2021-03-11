@@ -1,7 +1,7 @@
 ---
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview) 
 titleSuffix: Configuration Manager
-description: "Deploy Microsoft Defender for Endpoint Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
+description: "Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
 ms.date: 03/03/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
