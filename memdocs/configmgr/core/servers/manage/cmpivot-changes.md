@@ -19,19 +19,26 @@ Use the following information to learn about changes made to [CMPivot](cmpivot.m
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
 <!--7137169, 9442715, 9310040, 9391017-->
 Starting in version 2103, the following improvements have been made for CMPivot:
-- [Export CMPivot data option for when results are too large](#bkmk_export)
+- [Warning message and export CMPivot data option when results are too large](#bkmk_export)
 - [Access the top queries shared in the Community hub from CMPivot](#bkmk_cmpivot_hub)
 
-### <a name="bkmk_export"></a> Export CMPivot data option for when results are too large
+### <a name="bkmk_export"></a> Warning message and export CMPivot data option when results are too large
 <!-- 9306291, 7717129, 5431427-->
-You'll be given an option to export results to a `.csv` file in the warning message for the following scenarios:
 
-- Results are greater than 100,000 cells.
+When results are too large the following warning message is displayed:
+
+**Your query returned a large number of results. Narrow the results by modifying the query, or select this banner to export the results.**
+
+This message occurs in the following scenarios:
+
+- When results are greater than 100,000 cells.
    - For instance, the warning threshold is reached for 10,000 devices (rows) with 10 columns of entity data.
-- When more than 128 KB of data returned from a given device.
-   - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the limit. When the results are over 128 KB, they won't be returned from the client to the server.
+   - In this case, you'll be given an option to export results to a `.csv` file
 
-The warning message displayed in these scenarios is **Your query returned a large number of results. Narrow the results by modifying the query, or select this banner to export the results.**
+- When more than 128 KB of data is requested to be returned from a given device.
+   - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the 128 KB limit. 
+   - When the results are over 128 KB, you'll get a warning, but you can't export them since they won't be returned from the client to the server.
+
 
 ### <a name="bkmk_cmpivot_hub"></a> Access the top queries shared in the Community hub from CMPivot
 Starting in version 2103, you can access the top CMPivot queries shared in the Community hub from on-premises CMPivot. By using pre-created CMPivot queries shared by the broader community, CMPivot users gain access to a wider variety of queries. On-premises CMPivot accesses the Community hub and returns a list of the top downloaded CMPivot queries. Users can review the top queries, customize them, and then run on-demand. This improvement gives a wider selection of queries for immediate usage without having to construct them and also allows information sharing on how to build queries for future reference.
