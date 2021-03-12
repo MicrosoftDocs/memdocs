@@ -109,7 +109,7 @@ Also on the **Content** tab, select **Maintenance Windows** to show the availabl
 
 Support Center is now split into the following tools:
 
-- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to [Collect selected data](../../support/support-center-ui-reference.md#collect-selected-data).
+- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
 
 - **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
 
@@ -118,6 +118,8 @@ The following tools are still a part of Support Center:
 - **Support Center Viewer**
 - **Support Center OneTrace**
 - **Support Center Log File Viewer**
+
+For more information, see [Support Center](../../support/support-center.md).
 
 ### OneTrace support for jump lists
 

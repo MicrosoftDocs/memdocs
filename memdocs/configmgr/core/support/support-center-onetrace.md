@@ -1,8 +1,8 @@
 ---
-title: Support Center OneTrace (Preview)
+title: Support Center OneTrace
 titleSuffix: Configuration Manager
 description: OneTrace is a new log viewer with Support Center that has improvements over CMTrace.
-ms.date: 04/01/2020
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Support Center OneTrace (Preview)
+# Support Center OneTrace
 
 <!--3555962-->
 
-Starting in version 1906, OneTrace is a new log viewer with Support Center. It works similarly to CMTrace, with the following improvements:
+OneTrace is a new log viewer with Support Center. It works similarly to CMTrace, with the following improvements:
 
 - A tabbed view
 - Dockable windows
@@ -45,8 +45,8 @@ OneTrace installs with Support Center. Find the Support Center installer on the 
 
 By default, the OneTrace application is installed at `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe`.
 
-> [!Note]  
-> Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.  
+> [!NOTE]
+> Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use [CMTrace](cmtrace.md) in boot images with task sequence deployments.
 
 ## Log groups
 
@@ -92,8 +92,6 @@ The `GroupType` property accepts the following values:
 
 The `GroupFilePath` property can include an explicit path for the log files. If it's blank, OneTrace relies upon the registry configuration for the group type. For example, if you set `GroupType=1`, by default OneTrace will automatically look in `C:\Windows\CCM\Logs` for the logs in the group. In this example, you don't need to specify `GroupFilePath`.
 
-## See also
+## Next steps
 
-- [Support Center log viewer](support-center-ui-reference.md#bkmk_log-viewer)
-
-- [CMTrace](cmtrace.md)
+[User interface reference](support-center-ui-reference.md)
