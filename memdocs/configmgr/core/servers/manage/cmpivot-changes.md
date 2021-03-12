@@ -25,7 +25,7 @@ Starting in version 2103, the following improvements have been made for CMPivot:
 ### <a name="bkmk_export"></a> Warning message and export CMPivot data option when results are too large
 <!-- 9306291, 7717129, 5431427-->
 
-When results are too large the following warning message is displayed and you'll be given an option to export results to a `.csv` file:
+When results are too large the following warning message is displayed:
 
 **Your query returned a large number of results. Narrow the results by modifying the query, or select this banner to export the results.**
 
@@ -33,12 +33,11 @@ This message occurs in the following scenarios:
 
 - When results are greater than 100,000 cells.
    - For instance, the warning threshold is reached for 10,000 devices (rows) with 10 columns of entity data.
+   - In this case, you'll be given an option to export results to a `.csv` file
 
-- When more than 128 KB of data returned from a given device.
+- When more than 128 KB of data is requested to be returned from a given device.
    - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the 128 KB limit. 
    - When the results are over 128 KB, you'll get a warning, but you can't export them since they won't be returned from the client to the server.
-
-In both of the scenarios, if the data exceeds the 128 KB maximum, you'll need to narrow the query results to export the data. 
 
 
 ### <a name="bkmk_cmpivot_hub"></a> Access the top queries shared in the Community hub from CMPivot
