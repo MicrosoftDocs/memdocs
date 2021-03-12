@@ -201,4 +201,4 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 - [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
 - [Monitor disk encryption](../protect/encryption-monitor.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
-- [Known issues for Enforcing BitLocker policies with Intune](windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

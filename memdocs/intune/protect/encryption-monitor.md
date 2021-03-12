@@ -206,4 +206,4 @@ Windows 10 BitLocker:
 - [Manage BitLocker policy](../protect/encrypt-devices.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Manage FileVault policy](encrypt-devices-filevault.md)
-- [Known issues for Enforcing BitLocker policies with Intune](windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
