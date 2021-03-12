@@ -42,7 +42,7 @@ Create a complete *troubleshooting bundle* file (.zip) that captures the client 
 
       - **Client log files**: All log files from the Configuration Manager clients, by default in `C:\Windows\CCM\logs`. It also includes log files for client setup, by default in `C:\Windows\ccmsetup\Logs`.
 
-      - **Client configuration**: Information from the Configuration Manager client. For example, the version, the assigned site and maangement point, and if it's internet facing. This option is always enabled.
+      - **Client configuration**: Information from the Configuration Manager client. For example, the version, the assigned site and management point, and if it's internet facing. This option is always enabled.
 
       - **Operating system**: Information about the computer. For example, Windows install, network adapters, and system services. This option is always enabled.
 
@@ -86,7 +86,7 @@ Beyond these basic capabilities, Support Center can also collect a wide variety 
 
 - **Certificates**: Public key information for client certificates. Support Center doesn't collect certificate private keys.
 
-- **Debug dumps**: Perform debug dump of client and related processes. Debug dumps can be large. Only enable this option when troubleshooting issues with client performance.
+- **Debug dumps**: Collect a debug dump of client and related processes. Debug dumps can be large. Only enable this option when troubleshooting issues with client performance.
 
     > [!WARNING]
     > Collecting debug dumps will cause data bundles to become very large. In some cases, the size can be several hundred MB.
