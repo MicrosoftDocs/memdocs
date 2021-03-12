@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2021
+ms.date: 03/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -65,7 +65,7 @@ Before you deploy Intune policies to Configuration Manager devices, complete the
 
 The following tasks are completed in the Configuration Manager console. If youâ€™re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
-1. [Confirm your Configuration Manage environment](#task-1-confirm-your-configuration-manage-environment)
+1. [Confirm your Configuration Manager environment](#task-1-confirm-your-configuration-manager-environment)
 2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
 3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
 4. [Enable collections to support Intune policies](#task-4-enable-collections-for-endpoint-security-policies)
@@ -76,7 +76,7 @@ The following tasks are completed in the Configuration Manager console. If youâ€
 > - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
 > - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
-### Task 1: Confirm your Configuration Manage environment
+### Task 1: Confirm your Configuration Manager environment
 
 Intune policies for Configuration Manager devices require different minimum versions of Configuration Manager, depending on when the policy was first released. Review the [Configuration Manager version requirements for Intune endpoint security policies](#configuration-manager-version-requirements-for-intune-endpoint-security-policies) found earlier in this article to ensure your environment supports the policies you plan to use. A more recent version of Configuration Manager will support policies that require an earlier version.
 
