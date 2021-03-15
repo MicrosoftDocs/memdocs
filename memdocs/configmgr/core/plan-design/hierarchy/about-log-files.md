@@ -46,7 +46,7 @@ Starting in version 1906, **OneTrace** is a new log viewer with Support Center. 
 
 ### Support Center log viewer
 
-**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log Viewer reference](../../support/support-center-ui-reference.md#bkmk_log-viewer).
+**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log Viewer](../../support/support-center-ui-reference.md#support-center-log-viewer).
 
 > [!Note]  
 > Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.

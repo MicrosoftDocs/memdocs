@@ -420,7 +420,7 @@ A Configuration Manager client downloads its client policy on a schedule that yo
 
 ### <a name="bkmk_policy-support"></a> Start client policy retrieval with Support Center
 
-Use Support Center to request and view client policy. For more information, see [Support Center reference](../../support/support-center-ui-reference.md#bkmk_support-policy).
+Use Support Center to request and view client policy. For more information, see [Support Center reference](../../support/support-center-ui-reference.md#policy-tab).
 
 ### <a name="bkmk_policy-script"></a> Start client policy retrieval by script  
 
