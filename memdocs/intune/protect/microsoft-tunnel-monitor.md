@@ -31,7 +31,7 @@ After installation of Microsoft Tunnel, you can view the server configuration an
 
 ## Use the admin center UI
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to *Tenant administration* > *Microsoft Tunnel Gateway*, and select the **Health status** tab.
+Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to *Tenant administration* > *Microsoft Tunnel Gateway*, and select the **Health check** tab.
 
 Select a server to view the following information about it:
 
