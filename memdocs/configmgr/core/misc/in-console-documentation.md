@@ -87,16 +87,6 @@ Articles with a recent and significant update:
 | 2/10/2021 | [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions?WT.mc_id=configmgr-console) |
 | 2/5/2021 | [Internet access requirements](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints?WT.mc_id=configmgr-console) |
 
-<!--
-PowerShell cmdlet articles with recent updates:
-
-| Last reviewed | Title |
-|---------------|-------|
-| 1/5/2021 | [Set-CMDeploymentTypeSupersedence (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdeploymenttypesupersedence?WT.mc_id=configmgr-console) |
-| 1/5/2021 | [Get-CMObjectLockDetails (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmobjectlockdetails?WT.mc_id=configmgr-console) |
-| 1/4/2021 | [New-CMRequirementRuleOperatingSystemValue (ConfigurationManager)](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmrequirementruleoperatingsystemvalue?WT.mc_id=configmgr-console) |
--->
-
 ## Troubleshooting articles
 
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
