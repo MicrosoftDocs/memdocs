@@ -26,7 +26,7 @@ Different update versions are identified by year and month. For example, version
 
 Use the following links to discover what's new with each supported version:
 
-- [What's new in version 2103](whats-new-in-version-2102.md)
+- [What's new in version 2103](whats-new-in-version-2103.md)
 - [What's new in version 2010](whats-new-in-version-2010.md)
 - [What's new in version 2006](whats-new-in-version-2006.md)
 - [What's new in version 2002](whats-new-in-version-2002.md)

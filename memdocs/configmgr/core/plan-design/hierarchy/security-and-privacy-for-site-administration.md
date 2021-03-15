@@ -2,7 +2,7 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 12/23/2020
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -243,6 +243,9 @@ Install only the minimum IIS features for the site system role that you install.
 When clients connect to a site system by using HTTP rather than by using HTTPS, they use Windows authentication. This behavior might fall back to using NTLM authentication rather than Kerberos authentication. When NTLM authentication is used, clients might connect to a rogue server.  
 
 The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security best practices for content management](security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
 
 ### Configure a certificate trust list (CTL) in IIS for site system roles
 

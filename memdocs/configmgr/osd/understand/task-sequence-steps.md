@@ -432,7 +432,7 @@ Specify the time zone to configure on the destination computer. The value that t
 
 <!--5411057, 5138936-->
 
-Starting in version 1910, control the language configuration during OS deployment. If you're already applying these language settings, this change can help you simplify your OS deployment task sequence. Instead of using multiple steps per language or separate scripts, use one instance per language of this step with a condition for that language.
+Use these settings to control the language configuration during OS deployment. If you're already applying these language settings, this change can help you simplify your OS deployment task sequence. Instead of using multiple steps per language or separate scripts, use one instance per language of this step with a condition for that language.
 
 Configure the following settings:
 
@@ -568,7 +568,7 @@ Captures the network adapter configuration of the destination computer. It captu
 
 - Global network settings  
 - Number of adapters  
-- The following network settings associated with each adapter: DNS, WINS, IP, and port filters
+- The following network settings associated with each adapter: DNS, IP, and port filters
 
 
 
@@ -1036,7 +1036,7 @@ If the task sequence fails to download a package, it starts to download the next
 
 ### <a name="bkmk_note1"></a> Note 1: Use of boot images in the Download Package Content step
 
-*Applies to version 1910 and later*<!-- SCCMDocs-pr #4202 -->
+<!-- SCCMDocs-pr #4202 -->
 
 If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
 
@@ -1137,7 +1137,7 @@ By default or if not specified, the step continues to use the default encryption
 By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 > [!TIP]
-> Starting in version 1910, you can create and deploy BitLocker management policies, which use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](../../protect/plan-design/bitlocker-management.md).
+> You can also use Configuration Manager to create and deploy BitLocker management policies. These policies use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](../../protect/plan-design/bitlocker-management.md).
 
 #### Choose where to create the recovery key
 
@@ -1987,9 +1987,9 @@ Examples:
 
 <!--user story 4977616/bug 4798352-->
 
-Starting in version 1910, save the command output to a custom task sequence variable.
+Use this setting to save the command output to a custom task sequence variable.
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager limits this output to the last 1000 characters.
 
 #### Disable 64-bit file system redirection
@@ -2151,8 +2151,8 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 <!-- 3556028 -->
 Save the script output to a custom task sequence variable.
 
-> [!Note]  
-> Starting in version 1910, Configuration Manager limits this output to the last 1000 characters.
+> [!NOTE]
+> Configuration Manager limits this output to the last 1000 characters.
 
 For an example of how to use this step property, see [How to set variables](using-task-sequence-variables.md#bkmk_run-ps).
 
@@ -2200,9 +2200,6 @@ Include other exit codes from the script that the step should evaluate as succes
 
 
 ## <a name="child-task-sequence"></a> Run Task Sequence
-
-> [!Note]  
-> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 This step runs another task sequence. It creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 

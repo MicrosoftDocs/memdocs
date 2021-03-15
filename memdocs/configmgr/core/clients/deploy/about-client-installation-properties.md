@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 02/04/2021
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -570,7 +570,7 @@ Specify a DNS domain for clients to locate management points that you publish in
 > [!NOTE]
 > You don't have to specify this property if the client is in the same domain as a published management point. In that case, the client's domain is automatically used to search DNS for management points.
 
-For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location).
+For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#determine-assigned-management-point).
 
 > [!NOTE]  
 > By default, Configuration Manager doesn't enable DNS publishing.
@@ -713,19 +713,18 @@ By default, the client installer uses `PU`. It first checks the installation pro
 
 Example: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
+<!-- 9460840
 ### SMSDIRECTORYLOOKUP
 
-Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.
+Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients can fallback to this method when they can't find a management point in Active Directory Domain Services or in DNS.
 
-This property doesn't affect whether the client uses WINS for name resolution.
+> [!IMPORTANT]
+> WINS is a deprecated service. For more information, see [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top).
 
-You can configure two different modes for this property:
-
-- **NOWINS**: This value is the most secure setting for this property. It prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet. For example, Active Directory Domain Services or DNS publishing.
-
-- **WINSSECURE** (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
+Use the **NOWINS** value for this setting. This value is the most secure setting for this property. It prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet. For example, Active Directory Domain Services or DNS publishing. For more information about this process, see [How clients find site resources and services](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).
 
 Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
+-->
 
 ### SMSMP
 

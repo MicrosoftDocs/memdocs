@@ -2,7 +2,7 @@
 title: Fundamentals of security
 titleSuffix: Configuration Manager
 description: Learn about the layers of security in Configuration Manager.
-ms.date: 10/22/2018
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -92,6 +92,9 @@ The final layer of security is based on permissions to objects in the site datab
  Configuration Manager secures client communication to site system roles by using either self-signed or PKI certificates, or Azure Active Directory (Azure AD) tokens. Some scenarios require the use of PKI certificates. For example, [internet-based client management](../clients/manage/plan-internet-based-client-management.md), and for [mobile device clients](../../mdm/plan-design/plan-on-premises-mdm.md).  
 
  You can configure the site system roles to which clients connect for either HTTPS or HTTP client communication. Client computers always communicate by using the most secure method that's available. Client computers only fall back to using the less secure communication method if you have site systems roles that allow HTTP communication.  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
 
  For more information, see [Plan for security](../plan-design/security/plan-for-security.md).
 

@@ -2,7 +2,7 @@
 title: Configure CMG client authentication
 titleSuffix: Configuration Manager
 description: Select an authentication method for clients to use a cloud management gateway (CMG).
-ms.date: 09/28/2020
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -182,6 +182,9 @@ These tables summarize whether the management point requires HTTP or HTTPS, depe
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**.
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**.
 - *E-HTTP*: On the site properties, **Communication Security** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, and the HTTP management point is ready for both HTTP and HTTPS communication.
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
 ##### For internet-based clients communicating with the CMG
 
