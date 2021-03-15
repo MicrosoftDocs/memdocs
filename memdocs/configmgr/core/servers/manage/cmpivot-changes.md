@@ -55,7 +55,7 @@ Starting in version 2103, you can access the top CMPivot queries shared in the C
 
 1. Go to the **Assets and Compliance** workspace then select the **Device Collections** node.
 1. Select a target collection, target device, or group of devices then select **Start CMPivot** in the ribbon to launch the tool.
-1. Use the Community hub icon on the menu.
+1. Use the community hub icon on the menu.
 
     :::image type="content" source="./media/7137169-hub-icon.png" alt-text="Community hub icon":::
 
@@ -65,7 +65,7 @@ Starting in version 2103, you can access the top CMPivot queries shared in the C
 
 1. Select one of the top queries to load it into the query pane.
 1. Edit the [query](cmpivot-overview.md) if needed then select **Run Query**.
-1. Optionally, add the original query or your edited version to your favorites list to run later.
+1. Optionally, select the folder icon to access your favorites list. Add the original query or your edited version to your favorites list to run later. Select the community hub icon to search for another query. 
 1. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete. If the query has been sent, then clients still send a state message response to the server.
 
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
