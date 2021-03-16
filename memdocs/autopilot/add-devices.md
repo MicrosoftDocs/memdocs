@@ -121,6 +121,35 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 
 5. Refresh the view to see the new devices.
 
+## Edit Autopilot device attributes
+
+After you've uploaded an Autopilot device, you can edit certain attributes of the device.
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
+2. Select the device you want to edit.
+3. In the pane on the right of the screen, you can edit:
+    - Device name.
+    - Group tag.
+    - User Friendly Name (if you've assigned a user).
+4. Select **Save**.
+
+> [!NOTE]
+> Device names can be configured for all devices, but are ignored in Hybrid Azure AD joined deployments. Device name still comes from the domain join profile for Hybrid Azure AD devices.
+
+## Delete Autopilot devices
+
+You can delete Windows Autopilot devices that aren't enrolled into Intune:
+
+- Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**. Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
+
+Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. These deletions can all be done from Intune:
+
+1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+
+2. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
+
+3. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** >. Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
+
 ## Next steps
 
 [Create device groups](enrollment-autopilot.md): Device groups are used to apply Autopilot deployment profiles.

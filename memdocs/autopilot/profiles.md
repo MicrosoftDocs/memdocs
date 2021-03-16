@@ -90,6 +90,20 @@ After you've created an Autopilot deployment profile, you can edit certain parts
     > [!NOTE]
     > Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that has already enrolled in Intune until after the device is reset and reenrolled.
 
+## Alerts for Windows Autopilot unassigned devices <!-- 163236 --> 
+
+Alerts will show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them.
+
+To see alerts for unassigned devices, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**. 
+
+## Autopilot deployments report
+
+You can see details on each device deployed through Windows Autopilot.
+To see the report, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
+The data is available for 30 days after deployment.
+
+This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment won't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
+
 ## Related topics
 
 [Profile download](troubleshooting.md#profile-download)<br>
