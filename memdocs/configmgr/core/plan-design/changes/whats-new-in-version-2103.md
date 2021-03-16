@@ -89,22 +89,6 @@ Starting in this release, you can now configure a client setting to use the WebV
 
 ### Improvements to Support Center
 
-<!--8272488-->
-
-When you troubleshoot software update deployments, you might ask the following questions:
-
-- Are any updates missing or failing?
-- Are specific updates deployed to a device?
-- What are the error codes for a deployment?
-- Why didn't the device reboot during a maintenance window?
-- What's the current state of an update?
-
-Support Center already shows updates that are targeted to the device but not yet installed. Now in this release, select **All Updates** on the **Content** tab of Support Center to show all updates targeted to the device. To help you troubleshoot, this list includes information about whether the update is installed or missing.
-
-Also on the **Content** tab, select **Maintenance Windows** to show the available maintenance windows for the device.
-
-### Changes to Support Center
-
 <!--8693068-->
 
 Support Center is now split into the following tools:
