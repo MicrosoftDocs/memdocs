@@ -109,7 +109,7 @@ For more information, see [Support Center](../../support/support-center.md).
 
 <!--6991505-->
 
-[Support Center OneTrace](../../support/support-center-onetrace.md) now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
+Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
 
 There are now three methods to open recent files in OneTrace:
 
@@ -117,6 +117,7 @@ There are now three methods to open recent files in OneTrace:
 - Windows Start menu recently opened list
 - In OneTrace from **File** menu or **Recently opened** tab.
 
+For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
 
 ## Collections
 

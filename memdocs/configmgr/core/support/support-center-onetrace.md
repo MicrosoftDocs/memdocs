@@ -24,8 +24,9 @@ OneTrace is a new log viewer with Support Center. It works similarly to CMTrace,
 - Ability to enable filters without leaving the log view
 - Scrollbar hints to quickly identify clusters of errors
 - Fast log opening for large files
+- Windows jump lists for recently opened files (version 2103 and later)
 
-[![Screenshot of OneTrace log viewer](media/3555962-onetrace.png)](media/3555962-onetrace.png#lightbox)
+:::image type="content" source="media/3555962-onetrace.png" alt-text="Screenshot of Support Center OneTrace log viewer" lightbox="media/3555962-onetrace.png":::
 
 OneTrace works with many types of log files, such as:
 
@@ -46,7 +47,7 @@ OneTrace installs with Support Center. Find the Support Center installer on the 
 By default, the OneTrace application is installed at `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe`.
 
 > [!NOTE]
-> Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use [CMTrace](cmtrace.md) in boot images with task sequence deployments.
+> Support Center Log File Viewer and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use [CMTrace](cmtrace.md) in boot images with task sequence deployments.
 
 ## Log groups
 
@@ -60,7 +61,7 @@ Starting in version 2002, OneTrace supports customizable log groups, similar to 
 
 To show log groups, go to the **View** menu, and select **Log groups**.
 
-![Screenshot of OneTrace log group for application management](media/5559993-onetrace-log-groups.png)
+:::image type="content" source="media/5559993-onetrace-log-groups.png" alt-text="Screenshot of Support Center OneTrace log group for application management":::
 
 ### Customize log groups
 
@@ -91,6 +92,39 @@ The `GroupType` property accepts the following values:
 - `2`: Configuration Manager server logs
 
 The `GroupFilePath` property can include an explicit path for the log files. If it's blank, OneTrace relies upon the registry configuration for the group type. For example, if you set `GroupType=1`, by default OneTrace will automatically look in `C:\Windows\CCM\Logs` for the logs in the group. In this example, you don't need to specify `GroupFilePath`.
+
+## Open recent files
+
+<!--6991505-->
+
+Starting in version 2103, OneTrace supports Windows jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
+
+There are three methods to open recent files in OneTrace:
+
+- Windows taskbar jump list
+- Windows Start menu recently opened list
+- In OneTrace from **File** menu or **Recently opened** tab.
+
+### Windows taskbar jump list
+
+When the OneTrace icon is on the Windows taskbar, right-click it, and then select a file from the **Recently opened** list.
+
+:::image type="content" source="media/6991505-onetrace-jump-list.png" alt-text="Support Center OneTrace jump list from Windows taskbar with recently opened list":::
+
+### Windows Start menu recently opened list
+
+Go to the **Start** menu, and type `onetrace`. Select a file from the **Recently opened** list.
+
+:::image type="content" source="media/6991505-onetrace-start-menu.png" alt-text="Support Center OneTrace in Windows Start menu with recently opened list":::
+
+### OneTrace recently opened list
+
+There are two locations in OneTrace that show the list of recently opened files:
+
+- The **Recently opened** tab in the lower right corner.
+- Go to the **File** menu and select a file at the bottom of the menu.
+
+:::image type="content" source="media/6991505-onetrace-recently-opened.png" alt-text="Support Center OneTrace recently opened lists":::
 
 ## Next steps
 
