@@ -16,6 +16,7 @@ manager: dougeby
 The [community hub](../../../../core/servers/manage/community-hub.md) supports sharing extensions to the Configuration Manager console. To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following:
 
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
+
 - A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following:
    - A manifest file named `manifest.xml`
    - The author and [version](/dotnet/api/system.version) of the extension must be listed in the `manifest.xml`
@@ -34,6 +35,7 @@ Creating your extension for community hub isn't much different from how it was d
    - You can't create wizards by using the existing Configuration Manager console framework.
    - You can't modify or remove steps from the existing Configuration Manager wizards.
 
+Once you have the items created, you'll create the `manifest.xml` file, then package them all together in an authenticode-signed `.cab` file.
 
 ## <a name="bkmk_cab"></a> Create a valid payload cab file
 
@@ -43,53 +45,76 @@ Creating your extension for community hub isn't much different from how it was d
    - All relevant files for the extension must be in the `.cab` file
      - Each file must be listed in the manifest and have the correct name and SHA256 hash
 
-Sample xml file:
+Manifest.xml format:
 
 ```xml
 <CustomExtensionManifest ExtensionID="{A GUID to identify this extension}" Name="{Name of the extension to be shown in the Console Extension node}" Description="{Description of the extension to be shown in the Console Extension node" Version="{The version of the extension to be shown in the Console Extension node. For example:1.0}" Author="{The author of the extension to be shown in the Console Extension node}">
-   <Deployments>
-     <ActionExtensionDeployment ParentNode="{the GUID that identify the folder/node you want to place the action under}">
-       <FileList>
-         <File Name="{The name of the xml file that defines the action. For example: MyAction.xml}">
-           <Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-         </File>
-       </FileList>
-     </ActionExtensionDeployment>
-     <NodeExtensionDeployment ParentNode="{the GUID that identify the folder you want to place the node under}">
-       <FileList>
-         <File Name="{The name of the xml file that defines the node. For example: MyNode.xml}">
-           <Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-         </File>
-       </FileList>
-     </NodeExtensionDeployment>
-     <FormExtensionDeployment>
-       <FileList>
-         <File Name="{The name of the xml file that defines the form. For example: MyForm.xml}">
-           <Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-         </File>
-         <File Name="{The name of the dll file that defines the form. For example: MyForm.dll}">
-           <Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-         </File>
-       </FileList>
-     </FormExtensionDeployment>
-<ManagementClassExtensionDeployment>
-<FileList>
-<File Name="{The name of the xml file that defines the wmi class. For example: MyClass.xml}">
-<Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-</File>
-<File Name="{The name of the dll file that defines the wmi class. For example: MyClass.dll}">
-<Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-</File>
-</FileList>
-</ManagementClassExtensionDeployment>
-<ViewExtensionDeployment>
-<FileList>
-<File Name="{The name of the dll file that defines the view. For example: MyView.dll}">
-<Hash Algorithm="sha256">{The sha256 of this file}</Hash>
-</File>
-</FileList>
-</ViewExtensionDeployment>
-</Deployments>
+	<Deployments>
+		<ActionExtensionDeployment ParentNode="{the GUID that identify the folder/node you want to place the action under}">
+			<FileList>
+				<File Name="{The name of the xml file that defines the action. For example: MyAction.xml}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+			</FileList>
+		</ActionExtensionDeployment>
+		<NodeExtensionDeployment ParentNode="{the GUID that identify the folder you want to place the node under}">
+			<FileList>
+				<File Name="{The name of the xml file that defines the node. For example: MyNode.xml}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+			</FileList>
+		</NodeExtensionDeployment>
+		<FormExtensionDeployment>
+			<FileList>
+				<File Name="{The name of the xml file that defines the form. For example: MyForm.xml}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+				<File Name="{The name of the dll file that defines the form. For example: MyForm.dll}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+			</FileList>
+		</FormExtensionDeployment>
+		<ManagementClassExtensionDeployment>
+			<FileList>
+				<File Name="{The name of the xml file that defines the WMI class. For example: MyClass.xml}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+				<File Name="{The name of the dll file that defines the WMI class. For example: MyClass.dll}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+			</FileList>
+		</ManagementClassExtensionDeployment>
+		<ViewExtensionDeployment>
+			<FileList>
+				<File Name="{The name of the dll file that defines the view. For example: MyView.dll}">
+					<Hash Algorithm="sha256">{The SHA256 hash of this file}</Hash>
+				</File>
+			</FileList>
+		</ViewExtensionDeployment>
+	</Deployments>
+</CustomExtensionManifest>
+```
+
+Example manifest.xml file:
+
+```xml
+<CustomExtensionManifest ExtensionID="808b9ce3-e574-49be-82be-64ed35d800c5" Name="Nice Console Node and Console Action Extension" Description="Very Useful Extension" Version="1.1" Author="Me">
+	<Deployments>
+		<NodeExtensionDeployment ParentNode="d61498cb-7b3f-4748-ae3e-026674fb0cbd">
+			<FileList>
+				<File Name="Test.xml">
+					<Hash Algorithm="sha256">543F2947AEA734B6833F275091AC6A159C0FCD341373D6E53062E37281B602B3</Hash>
+				</File>
+			</FileList>
+		</NodeExtensionDeployment>
+      <ActionExtensionDeployment ParentNode="172d85e7-bb7a-4479-a6a2-768f175b75cb">
+        <FileList>
+          <File Name="Test2.xml">
+            <Hash Algorithm="sha256">C60FB69B86BF9B2E924FF272292CA2C97864D636B8190C95DC926049651A002E</Hash>
+          </File>
+        </FileList>
+      </ActionExtensionDeployment>
+	</Deployments>
 </CustomExtensionManifest>
 ```
 
@@ -97,13 +122,11 @@ Sample xml file:
 
 When you have your extension built, you'll want to test it in a Configuration Manager environment. You'll do this by sending it through the [administration service](../../../adminservice/usage.md).
 
-
 ```powershell
-$adminServiceURL = "https://server.contoso.com/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
+$adminServiceProvider = "SMSProviderServer.contoso.com"
 $cabFilePath = "C:\Testing\MyExtension.cab"
-
+$adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
 $cabFileName = (Get-Item -Path $cabFilePath).Name
-
 $Data = Get-Content $cabFilePath
 $Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
 $base64Content = [Convert]::ToBase64String($Bytes)
@@ -119,41 +142,12 @@ $Body = @{
             }
         } | ConvertTo-Json
 
-Invoke-RestMethod -Method Post -Uri "$($adminServiceURL)" -Body $Body -Headers $Headers -UseDefaultCredentials | Out-Null
-```
-
-Take 2 
-
-```powershell
-$adminServiceProvider = "server.contoso.com"
-$cabFilePath = "C:\Testing\MyExtension.cab"
-$adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
-$cabFileName = (Get-Item -Path $cabFilePath).Name
-$Data = Get-Content $cabFilePath
-$Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
-$base64Content = [Convert]::ToBase64String($Bytes)
-$Headers = @{​​​​​
-    "Content-Type" = "Application/json"
-}​​​​​
-$Body = @{​​​​​
-            CabFile = @{​​​​​
-                FileName = $cabFileName
-                FileContent = $base64Content
-            }​​​​​
-        }​​​​​ | ConvertTo-Json
 $result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
-if ($result.StatusCode -eq 200) {​​​​​Write-Host "$cabFileName was published successfully."}​​​​​ 
-else {​​​​​Write-Host "$cabFileName upload failed. Please review AdminService.log for more information."}​​​​​
+
+if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
+else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
 ```
 
+## Next steps
 
-<!--
-
-When you get an extension from the hub, it's available in the **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
-
-After you approve an extension, when you open the console, you'll see a [console notification](../../../../servers/manage/community-hub.md#bkmk_hub_os). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension.
-
-## Prerequisites
-To register a console extension for download in community hub, you'll need to meet all fo the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
-
--->
+- [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md)
