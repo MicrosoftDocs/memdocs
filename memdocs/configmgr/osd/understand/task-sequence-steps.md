@@ -787,6 +787,8 @@ Starting in version 2002, this step includes eight new checks. None of these new
 
 Starting in version 2006, this step includes includes a check to determine if the device uses UEFI, **Computer is in UEFI mode**.<!--6452769-->
 
+Starting in version 2103, the task sequence progress displays more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements of this step, the user can select an option to **Inspect**. This action shows the checks that failed on the device. For more information, see [User experiences for OS deployment](user-experience.md#task-sequence-error).<!--8888218-->
+
 > [!IMPORTANT]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 

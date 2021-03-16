@@ -211,7 +211,11 @@ You can now upgrade a client's Windows OS by using a feature update deployed wit
 
 <!--8888218-->
 
-The task sequence progress can now display more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements configured in the **Check readiness** task sequence step, the user can now see more details about the failed prerequisites. They still see the common "task sequence error" message, but can now select an option to **Inspect**. This action shows the checks that failed on the device.
+The task sequence progress can now display more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements configured in the **Check readiness** task sequence step, the user can now see more details about the failed prerequisites.
+
+:::image type="content" source="media/8888218-task-sequence-check-readiness-failure.png" alt-text="Task sequence check readiness failure":::
+
+For more information, see [User experiences for OS deployment](../../../osd/understand/user-experience.md#task-sequence-error).
 
 ### Encryption algorithm to capture and restore user state
 
