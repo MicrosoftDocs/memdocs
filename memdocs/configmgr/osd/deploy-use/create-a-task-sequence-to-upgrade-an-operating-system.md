@@ -62,7 +62,7 @@ If you need to create a new task sequence, you need an OS upgrade package to com
 >
 > You can create a custom task sequence and add the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) step. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the **Upgrade OS** step. Make sure to use the setting for **The currently installed default operating system** to restart the computer into the installed OS and not Windows PE.
 
-If you have an existing Windows 10 in-place upgrade task sequence, edit or copy it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
+If you have an existing Windows 10 in-place upgrade task sequence, [edit](../understand/task-sequence-editor.md#bkmk_edit) or [copy](manage-task-sequences-to-automate-tasks.md#copy) it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
 
 ## Create a task sequence to upgrade an OS
 
