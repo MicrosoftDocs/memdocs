@@ -170,6 +170,6 @@ When it deploys successfully, you can use the monitoring and reporting features 
 
 ## Next steps
 
-[Overview of guided scenarios](guided-scenarios-overview.md)
+[Guided scenarios overview](guided-scenarios-overview.md)
 
 [Windows 10 in cloud configuration](https://aka.ms/cloud-config)
