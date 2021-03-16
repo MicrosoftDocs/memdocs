@@ -186,7 +186,7 @@ The `localizationType` parameter controls localization behavior for the report. 
 
 This value for the `localizationType` parameter is the default value. It will be inserted automatically if the `localizationType` parameter is not specified. This value specifies that Intune provides two columns for each localizable column.
 - *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column will be under the original column name (see example).</li><li>
-- *localized string value*: This column  will be the original column name with _loc appended. It will contain string values that are human readable, and locale conditional (see exmple).
+- *localized string value*: This column  will be the original column name with _loc appended. It will contain string values that are human readable, and locale conditional (see example).
 
 #### Example
 
