@@ -223,6 +223,11 @@ For more information, see [User experiences for OS deployment](../../../osd/unde
 
 The task sequence steps to **Capture User State** and **Restore User State** always encrypt the USMT state store. Previously, Configuration Manager configured USMT to use the 3DES algorithm. Starting in this release, both steps now use the highest supported encryption algorithm, **AES 256**.
 
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm.
+
+For more information, see [About task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState).
+
 ### Improvements to OS deployment
 
 This release includes the following improvements to OS deployment:

@@ -637,6 +637,11 @@ Enter the Windows account that has permissions to the specified network share. S
 
 This step uses the User State Migration Tool (USMT) to capture user state and settings from the computer running the task sequence. This task sequence step is used in conjunction with the **Restore User State** task sequence step. This step always encrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
+Starting in version 2103, this step and the **Restore User State** step use the current highest supported encryption algorithm, **AES 256**.<!--9171505-->
+
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm. If necessary, you can manually restore the user state and explicitly use the USMT parameter `/decrypt:3DES`.
+
 For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 If you want to save and restore user state settings from a state migration point, use this step with the **Request State Store** and **Release State Store** steps.  
@@ -1871,6 +1876,11 @@ Use this step to initiate the User State Migration Tool (USMT) to restore user s
 For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 Use this step with the **Request State Store** and **Release State Store** steps to save or restore the state settings with a state migration point. This option always decrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
+
+Starting in version 2103, this step and the **Capture User State** step use the current highest supported encryption algorithm, **AES 256**.<!--9171505-->
+
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm. If necessary, you can manually restore the user state and explicitly use the USMT parameter `/decrypt:3DES`.
 
 The **Restore User State** step provides control over a limited subset of the most commonly used USMT options. Specify additional command-line options with the **OSDMigrateAdditionalRestoreOptions** variable.  
 
