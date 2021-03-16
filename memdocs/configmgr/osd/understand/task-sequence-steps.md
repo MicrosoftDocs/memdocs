@@ -2311,7 +2311,7 @@ To set a dynamic variable for use in the task sequence, add a rule. Then set a v
 
     Specify an asterisk (`*`) and question mark (`?`) as wild cards characters. The asterisk matches multiple characters and the question mark matches a single character. For example, the string `DELL*900?` matches both `DELL-ABC-9001` and `DELL9009`.  
 
-- **Task Sequence Variable**: Add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
+- **Task Sequence Variable**: Add a [task sequence variable](task-sequence-variables.md), condition, and value to evaluate. The conditions are the same as for [step conditions](using-task-sequence-variables.md#bkmk_access-condition). The rule evaluates to true when the value set for the variable meets the specified condition.
 
     Specify one or more variables to set for a rule that evaluates to true, or set variables without using a rule. Select an existing variable, or create a custom variable.  
 
