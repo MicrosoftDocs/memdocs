@@ -42,43 +42,65 @@ With Windows 10 in cloud configuration:
 > [!TIP]
 > To learn more about Windows 10 in cloud configuration, see [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
 
-## What the guided scenario does
+## What this guided scenario does
 
-Using Microsoft Endpoint Manager, you can use a guided scenario that deploys a cloud configuration. The guided scenario automatically creates all the resources you need, including the following resources:
+Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a cloud configuration. The guided scenario automatically creates all the resources you need, including the following resources:
 
 - Creates a new Azure AD security group, or uses an existing Azure AD security group.
 - Deploys the Microsoft Edge and Microsoft Teams apps. For more information on deploying these apps individually, see:
   - [Add Microsoft Edge for Windows 10](../apps/apps-windows-edge.md)
   - [Add Microsoft 365 apps to Windows 10 devices](../apps/apps-add-office365.md)
-- Creates a Windows 10 security baseline profile. For more information about security baselines, and what they do, see [Use security baselines to configure Windows 10 devices](../protect/security-baselines.md).
-- Creates a Windows Autopilot enrollment profile. For more information on creating your own Autopilot profile, see [Configure Autopilot profiles](../autopilot/profiles.md).
-- Configures the Autopilot enrollment status page (ESP). For more information about the ESP, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+
+- Creates a Windows 10 security baseline policy with recommended security settings that are already configured.
+
+  For more information about security baselines, and what they do, see [Use security baselines to configure Windows 10 devices](../protect/security-baselines.md).
+
+- Creates a Windows Autopilot enrollment profile that automatically enrolls devices in Microsoft Intune.
+
+  For more information on creating your own Autopilot profile, see [Configure Autopilot profiles](../../autopilot/profiles.md).
+
+- Turns on and configures the Autopilot enrollment status page (ESP) to show users the enrollment progress.
+
+  For more information about the ESP, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+
 - Creates an administrative template that configures OneDrive with the Known Folder Move settings. With these settings, user files and data are automatically saved in OneDrive.
 
   For information on this setting, see [Redirect and move Windows known folders](/onedrive/redirect-known-folders).
 
-- Creates an administrative template that configures some settings in the Microsoft Edge app. For more information on creating your own profile, see [Configure Microsoft Edge policy settings](../configuration/administrative-templates-configure-edge.md).
+- Creates an administrative template that configures some SmartScreen settings in the Microsoft Edge app. For more information on creating your own profile, see [Configure Microsoft Edge policy settings](../configuration/administrative-templates-configure-edge.md).
 
 - Creates a compliance policy that monitors compliance and health. Users are allowed to use noncompliant devices, and access resources. If your organization blocks access to non-compliant devices, then create another compliance policy that blocks access, and assign it to the same group.
 
   For more information on the compliance settings you can configure on your own, see [Windows 10 and later settings to mark devices as compliant or not compliant](../protect/compliance-policy-create-windows.md).
 
-- Deploys a Windows PowerShell script that removes built-in apps, and simplifies the Start menu. For more information about PowerShell scripts, see [Use PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md).
-- Creates a Windows 10 update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates. For more information about update rings, and creating your policy, see [Windows 10 update rings policy](../protect/windows-10-update-rings.md).
+- Deploys a Windows PowerShell script that removes built-in apps, and simplifies the Start menu.
+
+  For more information about PowerShell scripts, see [Use PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md).
+
+- Creates a Windows 10 update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
+
+  For more information about update rings, and creating your policy, see [Windows 10 update rings policy](../protect/windows-10-update-rings.md).
 
 > [!TIP]
 > This guided scenario creates all these resources for you, automatically. If you want create your own individual resources, and not use the guided scenario, then you can. For the specific steps, see the overview and setup guide at [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
 
 ## Prerequisites
 
-- At a minimum, you must have the Microsoft 365 E3 license. For more security options and features, it's recommended to use the Microsoft 365 E5 license. To help decide which license is right for your organization, see [Transform your enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
+- At a minimum, you must have the following licenses:
+
+  - Azure Active Directory Premium P1
+  - Microsoft Intune
+  - Microsoft Teams
+  - OneDrive for Business
+  - Windows 10 Pro
+
+  All of these services are included with the Microsoft 365 E3 license. For more security options and features, it's recommended to use the Microsoft 365 E5 license. To help decide which license is right for your organization, see [Transform your enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
+
 - [Set the MDM authority to Intune](mdm-authority-set.md). The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
 - At a minimum, your devices must be running Windows 10 version 1903.
-- Sign in as the Intune Service Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+- Sign in as the Intune Service Administrator, also known as the Intune Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Step 1 - Introduction
-
-Create the guided scenario:
 
 1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows 10 in cloud configuration** > **Start**.
@@ -129,10 +151,10 @@ Select the apps you want to deploy to devices. Microsoft recommends deploying th
 
 Select the groups that will receive this guided scenario, and all the resources it creates.
 
-- **Create new group**: Creates a new group, and deploys the guided scenario policies to this group.
+- **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they'll start to receive this guided scenario.
   - **Group name**: Enter the group name. For example, enter `Cloud configured devices`.
 
-- **Choose an existing group**: Select an existing group, and deploy the guided scenario policies to this group.
+- **Choose an existing group**: Select an existing group. You guided scenario policies are deployed to this group.
 
 - Select **Next**.
 
@@ -149,12 +171,13 @@ Look at the following properties:
 
   :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Review and the Windows 10 in cloud configuration guided scenario deployment status in Microsoft Intune and Endpoint Manager.":::
 
-If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/cloud-config) may be a good resource.
+If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/cloud-config) is also a good resource.
 
 When it deploys successfully, you can use the monitoring and reporting features in the Endpoint Manager admin center:
 
 - [Intune reports](reports.md)
 - [Monitor device profiles](../configuration/device-profile-monitor.md)
+- [Monitor security baselines and profiles](../protect/security-baselines-monitor.md)
 
 ## What you need to know
 
@@ -162,14 +185,16 @@ When it deploys successfully, you can use the monitoring and reporting features 
 
   For information on the policy refresh times, see [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-- Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add on any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
+- Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy these policies to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
 - Microsoft doesn't recommend using Windows 10 in cloud configuration with shared devices. Shared devices typically have multiple users that sign in and sign out.
-- To remove the guided scenario resources from devices, go to each resource, and then configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario. Setting to **Not configured** will remove the configured settings from the devices. Then, you can delete the individual items in the cloud config, including apps, policies, the Windows PowerShell script, and the group.
+- After the guided scenario is deployed, you can go to a policy, and see the settings and their configured values. You can change any of these settings to another value, if you like.
+- To remove the guided scenario settings from devices, go to each policy created by the cloud config guided scenario. Configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario.
 
-  After you remove the settings, and delete the resources, the devices won't be protected.
+  Changing a policy setting to **Not configured** might keep the current configuration on the device. It might not revert the setting to the value before the guided scenario. Once set to **Not configured**, another policy can update the setting.
+
+  Now, you can delete the individual items created by this guided scenario, including apps, policies, the Windows PowerShell script, and the group.
 
 ## Next steps
 
-[Guided scenarios overview](guided-scenarios-overview.md)
-
-[Windows 10 in cloud configuration](https://aka.ms/cloud-config)
+- To learn more about guided scenarios, and see what other scenarios are available, go to [Guided scenarios overview](guided-scenarios-overview.md).
+- To learn more about Windows 10 in a cloud configuration, see [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
