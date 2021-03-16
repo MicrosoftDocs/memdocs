@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll devices with Windows Autopilot - Microsoft Intune | Microsoft Docs
+title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Windows 10 devices using Windows Autopilot.
+description: Learn how to create device groups for Windows Autopilot.
 keywords:
-author: ErikjeMS
-ms.author: erikje
-manager: dougeby
-ms.date: 12/16/2020
+author: greg-lindsay
+ms.author: greglin
+manager: laurawi
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -70,6 +70,10 @@ ms.collection:
       **Save** your expressions.
 
 3. Select **Create**.
+
+## Add devices
+
+For information about formatting and using a CSV file to manually add Windows Autopilot devices, see [Manually register devices with Windows Autopilot](add-devices.md).
 
 ## Edit Autopilot device attributes
 

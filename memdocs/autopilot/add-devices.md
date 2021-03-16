@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -52,18 +52,18 @@ For more information about registering HoloLens 2 devices with Windows Autopilot
 - [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
-### Required permissions
+## Required permissions
 
 Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](../intune/fundamentals/role-based-access-control.md) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
 
-### Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
+## Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
 Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows 10 devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
 
 > [!Note]
 > Before uploading the CSV file on Intune, please make sure that the first row contains the device serial number, Windows product ID, hardware hash, group tag, and assigned user. If there is header information on the top of CSV file, please delete that header information. See details at [Enroll Windows devices in Intune](/intune/enrollment/enrollment-autopilot).
 
-### Collecting the hardware hash from existing devices using PowerShell
+## Collecting the hardware hash from existing devices using PowerShell
 
 The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
 
