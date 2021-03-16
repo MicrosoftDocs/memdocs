@@ -691,11 +691,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/autopilot/enrollment-autopilot.md?WT.mc_id=Portal-Microsoft_Intune_Enrollment#add-devices",
-            "redirect_url": "/mem/autopilot/add-devices#add-devices",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "memdocs/autopilot/enrollment-autopilot.md#add-devices",
             "redirect_url": "/mem/autopilot/add-devices#add-devices",
             "redirect_document_id": false
