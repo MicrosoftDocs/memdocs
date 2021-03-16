@@ -93,10 +93,7 @@ You can use scope tags to determine who can see client app information in Intune
 ## Add the app
 When you've completed configuring, select **Add** from the **App app** pane. 
 
-The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
-
-> [!NOTE]
-> Currently, Apple does not provide a way for Intune to uninstall Microsoft Edge on macOS devices.
+The app you've created is displayed in the apps list, where you can assign it to the groups that you select.
 
 ## Next steps
 - To learn how to configure Microsoft Edge on macOS devices, see [Configure Microsoft Edge on macOS devices](/deployedge/configure-microsoft-edge-on-mac).
