@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 01/13/2021
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -2236,8 +2236,6 @@ Manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#11
 - [Remove-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/remove-cmtsstepruntasksequence)
 - [Set-CMTSStepRunTaskSequence](/powershell/module/configurationmanager/set-cmtsstepruntasksequence)
 
-For more information, see [1906 release notes - New cmdlets](/powershell/sccm/1906-release-notes#new-cmdlets).
-
 ### Properties for Run Task Sequence
 
 On the **Properties** tab for this step, configure the settings described in this section.  
@@ -2471,9 +2469,9 @@ When you run an OS deployment task sequence on an internet-based client, that's 
 
 ## <a name="BKMK_UpgradeOS"></a> Upgrade Operating System
 
-Use this step to upgrade an older version of Windows to a newer version of Windows 10.  
+Use this step to upgrade an older version of Windows to a newer version of Windows 10.
 
-This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
+This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
@@ -2484,11 +2482,11 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 ### Variables for Upgrade OS
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [_SMSTSOSUpgradeActionReturnCode](task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)  
+- [_SMSTSOSUpgradeActionReturnCode](task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)
 - [SetupCompletePause](task-sequence-variables.md#SetupCompletePause)
-- [OSDSetupAdditionalUpgradeOptions](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)  
+- [OSDSetupAdditionalUpgradeOptions](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)
 
 ### Cmdlets for Upgrade OS
 
@@ -2501,35 +2499,49 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 ### Properties for Upgrade OS
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Upgrade package
 
-Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.  
+Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.
 
 #### Source path
 
 Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
 
-You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.  
+You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.
 
 #### Edition
 
-Specify the edition within the OS media to use for the upgrade.  
+Specify the edition within the OS media to use for the upgrade.
 
 #### Product key
 
-Specify the product key to apply to the upgrade process.  
+Specify the product key to apply to the upgrade process.
+
+#### Install the following feature updates
+
+<!--3555906-->
+Starting in version 2103, select this option to upgrade a client's Windows OS by using a feature update. This option uses a single ESD file that you synchronize through the software update point. The size of the ESD file is generally smaller than the WIM image file and the OS upgrade package.
+
+Select the new button (gold asterisk), and add a feature update.
+
+> [!NOTE]
+> You can only add feature updates.
+
+If your environment supports multiple languages or architectures, add multiple feature updates to the step. The client uses the first applicable update that's not superseded by any other deployed updates.
+
+The user experience with a feature update in a task sequence is the same as with an OS upgrade package.
 
 #### Provide the following driver content to Windows Setup during upgrade
 
 Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
-Specify one of the following options:  
+Specify one of the following options:
 
 - **Driver package**: Select **Browse** and choose an existing driver package from the list.
 
-- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
+- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.
 
 > [!TIP]
 > If you want to have dynamic content for multiple types of hardware:
@@ -2540,7 +2552,7 @@ Specify one of the following options:
 
 #### Time-out (minutes)
 
-Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.  
+Specify the number of minutes before Configuration Manager fails this step. This option is useful if Windows Setup stops processing but doesn't terminate.
 
 #### Perform Windows Setup compatibility scan without starting upgrade
 
@@ -2549,25 +2561,25 @@ Perform the Windows Setup compatibility scan without starting the upgrade proces
 <!--SCCMDocs-pr issue 2812-->
 When you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](provisioning-mode.md).
 
-Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
+Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:
 
-|Exit code|Details|  
-|-|-|  
-|MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|  
-|MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility issues.|  
-|MOSETUP_E_COMPAT_MIGCHOICE_BLOCK (0xC1900204)|Selected migration choice isn't available. For example, an upgrade from Enterprise to Professional.|  
-|MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|  
-|MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|  
+|Exit code|Details|
+|-|-|
+|MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|
+|MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility issues.|
+|MOSETUP_E_COMPAT_MIGCHOICE_BLOCK (0xC1900204)|Selected migration choice isn't available. For example, an upgrade from Enterprise to Professional.|
+|MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Not eligible for Windows 10.|
+|MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Not enough free disk space.|
 
-For more information about this parameter, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
+For more information about this parameter, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).
 
 #### Ignore any dismissible compatibility messages
 
-Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option `/Compat IgnoreWarning`.  
+Specifies that Setup completes the installation, ignoring any dismissible compatibility messages. This setting corresponds to the Windows Setup command-line option `/Compat IgnoreWarning`.
 
 #### Dynamically update Windows Setup with Windows Update
 
-Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.  
+Enable setup to perform Dynamic Update operations, such as search, download, and install updates. This setting corresponds to the Windows Setup command-line option `/DynamicUpdate`. This setting isn't compatible with Configuration Manager software updates. Enable this option when you manage updates with stand-alone Windows Server Update Services (WSUS) or Windows Update for Business.
 
 #### Override policy and use default Microsoft Update
 
