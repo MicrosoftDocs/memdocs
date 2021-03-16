@@ -254,7 +254,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     >
     > Temporary sessions are enabled by default and allow your users to sign in to a shared iPad without a Managed Apple ID account. You can disable temporary sessions on shared iPads by configuring iOS/iPadOS Shared iPad [device restriction settings](../configuration/device-restrictions-ios.md).  
 
-13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**. For iOS/iPadOS 13.0 and later, Apple deprecated this setting. 
+13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**. 
 
      > [!NOTE]
      > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
