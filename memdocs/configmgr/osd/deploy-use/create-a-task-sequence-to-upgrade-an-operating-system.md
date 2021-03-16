@@ -58,13 +58,13 @@ Before you create the task sequence, make sure the following requirements are in
 If you need to create a new task sequence, you need an OS upgrade package to complete the Create Task Sequence Wizard.
 
 > [!NOTE]
-> To create a task sequence to upgrade an OS to Windows 10, you typically use the steps in the section to [Create a task sequence to upgrade an OS](#create-a-task-sequence-to-upgrade-an-OS). The task sequence includes the **Upgrade OS** step, as well as additional recommended steps and groups to handle the end-to-end upgrade process.
+> To create a task sequence to upgrade an OS to Windows 10, you typically use the steps in the section to [Create a task sequence to upgrade an OS](#create-a-task-sequence-to-upgrade-an-os). The task sequence includes the **Upgrade OS** step, as well as additional recommended steps and groups to handle the end-to-end upgrade process.
 >
 > You can create a custom task sequence and add the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) step. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the **Upgrade OS** step. Make sure to use the setting for **The currently installed default operating system** to restart the computer into the installed OS and not Windows PE.
 
 If you have an existing Windows 10 in-place upgrade task sequence, edit or copy it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
 
-## Create a task sequence to upgrade an OS  
+## Create a task sequence to upgrade an OS
 
 To upgrade the OS on clients, create a task sequence and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard adds the task sequence steps to upgrade the OS, apply software updates, and install applications.
 
