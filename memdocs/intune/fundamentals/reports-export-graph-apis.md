@@ -35,22 +35,31 @@ All reports that have been migrated to the Intune reporting infrastructure will 
 > [!NOTE]
 > For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports based on the following Microsoft Graph API endpoint:
+Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
 
-## Default columns verse specific columns	
+## Selecting columns	
 
-When you use the Graph API to export Intune reports without selecting any columns for a report, you will receive the default column set. For example, you can request the default column set of the `Devices` report using the following HTTP request:	
+Select which columns you would like the report to contain using an HTTP POST request: 
 
 ```http	
-{	
-    "reportName": "Devices",	
-    "filter": "", 	
-    "select": "" 	
-}	
+{"reportName":"Devices", 
+    "filter":"(OwnerType eq '1')", 
+    “localizationType": "LocalizedValuesAsAdditionalColumn" 
+    "select": 
+        ["DeviceName", 
+        "managementAgent", 
+        "ownerType", 
+        "complianceState", 
+        "OS", 
+        "OSVersion", 
+        "LastContact", 
+        "UPN", 
+        "DeviceId"] 
+} 
 ```	
 
 If you need specific columns that are not included in the default column set, such as `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`, you can explicitly retrieve these columns. Additionally, you can specify that report data that you export contains localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports.
@@ -162,11 +171,54 @@ You can then directly download the compressed CSV from the `url` field.
 
 ## Report parameters
 
-There are three main parameters you can submit in your request body to define the export request: 
+There are four main parameters you can submit in your request body to define the export request: 
 
 - `reportName`: Required. This parameter is the name of the report you want to specify.  
-- `filter`: Not required for most reports. 
-- `select`: Not required. If you don't specify a `select` value you will receive a default set of columns, which for most reports is the entire dataset. 
+- `filter`: Not required for most reports. Note that the filter parameter is a string.
+- `select`: Not required. Specify which columns from the report you want. Only valid column names relevant to the report you are calling will be accepted.  
+- `localizationType`: This parameter controls localization behavior for the report. Possible values are `LocalizedValuesAsAdditionalColumn` and `ReplaceLocalizableValues`.
+
+## Localization behavior
+
+The `localizationType` parameter controls localization behavior for the report. The possible values for this parameter are `LocalizedValuesAsAdditionalColumn` and `ReplaceLocalizableValues`.
+
+### LocalizedValuesAsAdditionalColumn report value
+
+This value for the `localizationType` parameter is the default value. It will be inserted automatically if the `localizationType` parameter is not specified. This value specifies that Intune provides two columns for each localizable column.
+- *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column will be under the original column name (see example).</li><li>
+- *localized string value*: This column  will be the original column name with _loc appended. It will contain string values that are human readable, and locale conditional (see exmple).
+
+#### Example
+
+|         OS  |            OS_loc        |
+|-|-|
+|         1  |            Windows        |
+|         1  |            Windows        |
+|         1  |            Windows        |
+|         2  |            iOS        |
+|         3  |            Android        |
+|         4  |            Mac        |
+
+
+### ReplaceLocalizableValues report value
+
+ReplaceLocalizableValues report value will only return one column per localized attribute. This column will contain the original column name with the localized values.
+
+#### Example 
+
+|         OS        |
+|-|
+|         Windows        |
+|         Windows        |
+|         Windows        |
+|         iOS        |
+|         Android        |
+|         Mac        |
+
+For columns without localized values, only a single column with the true column name and the true column values are returned.  
+
+> [!IMPORTANT]
+> The `localizationType` parameter is relevant for any export experience hosted by Intune's reporting infrastructure with a few exceptions. The`Devices` and `DevicesWithInventory` report types will not honor the `localizationType` parameter due to legacy compatibility requirements.
 
 ## Available reports
 
