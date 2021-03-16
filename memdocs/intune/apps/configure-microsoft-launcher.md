@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -104,7 +104,7 @@ In addition to the list of configurable settings listed in the Configuration Des
             "managedProperty": [
                 {
                     "key": "package",
-                    "valueString": ""
+                    "valueString": "com.android.settings"
                 },
                 {
                     "key": "class",
@@ -131,11 +131,11 @@ In addition to the list of configurable settings listed in the Configuration Des
                 },
                 {
                     "key": "position",
-                    "valueInteger": 0
+                    "valueInteger": 1
                 },
                 {
                     "key": "package",
-                    "valueString": ""
+                    "valueString": "com.android.settings"
                 },
                 {
                     "key": "class",
@@ -157,11 +157,11 @@ In addition to the list of configurable settings listed in the Configuration Des
             "managedProperty": [ 
                 { 
                     "key": "label",
-                    "valueString": "" 
+                    "valueString": "weblink" 
                 },  
                 { 
                     "key": "link", 
-                    "valueString": "" 
+                    "valueString": "https://www.microsoft.com" 
                 } 
             ] 
         }
@@ -174,19 +174,19 @@ In addition to the list of configurable settings listed in the Configuration Des
             "managedProperty": [ 
                 { 
                     "key": "type",  
-                    "valueString": "" 
+                    "valueString": "weblink" 
                 },  
                 { 
                     "key": "position",  
-                    "valueInteger": 
+                    "valueInteger": 2
                 },  
                 { 
                     "key": "label",  
-                    "valueString": "" 
+                    "valueString": "Microsoft" 
                 },  
                 { 
                     "key": "link",  
-                    "valueString": "" 
+                    "valueString": "https://www.microsoft.com" 
                 } 
             ] 
         }
@@ -281,7 +281,7 @@ The following is an example JSON script with all the available configuration key
                         },  
                         { 
                             "key": "link", 
-                            "valueString": "https://www.bbc.com" 
+                            "valueString": "https://www.contoso.com" 
                         } 
                     ] 
                 }
@@ -370,7 +370,7 @@ The following is an example JSON script with all the available configuration key
                         }, 
                         {
                             "key": "link", 
-                            "valueString": "https://www.bbc.com"
+                            "valueString": "https://www.contoso.com"
                         }
                     ]
                 }
