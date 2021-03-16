@@ -234,8 +234,6 @@ This release includes the following improvements to OS deployment:
 
 - Task sequence conditions now include a **not like** operator. This operator applies to task sequence variable conditions. It's also used in the [Set Dynamic Variable](../../../osd/understand/task-sequence-steps.md#BKMK_SetDynamicVariables) task sequence step.<!--8764365-->
 
-- This release fixes issues with the [SMSTSDisableStatusRetry](../../../osd/understand/task-sequence-variables.md#SMSTSDisableStatusRetry) task sequence variable.<!-- 8727206 -->
-
 - The [Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness) task sequence step now also checks free space on disks without partitions.<!-- 8751864  -->
 
 - The following PowerShell cmdlets now have an **Index** parameter:<!-- 8559060 -->
