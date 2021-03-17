@@ -66,9 +66,9 @@ Before you deploy Intune policies to Configuration Manager devices, complete the
 The following tasks are completed in the Configuration Manager console. If you’re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
 1. [Confirm your Configuration Manager environment](#task-1-confirm-your-configuration-manager-environment)
-2. [Configure tenant attach and synchronize devices](#Task-2-Configure-tenant-attach-and-synchronize-devices)  
-3. [Select devices to synchronize](#Task-3-Select-devices-to-synchronize)
-4. [Enable collections for endpoint security policies](#task-4-enable-collections-for-endpoint-security-policies)
+2. [Configure tenant attach and synchronize devices](#task-2-configure-tenant-attach-and-synchronize-devices)
+4. [Select devices to synchronize](#task-3-select-devices-to-synchronize)
+5. [Enable collections for endpoint security policies](#task-4-enable-collections-for-endpoint-security-policies)
 
 > [!TIP]
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
