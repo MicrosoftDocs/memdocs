@@ -22,6 +22,7 @@ Starting in Configuration Manager version 2103, the [community hub](../../../../
 
 - Configuration Manager version 2103, or later
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
+- Configuration Manager **Full Administrator** with **All** scope rights.
 
 - A [valid payload](#bkmk_cab) in an authenticode-signed `.cab` file once you're ready to publish. Your `.cab` file must contain the following items:
    - A manifest file named `manifest.xml`
@@ -129,7 +130,7 @@ Example manifest.xml file:
 
 ## <a name="bkmk_test"></a> Register the extension to a site for testing
 
-When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
+When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager lab environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
 1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
@@ -162,14 +163,13 @@ When you have your extension built and packaged into an authenticode-signed `.ca
     ```
 
 1. In the Configuration Manager console, go to **Administration** >  **Overview** > **Updates and Servicing** > **Console Extensions**.
-1. Select **Approve Installation**.
+1. Select your extension, then choose **Approve Installation**.
 1. To install the extension on the current console, select **Install** under **Local Extension**.
+1. Rerunning the PowerShell script with the same extension and the same version will overwrite the current existing one.
 
 ## Share your extension on community hub
 
-1. Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. For more information, see [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md).
-1. 
-
+Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. You contribute extensions the same way you would any other community hub object. For more information, see [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md).
 
 ## Next steps
 

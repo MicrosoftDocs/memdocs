@@ -15,9 +15,6 @@ manager: dougeby
 # Configuration Manager Console Extension Deployment
 The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
 
-> [!NOTE]
-> Deploying console extensions is changing. For the preferred method, see [Console extension registration though community hub](console-extension-register.md).
-
  When you deploy a Configuration Manager extension, you install the files in the following directories:  
 
 |Extension Type|Directory|  
