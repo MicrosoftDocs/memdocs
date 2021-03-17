@@ -2,7 +2,7 @@
 title: What's new in version 2010
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
-ms.date: 01/27/2021
+ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -436,6 +436,7 @@ The following additional hotfixes are available to address specific issues:
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
 | [4594177](https://support.microsoft.com/help/4594177) | Client notifications sent to all collection members in Configuration Manager current branch, version 2010 | January 12, 2021 | Yes |
+| [4600089](https://support.microsoft.com/help/4600089)| Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010 | March 8, 2021| Yes|
 
 <!--
 > [!NOTE]  

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/05/2021
+ms.date: 03/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -125,12 +125,14 @@ The following third-party certification authorities support Intune:
 
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
-- [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
+- [Entrust](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
+- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 - [Sectigo](https://sectigo.com/products)
+- [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
