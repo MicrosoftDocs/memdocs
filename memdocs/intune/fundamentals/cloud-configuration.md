@@ -190,7 +190,7 @@ When it deploys successfully, you can use the monitoring and reporting features 
 - After the guided scenario is deployed, you can go to a policy, and see the settings and their configured values. You can change any of these settings to another value, if you like.
 - To remove the guided scenario settings from devices, go to each policy created by the cloud config guided scenario. Configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario.
 
-  Changing a policy setting to **Not configured** might keep the current configuration on the device. It might not revert the setting to the value before the guided scenario. Once set to **Not configured**, another policy can update the setting.
+  The next time devices check in, the setting is no longer locked, and can be changed by another policy. It's possible the setting might keep the current value.
 
   Now, you can delete the individual items created by this guided scenario, including apps, policies, the Windows PowerShell script, and the group.
 
