@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Understand available Graph Intune Reports | Microsoft Docs
-description: Learn about the available Intune reports using Graph APIs.
+title: Intune Graph API - Reports and properties | Microsoft Docs
+description: Learn about Intune reports and properties provided via Graph API.
 keywords: 
 ms.author: erikre
 author: Erikre
@@ -28,7 +28,7 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Available Intune reports using Graph APIs
+# Intune reports and properties available using Graph API
 
 Microsoft Intune provides several different types of reports that called and returned using Graph APIs. All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top-level export API. You must use the Microsoft Graph API to make the HTTP call. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources.
 
