@@ -20,10 +20,10 @@ Starting in Configuration Manager version 2103, the [community hub](../../../../
 
  To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following prerequisites:
 
-- Configuration Manager version 2103 or later
+- Configuration Manager version 2103, or later
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
 
-- A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following items:
+- A [valid payload](#bkmk_cab) in an authenticode-signed `.cab` file once you're ready to publish. Your `.cab` file must contain the following items:
    - A manifest file named `manifest.xml`
    - The author and [version](/dotnet/api/system.version) of the extension must be listed in the `manifest.xml`
    - All relevant files for the extension must be in the `.cab` file
@@ -41,7 +41,9 @@ Creating your extension for community hub isn't much different from how it was d
    - You can't create wizards by using the existing Configuration Manager console framework.
    - You can't modify or remove steps from the existing Configuration Manager wizards.
 
-From community hub's GitHub repository, you can download [a sample extension's cab file](https://github.com/microsoft/configmgr-hub/blob/master/objects/ConsoleExtensionCab/AllStatusMessageForTsDeployment.cab).
+> [!TIP]
+> From community hub's GitHub repository, you can download [a sample extension's cab file](https://github.com/microsoft/configmgr-hub/blob/master/objects/ConsoleExtensionCab/AllStatusMessageForTsDeployment.cab).
+
 ## <a name="bkmk_cab"></a> Create a valid payload cab file
 
 Once you have the files for your extension created, you'll create the `manifest.xml` file, then package them all together in an authenticode-signed `.cab` file.
@@ -127,7 +129,7 @@ Example manifest.xml file:
 
 ## <a name="bkmk_test"></a> Register the extension to a site for testing
 
-When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager environment. You'll do this by sending it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
+When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager environment. You'll do this by posting it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
 1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
