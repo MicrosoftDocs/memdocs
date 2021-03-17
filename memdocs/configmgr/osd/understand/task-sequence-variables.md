@@ -687,6 +687,8 @@ Specifies the index value of the image that's applied to the destination compute
 
 Specifies the physical disk number to be partitioned.
 
+In version 2010 and earlier, this number can't be larger than 99. In version 2103 and later, the maximum number is 1000. This change helps support storage area network (SAN) scenarios.<!-- 9528541 -->
+
 ### <a name="OSDDNSDomain"></a> OSDDNSDomain
 
 *Applies to the [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings) step.*

@@ -1166,23 +1166,23 @@ Starting in version 2006, select this option to skip drive encryption on a compu
 
 ## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
 
-Use this step to format and partition a specified disk on the destination computer.  
+Use this step to format and partition a specified disk on the destination computer.
 
-> [!IMPORTANT]  
-> Every setting you specify for this step applies to a single specified disk. To format and partition another disk on the destination computer, add an additional **Format and Partition Disk** step to the task sequence.  
+> [!IMPORTANT]
+> Every setting you specify for this step applies to a single specified disk. To format and partition another disk on the destination computer, add an additional **Format and Partition Disk** step to the task sequence.
 
-This step runs only in Windows PE. It doesn't run in the full OS.  
+This step runs only in Windows PE. It doesn't run in the full OS.
 
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Format and Partition Disk**.
 
 ### Variables for Format and Partition Disk
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [OSDDiskIndex](task-sequence-variables.md#OSDDiskIndex)  
-- [OSDGPTBootDisk](task-sequence-variables.md#OSDGPTBootDisk)  
-- [OSDPartitions](task-sequence-variables.md#OSDPartitions)  
-- [OSDPartitionStyle](task-sequence-variables.md#OSDPartitionStyle)  
+- [OSDDiskIndex](task-sequence-variables.md#OSDDiskIndex)
+- [OSDGPTBootDisk](task-sequence-variables.md#OSDGPTBootDisk)
+- [OSDPartitions](task-sequence-variables.md#OSDPartitions)
+- [OSDPartitionStyle](task-sequence-variables.md#OSDPartitionStyle)
 
 ### Cmdlets for Format and Partition Disk
 
@@ -1195,11 +1195,13 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 ### Properties for Format and Partition Disk
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Disk Number
 
-The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.  
+The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.
+
+In version 2010 and earlier, this number can't be larger than 99. In version 2103 and later, the maximum number is 1000. This change helps support storage area network (SAN) scenarios.<!-- 9528541 -->
 
 #### Variable name to store disk number
 
@@ -1230,25 +1232,25 @@ A variation of this example uses disk numbers and partitioning plans for differe
 
 The type of the disk to format. There are two options to select from the drop-down list:
 
-- **Standard (MBR)**: Master Boot Record  
-- **GPT**: GUID Partition Table  
+- **Standard (MBR)**: Master Boot Record
+- **GPT**: GUID Partition Table
 
-> [!NOTE]  
-> If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.  
+> [!NOTE]
+> If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, the task sequence removes all extended and logical partitions from the layout. The task sequence editor prompts to confirm this action before changing the disk type.
 
 #### Volume
 
-Specific information about the partition or volume that the task sequence creates, including the following attributes:  
+Specific information about the partition or volume that the task sequence creates, including the following attributes:
 
-- Name  
-- Remaining disk space  
+- Name
+- Remaining disk space
 
-To create a new partition, select **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it's a boot partition. To modify an existing partition, select the partition to be modified, and then select the **Properties** button. For more information about how to configure hard drive partitions, see one of the following articles:  
+To create a new partition, select **New** to launch the **Partition Properties** dialog box. Specify the partition type and size, and if it's a boot partition. To modify an existing partition, select the partition to be modified, and then select the **Properties** button. For more information about how to configure hard drive partitions, see one of the following articles:
 
-- [UEFI/GPT-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
-- [BIOS/MBR-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+- [UEFI/GPT-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)
+- [BIOS/MBR-based hard drive partitions](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)
 
-To delete a partition, choose the partition, and then select **Delete**.  
+To delete a partition, choose the partition, and then select **Delete**.
 
 
 
