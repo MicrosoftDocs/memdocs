@@ -46,11 +46,20 @@ Before you create the task sequence, make sure the following requirements are in
 
 - For a deployment package that contains the feature update, distribute it to a distribution point that the client can access. For more information, see [Download software updates](../../sum/deploy-use/download-software-updates.md).
 
+    > [!NOTE]
+    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence.
+    >
+    > When you deploy the task sequence, you can also select the option of **No deployment package** for the feature update. When clients run the task sequence, they download the feature update from peers or the Microsoft cloud.
+    >
+    > The option to **Pre-download content for this task sequence** doesn't apply to feature updates.
+
 - Review the configuration of the following client settings in the [Software Updates](../../core/clients/deploy/about-client-settings.md#software-updates) group, which are applicable to this scenario:
 
   - **Specify thread priority for feature updates**: In most instances, set this value to **Normal**.
 
   - **Enable Dynamic Update for feature updates**: Use this setting to use dynamic update to install language packs, features on demand, drivers, and cumulative updates during Windows Setup. Clients download these other updates from the internet.
+
+  - **Allow clients to download delta content when available**: If you use Windows Delivery Optimization, the content that the client downloads may be much smaller.
 
 #### Known issue with feature update in a task sequence
 
@@ -307,5 +316,6 @@ Add a **Run Command Line** step to the task sequence in the **Prepare for Upgrad
 
 ## Next steps
 
-<!--1021244-->
-The pre-cache feature for available deployments of task sequences lets clients download relevant OS upgrade package content before a user installs the task sequence. For more information, see [Configure pre-cache content](configure-precache-content.md).
+[Deploy the task sequence](deploy-a-task-sequence.md), [Deploy the task sequence over the internet](deploy-task-sequence-over-internet.md), or [Create a phased deployment](create-phased-deployment-for-task-sequence.md).
+
+The pre-cache feature for available deployments of task sequences lets clients download relevant OS upgrade package content before a user installs the task sequence. For more information, see [Configure pre-cache content](configure-precache-content.md).<!--1021244-->
