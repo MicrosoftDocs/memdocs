@@ -156,7 +156,9 @@ There are now three methods to open recent files in OneTrace:
 
 <!--8543508-->
 
-Starting in current branch version 2010, you can view [dependency relationships between collections](../../clients/manage/collections/manage-collections.md#view-collection-relationships) in a graphical format. The relationships for a collection were presented as two hierarchical trees, one for dependents and the other for dependencies. In this release, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+Starting in version 2010, you can view dependency relationships between collections in a graphical format. The relationships for a collection were presented as two hierarchical trees, one for dependents and the other for dependencies. In this release, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+
+For more information, see [Manage collections: View collection relationships](../../clients/manage/collections/manage-collections.md#improvements-in-version-2103).
 
 ### Improvements to query preview
 <!--8680235-->
