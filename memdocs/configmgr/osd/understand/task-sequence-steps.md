@@ -682,7 +682,7 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the package that contains the User State Migration Tool (USMT). The task sequence uses this version of USMT to capture the user state and settings. This package doesn't require a program. Specify a package containing the 32-bit or 64-bit version of USMT. The architecture of USMT depends upon the architecture of the OS from which the task sequence is capturing state.  
 
-#### Capture all user profiles with standard options
+#### Capture all user profiles by using standard options
 
 Migrate all user profile information. This option is the default.  
 
@@ -698,9 +698,9 @@ If you have no local user accounts, this setting doesn't apply.
 
 Select this option to specify a custom profile file for migration. Select **Files** to select the configuration files for USMT to use with this step. Specify a custom .xml file that contains rules that define the user state files to migrate.  
 
-#### Click here to select configuration files
+#### Select configuration files
 
-Select this option to select the configuration files in the USMT package you want to use for capturing user profiles. Select the **Files** button to launch the **Configuration Files** dialog box. To specify a configuration file, enter the name of the file on the **Filename** line and select the **Add** button.  
+Choose this option and select **Files** to select the configuration files in the USMT package you want to use to capture user profiles. To add a configuration file, enter the **Filename** and select **Add**.
 
 #### Enable verbose logging
 
