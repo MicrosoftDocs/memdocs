@@ -37,7 +37,7 @@ If your ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microso
 
 ## Overview of Microsoft Tunnel
 
-Microsoft Tunnel Gateway installs to a Docker container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment or a virtual machine that runs on-premises or in the cloud. You'll deploy the Microsoft tunnel app and Intune VPN profiles to your iOS nd Android devices to enable them to use the tunnel to connect to corporate resources. When the tunnel is hosted in the cloud, you’ll need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud.
+Microsoft Tunnel Gateway installs to a Docker container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment or a virtual machine that runs on-premises or in the cloud. You'll deploy the Microsoft tunnel app and Intune VPN profiles to your iOS and Android devices to enable them to use the tunnel to connect to corporate resources. When the tunnel is hosted in the cloud, you’ll need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud.
 
 Through the Microsoft Endpoint Manager admin center, you’ll:
 
