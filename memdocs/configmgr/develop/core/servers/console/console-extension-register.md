@@ -18,12 +18,12 @@ Starting in Configuration Manager version 2103, the [community hub](../../../../
 
 ## Prerequisites
 
- To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following:
+ To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following prerequisites:
 
 - Configuration Manager version 2103 or later
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
 
-- A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following:
+- A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following items:
    - A manifest file named `manifest.xml`
    - The author and [version](/dotnet/api/system.version) of the extension must be listed in the `manifest.xml`
    - All relevant files for the extension must be in the `.cab` file
@@ -31,7 +31,7 @@ Starting in Configuration Manager version 2103, the [community hub](../../../../
 
 ## <a name="bkmk_create"></a> Create an extension
 
-Creating your extension for community hub isn't much different from how it was done previously. However, there is no longer a need to install the files in their respective `%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions` folder. This is part of the function of the new `manifest.xml` file. You can still create the following items:
+Creating your extension for community hub isn't much different from how it was done previously. However, there's no longer a need to install the files in their respective `%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions` folder. This is part of the function of the new `manifest.xml` file. You can still create the following items:
 - [Actions](configuration-manager-actions.md)
 - [Forms](about-configuration-manager-console-forms.md)
 - [Management classes](about-configuration-manager-console-management-classes.md)
@@ -46,7 +46,7 @@ From community hub's GitHub repository, you can download [a sample extension's c
 
 Once you have the files for your extension created, you'll create the `manifest.xml` file, then package them all together in an authenticode-signed `.cab` file.
 
-- A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following:
+- A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following items:
    - A manifest file named `manifest.xml`
    - The author and [version](/dotnet/api/system.version) of the extension must be listed in the `manifest.xml`
    - All relevant files for the extension must be in the `.cab` file
