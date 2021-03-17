@@ -840,7 +840,9 @@ Verify that the speed of the processor, in megahertz (MHz), meets or exceeds the
 
 #### Minimum free disk space (MB)
 
-Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.  
+Verify that the amount of free disk space, in megabytes (MB), meets or exceeds the specified amount.
+
+Starting in version 2103, it also checks free space on disks without partitions.<!-- 8751864 -->
 
 #### Current OS to be refreshed is
 
