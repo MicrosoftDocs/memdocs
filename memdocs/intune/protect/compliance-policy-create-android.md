@@ -151,7 +151,6 @@ As an Intune administrator, use these compliance settings to help protect your o
     - Has the default runtime environment installed
     - Is properly signed
     - Isn't in debug-mode
-    - Is installed from a known source
 
 - **Block USB debugging on device**  
   *(Supported on Android 4.2 or later)*
