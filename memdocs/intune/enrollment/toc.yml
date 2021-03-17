@@ -140,10 +140,10 @@
       href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
       displayName: sso    
     - name: Troubleshoot iOS/iPadOS device enrollment
-      href: troubleshoot-ios-enrollment-errors.md
+      href: /troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors
     - name: Troubleshoot Windows device enrollment
       href: /troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors
     - name: Troubleshoot Windows auto-enrollment
-      href: troubleshoot-windows-auto-enrollment.md
+      href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
     - name: Troubleshoot Android device enrollment
       href: /troubleshoot/mem/intune/troubleshoot-android-enrollment
