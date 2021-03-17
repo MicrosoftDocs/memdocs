@@ -211,7 +211,11 @@ You can now upgrade a client's Windows OS by using a feature update deployed wit
 
 <!--8888218-->
 
-The task sequence progress can now display more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements configured in the **Check readiness** task sequence step, the user can now see more details about the failed prerequisites. They still see the common "task sequence error" message, but can now select an option to **Inspect**. This action shows the checks that failed on the device.
+The task sequence progress can now display more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements configured in the **Check readiness** task sequence step, the user can now see more details about the failed prerequisites.
+
+:::image type="content" source="media/8888218-task-sequence-check-readiness-failure.png" alt-text="Task sequence check readiness failure":::
+
+For more information, see [User experiences for OS deployment](../../../osd/understand/user-experience.md#task-sequence-error).
 
 ### Encryption algorithm to capture and restore user state
 
@@ -219,13 +223,16 @@ The task sequence progress can now display more information about readiness chec
 
 The task sequence steps to **Capture User State** and **Restore User State** always encrypt the USMT state store. Previously, Configuration Manager configured USMT to use the 3DES algorithm. Starting in this release, both steps now use the highest supported encryption algorithm, **AES 256**.
 
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm.
+
+For more information, see [About task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState).
+
 ### Improvements to OS deployment
 
 This release includes the following improvements to OS deployment:
 
 - Task sequence conditions now include a **not like** operator. This operator applies to task sequence variable conditions. It's also used in the [Set Dynamic Variable](../../../osd/understand/task-sequence-steps.md#BKMK_SetDynamicVariables) task sequence step.<!--8764365-->
-
-- This release fixes issues with the [SMSTSDisableStatusRetry](../../../osd/understand/task-sequence-variables.md#SMSTSDisableStatusRetry) task sequence variable.<!-- 8727206 -->
 
 - The [Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness) task sequence step now also checks free space on disks without partitions.<!-- 8751864  -->
 
