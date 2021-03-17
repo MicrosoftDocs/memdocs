@@ -2060,32 +2060,34 @@ Include other exit codes from the script that the step should evaluate as succes
 
 ## <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script
 
-Use this step to run the specified Windows PowerShell script.  
+Use this step to run the specified Windows PowerShell script.
 
-The script must meet the following criteria:  
+The script must meet the following criteria:
 
-- It shouldn't interact with the desktop. The script must run silently or in an unattended mode.  
+- It shouldn't interact with the desktop. The script must run silently or in an unattended mode.
 
 - It must not initiate a restart on its own. The script must request a restart using the standard restart code, 3010. This behavior makes sure that the task sequence properly handles the restart. If the script does return a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.
 
-This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](../get-started/manage-boot-images.md).  
+- Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
 
-> [!NOTE]  
-> PowerShell isn't enabled by default on Windows Embedded operating systems.  
+This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](../get-started/manage-boot-images.md).
+
+> [!NOTE]
+> PowerShell isn't enabled by default on Windows Embedded operating systems.
 
 > [!WARNING]
-> Certain anti-malware software may inadvertently trigger events against the Configuration Manager Run PowerShell Script task sequence step. It is recommended to exclude %windir%\temp\smstspowershellscripts so that the anti-malware software permits those scripts to run without interference.
+> Some antimalware software may inadvertently trigger events for this task sequence step. To allow these scripts to run without interference, configure the antimalware software to exclude `%windir%\temp\smstspowershellscripts`.
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Run PowerShell Script**.
 
 ### Variables for Run PowerShell Script
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters)<!--3556028-->  
+- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters)<!--3556028-->
 - [SMSTSRunPowerShellAsUser](task-sequence-variables.md#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
-- [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)  
-- [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)  
+- [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)
+- [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)
 
 ### Cmdlets for Run PowerShell Script
 
@@ -2096,52 +2098,47 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript)
 - [Set-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/set-cmtssteprunpowershellscript)
 
-> [!Note]  
-> Use signed PowerShell scripts in Unicode format. ANSI format, which is the default, doesn't work with this step.
-
 ### Properties for Run PowerShell Script
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Package
 
-Specify the Configuration Manager package that contains the PowerShell script. One package can contain multiple PowerShell scripts.  
+Specify the Configuration Manager package that contains the PowerShell script. One package can contain multiple PowerShell scripts.
 
 #### Script name
 
-Specifies the name of the PowerShell script to run. This field is required.  
+Specifies the name of the PowerShell script to run. This field is required.
 
 #### Enter a PowerShell script
 
 <!-- 3556028 -->
 Directly enter Windows PowerShell code in this step. This feature lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
-When you add or edit a script, the PowerShell script window provides the following actions:  
+When you add or edit a script, the PowerShell script window provides the following actions:
 
-- Edit the script directly  
+- Edit the script directly
 
-- Open an existing script from file  
+- Open an existing script from file
 
 - Browse to an existing approved [script](../../apps/deploy-use/create-deploy-scripts.md) in Configuration Manager
 
-> [!Important]  
-> To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
 #### Parameters
 
-Specifies the parameters passed to the PowerShell script. These parameters are the same as the PowerShell script parameters on the command line.  
+Specifies the parameters passed to the PowerShell script. These parameters are the same as the PowerShell script parameters on the command line.
 
-Provide parameters consumed by the script, not for the Windows PowerShell command line.  
-The following example contains valid parameters:  
+Provide parameters consumed by the script, not for the Windows PowerShell command line.
 
-`-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
+The following example contains valid parameters:
 
-The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.  
+`-MyParameter1 MyValue1 -MyParameter2 MyValue2`
+
+The following example contains invalid parameters. The first two items are Windows PowerShell command-line parameters (**-NoLogo** and **-ExecutionPolicy Unrestricted**). The script doesn't consume these parameters.
 
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
 <!-- SCCMDocs-pr issue 3561 -->
-If a parameter value includes a special character, use single quotation marks (`'`) around the value. Using double quotation marks (`"`) may cause the task sequence step to incorrectly process the parameter.
+If a parameter value includes a special character or a space, use single quotation marks (`'`) around the value. Using double quotation marks (`"`) may cause the task sequence step to incorrectly process the parameter.
 
 For example: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
@@ -2149,16 +2146,16 @@ Starting in version 2002, set this property to a variable.<!-- 5690481 --> For e
 
 #### PowerShell execution policy
 
-Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:  
+Determine which PowerShell scripts (if any) you allow to run on the computer. Choose one of the following execution policies:
 
-- **AllSigned**: Only run scripts signed by a trusted publisher  
+- **AllSigned**: Only run scripts signed by a trusted publisher.
 
-- **Undefined**: Don't define any execution policy  
+- **Undefined**: Don't define any execution policy.
 
-- **Bypass**: Load all configuration files and run all scripts. If you download an unsigned script from the internet, Windows PowerShell doesn't prompt for permission before running the script.  
+- **Bypass**: Load all configuration files and run all scripts. If you download an unsigned script from the internet, Windows PowerShell doesn't prompt for permission before running the script.
 
-> [!IMPORTANT]  
-> PowerShell 1.0 doesn't support Undefined and Bypass execution policies.  
+> [!IMPORTANT]
+> PowerShell 1.0 doesn't support Undefined and Bypass execution policies.
 
 #### Output to task sequence variable
 
@@ -2173,26 +2170,26 @@ For an example of how to use this step property, see [How to set variables](usin
 #### Start in
 
 <!-- 3556028 -->
-Specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.  
+Specify the starting folder for the script, up to 127 characters. This folder can be an absolute path on the destination computer or a path relative to the distribution point folder that contains the package. This field is optional.
 
-> [!NOTE]  
-> The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.  
+> [!NOTE]
+> The **Browse** button browses the local computer for files and folders. Anything you select must also exist on the destination computer. It must exist in the same location and with the same file and folder names.
 
 #### Time-out
 
 <!-- 3556028 -->
-Specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.  
+Specify a value that represents how long Configuration Manager allows the PowerShell script to run. This value can be from one minute to 999 minutes. The default value is 15 minutes. This option is disabled by default.
 
-> [!IMPORTANT]  
-> If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.  
+> [!IMPORTANT]
+> If you enter a value that doesn't allow enough time for the specified script to complete successfully, this step fails. The entire task sequence could fail depending on step or group conditions. If the time-out expires, Configuration Manager terminates the PowerShell process.
 
 #### Run this step as the following account
 
 <!-- 3556028 -->
-Specify that the PowerShell script is run as a Windows user account other than the Local System account.  
+Specify that the PowerShell script is run as a Windows user account other than the Local System account.
 
 > [!NOTE]  
-> To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.  
+> To run simple scripts or commands with another account after installing the OS, first add the account to the computer. Additionally, you may need to restore Windows user profiles to run more complex actions.
 
 #### Account
 
@@ -2204,7 +2201,7 @@ Specify the Windows user account this step uses to run the PowerShell script. Th
 
 ### Options for Run PowerShell Script
 
-Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:  
+Besides the default options, configure the following additional settings on the **Options** tab of this task sequence step:
 
 #### Success codes
 
