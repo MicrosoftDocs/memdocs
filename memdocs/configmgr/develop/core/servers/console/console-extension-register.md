@@ -1,5 +1,6 @@
 ---
-title: "Console extension registration for community hub"
+title: "Console extension registration through community hub"
+description: "Register a console extension through community hub"
 titleSuffix: "Configuration Manager"
 ms.date: "03/26/2021"
 ms.prod: "configuration-manager"
@@ -11,10 +12,15 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Console extension registration for community hub
+# Console extension registration though community hub
 <!--9526630, 3555909-->
-The [community hub](../../../../core/servers/manage/community-hub.md) supports sharing extensions to the Configuration Manager console. To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following:
+Starting in Configuration Manager version 2103, the [community hub](../../../../core/servers/manage/community-hub.md) supports console extensions. Console extension authors can contribute extensions they've written to the community hub. Community hub users can download the extensions and manage the installation of them across their Configuration Manager hierarchy. Contributing extensions through community hub supersedes the [previous deployment process](console-extension-deployment.md).
 
+## Prerequisites
+
+ To register a console extension in the community hub for Configuration Manager admins to download, you'll need the following:
+
+- Configuration Manager version 2103 or later
 - Meet all of the prerequisites for [contributing to community hub](../../../../core/servers/manage/community-hub-contribute.md)
 
 - A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following:
@@ -35,9 +41,10 @@ Creating your extension for community hub isn't much different from how it was d
    - You can't create wizards by using the existing Configuration Manager console framework.
    - You can't modify or remove steps from the existing Configuration Manager wizards.
 
-Once you have the items created, you'll create the `manifest.xml` file, then package them all together in an authenticode-signed `.cab` file.
-
+From community hub's GitHub repository, you can download [a sample extension's cab file](https://github.com/microsoft/configmgr-hub/blob/master/objects/ConsoleExtensionCab/AllStatusMessageForTsDeployment.cab).
 ## <a name="bkmk_cab"></a> Create a valid payload cab file
+
+Once you have the files for your extension created, you'll create the `manifest.xml` file, then package them all together in an authenticode-signed `.cab` file.
 
 - A valid payload in an authenticode-signed `.cab` file. Your `.cab` file must contain the following:
    - A manifest file named `manifest.xml`
@@ -120,34 +127,49 @@ Example manifest.xml file:
 
 ## <a name="bkmk_test"></a> Register the extension to a site for testing
 
-When you have your extension built, you'll want to test it in a Configuration Manager environment. You'll do this by sending it through the [administration service](../../../adminservice/usage.md).
+When you have your extension built and packaged into an authenticode-signed `.cab` file, you can test it in a Configuration Manager environment. You'll do this by sending it through the [administration service](../../../adminservice/usage.md). Once the extension is inserted into the site, you can approve it and install it locally from the **Console Extensions** node.
 
-```powershell
-$adminServiceProvider = "SMSProviderServer.contoso.com"
-$cabFilePath = "C:\Testing\MyExtension.cab"
-$adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
-$cabFileName = (Get-Item -Path $cabFilePath).Name
-$Data = Get-Content $cabFilePath
-$Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
-$base64Content = [Convert]::ToBase64String($Bytes)
+1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
+   - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
+   - `$cabFilePath` - Path to the extension's authenticode-signed `.cab` file
+ 
+    ```powershell
+    $adminServiceProvider = "SMSProviderServer.contoso.com"
+    $cabFilePath = "C:\Testing\MyExtension.cab"
+    $adminServiceURL = "https://$adminServiceProvider/AdminService/v1/ConsoleExtensionMetadata/AdminService.UploadExtension"
+    $cabFileName = (Get-Item -Path $cabFilePath).Name
+    $Data = Get-Content $cabFilePath
+    $Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
+    $base64Content = [Convert]::ToBase64String($Bytes)
+    
+    $Headers = @{
+        "Content-Type" = "Application/json"
+    }
+    
+    $Body = @{
+                CabFile = @{
+                    FileName = $cabFileName
+                    FileContent = $base64Content
+                }
+            } | ConvertTo-Json
+    
+    $result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
+    
+    if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
+    else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
+    ```
 
-$Headers = @{
-    "Content-Type" = "Application/json"
-}
+1. In the Configuration Manager console, go to **Administration** >  **Overview** > **Updates and Servicing** > **Console Extensions**.
+1. Select **Approve Installation**.
+1. To install the extension on the current console, select **Install** under **Local Extension**.
 
-$Body = @{
-            CabFile = @{
-                FileName = $cabFileName
-                FileContent = $base64Content
-            }
-        } | ConvertTo-Json
+## Share your extension on community hub
 
-$result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
+1. Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. For more information, see [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md).
+1. 
 
-if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
-else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
-```
 
 ## Next steps
 
 - [Contribute to community hub](../../../../core/servers/manage/community-hub-contribute.md)
+- [Use the community hub](../../../../core/servers/manage/community-hub.md)
