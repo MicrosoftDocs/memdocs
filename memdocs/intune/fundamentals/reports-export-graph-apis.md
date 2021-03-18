@@ -62,24 +62,10 @@ Select which columns you would like the report to contain using an HTTP POST req
 } 
 ```	
 
-If you need specific columns that are not included in the default column set, such as `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`, you can explicitly retrieve these columns. Additionally, you can specify that report data that you export contains localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports.
+If you need specific columns that are not included in the default column set, such as `complianceState`, `OS`, or `OSVersion`, you can explicitly retrieve these columns. Additionally, you can specify that report data that you export contains localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports.
 
-> [!NOTE]	
-> If you have previously built automation around the default columns of the device export, and that automation uses columns that are no longer available as default columns, you need to refactor your processes to explicitly select these and any other relevant columns. 	
-For example, you can explicitly select columns of the `Devices` report using the following HTTP request:	
-
-```http	
-{	
-    "reportName": "Devices", 	
-    "filter": "", 	
-    "select": [	
-        "PhoneNumberE164Format", 	
-        "_ComputedComplianceState", 	
-        "_OS", 	
-        "OSDescription"	
-    ]	
-} 	
-```
+> [!NOTE]
+> Do not build automation around default columns of any report export. You should build your automation to explicitly select relevant columns.
 
 ## Example devices report request and response
 
@@ -185,7 +171,7 @@ The `localizationType` parameter controls localization behavior for the report. 
 ### LocalizedValuesAsAdditionalColumn report value
 
 This value for the `localizationType` parameter is the default value. It will be inserted automatically if the `localizationType` parameter is not specified. This value specifies that Intune provides two columns for each localizable column.
-- *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column will be under the original column name (see example).</li><li>
+- *enum value*:  The *enum value* column contains either a raw string, or a set of numbers that don't change, regardless of locale. This column will be under the original column name (see example).
 - *localized string value*: This column  will be the original column name with _loc appended. It will contain string values that are human readable, and locale conditional (see example).
 
 #### Example
