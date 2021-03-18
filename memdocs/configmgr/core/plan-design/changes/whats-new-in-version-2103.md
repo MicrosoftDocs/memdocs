@@ -107,27 +107,11 @@ Starting in this release, you can now configure a client setting to use the WebV
 
 ### Improvements to Support Center
 
-<!--8272488-->
-
-When you troubleshoot software update deployments, you might ask the following questions:
-
-- Are any updates missing or failing?
-- Are specific updates deployed to a device?
-- What are the error codes for a deployment?
-- Why didn't the device reboot during a maintenance window?
-- What's the current state of an update?
-
-Support Center already shows updates that are targeted to the device but not yet installed. Now in this release, select **All Updates** on the **Content** tab of Support Center to show all updates targeted to the device. To help you troubleshoot, this list includes information about whether the update is installed or missing.
-
-Also on the **Content** tab, select **Maintenance Windows** to show the available maintenance windows for the device.
-
-### Changes to Support Center
-
 <!--8693068-->
 
 Support Center is now split into the following tools:
 
-- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to [Collect selected data](../../support/support-center-ui-reference.md#collect-selected-data).
+- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
 
 - **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
 
@@ -137,11 +121,13 @@ The following tools are still a part of Support Center:
 - **Support Center OneTrace**
 - **Support Center Log File Viewer**
 
+For more information, see [Support Center](../../support/support-center.md).
+
 ### OneTrace support for jump lists
 
 <!--6991505-->
 
-[Support Center OneTrace](../../support/support-center-onetrace.md) now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
+Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
 
 There are now three methods to open recent files in OneTrace:
 
@@ -149,6 +135,7 @@ There are now three methods to open recent files in OneTrace:
 - Windows Start menu recently opened list
 - In OneTrace from **File** menu or **Recently opened** tab.
 
+For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
 
 ## Collections
 
