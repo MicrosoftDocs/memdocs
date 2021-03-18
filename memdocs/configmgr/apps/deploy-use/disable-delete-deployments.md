@@ -37,13 +37,21 @@ Starting in version 2103, you can disable application deployments. Other objects
 
 For device-based deployments, when you disable the deployment or object, use the client notification action to **Download Computer Policy**. This action immediately tells the client to update its policy from the site. If the deployment hasn't already started, the client receives the updated policy that the object is now disabled.
 
+For user-based deployments, the user needs to sign out of Windows. Policy updates when they sign in to Windows, or every 24 hours by default.
+
+> [!NOTE]
+> You can't disable an available deployment of an application to a user collection.<!-- 9390894 --> You can only disable required deployments to user collections, or both type of deployments to device collections. The following table summarizes the supported scenarios to disable app deployments:
+>
+> |         |  Device |  User   |
+> |---------|---------|---------|
+> |Required |  Yes    |  Yes    |
+> |Available|  Yes    |  No     |
+
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 
 1. Select an app that you've deployed. In the details pane, switch to the **Deployment** tab.
 
 1. Select a deployment. In the ribbon, on the **Deployment** tab, select **Disable**.
-
-    For a user-based deployment, the user needs to sign out of Windows. Policy updates when they sign in to Windows, or every 24 hours by default.
 
 1. For a device-based deployment, note the name of the collection in **Collection** field of the deployment.
 
