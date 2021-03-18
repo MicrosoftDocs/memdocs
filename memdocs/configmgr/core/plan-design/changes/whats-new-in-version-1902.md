@@ -298,7 +298,7 @@ Sometimes users don't see the Windows toast notification about a restart or requ
 
 Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window.
 
-For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)
+For more information, see [User notifications](../../../apps/plan-design/user-notifications.md#replace-toast-notifications-with-dialog-window)
 
 ### Configure user device affinity in Software Center
 

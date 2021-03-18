@@ -129,7 +129,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -185,7 +185,7 @@ Choose **Yes** if you want to deploy [user data and profiles](../../../complianc
 
 ### User notifications for required deployments
 
-For more information about the following three settings, see [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify):
+For more information about the following three settings, see [User notifications for required deployments](../../../apps/plan-design/user-notifications.md):
 
 - **Deployment deadline greater than 24 hours, remind user every (hours)**
 - **Deployment deadline less than 24 hours, remind user every (hours)**

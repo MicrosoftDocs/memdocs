@@ -2,7 +2,7 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 08/20/2020
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -48,57 +48,11 @@ Update your Configuration Manager sites and clients to version 1906 or later to 
 
 - Application catalog roles aren't required to display user-available applications in Software Center. This behavior helps you reduce the server infrastructure required to deliver applications to users. Software Center relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../../core/servers/deploy/configure/boundary-groups.md#management-points).<!--1358309-->
 
-- Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. Starting in version 2006, they can get user-available apps on internet-based, domain-joined devices. For more information, see [Deploy user-available applications](../deploy-use/deploy-applications.md#deploy-user-available-applications).
+- Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. Starting in version 2006, they can get user-available apps on internet-based, domain-joined devices. For more information, see [Prerequisites to deploy user-available applications](prerequisites-deploy-user-available-apps.md).
 
 - Starting in version 1906, Software Center communicates with a management point for apps targeted to users as available. It doesn't use the application catalog anymore. This change makes it easier for you to remove the application catalog from the site.
 
 - Previously, Software Center picked the first management point from the list of available servers. Starting in version 1906, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
-
-## <a name="bkmk_impact"></a> Replace toast notifications with dialog window
-
-<!--3555947-->
-Sometimes users don't see the Windows toast notification about a restart or required deployment. Then they don't see the experience to snooze the reminder. This behavior can lead to a poor user experience when the client reaches a deadline.
-
-Starting in version 1902, when [software changes are required](#software-changes-are-required) or deployments [need a restart](#restart-required), you have the option of using a more intrusive dialog window.
-
-### Software changes are required
-
-When you [deploy an application](../deploy-use/deploy-applications.md) as required with a deadline in the future, on the **User Experience** page of the Deploy Software Wizard, select the following user notification options:
-
-- **Display in Software Center and show all notifications**
-- **When software changes are required, show a dialog window to the user instead of a toast notification**
-
-Configuring this deployment setting changes the user experience for this scenario.
-
-From the following toast notification:
-
-![Toast notification that Software changes are required](media/3555947-required-toast.png)  
-
-To the following dialog window:
-
-![Dialog window for Required software changes](media/3555947-required-dialog.png)
-
-
-### Restart required
-
-In the [Computer Restart](../../core/clients/deploy/about-client-settings.md#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
-
-Configuring this client setting changes the user experience for all required deployments that require a restart of the following types:
-
-- [Application](../deploy-use/deploy-applications.md)
-- [Task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
-- [Software update](../../sum/deploy-use/deploy-software-updates.md)
-
-From the following toast notification:
-
-![Toast notification that Restart required](media/3555947-restart-toast.png)  
-
-To the following dialog window:
-
-![Dialog window to Restart your computer](media/3555947-restart-dialog.png)
-
-> [!IMPORTANT]
-> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 ## Brand Software Center
 
@@ -135,10 +89,15 @@ If you're using the application catalog, branding follows these priorities:
 
 3. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-## See also
+## Next steps
 
 - [Software Center user guide](../../core/understand/software-center.md)
 
 - [Plan for and configure application management](plan-for-and-configure-application-management.md)
 
 - [Use the Company Portal app on co-managed devices](../../comanage/company-portal.md)
+
+> [!NOTE]
+> This article used to include more sections, which have moved to the following articles:
+>
+> - [User notifications for required deployments](user-notifications.md)
