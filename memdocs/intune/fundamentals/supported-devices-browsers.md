@@ -105,7 +105,6 @@ Different administrative tasks require that you use one of the following adminis
 The following browsers are supported for these portals:
 
 - Microsoft Edge (latest version)
-- Microsoft Internet Explorer 11
 - Safari (latest version, Mac only)
 - Chrome (latest version)
 - Firefox (latest version)
