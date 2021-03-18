@@ -249,7 +249,7 @@ Use the following tips to navigate the relationship viewer:
 
 Starting in version 2103, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
 
-The following example shows the relationships for the "c1" collection in the center. It's dependent upon the collections above it, and has dependencies below it.
+The following example shows the relationships for the "c1" collection in the center. It's dependent upon the collections above it (parents), and has dependencies below it (children).
 
 :::image type="content" source="media/8543508-view-collection-relationships.png" alt-text="Example graph of collection relationships" lightbox="media/8543508-view-collection-relationships.png":::
 
@@ -261,7 +261,7 @@ Other improvements:
 
 - If you don't have permissions to all related collections, the graph includes a warning message that the graph may be incomplete.
 
-- When the graph is wider than the window can display, use the page navigation controls in the upper left corner. The first number is the page for dependencies (below), and the second number is the page for dependents (above). The window title also shows the page numbers.
+- When the graph is wider than the window can display, use the page navigation controls in the upper left corner. The first number is the page for parents (above), and the second number is the page for children (below). The window title also shows the page numbers.
 
 - The tooltip for a collection displays the count of dependencies it has and the count of dependant collections where applicable. This count only includes unique subcollections. The count no longer displays in the parentheses next to the collection name.
 
