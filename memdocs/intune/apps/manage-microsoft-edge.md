@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 3/01/2021
+ms.date: 3/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -242,11 +242,14 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 #### Disable extensions
 
-You can disable the extension framework within Edge for Android to prevent users from installing any app extensions. To do this, configure the following setting:
+You can disable the extension framework, like Coupons, within Edge for iOS and Android to prevent users from installing or using any pre-configured app extensions. To do this, configure the following setting:
 
 |    Key    |    Value    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.disableExtensionFramework    |    **true** disables the extension framework<br>**false** (default) enables the extension framework    |
+
+> [!NOTE]
+> Edge for iOS does not support disabling extensions.
 
 ### Kiosk mode experiences on Android devices
 
