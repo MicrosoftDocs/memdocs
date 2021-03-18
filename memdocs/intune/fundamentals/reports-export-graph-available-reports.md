@@ -30,10 +30,12 @@ ms.collection: M365-identity-device-management
 
 # Intune reports and properties available using Graph API
 
-Microsoft Intune provides several different types of reports that called and returned using Graph APIs. All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top-level export API. You must use the Microsoft Graph API to make the HTTP call. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources.
+Microsoft Intune provides many reports in the console that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information about , see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 > [!NOTE]
-> For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
+> Intune reports that have been migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/10095530) will be available for export from a single top-level export Graph API. 
+> 
+> For more information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
 Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
 
