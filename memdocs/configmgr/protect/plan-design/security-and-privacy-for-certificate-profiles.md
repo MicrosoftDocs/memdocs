@@ -31,7 +31,7 @@ manager: dougeby
 ## Privacy Information for Certificate Profiles  
  You can use certificate profiles to deploy root certification authority (CA) and client certificates, and then evaluate whether those devices become compliant after the profiles are applied. The management point sends compliance information to the site server, and Configuration Manager stores that information in the site database. Compliance information includes certificate properties such as subject name and thumbprint. The information is encrypted when devices send it to the management point, but it is not stored in encrypted format in the site database. The database retains the information until the site maintenance task **Delete Aged Configuration Management Data** deletes it after the default interval of 90 days. You can configure the deletion interval. Compliance information is not sent to Microsoft.  
 
- Certificate profiles use information that Configuration Manager collects using discovery. For more information about privacy information for discovery, see the **Privacy Information for Discovery** section in [Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
+ Certificate profiles use information that Configuration Manager collects using discovery. For more information about privacy information for discovery, see the **Privacy Information for Discovery** section in [Security and privacy for Configuration Manager](../../security/index.yml).  
 
 > [!NOTE]  
 >  Certificates that are issued to users or devices might allow access to confidential information.  
