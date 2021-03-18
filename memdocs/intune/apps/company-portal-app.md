@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2021
+ms.date: 03/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -272,6 +272,10 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
+
+## Company Portal app notifications
+
+The Company Portal app can store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
 
 ## Next steps
 
