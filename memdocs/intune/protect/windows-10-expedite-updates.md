@@ -242,7 +242,7 @@ From this pane, you can:
 
 Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md).
 
-> [!IMPORTANT]
+> [!IMPORTANT] 
 > When you configure the Windows Health Monitoring profile, during step seven you must set the **Scope** to **Windows updates**. 
 
 After a policy has been created you can monitor results, update status, and errors from the following reports.
