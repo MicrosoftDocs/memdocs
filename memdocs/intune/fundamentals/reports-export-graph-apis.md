@@ -41,32 +41,6 @@ Microsoft Endpoint Manager will export reports using the following Microsoft Gra
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
 
-## Selecting columns	
-
-Select which columns you would like the report to contain using an HTTP POST request: 
-
-```http	
-{"reportName":"Devices", 
-    "filter":"(OwnerType eq '1')", 
-    “localizationType": "LocalizedValuesAsAdditionalColumn" 
-    "select": 
-        ["DeviceName", 
-        "managementAgent", 
-        "ownerType", 
-        "complianceState", 
-        "OS", 
-        "OSVersion", 
-        "LastContact", 
-        "UPN", 
-        "DeviceId"] 
-} 
-```	
-
-If you need specific columns that are not included in the default column set, such as `complianceState`, `OS`, or `OSVersion`, you can explicitly retrieve these columns. Additionally, you can specify that report data that you export contains localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports.
-
-> [!NOTE]
-> Do not build automation around default columns of any report export. You should build your automation to explicitly select relevant columns.
-
 ## Example devices report request and response
 
 When making the request, you must provide a `reportName` parameter as part of the request body based on the report that you would like to export. Below is an example of an export request for the **Devices** report. You must use the POST HTTP method on your request. The POST method is used to create a new resource or perform an action.
@@ -78,7 +52,8 @@ The below request contains the HTTP method used on the request to Microsoft Grap
 ```http
 { 
     "reportName": "Devices", 
-    "filter": "", 
+    "filter":"(OwnerType eq '1')", 
+    “localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -92,6 +67,10 @@ The below request contains the HTTP method used on the request to Microsoft Grap
     ]
 } 
 ```
+
+> [!NOTE]
+> To retrieve data, select specific columns, such as those specified in the above example. Do not build automation around default columns of any report export. You should build your automation to explicitly select relevant columns.
+
 ### Response example
 
 Based on the above POST request, Graph returns a response message. The response message is the data that you requested or the result of the operation.
@@ -101,7 +80,8 @@ Based on the above POST request, Graph returns a response message. The response 
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/reports/exportJobs/$entity", 
     "id": "Devices_05e62361-783b-4cec-b635-0aed0ecf14a3", 
     "reportName": "Devices", 
-    "filter": "", 
+    "filter":"(OwnerType eq '1')", 
+    “localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -133,7 +113,8 @@ You will need to continue calling this URL until you get a response with a `stat
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/reports/exportJobs/$entity", 
     "id": "Devices_05e62361-783b-4cec-b635-0aed0ecf14a3", 
     "reportName": "Devices", 
-    "filter": "", 
+    "filter":"(OwnerType eq '1')", 
+    “localizationType": "LocalizedValuesAsAdditionalColumn", 
     "select": [ 
         "DeviceName", 
         "managementAgent", 
