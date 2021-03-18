@@ -50,13 +50,16 @@ For device-based deployments, when you disable the deployment or object, use the
     > [!TIP]
     > When you select the deployment, press **CTRL** + **C**. This keyboard shortcut copies the values of the current columns for the selected deployment.
 
-    <!-- 1. Right-click the deployment and select **Collection**. This action switches the view to the **Assets and Compliance** workspace showing the target collection for the deployment.  -->
+    <!-- 1. Right-click the deployment and select **Collection**. This action switches the view to the **Assets and Compliance** workspace showing the target collection for the deployment.  Waiting on 8957946 for better end-to-end flow -->
 
 1. Switch to the **Assets and Compliance** workspace, select the **Device Collections** node, and locate the target collection for the deployment. The quickest method is to search for the collection name as previously noted. You may need to select the option in the ribbon to search **All subfolders**.
 
 1. Select the target collection for the deployment. In the ribbon, in the **Collection** group, select **Client Notification** and choose the **Download Computer Policy** action.
 
 To enable the deployment, repeat this process but select the **Enable** action on the application deployment.
+
+> [!NOTE]
+> When you select a deployment, you can use the **Collection** action to change to the **Assets and Compliance** workspace. But the current collection view doesn't support client notification actions.<!-- 8957946 -->
 
 ## Delete
 
