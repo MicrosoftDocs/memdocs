@@ -42,7 +42,7 @@ For user-based deployments, the user needs to sign out of Windows. Policy update
 > [!NOTE]
 > You can't disable an available deployment of an application to a user collection.<!-- 9390894 --> You can only disable required deployments to user collections, or both type of deployments to device collections. The following table summarizes the supported scenarios to disable app deployments:
 >
-> |         |  Device |  User   |
+> |Deployment purpose| Device collection | User collection |
 > |---------|---------|---------|
 > |Required |  Yes    |  Yes    |
 > |Available|  Yes    |  No     |
