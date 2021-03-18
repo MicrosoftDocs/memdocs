@@ -64,6 +64,14 @@ The actual time that a device starts to update depends on the device being onlin
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
+**Licensing**:
+
+In addition to a license for Intune, your organization must have one of the following subscriptions:
+
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Virtual Desktop Access E3 or E5
+
 **Supported Windows 10 versions**:
 
 - Windows 10 versions that remain in support for Servicing, on x86 or x64 architecture
@@ -79,9 +87,7 @@ The following are requirements to qualify for installing expedited quality updat
 
 - Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune.
 
-- Have a Windows 10 Enterprise E3 or greater license.
-  
-  For example, the device could have a license for Windows 10 Enterprise E5, a Microsoft 365 E3 or E5, or Windows E5.
+- Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
 - Have access to the following endpoints:
 
@@ -102,8 +108,6 @@ The following are requirements to qualify for installing expedited quality updat
 
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
     - *.notify.windows.com
-
-- Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
 - Have installed the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update for a Windows 10 version of 1809 or later. Both options will install the *Update Health Tools*. To confirm the presence of the Update Health Tools on a device, look for the folder **C:\Program Files\Microsoft Update Health Tools**.
 
