@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2021  
+ms.date: 03/19/2021  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -92,7 +92,7 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
 ## Android Enterprise availability 
 
-Work profile setup is supported in [regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910) (opens Google Support website). Company Portal can't set up a work profile on your device if you're outside of one of these regions. If Android Enterpise isn't available in your country, ask your support person for other ways to access work resources.  
+Work profile setup is supported in [countries and regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910) (opens Google Support website). Company Portal can't set up a work profile on your device if you're outside these areas. If Android Enterprise isn't available in your country or region, ask your support person for other ways to access work resources.  
 
 ## Next steps  
 
