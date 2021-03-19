@@ -1201,7 +1201,7 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.
 
-In version 2010 and earlier, this number can't be larger than 99. In version 2103 and later, the maximum number is 1000. This change helps support storage area network (SAN) scenarios.<!-- 9528541 -->
+In version 2010 and earlier, this number can't be larger than 99. In version 2103 and later, the maximum number is 10,000. This change helps support storage area network (SAN) scenarios.<!-- 9528541 -->
 
 #### Variable name to store disk number
 
