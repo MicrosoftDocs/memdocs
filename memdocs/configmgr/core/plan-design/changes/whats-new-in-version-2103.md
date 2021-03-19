@@ -240,13 +240,13 @@ This release includes the following improvements to OS deployment:
 
 ## Protection
 
-## Improvements to BitLocker support via cloud management gateway
+## Improvements to BitLocker management
 
 <!--8845996-->
 
 In current branch version 2010, you can manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). This support included a couple of limitations.
 
-Starting in this technical preview release, BitLocker management policies over a CMG support the following capabilities:
+Starting in this release, BitLocker management policies over a CMG support the following capabilities:
 
 - Recovery keys for removable drives
 
@@ -254,6 +254,9 @@ Starting in this technical preview release, BitLocker management policies over a
 
 For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
+This release also provides support for the recovery service on management points that use a database replica.
+
+For more information, see [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
 
 ## Software updates
 
