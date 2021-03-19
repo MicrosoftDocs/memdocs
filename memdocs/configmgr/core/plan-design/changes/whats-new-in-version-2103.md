@@ -375,11 +375,9 @@ As first announced in version 1906, version 2103 drops support for the following
 
 ## Other updates
 
-<!--
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
--->
+- [Remove the central administration site](../../servers/deploy/install/remove-central-administration-site.md) <!-- 3607277 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2103 release notes](/powershell/sccm/2103-release-notes).
 
