@@ -21,9 +21,9 @@ manager: dougeby
 If the hierarchy consists of the central administration site (CAS) and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
 > [!NOTE]
-> This feature was first introduced in version 2002 as a [pre-release feature](pre-release-features.md). Starting in version 2103, it's no longer a pre-release feature.
+> This feature was first introduced in version 2002 as a [pre-release feature](../../manage/pre-release-features.md). Starting in version 2103, it's no longer a pre-release feature.
 >
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../manage/install-in-console-updates.md#bkmk_options).
 
 ## Plan
 
