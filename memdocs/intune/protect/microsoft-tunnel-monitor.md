@@ -35,7 +35,7 @@ Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fw
 
 Select a server to view the following information about it:
 
-- **Last check-in** – When the server last checked in with Intune.
+- **Last check-in** – When the Tunnel Gateway server last checked in with Intune.
   - *Healthy* – The last check-in was within the last five minutes.
   - *Unhealthy* – More than five minutes have passed since the last check-in.
 
@@ -66,7 +66,6 @@ Select a server to view the following information about it:
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
 
-:::image type="content" source="./media/microsoft-tunnel-monitor/health-metrics.png" alt-text="In Microsoft Intune and Endpoint Manager admin center, view the tunnel health metrics for a server.":::
 ## Use mst-cli command-line tool
 
 Use the **mst-cli** command-line tool to get information about the Microsoft Tunnel server. This file is added to the Linux server when the Microsoft Tunnel installs. The tool is located at: **/usr/sbin/mst-cli**.
