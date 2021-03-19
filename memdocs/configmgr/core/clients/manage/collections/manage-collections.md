@@ -267,6 +267,9 @@ Other improvements:
 
 - Previously the **Back** button took you through your viewing history. Now it takes you to the previously selected collection. For example, changing pages for the current collection doesn't activate the **Back** button. When you select a new collection, you can select **Back** to return to the original collection graph.
 
+> [!TIP]
+> Hold the **Ctrl** key and scroll the mouse wheel to zoom the graph.
+
 For more information on how to navigate the collection dependency graph with a keyboard, see [Accessibility features](../../../understand/accessibility-features.md#collection-relationship-diagram-shortcuts).
 
 ## PowerShell

@@ -32,21 +32,21 @@ To access a workspace, use the following keyboard shortcuts:
 
 |Keyboard shortcut| Workspace|
 |--------|--------|
-|Ctrl + 1| Assets and Compliance|
-|Ctrl + 2|  Software Library|
-|Ctrl + 3|  Monitoring|
-|Ctrl + 4|  Administration|
+|`Ctrl` + `1`| Assets and Compliance|
+|`Ctrl` + `2`|  Software Library|
+|`Ctrl` + `3`|  Monitoring|
+|`Ctrl` + `4`|  Administration|
 
 ### Other console shortcuts
 
 |Keyboard shortcut|  Purpose|
 |--------|--------|
-|Ctrl + M|Set the focus on the main (central) pane.|
-|Ctrl + T|Set the focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.|
-|Ctrl + I|Set the focus to the breadcrumb bar, below the ribbon.|
-|Ctrl + L|Set the focus to the **Search** field, when available.|
-|Ctrl + D|Set the focus to the details pane, when available.|
-|Alt     |Change the focus in and out of the ribbon.|
+|`Ctrl` + `M`|Set the focus on the main (central) pane.|
+|`Ctrl` + `T`|Set the focus to the top node in the navigation pane. If the focus was already in that pane, the focus is set to the last node you visited.|
+|`Ctrl` + `I`|Set the focus to the breadcrumb bar, below the ribbon.|
+|`Ctrl` + `L`|Set the focus to the **Search** field, when available.|
+|`Ctrl` + `D`|Set the focus to the details pane, when available.|
+|`Alt`       |Change the focus in and out of the ribbon.|
 
 ### <a name="bkmk_cmpshortcuts"></a> CMPivot shortcuts
 
@@ -54,8 +54,8 @@ Most [web browser keyboard shortcuts](https://support.microsoft.com/topic/intern
 
 |Keyboard shortcut|Purpose|
 |--------|--------|
-|Ctrl + 1|Set the focus on the first tab.|
-|Alt + &lt;|To back to the address|
+|`Ctrl` + `1`|Set the focus on the first tab.|
+|`Alt` + `<`|To back to the address|
 
 ### Collection relationship diagram shortcuts
 
@@ -64,20 +64,22 @@ When you [view collection relationships](../clients/manage/collections/manage-co
 
 |Navigator shortcut|Purpose|
 |--------|--------|
-|Ctrl + W|Scroll up|
-|Ctrl + S|Scroll down|
-|Ctrl + A|Scroll left|
-|Ctrl + D|Scroll right|
+|`Ctrl` + `W`|Scroll up|
+|`Ctrl` + `S`|Scroll down|
+|`Ctrl` + `A`|Scroll left|
+|`Ctrl` + `D`|Scroll right|
+|`Ctrl` + `+`|Zoom in|
+|`Ctrl` + `-`|Zoom out|
 
 Use the following keyboard shortcuts to quickly move focus to different areas of the window:
 
 |Keyboard shortcut|Purpose|
 |--------|--------|
-|Alt + P | Dependent page |
-|Alt + B | Back |
-|Alt + H | Home   |
-|Alt + N | Collection name |
-|Alt + T | Filter |
+|`Alt` + `P` | Dependent page |
+|`Alt` + `B` | Back |
+|`Alt` + `H` | Home |
+|`Alt` + `N` | Collection name |
+|`Alt` + `T` | Filter |
 
 ## Other accessibility features
 
@@ -85,7 +87,7 @@ Use the following keyboard shortcuts to quickly move focus to different areas of
 
 - Keyboard navigation through the main view and the ribbon is circular.
 
-- Keyboard navigation in the details pane is circular. To return to the previous object or pane, use Ctrl + D, then Shift + TAB.
+- Keyboard navigation in the details pane is circular. To return to the previous object or pane, use `Ctrl` + D, then Shift + TAB.
 
 - After refreshing a Workspace view, the focus is set to the main pane of that workspace.
 
