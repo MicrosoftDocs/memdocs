@@ -187,7 +187,7 @@ Upon upload, Intune rotates the key to create a new personal recovery key. Intun
   > [!NOTE]
   > Based on your compliance policy, devices might be blocked from accessing corporate resources until Intune successfully assumes management of FileVault encryption on the device
 
-**Instructions**:
+**Upload a personal recovery key to Intune**:
 
 1. After the device receives the FileVault profile, direct the user to use the [Company Portal website](https://portal.manage.microsoft.com/).
 
