@@ -123,4 +123,4 @@ Verify with:
 (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 ```
 
-![Command line sample of PowerShell verification](./media/licenses-assign/posh-addlic-verify.png)
+![Command line sample of PowerShell verification alt-text="Command line sample"](./media/licenses-assign/posh-addlic-verify.png)
