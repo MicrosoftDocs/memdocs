@@ -1,7 +1,7 @@
 ---
 title: "Console Extension Deployment"
 titleSuffix: "Configuration Manager"
-ms.date: "03/26/2021"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
