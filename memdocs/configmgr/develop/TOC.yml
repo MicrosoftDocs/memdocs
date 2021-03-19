@@ -506,8 +506,6 @@
     href: core/servers/console/about-configuration-manager-console-extension.md
   - name: Console extension architecture
     href: core/servers/console/console-extension-architecture.md
-  - name: Console extension registration for community hub
-    href: core/servers/console/console-extension-register.md    
   - name: Console extension deployment
     href: core/servers/console/console-extension-deployment.md
   - name: Console actions
