@@ -190,7 +190,7 @@ Support for a Proxy is limited to the following platforms:
 
 ## Permissions
 
-To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Azure AD administrators have these permissions. You can also add them to [custom roles you create](https://docs.microsoft.com/mem/intune/fundamentals/create-custom-role) for your Intune tenant.
+To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Azure AD administrators have these permissions. You can also add them to [custom roles you create](../fundamentals/create-custom-role.md) for your Intune tenant.
 
 While configuring a role, on the **Permissions** page, expand **Microsoft Tunnel Gateway** and then select the permissions you want to grant.
 
