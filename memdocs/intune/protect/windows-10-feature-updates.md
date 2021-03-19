@@ -53,9 +53,13 @@ When a device receives a Windows 10 feature updates policy:
 
 Intune’s Windows 10 feature updates requires the following prerequisites:
 
+- In addition to a license for Intune, your organization must have one of the following subscriptions:
+  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+  - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+  - Windows Virtual Desktop Access E3 or E5
+
 - Devices must:  
   - Run Windows 10 version 1709 or later.
-  - Have a [Windows 10 Enterprise E3 license](/windows/deployment/windows-10-enterprise-e3-overview).
   - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
   - Have Telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
