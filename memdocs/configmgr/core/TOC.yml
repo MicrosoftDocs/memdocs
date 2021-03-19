@@ -26,6 +26,8 @@
       href: servers/manage/admin-console.md
     - name: Console notifications
       href: servers/manage/admin-console-notifications.md
+    - name: Console extensions
+      href: servers/manage/admin-console-extensions.md
     - name: Console changes and tips
       href: servers/manage/admin-console-tips.md
   - name: Fundamentals
@@ -470,6 +472,8 @@
     items:
     - name: Use community hub
       href: servers/manage/community-hub.md
+    - name: Console extensions in community hub
+      href: servers/manage/community-hub-extensions.md
     - name: Contribute to community hub
       href: servers/manage/community-hub-contribute.md      
   - name: CMPivot

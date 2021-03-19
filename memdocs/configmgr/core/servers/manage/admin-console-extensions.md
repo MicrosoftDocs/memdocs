@@ -1,0 +1,56 @@
+---
+title: Console extensions for Configuration Manager
+titleSuffix: Configuration Manager
+description: Learn about managing console extensions for Configuration Manager
+ms.date: 03/26/2021
+ms.prod: configuration-manager
+ms.technology: configmgr-core
+ms.topic: conceptual
+ms.assetid: dfda09bc-5eca-4fb6-9064-4e51705cfe58
+author: mestew
+ms.author: mstewart
+manager: dougeby
+---
+
+# Manage console extensions for Configuration Manager
+
+*Applies to: Configuration Manager (current branch)*
+
+Starting in Configuration Manager 2103, You can download console extensions from the [Community hub](community-hub.md) and have it applied to all consoles connected to a hierarchy. The **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
+
+After you approve an extension, when you open the console, you'll see a [console notification](community-hub.md#bkmk_hub_os). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension.
+
+
+
+[!INCLUDE [console extensions node](includes/console-extensions-node.md)]
+
+
+### Console extension to show all status messages for a task sequence deployment
+
+With this release, the Community hub includes one extension to help you test and use this feature: `Show all status messages for a task sequence deployment`. This extension is based on your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/11605476-status-messages-in-the-sccm-console). When you install this extension, it adds a right-click action to task sequence deployments to **Show all status messages**.
+
+:::image type="content" source="../../media/8116426-ts-deployment-menu.png" alt-text="Context menu on a task sequence deployment with extension to Show all status messages":::
+
+To share a console extension with the community, use the same process to [Contribute content](../../../../servers/manage/community-hub.md#join-the-community-hub-to-contribute-content).
+
+### Try it out!
+
+Try to complete the tasks. Then send [Feedback](../../../../understand/product-feedback.md) with your thoughts on the feature.
+
+1. [Use the community hub](../../../../servers/manage/community-hub.md#use-the-community-hub) to download the console extension.
+
+1. Go to the **Administration** workspace, expand **Updates and servicing**, and select the **Console extensions** node.
+
+1. Select the new extension. In the ribbon, select **Approve**.
+
+1. Restart the console. In the upper-right corner of the console, select the bell icon to display Configuration Manager console notifications.
+
+1. The notification says **New custom console extensions are available**.
+
+1. To start the install, select **Install custom console extensions**.
+
+1. When the update is complete for the extension, select **Close**. The console restarts.
+
+1. Go to the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Right-click a task sequence, and select the new option to **Show all status messages**.
+
+To troubleshoot the installation of an extension, see **AdminUI.ExtensionInstaller.log** in the AdminUILog directory on the computer with the console.

@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use community hub in Configuration Manager
-ms.date: 03/02/2021 
+ms.date: 03/26/2021 
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

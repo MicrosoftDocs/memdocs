@@ -278,17 +278,19 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 
 ## Configuration Manager console
 
-### Get console extensions from the Community hub
+### Get console extensions from the community hub
 
-<!--8116426-->
+<!--8116426, 3555909-->
 
 The [Community hub](../../servers/manage/community-hub.md) now supports sharing extensions to the Configuration Manager console. When you get an extension from the hub, it's available in a new **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
 
-### Download Power BI report templates from Community hub
+For more information, see [Using community hub](../../servers/manage/community-hub.md) and [Console notifications](../../servers/manage/admin-console-extensions.md).
+
+### Download Power BI report templates from community hub
 <!--5679831-->
 Community hub now supports contributing and downloading Power BI report template files. This integration allows administrators to easily share and reuse Power BI reports. Contributing and downloading Power BI report template is also available for current branch versions of Configuration Manager.
 
-For more information, see [Power BI report templates in Community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using Community hub](../../servers/manage/community-hub.md).
+For more information, see [Power BI report templates in community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using community hub](../../servers/manage/community-hub.md).
 
 ### Add a report as a favorite
 
