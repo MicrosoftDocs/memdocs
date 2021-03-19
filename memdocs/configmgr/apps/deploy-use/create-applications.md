@@ -166,7 +166,7 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 > - [Return Codes](#bkmk_dt-return)
 > - [Dependencies](#bkmk_dt-depend)
 >  
-> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](deploy-applications.md#bkmk_exe-check).  
+> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](check-for-running-executable-files.md).
 
 ### Start the Create Deployment Type wizard  
 

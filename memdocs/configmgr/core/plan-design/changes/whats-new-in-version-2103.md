@@ -181,6 +181,7 @@ You can now disable application deployments. Other objects already have similar 
 
 For device-based deployments, when you disable the deployment or object, use the client notification action to **Download Computer Policy**. This action immediately tells the client to update its policy from the site. If the deployment hasn't already started, the client receives the updated policy that the object is now disabled.
 
+For more information, see [Disable and delete application deployments](../../../apps/deploy-use/disable-delete-deployments.md).
 
 ## OS deployment
 

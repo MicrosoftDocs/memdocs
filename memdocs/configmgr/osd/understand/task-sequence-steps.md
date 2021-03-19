@@ -1268,8 +1268,8 @@ The applications must meet the following criteria:
 
 - It must not initiate a restart on its own. The application must request a restart by using the standard restart code, 3010. This behavior makes sure that this step correctly handles the restart. If the application returns a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
-> [!Note]
-> If the application [checks for running executable files](../../apps/deploy-use/deploy-applications.md#bkmk_exe-check), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
+> [!NOTE]
+> If the application [checks for running executable files](../../apps/deploy-use/check-for-running-executable-files.md), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
 
 When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 
