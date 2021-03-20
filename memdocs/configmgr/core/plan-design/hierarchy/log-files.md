@@ -430,24 +430,24 @@ The following sections list log files related to Configuration Manager functions
 
 The following table lists the log files that contain information related to application management.  
 
-|Log name|Description|Computer with log file|  
-|--------------|-----------------|----------------------------|  
-|AppIntentEval.log|Records details about the current and intended state of applications, their applicability, whether requirements were met, deployment types, and dependencies.|Client|  
-|AppDiscovery.log|Records details about the discovery or detection of applications on client computers.|Client|  
-|AppEnforce.log|Records details about enforcement actions (install and uninstall) taken for applications on the client.|Client|  
+| Log name | Description | Computer with log file |
+|----------|-------------|------------------------|
+|AppIntentEval.log|Records details about the current and intended state of applications, their applicability, whether requirements were met, deployment types, and dependencies.|Client|
+|AppDiscovery.log|Records details about the discovery or detection of applications on client computers.|Client|
+|AppEnforce.log|Records details about enforcement actions (install and uninstall) taken for applications on the client.|Client|
 |AppGroupHandler.log|Records detection and enforcement information for application groups|Client|
 |BusinessAppProcessWorker.log|Records processing for Microsoft Store for Business apps.|Site server|
-|Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|  
-|colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|  
+|Ccmsdkprovider.log|Records the activities of the application management SDK.|Client|
+|colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site system server|
 |WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
-|NotiCtrl.log|Application request notifications.|Site server|  
-|PrestageContent.log|Records details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system server|  
+|NotiCtrl.log|Application request notifications.|Site server|
+|PrestageContent.log|Records details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system server|
 |SettingsAgent.log|Enforcement of specific applications, records orchestration of application group evaluation, and details of co-management policies.|Client|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
-|SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
-|SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|  
-|TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.|Client|<!-- MEMDocs#336 -->
+|SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|
+|SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|
+|TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.<!-- MEMDocs#336 -->|Client|
 
 #### Packages and programs
 
