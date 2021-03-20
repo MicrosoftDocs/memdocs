@@ -9,4 +9,4 @@ ms.date: 03/26/2021
 
 ## Notifications for console extensions
 
-Starting in Configuration Manager version 2130, 
+Starting in Configuration Manager version 2103, 
