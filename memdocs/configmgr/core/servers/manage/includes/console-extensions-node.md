@@ -56,7 +56,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 1. Install the extension on the local console by choosing **Install**.
 1. Once the extension is installed, verify it displays and you can use it from the local console.
 
-## Notify users to install the extension
+## Enable notifications to users for extension installation
 
 1. Modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
 1. Select **Enable Notifications**.

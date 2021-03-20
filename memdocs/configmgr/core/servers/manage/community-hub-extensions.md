@@ -23,3 +23,5 @@ After you approve an extension, when you open the console, you'll see a [console
 [!INCLUDE [console extensions node](includes/console-extensions-node.md)]
 
 [!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
+
+## Next steps
