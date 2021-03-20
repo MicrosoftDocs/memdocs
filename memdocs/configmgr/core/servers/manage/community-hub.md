@@ -25,10 +25,10 @@ Community hub supports the following objects:
 
 ## <a name="bkmk_new"></a> What's new
 
+- Support for [managing console extensions](community-hub-exentions.md) added in Configuration Manager 2103 <!--8116426, 3555909-->
 - Support for configuration baselines including child configuration items, added in March 2021 <!--7983121-->
 - Support for Power BI reports, added in February 2021 <!--5679831-->
 - Support for installing console extensions, added in January 2021 <!--3555909-->
-
 ## Prerequisites
 
 - The device running the Configuration Manager console used to access the community hub needs the following items:
