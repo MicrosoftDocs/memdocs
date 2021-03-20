@@ -80,7 +80,6 @@ Use the following information to identify the Windows groups, accounts, and SQL 
   - [smsdbrole_siteprovider](#smsdbrole_siteprovider)
   - [smsdbrole_siteserver](#smsdbrole_siteserver)
   - [smsdbrole_SUP](#smsdbrole_sup)
-  - [smsdbrole_WebPortal](#smsdbrole_webportal)
   - [smsschm_users](#smsschm_users)
 
 ## <a name="bkmk_groups"></a> Windows groups that Configuration Manager creates and uses  
