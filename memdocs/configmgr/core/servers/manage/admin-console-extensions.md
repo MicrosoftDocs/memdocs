@@ -21,3 +21,7 @@ Starting in Configuration Manager 2103, You can download console extensions from
 After you approve an extension, when you open the console, you'll see a [console notification](community-hub.md#bkmk_hub_os). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension.
 
 [!INCLUDE [console extensions node](includes/console-extensions-node.md)]
+
+[!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
+
+## Next steps
