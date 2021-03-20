@@ -811,7 +811,6 @@ Configuration Manager uses SQL Server Native Client on the following site system
 - Multicast-enabled distribution point
 - Asset Intelligence update service point
 - Reporting services point
-- Application catalog web service
 - Enrollment point
 - Endpoint Protection point
 - Service connection point

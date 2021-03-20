@@ -163,11 +163,7 @@ Not all devices can support content hashing. The exceptions include:
 ### Server communication within a site  
  Each site system server uses a certificate to transfer data to other site systems in the same Configuration Manager site. Some site system roles also use certificates for authentication. For example, if you install the enrollment proxy point on one server and the enrollment point on another server, they can authenticate one another by using this identity certificate. When Configuration Manager uses a certificate for this communication, if there is a PKI certificate available that has server authentication capability, Configuration Manager automatically uses it; if not, Configuration Manager generates a self-signed certificate. This self-signed certificate has server authentication capability, uses SHA-256, and has a key length of 2048 bits. Configuration Manager copies the certificate to the Trusted People store on other site system servers that might need to trust the site system. Site systems can then trust one another by using these certificates and PeerTrust.  
 
- In addition to this certificate for each site system server, Configuration Manager generates a self-signed certificate for most site system roles. When there is more than one instance of the site system role in the same site, they share the same certificate. For example, you might have multiple management points or multiple enrollment points in the same site. This self-signed certificate also uses SHA-256 and has a key length of 2048 bits. It is also copied to the Trusted People Store on site system servers that might need to trust it. The following site system roles generate this certificate:  
-
-- Application Catalog web service point  
-
-- Application Catalog website point  
+ In addition to this certificate for each site system server, Configuration Manager generates a self-signed certificate for most site system roles. When there is more than one instance of the site system role in the same site, they share the same certificate. For example, you might have multiple management points or multiple enrollment points in the same site. This self-signed certificate also uses SHA-256 and has a key length of 2048 bits. It is also copied to the Trusted People Store on site system servers that might need to trust it. The following site system roles generate this certificate:
 
 - Asset Intelligence synchronization point  
 
