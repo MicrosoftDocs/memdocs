@@ -11,7 +11,6 @@ ms.date: 03/26/2021
 <!--3555909-->
 The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Console extensions downloaded from the [community hub](../community-hub.md) will be located here. Actions for console extensions are grouped in the ribbon and the right-click menu.
 
-
 :::image type="content" source="../media/3555909-console-extensions-node.png" alt-text="The Console Extensions node in the Configuration Manager console" lightbox="../media/3555909-console-extensions-node.png":::
 
 **Actions for All Sites** group:
@@ -29,7 +28,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 **Classify** group:
 
-- **Set Security Scopes**: Set the [security scopes](../../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) to secure the object and limit access.
+- **Set Security Scopes**: Set the [security scopes](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) to secure the object and limit access.
 
 **Local Extension** group:
 
@@ -45,7 +44,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 ## Install an extension to a local console
 
-1. Change the [security scope](../../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension. Changing the security scope is recommended for initial testing of an extension.
+1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension. Changing the security scope is recommended for initial testing of an extension.
    1. Go to the **Console Extensions** node under **Administration** > **Overview** > **Updates and Servicing**.
    1. Select the extension, then select **Set Security Scopes** from the ribbon.
    1. Remove the **Default** security scope and add a scope that only contains one or two admins for initial testing.
@@ -63,4 +62,3 @@ The **Console Extensions** node is located under **Administration** > **Overview
 1. Select **Enable Notifications**.
 1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use an account that you just gave access to when you modified the security scope.
 1. Verify that the notification for the extension occurs and that you can install the extension.
-
