@@ -35,11 +35,13 @@ The **Console Extensions** node is located under **Administration** > **Overview
 - **Install**: Installs the selected extension for the current local console
 - **Uninstall**: Uninstalls the selected extension from the current local console
 
+> [!NOTE]
+> The WebView2 console extension is approved by default to enable using community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
 ## Download a console extension
-
 
 1. From the Configuration Manager console, go to the **Community hub** node in the **Community** workspace.
 1. Find an extension under the **Recently Updated** section on the **Home** page or search for it in the **All objects** page.
+    :::image type="content" source="../media/3555909-community-hub-console-extension.png" alt-text="Example console extension from community hub":::
 1. Select the extension and choose **Download**.
 
 ## Install and test an extension on a local console
@@ -58,7 +60,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 ## Enable notifications to users for extension installation
 
-1. Modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
+1. If needed, modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
 1. Select **Enable Notifications**.
-1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you just gave access to when you modified the security scope.
+1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you gave access to when you modified the security scope.
 1. Verify that the notification for the extension occurs and that you can install the extension.
