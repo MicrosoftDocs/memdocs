@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,7 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Expedite Windows 10 quality updates in Intune
+# Expedite Windows 10 quality updates in Microsoft Intune
 
 *This feature is in public preview.*
 
@@ -198,7 +198,7 @@ A more recent update is deployed when the following conditions are met:
   - When it runs its daily scan
   - When a new update becomes available
 
-  In this event, Windows Update attempts to stop installation of the original update, cancel the restart, and then starts the download and installation of the more recent update. 
+  In this event, Windows Update attempts to stop installation of the original update, cancel the restart, and then starts the download and installation of the more recent update.
 
 - The device isn't targeted with a deferral policy that blocks installation of a more recent update. In this case, the most recently available update that isn't deferred is the update that installs.
 
@@ -246,8 +246,8 @@ From this pane, you can:
 
 Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md).
 
-> [!IMPORTANT] 
-> When you configure the Windows Health Monitoring profile, during step seven you must set the **Scope** to **Windows updates**. 
+> [!IMPORTANT]
+> When you configure the Windows Health Monitoring profile, during step seven you must set the **Scope** to **Windows updates**.
 
 After a policy has been created you can monitor results, update status, and errors from the following reports.
 
@@ -294,8 +294,8 @@ This report can help you find devices with alerts or errors and can help you tro
 | Installing | RestartRequired  | The installation is complete and requires a restart. |
 | Installing | RestartInitiated | The device has begun a restart. |
 | Installing | RestartComplete  | The device has completed the restart. |
-| Installed | UpdateInstalled  | Update has successfully completed. |
- 
+| Installed  | UpdateInstalled  | Update has successfully completed. |
+
 ## Next steps
 
 - Configure [Widows 10 update rings](../protect/windows-10-update-rings.md)
