@@ -87,6 +87,22 @@ This behavior is similar if you migrate a task sequence with a feature update be
 <!-- 9550275 -->
 You can't currently use the action to **Create prestaged content file** for a task sequence with a feature update.
 
+##### Create standalone media
+
+<!-- 9544102 -->
+Standalone media isn't supported for a task sequence with a feature update. When you try to create standalone media, it fails with entries similar to the following in CreateTSMedia.log:
+
+```log
+Unable to retrieve policy for Task Sequence XYZ004BD from site XYZ.
+Failed to initialize.... Verify the user is authorized to create Task Sequence media and has local admin permissions.
+MediaGenerator::~MediaGenerator()
+Failed to create media generator (0x80070490)
+CreateTsMedia failed with error 0x80070490, details=''
+Media temp directory 'C:\Users\jqpublic\AppData\Local\Temp\_tsmedia_1053544' is fully cleared
+Media creation process that was started from Admin Console completed.
+CreateMedia.exe finished with error code 80070490
+```
+
 ## Create a task sequence to upgrade an OS
 
 To upgrade the OS on clients, create a task sequence and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard adds the task sequence steps to upgrade the OS, apply software updates, and install applications.
