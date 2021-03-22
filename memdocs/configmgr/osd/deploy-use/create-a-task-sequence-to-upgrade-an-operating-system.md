@@ -61,7 +61,9 @@ Before you create the task sequence, make sure the following requirements are in
 
   - **Allow clients to download delta content when available**: If you use Windows Delivery Optimization, the content that the client downloads may be much smaller.
 
-#### Known issue with feature update in a task sequence
+#### Known issues with feature updates in a task sequence
+
+##### Create a new task sequence
 
 <!-- bug 8976935 -->
 If you need to create a new task sequence, you need an OS upgrade package to complete the Create Task Sequence Wizard.
@@ -72,6 +74,18 @@ If you need to create a new task sequence, you need an OS upgrade package to com
 > You can create a custom task sequence and add the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) step. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the **Upgrade OS** step. Make sure to use the setting for **The currently installed default operating system** to restart the computer into the installed OS and not Windows PE.
 
 If you have an existing Windows 10 in-place upgrade task sequence, [edit](../understand/task-sequence-editor.md#bkmk_edit) or [copy](manage-task-sequences-to-automate-tasks.md#copy) it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
+
+##### Export, import, and migrate task sequences
+
+<!-- 9553497 -->
+If you export a task sequence with the **Upgrade OS** step that uses a feature update, the exported task sequence doesn't include the feature update content. When you import the task sequence, readd the **Upgrade OS** step with the feature update.
+
+This behavior is similar if you migrate a task sequence with a feature update between hierarchies.
+
+##### Create prestaged content file
+
+<!-- 9550275 -->
+You can't currently use the action to **Create prestaged content file** for a task sequence with a feature update.
 
 ## Create a task sequence to upgrade an OS
 
