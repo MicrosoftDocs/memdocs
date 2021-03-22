@@ -97,7 +97,7 @@ Selecting a device name opens the **Application reliability (preview)** tab for 
 
 **Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Only devices enrolled in Endpoint analytics via Configuration Manager version 2010 or older can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
 
-**Mitigation**: This issue requires a client-side mitigation which is available as part of an update rollup for Configuration Manager version 2010. Learn more at [KB4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95).
+**Mitigation**: This issue requires a client-side mitigation which is available as part of an update rollup for Configuration Manager version 2010. For more information, see [KB4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95).
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
