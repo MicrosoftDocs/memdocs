@@ -110,8 +110,6 @@ With both licenses, all four tabs are available.
 
 :::image type="content" source="./media/microsoft-tunnel-migrate-app/defender-app-tabs.png" alt-text="Screenshot of the Defender for Endpoint tabs.":::
 
-microsoft-tunnel-migrate-app
-
 For information about license requirements for Microsoft Defender for Endpoint, see [Get Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/switch-to-microsoft-defender-prepare#get-microsoft-defender-for-endpoint).
 
 ## Migrate devices to Microsoft Defender for Endpoint
