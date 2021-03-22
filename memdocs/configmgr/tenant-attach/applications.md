@@ -2,7 +2,7 @@
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 12/03/2020
+ms.date: 03/26/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
