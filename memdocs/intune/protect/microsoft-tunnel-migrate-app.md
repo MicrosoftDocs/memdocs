@@ -34,7 +34,7 @@ Now in public preview, you can use Microsoft Defender for Endpoint as the tunnel
 > [!TIP]
 > For more information about the preview, see the blog **Simplify mobile security with a single app for Microsoft Tunnel and Microsoft Defender for Endpoint** at https://aka.ms/defendertunnel.
 >
-> For documentation about Microsoft Tunnel, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview).
+> For documentation about Microsoft Tunnel, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md).
 
 When this preview for Android and a future preview for iOS/iPadOS are both over, the Microsoft Defender for Endpoint apps for each platform will become generally available. At that time, we'll announce deprecation of the standalone tunnel app for both platforms. Support bot the standalone apps will end 60 days after that announcement.
 
@@ -47,7 +47,7 @@ The public preview supports the following device platforms:
 
 Unlike most public previews for Intune, you must opt in before you can use  this preview. When you opt in, Microsoft grants your tenant access to the preview build of Microsoft Defender for Endpoint that supports the tunnel app functionality. After you opt in:
 
-- Your tenant receives access to the app, and we'll send you an email wth instructions for deploying it.
+- Your tenant receives access to the app, and we'll send you an email with instructions for deploying it.
 - You’ll deploy the Microsoft Defender for Endpoint app to devices.
 - Replace your existing VPN profile for Microsoft Tunnel with a new VPN profile that directs devices to use the Microsoft Defender for Endpoint app.
 
