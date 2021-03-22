@@ -53,6 +53,9 @@ Devices must run one of the following OS versions to target an OS upgrade task s
 
 For more information, see [Windows 10 upgrade paths](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
+> [!NOTE]
+> OS deployment isn't supported for Windows 10 on ARM64 devices, except for a feature update task sequence. Starting in version 2103, you can deploy a task sequence with a feature update to an ARM64 device.
+
 #### Windows Server
 
 - Windows Server 2012
