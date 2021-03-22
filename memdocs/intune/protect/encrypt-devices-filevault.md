@@ -159,7 +159,7 @@ After Intune escrows the personal recovery key:
 
 ### Assume management of FileVault on previously encrypted devices
 
-By default, Intune can’t manage FileVault disk encryption on a macOS device that was encrypted by a device user. However, there are two methods you can use that enable Intune to take-over management of FileVault in that scenario:
+Intune can’t manage FileVault disk encryption on a macOS device that was encrypted by a device user, unless you apply FileVault policy through Intune. There are two methods you can use that enable Intune to take-over management of FileVault in this scenario:
 
 - [Upload a personal recovery key to Intune](#upload-a-personal-recovery-key) – Use this method when the user knows their personal recovery key.
 - [The user generates a new recovery key on the device](#generate-a-new-recovery-key-on-the-device) – Use this method if the personal recovery key isn’t known by the user.
