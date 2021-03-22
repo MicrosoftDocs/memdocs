@@ -278,7 +278,7 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 
 ## Configuration Manager console
 
-### Console extension management
+### Console extension management and installation
 <!--8116426, 3555909-->
 
 The **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. You can download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users are notified to install the extension to their local console.
