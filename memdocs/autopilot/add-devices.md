@@ -125,7 +125,7 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 
 After you've uploaded an Autopilot device, you can edit certain attributes of the device.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
 2. Select the device you want to edit.
 3. In the pane on the right of the screen, you can edit:
     - Device name.
@@ -140,7 +140,7 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 You can delete Windows Autopilot devices that aren't enrolled into Intune:
 
-- Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**. Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
+- Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
 
 Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. These deletions can all be done from Intune:
 
@@ -148,7 +148,7 @@ Completely removing a device from your tenant requires you to delete the Intune 
 
 2. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
 
-3. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** >. Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
+3. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
 
 ## Next steps
 
