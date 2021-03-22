@@ -89,7 +89,7 @@ Microsoft recommends that you keep SQL Server Express up to date. For more infor
 
 Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
 
-For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#software-center-customization-general).
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#software-center-customizations---general).
 
 ### Improved user experience and security with Software Center custom tabs
 

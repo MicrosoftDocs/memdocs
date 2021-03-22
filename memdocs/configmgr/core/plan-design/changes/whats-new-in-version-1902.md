@@ -324,7 +324,7 @@ This version of Configuration Manager further iterates on how you can customize 
 
 Specify these settings in the **Software Center** group of client settings.
 
-For more information, see [About client settings](../../clients/deploy/about-client-settings.md#software-center-customizations-defaults).
+For more information, see [About client settings](../../clients/deploy/about-client-settings.md#software-center-customizations---defaults).
 
 
 ## <a name="bkmk_sum"></a> Software updates
