@@ -9,7 +9,7 @@ ms.date: 03/26/2021
 
 ## About the Console Extensions node
 <!--3555909-->
-*(Introduced in version 2010)*
+(*Introduced in version 2103*)
 
 The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Console extensions downloaded from the [community hub](../community-hub.md) will be located here. Actions for console extensions are grouped in the ribbon and the right-click menu.
 
