@@ -126,11 +126,17 @@ Starting in version 2006, you can choose to receive notifications from Microsoft
 
 :::image type="content" source="media/3953121-microsoft-notifications.png" alt-text="Notification from Microsoft options in site properties" lightbox="media/3953121-microsoft-notifications.png":::
 
+## <a name="bkmk_notification"></a> Console extension installation notifications
+<!--3555909-->
+(*Introduced in version 2103*)
+
+[!INCLUDE [Console extensions notifications](includes/console-extensions-notifications.md)]
+
+For more information, see [Manage console extensions](community-hub-extensions.md).
 ## Log files
 
 For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
-[!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
 ## Next steps
 
 - [Use the console](admin-console.md)

@@ -284,7 +284,7 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 
 The [Community hub](../../servers/manage/community-hub.md) now supports sharing extensions to the Configuration Manager console. When you get an extension from the hub, it's available in a new **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
 
-For more information, see [Using community hub](../../servers/manage/community-hub.md) and [Console notifications](../../servers/manage/admin-console-extensions.md).
+For more information, see [Console extensions](../../servers/manage/community-hub-extensions.md) and [Using community hub](../../servers/manage/community-hub.md).
 
 ### Download Power BI report templates from community hub
 <!--5679831-->

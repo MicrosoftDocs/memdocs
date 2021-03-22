@@ -42,7 +42,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 1. Find an extension under the **Recently Updated** section on the **Home** page or search for it in the **All objects** page.
 1. Select the extension and choose **Download**.
 
-## Install an extension to a local console
+## Install and test an extension on a local console
 
 1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension. Changing the security scope is recommended for initial testing of an extension.
    1. Go to the **Console Extensions** node under **Administration** > **Overview** > **Updates and Servicing**.
@@ -60,5 +60,5 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 1. Modify the security scopes for the extension to allow access by more admins. These admins will be targeted with the in-console notification for installing the extension.
 1. Select **Enable Notifications**.
-1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use an account that you just gave access to when you modified the security scope.
+1. Launch a Configuration Manager console that doesn't have the extension installed. Ideally, use a test account that you just gave access to when you modified the security scope.
 1. Verify that the notification for the extension occurs and that you can install the extension.
