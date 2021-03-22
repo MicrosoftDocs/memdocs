@@ -39,7 +39,7 @@ Here are some tips we've learned from helping thousands of customers get current
 
 - Use pre-caching to reduce user wait times. For more information, see [Configure pre-cache content](../osd/deploy-use/configure-precache-content.md).  
 
-- Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-for-post-processing).  
+- Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](../osd/understand/in-place-upgrade-recommendations.md#post-processing).
 
 - If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [Deploy Windows 10 in-place upgrade via CMG](../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).  
 

@@ -62,11 +62,11 @@ Add steps in this group to remove any drivers that are incompatible with this ve
 
 Add steps in this group to remove or suspend third-party security programs, such as antivirus.
 
-If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any further guidance on this process.
+If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any further guidance on this process.
 
 ### Download Package Content task sequence step
 
-Use the [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent) step before the **Upgrade Operating System** step in the following scenarios:
+Use the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step before the **Upgrade Operating System** step in the following scenarios:
 
 - You use a single upgrade task sequence for both x86 and x64 platforms. Include two **Download Package Content** steps in the **Prepare for Upgrade** group. Set conditions on each step to detect the client architecture. This condition causes the step to download only the appropriate OS upgrade package. Configure each **Download Package Content** step to use the same variable, and use the variable for the media path on the **Upgrade Operating System** step.
 
@@ -104,7 +104,7 @@ Add steps in this group to set Windows default apps and file associations.
 
 1. Add the XML file to a package.
 
-1. Add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line:
+1. Add a [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line:
 
     `dism /online /Import-DefaultAppAssociations:DefaultAppAssociations.xml`
 
@@ -127,9 +127,9 @@ The default task sequence template for Windows 10 in-place upgrade includes a gr
 
 To gather logs from the client, add steps in this group.
 
-- A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder) step.
+- A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) step.
 
-- To do the copy operation, use a custom script or utility with either the [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) or [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step.
+- To do the copy operation, use a custom script or utility with either the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) or [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.
 
 - Files to collect might include the following logs:
      `%_SMSTSLogPath%\*.log`
@@ -139,7 +139,7 @@ To gather logs from the client, add steps in this group.
 
 - For more information on Configuration Manager client logs, see [Configuration Manager client logs](../../core/plan-design/hierarchy/log-files.md#BKMK_ClientLogs).
 
-- For more information on **_SMSTSLogPath** and other useful variables, see [Task sequence variables](../understand/task-sequence-variables.md).
+- For more information on **_SMSTSLogPath** and other useful variables, see [Task sequence variables](task-sequence-variables.md).
 
 ### Run diagnostic tools
 
@@ -149,7 +149,7 @@ One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It'
 
 - In Configuration Manager, [create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) for the tool.
 
-- Add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:
+- Add a [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`
 
 > [!TIP]
@@ -167,7 +167,7 @@ On the default **Check Readiness** step, enable **Ensure minimum free disk space
 
 ### Retry downloading policy
 
-Use the **SMSTSDownloadRetryCount** [task sequence variable](../understand/task-sequence-variables.md#SMSTSDownloadRetryCount) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients aren't on a wired intranet network connection, more retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it can't download policy.<!--501016--> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
+Use the **SMSTSDownloadRetryCount** [task sequence variable](task-sequence-variables.md#SMSTSDownloadRetryCount) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients aren't on a wired intranet network connection, more retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it can't download policy.<!--501016--> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
 
 ### Do an inline compatibility assessment
 
@@ -191,18 +191,18 @@ Use the **SMSTSDownloadRetryCount** [task sequence variable](../understand/task-
 
     This condition means that the task sequence only runs this **Run Command Line** step if the return code isn't a success code.
 
-The return code `3247440400` is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns `3247440400`, the task sequence skips this **Run Command Line** step, and continues. If the assessment step returns any other return code, this **Run Command Line** step runs. Because the command exits with a non-zero return code, the task sequence also fails. The task sequence log and status messages include the return code from the Windows Setup compatibility scan. For more information on **_SMSTSOSUpgradeActionReturnCode**, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+The return code `3247440400` is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns `3247440400`, the task sequence skips this **Run Command Line** step, and continues. If the assessment step returns any other return code, this **Run Command Line** step runs. Because the command exits with a non-zero return code, the task sequence also fails. The task sequence log and status messages include the return code from the Windows Setup compatibility scan. For more information on **_SMSTSOSUpgradeActionReturnCode**, see [Task sequence variables](task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
 
-For more information, see the [Upgrade operating system](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step.
+For more information, see the [Upgrade operating system](task-sequence-steps.md#BKMK_UpgradeOS) task sequence step.
 
 ### Convert from BIOS to UEFI
 
-If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
+If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### Manage BitLocker
 
 <!--SCCMDocs issue #494-->
-If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements need devices to always have active disk encryption, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements need devices to always have active disk encryption, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### Remove default apps
 
