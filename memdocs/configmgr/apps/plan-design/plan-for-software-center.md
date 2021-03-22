@@ -60,7 +60,12 @@ Customize the appearance of Software Center by adding your organization's brandi
 
 - **Organization name**: Software Center displays this name in the top banner
 - **Color scheme**: The primary color for the banner and other elements
+- **Foreground color**: By default, when you select an item, the font color is white. Starting in version 2103, you can change this color for better visibility with certain primary colors, and better accessibility.<!--8655575-->
 - **Logo**: A JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB
+
+The following image shows a example of Software Center that's customized with all four branding settings:
+
+:::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding":::
 
 For more information, see the following articles:
 

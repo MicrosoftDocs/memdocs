@@ -612,15 +612,11 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 #### Software Center Customization - General
 
-The following image shows a example of Software Center that's customized with all four branding settings:
-
-:::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding":::
-
 - **Company name**: Specify the organization name that users see in Software Center.
 
-- **Color scheme for Software Center**: Select the primary color that Software Center uses. You can choose from 48 basic colors, or define a custom color.
+- **Color scheme for Software Center**: Select the primary color that Software Center uses. You can choose from 48 basic colors, or define a custom color. By default, this color is Microsoft blue (Red: 0, Green: 120, Blue: 212).
 
-- **Foreground color for Software Center**: Starting in version 2103, configure a custom color for the foreground font. For some customers, their brand color doesn't work well with the default white font color for a selected item. This setting better supports these customers and improves accessibility.<!--8655575-->
+- **Foreground color for Software Center**: Starting in version 2103, configure a custom color for the foreground font. By default, this color is white (Red: 255, Green: 255, Blue: 255). For some customers, their brand color doesn't work well with the default white font color for a selected item. This setting better supports these customers and improves accessibility.<!--8655575-->
 
 - **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
 
@@ -678,11 +674,11 @@ If you don't enable this option, Software Center uses the Windows built-in Inter
 #### Software Center Customizations - Defaults
 <!--3612112-->
 
-- Configure the **Default application filter** as either **All** or only **Required** applications.  
+- Configure the **Default application filter** as either **All** or only **Required** applications. By default, it shows all applications.
 
-  Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
+  Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.
 
-- Set the **Default application view** as either **Tile view** or **List view**.
+- Set the **Default application view** as either **Tile view** or **List view**. By default, it uses the tile view.
 
   If a user changes this configuration, Software Center persists the user's preference in the future.
 
