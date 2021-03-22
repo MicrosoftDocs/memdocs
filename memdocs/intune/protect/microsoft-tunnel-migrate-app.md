@@ -25,18 +25,18 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Migrate Microsoft Tunnel to the preview version of Microsoft Defender for Endpoint for Microsoft Intune
+# Migrate to Microsoft Defender for Endpoint for the Microsoft Tunnel in Intune
 
-*Microsoft Defender for Endpoint support for Android is public preview*.
+*Microsoft Defender for Endpoint support for Android is in public preview*.
 
-Now in public preview, you can use Microsoft Defender for Endpoint as the tunnel application for the Microsoft Tunnel Gateway. With this preview, a preview version of **Microsoft Defender for Endpoint** replaces the **Microsoft Tunnel** app as the tunnel client on supported devices.
+Use a preview version of Microsoft Defender for Endpoint as the tunnel application for the Microsoft Tunnel Gateway in Microsoft Intune. The preview version of **Microsoft Defender for Endpoint** includes the Tunnel app functionality. The new app replaces the standalone **Microsoft Tunnel** app as the tunnel client on supported devices.
 
 > [!TIP]
 > For more information about the preview, see the blog **Simplify mobile security with a single app for Microsoft Tunnel and Microsoft Defender for Endpoint** at https://aka.ms/defendertunnel.
 >
-> For documentation about Microsoft Tunnel, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md).
+> For general information about Microsoft Tunnel, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md).
 
-When this preview for Android and a future preview for iOS/iPadOS are both over, the Microsoft Defender for Endpoint apps for each platform will become generally available. At that time, we'll announce deprecation of the standalone tunnel app for both platforms. Support bot the standalone apps will end 60 days after that announcement.
+When this preview for Android and a future preview for iOS/iPadOS are both over, the Microsoft Defender for Endpoint app for both platforms becomes generally available. At that time, we'll announce deprecation of the standalone tunnel app for both platforms. Support for the standalone apps will end 60 days after that announcement.
 
 The public preview supports the following device platforms:
 
@@ -51,38 +51,46 @@ Unlike most public previews for Intune, you must opt in before you can use  this
 - You’ll deploy the Microsoft Defender for Endpoint app to devices.
 - Replace your existing VPN profile for Microsoft Tunnel with a new VPN profile that directs devices to use the Microsoft Defender for Endpoint app.
 
-## Important changes introduced with this preview
+## Changes introduced with this preview
 
 The introduction of the public preview version of Microsoft Defender for Endpoint brings the following changes.
 
 **Renamed connection type for VPN profiles for all tenants**:
 
-To support this preview, VPN profiles with a connection type of **Microsoft Tunnel** in all Intune tenants were updated to a connection type of **Microsoft Tunnel (standalone client)**. This change:
+To support this preview, all VPN profiles created before March 2, 2021 that have a connection type of **Microsoft Tunnel** were updated to a connection type of **Microsoft Tunnel (standalone client)**.
 
-- Has no effect on the functionality of existing profiles.
-- Supports moving to use Microsoft Defender for Endpoint app to support Microsoft Tunnel functionality.
+This change:
+
+- Applies to all tenants.
+- Has no effect on the functionality of those existing profiles.
+- Supports the change to use Microsoft Defender for Endpoint to support Microsoft Tunnel functionality.
+- Cannot be reversed. Intune doesn’t support administrative change of a VPN profiles connection type.
 
 The following connection types are now available in VPN profiles:
 
-- **Microsoft Tunnel (standalone client)** - The new name of the original connection type for VPN profiles.
+- **Microsoft Tunnel (standalone client)** - The new name of the original connection type for VPN profiles. Use this connection type for profiles assigned to devices that aren't part of the preview:
 
-  - This connection type is available for Android and iOS/iPadOS VPN profiles.
-  - All VPN profiles that were created before March 2, 2021 for use with the Microsoft Tunnel app have had their connection type updated to *Microsoft Tunnel (standalone client)*.
-  - Use this connection type for profiles assigned to devices that aren't part of the preview.
-  - This connection type and the standalone Tunnel app will eventually be deprecated for Android when the preview version of Microsoft Defender for Endpoint moves out of preview and into general availability.
+  - A VPN profile with this connection type directs devices to use the Microsoft Tunnel app to connect to the Microsoft Tunnel Gateway.
 
-- **Microsoft Tunnel** – A new connection type added to VPN profiles to support Microsoft Defender for Endpoint. This new connection type reuses the name of the original connection type. New VPN profiles that specify this connection type use the *Microsoft Defender for Endpoint* app to connect to Microsoft Tunnel Gateway.
+  - Use this connection type with VPN profiles for devices that run Android Enterprise and iOS/iPadOS.
 
-  - Use this connection type when after you join the public preview for Microsoft Defender for Endpoint with support for Microsoft Tunnel.
-  - Although this connection appears as an option for iOS/iPadOS VPN profiles, it's only supported for Android in the current preview.
-  - Only new VPN profiles that you create will use this connection type. You can't edit existing profiles to change their connection type.
+  > [!TIP]
+  > This connection type and the standalone Tunnel app will be deprecated after the preview for Tunnel functionality in Microsoft Defender for Endpoint moves out of preview and into general availability. Deprecation will happen at least 60 days after it's announced.
 
-    > [!IMPORTANT]
-    > The public preview doesn’t support iOS/iPadOS. However, when creating a new VPN profile for iOS/iPadOS you’ll see a connection type of Microsoft Tunnel. Do not use this connection type. VPN profiles with this connection type for iOS/iPadOS will not function.
+- **Microsoft Tunnel** – A new connection type added to VPN profiles to support Microsoft Defender for Endpoint. This connection type reuses the name of the original connection type. Use this connection type for profiles assigned to devices that are part of the preview:
+
+  - A VPN profile with this connection type directs devices to use the Microsoft Defender for Endpoint app to connect to Microsoft Tunnel Gateway.
+
+  - Use this connection type with VPN profiles for devices that run Android Enterprise.
+
+  > [!IMPORTANT]
+  > Although this connection type appears for iOS/iPad OS VPN profiles, those platforms are not yet supported. Because the public preview doesn’t support iOS/iPadOS, VPN profiles for them with a connection type of Microsoft Tunnel won't function.
+
+
 
 **End-user changes**:
 
-On devices that install the new app as part of this preview, user can start using the Microsoft Defender for Endpoint app. The preview version of the Microsoft Defender for Endpoint app includes a new tab for the Microsoft Tunnel functionality.
+On devices that install the new app as part of this preview, users can start using the Microsoft Defender for Endpoint app. The preview version of the Microsoft Defender for Endpoint app includes a new tab for the Microsoft Tunnel functionality.
 
 ## Licensing
 
@@ -106,11 +114,11 @@ microsoft-tunnel-migrate-app
 
 For information about license requirements for Microsoft Defender for Endpoint, see [Get Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/switch-to-microsoft-defender-prepare#get-microsoft-defender-for-endpoint).
 
-## Migrate Android devices from the Microsoft Tunnel app to Microsoft Defender for Endpoint
+## Migrate devices to Microsoft Defender for Endpoint
 
-After you sign up and have access to the preview version of Microsoft Defender for Endpoint, you can migrate your Android devices from the Tunnel app to the new app. You can also deploy the preview app to other Android devices that haven't previously used the Microsoft Tunnel.
+After you sign up and have access to the preview version of Microsoft Defender for Endpoint, you can migrate supported devices from the Tunnel app to the new app. You can also deploy the preview app to other devices that haven't previously used the Microsoft Tunnel.
 
-Migration to the preview of Microsoft Defender for Endpoint requires the following broad actions, which are described in detail in the following sections:
+Migration to the preview of Microsoft Defender for Endpoint requires the following broad actions, which are described in the following sections:
 
 1. Join the public preview.
 2. Review and record your current Tunnel configurations.
@@ -120,13 +128,13 @@ Migration to the preview of Microsoft Defender for Endpoint requires the followi
 
 ### Join the Microsoft Defender for Endpoint public preview for Microsoft Tunnel
 
-To gain access to the Microsoft Defender for Endpoint app that includes support for Microsoft Tunnel, you must opt into the public preview. That’s because the version of the app that’s available from the regular Google Play store doesn’t support the Microsoft Tunnel functionality. Only tenants that sign-up for the preview have access to the preview app.
+To gain access to the Microsoft Defender for Endpoint app that includes support for Microsoft Tunnel, you must opt into the public preview. That’s because the version of the app that’s available from the regular Google Play store doesn’t support the Microsoft Tunnel functionality. Only tenants that sign-up for the preview will have access to the preview app.
 
-**To opt in to the preview**:
+**To opt into the preview**:
 
 Sign up at https://aka.ms/VPNpreview where you provide your Managed Google Play Organization ID and contact email.
 
-After you sign up, you’ll be alerted by email when your tenant has access to the preview app. You can then deploy the Microsoft Defender for Endpoint app that supports the Microsoft Tunnel from the Managed Google Play store.
+After you sign up, you’ll be alerted by email when your tenant has access to the preview app. The email includes instructions for deploying the preview Microsoft Defender for Endpoint app from the Managed Google Play store.
 
 ### Review and record your current Tunnel configurations
 
@@ -162,13 +170,13 @@ After receiving confirmation for the public preview, you can access and deploy t
 
 ### Create new VPN profiles
 
-Before devices can use the Microsoft Defender for Endpoint app to connect to Microsoft Tunnel, create and deploy new VPN profiles. The new profiles direct devices to use the Microsoft Defender for Endpoint app. Editing the connection type of an existing profile isn’t supported.
+To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft Tunnel Gateway, deploy new VPN profiles with the Microsoft Tunnel connection type. Editing the connection type of an existing profile isn’t supported.
 
 1. Use the information from [Create a VPN Profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) to create and deploy new VPN profiles for your Android Enterprise devices.
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel**.
 
-### Clean up the previous deployments
+### Clean up previous deployments
 
 After devices install the Microsoft Defender for Endpoint app and receive new VPN profiles, you can remove configurations for the original deployments.
 
