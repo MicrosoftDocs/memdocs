@@ -126,7 +126,7 @@ Starting in version 2006, you can choose to receive notifications from Microsoft
 
 :::image type="content" source="media/3953121-microsoft-notifications.png" alt-text="Notification from Microsoft options in site properties" lightbox="media/3953121-microsoft-notifications.png":::
 
-## <a name="bkmk_notification"></a> Console extension installation notifications
+## <a name="bkmk_extension"></a> Console extension installation notifications
 <!--3555909-->
 (*Introduced in version 2103*)
 
