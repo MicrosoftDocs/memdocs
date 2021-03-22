@@ -59,7 +59,7 @@ The introduction of the public preview version of Microsoft Defender for Endpoin
 
 To support this preview, all VPN profiles created before March 2, 2021 that have a connection type of **Microsoft Tunnel** were updated to a connection type of **Microsoft Tunnel (standalone client)**.
 
-This change:
+This change:  
 
 - Applies to all tenants.
 - Has no effect on the functionality of those existing profiles.
