@@ -172,8 +172,6 @@ This scenario doesn't require a two-way forest trust.
 
 Primary sites support the installation of site system roles on computers in remote forests.  
 
-- The Application Catalog web service point is the only exception.  It's only supported in the same forest as the site server.  
-
 - When a site system role accepts connections from the internet, as a security best practice, install the site system roles in a location where the forest boundary provides protection for the site server (for example, in a perimeter network).  
 
 To install a site system role on a computer in an untrusted forest:  
