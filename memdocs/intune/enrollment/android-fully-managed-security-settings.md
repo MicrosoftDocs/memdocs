@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 2/3/2021
+ms.date: 3/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -148,7 +148,6 @@ Level 3 is the recommended configuration for both:
 Such organizations are typically targeted by well-funded and sophisticated adversaries. Therefore, they merit the additional constraints and controls listed below.
 
 This configuration expands upon Level 2 by:
-- increasing the minimum operating system version.
 - ensuring that the device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.
 - increasing the minimum operating system version.
 - enforcing additional device restrictions (like disabling unredacted notifications on lock screen).
