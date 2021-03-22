@@ -184,6 +184,25 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
 
+## Supported BYO VPNs 
+
+Here is a list of VPN clients that are known to be tested and validated:
+
+**Supported clients:**
+In-box Windows VPN client
+Cisco AnyConnect (Win32 client)
+Pulse Secure (Win32 client)
+GlobalProtect (Win32 client)
+Checkpoint (Win32 client)
+Citrix NetScaler (Win32 client)
+SonicWall (Win32 client)
+
+**Not supported clients:**
+UWP-based VPN plug-ins
+Anything that requires a user cert
+DirectAccess
+ 
+
 
 ## Create and assign an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices.
