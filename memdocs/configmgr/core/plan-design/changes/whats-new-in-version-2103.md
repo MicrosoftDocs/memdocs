@@ -278,11 +278,10 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 
 ## Configuration Manager console
 
-### Get console extensions from the community hub
-
+### Console extension management
 <!--8116426, 3555909-->
 
-The [Community hub](../../servers/manage/community-hub.md) now supports sharing extensions to the Configuration Manager console. When you get an extension from the hub, it's available in a new **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
+The **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. You can download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users are notified to install the extension to their local console.
 
 For more information, see [Console extensions](../../servers/manage/community-hub-extensions.md) and [Using community hub](../../servers/manage/community-hub.md).
 
@@ -299,10 +298,6 @@ For more information, see [Power BI report templates in community hub](../../ser
 Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
 
 For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
-
-### Console extension installation
-<!--3555909-->
-You can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. This improvement allows you to start managing the approval and installation of console extensions used in your environment. In this technical preview, only [Right Click Tools (Community Edition) from Recast Software](https://www.recastsoftware.com/enterprise?utm_source=microsoft&utm_medium=referral&utm_campaign=commhub) is available for download and installation. This version of the Right Click Tools extension isn't a final production version. This extension is for technical preview environments only and will expire on April 1, 2021.
 
 ### Access the top queries shared in the Community hub from CMPivot
 <!--7137169-->
