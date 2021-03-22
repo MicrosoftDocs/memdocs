@@ -84,7 +84,7 @@ The following connection types are now available in VPN profiles:
   - Use this connection type with VPN profiles for devices that run Android Enterprise.
 
   > [!IMPORTANT]
-  > Although this connection type appears for iOS/iPad OS VPN profiles, those platforms are not yet supported. Because the public preview doesn’t support iOS/iPadOS, VPN profiles for them with a connection type of Microsoft Tunnel won't function.
+  > Although this connection type appears for iOS/iPad OS VPN profiles, these platforms aren't yet supported. Because the public preview doesn’t support iOS/iPadOS, VPN profiles for them with a connection type of Microsoft Tunnel won't function.
 
 
 
@@ -184,7 +184,7 @@ For deployments of the original Microsoft Tunnel app:
 
 1. Remove **Required** and **Available for enrolled devices**.
 
-2. Add **Uninstall**, to trigger removal of the application.
+2. Add **Uninstall** to trigger removal of the application.
 
 ## Next Steps
 
