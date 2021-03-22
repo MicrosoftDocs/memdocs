@@ -259,7 +259,7 @@ If the client attempts to download content that's less than the size of the cach
 
 If you later increase the cache size, the client attempts to download the content again during the next retry interval. The client tries to download the content every four hours until it tries 18 times.  
 
-Cached content isn't automatically deleted. It remains in the cache for at least one day after the client uses that content. If you configure the content with the option to persist content in the client cache, the client doesn't automatically delete it. If the cache space is used by content that was downloaded within the last 24 hours, and the client must download new content, either increase the cache size or choose the option to delete persisted cache content.
+Cached content isn't automatically deleted and is only removed if new content requires its disk space. It remains in the cache for the configured number of minutes after the client uses that content. If you configure the content with the option to persist content in the client cache, the client doesn't automatically delete it. If the cache space is used by content that was downloaded within the configured number of minutes, and the client must download new content, either increase the cache size or choose the option to delete persisted cache content. For more information see [About client settings in Configuration Manager](../deploy/about-client-settings.md#minimum-duration-before-cached-content-can-be-removed-minutes).
 
 For applications only, if the content for a related deployment currently exists in the cache, then the client downloads only new or changed files. Related deployments include those for older revisions of the same deployment type and superseded applications.
 
