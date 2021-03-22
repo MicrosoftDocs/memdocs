@@ -629,7 +629,7 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 - **Hide Application Catalog link in Software Center**: Enable this setting. The application catalog is no longer supported. This link would appear on the **Installation Status** tab of Software Center.<!--1358214-->
 
-#### Software Center Customizations - Tabs
+#### Software Center Customization - Tabs
 
 <!--4063773-->
 
@@ -671,7 +671,7 @@ If it's not already installed, the Configuration Manager client installs the **M
 
 If you don't enable this option, Software Center uses the Windows built-in Internet Explorer browser control.
 
-#### Software Center Customizations - Defaults
+#### Software Center Customization - Defaults
 <!--3612112-->
 
 - Configure the **Default application filter** as either **All** or only **Required** applications. By default, it shows all applications.
