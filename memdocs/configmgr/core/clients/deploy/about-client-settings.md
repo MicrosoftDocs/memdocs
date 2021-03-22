@@ -612,14 +612,20 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 #### Software Center Customization - General
 
+The following image shows a example of Software Center that's customized with all four branding settings:
+
+:::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding":::
+
 - **Company name**: Specify the organization name that users see in Software Center.
 
 - **Color scheme for Software Center**: Select the primary color that Software Center uses. You can choose from 48 basic colors, or define a custom color.
 
+- **Foreground color for Software Center**: Starting in version 2103, configure a custom color for the foreground font. For some customers, their brand color doesn't work well with the default white font color for a selected item. This setting better supports these customers and improves accessibility.<!--8655575-->
+
 - **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
 
     > [!NOTE]
-    > The window displays a preview of the combination of these first three settings.
+    > The window displays a preview of the combination of these first four settings.
 
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
