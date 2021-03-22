@@ -606,35 +606,34 @@ The behavior of the Company Portal depends upon your co-management workload conf
 
 ### Select these new settings to specify company information
 
-Set this option to **Yes**, and then specify the following settings to brand Software Center for your organization:
+Set this option to **Yes**, and then select **Customize** to configure Software Center settings for your organization. This action opens the **Software Center Customization** window.
 
-- **Company name**: Enter the organization name that users see in Software Center.  
+### Software Center settings
 
-- **Color scheme for Software Center**: Click **Select Color** to define the primary color used by Software Center.  
+#### Software Center Customization - General
 
-- **Select a logo for Software Center**: Click **Browse** to select an image to appear in Software Center. The logo must be a JPEG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.  
+- **Company name**: Specify the organization name that users see in Software Center.
 
-### <a name="bkmk_HideUnapproved"></a> Hide unapproved applications in Software Center
+- **Color scheme for Software Center**: Select the primary color that Software Center uses. You can choose from 48 basic colors, or define a custom color.
 
-When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
+- **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
 
-### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
+    > [!NOTE]
+    > The window displays a preview of the combination of these first three settings.
 
-When you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager. Installed applications are still available for review under the installation status tab. <!--1357592-->
+- **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
-### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
+- **Hide installed applications in Software Center**: When you enable this option, applications that are already installed no longer show in the **Applications** tab. This option is enabled by default. Installed applications are still available for review under the **Installation Status** tab.<!--1357592-->
 
-<!--1358214-->
+- **Hide Application Catalog link in Software Center**: Enable this setting. The application catalog is no longer supported. This link would appear on the **Installation Status** tab of Software Center.<!--1358214-->
 
-Enable this setting. The application catalog is no longer supported. This link would appear on the **Installation Status** tab of Software Center.
-
-### Software Center tab visibility
+#### Software Center Customizations - Tabs
 
 <!--4063773-->
 
-Choose which tabs should be visible in Software Center. Use the **Add** button to move a tab to **Visible tabs**. Use the **Remove**  button to move it to the **Hidden tabs** list. Order the tabs using the **Move Up** or **Move Down** buttons.
+Choose which tabs should be visible in Software Center. To move a tab to **Visible tabs** list, select **Add**. To move it to the **Hidden tabs** list, select **Remove**. To change the order of the tabs in Software Center, select **Move Up** or **Move Down**.
 
-Available tabs:
+Default tabs:
 
 - **Applications**
 - **Updates**
@@ -645,26 +644,28 @@ Available tabs:
 
 You can also add up to five custom tabs:
 
-- Select **Add tab**.
-- Specify the **Tab name** and **Content URL** for your custom tab.
+1. Select **Add tab**.
+2. Specify the **Tab name** and **Content URL** for your custom tab. Configuration Manager doesn't validate this URL.
 
-Select **Delete Tab** to remove a custom tab.  
+Select **Delete Tab** to remove a custom tab. Select **Edit tab** to change the configuration of a custom tab.
 
 > [!IMPORTANT]
-> Some website features may not work in a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
+> Some website features may not work in a custom tab in Software Center. Make sure to test the results before deploying this to clients.<!--519659-->
 >
 > Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
 
-### <a name="bkmk_swctr_defaults"></a> Configure default views in Software Center
+#### Software Center Customizations - Defaults
 <!--3612112-->
 
 - Configure the **Default application filter** as either **All** or only **Required** applications.  
 
-  - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
+  Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
 
 - Set the **Default application view** as either **Tile view** or **List view**.
 
-  - If a user changes this configuration, Software Center persists the user's preference in the future.
+  If a user changes this configuration, Software Center persists the user's preference in the future.
+
+For more information on the appearance of these settings, see the [Software Center user guide](../../understand/software-center.md#applications).
 
 ## Software deployment  
 
