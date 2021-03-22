@@ -654,6 +654,21 @@ Select **Delete Tab** to remove a custom tab. Select **Edit tab** to change the 
 >
 > Specify only trusted or intranet website addresses when you add a custom tab.<!--SCCMDocs issue 1575-->
 
+##### Display custom tabs with Microsoft Edge WebView2 runtime
+
+<!--9142301,8655543-->
+
+_Applies to version 2103 and later_
+
+Enable this option for Software Center to use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
+
+If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device.
+
+> [!NOTE]
+> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control.
+
+If you don't enable this option, Software Center uses the Windows built-in Internet Explorer browser control.
+
 #### Software Center Customizations - Defaults
 <!--3612112-->
 

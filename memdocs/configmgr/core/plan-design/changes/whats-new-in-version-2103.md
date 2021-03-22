@@ -91,19 +91,13 @@ Software Center already provides various controls for you to customize the brand
 
 ### Improved user experience and security with Software Center custom tabs
 
-<!--8655543-->
+<!--9142301,8655543-->
 
 Since current branch version 1906, you can add up to five custom tabs to Software Center. These custom tabs let you give your users easy access to common web apps and other sites. Previously, to display websites Software Center used the Windows built-in Internet Explorer browser control.
 
 Starting in this release, Software Center can now use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
 
-### Client setting for displaying Software Center custom tabs
-
-<!--9142301-->
-
-Technical preview version 2012 included an improved user experience and security with Software Center custom tabs. It required that you manually deploy the Microsoft Edge WebView2 browser control.
-
-Starting in this release, you can now configure a client setting to use the WebView2 runtime.
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#display-custom-tabs-with-microsoft-edge-webview2-runtime).
 
 ### Improvements to Support Center
 
