@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 03/24/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,15 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Windows 10 in cloud configuration
 
-Windows 10 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10 Professional, Enterprise, and Education device into a cloud-optimized device. It’s ideal for frontline workers, remote workers, and other users with focused workflow needs, like productivity and browsing. Cloud config makes these devices easy to use, and secures these devices with Microsoft-recommended security features.
+Windows 10 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10 Professional, Enterprise, and Education device into a cloud-optimized device.
+
+It’s ideal for:
+
+- Frontline workers
+- Remote workers
+- Other users with focused workflow needs, like productivity and browsing
+
+Cloud config makes these devices easy to use, and secures these devices with Microsoft-recommended security features.
 
 With Windows 10 in cloud configuration:
 
@@ -59,7 +67,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 
   For more information on creating your own Autopilot profile, see [Configure Autopilot profiles](../../autopilot/profiles.md).
 
-- Turns on and configures the Autopilot enrollment status page (ESP) to show users the enrollment progress.
+- Turns on and configures the Autopilot enrollment status page (ESP). This page shows users the enrollment progress.
 
   For more information about the ESP, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
@@ -97,7 +105,10 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
   All of these services are included with the Microsoft 365 E3 license. For more security options and features, it's recommended to use the Microsoft 365 E5 license. To help decide which license is right for your organization, see [Transform your enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 - [Set the MDM authority to Intune](mdm-authority-set.md). The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
-- Enable automatic enrollment for Windows 10 devices.
+- Enable automatic enrollment for Windows 10 devices. For more information, see:
+  - [Quickstart: Set up automatic enrollment for Windows 10 devices](../enrollment/quickstart-setup-auto-enrollment.md)
+  - [Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+
 - Sign in as the Intune Service Administrator, also known as the Intune Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Step 1 - Introduction
@@ -112,7 +123,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
 - **Autopilot device name template**: This guided scenario enrolls your devices in Windows Autopilot. When they enroll, you can optionally name your devices using a unique pattern that applies to all devices. Your options:
 
-  - **Apply device name template**: **No** doesn't create a template or pattern when naming your devices. Select **Yes** to create a unique pattern to name your devices. For example, enter `Contoso-%RAND:7%` to name all your devices **Contoso-** followed by seven random characters.
+  - **Apply device name template**: **No** doesn't create a template or pattern when naming your devices. The device will have the OEM name, such as `DESKTOP-`, followed by some random characters. Select **Yes** to create a unique pattern to name your devices. For example, enter `Contoso-%RAND:7%` to name all your devices **Contoso-** followed by seven random characters.
 
     The names:
 
@@ -136,12 +147,14 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
 Select the apps you want to deploy to devices. Microsoft recommends deploying the smallest number of apps as possible. The idea is to keep your cloud config devices simple, and easy to manage.​
 
-- **Cloud config defaults**: This guided scenario automatically includes the Microsoft Edge and Microsoft Teams apps. They can't be removed when creating the guided scenario. You can delete or uninstall these apps after the guided scneario is completed to remove them from the deployment.
+- **Cloud config defaults**: This guided scenario automatically includes the Microsoft Edge and Microsoft Teams apps. They can't be removed when creating the guided scenario. You can delete or uninstall these apps after the guided scenario finishes.
+
+  To remove the Microsoft Edge app, see [Uninstall the app](../apps/apps-windows-edge.md#uninstall-the-app).
 
 - **Select additional M365 apps (optional)**: From the list, add more Microsoft 365 apps that you want on the devices. Remember, keep the list small, and only include apps your users need. The idea is to keep the devices simple.
 
   > [!TIP]
-  > To add apps not listed, or add line-of-business apps, complete this guided scenario. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, create a policy, and deploy it to the same group that you deployed cloud config to using the guided scenario. For more information on adding apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+  > To add apps not listed, or add line-of-business apps, complete this guided scenario. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, and create a policy. Deploy the app policy to the same group that you deployed this cloud config guided scenario. For more information on adding apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - Select **Next**.
 
@@ -179,20 +192,25 @@ When it deploys successfully, you can use the monitoring and reporting features 
 
 ## What you need to know
 
-- You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, then they'll automatically start receiving the policies in this guided scenario. You can add pre-registered Windows Autopilot devices to the group before setting them up. You can also add existing Windows 10 devices that you have already enrolled. Microsoft recommends removing other apps and profiles targeted to these devcies and resetting them after adding them to the group, so they start fresh with just cloud config applied.
+- You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, then they'll automatically start receiving the policies in this guided scenario.
+
+  You can also:
+
+  - Add preregistered Windows Autopilot devices to the group. Add them to the group before you enroll or apply any policies.
+  - Add existing Windows 10 devices that are already enrolled. Microsoft recommends removing other apps and profiles targeted to these devices. After adding them to the group, reset the devices so they start fresh with just cloud config applied.
 
   For information on the policy refresh times, see [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 - Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy these policies to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
-- Microsoft doesn't recommend using Windows 10 in cloud configuration with shared devices, due to a OneDrive sync issue with shared devices. Shared devices typically have multiple users that sign in and sign out.
+- Microsoft doesn't recommend using Windows 10 in cloud configuration with shared devices, because of a OneDrive sync issue with shared devices. Shared devices typically have multiple users that sign in and sign out.
 - After the guided scenario is deployed, you can go to a policy, and see the settings and their configured values. You can change any of these settings to another value, if you like.
 - To remove the guided scenario settings from devices, go to each policy created by the cloud config guided scenario. Configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario.
 
-  The next time the device checks in, the setting is no longer locked, and can be changed by another policy. It's possible the setting might have the same value set by the guided scenario.
+  The next time the device checks in, the setting is no longer locked. The setting can be changed by another policy, and possibly the end user. It's possible the setting might have the same value set by the guided scenario.
 
   Now, you can delete the individual items created by this guided scenario, including apps, policies, the Windows PowerShell script, and the group.
 
 ## Next steps
 
-- To learn more about guided scenarios, and see what other scenarios are available, go to [Guided scenarios overview](guided-scenarios-overview.md).
+- To learn more about guided scenarios, and see the other scenarios are available, go to [Guided scenarios overview](guided-scenarios-overview.md).
 - To learn more about Windows 10 in a cloud configuration, see [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
