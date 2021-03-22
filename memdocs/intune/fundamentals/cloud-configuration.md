@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Windows 10 in cloud configuration
 
-Windows 10 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10 Professional, Enterprise, and Education device into a cloud-optimized device. It’s ideal for frontline workers, remote workers, and other users with focused workflow needs, like productivity and browsing. Cloud configuration makes these devices easy to use, and secures these devices with Microsoft recommended security features.
+Windows 10 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10 Professional, Enterprise, and Education device into a cloud-optimized device. It’s ideal for frontline workers, remote workers, and other users with focused workflow needs, like productivity and browsing. Cloud config makes these devices easy to use, and secures these devices with Microsoft-recommended security features.
 
 With Windows 10 in cloud configuration:
 
@@ -82,7 +82,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
   For more information about update rings, and creating your policy, see [Windows 10 update rings policy](../protect/windows-10-update-rings.md).
 
 > [!TIP]
-> This guided scenario creates all these resources for you, automatically. If you want create your own individual resources, and not use the guided scenario, then you can. For the specific steps, see the overview and setup guide at [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
+> This guided scenario creates all these resources for you, automatically. If you want create your own individual resources, and not use the guided scenario, then you can. For the specific steps, see the [cloud config overview and setup guide](https://aka.ms/CloudConfigGuide).
 
 ## Prerequisites
 
@@ -97,7 +97,7 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
   All of these services are included with the Microsoft 365 E3 license. For more security options and features, it's recommended to use the Microsoft 365 E5 license. To help decide which license is right for your organization, see [Transform your enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 - [Set the MDM authority to Intune](mdm-authority-set.md). The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
-- At a minimum, your devices must be running Windows 10 version 1903.
+- Enable automatic enrollment for Windows 10 devices.
 - Sign in as the Intune Service Administrator, also known as the Intune Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Step 1 - Introduction
@@ -136,14 +136,12 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
 Select the apps you want to deploy to devices. Microsoft recommends deploying the smallest number of apps as possible. The idea is to keep your cloud config devices simple, and easy to manage.​
 
-- **Cloud config defaults**: This guided scenario automatically includes the Microsoft Edge and Microsoft Teams apps. They can't be removed when creating the guided scenario.
-
-  After the guided scenario is created and deployed, you can uninstall these default apps. Then, assign the app policy to the same group as this Windows cloud config guided scenario. For more specific information, see [Uninstall the app](../apps/apps-windows-edge.md#uninstall-the-app).
+- **Cloud config defaults**: This guided scenario automatically includes the Microsoft Edge and Microsoft Teams apps. They can't be removed when creating the guided scenario. You can delete or uninstall these apps after the guided scneario is completed to remove them from the deployment.
 
 - **Select additional M365 apps (optional)**: From the list, add more Microsoft 365 apps that you want on the devices. Remember, keep the list small, and only include apps your users need. The idea is to keep the devices simple.
 
   > [!TIP]
-  > To add apps not listed, or add line-of-business apps, complete this guided scenario. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, create a policy, and deploy it to the same group as the Windows cloud config guided scenario. For more information on adding apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+  > To add apps not listed, or add line-of-business apps, complete this guided scenario. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, create a policy, and deploy it to the same group that you deployed cloud config to using the guided scenario. For more information on adding apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - Select **Next**.
 
@@ -171,7 +169,7 @@ Look at the following properties:
 
   :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Review and the Windows 10 in cloud configuration guided scenario deployment status in Microsoft Intune and Endpoint Manager.":::
 
-If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/cloud-config) is also a good resource.
+If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/CloudConfigGuide) is also a good resource.
 
 When it deploys successfully, you can use the monitoring and reporting features in the Endpoint Manager admin center:
 
@@ -181,12 +179,12 @@ When it deploys successfully, you can use the monitoring and reporting features 
 
 ## What you need to know
 
-- You can create the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, then they'll automatically start receiving the policies in this guided scenario.
+- You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, then they'll automatically start receiving the policies in this guided scenario. You can add pre-registered Windows Autopilot devices to the group before setting them up. You can also add existing Windows 10 devices that you have already enrolled. Microsoft recommends removing other apps and profiles targeted to these devcies and resetting them after adding them to the group, so they start fresh with just cloud config applied.
 
   For information on the policy refresh times, see [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 - Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy these policies to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
-- Microsoft doesn't recommend using Windows 10 in cloud configuration with shared devices. Shared devices typically have multiple users that sign in and sign out.
+- Microsoft doesn't recommend using Windows 10 in cloud configuration with shared devices, due to a OneDrive sync issue with shared devices. Shared devices typically have multiple users that sign in and sign out.
 - After the guided scenario is deployed, you can go to a policy, and see the settings and their configured values. You can change any of these settings to another value, if you like.
 - To remove the guided scenario settings from devices, go to each policy created by the cloud config guided scenario. Configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario.
 
