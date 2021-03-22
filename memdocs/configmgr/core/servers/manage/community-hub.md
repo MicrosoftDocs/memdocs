@@ -129,7 +129,7 @@ Starting in Configuration Manager version 2010, You can now display the **Commun
 
 ### Community hub doesn't load
 <!--9561090-->
-The community hub may not load or load after a long delay, if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see [Managing console extension](community-hub-extensions.md).
+The community hub may not load, or load after a long delay if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see [Managing console extension](community-hub-extensions.md).
 ### Unable to access community hub node when running console as a different user
 <!--7826897-->
 If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.
