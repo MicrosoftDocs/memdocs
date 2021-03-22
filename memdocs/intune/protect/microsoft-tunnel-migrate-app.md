@@ -64,7 +64,7 @@ This change:
 - Applies to all tenants.
 - Has no effect on the functionality of those existing profiles.
 - Supports the change to use Microsoft Defender for Endpoint to support Microsoft Tunnel functionality.
-- Cannot be reversed. Intune doesn’t support administrative change of a VPN profiles connection type.
+- Cannot be reversed. You can’t edit existing profiles to change their connection type.
 
 The following connection types are now available in VPN profiles:
 
