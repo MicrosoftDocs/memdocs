@@ -97,7 +97,7 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | Work profile settings | Face unlock | Not configured ||
 | Work profile settings | Fingerprint unlock | Not configured ||
 | Work profile settings | Iris unlock | Not configured ||
-| Work profile settings | Smart Lock and other trust agents | Not configured |||
+| Work profile settings | Smart Lock and other trust agents | Not configured ||
 | Device password | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
 | Device password | Maximum minutes of inactivity until screen locks | 5 | Organizations may need to update this setting to match their password policy. |
 | Device password | Number of sign-in failures before wiping device | 10 | This setting triggers a work profile wipe, and not a wipe of the device. |

@@ -97,7 +97,7 @@ Class SMS_CIRelation : SMS_BaseClass
 |11|Intention|  
 |12|Platform|  
 |13|GlobalConditionReference|  
-|15|ApplicationSuperSeded||  
+|15|ApplicationSuperSeded|  
 |16|ApplicationType|  
 |17|ApplicationHost|  
 |18|ApplicationInstaller|  
