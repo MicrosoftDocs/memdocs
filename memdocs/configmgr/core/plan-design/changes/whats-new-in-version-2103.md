@@ -35,7 +35,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--8795301-->
 Applications targeted to a device or a user with a required deadline will now show in the **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center. This improvement allows you to review when application installations are expected to occur on a device. The **An administrator must approve a request for this application on the device** option is no longer required to be set on the device available deployment for applications to be listed in the admin center.
 
-For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).
+For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_required).
 
 ## Cloud-attached management
 
