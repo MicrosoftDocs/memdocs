@@ -144,9 +144,6 @@ The Company Portal app can now store, as well as display, push notifications sen
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripting
 
-#### Export Intune reports using Graph API v1.0 or beta<!-- 8090911   -->
-Intune reporting export API is now available in Graph v1.0, and continues to be available in Graph beta. For related information, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
-
 #### Export localized Intune report data using Graph APIs<!-- 8612346  -->
 You can now specify that the report data that you export using the Microsoft Endpoint Manager reporting export [API](../fundamentals/reports-export-graph-apis.md) can contain localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports, which will prevent breaking changes. For related information about reports, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md) and [Intune reports and properties available using Graph API](../fundamentals/reports-export-graph-apis.md).
 
