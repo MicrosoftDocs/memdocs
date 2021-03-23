@@ -161,7 +161,7 @@ After receiving confirmation for the public preview, you can access and deploy t
 
 1. Locate and **Approve** the app in the Managed Google Play store for your tenant, and then **Sync** it. For information on this process, see [Managed Google Play store apps](../apps/apps-add-android-for-work.md#managed-google-play-store-apps).
 
-2. **Assign** the app to groups. While assigning the app, under App settings set **Tracks** to **MDATP-Ring0-External**.
+2. **Assign** the app to groups. While assigning the app, under App settings set **Tracks** to **SuperApp Public Preview**.
 
    Only **Available** deployments are supported for the public preview.
 3. Complete the assignment, and then ask users to install the Microsoft Defender for Endpoint app.
