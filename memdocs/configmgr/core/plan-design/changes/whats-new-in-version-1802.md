@@ -199,7 +199,7 @@ The Windows 10 [in-place upgrade task sequence](../../../osd/deploy-use/upgrade-
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!-- 1357425 -->
-The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-to-prepare-for-upgrade).
+The default task sequence template for Windows 10 in-place upgrade now includes additional groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [In-place upgrade recommendations](../../../osd/understand/in-place-upgrade-recommendations.md#prepare-for-upgrade).
 
 ### Improvements to operating system deployment
 This release includes the following improvements to operating system deployment:

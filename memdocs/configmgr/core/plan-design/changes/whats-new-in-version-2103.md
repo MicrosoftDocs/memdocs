@@ -191,7 +191,15 @@ For more information, see [Windows 10 servicing dashboard](../../../osd/deploy-u
 
 <!--3555906-->
 
-You can now upgrade a client's Windows OS by using a feature update deployed with a task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses a single ESD file that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the ESD file is generally smaller than the WIM image file.
+You can now upgrade a client's Windows OS by using a feature update deployed with a task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses content that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file. You can also use Windows features such as Dynamic Update and Delivery Optimization.
+
+This type of task sequence extends support to Windows 10 on ARM64 devices.
+
+For more information, see the following articles:
+
+- For scenario guidance and planning, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+- For prerequisites, see [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md).
+- For the new setting on the task sequence step, see [About task sequence steps: Upgrade OS](../../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
 
 ### Task sequence error shows more check readiness details
 
