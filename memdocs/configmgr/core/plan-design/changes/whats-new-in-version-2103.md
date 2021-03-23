@@ -89,45 +89,25 @@ Microsoft recommends that you keep SQL Server Express up to date. For more infor
 
 Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
 
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#software-center-customization---general).
+
 ### Improved user experience and security with Software Center custom tabs
 
-<!--8655543-->
+<!--9142301,8655543-->
 
 Since current branch version 1906, you can add up to five custom tabs to Software Center. These custom tabs let you give your users easy access to common web apps and other sites. Previously, to display websites Software Center used the Windows built-in Internet Explorer browser control.
 
 Starting in this release, Software Center can now use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
 
-### Client setting for displaying Software Center custom tabs
-
-<!--9142301-->
-
-Technical preview version 2012 included an improved user experience and security with Software Center custom tabs. It required that you manually deploy the Microsoft Edge WebView2 browser control.
-
-Starting in this release, you can now configure a client setting to use the WebView2 runtime.
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#display-custom-tabs-with-microsoft-edge-webview2-runtime).
 
 ### Improvements to Support Center
-
-<!--8272488-->
-
-When you troubleshoot software update deployments, you might ask the following questions:
-
-- Are any updates missing or failing?
-- Are specific updates deployed to a device?
-- What are the error codes for a deployment?
-- Why didn't the device reboot during a maintenance window?
-- What's the current state of an update?
-
-Support Center already shows updates that are targeted to the device but not yet installed. Now in this release, select **All Updates** on the **Content** tab of Support Center to show all updates targeted to the device. To help you troubleshoot, this list includes information about whether the update is installed or missing.
-
-Also on the **Content** tab, select **Maintenance Windows** to show the available maintenance windows for the device.
-
-### Changes to Support Center
 
 <!--8693068-->
 
 Support Center is now split into the following tools:
 
-- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to [Collect selected data](../../support/support-center-ui-reference.md#collect-selected-data).
+- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
 
 - **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
 
@@ -137,11 +117,13 @@ The following tools are still a part of Support Center:
 - **Support Center OneTrace**
 - **Support Center Log File Viewer**
 
+For more information, see [Support Center](../../support/support-center.md).
+
 ### OneTrace support for jump lists
 
 <!--6991505-->
 
-[Support Center OneTrace](../../support/support-center-onetrace.md) now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
+Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
 
 There are now three methods to open recent files in OneTrace:
 
@@ -149,6 +131,7 @@ There are now three methods to open recent files in OneTrace:
 - Windows Start menu recently opened list
 - In OneTrace from **File** menu or **Recently opened** tab.
 
+For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
 
 ## Collections
 
@@ -156,7 +139,9 @@ There are now three methods to open recent files in OneTrace:
 
 <!--8543508-->
 
-Starting in current branch version 2010, you can view [dependency relationships between collections](../../clients/manage/collections/manage-collections.md#view-collection-relationships) in a graphical format. The relationships for a collection were presented as two hierarchical trees, one for dependents and the other for dependencies. In this release, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+Starting in version 2010, you can view dependency relationships between collections in a graphical format. The relationships for a collection were presented as two hierarchical trees, one for dependents and the other for dependencies. In this release, you can view both parent and child relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+
+For more information, see [Manage collections: View collection relationships](../../clients/manage/collections/manage-collections.md#improvements-in-version-2103).
 
 ### Improvements to query preview
 <!--8680235-->
@@ -192,6 +177,7 @@ You can now disable application deployments. Other objects already have similar 
 
 For device-based deployments, when you disable the deployment or object, use the client notification action to **Download Computer Policy**. This action immediately tells the client to update its policy from the site. If the deployment hasn't already started, the client receives the updated policy that the object is now disabled.
 
+For more information, see [Disable and delete application deployments](../../../apps/deploy-use/disable-delete-deployments.md).
 
 ## OS deployment
 
@@ -219,7 +205,11 @@ For more information, see the following articles:
 
 <!--8888218-->
 
-The task sequence progress can now display more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements configured in the **Check readiness** task sequence step, the user can now see more details about the failed prerequisites. They still see the common "task sequence error" message, but can now select an option to **Inspect**. This action shows the checks that failed on the device.
+The task sequence progress can now display more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements configured in the **Check readiness** task sequence step, the user can now see more details about the failed prerequisites.
+
+:::image type="content" source="media/8888218-task-sequence-check-readiness-failure.png" alt-text="Task sequence check readiness failure":::
+
+For more information, see [User experiences for OS deployment](../../../osd/understand/user-experience.md#task-sequence-error).
 
 ### Encryption algorithm to capture and restore user state
 
@@ -227,13 +217,16 @@ The task sequence progress can now display more information about readiness chec
 
 The task sequence steps to **Capture User State** and **Restore User State** always encrypt the USMT state store. Previously, Configuration Manager configured USMT to use the 3DES algorithm. Starting in this release, both steps now use the highest supported encryption algorithm, **AES 256**.
 
+> [!IMPORTANT]
+> If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Otherwise, the updated client will fail to restore the user state when it tries to use a different encryption algorithm.
+
+For more information, see [About task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState).
+
 ### Improvements to OS deployment
 
 This release includes the following improvements to OS deployment:
 
 - Task sequence conditions now include a **not like** operator. This operator applies to task sequence variable conditions. It's also used in the [Set Dynamic Variable](../../../osd/understand/task-sequence-steps.md#BKMK_SetDynamicVariables) task sequence step.<!--8764365-->
-
-- This release fixes issues with the [SMSTSDisableStatusRetry](../../../osd/understand/task-sequence-variables.md#SMSTSDisableStatusRetry) task sequence variable.<!-- 8727206 -->
 
 - The [Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness) task sequence step now also checks free space on disks without partitions.<!-- 8751864  -->
 
@@ -308,6 +301,8 @@ For more information, see [Power BI report templates in Community hub](../../ser
 
 Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
 
+For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
+
 ### Console extension installation
 <!--3555909-->
 You can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. This improvement allows you to start managing the approval and installation of console extensions used in your environment. In this technical preview, only [Right Click Tools (Community Edition) from Recast Software](https://www.recastsoftware.com/enterprise?utm_source=microsoft&utm_medium=referral&utm_campaign=commhub) is available for download and installation. This version of the Right Click Tools extension isn't a final production version. This extension is for technical preview environments only and will expire on April 1, 2021.
@@ -329,12 +324,15 @@ This release continues to iterate on the scenario to share apps via the [Communi
 
 <!--8160460-->
 
-This release includes improvements to the [product lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) to make it more actionable for you.
+This release includes improvements to the product lifecycle dashboard to make it more actionable for you.
 
 - Customize the timeframe on the charts for your preference.
 - Search, sort, and filter the data.
 - View a list of devices with products that are near or at end of support, and you need to update.
 
+:::image type="content" source="media/8160460-product-lifecycle-timescale.png" alt-text="Product lifecycle dashboard highlighting new timescale control at 33 months":::
+
+For more information, see [product lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
 ## Content management
 
@@ -382,11 +380,9 @@ As first announced in version 1906, version 2103 drops support for the following
 
 ## Other updates
 
-<!--
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
--->
+- [Remove the central administration site](../../servers/deploy/install/remove-central-administration-site.md) <!-- 3607277 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2103 release notes](/powershell/sccm/2103-release-notes).
 

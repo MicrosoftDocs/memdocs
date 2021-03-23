@@ -820,7 +820,7 @@ Windows 10 feature update policies cannot be applied during the Autopilot out of
 ### Monitor and troubleshoot
 
 #### Windows Autopilot deployment reports (preview) <!-- 3856172   -->
-A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](../../autopilot/enrollment-autopilot.md#autopilot-deployments-report).
+A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](../../autopilot/profiles.md#autopilot-deployments-report).
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1058,10 +1058,10 @@ Applies to:
 ### Device management
 
 #### Edit device name value for Autopilot devices<!-- 2640074 -->
-You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](../../autopilot/enrollment-autopilot.md#edit-autopilot-device-attributes).
+You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](../../autopilot/add-devices.md#edit-autopilot-device-attributes).
 
 #### Edit Group Tag value for Autopilot devices<!-- 4816775   -->
-You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](../../autopilot/enrollment-autopilot.md#edit-autopilot-device-attributes).
+You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](../../autopilot/add-devices.md#edit-autopilot-device-attributes).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -2525,7 +2525,7 @@ You can use Windows 10 devices in kiosk mode to run one app, or many apps. This 
 For a list of these settings, see:
 
 - [Windows 10 and later device settings to run as a kiosk](../configuration/kiosk-settings-windows.md)
-- [Microsoft Edge Browser verion 45 and older device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older)
+- [Microsoft Edge Browser version 45 and older device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older)
 - [Favorites and search device restrictions](../configuration/device-restrictions-windows-10.md#favorites-and-search)
 
 Applies to:
@@ -3814,7 +3814,7 @@ See [Enable Defender for Endpoint with Conditional Access in Intune](../protect/
 Intune supports the ability to evaluate compliance on a user-less device, such as the Microsoft Surface Hub. Compliance policy can target specific devices. So compliance (and noncompliance) can be determined for devices that don't have an associated user.
 
 #### Delete Autopilot devices<!-- 1713650 -->
-Intune admins can [delete Autopilot devices](../../autopilot/enrollment-autopilot.md#delete-autopilot-devices).
+Intune admins can [delete Autopilot devices](../../autopilot/add-devices.md#delete-autopilot-devices).
 
 #### Improved device deletion experience<!--1832333 -->
 You're no longer be required to remove company data or factory reset a device before [deleting a device from Intune](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
@@ -4395,7 +4395,7 @@ In this release, we've updated a few of the Graph API's for Intune that are in b
 
 
 #### Intune supports Windows Information Protection (WIP) denied apps<!-- 1479103 -->
-You can specify denied apps in Intune. If an app is denied, it is blocked from accessing corporate information, effectively the opposite of the allowed apps list. For more information, see [Recommended deny list for Windows Information Protection](/windows/client-management/mdm/applocker-csp?f=255&MSPPError=-2147217396#recommended-deny-list-for-windows-information-protection).
+You can specify denied apps in Intune. If an app is denied, it is blocked from accessing corporate information, effectively the opposite of the allowed apps list. For more information, see [Recommended blocklist for Windows Information Protection](/windows/client-management/mdm/applocker-csp?f=255&MSPPError=-2147217396#recommended-deny-list-for-windows-information-protection).
 
 <!-- ########################## -->
 ### November 2017
@@ -5007,7 +5007,7 @@ Intune now supports restricting iOS and Android enrollment by operating system v
 >Does not restrict enrollment through Apple enrollment programs or Apple Configurator.
 
 #### Restrict Android, iOS, and macOS device personally owned device enrollment <!-- 1333272,  1333275, 1245709 -->
-Intune can restrict personal device enrollment by adding corporate device IMEI numbers to an allow list. Intune has now expanded this functionality to iOS, Android, and macOS using device serial numbers. By uploading the serial numbers to Intune, you can predeclare devices as corporate-owned. Using enrollment restrictions, you can block personally owned (BYOD) devices, allowing enrollment only for corporate-owned devices. Learn more about [device enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
+Intune can restrict personal device enrollment by adding corporate device IMEI numbers to an allowlist. Intune has now expanded this functionality to iOS, Android, and macOS using device serial numbers. By uploading the serial numbers to Intune, you can predeclare devices as corporate-owned. Using enrollment restrictions, you can block personally owned (BYOD) devices, allowing enrollment only for corporate-owned devices. Learn more about [device enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
 
 To import serial numbers, go **Device enrollment** > **Corporate device identifiers** and click **Add** and then upload a .CSV file (no header, two columns for serial number and details like IMEI numbers). To restrict personally owned devices, go **Device enrollment** > **Enrollment restrictions**. Under **Device Type Restrictions**, select the **Default** and then select **Platform Configurations**. You can **Allow** or **Block** personally owned devices for iOS, Android, and macOS.
 

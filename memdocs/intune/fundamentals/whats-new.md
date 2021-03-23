@@ -306,7 +306,7 @@ For more information, see:
 - [Settings catalog](../configuration/settings-catalog.md)
 - [Add a property list file to macOS devices using Intune](../configuration/preference-file-settings-macos.md)
 
-To see the policies you have configured, open Microsoft Edge, and go to [edge://policy](edge://policy).
+To see the policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
 Applies to:
 - Microsoft Edge browser version 77 and newer on macOS 

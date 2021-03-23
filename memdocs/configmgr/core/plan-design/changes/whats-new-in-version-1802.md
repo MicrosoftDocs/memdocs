@@ -231,15 +231,15 @@ If an end user or desktop technician needs to install multiple applications on a
 
 ### Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#bkmk_HideInstalled) has additional details.   
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.   
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#bkmk_HideUnapproved) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.  
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->

@@ -257,4 +257,4 @@ Before you configure OS deployment, consider your privacy requirements.
 
 [Diagnostics and usage data](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
 
-[Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md)
+[Security and privacy for Configuration Manager](../../security/index.yml)
