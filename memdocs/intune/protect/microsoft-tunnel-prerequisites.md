@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Prerequisites for the Microsoft Tunnel in Intune
 
-Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites that include use of a Linux server that also runs Docker, to ensuring your network and any firewalls or proxies you use are ready to support communications for the Microsoft Tunnel.
+Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs Docker to host the Tunnel server software. You'll also need to configure your network,  firewalls, and proxies to support communications for the Microsoft Tunnel.
 
 *Microsoft Tunnel is in public preview*.
 
@@ -44,9 +44,6 @@ Prerequisites you’ll configure include preparing your network, firewalls, and 
 After configuring prerequisites, we recommend you then run the [readiness tool](#run-the-readiness-tool) to help validate that your environment is well configured for a successful installation.
 
 The following sections detail the prerequisites for the Microsoft Tunnel, and provide guidance on using the readiness tool.
-
-> [!NOTE]
-> Microsoft Tunnel isn’t supported with Azure Government cloud environments.
 
 ## Linux server
 
@@ -111,7 +108,7 @@ We recommend using two Network Interface controllers (NICs) per Linux server to 
 
 - **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
 
-If you run Linux as a VM in a cloud, you’ll need to ensure the server can access to your on-premises network. For example, when your VM runs in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
 
 If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
@@ -130,7 +127,7 @@ By default, the Microsoft Tunnel and server use the following ports:
 - TCP 443 – Required to access Intune services. Required by Docker to pull images.
 - TCP – 80 – Required to access Intune services.
 
-When you create a Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, be sure to configure firewalls to support your configuration.
+When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 
 **Additional requirements**:
 
@@ -200,11 +197,11 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 - **Create** - Configure Microsoft Tunnel Gateway *Servers* and *Sites*. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
 
-- **Update** (modify) - Update Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
+- **Update** (modify) - Update Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
 
 - **Delete** - Delete Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
 
-- **Read** - View Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
+- **Read** - View Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
 
 
 ## Run the readiness tool
