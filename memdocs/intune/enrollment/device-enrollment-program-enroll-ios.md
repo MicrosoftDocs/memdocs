@@ -76,9 +76,10 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 ## Supported volume
 
 - Maximum enrollment profiles per token: 1,000.  
-- Maximum Automated Device Enrollment devices per profile: Same as the maximum number of devices per token.
+- Maximum Automated Device Enrollment devices per profile: Same as the maximum number of devices per token (200,000 devices per token).
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000.
-- Maximum Automated Device Enrollment devices per token: We recommend that you don't exceed 60,000 devices per token. Otherwise you might have sync problems. If you have more than 60,000 devices, split the devices into multiple ADE tokens.
+- Maximum Automated Device Enrollment devices per token: We recommend that you don't exceed 200,000 devices per token. Otherwise you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.
+    - About 3,000 devices per minute sync from ABM/ASM over to Intune. We recommend that you wait to manually sync again from the admin console until enough time has passed for all of the devices to sync over (total number of devices/3,000 devices per minute).
 
 ## Get an Apple Automated Device Enrollment token
 

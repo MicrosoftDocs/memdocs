@@ -45,8 +45,6 @@
     href: device-lifecycle.md
   - name: App lifecycle
     href: ../apps/app-lifecycle.md
-  - name: Windows 10 in cloud configuration
-    href: cloud-configuration.md
   - name: Guided scenarios
     items: 
     - name: Guided scenarios overview
@@ -57,6 +55,8 @@
       href: guided-scenarios-cloud-managed-pc.md   
     - name: Secure Microsoft Office mobile apps
       href: guided-scenarios-office-mobile.md              
+    - name: Windows 10 in cloud configuration
+      href: cloud-configuration.md
   - name: Common scenarios
     href: common-scenarios.md
   - name: Technology decisions for BYOD with EMS
@@ -205,6 +205,8 @@
       href: reports.md
     - name: Export reports using Graph
       href: reports-export-graph-apis.md
+    - name: Intune reports and properties using Graph
+      href: reports-export-graph-available-reports.md
     - name: Audit logs for Intune activities
       href: monitor-audit-logs.md
     - name: Review logs with Azure Monitor
