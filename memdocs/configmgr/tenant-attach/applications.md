@@ -112,7 +112,7 @@ Deploying applications to a user has the following limitations:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 1. Go to **Devices** then **All Devices**.
-1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md). Targeted clients need to be online and have the .
+1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Choose **Applications**.
 1. Select the application then one of the following actions you want to perform on the device:
    - **Reinstall**
@@ -120,6 +120,55 @@ Deploying applications to a user has the following limitations:
    - **Uninstall**
    - **Repair**
 
+## <a name="bkmk_required"></a> Required application deployments display in the admin center
+<!--8795301-->
+*(Introduced March 2021)*
+
+Applications targeted to a device or a user with a required deadline display in the **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center. This improvement allows you to review when application installations are expected to occur on a device. The **An administrator must approve a request for this application on the device** option is no longer required to be set on the device available deployment for applications to be listed in the admin center.
+
+:::image type="content" source="./media/8795301-display-required-app.png" alt-text="Details about required deadlines for applications in Microsoft Endpoint Manager admin center":::
+
+We recommend using the **An administrator must approve a request for this application on the device** on application deployments when you have a large number of device available applications. By using this option, it defers targeting a new policy to the client until installation is initiated by the admin. By not targeting a large number of application policies to the client, it increases the performance of the site servers and the client. Use the following table to determine installation behavior on the device when you install an app from the admin center:
+
+|Deployment options|Client requires policy sync before installation|Client must be online to queue the installation|
+|--|--|--|
+|Device required| Yes| Yes|
+|Device available| Yes|Yes|
+|Device requires approval|No |No </br> The installation will occur when the client next comes online |
+|User required|Yes|Yes|
+User available|No|No </br> The installation will occur when the client next comes online|
+|User requires approval| No|No </br> The installation will occur when the client next comes online|
+
+### Prerequisites for displaying status of a required application with a deadline
+
+### Review status of a required application with a deadline
+
+1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) and sign in.
+1. From **Devices** > **All devices**, choose a device managed by **ConfigMgr**.
+1. Select **Applications (preview)** then select an application that has a **Status** of **Required**.
+1. Review the details of the schedule for the installation of the application.
 ## Next steps
 
 [Troubleshoot applications](troubleshoot-applications.md)
+
+<!--
+
+## Prerequisites
+
+For Configuration Manager versions 2010, or later:
+
+- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
+- An application that meets one of the the following requirements:
+   - Is required and has a deadline
+   - Is deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt)
+      - When you have a large number of device available applications,using the **An administrator must approve a request for this application on the device** on application deployments is recommended.
+
+For Configuration Manager versions 2006, and earlier:
+
+- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
+- A minimum of [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed
+- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
+- At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
+   - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
+- A minimum of Configuration Manager version 2006 and the corresponding version of the console installed is required for installing [user targeted applications](#bkmk_user):<!--7518897-->.
+
