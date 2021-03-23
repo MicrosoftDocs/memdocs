@@ -141,18 +141,7 @@ Starting in Configuration Manager 2103, applications targeted to a device or a u
 
 :::image type="content" source="./media/8795301-display-required-app.png" alt-text="Details about required deadlines for applications in Microsoft Endpoint Manager admin center":::
 
-We recommend using the **An administrator must approve a request for this application on the device** on application deployments when you have a large number of device available applications. By using this option, it defers targeting a new policy to the client until installation is initiated by the admin. By not targeting a large number of application policies to the client, it increases the performance of the site servers and the client. 
-
-Use the following table to determine installation behavior on the device when you install an app from the admin center:
-
-|Deployment options | Client requires policy sync before installation|Client must be online to queue the installation|
-|--|--|--|
-|Device required | Yes | Yes|
-|Device available | Yes | Yes|
-|Device requires approval |No |No </br> The installation will occur when the client next comes online |
-|User required| Yes | Yes |
-User available |No | No </br> The installation will occur when the client next comes online|
-|User requires approval | No| No </br> The installation will occur when the client next comes online|
+We recommend using the **An administrator must approve a request for this application on the device** on application deployments when you have a large number of device available applications. By using this option, it defers targeting a new policy to the client until installation is initiated by the admin. By not targeting a large number of application policies to the client, it increases the performance of the site servers and the client. For more information about determining installation behavior, see [When will the application install on the device?](#bkmk_behavior).
 
 ### Review status of a required application with a deadline
 
@@ -173,6 +162,19 @@ The displayed application and available actions are dependent on the version of 
 |Configuration Manager version 2010 with devices running 2010 client versions| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications|Install </br> Reinstall </br> Re-evaluate </br> Uninstall </br> Repair|
 |Configuration Manager version 2103 with devices running 2006 or earlier client versions| All applications targeted to the device </br> </br> All user-available applications </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed.| For device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment: </br> Install </br> Reinstall </br></br> For all user-available applications: </br> Install </br> Reinstall </br></br>  All other applications display status but no actions are available |
 |Configuration Manager version 2103 with devices running 2010 or later client versions| All applications targeted to the device </br> </br> All user-available applications </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed| Install </br> Reinstall </br> Re-evaluate </br> Uninstall </br> Repair |
+
+## <a name="bkmk_behavior"></a> When will the application install on the device?
+
+Use the following table to determine installation behavior on the device when you install an app from the admin center:
+
+|Deployment options | Client requires policy sync before installation|Client must be online to queue the installation|
+|--|--|--|
+|Device required | Yes | Yes|
+|Device available | Yes | Yes|
+|Device requires approval |No |No </br> The installation will occur when the client next comes online |
+|User required| Yes | Yes |
+User available |No | No </br> The installation will occur when the client next comes online|
+|User requires approval | No| No </br> The installation will occur when the client next comes online|
 
 ## Next steps
 
