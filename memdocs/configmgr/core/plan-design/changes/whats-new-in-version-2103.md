@@ -54,11 +54,11 @@ You can now exclude OUs from [Active Directory User Discovery](../../servers/dep
 
 When you install or update to version 2103, there are several new warning [prerequisite checks](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
-#### Site system roles that allow HTTP client connections
+#### Enable the site for HTTPS-only or enhanced HTTP
 
-<!-- 9390933 -->
+<!-- 9390933,9572265 -->
 
-If you have site system roles that allow HTTP client connections, you'll see this warning. The most common roles with this configuration are management points and distribution points. To improve the security of client communications, Configuration Manager won't support this configuration in the future. Plan to enable these roles for a more secure communication method with [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+If your site is configured to allow HTTP communication without enhanced HTTP, you'll see this warning. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP. Plan to configure the site for **HTTPS only** or to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see the description of this [prerequisite check](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).
 
 #### Deprecated Azure Monitor connector
 
