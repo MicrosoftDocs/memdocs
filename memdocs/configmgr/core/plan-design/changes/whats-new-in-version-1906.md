@@ -424,7 +424,7 @@ For more information, see [Device restart notifications](../../clients/deploy/de
 
 <!--4655176-->
 
-You can now provide users with a direct link to a [custom tab](../../clients/deploy/about-client-settings.md#software-center-tab-visibility) in Software Center.
+You can now provide users with a direct link to a [custom tab](../../clients/deploy/about-client-settings.md#software-center-customization---tabs) in Software Center.
 
 Use the following URL format to open Software Center to a particular tab:
 
@@ -445,7 +445,7 @@ You can also use this syntax to open default tabs in Software Center:
 |`Compliance`|Device compliance|
 |`Options`|Options|
 
-For more information, see [Software Center tab visibility](../../clients/deploy/about-client-settings.md#software-center-tab-visibility).
+For more information, see [Software Center tab visibility](../../clients/deploy/about-client-settings.md#software-center-customization---tabs).
 
 ## <a name="bkmk_sum"></a> Software updates
 

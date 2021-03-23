@@ -235,11 +235,11 @@ If you deploy applications as available to users, they can now browse and instal
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#bkmk_HideInstalled) has additional details.   
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.   
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#bkmk_HideUnapproved) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.  
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->

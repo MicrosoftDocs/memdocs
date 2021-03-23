@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/19/2020
+ms.date: 03/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 
 - Windows 10
 
-You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
+You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.  For more information about hybrid Azure AD join, see [Understanding hybrid Azure AD join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
 ## Prerequisites
 
@@ -184,13 +184,32 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
 
+## Supported BYO VPNs 
+
+Here is a list of VPN clients that are known to be tested and validated:
+
+**Supported clients:**
+In-box Windows VPN client
+Cisco AnyConnect (Win32 client)
+Pulse Secure (Win32 client)
+GlobalProtect (Win32 client)
+Checkpoint (Win32 client)
+Citrix NetScaler (Win32 client)
+SonicWall (Win32 client)
+
+**Not supported clients:**
+UWP-based VPN plug-ins
+Anything that requires a user cert
+DirectAccess
+ 
+
 
 ## Create and assign an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 2. On the **Basics** page, type a **Name** and optional **Description**.
-3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](enrollment-autopilot.md#delete-autopilot-devices).
+3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
