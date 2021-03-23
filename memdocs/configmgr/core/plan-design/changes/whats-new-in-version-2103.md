@@ -205,9 +205,9 @@ For more information, see [Windows 10 servicing dashboard](../../../osd/deploy-u
 
 <!--3555906-->
 
-You can now upgrade a client's Windows OS by using a feature update deployed with a task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses a single ESD file that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the ESD file is generally smaller than the WIM image file and the OS upgrade package. You can also use Windows features such as Dynamic Update and Delivery Optimization.
+You can now upgrade a client's Windows OS by using a feature update deployed with a task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses content that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file. You can also use Windows features such as Dynamic Update and Delivery Optimization.
 
-This type of task sequence also extends support to Windows 10 on ARM64 devices.
+This type of task sequence extends support to Windows 10 on ARM64 devices.
 
 For more information, see the following articles:
 

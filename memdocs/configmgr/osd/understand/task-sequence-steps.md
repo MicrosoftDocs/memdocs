@@ -2522,7 +2522,7 @@ Specify the product key to apply to the upgrade process.
 #### Install the following feature updates
 
 <!--3555906-->
-Starting in version 2103, select this option to upgrade a client's Windows OS by using a feature update. This option uses a single ESD file that you synchronize through the software update point. The size of the ESD file is generally smaller than the WIM image file and the OS upgrade package.
+Starting in version 2103, select this option to upgrade a client's Windows OS by using a feature update. This option uses content that you synchronize through the software update point. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file.
 
 Select the new button (gold asterisk), and add a feature update.
 
