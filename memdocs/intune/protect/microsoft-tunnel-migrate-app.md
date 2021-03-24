@@ -36,7 +36,7 @@ Use a preview version of Microsoft Defender for Endpoint as the tunnel applicati
 >
 > For general information about Microsoft Tunnel, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md).
 
-When this preview for Android is over, the Microsoft Defender for Endpoint app becomes generally available. At that time, the standalone app version is deprecated and support for it ends 60 days after the announcement.
+When this preview for Android is over and the Microsoft Defender for Endpoint app that supports Tunnel becomes generally available, the standalone app is deprecated. Support for the standalone apps ends after 60 days.
 
 The public preview supports the following device platforms:
 
