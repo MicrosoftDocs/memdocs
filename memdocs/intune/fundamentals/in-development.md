@@ -94,7 +94,7 @@ This method has the following options for installing the Company Portal:
 ## Device management
 
 ### Windows 10 Enterprise multi-session support (public preview)<!--8666391 -->
-This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user M365 licensing. This upcoming support will let you:
+This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user Microsoft 365 licensing. This upcoming support will let you:
 
 - Host multiple concurrent user sessions using the  new Remote Desktop Session Host exclusive to Windows Virtual Desktop on Azure.
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.

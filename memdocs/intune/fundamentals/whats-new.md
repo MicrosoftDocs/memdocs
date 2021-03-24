@@ -788,7 +788,7 @@ We’ve added support for *policy merge* of USB device ID’s to the [Device con
 
 Policy merge applies to the configuration of each setting across the different profiles that apply to a device. It doesn’t include evaluation between different settings, even when two settings are closely related.
 
-For a more detailed example of what merges, and how to allow and block lists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles.
+For a more detailed example of what merges, and how to allow and blocklists for each supported setting gets merged and applies on a device, see [Policy merge for settings](../protect/endpoint-security-asr-policy.md#policy-merge-for-settings) for device control profiles.
 
 #### Improved Antivirus status operations report for endpoint security<!-- 7771023   -->
 We’ve added new details to the [Antivirus status operations](reports.md#antivirus-agent-status-report-organizational) report for Windows Defender Antivirus, which is an endpoint security policy report.
@@ -1001,7 +1001,7 @@ Firewall policy for tenant attached devices is supported for devices that run *W
 
 For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#configuration-manager-version-requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
 
-#### Expanded settings to manage hardware device installation through block and allow lists<!-- 7339038      -->
+#### Expanded settings to manage hardware device installation through block and allowlists<!-- 7339038      -->
 In **Device control** profiles, which are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md), we’ve revised and [expanded our settings for managing hardware device installation](../protect/endpoint-security-asr-profile-settings.md#device-control). You’ll now find settings to define *block* lists and separate *allow* lists using *device IDs*, *setup classes*, and *instance identifiers*.  The following six settings are now available:
 
 - Allow hardware device installation by device identifiers
@@ -1012,8 +1012,8 @@ In **Device control** profiles, which are part of endpoint security [Attack surf
 - Block hardware device installation by device instance identifiers
 
 Each of these settings supports the options of *Yes*, *No*, and *Not configured*.
-When you configure *Yes* you can then define the block or allow list for that setting.
-On a device, hardware that is specified in an allow list can install or update. However, if that same hardware is specified on a block list, the block overrides the allow list and installation or update of the hardware is prevented.
+When you configure *Yes* you can then define the block or allowlist for that setting.
+On a device, hardware that is specified in an allowlist can install or update. However, if that same hardware is specified on a blocklist, the block overrides the allowlist and installation or update of the hardware is prevented.
 
 #### Improvements to endpoint security Firewall rules<!-- 7732448    -->
 We've made several changes to improve the experience of configuring firewall rules in the [Microsoft Defender Firewall rules profile](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules) for endpoint security Firewall policy.
