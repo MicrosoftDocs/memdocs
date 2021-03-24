@@ -161,7 +161,8 @@ The following improvements were made to the collection evaluation view:
 - Copy text to the clipboard from the collection evaluation page
 - Configure the refresh interval for the collection evaluation statistics page
 
-For more information, see [Collection evaluation information at the CAS](../../clients/manage/collections/collection-evaluation-view.md#bkmkcas) and [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md).
+For more information, see [Collection evaluation information at the CAS](../../clients/manage/collections/collection-evaluation-view.md#bkmk_cas) and [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md).
+
 ## Application management
 
 ### Disable application deployments

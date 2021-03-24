@@ -25,7 +25,7 @@ Starting in Configuration Manager version 2010, the functionality of [Collection
 - The estimated time that a collection evaluation will start and complete
 
 > [!Tip]
-> Viewing collection evaluation at the CAS changed in Configuration Manager version 2103. For more information, see the []() section.
+> Viewing collection evaluation at the CAS changed in Configuration Manager version 2103. For more information, see the [Collection evaluation information at the CAS](#bkmk_cas) section.
 >
 > The collection evaluation process is performed on primary sites, not on the central administration site (CAS). When using the console connected to a CAS using Configuration Manager 2010, you'll see the following behavior:
 > - Evaluation related columns for device collections won't contain data.
