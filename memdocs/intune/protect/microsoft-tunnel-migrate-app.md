@@ -32,11 +32,11 @@ ms.collection: M365-identity-device-management
 Use a preview version of Microsoft Defender for Endpoint as the tunnel application for the Microsoft Tunnel Gateway in Microsoft Intune. The preview version of **Microsoft Defender for Endpoint** includes the Tunnel app functionality. The new app replaces the standalone **Microsoft Tunnel** app as the tunnel client on supported devices.
 
 > [!TIP]
-> For more information about the preview, see the blog **Simplify mobile security with a single app for Microsoft Tunnel and Microsoft Defender for Endpoint** at https://aka.ms/defendertunnel.
+> For more information about the preview, see the blog **Simplify mobile security with a single app for Microsoft Tunnel and Microsoft Defender for Endpoint** at [aka.ms/defendertunnel](https://aka.ms/defendertunnel).
 >
 > For general information about Microsoft Tunnel, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md).
 
-When this preview for Android and a future preview for iOS/iPadOS are both over, the Microsoft Defender for Endpoint app for both platforms becomes generally available. At that time, we'll announce deprecation of the standalone tunnel app for both platforms. Support for the standalone apps will end 60 days after that announcement.
+When this preview for Android is over, the Microsoft Defender for Endpoint app becomes generally available. At that time, the standalone app version is deprecated and support for it ends 60 days after the announcement.
 
 The public preview supports the following device platforms:
 
