@@ -57,25 +57,6 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
-
-
-<!-- ########################## -->
-## Week of March 22, 2021
-
-### Device configuration
-
-#### Public preview of Tunnel client functionality in Microsoft Defender for Endpoint app for Android<!-- 9248143 -->
-
-As announced at Ignite, Microsoft Tunnel client functionality is migrating into the Microsoft Defender for Endpoint app. With this preview, you can start to use a preview version of Microsoft Defender for Endpoint as the Tunnel app for supported devices. The existing Tunnel client remains available, but will eventually be phased out in favor of the Defender for Endpoint app.
-
-This public preview applies to:  
-- Android Enterprise
-  - Fully managed
-  - Corporate-owned work profile
-  - Personally-owned work profile
-
-For this preview, you must opt in to gain access to the preview version of Microsoft Defender for Endpoint, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
-
 <!-- ########################## -->
 ## Week of March 22, 2021 (Service release 2103)
 
@@ -141,6 +122,19 @@ On the new [*Health check* tab](../protect/microsoft-tunnel-monitor.md#use-the-a
 - Memory usage - The average memory use.
 - Latency - The average time for IP packets to traverse the NIC.
 - TLS certificate expiration status and days before expiration - How long the TLS certificate that secures client to server communication for the tunnel remains valid.
+
+#### Public preview of Tunnel client functionality in Microsoft Defender for Endpoint app for Android<!-- 9248143 -->
+
+As announced at Ignite, Microsoft Tunnel client functionality is migrating into the Microsoft Defender for Endpoint app. With this preview, you can start to use a preview version of Microsoft Defender for Endpoint as the Tunnel app for supported devices. The existing Tunnel client remains available, but will eventually be phased out in favor of the Defender for Endpoint app.
+
+This public preview applies to:  
+- Android Enterprise
+  - Fully managed
+  - Corporate-owned work profile
+  - Personally-owned work profile
+
+For this preview, you must opt in to gain access to the preview version of Microsoft Defender for Endpoint, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Intune apps
