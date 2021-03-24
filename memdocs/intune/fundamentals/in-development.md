@@ -87,7 +87,7 @@ Using iOS app protection policies in Microsoft Intune app protection policies, y
 ### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
 To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you'll be able to see the overall compliance status for the policy. With device level reporting, you'll be able to see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
 
-For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
+For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions.md).
 
 ### Disable NFC pairing on iOS/iPadOS devices running 14.2 and newer<!-- 9112701 -->
 On iOS/iPadOS devices, you'll be able to create a device restrictions profile that disables NFC (**Devices** > **Configuration  profiles**> **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile > **Connected devices** > **Disable near field communication (NFC)**). When you disable this feature, it prevents devices from pairing with other NFC-enabled devices and NFC will be disabled. 
