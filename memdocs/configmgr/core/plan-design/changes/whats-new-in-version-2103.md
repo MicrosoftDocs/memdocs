@@ -147,11 +147,13 @@ For more information, see [Manage collections: View collection relationships](..
 <!--8680235-->
 You now have more options when using the collection query preview. The following improvements have been made to previewing collection queries:
 - Limit the number of rows returned
-   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows. 
+   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows.
 - Omit duplicate rows from the result set
   - If the **Omit duplicate rows** option isn't selected, the original query statement will be executed as is, even if the query contains the word **distinct**.
   - When the **Omit duplicate rows** option is selected, if the query already contains the word **distinct**, then the query runs as it is. When the query doesn't contain the word **distinct**, it's added to the query for the preview (mean override).
 - Review statistics for the query preview such as number of rows returned and elapsed time.
+
+For more information, see [How to create collections](../../clients/manage/collections/create-collections.md#bkmk-preview).
 
 ### Improvements to collection evaluation view
 <!--8787410-->
