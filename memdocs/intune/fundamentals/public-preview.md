@@ -2,7 +2,7 @@
 # required metadata
 
 title: Public preview overview in Microsoft Intune - Azure | Microsoft Docs
-description: 
+description: Learn about public preview features in Microsoft Intune, and see an example. See a list of limitations, restrictions, and more in Microsoft Endpoint Manager admin center.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
