@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Public preview in Microsoft Intune
 
-Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test these features in your non-production environments, provide feedback, and start planning how you'll use them in production.
+Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features, provide feedback, and start planning for broad usage in production scenarios.
 
 Preview features have a **(preview)** tag in the Microsoft Endpoint Manager admin center:
 
