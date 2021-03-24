@@ -129,6 +129,8 @@
       href: microsoft-tunnel-monitor.md
     - name: Microsoft Tunnel with Conditional Access
       href: microsoft-tunnel-conditional-access.md
+    - name: Migrate to the Defender for Endpoint app
+      href: microsoft-tunnel-migrate-app.md
   - name: Identity protection
     items:
     - name: Windows Hello
