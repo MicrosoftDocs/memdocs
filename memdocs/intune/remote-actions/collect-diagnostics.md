@@ -38,6 +38,7 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 ## Requirements
 
 The **Collect diagnostics** remote action is supported for:
+- Intune or Co-Managed devices.
 - Windows 10 version 1909 and later.
 - Microsoft HoloLens 2 2004 and later.
 - Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions (under **Remote tasks**).
@@ -122,3 +123,8 @@ Files:
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
 2.	Change the control to **Disabled**.
+
+## Known issues with device diagnostics
+Currently there are the two main issues which may cause device diagnostics to fail:  
+1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP which prevents timeout during upload.  After installing the update please make sure to reboot your device.
+2. The device wasn't able to receive the device action within a 12 hour window.  If the device is offline or turned off this may cause a failure.
