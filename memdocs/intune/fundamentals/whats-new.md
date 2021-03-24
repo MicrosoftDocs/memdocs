@@ -123,6 +123,9 @@ Previously, we recommended that you don't exceed 60,000 iOS/iPadOS or macOS devi
 #### Update of column names in All devices view and Export report<!-- 8854380  -->
 To accurately reflect the data in the columns, we've updated the column names in the All devices view and the Export report to be "Primary User UPN", "Primary User email address", and "Primary User display name".
 
+### End of support for Internet Explorer 11<!--9218996 -->
+Intune will end support for Internet Explorer 11 admin access to the Admin Portal web app UI on March 31, 2021. Move to Edge or another [supported browser](supported-devices-browsers.md) before that time to administer any of your Microsoft services built on Azure.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
