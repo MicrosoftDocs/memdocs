@@ -25,7 +25,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 ## What's new
 
-- Display applications with a required deadline was added in Configuration Manager version 2013
+- Display all applications for a device was added in Configuration Manager version 2013
 - Uninstall, repair, re-evaluate, or reinstall an application was added in Configuration Manager version 2010
 - Deploy an application to a user was added in Configuration Manager version 2006
 
@@ -35,9 +35,9 @@ For Configuration Manager versions 2103, or later:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
 - An application that meets one of the following requirements: <!--8795301-->
-   - Is required and has a deadline
-   - Is deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt)
-      - When you have a large number of device available applications, using the **An administrator must approve a request for this application on the device** on application deployments is recommended. For more information, see [Required application deployments display in the admin center](#bkmk_required)
+   - Is deployed to the device
+   - Is deployed to a user that's logged in to the device, primary user of the device, or was previously installed.
+     - When you have a large number of device available applications, using the **An administrator must approve a request for this application on the device** on application deployments is recommended. For more information, see [Display all applications for a device in the admin center](#bkmk_all).
 
 For Configuration Manager versions 2010, and earlier:
 
@@ -133,17 +133,19 @@ Deploying applications to a user has the following limitations:
    - **Uninstall**
    - **Repair**
 
-## <a name="bkmk_required"></a> Required application deployments display in the admin center
+## <a name="bkmk_all"></a> Display all applications for a device in the admin center
 <!--8795301-->
 *(Introduced in version 2103)*
 
-Starting in Configuration Manager 2103, applications targeted to a device or a user with a required deadline display in the **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center. This improvement allows you to review when application installations are expected to occur on a device. The **An administrator must approve a request for this application on the device** option is no longer required to be set on the device available deployment for applications to be listed in the admin center.
+Starting in Configuration Manager 2103, the **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center displays more applications from Configuration Manager. This improvement allows you to review when application installations are expected to occur on a device. Displayed applications include applications that are:
+- Deployed to the device
+- Deployed to a user that's logged in to the device, primary user of the device, or was previously installed.
 
 :::image type="content" source="./media/8795301-display-required-app.png" alt-text="Details about required deadlines for applications in Microsoft Endpoint Manager admin center":::
 
-We recommend using the **An administrator must approve a request for this application on the device** on application deployments when you have a large number of device available applications. By using this option, it defers targeting a new policy to the client until installation is initiated by the admin. By not targeting a large number of application policies to the client, it increases the performance of the site servers and the client. For more information about determining installation behavior, see [When will the application install on the device?](#bkmk_behavior).
+The option, **An administrator must approve a request for this application on the device**, is no longer required to be set on the device available deployment for applications to be listed in the admin center. However, we recommend using the **An administrator must approve a request for this application on the device** option on application deployments when you have a large number of device available applications. By using this option, it defers targeting a new policy to the client until installation is initiated by the admin. By not targeting a large number of application policies to the client, it increases the performance of the site servers and the client. For more information about determining installation behavior, see [When will the application install on the device?](#bkmk_behavior).
 
-### Review status of a required application with a deadline
+### Review status of an application
 
 1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) and sign in.
 1. From **Devices** > **All devices**, choose a device managed by **ConfigMgr**.
