@@ -48,7 +48,7 @@ The **Wipe** action restores a device to its factory default settings. The user 
 
 
 > [!NOTE]
-> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment.
+> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](https://docs.microsoft.com/en-us/mem/intune/enrollment/ios-user-enrollment)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
