@@ -69,26 +69,15 @@ You'll be able to deploy Android Enterprise system apps for Android Enterprise W
 
 
 <!-- ***********************************************-->
-
+<!--
 ## Device configuration
-
-### More Microsoft Edge settings and categories temporarily removed in Settings Catalog for macOS devices<!-- 9220407 -->
-On macOS devices, you can use the Settings Catalog to configure Microsoft Edge version 77 and newer (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings Catalog**). More Microsoft Edge settings are added. Temporarily, the setting categories are removed. To find settings, use the search feature in the Settings Catalog. For a list of settings, [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) is a good resource.
-
-For more information on the Settings Catalog, see [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
-
-Applies to:
-- macOS 
-- Microsoft Edge 
+-->
  
 <!-- ***********************************************-->
 ## Device enrollment
 
 ### Microsoft Endpoint Manager ending support for Android 5.x<!--9058248 -->
 In a future update, Microsoft Endpoint Manager will stop supporting Android 5.x devices.
-
-### Increasing recommended maximum number of iOS/iPadOS and macOS devices per enrollment token<!--8568668 -->
-Currently, we recommend that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. In a future update, this recommended limit will increase to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
 
 ### New modern authentication method with Apple Setup Assistant <!--4843770 -->
 When creating an Automated Device Enrollment profile, you'll be able to choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD MFA during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
@@ -105,7 +94,7 @@ This method has the following options for installing the Company Portal:
 ## Device management
 
 ### Windows 10 Enterprise multi-session support (public preview)<!--8666391 -->
-This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user M365 licensing. This upcoming support will let you:
+This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user Microsoft 365 licensing. This upcoming support will let you:
 
 - Host multiple concurrent user sessions using the  new Remote Desktop Session Host exclusive to Windows Virtual Desktop on Azure.
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
@@ -133,19 +122,6 @@ This action will work in a similar manner as the current [Locate device action f
 ### End users can restart an app install from the Company Portal<!-- 652935  -->
 Using the Company Portal, end users will be able to restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
 
-
-### Microsoft Launcher configuration keys<!-- 8980621 -->
-For Android Enterprise fully managed devices, the Microsoft Launcher for Intune app will provide additional customization. You'll be able to configure the set of apps and weblinks, as well as the order, that are displayed in Launcher. The app set and position (order) of app configurations have been merged together to simplify home screen customization. For related information, see [Configure Microsoft Launcher](../apps/configure-microsoft-launcher.md).
-
-### Improved notification experience in the iOS/iPadOS Company Portal app<!-- 7219429  -->
-The Company Portal app will store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications will be able to view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
-
-### Microsoft Edge for macOS devices will be a universal app<!-- 9076329  -->
-When you deploy Microsoft Edge for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the app that runs natively on Apple Silicon Macs. The same deployment will install the x64 version of the app on Intel Macs. To add Microsoft Edge for macOS, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **All apps** > **Add**. In the **App type** list under **Microsoft Edge, version 77 and later**, select **macOS**. For related information, see [Add Microsoft Edge to macOS devices using Microsoft Intune](../apps/apps-edge-macos.md).
-
-### Additional configuration keys for the Microsoft Launcher app<!-- 9364310  -->
-You'll be able to set folder configuration settings for Microsoft Launcher on Android Enterprise corporate owned fully managed devices. By using an app configuration policy and configuration key values, you will be able to set values for folder shape, folder opened to full screen, and folder scroll direction. Also, you will now be able to position the folder on the home screen in addition to positioning apps and web links. Additionally, you can choose to allow end users to modify the folder style values within the app. For more information about Microsoft Launcher, see [Configure Microsoft Launcher for Android Enterprise with Intune](..\apps\configure-microsoft-launcher.md).
-
 ### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
 When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos). 
 
@@ -159,9 +135,6 @@ After the change, only new policies you then create will use the new API. Your e
 
 ### Organizational report focused on device configuration<!-- 8455708  --> 
 We'll be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or pending. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
-
-### Update of column names in All devices view and Export report<!-- 8854380  -->
-We'll be updating the column names in the All devices view and the Export report to be "Primary User UPN", "Primary User email address", and "Primary User display name" to accurately reflect the data these columns provide.
 
 ### Export Intune reports using Graph API v1.0 or beta<!-- 8090911  -->
 Intune reporting export API will be available in Graph v1.0, and will continue to be available in Graph beta. For related information, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md). 
@@ -177,10 +150,6 @@ Intune reporting export API will be available in Graph v1.0, and will continue t
 
 ### Update when exporting Intune reports using the Graph API<!-- 8764428  -->
 When you use the Graph API to export Intune reports without selecting any columns for the devices report, you'll receive the default column set. To reduce confusion, we'll be removing columns from the default column set starting January 2021. The columns being removed are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns will still be available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
-
-
-### Export localized Intune report data using Graph APIs<!-- 8612346 -->
-You'll be able to specify that the report data that you export from the Microsoft Endpoint Manager reporting export [API](../fundamentals/reports-export-graph-apis.md) can contain localized columns only, or localized and non-localized columns. The localized and non-localized columns option will be selected by default for most reports, which will prevent breaking changes. For more information about reports, see [Intune reports](../fundamentals/reports.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ***********************************************-->
 ## Security
