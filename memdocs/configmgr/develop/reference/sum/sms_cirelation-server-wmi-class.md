@@ -1,6 +1,7 @@
 ---
 title: "SMS_CIRelation Class"
 titleSuffix: "Configuration Manager"
+description: Learn about the SMS_CIRelation Server Windows Management Instrumentation (WMI) Class.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
