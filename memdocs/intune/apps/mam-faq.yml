@@ -229,9 +229,8 @@ sections:
           
           When dealing with different types of settings, an Intune App SDK version requirement would take precedence, then an app version requirement, followed by the iOS/iPadOS operating system version requirement. Then, any warnings for all types of settings in the same order are checked. We recommend the Intune App SDK version requirement be configured only upon guidance from the Intune product team for essential blocking scenarios.
           
-          
 additionalContent: |
-  
+
   ## See also
 
   - [Deploy Intune](../fundamentals/deployment-guide-intune-setup.md)
