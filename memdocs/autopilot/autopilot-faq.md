@@ -12,6 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 1/28/2020
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -144,6 +145,8 @@ A [glossary](#glossary) of abbreviations used in this article is provided at the
 | What are some common causes of registration failures? |1. Bad or missing hardware hash entries can lead to faulty registration attempts <br>2. Hidden special characters in CSV files. <br><br>To avoid this issue, after creating your CSV file, open it in Notepad to look for hidden characters or trailing spaces or other corruptions.|
 | Is Autopilot supported on IoT devices? | Autopilot isn't supported on IoT Core devices, and there are currently no plans to add this support. Autopilot is supported on Windows 10 IoT Enterprise SAC devices. Autopilot is supported on Windows 10 Enterprise LTSC 2019 and above; it isn't supported on earlier versions of LTSC.|
 | Is Autopilot supported in all regions/countries? | Autopilot only supports customers using global Azure. Global Azure doesn't include the three entities listed below:<br>- Azure Germany <br>- Azure China 21Vianet<br>- Azure Government<br>So, if a customer is set up in global Azure, there are no region restrictions. For example, if Contoso uses global Azure but has employees working in China, the Contoso employees working in China could use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees couldn't use Autopilot.|
+| Why does TPM provisioning/attestatstion take longer during the first boot on a device? | TPM provisioning involves generating and processing strong cryptographic keys and depending on characteristics of TPM hardware used on a device, it may take longer than 1 minute on first boot.|
+
 
 ## Glossary
 

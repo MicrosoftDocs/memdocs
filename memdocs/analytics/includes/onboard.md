@@ -17,4 +17,5 @@ ms.date: 06/25/2020
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](../settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 > [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](../data-collection.md#bkmk_stop) at any time.
+> - We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](../data-collection.md#bkmk_stop) at any time.
+> - Client devices require a restart to fully enable all analytics. <!--7698085-->

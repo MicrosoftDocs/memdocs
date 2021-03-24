@@ -145,9 +145,9 @@ The number of supported clients depends on the version of Windows Server Update 
   IIS Application Pools:
 
   - Increase the WsusPool Queue Length to 2000
-  - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://www.phoenixtekk.com/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
+  - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see [WSUS best practices](/troubleshoot/mem/configmgr/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits).
 
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#bkmk_ScaleSieSystems).  
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#site-systems).  
 
 #### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 
@@ -205,7 +205,7 @@ A stand-alone primary site supports the following number of devices:
 
 - 175,000 total clients and devices, not to exceed:  
 
-  - 150,000 desktops (computers that run Windows, Linux, and UNIX). Also see, support for [embedded devices](#embedded).
+  - 150,000 Windows clients. Also see, support for [embedded devices](#embedded).
 
   - 25,000 devices that run Mac and Windows CE 7.0
 
@@ -221,7 +221,7 @@ Primary sites support Windows Embedded devices that have File-Based Write Filter
 
 Secondary sites support the following number of devices:  
 
-- 15,000 desktops (computers that run Windows, Linux, and UNIX)  
+- 15,000 Windows clients
 
 ### <a name="bkmk_mp"></a> Management points
 
@@ -229,10 +229,10 @@ Each management point can support the following number of devices:
 
 - 25,000 total clients and devices, not to exceed:  
 
-  - 25,000 desktops (computers that run Windows, Linux, and UNIX)  
+  - 25,000 Windows clients
 
   - One of the following (not both):  
 
     - 10,000 devices that are managed by using on-premises MDM  
 
-    - 10,000 devices that run Mac and Windows CE 7.0 clients
+    - 10,000 devices that run macOS and Windows CE 7.0 clients

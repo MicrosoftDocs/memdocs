@@ -24,7 +24,7 @@
     href: cmpivot-samples-attached.md
 - name: Endpoint security for tenant attached devices (preview)
   items:
-  - name: Enable endpoint security
+  - name: Enable endpoint detection and response
     href: atp-onboard.md
   - name: Create and deploy endpoint security policy
     href: deploy-antivirus-policy.md
@@ -46,6 +46,8 @@
     href: troubleshoot-client-details.md
   - name: Application installation (preview)
     href: troubleshoot-applications.md
+  - name: Common error codes for application installation
+    href: app-install-error-reference.md
   - name: Timeline (preview)
     href: troubleshoot-timeline.md
   - name: Resource explorer (preview)

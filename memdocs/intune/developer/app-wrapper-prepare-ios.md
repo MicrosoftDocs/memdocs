@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/04/2020
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -36,6 +36,9 @@ The tool is a macOS command-line application that creates a wrapper around an ap
 
 To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) on GitHub.
 
+> [!NOTE]
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/issues) on GitHub.
+
 ## General prerequisites for the App Wrapping Tool
 
 Before you run the App Wrapping Tool, you need to fulfill some general prerequisites:
@@ -48,7 +51,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 12 or later.
+  * The input app must be compiled for iOS 12.2 or later.
 
   * The input app cannot be encrypted.
 
@@ -174,6 +177,9 @@ You will need the following to distribute apps wrapped by Intune:
 
 ## Run the App Wrapping Tool
 
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
+
 ### Use terminal
 
 Open the macOS Terminal and run the following command:
@@ -297,10 +303,11 @@ If the app wrapping tool fails to finish successfully, one of the following erro
 Use the following steps to get logs for your wrapped applications during troubleshooting.
 
 1. Go to the iOS Settings app on your device and select your LOB app.
-2. Toggle the **Diagnostics Console** to **On**.
-3. Launch your LOB application.
-4. Click on the "Get Started" link.
-5. You can now share logs through email or copying them to a OneDrive location.
+2. Select **Microsoft Intune**.
+3. Toggle the **Display Diagnostics Console** setting to **On**.
+4. Launch your LOB application.
+5. Click on the "Get Started" link.
+6. You can now share logs through email or copying them to a OneDrive location.
 
 > [!NOTE]
 > The logging functionality is enabled for apps that have wrapped with the Intune App Wrapping Tool version 7.1.13 or above.

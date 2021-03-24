@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 03/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,6 +68,9 @@ The following diagram shows a detailed flow of third-party SCEP integration with
 
 Before integrating third-party certification authorities with Intune, confirm that the CA you're using supports Intune. [Third-party CA partners](#third-party-certification-authority-partners) (in this article) includes a list. You can also check your certification authority's guidance for more information. The CA may include setup instructions specific to their implementation.
 
+> [!NOTE]
+> To support Android Enterprise Device Owner devices, the CA must support use of an HTTPS URL when you configure the *HTTP Server URL* for the [SCEP certificate profile](certificates-profile-scep.md).
+
 ### Authorize communication between CA and Intune
 
 To allow a third-party SCEP server to run custom challenge validation with Intune, create an app in Azure AD. This app gives delegated rights to Intune to validate SCEP requests.
@@ -76,18 +79,19 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
 
 #### Create an application in Azure Active Directory  
 
-1. In the [Azure portal](https://portal.azure.com), go to **Azure Active Directory** > **App Registrations**, and then select **New registration**.  
+1. In the [Azure portal](https://portal.azure.com), go to **Azure Active Directory** > **App Registrations**, and then select **New registration**.
 
 2. On the **Register an application** page, specify the following details:  
-   - In the **Name** section, enter a meaningful application name.  
+   - In the **Name** section, enter a meaningful application name.
    - For the **Supported account types** section, select **Accounts in any organizational directory**.  
-   - For **Redirect URI**, leave the default of Web, and then specify the sign-on URL for the third-party SCEP server.  
+   - For **Redirect URI**, leave the default of Web, and then specify the sign-on URL for the third-party SCEP server.
 
-3. Select **Register** to create the application and to open the Overview page for the new app.  
+3. Select **Register** to create the application and to open the Overview page for the new app.
 
 4. On the app **Overview** page, copy the **Application (client) ID** value and record it for later use. You'll need this value later.  
 
-5. In the navigation pane for the app, go to **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in Description, select any option for **Expires**, and then and choose **Add** to generate a *value* for the client secret. 
+5. In the navigation pane for the app, go to **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in Description, select any option for **Expires**, and then and choose **Add** to generate a *value* for the client secret.
+
    > [!IMPORTANT]  
    > Before you leave this page, copy the value for the client secret and record it for later use with your third-party CA implementation. This value is not shown again. Be sure to review the guidance for your third-party CA on how they want the Application ID, Authentication Key, and Tenant ID configured.  
 
@@ -100,10 +104,11 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
    Select **Add permissions** to save this configuration.  
 
 9. Remain on the **API permissions** page, and select **Grant admin consent for Microsoft**, and then select **Yes**.  
-   
+
    The app registration process in Azure AD is complete.
 
 ### Configure and deploy a SCEP certificate profile
+
 As the administrator, create a SCEP certificate profile to target to users or devices. Then, assign the profile.
 
 - [Create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile)
@@ -115,18 +120,20 @@ As the administrator, create a SCEP certificate profile to target to users or de
 When you unenroll or wipe the device, the certificates are removed. The certificates aren't revoked.
 
 ## Third-party certification authority partners
+
 The following third-party certification authorities support Intune:
 
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
-- [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
+- [Entrust](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
+- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 - [Sectigo](https://sectigo.com/products)
+- [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
-
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 

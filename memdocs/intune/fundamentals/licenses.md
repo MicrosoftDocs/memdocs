@@ -20,7 +20,7 @@ ms.assetid: 4a94440c-11cb-11e8-b642-0ed5f89f718b
 
 #ROBOTS:
 #audience:
-ms.reviewer: chmaguir
+ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -43,6 +43,7 @@ Intune is included in the following licenses:
 - Microsoft 365 F3
 - Microsoft 365 Government G5
 - Microsoft 365 Government G3
+- Intune for Education
 
 ## Microsoft Intune for Education
 Intune for Education is included in the following licenses:
@@ -52,9 +53,12 @@ Intune for Education is included in the following licenses:
 
 ## Additional information
 - A Microsoft Intune user and device subscription is available as a standalone, in addition to the bundles listed above.
-- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features.
+- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Introduction to device licenses in Microsoft Intune](/troubleshoot/mem/intune/device-licenses-introduction).
 - The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune isn't included in licenses not in the previous tables.
+
+## Unlicensed admins
+For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](unlicensed-admins.md).
 
 Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page for the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.  
 

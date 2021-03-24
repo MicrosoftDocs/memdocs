@@ -29,8 +29,6 @@ Before installing clients on PCs, servers, and other devices in Configuration Ma
 
 -   [Prerequisites for deploying clients to Windows computers](../../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)  
 
--   [Planning for client deployment to Linux and UNIX computers](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md)  
-
 -   [Planning for client deployment to Mac computers](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)  
 
 -   [Planning for client deployment to Windows Embedded devices](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)  

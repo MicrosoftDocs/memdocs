@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 03/17/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -111,6 +111,9 @@ The **vppProgramType** entity lists possible VPP program types for an app.
 ## applicationInventories
 
 The **applicationInventory** entity lists the applications found on the device at the time of inventory collection.
+
+> [!NOTE]
+> This entity is in the process of being deprecated.
 
 | Property  | Description |
 |---------|------------|

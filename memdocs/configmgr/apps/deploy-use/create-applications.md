@@ -731,5 +731,4 @@ For more information about creating applications on different OS platforms, see 
 
 - [Create Windows applications](../get-started/creating-windows-applications.md)
 - [Create Mac applications](../get-started/creating-mac-computer-applications.md)
-- [Create Linux and UNIX server applications](../get-started/creating-linux-and-unix-server-applications.md)
 - [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md)

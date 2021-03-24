@@ -53,8 +53,6 @@ Not all devices can support content hashing. The exceptions include:
 
 - Windows RT client, though these clients verify the signature of an application that is signed by a trusted source and also use package full name (PFN) validation.  
 
-- Clients that run on versions of Linux and UNIX that do not support SHA-256. For more information, see [Planning for client deployment to Linux and UNIX computers](../../clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md).  
-
 ### Inventory signing and encryption  
  Inventory that clients send to management points is always signed by devices, regardless of whether they communicate with management points over HTTP or HTTPS. If they use HTTP, you can choose to encrypt this data, which is a security best practice.  
 
@@ -118,7 +116,7 @@ Not all devices can support content hashing. The exceptions include:
  After the operating system is deployed and the Configuration Manager is installed, the client will require its own PKI client authentication certificate for HTTPS client communication.  
 
 ### ISV proxy solutions and PKI certificates  
- Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. For example, an ISV could create extensions to support non-Windows client platforms such as Macintosh or UNIX computers. However, if the site systems require HTTPS client connections, these clients must also use PKI certificates for communication with the site. Configuration Manager includes the ability to assign a certificate to the ISV proxy that enables communications between the ISV proxy clients and the management point. If you use extensions that require ISV proxy certificates, consult the documentation for that product. For more information about how to create ISV proxy certificates, see the Configuration Manager Software Developer Kit (SDK).  
+ Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. For example, an ISV could create extensions to support non-Windows client platforms such as macOS. However, if the site systems require HTTPS client connections, these clients must also use PKI certificates for communication with the site. Configuration Manager includes the ability to assign a certificate to the ISV proxy that enables communications between the ISV proxy clients and the management point. If you use extensions that require ISV proxy certificates, consult the documentation for that product. For more information about how to create ISV proxy certificates, see the Configuration Manager Software Developer Kit (SDK).  
 
  If the ISV certificate is compromised, block the certificate in the **Certificates** node in the **Administration** workspace, **Security** node.  
 
@@ -145,7 +143,7 @@ Not all devices can support content hashing. The exceptions include:
  These PKI certificates are automatically requested, generated, and installed by Microsoft Intune.  
 
 ### CRL checking for PKI certificates  
- A PKI certificate revocation list (CRL) increases administrative and processing overhead but it is more secure. However, if CRL checking is enabled but the CRL is inaccessible, the PKI connection fails. For more information, see [Security and privacy for Configuration Manager](security-and-privacy.md).  
+ A PKI certificate revocation list (CRL) increases administrative and processing overhead but it is more secure. However, if CRL checking is enabled but the CRL is inaccessible, the PKI connection fails.
 
  Certificate revocation list (CRL) checking is enabled by default in IIS, so if you are using a CRL with your PKI deployment, there is nothing additional to configure on most Configuration Manager site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.  
 

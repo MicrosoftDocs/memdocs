@@ -52,6 +52,9 @@ For more information on these prerequisites, see [Install clients using Azure AD
 
 To determine if your internet-enabled management point requires HTTPS, see [management points](#bkmk_mphttps).
 
+> [!NOTE]
+> If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
+
 ## PKI certificate
 
 If you have a public key infrastructure (PKI) that can issue client authentication certificates to devices, then consider this authentication method for internet-based devices with your CMG. It doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10.

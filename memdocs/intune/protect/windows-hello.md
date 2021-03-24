@@ -41,7 +41,7 @@ Intune integrates with Hello for Business in two ways:
 In addition, Intune supports the following types of policy to manage some settings for Windows Hello for Business:
 
 - [**Security baselines**](../protect/security-baselines.md). The following baselines include settings for Windows Hello for Business:
-  - [Microsoft Defender Advanced Threat Protection baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Microsoft Defender for Endpoint baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
   - [Windows MDM security baseline settings](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
 - Endpoint security [**Account protection**](../protect/endpoint-security-account-protection-policy.md) policy. View the [Account protection settings](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
 

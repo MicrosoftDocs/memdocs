@@ -2,16 +2,14 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 06/04/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Reference for maintenance tasks in Configuration Manager
@@ -46,10 +44,13 @@ Use this task to maintain consistency of software titles between software invent
 
 ### Clear Undiscovered Clients
 
-> [!Tip]
+> [!TIP]
 > You may also see this task in the console named **Clear Install Flag**.
 
-Use this task to remove the installed flag for clients that don't submit a Heartbeat Discovery record during the **Client Rediscovery** period. The installed flag prevents automatic client push installation to a computer that might have an active Configuration Manager client.  
+Use this task to remove the installed flag for clients that don't submit a Heartbeat Discovery record during the **Client Rediscovery** period. The installed flag prevents automatic client push installation to a computer that might have an active Configuration Manager client. The default value is 21 days.
+
+> [!IMPORTANT]
+> Make sure this value is greater than the interval for [Heartbeat discovery](../deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc), which by default is seven days. Otherwise, clients will unnecessarily reinstall.<!-- 7355291 -->
 
 | Site type | Status |
 | --------- | ------ |
@@ -140,6 +141,16 @@ Use this task to delete from the site database aged information from clients in 
 ### Delete Aged Collected Files
 
 Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).  
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Collected Diagnostic Files
+<!--6503308-->
+Use this task to delete [collected diagnostic files](../../clients/manage/client-notification.md#client-diagnostics). Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. **Delete Aged Collected Diagnostic Files** uses a default value of 14 days when looking for diagnostic files to clean up and doesn't affect other collected files. This maintenance task is enabled by default and was introduced in Configuration Manager version 2010. Earlier Configuration Manager versions use the [Delete Aged Collected Files](#delete-aged-collected-files) task for deleting client diagnostic files.
 
 | Site type | Status |
 | --------- | ------ |
@@ -343,7 +354,7 @@ Use this task to delete from the site database aged replication summary data whe
 
 ### Delete Aged Status Messages
 
-Use this task to delete from the database aged status message data as configured in status filter rules. For more information, see [Monitor the status system of Configuration Manager](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
+Use this task to delete from the database aged status message data as configured in status filter rules. For more information, see [Monitor the status system](use-status-system.md#monitor-the-status-system).
 
 | Site type | Status |
 | --------- | ------ |
@@ -418,7 +429,7 @@ This task operates only on resources that are Configuration Manager clients. It'
 
 ### Delete Obsolete Alerts
 
-Use this task to delete from the database expired alerts that have been stored longer than a specified time. For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+Use this task to delete from the database expired alerts that have been stored longer than a specified time. For more information, see [Configure alerts](configure-alerts.md).
 
 | Site type | Status |
 | --------- | ------ |

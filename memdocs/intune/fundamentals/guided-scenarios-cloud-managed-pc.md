@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 12/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -22,7 +22,7 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Cloud-managed Modern Desktop
 
-The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows 10 are the core components of the modern desktop along with the latest security baselines for Windows 10 and Microsoft Defender Advanced Threat Protection.
+The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows 10 are the core components of the modern desktop along with the latest security baselines for Windows 10 and Microsoft Defender for Endpoint.
 
 Managing the modern desktop from the cloud brings the added benefit of internet-wide remote actions. Cloud-management utilizes the in-built Windows Mobile Device Management policies and removes dependencies on local Active Directory group policy.
 
@@ -43,7 +43,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 ## Step 1 - Introduction
 
-Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
+Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender for Endpoint, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
 
 ### What you will need to continue
 
@@ -51,7 +51,7 @@ You must supply your test device and test user in this guided scenario. Make sur
 
 - Set up a test user account in Azure Active Directory.
 - Create a test device running Windows 10, version 1903 or later.
-- (Optional) [Register the test device with Windows Autopilot](../../autopilot/enrollment-autopilot.md#add-devices).
+- (Optional) [Register the test device with Windows Autopilot](../../autopilot/add-devices.md#add-devices).
 - (Optional) Enable [branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 ## Step 2 - User
@@ -119,7 +119,7 @@ The guided scenario will also assign the user to the selected Autopilot device f
 Once the user joins the device to Azure Active Directory, the following configurations will be applied to the device:
 
 1. Microsoft 365 Apps will be automatically installed on the Cloud-managed PC. It includes the applications that you're familiar with, including Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business, and Word. You can use these applications to connect with Microsoft 365 services such as SharePoint Online, Exchange Online, and Skype for Business Online. Microsoft 365 Apps is updated regularly with new features, unlike non-subscription versions of Office. For a list of new features, see What's new in Microsoft 365.
-2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender Advanced Threat Protection, the guided scenario will also configure baseline settings for Defender. Defender Advanced Threat Protection provides a new post-breach layer of protection to the Windows 10 security stack. With a combination of client technology built into Windows 10 and a robust cloud service, it will help detect threats that have made it past other defenses. 
+2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender for Endpoint, the guided scenario will also configure baseline settings for Defender. Defender for Endpoint provides a new post-breach layer of protection to the Windows 10 security stack. With a combination of client technology built into Windows 10 and a robust cloud service, it will help detect threats that have made it past other defenses. 
 
 ## Next steps
 

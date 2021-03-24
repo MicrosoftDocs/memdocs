@@ -1,7 +1,7 @@
 ---
 title: Setup wizard
 titleSuffix: Configuration Manager
-ms.date: 07/26/2019
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -31,7 +31,6 @@ Install a secondary site from within the Configuration Manager console. Secondar
 > - [**Download System Center Updates Publisher**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Download clients for additional operating systems**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
->   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Release notes**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
 > - [**Read documentation**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Obtain installation assistance**: [Microsoft Q&A: Configuration Manager site and client deployment](/answers/topics/mem-cm-site-deployment.html) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
@@ -237,8 +236,9 @@ If you're installing a central administration site as part of a site expansion s
 
     - You can connect a Configuration Manager console to the site before Setup is complete. This console connects as read-only, and lets you view objects and settings, but you can't modify anything.  
 
-    - After Setup completes, you can connect a console that can edit objects and settings.  
-
+    - After Setup completes, you can connect a console that can edit objects and settings.
+      
+    - Starting in Configuration Manager version 2010, you'll be given a **Report update error to Microsoft** option if setup fails. For more information, see [Report setup and upgrade failures to Microsoft](../../manage/install-in-console-updates.md#bkmk_report).
 
 ## <a name="bkmk_expand"></a> Expand a stand-alone primary site
 

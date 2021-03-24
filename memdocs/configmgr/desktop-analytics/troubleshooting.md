@@ -42,7 +42,7 @@ For more information, see [Monitor connection health](monitor-connection-health.
 > [!NOTE]
 > The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_move).
 
-Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
+Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../core/servers/manage/use-status-system.md#monitor-the-status-system) node of the Configuration Manager console.<!-- 5566763 -->
 
 ## Log files
 
@@ -84,7 +84,7 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
     - **Name**: a unique name that identifies the app, for example: `Desktop-Analytics-Connection`  
 
-    - **Supported account types**: **Accounts in this organizational directory only (Contoso)**
+    - **Supported account types**: **Accounts in this organizational directory only (Contoso only - Single tenant)**
 
     - **Redirect URI (optional)**: **Web**  
 
@@ -94,14 +94,19 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
 3. Select the app, note the **Application (client) ID** and **Directory (tenant) ID**. The values are GUIDs that are used to configure the Configuration Manager connection.  
 
-4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
+4. In the **Manage** menu, select **Certificates & secrets**. Select **New client secret**. Enter a **Description**, specify an expiration duration, and then select **Add**. 
+
+    > [!TIP]
+    > If you select an expiration date other than **Never**, take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service. 
+
+5. Copy the **Value** of the key, which is used to configure the Configuration Manager connection.
 
     > [!Important]  
-    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.  
+    > This is the only opportunity to copy the key value. If you don't copy it now, you need to create another key.   
     >
     > Save the key value in a secure location.  
 
-5. In the **Manage** menu, select **API permissions**.  
+6. In the **Manage** menu, select **API permissions**.  
 
     1. On the **API permissions** panel, select **Add a permission**.  
 
@@ -113,7 +118,7 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
     5. Select **Add permissions**.  
 
-6. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
+7. On the **API permissions** panel, select **Grant admin consent...**. Select **Yes**.  
 
 #### Import app in Configuration Manager
 
@@ -216,9 +221,6 @@ Then select **Apply changes**:
 This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data.  For more information, see the [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
-
-> [!IMPORTANT]
-> The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
 
 ## Service notifications
 

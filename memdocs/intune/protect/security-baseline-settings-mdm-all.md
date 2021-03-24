@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,28 +36,30 @@ ms.collection: M365-identity-device-management
 View the MDM security baseline settings that Microsoft Intune supports for devices that run Windows 10 or later. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
-- The most recent baseline version is **MDM Security Baseline for August 2020**
+- The most recent baseline version is **MDM Security Baseline for December 2020**
 
+
+::: zone pivot="mdm-december-2020"
+
+**MDM Security Baseline for December 2020**  
+
+::: zone-end
 ::: zone pivot="mdm-sept-2020"
 
 **MDM Security Baseline for August 2020**  
-This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
-
-- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
-
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
-
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **MDM Security Baseline for May 2019**:  
+
+::: zone-end
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
+
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
 
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
@@ -92,7 +94,7 @@ For more information, see [Policy CSP - AboveLock](/windows/client-management/md
   **Default**: Disabled
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## App Runtime
 
@@ -109,7 +111,7 @@ For more information, see [Policy CSP - AppRuntime](/windows/client-management/m
 For more information, see [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) in the Windows documentation.
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020"
 
 - **Block app installations with elevated privileges**:
   This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system. If you enable this policy setting, privileges are extended to all programs. This enables users to install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.  
@@ -158,7 +160,7 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020"
 
 ## Audit
 
@@ -282,7 +284,7 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
   **Default**: Success and Failure
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Auto Play
 
@@ -319,7 +321,7 @@ For more information, see [Policy CSP - BitLocker](/windows/client-management/md
   For BitLocker removable drive policy, configure the following setting:
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
   - **Block write access to removable data-drives not protected by BitLocker**:  
     **Default**: Yes
@@ -359,7 +361,7 @@ For more information, see [Policy CSP - BitLocker](/windows/client-management/md
     **Default**: AES 256bit XTS
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Browser
 
@@ -406,7 +408,7 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Configure secure access to UNC paths**:  
   This policy setting configures secure access to UNC paths. If you enable this policy, Windows only allows access to the specified UNC paths after fulfilling additional security requirements.  
@@ -420,7 +422,7 @@ For more information, see [Policy CSP - Connectivity](/windows/client-management
   Select **Add** to specify additional security flags and server paths.
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Block downloading of print drivers over HTTP**:  
   This policy setting specifies whether to allow this client to download print driver packages over HTTP. To set up HTTP printing, non-inbox drivers need to be downloaded over HTTP. Note: This policy setting doesn't prevent the client from printing to printers on the Intranet or the Internet over HTTP. It only prohibits downloading drivers that aren't already installed locally. If you enable this policy setting, print drivers can't be downloaded over HTTP. If you disable or don't configure this policy setting, users can download print drivers over HTTP.  
@@ -469,7 +471,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
   **Default**: Enable with UEFI lock
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Virtualization based security**:  
   Turns on virtualization-based security (VBS) at the next reboot. Virtualization based security uses the Windows Hypervisor to provide support for security services.
@@ -477,7 +479,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
   **Default**: Enable VBS with secure boot
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Enable virtualization based security**:  
   Turns on virtualization-based security (VBS) at the next reboot. Virtualization-based security uses the Windows Hypervisor to provide support for security services.  
@@ -491,6 +493,28 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
   **Default**: Enabled
 
 ## Device Installation
+
+::: zone-end
+::: zone pivot="mdm-december-2020"
+
+- **Block hardware device installation by setup classes**:  
+  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.  
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclassess)
+
+  **Default**: Yes
+  
+  When *Yes* is selected, the following settings are available.
+
+  - **Remove matching hardware devices**:  
+    This setting is available only when *Block hardware device installation by setup classes* is set to *Yes*.
+
+    **Default**: Yes
+
+  - **Block list**
+    Manage a list of device setup class globally unique identifiers that for device drivers that Windows is prevented from installing.
+ 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 For more information, see [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) in the Windows documentation.
 
@@ -530,6 +554,8 @@ For more information, see [Policy CSP - DeviceInstallation](/windows/client-mana
 
     **Default**: *No default configuration*
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 ## Device Lock
 
 For more information, see [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.
@@ -605,7 +631,7 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
   **Default**: Enabled *A setting of Enabled prevents slide shows from running.*
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## DMA Guard
 
@@ -618,7 +644,7 @@ For more information, see [Policy CSP - DmaGuard](/windows/client-management/mdm
   **Default**: Block all
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Event Log Service
 
@@ -666,6 +692,8 @@ For more information, see [Policy CSP - Experience](/windows/client-management/m
 
     **Default**: Not configured
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 ## Exploit Guard
 
 For more information, see [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.
@@ -676,6 +704,8 @@ For more information, see [Policy CSP - ExploitGuard](/windows/client-management
 
   **Default**: *Sample xml is provided*
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 ## File Explorer
 
 For more information, see [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) in the Windows documentation.  
@@ -765,7 +795,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Disabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer internet zone drag and drop or copy and paste files**:  
   This policy setting allows you to manage whether users can drag files or copy and paste files from a source within the zone. If you enable this policy setting, users can drag files or copy and paste files from this zone automatically. If you select Prompt in the drop-down box, users are queried to choose whether to drag or copy files from this zone. If you disable this policy setting, users are prevented from dragging files or copying and pasting files from this zone. If you don't configure this policy setting, users can drag files or copy and paste files from this zone automatically.  
@@ -786,7 +816,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Disabled
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer internet zone access to data sources**:  
   This policy setting allows you to manage whether Internet Explorer can access data from another security zone using the Microsoft XML Parser (MSXML) or ActiveX Data Objects (ADO). If you enable this policy setting, users can load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you select Prompt in the drop-down box, users are queried to choose whether to allow a page to load in the zone that uses MSXML or ADO to access data from another site in the zone. If you disable this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you don't configure this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone.  
@@ -861,7 +891,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Disable
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer internet zone automatic prompt for file downloads**:  
   This policy setting determines whether users are prompted for non user-initiated file downloads. Regardless of this setting, users will receive file download dialogs for user-initiated downloads. If you enable this setting, users will receive a file download dialog for automatic download attempts. If you disable or don't configure this setting, file downloads that aren't user-initiated are blocked, and users will see the Notification bar instead of the file download dialog. Users can then click the Notification bar to allow the file download prompt.  
@@ -879,7 +909,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer restricted zone security warning for potentially unsafe files**:  
   This policy setting controls if the "Open File - Security Warning" message appears when the user tries to open executable files or other potentially unsafe files (from an intranet file share by using File Explorer, for example). If you enable this policy setting and set the drop-down box to Enable, these files open without a security warning. If you set the drop-down box to Prompt, a security warning appears before the files open. If you disable this policy setting, these files don't open. If you don't configure this policy setting, the user can configure how the computer handles these files. By default, these files are blocked in the Restricted zone, enabled in the Intranet and Local Computer zones, and set to prompt in the Internet and Trusted zones.  
@@ -900,7 +930,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: No sites
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer encryption support**:  
   This policy setting allows you to turn off support for Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0, or SSL 3.0 in the browser. TLS and SSL are protocols that help protect communication between the browser and the target server. When the browser attempts to set up a protected communication with the target server, the browser and server negotiate which protocol and version to use. The browser and server attempt to match each other's list of supported protocols and versions, and they select the most preferred match. If you enable this policy setting, the browser negotiates or doesn't negotiate an encryption tunnel by using the encryption methods that you select from the drop-down list. If you disable or don't configure this policy setting, the user can select which encryption method the browser supports.  
@@ -910,7 +940,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   *Select the down arrow to display options that you can select for this setting.*
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Internet Explorer locked down internet zone smart screen**:  
   This policy setting controls whether SmartScreen Filter scans pages in this zone for malicious content. If you enable this policy setting, SmartScreen Filter scans pages in this zone for malicious content. If you disable this policy setting, SmartScreen Filter doesn't scan pages in this zone for malicious content. If you don't configure this policy setting, the user can choose whether SmartScreen Filter scans pages in this zone for malicious content. Note: In Internet Explorer 7, this policy setting controls whether Phishing Filter scans pages in this zone for malicious content.  
@@ -1724,7 +1754,7 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](/windows/c
 For more information, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Block Adobe Reader from creating child processes**:  
 This rule prevents attacks by blocking Adobe Reader from creating additional processes. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader. By blocking child processes from being generated by Adobe Reader, malware attempting to use it as a vector are prevented from spreading.
@@ -1745,7 +1775,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: 4
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020"
 
 - **Scan type**  
   CSP: [Defender/ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
@@ -1755,12 +1785,20 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default** Quick scan
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Defender schedule scan day**:  
   Defender schedule scan day.
 
   **Default**: Everyday
+
+::: zone-end
+::: zone pivot="mdm-december-2020"
+
+- **Defender scan start time**:  
+  Defender schedule scan time.
+
+  **Default**: Not configured
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1783,7 +1821,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**:  Not configured
   
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
@@ -1865,7 +1903,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Block
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-sept-2020,mdm-december-2020"
 
 - **Block executable content download from email and webmail clients**:   
   [Block executable content download from email and webmail clients](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -1875,7 +1913,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Block
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Prevent credential stealing type**:  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -1926,7 +1964,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   When set to Yes, Defender will block JavaScript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020,mdm-december-2020"
 
 ## MS Security Guide
 
@@ -2010,7 +2048,7 @@ For more information, see [Policy CSP - Power](/windows/client-management/mdm/po
   **Default**: Enabled
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Remote Assistance
 
@@ -2031,7 +2069,7 @@ For more information, see [Policy CSP - RemoteAssistance](/windows/client-manage
   **Default**: Disable Remote Assistance
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Remote Desktop Services
 
@@ -2167,7 +2205,7 @@ For more information, see [Policy CSP - SmartScreen](/windows/client-management/
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
@@ -2186,7 +2224,7 @@ For more information, see [Policy CSP - SmartScreen](/windows/client-management/
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## System
 
@@ -2295,7 +2333,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
     **Default**: Not configured
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020,mdm-december-2020"
 
 ## Windows Ink Workspace
 
@@ -2430,4 +2468,4 @@ The following settings are either:
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

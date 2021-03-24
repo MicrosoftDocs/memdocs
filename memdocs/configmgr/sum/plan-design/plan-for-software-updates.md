@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -262,6 +262,10 @@ Using the SSL protocol to help secure the software update point is highly recomm
 
 When you install and configure the software update point, select the option to **Enable SSL communications for the WSUS Server**. Otherwise, Configuration Manager configures WSUS not to use SSL. When you enable SSL on a software update point, also configure any software update points at child sites to use SSL. For more information, see the [Configure a software update point to use TLS/SSL with a PKI certificate tutorial](../get-started/software-update-point-ssl.md).
 
+> [!Note]
+> To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). 
+
+
 ###  <a name="BKMK_ConfigureFirewalls"></a> Configure firewalls  
 
 The software update point at a Configuration Manager central administration site communicates with WSUS on the software update point. WSUS communicates with the synchronization source to synchronize software updates metadata. Software update points at a child site communicate with the software update point at the parent site. When there's more than one software update point at a primary site, the additional software update points communicate with the default software update point. The default role is the first software update point that's installed at the site.  
@@ -278,7 +282,7 @@ The connection to Microsoft Update is always configured to use port 80 for HTTP 
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the active software update point to access internet endpoints. Then WSUS and Automatic Updates can communicate with the Microsoft Update cloud service.
 
-For more information, see [Internet access requirements](../../core/plan-design/network/internet-endpoints.md#bkmk_sum).
+For more information, see [Internet access requirements](../../core/plan-design/network/internet-endpoints.md#software-updates).
 
 
 ##  <a name="BKMK_SyncSettings"></a> Plan for synchronization settings  

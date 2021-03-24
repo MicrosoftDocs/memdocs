@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2020
+ms.date: 03/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,21 +100,21 @@ Use one of the following procedures to create the policy type you prefer.
 
    ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
-4. Select **Settings** > **Windows Encryption**.
+4. On the **Configuration settings** page, expand **Windows Encryption**.
 
-   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
+   :::image type="content" source="./media/encrypt-devices/bitlocker-settings.png" alt-text="Select Windows encryption settings":::
 
 5. Configure settings for BitLocker to meet your business needs.
 
    If you want to enable BitLocker silently, see [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices), in this article for additional prerequisites and the specific setting configurations you must use.
 
-6. Select **OK**.
+6. Select **Next** to continue.
 
 7. Complete configuration of additional settings, and then save the profile.
 
 ## Manage BitLocker
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). You can also view and retrieve BitLocker recovery keys when you view the encryption report.
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). 
 
 ### Silently enable BitLocker on devices
 
@@ -126,7 +126,7 @@ A device must meet the following conditions to be eligible for silently enabling
 
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
 - If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
-- The device must be Azure AD Joined
+- The device must be Azure AD Joined or Hybrid Azure AD Joined.
 - Device must contain TPM (Trusted Platform Module) 2.0
 - The BIOS mode must be set to Native UEFI only. 
 
@@ -200,3 +200,5 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 - [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
 - [Monitor disk encryption](../protect/encryption-monitor.md)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

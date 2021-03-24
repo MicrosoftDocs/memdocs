@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2020
+ms.date: 03/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,6 +40,11 @@ Intune includes many features and settings that help administrators control iOS,
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you then push or deploy the profile to iOS/iPadOS and macOS devices in your organization.
 
+This feature applies to:
+
+- iOS/iPadOS
+- macOS
+
 This article describes the different features you can configure, and shows you how to create a device configuration profile. You can also see all the available settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
 
 ## Create the profile
@@ -48,12 +53,12 @@ This article describes the different features you can configure, and shows you h
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Choose the platform of your devices. Your options:  
+    - **Platform**: Choose your platform:
 
         - **iOS/iPadOS**
         - **macOS**
 
-    - **Profile**: Select **Device features**.
+    - **Profile**: Select **Device features**. Or, select **Templates** > **Device features**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -125,10 +130,10 @@ Applies to:
 
 ## Home screen layout
 
-These settings configure the app layout and folders on the dock and home screens on iOS and iPadOS devices. You can:
+These settings configure the app layout and folders on the home screen and dock. You can also see in real time how most apps and their icons look. Specifically:
 
-- Use the **Dock** settings to add apps or folders to the screen. For example, show Safari and the Mail app on the device dock.
-- Add **Pages** you want shown on the home screen, and the apps you want shown on each page. For example, add a **Contoso** page, and add the Settings app on this page.
+- Use the **Home screen** settings to add apps and folders to the home screen on devices.
+- Use the **Dock** settings to add apps or folders to the dock on the screen. For example, show Safari and the Mail app on the device dock.
 
 For a list of the settings you can configure in Intune, see [Home screen layout on iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 

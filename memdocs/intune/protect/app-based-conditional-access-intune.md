@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2020
+ms.date: 12/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,6 +87,9 @@ In this example, the admin has applied app protection policies to the Outlook ap
 10. The Outlook app communicates with Exchange Online to retrieve the user's corporate e-mail.
 
 11. Corporate e-mail is delivered to the user's mailbox.
+
+> [!TIP]
+> The Company Portal app is required by Intune mobile application management (MAM) scenarios. On Android devices, the Authenticator app includes functions of the broker and might be used as the broker in some situations, such as when the Authenticator was installed before the Company Portal app.
 
 ## Next steps
 

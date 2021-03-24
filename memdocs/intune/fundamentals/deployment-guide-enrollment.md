@@ -122,7 +122,7 @@ For more information and suggestions, see the [Planning guide: Task 5: Create a 
 ## Reporting and troubleshooting
 
 - [Incomplete user enrollments](../enrollment/enrollment-report-company-portal-abandon.md)
-- [Troubleshoot device enrollment](../enrollment/troubleshoot-device-enrollment-in-intune.md)
+- [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)
 
 ## Next steps
 

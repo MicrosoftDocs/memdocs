@@ -36,8 +36,7 @@ After you install the Configuration Manager clients, there are several tasks tha
 
 The Configuration Manager console monitors the previous tasks in near real time. Notification and status information for each task is available in the Configuration Manager console. To capture data and historical trending, use the integrated reporting capabilities of SQL Server Reporting Services. Clients submit details to the site as client status.  Client status information provides data about the health of the client and client activity, and is viewed in the console or by using the built-in reports for Configuration Manager. This data helps identify computers that are not responding and in some cases, problems are automatically remediated.  
 
- For more information about  management tasks for clients, see  [How to manage clients](../../core/clients/manage/manage-clients.md) and [How to manage clients for Linux and UNIX servers](../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md). To learn about using reports, see   
-            [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  
+For more information about management tasks for clients, see [How to manage clients](../../core/clients/manage/manage-clients.md). To learn about using reports, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).
 
 ## Configuration Manager client application  
  When you install the Configuration Manager client software, the Configuration Manager client application is installed too. Unlike Software Center, the Configuration Manager client application is designed for the help desk rather than for the end user. Some configuration options require local administrative permissions, and most options require technical knowledge about how the Configuration Manager client application works. You can use this application to perform the following tasks on a client:  

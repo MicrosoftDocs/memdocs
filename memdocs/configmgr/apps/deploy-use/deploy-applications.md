@@ -2,7 +2,7 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
@@ -90,7 +90,7 @@ On the **Deployment Settings** page, specify the following information:
     > [!NOTE]  
     > When you set the deployment action to **Uninstall**, the deployment purpose is automatically set to **Required**. You can't change this behavior.  
 
-- **Allow end users to attempt to repair this application**: Starting in version 1810, if you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->  
+- **Allow end users to attempt to repair this application**: If you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->  
 
 - **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user's primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.  
 
@@ -156,7 +156,7 @@ On the **User Experience** page, specify information about how users can interac
 
 - **User notifications**: Specify whether to display notification in Software Center at the configured available time. This setting also controls whether to notify users on the client computers. For available deployments, you can't select the option to **Hide in Software Center and all notifications**.  
 
-  - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [Plan for Software Center](../plan-design/plan-for-software-center.md#bkmk_impact).
+  - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [Plan for Software Center](../plan-design/plan-for-software-center.md#bkmk_impact).
 
 - **Software Installation** and **System restart**: Only configure these settings for required deployments. They specify the behaviors when the deployment reaches the deadline outside of any defined maintenance windows. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
@@ -286,9 +286,29 @@ If you deploy applications as available to users, they can browse and install th
   > [!NOTE]
   > For a client detected as on the intranet, but communicating via the cloud management gateway (CMG), in Configuration Manager version 2002 and earlier, Software Center uses Windows authentication. When it tried to get the list of user-available apps via CMG, it would fail. Starting in version 2006, it uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.<!--6935376-->
 
+### Internet-based domain-joined devices
+
+<!--7033501-->
+
+Starting in version 2010, an internet-based, domain-joined device that isn't joined to Azure AD and communicates via a cloud management gateway (CMG) can get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
+
+Configure the following prerequisites to enable this functionality:
+
+- Windows 10 device
+
+  - Joined to your on-premises Active Directory domain
+
+  - Communicate via [CMG](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)
+
+- The site has discovered the user by _both_ [Active Directory](../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+
+> [!NOTE]
+> If you apply a [software restriction policy](/windows-server/identity/software-restriction-policies/administer-software-restriction-policies) to the device, it can block the authentication prompt in Windows. Review any domain or local group policies that you apply to the device. Then remove any that might interfere with this Software Center behavior.
+
 ## Next steps
 
 - [Monitor applications](monitor-applications-from-the-console.md)
-- [Troubleshoot application deployments](troubleshoot-application-deployment.md)
+- [Troubleshoot application deployments](/troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
 - [Management tasks for applications](management-tasks-applications.md)
 - [Software Center user guide](../../core/understand/software-center.md)

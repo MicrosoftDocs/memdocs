@@ -51,7 +51,7 @@ landingContent:
         url: store-apps-android.md
       - text: Line-of-business apps
         url: lob-apps-android.md
-      - text: Win32 app management for Intune standalone
+      - text: Win32 app management
         url: apps-win32-app-management.md
       - text: Use PowerShell scripts on Windows 10 devices
         url: intune-management-extension.md
@@ -116,8 +116,8 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Troubleshoot app installation problems
-        url: troubleshoot-app-install.md
+        url: /troubleshoot/mem/intune/troubleshoot-app-install
       - text: Troubleshoot mobile application management
-        url: troubleshoot-mam.md
+        url: /troubleshoot/mem/intune/troubleshoot-mam
       - text: Review app protection logs
         url: app-protection-policy-settings-log.md

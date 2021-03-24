@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/25/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -36,7 +36,7 @@ Visit the [Company Portal website](https://portal.manage.microsoft.com) to view 
 ## View all apps  
 From the menu, select **Apps** to see all apps made available by your organization. 
 
-   ![Screenshot of Company Portal website, Apps page, showing Refine options.](./media/intune-view-apps-1907.png)  
+   ![Screenshot of Company Portal website, Apps page.](./media/intune-view-apps-1907.png)  
 
 This page lists the following details about each app:  
 
@@ -45,6 +45,14 @@ This page lists the following details about each app:
 * Date Published: The date that the app was made available to download. Publish date could show an app's initial release or an app's most recent update.
 * Status: The current state of the app on your device, which includes available, installed, and installing. 
 * Category: The app's function or purpose, such as featured, engineering, education, and productivity.  
+
+### Viewing apps for Windows devices  
+Company Portal doesn't immediately recognize newly added Windows devices. So before you can see your available apps, you have to tell Company Portal which device you're using. To do that: 
+
+1. Sign in to https://portal.manage.microsoft.com/devices.
+2. Select **Devices**.
+3. Under the list of devices, you'll see a message that prompts you to identify your device. Tap the message. 
+4. Select your device on the **What device are you using** screen.   
 
 ### Search and refine   
 

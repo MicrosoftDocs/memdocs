@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2020
+ms.date: 02/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,12 +78,6 @@ To allow devices on the internet to get certificates, you must publish your NDES
 ### Accounts
 
 - **NDES service account** - Before you set up NDES, identify a domain user account to use as the NDES service account. You'll specify this account when you configure templates on your issuing CA, before you configure NDES.
-
-  This account must have the following rights on the server that hosts NDES:
-
-  - **Logon Locally**
-  - **Logon as a Service**
-  - **Logon as a batch job**
 
   For more information, see [Create a domain user account to act as the NDES service account](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
 
@@ -459,4 +453,4 @@ To validate that the service is running, open a browser, and enter the following
 ## Next steps
 
 [Create a SCEP certificate profile](certificates-profile-scep.md)  
-[Troubleshoot issues for the Microsoft Intune Connector ](troubleshoot-certificate-connector-events.md)
+[Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/mem/intune/troubleshoot-certificate-connector-events)

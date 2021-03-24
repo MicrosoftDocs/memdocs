@@ -45,7 +45,7 @@ In addition to the other Configuration Manager requirements and procedures for c
 
 -   To deploy virtual applications in Configuration Manager, client computers must have at minimum the App-V 4.6 SP1 or a later version of the client installed.  
 
--   Before you can successfully deploy virtual applications, update the App-V client with the latest hotfix. For more information, see [Current list of App-V 4.5 and App-V 4.6 file versions](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).
+-   Before you can successfully deploy virtual applications, update the App-V client with the latest hotfix.
 
 -   When you use connection groups in App-V 5.0, your deployed virtual applications can share the same file system and registry on client computers. Unlike standard virtual applications, these applications can share data with one another. Additionally, connection groups preserve user settings for the applications that they contain. App-V virtual environments in Configuration Manager are used to set up connection groups on client computers. Virtual environments are created or changed on client computers when the application is installed or when clients next evaluate their installed applications. You can prioritize these applications so that when multiple applications try to change a file system or registry value, the application that has the highest priority takes precedence. For more information, see [Create App-V virtual environments](../../apps/deploy-use/create-app-v-virtual-environments.md).  
 
@@ -54,7 +54,7 @@ In addition to the other Configuration Manager requirements and procedures for c
 
 -   **App-V 4.6**: To use virtual applications in Configuration Manager, client computers must have the App-V 4.6 SP1, App-V 4.6 SP2, or App-V 4.6 SP3 client installed.  
 
-     Before you can successfully deploy virtual applications, update the App-V 4.6 client with the latest hotfix. For more information, see [Current list of App-V 4.5 and App-V 4.6 file versions](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).  
+     Before you can successfully deploy virtual applications, update the App-V 4.6 client with the latest hotfix.  
 
 -   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/help/2963211) or use App-V 5.0 SP3.  
 -   **App-V 5.2**: This is built into Windows 10 Education (1607 and later), Windows 10 Enterprise (1607 and later), and Windows Server 2016.

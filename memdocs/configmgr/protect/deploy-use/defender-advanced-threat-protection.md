@@ -66,7 +66,10 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
 
 > [!Warning]
-> If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
+> - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
+>
+> - In Configuration Manager 2006, or earlier: <!--8715565-->
+>   - If you edit an existing policy to add or edit the **Workspace key** and **Workspace ID** fields, you must also provide the configuration file too. If all three items are not provided, the policy will fail on down-level clients. >   - If you need to edit the onboarding file, and also have the **Workspace key** and **Workspace ID** fields populated, provide them again along with the onboarding file. If all three items are not provided, the policy will fail on down-level clients. <!--8715565-->
 
 ## <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to ATP (recommended)
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to ATP by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
@@ -106,6 +109,9 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 1. Review the summary and complete the wizard.  
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender ATP policy to clients.
 
+> [!IMPORTANT]
+> - In Configuration Manager 2006, or earlier: <!--8715565-->
+>   - If you edit an existing policy to add or edit the **Workspace key** and **Workspace ID** fields, you must also provide the configuration file too. If all three items are not provided, the policy will fail on down-level clients. >   - If you need to edit the onboarding file, and also have the **Workspace key** and **Workspace ID** fields populated, provide them again along with the onboarding file. If all three items are not provided, the policy will fail on down-level clients. <!--8715565-->
 ## <a name="bkmk_uplevel"></a> Onboard devices running only up-level operating systems to ATP
 
 Up-level clients require an onboarding configuration file for onboarding to ATP. Up-level operating systems include:
@@ -128,15 +134,12 @@ If your target collection contains both up-level and down-level devices, or if y
 > - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
 > - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
+
 ### Onboard the up-level devices
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
-   > [!Note]
-   > - For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
-   > - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender ATP online service. <!--8538605-->
-
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
    - **None**
    - **All file types**  
