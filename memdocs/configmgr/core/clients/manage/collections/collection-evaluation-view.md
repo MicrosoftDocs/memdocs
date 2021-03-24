@@ -2,7 +2,7 @@
 title: How to view collection evaluation
 titleSuffix: Configuration Manager
 description: View collection evaluation queues and evaluation related information.
-ms.date: 11/30/2020
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -25,10 +25,13 @@ Starting in Configuration Manager version 2010, the functionality of [Collection
 - The estimated time that a collection evaluation will start and complete
 
 > [!Tip]
-> The collection evaluation process is performed on primary sites, not on the central administration site (CAS). When using the console connected to a CAS, you'll see the following behavior:
+> Viewing collection evaluation at the CAS changed in Configuration Manager version 2103. For more information, see the []() section.
+>
+> The collection evaluation process is performed on primary sites, not on the central administration site (CAS). When using the console connected to a CAS using Configuration Manager 2010, you'll see the following behavior:
 > - Evaluation related columns for device collections won't contain data.
 > - The **Collection Evaluation** node under the **Monitoring** workspace isn't shown.
 > - Evaluation related information, such as evaluation status and links to the collection evaluation queues, won't be shown in the collection **Summary** group pane.
+
 
 ## Collection evaluation queues
 
@@ -96,6 +99,23 @@ Monitoring the collection evaluation queues can give you deeper insight into the
    - **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format
 
 :::image type="content" source="./media/6251274-manual-evaluation-queue.png" alt-text="Manual Evaluation Queue node containing detailed information about collection evaluation" lightbox="./media/6251274-manual-evaluation-queue.png":::
+
+## <a name="bkmk_cas"></a> Collection evaluation information at the CAS
+<!--8787410-->
+*(Introduced in 2103)*
+
+Since collection evaluation happens at the primary site level, the collection evaluation view on the CAS is a summary of what's occurring on the primary sites. Starting in Configuration Manager version 2103, there are two new tabs in the details pane of the collection view in the console. The following new tabs show collection evaluation information from all primary sites in hierarchy:
+
+- **Evaluation (Full) In Hierarchy**
+- **Evaluation (Incremental) In Hierarchy**
+
+:::image type="content" source="./media/8787410-collection-evaluation-details-tab.png" alt-text="Collection evaluation tabs in the collection's details pane at the CAS" lightbox="./media/8787410-collection-evaluation-details-tab.png":::
+
+From the **Device Collections** node at the CAS, the evaluation columns display the evaluation status from the primary site with the longest run time. The column information at the CAS for the full evaluation status could be from a different primary site than the incremental information since the longest runtime for the incremental might have occurred at a different primary.
+
+ For instance, incremental evaluation for the `All Systems` collection on the  `WMI` primary site takes longer than the other primary sites. The full evaluation columns on the CAS display the information from primary site `WMI` for the `All Systems` collection in the **Device Collections** node.
+
+:::image type="content" source="./media/8787410-cas-collection-evaluation-columns.png" alt-text="Collection evaluation columns at the CAS with the details tab open displaying the evaluation from all primary sites" lightbox="./media/8787410-cas-collection-evaluation-columns.png":::
 
 ## Next steps
 
