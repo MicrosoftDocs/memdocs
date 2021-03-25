@@ -25,7 +25,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 ## What's new
 
-- Display all applications for a device was added in Configuration Manager version 2013
+- Display all applications for a device was added in Configuration Manager version 2103
 - Uninstall, repair, re-evaluate, or reinstall an application was added in Configuration Manager version 2010
 - Deploy an application to a user was added in Configuration Manager version 2006
 
@@ -36,17 +36,17 @@ For Configuration Manager versions 2103, or later:
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
 - An application that meets one of the following requirements: <!--8795301-->
    - Is deployed to the device
-   - Is deployed to a user that's logged in to the device, primary user of the device, or was previously installed.
+   - Is deployed to a user that's logged in to the device, primary user of the device, or applications previously installed for the user
      - When you have a large number of device available applications, using the **An administrator must approve a request for this application on the device** on application deployments is recommended. For more information, see [Display all applications for a device in the admin center](#bkmk_all).
 
 For Configuration Manager versions 2010, and earlier:
 
-- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
-- A minimum of [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed
+- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
+- A minimum of [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/)
 - Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
    - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
-- A minimum of Configuration Manager version 2006 and the corresponding version of the console installed is required for installing [user targeted applications](#bkmk_user)<!--7518897-->.
+- A minimum of Configuration Manager version 2006 is required for installing [user targeted applications](#bkmk_user)<!--7518897-->.
 
 ## Permissions
 
@@ -162,8 +162,8 @@ The displayed application and available actions are dependent on the version of 
 |Configuration Manager version 2006 with devices running any client version| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications| Install </br> Reinstall|
 |Configuration Manager version 2010 with devices running client versions before 2010| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications| Install </br> Reinstall|
 |Configuration Manager version 2010 with devices running 2010 client versions| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications|Install </br> Reinstall </br> Re-evaluate </br> Uninstall </br> Repair|
-|Configuration Manager version 2103 with devices running 2006 or earlier client versions| All applications targeted to the device </br> </br> All user-available applications </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed.| For device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment: </br>&nbsp;&nbsp;&nbsp;Install</br>&nbsp;&nbsp;&nbsp;Reinstall</br></br> For all user-available applications: </br>&nbsp;&nbsp;&nbsp;Install </br>&nbsp;&nbsp;&nbsp;Reinstall </br></br>  All other applications display status but no actions are available |
-|Configuration Manager version 2103 with devices running 2010 or later client versions| All applications targeted to the device </br> </br> All user-available applications </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed| Install </br> Reinstall </br> Re-evaluate </br> Uninstall </br> Repair |
+|Configuration Manager version 2103 with devices running 2006 or earlier client versions| All applications targeted to the device </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed.| For user and device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment: </br>&nbsp;&nbsp;&nbsp;Install</br>&nbsp;&nbsp;&nbsp;Reinstall</br></br>  All other applications display status but no actions are available |
+|Configuration Manager version 2103 with devices running 2010 or later client versions| All applications targeted to the device  </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed| Install </br> Reinstall </br> Re-evaluate </br> Uninstall </br> Repair |
 
 ## <a name="bkmk_behavior"></a> When will the application install on the device?
 
@@ -175,7 +175,7 @@ Use the following table to determine installation behavior on the device when yo
 |Device available | Yes | Yes|
 |Device requires approval |No |No </br> The installation will occur when the client next comes online |
 |User required| Yes | Yes |
-User available |No | No </br> The installation will occur when the client next comes online|
+|User available |No | No </br> The installation will occur when the client next comes online|
 |User requires approval | No| No </br> The installation will occur when the client next comes online|
 
 ## Next steps
