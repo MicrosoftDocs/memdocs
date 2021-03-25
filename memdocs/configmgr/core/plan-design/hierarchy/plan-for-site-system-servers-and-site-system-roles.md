@@ -128,7 +128,7 @@ By default, this role installs on the site server when you install a new primary
 Set up management points to support either HTTP or HTTPs. They can also support mobile devices that you manage with Configuration Manager on-premises mobile device management (MDM). To help reduce the processing load placed on the site database server by management points as they service requests from clients, use [Database replicas for management points](../../servers/deploy/configure/database-replicas-for-management-points.md).  
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ### Reporting services point
 

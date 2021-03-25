@@ -186,9 +186,6 @@ If you're installing a CAS as part of a site expansion scenario, review [Expandi
 
     - Enter the **FQDN** for the server that will host the role. Then choose the client connection method that the server will support: HTTP or HTTPS.
 
-        > [!IMPORTANT]
-        > Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
-
     - If you selected **All site system roles accept only HTTPS communication from clients** on the previous page, the wizard automatically configures the client connection settings for HTTPS. You can't change this setting unless you go back to the previous page.
 
     > [!NOTE]  
@@ -344,9 +341,6 @@ Use the Configuration Manager console to install a secondary site.
 
         - **Specify how client devices communicate with the distribution point**: Choose between HTTP and HTTPS.
 
-            > [!IMPORTANT]
-            > Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
-
         - **Create a self-signed certificate or import a PKI client certificate**: Choose between using a self-signed certificate or importing a certificate from your PKI. A self-signed certificate lets you also allow anonymous connections from Configuration Manager clients to the content library. The certificate is used to authenticate the distribution point to a management point before the distribution point sends status messages. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).
 
     - _Optional settings:_
@@ -398,6 +392,9 @@ Use the Configuration Manager console to install a secondary site.
 ## Next steps
 
 [Configure sites and hierarchies](../configure/configure-sites-and-hierarchies.md)
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 [Install consoles](install-consoles.md)
 
