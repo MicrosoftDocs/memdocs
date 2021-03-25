@@ -199,6 +199,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting)
 - [Remove-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting)
 - [Set-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting)
+- [New-CMTSNetworkAdapterSetting](/powershell/module/configurationmanager/new-cmtsnetworkadaptersetting)
 
 ### Properties for Apply Network Settings
 
@@ -1192,6 +1193,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk)
 - [Remove-CMTSStepPartitionDisk](/powershell/module/configurationmanager/remove-cmtssteppartitiondisk)
 - [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk)
+- [New-CMTSPartitionSetting](/powershell/module/configurationmanager/new-cmtspartitionsetting)
 
 ### Properties for Format and Partition Disk
 
@@ -2291,6 +2293,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [New-CMTSStepSetDynamicVariable](/powershell/module/configurationmanager/new-cmtsstepsetdynamicvariable)
 - [Remove-CMTSStepSetDynamicVariable](/powershell/module/configurationmanager/remove-cmtsstepsetdynamicvariable)
 - [Set-CMTSStepSetDynamicVariable](/powershell/module/configurationmanager/set-cmtsstepsetdynamicvariable)
+- [New-CMTSRule](/powershell/module/configurationmanager/new-cmtsrule)
 
 ### Properties for Set Dynamic Variables
 

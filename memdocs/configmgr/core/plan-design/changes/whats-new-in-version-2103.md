@@ -359,14 +359,17 @@ For more information, see [product lifecycle dashboard](../../clients/manage/ass
 
 ## PowerShell
 
-### Update PowerShell help
+### Known issue with updateable PowerShell help
 
-<!-- will need to say something about the changes here...
-You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+<!-- 8617455 -->
 
-For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
- -->
+Starting in version 2010, you could use the **Update-Help** cmdlet to download the latest information for the Configuration Manager PowerShell module.
 
+Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.
+
+The cmdlet will successfully download content on a version 2010 console, but **Get-Help** will only return default usage information. Before the release of version 2103, if you used **Update-Help** with a version 2010 site, you can continue to use **Get-Help** now.
+
+For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
 
 ## Deprecated features
 
