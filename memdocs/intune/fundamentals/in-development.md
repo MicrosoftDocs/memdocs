@@ -219,6 +219,13 @@ Options include:
 
 We're also adding a new health check setting that helps you identify when a server is running the latest version of Tunnel Gateway.
 
+#### Use Antivirus profiles to prevent or allow merger of Antivirus exclusion lists on devices<!-- 9070651-->
+
+You’ll soon be able to use a setting in a *Microsoft Defender Antivirus* profile to block merger of local exclusion lists for Microsoft Defender Antivirus on Windows 10 devices. Exclusion lists for Microsoft Defender Antivirus can be configured locally on a device, and specified by Intune Antivirus policy. (**Endpoint security** > **Antivirus**)
+
+- When exclusion lists are merged, a locally defined exclusion can override those from Intune.
+- When merge is blocked, those from Intune policy take precedence in the case of conflicts.
+
 <!-- ***********************************************-->
 ## Notices
 
