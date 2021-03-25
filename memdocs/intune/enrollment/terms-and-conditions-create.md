@@ -87,8 +87,14 @@ The following example shows the terms and conditions in the admin console and th
 
 ## Monitor terms and conditions
 
+To add *terms of use* compliance requirements, use the following steps:
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions**.
-2. In the list of terms and conditions, choose the terms you want to view acceptance for > **Acceptance Reporting**.
+2. In the **Terms and conditions** pane, select **Create** to add and assign *terms of use* compliance requirements to your end users.
+
+> [!NOTE]
+> Acceptance reporting data is updated every 24 hours and can take up to 12 hours to run. As such, data in the report can have up to a 36 hour latency.
+
 
 ## Work with multiple versions of terms and conditions
 You can edit your terms and conditions and manage their versions. Each time you make a significant change to your terms and conditions, you should:
