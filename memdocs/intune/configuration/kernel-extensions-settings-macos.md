@@ -52,6 +52,8 @@ This feature applies to:
 - macOS 10.13.2 and newer
 - User approved device enrollment is required 
 
+Important note - Currently, kernel extensions will not work on macOS devices with the M1 chip (macOS devices running on Apple Silicon). We recommend you use system extensions for any macOS devices running 10.15 and later. If you are using the kernel extensions settings, consider excluding macOS devices with M1 chips from receiving the kernel extension profile.
+
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Allow User Overrides**: **Yes** lets users approve kernel extensions not included in the configuration profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
