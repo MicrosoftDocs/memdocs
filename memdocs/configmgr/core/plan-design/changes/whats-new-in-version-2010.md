@@ -372,6 +372,11 @@ You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/u
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 
+> [!WARNING]
+> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.<!-- 8617455 -->
+>
+> For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
+
 ### Support for PowerShell version 7
 
 <!--6023299-->
