@@ -35,7 +35,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--8795301-->
 The **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center now displays more applications from Configuration Manager. Displayed applications include applications that are:
 - Deployed to the device
-- Deployed to a user that's logged in to the device, primary user of the device, or applications previously installed for the user
+- Deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
 
 The option, **An administrator must approve a request for this application on the device**, is no longer required to be set on the device available deployment for applications to be listed in the admin center. This improvement allows you to review when application installations are expected to occur on a device.
 

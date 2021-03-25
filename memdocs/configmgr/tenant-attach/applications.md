@@ -36,7 +36,7 @@ For Configuration Manager versions 2103, or later:
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
 - An application that meets one of the following requirements: <!--8795301-->
    - Is deployed to the device
-   - Is deployed to a user that's logged in to the device, primary user of the device, or applications previously installed for the user
+   - Is deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
      - When you have a large number of device available applications, using the **An administrator must approve a request for this application on the device** on application deployments is recommended. For more information, see [Display all applications for a device in the admin center](#bkmk_all).
 
 For Configuration Manager versions 2010, and earlier:
