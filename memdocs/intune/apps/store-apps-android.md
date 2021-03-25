@@ -37,7 +37,7 @@ Before you assign an app to a device or a group of users, you must first add the
 
 ## Add an app
 
-You can add an Android store app to Intune from the Azure portal by doing the following:
+You can add an Android store app to Intune from the portal by doing the following:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
