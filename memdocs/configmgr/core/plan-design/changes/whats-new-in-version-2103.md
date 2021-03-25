@@ -343,8 +343,7 @@ Because of a change in how the updateable content is structured and published wi
 
 The cmdlet will successfully download content on a version 2010 console, but **Get-Help** will only return default usage information. Before the release of version 2103, if you used **Update-Help** with a version 2010 site, you can continue to use **Get-Help** now.
 
-> [!NOTE]
-> This issue is unique to version 2010. Because of how the structure changed, it shouldn't be an issue for later versions.
+For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
 
 ## Deprecated features
 
