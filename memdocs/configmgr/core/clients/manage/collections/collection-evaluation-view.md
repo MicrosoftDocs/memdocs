@@ -1,7 +1,7 @@
 ---
 title: How to view collection evaluation
 titleSuffix: Configuration Manager
-description: View collection evaluation queues and evaluation related information.
+description: View collection evaluation queues and evaluation-related information.
 ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -28,9 +28,9 @@ Starting in Configuration Manager version 2010, the functionality of [Collection
 > Viewing collection evaluation at the CAS changed in Configuration Manager version 2103. For more information, see the [Collection evaluation information at the CAS](#bkmk_cas) section.
 >
 > When using the console connected to a CAS using Configuration Manager 2010, you'll see the following behavior:
-> - Evaluation related columns for device collections won't contain data.
+> - Evaluation-related columns for device collections won't contain data.
 > - The **Collection Evaluation** node under the **Monitoring** workspace isn't shown.
-> - Evaluation related information, such as evaluation status and links to the collection evaluation queues, won't be shown in the collection **Summary** group pane.
+> - Evaluation-related information, such as evaluation status and links to the collection evaluation queues, won't be shown in the collection **Summary** group pane.
 
 
 ## Collection evaluation queues
@@ -92,7 +92,7 @@ Monitoring the collection evaluation queues can give you deeper insight into the
    - Current evaluation collection
    - Current evaluation started on
    - Current evaluation elapsed (seconds)
-1. Starting in Configuration Manager 2013, you can: <!--8787410-->
+1. Starting in Configuration Manager 2103, you can: <!--8787410-->
     - Configure a primary site's refresh interval for the **Collection Evaluation** statistics page to be between 1 minute and 1440 minutes (1 day). Typically, collection evaluation occurs over the course of seconds or minutes. However, you can change the statistics refresh to accommodate your environment. The default **Refresh Interval (minutes)** is 5.
     - Copy collection evaluation statistics as structured text to the clipboard. Use the **Copy** button in the ribbon to copy the statistics. When the text is pasted into a text editor, it's structured to make it easy to read.
 1. Selecting the node for a queue brings up detailed status for the queue including: 
