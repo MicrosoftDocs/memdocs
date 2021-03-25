@@ -827,6 +827,14 @@ Adjust this schedule based on company policy for software update compliance, and
 
 Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. Set this option to **Yes** to allow these connections if you require a user proxy despite the security trade-offs. By default, this setting is set to **No**. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
 
+### Enforce TLS certificate pinning for Windows Update client for detecting updates
+<!--8913038-->
+*(Introduced in version 2103)*
+
+Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To use certificate pinning, ensure your WSUS server is enabled for TLS/SSL, and add the certificates for the WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients. For more information about certificate pinning for devices scanning HTTPS-configured WSUS servers, see [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md). The following settings are available starting in Configuration Manager version 2103:
+- **No**: Don't enable enforcement of TLS certificate pinning for WSUS scanning
+- **Yes**: Enables enforcement of TLS certificate pinning for devices during WSUS scanning (default)
+
 ### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
 Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client starts installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
