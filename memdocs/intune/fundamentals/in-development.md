@@ -196,7 +196,7 @@ When you use the Graph API to export Intune reports without selecting any column
 
 ### Intune Data Warehouse updates<!-- 9370034 -->
 
-The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 service update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ***********************************************-->
 ## Security
