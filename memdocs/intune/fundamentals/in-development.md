@@ -84,10 +84,6 @@ In addition to exporting the summarized discovered apps list data, you will also
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
 <!-- ***********************************************-->
-<<<<<<< HEAD
-
-=======
->>>>>>> 6e52a72afa92516c965c57e7fcde7160bb75915d
 ## Device configuration
 
 ### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
