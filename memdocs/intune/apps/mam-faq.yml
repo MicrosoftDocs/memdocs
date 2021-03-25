@@ -88,9 +88,9 @@ sections:
         answer: The Intune App SDK can use the Microsoft Authentication Library for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
       - question: |
-          What are the additional requirements to use the [Outlook mobile app](https://products.office.com/outlook)?
+          What are the additional requirements to use the Outlook mobile app?
         answer: |
-          - The end user must have the Outlook mobile app installed to their device.
+          - The end user must have the [Outlook mobile app](https://products.office.com/outlook) installed to their device.
           
           - The end user must have a [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Azure Active Directory account.
           
@@ -98,11 +98,11 @@ sections:
             > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true) and does not support Exchange in Office 365 Dedicated.
           
       - question: |
-          What are the additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps?
+          What are the additional requirements to use the Word, Excel, and PowerPoint apps?
         answer: |
           - The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
           
-          - The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
+          - The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's [Word, Excel, or PowerPoint](https://products.office.com/business/office) app.
           
           - If the managed location is OneDrive, the app must be targeted by the app protection policy deployed to the end user.
           
@@ -212,7 +212,9 @@ sections:
           
           When dealing with different types of settings, an app version requirement would take precedence, followed by Android operating system version requirement and Android patch version requirement. Then, any warnings for all types of settings in the same order are checked.
           
-          **Intune App Protection Policies provide the capability for admins to require end user devices to pass Google's SafetyNet Attestation for Android devices. How often is a new SafetyNet Attestation result sent to the service?** <br><br> A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and is not configurable. Any IT admin configured action for the Google SafetyNet Attestation setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there is no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there is stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
+      - question: Intune App Protection Policies provide the capability for admins to require end user devices to pass Google's SafetyNet Attestation for Android devices. How often is a new SafetyNet Attestation result sent to the service?
+        answer: |
+           A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and is not configurable. Any IT admin configured action for the Google SafetyNet Attestation setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there is no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there is stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
           
       - question: Intune App Protection Policies provide the capability for admins to require end user devices to send signals via Google's Verify Apps API for Android devices. How can an end user turn on the app scan so that they are not blocked from access due to this?
         answer: |
