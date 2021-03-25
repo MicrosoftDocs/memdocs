@@ -82,7 +82,9 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Use one of the following options:
 
-  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
+  - Enable the site for enhanced HTTP. This option applies to version 2103 or later.<!-- 9503186 -->
+
+  - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option applies to version 2002 or later.<!-- 5925660 -->
 
   - Configure the management point for HTTPS. This option applies to all supported Configuration Manager versions.
 

@@ -172,6 +172,8 @@ Configuration Manager stores the recovery information in the site database. With
 
 Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). When domain-joined clients communicate via the CMG, they don't use the legacy recovery service, but the message processing engine component of the management point. Hybrid Azure AD-joined devices also use the message processing engine.
 
+Starting in version 2103, all supported clients use the message processing engine component of the management point as the recovery service. This change reduces dependencies on legacy MBAM components, and enables support for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md).<!-- 9503186 -->
+
 > [!NOTE]
 > For version 2010, the message processing engine channel only escrows keys for OS and fixed drive volumes. It doesn't support recovery keys for removable drives or the TPM password hash.
 >

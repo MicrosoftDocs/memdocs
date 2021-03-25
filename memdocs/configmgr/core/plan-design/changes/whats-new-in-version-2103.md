@@ -254,7 +254,10 @@ Starting in this release, BitLocker management policies over a CMG support the f
 
 For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
-This release also provides support for the recovery service on management points that use a database replica.
+This release also provides support for the following features:
+
+- Enhanced HTTP<!-- 9503186 -->
+- The recovery service on management points that use a database replica.
 
 For more information, see [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
 
