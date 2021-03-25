@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2021
+ms.date: 03/25/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,7 +40,7 @@ Preview features have a **(preview)** tag in the Microsoft Endpoint Manager admi
 
 When working with features in public preview, these features:
 
-- May have restricted or limited functionality. For example, the core feature functionality is implemented, but reporting or the troubleshooting experience is still being created.
+- May have restricted or limited functionality. For example, the feature may only apply to one platform.
 - Typically go through feature changes before they're generally available (GA).
 - Are supported by the Microsoft support team. For more information on supportability, see the [Supplemental Terms of Use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 - May only be available in selected geographic regions or cloud environments. For example, the feature may not exist in the government cloud.
