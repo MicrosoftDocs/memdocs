@@ -21,7 +21,7 @@ ms.author: mstewart
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
+   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
 
 ## What's new
 
@@ -81,7 +81,7 @@ You can filter the application list based on the status. The application status 
 1. Select **Applications**.
 1. Select the application and choose **Install**.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-install.png" alt-text="Application installation from Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-install.png":::
+   :::image type="content" source="media/6024389-tenant-attach-application-install.png" alt-text="Screenshot of application installation from Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-install.png":::
 
 You can export all of the data currently in the view into a .csv file. At the top of the page, select the **Export** option to create the file. If the view exceeds 500 rows, only the first 500 are exported.
 
@@ -107,7 +107,7 @@ Deploying applications to a user has the following limitations:
 - **Re-evaluate** the application installation status
 - **Reinstall** an application has replaced **Retry installation**
 
-:::image type="content" source="./media/7979972-application-repair.png" alt-text="Application installation options in the Microsoft Endpoint Manager admin center" lightbox="./media/7979972-application-repair.png":::
+:::image type="content" source="./media/7979972-application-repair.png" alt-text="Screenshot of application installation options in the Microsoft Endpoint Manager admin center" lightbox="./media/7979972-application-repair.png":::
 
 ### Prerequisites to uninstall, repair, reinstall, or re-evaluate an application
 
@@ -141,7 +141,7 @@ Starting in Configuration Manager 2103, the **Applications** view for a tenant a
 - Deployed to the device
 - Deployed to a user that's logged in to the device, primary user of the device, or was previously installed.
 
-:::image type="content" source="./media/8795301-display-required-app.png" alt-text="Details about required deadlines for applications in Microsoft Endpoint Manager admin center":::
+:::image type="content" source="./media/8795301-display-required-app.png" alt-text="Screenshot showing details about required deadlines for applications in Microsoft Endpoint Manager admin center":::
 
 The option, **An administrator must approve a request for this application on the device**, is no longer required to be set on the device available deployment for applications to be listed in the admin center. However, we recommend using the **An administrator must approve a request for this application on the device** option on application deployments when you have a large number of device available applications. By using this option, it defers targeting a new policy to the client until installation is initiated by the admin. By not targeting a large number of application policies to the client, it increases the performance of the site servers and the client. For more information about determining installation behavior, see [When will the application install on the device?](#bkmk_behavior).
 
