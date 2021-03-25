@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Validate that your app protection policy is correctly set up and working. This guidance applies to app protection policies in the Azure portal.
+Validate that your app protection policy is correctly set up and working. This guidance applies to app protection policies in the portal.
 
 ## Checking for symptoms
 Users are unlikely to report issues since app protection is a data protection tool. If there's a problem with the app protection configuration, the user will have unrestricted access, as they would have without app protection, and they wouldn't know there's an issue. For this reason, we recommend you validate your app protection configuration by piloting your app protection policies with a small group of users who can deliberately test the app protection restrictions.
