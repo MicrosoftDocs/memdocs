@@ -79,11 +79,9 @@ In addition to exporting the summarized discovered apps list data, you will also
 ### Maximum OS version setting for app conditional launch<!-- 9493137  -->
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
-
 <!-- ***********************************************-->
-<!--
+
 ## Device configuration
-<<<<<<< HEAD
 
 ### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
 To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you'll be able to see the overall compliance status for the policy. With device level reporting, you'll be able to see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
@@ -96,13 +94,14 @@ On iOS/iPadOS devices, you'll be able to create a device restrictions profile th
 To see the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
 
 Applies to:
-
 - iOS/iPadOS 14.2 and newer
 
-=======
--->
- 
->>>>>>> 563c5b9499229d181739ca37827c1bc29bdc1adc
+### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
+To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you can see the overall compliance status for the policy. With device level reporting, you can see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
+
+For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
+
+
 <!-- ***********************************************-->
 ## Device enrollment
 
@@ -184,12 +183,9 @@ Intune reporting export API will be available in Graph v1.0, and will continue t
 ### Update when exporting Intune reports using the Graph API<!-- 8764428  -->
 When you use the Graph API to export Intune reports without selecting any columns for the devices report, you'll receive the default column set. To reduce confusion, we'll be removing columns from the default column set starting January 2021. The columns being removed are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns will still be available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
-<<<<<<< HEAD
-### Intune Data Warehouse updates<!-- 9370034  wnready -->
+### Intune Data Warehouse updates<!-- 9370034 -->
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
-=======
->>>>>>> 563c5b9499229d181739ca37827c1bc29bdc1adc
 <!-- ***********************************************-->
 ## Security
 
