@@ -655,7 +655,7 @@ No State IDs.
 
 |     State Message ID     |  State Message Description |
 |:-------------|:------|
-|| 1 | Compliance success    |
+| 1 | Compliance success    |
 | 2 | Compliance fail at mp   |
 | 3 | Compliance fail at the client   |
 | 4 | Compliance fail at Intune   |
