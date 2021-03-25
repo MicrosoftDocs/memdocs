@@ -81,8 +81,9 @@ Using iOS app protection policies in Microsoft Intune app protection policies, y
 
 
 <!-- ***********************************************-->
-
+<!--
 ## Device configuration
+<<<<<<< HEAD
 
 ### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
 To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you'll be able to see the overall compliance status for the policy. With device level reporting, you'll be able to see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
@@ -98,6 +99,10 @@ Applies to:
 
 - iOS/iPadOS 14.2 and newer
 
+=======
+-->
+ 
+>>>>>>> 563c5b9499229d181739ca37827c1bc29bdc1adc
 <!-- ***********************************************-->
 ## Device enrollment
 
@@ -119,7 +124,7 @@ This method has the following options for installing the Company Portal:
 ## Device management
 
 ### Windows 10 Enterprise multi-session support (public preview)<!--8666391 -->
-This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user M365 licensing. This upcoming support will let you:
+This support will give users a familiar Windows 10 experience while you get the cost advantages of multi-session and existing per-user Microsoft 365 licensing. This upcoming support will let you:
 
 - Host multiple concurrent user sessions using the  new Remote Desktop Session Host exclusive to Windows Virtual Desktop on Azure.
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10 Enterprise client.
@@ -179,9 +184,12 @@ Intune reporting export API will be available in Graph v1.0, and will continue t
 ### Update when exporting Intune reports using the Graph API<!-- 8764428  -->
 When you use the Graph API to export Intune reports without selecting any columns for the devices report, you'll receive the default column set. To reduce confusion, we'll be removing columns from the default column set starting January 2021. The columns being removed are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns will still be available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
+<<<<<<< HEAD
 ### Intune Data Warehouse updates<!-- 9370034  wnready -->
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
+=======
+>>>>>>> 563c5b9499229d181739ca37827c1bc29bdc1adc
 <!-- ***********************************************-->
 ## Security
 
