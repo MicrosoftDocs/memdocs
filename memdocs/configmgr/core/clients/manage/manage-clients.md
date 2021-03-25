@@ -2,7 +2,7 @@
 title: Manage clients
 titleSuffix: Configuration Manager
 description: Learn how to manage clients in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -381,14 +381,16 @@ Use the following process to add hardware identifiers for Configuration Manager 
 
 3. Switch to the **Client Approval and Conflicting Records** tab. To add new hardware identifiers, choose **Add** in the **Duplicate hardware identifiers** section.
 
-> [!TIP]
-> Starting in version 1910, use the following PowerShell cmdlets to automate the management of duplicate hardware identifiers:<!-- 4852819 -->
->
-> - New-CMDuplicateHardwareIdGuid
-> - Remove-CMDuplicateHardwareIdGuid
-> - New-CMDuplicateHardwareIdMacAddress
-> - Remove-CMDuplicateHardwareIdMacAddress
+### PowerShell for duplicate hardware IDs
 
+You can use the following PowerShell cmdlets to automate the management of duplicate hardware identifiers:<!-- 4852819 -->
+
+- [Get-CMDuplicateHardwareIdGuid](/powershell/module/configurationmanager/get-cmduplicatehardwareidguid)
+- [New-CMDuplicateHardwareIdGuid](/powershell/module/configurationmanager/new-cmduplicatehardwareidguid)
+- [Remove-CMDuplicateHardwareIdGuid](/powershell/module/configurationmanager/remove-cmduplicatehardwareidguid)
+- [Get-CMDuplicateHardwareIdMacAddress](/powershell/module/configurationmanager/get-cmduplicatehardwareidmacaddress)
+- [New-CMDuplicateHardwareIdMacAddress](/powershell/module/configurationmanager/new-cmduplicatehardwareidmacaddress)
+- [Remove-CMDuplicateHardwareIdMacAddress](/powershell/module/configurationmanager/remove-cmduplicatehardwareidmacaddress)
 
 ## <a name="BKMK_PolicyRetrieval"></a> Start policy retrieval
 
