@@ -84,7 +84,10 @@ In addition to exporting the summarized discovered apps list data, you will also
 Using iOS app protection policies in Microsoft Intune app protection policies, you will be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
 <!-- ***********************************************-->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6e52a72afa92516c965c57e7fcde7160bb75915d
 ## Device configuration
 
 ### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
@@ -195,8 +198,12 @@ Intune reporting export API will be available in Graph v1.0, and will continue t
 
 When you use the Graph API to export Intune reports without selecting any columns for the devices report, you'll receive the default column set. To reduce confusion, we'll be removing columns from the default column set starting January 2021. The columns being removed are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns will still be available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
+<<<<<<< HEAD
 ### Intune Data Warehouse updates<!-- 9370034 -->
 
+=======
+### Intune Data Warehouse updates<!-- 9370034  wnready -->
+>>>>>>> 6e52a72afa92516c965c57e7fcde7160bb75915d
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 <!-- ***********************************************-->
