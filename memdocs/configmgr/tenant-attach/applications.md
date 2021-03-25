@@ -23,12 +23,6 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
    :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
 
-## What's new
-
-- Display all applications for a device was added in Configuration Manager version 2103
-- Uninstall, repair, re-evaluate, or reinstall an application was added in Configuration Manager version 2010
-- Deploy an application to a user was added in Configuration Manager version 2006
-
 ## Prerequisites
 
 For Configuration Manager versions 2103, or later:
