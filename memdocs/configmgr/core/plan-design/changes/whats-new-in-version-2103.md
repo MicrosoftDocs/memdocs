@@ -256,7 +256,7 @@ Configuration Manager sets the following maximum run time for these categories o
 - **Non-feature updates for Windows**: 60 minutes
 - **Updates for Microsoft 365 Apps** (Office 365 updates): 60 minutes
 
-All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in this technical preview, the default maximum run time for these updates is 60 minutes rather than 10 minutes.
+All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in this release, the default maximum run time for these updates is 60 minutes rather than 10 minutes.
 
 ### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
 <!--8913038-->

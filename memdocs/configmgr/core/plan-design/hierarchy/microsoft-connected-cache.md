@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 01/27/2021
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -21,13 +21,13 @@ manager: dougeby
 You can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature that can help to protect WAN links.
 
 > [!NOTE]
-> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
+> This feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
 
 This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
 
 This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately.
 
-> [!Note]  
+> [!NOTE]
 > The Connected Cache server is an application installed on Windows Server. This application is still in development.
 
 ## How it works
@@ -141,7 +141,7 @@ For more detailed information, see [Troubleshoot Microsoft Connected Cache in Co
 
 <!--5032900-->
 
-Starting in version 1910, when you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
+When you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
 
 > [!TIP]
 > All other content that Intune-managed devices download from Microsoft with Delivery Optimization can also be cached on Microsoft Connected Cache. This content includes software updates for Windows, Microsoft 365 apps, and Microsoft Edge.
@@ -161,7 +161,7 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 - Enable Connected Cache on a distribution point. For more information, see [Microsoft Connected Cache](microsoft-connected-cache.md).
 
-- The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
+- The client and the Connected Cache-enabled distribution point need to be in the same boundary group. If a client isn't in a boundary group with a Connected Cache-enabled distribution point, it won't download content from a Connected Cache-enabled distribution point in a neighbor or site default boundary group.
 
   - Enable **Allow peer downloads in this boundary group** option for the Boundary Group which contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 

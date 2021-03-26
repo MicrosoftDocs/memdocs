@@ -216,7 +216,19 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft or Microsoft partners, confirm that those products support version 2103. Check with the product vendor for this information. For example, see the Microsoft Deployment Toolkit [release notes](../../../mdt/release-notes.md).
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2103. Check with the product vendor for this information.
+
+### Disable any custom solutions
+
+If your site has any custom solutions based on the Configuration Manager SDK or PowerShell, disable this code before you update the site. Make sure to test this custom code in a lab environment to make sure it's compatible with the new version.
+
+### Read the release notes
+
+Before you start the update, review the current release notes. With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support article.
+
+Feature-specific documentation may include information about known issues that affect core scenarios.
+
+For more inforrmation, see the [Release notes](../deploy/install/release-notes.md).
 
 ### Run the setup prerequisite checker
 
@@ -286,7 +298,11 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Third-party extensions
 
-If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 2103.
+If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2103.
+
+### Enable any custom solutions
+
+Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2103.
 
 ### Update custom boot images and media
 
@@ -305,3 +321,7 @@ For more information, see [Update distribution points with the boot image](../..
 To get the latest information for the Configuration Manager PowerShell module, use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet. Run this cmdlet on all computers with the Configuration Manager console. This help content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
+
+## Next steps
+
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
