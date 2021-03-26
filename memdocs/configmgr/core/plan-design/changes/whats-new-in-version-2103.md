@@ -41,7 +41,7 @@ The option, **An administrator must approve a request for this application on th
 
 For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_all).
 
-### Tenant attach: Antivirus policy supports exclusions merge
+### Tenant attach: Antivirus policy exclusions merge
 <!--9089764-->
 
 When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
