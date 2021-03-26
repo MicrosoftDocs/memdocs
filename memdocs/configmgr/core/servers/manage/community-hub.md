@@ -27,7 +27,6 @@ Community hub supports the following objects:
 
 - Support for configuration baselines including child configuration items, added in March 2021 <!--7983121-->
 - Support for Power BI reports, added in February 2021 <!--5679831-->
-- Support for installing console extensions, added in January 2021 <!--3555909-->
 
 ## Prerequisites
 
