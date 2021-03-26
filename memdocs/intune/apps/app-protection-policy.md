@@ -310,7 +310,7 @@ For more information about remote wipe for MDM, see [Remove devices by using wip
 See [Remove devices - retire](../remote-actions/devices-wipe.md#retire) to read about removing company data.
 
 **Selective wipe for MAM**<br>
-Selective wipe for MAM simply removes company app data from an app. The request is initiated using the Intune Azure portal. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
+Selective wipe for MAM simply removes company app data from an app. The request is initiated using the Intune portal. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
 If the user is using the app when selective wipe is initiated, the [Intune SDK](../developer/app-sdk.md) checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
 

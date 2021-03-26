@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the Azure portal. For example:
+The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
 * You can synchronize the list of apps you have purchased (or that are free) from the store with Intune.
 * Apps that are synchronized appear in the Intune administration console; you can assign these apps like any other apps.
@@ -78,7 +78,7 @@ You can now continue, and set up synchronization in the Intune console.
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.
-5. From the **Language** drop-down list, choose the language in which apps from the Microsoft Store for Business are displayed in the Azure portal. Regardless of the language in which they are displayed, they are installed in the end user's language when available.
+5. From the **Language** drop-down list, choose the language in which apps from the Microsoft Store for Business are displayed in the portal. Regardless of the language in which they are displayed, they are installed in the end user's language when available.
 6. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.
 
 ## Synchronize apps
