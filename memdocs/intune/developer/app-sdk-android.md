@@ -1089,7 +1089,7 @@ only resources which cannot be CA-protected, you may skip these steps.
     * This will generate a Client ID for your application.
 2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
 3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
-4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
+4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and confirming the following:
     - That sign-in to your app prompts for installation and enrollment of the Intune Company Portal
     - That after enrollment, sign-in to your app completes successfully.
 5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
