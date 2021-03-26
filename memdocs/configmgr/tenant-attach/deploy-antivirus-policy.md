@@ -75,7 +75,7 @@ To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://supp
 1. On the **Assignments** page, select the collections to include for the policy assignment then choose **Next**.
 1. Review the settings on the **Review + Create** page and select **Create** when you're done.
 
-## <a name="bkmk_exclusion"></a> Antivirus policy supports exclusions merge
+## <a name="bkmk_exclusion"></a> Antivirus policy exclusions merge
 <!--9089764-->
 *(Introduced in 2103)*
 
