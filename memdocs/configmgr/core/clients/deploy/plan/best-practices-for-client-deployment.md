@@ -89,6 +89,13 @@ If you use another client installation method as the primary upgrade method, use
 
 For more information, see [Automatic client upgrades](../../manage/upgrade/upgrade-clients-for-windows-computers.md).
 
+### Assign site systems as clients to the same site
+
+<!-- 9606023 -->
+If you install the Configuration Manager client on site systems, assign them to the same site. Roles like the management point and distribution point have shared binary files between the role and the client. These collocated clients should always be the same version as the site system role.
+
+For example, for a management point in site XYZ, assign the client installed on this site system server to site XYZ.
+
 ## Other device types
 
 ### Plan your user enrollment experience for Mac computers and mobile devices
