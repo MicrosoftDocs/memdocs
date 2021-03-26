@@ -29,7 +29,7 @@
   - name: Use Intune without Google Mobile Services
     href: manage-without-gms.md      
   - name: MAM FAQ
-    href: mam-faq.md
+    href: mam-faq.yml
 - name: How-to guides
   items:
     - name: Add apps 

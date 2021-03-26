@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 # iOS app protection policy settings
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article describes the app protection policy settings for iOS/iPadOS devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the Azure portal when you make a new policy.
+This article describes the app protection policy settings for iOS/iPadOS devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal when you make a new policy.
 
 There are three categories of policy settings: *Data relocation*, *Access requirements*, and *Conditional launch*. In this article, the term ***policy-managed apps*** refers to apps that are configured with app protection policies.
 
@@ -110,7 +110,7 @@ Third party unmanaged apps can be added to the exemptions list which can allow d
 | **Recheck the access requirements after (minutes of inactivity)** | Configure the number of minutes of inactivity that must pass before the app requires the user to again specify the access requirements. <br><br> For example, an admin turns on PIN and Blocks rooted devices in the policy, a user opens an Intune-managed app, must enter a PIN, and must be using the app on a non-rooted device. When using this setting, the user would not have to enter a PIN or undergo another root-detection check on any Intune-managed app for a period of time equal to the configured value.  <br><br>**Note:** *On iOS/iPadOS, the PIN is shared amongst all Intune-managed apps of the **same publisher**. The PIN timer for a specific PIN is reset once the app leaves the foreground on the device. The user wouldn't have to enter a PIN on any Intune-managed app that shares its PIN for the duration of the timeout defined in this setting. This policy setting format supports a positive whole number.*     | **30** |
 
 > [!NOTE]
-> To learn more about how multiple Intune app protection settings configured in the Access section to the same set of apps and users work on iOS/iPadOS, see [Intune MAM frequently asked questions](mam-faq.md#app-experience-on-ios) and [Selectively wipe data using app protection policy access actions in Intune](app-protection-policies-access-actions.md).
+> To learn more about how multiple Intune app protection settings configured in the Access section to the same set of apps and users work on iOS/iPadOS, see [Intune MAM frequently asked questions](mam-faq.yml) and [Selectively wipe data using app protection policy access actions in Intune](app-protection-policies-access-actions.md).
 
 ## Conditional launch
 Configure conditional launch settings to set sign-in security requirements for your access protection policy. 

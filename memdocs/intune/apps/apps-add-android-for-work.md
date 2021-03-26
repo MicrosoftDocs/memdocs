@@ -45,7 +45,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 
 ## Before you start
 - Make sure you have connected your Intune tenant to Managed Google Play.  For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
-- If you intend to enroll personally-owned work profile devices, make sure you have configured Intune and Android personally-owned work profiles to work together in the **Device enrollment** workload of the Azure portal. For more information, see [Enroll Android devices](../enrollment/android-work-profile-enroll.md).
+- If you intend to enroll personally-owned work profile devices, make sure you have configured Intune and Android personally-owned work profiles to work together in the **Device enrollment** workload of the portal. For more information, see [Enroll Android devices](../enrollment/android-work-profile-enroll.md).
 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
@@ -240,7 +240,7 @@ You can distribute a non-production version of a Managed Google Play app to devi
 > Required app deployments for non-production app tracks are currently unavilable for devices enrolled in Android Enterprise personally-owned work profile (BYOD).
 
 ## Delete Managed Google Play apps
-When necessary, you can delete managed Google Play apps from Microsoft Intune. To delete a managed Google Play app, open Microsoft Intune in the Azure portal and select **Apps** > **All apps**. From the app list, select the ellipses (...) to the right of the managed Google Play app, then select **Delete** from the displayed list. When you delete a managed Google Play app from the app list, the managed Google Play app is automatically unapproved.
+When necessary, you can delete managed Google Play apps from Microsoft Intune. To delete a managed Google Play app, open Microsoft Intune in the portal and select **Apps** > **All apps**. From the app list, select the ellipses (...) to the right of the managed Google Play app, then select **Delete** from the displayed list. When you delete a managed Google Play app from the app list, the managed Google Play app is automatically unapproved.
 
 > [!NOTE]
 > If an app is unapproved or deleted from the managed Google Play store, it will not be removed from the Intune client apps list. This allows you to still target an uninstall policy to users even if the app is unapproved.
