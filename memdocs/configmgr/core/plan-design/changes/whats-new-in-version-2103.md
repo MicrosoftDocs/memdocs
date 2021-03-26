@@ -265,7 +265,7 @@ Configuration Manager sets the following maximum run time for these categories o
 
 All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in Configuration Manager 2103, the default maximum run time for these updates is 60 minutes rather than 10 minutes. The new maximum run time will only apply to new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing updates.
 
-For more information, see [Plan for software updates](../../sum/plan-design/plan-for-softwareupdats.md#bkmk_maxruntime).
+For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime).
 
 ### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
 <!--8913038-->
