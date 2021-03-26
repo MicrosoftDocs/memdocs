@@ -76,7 +76,7 @@ To support [firewall](#bkmk_firewall) policies, install [KB4578605](https://supp
 1. Review the settings on the **Review + Create** page and select **Create** when you're done.
 
 ## <a name="bkmk_exclusion"></a> Antivirus policy exclusions merge
-<!--9089764-->
+<!--9089764 -->
 *(Introduced in 2103)*
 
 Starting in Configuration Manager 2103, When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
