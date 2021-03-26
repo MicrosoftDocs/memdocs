@@ -132,7 +132,7 @@ Starting in version 2006, you can choose to receive notifications from Microsoft
 
 [!INCLUDE [Console extensions notifications](includes/console-extensions-notifications.md)]
 
-For more information, see [Manage console extensions](community-hub-extensions.md).
+For more information, see [Manage console extensions](admin-console-extensions.md).
 ## Log files
 
 For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.

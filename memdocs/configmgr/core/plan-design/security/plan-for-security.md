@@ -62,7 +62,7 @@ Configuration Manager supports Cryptography: Next Generation (CNG) v3 certificat
 
 ### <a name="bkmk_plan-ehttp"></a> Enhanced HTTP  
 
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. Starting in version 1806, you can enable the site to use **Enhanced HTTP**. This configuration supports HTTPS on site systems by using a combination of self-signed certificates and Azure AD. It doesn't require PKI. For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. You can enable the site to use **Enhanced HTTP**. This configuration supports HTTPS on site systems by using a combination of self-signed certificates and Azure AD. It doesn't require PKI. For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
 
 
 ### <a name="bkmk_plan-cmgcdp"></a> Certificates for CMG and CDP
@@ -361,7 +361,7 @@ For more information on these installation properties, see [About client install
 When you use PKI certificates for all client communications, you don't have to plan for signing and encryption to help secure client data communication. If you set up any site systems that run IIS to allow HTTP client connections, decide how to help secure the client communication for the site.  
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 To help protect the data that clients send to management points, you can require clients to sign the data. You can also require the SHA-256 algorithm for signing. This configuration is more secure, but don't require SHA-256 unless all clients support it. Many operating systems natively support this algorithm, but older operating systems might require an update or hotfix. 
 
@@ -389,11 +389,9 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - [Co-management](../../../comanage/overview.md)  
 
-- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)
+- [Deploy user-available apps](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)
 
 - [Microsoft Store for Business online apps](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
-
-- Reduce infrastructure requirements. For example, [Software Center using the management point](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex) instead of the application catalog  
 
 - [Manage Microsoft 365 Apps for enterprise](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
 
@@ -419,31 +417,30 @@ For more information about Azure AD, see [Azure Active Directory documentation](
 
 
 ## <a name="bkmk_auth"></a> Plan for SMS Provider authentication
-<!--1357013--> 
+<!--1357013-->
 
-Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. It applies to all components that access the SMS Provider. For example, the Configuration Manager console, SDK methods, and Windows PowerShell cmdlets. 
+You can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. It applies to all components that access the SMS Provider. For example, the Configuration Manager console, SDK methods, and Windows PowerShell cmdlets.
 
-This configuration is a hierarchy-wide setting. Before you change this setting, make sure that all Configuration Manager administrators can sign in to Windows with the required authentication level. 
+This configuration is a hierarchy-wide setting. Before you change this setting, make sure that all Configuration Manager administrators can sign in to Windows with the required authentication level.
 
 The following levels are available:
 
-- **Windows authentication**: Require authentication with Active Directory domain credentials.   
+- **Windows authentication**: Require authentication with Active Directory domain credentials.
 
 - **Certificate authentication**: Require authentication with a valid certificate that's issued by a trusted PKI certificate authority.  
 
 - **Windows Hello for Business authentication**: Require authentication with strong two-factor authentication that's tied to a device and uses biometrics or a PIN.  
 
-For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth). 
-
-
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
 
 ## See also
-- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
 
-- [Configure security](configure-security.md)  
+- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)
 
-- [Communication between endpoints](../hierarchy/communications-between-endpoints.md)  
+- [Configure security](configure-security.md)
 
-- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)  
+- [Communication between endpoints](../hierarchy/communications-between-endpoints.md)
+
+- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 
 - [PKI certificate requirements](../network/pki-certificate-requirements.md)

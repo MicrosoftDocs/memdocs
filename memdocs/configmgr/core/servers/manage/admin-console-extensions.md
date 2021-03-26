@@ -16,9 +16,18 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Starting in Configuration Manager 2103, the **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. You can download console extensions from the [Community hub](community-hub.md) and have it applied to all consoles connected to a hierarchy. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
+Starting in Configuration Manager 2103, the **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. Having extensions in the console doesn't make them immediately available. First, an administrator has to approve the extension for the site and enable notifications. Then console users can install the extension to their local console.
 
 After you approve an extension, when you open the console, you'll see a [console notification](#bkmk_notification). From the notification, you can start the extension installer. After the installer completes, the console restarts automatically, and then you can use the extension.
+
+The new style of console extensions have the following benefits:
+
+1. Centralized management of console extensions for the site from the console instead of manually placing binaries on individual consoles.
+1. A clear separation of console extensions from different extension providers.
+1. The ability for admins to have more control over which console extensions are loaded and used in the environment, to keep them more secure.
+1. A hierarchy setting that allows for only using the new style of console extension.
+
+The old style of console extensions may start being phased out in favor of the new style, which is more secure and centrally managed.
 
 [!INCLUDE [console extensions node](includes/console-extensions-node.md)]
 
@@ -27,3 +36,6 @@ After you approve an extension, when you open the console, you'll see a [console
 [!INCLUDE [console extensions notifications](includes/console-extensions-notifications.md)]
 
 ## Next steps
+
+- [Console tips](admin-console-tips.md)
+- [Configuration Manager console notifications](admin-console-notifications.md)

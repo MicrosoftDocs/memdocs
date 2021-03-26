@@ -74,12 +74,14 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 ### <a name="bkmk_arm64"></a> Windows 10 on ARM64
 
-Configuration Manager supports the client on Windows 10 ARM64 devices. OS deployment is not supported.<!-- 1353704 -->
+Configuration Manager supports the client on Windows 10 ARM64 devices.<!-- 1353704 -->
 
 Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
 
 > [!NOTE]
 > If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. This new platform isn't automatically selected. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
+
+OS deployment isn't supported, except for a feature update task sequence. Starting in version 2103, you can deploy a task sequence with a feature update to a Windows 10 on ARM64 device. For more information, see [Deploy a feature update with a task sequence](../changes/whats-new-in-version-2103.md#deploy-a-feature-update-with-a-task-sequence).
 
 ### <a name="bkmk_WIfB-support"></a> Support for Windows Insider
 

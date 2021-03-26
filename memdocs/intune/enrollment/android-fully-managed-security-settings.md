@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 2/3/2021
+ms.date: 3/24/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,6 +40,8 @@ For corporate owned fully-managed devices, there are three recommended security 
 - [Fully managed basic security (level 1)](#fully-managed-basic-security) 
 - [Fully managed enhanced security (level 2)](#fully-managed-enhanced-security)
 - [Fully managed high security (level 3)](#fully-managed-high-security) 
+
+Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## Fully managed basic security
 
@@ -148,7 +150,6 @@ Level 3 is the recommended configuration for both:
 Such organizations are typically targeted by well-funded and sophisticated adversaries. Therefore, they merit the additional constraints and controls listed below.
 
 This configuration expands upon Level 2 by:
-- increasing the minimum operating system version.
 - ensuring that the device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.
 - increasing the minimum operating system version.
 - enforcing additional device restrictions (like disabling unredacted notifications on lock screen).

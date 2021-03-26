@@ -31,18 +31,30 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Microsoft Endpoint Manager tenant attach
 
-### Required application deployments display in Microsoft Endpoint Manager admin center
+### Display all applications for a device in Microsoft Endpoint Manager admin center
 <!--8795301-->
-Applications targeted to a device or a user with a required deadline will now show in the **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center. This improvement allows you to review when application installations are expected to occur on a device. The **An administrator must approve a request for this application on the device** option is no longer required to be set on the device available deployment for applications to be listed in the admin center.
+The **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center now displays more applications from Configuration Manager. Displayed applications include applications that are:
+- Deployed to the device
+- Deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
 
+The option, **An administrator must approve a request for this application on the device**, is no longer required to be set on the device available deployment for applications to be listed in the admin center. This improvement allows you to review when application installations are expected to occur on a device.
 
+For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_all).
+
+### Tenant attach: Antivirus policy exclusions merge
+<!--9089764 -->
+
+When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
+
+For more information, see [antivirus policies](../../../tenant-attach/deploy-antivirus-policy.md#bkmk_exclusion).
+
+<!-- 
 ## Cloud-attached management
-
 
 ## Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
-
+ -->
 
 ## Site infrastructure
 
@@ -54,11 +66,11 @@ You can now exclude OUs from [Active Directory User Discovery](../../servers/dep
 
 When you install or update to version 2103, there are several new warning [prerequisite checks](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
-#### Site system roles that allow HTTP client connections
+#### Enable the site for HTTPS-only or enhanced HTTP
 
-<!-- 9390933 -->
+<!-- 9390933,9572265 -->
 
-If you have site system roles that allow HTTP client connections, you'll see this warning. The most common roles with this configuration are management points and distribution points. To improve the security of client communications, Configuration Manager won't support this configuration in the future. Plan to enable these roles for a more secure communication method with [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+If your site is configured to allow HTTP communication without enhanced HTTP, you'll see this warning. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP. Plan to configure the site for **HTTPS only** or to **Use Configuration Manager-generated certificates for HTTP site systems**. For more information, see the description of this [prerequisite check](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).
 
 #### Deprecated Azure Monitor connector
 
@@ -76,66 +88,9 @@ If you have a secondary site that uses SQL Server Express edition, this check wa
 
 Microsoft recommends that you keep SQL Server Express up to date. For more information, see [Security for site administration](../hierarchy/security-and-privacy-for-site-administration.md#update-sql-server-express-at-secondary-sites).
 
-
-
-<!--don't include bug 8561493, replaced by user story 9388277. see bug 9383867 (and remove this comment before release!) -->
-
-
+<!-- 
 ## Client management
-
-### Change foreground color for Software Center branding
-
-<!--8655575-->
-
-Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
-
-### Improved user experience and security with Software Center custom tabs
-
-<!--8655543-->
-
-Since current branch version 1906, you can add up to five custom tabs to Software Center. These custom tabs let you give your users easy access to common web apps and other sites. Previously, to display websites Software Center used the Windows built-in Internet Explorer browser control.
-
-Starting in this release, Software Center can now use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
-
-### Client setting for displaying Software Center custom tabs
-
-<!--9142301-->
-
-Technical preview version 2012 included an improved user experience and security with Software Center custom tabs. It required that you manually deploy the Microsoft Edge WebView2 browser control.
-
-Starting in this release, you can now configure a client setting to use the WebView2 runtime.
-
-### Improvements to Support Center
-
-<!--8693068-->
-
-Support Center is now split into the following tools:
-
-- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
-
-- **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
-
-The following tools are still a part of Support Center:
-
-- **Support Center Viewer**
-- **Support Center OneTrace**
-- **Support Center Log File Viewer**
-
-For more information, see [Support Center](../../support/support-center.md).
-
-### OneTrace support for jump lists
-
-<!--6991505-->
-
-Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
-
-There are now three methods to open recent files in OneTrace:
-
-- Windows taskbar jump list
-- Windows Start menu recently opened list
-- In OneTrace from **File** menu or **Recently opened** tab.
-
-For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
+ -->
 
 ## Collections
 
@@ -151,11 +106,13 @@ For more information, see [Manage collections: View collection relationships](..
 <!--8680235-->
 You now have more options when using the collection query preview. The following improvements have been made to previewing collection queries:
 - Limit the number of rows returned
-   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows. 
+   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows.
 - Omit duplicate rows from the result set
   - If the **Omit duplicate rows** option isn't selected, the original query statement will be executed as is, even if the query contains the word **distinct**.
   - When the **Omit duplicate rows** option is selected, if the query already contains the word **distinct**, then the query runs as it is. When the query doesn't contain the word **distinct**, it's added to the query for the preview (mean override).
 - Review statistics for the query preview such as number of rows returned and elapsed time.
+
+For more information, see [How to create collections](../../clients/manage/collections/create-collections.md#bkmk-preview).
 
 ### Improvements to collection evaluation view
 <!--8787410-->
@@ -164,6 +121,28 @@ The following improvements were made to the collection evaluation view:
 - Drill through from collection evaluation status queue to a collection
 - Copy text to the clipboard from the collection evaluation page
 - Configure the refresh interval for the collection evaluation statistics page
+
+For more information, see [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md).
+
+## Software Center
+
+### Change foreground color for Software Center branding
+
+<!--8655575-->
+
+Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
+
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#software-center-customization---general).
+
+### Improved user experience and security with Software Center custom tabs
+
+<!--9142301,8655543-->
+
+Since current branch version 1906, you can add up to five custom tabs to Software Center. These custom tabs let you give your users easy access to common web apps and other sites. Previously, to display websites Software Center used the Windows built-in Internet Explorer browser control.
+
+Starting in this release, Software Center can now use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
+
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#display-custom-tabs-with-microsoft-edge-webview2-runtime).
 
 ## Application management
 
@@ -181,6 +160,7 @@ You can now disable application deployments. Other objects already have similar 
 
 For device-based deployments, when you disable the deployment or object, use the client notification action to **Download Computer Policy**. This action immediately tells the client to update its policy from the site. If the deployment hasn't already started, the client receives the updated policy that the object is now disabled.
 
+For more information, see [Disable and delete application deployments](../../../apps/deploy-use/disable-delete-deployments.md).
 
 ## OS deployment
 
@@ -194,7 +174,15 @@ For more information, see [Windows 10 servicing dashboard](../../../osd/deploy-u
 
 <!--3555906-->
 
-You can now upgrade a client's Windows OS by using a feature update deployed with a task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses a single ESD file that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the ESD file is generally smaller than the WIM image file.
+You can now upgrade a client's Windows OS by using a feature update deployed with a task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses content that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file. You can also use Windows features such as Dynamic Update and Delivery Optimization.
+
+This type of task sequence extends support to Windows 10 on ARM64 devices.
+
+For more information, see the following articles:
+
+- For scenario guidance and planning, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+- For prerequisites, see [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md).
+- For the new setting on the task sequence step, see [About task sequence steps: Upgrade OS](../../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
 
 ### Task sequence error shows more check readiness details
 
@@ -237,16 +225,15 @@ This release includes the following improvements to OS deployment:
 
   These new cmdlets supplement the existing cmdlets to add and remove duplicate IDs. For more information, see [Version 1910 PowerShell release notes](/powershell/sccm/1910-release-notes#new-cmdlets).
 
-
 ## Protection
 
-## Improvements to BitLocker support via cloud management gateway
+### Improvements to BitLocker management
 
 <!--8845996-->
 
 In current branch version 2010, you can manage BitLocker policies and escrow recovery keys over a cloud management gateway (CMG). This support included a couple of limitations.
 
-Starting in this technical preview release, BitLocker management policies over a CMG support the following capabilities:
+Starting in this release, BitLocker management policies over a CMG support the following capabilities:
 
 - Recovery keys for removable drives
 
@@ -254,6 +241,12 @@ Starting in this technical preview release, BitLocker management policies over a
 
 For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
 
+This release also provides support for the following features:
+
+- Enhanced HTTP<!-- 9503186 -->
+- The recovery service on management points that use a database replica.
+
+For more information, see [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
 
 ## Software updates
 
@@ -270,34 +263,25 @@ Configuration Manager sets the following maximum run time for these categories o
 - **Non-feature updates for Windows**: 60 minutes
 - **Updates for Microsoft 365 Apps** (Office 365 updates): 60 minutes
 
-All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in this technical preview, the default maximum run time for these updates is 60 minutes rather than 10 minutes.
+All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in Configuration Manager 2103, the default maximum run time for these updates is 60 minutes rather than 10 minutes. The new maximum run time will only apply to new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing updates.
+
+For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime).
 
 ### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
 <!--8913038-->
-Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To enable this behavior, add certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients and enable certificate pinning through **Client Settings**. This setting ensures that your clients will only be able to communicate with WSUS when certificate pinning is successful.
+Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To fully enable this behavior:
+- Ensure your software update points are configured to use TLS/SSL
+- Add the certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients
+- Verify the **Enforce TLS certificate pinning for Windows Update client for detecting updates** software updates client setting is set to **Yes** (default).
 
-## Configuration Manager console
+For more information, see [Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning) and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
-### Console extension download, management, and installation
-<!--8116426, 3555909-->
-
-The **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. You can download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users are notified to install the extension to their local console.
-
-For more information, see [Console extensions](../../servers/manage/community-hub-extensions.md) and [Using community hub](../../servers/manage/community-hub.md).
-
-### Download Power BI report templates from community hub
+## Community hub
+### Download Power BI report templates from Community hub
 <!--5679831-->
 Community hub now supports contributing and downloading Power BI report template files. This integration allows administrators to easily share and reuse Power BI reports. Contributing and downloading Power BI report template is also available for current branch versions of Configuration Manager.
 
-For more information, see [Power BI report templates in community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using community hub](../../servers/manage/community-hub.md).
-
-### Add a report as a favorite
-
-<!--8034298-->
-
-Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
-
-For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
+For more information, see [Power BI report templates in Community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using Community hub](../../servers/manage/community-hub.md).
 
 ### Access the top queries shared in the Community hub from CMPivot
 <!--7137169-->
@@ -311,6 +295,30 @@ For more information, see [Changes to CMPivot in version 2103](../../servers/man
 <!--7983035-->
 
 This release continues to iterate on the scenario to share apps via the [Community hub](../../servers/manage/community-hub.md). Previously you could share just the definition of the app. Another hub user could download the app's XML metadata, and create it in their site. But to actually deploy the app, they would then need to locate the app's content.
+
+## Configuration Manager console
+
+### Centralized management of console extensions
+<!--3555909, 8116426, & 9561090-->
+
+Configuration Manager now supports for a new style of console extensions that have the following benefits:
+
+1. Centralized management of console extensions for the site from the console instead of manually placing binaries on individual consoles.
+1. A clear separation of console extensions from different extension providers.
+1. The ability for admins to have more control over which console extensions are loaded and used in the environment, to keep them more secure.
+1. A hierarchy setting that allows for only using the new style of console extension.
+
+The old style of console extensions may start being phased out in favor of the new style, which is more secure and centrally managed.
+
+For more information, see [Console extensions for Configuration Manager](../../servers/manage/admin-console-extensions.md).
+
+### Add a report as a favorite
+
+<!--8034298-->
+
+Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
+
+For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
 
 ### Improvements to the product lifecycle dashboard
 
@@ -326,21 +334,57 @@ This release includes improvements to the product lifecycle dashboard to make it
 
 For more information, see [product lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
+## Support Center
+
+### Improvements to Support Center
+
+<!--8693068-->
+
+Support Center is now split into the following tools:
+
+- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
+
+- **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
+
+The following tools are still a part of Support Center:
+
+- **Support Center Viewer**
+- **Support Center OneTrace**
+- **Support Center Log File Viewer**
+
+For more information, see [Support Center](../../support/support-center.md).
+
+### OneTrace support for jump lists
+
+<!--6991505-->
+
+Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
+
+There are now three methods to open recent files in OneTrace:
+
+- Windows taskbar jump list
+- Windows Start menu recently opened list
+- In OneTrace from **File** menu or **Recently opened** tab.
+
+For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
+
+<!-- 
 ## Content management
-
-### Improvements to client data sources dashboard
-
+ -->
 
 ## PowerShell
 
-### Update PowerShell help
+### Known issue with updateable PowerShell help
 
-<!-- will need to say something about the changes here...
-You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+<!-- 8617455 -->
 
-For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
- -->
+Starting in version 2010, you could use the **Update-Help** cmdlet to download the latest information for the Configuration Manager PowerShell module.
 
+Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.
+
+The cmdlet will successfully download content on a version 2010 console, but **Get-Help** will only return default usage information. Before the release of version 2103, if you used **Update-Help** with a version 2010 site, you can continue to use **Get-Help** now.
+
+For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
 
 ## Deprecated features
 
@@ -359,7 +403,7 @@ The following [features are now deprecated](deprecated/removed-and-deprecated-cm
 
   This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
 
-- Site system roles that allow HTTP client connections. Enable these roles for [HTTPS](../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../hierarchy/enhanced-http.md). For example, [configure your management points](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).<!-- 9390933 -->
+- Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 
 <!--
@@ -372,11 +416,9 @@ As first announced in version 1906, version 2103 drops support for the following
 
 ## Other updates
 
-<!--
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
--->
+- [Remove the central administration site](../../servers/deploy/install/remove-central-administration-site.md) <!-- 3607277 -->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2103 release notes](/powershell/sccm/2103-release-notes).
 

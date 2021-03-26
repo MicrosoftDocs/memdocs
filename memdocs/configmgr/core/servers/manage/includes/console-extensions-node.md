@@ -5,13 +5,13 @@ ms.prod: configuration-manager
 ms.topic: include
 ms.date: 03/26/2021
 ---
-<!--This file is shared by the community-hub-extensions.md and admin-console-extensions.md files. Some headings may be context driven by the article-->
+<!--This file will be shared. Currently it's in use by the admin-console-extensions.md file. Some headings may be context driven by the article-->
 
 ## About the Console Extensions node
 <!--3555909-->
 (*Introduced in version 2103*)
 
-The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Console extensions downloaded from the [community hub](../community-hub.md) will be located here. Actions for console extensions are grouped in the ribbon and the right-click menu.
+The **Console Extensions** node is located under **Administration** > **Overview** > **Updates and Servicing**. Actions for console extensions are grouped in the ribbon and the right-click menu.
 
 :::image type="content" source="../media/3555909-console-extensions-node.png" alt-text="The Console Extensions node in the Configuration Manager console" lightbox="../media/3555909-console-extensions-node.png":::
 
@@ -38,14 +38,8 @@ The **Console Extensions** node is located under **Administration** > **Overview
 - **Uninstall**: Uninstalls the selected extension from the current local console
 
 > [!NOTE]
-> The WebView2 console extension is approved by default to enable using community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
-## Download a console extension
+> The WebView2 console extension is approved by default to enable using Community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
 
-1. From the Configuration Manager console, go to the **Community hub** node in the **Community** workspace.
-1. Find an extension under the **Recently Updated** section on the **Home** page or search for it in the **All objects** page.
-1. Select the extension and choose **Download**.
-
-   :::image type="content" source="../media/3555909-community-hub-console-extensions.png" alt-text="Example console extension from community hub":::
 ## Install and test an extension on a local console
 
 1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension. Changing the security scope is recommended for initial testing of an extension.

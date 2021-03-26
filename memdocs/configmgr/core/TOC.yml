@@ -472,8 +472,6 @@
     items:
     - name: Use community hub
       href: servers/manage/community-hub.md
-    - name: Console extensions in community hub
-      href: servers/manage/community-hub-extensions.md
     - name: Contribute to community hub
       href: servers/manage/community-hub-contribute.md      
   - name: CMPivot

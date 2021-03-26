@@ -94,7 +94,7 @@ The final layer of security is based on permissions to objects in the site datab
  You can configure the site system roles to which clients connect for either HTTPS or HTTP client communication. Client computers always communicate by using the most secure method that's available. Client computers only fall back to using the less secure communication method if you have site systems roles that allow HTTP communication.  
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for [HTTPS](../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
  For more information, see [Plan for security](../plan-design/security/plan-for-security.md).
 

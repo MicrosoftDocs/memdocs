@@ -632,11 +632,28 @@ The Configuration Manager computer is a member of a Windows domain.
 
 ### Enable site system roles for HTTPS or Enhanced HTTP
 
-*Applies to: Primary site*
+*Applies to: central administration site, primary site*
 
-<!-- 9390933 -->
+<!-- 9390933,9572265 -->
 
-Starting in version 2103, if you have site system roles that allow HTTP client connections, you'll see this warning. The most common roles with this configuration are management points and distribution points. To improve the security of client communications, Configuration Manager won't support this configuration in the future. Plan to enable these roles for a more secure communication method with [HTTPS](../../../clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Security_Clients) or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).
+Starting in version 2103, if your site is configured to allow HTTP communication without enhanced HTTP, you'll see this warning. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP.
+
+This check looks at the following settings:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
+1. Select a site, and then in the ribbon select **Properties**.
+
+1. Switch to the **Communication Security** tab.
+
+    Configure one of the following options:
+
+    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForPKITransition).
+
+    - **HTTPS or HTTP** _and_ **Use Configuration Manager-generated certificates for HTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
+
+> [!NOTE]
+> If you see this warning when updating the central administration site, it may be because of a child primary site.<!-- 9480431 -->
 
 ### Firewall exception for SQL Server (standalone primary site)
 
@@ -811,7 +828,6 @@ Configuration Manager uses SQL Server Native Client on the following site system
 - Multicast-enabled distribution point
 - Asset Intelligence update service point
 - Reporting services point
-- Application catalog web service
 - Enrollment point
 - Endpoint Protection point
 - Service connection point

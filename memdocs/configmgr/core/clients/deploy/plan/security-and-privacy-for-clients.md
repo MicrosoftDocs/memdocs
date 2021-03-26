@@ -36,7 +36,7 @@ Mobile device clients and some internet-based clients require these certificates
 For more information about the PKI certificate requirements and how they're used to help protect Configuration Manager, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, site system roles that allow HTTP client connections are [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9390933 --> Enable these roles for HTTPS or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md). For example, [configure your management points](../../manage/cmg/configure-authentication.md#bkmk_mphttps).
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ### Automatically approve client computers from trusted domains and manually check and approve other computers  
 

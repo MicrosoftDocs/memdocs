@@ -50,7 +50,7 @@ The following table lists CMG support for Configuration Manager features:
 | Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) (2002) |
 | Software distribution (device-targeted) | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration) | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Supported](media/green_check.png) |
+| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | ![Supported](media/green_check.png) |
 | BitLocker Management | ![Supported](media/green_check.png) (2010) |
 | Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
 | Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |

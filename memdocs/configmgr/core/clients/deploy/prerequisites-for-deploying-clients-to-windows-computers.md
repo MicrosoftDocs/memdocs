@@ -44,7 +44,7 @@ Many of these components are services or features that Windows enables by defaul
 <!--SCCMDocs-pr#3404-->
 Because of weaknesses in the SHA-1 algorithm and to align to industry standards, Microsoft now only signs Configuration Manager binaries using the more secure SHA-2 algorithm. Legacy Windows OS versions require an update for SHA-2 code signing support. For more information, see [2019 SHA-2 code signing support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
-If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
+If you don't update these OS versions, you can't install the Configuration Manager client version 1906 or later. This behavior applies to either a new client install or updating it from a previous version.
 
 If you need to manage a client on a version of Windows that's not updated, or older than the versions listed above, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](../../understand/interoperability-client.md).
 
@@ -63,24 +63,14 @@ The Configuration Manager client has external dependencies. These dependencies d
 
 If the client requires these dependencies to complete the installation, it automatically installs them.
 
-|Component|Description|
-|---|---|
+| Component | Description |
+|-----------|-------------|
 |Microsoft Core XML Services (MSXML) version 6.20.5002 or later (`msxml6.msi`)|Required to support the processing of XML documents in Windows.|
-|Microsoft Visual C++ 2013 Redistributable version 12.0.40660.0 (`vcredist_x*.exe`)|Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.|<!-- SCCMDocs#1526 -->
+|Microsoft Visual C++ 2013 Redistributable version 12.0.40660.0 (`vcredist_x*.exe`)|Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- SCCMDocs#1526 -->|
 |Windows Imaging APIs 6.0.6001.18000 or later (`wimgapi.msi`)|Required to allow Configuration Manager to manage Windows image (.wim) files.|
-|Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`)|Required to allow clients to evaluate compliance settings.|  
-|Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|  
-|Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
->
-> If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. The client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
+|Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`)|Required to allow clients to evaluate compliance settings.|
+|Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Required to support client operations. Automatically installed on the client computer if it doesn't have Microsoft .NET Framework version 4.5 or later installed. For more information, see [Additional details about Microsoft .NET Framework version 4.5.2](#dotNet).|
+|Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|
 
 #### <a name="dotNet"></a> Additional details about Microsoft .NET Framework version 4.5.2  
 

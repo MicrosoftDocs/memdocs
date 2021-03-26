@@ -93,7 +93,7 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Existence of Microsoft BitLocker Administration and Monitoring (MBAM) server-side extensions
 
-- BitLocker management client counts summarized by state
+- ***[Updated]*** BitLocker management client counts summarized by enrollment and TPM state
 
 ### Setup (level 1)
 
@@ -108,6 +108,8 @@ For Configuration Manager version 2103, this level includes the following data:
 - Use of early update ring
 
 - Version of post-upgrade script
+
+- ***[New]*** Central administration site removal status
 
 ### Site database (level 1)
 
@@ -170,6 +172,10 @@ For Configuration Manager version 2103, this level includes the following data:
 - Count of phased deployments created by type
 
 - Count of categorized and uncategorized applications for asset intelligence
+
+- ***[New]*** Aggregated count of upgrade readiness assessments
+
+- ***[New]*** Number of software updates referenced by task sequence
 
 ## Level 2 - Enhanced
 
@@ -324,6 +330,10 @@ For Configuration Manager version 2103, this level includes the following data:
 - Count of pull-distribution points with a cloud distribution point as a source location
 
 - Usage of the cloud services onboarding wizard
+
+- ***[New]*** Cloud services configuration onboarding properties
+
+- ***[New]*** Cloud services endpoint connectivity and component health
 
 ### CMPivot (level 2)
 
@@ -489,6 +499,8 @@ For Configuration Manager version 2103, this level includes the following data:
 
 - Grouped sizes of task sequence policies
 
+- ***[New]*** Count of error codes from feature upgrades for Windows 10 clients
+
 ### Site updates (level 2)
 
 - Versions of installed Configuration Manager hotfixes
@@ -612,6 +624,8 @@ For Configuration Manager version 2103, this level includes the following data:
 - Count of clients with browser usage
 
 - Summary of how many site systems have the proxy enabled and how many are authenticated proxy
+
+- ***[New]*** Usage information for the last seven days of in-console product feedback
 
 ## Level 3 - Full
 
