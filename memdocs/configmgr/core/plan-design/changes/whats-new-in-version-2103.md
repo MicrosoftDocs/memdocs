@@ -41,13 +41,13 @@ The option, **An administrator must approve a request for this application on th
 
 For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_all).
 
+<!-- 
 ## Cloud-attached management
-
 
 ## Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
-
+ -->
 
 ## Site infrastructure
 
@@ -81,62 +81,9 @@ If you have a secondary site that uses SQL Server Express edition, this check wa
 
 Microsoft recommends that you keep SQL Server Express up to date. For more information, see [Security for site administration](../hierarchy/security-and-privacy-for-site-administration.md#update-sql-server-express-at-secondary-sites).
 
-
-
-<!--don't include bug 8561493, replaced by user story 9388277. see bug 9383867 (and remove this comment before release!) -->
-
-
+<!-- 
 ## Client management
-
-### Change foreground color for Software Center branding
-
-<!--8655575-->
-
-Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
-
-For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#software-center-customization---general).
-
-### Improved user experience and security with Software Center custom tabs
-
-<!--9142301,8655543-->
-
-Since current branch version 1906, you can add up to five custom tabs to Software Center. These custom tabs let you give your users easy access to common web apps and other sites. Previously, to display websites Software Center used the Windows built-in Internet Explorer browser control.
-
-Starting in this release, Software Center can now use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
-
-For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#display-custom-tabs-with-microsoft-edge-webview2-runtime).
-
-### Improvements to Support Center
-
-<!--8693068-->
-
-Support Center is now split into the following tools:
-
-- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
-
-- **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
-
-The following tools are still a part of Support Center:
-
-- **Support Center Viewer**
-- **Support Center OneTrace**
-- **Support Center Log File Viewer**
-
-For more information, see [Support Center](../../support/support-center.md).
-
-### OneTrace support for jump lists
-
-<!--6991505-->
-
-Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
-
-There are now three methods to open recent files in OneTrace:
-
-- Windows taskbar jump list
-- Windows Start menu recently opened list
-- In OneTrace from **File** menu or **Recently opened** tab.
-
-For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
+ -->
 
 ## Collections
 
@@ -169,6 +116,26 @@ The following improvements were made to the collection evaluation view:
 - Configure the refresh interval for the collection evaluation statistics page
 
 For more information, see [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md).
+
+## Software Center
+
+### Change foreground color for Software Center branding
+
+<!--8655575-->
+
+Software Center already provides various controls for you to customize the branding to support your organization's brand. For some customers, their brand color doesn't work well with the default white font color for a selected item. To better support these customers and improve accessibility, you can now configure a custom color for the foreground font.
+
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#software-center-customization---general).
+
+### Improved user experience and security with Software Center custom tabs
+
+<!--9142301,8655543-->
+
+Since current branch version 1906, you can add up to five custom tabs to Software Center. These custom tabs let you give your users easy access to common web apps and other sites. Previously, to display websites Software Center used the Windows built-in Internet Explorer browser control.
+
+Starting in this release, Software Center can now use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
+
+For more information, see [About client settings - Software Center](../../clients/deploy/about-client-settings.md#display-custom-tabs-with-microsoft-edge-webview2-runtime).
 
 ## Application management
 
@@ -251,10 +218,9 @@ This release includes the following improvements to OS deployment:
 
   These new cmdlets supplement the existing cmdlets to add and remove duplicate IDs. For more information, see [Version 1910 PowerShell release notes](/powershell/sccm/1910-release-notes#new-cmdlets).
 
-
 ## Protection
 
-## Improvements to BitLocker management
+### Improvements to BitLocker management
 
 <!--8845996-->
 
@@ -299,7 +265,7 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 For more information, see [ Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning).
  and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
-## Configuration Manager console
+## Community hub
 
 ### Get console extensions from the Community hub
 
@@ -313,18 +279,6 @@ Community hub now supports contributing and downloading Power BI report template
 
 For more information, see [Power BI report templates in Community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using Community hub](../../servers/manage/community-hub.md).
 
-### Add a report as a favorite
-
-<!--8034298-->
-
-Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
-
-For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
-
-### Console extension installation
-<!--3555909-->
-You can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. This improvement allows you to start managing the approval and installation of console extensions used in your environment. In this technical preview, only [Right Click Tools (Community Edition) from Recast Software](https://www.recastsoftware.com/enterprise?utm_source=microsoft&utm_medium=referral&utm_campaign=commhub) is available for download and installation. This version of the Right Click Tools extension isn't a final production version. This extension is for technical preview environments only and will expire on April 1, 2021.
-
 ### Access the top queries shared in the Community hub from CMPivot
 <!--7137169-->
 
@@ -337,6 +291,20 @@ For more information, see [Changes to CMPivot in version 2103](../../servers/man
 <!--7983035-->
 
 This release continues to iterate on the scenario to share apps via the [Community hub](../../servers/manage/community-hub.md). Previously you could share just the definition of the app. Another hub user could download the app's XML metadata, and create it in their site. But to actually deploy the app, they would then need to locate the app's content.
+
+## Configuration Manager console
+
+### Console extension installation
+<!--3555909-->
+You can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. This improvement allows you to start managing the approval and installation of console extensions used in your environment. In this technical preview, only [Right Click Tools (Community Edition) from Recast Software](https://www.recastsoftware.com/enterprise?utm_source=microsoft&utm_medium=referral&utm_campaign=commhub) is available for download and installation. This version of the Right Click Tools extension isn't a final production version. This extension is for technical preview environments only and will expire on April 1, 2021.
+
+### Add a report as a favorite
+
+<!--8034298-->
+
+Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, you can now make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
+
+For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
 
 ### Improvements to the product lifecycle dashboard
 
@@ -352,10 +320,43 @@ This release includes improvements to the product lifecycle dashboard to make it
 
 For more information, see [product lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
+## Support Center
+
+### Improvements to Support Center
+
+<!--8693068-->
+
+Support Center is now split into the following tools:
+
+- **Support Center Client Data Collector**: Collects data from a device to view in the Support Center Viewer. This separate tool encompasses the existing Support Center action to **Collect selected data**.
+
+- **Support Center Client Tools**: The other Support Center troubleshooting functionality, except for **Collect selected data**.
+
+The following tools are still a part of Support Center:
+
+- **Support Center Viewer**
+- **Support Center OneTrace**
+- **Support Center Log File Viewer**
+
+For more information, see [Support Center](../../support/support-center.md).
+
+### OneTrace support for jump lists
+
+<!--6991505-->
+
+Support Center OneTrace now supports jump lists for recently opened files. Jump lists let you quickly go to previously opened files, so you can work faster.
+
+There are now three methods to open recent files in OneTrace:
+
+- Windows taskbar jump list
+- Windows Start menu recently opened list
+- In OneTrace from **File** menu or **Recently opened** tab.
+
+For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
+
+<!-- 
 ## Content management
-
-### Improvements to client data sources dashboard
-
+ -->
 
 ## PowerShell
 
