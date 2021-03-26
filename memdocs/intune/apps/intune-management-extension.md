@@ -174,7 +174,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
 ## Monitor run status
 
-You can monitor the run status of PowerShell scripts for users and devices in the Azure portal.
+You can monitor the run status of PowerShell scripts for users and devices in the portal.
 
 In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and then choose one of the following reports:
 
