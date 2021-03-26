@@ -269,10 +269,12 @@ For more information, see [Plan for software updates](../../../sum/plan-design/p
 
 ### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
 <!--8913038-->
-Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To enable this behavior, add certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients and enable certificate pinning through **Client Settings**. This setting ensures that your clients will only be able to communicate with WSUS when certificate pinning is successful.
+Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To fully enable this behavior:
+- Ensure your software update points are configured to use TLS/SSL
+- Add the certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients
+- Verify the **Enforce TLS certificate pinning for Windows Update client for detecting updates** software updates client setting is set to **Yes** (default).
 
-For more information, see [ Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning).
- and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
+For more information, see [Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning) and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
 ## Community hub
 
