@@ -277,13 +277,6 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 For more information, see [Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning) and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
 ## Community hub
-
-### Get console extensions from the Community hub
-
-<!--8116426-->
-
-The [Community hub](../../servers/manage/community-hub.md) now supports sharing extensions to the Configuration Manager console. When you get an extension from the hub, it's available in a new **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
-
 ### Download Power BI report templates from Community hub
 <!--5679831-->
 Community hub now supports contributing and downloading Power BI report template files. This integration allows administrators to easily share and reuse Power BI reports. Contributing and downloading Power BI report template is also available for current branch versions of Configuration Manager.
@@ -305,9 +298,19 @@ This release continues to iterate on the scenario to share apps via the [Communi
 
 ## Configuration Manager console
 
-### Console extension installation
-<!--3555909-->
-You can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. This improvement allows you to start managing the approval and installation of console extensions used in your environment. In this technical preview, only [Right Click Tools (Community Edition) from Recast Software](https://www.recastsoftware.com/enterprise?utm_source=microsoft&utm_medium=referral&utm_campaign=commhub) is available for download and installation. This version of the Right Click Tools extension isn't a final production version. This extension is for technical preview environments only and will expire on April 1, 2021.
+### Centralized management of console extensions
+<!--3555909, 8116426, & 9561090-->
+
+Configuration Manager now supports a new style of console extensions that have the following benefits:
+
+1. Centralized management of console extensions for the site from the console instead of manually placing binaries on individual consoles.
+1. A clear separation of console extensions from different extension providers.
+1. The ability for admins to have more control over which console extensions are loaded and used in the environment, to keep them more secure.
+1. A hierarchy setting that allows for only using the new style of console extension.
+
+The old style of console extensions may start being phased out in favor of the new style, which is more secure and centrally managed.
+
+For more information, see [Console extensions for Configuration Manager](../../servers/manage/admin-console-extensions.md).
 
 ### Add a report as a favorite
 
