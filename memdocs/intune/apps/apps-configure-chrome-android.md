@@ -106,7 +106,7 @@ Launch Google Chrome and you will find the settings applied.
 
 ## Troubleshooting
 
-1. Check the Intune portal to monitor the policy deployment status.
+1. Check Intune to monitor the policy deployment status.
 
     ![Monitor the policy deployment status](./media/apps-configure-chrome-android/monitor-status.png)
 
