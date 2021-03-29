@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/24/2021
+ms.date: 03/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,21 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+
+!-- ########################## -->
+## Week of March 29, 2021 (Service release 2103)
+
+### Device security
+
+#### Update for Microsoft Tunnel<!-- 9574820 -->
+
+We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway, which includes the following changes:
+
+- Various bug fixes and enhancements.
+
+The Tunnel Gateway server will automatically update to the new release.
+
 
 <!-- ########################## -->
 ## Week of March 22, 2021 (Service release 2103)
@@ -134,7 +149,6 @@ This public preview applies to:
   - Personally-owned work profile
 
 For this preview, you must opt in to gain access to the preview version of Microsoft Defender for Endpoint, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Intune apps

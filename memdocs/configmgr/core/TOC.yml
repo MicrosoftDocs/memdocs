@@ -26,6 +26,8 @@
       href: servers/manage/admin-console.md
     - name: Console notifications
       href: servers/manage/admin-console-notifications.md
+    - name: Console extensions
+      href: servers/manage/admin-console-extensions.md
     - name: Console changes and tips
       href: servers/manage/admin-console-tips.md
   - name: Fundamentals

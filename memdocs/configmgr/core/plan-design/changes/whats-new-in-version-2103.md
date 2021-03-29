@@ -41,6 +41,13 @@ The option, **An administrator must approve a request for this application on th
 
 For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_all).
 
+### Tenant attach: Antivirus policy exclusions merge
+<!--9089764 -->
+
+When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
+
+For more information, see [antivirus policies](../../../tenant-attach/deploy-antivirus-policy.md#bkmk_exclusion).
+
 <!-- 
 ## Cloud-attached management
 
@@ -256,23 +263,20 @@ Configuration Manager sets the following maximum run time for these categories o
 - **Non-feature updates for Windows**: 60 minutes
 - **Updates for Microsoft 365 Apps** (Office 365 updates): 60 minutes
 
-All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in this release, the default maximum run time for these updates is 60 minutes rather than 10 minutes.
+All other software updates outside these categories, such as third-party updates, were given a maximum run time of 10 minutes. Starting in Configuration Manager 2103, the default maximum run time for these updates is 60 minutes rather than 10 minutes. The new maximum run time will only apply to new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing updates.
+
+For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime).
 
 ### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
 <!--8913038-->
-Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To enable this behavior, add certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients and enable certificate pinning through **Client Settings**. This setting ensures that your clients will only be able to communicate with WSUS when certificate pinning is successful.
+Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To fully enable this behavior:
+- Ensure your software update points are configured to use TLS/SSL
+- Add the certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients
+- Verify the **Enforce TLS certificate pinning for Windows Update client for detecting updates** software updates client setting is set to **Yes** (default).
 
-For more information, see [ Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning).
- and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
+For more information, see [Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning) and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
 ## Community hub
-
-### Get console extensions from the Community hub
-
-<!--8116426-->
-
-The [Community hub](../../servers/manage/community-hub.md) now supports sharing extensions to the Configuration Manager console. When you get an extension from the hub, it's available in a new **Console extensions** node in the console. Getting an extension from the hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
-
 ### Download Power BI report templates from Community hub
 <!--5679831-->
 Community hub now supports contributing and downloading Power BI report template files. This integration allows administrators to easily share and reuse Power BI reports. Contributing and downloading Power BI report template is also available for current branch versions of Configuration Manager.
@@ -286,17 +290,21 @@ You can now access the top CMPivot queries shared in the Community hub from on-p
 
 For more information, see [Changes to CMPivot in version 2103](../../servers/manage/cmpivot-changes.md#bkmk_2103).
 
-### Community hub support for application content
-
-<!--7983035-->
-
-This release continues to iterate on the scenario to share apps via the [Community hub](../../servers/manage/community-hub.md). Previously you could share just the definition of the app. Another hub user could download the app's XML metadata, and create it in their site. But to actually deploy the app, they would then need to locate the app's content.
-
 ## Configuration Manager console
 
-### Console extension installation
-<!--3555909-->
-You can now download console extensions from the [Community hub](../../servers/manage/community-hub.md) and have it applied to all consoles connected to a hierarchy. This improvement allows you to start managing the approval and installation of console extensions used in your environment. In this technical preview, only [Right Click Tools (Community Edition) from Recast Software](https://www.recastsoftware.com/enterprise?utm_source=microsoft&utm_medium=referral&utm_campaign=commhub) is available for download and installation. This version of the Right Click Tools extension isn't a final production version. This extension is for technical preview environments only and will expire on April 1, 2021.
+### Centralized management of console extensions
+<!--3555909, 8116426, & 9561090-->
+
+Configuration Manager now supports a new style of console extensions that have the following benefits:
+
+1. Centralized management of console extensions for the site from the console instead of manually placing binaries on individual consoles.
+1. A clear separation of console extensions from different extension providers.
+1. The ability for admins to have more control over which console extensions are loaded and used in the environment, to keep them more secure.
+1. A hierarchy setting that allows for only using the new style of console extension.
+
+The old style of console extensions may start being phased out in favor of the new style, which is more secure and centrally managed.
+
+For more information, see [Console extensions for Configuration Manager](../../servers/manage/admin-console-extensions.md).
 
 ### Add a report as a favorite
 
