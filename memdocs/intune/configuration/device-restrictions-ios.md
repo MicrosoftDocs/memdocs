@@ -505,7 +505,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Required password type**: Enter the required password complexity level your organization requires. Your options:
   - **Device default**
-  - **Numeric**: Password must only be numbers, such as 123456789.
+  - **Numeric**: Password is not required to contain Alphabetic characters. It may only be numbers, such as 123456789.
   - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
 
   > [!NOTE]
