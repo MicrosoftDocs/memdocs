@@ -50,7 +50,7 @@ Review the following information before you start syncing and assigning apps fro
 - You must have signed up for an account on the Microsoft Store for Business.
 - Once you have associated a Microsoft Business Store account with Intune, you cannot change to a different account in the future.
 - Apps purchased from the store cannot be manually added to or deleted from Intune. They can only be synchronized with the Microsoft Store for Business.
-- Both online and offline licensed apps that you have purchased from the Microsoft Store for Business are synced into the Intune portal. You can then deploy these apps to device groups or user groups.
+- Both online and offline licensed apps that you have purchased from the Microsoft Store for Business are synced into Intune. You can then deploy these apps to device groups or user groups.
 - Online app installations are managed by the store.
 - Offline apps that are free of charge can also be synced to Intune. These apps are installed by Intune, not by the store.
 - To use this capability, devices must be joined to Active Directory Domain Services, Azure AD joined, or workplace-joined.
