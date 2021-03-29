@@ -269,11 +269,14 @@ Choose **Yes** to display a notification for deployments available for less than
 
 ### Disable deadline randomization
 
-After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled.  
+After the deployment deadline, this setting determines whether the client uses an activation delay of up to two hours to install required software updates. By default, the activation delay is disabled. 
 
 For virtual desktop infrastructure (VDI) scenarios, this delay helps distribute the CPU processing and data transfer for a host machine with multiple virtual machines. Even if you don't use VDI, having many clients installing the same updates at the same time can negatively increase CPU usage on the site server. This behavior can also slow down distribution points, and significantly reduce the available network bandwidth.  
 
 If clients must install required software updates at the deployment deadline without delay, then configure this setting to **Yes**.
+
+> [!IMPORTANT]
+> Disabling randomization only applies to manual software update deployments. The setting doesn't apply to automatic deployment rules for software updates or for other deployments such as applications. <!--9388804-->
 
 ### Grace period for enforcement after deployment deadline (hours)
 

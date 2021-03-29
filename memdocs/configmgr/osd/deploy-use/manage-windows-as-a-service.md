@@ -205,8 +205,7 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
 
             > [!NOTE]
             > The actual installation deadline time is the displayed deadline interval plus a random amount of time up to 2 hours. This randomization reduces the potential impact of all clients in the collection installing the upgrade at the same time.
-            >
-            > To disable the installation randomization delay for required updates, configure the **Computer Agent** client setting **Disable deadline randomization**. For more information, see [About client settings: Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).
+
 
         - **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](../../core/clients/deploy/about-client-settings.md#grace-period-for-enforcement-after-deployment-deadline-hours).
 
