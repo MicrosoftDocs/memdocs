@@ -290,12 +290,6 @@ You can now access the top CMPivot queries shared in the Community hub from on-p
 
 For more information, see [Changes to CMPivot in version 2103](../../servers/manage/cmpivot-changes.md#bkmk_2103).
 
-### Community hub support for application content
-
-<!--7983035-->
-
-This release continues to iterate on the scenario to share apps via the [Community hub](../../servers/manage/community-hub.md). Previously you could share just the definition of the app. Another hub user could download the app's XML metadata, and create it in their site. But to actually deploy the app, they would then need to locate the app's content.
-
 ## Configuration Manager console
 
 ### Centralized management of console extensions
