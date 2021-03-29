@@ -62,6 +62,8 @@ When you configure clients to use the Connected Cache server, they no longer req
 
   - Starting in version 2002, the Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 
+  - Don't use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
+
 - Clients running Windows 10 version 1709 or later
 
 ## Enable Connected Cache
