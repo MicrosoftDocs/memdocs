@@ -82,8 +82,8 @@ To view the Company Portal logs from your work profile, you must have access to 
 5. Tap the menu > **Show internal storage.** 
     * The setting name may vary between apps.  
     * Make sure you're viewing the internal storage for your device. If you don't see any folders appear, tap the app menu and then tap your device name to switch to your device's storage.  
-6. From your files, tap **Android** > **data** > **com.microsoft.windowsintune.companyportal\files\ > **Files**.   
+6. From the list of files, tap **Android** > **data** > **com.microsoft.windowsintune.companyportal\files** > **Files**.   
 
 ## Next steps  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
