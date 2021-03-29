@@ -32,7 +32,7 @@ ms.collection:
 
 # Upload and email logs  
 
-If you experience a problem in the Company Portal or Microsoft Intune app, you can email the details of the problem to your company support person. These details will provide them with additional context about the problem.  
+If you experience a problem in the Company Portal or Microsoft Intune app, you can email the details of the problem to your company support person. These details will give them more context about the problem.  
 
 The actual error details are kept on your device in a special document called a _diagnostic log_. When you upload the logs to the Company Portal or Microsoft Intune app, they're first sent to the Microsoft developers that work on the app. They use the logs to improve the app's functionality and prevent future errors. An incident ID for your specific error is then provided to you to share with your company support person, for use in Microsoft Support cases. 
 
@@ -75,7 +75,7 @@ This article describes how to send app logs from the Company Portal and Microsof
 ## Access logs from work profile  
 To view the Company Portal logs from your work profile, you must have access to a file viewing app in the work profile.       
 
-1. Go to your work proile and open Company Portal.
+1. Go to your work profile and open Company Portal.
 2. Tap **Settings**.
 3. Tap **COPY LOGS**.
 4. Go back to your work profile and open a file viewing app.  
