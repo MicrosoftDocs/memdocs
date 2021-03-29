@@ -137,7 +137,7 @@ Before you begin to add and assign apps, consider the following points:
 - Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
 
 > [!IMPORTANT]
-> If you change the name of the app through the Intune portal after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
+> If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
 
 ## Cloud storage space
 All apps that you create by using the software installer installation type (for example, a line-of-business app) are packaged and uploaded to Intune cloud storage. A trial subscription of Intune includes 2 gigabytes (GB) of cloud-based storage that is used to store managed apps and updates. A full subscription does not limit the total amount of storage space.
