@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 03/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,7 +100,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](#microsoft-tunnel-updates) of Microsoft Tunnel.
 
    > [!IMPORTANT]
-   > **For the U.S. government cloud**, the command line must reference the governement cloud environement. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
+   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
 
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.
@@ -266,13 +266,25 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
-### January 19, 2021
+### March 29, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7ff81ebec9d129558cf07ba1d044d4051dbfaf9eb75cc91500a11f4ef0cb447e
+
+- **serverImageDigest**: sha256:56dc303c67735bad243b2dc8644cc3d1e5318aa963be05a9a685ec6bcbb41c4e
+
+Changes in this release:
+
+- Minor bug fixes and enhancements
+
+- ### January 19, 2021
 
 Image hash values:
 
 - **agentImageDigest**: sha256:227557e71b197c5c26baeed7633e5f89b476bbb8eb23fc82dec260890d5145f1
 
-- **serverImageDigest**:  sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
+- **serverImageDigest**: sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
 
 Changes in this release:
 
@@ -285,7 +297,7 @@ Image hash values:
 
 - **agentImageDigest**: sha256:ba48de2c746a68286d15985f807702c60004131368a4a6a50ceab0f04653031a
 
-- **serverImageDigest**:  sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
+- **serverImageDigest**: sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
 
 Changes in this release:
 
@@ -298,7 +310,7 @@ Image hash values:
 
 - **agentImageDigest**: sha256:d168e416591d94d6a02b64e5dde8709e2d5a44261d67036caafcb55b12912ca5
 
-- **serverImageDigest**:  sha256:8b50257a94b9825915cb6a77ed49cfb3e5c6f68da9ae0272cdf8e49cff3d342e
+- **serverImageDigest**: sha256:8b50257a94b9825915cb6a77ed49cfb3e5c6f68da9ae0272cdf8e49cff3d342e
 
 Changes in this release:
 
@@ -309,6 +321,8 @@ Changes in this release:
 
 The initial public preview release of Microsoft Tunnel.
 
+<!-- Archive of past releases
+-->
 ## Next steps
 
 [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  
