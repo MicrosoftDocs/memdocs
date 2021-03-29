@@ -301,7 +301,7 @@ This release continues to iterate on the scenario to share apps via the [Communi
 ### Centralized management of console extensions
 <!--3555909, 8116426, & 9561090-->
 
-Configuration Manager now supports for a new style of console extensions that have the following benefits:
+Configuration Manager now supports a new style of console extensions that have the following benefits:
 
 1. Centralized management of console extensions for the site from the console instead of manually placing binaries on individual consoles.
 1. A clear separation of console extensions from different extension providers.
