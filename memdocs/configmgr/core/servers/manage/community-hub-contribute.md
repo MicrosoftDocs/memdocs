@@ -2,7 +2,7 @@
 title: Contribute to the Community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager Community hub
-ms.date: 03/02/2021
+ms.date: 03/26/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -14,6 +14,8 @@ manager: dougeby
 
 # Contribute to the Community hub
 <!--3555935, 3555936-->
+*Applies to: Configuration Manager (current branch)*
+
 [Community hub](community-hub.md) fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the Configuration Manager community:  
 
 [!INCLUDE [Community hub object type information](includes/community-hub-object-types.md)]
@@ -21,6 +23,8 @@ manager: dougeby
 ## Prerequisites
 
 - All [Community hub prerequisites and permissions](community-hub.md#prerequisites)
+- Configuration Manager version 2010 or later
+- Install the Microsoft Edge [WebView2 extension](community-hub.md#bkmk-hub-os) for the Configuration Manager console.  <!--9598183-->
 - A [GitHub](https://github.com) account
   - A GitHub account is only required to contribute and share content from the **Your hub** page.
   - If you don't already have a GitHub account, you can create one before you join.
