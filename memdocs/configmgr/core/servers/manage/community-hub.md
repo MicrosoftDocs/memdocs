@@ -14,6 +14,7 @@ manager: dougeby
 
 # Community hub and GitHub
 <!--3555935, 3555936-->
+*Applies to: Configuration Manager (current branch)*
 
 The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Community hub** in Configuration Manager where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
 
@@ -34,7 +35,8 @@ Community hub supports the following objects:
    - .NET Framework version 4.6 or higher
      - .NET Framework version 4.6.2 or higher is required starting in Configuration Manager 2010
    - Windows 10 build 17110 or higher
-      - Windows Server isn't supported prior to version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server. For more information, see [Community hub on Windows Server operating systems](#bkmk_hub_os). <!--3555940, 8625943, 8717639 -->
+      - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
+      - Starting in version 2010, [install the Microsoft Edge WebView2 console extension](#bkmk_webview2) to support Windows Server. <!--3555940, 8625943, 8717639 -->
    - The logged-in user account can't be the built-in administrator account
 
 - The [administration service](../../../develop/adminservice/set-up.md) in Configuration Manager needs to be set up and functional.
@@ -42,6 +44,8 @@ Community hub supports the following objects:
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
 - A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information, see [Contribute to Community hub](community-hub-contribute.md).
+   > [!IMPORTANT]
+   > Configuration Manager versions 2006 and earlier won't be able to sign in to GitHub. Configuration Manager version 2010 or later with the [WebView2 console extension installed](#bkmk_webview2) are required for sign in. <!--9598183-->
 
 ## Permissions
 
@@ -101,11 +105,20 @@ Since the content is *open-source* style content, admins should always review wh
 1. Go back to **Hierarchy Settings** and select another option such as **Display all content, including unreviewed content**.
 1. Confirm that only the type of content is displayed and able to be downloaded from the Community hub, that matches the corresponding hierarchy setting category.
 
-## <a name="bkmk_hub_os"></a> Community hub on Windows Server operating systems
+## <a name="bkmk_webview2"></a> Install the WebView2 console extension
 <!--3555940, 8625943, 8717639 -->
 *(Introduced in version 2010)*
 
-Starting in Configuration Manager version 2010, You can now display the **Community hub** on Windows Server operating systems. Follow the instructions below to enable Windows Server 2012 and later to load the Community hub:
+Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console extension enables the full functionality for Community hub. The WebView2 console extension enables the following functionality in Community hub:
+
+- Displays the **Community hub** on Windows Server operating systems
+- Enables sign in for GitHub
+   - GitHub sign-in is needed for [contributing to Community hub](community-hub-contribute.md) but not for downloading items.
+
+> [!IMPORTANT]
+> Configuration Manager versions 2006 and earlier can't sign in to GitHub or view Community hub on Windows Server, but can still download items.
+
+Follow the instructions below to enable the full functionality of Community hub:
 
 1. In the upper-right corner of the console, select the bell icon to display Configuration Manager console notifications.
 
@@ -124,11 +137,15 @@ Starting in Configuration Manager version 2010, You can now display the **Commun
    - You may also notice that a new folder `AdminConsole\bin\Microsoft.WebView2.FixedVersionRuntime.<version>.x86` was created.
    - The files are automatically downloaded from https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section with the other redistributable files.
 
+> [!Tip]
+> Starting in Configuration Manager version 2103, you can also install the WebView2 extension from the **Console Extensions** node. For more information, see [Install an extension on a local console](admin-console-extensions.md#bkmk_local_install).
+
 ## <a name="bkmk_known"></a> Known issues
 
 ### Community hub doesn't load
 <!--9561090-->
-The Community hub may not load, or load after a long delay if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see [Managing console extension](admin-console-extensions.md).
+The Community hub may not load, or load after a long delay if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see the [Install the WebView2 console extension](#bkmk_webview2) and [Managing console extensions (starting in version 2103)](admin-console-extensions.md).
+
 ### Unable to access Community hub node when running console as a different user
 <!--7826897-->
 If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.

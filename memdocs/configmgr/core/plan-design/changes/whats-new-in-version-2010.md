@@ -301,7 +301,7 @@ For more information, see [Community hub](../../servers/manage/community-hub.md#
 <!--3555940, 8625943, 8717639 -->
 You can now display the Community hub on Windows Server operating systems. The Configuration Manager console will notify you to install the console extension to enable Windows Server 2012 and later to load the Community hub.
 
-For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_hub_os).
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_webview2).
 
 ### Product feedback
 

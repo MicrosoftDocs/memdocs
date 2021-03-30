@@ -40,7 +40,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 > [!NOTE]
 > The WebView2 console extension is approved by default to enable using Community hub. The files are automatically downloaded from `https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section` with the other redistributable files.
 
-## Install and test an extension on a local console
+## <a name="bkmk_local_install"></a> Install and test an extension on a local console
 
 1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension. Changing the security scope is recommended for initial testing of an extension.
    1. Go to the **Console Extensions** node under **Administration** > **Overview** > **Updates and Servicing**.

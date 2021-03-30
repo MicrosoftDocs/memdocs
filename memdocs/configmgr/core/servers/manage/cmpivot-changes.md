@@ -14,6 +14,8 @@ manager: dougeby
 
 # Changes to CMPivot
 
+*Applies to: Configuration Manager (current branch)*
+
 Use the following information to learn about changes made to [CMPivot](cmpivot.md) between Configuration Manager versions:
 
 ## <a name="bkmk_2103"></a> CMPivot changes for version 2103
@@ -45,11 +47,12 @@ Starting in version 2103, you can access the top CMPivot queries shared in the C
 
    > [!NOTE]
    > These queries are available when you run CMPivot from the Configuration Manager console. They're not yet available from [standalone CMPivot](cmpivot.md#install-cmpivot-standalone). <!--9442715, 9310040, 9391017-->
+
 #### Prerequisites:
 - Meet all of the [CMPivot prerequisites and permissions](cmpivot.md#prerequisites)
 - Enable [Community hub](community-hub.md). You don't need a GitHub account to download content.
 - Verify which [content categories are displayed](community-hub.md#bkmk_category) for community hub
-- Install the Microsoft Edge WebView2 runtime extension from the [Configuration Manager console notification](community-hub.md#bkmk_hub_os)
+- Install the Microsoft Edge WebView2 extension from the [Configuration Manager console notification](community-hub.md#bkmk_webview2)
 
 #### Use CMPivot to access the top Community hub queries
 
