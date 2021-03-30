@@ -36,7 +36,7 @@ Community hub supports the following objects:
      - .NET Framework version 4.6.2 or higher is required starting in Configuration Manager 2010
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
-      - Starting in version 2010, install the Microsoft Edge WebView2 console extension to support Windows Server. For more information, see [Install the WebView2 console extension](#bkmk_webview2). <!--3555940, 8625943, 8717639 -->
+      - Starting in version 2010, [install the Microsoft Edge WebView2 console extension](#bkmk_webview2) to support Windows Server. <!--3555940, 8625943, 8717639 -->
    - The logged-in user account can't be the built-in administrator account
 
 - The [administration service](../../../develop/adminservice/set-up.md) in Configuration Manager needs to be set up and functional.
@@ -45,7 +45,7 @@ Community hub supports the following objects:
 
 - A GitHub account is only required to contribute and share content from the **Your hub** page. If you don't wish to share, you can use contributions from others without having a GitHub account, For more information, see [Contribute to Community hub](community-hub-contribute.md).
    > [!IMPORTANT]
-   > Configuration Manager versions 2006 and earlier won't be able to sign in to GitHub. Configuration Manager version 2010 or later with the WebView2 console extension installed are required for sign in. For more information, see [Install the WebView2 console extension](#bkmk_webview2).<!--9598183-->
+   > Configuration Manager versions 2006 and earlier won't be able to sign in to GitHub. Configuration Manager version 2010 or later with the [WebView2 console extension installed](#bkmk_webview2) are required for sign in. <!--9598183-->
 
 ## Permissions
 
@@ -115,7 +115,10 @@ Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console exte
 - Enables sign in for GitHub
    - GitHub sign-in is needed for [contributing to Community hub](community-hub-contribute.md) but not for downloading items.
 
-Configuration Manager versions 2006 and earlier can't sign in to GitHub or view Community hub on Windows Server, but can still download items. Follow the instructions below to enable the full functionality of Community hub:
+> [!IMPORTANT]
+> Configuration Manager versions 2006 and earlier can't sign in to GitHub or view Community hub on Windows Server, but can still download items.
+
+Follow the instructions below to enable the full functionality of Community hub:
 
 1. In the upper-right corner of the console, select the bell icon to display Configuration Manager console notifications.
 
