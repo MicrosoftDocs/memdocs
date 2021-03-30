@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/04/2021  
+ms.date: 03/19/2021  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -41,6 +41,9 @@ After your profile is set up, your organization will manage the work-side of it,
 Find out more about [what happens when you create a work profile](what-happens-when-you-create-a-work-profile-android.md).
 
 ## Create work profile and enroll device
+
+> [!NOTE]
+> To create a work profile on your device, you must be using the primary user account on your device. Creating a work profile on a secondary user account is not supported. 
 
 1. Open the Company Portal app and sign in with your work or school account. If you haven't installed the free app, install it from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
 
@@ -87,7 +90,9 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Example image of Company Portal menu, highlighting Get Apps link.](./media/updated-drawer-android-2005.png) 
 
+## Android Enterprise availability 
 
+Work profile setup is supported in [countries and regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910) (opens Google Support website). Company Portal can't set up a work profile on your device if you're outside these areas. If Android Enterprise isn't available in your country or region, ask your support person for other ways to access work resources.  
 
 ## Next steps  
 

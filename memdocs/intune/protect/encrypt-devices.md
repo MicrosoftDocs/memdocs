@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2021
+ms.date: 03/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -126,7 +126,7 @@ A device must meet the following conditions to be eligible for silently enabling
 
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
 - If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
-- The device must be Azure AD Joined
+- The device must be Azure AD Joined or Hybrid Azure AD Joined.
 - Device must contain TPM (Trusted Platform Module) 2.0
 - The BIOS mode must be set to Native UEFI only. 
 
@@ -201,3 +201,4 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 - [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
 - [Monitor disk encryption](../protect/encryption-monitor.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

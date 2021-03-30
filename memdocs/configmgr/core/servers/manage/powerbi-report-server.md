@@ -51,7 +51,7 @@ This process varies depending upon whether you already have this role in the sit
 
 Only use this process if you already have a reporting services point in the site. Do all steps of this process on the same server:
 
-1. In **Reporting Server Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. In **Reporting Services Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > If you skip this step, you'll lose access to any custom reports in SQL Server Reporting Services.
@@ -66,7 +66,7 @@ Only use this process if you already have a reporting services point in the site
 
     1. Use the previous report server database.
 
-    1. Use **Reporting Server Configuration Manager** to restore the **Encryption Keys**.
+    1. Use **Reporting Services Configuration Manager** to restore the **Encryption Keys**.
 
     > [!TIP]
     > Before you add the reporting services point role in Configuration Manager, use SQL Server Reporting Services Configuration Manager to test and verify the configuration. For more information, see [Verify SQL Server Reporting Services installation](configuring-reporting.md#verify-sql-server-reporting-services-installation).<!-- MEMDocs #713 -->
@@ -151,7 +151,7 @@ Using [Community hub](community-hub.md), you can share Power BI report templates
 1. Repeat the steps for any other report templates that were downloaded. When you're done, close Microsoft Power BI Desktop (Optimized for Power BI Report Server).
 ## Known issues
 
-There's a known issue with Power BI Report Server and email subscriptions. After you configure the email settings in the Reporting Server Configuration Manager, when you try to create a new subscription, the option to deliver a report by **Email** isn't available. To work around this issue, restart the Power BI Report Server service.<!-- 7698019 -->
+There's a known issue with Power BI Report Server and email subscriptions. After you configure the email settings in the Reporting Services Configuration Manager, when you try to create a new subscription, the option to deliver a report by **Email** isn't available. To work around this issue, restart the Power BI Report Server service.<!-- 7698019 -->
 
 ## Next steps
 

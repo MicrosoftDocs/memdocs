@@ -4,7 +4,7 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 10/23/2020
+ms.date: 03/12/2020
 ms.author: brenduns
 ms.custom: include file
 ---
@@ -32,7 +32,6 @@ Manage [Endpoint detection and response policy settings for Configuration Manage
 
 - Windows 10 and later (x86, x64, ARM64)
 - Windows 8.1 (x84, x64)
-- Windows 7 SP1 (x84, x64)
 - Windows Server 2019 and later (x64)
+- Windows Server 2016 (x64)
 - Windows Server 2012 R2 (x64)
-- Windows Server 2008 R2 SP1 (x64)

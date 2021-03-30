@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 03/18/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: dudeso
+ms.reviewer: davidmeb; bryanke 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 With *Windows 10 feature updates* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1803 or version 1809. Intune supports setting a feature level of 1803 or later.
 
-Windows 10 feature updates policies work in conjunction with your *Windows 10 update ring* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
+Windows 10 feature updates policies work with your *Windows 10 update ring* policies to prevent a device from receiving a Windows feature version that’s later than the value specified in the feature updates policy.
 
 When a device receives a Windows 10 feature updates policy:
 
@@ -53,9 +53,14 @@ When a device receives a Windows 10 feature updates policy:
 
 Intune’s Windows 10 feature updates requires the following prerequisites:
 
+- In addition to a license for Intune, your organization must have one of the following subscriptions:
+  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+  - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+  - Windows Virtual Desktop Access E3 or E5
+
 - Devices must:  
   - Run Windows 10 version 1709 or later.
-  - Be enrolled in Intune MDM and be Hybrid AD joined, Azure AD joined, or Azure AD registered
+  - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
   - Have Telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
     Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy. The prerequisite to require Telemetry is under review as this feature moves towards general availability.
@@ -81,6 +86,8 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 - Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
 - While this feature is in preview and you co-manage devices with Configuration Manager, there is a limitation where feature updates policies might not immediately take effect. This delay can result in devices updating to a later feature update version than as configured policy.
+
+  For an alternative method to restrict the Windows 10 feature update versions that are offered to devices enrolled in Intune, see [Use the TargetReleaseVersion policy CSP to manage Windows 10 feature updates for co-managed devices](/troubleshoot/mem/intune/create-feature-update-hold-co-managed-devices). 
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 

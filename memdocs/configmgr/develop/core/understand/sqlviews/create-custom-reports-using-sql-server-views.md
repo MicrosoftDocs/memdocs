@@ -6,8 +6,6 @@ ms.date: 06/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
 ms:assetid: 5741ada8-449c-45af-85e1-2e68abf96440
 author: aczechowski
 ms.author: aaroncz
@@ -30,8 +28,6 @@ This document was created using Microsoft SQL Server 2012, Report Builder 3.0 an
 
 This section lists the changes that have been made since Configuration Manager 2007 for Configuration Manager reporting.
 
-## Changes made to reporting in Configuration Manager
-
 - Configuration Manager no longer uses the reporting point; the reporting services point is the only site system role that Configuration Manager now uses for reporting.
 
 - Full integration of the Configuration Manager 2007 R2 SQL Server Reporting Services solution: In addition to standard report management, Configuration Manager 2007 R2 introduced support for SQL Server Reporting Services reporting. Configuration Manager integrates the Reporting Services solution, adds new functionality, and removes standard report management as a reporting solution.
@@ -44,15 +40,9 @@ This section lists the changes that have been made since Configuration Manager 2
 
 - Reports in Configuration Manager are rendered in the locale of the installed Configuration Manager console. Subscriptions are rendered in the locale that SQL Server Reporting Services is installed. When you author a report, you can specify the assembly and expression.
 
-## Changes made to reporting in Configuration Manager SP1
-
-- Configuration Manager SP1 supports Microsoft SQL Server 2012 Reporting Services.
-
 - When Microsoft SQL Server 2012 or SQL Server 2008 R2 runs on the Reporting Services point, Configuration Manager opens Reporting Services Report Builder 3.0 when you create or modify reports. When Microsoft SQL Server 2008 runs on the Reporting Services point, Configuration Manager opens Reporting Services Report Builder 2.0 when you create or modify reports.
 
 - The **Monitoring** workspace in the Configuration Manager console now displays links to SQL Server Reporting Services Report Manager from the **Reporting** node.
-
-## Changes made to reporting in Configuration Manager
 
 - Configuration Manager reports are now fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles. For more information, see the [Planning for Role-Based Administration](../../../../core/servers/manage/planning-for-reporting.md#plan-for-role-based-administration) for Reports section in the  Planning for Reporting in Configuration Manager article in the Configuration Manager Documentation Library.
 

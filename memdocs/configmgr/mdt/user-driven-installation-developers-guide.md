@@ -44,7 +44,7 @@ User Driven Installation (UDI) helps simplify the deployment of Windows® client
 
  Figure 1 illustrates the relationship between the UDI Wizard Designer and the UDI Wizard.  
 
- ![UDIDevelopersGuide1](media/UDIDevelopersGuide1.jpg "UDIDevelopersGuide1")  
+ ![Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer](media/UDIDevelopersGuide1.jpg)
 Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer  
 
  **Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer**  
@@ -133,7 +133,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
      When completed, the folder structure beneath *local_folder* should look like the folder structure illustrated in Figure 2 (where *local_folder* is the folder you created earlier in the process and is shown as *UDIDevelopment* in the figure).  
 
-     ![UDIDevelopersGuide2](media/UDIDevelopersGuide2.jpg "UDIDevelopersGuide2")  
+     ![Figure 2. Folder structure for UDI development](media/UDIDevelopersGuide2.jpg)
 Figure 2. Folder structure for UDI development  
 
      **Figure 2. Folder structure for UDI development**  
@@ -2402,9 +2402,8 @@ __interface IDataNodes : IUnknown
 
 ### Table 42. HRESULT GetProperty  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|The property was retrieved.|  
 |**E_INVALIDARG**|The index is past the end of the array.|  
 
@@ -2768,9 +2767,8 @@ __interface IStringProperties : IUnknown
 
 ### Table 48. IHRESULT Get Property Value Results  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Property value is retrieved.|  
 |**E_INVALIDARG**|There is no property with the name you provided.|  
 

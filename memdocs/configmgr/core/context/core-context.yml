@@ -1,4 +1,7 @@
 ### YamlMime:ContextObject
+###
+### STOP! This is a context file used for contextual TOCs and should only be modified by members of the EMMDocs team. 
+###
 brand: ''
 breadcrumb_path: ../breadcrumb/TOC.yml
 toc_rel: ../TOC.yml

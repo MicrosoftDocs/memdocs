@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/12/2020
+ms.date: 03/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,9 +31,40 @@ After installation of Microsoft Tunnel, you can view the server configuration an
 
 ## Use the admin center UI
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to *Tenant administration* > *Microsoft Tunnel Gateway*, and select the **Health status** tab.
+Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to *Tenant administration* > *Microsoft Tunnel Gateway*, and select the **Health check** tab.
 
-While in preview, Health status only shows whether the server has connected in the last 5 minutes or not.  Future enhancements will add additional details.
+Select a server to view the following information about it:
+
+- **Last check-in** – When the Tunnel Gateway server last checked in with Intune.
+  - *Healthy* – The last check-in was within the last five minutes.
+  - *Unhealthy* – More than five minutes have passed since the last check-in.
+
+- **Current connections** – The number of unique connections that were active at the last server check-in.
+  - *Healthy* – There were 4,990 or fewer connections
+  - *Unhealthy* – There were more than 4,990 active connections
+
+- **Throughput** – The megabits bits per second of traffic passing through the Tunnel Gateway NIC at the last server check-in.
+
+- **CPU usage** – The average CPU use by the Tunnel Gateway server every five minutes.
+  - *Healthy* - 95% or less
+  - *Warning* - 96% to 99%
+  - *Unhealthy* - 100% use
+  
+
+- **Memory usage** – The average memory use by the Tunnel Gateway server every 5 minutes.
+  - *Healthy* - 95% or less
+  - *Warning* - 96% to 99%
+  - *Unhealthy* - 100% use
+
+- **Latency** – The average amount of time it takes for IP packets to arrive and then exit the network interface.
+  - *Healthy* - Less than 10 milliseconds
+  - *Warning* - 10 milliseconds to 20 milliseconds
+  - *Unhealthy* - More than 20 milliseconds
+
+- **TLS certificate** - The number of days until the TLS certificate that secures traffic between clients and the Tunnel Gateway server will expire.
+  - *Healthy* - More than 30 days
+  - *Warning* - 30 days or less
+  - *Unhealthy* - The certificate is expired
 
 ## Use mst-cli command-line tool
 
@@ -43,7 +74,7 @@ For more information and command-line examples, see [mst-cli command-line tool f
 
 ## View Microsoft Tunnel logs
 
-Beginning in October 2020, Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. You can view the log entries by using the **journalctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:
+Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. To view log entries, use the **journalctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:
 
 - **ocserv** -  Display server logs.
 - **mstunnel-agent**: Display agent logs.
@@ -53,7 +84,7 @@ For example, to view information for only the tunnel server, run `journalctl -t 
 
 You can add  `-f` to the command to display an active and continuing view of the log file.   For example, to actively monitor ongoing processes for Microsoft Tunnel, run `journalctl -t mstunnel_monitor -f`.
 
-Additional options for *journalctl*:
+More options for *journalctl*:
 
 - `journalctl -h` – Display command help for *journalctl*.
 - `man journalctl` – Display additional information.

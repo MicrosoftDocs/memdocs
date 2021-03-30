@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -51,9 +51,9 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
 
 - **Shared PC mode**: **Enable** turns on shared PC mode. In this mode, only one user signs in to the device at a time. Another user can't sign in until the first user signs out. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Guest account**: Choose to create a Guest option on the sign-in screen. Guest accounts don't require any user credentials or authentication. This setting creates a new local account each time it's used. Your options:
-  - **Guest**: Creates a guest account locally on the device.
-  - **Domain**: Creates a guest account in Azure Active Directory (AD).
-  - **Guest and domain**: Creates a guest account locally on the device, and in Azure Active Directory (AD).
+  - **Guest**: Only allows a local guest account to sign in to the device.
+  - **Domain**: Only allows an Azure Active Directory (AD) domain account to sign in to the device.
+  - **Guest and domain**: Allows a local guest account, or an Azure Active Directory (AD) domain account to sign in to the device.
 - **Account management**: Choose if accounts are automatically deleted. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Enabled**: Accounts created by guests, and accounts in AD and Azure AD are automatically deleted from the devices. When a user signs off the device, or when system maintenance runs, these accounts are removed from the devices.
@@ -75,13 +75,13 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
 
 - **Local Storage**: With local storage, users can save and view files on the device's hard drive. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
-  - **Enabled**: Prevents users from saving and viewing files on the device's hard drive.
-  - **Disabled**: Allows users to see and save files locally using File Explorer.
+  - **Enabled**: Allows users to see and save files locally using File Explorer.
+  - **Disabled**: Prevents users from saving and viewing files on the device's hard drive.
 
 - **Power Policies**: Allow or prevent users from changing the power settings. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
-  - **Enabled**: Users can't turn off hibernate, can't override all sleep actions (such as closing the lid), and can't change the power settings.
-  - **Disabled**: Users can hibernate the device, can close the lid to sleep the device, and change the power settings.
+  - **Enabled**: Users can hibernate the device, can close the lid to sleep the device, and change the power settings.
+  - **Disabled**: Users can't turn off hibernate, can't override all sleep actions (such as closing the lid), and can't change the power settings.
 
 - **Sleep time out (in seconds)**: Enter the number of inactive seconds (0-18000) before the device goes into sleep mode. `0` means the device never sleeps. If you don't set a time, the device goes to sleep after 3600 seconds (60 minutes).
 

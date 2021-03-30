@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -169,14 +169,14 @@ These settings use the [accounts policy CSP](/windows/client-management/mdm/poli
 > [!IMPORTANT]
 > Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Azure AD. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md) (previously called white glove). Typically, users are shown an Azure AD sign in window. When these settings are set to **Block** or **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
-- **Microsoft account**: **Block** prevents users from associating a Microsoft account with the device. **Block** may also impact some enrollment scenarios that rely on users to complete the enrollment process. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and using a Microsoft account.
+- **Microsoft account**: **Block** prevents users from associating a Microsoft account with the device. **Block** may also affect some enrollment scenarios that rely on users to complete the enrollment process. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and using a Microsoft account.
 - **Non-Microsoft account**: **Block** prevents users from adding non-Microsoft accounts using the user interface. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add email accounts that aren't associated with a Microsoft account.
 - **Settings synchronization for Microsoft account**: **Block** prevents device and app settings associated with a Microsoft account to synchronize between devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this synchronization.
 - **Microsoft Account sign-in assistant**: This OS service allows users to sign in to their Microsoft account. By default, the OS might allow users to start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service.
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow users to start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service.
   - **Disabled**: Sets the Microsoft Sign-in Assistant service (wlidsvc) to Disabled, and prevents users from manually starting it.
 
-      **Disable** may also impact some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 
@@ -210,6 +210,9 @@ These settings use the [EnterpriseCloudPrint policy CSP](/windows/client-managem
       [Settings policy CSP](/windows/client-management/mdm/policy-csp-settings)
 
   - **Gaming**: **Block** prevents access to the Gaming area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+    [Settings/PageVisibilityList CSP](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)
+
   - **Ease of Access**: **Block** prevents access to the Ease of Access area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Privacy**: **Block** prevents access to the Privacy area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Update and Security**: **Block** prevents access to the Update & Security area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -336,12 +339,12 @@ These settings use the [messaging policy CSP](/windows/client-management/mdm/pol
 - **MMS (mobile only)**: **Block** disables MMS send and receive functionality on the device. For enterprises, use this policy to disable MMS on devices as part of the auditing or management requirement. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow MMS send and receive.
 - **RCS (mobile only)**: **Block** disables Rich Communication Services (RCS) send and receive functionality on the device. For enterprises, use this policy to disable RCS on devices as part of the auditing or management requirement. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow RCS send and receive.
 
-## Microsoft Edge Browser
+## Microsoft Edge Legacy (Version 45 and older)
 
 These settings use the [browser policy CSP](/windows/client-management/mdm/policy-csp-browser), which also lists the supported Windows editions.
 
 > [!NOTE]
-> Using the browser policy CSP applies to Microsoft Edge version 45 and earlier. For Microsoft Edge Enterprise version 77 and later, see [Configure Microsoft Edge policy settings with Microsoft Intune](/DeployEdge/configure-edge-with-intune).
+> Using the browser policy CSP applies to Microsoft Edge version 45 and older. For Microsoft Edge version 77 and newer, see [Configure Microsoft Edge policy settings in Microsoft Intune](administrative-templates-configure-edge.md).
 
 ### Use Microsoft Edge kiosk mode
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/26/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -69,17 +69,34 @@ For devices that run Android, you can use Intune policy to modify the configurat
 
 ## Prerequisites
 
-To use Microsoft Defender for Endpoint with Intune, be sure you have the following configured, and ready for use:
+**Subscriptions**:  
+To use Microsoft Defender for Endpoint with Intune, you must have the following subscriptions: 
 
-- A [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) subscription, which provides you access to the Microsoft Defender Security Center (ATP portal)
-- Licensed tenant for Enterprise Mobility + Security E3 and Windows E5 (or Microsoft 365 Business Premium)
-- Microsoft Intune environment, with [Intune managed](../enrollment/windows-enroll.md), running one of the following: 
-  - Android
-  - iOS/iPadOS
-  - Windows 10 (Hybrid Azure Active Directory Joined or Azure Active Directory Joined)
+- **Microsoft Defender for Endpoint** - This subscription provides you access to the Microsoft Defender Security Center (ATP portal).  
 
-> [!NOTE]
-> Microsoft Defender for Endpoint is not supported with Intune app protection policies. See [Microsoft Defender for Android system requirements](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#system-requirements) to see which management modes are supported. 
+  Common options that include a Microsoft Defender for Endpoint license:
+  - Microsoft 365 E5
+  - Windows 10 Enterprise E5 (*This license is included with Microsoft 365 E5*)
+
+  For more information, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements).
+
+- **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Endpoint Manager admin center.
+
+  Common options that include a Microsoft Intune license:
+  - Microsoft 365 Business Premium
+  - Microsoft 365 E3
+  - Microsoft 365 E5
+  - Enterprise Mobility + Security E3
+  - Enterprise Mobility + Security E5
+
+  For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md).
+
+**Devices managed with Intune**:  
+The following platforms are supported for Intune with Microsoft Defender for Endpoint:
+
+- Android
+- iOS/iPadOS
+- Windows 10 (Hybrid Azure Active Directory Joined or Azure Active Directory Joined)
 
 ## Next steps
 
