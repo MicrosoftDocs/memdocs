@@ -29,6 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Use custom settings for macOS devices in Microsoft Intune
 
+> [!IMPORTANT]
+> Custom configuration profiles should not be used for sensitive information, such as WiFi or credential profiles. Use standard profiles that do not contain credentials or certificates to deliver sensitive profiles. 
+
 Using Microsoft Intune, you can add or create custom settings for your macOS devices using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 When using macOS devices, there are two ways to get custom settings into Intune:
