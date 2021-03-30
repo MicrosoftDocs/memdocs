@@ -46,9 +46,8 @@ The **Wipe** action restores a device to its factory default settings. The user 
 |**Wipe**| Not checked | Yes | Wipes all user accounts, data, MDM policies, and settings. Resets the operating system to its default state and settings.|
 |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
 
-
 > [!NOTE]
-> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](https://docs.microsoft.com/en-us/mem/intune/enrollment/ios-user-enrollment)
+> The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
@@ -157,6 +156,15 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
 
 If the device is on and connected, the **Retire** action propagates across all device types in less than 15 minutes.
+
+## Manually un-enroll devices
+
+Device owners can manually un-enroll their devices as explained in the following end user help articles:
+
+- [Remove device from Company Portal for Android](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android.md)
+- [Remove device from Company Portal for iOS app](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-ios.md)
+- [Remove device from Company Portal for macOS app](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos.md)
+- [Remove your Windows device from management](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-windows.md)
 
 ## Delete devices from the Intune portal
 
