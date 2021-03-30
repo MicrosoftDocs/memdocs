@@ -76,9 +76,10 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 ## Supported volume
 
 - Maximum enrollment profiles per token: 1,000.  
-- Maximum Automated Device Enrollment devices per profile: Same as the maximum number of devices per token.
+- Maximum Automated Device Enrollment devices per profile: Same as the maximum number of devices per token (200,000 devices per token).
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000.
-- Maximum Automated Device Enrollment devices per token: We recommend that you don't exceed 60,000 devices per token. Otherwise you might have sync problems. If you have more than 60,000 devices, split the devices into multiple ADE tokens.
+- Maximum Automated Device Enrollment devices per token: We recommend that you don't exceed 200,000 devices per token. Otherwise you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.
+    - About 3,000 devices per minute sync from ABM/ASM over to Intune. We recommend that you wait to manually sync again from the admin console until enough time has passed for all of the devices to sync over (total number of devices/3,000 devices per minute).
 
 ## Get an Apple Automated Device Enrollment token
 
@@ -202,7 +203,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     >
     > For more information on enrolling iOS/iPadOS devices, see [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
-7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (**Intune** > **Client Apps**). 
+7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**). 
  
    To ensure that user interaction isn't required, you'll probably want to make Company Portal an iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for Company Portal. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID. 
 

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 2/3/2021
+ms.date: 3/24/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -42,6 +42,8 @@ For personally-owned work profile devices, there are two recommended security co
 
 > [!Note]
 > Because of the settings available for personally-owned work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
+
+Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## Personally-owned work profile basic security
 
@@ -97,7 +99,7 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | Work profile settings | Face unlock | Not configured ||
 | Work profile settings | Fingerprint unlock | Not configured ||
 | Work profile settings | Iris unlock | Not configured ||
-| Work profile settings | Smart Lock and other trust agents | Not configured |||
+| Work profile settings | Smart Lock and other trust agents | Not configured ||
 | Device password | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
 | Device password | Maximum minutes of inactivity until screen locks | 5 | Organizations may need to update this setting to match their password policy. |
 | Device password | Number of sign-in failures before wiping device | 10 | This setting triggers a work profile wipe, and not a wipe of the device. |

@@ -549,7 +549,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
   - **Auto grant**
   - **Auto deny**
 
-  You can also use an app configuration policy to grant permissions for individual apps (**Client Apps** > **App configuration policies**).
+  You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
 
 - **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the personally owned work profile. For example, when you deploy the Gmail app into an Android personally owned work profile, you can prevent users from adding or removing accounts in this personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the personally owned work profile.  
 
