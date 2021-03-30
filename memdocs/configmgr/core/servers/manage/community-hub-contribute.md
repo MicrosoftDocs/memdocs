@@ -24,7 +24,7 @@ manager: dougeby
 
 - All [Community hub prerequisites and permissions](community-hub.md#prerequisites)
 - Configuration Manager version 2010 or later
-- Install the Microsoft Edge [WebView2 extension](community-hub.md#bkmk-hub-os) for the Configuration Manager console.  <!--9598183-->
+- Install the Microsoft Edge [WebView2 extension](community-hub.md#bkmk_webview2) for the Configuration Manager console.  <!--9598183-->
 - A [GitHub](https://github.com) account
   - A GitHub account is only required to contribute and share content from the **Your hub** page.
   - If you don't already have a GitHub account, you can create one before you join.
