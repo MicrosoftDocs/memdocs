@@ -134,7 +134,7 @@ You can create multiple deployments of the same policy. To view additional infor
 >
 > You can use RDP to remotely connect to the console session of the device with the `/admin` switch. For example: `mstsc.exe /admin /v:<IP address of device>`
 >
-> A _console session_ is a remote connection that's the same as if you're sitting at the physical console of the computer.
+> A _console session_ is either when you're at the computer's physical console, or a remote connection that's the same as if you're at the computer's physical console.
 
 Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
