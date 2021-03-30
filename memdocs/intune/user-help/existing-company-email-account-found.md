@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 03/30/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -37,7 +37,7 @@ Doing this allows your organization to set you up with an email profile that mee
 
 Complete the following steps to disconnect the existing account and update device settings. If you don't complete these steps, you may lose or have limited mobile access to your work account.
 
-1. On your device, go to **Settings** and find your connected accounts. On an iOS 11+ device, for example, you'd select **Password & Accounts**.
+1. On your device, go to **Settings** and find your connected accounts. On an device running iOS 14 and later, for example, select **Mail** > **Accounts**. 
  
 2. Select and remove the account that you've linked to your work email. 
 
