@@ -2,6 +2,11 @@
     "redirections": [
 
         {
+            "source_path": "memdocs/intune/user-help/send-logs-to-your-it-admin-using-cable-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        },  
+        {
             "source_path": "memdocs/intune/fundamentals/tutorial-walkthrough-intune-portal.md",
             "redirect_url": "/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager",
             "redirect_document_id": false
