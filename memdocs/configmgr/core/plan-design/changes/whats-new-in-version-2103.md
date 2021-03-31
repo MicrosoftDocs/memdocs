@@ -49,7 +49,7 @@ For more information, see [antivirus policies](../../../tenant-attach/deploy-ant
 
 ### Tenant attach: User discovery prerequisite simplification
 <!--8126836 -->
-The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid user account needs to be discovered by one of the following discovery methods instead of both:
+The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid user needs to be discovered by one of the following discovery methods instead of both:
 - Azure Active Directory user discovery
 - Active Directory user discovery
 
