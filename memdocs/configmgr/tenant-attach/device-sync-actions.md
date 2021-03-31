@@ -28,7 +28,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 - An Azure public cloud environment.
    - The **Upload to Microsoft Endpoint Manager admin center** option is disabled for Microsoft Azure China 21Vianet (Azure China Cloud) and Azure US Government Cloud. <!--8815787-->
 - The user accounts triggering device actions have the following prerequisites:
-   - The user account needs to be a synced user object in Azure AD (hybrid identity).
+   - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
      - For Configuration Manager version 2103, and later: </br>
    Has been discovered with either [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
      - For Configuration Manager version 2010, and earlier: </br>
