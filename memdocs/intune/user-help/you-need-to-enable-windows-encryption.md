@@ -31,7 +31,7 @@ ms.collection:
 ---
 # Turn on BitLocker encryption
 
-Your organization can require you to turn on BitLocker in an effort to keep your device and the data on it secure. Turning on BitLocker encrypts the data on the device and prevents unauthorized people from accessing it.  
+Your organization can require you to turn on BitLocker as a way to keep your device and the data on it secure. Turning on BitLocker encrypts the data on the device so that it's harder to steal, and it prevents unauthorized people from accessing it.  
 
 To turn on BitLocker:  
 
