@@ -48,6 +48,15 @@ When a tenant attached device is targeted with two or more antivirus policies, t
 
 For more information, see [antivirus policies](../../../tenant-attach/deploy-antivirus-policy.md#bkmk_exclusion).
 
+### Tenant attach: User discovery prerequisite simplification
+<!--8126836 -->
+The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid user account needs to be discovered by one of the following discovery methods instead of both:
+- Azure Active Directory user discovery
+- Active Directory user discovery
+
+For more information, see [Tenant attach prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+
+
 <!-- 
 ## Cloud-attached management
 
