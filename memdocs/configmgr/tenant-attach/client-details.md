@@ -29,7 +29,12 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 - One of the following browsers:
   - Microsoft Edge, version 77 and later
   - Google Chrome
-
+- The user accounts triggering device actions have the following prerequisites:
+   - The user account needs to be a synced user object in Azure AD (hybrid identity).
+     - For Configuration Manager version 2103, and later: </br>
+   Has been discovered with either [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
+      - For Configuration Manager version 2010, and earlier: </br>
+   Has been discovered with both [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 ## Permissions
 
 The user account accessing tenant attach features within the Microsoft Endpoint Manager admin center needs the following permissions:
