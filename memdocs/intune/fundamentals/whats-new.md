@@ -98,7 +98,7 @@ On macOS devices, you can use the Settings Catalog to configure Microsoft Edge v
 In this release:
 
 - More Microsoft Edge settings are added.
-- Temporarily, the setting categories are removed. To find a specific setting, use the **Microsoft Edge - All** category, or search for the setting name. For a list of settings, see  [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies.md).
+- Temporarily, the setting categories are removed. To find a specific setting, use the **Microsoft Edge - All** category, or search for the setting name. For a list of settings, see  [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies).
 
 For more information on the Settings Catalog, see [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
 
