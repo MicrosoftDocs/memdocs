@@ -42,11 +42,19 @@ The option, **An administrator must approve a request for this application on th
 For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_all).
 
 ### Tenant attach: Antivirus policy exclusions merge
-<!--9089764 -->
-
+<!--9089764-->
 When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
 
 For more information, see [antivirus policies](../../../tenant-attach/deploy-antivirus-policy.md#bkmk_exclusion).
+
+### Tenant attach: User discovery prerequisite simplification
+<!--8126836 -->
+The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid user needs to be discovered by one of the following discovery methods instead of both:
+- Azure Active Directory user discovery
+- Active Directory user discovery
+
+For more information, see [Tenant attach prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+
 
 <!-- 
 ## Cloud-attached management
