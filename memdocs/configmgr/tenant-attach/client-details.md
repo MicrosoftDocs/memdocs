@@ -2,7 +2,7 @@
 title: Tenant attach - ConfigMgr client details (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "View client details for Configuration Manager devices from the admin center."
-ms.date: 12/03/2020
+ms.date: 03/26/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -25,12 +25,10 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 ## Prerequisites
 
-- An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
+- All of the prerequisites for [Microsoft Endpoint Manager tenant attach](device-sync-actions.md) and a tenant attached environment.
 - One of the following browsers:
   - Microsoft Edge, version 77 and later
   - Google Chrome
-- The user account accessing tenant attach features within the **Microsoft Endpoint Manager admin center** must have been discovered with both [Azure Active Directory (Azure AD) user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
-  - Meaning the user account needs to be a synced user object in Azure.
 
 ## Permissions
 
