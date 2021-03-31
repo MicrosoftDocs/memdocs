@@ -161,6 +161,9 @@ Use the following procedure to set a task sequence as high-impact.
 
 ### Create a custom notification for high-risk deployments
 
+    > [!NOTE]
+    > High-impact notifications are only displayed for OSD task sequences. They are not displayed for non-OSD/stand-alone task sequences.
+
 Use the following procedure to create a custom notification for high-impact deployments.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.  
