@@ -3,8 +3,7 @@
 
 title: Add and assign MTD apps to Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authenticator app, and iOS configuration policy in the Azure portal.
-keywords:
+description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authenticator app, and iOS configuration policy in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -195,7 +194,7 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 ## Assigning Mobile Threat Defense apps to end users via Intune
 
-To install the Mobile Threat Defense app on the end user device, you can follow the below steps in the Azure portal. Make sure you're familiar with the process of:
+To install the Mobile Threat Defense app on the end user device, you can follow the steps that are detailed in the following sections. Make sure you're familiar with the process of:
 
 - [Assigning apps to groups with Intune](../apps/apps-deploy.md)
 
