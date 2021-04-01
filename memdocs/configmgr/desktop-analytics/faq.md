@@ -98,9 +98,7 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
-Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
-
-For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
+Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. Devices can only send diagnostic data to one workspace.  You need to reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance. For the best experience, use Configuration Manager. Configuration Manager provides an integrated experience for managing and deploying these settings to clients. 
 
 ### Are there any Windows Analytics features that aren't available in Desktop Analytics?
 
@@ -146,6 +144,13 @@ Yes, the following Windows Analytics features were either retired or aren't yet 
 ### Why aren't new Windows releases available immediately in Desktop Analytics?
 
 Desktop Analytics uses several signals to generate the [compatibility assessment](compat-assessment.md) for applications. One of these signals is [Ready for Windows](compat-assessment.md#ready-for-windows) data. This data is based on the adoption status of every combination of application and OS versions from commercial devices that share data with Microsoft. This signal is more accurate from 30 to 60 days after the general availability of a new OS release. To avoid many of your assets having an **Unknown** or **Insufficient data** compatibility risk assessment, we wait 1-2 months before we add it to the list of target OS versions.
+
+### Where is the Security update tile in Desktop Analytics?
+
+<!-- 8099536 -->
+
+In the Desktop Analytics portal, the **Security updates** tile on the home page and the **Security updates** page were deprecated in March 2021. To monitor your devices' Windows updates and Microsoft Defender status, use [Update Compliance](/windows/deployment/update/update-compliance-get-started) in the same workspace as Desktop Analytics.  Devices can only send diagnostic data to one workspace.  
+
 
 ### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Microsoft 365 Apps upgrades?
 
