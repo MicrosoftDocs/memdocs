@@ -44,7 +44,7 @@ Intune and Azure Active Directory work together to make sure only managed and co
 
 Intune provides device compliance policy capabilities that evaluate the compliance status of the devices. The compliance status is reported to Azure Active Directory that uses it to enforce the Conditional Access policy created in Azure Active Directory when the user tries to access company resources.
 
-Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Azure portal](../fundamentals/what-is-intune.md).
+Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Microsoft Endpoint Manager admin center](../fundamentals/what-is-intune.md).
 
 - Learn more about [Require managed devices with Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
