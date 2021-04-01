@@ -166,7 +166,7 @@ Information for BitLocker is obtained using the [BitLocker configuration service
 
 IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/devices/bitLockerRecoveryKeys/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference). 
 
-All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure Portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### Rotate BitLocker recovery keys
 
