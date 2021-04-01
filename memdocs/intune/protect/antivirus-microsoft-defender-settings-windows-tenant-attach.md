@@ -112,7 +112,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Not allowed.** Turns off behavior monitoring.
   - **Allowed.** Turns on real-time behavior monitoring.
 
-- **Allow Intrusion Prevention System**  
+- **Turn on Intrusion Prevention**  
   CSP: [AllowIntrusionPreventionSystem](/windows/client-management/mdm/policy-csp-defender#defender-allowintrusionpreventionsystem)
 
   Configure Defender to allow or disallow Intrusion Prevention functionality.
