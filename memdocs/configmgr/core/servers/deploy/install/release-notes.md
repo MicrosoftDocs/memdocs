@@ -172,7 +172,7 @@ No workaround is required for this issue. Don't uninstall the April ESU. If othe
 <!--3555909-->
 *Applies to version 2103* 
 
-There is a new hierarchy setting that allows for only using the new style of [console extensions](../../manage/admin-console-extensions.md). If this setting is enabled, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](updates.md#bkmk_Baselines). It will remain `disabled` by default, if you upgraded from a version prior to 2103.
+There is a new hierarchy setting that allows for only using the new style of [console extensions](../../manage/admin-console-extensions.md). If this setting is enabled, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](../../manage/updates.md#bkmk_Baselines). It will remain `disabled` by default, if you upgraded from a version prior to 2103.
 
 ## Cloud services
 
