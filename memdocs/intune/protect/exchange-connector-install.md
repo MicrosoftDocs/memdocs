@@ -56,7 +56,7 @@ Intune supports the installation of multiple Intune Exchange connectors per subs
 
 Follow these general steps to set up a connection that enables Intune to communicate with the on-premises Exchange server:
 
-1. Download the on-premises connector from the Intune portal.
+1. Download the on-premises connector from the Microsoft Endpoint Manager admin center.
 2. Install and configure the Exchange connector on a computer in the on-premises Exchange organization.
 3. Validate the Exchange connection.
 4. Repeat these steps for each additional Exchange organization you want to connect to Intune.
