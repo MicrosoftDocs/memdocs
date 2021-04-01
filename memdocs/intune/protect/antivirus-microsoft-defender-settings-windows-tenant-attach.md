@@ -113,9 +113,13 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed.** Turns on real-time behavior monitoring.
 
 - **Allow Intrusion Prevention System**  
+  CSP: [AllowIntrusionPreventionSystem](/windows/client-management/mdm/policy-csp-defender#defender-allowintrusionpreventionsystem)
+
+  Configure Defender to allow or disallow Intrusion Prevention functionality.
+
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.**
-  - **Allowed.**
+  - **No** - Intrusion Prevention Systme is not allowed.
+  - **Yes** - Intrusion Prevention System is allowed.
 
 - **Scan all downloaded files and attachments**  
   CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
