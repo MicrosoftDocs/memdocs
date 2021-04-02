@@ -59,35 +59,35 @@ For previous Configuration Manager versions, you must take the following steps t
 Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149-->
 
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
-2. Click **Office 365 Installer** in the upper-right pane. The installation wizard opens.
-3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
-4. On the **Office Settings** page, click on **Go to the Office Customization Tool**. This will open the [Office Customization Tool for Click-to-Run](https://config.office.com).
-5. Configure the desired settings for your Microsoft 365 Apps installation. Click the **Submit** in the upper right of the page when you complete the configuration. 
+2. Select **Office 365 Installer** in the upper-right pane. The installation wizard opens.
+3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then choose **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
+4. On the **Office Settings** page, select  **Go to the Office Customization Tool**. This will open the [Office Customization Tool for Click-to-Run](https://config.office.com).
+5. Configure the desired settings for your Microsoft 365 Apps installation. Select **Submit** in the upper right of the page when you complete the configuration. 
 6. On the **Deployment** page, determine if you would like to deploy now or at a later time. If you choose to deploy later, you can find the application in **Software Library** > **Application Management** > **Applications**.  
 7. Confirm the settings on the **Summary** page. 
-8. Click **Next** then click **Close** once the wizard completes. 
+8. Select **Next** then **Close** once the wizard completes. 
 
 ### Deploy Microsoft 365 Apps using Configuration Manager version 1802 and prior:
 
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
-2. Click **Office 365 Installer** in the upper-right pane. The installation wizard opens.
-3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
-4. On the **Import Client Settings** page, choose whether to import the Microsoft 365 Apps client settings from an existing XML configuration file or to manually specify the settings. Click **Next** when you're done.  
+2. Choose **Office 365 Installer** in the upper-right pane. The installation wizard opens.
+3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then choose **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
+4. On the **Import Client Settings** page, choose whether to import the Microsoft 365 Apps client settings from an existing XML configuration file or to manually specify the settings. Select **Next** when you're done.  
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. You must specify the location in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
     > [!IMPORTANT]    
     > The XML configuration file must contain only [languages supported by Office 2016](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
-5. On the **Client Products** page, select the Microsoft 365 Apps suite that you use. Select the applications that you want to include. Select any additional products that should be included, and then click **Next**.
-6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
-7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**. <br/>If you choose not to deploy the package in the wizard, skip to step 9.
+5. On the **Client Products** page, select the Microsoft 365 Apps suite that you use. Select the applications that you want to include. Select any additional products that should be included, and then select **Next**.
+6. On the **Client Settings** page, choose the settings to include, and then select **Next**.
+7. On the **Deployment** page, choose whether to deploy the application, and then select **Next**. <br/>If you choose not to deploy the package in the wizard, skip to step 9.
 8. Configure the rest of the wizard pages as you would for a typical application deployment. For details, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md).
 9. Complete the wizard.
 10. You can deploy or edit the application from **Software Library** > **Overview** > **Application Management** > **Applications**.
 
 After you create and deploy Microsoft 365 Apps using the installer, Configuration Manager won't manage the Microsoft 365 Apps updates by default. To enable Microsoft 365 Apps clients to receive updates from Configuration Manager, see [Deploy Microsoft 365 Apps updates with Configuration Manager](#bkmk_update).
 
-After you deploy Microsoft 365 Apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Microsoft 365 Apps, click **Create an ADR** from the [Office 365 Client Management dashboard](office-365-dashboard.md). Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](automatically-deploy-software-updates.md).
+After you deploy Microsoft 365 Apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Microsoft 365 Apps, select **Create an ADR** from the [Office 365 Client Management dashboard](office-365-dashboard.md). Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](automatically-deploy-software-updates.md).
 
 
 ## Drill through required Microsoft 365 Apps updates
@@ -114,11 +114,11 @@ Use the following steps to deploy Microsoft 365 Apps updates with Configuration 
 
     **Method 1**: Beginning in Configuration Manager version 1606, you can use the Configuration Manager client setting to manage the Microsoft 365 Apps client agent. After you configure this setting and deploy Microsoft 365 Apps updates, the Configuration Manager client agent communicates with the Microsoft 365 Apps client agent to download the updates from a distribution point and install them. Configuration Manager takes inventory of Microsoft 365 Apps client settings.    
 
-      1. In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.  
+      1. In the Configuration Manager console, select **Administration** > **Overview** > **Client Settings**.  
 
       2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
-      3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
+      3. Select **Software Updates** and choose **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
 
     **Method 2**:
     [Enable Microsoft 365 Apps clients to receive updates](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
@@ -234,11 +234,11 @@ To ensure that the update channel is set so that deployed updates will be proper
 **Method 1:**
 1. On a machine with the same version of Microsoft 365 Apps, open Task Scheduler (taskschd.msc) and identify the Microsoft 365 Apps automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
 2. Right-click on the automatic updates task and select **Properties**.
-3. Go to the **Actions** tab and click **Edit**. Copy the command and any arguments. 
+3. Go to the **Actions** tab and choose **Edit**. Copy the command and any arguments. 
 4. In the Configuration Manager console, edit your task sequence.
 5. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Microsoft 365 Apps is installed as part of the same task sequence, make sure this step runs after Office is installed.
 6. Copy in the command and arguments that you gathered from the Office automatic updates scheduled task. 
-7. Click **OK**. 
+7. Select **OK**. 
 
 **Method 2:**
 1. On a machine with the same version of Microsoft 365 Apps, open Task Scheduler (taskschd.msc) and identify the Microsoft 365 Apps automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
@@ -247,7 +247,7 @@ To ensure that the update channel is set so that deployed updates will be proper
 4. In the command line field, enter the command line that will run the scheduled task. See example below making sure the string in quotes matches the path and name of the task identified in step 1.  
 
     Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
-5. Click **OK**. 
+5. Select **OK**. 
 
 ## <a name="bkmk_channel"></a> Update channels for Microsoft 365 Apps
 <!--6298093-->
