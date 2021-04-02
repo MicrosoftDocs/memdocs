@@ -26,6 +26,8 @@ The new style of console extensions have the following benefits:
 1. A clear separation of console extensions from different extension providers.
 1. The ability for admins to have more control over which console extensions are loaded and used in the environment, to keep them more secure.
 1. A hierarchy setting that allows for only using the new style of console extension.
+   > [!Important]
+   > If this setting is used, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](updates.md#bkmk_Baselines). The setting remains `disabled` by default, if you upgraded from a version prior to 2103. If the setting was enabled in error, disabling the setting allows the old style extensions to be used again.
 
 The old style of console extensions may start being phased out in favor of the new style, which is more secure and centrally managed.
 
