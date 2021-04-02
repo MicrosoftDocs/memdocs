@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2021
+ms.date: 04/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -139,7 +139,9 @@ In addition to device configuration policy, you can onboard devices using:
 
 After you establish the service-to-service connection between Intune and Microsoft Defender for Endpoint, you can onboard macOS devices to Microsoft Defender for Endpoint. Onboarding configures devices to communicate with Microsoft Defender Endpoint, which then collects data about devices risk level.
 
-For macOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
+For configuration guidance for Intune, see [Microsoft Defender for Endpoint for macOS](../apps/apps-advanced-threat-protection-macos.md).
+
+For additional information about Microsoft Defender for Endpoint for Mac, including what's new in the latest release, see [Microsoft Defender for Endpoint for Mac](/security/defender-endpoint/microsoft-defender-endpoint-mac?view=o365-worldwide#installation-instructions) in the Microsoft 365 security documentation.
 
 ### Onboard Android devices
 
