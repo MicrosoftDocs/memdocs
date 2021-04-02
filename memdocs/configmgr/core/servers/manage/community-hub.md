@@ -109,7 +109,7 @@ Since the content is *open-source* style content, admins should always review wh
 <!--3555940, 8625943, 8717639, 9082812 -->
 *(Introduced in version 2010)*
 
-Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console extension enables the full functionality for Community hub. The WebView2 console extension:
+Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console extension enables the full functionality for Community hub. If WebView2 isn't installed, a banner is shown when you navigate to the **Community hub** node.<!--9598183--> The WebView2 console extension:
 
 - Displays the **Community hub** on Windows Server operating systems
 - Enables sign in for GitHub
