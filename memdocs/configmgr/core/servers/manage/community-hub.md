@@ -106,7 +106,7 @@ Since the content is *open-source* style content, admins should always review wh
 1. Confirm that only the type of content is displayed and able to be downloaded from the community hub, that matches the corresponding hierarchy setting category.
 
 ## <a name="bkmk_hub_os"></a> Install the WebView2 console extension
-<!--3555940, 8625943, 8717639 -->
+<!--3555940, 8625943, 8717639, 9082812 -->
 *(Introduced in version 2010)*
 
 Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console extension enables the full functionality for Community hub. The WebView2 console extension:
@@ -141,7 +141,7 @@ Follow the instructions below to enable the full functionality of Community hub:
 
 ### Community hub doesn't load
 <!--9561090-->
-The Community hub may not load, or load after a long delay if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see the [Install the WebView2 console extension](#bkmk_hub_os) and [Managing console extensions (starting in version 2103)](admin-console-extensions.md).
+The Community hub may not load, or load after a long delay if the WebView2 console extension hasn't been installed. For more information about installing console extensions, see the [Install the WebView2 console extension](#bkmk_hub_os).
 
 ### Unable to access community hub node when running console as a different user
 <!--7826897-->
