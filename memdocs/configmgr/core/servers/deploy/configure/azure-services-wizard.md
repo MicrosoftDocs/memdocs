@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 01/25/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -159,7 +159,7 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
-   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
+   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654--> The field is called **Secret Key validity period**, but specifying **Never** sets the secret key to never expire. <!--9199545, 7153654-->
    > [!IMPORTANT]
    > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment until you manually mitigate.
 
