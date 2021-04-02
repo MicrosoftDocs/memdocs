@@ -29,7 +29,7 @@ Use Desktop Analytics with Configuration Manager to:
 
 - Deploy Windows 10 to pilot and production-managed devices
 
-:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center":::
+:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center" lightbox="media/portal-home.png":::
 
 The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
@@ -93,7 +93,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
   - Install the latest updates. For more information, see [Update devices](enroll-devices.md#update-devices).
 
-  - Managed with supported version of the Configuration Manager client.
+  - Managed with a supported version of the Configuration Manager client.
 
   - Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) 2019 devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans to shift from LTSC to the semi-annual servicing channel.<!--6107649-->
   
