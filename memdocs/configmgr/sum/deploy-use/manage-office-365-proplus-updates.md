@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Microsoft 365 Apps client updat
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/24/2020
+ms.date: 03/26/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -169,9 +169,35 @@ To select the necessary languages, use the **Language Selection** page in the fo
 - Download Software Updates Wizard
 - Automatic Deployment Rule Properties
 
-In the **Language Selection** page, select **Office 365 Client Update**, then click **Edit**. Add the needed languages for Microsoft 365 Apps, then click **OK**.
+In the **Language Selection** page, select **Office 365 Client Update**, then select **Edit**. Add the needed languages for Microsoft 365 Apps, then choose **OK**.
 
 ![Screenshot of adding additional languages for Microsoft 365 Apps](media/office-update-languages-selection.png)
+
+### To add support to download updates for additional languages in version 1902 and later
+<!--9391197-->
+When new languages are added to Microsoft 365 Apps they don't appear in the content download languages, you can add them if needed. Use the following procedure on the software update point at the central administration site or stand-alone primary site:
+
+> [!IMPORTANT]  
+> Configuring additional Microsoft 365 Apps update languages is a site-wide setting. After you add the languages using the following procedure, all Microsoft 365 Apps updates are downloaded in those languages, as well as the languages that you select on the **Language Selection** page in the Download Software Updates or Deploy Software Updates wizards.
+
+1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
+2. Select **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
+3. Choose **Query**, and then run the following query:
+   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
+   ![Screenshot of WMI query](./media/9391197-wmi-query.png)
+4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
+5. Select the **Props** property, select **Edit Property**, and then **View Embedded**.
+   ![Screenshot of the property editor](./media/9391197-editor.png)
+6. Starting at the first query result, open each object until you find the one with **AvailableUpdateLanguagesForO365** for the **PropertyName** property.
+7. Select **Value2** and choose **Edit Property**.  
+   ![Screenshot of editing the Value2 property](./media/9391197-sms-embededproperty.png)
+8. Add additional languages to the **Value2** property and select **Save Property**. <br/> 
+   For example, 2057 (for en-gb), 2058 (for es-mx), and 3084 (for fr-ca), you would type `2057, 2058, 3084` for the example languages..
+ 
+   ![Screenshot of adding the language code in Property Editor](./media/9391197-property-editor.png)  
+9. Select **Close**, select **Close**, select **Save Property**, and choose **Save Object** (if you select **Close** here the values are discarded). Select**Close**, and then **Exit** to exit the Windows Management Instrumentation Tester.
+10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
+11. When you download Microsoft 365 Apps updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and find files with the new language code in the filename.  
 
 ### To add support to download updates for additional languages in version 1810 and earlier
 
@@ -181,21 +207,21 @@ Use the following procedure on the software update point at the central administ
 > Configuring additional Microsoft 365 Apps update languages is a site-wide setting. After you add the languages using the following procedure, all Microsoft 365 Apps updates are downloaded in those languages, as well as the languages that you select on the **Language Selection** page in the Download Software Updates or Deploy Software Updates wizards.
 
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
-2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
-3. Click **Query**, and then run the following query:
+2. Select **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
+3. Select **Query**, and then run the following query:
    *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
    ![WMI query](../media/1-wmiquery.png)
 4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
-5. Select the **Props** property, click **Edit Property**, and then click **View Embedded**.
+5. Select the **Props** property, select **Edit Property**, and then choose **View Embedded**.
    ![Property editor](../media/2-propeditor.png)
 6. Starting at the first query result, open each object until you find the one with **AdditionalUpdateLanguagesForO365** for the **PropertyName** property.
-7. Select **Value2** and click **Edit Property**.  
+7. Select **Value2** and choose **Edit Property**.  
    ![Edit the Value2 property](../media/3-queryresult.png)
-8. Add additional languages to the **Value2** property and click **Save Property**. <br/> 
+8. Add additional languages to the **Value2** property and select **Save Property**. <br/> 
    For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc. You would type `pt-pt,af-za,nn-no` for the example languages. Don't use spaces between the languages.
  
    ![Add languages in Property Editor](../media/4-props.png)  
-9. Click **Close**, click **Close**, click **Save Property**, and click **Save Object** (if you click **Close** here the values are discarded). Click **Close**, and then click **Exit** to exit the Windows Management Instrumentation Tester.
+9. Select **Close**, select **Close**, select **Save Property**, and choose **Save Object** (if you select **Close** here the values are discarded). Select**Close**, and then **Exit** to exit the Windows Management Instrumentation Tester.
 10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
 11. Now when you download Microsoft 365 Apps updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
     ![Filenames with additional languages](../media/5-verification.png)
