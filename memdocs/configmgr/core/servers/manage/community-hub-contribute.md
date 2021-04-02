@@ -29,7 +29,7 @@ manager: dougeby
    - If you don't wish to share, you can use contributions from others without having a GitHub account.
 
 > [!IMPORTANT]
-> Configuration Manager versions 2006 and earlier can't sign in to GitHub or view Community hub on Windows Server, but can still download items. <!--9082812-->
+> Configuration Manager versions 2006 and earlier can’t sign into GitHub but can still download items. Using Community hub on Windows Server requires Configuration Manager versions 2010 and the WebView2 console extension. <!--9082812-->
 
 [!INCLUDE [Community hub security role information](includes/community-hub-security-roles.md)]
 

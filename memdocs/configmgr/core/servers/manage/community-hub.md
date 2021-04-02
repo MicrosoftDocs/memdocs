@@ -116,7 +116,7 @@ Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console exte
    - GitHub sign-in is needed for [contributing to Community hub](community-hub-contribute.md) but not for downloading items.
 
 > [!IMPORTANT]
-> Configuration Manager versions 2006 and earlier can't sign in to GitHub or view Community hub on Windows Server, but can still download items. <!--9082812-->
+> Configuration Manager versions 2006 and earlier can’t sign into GitHub but can still download items. Using Community hub on Windows Server requires Configuration Manager versions 2010 and the WebView2 console extension. <!--9082812-->
 
 Follow the instructions below to enable the full functionality of Community hub:
 
