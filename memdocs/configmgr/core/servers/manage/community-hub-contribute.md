@@ -2,7 +2,7 @@
 title: Contribute to the community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager community hub
-ms.date: 03/02/2021
+ms.date: 04/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -21,10 +21,15 @@ manager: dougeby
 ## Prerequisites
 
 - All [Community hub prerequisites and permissions](community-hub.md#prerequisites)
+- Configuration Manager version 2010 or later
+- Install the Microsoft Edge [WebView2 extension](community-hub.md#bkmk_hub_os) for the Configuration Manager console.  <!--9598183-->
 - A [GitHub](https://github.com) account
   - A GitHub account is only required to contribute and share content from the **Your hub** page.
   - If you don't already have a GitHub account, you can create one before you join.
    - If you don't wish to share, you can use contributions from others without having a GitHub account.
+
+> [!IMPORTANT]
+> Configuration Manager versions 2006 and earlier can't sign in to GitHub or view Community hub on Windows Server, but can still download items. <!--9082812-->
 
 [!INCLUDE [Community hub security role information](includes/community-hub-security-roles.md)]
 
