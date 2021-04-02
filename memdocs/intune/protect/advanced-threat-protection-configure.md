@@ -141,7 +141,7 @@ After you establish the service-to-service connection between Intune and Microso
 
 For configuration guidance for Intune, see [Microsoft Defender for Endpoint for macOS](../apps/apps-advanced-threat-protection-macos.md).
 
-For additional information about Microsoft Defender for Endpoint for Mac, including what's new in the latest release, see [Microsoft Defender for Endpoint for Mac](/security/defender-endpoint/microsoft-defender-endpoint-mac?view=o365-worldwide&preserve-view=true#installation-instructions) in the Microsoft 365 security documentation.
+For additional information about Microsoft Defender for Endpoint for Mac, including what's new in the latest release, see [Microsoft Defender for Endpoint for Mac](microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac?view=o365-worldwide&preserve-view=true&branch=pr-en-us-3913) in the Microsoft 365 security documentation.
 
 ### Onboard Android devices
 
