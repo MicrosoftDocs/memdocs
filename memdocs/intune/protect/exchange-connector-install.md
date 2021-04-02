@@ -56,7 +56,7 @@ Intune supports the installation of multiple Intune Exchange connectors per subs
 
 Follow these general steps to set up a connection that enables Intune to communicate with the on-premises Exchange server:
 
-1. Download the on-premises connector from the Intune portal.
+1. Download the on-premises connector from the Microsoft Endpoint Manager admin center.
 2. Install and configure the Exchange connector on a computer in the on-premises Exchange organization.
 3. Validate the Exchange connection.
 4. Repeat these steps for each additional Exchange organization you want to connect to Intune.
@@ -179,7 +179,7 @@ Follow these steps to install the Intune Exchange connector. If you have multipl
 
 5. Provide credentials to send notifications to a user's Exchange Server mailbox. This user can be dedicated to just notifications. The notifications user needs an Exchange mailbox to send notifications by email. You can configure these notifications by using conditional access policies in Intune.
 
-   Make sure the Autodiscover service and Exchange Web Services are configured on the Exchange CAS. For more information, see [Client Access server](/Exchange/architecture/client-access/client-access?view=exchserver-2019).
+   Make sure the Autodiscover service and Exchange Web Services are configured on the Exchange CAS. For more information, see [Client Access server](/Exchange/architecture/client-access/client-access?view=exchserver-2019&preserve-view=true).
 
 6. In the **Password** field, provide the password for this account to enable Intune to access the Exchange server.
 
@@ -274,7 +274,7 @@ An Intune Exchange connector automatically synchronizes EAS and Intune device re
 
 - A **quick sync** occurs regularly, several times a day. A quick sync retrieves device information for Intune-licensed and on-premises Exchange users that are targeted for conditional access and that have changed since the last sync.
 
-- A **full sync** occurs once daily by default. A full sync retrieves device information for all Intune-licensed and on-premises Exchange users that are targeted for conditional access. A full sync also retrieves Exchange Server information and ensures that the configuration that Intune specifies in the Azure portal is updated on the Exchange server.
+- A **full sync** occurs once daily by default. A full sync retrieves device information for all Intune-licensed and on-premises Exchange users that are targeted for conditional access. A full sync also retrieves Exchange Server information and ensures that the configuration that Intune specifies is updated on the Exchange server.
 
 You can force a connector to run a sync by using the **Quick Sync** or **Full Sync** options on the Intune dashboard:
 
