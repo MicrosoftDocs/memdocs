@@ -132,12 +132,12 @@ Use the following steps to deploy Microsoft 365 Apps updates with Configuration 
 > If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#bkmk_ts).
 
 ## Restart behavior and client notifications for Microsoft 365 Apps updates
-When you deploy an update to an Microsoft 365 Apps client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives an Microsoft 365 Apps update:
+When you deploy an update to a Microsoft 365 Apps client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives a Microsoft 365 Apps update:
 
 |Configuration Manager version |End-user experience|  
 |----------------|---------------------|
 |1706, 1710|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
-|1802| The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update. </br>If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart <!--510006-->|
+|1802| The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. </br>If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart <!--510006-->|
 
 
 > [!Important]
@@ -158,7 +158,7 @@ When you deploy an update to an Microsoft 365 Apps client, the restart behavior 
 ## <a name="bkmk_o365_lang"></a> Add languages for Microsoft 365 Apps update downloads
 You can add support for Configuration Manager to download updates for any languages that are supported by Microsoft 365 Apps.
 
-### Download updates for additional languages in version 1902
+### Download updates for additional languages in version 1902, or later
 <!--3555955-->
 
 Starting in Configuration Manager version 1902, the update workflow separates the 38 languages for **Windows Update** from the numerous additional languages for **Office 365 Client Update**.
