@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -831,7 +831,7 @@ Adjust this schedule based on company policy for software update compliance, and
 Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. Set this option to **Yes** to allow these connections if you require a user proxy despite the security trade-offs. By default, this setting is set to **No**. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md).
 
 ### Enforce TLS certificate pinning for Windows Update client for detecting updates
-<!--8913038-->
+<!--8913032-->
 *(Introduced in version 2103)*
 
 Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To use certificate pinning, ensure your WSUS server is enabled for TLS/SSL, and add the certificates for the WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients. For more information about certificate pinning for devices scanning HTTPS-configured WSUS servers, see [secure your software update infrastructure](../../../sum/get-started/software-update-point-ssl.md). The following settings are available starting in Configuration Manager version 2103:

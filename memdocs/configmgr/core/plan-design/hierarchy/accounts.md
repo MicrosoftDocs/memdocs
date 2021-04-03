@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

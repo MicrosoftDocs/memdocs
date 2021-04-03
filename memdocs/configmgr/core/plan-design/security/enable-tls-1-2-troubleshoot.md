@@ -2,7 +2,7 @@
 title: Common issues when enabling TLS 1.2
 titleSuffix: Configuration Manager
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting

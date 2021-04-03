@@ -2,7 +2,7 @@
 title: In-place upgrade recommendations
 titleSuffix: Configuration Manager
 description: Recommended steps for using the task sequence to upgrade devices to Windows 10.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference

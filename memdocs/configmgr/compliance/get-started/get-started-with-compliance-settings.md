@@ -2,7 +2,7 @@
 title: Get started with compliance settings
 titleSuffix: Configuration Manager
 description: Learn about core concepts and how compliance settings work
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual

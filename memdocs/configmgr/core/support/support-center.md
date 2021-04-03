@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview

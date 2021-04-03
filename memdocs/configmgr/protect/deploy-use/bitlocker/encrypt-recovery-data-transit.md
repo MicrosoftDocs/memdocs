@@ -2,7 +2,7 @@
 title: Encrypt recovery data over the network
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes over the network.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to

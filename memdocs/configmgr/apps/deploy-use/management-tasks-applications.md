@@ -2,7 +2,7 @@
 title: Management tasks for applications
 titleSuffix: Configuration Manager
 description: Manage Configuration Manager applications and deployment types.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to

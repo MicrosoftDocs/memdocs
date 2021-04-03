@@ -2,7 +2,7 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

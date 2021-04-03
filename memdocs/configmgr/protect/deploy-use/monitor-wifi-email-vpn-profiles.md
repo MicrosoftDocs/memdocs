@@ -2,7 +2,7 @@
 title: "Monitor Email, Wi-Fi and VPN profiles"
 titleSuffix: "Configuration Manager"
 description: "Learn how to monitor the compliance status of email, Wi-Fi, and VPN profiles in Configuration Manager."
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

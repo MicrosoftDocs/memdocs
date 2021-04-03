@@ -2,7 +2,7 @@
 title: Test database update
 titleSuffix: Configuration Manager
 description: Test upgrade the site database when installing updates for Configuration Manager.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

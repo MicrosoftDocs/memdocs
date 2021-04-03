@@ -2,7 +2,7 @@
 title: Interoperability between versions
 titleSuffix: Configuration Manager
 description: Learn how to avoid conflicts between multiple Configuration Manager hierarchies on the same network.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

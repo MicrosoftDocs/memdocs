@@ -2,7 +2,7 @@
 title: VPN profiles
 titleSuffix: Configuration Manager
 description: Learn how to use VPN profiles in Configuration Manager to deploy VPN settings to users in your organization.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
