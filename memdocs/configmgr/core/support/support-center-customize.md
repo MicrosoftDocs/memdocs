@@ -2,7 +2,7 @@
 title: Customize Support Center
 titleSuffix: Configuration Manager
 description: Customize the Support Center configuration file.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

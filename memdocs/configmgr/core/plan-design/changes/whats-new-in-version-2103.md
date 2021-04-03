@@ -2,7 +2,7 @@
 title: What's new in version 2103
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2103 of Configuration Manager current branch.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -41,13 +41,13 @@ The option, **An administrator must approve a request for this application on th
 
 For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md#bkmk_all).
 
-### Tenant attach: Antivirus policy exclusions merge
+### Antivirus policy exclusions merge
 <!--9089764-->
 When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions.
 
 For more information, see [antivirus policies](../../../tenant-attach/deploy-antivirus-policy.md#bkmk_exclusion).
 
-### Tenant attach: User discovery prerequisite simplification
+### User discovery prerequisite simplification
 <!--8126836 -->
 The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid identity needs to be discovered by one of the following discovery methods instead of both:
 - Azure Active Directory user discovery
@@ -55,6 +55,11 @@ The discovery prerequisite for user accounts accessing tenant attach features wi
 
 For more information, see [Tenant attach prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
 
+### Application details
+<!--8364465-->
+When tenant attach is enabled, the applications pane in the Microsoft Endpoint Manager admin center will show an **Error Description** if the application status is **Failed**.
+
+For more information on the error code and troubleshooting steps, see [Application installation common error codes reference](../../../tenant-attach/app-install-error-reference.md).
 
 <!-- 
 ## Cloud-attached management
@@ -65,10 +70,6 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
  -->
 
 ## Site infrastructure
-
-### Allow exclusion of organizational units (OU) from Active Directory User Discovery
-<!--5193509-->
-You can now exclude OUs from [Active Directory User Discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_config-adud).
 
 ### New prerequisite checks
 
@@ -99,6 +100,11 @@ Microsoft recommends that you keep SQL Server Express up to date. For more infor
 <!-- 
 ## Client management
  -->
+
+### Allow exclusion of organizational units (OU) from Active Directory User Discovery
+<!--5193509-->
+
+You can now exclude OUs from [Active Directory User Discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_config-adud).
 
 ## Collections
 
@@ -263,6 +269,7 @@ For more information, see [Plan for BitLocker management](../../../protect/plan-
 You can now select from scripts that have already been approved when configuring pre and post-scripts for an [orchestration group](../../../sum/deploy-use/orchestration-groups.md). When in the **Create Orchestration Group Wizard**, you'll see a new page called **Script Picker**. Select your pre and post scripts from your list of scripts that are already approved. You can still add scripts manually on the pre and post-script pages. Additionally, you can also edit scripts that you pre-populated from the **Script Picker**.
 
 For more information, see [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md).
+
 ### Change default maximum run time for software updates
 <!--7833866-->
 Configuration Manager sets the following maximum run time for these categories of software updates:
@@ -276,7 +283,7 @@ All other software updates outside these categories, such as third-party updates
 For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime).
 
 ### TLS certificate pinning for devices scanning HTTPS-configured WSUS servers
-<!--8913038-->
+<!--8913032-->
 Further increase the security of HTTPS scans against WSUS by enforcing certificate pinning. To fully enable this behavior:
 - Ensure your software update points are configured to use TLS/SSL
 - Add the certificates for your WSUS servers to the new `WindowsServerUpdateServices` certificate store on your clients
@@ -285,6 +292,7 @@ Further increase the security of HTTPS scans against WSUS by enforcing certifica
 For more information, see [Configure a software update point to use TLS/SSL with a PKI certificate](../../../sum/get-started/software-update-point-ssl.md#bkmk_cert_pinning) and [Client settings for software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
 ## Community hub
+
 ### Download Power BI report templates from Community hub
 <!--5679831-->
 Community hub now supports contributing and downloading Power BI report template files. This integration allows administrators to easily share and reuse Power BI reports. Contributing and downloading Power BI report template is also available for current branch versions of Configuration Manager.
@@ -406,7 +414,6 @@ The following [features are now deprecated](deprecated/removed-and-deprecated-cm
   This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
 
 - Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
-
 
 <!--
 As first announced in version 1906, version 2103 drops support for the following client OS versions:  

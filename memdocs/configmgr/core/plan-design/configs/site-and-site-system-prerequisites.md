@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

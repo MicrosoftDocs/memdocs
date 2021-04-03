@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference

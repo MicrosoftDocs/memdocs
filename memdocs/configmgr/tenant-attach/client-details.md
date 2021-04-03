@@ -2,7 +2,7 @@
 title: Tenant attach - ConfigMgr client details (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "View client details for Configuration Manager devices from the admin center."
-ms.date: 03/26/2021
+ms.date: 04/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
