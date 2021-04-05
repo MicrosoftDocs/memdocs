@@ -221,15 +221,17 @@ Plan to use a validity period of five days or greater. When the validity period 
 
 #### To configure a value that can be set from within the Intune console
 
-1. On the CA, run the following commands:
+On the CA, run the following commands:
 
    **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
    **net stop certsvc**  
    **net start certsvc**    
 
-2. On the issuing CA, use the Certification Authority snap-in to publish the certificate template. Select the **Certificate Templates** node, select **Action** > **New** > **Certificate Template to Issue**, and then select the certificate template you created in the previous section.
+### Publish certificate templates
 
-3. Validate that the template has published by viewing it in the **Certificate Templates** folder.
+1. On the issuing CA, use the Certification Authority snap-in to publish the certificate template. Select the **Certificate Templates** node, select **Action** > **New** > **Certificate Template to Issue**, and then select the certificate template you created in the previous section.
+
+2. Validate that the template has published by viewing it in the **Certificate Templates** folder.
 
 ## Set up NDES
 
