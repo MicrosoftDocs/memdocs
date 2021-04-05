@@ -161,10 +161,10 @@ If the device is on and connected, the **Retire** action propagates across all d
 
 Device owners can manually un-enroll their devices as explained in the following end user help articles:
 
-- [Remove device from Company Portal for Android](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android.md)
-- [Remove device from Company Portal for iOS app](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-ios.md)
-- [Remove device from Company Portal for macOS app](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos.md)
-- [Remove your Windows device from management](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-windows.md)
+- [Remove device from Company Portal for Android](../user-help/unenroll-your-device-from-intune-android.md)
+- [Remove device from Company Portal for iOS app](../user-help/unenroll-your-device-from-intune-ios.md)
+- [Remove device from Company Portal for macOS app](../user-help/unenroll-your-device-from-intune-macos.md)
+- [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 ## Delete devices from the Intune portal
 
