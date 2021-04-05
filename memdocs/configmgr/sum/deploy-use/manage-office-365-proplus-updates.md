@@ -176,7 +176,7 @@ In the **Language Selection** page, select **Office 365 Client Update**, then se
 ### To add support to download updates for additional languages in version 1902 and later
 <!--9391197-->
 When new languages are added to Microsoft 365 Apps they don't appear in the content download languages, you can add them if needed. Use the following procedure on the software update point at the central administration site or stand-alone primary site:
- 
+
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
 2. Select **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Choose **Query**, and then run the following query:
@@ -189,7 +189,7 @@ When new languages are added to Microsoft 365 Apps they don't appear in the cont
 7. Select **Value2** and choose **Edit Property**.  
    ![Screenshot of editing the Value2 property](./media/9391197-sms-embededproperty.png)
 8. Add additional languages to the **Value2** property and select **Save Property**. <br/> 
-   For example, 2057 (for en-gb), 2058 (for es-mx), and 3084 (for fr-ca), you would type `2057, 2058, 3084` for the example languages..
+   For example, 2057 (for en-gb), 2058 (for es-mx), and 3084 (for fr-ca), you would type `2057, 2058, 3084` for the example languages.
  
    ![Screenshot of adding the language code in Property Editor](./media/9391197-property-editor.png)  
 9. Select **Close**, select **Close**, select **Save Property**, and choose **Save Object** (if you select **Close** here the values are discarded). Select**Close**, and then **Exit** to exit the Windows Management Instrumentation Tester.
