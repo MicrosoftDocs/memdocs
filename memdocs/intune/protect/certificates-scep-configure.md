@@ -59,7 +59,7 @@ The following on-premises infrastructure must run on servers that are domain-joi
   - The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - The connector must run on the same server as the NDES server role, a server that runs Windows Server 2012 R2 or later.
   - The .NET 4.5 Framework is required by the connector and is automatically included with Windows Server 2012 R2.
-  - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Microsoft Intune Connector.
+  - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Intune Connector.
 
 #### Support for NDES on the internet
 
