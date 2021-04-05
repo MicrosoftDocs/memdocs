@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/05/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Public preview in Microsoft Intune
 
-Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features, provide feedback, and start planning for broad usage in production scenarios.
+Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features in production environments and scenarios, and provide feedback.
 
 Preview features have a **(preview)** tag in the Microsoft Endpoint Manager admin center:
 
@@ -42,7 +42,7 @@ When working with features in public preview, these features:
 
 - May have restricted or limited functionality. For example, the feature may only apply to one platform.
 - Typically go through feature changes before they're generally available (GA).
-- Are supported by the Microsoft support team. For more information on supportability, see the [Supplemental Terms of Use](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+- Are fully supported by Microsoft.
 - May only be available in selected geographic regions or cloud environments. For example, the feature may not exist in the government cloud.
 - Individual features in preview may have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
 
