@@ -94,7 +94,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 <!--9391319, -->
 **Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Endpoint Manager admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
 
-**Workaround:** The current workaround is to restart the `SMS_Executive` service at the top-level site.
+**Workaround:** The current workaround is to restart the `SMS_Executive` service at the site with the [administration service](../develop/adminservice/overview.md).
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
