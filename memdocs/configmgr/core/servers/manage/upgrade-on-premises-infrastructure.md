@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 09/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -21,7 +21,6 @@ Use the information in this article to help you upgrade the server infrastructur
 - If you want to *upgrade* from an earlier version to Configuration Manager, current branch, see [Upgrade to Configuration Manager](../deploy/install/upgrade-to-configuration-manager.md).  
 
 - If you want to *update* your Configuration Manager, current branch, infrastructure to a new version, see [Updates for Configuration Manager](updates.md).  
-
 
 ## <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade the OS of site systems  
 
@@ -85,10 +84,6 @@ Use the steps in this section for any of the following upgrade scenarios:
 
     - Management point  
 
-    - Application Catalog web service point  
-
-    - Application Catalog website point  
-
 - Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
 
 - After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.  
@@ -149,19 +144,11 @@ When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Wi
 
     - Management point  
 
-    - Application Catalog web service point  
-
-    - Application Catalog website point  
-
 - Make sure the **Windows Process Activation** and **WWW/W3svc** services are enabled and set for automatic start. The upgrade process disables these services, so make sure they're running for the following site system roles:  
 
     - Site server  
 
     - Management point  
-
-    - Application Catalog web service point  
-
-    - Application Catalog website point  
 
 - Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
 

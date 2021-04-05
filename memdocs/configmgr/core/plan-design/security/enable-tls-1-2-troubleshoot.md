@@ -1,8 +1,8 @@
 ---
-title: Common issues when enabling Transport Layer Security (TLS) 1.2
+title: Common issues when enabling TLS 1.2
 titleSuffix: Configuration Manager
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
-ms.date: 12/13/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -58,55 +58,6 @@ To resolve this issue, follow these steps:
 1. [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on all relevant computers.
 
 1. After you install any updates, restart the SMS_Executive service.
-
-## Application catalog doesn't initialize
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md).
-
-If the application catalog doesn't initialize, check the **ServicePortalWebSite.svclog** file for the following error entry:
-
-`SOAP security negotiation failed. The client and server can't communicate because they don't share a common algorithm.`
-
-To resolve this issue, follow these steps:
-
-1. [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on all relevant computers.
-
-1. In the `%WinDir%\System32\InetSrv` folder of the application catalog server, create a **W2SP.exe.config** file with the following contents:
-
-    ``` XML
-    <?xml version="1.0" encoding="utf-8" ?>
-    <configuration>
-      <runtime>
-      <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" />
-      </runtime>
-    </configuration>
-    ```
-
-    > [!NOTE]
-    > This file is the default file that's created if the application was built by using .NET Framework 4.6.3.
-
-1. Use HTTPS transport security for application catalog roles.
-
-    > [!Important]
-    > When you use HTTP message security for application catalog roles, WCF is hard-coded to use SSL 3.0 and TLS 1.0 only. This prevents the use of TLS 1.2.
-
-1. If you made any changes, restart the computer.
-
-## Software Center or browser doesn't communicate with the application catalog
-
-> [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md).
-
-The best method to make Software Center work with for user-available apps in a TLS 1.2-enabled site, remove the application catalog role. Then let Software Center communicate directly with a management point. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).
-
-If you need to resolve communication failures between the application catalog and Software Center, verify the following conditions:
-
-- [Update .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on each computer.
-
-- After you make the changes, restart all affected computers.
-
-<!-- - Configure the browser is configured to support TLS 1. Prior to Windows 10, this option was disabled by default. removing, Silverlight experience is out of support-->
 
 ## Service connection point upload failures
 

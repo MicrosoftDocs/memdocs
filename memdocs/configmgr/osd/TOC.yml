@@ -138,6 +138,8 @@
       href: understand/task-sequence-steps.md
     - name: Install Software Updates
       href: understand/install-software-updates.md
+    - name: In-place upgrade recommendations
+      href: understand/in-place-upgrade-recommendations.md
     - name: Pre-provision BitLocker in Windows PE
       href: deploy-use/preprovision-bitlocker-in-windows-pe.md
   - name: How to use task sequence variables

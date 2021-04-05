@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 04/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -127,7 +127,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
              - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.  
 
-             - To disable the installation randomization delay for required software updates, configure the client setting to **Disable deadline randomization** in the **Computer Agent** group. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+             - The **Disable deadline randomization** in the **Computer Agent** group doesn't override the randomization behavior. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  <!--9388804-->
 
     -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 

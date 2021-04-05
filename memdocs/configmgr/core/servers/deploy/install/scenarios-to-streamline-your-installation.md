@@ -1,124 +1,86 @@
 ---
-title: "Installation scenarios"
-titleSuffix: "Configuration Manager"
-description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading a site."
-ms.date: 10/06/2016
+title: Installation scenarios
+titleSuffix: Configuration Manager
+description: Learn techniques for installing a new Configuration Manager hierarchy when you update or upgrade a site.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Scenarios to streamline your installation of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-With the release of update versions for Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1610), and to upgrade from Microsoft System Center 2012 Configuration Manager.
+With the release of update versions for Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version. You can also use these techniques to upgrade from Microsoft System Center 2012 Configuration Manager.
 
-Supported scenarios include:  
+The following list is a summary of the two main scenarios:
 
-**Install a new Configuration Manager current branch hierarchy** that runs an update version.  
+- [Install a new Configuration Manager current branch hierarchy that runs an update version](#install-a-new-hierarchy-to-an-update-version).
 
--   Install only the top-tier site, and then immediately install an update to bring that site current with the update version that you will use. Then, you can install additional sites directly to that update version.  
--   In this scenario, you skip the process of installing additional sites to a baseline level, and then updating them to the update version that you want to use.  
--   In this scenario, you skip the process of installing clients to a baseline version, and then reinstalling them when you update to a later version.  
+  - Install only the top-tier site with a baseline version. Then immediately install an update to bring that site current with the update version that you'll use. Then install others sites directly to that update version.
+  - This process skips the installation of other sites to a baseline level, and then updating them to the update version that you want to use.
+  - The process also skips the installation of clients to a baseline version, and then reinstalling them when you update to a later version.
 
-**Upgrade a Microsoft System Center 2012 Configuration Manager** infrastructure to an update version of Configuration Manager.  
+- [Upgrade a Microsoft System Center 2012 Configuration Manager infrastructure to an update version of Configuration Manager](#upgrade-to-current-branch).
 
--   Manually upgrade your central administration site and each primary site to a baseline version (like version 1606) before you install an update version (like version 1610).  
--   Don't upgrade secondary sites from Microsoft System Center 2012 Configuration Manager until your primary sites run the update version that you will use.  
--   Don't upgrade clients from Microsoft System Center 2012 Configuration Manager until your primary sites run the update version that you will use.  
+  - Manually upgrade your central administration site (CAS) and each primary site to a baseline version before you install an update version.
+  - Don't upgrade secondary sites from Microsoft System Center 2012 Configuration Manager until your primary sites run the update version that you'll use.
+  - Don't upgrade clients from Microsoft System Center 2012 Configuration Manager until your primary sites run the update version that you'll use.
 
-## Scenario: Install a new hierarchy to an update version  
-In this example scenario, install the first site of a hierarchy by using a baseline version of Configuration Manager, like version 1610. Then, install the 1610 update before you deploy additional sites or clients.  
+## Install a new hierarchy to an update version
 
--   Because you plan to use an update version (like version 1610) and not remain at a baseline version (like version 1606), you don't need to install additional sites and then upgrade them. This also applies to clients.  
--   Don't install secondary sites with version 1606 and then upgrade them to version 1610. Instead, install secondary sites after your primary sites run version 1610.  
+1. Install a top-level site for your new hierarchy by using the baseline media. You can use baseline media only to install the first site of a new hierarchy. For more information, see [Use the Setup Wizard to install sites](use-the-setup-wizard-to-install-sites.md).
 
-Follow this sequence:  
+    After this step, your top-level site runs the baseline version.
 
-1. **Install a top-level site for your new hierarchy** by using the baseline media.  
+1. Use in-console updates to update your top-level site to a later version. Before you install any child sites or clients, update your top-level site to the update version that you plan to use. For more information, see [Updates for Configuration Manager](../../manage/updates.md).
 
-   -   You can use baseline media only to install the first site of a new hierarchy.  
-   -   For example, install a top-level site by using the baseline version of 1606. For more information, see [Use the Setup Wizard to install sites](use-the-setup-wizard-to-install-sites.md).  
+    After this step, your top-level site runs the updated version.
 
-   After this step, your top-level site runs version 1606.  
+1. If you intend for the first site to be a CAS, next install new child primary sites. Use the installation media from the CD.Latest folder on the CAS server to install child primary sites. Use this source media to make sure that new child primary sites match the version of the CAS. For more information, see [The CD.Latest folder for Configuration Manager](../../manage/the-cd.latest-folder.md).
 
-2. **Use in-console updates to update your top-level site to a later version.**  
+1. Add other site system roles on remote servers at the CAS and primary sites. This action makes sure that the site systems run the updated version. For more information, see [Install site system roles](../configure/install-site-system-roles.md).
 
-   -   Before you install any child sites or clients, update your top-level site to the update version that you plan to use.  
-   -   For example, you can update your top-level site that runs version 1606 to version 1610. For more information, see [Updates for Configuration Manager](../../../../core/servers/manage/updates.md).  
+1. If you plan to have secondary sites, at each primary site, use the in-console option to install new secondary sites. Because you didn't install secondary sites while primary sites were at the baseline version, you don't need to update the secondary sites. Instead, you install new secondary sites that run the updated version. For more information, see [Install a secondary site](use-the-setup-wizard-to-install-sites.md#bkmk_secondary).
 
-   After this step, your top-level site runs version 1610.  
+1. Install new clients at the primary site. Because you didn't install clients while primary sites were at the baseline version, you don't need to update clients. Instead, install new clients that run the updated version. For more information, see [Deploy clients](../../../clients/deploy/deploy-clients-to-windows-computers.md).
 
-3. **Install new child primary sites below a central administration site.**  
+1. Install new consoles on remote computers. Because you didn't install consoles while primary sites were at the baseline version, you don't need to update consoles. Install them with the updated version. For more information, see [Install consoles](install-consoles.md).
 
-   - Use the installation media from the CD.Latest folder on the central administration site server to install child primary sites. For more information, see [The CD.Latest folder for Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md).  
+## Upgrade to current branch
 
-     This source media is required to ensure that new child primary sites match the version of the central administration site.  
+1. Upgrade your top-level System Center 2012 Configuration Manager site to a baseline version of the current branch. Use source media for Configuration Manager current branch. You always upgrade the top-level site of a hierarchy first, and then upgrade child sites. For more information, see [Upgrade to Configuration Manager](upgrade-to-configuration-manager.md).
 
-   After this step, your new child primary sites run version 1610.  
+    After this step, your top-level site runs the baseline version.
 
-4. **At each primary site, use the in-console option to install new secondary sites.**  
+1. Upgrade each child primary site in your hierarchy to the same baseline version. When you upgrade from Microsoft System Center 2012 Configuration Manager, manually upgrade each primary site to a baseline version of the current branch. Don't upgrade secondary sites yet.
 
-   -   Because you did not install secondary sites while primary sites were at version 1606, you do not need to upgrade secondary sites.  
-   -   Instead, install new secondary sites that run version 1610. For more information, see [Install a secondary site](use-the-setup-wizard-to-install-sites.md#bkmk_secondary) in the [Use the Setup Wizard to install sites](use-the-setup-wizard-to-install-sites.md) topic.  
+    After this step, each primary site runs the baseline version.
 
-   After this step, new secondary sites are installed and run version 1610.  
+1. Set service windows on child-primary sites. After you upgrade all of your primary sites to the baseline version, configure maintenance windows to control when those sites install infrastructure updates. For more information, see [Service windows for site servers](../../manage/service-windows.md).
 
-5. **Install new clients at the primary site.**  
+    - Child primary sites automatically install the same updates that you install at a CAS.
+    - Secondary sties don't automatically install new versions. Update them manually from the console.
 
-   -   Because you did not install clients while primary sites were at version 1606, you do not need to upgrade clients from version 1606 to version 1610.  
-   -   Instead, install new clients that run version 1610. For more information, see [Deploy clients](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
+    After this step, child primary sites are ready to install updates during their service window.
 
-   After this step, new clients are installed that run version 1610.  
+1. Install the update version at your top-level site. This action updates your top-level site to the updated version. After a CAS installs the update version, each child primary site automatically installs the same update during its service window. For more information, see [Updates for Configuration Manager](../../manage/updates.md).
 
-## Scenario: Upgrade System Center 2012 Configuration Manager to an update version of Configuration Manager, current branch  
+    After this step, your CAS and each primary site run the updated version.
 
-In this example scenario, upgrade your System Center 2012 Configuration Manager infrastructure to an update version of Configuration Manager current branch, like version 1610.  
+1. Upgrade secondary sites. After a primary site installs the update, use the in-console option to update secondary sites. This action upgrades secondary sites directly from System Center 2012 Configuration Manager to the same update version as the primary site. For more information about upgrading a secondary site, see [Upgrade sites](upgrade-to-configuration-manager.md#upgrade-sites).
 
--   The central administration site and each primary site must upgrade to the baseline version 1606 before you install the update for version 1610.  
--   Secondary sites and clients do not upgrade or install version 1606. Instead, they move directly from System Center 2012 Configuration Manager to Configuration Manager current branch version 1610.  
+1. Upgrade clients. This process upgrades clients directly from System Center 2012 Configuration Manager to the update version that you installed at the primary site. For more information, see [How to upgrade clients for Windows computers](../../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).
 
-Follow this sequence:  
+    After this step, run the updated version.
 
-1. **Upgrade your top-level System Center 2012 Configuration Manager site** to a baseline version of the current branch by using source media for Configuration Manager (like version 1606). For more information, see [Upgrade to Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+1. Upgrade consoles on remote computers. This process upgrades clients directly from System Center 2012 Configuration Manager to the update version that you installed at the primary site. For more information, see [Install consoles](install-consoles.md).
 
-   -   Like traditional upgrade scenarios, you always upgrade the top-level site of a hierarchy first, and then upgrade child sites.  
+## Next steps
 
-   After this step, your top-level site runs version 1606.  
-
-2. **Upgrade each child primary site in your hierarchy** to that same baseline version.  
-
-   -   When you upgrade from Microsoft System Center 2012 Configuration Manager, you must manually upgrade each primary site to a baseline version of the current branch.  
-   -   You will not upgrade secondary sites at this point.  
-
-   After this step, each primary site runs version 1606.  
-
-3. **Set maintenance windows on child-primary sites.** After you upgrade all your primary sites to the baseline version, plan to configure maintenance windows to control when those sites install infrastructure updates. For more information, see [How to use maintenance windows](../../../../core/clients/manage/collections/use-maintenance-windows.md).  (Maintenance windows are called *service windows* in version 1606.)  
-
-   -   A child primary site automatically installs the same updates that you install at a central administration site.  
-   -   Secondary sties do not automatically install new versions. You must upgrade them manually from within the console.  
-
-   After this step, when you install updates at the central administration site, child primary sites will only install that update when allowed by their maintenance window.  
-
-4. **Install the update version at your top-level site.** This updates your top-level site. After a central administration site installs the update version, each child primary site automatically installs the update unless the installation is blocked by a maintenance window.  
-
-   -   For example, you can update your top-level site from version 1606 to version 1610. For more information, see [Updates for Configuration Manager](../../../../core/servers/manage/updates.md).  
-
-   After this step, your central administration site and each primary site runs version 1610.  
-
-5. **Upgrade secondary sites.** After a primary site installs the update and runs version 1610, use the in-console option to upgrade secondary sites.  
-
-   -   This upgrades secondary sites directly from Microsoft System Center 2012 Configuration Manager to the update version that you installed at the primary site.  
-   -   For information about upgrading a secondary site, see [Upgrade sites](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade) in the  [Upgrade to Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) topic.  
-
-6. **Upgrade clients.** To upgrade clients, use the information in [How to upgrade clients for Windows computers](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
-
-   -   This upgrades clients directly from Microsoft System Center 2012 Configuration Manager to the update version that you installed at the primary site.  
-
-   After this step, clients are upgraded to version 1610 without first upgrading to version 1606.
+[Configure sites and hierarchies](../configure/configure-sites-and-hierarchies.md)

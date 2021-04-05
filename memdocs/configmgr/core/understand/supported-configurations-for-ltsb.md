@@ -86,8 +86,6 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
     -   Unified Write Filters (UWF)  
 
--   The Application Catalog is not supported for any Windows Embedded device.  
-
 -   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the embedded device. Use Windows Embedded Target Designer to install this package. The *WBEMDISP.DLL* and *WBEMDISP.TLB* files must exist and be registered in the %windir%\System32\WBEM folder on the embedded device to ensure that detected malware is reported.  
 
 **Supported operating systems:**  
