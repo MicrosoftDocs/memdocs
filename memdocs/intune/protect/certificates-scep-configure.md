@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2021
+ms.date: 04/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,6 +38,14 @@ The information in this article can help you configure your infrastructure to su
 ## Prerequisites for using SCEP for certificates
 
 Before you continue, ensure you've [created and deployed a *trusted certificate* profile](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) to devices that will use SCEP certificate profiles. SCEP certificate profiles directly reference the trusted certificate profile that you use to provision devices with a Trusted Root CA certificate.
+
+- [Servers and server roles](#servers-and-server-roles)
+- [Accounts](#accounts)
+- [Network requirements](#network-requirements)
+- [Certificates and templates](#certificates-and-templates) 
+<!--
+- [PIN requirement for Android Enterprise](#pin-requirement-for-android-enterprise)  
+- -->
 
 ### Servers and server roles
 
@@ -102,6 +110,33 @@ The following certificates and templates are used when you use SCEP.
 |**Server authentication certificate** |Web Server certificate requested from your issuing CA or public CA.<br /> You install and bind this SSL certificate in IIS on the computer that hosts NDES.<br />If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate, you can then use the same certificate for server and client authentication. |
 |**Trusted Root CA certificate**       |To use a SCEP certificate profile, devices must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices. <br/><br/> **-**  Use a single Trusted Root CA certificate per operating system platform and associate that certificate with each trusted certificate profile you create. <br /><br /> **-**  You can use additional Trusted Root CA certificates when needed. For example, you might use additional certificates to provide a trust to a CA that signs the server authentication certificates for your Wi-Fi access points. Create additional Trusted Root CA certificates for issuing CAs.  In the SCEP certificate profile you create in Intune, be sure to specify the Trusted Root CA profile for the issuing CA.<br/><br/> For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. |
 
+<!--### PIN requirement for Android Enterprise
+
+For Android Enterprise, the version of encryption on a device determines whether the device must be configured with a PIN before SCEP can provision that device with a certificate. The available encryption types are:
+
+- **Full-disk encryption**, which requires the device have a PIN configured.
+
+- **File-based encryption**, which typically doesn’t require a PIN. Beginning with Android 10, this type of encryption is required.  Devices that were installed by the OEM with Android 10 or later won’t require a PIN. Devices that are upgraded to Android 10 might still require a PIN.
+
+> [!NOTE]
+>
+> Microsoft Endpoint Manager can’t identify the type of encryption on an Android device.
+
+The OEM version of Android installed on a device can affect the available encryption type:
+
+- **Android 10 and later:** Beginning with 10 and later, file-based encryption is required. These devices won’t require a PIN for SCEP to provision a certificate.
+
+- **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it’s not required. Each OEM chooses which encryption type to implement for a device. It’s also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is implemented.
+
+- **Android 7 and earlier**: Disk-based encryption is typical, if not universal. With version 7, file-based encryption is an end-user option. For devices on which users choose to use file-based encryption a PIN might still be required before SCEP can provision a certificate. It’s also possible that OEM modifications result in a PIN not being required.
+
+- **Upgrade to 10 or later**: Devices that upgrade to version 10 or later and begin to use file-based encryption might still require a PIN.
+
+For more information, see the following articles in the Android documentation:  
+
+- [File-Based Encryption](https://source.android.com/security/encryption/file-based)  
+- [Full-Disk Encryption](https://source.android.com/security/encryption/full-disk)
+-->
 ## Configure the certification authority
 
 In the following sections, you'll:

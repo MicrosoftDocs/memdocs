@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -106,7 +106,7 @@ You create a collection that has one include collection rule and one exclude col
 > [!NOTE]  
 > To see new collection members, refresh or reload the Configuration Manager console. They don't appear in the collection until after the first scheduled update. You can also manually select **Update Membership** for the collection. It might take a few minutes for a collection update to complete.
 
-### <a name="bkmk-direct"></a> Configure a direct rule
+## <a name="bkmk-direct"></a> Configure a direct rule for a collection
 
 1. On the **Search for Resources** page of the **Create Direct Membership Rule Wizard**, specify the following information:
 
@@ -135,7 +135,7 @@ You create a collection that has one include collection rule and one exclude col
 
 1. On the **Select Resources** page, select the resources that you want to add to the collection in the **Resources** list, and then select **Next**.
 
-### <a name="bkmk-query"></a> Configure a query rule  
+## <a name="bkmk-query"></a> Configure a query rule for a collection
 
 In the **Query Rule Properties** dialog box, specify the following information.
 
@@ -147,17 +147,40 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in less rows returned but potentially quicker results. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
 
-   - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. In the **Query Statement Properties**, select the green triangle to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query. <!--7380401-->
-   :::image type="content" source="./media/7380401-preview-collection-query.png" alt-text="Client data sources dashboard" lightbox="./media/7380401-preview-collection-query.png":::
+   - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. For more information, see the [Preview collection queries](#bkmk-preview) section.
 
-### <a name="bkmk-include"></a> Configure an include collection rule
+## <a name="bkmk-include"></a> Configure an include collection rule
 
 In the **Select Collections** dialog box, select the collections you want to include in the new collection, and then select **OK**.
 
-### <a name="bkmk-exclude"></a> Configure an exclude collection rule
+## <a name="bkmk-exclude"></a> Configure an exclude collection rule
 
 In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, and then select **OK**.
 
+## <a name="bkmk-preview"></a> Preview collection queries
+
+*(Introduced in 2010)*
+
+Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. In the **Query Statement Properties**, select the green triangle to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query. <!--7380401-->
+:::image type="content" source="./media/7380401-preview-collection-query.png" alt-text="Client data sources dashboard" lightbox="./media/7380401-preview-collection-query.png":::
+
+### <a name="bkmk_query"></a> Improvements to query preview
+<!--8680235-->
+*(Introduced in 2103)*
+
+Starting in Configuration Manager version 2103, you have more options when using the collection query preview. The following improvements have been made to previewing collection queries:
+- Limit the number of rows returned
+   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows. 
+- Omit duplicate rows from the result set
+  - If the **Omit duplicate rows** option isn't selected, the original query statement will be executed as is, even if the query contains the word **distinct**.
+  - When the **Omit duplicate rows** option is selected, if the query already contains the word **distinct**, then the query runs as it is. When the query doesn't contain the word **distinct**, it's added to the query for the preview (mean override).
+- Review statistics for the query preview such as number of rows returned and elapsed time.
+
+:::image type="content" source="./media/8680235-limited-query-preview.png" alt-text="Limiting rows returned and omitting duplicate rows when previewing a quiery" lightbox="./media/8680235-limited-query-preview.png":::
+
+> [!NOTE]
+> - Elapsed times shown for the query preview may not be the same as actual execution of the target query.
+> - **Query execution elapsed time** and **Displaying results elapsed time** shouldn't be added for a total elapsed time since these processes run in parallel.
 ## <a name="bkmk_import"></a> Import a collection
 
 When you export a collection from a site, Configuration Manager saves it as a Managed Object Format (MOF) file. Use this procedure to import that file into your site database. To complete this procedure, you need **Create** permissions on the collections class.

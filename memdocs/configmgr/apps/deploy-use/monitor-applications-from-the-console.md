@@ -1,85 +1,112 @@
 ---
-title: "Monitor applications from the console"
-titleSuffix: "Configuration Manager"
-description: "Monitor deployment of software, including updates, compliance settings, and applications by using the Monitoring workspace in Configuration Manager."
-ms.date: 10/06/2016
+title: Monitor applications from the console
+titleSuffix: Configuration Manager
+description: Monitor deployment applications with the Monitoring workspace in Configuration Manager.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
 ---
+
 # Monitor applications from the Configuration Manager console
 
 *Applies to: Configuration Manager (current branch)*
 
+Applications in Configuration Manager support state-based monitoring, which enables you to track the last application deployment state for users and devices. These state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console.
 
-In Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  
+Monitor application deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.
 
- Applications in Configuration Manager support state-based monitoring, which enables you to track the last application deployment state for users and devices. These state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console.  
+## About compliance states
 
-## Learn about compliance states
- An application deployment state has one of the following compliance states:  
+An application deployment state has one of the following compliance states:
 
--   **Success** – The application deployment succeeded or was found to be already installed.  
+- **Success**: The client successfully deployed the application or it's already deployed. A deployment can install or uninstall an application.
 
--   **In Progress** – The application deployment is in progress.  
+- **In progress**: The client is currently running the application deployment.
 
--   **Unknown** – The state of the application deployment could not be determined. This state is not applicable for deployments with a purpose of **Available**. This state is typically displayed when state messages from the client are not yet received.  
+- **Unknown**: Configuration Manager can't determine the state of the application deployment. This state isn't applicable for deployments with a purpose of **Available**. The console typically displays this state when the site hasn't yet received state messages from the client.
 
--   **Requirements Not Met** – The application was not deployed because it was not compliant with a dependency or a requirement rule, or because the operating system to which it was deployed was not applicable.  
+- **Requirements not met**: The client didn't run the application deployment because it wasn't compliant with a dependency or a requirement rule. For example, the OS on the device isn't applicable.
 
--   **Error** – The application failed to deploy because of an error.  
+- **Error**: The client failed to deploy the application because of an error.
 
-You can view additional information for each compliance state, including subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
+For each compliance state, you can view additional information, such as the number of users and devices in this category. The compliance states also include subcategories. For example, the **Error** compliance state includes the following subcategories:
 
-- Error evaluating requirements  
+- Error evaluating requirements
 
-- Content related errors  
+- Content related errors
 
-- Installation errors  
+- Installation errors
 
-  When more than one compliance state applies for an application deployment, you can see the aggregate state that represents the lowest compliance. For example:  
+When more than one compliance state applies for an application deployment, you can see the aggregate state that represents the lowest compliance. For example:
 
-  -   If a user signs in to two devices and the application is successfully installed on one device but fails to install on the second device, the aggregate deployment state of the application for that user displays as **Error**.  
+- A user signs in to two devices. The application successfully installs on one device but fails to install on the other. The aggregate deployment state of the application for this user displays as **Error**.
 
-  -   If an application is deployed to all users that sign in to a computer, you receive multiple deployment results for that computer. If one of the deployments fails, the aggregate deployment state for the computer displays as **Error**.  
+- You deploy an application to all users that sign in to a computer. Configuration Manager displays multiple deployment results for that computer. If one of the deployments fails, the aggregate deployment state for the computer displays as **Error**.
 
-The deployment state for package and program deployments is not aggregated.  
+Use these subcategories to help you to quickly identify any important issues with an application deployment. You can also view additional information about the devices that fall into a particular subcategory of a compliance state.
 
- Use these subcategories to help you to quickly identify any important issues with an application deployment. You can also view additional information about the devices that fall into a particular subcategory of a compliance state.  
+## Application monitoring reports
 
- Application management in Configuration Manager includes a number of built-in reports that enable you to monitor information about applications and deployments. These reports have the report category of **Software Distribution – Application Monitoring**.  
+Application management in Configuration Manager includes many built-in reports to monitor information about applications and deployments. These reports have the report category of **Software Distribution – Application Monitoring**. For more information, see [List of reports](../../core/servers/manage/list-of-reports.md#software-distribution---application-monitoring).
 
- For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).
 
-## Monitor the state of an application in the Configuration Manager console  
+## Monitor app state in the console
 
-1.  In the Configuration Manager console, choose **Monitoring** > **Deployments**.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Deployments** node.
 
-3.  To review deployment details for each compliance state and the devices in that state, select a deployment, and then, on the **Home** tab, in the **Deployment** group, choose **View Status** to open the **Deployment Status** pane. In this pane, you can view the assets with each compliance state. Choose any asset to view more detailed information about the deployment status to that asset.  
+    > [!TIP]
+    > If your site has a lot of deployments, filter the list to just application deployments.
+    >
+    > 1. At the top of the list next to the _Search_ field, select **Add Criteria**. Choose **Feature Type** and then select **Add**.
+    > 1. The search area adds the default criteria, **AND Feature Type Content Distribution**. Select **Content Distribution** and choose **Application** instead.
+    > 1. Select **Search** to refresh the list.
 
-    > [!NOTE]  
-    >  The number of items that can be displayed in the **Deployment Status** pane is limited to 20,000. If you need to see more items, use Configuration Manager reports to view application status data.  
-    >   
-    >  The status of deployment types is aggregated in the **Deployment Status** pane. To view more detailed information about the deployment types, use the report **Application Infrastructure Errors** in the report category **Software Distribution – Application Monitoring**.  
+1. Select a deployment for the app to monitor.
 
-4.  To review general status information about an application deployment, select a deployment, and then choose the **Summary** tab in the **Selected Deployment** window.  
+:::image type="content" source="media/monitor-app-deployments.png" alt-text="Screenshot of the Monitoring workspace, Deployments node, filtered to applications" lightbox="media/monitor-app-deployments.png":::
 
-5.  To review information about the applications deployment type, select a deployment, and then choose the **Deployment Types** tab in the **Selected Deployment** window.  
+- To review general status information about an application deployment, see the **Summary** tab in the details pane.
 
-The information that's shown in the **Deployment Status** pane after you choose **View Status** is live data from the Configuration Manager database. The information that's shown in the **Summary** tab and the **Deployment Types** tab is summarized data.
+- To review status for the application's deployment types, switch to the **Deployment Types** tab in the details pane.
 
-If the data that is shown in the **Summary** tab and the **Deployment Types** tab does not match the data that's shown in the **Deployment Status** pane, choose **Run Summarization** to update the data in these tabs. You can configure the default application deployment summarization interval as follows:  
+- To review deployment details for each compliance state and the resources in that state, select **View status** on the **Home** tab of the ribbon. This action opens the **Deployment Status** pane. Here you can view the assets in each compliance state. To view more detailed information about the deployment status to an asset, select it in the Asset Details list. Then select **More Details** on the right side of the window.
 
-1. In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites**.
+    > [!NOTE]
+    > The maximum number of items that the **Deployment Status** pane can display is 20,000. If you need to see more items, use Configuration Manager reports to view application status data.
+    >
+    > The status of deployment types is aggregated in the **Deployment Status** pane. To view more detailed information about the deployment types, use the **Application Infrastructure Errors** report.
 
-2. From the **Sites** list, select the site for which you want to configure the summarization interval, and then in the **Home** tab, in the **Settings** group, choose **Status Summarizers**.
+### Summarized data
 
-3. In the **Status Summarizers** dialog box, choose **Application Deployment Summarizer**, and then choose **Edit**.  
+The information on the **Summary** and **Deployment Types** tabs is summarized data. When you select **View Status**, the console displays current data from the site database. If these data don't match, select **Run Summarization**.
 
-4. In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals, and then choose **OK**.  
+To configure the default application deployment summarization interval:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
+1. Select the site for which you want to configure the summarization interval. Then in the **Settings** group of the ribbon, choose **Status Summarizers**.
+
+1. Select **Application Deployment Summarizer**, and the select **Edit**.
+
+1. Configure the summarization intervals:
+
+    - **Frequency of status updates for a deployment that was modified in the last 30 days**: By default, this value is **60 minutes**.
+    - **Frequency of status updates for a deployment that was modified in the last 31 to 90 days**: By default, this value is **24 hours**.
+    - **Frequency of status updates for a deployment that was last modified over 90 days ago**: By default this value is **7 days**.
+
+    > [!NOTE]
+    > These values apply to application, task sequence, and package deployments.
+    >
+    > The site calculates the period of time based on the deployment start time.
+
+## Next steps
+
+[Monitor phased deployments](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+
+[Monitor app usage with software metering](monitor-app-usage-with-software-metering.md)

@@ -2,7 +2,7 @@
 title: Create SCEP certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how to use certificate profiles to provision managed devices with the certificates they need
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -18,10 +18,10 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Use certificate profiles in Configuration Manager to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure](certificate-infrastructure.md).  
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
 
-> [!TIP]
-> For co-managed devices, consider moving the [**Resource access policies** workload](../../comanage/workloads.md#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](../../comanage/how-to-switch-workloads.md).
+Use certificate profiles in Configuration Manager to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure](certificate-infrastructure.md).  
 
 This article describes how to create trusted root and Simple Certificate Enrollment Protocol (SCEP) certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
