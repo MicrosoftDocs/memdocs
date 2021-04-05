@@ -35,10 +35,10 @@ ms.collection: M365-identity-device-management
 
 Android Enterprise supports corporate-owned, single-use, kiosk-style devices with its dedicated devices solution set. Such devices are used for a single purpose, such as digital signage, ticket printing, or inventory management, to name just a few. Admins can lock down the usage of a device to a single app, or a limited set of apps, inclusive of web apps. Users are prevented from adding other apps or taking actions on the device that unless explicitly approved by admins.
 
-Devices that you manage in this way can be enrolled into Intune in two different ways: 
+Devices that you manage in this way can be enrolled into Intune in two different ways:
 
-1. As a standard Android Enterprise dedicated device. These devices are enrolled into Intune without a user account and are not associated with any end user. These devices          are not intended for personal use applications or apps that have a strong requirement for user-specific account data such as Outlook or Gmail. 
-    
+1. As a standard Android Enterprise dedicated device. These devices are enrolled into Intune without a user account and are not associated with any end user. These devices          are not intended for personal use applications or apps that have a strong requirement for user-specific account data such as Outlook or Gmail.
+
 2. As a standard Android Enterprise dedicated device that is automatically set up with Microsoft's Authenticator application configured into [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. These devices are enrolled into Intune without a user account and are not associated with any end user. These devices are intended for use with applications that have integrated with Azure AD's Shared device mode to allow for single sign-in and single sign-out between users across participating applications.
 
 Intune helps you deploy apps and settings to Android Enterprise dedicated devices. For specific details about Android Enterprise, see [Android enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
@@ -71,8 +71,8 @@ You must create an enrollment profile so that you can enroll your dedicated devi
 2. Choose **Create** and fill out the required fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
     - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
-        - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation. 
-        - **Corporate-owned dedicated device with Azure AD shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Azure AD Shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Azure AD Microsoft Authentication Library and global sign-in/sign-out calls. 
+        - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation.
+        - **Corporate-owned dedicated device with Azure AD shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Azure AD Shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Azure AD Microsoft Authentication Library and global sign-in/sign-out calls.
     - **Token expiration date**: The date when the token expires. Google enforces a maximum of 90 days.
 3. Choose **Create** to save the profile.
 
@@ -124,9 +124,11 @@ Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#ass
 Apps are automatically updated on managed devices when the app developer publishes an update to Google Play.
 
 To remove an app from Android Enterprise dedicated devices, you can do either of the following:
+
 - Delete the Required app deployment.
 - Create an uninstall deployment for the app.
 
 ## Next steps
+
 - [Deploy Android apps](../apps/apps-deploy.md)
 - [Add Android configuration policies](../configuration/device-profiles.md)
