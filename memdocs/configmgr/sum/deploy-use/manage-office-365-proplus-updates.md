@@ -176,10 +176,7 @@ In the **Language Selection** page, select **Office 365 Client Update**, then se
 ### To add support to download updates for additional languages in version 1902 and later
 <!--9391197-->
 When new languages are added to Microsoft 365 Apps they don't appear in the content download languages, you can add them if needed. Use the following procedure on the software update point at the central administration site or stand-alone primary site:
-
-> [!IMPORTANT]  
-> Configuring additional Microsoft 365 Apps update languages is a site-wide setting. After you add the languages using the following procedure, all Microsoft 365 Apps updates are downloaded in those languages, as well as the languages that you select on the **Language Selection** page in the Download Software Updates or Deploy Software Updates wizards.
-
+ 
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
 2. Select **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Choose **Query**, and then run the following query:
