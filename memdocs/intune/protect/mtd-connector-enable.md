@@ -66,7 +66,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 5. Enable the toggle options according to your organization's requirements. Toggle options visible will vary depending on the MTD partner.  For example, the following image shows the options that are available for Symantec Endpoint Protection:
 
-   ![MTD setup in Intune Azure portal](./media/mtd-connector-enable/enable-mtd-connector-1.png)
+   ![MTD setup in Intune](./media/mtd-connector-enable/enable-mtd-connector-1.png)
 
 ## Mobile Threat Defense toggle options
 

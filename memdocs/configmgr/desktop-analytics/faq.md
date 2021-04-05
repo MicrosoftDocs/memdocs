@@ -2,7 +2,7 @@
 title: FAQ for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Frequently asked questions for Desktop Analytics.
-ms.date: 11/19/2020
+ms.date: 04/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -21,7 +21,7 @@ ms.reviewer: acabello
 
 Not today, but see the announcement from Microsoft Ignite 2019 on [insights-driven device management](https://myignite.microsoft.com/archives/IG19-BRK3086). This planned solution is a successor to Device Health and Upgrade Readiness.
 
-The vast majority of customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the additional insights from analytics data, and we're working on ways to share insights with them as well.
+Most customers that can benefit from the Desktop Analytics workflow use Configuration Manager to deploy Windows. We know Intune customers love the insights from analytics data, and we're working on ways to share insights with them as well.
 
 ### It's been over 72 hours and the portal is still processing data, what next?
 
@@ -35,13 +35,13 @@ If devices are properly configured, and you're still not seeing data in your wor
 
 ## Connect Configuration Manager
 
-### Can I change the target or additional collections?
+### Can I change the target or other collections?
 
 Yes, use the following process:
 
 - In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service.
 
-- On the **Desktop Analytics Connection** tab, change the **Target Collection** or manage the additional collections.
+- On the **Desktop Analytics Connection** tab, change the **Target Collection** or manage the other collections.
 
 <!-- 7130169 -->
 > [!Note]
@@ -98,9 +98,7 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
-Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
-
-For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
+Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. Devices can only send diagnostic data to one workspace. Reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance. For the best experience, use Configuration Manager. Configuration Manager provides an integrated experience for managing and deploying these settings to clients.
 
 ### Are there any Windows Analytics features that aren't available in Desktop Analytics?
 
@@ -146,6 +144,12 @@ Yes, the following Windows Analytics features were either retired or aren't yet 
 ### Why aren't new Windows releases available immediately in Desktop Analytics?
 
 Desktop Analytics uses several signals to generate the [compatibility assessment](compat-assessment.md) for applications. One of these signals is [Ready for Windows](compat-assessment.md#ready-for-windows) data. This data is based on the adoption status of every combination of application and OS versions from commercial devices that share data with Microsoft. This signal is more accurate from 30 to 60 days after the general availability of a new OS release. To avoid many of your assets having an **Unknown** or **Insufficient data** compatibility risk assessment, we wait 1-2 months before we add it to the list of target OS versions.
+
+### Where is the Security update tile in Desktop Analytics?
+
+<!-- 8099536 -->
+
+In the Desktop Analytics portal, the **Security updates** tile on the home page and the **Security updates** page were removed in March 2021. To monitor your devices' Windows updates and Microsoft Defender status, use [Update Compliance](/windows/deployment/update/update-compliance-get-started) in the same workspace as Desktop Analytics. Devices can only send diagnostic data to one workspace.
 
 ### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Microsoft 365 Apps upgrades?
 
