@@ -1,8 +1,8 @@
 ---
-title: "Configure client communication ports"
-titleSuffix: "Configuration Manager"
-description: "Set client communication ports in Configuration Manager."
-ms.date: 04/23/2017
+title: Configure client communication ports
+titleSuffix: Configuration Manager
+description: Set client communication ports in Configuration Manager.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,56 +10,74 @@ ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # How to configure client communication ports in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You can change the request port numbers that Configuration Manager clients use to communicate with site systems that use HTTP and HTTPS for communication. Although HTTP or HTTPS is more likely to be already configured for firewalls, client notification that uses HTTP or HTTPS requires more CPU usage and memory on the management point computer than if you use a custom port number. You can also specify the site port number to use if you wake up clients by using traditional wake-up packets.  
+You can change the request port numbers that Configuration Manager clients use to communicate with site systems that use HTTP and HTTPS for communication. Although HTTP or HTTPS is more likely to be already configured for firewalls, client notification that uses HTTP or HTTPS requires more CPU usage and memory on the management point computer than if you use a custom port number. You can also specify the site port number to use if you wake up clients by using traditional wake-up packets.
 
- When you specify HTTP and HTTPS request ports, you can specify both a default port number and an alternative port number. Clients automatically try the alternative port after communication fails with the default port. You can specify settings for HTTP and HTTPS data communication.  
+When you specify HTTP and HTTPS request ports, you can specify both a default port number and an alternative port number. If communication fails with the default port, clients automatically try the alternative port. You can specify port settings for HTTP and HTTPS data communication.
 
- The default values for client request ports are **80** for HTTP traffic and **443** for HTTPS traffic. Change them only if you do not want to use these default values. A typical scenario for using custom ports is when you use a custom website in IIS rather than the default website. If you change the default port numbers for the default website in IIS and other applications also use the default website, they are likely to fail.  
+The default values for client request ports are **80** for HTTP traffic and **443** for HTTPS traffic. Change them only if you don't want to use these default values. A typical scenario for using custom ports is when you use a custom website in IIS rather than the default website. If you change the default port numbers for the default website in IIS, and other applications also use the default website, they're likely to fail.
 
 > [!IMPORTANT]
->  Do not change the port numbers in Configuration Manager without understanding the consequences. Examples:  
-> 
-> - If you change the port numbers for the client request services as a site configuration and existing clients are not reconfigured to use the new port numbers, these clients will become unmanaged.  
->   -   Before you configure a non-default port number, make sure that firewalls and all intervening network devices can support this configuration and reconfigure them as necessary. If you will manage clients on the Internet and change the default HTTPS port number of 443, routers and firewalls on the Internet might block this communication.  
+> Don't change the port numbers in Configuration Manager without understanding the consequences. For example:
+>
+> - If you change the port numbers for the client request services as a site configuration, and existing clients aren't reconfigured to use the new port numbers, these clients will be unmanaged.
+> - Before you configure a non-default port number, make sure that firewalls and all intervening network devices support this configuration. If you will manage clients on the internet, and change the default HTTPS port number of 443, routers and firewalls on the internet might block this communication.
 
- To make sure that clients do not become unmanaged after you change the request port numbers, clients must be configured to use the new request port numbers. When you change the request ports on a primary site, any attached secondary sites automatically inherit the same port configuration. Use the procedure in this topic to configure the request ports on the primary site.  
+To make sure that clients don't become unmanaged after you change the request port numbers, configure clients to use the new request port numbers. When you change the request ports on a primary site, any attached secondary sites automatically inherit the same port configuration.
 
- When the Configuration Manager site is published to Active Directory Domain Services, new and existing clients that can access this information will automatically be configured with their site port settings and you do not need to take further action. Clients that cannot access this information published to Active Directory Domain Services include workgroup clients, clients from another Active Directory forest, clients that are configured for Internet-only, and clients that are currently on the Internet. If you change the default port numbers after these clients have been installed, reinstall them and install any new clients by using one of the following methods:  
+## How clients get the port configuration
 
-- Reinstall the clients by using the Client Push Installation Wizard. Client push installation automatically configures clients with the current site port configuration. For more information about how to use the Client Push Installation Wizard, see [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
+When the Configuration Manager [site is published](../../servers/deploy/configure/publish-site-data.md) to Active Directory Domain Services, new and existing clients that can access this information will automatically be configured with their site port settings. You don't need to take further action.
 
-- Reinstall the clients by using CCMSetup.exe and the client.msi installation properties of CCMHTTPPORT and CCMHTTPSPORT. For more information about these properties, see  [About client installation properties](../../../core/clients/deploy/about-client-installation-properties.md).  
+Clients that can't access this information published to Active Directory include:
 
-- Reinstall the clients by using a method that searches Active Directory Domain Services for Configuration Manager client installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
+- Workgroup clients
+- Clients from another Active Directory forest
+- Clients that are configured for internet-only
+- Clients that are currently on the internet.
 
-  To reconfigure the port numbers for existing clients, you can also use the script PORTSWITCH.VBS that is provided with the installation media in the SMSSETUP\Tools\PortConfiguration folder.  
+If you change the default port numbers after you install these clients, reinstall them.
 
-> [!IMPORTANT]  
->  For existing and new clients that are currently on the Internet, you must configure the non-default port numbers by using the CCMSetup.exe client.msi properties of CCMHTTPPORT and CCMHTTPSPORT.  
+Install any new clients by using one of the following methods:
 
- After changing the request ports on the site, new clients that are installed by using the site-wide client push installation method will be automatically configured with the current port numbers for the site.  
+- Reinstall the clients by using the Client Push Installation Wizard. Client push installation automatically configures clients with the current site port configuration. For more information, see [How to install Configuration Manager clients with client push](deploy-clients-to-windows-computers.md#BKMK_ClientPush).
 
-#### To configure the client communication port numbers for a site  
+- Reinstall the clients by using CCMSetup.exe and the client.msi installation properties of **CCMHTTPPORT** and **CCMHTTPSPORT**. For more information, see  [About client installation properties](about-client-installation-properties.md).
 
-1. In the Configuration Manager console, click **Administration**.  
+- Reinstall the clients by using a method that searches Active Directory Domain Services for Configuration Manager client installation properties. For more information, see [About client installation properties published to Active Directory Domain Services](about-client-installation-properties-published-to-active-directory-domain-services.md).
 
-2. In the **Administration** workspace, expand **Site Configuration**, click **Sites**, and select the primary site to configure.  
+To reconfigure the port numbers for existing clients, you can also use the script **Portswitch.vbs**. Find this script on the installation media in the `SMSSETUP\Tools\PortConfiguration` folder.
 
-3. On the **Home** tab, click **Properties**, and then click the **Ports** tab.  
+> [!IMPORTANT]
+> For existing and new clients that are currently on the internet, configure the non-default port numbers by using the CCMSetup.exe client.msi properties of **CCMHTTPPORT** and **CCMHTTPSPORT**.
 
-4. Select any of the items and click the Properties icon to display the **Port Detail** dialog box.  
+After changing the request ports on the site, when you install new clients with the site-wide client push installation method, they're automatically configured with the current port numbers for the site.
 
-5. In the **Port Detail** dialog box, specify the port number and description for the item, and then click **OK**.  
+## Configure ports for a site
 
-6. Select **Use custom web site** if you will use the custom website name of **SMSWeb** for site systems that run IIS.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node.
 
-7. Click **OK** to close the properties dialog box for the site.  
+1. Select the primary site to configure.
 
-   Repeat this procedure for all primary sites in the hierarchy.
+1. On the **Home** tab of the ribbon, select **Properties**.
+
+1. Switch to the **Ports** tab.
+
+    :::image type="content" source="media/site-properties-ports.png" alt-text="The Ports tab of the site's Properties window":::
+
+1. Select a service, and then select the Properties icon to open the **Port Detail** window.
+
+    :::image type="content" source="media/port-detail.png" alt-text="Site properties Port Detail window":::
+
+1. Specify the port number and description for the item, and then select **OK**.
+
+1. If you want to use the custom website **SMSWeb** for site systems that run IIS, select **Use custom web site**. For more information, see [Websites for site system servers](../../plan-design/network/websites-for-site-system-servers.md).
+
+1. Select **OK** to save the configuration and close the site properties window.
+
+Repeat this procedure for all primary sites in the hierarchy.

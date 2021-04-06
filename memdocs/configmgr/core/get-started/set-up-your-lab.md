@@ -315,7 +315,7 @@ Internet Information Services (IIS) is a flexible, scalable web server that can 
 
 7.  Click **Install** and verify that the installation completed properly in the **Notifications** pane of **Server Manager**.  
 
-By default, IIS blocks several types of file extensions and locations from access by HTTP or HTTPS communication. To enable these files to be distributed to client systems, you will need to configure request filtering for IIS on your distribution point. For more information, see [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
+By default, IIS blocks several types of file extensions and locations from access by HTTP or HTTPS communication. To enable these files to be distributed to client systems, you will need to configure request filtering for IIS on your distribution point. For more information, see [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#iis-request-filtering-for-distribution-points).  
 
 #### To configure IIS filtering on distribution points:  
 

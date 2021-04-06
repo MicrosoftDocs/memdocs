@@ -2,7 +2,7 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 12/07/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # High availability options for Configuration Manager
@@ -108,10 +106,6 @@ At each site, you deploy site system roles to provide the services that you want
 
 ### Redundancy for important site system roles
 
-- Application catalog web service point  
-
-- Application catalog website point  
-
 - Distribution point  
 
 - Management point  
@@ -160,23 +154,6 @@ Secondary sites only support installation of one management point, which must be
 ### Distribution point
 
 Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](boundary-groups.md).  
-
-### Application catalog web service point and application catalog website point
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-Install more than one instance of each site system role. For best performance, deploy one of each on the same site system server.  
-
-Each application catalog site system role provides the same information as other instances of that role regardless of its location in the hierarchy. When a client makes a request for the application catalog, and you've configured clients to automatically detect the default application catalog website point, the client is directed to an available instance. Clients prefer local application catalog instances, based on the current network location of the client.  
-
-For more information about this client setting and how automatic detection works, see the [Computer Agent](../../../clients/deploy/about-client-settings.md#computer-agent) client settings.  
-
 
 ## <a name="bkmk_client"></a> High availability for clients  
 
