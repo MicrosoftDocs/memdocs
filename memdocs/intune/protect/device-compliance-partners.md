@@ -49,15 +49,12 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 The following compliance partners are supported as generally available:
 
+- Citrix Workspace device compliance
+- IBM MaaS360
 - JAMF Pro
 - MobileIron Device Compliance On-prem
 - VMware Workspace ONE UEM (formerly AirWatch)
-
-The following compliance partners are supported through public previews:
-
 - IBM MaaS360
-- Citrix Workspace device compliance
-
 
 ## Prerequisites
 
