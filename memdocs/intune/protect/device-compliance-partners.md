@@ -54,7 +54,6 @@ The following compliance partners are supported as generally available:
 - JAMF Pro
 - MobileIron Device Compliance On-prem
 - VMware Workspace ONE UEM (formerly AirWatch)
-- IBM MaaS360
 
 ## Prerequisites
 
