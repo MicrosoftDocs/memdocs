@@ -15,9 +15,9 @@ These notices provide important information that can help you prepare for future
 
 As mentioned in MC234534, Intune will be moving to support Android 6.0 (Marshmallow) and higher in the April (2104) service release.
 
-#### How this will affect your organization
+#### How this change will affect your organization
 
-Given that the Office mobile apps for Android ended support for Android 5.x (Lollipop) on June 30th, 2019 (MC181101) this may not affect you; you have likely already upgraded your OS or devices. However, if you have any device that is still running Android version 5.x, or decide to enroll any device that is running Android version 5.x, please note that these devices will no longer be supported. Either update them to Android version 6.0 (Marshmallow) or higher or replace them with a device on Android version 6.0 or higher.
+Given that the Office mobile apps for Android ended support for Android 5.x (Lollipop) on June 30, 2019 (MC181101) this change may not affect you; you have likely already upgraded your OS or devices. However, if you have any device that is still running Android version 5.x, or decide to enroll any device that is running Android version 5.x, please note that these devices will no longer be supported. Either update them to Android version 6.0 (Marshmallow) or higher or replace them with a device on Android version 6.0 or higher.
 
 > [!NOTE]
 > Teams Android devices are not impacted by this announcement and will continue to be supported regardless of their Android OS version.
