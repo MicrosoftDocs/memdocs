@@ -68,7 +68,7 @@ These settings are available in the following profiles:
 The following setting is only available in the Microsoft Defender Antivirus profile:
 
 - **Defender local admin merge**  
-  CSP: [Configuration/DisableLocalAdminMerge]( Configuration/DisableLocalAdminMerge)
+  CSP: [Configuration/DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)
 
   This setting controls if exclusion list settings that are configured by a local administrator merge with managed settings from Intune policy. This setting applies to lists such as threats and exclusions.
 
