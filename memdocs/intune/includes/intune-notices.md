@@ -11,7 +11,7 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for Change: Intune moving to support Android 6.0 and higher in April
+### Plan for Change: Intune moving to support Android 6.0 and higher in April 2021
 
 As mentioned in MC234534, Intune will be moving to support Android 6.0 (Marshmallow) and higher in the April (2104) service release.
 
