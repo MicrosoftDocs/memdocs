@@ -299,6 +299,12 @@ Community hub now supports contributing and downloading Power BI report template
 
 For more information, see [Power BI report templates in Community hub](../../servers/manage/powerbi-report-server.md#bkmk_community_hub) and [Using Community hub](../../servers/manage/community-hub.md).
 
+### Download configuration items and configuration baselines from Community hub
+<!--7983121-->
+You can now download configuration items and configuration baselines from Community hub.
+
+For more information, see [Using Community hub](../../servers/manage/community-hub.md).
+
 ### Access the top queries shared in the Community hub from CMPivot
 <!--7137169-->
 
