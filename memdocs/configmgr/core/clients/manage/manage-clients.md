@@ -2,7 +2,7 @@
 title: Manage clients
 titleSuffix: Configuration Manager
 description: Learn how to manage clients in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -381,14 +381,16 @@ Use the following process to add hardware identifiers for Configuration Manager 
 
 3. Switch to the **Client Approval and Conflicting Records** tab. To add new hardware identifiers, choose **Add** in the **Duplicate hardware identifiers** section.
 
-> [!TIP]
-> Starting in version 1910, use the following PowerShell cmdlets to automate the management of duplicate hardware identifiers:<!-- 4852819 -->
->
-> - New-CMDuplicateHardwareIdGuid
-> - Remove-CMDuplicateHardwareIdGuid
-> - New-CMDuplicateHardwareIdMacAddress
-> - Remove-CMDuplicateHardwareIdMacAddress
+### PowerShell for duplicate hardware IDs
 
+You can use the following PowerShell cmdlets to automate the management of duplicate hardware identifiers:<!-- 4852819 -->
+
+- [Get-CMDuplicateHardwareIdGuid](/powershell/module/configurationmanager/get-cmduplicatehardwareidguid)
+- [New-CMDuplicateHardwareIdGuid](/powershell/module/configurationmanager/new-cmduplicatehardwareidguid)
+- [Remove-CMDuplicateHardwareIdGuid](/powershell/module/configurationmanager/remove-cmduplicatehardwareidguid)
+- [Get-CMDuplicateHardwareIdMacAddress](/powershell/module/configurationmanager/get-cmduplicatehardwareidmacaddress)
+- [New-CMDuplicateHardwareIdMacAddress](/powershell/module/configurationmanager/new-cmduplicatehardwareidmacaddress)
+- [Remove-CMDuplicateHardwareIdMacAddress](/powershell/module/configurationmanager/remove-cmduplicatehardwareidmacaddress)
 
 ## <a name="BKMK_PolicyRetrieval"></a> Start policy retrieval
 
@@ -418,9 +420,9 @@ A Configuration Manager client downloads its client policy on a schedule that yo
 
 4. Repeat the previous steps for any other actions. For example, **User Policy Retrieval & Evaluation Cycle** for user client settings.  
 
-### <a name="bkmk_policy-support"></a> Start client policy retrieval with Support Center
+### <a name="bkmk_policy-support"></a> Start client policy retrieval with Support Center Client Tools
 
-Use Support Center to request and view client policy. For more information, see [Support Center reference](../../support/support-center-ui-reference.md#bkmk_support-policy).
+Use Support Center Client Tools to request and view client policy. For more information, see [Support Center reference](../../support/support-center-ui-reference.md#policy-tab-client-tools).
 
 ### <a name="bkmk_policy-script"></a> Start client policy retrieval by script  
 

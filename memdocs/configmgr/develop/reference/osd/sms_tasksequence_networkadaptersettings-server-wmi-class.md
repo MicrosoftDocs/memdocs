@@ -1,21 +1,22 @@
 ---
-title: "SMS_TaskSequence_NetworkAdapterSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_NetworkAdapterSettings class
+titleSuffix: Configuration Manager
+description: Details of the SMS_TaskSequence_NetworkAdapterSettings server WMI class
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7283c9dc-4098-4bce-9c72-56a30f263c58
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_NetworkAdapterSettings Server WMI Class
+
+# SMS_TaskSequence_NetworkAdapterSettings server WMI class
+
 The `SMS_TaskSequence_NetworkAdapterSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings to apply to a physical network adapter.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
@@ -129,7 +130,10 @@ Class SMS_TaskSequence_NetworkAdapterSettings
 
  Qualifiers: [not_null]  
 
- `true` to use WINS for name resolution.  
+ `true` to use WINS for name resolution.
+
+> [!IMPORTANT]
+> WINS is a deprecated service. For more information, see [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top).
 
  `GatewayCostMetric`  
  Data type: `UInt32`  

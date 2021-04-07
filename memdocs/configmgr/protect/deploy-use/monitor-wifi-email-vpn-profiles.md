@@ -2,7 +2,7 @@
 title: "Monitor Email, Wi-Fi and VPN profiles"
 titleSuffix: "Configuration Manager"
 description: "Learn how to monitor the compliance status of email, Wi-Fi, and VPN profiles in Configuration Manager."
-ms.date: 10/06/2016
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -17,6 +17,9 @@ manager: dougeby
 # Monitor Email, Wi-Fi and VPN profiles in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
 
 After you have deployed Configuration Manager Email, Wi-Fi or VPN profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the profile:  
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,8 +38,8 @@ You can use app configuration policies with managed apps that support the Intune
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 3. On the **Basics** page, set the following details:
-    - **Name**: The name of the profile that will appear in the Azure portal.
-    - **Description**: The  description of the profile that will appear in the Azure portal.
+    - **Name**: The name of the profile that will appear in the portal.
+    - **Description**: The  description of the profile that will appear in the portal.
     - **Device enrollment type**: Managed apps is selected.
 4. Choose either **Select public apps** or **Select custom apps** to choose the app that you are going to configure. Select the app from the list of apps that you have approved and synchronized with Intune.
 5. Click **Next** to display the **Settings** page.

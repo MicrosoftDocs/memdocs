@@ -18,6 +18,8 @@
       href: in-development.md   
     - name: Important notices
       href: whats-new.md#notices
+    - name: Public preview
+      href: public-preview.md
 - name: Quickstarts
   items:
   - name: Try Intune for free
