@@ -37,9 +37,6 @@ Intune stores only the update policy assignments, not the updates themselves. De
 
 Learn more about Windows 10 [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) in the Windows documentation.
 
-> [!NOTE]
-> If the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update will no longer offer feature updates to devices running Windows 10 1709 or higher. See [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are) in the Windows documentation.
-
 ## Policy types to manage updates
 
 Intune provides the following policy types to manage updates:
