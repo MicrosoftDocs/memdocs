@@ -135,14 +135,11 @@ For more information, see the following articles in the Android documentation:
 
 #### Considerations for devices enrolled as Android Enterprise dedicated
 
-For devices enrolled as Android Enterprise dedicated, password enforcement can present challenges, especially for devices in single-app kiosk mode.
+For devices enrolled as Android Enterprise dedicated, password enforcement can present challenges.
 
-For devices that run 9.0 and later, you can use a device compliance or device configuration policy to enforce the password requirement. For devices in kiosk mode, view [Support Tip: New Google-based Compliance Screens for Kiosk Mode](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-new-google-based-compliance-screens-for-kiosk-mode/ba-p/2129719) from the Intune Support Team, to understand the device experience.  
+For devices that run 9.0 and later and receive a kiosk-mode policy, you can use a device compliance or device configuration policy to enforce the password requirement. View [Support Tip: New Google-based Compliance Screens for Kiosk Mode](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-new-google-based-compliance-screens-for-kiosk-mode/ba-p/2129719) from the Intune Support Team, to understand the device experience.
 
-For devices that run 8.x and earlier, you can also use a device compliance or device configuration policy to enforce the password requirement. However:
-
-- To set up a PIN, you’ll need to manually enter the settings application on the device and configure the PIN.
-- Some devices might not support enforcement of password policy, such as devices configured as single-app kiosks.
+For devices that run 8.x and earlier, you can also use a device compliance or device configuration policy to enforce the password requirement. However, to set up a PIN, you’ll need to manually enter the settings application on the device and configure the PIN.
 
 
 ## Configure the certification authority
