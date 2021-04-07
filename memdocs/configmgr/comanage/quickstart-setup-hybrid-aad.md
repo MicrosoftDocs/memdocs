@@ -32,6 +32,10 @@ Hybrid Azure AD join is one of the key foundations for co-management. This proce
 
 Resolving these challenges can take some guidance. This article helps to mitigate any delays.
 
+[!Tip]
+    > As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (AD) joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post “Understanding hybrid Azure AD and co-management scenarios” This blog aims to clarify Hybrid Azure AD Join and co-management, how they work together but are not the same thing.
+ >
+
 
 ## How to do it
 
