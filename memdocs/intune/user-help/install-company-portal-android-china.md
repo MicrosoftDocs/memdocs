@@ -40,13 +40,13 @@ Install the Intune Company Portal app to access school or work resources from yo
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 
-<!--
+
 Company Portal is also available from the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565). To find it:  
  
    1. Go to the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565).  
    2. Search for the Company Portal app by entering **公司门户** in the search bar.  
    3. Select the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2101.png) listing.  
--->
+
 
 ## Next steps  
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 

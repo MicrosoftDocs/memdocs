@@ -1,6 +1,6 @@
 ---
 title: Startup performance in Endpoint Analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Get details about device startup performance in Endpoint Analytics
 ms.date: 02/25/2021
 ms.prod: configuration-manager
