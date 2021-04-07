@@ -2,13 +2,11 @@
 title: Endpoint analytics documentation
 summary: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
  
-
 metadata:
   title: Endpoint analytics documentation
-  titleSuffix: Configuration Manager
   description: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
-  ms.product: configuration-manager
-  ms.technology: configmgr-analytics
+  ms.service: mem
+  ms.subservice: fundamentals
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart
