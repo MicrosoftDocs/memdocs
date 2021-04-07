@@ -1,6 +1,6 @@
 ---
 title: Endpoint analytics settings
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Instructions for configuring settings in Endpoint analytics.
 ms.date: 09/22/2020
 ms.prod: configuration-manager

@@ -1,6 +1,6 @@
 ---
 title: Recommended software in Endpoint Analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Get details about recommended software in Endpoint Analytics
 ms.date: 09/22/2020
 ms.prod: configuration-manager
