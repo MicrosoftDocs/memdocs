@@ -1,6 +1,6 @@
 ---
 title: Restart frequency (preview) in endpoint analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Get details about device restart frequency in endpoint analytics
 ms.date: 03/01/2021
 ms.prod: configuration-manager
