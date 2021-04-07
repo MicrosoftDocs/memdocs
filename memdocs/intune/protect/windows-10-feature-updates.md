@@ -67,7 +67,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10 or later. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Basic**. Values of **Enhanced** or **Full** are also supported.
 
-  - Have Microsoft Sign-In Assistant (wlidsvc) running. If blocked or set to *Disabled*, it will fail to receive the update. See [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are) in the Windows documentation.
+  - Have Microsoft Sign-In Assistant (wlidsvc) running. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
 - Feature updates are supported for the following Windows 10 editions:  
   - Windows 10 Pro
