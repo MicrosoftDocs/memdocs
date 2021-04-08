@@ -29,8 +29,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Network access control (NAC) integration with Intune
-
-Intune integrates with network access control partners to help organizations secure corporate data when devices try to access on-premises resources.
+ 
+Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!IMPORTANT]
 > NAC is not currently supported for Android Enterprise Fully Managed or Android Enterprise Dedicated devices.
