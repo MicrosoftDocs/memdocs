@@ -331,19 +331,19 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 2.  On the **Home** tab, in the **Deployment** group, click **Clear Server Group Deployment Locks**. When clients have failed to install the software updates and are preventing other clients from installing their software updates, the deployment locks can be manually cleared.  
 
-##  <a name="BKMK_ATP"></a> Support for Microsoft Defender Advanced Threat Protection service  
- Microsoft Defender Advanced Threat Protection (ATP) is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Microsoft Defender ATP is formerly known as Windows Defender ATP. Learn more about [Microsoft Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager can help you onboard and monitor managed Windows 10 Anniversary Edition client devices.  
+##  <a name="BKMK_ATP"></a> Support for Microsoft Defender for Endpoint service  
+ Microsoft Defender for Endpoint  is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Microsoft Defender for Endpoint is formerly known as Windows Defender ATP. Learn more about [Microsoft Defender for Endpoint](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager can help you onboard and monitor managed Windows 10 Anniversary Edition client devices.  
 
 ### Try it now!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
-- Onboard devices to the Microsoft Defender Advanced Threat Protection (ATP) online service  
+- Onboard devices to the Microsoft Defender for Endpoint online service  
 
-- Monitor Microsoft Defender ATP deployment to managed devices  
+- Monitor Microsoft Defender for Endpoint deployment to managed devices  
 
   **Prerequisites**  
 
-- Subscription to the Microsoft Defender Advanced Threat Protection online service  
+- Subscription to the Microsoft Defender for Endpoint online service  
 
 - Clients running Windows 10, Anniversary Edition (build 14328 and greater)  
 
@@ -351,7 +351,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
   ##### How to create an onboarding configuration file  
 
-  1.  Logon to the Microsoft Defender ATP online service  
+  1.  Logon to the Microsoft Defender for Endpoint online service  
 
   2.  Click on the **Client On-boarding** menu item  
 
@@ -360,13 +360,13 @@ In this technical preview, if the Company Portal is open for more than 15 minute
   4.  Download the compressed archive (.zip) file and extract the contents.  
 
 
-##### Onboard devices for Microsoft Defender ATP  
+##### Onboard devices for Microsoft Defender for Endpoint  
 
-1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender for Endpoint Policy Wizard opens.  
 
-2. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**. Click Next.  
+2. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**. Click Next.  
 
-3. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant. Click **Next**.  
+3. **Browse** to the Configuration file provided by your organization's Microsoft Defender for Endpoint cloud service tenant. Click **Next**.  
 
 4. Specify the file samples that are collected and shared from managed devices for analysis.  
 
@@ -378,17 +378,17 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 5. Review the summary and complete the wizard.  
 
-6. You can now deploy the Microsoft Defender ATP policy to managed client computers by clicking **Deploy**.  
+6. You can now deploy the Microsoft Defender for Endpoint policy to managed client computers by clicking **Deploy**.  
 
-##### Monitor Microsoft Defender ATP  
+##### Monitor Microsoft Defender for Endpoint  
 
 1.  In the Configuration Manager console, navigate **Monitoring** > **Overview** > **Security** and then click **Windows Defender ATP**.  
 
-2.  Review the Microsoft Defender Advanced Threat Protection dashboard.  
+2.  Review the Microsoft Defender for Endpoint dashboard.  
 
-    -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
+    -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded  
 
-    -   **Windows Defender ATP Agent Health** – Percentage of computer clients reporting status for their Microsoft Defender ATP agent  
+    -   **Windows Defender ATP Agent Health** – Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent  
 
         -   **Healthy** - Working properly  
 

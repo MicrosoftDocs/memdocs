@@ -7,7 +7,7 @@ groups:
     - id: windows-mdm
       title: Windows MDM
     - id: microsoft-defender-atp
-      title: Microsoft Defender Advanced Threat Protection
+      title: Microsoft Defender for Endpoint
 - id: windows-mdm-versions
   title: Windows MDM baseline versions
   prompt: Choose a version

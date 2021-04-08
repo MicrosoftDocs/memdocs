@@ -30,7 +30,7 @@ With co-management, Intune evaluates every device in your network to determine h
 
     - For co-managed devices, Configuration Manager also does configuration-based evaluation. For example, required updates or apps compliance. Intune combines this evaluation along with its own assessment.  
 
-2. Intune detects active security incidents on a device. It uses the intelligent security of [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly Windows Defender ATP) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
+2. Intune detects active security incidents on a device. It uses the intelligent security of [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly Windows Defender ATP) and other [mobile threat defense providers](https://www.lookout.com/about/partners/microsoft). These partners run ongoing behavioral analysis on devices. This analysis detects active incidents, and then passes this information to Intune for real-time compliance evaluation.  
 
     - This evaluation is post-security breach and incident-based  
 
@@ -59,7 +59,7 @@ With co-management, Intune can incorporate Configuration Manager's responsibilit
 
 Conditional Access is also a critical part of developing your [Zero Trust Network](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/) architecture. With Conditional Access, compliant device access controls cover the foundational layers of Zero Trust Network. This functionality is a large part of how you secure your organization in the future.
 
-For more information, see the blog post on [Enhancing Conditional Access with machine-risk data from Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
+For more information, see the blog post on [Enhancing Conditional Access with machine-risk data from Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
 
 
 
