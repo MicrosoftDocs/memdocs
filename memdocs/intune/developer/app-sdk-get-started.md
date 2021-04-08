@@ -66,9 +66,6 @@ We will use the email addresses listed in your questionnaire response to reach o
 
 The deep link is the link to your app's listing in the public app store. If your app's deep link changes in the future, you will need to re-register your app.
 
-> [!NOTE]
-> You must inform us if you update your app with a new version of the Intune App SDK.
-
 ## Download the SDK files
 
 The Intune App SDKs for native iOS and Android are hosted on a Microsoft GitHub account. These public repositories have the SDK files for native iOS and Android, respectively:
