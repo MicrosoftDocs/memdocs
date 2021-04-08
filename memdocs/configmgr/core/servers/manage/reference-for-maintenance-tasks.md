@@ -2,7 +2,7 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -554,14 +554,7 @@ These mappings are stored in a table for quick reference. When a collections mem
 
 ### Update Application Catalog Tables
 
-Use this task to synchronize the Application Catalog website database cache with the latest application information. When you change the configuration of this maintenance task, it applies to all primary sites in the hierarchy.  
-
-| Site type | Status |
-| --------- | ------ |
-|Central administration site|Not available|
-|**Primary site**|Enabled|
-|Secondary site|Not available|
-
+This task exists in the site, but isn't used. The application catalog is no longer supported.
 
 ## See also
 

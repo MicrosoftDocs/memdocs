@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune can use Azure Active Directory (AD) multi-factor authentication (MFA) for device enrollment to help you secure your corporate resources.
+Intune can use Azure Active Directory (AD) Conditional Access policies to require multi-factor authentication (MFA) for device enrollment to help you secure your corporate resources.
 
 MFA works by requiring any two or more of the following verification methods:
 

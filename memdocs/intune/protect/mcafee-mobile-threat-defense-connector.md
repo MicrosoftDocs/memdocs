@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,7 @@ You can configure Conditional Access policies based on MVISION Mobile risk asses
 
 ## Supported platforms
 
-- **Android 5.0 and later**
+- **Android 6.0 and later**
 
 - **iOS 9 and later**
 
@@ -60,7 +60,11 @@ The MVISION Mobile app for Android and iOS/iPadOS captures file system, network 
   - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
   - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
 
-- **Support for unenrolled devices** - MVISION Mobile with Intune doesn't support unenrolled devices.
+- **Support for unenrolled devices** - Intune can use the risk assessment data from the MVISION Mobile app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a Microsoft Intune protected app, Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using MVISION Mobile with unenrolled devices:
+
+  - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
+  - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
+  - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
   
 ## Sample scenarios
 

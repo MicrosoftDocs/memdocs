@@ -90,7 +90,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 | PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
-| Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
+| PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
 | Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 | Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 |IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
@@ -114,7 +114,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> For Windows 10 devices that are registered with [Windows Autopilot service](https://docs.microsoft.com/mem/autopilot/add-devices), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
+> For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

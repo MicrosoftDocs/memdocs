@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/29/2018
+ms.date: 02/04/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,11 +37,10 @@ The needs around enterprise mobility are dynamically evolving, and Microsoft's a
 Following are short introductions to the six most common scenarios that rely on Intune, accompanied with links to more information about how to plan and deploy each of them.
 
 >[!NOTE]
->Do you want to know how Microsoft IT uses Intune to give Microsoft access to corporate resources on their mobile devices while also keeping corporate data protected? [Read this technical case study](https://www.microsoft.com/itshowcase/Article/Content/588) to see in detail how Microsoft IT uses Intune and other services to manage identity, devices, and apps, and data.  
-
->[!IMPORTANT]
->We want to ensure that mobile devices are up-to-date
->In light of the recent "Trident" malware attacks on iOS/iPadOS devices. So we've published a blog post that's called [Ensuring mobile devices are up-to-date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). It provides information about the different ways that Intune can help keep your devices secure and up-to-date.
+>
+> - Want to know how Microsoft IT uses Intune to give corporate access on mobile devices, while also keeping corporate data protected? Check out the [IT Showcase Library](https://www.microsoft.com/itshowcase), and search for "Intune".
+>
+> - The [Microsoft Security and Compliance blogs](https://techcommunity.microsoft.com/t5/microsoft-security-and/bg-p/MicrosoftSecurityandCompliance) are a great resource. You can filter on areas that interest you, including Enterprise Mobility + Security, data loss prevention, identity & access management, and more.
 
 ## Protecting your on-premises email and data so it can be safely accessed by mobile devices
 
@@ -106,3 +105,8 @@ Simplicity of the user experience is critical in this case. For this reason, tab
 Sometimes your employees need to use devices, apps, or browsers that you can't manage, such as the public computers at trade shows and in hotel lobbies.
 
 Should you allow your employees to access corporate email from them? With Intune and Microsoft Enterprise Mobility + Security, the answer can simply be "no", by [limiting email access to devices that are managed by your organization](../protect/conditional-access.md). This ensures that your strongly authenticated employee doesn't accidentally leave corporate data on the untrusted computer.
+
+## Next steps
+
+- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Intune guided scenarios](guided-scenarios-overview.md)

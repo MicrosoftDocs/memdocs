@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,9 +37,8 @@ To use Win32 app management, be sure the following criteria are met:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
-  - [Azure AD joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)
-  - [Hybrid Azure AD joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)
-  - [Azure AD registered](../fundamentals/whats-new.md#win32-app-support-for-workplace-join-wpj-devices-)
+  - [Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join)
+  - [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
 - Windows application size must not be greater than 8 GB per app.
 
   > [!NOTE]

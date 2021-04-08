@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2020
+ms.date: 02/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,9 +29,12 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 and Windows Holographic device settings to add VPN connections using Intune
 
-You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes the settings and features you can configure when creating virtual private networks (VPNs). These VPN settings are used in device configuration profiles, and then pushed or deployed to devices.
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a VPN vendor, enabling always on, using DNS, adding a proxy, and more.
+You can add and configure VPN connections for devices using Microsoft Intune. This article describes some of the settings and features you can configure when creating virtual private networks (VPNs). These VPN settings are used in device configuration profiles, and then pushed or deployed to devices.
+
+As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a specific VPN vendor, enabling always on, using DNS, adding a proxy, and more.
 
 These settings apply to devices running:
 
@@ -40,11 +43,9 @@ These settings apply to devices running:
 
 ## Before you begin
 
-Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
+- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
-The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
-
-These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+- These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## Base VPN
 
@@ -60,9 +61,10 @@ These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
+  - **Cisco AnyConnect**
   - **Pulse Secure**
   - **F5 Access**
-  - **SonicWALL Mobile Connect**
+  - **SonicWall Mobile Connect**
   - **Check Point Capsule VPN**
   - **Citrix**
   - **Palo Alto Networks GlobalProtect**

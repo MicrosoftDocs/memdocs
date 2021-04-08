@@ -2,7 +2,7 @@
 title: What's new in version 2010
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
-ms.date: 12/11/2020
+ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -140,6 +140,18 @@ Starting in this release, you no longer need to enable IIS on the SMS Provider f
 
 For more information, see [Prerequisites for the administration service](../../../develop/adminservice/overview.md#prerequisites).
 
+### Improvements to the Azure migration tool
+
+<!-- 7812857 -->
+
+The tool to extend and migrate an on-premises site to Microsoft Azure now includes the following improvements:
+
+- Support environments with virtual networks other than ExpressRoute
+- Support a hierarchy
+- Support a site with a collocated site database
+
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md).
+
 ## Client management
 
 ### Wake machine at deployment deadline using peer clients on the same remote subnet
@@ -196,7 +208,7 @@ For more information, see [How to manage collections](../../clients/manage/colle
 <!--7033501-->
 An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
 
-For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ## OS deployment
 
@@ -285,11 +297,12 @@ Community hub content is grouped into a Microsoft, curated, or unreviewed catego
 
 For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_category).
 
-##  Community hub on Windows Server operating systems
+### Community hub on Windows Server operating systems
 <!--3555940, 8625943, 8717639 -->
 You can now display the Community hub on Windows Server operating systems. The Configuration Manager console will notify you to install the console extension to enable Windows Server 2012 and later to load the Community hub.
 
-For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_hub_os).
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_webview2).
+
 ### Product feedback
 
 <!--3180826-->
@@ -359,6 +372,11 @@ You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/u
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 
+> [!WARNING]
+> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.<!-- 8617455 -->
+>
+> For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
+
 ### Support for PowerShell version 7
 
 <!--6023299-->
@@ -415,15 +433,16 @@ Aside from new features, this release also includes additional changes such as b
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
+-->
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4580678](https://support.microsoft.com/help/4580678) | Tenant attach rollup for Configuration Manager current branch, version 2010 | September 18, 2020 | Yes |
-| [4584759](https://support.microsoft.com/help/4584759) | Clients report Desktop Analytics configuration errors in Configuration Manager, version 2010 | October 2, 2020 | Yes |
+| [4594177](https://support.microsoft.com/help/4594177) | Client notifications sent to all collection members in Configuration Manager current branch, version 2010 | January 12, 2021 | Yes |
+| [4600089](https://support.microsoft.com/help/4600089)| Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010 | March 8, 2021| Yes|
+
 <!--
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

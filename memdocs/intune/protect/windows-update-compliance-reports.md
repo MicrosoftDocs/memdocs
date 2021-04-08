@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 01/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,40 +87,37 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 ### Configure data collection
 
-The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune. Instead, it's collected through Endpoint analytics, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
+The data that powers Intune’s Windows 10 feature updates reports isn’t collected by the typical device sync with Intune, but through the *Windows health monitoring* device configuration policy, which uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
-To enable data collection through [Endpoint analytics](/mem/analytics/overview) in the Microsoft Endpoint Manager admin center, enable the *Intune data collection policy* for your devices. Then, you configure a *Windows health monitoring* profile as a device configuration policy for the same devices.
+#### Enable data collection
 
-### Enable data collection
+To Configure this setting for your devices, [Create a profile](../configuration/device-profile-create.md#create-the-profile) with  the following information: 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  - **Platform**: Select **Windows 10 and later**
+  
+  - **Profile**: Select **Windows health monitoring**
+  
+  - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
+   
+  - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    
+  - In **Configuration Settings**:
+   
+       - **Health Monitoring**: Select *Enable* to collect event information from supported Windows 10 devices
+    
+       - **Scope**: Select *Windows Updates*.
 
-2. Go to **Reports** > **Endpoint analytics** > **Settings**.  If the option to select **Settings** isn’t available, select **Start**, and then select **Settings**.
+  - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later is supported for these reports.
 
-   On the **General** tab of *Endpoint analytics* | *Settings*, select the link **Intune data collection policy**. When you select this link, Intune automatically creates a default policy for data collection that deploys to All Devices.
-   > [!div class="mx-imgBorder"]
-   > ![Intune data collection policy](./media/windows-update-compliance-reports/intune-data-collection-policy.png)
-
-3. After the **Intune data collection policy** is created, Intune displays the Overview page for the policy. You can select **Properties** to view the policy and edit its configuration.
-
-4. Next, configure the **Windows health monitoring** profile as part of a device configuration policy. This profile type is available only after your tenant has an **Intune data collection policy**.
-
-   For guidance on creating and configuring this profile, see [Windows health monitoring](../configuration/windows-health-monitoring.md) in the Intune documentation.
-
-   When you configure this profile:
-
-   1. On the **Configuration settings** page, for **Health monitoring** select *Enable*.
-   2. On the **Configuration settings** page, for **Scope** select *Windows updates*.
-      > [!div class="mx-imgBorder"]
-      > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
-   3. On the **Applicability Rules** page, you can optionally add a rule to only apply the profile to devices on this version or above.  Only Windows 10 version 1903 and later is supported for these reports.
-
-5. When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
+    > [!div class="mx-imgBorder"]
+    > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
+    
+When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
 
 It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.  
 
 > [TIP]  
-> If you use [Endpoint Analytics](/mem/analytics/overview), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+> If you use [Endpoint Analytics](../../analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
 
 ### About reporting data latency
 
@@ -316,15 +313,15 @@ The OMA-URI (case sensitive) path for configuring the commercial ID is: *./Vendo
 
 For example, you can use the following values in **Add or edit OMA-URI Setting**:
 
-- **Setting Name**: Windows Analytics Commercial ID
-- **Setting Description**: Configuring commercial ID for Windows Analytics solutions
-- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
-- **Data Type**: String
-- **Value**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
+- **Setting Name**: Update Compliance Commercial ID
+- **Setting Description**: Configure devices with the Commercial ID for Update Compliance solutions
+- **OMA-URI**: Enter the following path, which is case sensitive, and avoid trailing spaces: `./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID`
 
-> [!NOTE]
-> For more information about MS DM Server, see [DMClient configuration service provider (CSP)](/windows/client-management/mdm/dmclient-csp).
+  For more information about this configuration service provider (CSP) and the Provider ID *MS DM Server*, see [DMClient CSP](/windows/client-management/mdm/dmclient-csp)
+- **Data Type**: Select *String*. When you String, you can then specify a Value.
+- **Value**: Specify the GUID for your *CommercialID*, which you get from your Update Compliance Settings in Microsoft Azure.
 
+ 
 ## Next steps
 
 [Manage software updates in Intune](windows-update-for-business-configure.md)

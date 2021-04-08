@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 04/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,6 +43,7 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > - Better Mobile (Android,iOS/iPadOS)
 > - Check Point Sandblast (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
+> - MVISION Mobile (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
@@ -62,7 +63,7 @@ However, should you wish to make the app available to end users via the Intune C
 
 When using Intune app protection policies with Mobile Threat Defense, Intune will guide the end user to install and sign in to the required Mobile Threat Defense client app.
 
-However, should you wish to make the app available to end users via the Intune Company Portal, you can follow the below steps in the [Azure portal](https://portal.azure.com/). Make sure you're familiar with the process of:
+However, should you wish to make the app available to end users via the Intune Company Portal, you can follow the steps provided in the following sections. Make sure you're familiar with the process of:
 
 - [Adding an app into Intune](../apps/apps-add.md)
 - [Assigning an app with Intune](../apps/apps-deploy.md)
@@ -91,7 +92,15 @@ However, should you wish to make the app available to end users via the Intune C
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work - iOS App Store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) when completing the **Configure app information** section.
 
+### Making MVISION Mobile available to end users
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision&hl=en_CA&gl=US) when completing the **Configure app information** section.
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile - App Store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) when completing the **Configure app information** section.
+
 ### Making Symantec Endpoint Protection Mobile available to end users
+
 - **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). When completing the **Configure app information** section, use this [SEP Mobile app store URL](https://play.google.com/store/apps/details?id=com.skycure.skycure). For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
 

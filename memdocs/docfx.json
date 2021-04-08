@@ -90,8 +90,10 @@
       }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
-        "configmgr/core/**/*.md": ["ConfigMgr"]        
-      }, 
+        "configmgr/core/**/*.md": ["ConfigMgr"],
+        "analytics/**/*.md": ["Analytics"],
+        "autopilot/**/*.md": ["Autopilot"]
+      },
       "featureFlags": {
         "*.md" : [
           "show_binary_rating"
@@ -109,7 +111,18 @@
             "exclude": [
                 "memdocs/configmgr/core/misc/in-console-documentation.md"
             ]
-        }
+        },
+      "sensitive-language-bl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      },
+       "sensitive-language-wl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      } 
+      
     }
   }
 }

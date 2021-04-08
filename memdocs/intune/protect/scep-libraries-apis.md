@@ -6,7 +6,7 @@ keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 02/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -89,14 +89,14 @@ Integrating the library into your products includes the following steps. These s
 7. Complete [integration testing](#integration-testing) (in this article), and address any issues
 8. Give written guidance to the customer that explains:
 
-   - How the SCEP Server needs to be onboarded in the Azure portal
+   - How the SCEP Server needs to be onboarded in the Microsoft Endpoint Manager admin center
    - How to get the Azure Application Identifier and Azure Application Key needed to configure the library
 
 ### Onboard SCEP server in Azure
 
 To authenticate to Intune, the SCEP server requires an Azure Application ID, an Azure Application Key, and a Tenant ID. The SCEP Server also needs authorized to access the Intune API.
 
-To get this data, the SCEP server administrator signs in to the Azure portal, registers the application, gives the application the **Microsoft Intune API\SCEP challenge validation** permission, creates a key for the application, and then downloads the application ID, its key, and the tenant ID.
+To get this data, the SCEP server administrator signs in to the Azure portal, registers the application, gives the application both the **Microsoft Intune API\SCEP challenge validation** permission and the **Application.Read.All** permission, creates a key for the application, and then downloads the application ID, its key, and the tenant ID.
 
 For guidance on registering an application, and getting the IDs and keys, see [Use portal to create an AAD application and service principal to access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 

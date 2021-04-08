@@ -2,7 +2,7 @@
 title: User experiences for OS deployment
 titleSuffix: Configuration Manager
 description: Learn about user experiences like the task sequence progress and media wizard for operating system deployment in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -28,7 +28,7 @@ After you [deploy a task sequence](../deploy-use/deploy-a-task-sequence.md), dep
 
 For a high-impact deployment, you can customize the message that Software Center displays. When the user opens the OS deployment in Software Center, they see a message similar to the following window:
 
-![Customized task sequence notification to the end user from Software Center](../media/user-notification-enduser.png)
+:::image type="content" source="../media/user-notification-enduser.png" alt-text="Customized task sequence notification to the end user from Software Center":::
 
 For more information on how to customize the message in this window, see [Create a custom notification for high-risk deployments](../deploy-use/manage-task-sequences-to-automate-tasks.md#create-a-custom-notification-for-high-risk-deployments).
 
@@ -47,7 +47,7 @@ Different hardware models have different experiences for PXE. To boot to the net
 
 The following example shows the Hyper-V Gen1 (BIOS) PXE experience:
 
-![Example BIOS PXE screen from a Hyper-V virtual machine](media/hyperv-pxe.png)
+:::image type="content" source="media/hyperv-pxe.png" alt-text="Example BIOS PXE screen from a Hyper-V virtual machine":::
 
 After the device successfully boots via PXE, it behaves similarly to bootable media. For more information, see the next section on the [Task sequence wizard](#task-sequence-wizard).
 
@@ -62,7 +62,7 @@ When you use [task sequence media](../deploy-use/create-task-sequence-media.md),
 
 ### Welcome to the task sequence wizard
 
-![Screenshot of main page of the Task Sequence Wizard](media/welcome-task-sequence-wizard.png)
+:::image type="content" source="media/welcome-task-sequence-wizard.png" alt-text="Screenshot of main page of the Task Sequence Wizard":::
 
 - If you password-protect the media, the user has to enter the password on this welcome page.
 
@@ -74,13 +74,13 @@ When you use [task sequence media](../deploy-use/create-task-sequence-media.md),
 
 If you deploy more than one task sequence to the device, you see this page to select a task sequence. Make sure to use a name and description for your task sequence that users can understand.
 
-![Screenshot of the task sequence selection page of the Task Sequence Wizard](media/task-sequence-wizard-select.png)
+:::image type="content" source="media/task-sequence-wizard-select.png" alt-text="Screenshot of the task sequence selection page of the Task Sequence Wizard":::
 
 ### Edit task sequence variables
 
 If any task sequence variables have empty values, the wizard shows a page to edit the variable values.
 
-![Screenshot of the edit task sequence variables page of the Task Sequence Wizard](media/task-sequence-wizard-variables.png)
+:::image type="content" source="media/task-sequence-wizard-variables.png" alt-text="Screenshot of the edit task sequence variables page of the Task Sequence Wizard":::
 
 ## Prestart commands
 
@@ -102,7 +102,7 @@ For more information, see the following articles:
 
 When the task sequence runs, it displays the **Installation progress** window:
 
-![Example of the Task Sequence Progress window](media/task-sequence-progress.png)
+:::image type="content" source="media/task-sequence-progress.png" alt-text="Example of the Task Sequence Progress window":::
 
 - This window is always on top; you can move it, but you can't close or minimize it.
 
@@ -127,7 +127,7 @@ Starting in version 2002, the task sequence progress window includes the followi
 
 - Increased the width of the window to give you more space to better show the organization name in a single line
 
-![Example task sequence progress window](media/2356386-task-sequence-progress.png)
+:::image type="content" source="media/2356386-task-sequence-progress.png" alt-text="Example task sequence progress window":::
 
 By default, the task sequence progress window uses the existing text. If you make no changes, it continues to work the same as in version 1910 and earlier. To show the new progress information, specify the task sequence variable, [TSProgressInfoLevel](task-sequence-variables.md#TSProgressInfoLevel).
 
@@ -147,10 +147,14 @@ The count of total steps doesn't include the following items in the task sequenc
 
 If the task sequence fails, it displays the **Task Sequence Error** window.
 
-![Example task sequence error window](media/task-sequence-error.png)
+:::image type="content" source="media/task-sequence-error.png" alt-text="Example task sequence error window":::
 
 - You customize the header information the same as the task sequence progress window.
 
 - It displays the name of the task sequence, an error code, and a general message for users. For example: `Task sequence: Upgrade to Windows 10 Enterprise has failed with the error code (0x80004005). For more information, contact your system administrator or helpdesk operator.`
 
 - The window automatically closes after a timeout period. By default, this timeout is 15 minutes. You can customize this value with the task sequence variable [SMSTSErrorDialogTimeout](task-sequence-variables.md#SMSTSErrorDialogTimeout).
+
+Starting in version 2103, if the task sequence fails because the client doesn't meet the requirements configured in the [Check readiness](task-sequence-steps.md#BKMK_CheckReadiness) step, the user can now see more details about the failed prerequisites. They still see the common "task sequence error" message, but can then select an option to **Inspect**. This action shows the checks that failed on the device.<!--8888218-->
+
+:::image type="content" source="media/8888218-task-sequence-check-readiness-failure.png" alt-text="Task sequence check readiness failure":::

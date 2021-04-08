@@ -2,7 +2,7 @@
 # required metadata
 title: Encrypt macOS devices with FileVault disk encryption with Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt macOS devices with the built-in encryption method FileVault, and manage the recovery keys for those encrypted devices from within the Intune portal. 
+description: Encrypt macOS devices with the built-in encryption method FileVault, and manage the recovery keys for encrypted devices from within the Microsoft Endpoint Manager admin center. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -75,7 +75,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
    - **Platform**: macOS
    - **Profile**: Endpoint protection
 
-   ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
+   ![Select the Endpoint protection profile](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
 4. On the **Basics** page, enter the following properties:
 

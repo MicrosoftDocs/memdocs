@@ -12,6 +12,8 @@ groups:
   title: Windows MDM baseline versions
   prompt: Choose a version
   pivots:
+    - id: mdm-december-2020
+      title: December 2020
     - id: mdm-sept-2020
       title: August 2020
     - id: mdm-may-2019
@@ -32,6 +34,8 @@ groups:
   title: ATP baseline versions
   prompt: Choose a version
   pivots:
+    - id: atp-december-2020
+      title: December 2020
     - id: atp-sept-2020
       title: September 2020
     - id: atp-april-2020 

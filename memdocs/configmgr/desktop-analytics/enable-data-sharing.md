@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 11/30/2020
+ms.date: 01/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -45,7 +45,7 @@ Microsoft recommends that you enable the **Optional (limited)** diagnostic data 
 For more information about diagnostic data shared with Microsoft with **Optional (limited)**, see [Windows 10 enhanced diagnostic data events and fields](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!IMPORTANT]
-> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (EEA and Switzerland).
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom).
 
 For more information, see [Desktop Analytics privacy](privacy.md).
 
@@ -69,9 +69,7 @@ Microsoft is increasing transparency by categorizing the diagnostic data that Wi
 - **Basic** diagnostic data is recategorized as **Required**
 - **Full** is recategorized as **Optional**
 
-If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
-
-Starting in Configuration Manager current branch version 2006, the **Diagnostic Data** tab of the Desktop Analytics service in the Configuration Manager console uses new labels. In Configuration Manager version 2002 and earlier, the settings had different names:<!-- 7363467 -->
+Starting in Configuration Manager current branch version 2006, the **Diagnostic Data** tab of the Desktop Analytics service in the Configuration Manager console uses these new labels. In Configuration Manager version 2002 and earlier, the settings had different names:<!-- 7363467 -->
 
 | Version 2006 and later | Version 2002 and earlier |
 |---------|---------|
@@ -82,7 +80,7 @@ Starting in Configuration Manager current branch version 2006, the **Diagnostic 
 
 If you previously configured any devices at the **Enhanced** level, when you upgrade to version 2006, they'll revert to **Optional (limited)**. They will then send less data to Microsoft. This change shouldn't impact what you see in Desktop Analytics.
 
-Starting in version 2010, <!--6979470-->Configuration Manager will properly configure the devices. If you're using another mechanism to configure these policies on devices, you may need to make changes for the upcoming new behavior. For more information, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection#behaviorial-changes).
+In an upcoming release of Windows 10,  devices configured for **Enhanced** or **Enhanced (Limited)** diagnostic data will revert to the **Required** level. This change may impact the functionality of Desktop Analytics. Use Configuration Manager current branch version 2010, <!--6979470--> to properly configure these devices to to **Optional (limited)**. If you're using another mechanism to configure these policies on devices, you may need to make changes for the upcoming new behavior. For more information, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection#behaviorial-changes).
 
 You can test the behavioral changes now in Windows 10 Insider Preview build 19577 and later. After you enroll Windows Insider devices to Desktop Analytics, it may take up to 48 hours to appear on the Desktop Analytics portal or the new configurations to take effect. Use the Configuration Manager console to look for issues or configuration alerts as you [Monitor connection health](monitor-connection-health.md).
 

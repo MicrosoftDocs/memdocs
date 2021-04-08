@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -11,7 +11,6 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ---
-
 # Configure Azure services for use with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -160,7 +159,7 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
-   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654-->
+   - Starting in Configuration Manager version 2010, you can specify **Never** for the expiration of a secret key. <!--7153654--> The field is called **Secret Key validity period**, but specifying **Never** sets the secret key to never expire. <!--9199545, 7153654-->
    > [!IMPORTANT]
    > Choosing **Never** as an option for secret key expiry carries security risk since a secret that's compromised and never expires can become a point of entry into your environment until you manually mitigate.
 
@@ -216,7 +215,7 @@ Select **OK** to create the native app in Azure AD and close the Create Client A
 
 ## Configuration or Discovery
 
-After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
+After specifying the web and native apps on the **Apps** page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
@@ -225,6 +224,16 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 - **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
+
+## <a name="bkmk_SRVAppSettings"></a> Update application settings
+
+To allow your Configuration Manager clients to request an **Azure AD device token** and to enable the **Reading directory data** permissions, you need to update the web server application settings.
+### Update Application Settings
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
+1. Select the Azure AD tenant for the application you want to update.
+1. In the **Applications** section, select your Azure AD web server application, then select **Update Application Settings** from the ribbon.
+1. When prompted for confirmation, select **Yes** to confirm you want to update the application with the latest settings.
 
 ## <a name="bkmk_renew"></a> Renew secret key
 

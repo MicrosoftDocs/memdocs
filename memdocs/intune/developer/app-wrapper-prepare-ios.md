@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -36,6 +36,9 @@ The tool is a macOS command-line application that creates a wrapper around an ap
 
 To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) on GitHub.
 
+> [!NOTE]
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/issues) on GitHub.
+
 ## General prerequisites for the App Wrapping Tool
 
 Before you run the App Wrapping Tool, you need to fulfill some general prerequisites:
@@ -48,7 +51,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 13 or later.
+  * The input app must be compiled for iOS 12.2 or later.
 
   * The input app cannot be encrypted.
 
@@ -173,6 +176,9 @@ You will need the following to distribute apps wrapped by Intune:
 3. Choose **Agree** to accept EULA, which mounts the package to your computer.
 
 ## Run the App Wrapping Tool
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Use terminal
 

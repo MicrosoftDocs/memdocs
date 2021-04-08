@@ -19,7 +19,7 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -123,4 +123,4 @@ Verify with:
 (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 ```
 
-![PoSH-AddLic-Verify](./media/licenses-assign/posh-addlic-verify.png)
+![Command line sample of PowerShell verification alt-text="Command line sample"](./media/licenses-assign/posh-addlic-verify.png)

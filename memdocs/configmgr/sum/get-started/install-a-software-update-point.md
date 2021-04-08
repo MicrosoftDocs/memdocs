@@ -1,27 +1,23 @@
 ---
 title: Install and configure a software update point
-titleSuffix: "Configuration Manager"
-description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
+titleSuffix: Configuration Manager
+description: Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients.
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/30/2020
-ms.topic: conceptual
+ms.date: 03/05/2021
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-
-
 ---
-
 
 # Install and configure a software update point  
 
 *Applies to: Configuration Manager (current branch)*
 
-
 > [!IMPORTANT]  
->  Before you install the software update point site system role (SUP), you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  
+> Before you install the software update point site system role (SUP), you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  
 
  The software update point is required on the central administration site and on the primary sites to enable software updates compliance assessment and to deploy software updates to clients. The software update point is optional on secondary sites. The software update point site system role must be created on a server that has WSUS installed. The software update point interacts with the WSUS services to configure the software update settings and to request synchronization of software updates metadata. When you have a Configuration Manager hierarchy, install and configure the software update point on the central administration site first, then on child primary sites, and then optionally, on secondary sites. When you have a stand-alone primary site, not a central administration site, install and configure the software update point on the primary site first, and then optionally, on secondary sites. Some settings are only available when you configure the software update point on a top-level site. There are different options that you must consider depending on where you installed the software update point.  
 
@@ -69,6 +65,10 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
  For more information about how to use SSL, see [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) and [Configure a software update point to use TLS/SSL with a PKI certificate](../get-started/software-update-point-ssl.md).  
 
+### Allow cloud management gateway traffic
+
+<!-- MEMDocs #1362 -->
+You can enable a software update point to accept communication from clients on the internet via a cloud management gateway (CMG). For more information about this setting, see [Configure client-facing roles for CMG traffic](../../core/clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role).
 
 ### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you don't configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  
@@ -91,7 +91,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
    - When there's a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
-   - If you're sharing the WSUS database, be aware that Configuration Manager randomly chooses the software update point between the front-end WSUS servers. Ensure that the [internet access requirements](../../core/plan-design/network/internet-endpoints.md#bkmk_sum) are met for each of the WSUS servers. If internet access requirements aren't met, then sync failures can occur. You may see different software update points at the top-level site syncing with Microsoft.
+   - If you're sharing the WSUS database, be aware that Configuration Manager randomly chooses the software update point between the front-end WSUS servers. Ensure that the [internet access requirements](../../core/plan-design/network/internet-endpoints.md#software-updates) are met for each of the WSUS servers. If internet access requirements aren't met, then sync failures can occur. You may see different software update points at the top-level site syncing with Microsoft.
 
 -   **<a name="BKMK_wsussync"></a>Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as `https://WSUSServer:8531`, where 8531 is the port that is used to connect to the WSUS server.  
 

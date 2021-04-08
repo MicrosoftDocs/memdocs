@@ -2,7 +2,7 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -46,30 +46,6 @@ These support numbers are based on using the recommended hardware for Configurat
 - Secondary sites don't support child sites.  
 
 ## <a name="bkmk_roles"></a> Site system roles
-
-### Application catalog web service point  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-- You can install multiple instances of the Application Catalog web service point at primary sites.  
-
-### Application catalog website point  
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-- You can install multiple instances of the Application Catalog website point at primary sites.  
 
 ### <a name="bkmk_cmg"></a> Cloud management gateway
 
@@ -147,7 +123,7 @@ The number of supported clients depends on the version of Windows Server Update 
   - Increase the WsusPool Queue Length to 2000
   - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see [WSUS best practices](/troubleshoot/mem/configmgr/windows-server-update-services-best-practices#disable-recycling-and-configure-memory-limits).
 
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#bkmk_ScaleSieSystems).  
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#site-systems).  
 
 #### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 

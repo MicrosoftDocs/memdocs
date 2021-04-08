@@ -2,7 +2,7 @@
 title: Configure client settings
 titleSuffix: Configuration Manager
 description: Learn how to configure client settings in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -104,6 +104,11 @@ Use the following cmdlets to configure client settings for the specific group:
 - [Set-CMClientSettingSoftwareUpdate](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareUpdate)
 - [Set-CMClientSettingStateMessaging](/powershell/module/configurationmanager/Set-CMClientSettingStateMessaging)
 - [Set-CMClientSettingUserAndDeviceAffinity](/powershell/module/configurationmanager/Set-CMClientSettingUserAndDeviceAffinity)
+
+Use the following cmdlets to manage deployments of custom client settings:
+
+- [New-CMClientSettingDeployment](/powershell/module/configurationmanager/New-CMClientSettingDeployment)
+- [Remove-CMClientSettingDeployment](/powershell/module/configurationmanager/Start-CMClientSettingDeployment)
 
 ## Next steps
 

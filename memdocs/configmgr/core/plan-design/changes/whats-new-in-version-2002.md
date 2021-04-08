@@ -411,7 +411,7 @@ For more information, see [Support Center OneTrace](../../support/support-center
 <!--5665775, 6307931-->
 The tool to extend and migrate on-premises site to Microsoft Azure now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
 
-For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#bkmk_add_role).
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#add-site-roles-to-an-existing-vm).
 
 ## Other updates
 

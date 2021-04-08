@@ -1,8 +1,8 @@
 ---
-title: "Websites for site systems"
-titleSuffix: "Configuration Manager"
-description: "Learn about default and custom websites for site system servers in Configuration Manager."
-ms.date: 02/8/2017
+title: Websites for site systems
+titleSuffix: Configuration Manager
+description: Learn about default and custom websites for site system servers in Configuration Manager.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,116 +10,113 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
+
 # Websites for site system servers in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Several Configuration Manager site system roles require the use of Microsoft Internet Information Services (IIS) and use the default IIS website to host site system services. When you must run other web applications on the same server and settings are not compatible with Configuration Manager, consider using a custom website for Configuration Manager.  
+Several Configuration Manager site system roles require the use of Internet Information Services (IIS). By default, they use the default IIS website to host site system services. When you run other web applications on the same server, and settings aren't compatible with Configuration Manager, consider using a custom website for Configuration Manager.
 
-> [!TIP]  
->  A security best practice is to dedicate a server for the Configuration Manager site systems that require IIS. When you run other applications on a Configuration Manager site system, you increase the attack surface of that computer.  
+> [!TIP]
+> For improved security, dedicate a server for the Configuration Manager site systems that require IIS. When you run other applications on a Configuration Manager site system, you increase the attack surface of that computer.
 
+## Choosing to use custom websites
 
+By default, site system roles use the **Default Web Site** in IIS. This configuration is set up automatically when the site system role installs. However, at primary sites, you can choose to use custom websites instead.
 
+When you use custom websites:
 
-##  <a name="BKMK_What2Know"></a> What to know before choosing to use custom websites  
- By default, site system roles use the **Default Web Site** in IIS. This is set up automatically when the site system role installs. However, at primary sites, you can choose to use custom websites instead. When you use custom websites:  
+- They're enabled for the entire site instead of for individual site system servers or roles.
 
--   Custom websites are enabled for the entire site instead of for individual site system servers or roles.  
+- At primary sites, for each computer that will host an applicable site system role, configure it with a custom website named **SMSWEB**. Until you create this website, and set up site system roles on that computer to use the custom website, clients can't communicate with site system roles on that computer.
 
--   At primary sites, each computer that will host an applicable site system role must be set up with a custom website named **SMSWEB**. Until you create this website and set up site system roles on that computer to use the custom website, clients might not be able to communicate with site system roles on that computer.  
+- Secondary sites are automatically set up to use a custom website when their primary parent site uses it. Create custom websites in IIS on each secondary site system server that requires IIS.
 
--   Because secondary sites are automatically set up to use a custom website when their primary parent site is set up to do so, you must also create custom websites in IIS on each secondary site system server that requires IIS.  
+### Prerequisites for using custom websites
 
+Before you enable the option to use custom websites at a site:
 
-  **Prerequisites for using custom websites:**  
+- Create a custom website named **SMSWEB** in IIS on each site system server that requires IIS. Set this configuration at the primary site and at any child secondary sites.
 
- Before you enable the option to use custom websites at a site, you must:  
+- Set up the custom website to respond to the same port that you set up for Configuration Manager client communication. This port is known as the _client request port_.
 
--   Create a custom website named **SMSWEB** in IIS on each site system server that requires IIS. Do this at the primary site and at any child secondary sites.  
+- For each custom or default website that uses a custom folder, place a copy of the default document type that you use in the root folder that hosts the website. For example, with the typical default configuration, **iisstart.htm** is one of several default document types that are available. You can find this file in the root of the default website. Place a copy of this file or other default document in the root folder that hosts the SMSWEB custom website. For more information about default document types, see [Default Document for IIS](/iis/configuration/system.webServer/defaultDocument/).
 
--   Set up the custom website to respond to the same port that you set up for Configuration Manager client communication (client request port).  
+### About IIS requirements
 
--   For each custom or default website that uses a custom folder, place a copy of the default document type that you use in the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer that has default configurations, **iisstart.htm** is one of several default document types that are available. You can find this file in the root of the default website and then place a copy of this file (or a copy of the default document type that you use) in the root folder that hosts the SMSWEB custom website. For more about default document types, see [Default Document &lt;defaultDocument\> for IIS](https://www.iis.net/configreference/system.webserver/defaultdocument).  
+The following site system roles require IIS and a website to host the site system services:
 
-**About IIS requirements:**
-**The following site system roles require IIS and a website to host the site system services:**  
+- Distribution point
 
--   Application Catalog web service point  
+- Enrollment point
 
--   Application Catalog website point  
+- Enrollment proxy point
 
--   Distribution point  
+- Fallback status point
 
--   Enrollment point  
+- Management point
 
--   Enrollment proxy point  
+- Software update point
 
--   Fallback status point  
+- State migration point
 
--   Management point  
+Other considerations:
 
--   Software update point  
+- When a primary site has custom websites enabled, clients that are assigned to that site are directed to communicate with the custom websites instead of the default websites.
 
--   State migration point  
+- If you use custom websites for one primary site, consider custom websites for all primary sites in your hierarchy. This configuration makes sure that clients can successfully roam within the hierarchy. _Roaming_ is when a client computer moves to a new network segment that is managed by a different site. Roaming can affect resources that a client can access locally instead of across a WAN link.
 
-Additional considerations:  
+- Site system roles that use IIS but don't accept client connections also use the SMSWEB website instead of the default website. For example, the reporting services point.
 
--   When a primary site has custom websites enabled, clients that are assigned to that site are directed to communicate with the custom websites instead of the default websites on applicable site system servers  
+- Custom websites require you to assign port numbers that differ from the computer's default website. A default website and custom website can't run at the same time if both websites try to use the same TCP/IP ports.
 
--   If you use custom websites for one primary site, consider custom websites for all primary sites in your hierarchy to ensure that clients can successfully roam within the hierarchy. (Roaming is when a client computer moves to a new network segment that is managed by a different site. Roaming can affect resources that a client can access locally instead of across a WAN link).  
+- The TCP/IP ports that you set up in IIS for the custom website must match the client request ports for the site.
 
--   Site system roles that use IIS but do not accept client connections, like the reporting services point, also use the SMSWEB website instead of the default website.  
+## Switch between default and custom websites
 
--   Custom websites require you to assign port numbers that differ from those that the computer's default website uses. A default website and custom website cannot run at the same time if both websites try to use the same TCP/IP ports.  
+Although you can check or uncheck the box for using custom websites at a primary site at any time, plan carefully before you make this change. When this configuration changes, all applicable site system roles at the primary site and child secondary sites uninstall and then reinstall.
 
--   The TCP/IP ports that you set up in IIS for the custom website must match the client request ports for the site.  
+The following roles reinstall automatically:
 
-## Switch between default and custom websites  
-Although you can check or uncheck the box for using custom websites at a primary site at any time (the box is on the Ports tab of the site's Properties), plan carefully before you make this change. When this configuration changes, all applicable site system roles at the primary site and child secondary sites must uninstall and then reinstall:  
+- Management point
 
-The following roles **reinstall automatically**:  
+- Distribution point
 
--   Management point  
+- Software update point
 
--   Distribution point  
+- Fallback status point
 
--   Software update point  
+- State migration point
 
--   Fallback status point  
+You need to manually reinstall the following roles:
 
--   State migration point  
+- Enrollment point
 
-The following roles must be **manually reinstalled**:  
+- Enrollment proxy point
 
--   Application Catalog web service point  
+When you change from the default website to use a custom website, Configuration Manager doesn't remove the old virtual directories. If you want to remove the files that Configuration Manager used, manually delete the virtual directories that were created under the default website.
 
--   Application Catalog website point  
+If you change the site to use custom websites, clients that are already assigned to the site need to be reconfigured to use the new client request ports for the custom websites. For more information, see [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md).
 
--   Enrollment point  
+## Set up custom websites
 
--   Enrollment proxy point  
+The steps to create a custom website vary for different OS versions. For exact steps, refer to the documentation for your OS version.
 
-Additionally:  
+Use the following general information when applicable:
 
--   When you change from the default website to use a custom website, Configuration Manager does not remove the old virtual directories. If you want to remove the files that Configuration Manager used, you must manually delete the virtual directories that were created under the default website.  
+- The website name is **SMSWEB**.
 
--   If you change the site to use custom websites, clients that are already assigned to the site must then be reconfigured to use the new client request ports for the custom websites. See [How to configure client communication ports](../../../core/clients/deploy/configure-client-communication-ports.md).  
+- When you set up HTTPS, specify a PKI certificate before you can save the configuration.  
 
-## Set up custom websites  
-Because the steps to create a custom website vary for different operating system versions, refer to documentation for your operating system version for exact steps, but use the following information when applicable:  
+- After you create the custom website, remove the custom website ports that you use from other websites in IIS:
 
--   The website name must be: **SMSWEB**.  
+  1. Edit the **Bindings** of the other websites to remove ports that match the ports that are assigned to the **SMSWEB** website.
 
--   When you set up HTTPS, you must specify a SSL certificate before you can save the configuration.  
+  1. Start the **SMSWEB** website.
 
--   After you create the custom website, remove the custom website ports that you use from other websites in IIS:  
+  1. Restart the **SMS_SITE_COMPONENT_MANAGER** service on the site server of the site.
 
-    1.  Edit the **Bindings** of the other websites to remove ports that match those that are assigned to the **SMSWEB** website.  
+## Next steps
 
-    2.  Start the **SMSWEB** website.  
-
-    3.  Restart the **SMS_SITE_COMPONENT_MANAGER** service on the site server of the site.  
+To configure the site to use a custom web site, enable the setting **Use custom web site** on the **Ports** tab of the site properties. For more information, see [Configure client communication ports](../../clients/deploy/configure-client-communication-ports.md).

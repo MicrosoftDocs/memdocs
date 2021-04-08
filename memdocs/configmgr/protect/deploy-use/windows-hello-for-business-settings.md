@@ -2,7 +2,7 @@
 title: Windows Hello for Business settings
 titleSuffix: Configuration Manager
 description: Learn how to integrate Windows Hello for Business with Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -18,6 +18,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+
 <!--1245704-->
 Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or an Azure Active Directory (Azure AD) account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a *user gesture* to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
 
@@ -25,8 +28,6 @@ Configuration Manager integrates with Windows Hello for Business. (This feature 
 > Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported. For more information, see [deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). Key-based authentication is still valid.
 >
 > Active Directory Federation Services Registration Authority (ADFS RA) deployment is simpler, provides a better user experience, and has a more deterministic certificate enrollment experience. Use ADFS RA for certificate-based authentication with Windows Hello for Business.
->
-> For co-managed devices, consider moving the [**Resource access policies** workload](../../comanage/workloads.md#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](../../comanage/how-to-switch-workloads.md).
 
 For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 

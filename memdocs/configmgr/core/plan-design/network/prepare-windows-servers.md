@@ -1,8 +1,8 @@
 ---
 title: Prepare Windows Servers
 titleSuffix: Configuration Manager
-description: Ensure that a computer meets prerequisites for use as a site server or a site system server for Configuration Manager.
-ms.date: 02/14/2017
+description: Make sure that a computer meets prerequisites for use as a site server or a site system server for Configuration Manager.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,127 +10,130 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Prepare Windows Servers to support Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you can use a Windows computer as a site system server for Configuration Manager, the computer must meet the prerequisites for its intended use as a site server or site system server.  
-
-- These prerequisites often include one or more Windows features or roles, which are enabled by using the computers Server Manager.  
-
-- Because the method to enable Windows features and roles differs among OS versions, refer to the documentation for your OS version for detailed information about how to set up the OS that you use.  
+Before you can use a Windows computer as a site system server for Configuration Manager, it must meet the prerequisites for its intended use. These prerequisites often include one or more Windows features or roles. Because the method to enable Windows features and roles differs among OS versions, refer to the documentation for your OS version for detailed information.
 
 The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).
 
-##  <a name="BKMK_WinFeatures"></a> Windows features and roles  
-When you set up Windows features and roles on a computer, you might be required to reboot the computer to complete that configuration. Therefore, it's a good idea to identify computers that will host specific site system roles before you install a Configuration Manager site or site system server.
+## Windows features and roles
 
-### Features  
-The following Windows features are required on certain site system servers and should be set up before you install a site system role on that computer.  
+When you set up Windows features and roles on a computer, you might be required to reboot the computer to complete that configuration. So before you install a Configuration Manager site or site system server, identify computers that will host specific site system roles.
 
-- **.NET Framework**: Including  
+### Features
 
-    - ASP.NET  
-    - HTTP Activation  
-    - Non-HTTP Activation  
-    - Windows Communication Foundation (WCF) Services  
+The following Windows features are required on certain site system servers. Set them up before you install a site system role on that computer.
 
-    Different site system roles require different versions of .NET Framework.  
+- **.NET Framework**
 
-    Because .NET Framework 4.0 and later isn't backward compatible to replace 3.5 and earlier versions, when different versions are listed as required, plan to enable each version on the same computer.  
+  - ASP.NET
+  - HTTP Activation
+  - Non-HTTP Activation
+  - Windows Communication Foundation (WCF) Services
 
-- **Background Intelligent Transfer Services (BITS)**: Management points require BITS (and automatically selected options) to support communication with managed devices.  
+  Different site system roles require different versions of .NET Framework.
 
-- **BranchCache**: Distribution points can be set up with BranchCache to support clients that use BranchCache.  
+  Because .NET Framework 4.0 and later isn't backward compatible to replace 3.5 and earlier versions, when different versions are listed as required, plan to enable each version on the same computer.
 
-- **Data Deduplication**: Distribution points can be set up with and benefit from data deduplication.  
+- **Background Intelligent Transfer Services (BITS)**: Management points require BITS to support communication with managed devices. This feature includes all automatically selected options.
 
-- **Remote Differential Compression (RDC)**: Each computer that hosts a site server or a distribution point requires RDC. RDC is used to generate package signatures and perform signature comparisons.  
+- **BranchCache**: Distribution points can be set up with BranchCache to support clients.
 
-### Roles  
-The following Windows roles are required to support specific functionality, like software updates and OS deployments, while IIS is required by the most common site system roles.  
+- **Data Deduplication**: Distribution points can be set up with and benefit from data deduplication.
 
-- **Network Device Enrollment Service** (under Active Directory Certificate Services): This Windows role is a prerequisite to use certificate profiles in Configuration Manager.  
+- **Remote Differential Compression (RDC)**: Each computer that hosts a site server or a distribution point requires RDC. RDC is used to generate package signatures and compare digital signatures.
 
-- **Web server (IIS)**: Including:  
-    - Common HTTP Features  
-          - HTTP Redirection  
-    - Application Development  
-          - .NET Extensibility  
-          - ASP.NET  
-          - ISAPI Extensions  
-          - ISAPI Filters  
-    - Management Tools  
-          - IIS 6 Management Compatibility  
-          - IIS 6 Metabase Compatibility  
-          - IIS 6 Windows Management Instrumentation (WMI) Compatibility  
-    - Security  
-          - Request Filtering  
-          - Windows Authentication  
+### Roles
 
-  The following site system roles use one or more of the listed IIS configurations:  
-  - Application Catalog web service point  
-  - Application Catalog website point  
-  - Distribution point  
-  - Enrollment point  
-  - Enrollment proxy point  
-  - Fallback status point  
-  - Management point  
-  - Software update point  
-  - State migration point     
+The following Windows roles are required to support specific functionality, like software updates and OS deployments. IIS is required by the most common site system roles.
 
-  The minimum version of IIS that's required is the version that's supplied with the OS of the site server.  
+- **Network Device Enrollment Service** (under Active Directory Certificate Services): This Windows role is a prerequisite to use certificate profiles in Configuration Manager.
 
-  In addition to these IIS configurations, you might need to set up [IIS Request Filtering for distribution points](#BKMK_IISFiltering).  
+- **Web server (IIS)**
+  - Common HTTP Features
+    - HTTP Redirection
+  - Application Development
+    - .NET Extensibility
+    - ASP.NET
+    - ISAPI Extensions
+    - ISAPI Filters
+  - Management Tools
+    - IIS 6 Management Compatibility
+    - IIS 6 Metabase Compatibility
+    - IIS 6 Windows Management Instrumentation (WMI) Compatibility
+  - Security
+    - Request Filtering
+    - Windows Authentication
 
-- **Windows Deployment Services**: This role is used with OS deployment.  
+  The following site system roles use one or more of the listed IIS configurations:
 
-- **Windows Server Update Services**: This role is required for software updates.  
+  - Distribution point
+  - Enrollment point
+  - Enrollment proxy point
+  - Fallback status point
+  - Management point
+  - Software update point
+  - State migration point
 
+  The minimum version of IIS that's required is the version that's supplied with the OS of the site server.
 
-##  <a name="BKMK_IISFiltering"></a> IIS request filtering for distribution points  
-By default, IIS uses request filtering to block several file name extensions and folder locations from access by HTTP or HTTPS communication. On a distribution point, this prevents clients from downloading packages that have blocked extensions or folder locations.  
+  In addition to these IIS configurations, you might need to set up [IIS Request Filtering for distribution points](#iis-request-filtering-for-distribution-points).
 
-When your package source files have extensions that are blocked in IIS by your request filtering configuration, you must set up request filtering to allow them. This is done by [editing the request filtering feature](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in the IIS Manager on your distribution point computers.  
+- **Windows Deployment Services**: This role is used with OS deployment.
 
-Additionally, the following file name extensions are used by Configuration Manager for packages and applications. Make sure that your request filtering configurations don't block these file extensions:  
+- **Windows Server Update Services**: This role is required for software updates.
 
-- .PCK  
-- .PKG  
-- .STA  
-- .TAR  
+## IIS request filtering for distribution points
 
-For example, source files for a software deployment might include a folder named **bin** or have a file that has the **.mdb** file name extension.  
+By default, IIS uses request filtering to block several file name extensions and folder locations from access by HTTP or HTTPS communication. On a distribution point, this configuration prevents clients from downloading packages that have blocked extensions or folder locations.
 
-- By default, IIS request filtering blocks access to these elements (**bin** is blocked as a Hidden Segment and **.mdb** is blocked as a file name extension).  
+When your package source files have extensions that are blocked in IIS by your request filtering configuration, set up request filtering to allow them. Use the IIS Manager to [edit the request filtering feature](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) on your distribution point computers.
 
-- When you use the default IIS configuration on a distribution point, clients that use BITS fail to download this software deployment from the distribution point and indicate that they're waiting for content.  
+Additionally, the following file name extensions are used by Configuration Manager for packages and applications. Make sure that your request filtering configurations don't block these file extensions:
 
-- To let the clients download this content, on each applicable distribution point, edit **Request Filtering** in IIS Manager to allow access to the file extensions and folders that are in the packages and applications that you deploy.  
+- .PCK
+- .PKG
+- .STA
+- .TAR
 
-> [!IMPORTANT]  
-> Edits to the request filter can increase the attack surface of the computer.  
-> 
-> - Edits that you make at the server level apply to all websites on the server.   
->     - Edits that you make to individual websites apply to only that website.  
-> 
-> The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers](websites-for-site-system-servers.md).  
+For example, source files for a software deployment might include a folder named **bin** or have a file that has the **.mdb** file name extension.
+
+- By default, IIS request filtering blocks access to these elements. **Bin** is blocked as a Hidden Segment and **.mdb** is blocked as a file name extension.
+
+- When you use the default IIS configuration on a distribution point, clients that use BITS fail to download this software deployment from the distribution point and indicate that they're waiting for content.
+
+- To let the clients download this content, on each applicable distribution point, edit **Request Filtering** in IIS Manager. Allow access to the file extensions and folders that are in the packages and applications that you deploy.
+
+> [!IMPORTANT]
+> Edits to the request filter can increase the attack surface of the computer.
+>
+> - Edits that you make at the server level apply to all websites on the server.
+> - Edits that you make to individual websites apply to only that website.
+>
+> For best security, run Configuration Manager on a dedicated web server. If you need to run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers](websites-for-site-system-servers.md).
 
 ## HTTP verbs
-**Management points:** To ensure that clients can successfully communicate with a management point, on the management point server ensure the following HTTP verbs are allowed:  
+
+For more information, see [Configure request filtering in IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs).
+
+### Management points
+
+To make sure that clients can successfully communicate with a management point, on the management point server make sure IIS allows the following HTTP verbs:
+
 - GET
 - POST
 - CCM_POST
 - HEAD
 - PROPFIND
 
-**Distribution points:** Distribution points require that the following HTTP verbs as allowed:
+### Distribution points
+
+Distribution points require that IIS allows the following HTTP verbs:
+
 - GET
 - HEAD
 - PROPFIND
-
-For more information, see [Configure request filtering in IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs).
