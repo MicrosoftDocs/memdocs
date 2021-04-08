@@ -58,6 +58,8 @@ The actual time that a device starts to update depends on the device being onlin
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
+  Consider using the *deadline settings* from a Windows 10 update rings policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
 ## Prerequisites
@@ -278,6 +280,8 @@ This report can help you find devices with alerts or errors and can help you tro
 3. In the list of monitoring reports, scroll to the Software updates section and select **Expedited update failures**.
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
+ 
+   :::image type="content" source="./media/windows-10-expedite-updates/device-report.png" alt-text="Example of the device report":::
 
 ### Update states
 
