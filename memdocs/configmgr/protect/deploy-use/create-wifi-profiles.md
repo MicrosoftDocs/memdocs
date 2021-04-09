@@ -2,7 +2,7 @@
 title: How to create Wi-Fi profiles
 titleSuffix: Configuration Manager
 description: Learn how to use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to users in your organization.
-ms.date: 01/14/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -15,6 +15,9 @@ manager: dougeby
 # Create Wi-Fi profiles
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
 
 Use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
 

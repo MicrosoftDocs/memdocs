@@ -45,9 +45,7 @@ When you configure at least one setting in the group, Configuration Manager mana
 
 ## Access rules and remote actions
 
-You can also configure the Exchange Server connector to manage the Exchange access rules. These access rules include allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console, and users can remotely wipe their mobile devices by using the application catalog.
-
-A user's mobile device automatically appears in the application catalog when you manage it and the Exchange Server is on-premises. For the mobile device to appear in the application catalog when you use Exchange Online, manually configure user device affinity. For more information, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
+You can also configure the Exchange Server connector to manage the Exchange access rules. These access rules include allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console.
 
 > [!TIP]  
 > When a mobile device is transferred to another user, before the new owner configures their Exchange account on the device, delete the mobile device from the Configuration Manager console.

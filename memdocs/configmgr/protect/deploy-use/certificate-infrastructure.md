@@ -2,7 +2,7 @@
 title: "Configure certificate infrastructure"
 titleSuffix: "Configuration Manager"
 description: "Learn how to configure certificate enrollment in Configuration Manager."
-ms.date: 07/25/2017
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -15,6 +15,9 @@ manager: dougeby
 # Configure certificate infrastructure
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
 
 Learn to configure certificate infrastructure in Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 

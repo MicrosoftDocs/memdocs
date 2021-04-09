@@ -2,7 +2,7 @@
 title: Encrypt recovery data over the network
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes over the network.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -26,9 +26,11 @@ Given the sensitive nature of this information, you need to protect it.
 
 Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. Use one of the following options:
 
-- Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to Configuration Manager versions 1910 or later.
+- Enable the site for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md). This option applies to version 2103 or later.<!-- 9503186 -->
 
-- HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option applies to Configuration Manager version 2002 or later.<!-- 5925660 -->
+- HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role. This option applies to version 2002 or later.<!-- 5925660 -->
+
+- Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to all supported versions of Configuration Manager.
 
 ## Configure the management point for HTTPS
 

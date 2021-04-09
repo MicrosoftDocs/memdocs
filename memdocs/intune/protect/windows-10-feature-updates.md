@@ -67,6 +67,8 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10 or later. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Basic**. Values of **Enhanced** or **Full** are also supported.
 
+  - Have Microsoft Sign-In Assistant (wlidsvc) running. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
+
 - Feature updates are supported for the following Windows 10 editions:  
   - Windows 10 Pro
   - Windows 10 Enterprise
@@ -84,11 +86,9 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   - Feature updates for the update ring must be *running*. They must not be paused.
   
   > [!TIP]
-  > If you’re using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations. 
-  > 
+  > If you’re using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
+  >
   > For more information see [Move from update ring deferrals to feature updates policy](../protect/windows-udpate-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy).
-  
-  
 
 - Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 

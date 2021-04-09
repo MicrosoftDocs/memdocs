@@ -101,7 +101,7 @@ When you configure the pull-distribution point, specify one or more source distr
 
 - Only distribution points that support HTTP can be specified as source distribution points when you use the Configuration Manager console.  
 
-- Use the Configuration Manager SDK to specify a source distribution point that's configured for HTTPS. To use a source distribution point that's configured for HTTPS, install the Configuration Manager client on the pull-distribution point.  
+- To use a source distribution point that's configured for HTTPS, install the Configuration Manager client on the pull-distribution point.  
 
 - If your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a [cloud distribution point](use-a-cloud-based-distribution-point.md) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source cloud distribution point.<!--1321554-->  
 
