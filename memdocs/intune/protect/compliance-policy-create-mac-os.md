@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# macOS settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for macOS settings in Intune
 
 This article lists and describes the different compliance settings you can configure on macOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to set a minimum or maximum OS version, set passwords to expire, and more.
 

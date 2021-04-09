@@ -21,7 +21,7 @@ ms.assetid: 85b07f57-661a-4bc8-87d2-7b446d5cf4d6
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
