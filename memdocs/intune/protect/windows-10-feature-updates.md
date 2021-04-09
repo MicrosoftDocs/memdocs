@@ -57,6 +57,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
   - Windows Virtual Desktop Access E3 or E5
+  - Microsoft 365 Business Premium
 
 - Devices must:  
   - Run Windows 10 version 1709 or later.
