@@ -164,6 +164,7 @@
     href: endpoint-protection-configure.md
   - name: Mobile Threat Defense partners
     href: mobile-threat-defense.md
+    displayName: MTD
     items:
     - name: MTD on unenrolled devices
       items:
@@ -349,6 +350,7 @@
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
       href: endpoint-security-disk-encryption-profile-settings.md
+      displayName: AWA; Add Work Account
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
     - name: Tenant attach Firewall settings    
