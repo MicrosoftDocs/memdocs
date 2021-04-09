@@ -84,7 +84,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 - When you deploy a *Windows 10 feature updates* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
-  
+
   > [!TIP]
   > If you’re using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
   >
