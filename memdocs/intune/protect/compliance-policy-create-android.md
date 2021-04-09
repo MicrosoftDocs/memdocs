@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 04/09/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Android settings to mark devices as compliant or not compliant using Intune
+# Android device administrator settings to mark devices as compliant or not compliant using Intune
 
 This article lists and describes the different compliance settings you can configure on Android devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 

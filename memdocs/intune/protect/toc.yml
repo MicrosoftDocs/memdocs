@@ -321,7 +321,7 @@
     href: scep-libraries-apis.md
   - name: Compliance policy settings
     items:
-    - name: Compliance policy settings - Android
+    - name: Compliance policy settings - Android device administrator
       href: compliance-policy-create-android.md
     - name: Compliance policy settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md
