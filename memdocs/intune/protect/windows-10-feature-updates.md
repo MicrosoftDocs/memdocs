@@ -88,7 +88,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   > [!TIP]
   > If you’re using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
   >
-  > For more information see [Move from update ring deferrals to feature updates policy](../protect/windows-udpate-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy).
+  > For more information see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
 - Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 

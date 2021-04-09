@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: dudeso
+ms.reviewer: davidmeb; bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
