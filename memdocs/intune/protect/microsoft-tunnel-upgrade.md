@@ -92,7 +92,11 @@ Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fw
 
 When a server doesn’t run the most recent software version, plan to install an available upgrade to keep the Microsoft Tunnel in support.
 
-## Upgrade a site that supports automatic upgrade
+## Manage upgrades
+
+Upgrade installation depends on how a site is configured.
+
+### Sites that support automatic upgrade
 
 When a site [supports automatic upgrades](#automatically-upgrade-servers-at-this-site) of servers, no administrative action is necessary. When the upgrade starts depends on the configuration of a maintenance window for the site:
 
@@ -100,13 +104,13 @@ When a site [supports automatic upgrades](#automatically-upgrade-servers-at-this
 
 - **With a maintenance window**: Upgrades start during the next maintenance window after a new version of Microsoft Tunnel becomes available.
 
-## Upgrade a site that doesn’t support automatic upgrade
+### Sites that don't support automatic upgrade
 
 When a site [doesn’t support automatic upgrade](#automatically-upgrade-servers-at-this-site), new versions of Microsoft Tunnel must be explicitly approved for the site before servers will upgrade.
 
 Use the [Health check](#view-tunnel-server-status) tab to understand when newer versions of Microsoft Tunnel are available to install. The report also identifies when the current tunnel version at the site is out of support.
 
-### To approve installation of an upgrade
+#### To approve installation of an upgrade
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
