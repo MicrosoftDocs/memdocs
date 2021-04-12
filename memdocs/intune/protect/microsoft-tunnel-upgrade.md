@@ -118,9 +118,9 @@ After you choose to upgrade servers, Intune starts the process to do so, which c
 
 ## Microsoft Tunnel update history
 
-Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version releases, you'll automatically benefit from each new version.
+Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here.
 
-After an update releases, it rolls out to tenants over the following days. This means your tunnel servers might not start the process to update for a few days.
+After an update releases, it rolls out to tenants over the following days. This means new updates might not be available for your tunnel servers for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 

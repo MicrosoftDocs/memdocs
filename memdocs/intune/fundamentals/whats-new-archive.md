@@ -373,7 +373,7 @@ For more information, go to [Overview](migration-guide.md).
 
 #### Update for Microsoft Tunnel<!-- 8629678  -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-upgrade-history) of the Microsoft Tunnel Gateway, which includes the following changes:
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway, which includes the following changes:
 
 - Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journalctl -t mstunnel_monitor* command line on the tunnel server.
 - Additional bug fixes.
