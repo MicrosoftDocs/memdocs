@@ -130,7 +130,7 @@ To help avoid conflicts or configurations that can block installation of expedit
 |---------------------------|-------------------------------------|
 | Servicing channel         | **Semi-Annual Channel**  <br><br> Expedite doesn't support additional channels at this time. |
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
-| Change notification update level | Use any value other than **Turn off al notifications, including restart warnings** |
+| Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
 For more information about these settings, see [Policy CSP – Update](/windows/client-management/mdm/policy-csp-update).
 
