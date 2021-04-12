@@ -58,9 +58,9 @@ The actual time that a device starts to update depends on the device being onlin
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
-  Consider using the *deadline settings* from a Windows 10 update rings policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
-
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from a Windows 10 update rings policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
 
@@ -124,8 +124,24 @@ In addition to a license for Intune, your organization must have one of the foll
 
 **Device settings**:
 
-The following settings on devices should be configured as follows. Review and apply policies to devices to help avoid conflicts or configurations that can block installation of expedited updates. For more information about these settings, see [Policy CSP – Update](/windows/client-management/mdm/policy-csp-update).
+To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Windows 10 update ring* policies to manage these settings.
 
+| Update ring setting       | Recommended value        |
+|---------------------------|-------------------------------------|
+| Servicing channel         | **Semi-Annual Channel**  <br><br> Expedite doesn't support additional channels at this time. |
+| Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
+| Change notification update level | Use any value other than **Turn off al notifications, including restart warnings** |
+
+For more information about these settings, see [Policy CSP – Update](/windows/client-management/mdm/policy-csp-update).
+
+Group Policy settings override mobile device management policies, and the following list of Group Policy settings can interfere with Expedited policy. On devices where these settings were managed by Group Policy, restore them to their device defaults (Not configured):
+
+- **CorpWuURL** - Specify intranet Microsoft update service location.
+- **AutoUpdateCfg** - Configure Automatic Updates.
+- **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
+- **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
+
+<!-- 
 | MDM Setting Name  |  Equivalent Group Policy Name       |
 |-------------------|-------------------------------------|
 | **AllowUpdateService** - This policy enables the admin to specify whether they want devices to get updates from the Windows Update endpoint directly, or if they want to get updates only from their specified intranet Microsoft update service location. </br></br> Expedite is only applicable to devices scanning Windows Update directly. </br></br> Use one of the following options: </br> - **Not configured** </br> - **1 Update Service is Allowed** (default)  |  **CorpWuURL** - Specify intranet Microsoft update service location. </br></br> Use one of the following options: </br> - The intranet update location as blank string, or **Not configured** </br> - **1 - Update Service is Allowed** (default)      |
@@ -133,6 +149,7 @@ The following settings on devices should be configured as follows. Review and ap
 | **BranchReadinessLevel** - This policy specifies which branch a device receives their updates from. </br></br> Use one of the following options: </br> - **Not configured** </br> - **16 - Semi-Annual Channel** (default)  |  **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received. </br></br> Use one of the following options: </br> - **Not configured** </br> - **Semi-Annual Channel**      |
 | **DisableDualScan** -This policy specifies whether the device gets its Windows Updates from Windows Update and all other updates from the specified server, or to get all updates from the specified server including Windows Updates. </br></br> For expedite to work, devices must scan against Windows Update directly for their Windows updates. </br></br> Use one of the following options: </br> - **Not configured** </br> -**0 – Allow scans against Windows Update**  |  **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update. </br></br> Use one of the following options: </br> - **Not configured** </br>  - **0 - Allow scan against Windows Update**       |
 | **RequireUpdateApproval** - This policy isn't supported for desktop devices. Instead of this policy, use the policy *Update CSP deferrals* or target versions to manage when and which updates are offered. </br></br> Set to: </br> - **Not configured**  |  *Not applicable*     |
+-->
 
 ## Create and assign an expedited quality update
 
