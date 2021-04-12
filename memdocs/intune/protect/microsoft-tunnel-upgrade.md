@@ -36,7 +36,7 @@ During an upgrade cycle:
 - If a server was off, upgrade begins after the server turns on.
 - After a successful upgrade of one server at a site, Intune waits a short period of time before starting the upgrade of the next server.
 
-## Upgrade controls
+## About upgrade controls
 
 To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure these when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
 
@@ -47,11 +47,11 @@ To help control when Intune begins the upgrade cycle, configure the following se
 
 This setting determines if an upgrade cycle for the site can begin automatically, or if an admin must explicitly approve the upgrade before the cycle can begin.
 
-- **Yes** *(default)* – When set to *Yes*, the site automatically upgrade servers as soon as possible after a new tunnel version becomes available. Upgrades begin without further admin intervention.
+- **Yes** *(default)* – When set to *Yes*, the site automatically upgrade servers as soon as possible after a new tunnel version becomes available. Upgrades begin without admin intervention.
 
   If you set a maintenance window for the site, the upgrade cycle begins between the windows start and end time. If no maintenance window is set, the upgrade cycle starts as soon as possible.
 
-- **No** – When set to *No*, Intune won’t upgrade servers until an Admin explicitly chooses to begin the upgrade cycle.
+- **No** – When set to *No*, Intune won’t upgrade servers until an admin explicitly chooses to begin the upgrade cycle.
 
   After upgrade is approved for a site with a maintenance window, the upgrade cycle begins between the windows start and end time. If there is no maintenance window, the upgrade cycle starts as soon as possible.
 
@@ -60,9 +60,9 @@ This setting determines if an upgrade cycle for the site can begin automatically
 
 ### Limit server upgrades to maintenance window
 
-This setting is used to define a maintenance window for the site.
+Ues this setting to define a maintenance window for the site.
 
-When configured for site, the server upgrade cycle can begin only during the configured period. However, one begun, the cycle continues to update servers one-by-one until all servers assigned to the site complete the upgrade.
+When configured for site, the server upgrade cycle can begin only during the configured period. However, once begun, the cycle continues to update servers one-by-one until all servers assigned to the site complete the upgrade.
 
 - **No** *(default)* – No maintenance window is set. Sites configured to upgrade automatically will do so as soon as possible. Sites configured to require explicit action to start the upgrade will do so as soon as possible *after* the upgrade is approved.
 
@@ -92,7 +92,22 @@ Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fw
 
 When a server doesn’t run the most recent software version, plan to install an available upgrade to keep the Microsoft Tunnel in support.
 
-## Manage upgrades
+## Approve upgrades
+
+Sites that have the setting *Automatically upgrade servers at this site* set to *No* won't automatically upgrade servers. Instead, an admin must approve upgrades for servers at that site before the upgrade cycle starts.
+
+To understand when an upgrade is available for servers, use the [Health check](#view-tunnel-server-status) tab to review server status.
+### To approve an upgrade
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+
+2. Select the site with an **Upgrade type** of **Manual**.
+
+3. On the site’s properties, select **Upgrade servers**.
+
+After you choose to upgrade servers, Intune starts the process to do so, which cannot be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
+
+<!-- ## Manage upgrades
 
 Upgrade installation depends on how a site is configured.
 
@@ -119,7 +134,7 @@ Use the [Health check](#view-tunnel-server-status) tab to understand when newer 
 3. On the site’s properties, select **Upgrade servers**.
 
 After you choose to upgrade servers, Intune starts the process to do so, which cannot be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
-
+-->
 ## Microsoft Tunnel update history
 
 Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here.
