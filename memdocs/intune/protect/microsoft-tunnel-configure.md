@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2021
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,9 +73,26 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 2. On the **Create a site** pane, specify the following properties:
 
    - **Name**: Enter a name for this Site.
+   
    - **Description** *(optional)*
+
    - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address can be an individual server or the IP or FQDN of a load-balancing server. The IP address must be publicly routable and the FQDN must be resolvable in public DNS.
+
    - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
+
+   - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
+
+     For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
+
+   - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there is no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
+
+     When set to *Yes*, configure the following options:
+
+     - **Time zone** – The time zone you select determines when the maintenance window starts and ends on all servers in the site, regardless of the time zone of individual servers.
+     - **Start time** – Specify the earliest time that the upgrade cycle can start, based on the time zone you selected.
+     - **End time** - Specify the latest time that upgrade cycle can start, based on the time zone you selected. Upgrade cycles that start before this time will continue to run and can complete after this time.
+
+     For more information, see [Upgrade Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
 3. Select **Create** to save the Site.
 

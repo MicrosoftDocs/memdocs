@@ -127,6 +127,8 @@
       href: microsoft-tunnel-configure.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
+    - name: Upgrade Microsoft Tunnel
+      href: microsoft-tunnel-upgrade.md
     - name: Microsoft Tunnel with Conditional Access
       href: microsoft-tunnel-conditional-access.md
     - name: Migrate to the Defender for Endpoint app
