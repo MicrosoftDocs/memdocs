@@ -2,10 +2,10 @@
 title: Introduction to reporting
 titleSuffix: Configuration Manager
 description: Learn about the set of tools and resources available to you for managing reporting in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
@@ -78,6 +78,14 @@ When you run a Reporting Services-based report in the Configuration Manager cons
 
 Starting in version 2002, when you run a Power BI-based report, it opens in the web browser.
 
+### Add to Favorites
+
+<!--8034298-->
+
+Configuration Manager ships with several hundred reports by default, and you might add more to that list. Instead of continually searching for reports you commonly use, starting in version 2103 you can make a report a favorite. This action allows you to quickly access it from the **Favorites** node.
+
+For more information, see [Operations and maintenance for reporting](../../servers/manage/operations-and-maintenance-for-reporting.md#favorites).
+
 ### Report prompts
 
 You can configure a report prompt or parameter when you create or modify a report. Create report prompts to limit or target the data that a report retrieves. A report can contain more than one prompt. Make sure the prompt names are unique and contain only alphanumeric characters that conform to the SQL Server rules for identifiers.
@@ -86,7 +94,7 @@ When you run a report, the prompt requests a value for a required parameter. Bas
 
 ### Report links
 
-Report links in Configuration Manager are used in a source report to provide easy access to additional data. For example, it can link to more detailed information about each of the items in the source report. If the destination report requires one or more prompts to run, the source report must contain a column with the appropriate values for each prompt.
+Report links in Configuration Manager are used in a source report to provide easy access to other data. For example, it can link to more detailed information about each of the items in the source report. If the destination report requires one or more prompts to run, the source report must contain a column with the appropriate values for each prompt.
 
 The link needs to specify the column number with the value for the prompt. For example:
 

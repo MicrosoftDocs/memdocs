@@ -20,7 +20,7 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -114,7 +114,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Prevent "Save as"|X||
 |Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
-|Customizable Style |X|||
+|Customizable Style |X||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
 |Disable contact sync|X|X|
 |Disable printing|X|X|

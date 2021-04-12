@@ -240,4 +240,4 @@ Select one of these objects in the Configuration Manager console, and then selec
 
 [Configure alerts](configure-alerts.md)
 
-[Configuration Manager Service Manager](../deploy/configure/site-components.md#BKMK_ServiceMgr)
+[Configuration Manager Service Manager](../deploy/configure/site-components.md#configuration-manager-service-manager)

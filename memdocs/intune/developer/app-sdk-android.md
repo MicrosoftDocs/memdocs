@@ -20,7 +20,7 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 #ROBOTS:
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -1089,7 +1089,7 @@ only resources which cannot be CA-protected, you may skip these steps.
     * This will generate a Client ID for your application.
 2. Follow the steps for [Using MSAL] and [Configure MSAL to use a broker].
 3. Set the manifest meta-data parameters per [Common MSAL configurations](#common-msal-configurations) for [App Integrates MSAL](#2-app-integrates-msal), see above.
-4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
+4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and confirming the following:
     - That sign-in to your app prompts for installation and enrollment of the Intune Company Portal
     - That after enrollment, sign-in to your app completes successfully.
 5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
@@ -1468,6 +1468,30 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 
 > [!NOTE]
 > The notification receiver must be registered before calling `remediateCompliance()` to avoid a race condition that could result in the notification being missed.
+
+### Declaring support for App CA
+Once your app is ready to handle App CA remediation, you can tell Microsoft Identity your app is App CA ready.  To do this in your MSAL application, build your Public Client using the Client Capabilities of “protapp”
+
+```java
+{
+	  "client_id" : "4b0db8c2-9f26-4417-8bde-3f0e3656f8e0",
+	  "authorization_user_agent" : "DEFAULT",
+	  "redirect_uri" : "msauth://com.microsoft.identity.client.sample.local/1wIqXSqBj7w%2Bh11ZifsnqwgyKrY%3D",
+	  "multiple_clouds_supported":true,
+	  "broker_redirect_uri_registered": true,
+	  "account_mode": "MULTIPLE",
+	  "client_capabilities": "protapp",
+	  "authorities" : [
+	    {
+	      "type": "AAD",
+	      "audience": {
+	        "type": "AzureADandPersonalMicrosoftAccount"
+	      }
+	    }
+	  ]
+	}
+```
+
 
 ### Implementation Notes
 

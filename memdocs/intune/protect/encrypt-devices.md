@@ -2,7 +2,7 @@
 # required metadata
 title: Encrypt Windows 10 devices with BitLocker in Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices from within the Intune portal.
+description: Encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices from within the Microsoft Endpoint Manager admin center.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -145,7 +145,7 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Intune portal. To be accessible, the device must have its keys escrowed to Azure AD.
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Microsoft Endpoint Manager admin center. To be accessible, the device must have its keys escrowed to Azure AD.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -166,7 +166,7 @@ Information for BitLocker is obtained using the [BitLocker configuration service
 
 IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/devices/bitLockerRecoveryKeys/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference). 
 
-All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure Portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### Rotate BitLocker recovery keys
 

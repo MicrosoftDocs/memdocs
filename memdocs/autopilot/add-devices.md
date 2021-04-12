@@ -12,7 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
-ms.date: 12/16/2020
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -52,18 +52,18 @@ For more information about registering HoloLens 2 devices with Windows Autopilot
 - [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
-### Required permissions
+## Required permissions
 
 Device enrollment can be done by an **Intune Administrator** or a **Policy and Profile Manager**. You can also create a custom Autopilot device manager role by using [Role Based Access Control](../intune/fundamentals/role-based-access-control.md) and creating this role. Autopilot device management only requires that you enable all permissions under **Enrollment programs**, with the exception of the four token management options.
 
-### Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
+## Collecting the hardware hash from existing devices using Microsoft Endpoint Configuration Manager
 
 Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows 10 devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
 
 > [!Note]
 > Before uploading the CSV file on Intune, please make sure that the first row contains the device serial number, Windows product ID, hardware hash, group tag, and assigned user. If there is header information on the top of CSV file, please delete that header information. See details at [Enroll Windows devices in Intune](/intune/enrollment/enrollment-autopilot).
 
-### Collecting the hardware hash from existing devices using PowerShell
+## Collecting the hardware hash from existing devices using PowerShell
 
 The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
 
@@ -120,6 +120,33 @@ Now that you have captured hardware hashes in a CSV file, you can add Windows Au
 4. After import is complete, choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Sync**. A message displays that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.
 
 5. Refresh the view to see the new devices.
+
+## Edit Autopilot device attributes
+
+After you've uploaded an Autopilot device, you can edit certain attributes of the device.
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
+2. Select the device you want to edit.
+3. In the pane on the right of the screen, you can edit:
+    - Device name.
+    - Group tag.
+    - User Friendly Name (if you've assigned a user).
+4. Select **Save**.
+
+> [!NOTE]
+> Device names can be configured for all devices, but are ignored in Hybrid Azure AD joined deployments. Device name still comes from the domain join profile for Hybrid Azure AD devices.
+
+## Delete Autopilot devices
+
+You can delete Windows Autopilot devices that aren't enrolled into Intune:
+
+- Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
+
+Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. These deletions can all be done from Intune:
+
+1. First, delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices you want to delete, then choose **Delete**. Windows Autopilot device deletion can take a few minutes to complete.
+2. If the devices are enrolled in Intune, you must [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+3. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
 
 ## Next steps
 

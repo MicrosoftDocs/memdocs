@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 03/30/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -19,7 +19,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-ms.reviewer:
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,9 +31,12 @@ ms.collection: M365-identity-device-management
 
 Use shell scripts to extend device management capabilities in Intune, beyond what is supported by the macOS operating system. 
 
+> [!NOTE]
+> Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/Misc/Rosetta2).
+
 ## Prerequisites
 Ensure that the following prerequisites are met when composing shell scripts and assigning them to macOS devices. 
- - Devices are running macOS 10.12 or later.
+ - Devices are running macOS 10.13 or later.
  - Devices are managed by Intune. 
  - Shell scripts begin with `#!` and must be in a valid location such as `#!/bin/sh` or `#!/usr/bin/env zsh`.
  - Command-line interpreters for the applicable shells are installed.
@@ -227,6 +230,10 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 ## Known issues
 - **No script run status:** In the unlikely event that a script is received on the device and the device goes offline before the run status is reported, the device will not report run status for the script in the admin console.
+
+## Additional information
+
+When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/Misc/Rosetta2).
 
 ## Next steps
 

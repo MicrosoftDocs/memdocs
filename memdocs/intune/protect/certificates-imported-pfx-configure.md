@@ -145,7 +145,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 > 2. On the server that hosts the connector, add or edit the following registry key to match teh following:
 >    `HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector\MbaseManagementAddress`
 >    - If *MbaseManagementAddress* isn't present, add it as a child key below *PFXCertificateConnector*.
->    - Set the *String Value* for *MbaseManagementAddress* to **https://manage.microsoft.us**
+>    - Set the *String Value* for *MbaseManagementAddress* to `https://manage.microsoft.us`
 
 ## Import PFX Certificates to Intune
 

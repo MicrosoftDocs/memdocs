@@ -2,6 +2,11 @@
     "redirections": [
 
         {
+            "source_path": "memdocs/intune/user-help/send-logs-to-your-it-admin-using-cable-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        },  
+        {
             "source_path": "memdocs/intune/fundamentals/tutorial-walkthrough-intune-portal.md",
             "redirect_url": "/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager",
             "redirect_document_id": false
@@ -688,6 +693,16 @@
         {
             "source_path": "memdocs/intune/protect/conditional-access-intune-reassign.md",
             "redirect_url": "/mem/intune/protect/conditional-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/hierarchy/content-source-location-scenarios.md",
+            "redirect_url": "/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md",
+            "redirect_url": "/mem/configmgr/core/servers/deploy/configure/boundary-groups",
             "redirect_document_id": false
         },
         {

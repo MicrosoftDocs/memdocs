@@ -2,7 +2,7 @@
 title: Wi-Fi and VPN profile prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites to manage Wi-Fi profiles and VPN profiles in Configuration Manager
-ms.date: 01/14/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -15,6 +15,9 @@ manager: dougeby
 # Prerequisites for Wi-Fi and VPN profiles in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
 
 Wi-Fi and VPN profiles in Configuration Manager have dependencies only within the product.
 

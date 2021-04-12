@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -92,7 +92,7 @@ For more information, see [Client notifications: Endpoint protection](../client-
 
 #### Export
 
-Opens the **Export Collection Wizard** that helps you export this collection to a Managed Object Format (MOF) file. You can then archive this file, or import it to another Configuration Manager site. When you export a collection, referenced collections aren't exported. A referenced collection is referenced by the selected collection through the use of an **Include** or **Exclude** rule.
+Opens the **Export Collection Wizard** that helps you export this collection to a Managed Object Format (MOF) file. You can then archive this file, or import it to another Configuration Manager site. When you export a collection, referenced collections aren't exported. A referenced collection is referenced by the selected collection by using an **Include** or **Exclude** rule.
 
 #### Copy
 
@@ -181,7 +181,7 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Distribution Point Groups**: Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md) starting in version 1906. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md). For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
     Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center](../../../../tenant-attach/atp-onboard.md).
 
@@ -197,7 +197,7 @@ Starting in version 2010, you can view dependency relationships between collecti
 
 :::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
 
-If you want to change or delete collections, view the relationships to understand the impact of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+If you want to change or delete collections, view the relationships to understand the affect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
 
 When you select the **View Relationships** action on a device or user collection:
 
@@ -242,6 +242,35 @@ Use the following tips to navigate the relationship viewer:
   - If you have permission for **All Systems** or **All Users and User Groups**, then you'll see all relationships.
 
   - If you don't have permission for a specific collection, you don't see it in the graph, and can't view its relationships.
+
+### Improvements in version 2103
+
+<!--8543508-->
+
+Starting in version 2103, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
+
+The following example shows the relationships for the "c1" collection in the center. It's dependent upon the collections above it (parents), and has dependencies below it (children).
+
+:::image type="content" source="media/8543508-view-collection-relationships.png" alt-text="Example graph of collection relationships" lightbox="media/8543508-view-collection-relationships.png":::
+
+To see the relationships of another collection in the graph, select it to open a new window targeted on that collection.
+
+Other improvements:
+
+- There's a new **Filter** button in the upper right corner. This action lets you reduce the graph to specific relationship types: **Limiting**, **Include**, or **Exclude**.
+
+- If you don't have permissions to all related collections, the graph includes a warning message that the graph may be incomplete.
+
+- When the graph is wider than the window can display, use the page navigation controls in the upper left corner. The first number is the page for parents (above), and the second number is the page for children (below). The window title also shows the page numbers.
+
+- The tooltip for a collection displays the count of dependencies it has and the count of dependant collections where applicable. This count only includes unique subcollections. The count no longer displays in the parentheses next to the collection name.
+
+- Previously the **Back** button took you through your viewing history. Now it takes you to the previously selected collection. For example, changing pages for the current collection doesn't activate the **Back** button. When you select a new collection, you can select **Back** to return to the original collection graph.
+
+> [!TIP]
+> Hold the **Ctrl** key and scroll the mouse wheel to zoom the graph.
+
+For more information on how to navigate the collection dependency graph with a keyboard, see [Accessibility features](../../../understand/accessibility-features.md#collection-relationship-diagram-shortcuts).
 
 ## PowerShell
 

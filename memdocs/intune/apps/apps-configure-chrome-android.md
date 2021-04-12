@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -54,8 +54,8 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
 1. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the portal.
+    - **Description** - The description of the profile that appears in the portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
     - **Platform** - Select **Android**.
 
@@ -106,7 +106,7 @@ Launch Google Chrome and you will find the settings applied.
 
 ## Troubleshooting
 
-1. Check the Intune portal to monitor the policy deployment status.
+1. Check Intune to monitor the policy deployment status.
 
     ![Monitor the policy deployment status](./media/apps-configure-chrome-android/monitor-status.png)
 
