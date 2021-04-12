@@ -73,12 +73,29 @@ Class SMS_AppRelation_Flat : SMS_BaseClass
 
 |Value|Relationship|  
 |-|-|  
-|1|Bundled|  
-|2|Required|  
-|3|Prohibited|  
-|4|Optional|  
-|5|Derived|  
-|6|Superseded|  
+|1|Bundled|
+|2|Required|
+|3|Prohibited|
+|4|Optional|
+|5|Derived|
+|6|Superseded|
+|7|Self|
+|8|Reference|
+|9|AppToDTReference|
+|10|AppDependence|
+|11|Intention|
+|12|Platform|
+|13|GlobalConditionReference|
+|15|ApplicationSuperSeded|
+|16|ApplicationType|
+|17|ApplicationHost|
+|18|ApplicationInstaller|
+|19|SupersedOrDependent|
+|20|VirtualEnvironmentReference|
+|21|AppDCMReference|
+|22|DeploymentTypeToPolicyTemplateReference|
+|23|CIInheritanceRelation|
+|24|AppConfigTemplateReference| 
 
  `ToApplicationCIID`  
  Data type: `UInt32`  
