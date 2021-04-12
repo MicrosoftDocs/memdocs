@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 ms.technology:
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic

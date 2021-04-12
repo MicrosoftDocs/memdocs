@@ -37,7 +37,7 @@ Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioni
 
 Starting in version 1902, the task sequence sets a timestamp when it puts the client in provisioning mode. Every 60 minutes, a client in provisioning mode checks the duration of time since the timestamp. If it's been in provisioning mode for more than 48 hours, the client automatically exits provisioning mode and restarts its process.
 
-48 hours is the default provisioning mode timeout value. You can adjust this timer on a device by setting the **ProvisioningMaxMinutes** value in the following registry key: `HKLM\Software\Microsoft\CCM\CcmExec`. If this value doesn't exist or is `0`, the client uses the default 48 hours.
+48 hours is the default provisioning mode timeout value. You can adjust this timer on a device by setting the **ProvisioningMaxMinutes** value in the following registry key: `HKLM\Software\Microsoft\CCM\CcmExec`. The value is specified in minutes. If this value doesn't exist or is `0`, the client uses the default 48 hours.
 
 The timestamp **ProvisioningEnabledTime** is located in the following registry key: `HKLM\Software\Microsoft\CCM\CcmExec`. The timestamp has a value of the last time the machine entered provisioning mode. The format is epoch (Unix timestamp) and is in UTC.
 

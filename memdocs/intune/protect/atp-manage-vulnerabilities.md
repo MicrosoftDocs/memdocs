@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 03/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint
 
-When you integrate Intune with Microsoft Defender for Endpoint, you can take advantage of Defender for Endpoints Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM. This integration brings a risk-based approach to the discovery and prioritization of vulnerabilities that can improve remediation response time across your environment.
+When you integrate Intune with Microsoft Defender for Endpoint, you can take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability. This integration brings a risk-based approach to the discovery and prioritization of vulnerabilities that can improve remediation response time across your environment.
 
 [Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender for Endpoint](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 

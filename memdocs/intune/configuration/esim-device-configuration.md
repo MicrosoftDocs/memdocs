@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,6 +44,9 @@ To deploy eSIM to your devices using Intune, the following are needed:
 - **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Or, see a list of [some of the known eSIM capable devices](#esim-capable-devices) (in this article).
 - **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
 - **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
+
+> [!NOTE]
+> You can create a custom OMA-URI profile using the [eUICCs CSP](/windows/client-management/mdm/euiccs-csp). Be sure to deploy one custom profile for each device. The profile must include the device ICCID and matching activation code from the carrier for each device.
 
 ## Deploy eSIM to devices - overview
 

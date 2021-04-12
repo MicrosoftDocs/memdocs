@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,6 +85,7 @@ When you enable this action:
     - Personally-Owned Work Profile
   - iOS/iPadOS
   - macOS
+  - Windows 10
 
   When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
 

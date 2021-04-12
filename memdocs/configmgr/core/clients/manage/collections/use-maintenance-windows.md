@@ -2,10 +2,10 @@
 title: Use maintenance windows
 titleSuffix: Configuration Manager
 description: Use collections and maintenance windows to effectively manage clients in Configuration Manager.
-ms.date: 06/03/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
@@ -33,6 +33,9 @@ Configure maintenance windows with an effective date, a start and end time, and 
 By default, computer restarts caused by a deployment aren't allowed outside of a maintenance window, but you can override the default. Maintenance windows affect only the time when the deployment runs. Deployments that you configure to download and run locally can download content outside of the window.
 
 When a client is a member of a device collection that has a maintenance window, a deployment runs only if its maximum allowed run time doesn't exceed the duration of the window. If the deployment fails to run, the client generates an alert. It then reruns the deployment during the next scheduled maintenance window that has available time.
+
+> [!TIP]
+> A _maintenance window_ is for a client. A _service window_ is for a site server. For more information, see [Service windows for site servers](../../../servers/manage/service-windows.md).
 
 ## Multiple maintenance windows
 
@@ -89,7 +92,7 @@ The **Maintenance Windows** tab of the collection properties displays all config
 
 ## <a name="bkmk_powershell"></a> Use PowerShell
 
-PowerShell can be used to configure maintenance windows. For more information, see the following articles:
+You can use PowerShell to configure maintenance windows. For more information, see the following articles:
 
 - [Get-CMMaintenanceWindow](/powershell/module/configurationmanager/get-cmmaintenancewindow)
 - [New-CMMaintenanceWindow](/powershell/module/configurationmanager/new-cmmaintenancewindow)

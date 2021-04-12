@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Endpoint analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Instructions for troubleshooting Endpoint analytics.
 ms.date: 01/08/2021
 ms.prod: configuration-manager

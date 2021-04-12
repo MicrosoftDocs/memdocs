@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 #ROBOTS:
 #audience:
 
-#ms.reviewer:
+ms.reviewer: manchen
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -55,7 +55,7 @@ If you deploy the app as required to users or devices then you do not need the I
 
 ### Upload the code-signing certificate
 
-If your Windows 10 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to the Intune portal:
+If your Windows 10 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to Intune using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Tenant administration** > **Connectors and tokens** > **Windows enterprise certificates**.
@@ -79,7 +79,7 @@ The Intune service can no longer deploy LOB apps for this platform once the exis
 
 Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 
-If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune portal
+If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the Microsoft Endpoint Manager admin center.
 
 ## Manually deploy Windows 10 Company Portal app
 

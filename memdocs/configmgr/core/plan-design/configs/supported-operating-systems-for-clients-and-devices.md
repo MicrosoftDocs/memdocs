@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -67,7 +67,6 @@ For more information, see the following articles:
 ### Supported server OS versions
 
 - **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
-    (Starting with Configuration Manager version 1806.)
 
 - **Windows Server 2016**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
 
@@ -122,8 +121,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
   - RAM File-Based Write Filters (FBWF)
 
   - Unified Write Filters (UWF)  
-
-- The application catalog isn't supported for any Windows Embedded device.  
 
 ### Supported OS versions  
 

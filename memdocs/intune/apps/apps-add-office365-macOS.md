@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
 #ROBOTS:
 #audience:
 
-ms.reviewer: aiwang
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -34,14 +34,15 @@ ms.collection: M365-identity-device-management
 This app type makes it easy for you to assign Microsoft 365 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
 
 > [!NOTE]
+> Other versions of Office for Mac can be added to the Microsoft Endpoint Manager admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
+> 
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 
 ## Before you start
 
 Before you begin adding Microsoft 365 apps to macOS devices, understand the following details:
 
-- Devices to which you deploy these apps must be running macOS 10.10 or later.
-- Intune supports adding the Office apps that are included with Office 2016 for Mac suite only.
+- Devices to which you deploy these apps must be running macOS 10.14 or later.
 - If any Office apps are open when Intune installs the app suite, users might lose data from unsaved files.
 
 ## Select Microsoft 365 Apps

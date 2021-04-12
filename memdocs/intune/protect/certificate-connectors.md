@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2021
+ms.date: 03/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -261,6 +261,12 @@ Updates for the two certificate connectors are released periodically. When we up
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
 
+#### March 10, 2021
+
+Version **6.2101.16.0**. - Changes in this release:
+
+- Improvements to to the PFX Create flow to prevent duplication of Certificate Request files on on-premises servers that host the connector.
+
 #### February 24, 2021
 
 Version **6.2101.13.0**. This new connector version adds [improvements for logging](#logging) to the PFX Connector:
@@ -288,6 +294,9 @@ Version **6.2101.13.0**. This new connector version adds [improvements for loggi
 - Fixed an issue with PKCS certificate delivery to Android Enterprise Fully Managed devices. The issue required the cryptography Key Storage Provider (KSP) be a legacy provider. You can now use a Cryptographic Next Generation (CNG) Key Storage Provider as well.
 - Changes to *CA Account* tab of the PFX Certificate Connector: The Username and password (credentials) that you specify are now used to issue certificates and to revoke certificates. Previously these credentials were used only for certificate revocation.
 
+<!-- Rolling Archive for PFX Certificate Connector release history
+ that are five or more releases old:
+
 #### August 26, 2020
 
 **Version 6.2008.60.607** - Changes in this release:
@@ -296,9 +305,6 @@ Version **6.2101.13.0**. This new connector version adds [improvements for loggi
 - Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PCKS #12 or Imported PFX certificates.
 - Adds support for using PKCS certificate profiles with all supported platforms except Windows 8.1.
 - Adds support for certificate revocation for Outlook S/MIME.
-
-<!-- Rolling Archive for PFX Certificate Connector release history
- that are five or more releases old:
 
 #### November 18, 2019
 
