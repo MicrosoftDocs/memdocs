@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 04/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -120,6 +120,7 @@ For more information, see [Data transfer policy exceptions for apps](app-protect
 | <ul><ui> **Fingerprint instead of PIN for access (Android 6.0+)** | Select **Allow** to allow the user to use [fingerprint authentication](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) instead of a PIN for app access. <br><br>Default value = **Allow** <br><br>**Note:** This feature supports generic controls for biometric on Android devices. OEM-specific biometric settings, like Samsung Pass, *are not supported.* <br><br>On Android, you can let the user prove their identity by using [Android fingerprint authentication](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) instead of a PIN. When the user tries to use this app with their work or school account, they are prompted to provide their fingerprint identity instead of entering a PIN. <br><br> Android personally-owned work profile enrolled devices require registering a separate fingerprint for the **Fingerprint instead of PIN for access** policy to be enforced. This policy takes effect only for policy-managed apps installed in the Android personally-owned work profile. The separate fingerprint must be registered with the device after the Android personally-owned work profile is created by enrolling in the Company Portal. For more information about personally-owned work profile fingerprints using Android personally-owned work profiles, see [Lock your work profile](https://support.google.com/work/android/answer/7029958). |
 | <ul><ui>**Override fingerprint with PIN after timeout**| To use this setting, select **Require** and then configure an inactivity timeout. <br><br>Default value = **Require** |
 | <ul><ui><ul><ui> **Timeout (minutes of inactivity)**| Specify a time in minutes after which either a passcode or numeric (as configured) PIN will override the use of a fingerprint. This timeout value should be greater than the value specified under 'Recheck the access requirements after (minutes of inactivity)'.<br><br>Default value = **30** |
+| <ul><ui>**Biometrics instead of PIN for access** | Select **Allow** to allow the user to use Face Unlock to authenticate users on Android devices. If allowed, Face Unlock is used to access the app on Android 10 or higher devices.    | **Allow**  |
 | <ul><ui>**PIN reset after number of days** | Select **Yes** to require users to change their app PIN after a set period of time, in days.  <br><br>When set to *Yes*, you then configure the number of days before the PIN reset is required. <br><br> Default value = **No**  |  
 | <ul><ui><ul><ui> **Number of days** | Configure the number of days before the PIN reset is required. <br><br> Default value = **90**  |
 | <ul><ui>**Select number of previous PIN values to maintain** | This setting specifies the number of previous PINs that Intune will maintain. Any new PINs must be different from those that Intune is maintaining. <br><br> Default value = **0** | 
