@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
 
-Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically receives [software upgrades](../protect/microsoft-tunnel-configure#microsoft-tunnel-updates) which must install on the tunnel servers to keep them in support. To stay in support, servers must run the most recent release, or at most be one version behind. The information in this article explains the upgrade process, upgrade controls, and status reports you can use to understand the software version of tunnel servers, when upgrades are available, and how to control when upgrades happen.
+Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically receives [software upgrades](#microsoft-tunnel-update-history) which must install on the tunnel servers to keep them in support. To stay in support, servers must run the most recent release, or at most be one version behind. The information in this article explains the upgrade process, upgrade controls, and status reports you can use to understand the software version of tunnel servers, when upgrades are available, and how to control when upgrades happen.
 
 Intune handles the upgrade of all servers assigned to each tunnel site for you, upgrading all servers in the site one at a time. This is referred to as an upgrade cycle for the site. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. By upgrading a single server at a time at each site, disruptions to users are minimized when a site includes multiple servers.
 During an upgrade cycle:
@@ -115,6 +115,72 @@ Use the [Health check](#view-tunnel-server-status) tab to understand when newer 
 3. On the site’s properties, select **Upgrade servers**.
 
 After you choose to upgrade servers, Intune starts the process to do so, which cannot be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
+
+## Microsoft Tunnel update history
+
+Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version releases, you'll automatically benefit from each new version.
+
+After an update releases, it rolls out to tenants over the following days. This means your tunnel servers might not start the process to update for a few days.
+
+The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### March 29, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7ff81ebec9d129558cf07ba1d044d4051dbfaf9eb75cc91500a11f4ef0cb447e
+
+- **serverImageDigest**: sha256:56dc303c67735bad243b2dc8644cc3d1e5318aa963be05a9a685ec6bcbb41c4e
+
+Changes in this release:
+
+- Minor bug fixes and enhancements
+
+- ### January 19, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:227557e71b197c5c26baeed7633e5f89b476bbb8eb23fc82dec260890d5145f1
+
+- **serverImageDigest**: sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
+
+Changes in this release:
+
+- Support for Red Hat Enterprise Linux 8.
+- Extraneous logging suppressed.
+
+### October 29, 2020
+
+Image hash values:
+
+- **agentImageDigest**: sha256:ba48de2c746a68286d15985f807702c60004131368a4a6a50ceab0f04653031a
+
+- **serverImageDigest**: sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
+
+Changes in this release:
+
+- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs).
+- Additional bug fixes.
+
+### October 12, 2020
+
+Image hash values:
+
+- **agentImageDigest**: sha256:d168e416591d94d6a02b64e5dde8709e2d5a44261d67036caafcb55b12912ca5
+
+- **serverImageDigest**: sha256:8b50257a94b9825915cb6a77ed49cfb3e5c6f68da9ae0272cdf8e49cff3d342e
+
+Changes in this release:
+
+- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the *syslog* format.
+- Various bug fixes.
+
+### September 23, 2020
+
+The initial public preview release of Microsoft Tunnel.
+
+<!-- Archive of past releases
+-->
 
 ## Next steps
 

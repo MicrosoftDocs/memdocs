@@ -65,12 +65,12 @@ Select a server and then open the **Health check** tab to view the following inf
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
 
-- **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version. 
+- **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version.
   - **Healthy** - Up to date with the most recent software version
   - **Warning** - One version behind
   - **Unhealthy** - Two or more versions behind, and out of support
 
-  When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](../protect/Microsoft-tunnel-upgade.md).
+  When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
 ## Use mst-cli command-line tool
 
