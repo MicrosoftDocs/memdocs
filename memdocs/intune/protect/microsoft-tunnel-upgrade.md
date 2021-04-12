@@ -36,7 +36,7 @@ During an upgrade cycle:
 - If a server was off, upgrade begins after the server turns on.
 - After a successful upgrade of one server at a site, Intune waits a short period of time before starting the upgrade of the next server.
 
-## About upgrade controls
+## Use upgrade controls
 
 To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure these when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
 
