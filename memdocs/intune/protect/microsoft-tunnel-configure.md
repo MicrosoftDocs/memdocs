@@ -114,7 +114,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
-2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](../protect/microsoft-tunnel-update.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
+2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
    > [!IMPORTANT]
    > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
