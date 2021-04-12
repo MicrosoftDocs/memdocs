@@ -1,3 +1,11 @@
+---
+author: ErikjeMS
+ms.service: microsoft-intune
+ms.topic: include
+ms.date: 04/12/2021
+ms.author: erikje
+---
+
 Security conscious organizations look at ways to ensure corporate data on mobile devices are protected. One method used to protect that data is through device enrollment. Device enrollment helps organizations:
 
 - deploy compliance policies (like PIN strength, jailbreak/root validation, and so on).
