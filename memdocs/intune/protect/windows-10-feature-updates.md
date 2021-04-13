@@ -95,7 +95,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 
 - While this feature is in preview and you co-manage devices with Configuration Manager, there is a limitation where feature updates policies might not immediately take effect. This delay can result in devices updating to a later feature update version than as configured policy.
 
-  For an alternative method to restrict the Windows 10 feature update versions that are offered to devices enrolled in Intune, see [Use the TargetReleaseVersion policy CSP to manage Windows 10 feature updates for co-managed devices](/troubleshoot/mem/intune/create-feature-update-hold-co-managed-devices). 
+  For an alternative method to restrict the Windows 10 feature update versions that are offered to devices enrolled in Intune, see [Use the TargetReleaseVersion policy CSP to manage Windows 10 feature updates for co-managed devices](/troubleshoot/mem/intune/create-feature-update-hold-co-managed-devices).
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
