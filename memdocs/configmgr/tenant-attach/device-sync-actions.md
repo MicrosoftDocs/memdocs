@@ -58,6 +58,7 @@ When co-management is already enabled, edit the co-management properties to enab
 1. In the ribbon, select **Properties** for your co-management production policy.
 1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
+   - Starting in Configuration Manager version 2010, when a single collection is selected, its child collections are also uploaded.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
 
 > [!Important]
@@ -87,7 +88,7 @@ When co-management isn't enabled, use the instructions below to enable device up
 1. Choose **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
      - Optionally, you can import a previously created Azure AD application during tenant attach onboarding (starting in version 2006). For more information, see the [Import a previously created Azure AD application](#bkmk_aad_app) section.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
-    - Starting in Configuration Manager version 2010, when a single collection is selected, it's child collections are also uploaded. <!--8717629-->
+    - Starting in Configuration Manager version 2010, when a single collection is selected, its child collections are also uploaded. <!--8717629-->
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md)
 1. Select **Summary** to review your selection, then choose **Next**.
 1. When the wizard is complete, select **Close**.  
