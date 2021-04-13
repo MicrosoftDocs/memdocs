@@ -149,7 +149,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Password | Number of sign-in failures before wiping the device | 5 | Organizations may need to update this setting to match their password policy. |
 | Password | Password expiration (days) | 365 | Organizations may need to update this setting to match their password policy. |
 | Password | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
-| Passwrod | Block password AutoFill | Yes | |
+| Password | Block password AutoFill | Yes | |
 | Wireless | Block voice dialing while device is locked | Yes |  |
 
 ## Next steps

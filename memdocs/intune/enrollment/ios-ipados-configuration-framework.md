@@ -37,9 +37,9 @@ The iOS/iPadOS security configuration framework is a series of recommendations f
 
 1. [iOS/iPadOS framework deployment methodology](ios-ipados-framework-deployment-methodology.md): A recommended methodology for deploying the security configuration framework.
 2. [Set app configuration policies for iOS/iPadOS devices](ios-ipados-app-configuration-policies.md): Configure apps on the devices to disallow personal accounts.
-3. [iOS/iPadOS device compliance security settings](ios-ipados-device-compliance-security-configuration.md): Specific configuration settings for ensuring personally owned and corporate owned devices are healthy and compliant.  
-4. [iOS/iPadOS personal device security settings](ios-ipados-personal-device-security-configuration.md): Specific configuration settings for basic, enhanced, and high security on personally owned devices.
-5. [iOS/iPadOS supervised device security settings](ios-ipados-supervised-devise-security-configuration.md): Specific configuration settings for basic, enhanced, and high security on corporate owned supervised devices.
+3. [iOS/iPadOS device compliance security settings](ios-ipados-device-compliance-security-configurations.md): Specific configuration settings for ensuring personally owned and corporate owned devices are healthy and compliant.  
+4. [iOS/iPadOS personal device security settings](ios-ipados-personal-device-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on personally owned devices.
+5. [iOS/iPadOS supervised device security settings](ios-ipados-supervised-devise-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on corporate owned supervised devices.
 
 ## iOS/iPadOS enrollment modes
 
