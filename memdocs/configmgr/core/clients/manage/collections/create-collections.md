@@ -222,7 +222,7 @@ You can enable the synchronization of collection memberships to an Azure Active 
 
 Synchronizations can either be full or incremental and they have slightly different behaviors: <!--9718854-->
 
-- Full synchronization: Occurs on the first initial synchronization after enabling it. You can force a full synchronization by selecting the collection, and then choosing **Synchronize Membership** from the ribbon. A full synchronization will overwrite members of the Azure AD group.
+- Full synchronization: Occurs on the first synchronization after enabling it. You can force a full synchronization by selecting the collection, and then choosing **Synchronize Membership** from the ribbon. A full synchronization will overwrite members of the Azure AD group.
 
 - Incremental synchronization: Occurs every 5 minutes. Changes made in Azure AD aren't reflected in Configuration Manager collections, but they aren't overwritten by Configuration Manager. <!--For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after an incremental synchronization, the Azure AD group has five devices.-->
 
@@ -236,6 +236,8 @@ Example synchronization scenario:
 1. `Group1` now contains only `DeviceB`.
 1. From Azure AD, add `DeviceD` to `Group1` and wait for an incremental synchronization.
 1. `Group1` now contains `DeviceB` and `DeviceD`.
+1. From Configuration Manager, select `Collection1`, and choose **Synchronize Membership** from the ribbon to force a full synchronization.
+1. `Group1` now contains only `DeviceB`
 
 ### Prerequisites for Azure AD synchronization
 
