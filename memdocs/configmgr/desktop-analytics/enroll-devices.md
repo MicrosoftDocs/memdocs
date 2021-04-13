@@ -2,10 +2,10 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 12/07/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
@@ -77,13 +77,12 @@ If your organization doesn't apply "Monthly Quality Rollup" updates to Windows 7
 
 The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager.
 
-> [!Note]  
+> [!NOTE]
 > If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance.
 >
-> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
+> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.
 
-
-When you [connect Configuration Manager to Desktop Analytics](connect-configmgr.md#bkmk_connect), you configure the settings to enroll devices including which Desktop Analytics instance the device should send its data, and other configuration options. 
+When you [connect Configuration Manager to Desktop Analytics](connect-configmgr.md#bkmk_connect), you configure the settings to enroll devices. These settings include which Desktop Analytics instance the device should send its data, and other configuration options.
 
 To change these settings, use the following procedure:
 
@@ -107,7 +106,7 @@ To change these settings, use the following procedure:
 
     - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**. For more information, see [Proxy server authentication](enable-data-sharing.md#proxy-server-authentication).
 
-    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->
+    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include other collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->
 
         > [!IMPORTANT]
         > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.
