@@ -135,6 +135,10 @@ For example, you have a primary site in forest A with two software update points
 
 Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your organizational security policy doesn't allow the top-level site to access to the internet, configure the synchronization source for the top-level site to use an existing WSUS server. This WSUS server isn't in your Configuration Manager hierarchy. For example, you have a WSUS server in an internet-connected network (DMZ), but your top-level site is in an internal network without internet access. Configure the WSUS server in the DMZ as your synchronization source for software updates metadata. Configure the WSUS server in the DMZ to synchronize software updates with the same criteria that you need in Configuration Manager. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS server connection account. This account needs access to the WSUS server in the DMZ. Also confirm that the firewall permits traffic for the appropriate ports. For more information, see the [ports used by the software update point to the synchronization source](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
+> [!IMPORTANT]  
+>  **Note about using WSUS Shared database scenario:**  
+If you are sharing the database of WSUS server on the top site which is talking to Microsoft for updates with other WSUS servers, You will need to make sure all the [internet requirements](https://docs.microsoft.com/en-us/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_ConfigureFirewalls) are met for every single WSUS server you are sharing the database with. This is because during sync ConfigMgr randomly chooses the WSUS server amongst the shared ones to sync against Microsoft updates. Our recommendation is to share database amongst the downstream servers and keep the top level servers use its own database for simplicity and avoiding opening more ports and firewall rules than you have to. 
+>      
 
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
 
@@ -212,6 +216,8 @@ This section includes the following subtopics:
 
 
 This section provides information about the steps to take to successfully plan and prepare for the software update point installation. Before you create a site system role for the software update point in Configuration Manager, there are several requirements to consider. The specific requirements depend on your Configuration Manager infrastructure. When you configure the software update point to communicate by using HTTPS, this section is especially important to review. HTTPS-enabled servers require additional steps to work properly.  
+
+
 
 ###  <a name="BKMK_SUPSystemRequirements"></a> Requirements for the software update point  
 
