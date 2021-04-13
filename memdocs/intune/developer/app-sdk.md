@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 04/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -71,7 +71,7 @@ Many users with personal devices want to access corporate data without enrolling
 App protection without device enrollment allows the Microsoft Intune service to deploy app protection policy to an app directly, without relying on a device management channel to deploy the policy.
 
 ### On-demand application VPN connections with Citrix mVPN 
-You can manage devices and apps with a combination of Citrix XenMobile MDX and Microsoft Intune. This combination means that you can manage apps with Intune app protection policy while using Citrix's mVPN technology. The integration with Citrix is available for the Intune App SDK for iOS and Android, and with the Intune App Wrapping Tool for iOS and Android (with the -citrix flag).
+You can manage devices and apps with a combination of Citrix XenMobile MDX and Microsoft Intune. This combination means that you can manage apps with Intune app protection policy while using Citrix's mVPN technology. The integration with Citrix is available for the Intune App SDK for iOS and Android, and with the Intune App Wrapping Tool for iOS (with the -citrix flag).
  
 To learn more about Citrix MDX, see [About the MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [Citrix MDX app wrapper for iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html), and the [Citrix MDX app wrapper for Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
 
