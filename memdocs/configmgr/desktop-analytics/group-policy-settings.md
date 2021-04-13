@@ -39,6 +39,9 @@ Configuration Manager sets Windows policies in one or both of the following regi
 | **RequestAllAppraiserVersions** | Both | Windows 8.1 and earlier | Desktop Analytics requires a value of `1` for data collection to work correctly. |
 | **DisableEnterpriseAuthProxy** | GPO | All Windows versions | If your environment requires a user-authenticated proxy with Windows Integrated Authentication for internet access, Desktop Analytics requires a value of `0` for data collection to work correctly. For more information, see [Proxy server authentication](enable-data-sharing.md#proxy-server-authentication). |
 
+> [!IMPORTANT]
+> When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, [**Configure telemetry opt-in setting user interface**](#bkmk_gp-ux-settings).
+
 Starting in version 2006, <!--8402852--> Configuration manager sets the following Windows policies in preparation to support an upcoming option for [enterprise customers to control their Windows diagnostic data](https://blogs.microsoft.com/eupolicy/2020/07/23/introducing-new-option-customers-control-windows-10-diagnostic-data):
 
 | Policy | Path | Applies to | Value |
@@ -68,7 +71,7 @@ Windows Analytics also set the following policies through the Upgrade Readiness 
 
 If you ran the Upgrade Readiness onboarding script on a device, these policy settings may still exist. Don't use the legacy script. Before you enroll the device to Desktop Analytics, remove these previous policy settings.
 
-## Group policy settings
+## <a name="bkmk_gp-settings"></a> Group policy settings
 
 In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](../core/clients/manage/collections/create-collections.md).
 
@@ -78,10 +81,9 @@ The relevant group policy settings are at the following path: **Computer Configu
 
 Group policy settings only modify registry settings in the following key: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-> [!IMPORTANT]
-> When you use group policy settings to enable complex scenarios, pay special attention to policy settings that can cause configuration conflicts. Configuration Manager only configures [Windows settings](#windows-settings) *if the value doesn't already exist*. Mobile device management (MDM) policies and group policy settings take precedence over Configuration Manager settings, so certain policy configurations could cause issues with Desktop Analytics.
+### <a name="bkmk_gp-conflict_res"></a> Conflict resolution
 
-### Group policy settings that could conflict with Configuration Manager settings for Desktop Analytics
+When you use group policy settings to enable complex scenarios, pay special attention to policy settings that can cause configuration conflicts. Configuration Manager only configures [Windows settings](#windows-settings) *if the value doesn't already exist*. Mobile device management (MDM) policies and group policy settings take precedence over Configuration Manager settings, so certain policy configurations could cause issues with Desktop Analytics. Status for devices targetted with MDM and group policy settings may not be accurately reflected in the [Connection health](monitor-connection-health.md) dashboard.
 
 The group policy settings in the following table have the greatest potential to cause conflict with the Windows settings that Configuration Manager sets on devices it enrolls to Desktop Analytics:
 
@@ -108,7 +110,7 @@ If you configure these group policy settings to **Disabled**, it has different e
 
   - If you set these group policy settings to **Not configured**, Windows removes the value once but doesn't continue to remove it. This configuration lets Configuration Manager apply its values as expected.
 
-### Group policy settings to customize the user experience
+### <a name="bkmk_gp-ux-settings"></a> Group policy settings to customize the user experience
 
 These group policy settings aren't required by Configuration Manager or Desktop Analytics. You can configure them in group policy to configure your users' experience with Windows diagnostic data.
 
