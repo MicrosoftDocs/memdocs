@@ -124,9 +124,8 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
         newSUMUpdatesAssignment["LogComplianceToWinEvent"].BooleanValue = newLogComplianceToWinEvent;  
         newSUMUpdatesAssignment["NotifyUser"].BooleanValue = newNotifyUser;  
         newSUMUpdatesAssignment["RaiseMomAlertsOnFailure"].BooleanValue = newRaiseMomAlertsOnFailure;  
-        newSUMUpdatesAssignment["NotifyUser"].BooleanValue = newNotifyUser;  
         newSUMUpdatesAssignment["SendDetailedNonComplianceStatus"].BooleanValue = newSendDetailedNonComplianceStatus;  
-        newSUMUpdatesAssignment["StartTime"].StringValue = newStartTime;  
+        newSUMUpdatesAssignment["StartTime"].DateTimeValue = newStartTime;  
         newSUMUpdatesAssignment["SuppressReboot"].IntegerValue = newSuppressReboot;  
         newSUMUpdatesAssignment["TargetCollectionID"].StringValue = newTargetCollectionID;  
         newSUMUpdatesAssignment["UseGMTTimes"].BooleanValue = newUseGMTTimes;  
