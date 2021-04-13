@@ -108,21 +108,15 @@ For more information, see [Microsoft Endpoint Configuration Manager troubleshoot
 
 ## New and updated support articles
 
-Support articles that are new or updated between October 16 and January 12, 2021.
+Support articles that are new or updated between January 13 and April 13, 2021.
 
-- [KB 4578605 Update Rollup for Microsoft Endpoint Configuration Manager version 2006](https://support.microsoft.com/help/4578605)
-- [KB 4575784 Office updates fail to download in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4575784)
-- [KB 4575783 Office updates fail to download in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4575783)
-- [KB 4575786 Configuration Manager console terminates unexpectedly on Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575786)
-- [KB 4575785 November 2020 Update for Asset Intelligence authentication certificate in Configuration Manager](https://support.microsoft.com/help/4575785)
-- [KB 4575787 Co-management enrollment takes longer than expected for Configuration Manager clients](https://support.microsoft.com/help/4575787)
-- [KB 4575789 Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789)
-- [KB 4575790 Client setup is unable to download contents from a cloud distribution point in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575790)
-- [KB 4594176 Update for Microsoft Endpoint Configuration Manager version 2010, early update ring](https://support.microsoft.com/help/4594176)
+- [KB 4600089 Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4600089)
 - [KB 4599924 Console terminates unexpectedly in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4599924)
-- [KB 4594177 Client notifications sent to all collection members in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4594177)
+- [KB 5001600 Microsoft Connected Cache component fails to install on Configuration Manager current branch](https://support.microsoft.com/help/5001600)
+- [KB 5001670 Devices do not report app usage data in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/5001670)
+- [Updates aren't downloaded when you run an ADR](https://docs.microsoft.com/troubleshoot/mem/configmgr/adr-updates-download-failure)
 
-Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com and support.office.com are moving to a new consolidated site. Existing Configuration Manager articles are migrated to the new site below and still accessible using their original URLs.
+Note: Effective October 2020, the Microsoft knowledge base articles previously found at support.microsoft.com are published to the new site below and still accessible using their original URLs. Troubleshooting articles created after October 2020 do not have a KB article ID associated. This does not apply to Configuration Manager hotfix/ update-related content.
 
 [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager?WT.mc_id=configmgr-console)
 
