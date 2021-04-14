@@ -55,7 +55,9 @@ Organizations that can use automatic enrollment can also configure [bulk enroll 
 
 ## Device enrollment prerequisites
 
-Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../fundamentals/licenses-assign.md)
+Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../fundamentals/licenses-assign.md).
+
+You also have the option to let unlicensed admins sign in to MEM. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 
 ## Multi-user support
 
