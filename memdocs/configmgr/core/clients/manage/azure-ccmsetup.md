@@ -264,7 +264,7 @@ Message '{BD03DEED-D09A-4E63-ADAD-596376FFB0DA}' got reply message '{36EE3A78-8F
 
 - CRL check is enabled: Publish the CRL on the internet. As an alternative, use the **/NoCRLCheck** parameter for ccmsetup. You can also disable the following option: **Clients check the certificate revocation list (CRL) for site systems**. Find this setting on the **Communication Security** tab of the site properties.
 
-- The WPJ certificate isn't found: Make sure the device is Azure AD-joined. Use [dsregcmd.exe](/azure/active-directory/devices/troubleshoot-device-dsregcmd). For example, `dsergcmd /status` and look at the **Device State** section.
+- The WPJ certificate isn't found: Make sure the device is Azure AD-joined. Use [dsregcmd.exe](/azure/active-directory/devices/troubleshoot-device-dsregcmd). For example, `dsregcmd /status` and look at the **Device State** section.
 
 > [!TIP]
 >
