@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 11/30/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -208,20 +208,20 @@ Boundary groups include the following additional settings to give you more contr
 
 - [Allow peer downloads in this boundary group](#bkmk_bgoptions1)  
 
-- [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
+  - [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
 
-- [Prefer distribution points over peers with the same subnet](#bkmk_bgoptions3)  
+  - [Prefer distribution points over peers within the same subnet](#bkmk_bgoptions3)  
 
-- [Prefer cloud distribution points over distribution points](#bkmk_bgoptions4)  
+- [Prefer cloud based sources over on-premises sources](#bkmk_bgoptions4)  
 
 For more information on how to configure these settings, see [Configure a boundary group](boundary-group-procedures.md#bkmk_config).
 
 If a device is in more than one boundary group, the following behaviors apply for these settings:
 
-- **Allow peer download in this boundary group**: If it is disabled in any one boundary group, the client won't use delivery optimization.
-- **During peer downloads, only use peers with the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
-- **Prefer distribution points over peers within the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
-- **Prefer cloud based sources over on-premise sources**: If it is enabled in any one boundary group, this setting takes effect.
+- **Allow peer downloads in this boundary group**: If it is disabled in any one boundary group, the client won't use delivery optimization.
+  - **During peer downloads, only use peers within the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
+  - **Prefer distribution points over peers within the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
+- **Prefer cloud based sources over on-premises sources**: If it is enabled in any one boundary group, this setting takes effect.
 
 #### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
 
@@ -293,14 +293,14 @@ $component.put()
 > [!NOTE]
 > By default, Configuration Manager includes the Teredo subnet in this list. When you change the list, always read the existing value first. Append additional subnets to the list, and then set the new value.
 
-#### <a name="bkmk_bgoptions3"></a> Prefer distribution points over peers with the same subnet
+#### <a name="bkmk_bgoptions3"></a> Prefer distribution points over peers within the same subnet
 
 By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.
 
 > [!TIP]
 > This behavior applies to the Configuration Manager client. It doesn't apply when the task sequence downloads content. When the task sequence runs, it prefers peer cache sources over distribution points.<!-- SCCMDocs#1376 -->
 
-#### <a name="bkmk_bgoptions4"></a> Prefer cloud based sources over on-premise sources
+#### <a name="bkmk_bgoptions4"></a> Prefer cloud based sources over on-premises sources
 
 If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
 
