@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 04/14/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -44,8 +44,6 @@ This step of the overall process includes the following actions:
 > - It doesn't support Azure US Government Cloud environments.
 >
 > If you already deployed a CMG with the **cloud service (classic)** method, you can't deploy another CMG as a **virtual machine scale set**. First [delete the existing CMG](modify-cloud-management-gateway.md#delete-the-service), and then create a new one with the other deployment method. All CMG instances for the site need to use the same deployment method.
-> 
-> When the CMG is deployed an Azure storage account is created that is need for CMG operations and optionally content distribution. Virtual network restrictions on this storage account is not supported.
 
 Do this procedure on the top-level site. That site is either a standalone primary site, or the central administration site.
 
