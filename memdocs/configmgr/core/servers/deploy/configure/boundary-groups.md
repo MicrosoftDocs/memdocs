@@ -49,11 +49,11 @@ For each boundary group in your hierarchy, you can assign:
 
 - One or more boundaries. A client's **current** boundary group is a network location that's defined as a boundary assigned to a specific boundary group. A client can have more than one current boundary group.  
 
-- One or more site system roles. Clients can always use roles associated with their current boundary group. Depending on additional configurations, they can use roles in additional boundary groups.  
+- One or more site system roles. Clients can always use roles associated with their current boundary group. Depending on other configurations, they can use roles in other boundary groups.  
 
 For each boundary group you create, you can configure a one-way link to another boundary group. The link is called a **relationship**. The boundary groups you link to are called **neighbor** boundary groups. A boundary group can have more than one relationship, each with a specific neighbor boundary group.
 
-When a client fails to find an available site system in its current boundary group, the configuration of each relationship determines when it begins to search a neighbor boundary group. This search of additional groups is called **fallback**.
+When a client fails to find an available site system in its current boundary group, the configuration of each relationship determines when it begins to search a neighbor boundary group. This search of other groups is called **fallback**.
 
 For more information, see the following procedures:  
 
@@ -77,7 +77,7 @@ Starting in version 2002, to help you better identify and troubleshoot device be
 
 ## Fallback
 
-To prevent problems when clients can't find an available site system in their current boundary group, define the relationship between boundary groups for fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
+To prevent problems when clients can't find an available site system in their current boundary group, define the relationship between boundary groups for fallback behavior. Fallback lets a client expand its search to other boundary groups to find an available site system.
 
 Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of supported site system role, configure independent settings for fallback to the neighbor boundary group. For more information, see [Configure fallback behavior](boundary-group-procedures.md#bkmk_bg-fallback).
 
@@ -204,13 +204,17 @@ The task sequence log file **smsts.log** shows the priority of the location sour
 ### <a name="bkmk_bgoptions"></a> Boundary group options for peer downloads
 
 <!--1356193, 1358749-->
-Boundary groups include the following additional settings to give you more control over content distribution in your environment:  
+Boundary groups include the following settings to give you more control over content distribution in your environment:  
 
 - [Allow peer downloads in this boundary group](#bkmk_bgoptions1)  
 
   - [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
 
+<<<<<<< HEAD
   - [Prefer distribution points over peers within the same subnet](#bkmk_bgoptions3)  
+=======
+- [Prefer distribution points over peers within the same subnet](#bkmk_bgoptions3)  
+>>>>>>> c4aae9acef7f68ec1c5915764a41bbcffaec94b2
 
 - [Prefer cloud based sources over on-premises sources](#bkmk_bgoptions4)  
 
@@ -218,10 +222,17 @@ For more information on how to configure these settings, see [Configure a bounda
 
 If a device is in more than one boundary group, the following behaviors apply for these settings:
 
+<<<<<<< HEAD
 - **Allow peer downloads in this boundary group**: If it is disabled in any one boundary group, the client won't use delivery optimization.
   - **During peer downloads, only use peers within the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
   - **Prefer distribution points over peers within the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
 - **Prefer cloud based sources over on-premises sources**: If it is enabled in any one boundary group, this setting takes effect.
+=======
+- **Allow peer download in this boundary group**: If it's disabled in any one boundary group, the client won't use delivery optimization.
+- **During peer downloads, only use peers within the same subnet**: If it's enabled in any one boundary group, this setting takes effect.
+- **Prefer distribution points over peers within the same subnet**: If it's enabled in any one boundary group, this setting takes effect.
+- **Prefer cloud based sources over on-premises sources**: If it's enabled in any one boundary group, this setting takes effect.
+>>>>>>> c4aae9acef7f68ec1c5915764a41bbcffaec94b2
 
 #### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
 
@@ -255,7 +266,7 @@ Import your subnet exclusion list as a comma-separated subnet string. Use the pe
 
 ##### Sample PowerShell script to update the subnet exclusion list
 
-The following script is a sample way of changing this value. Append your subnets to the **PropertyValue** variable after `2001:0000:%,172.16.16.0`. It's a comma separated string. Run this script on the top-level site server in your hierarchy.
+The following script is a sample way of changing this value. Append your subnets to the **PropertyValue** variable after `2001:0000:%,172.16.16.0`. It's a comma-separated string. Run this script on the top-level site server in your hierarchy.
 
 ```PowerShell
 $PropertyValue = "2001:0000:%,172.16.16.0"
@@ -302,7 +313,7 @@ By default, the management point prioritizes peer cache sources at the top of th
 
 #### <a name="bkmk_bgoptions4"></a> Prefer cloud based sources over on-premises sources
 
-If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following:<!-- SCCMDocs#1529 -->
+If you have a branch office with a faster internet link, you can prioritize cloud content. Cloud-based sources include the following locations:<!-- SCCMDocs#1529 -->
 
 - Cloud distribution points
 - Microsoft Update
@@ -331,11 +342,11 @@ This behavior is intentional. The client continues to use an existing software u
 
 #### A client always tries to reach its last known-good software update point for 120 minutes before starting fallback
 
-After 120 minutes, if the client hasn't established contact, it then begins fallback. When fallback starts, the client receives a list of all software update points in its current boundary group. Additional software update points in neighbor and site default boundary groups are available based on fallback configurations.
+After 120 minutes, if the client hasn't established contact, it then begins fallback. When fallback starts, the client receives a list of all software update points in its current boundary group. Other software update points in neighbor and site default boundary groups are available based on fallback configurations.
 
 ### Fallback configurations for software update points
 
-You can configure **Fallback times (in minutes)** for software update points to be less than 120 minutes. However, the client still tries to reach its original software update point for 120 minutes. Then it expands its search to additional servers. Boundary group fallback times start when the client first fails to reach its original server. When the client expands its search, the site provides any boundary groups configured for less than 120 minutes.
+You can configure **Fallback times (in minutes)** for software update points to be less than 120 minutes. However, the client still tries to reach its original software update point for 120 minutes. Then it expands its search to other servers. Boundary group fallback times start when the client first fails to reach its original server. When the client expands its search, the site provides any boundary groups configured for less than 120 minutes.
 
 To block fallback for a software update point to a neighbor boundary group, configure the setting to **Never fallback**.
 
@@ -409,8 +420,8 @@ When a client receives five errors in 10 minutes and fails to communicate with a
 
 ## <a name="bkmk_preferred"></a> Preferred management points
 
-> [!Note]
-> The behavior of this hierarchy setting, **Clients prefer to use management points specified in boundary groups**, changed in version 1802. When you enable this setting, Configuration Manager uses the boundary group functionality for the assigned management point. For more information, see [management points](#management-points).
+> [!NOTE]
+> When you enable **Clients prefer to use management points specified in boundary groups**, Configuration Manager uses the boundary group functionality for the assigned management point. For more information, see [management points](#management-points).
 
 Preferred management points enable a client to identify a management point that's associated with its current network location (boundary).  
 
@@ -425,7 +436,7 @@ Preferred management points enable a client to identify a management point that'
 
 ## <a name="overlapping-boundaries"></a> Overlapping boundaries and boundary groups
 
-Configuration Manager supports overlapping boundary and boundary group configurations for content and service location requests. Overlapping occurs when a client's location maps to multiple boundary groups. This happens for one of two reasons:
+Configuration Manager supports overlapping boundary and boundary group configurations for content and service location requests. Overlapping occurs when a client's location maps to multiple boundary groups. This behavior happens for one of two reasons:
 
 - You add the same boundary to multiple boundary groups.
 
@@ -433,7 +444,7 @@ Configuration Manager supports overlapping boundary and boundary group configura
 
 When overlapping occurs, Configuration Manager creates a list of all site systems referenced by all boundary groups that include a client's location. Configuration Manager sends this list to a client in response to a content or service location request. Configuration Manager doesn't apply any precedence or deterministic ordering to this list based on overlapping boundaries and boundary groups. Instead, the client chooses at random from this list.
 
-For client content requests, Configuration Manager includes only distribution points that have the requested content in the list of site systems returned. For other service location requests, Configuration Manager includes only site systems that host the type of role requested which may be one of the following:
+For client content requests, Configuration Manager includes only distribution points that have the requested content in the list of site systems returned. For other service location requests, Configuration Manager includes only site systems that host the type of role requested which may be one of the following roles:
 
 - State migration point
 
@@ -473,7 +484,7 @@ With this configuration:
 
 - If the client fails to find content from its *current* boundary group after searching for 10 minutes, it then adds the distribution points from the BG_B boundary group to its search. It then continues to search for content from a distribution point in its combined pool of servers. This pool now includes servers from both the BG_A and BG_B boundary groups. The client continues to contact each distribution point for two minutes, and then switches to the next server in its pool. The client's pool of valid content source locations includes DP_A1, DP_A2, DP_B1, and DP_B2.  
 
-- After an additional 10 minutes (20 minutes total), if the client still hasn't found a distribution point with content, it expands its pool to include available servers from the second *neighbor* group, boundary group BG_C. The client now has six distribution points to search: DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2. It continues changing to a new distribution point every two minutes until it finds content.  
+- After another 10 minutes (20 minutes total), if the client still hasn't found a distribution point with content, it expands its pool to include available servers from the second *neighbor* group, boundary group BG_C. The client now has six distribution points to search: DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2. It continues changing to a new distribution point every two minutes until it finds content.  
 
 - If the client hasn't found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool includes all distribution points from the three configured boundary groups, and the final distribution point located on the site server. The client then continues its search for content, changing distribution points every two minutes until content is found.  
 
@@ -499,7 +510,7 @@ Additionally, the result of setting **Allow clients to use a fallback source loc
 
 #### Boundary groups relationships
 
-You can link each boundary group to one or more additional boundary groups. These links form relationships that you configure on the new boundary group properties tab named **Relationships**:  
+You can link each boundary group to one or more other boundary groups. These links form relationships that you configure on the new boundary group properties tab named **Relationships**:  
 
 - Each boundary group that a client is directly associated with is called a **current** boundary group.  
 

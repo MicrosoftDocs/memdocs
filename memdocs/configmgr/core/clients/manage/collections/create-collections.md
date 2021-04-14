@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 04/05/2021
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -218,9 +218,26 @@ You can use PowerShell to create and import collections. For more information, s
 > [!TIP]
 > This feature was first introduced in version 1906 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.
 
-You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device or user collections. Only resources with an Azure AD record are reflected in the Azure AD group. Both hybrid Azure AD-joined and Azure AD-joined devices are supported.
+You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device or user collections. Only resources with an Azure AD record are reflected in the Azure AD group. Both hybrid Azure AD-joined and Azure AD-joined devices are supported. The synchronization of collection memberships is a one-way process from Configuration Manager to Azure AD. Ideally, Configuration Manager should be the authority for managing the membership for the target Azure AD groups.
 
-The Azure AD synchronization happens every five minutes. It's a one-way process from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
+Synchronizations can either be full or incremental and they have slightly different behaviors: <!--9718854-->
+
+- Full synchronization: Occurs on the first synchronization after enabling it. You can force a full synchronization by selecting the collection, and then choosing **Synchronize Membership** from the ribbon. A full synchronization will overwrite members of the Azure AD group.
+
+- Incremental synchronization: Occurs every 5 minutes. Changes made in Azure AD aren't reflected in Configuration Manager collections, but they aren't overwritten by Configuration Manager. <!--For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after an incremental synchronization, the Azure AD group has five devices.-->
+
+Example synchronization scenario:
+1. From Azure AD, create a group called `Group1` and add `DeviceA`, `DeviceB`, and `DeviceC`.
+   - Ideally, objects wouldn't be added from Azure AD since Configuration Manager should manage the group membership. 
+1. From Configuration Manager, create a collection called `Collection1` then add `DeviceB`, and `DeviceC`.
+1. [Enable synchronization](#enable-the-collection-to-synchronize) for `Collection1` to `Group1`.
+1. The first synchronization is a full synchronization so, `Group1` now contains `DeviceB`, and `DeviceC`. `DeviceA` was removed from the group during the full synchronization.
+1. Remove `DeviceC` from `Collection1` and wait for an incremental synchronization.
+1. `Group1` now contains only `DeviceB`.
+1. From Azure AD, add `DeviceD` to `Group1` and wait for an incremental synchronization.
+1. `Group1` now contains `DeviceB` and `DeviceD`.
+1. From Configuration Manager, select `Collection1`, and choose **Synchronize Membership** from the ribbon to force a full synchronization.
+1. `Group1` now contains only `DeviceB`
 
 ### Prerequisites for Azure AD synchronization
 
