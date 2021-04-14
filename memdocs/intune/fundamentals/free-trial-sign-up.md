@@ -94,7 +94,7 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 
     ![Screenshot of the Microsoft Intune set up account page - Add user name and password](./media/free-trial-sign-up/sign-up-for-intune-07.png)
 
-9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you'll receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
 ## Sign in to Intune in the Microsoft Endpoint Manager admin center
 
