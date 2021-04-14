@@ -20,7 +20,7 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 #ROBOTS:
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

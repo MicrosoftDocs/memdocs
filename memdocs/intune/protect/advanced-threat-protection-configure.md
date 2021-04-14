@@ -3,7 +3,7 @@
 
 title: Configure Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
 description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
-keywords:
+keywords: configure, manage, capabilities, attack surface reduction, next-generation protection, security controls, endpoint detection and response, auto investigation and remediation, security controls, controls, microsoft defender for endpoint, mde
 author: brenduns 
 ms.author: brenduns
 manager: dougeby

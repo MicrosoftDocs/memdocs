@@ -1,6 +1,7 @@
 ---
 title: "Configure and Deploy Updates"
 titleSuffix: "Configuration Manager"
+description: Learn how to use the Configuration Manager SDK to configure and deploy software updates
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -124,9 +125,8 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
         newSUMUpdatesAssignment["LogComplianceToWinEvent"].BooleanValue = newLogComplianceToWinEvent;  
         newSUMUpdatesAssignment["NotifyUser"].BooleanValue = newNotifyUser;  
         newSUMUpdatesAssignment["RaiseMomAlertsOnFailure"].BooleanValue = newRaiseMomAlertsOnFailure;  
-        newSUMUpdatesAssignment["NotifyUser"].BooleanValue = newNotifyUser;  
         newSUMUpdatesAssignment["SendDetailedNonComplianceStatus"].BooleanValue = newSendDetailedNonComplianceStatus;  
-        newSUMUpdatesAssignment["StartTime"].StringValue = newStartTime;  
+        newSUMUpdatesAssignment["StartTime"].DateTimeValue = newStartTime;  
         newSUMUpdatesAssignment["SuppressReboot"].IntegerValue = newSuppressReboot;  
         newSUMUpdatesAssignment["TargetCollectionID"].StringValue = newTargetCollectionID;  
         newSUMUpdatesAssignment["UseGMTTimes"].BooleanValue = newUseGMTTimes;  

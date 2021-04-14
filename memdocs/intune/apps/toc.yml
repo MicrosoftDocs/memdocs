@@ -30,6 +30,7 @@
     href: manage-without-gms.md      
   - name: MAM FAQ
     href: mam-faq.yml
+    displayName: MAM
 - name: How-to guides
   items:
     - name: Add apps 
@@ -132,7 +133,7 @@
       items:
       - name: App configuration policies
         href: app-configuration-policies-overview.md
-        displayName: App configuration policy; configuration policy
+        displayName: App configuration policy; configuration policy; AFW
       - name: iOS managed devices
         href: app-configuration-policies-use-ios.md
       - name: Android managed devices

@@ -14,7 +14,7 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: 29329f86-1aa5-434f-9925-8dc28bf35348
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure

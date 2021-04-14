@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2021
+ms.date: 04/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 4ef8f421-9610-4d34-a464-cc02eb1578a9
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
