@@ -57,7 +57,7 @@ Organizations that can use automatic enrollment can also configure [bulk enroll 
 
 Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../fundamentals/licenses-assign.md).
 
-You also have the option to let unlicensed admins sign in to MEM. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+You can also let unlicensed admins sign in to MEM. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 
 ## Multi-user support
 
@@ -66,7 +66,7 @@ Intune supports multiple users on devices that both:
 - run the Windows 10 Creator's update
 - are Azure Active Directory domain-joined.
 
-When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and performing device actions (Remove, Reset). For shared Windows 10 devices that do not have a primary user assigned, the Company Portal can still be used to install Available apps.
+When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and device actions (like Remove or Reset). For shared Windows 10 devices that don't have a primary user assigned, the Company Portal can still be used to install Available apps.
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
@@ -108,13 +108,13 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
 2. In the **Domain** box, enter the company website and then choose **Test**.
 
-### Additional endpoints are used but no longer supported
+### Additional endpoints that aren't supported
 
-EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment. There are two other endpoints that have been used by customers in the past and still work, but they are no longer supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won't have to do the additional confirmation step, so this is the recommended configuration
+EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment. There are two other endpoints that have been used previously and still work. However, they're no longer supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won't have to do another confirmation step, so this is the recommended configuration
 
-### Alternate Methods of Redirection Are Not Supported
+### Alternate methods of redirection aren't supported
 
-Using a method other than the CNAME configuration is not supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc is not supported.
+Using a method other than the CNAME configuration isn't supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc isn't supported.
 
 ## Tell users how to enroll Windows devices
 
