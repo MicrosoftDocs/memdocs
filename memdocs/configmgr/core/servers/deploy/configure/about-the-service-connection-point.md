@@ -2,7 +2,7 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 11/30/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -61,9 +61,11 @@ To use the Configuration Manager Service Manager to restart the SMS_DMP_DOWNLOAD
 
 ## Remote site system requirements
 
-When you install the service connection point on a site system server that's remote from the site server, configure the following requirements:
+When you install the service connection point on a site system server that's remote from the site server, configure one of the following requirements:
 
 - The computer account of the site server must be a local admin on the computer that hosts a remote service connection point.
+
+  or<!-- MEMDocs#1479 -->
 
 - Set up the site system server that hosts this role with a [site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account). The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
 

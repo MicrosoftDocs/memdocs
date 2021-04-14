@@ -91,7 +91,7 @@ When the task sequence runs, it downloads content from the cloud-based sources. 
 
   - Associate the content-enabled CMG or cloud distribution point site systems. For more information, see [Configure a boundary group](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_config).
 
-  - Enable the following option: **Prefer cloud based sources over on-premise sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+  - Enable the following option: **Prefer cloud based sources over on-premises sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 - Distribute the content referenced by the task sequence to the content-enabled CMG or cloud distribution point.
 
