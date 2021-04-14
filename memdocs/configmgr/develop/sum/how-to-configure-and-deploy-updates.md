@@ -1,6 +1,7 @@
 ---
 title: "Configure and Deploy Updates"
 titleSuffix: "Configuration Manager"
+description: Learn how to use the Configuration Manager SDK to configure and deploy software updates
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
