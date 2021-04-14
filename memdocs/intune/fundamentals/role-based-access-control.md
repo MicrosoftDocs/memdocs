@@ -85,7 +85,7 @@ A role assignment defines:
 - what resources they can change.
 
 You can assign both custom and built-in roles to your users. To be assigned an Intune role, the user must have an Intune license.
-To see a role assignment, choose **Intune** > **Tenant adminmistration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the **Properties** page you can edit:
+To see a role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the **Properties** page you can edit:
 
 - **Basics**: The assignments name and description.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
