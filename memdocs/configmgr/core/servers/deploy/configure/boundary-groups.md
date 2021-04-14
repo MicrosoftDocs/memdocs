@@ -208,7 +208,7 @@ Boundary groups include the following settings to give you more control over con
 
 - [Allow peer downloads in this boundary group](#bkmk_bgoptions1)  
 
-- [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
+  - [During peer downloads, only use peers within the same subnet](#bkmk_bgoptions2)  
 
 - [Prefer distribution points over peers within the same subnet](#bkmk_bgoptions3)  
 
@@ -218,9 +218,9 @@ For more information on how to configure these settings, see [Configure a bounda
 
 If a device is in more than one boundary group, the following behaviors apply for these settings:
 
-- **Allow peer download in this boundary group**: If it's disabled in any one boundary group, the client won't use delivery optimization.
-- **During peer downloads, only use peers within the same subnet**: If it's enabled in any one boundary group, this setting takes effect.
-- **Prefer distribution points over peers within the same subnet**: If it's enabled in any one boundary group, this setting takes effect.
+- **Allow peer downloads in this boundary group**: If it's disabled in any one boundary group, the client won't use delivery optimization.
+  - **During peer downloads, only use peers within the same subnet**: If it's enabled in any one boundary group, this setting takes effect.
+  - **Prefer distribution points over peers within the same subnet**: If it's enabled in any one boundary group, this setting takes effect.
 - **Prefer cloud based sources over on-premises sources**: If it's enabled in any one boundary group, this setting takes effect.
 
 #### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
