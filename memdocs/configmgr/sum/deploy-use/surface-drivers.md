@@ -155,7 +155,7 @@ No. Even if the update is imported into WSUS, the update won't be imported into 
 
 For information about how to deploy Surface driver and firmware updates through alternative channels, see [Manage Surface driver and firmware updates](/surface/manage-surface-driver-and-firmware-updates). If you want to download the .msi or .exe file, and then deploy through traditional software deployment channels, see [Keeping Surface Firmware Updated with Configuration Manager](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
-### My Surface drivers are expired or after removing my CAS, what should I do?
+### My Surface drivers are expired or no longer visible after removing my CAS. What should I do?
 <!-- 5728727,8734926, 8763769-->
 
 If you recently removed a central administration site from your hierarchy, you may notice that the option to **Include Microsoft Surface drivers and firmware updates** is no longer enabled. You may also see that the driver updates are expired in your Configuration Manager console. When you remove a CAS, you'll need to re-enable synchronization of Surface drivers and reconfigure this feature. For more information, see post-setup tasks for [Removing the central administration site (CAS)](../../core/servers/deploy/install/remove-central-administration-site.md).<!-- 5728727 -->
