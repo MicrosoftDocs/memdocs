@@ -110,7 +110,7 @@ For more information, see the following articles:
 - [Desktop analytics prerequisites](../../desktop-analytics/overview.md#prerequisites)
 - [Tenant attach prerequisites](../../tenant-attach/device-sync-actions.md#prerequisites)
 - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)
-- [Use conditional access with Intune](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [Use conditional access with Intune](../../../intune/protect/conditional-access.md#ways-to-use-conditional-access-with-intune)
 - [TeamViewer prerequisites](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  
