@@ -91,6 +91,9 @@ The Intune management extension has the following prerequisites. Once they're me
     - [What is co-management](/configmgr/comanage/overview) 
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
+
+> [!NOTE]
+> In Windows 10 version 1903 and later, PowerShell scripts still run on co-managed devices even if you haven't switched the **Client Apps** workload to Intune.
   
 > [!NOTE]
 > For information about using Window 10 VMs, see [Using Windows 10 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
