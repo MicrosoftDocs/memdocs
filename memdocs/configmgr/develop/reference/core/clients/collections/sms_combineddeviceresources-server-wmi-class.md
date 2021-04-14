@@ -204,7 +204,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 |6|Windows CE|  
 |7|Windows Embedded|  
 |8|iOS|  
-|9|Andriod|  
+|9|Android|  
 |10|Unix/Linux|  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
