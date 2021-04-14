@@ -135,7 +135,7 @@ Start the create task sequence media wizard for bootable media. For more informa
 
 - On the **Security** page, set a strong password to protect this media.
 
-- On the **Boot Image** page, select the **Cloud management gateway** for this boot media to use.
+- On the **Boot Image** page, under **Management point** select the **Cloud management gateway** from the **Add Management Points** dialog.
 
 When you boot an internet-connected device using this media, it communicates with the specified CMG. The boot media downloads the policy for the task sequence deployment via the CMG. As the task sequence runs, it downloads any additional content and policies over the internet.
 
