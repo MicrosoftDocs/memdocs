@@ -1,6 +1,7 @@
 ---
 title: "SMS_CombinedDeviceResources Class"
 titleSuffix: "Configuration Manager"
+description: Details of the SMS_CombinedDeviceResources WMI class
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -602,27 +603,37 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Qualifiers: none  
 
- Product status. Possible values are:  
+ Endpoint protection product status. You can combine these values. For example, a device has the status `524384`. The hexadecimal equivalent is `80060`, which is easier to separate to the specific states `80000` + `40` + `20`.
 
-| Value | EP Product status |
-| ----- | ----------------- |
-|0|No status flags are set.|  
-|0|Service not running.|  
-|1|Service started without any malware protection engine.|  
-|2|Pending a full scan due to threat action.|  
-|4|Pending a reboot due to threat action.|  
-|8|Pending manual steps due to threat action.|  
-|16|AV signatures out of date.|  
-|32|AS signatures out of date.|  
-|64|No quick scan has happened for a specified period.|  
-|128|No full scan has happened for a specified period.|  
-|256|System initiated scan in progress.|  
-|512|System initiated clean in progress.|  
-|1024|There are samples pending submission.|  
-|2048|Product running in evaluation mode.|  
-|4096|Product running in non-genuine Windows mode.|  
-|8192|Product expired.|  
-|16384|Off-line scan required.|  
+ The following table lists the possible values:
+
+| Decimal value | Hexadecimal value | Status |
+| ----- | ----- | ----------------- |
+|0|0|No status flags are set.|  
+|1|1|Service not running.|  
+|2|2|Service started without any malware protection engine.|  
+|4|4|Pending a full scan due to threat action.|  
+|8|8|Pending a reboot due to threat action.|  
+|16|10|Pending manual steps due to threat action.|  
+|32|20|AV signatures out of date.|  
+|64|40|AS signatures out of date.|  
+|128|80|No quick scan has happened for a specified period.|  
+|256|100|No full scan has happened for a specified period.|  
+|512|200|System initiated scan in progress.|  
+|1024|400|System initiated clean in progress.|  
+|2048|800|There are samples pending submission.|  
+|4096|1000|Product running in evaluation mode.|  
+|8192|2000|Product running in non-genuine Windows mode.|  
+|16384|4000|Product expired.|  
+|32768|8000|Off-line scan required.|  
+|65536|10000|Service is shutting down as part of system shutdown.|
+|131072|20000|Threat remediation failed critically.|
+|262144|40000|Threat remediation failed non-critically.|
+|524288|80000|No status flags set (well initialized state).|
+|1048576|100000|The platform is out of date.|
+|2097152|200000|Platform update is in progress.|
+|4194304|400000|The platform is about to be outdated.|
+|8388608|800000|The signature or platform end of life is past or is impending.|
 
  `ExchangeOrganization`  
  Data type: `String`  
