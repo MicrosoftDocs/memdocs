@@ -29,7 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Add iOS/iPadOS software update policies in Intune
 
-Software update policies let you force supervised iOS/iPadOS devices to automatically install OS updates. Supervised devices are those that enrolled using either Apple Business Manager or Apple School Manager. When configuring a policy to deploy updates, you can:
+Software update policies let you force supervised iOS/iPadOS devices to automatically install OS updates. [Supervised devices](../enrollment/device-enrollment-program-enroll-ios#what-is-supervised-mode) are those that enrolled using either Apple Business Manager or Apple School Manager.
+
+When configuring a policy to deploy updates, you can:
 
 - Choose to deploy the *latest update* that's available, or choose to deploy a an older update by the update version number if you don't want to deploy the latest update. If you choose to deploy an older update, you must also set a Device Configuration policy to restrict visibility of software updates.
 - Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
@@ -121,9 +123,12 @@ You can edit an existing policy, including changing the restricted times:
 
 ## Monitor device installation failures
 
+
 <!-- 1352223 -->
-**Software updates** > **Installation failures for iOS devices** shows a list of supervised iOS/iPadOS devices targeted by an update policy, attempted an update, and couldn't be updated. For each device, you can view the status on why the device hasn't been automatically updated. Healthy, up-to-date devices aren't shown in the list. "Up-to-date" devices include the latest update that the device itself supports.
+In the Microsoft Endpoint Manager admin center, go to **Devices** > **Monitor** > **Installation failures for iOS devices**.
+
+Intune displays a list of supervised iOS/iPadOS devices targeted by an update policy, attempted an update, and couldn't be updated. For each device, you can view the status on why the device hasn't been automatically updated. Healthy, up-to-date devices aren't shown in the list. "Up-to-date" devices include the latest update that the device itself supports.
 
 ## Next steps
 
-[Monitor its status](../configuration/device-profile-monitor.md).
+[Monitor device profiles](../configuration/device-profile-monitor.md)
