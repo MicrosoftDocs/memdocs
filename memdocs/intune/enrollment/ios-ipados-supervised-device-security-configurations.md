@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # iOS/iPadOS supervised device security configurations
 
-As part of the [iOS/iPadOS security configuration framework](ios-ipados-configuration-framework.md), apply the following device compliance settings to mobile users using personal devices. For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-ios.md).
+As part of the [iOS/iPadOS security configuration framework](ios-ipados-configuration-framework.md), apply the following device compliance settings to mobile users using supervised devices. For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-ios.md).
 
 When choosing your settings, be sure to review and categorize usage scenarios. Then, configure users following the guidance for the chosen security level. You can adjust the suggested settings based on the needs of your organization. Make sure to have your security team evaluate the threat environment, risk appetite, and impact to usability.
 
@@ -106,7 +106,7 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries. Therefore, they merit the additional constraints and controls listed below.
+- Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
 
 This configuration expands upon Level 2 by:
 
