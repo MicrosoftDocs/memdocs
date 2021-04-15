@@ -139,7 +139,7 @@ Don't configure the minimum and maximum values the same. This guidance is specif
 
 These values refer to the IOPS needs for the Configuration Manager and SQL Server logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive with the Configuration Manager inbox directories. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL Server files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL Server disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
 
-Both of these IOPS columns use data from the industry-standard tool, *Diskspd*. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest affect on site performance, and improvements here will give the most payback on investment.
+Both of these IOPS columns use data from the industry-standard tool, **Diskspd**. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest affect on site performance, and improvements here will give the most payback on investment.
 
 #### <a name="bkmk_note4"></a> Note 4: Storage space required
 
@@ -147,17 +147,17 @@ These real-world values may differ from other documented recommendations. We pro
 
 ## How to measure disk performance
 
-You can use the industry-standard tool *Diskspd* to provide standardized suggestions for the IOPS that various-sized Configuration Manager environments require. While not exhaustive, the following test steps and command lines provide a simple and reproducible way to estimate your servers' disk subsystem throughput. You can compare your results to the minimum recommended IOPS in the [general sizing guidelines](#general-sizing-guidelines) table.
+You can use the industry-standard tool **Diskspd** to provide standardized suggestions for the IOPS that various-sized Configuration Manager environments require. While not exhaustive, the following test steps and command lines provide a simple and reproducible way to estimate your servers' disk subsystem throughput. You can compare your results to the minimum recommended IOPS in the [general sizing guidelines](#general-sizing-guidelines) table.
 
 For test results from different kinds of hardware configurations in lab environments, see [Example disk configurations](#example-disk-configurations). You can use the data for a rough starting point when designing the storage subsystem for a new environment from scratch.
 
 ### How to test disk IOPS
 
-1. Download the *Diskspd* utility here: [https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62](https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62).
+1. Download the [Diskspd utility](https://github.com/microsoft/diskspd).
 
 1. Make sure you have at least 100 GB of free disk space. Disable any apps that might interfere or cause extra load on the disk, such as active antivirus scanning of the directory, SQL, or SMSExec.
 
-1. Run *Diskspd* from an elevated command prompt.
+1. Run **Diskspd** from an elevated command prompt.
 
     Run the tool twice in sequence for the volume that you want to test. The first test at 64k size with random write operations for one minute. This test validates controller cache loading and disk space allocation, in case the volume is dynamically expanding. Discard the results of the first test. The second test should *immediately* follow the first test, and do the same load for five minutes.
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Setup guide for Microsoft Intune - Azure | Microsoft Docs
-description: Deployment to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
+description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 04/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Setup or move to Microsoft Intune
 
-This deployment guide includes information when moving to Intune, or adopting Intune as your MDM and MAM solution.
+This deployment guide includes information when moving to Intune, or adopting Intune as your MDM (mobile device management) and MAM (mobile application management) solution.
 
 In this guide, you sign up for Intune, add your domain name, configure Intune as the MDM authority, and more. Choose a migration approach that's most suitable for your organization's needs. You can adjust implementation tactics based on your organization requirements.
 
@@ -218,7 +218,7 @@ Next, [deploy Intune](#deploy-intune) (in this article).
 
     By configuring device groups before device enrollment, you can use device categories to automatically join devices to groups when they enroll. Then, they receive their group's device policies automatically. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
 
-5. Assign Intune licenses to your users. When license are assigned, users' devices can enroll in Intune.
+5. Assign Intune licenses to your users. When license are assigned, user devices can enroll in Intune.
 
     For more information, see [assign licenses](licenses-assign.md).
 
