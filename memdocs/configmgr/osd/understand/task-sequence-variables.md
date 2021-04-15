@@ -1695,7 +1695,7 @@ Indicates that a restart is requested after the current task sequence step is co
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
-Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also set the [SMSTSRebootRequested](#SMSTSRebootRequested) variable to `true`. After the computer is restarted, the task sequence manager reruns the same task sequence step.
+Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also configure the [SMSTSRebootRequested](#SMSTSRebootRequested) variable. After the computer is restarted, the task sequence manager reruns the same task sequence step.
 
 ### <a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 

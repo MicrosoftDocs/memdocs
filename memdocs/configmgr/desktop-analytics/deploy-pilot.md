@@ -2,7 +2,7 @@
 title: How to deploy to pilot
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics pilot group.
-ms.date: 10/01/2020
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -76,7 +76,7 @@ If you connect multiple Configuration Manager hierarchies to the same Desktop An
 
 ## Address issues
 
-Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** or **Ready (with remediation)** before the pilot deployment starts.
+Use the Desktop Analytics portal to review any reported issues with assets that might block your deployment. Then approve, reject, or modify the suggested fix. All items must be marked **Ready** <!-- or **Ready (with remediation)** 9733137 -->before the pilot deployment starts.
 
 1. Go to the [Desktop Analytics portal](https://aka.ms/desktopanalytics), and in the Manage group select **Deployment plans**.  
 
@@ -86,7 +86,7 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 4. On the **Apps** tab, review the apps that need your input.  
 
-5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose **Not reviewed** or **Unable**, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the   **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer's recommended version*.
+5. For each app, select the app name. In the information pane, review the recommendation, and select the upgrade decision. If you choose   an option other than **Ready**<!--  **Not reviewed** or **Unable** 9733137-->, then Desktop Analytics doesn't include devices with this app in the pilot deployment. If you choose **Ready (with remediation)**, use the **Remediation notes** to capture the actions to take to address an issue, like *reinstall* or *find the manufacturer's recommended version*.
 
 6. Repeat this review for other assets.  
 
