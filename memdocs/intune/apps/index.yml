@@ -13,7 +13,7 @@ metadata:
   author: erikre
   ms.author: erikre
   ms.manager: dougeby
-  ms.date: 09/25/2019  
+  ms.date: 04/14/2021  
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -99,6 +99,8 @@ landingContent:
         url: app-protection-policy.md
     - linkListType: how-to-guide
       links:
+      - text: Data protection framework
+        url: app-protection-framework.md
       - text: Create and assign app protection policies
         url: app-protection-policies.md
       - text: Validate app protection policies

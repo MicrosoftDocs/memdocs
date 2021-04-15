@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 4/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,10 +31,11 @@ ms.collection:
 
 # Intune enrollment methods for Windows devices
 
-To manage devices in Intune, devices must first be enrolled in the Intune service. Both personally owned and corporate-owned devices can be enrolled for Intune management. 
+To manage devices in Intune, devices must first be enrolled in the Intune service. Both personally owned and corporate-owned devices can be enrolled for Intune management.
 
 There are two ways to get devices enrolled in Intune:
-- Users can self-enroll their Windows PCs 
+
+- Users can self-enroll their Windows PCs
 - Admins can configure policies to force automatic enrollment without any user involvement
 
 ## User self-enrollment in Intune
