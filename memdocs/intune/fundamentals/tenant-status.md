@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 04/15/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,9 +37,9 @@ To view the dashboard, sign in to the [Microsoft Endpoint Manager admin center](
 The page is divided into three tabs:
 
 ## Tenant details
-Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens the *What's new in Intune* article on Microsoft docs. In *What's new*, you can read about the latest features and updates to the Intune service.  
+Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens the [*What's new in Intune*](../fundamentals/whats-new.md) article on Microsoft docs. In *What's new*, you can read about the latest features and updates to the Intune service.  
 
-On this tab you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
+On this tab, you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
 
 ## Connector status
 Connector status is a one-stop location to review the status of all available connectors for Intune.  
@@ -63,9 +63,9 @@ When there's more than a single connector of any one type, the status is a summa
   - The certificate or credential won't expire within the next seven days
   - The last synchronization was less than one day ago  
 
-When you select a connector from the list, the portal presents the portal page that is relevant to that connector. From the connectors page you can view the status for previously configured connectors, or select options to add or create a new connector of that type.
+When you select a connector from the list, the portal presents the portal page that is relevant to that connector. From the connectors page, you can view the status for previously configured connectors. You can also select options to add or create a new connector of that type.
 
-For example, if you select the **VPP Expiry Date** connector, the **iOS Volume-Purchased Program Tokens** page opens where you can view more details about that connector. You can also create a new configuration or edit and fix issues with an existing one.
+For example, if you select the **VPP Expiry Date** connector, the **iOS Volume-Purchased Program Tokens** page opens. On this page you can view more details about that connector, create a new configuration, or edit and fix issues with an existing one.
 
 ## Service health dashboard  
 On the Service health dashboard you can view details for *Service incidents* that affect your tenant, and *Intune news* that provides information about updates and planned changes.
@@ -87,3 +87,8 @@ By default, the 10 most recent and active messages display. To view older messag
 To view information for Intune News, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory, or the **Message Center reader** role in the Microsoft 365 admin center.  To assign this permission, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for *Roles*, select *Teams Communications Administrator*, and then **Save** your edit to assign the permissions.  
 
 You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center.
+
+## Next steps
+
+- [Walkthrough Intune in Microsoft Endpoint Manager](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Get support for Intune](../../get-support.md)
