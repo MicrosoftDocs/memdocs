@@ -188,20 +188,16 @@ Now that you've installed your token, you can create an enrollment profile for A
     
       In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). 
 
-6. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal instead of the Apple Setup Assistant:
+6. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose with authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png" alt-text="Screenshot that shows the User Affinity & Authentication Method section.":::
+    - **Company Portal**: Authenticate with the Company Portal app if you want to:
+        - Use multifactor authentication.
+        - Prompt users to change their passwords when they first sign in.
+        - Prompt users to reset their expired passwords during enrollment.
 
-    > [!NOTE]
-    > Authenticate with the Company Portal app if you want to:
-    >
-    >  - Use multifactor authentication.
-    >  - Prompt users to change their passwords when they first sign in.
-    >  - Prompt users to reset their expired passwords during enrollment.
-    >
-    > These features aren't supported when you authenticate by using Apple Setup Assistant.
-    >
-    > For more information on enrolling iOS/iPadOS devices, see [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
+        These features aren't supported when you authenticate by using Apple Setup Assistant.
+    - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a WS-Trust 1.3 Username/Mixed endpoint is required. Learn more.
+    - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running iOS/iPadOS 13.0 and later can use this method. This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs. If you also use the **Install Company Portal with VPP** option below, the Company Portal will be installed without user interaction. During the Setup Assistant process on their device, the user must authenticate using Azure AD credentials. After completing all the Setup Assistant screens, the end user lands on the home page and then must authenticate with Azure AD credentials in the Company Portal before getting access to corporate resources.  
 
 7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**). 
  
@@ -212,7 +208,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png" alt-text="Screenshot that shows the options for installing the Company Portal app with VPP.":::
 
-8. If you selected **Setup Assistant** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
+8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
 9. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in with Company Portal.
 
