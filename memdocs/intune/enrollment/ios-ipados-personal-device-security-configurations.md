@@ -84,13 +84,14 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | App Store, Doc Viewing, Gaming | Allow managed apps to write contacts to unmanaged contacts accounts | Yes | This setting is needed to allow Outlook for iOS to export contacts when **Block viewing corporate documents in unmanaged apps** is set to *Yes*. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
 | Cloud Storage | Block backup of enterprise books | Yes |  |
 | Cloud Storage | Block notes and highlights sync for enterprise books | Yes |  |
+| General | Block sending diagnostic and usage data to Apple | Yes |  |
 
 ## Personal high security (Level 3)
 
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries. Therefore, they merit the additional constraints and controls listed below.
+- Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
 
 This configuration expands upon Level 2 by:
 
@@ -104,7 +105,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Cloud and Storage | Require AirPlay outgoing requests pairing password | Yes |  |
+| Cloud and Storage | Block Handoff | Yes |  |
 | Connected Devices | Require AirPlay outgoing requests pairing password | Yes |  |
 | General | Block screenshots and screen recording | Yes |  |
 | Password | Number of sign-in failures before wiping the device | 5 | Organizations may need to update this setting to match their password policy. |
