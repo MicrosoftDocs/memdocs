@@ -74,6 +74,7 @@ The following are known limitation when working with shared iPads:
 - **Company Portal and available apps are not supported:** Intune Company Portal app and the Intune Company Portal website are not supported on Shared iPads. Apps must be assigned as “required” to device groups containing the Shared iPad to install. Available apps are currently not supported on Shared iPad.
 - **Passcode complexity cannot be managed on Shared iPad:** The passcode complexity for Shared iPad is a complex 8 character alphanumeric and cannot be changed in Apple Business Manager. The passcode complexity and length settings available in device configuration profile do not apply to Shared iPads. The MDM administrator can set the grace period – a number of minutes during which the user can unlock the iPad without a passcode.
 - **Unsupported scenarios:** Some Intune scenarios are not supported on Shared iPads, namely, app-based and device-based Conditional Access, app protection policies and compliance policies.
+- **Wallpaper is not supported:** Setting a wallpaper image is currently not supported on Shared iPad. For more information on wallpaper, see [iOS/iPadOS Device Features](https://docs.microsoft.com/en-us/mem/intune/configuration/ios-device-features-settings#wallpaper). 
 
 
 ## Next steps
