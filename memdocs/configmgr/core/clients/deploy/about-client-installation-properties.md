@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 04/05/2021
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -277,14 +277,16 @@ Example: `ccmsetup.exe /uninstall`
 
 ### /UsePKICert
 
-Specify this parameter for the client to use a PKI client authentication certificate. If you don't include this parameter, or if the client can't find a valid certificate, it uses an HTTP connection with a self-signed certificate.
+Specify this parameter for the client to use a PKI client authentication certificate. If you don't include this parameter, or if the client can't find a valid certificate, it filters out all HTTPS management points, including cloud management gateways (CMG). The client uses an HTTP connection with a self-signed certificate.
 
-Example: `CCMSetup.exe /UsePKICert`  
+Example: `CCMSetup.exe /UsePKICert`
+
+If a device uses Azure Active Directory (Azure AD) for client authentication and also has a PKI-based client authentication certificate, if you use include this parameter the client won't be able to get Azure AD onboarding information from a cloud management gateway (CMG). For a client that uses Azure AD authentication, don't specify this parameter, but include the [AADRESOURCEURI](#aadresourceuri) and [AADCLIENTAPPID](#aadclientappid) properties.<!-- MEMDocs#1483 -->
 
 > [!NOTE]
 > In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update–based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
 >
-> Also specify this parameter when you install a client for internet-only communication. Use the **CCMALWAYSINF=1** property together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+> Also specify this parameter when you install a client for internet-only communication. Use `CCMALWAYSINF=1` together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
@@ -373,7 +375,7 @@ Example: `CCMSetup.exe CCMALLOWSILENTREBOOT`
 
 To specify that the client is always internet-based and never connects to the intranet, set this property value to `1`. The client's connection type displays **Always Internet**.  
 
-Use this property with [**CCMHOSTNAME**](#ccmhostname) to specify the FQDN of the internet-based management point. Also use it with the CCMSetup parameter [**/UsePKICert**](#usepkicert) and the site code ([**SMSSITECODE**](#smssitecode)).
+Use this property with [CCMHOSTNAME](#ccmhostname) to specify the FQDN of the internet-based management point. Also use it with the CCMSetup parameter [UsePKICert](#usepkicert) and the [SMSSITECODE](#smssitecode) property.
 
 For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
