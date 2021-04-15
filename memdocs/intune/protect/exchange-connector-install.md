@@ -141,7 +141,10 @@ On a Windows server that can support the Intune Exchange connector:
 
 4. On the **Add Connector** page, select **Download the on-premises connector**. The Intune Exchange connector is in a compressed (.zip) folder that can be opened or saved. In the **File Download** dialog box, choose **Save** to store the compressed folder in a secure location.
 
+--> 
 ## Install and configure the Intune Exchange connector
+
+*Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). The following instructions are maintained for the use of [reinstalling the connector](#reinstall-the-intune-exchange-connector).*
 
 Follow these steps to install the Intune Exchange connector. If you have multiple Exchange organizations, repeat the steps for each Exchange connector you want to set up.
 
@@ -254,7 +257,7 @@ To improve the Exchange connector performance:
 
 You might need to reinstall an Intune Exchange connector. Because only a single connector can connect to each Exchange organization, if you install a second connector for the organization, the new connector you install replaces the original connector.
 
-1. To install the new connector, follow the steps in the [Install and configure the Exchange connector](#install-and-configure-the-intune-exchange-connector) section.
+1. To reinstall the new connector, follow the steps in the [Install and configure the Exchange connector](#install-and-configure-the-intune-exchange-connector) section.
 
 2. When prompted, select **Replace** to install the new connector.
    ![Configuration warning to replace a connector](./media/exchange-connector-install/prompt-to-replace.png)

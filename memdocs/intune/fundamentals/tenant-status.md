@@ -90,5 +90,5 @@ You can only set up your communication preferences for Intune Message center thr
 
 ## Next steps
 
-- [Walkthrough Intune in Microsoft Endpoint Manager](../fundamentals/tutorial-walkthrough-endpoint-manager)
+- [Walkthrough Intune in Microsoft Endpoint Manager](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
 - [Get support for Intune](../../get-support.md)
