@@ -45,10 +45,10 @@ If you experience sync problems during the enrollment process, you can look for 
 
 ## Automated Device Enrollment and Company Portal
 
-ADE enrollments aren't compatible with the App Store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You might want to provide this access for one of the following reasons: 
+ADE enrollments aren't compatible with the App Store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You might want to provide this access for one of the following reasons:
 - To let users choose which corporate apps they want to use on their devices 
 - To use modern authentication to complete the enrollment process
-- To provide a staged enrollment in which the device is enrolled and receives device policies before users authenticate in Company Portal 
+- To provide a staged enrollment in which the device is enrolled and receives device policies before users authenticate in Company Portal
 
 To enable modern authentication during enrollment, push the app to the device by using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
@@ -58,7 +58,7 @@ To enable Company Portal to update automatically and provide the Company Portal 
 
 Apple introduced supervised mode in iOS/iPadOS 5. An iOS/iPadOS device in supervised mode provides more management control, like blocking of screen captures and blocking of the installation of apps from App Store. So it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part of ADE.
 
-Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPadOS 11 and later, ADE-configured devices should always be supervised. The ADE *is_supervised* flag will be ignored in iOS/iPadOS 13.0 and later. All iOS/iPadOS devices with version 13.0 and later are automatically supervised when enrolled with Automated Device Enrollment. 
+Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPadOS 11 and later, ADE-configured devices should always be supervised. The ADE *is_supervised* flag will be ignored in iOS/iPadOS 13.0 and later. All iOS/iPadOS devices with version 13.0 and later are automatically supervised when enrolled with Automated Device Enrollment.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -68,7 +68,9 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
+
 ## Prerequisites
+
 - Devices purchased in [Apple's ADE](https://deploy.apple.com)
 - [Mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
 - An [Apple MDM push certificate](apple-mdm-push-certificate-get.md)
@@ -79,7 +81,7 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 - Maximum Automated Device Enrollment devices per profile: Same as the maximum number of devices per token (200,000 devices per token).
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000.
 - Maximum Automated Device Enrollment devices per token: We recommend that you don't exceed 200,000 devices per token. Otherwise you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.
-    - About 3,000 devices per minute sync from ABM/ASM over to Intune. We recommend that you wait to manually sync again from the admin console until enough time has passed for all of the devices to sync over (total number of devices/3,000 devices per minute).
+  - About 3,000 devices per minute sync from ABM/ASM over to Intune. We recommend that you wait to manually sync again from the admin console until enough time has passed for all of the devices to sync over (total number of devices/3,000 devices per minute).
 
 ## Get an Apple Automated Device Enrollment token
 
@@ -88,7 +90,7 @@ Before you can enroll iOS/iPadOS devices with ADE, you need an ADE token (.p7m) 
 You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) portal to create a token. You also use the ABM or ASM portal to assign devices to Intune for management.
 
 > [!NOTE]
-> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals. 
+> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals.
 
 ### Step 1: Download the Intune public key certificate
 
@@ -103,13 +105,13 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
     1. Select **I agree** to give permission to Microsoft to send user and device information to Apple:
 
         :::image type="content" source="./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png" alt-text="Screenshot that shows the Add enrollment program token screen.":::
-        
+
     2. Select **Download the Intune public key certificate required to create the token**. This step downloads and saves the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple Business Manager portal.
 
         You'll upload this .pem file in Apple Business Manager in [Step 2: Go to the Apple Business Manager portal](#step-2-go-to-the-apple-business-manager-portal) (in this article).
 
     3. Keep this web browser tab and page open. If you close the tab:
-    
+
         - The certificate you downloaded is invalidated.
         - You have to repeat steps.
         - On the **Review + create** tab, the **Create** button isn't available, and you can't complete this procedure.
@@ -127,9 +129,9 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 2. In this portal, complete the following steps.
 
     - In settings, all tokens are shown. Add an MDM server, and upload the public key certificate (.pem file) that you downloaded from Intune in [Step 1: Download the Intune public key certificate](#step-1-download-the-intune-public-key-certificate) (in this article).
-    
+
       Use the server name to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune service.
-    
+
     - After you save the MDM server, select it, and then download the token (.p7m file). You'll upload this .p7m token in Intune in [Step 4: Upload your token and finish](#step-4-upload-your-token-and-finish) (in this article).
 
 #### Assign devices to the Apple token (MDM server)
@@ -196,7 +198,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         These features aren't supported when you authenticate by using Apple Setup Assistant.
     - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
-    - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running iOS/iPadOS 13.0 and later can use this method. This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs. If you also use the **Install Company Portal with VPP** option below, the Company Portal will be installed without user interaction. During the Setup Assistant process on their device, the user must authenticate using their Azure AD credentials. After completing all the Setup Assistant screens, the end user lands on the home page and then must authenticate with Azure AD credentials in the Company Portal before getting access to corporate resources. If a conditional access policy that requires multi-factor authentication applies at enrollment or enrollment and Company Portal signin, then MFA is required.
+    - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running iOS/iPadOS 13.0 and later can use this method. This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs. If you also use the **Install Company Portal with VPP** option below, the Company Portal will be installed without user interaction. During the Setup Assistant process on their device, the user must authenticate using their Azure AD credentials. After completing all the Setup Assistant screens, the end user lands on the home page and then must authenticate with Azure AD credentials in the Company Portal before getting access to corporate resources. If a conditional access policy that requires multi-factor authentication (MFA) applies at enrollment or enrollment and Company Portal signin, then MFA is required.
 
 7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**). 
  
