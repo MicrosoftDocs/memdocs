@@ -126,6 +126,20 @@
       displayName: ASM
     - name: Apple Configurator
       href: apple-configurator-enroll-ios.md
+    - name: iOS/iPadOS security configuration framework
+      items:
+        - name: iOS/iPadOS security configuration framework
+          href: ios-ipados-configuration-framework.md
+        - name: Framework deployment methodology
+          href: ios-ipados-framework-deployment-methodology.md
+        - name: Set app configuration policies
+          href: ios-ipados-app-configuration-policies.md
+        - name: iOS/iPadOS device compliance security configurations
+          href: ios-ipados-device-compliance-security-configurations.md
+        - name: iOS/iPadOS personal device security configurations
+          href: ios-ipados-personal-device-security-configurations.md
+        - name: iOS/iPadOS supervised device security configurations
+          href: ios-ipados-supervised-device-security-configurations.md
   - name: Set up macOS enrollment
     href: macos-enroll.md
     items:
@@ -135,7 +149,6 @@
       href: device-enrollment-direct-enroll-macos.md      
   - name: Incomplete enrollment report
     href: enrollment-report-company-portal-abandon.md
-
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment
