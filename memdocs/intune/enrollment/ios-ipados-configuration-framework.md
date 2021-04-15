@@ -35,18 +35,18 @@ The iOS/iPadOS security configuration framework is a series of recommendations f
 
 [!INCLUDE [configuration-framework-1](../includes/configuration-framework-1.md)]
 
-1. [iOS/iPadOS framework deployment methodology](ios-ipados-framework-deployment-methodology.md): A recommended methodology for deploying the security configuration framework.
-2. [Set app configuration policies for iOS/iPadOS devices](ios-ipados-app-configuration-policies.md): Configure apps on the devices to disallow personal accounts.
-3. [iOS/iPadOS device compliance security settings](ios-ipados-device-compliance-security-configurations.md): Specific configuration settings for ensuring personally owned and corporate owned devices are healthy and compliant.  
-4. [iOS/iPadOS personal device security settings](ios-ipados-personal-device-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on personally owned devices.
-5. [iOS/iPadOS supervised device security settings](ios-ipados-supervised-device-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on corporate owned supervised devices.
+- [iOS/iPadOS framework deployment methodology](ios-ipados-framework-deployment-methodology.md): A recommended methodology for deploying the security configuration framework.
+-  [Set app configuration policies for iOS/iPadOS devices](ios-ipados-app-configuration-policies.md): Configure apps on the devices to disallow personal accounts.
+- [iOS/iPadOS device compliance security settings](ios-ipados-device-compliance-security-configurations.md): Specific configuration settings for ensuring personally owned and corporate owned devices are healthy and compliant.
+- [iOS/iPadOS personal device security settings](ios-ipados-personal-device-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on personally owned devices.
+- [iOS/iPadOS supervised device security settings](ios-ipados-supervised-device-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on corporate owned supervised devices.
 
 ## iOS/iPadOS enrollment modes
 
 iOS/iPadOS supports several enrollment scenarios, two of which are covered as part of this framework:
 
-- [Device enrollment for personally owned devices](): These devices are personally owned and used for both work and personal use.
-- [Supervised automated device enrollment for corporate-owned devices](): These devices are corporate-owned, associated with a single user, and used exclusively for work and not personal use.
+- [Device enrollment for personally owned devices](ios-enroll.md): These devices are personally owned and used for both work and personal use.
+- [Supervised automated device enrollment for corporate-owned devices](device-enrollment-program-enroll-ios.md): These devices are corporate-owned, associated with a single user, and used exclusively for work and not personal use.
 
 ## Next steps
 
