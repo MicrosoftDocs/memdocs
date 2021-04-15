@@ -238,7 +238,7 @@ For Configuration Manager version 1610, this level includes the following:
 
     -   Count of alerts that are configured for Endpoint Protection feature  
 
-    -   Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+    -   Endpoint Policies (count of policies and whether policies are deployed)
 
 
 - **Migration:**

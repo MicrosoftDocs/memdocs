@@ -331,19 +331,19 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 2.  On the **Home** tab, in the **Deployment** group, click **Clear Server Group Deployment Locks**. When clients have failed to install the software updates and are preventing other clients from installing their software updates, the deployment locks can be manually cleared.  
 
-##  <a name="BKMK_ATP"></a> Support for Microsoft Defender Advanced Threat Protection service  
- Microsoft Defender Advanced Threat Protection (ATP) is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Microsoft Defender ATP is formerly known as Windows Defender ATP. Learn more about [Microsoft Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager can help you onboard and monitor managed Windows 10 Anniversary Edition client devices.  
+##  <a name="BKMK_ATP"></a> Support for Microsoft Defender for Endpoint service  
+ Microsoft Defender for Endpoint is a service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Microsoft Defender for Endpoint is formerly known as Windows Defender for Endpoint. Learn more about [Microsoft Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager can help you onboard and monitor managed Windows 10 Anniversary Edition client devices.  
 
 ### Try it now!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
-- Onboard devices to the Microsoft Defender Advanced Threat Protection (ATP) online service  
+- Onboard devices to the Microsoft Defender for Endpoint online service  
 
 - Monitor Microsoft Defender ATP deployment to managed devices  
 
   **Prerequisites**  
 
-- Subscription to the Microsoft Defender Advanced Threat Protection online service  
+- Subscription to the Microsoft Defender for Endpoint online service  
 
 - Clients running Windows 10, Anniversary Edition (build 14328 and greater)  
 
@@ -384,7 +384,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 1.  In the Configuration Manager console, navigate **Monitoring** > **Overview** > **Security** and then click **Windows Defender ATP**.  
 
-2.  Review the Microsoft Defender Advanced Threat Protection dashboard.  
+2.  Review the Microsoft Defender for Endpoint dashboard.  
 
     -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
 
