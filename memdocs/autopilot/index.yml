@@ -101,6 +101,8 @@ landingContent:
         url: policy-conflicts.md
       - text: Known issues
         url: known-issues.md
+      - text: Resolved issues
+        url: resolved-issues.md
 
   # Card (optional)
   - title: Resources

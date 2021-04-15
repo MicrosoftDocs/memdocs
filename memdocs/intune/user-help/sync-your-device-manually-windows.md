@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manually sync your Windows device | Microsoft Docs
-description:
+description: Sync your Windows devices using the Company Portal app, the Start menu, the task bar, or the Settings app.
 keywords:
 author: lenewsad
 ms.author: lanewsad

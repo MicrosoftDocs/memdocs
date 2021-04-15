@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 04/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -439,11 +439,11 @@ Starting in version 1906, you can specify the maximum amount of time a software 
     - Windows Server 2019
     - Office 365
 
-- These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](../get-started/manage-settings-for-software-updates.md#BKMK_SoftwareUpdatesSettings)
+- All other updates outside of these categories, such as third-party updates, are given a default maximum run time of 10 minutes. These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
+   > [!NOTE]
+   > Starting in Configuration Manager 2103, the default maximum run time for all other updates outside of these categories, such as third-party updates, is 60 minutes rather than 10 minutes. The new maximum run time will only apply to new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing updates. <!--7833866-->
 
-> [!NOTE]
-> In version 1906, the maximum runtime isn't available when you install the top-level software update point. After installation, edit the maximum run time on your top-level software update point.
+- If you need to change the maximum run time of an update, you can [configure the software update settings](../get-started/manage-settings-for-software-updates.md#BKMK_SoftwareUpdatesSettings) for it. 
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 

@@ -184,10 +184,6 @@ When Configuration Manager uses a certificate for this communication, if there's
 
 In addition to this certificate for each site system server, Configuration Manager generates a self-signed certificate for most site system roles. When there is more than one instance of the site system role in the same site, they share the same certificate. For example, you might have multiple management points in the same site. This self-signed certificate uses SHA-256 and has a key length of 2048 bits. It's copied to the Trusted People Store on site system servers that might need to trust it. The following site system roles generate this certificate:
 
-- Application Catalog web service point
-
-- Application Catalog website point
-
 - Asset Intelligence synchronization point
 
 - Certificate registration point

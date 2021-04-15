@@ -249,6 +249,18 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
+## PowerShell
+
+You can use the following PowerShell cmdlets to automate the management of third-party updates in Configuration Manager:
+
+- [Get-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/get-cmthirdpartyupdatecatalog)
+- [New-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/new-cmthirdpartyupdatecatalog)
+- [Remove-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/remove-cmthirdpartyupdatecatalog)
+- [Set-CMThirdPartyUpdateCatalog](/powershell/module/configurationmanager/set-cmthirdpartyupdatecatalog)
+- [Publish-CMThirdPartySoftwareUpdateContent](/powershell/module/configurationmanager/publish-cmthirdpartysoftwareupdatecontent)
+- [Get-CMThirdPartyUpdateCategory](/powershell/module/configurationmanager/get-cmthirdpartyupdatecategory)
+- [Set-CMThirdPartyUpdateCategory](/powershell/module/configurationmanager/set-cmthirdpartyupdatecategory)
+
 
 ## Next step
 > [!div class="nextstepaction"]

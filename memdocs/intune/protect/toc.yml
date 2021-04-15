@@ -121,10 +121,16 @@
     items:
     - name: Microsoft Tunnel overview
       href: microsoft-tunnel-overview.md
+    - name: Microsoft Tunnel prerequisites
+      href: microsoft-tunnel-prerequisites.md
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
+    - name: Microsoft Tunnel with Conditional Access
+      href: microsoft-tunnel-conditional-access.md
+    - name: Migrate to the Defender for Endpoint app
+      href: microsoft-tunnel-migrate-app.md
   - name: Identity protection
     items:
     - name: Windows Hello
@@ -158,6 +164,7 @@
     href: endpoint-protection-configure.md
   - name: Mobile Threat Defense partners
     href: mobile-threat-defense.md
+    displayName: MTD
     items:
     - name: MTD on unenrolled devices
       items:
@@ -315,17 +322,17 @@
     href: scep-libraries-apis.md
   - name: Compliance policy settings
     items:
-    - name: Compliance policy settings - Android
+    - name: Compliance settings - Android device administrator
       href: compliance-policy-create-android.md
-    - name: Compliance policy settings - Android Enterprise
+    - name: Compliance settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md
-    - name: Compliance policy settings - iOS
+    - name: Compliance settings - iOS
       href: compliance-policy-create-ios.md
-    - name: Compliance policy settings - macOS
+    - name: Compliance settings - macOS
       href: compliance-policy-create-mac-os.md
-    - name: Compliance policy settings - Windows 10
+    - name: Compliance settings - Windows 10
       href: compliance-policy-create-windows.md
-    - name: Compliance policy settings - Windows 8.1
+    - name: Compliance settings - Windows 8.1
       href: compliance-policy-create-windows-8-1.md
   - name: Endpoint security policy settings
     items:
@@ -343,6 +350,7 @@
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
       href: endpoint-security-disk-encryption-profile-settings.md
+      displayName: AWA; Add Work Account
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
     - name: Tenant attach Firewall settings    

@@ -9,12 +9,12 @@ ms.date: 01/08/2021
 
 *(Introduced in version 2006)* <!--4224406-->
 
-You can navigate to and reference items in the Configuration Manager console **Community hub** node with a direct link. Collaborate with your colleagues easily by sharing direct links to community hub items. These deep links are currently only for items in the **Community hub** node of the console.
+You can navigate to and reference items in the Configuration Manager console **Community hub** node with a direct link. Collaborate with your colleagues easily by sharing direct links to Community hub items. These deep links are currently only for items in the **Community hub** node of the console.
 
 Prerequisites for direct links:
 
 - Configuration Manager console version 2006 or later
-- You can't use the local built-in administrator account when following a community hub link.
+- You can't use the local built-in administrator account when following a Community hub link.
 
 Share an item:
 1. Go the item in the hub and select **Share**.

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2020
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,13 +42,13 @@ This article describes OEMConfig, lists the prerequisites, shows how to create a
 
 ## Overview
 
-OEMConfig policies are a special type of device configuration policy similar to [app configuration policy](../apps/app-configuration-policies-overview.md). OEMConfig is a standard defined by Google that uses app configuration in Android to send device settings to apps written by OEMs (original equipment manufacturers). This standard allows OEMs and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. [Learn more about OEMConfig](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/).
+OEMConfig policies are a special type of device configuration policy similar to [app configuration policy](../apps/app-configuration-policies-overview.md). OEMConfig is a standard defined by Google that uses app configuration in Android to send device settings to apps written by OEMs (original equipment manufacturers). This standard allows OEMs and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. [Learn more about OEMConfig](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/) (opens Google's web site).
 
 Historically, EMMs, such as Intune, manually build support for OEM-specific features after they're introduced by the OEM. This approach leads to duplicated efforts and slow adoption.
 
 With OEMConfig, an OEM creates a schema that defines OEM-specific management features. The OEM embeds the schema into an app, and then puts this app on Google Play. The EMM reads the schema from the app, and exposes the schema in the EMM administrator console. The console allows Intune administrators to configure the settings in the schema.
 
-When the OEMConfig app installs on a device, it uses the settings configured in the EMM administrator to manage the device. Device settings are executed by the OEMConfig app, instead of an MDM agent built by the EMM.
+When the OEMConfig app installs on a device, it uses the settings configured in the EMM administrator console to manage the device. Device settings are executed by the OEMConfig app, instead of an MDM agent built by the EMM.
 
 When the OEM adds and improves management features, the OEM also updates the app in Google Play. As an administrator, you get these new features and updates (including fixes) without waiting for EMMs to include these updates.
 
@@ -68,7 +68,7 @@ When using OEMConfig, be aware of the following information:
 
 ## Prerequisites
 
-To use OEMConfig on your devices, be sure you have the following requirements:
+To use OEMConfig on your devices, you need the following requirements:
 
 - An Android Enterprise device enrolled in Intune.
 - An OEMConfig app built by the OEM, and uploaded to Google Play. If it's not on Google Play, contact the OEM for more information.
@@ -120,7 +120,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
       - Many settings have default values supplied by the OEM. To see if there's a default value, hover over the info icon next to the setting. A tooltip shows the default values for that setting (if applicable), and more details provided by the OEM.
 
       - Clicking **Clear** deletes a setting from the profile. If a setting isn't in the profile, its value on the device won't change when the profile is applied.
-      
+
       - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting. 
 
       - If you create an empty (unconfigured) bundle in the configuration designer, it's deleted when switching to the JSON editor.
@@ -165,6 +165,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Ascom | com.ascom.myco.oemconfig | |
 | Bartec | com.bartec.oemconfig | |
 | Bluebird | com.bluebird.android.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig.common | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
@@ -192,7 +193,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 If you represent an OEM, and an OEMConfig application exists for your devices, but isn't in the table above, email `IntuneOEMConfig@microsoft.com` for onboarding help. OEMs must also [register their OEMConfig apps with Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform).
 
 > [!NOTE]
-> OEMConfig apps must on-boarded by Google and Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page.
+> OEMConfig apps must on-boarded by Google and Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions in this article.
 >
 > If you experience settings within an OEMConfig app behaving incorrectly, then contact the developers of the OEMConfig app. Intune isn't responsible for technical issues with the individual OEMConfig apps.
 

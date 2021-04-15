@@ -1,6 +1,6 @@
 ---
 title: Endpoint analytics data collection
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Data collection information for Endpoint analytics.
 ms.date: 09/22/2020
 ms.prod: configuration-manager
@@ -15,7 +15,7 @@ manager: dougeby
 
 # Endpoint analytics data collection
 
-This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
 
 ## <a name="bkmk_flow"></a>Data flow
 
@@ -72,7 +72,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **orgId:** Unique GUID representing the Microsoft 365 Tenant
   
 > [!Important]  
-> Our data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
+> Our data handling policies are described in the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 
@@ -97,7 +97,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 For more information about related privacy aspects, see the following articles:
 
-- [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement)
+- [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)
 - [Windows 10 and privacy compliance](/windows/privacy/windows-10-and-privacy-compliance)
 - [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  

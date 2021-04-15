@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/07/2021
+ms.date: 04/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -270,14 +270,37 @@ If you choose not to put a dependency in the **Automatically install** column, t
 
 Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule.​ Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
 
+## Step 6: Supersedence
+
+> [!NOTE]
+> Win32 app supersedence is in public preview.
+
+When you supersede an application, you can specify which app will be updated or replaced. To update an app, disable the uninstall previous version option. To replace an app, enable the uninstall previous version option. There is a maximum of 10 updated or replaced apps, including references to other apps. For example, your app references another app. This other app references other apps, and so on. This scenario creates a graph of apps. All apps in the graph count toward the maximum value of 10.
+
+To add apps that the current app will supersede:
+1. In the **Supersedence** step, click **Add** to choose apps that should be superseded.
+
+    > [!NOTE]
+    > There can be a maximum of 10 nodes in a supersedence relationship in Intune.
+
+2. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
+3. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it is not necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
+4. Once this step is finalized, click **Next**.
+
+For additional information, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+<!--
 ## Step 6: Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 Click **Select scope tags** to optionally add scope tags for the app. Then select **Next** to display the **Assignments** page.
+-->
 
 ## Step 7: Assignments
 
 You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+
+> [!IMPORTANT]
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device does not have, the app will fail to install.
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.

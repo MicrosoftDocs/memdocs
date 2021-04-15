@@ -1,6 +1,6 @@
 ---
 title: What is Endpoint analytics?
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Overview for Endpoint analytics.
 ms.date: 10/28/2020
 ms.prod: configuration-manager

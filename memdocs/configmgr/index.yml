@@ -158,8 +158,8 @@ conceptualContent:
         - text: Create configuration items
           url: ./compliance/deploy-use/create-configuration-items.md
           itemType: how-to-guide
-        - text: Microsoft Edge Legacy settings
-          url: ./compliance/deploy-use/browser-profiles.md
+        - text: OneDrive for Business Profiles
+          url: ./compliance/deploy-use/onedrive-profile.md
           itemType: how-to-guide
         - text: Windows edition upgrade
           url: ./compliance/deploy-use/upgrade-windows-version.md

@@ -72,8 +72,8 @@ When your company is successfully registered, you can create your MDM profile fo
 |Profile Name       | Yes       |Enter a profile name of your choice. |
 |Description        | No        |Enter text describing the Profile. |
 |MDM Information     | Yes        |Choose **Server URI not required for my MDM**.| 
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner| 
-|Custom JSON        | Yes*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [dedicated devices](android-kiosk-enroll.md) and [fully managed devices](android-fully-managed-enroll.md). |
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme| 
+|Custom JSON        | Yes*        |Leave this blank. |
 |Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.|
 |Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.|
 | Privacy Policy, EULAs and Terms of Service | No | Leave this blank. |
@@ -91,9 +91,9 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 |Profile Name       | Yes       |Enter a profile name of your choice.|
 |Description        | No        |Enter text describing the Profile.|
 |Pick your MDM | Yes | Choose Microsoft Intune. |
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme|
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner|
 |MDM Server URI     | No        |Leave this blank.|
-|Custom JSON Data        | No        |Leave this blank.|
+|Custom JSON Data        | No        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [dedicated devices](android-kiosk-enroll.md) and [fully managed devices](android-fully-managed-enroll.md). |
 |Dual DAR | No | Leave this blank.|
 |QR code for enrollment | No | You can add a QR code to speed enrollment.|
 |System applications | Yes | Choose the **Leave all system apps enabled** option to ensure all apps are enabled and available to the profile. If this option isn't selected, only a limited set of system apps displays in the device's apps tray. Apps such as the Email app remain hidden. |

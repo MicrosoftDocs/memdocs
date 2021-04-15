@@ -28,7 +28,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Android Enterprise settings to mark devices as compliant or not compliant using Intune
+# Device compliance settings for Android Enterprise in Intune
 
 This article lists and describes the different compliance settings you can configure on Android Enterprise devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
@@ -39,7 +39,7 @@ This feature applies to:
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 > [!IMPORTANT]
-> To apply to Android Enterprise dedicated devices, compliance policy must target devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign-in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Azure AD shared device mode*](/mem/intune/enrollment/android-kiosk-enroll).
+> To apply to Android Enterprise dedicated devices, compliance policy must target devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign-in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Azure AD shared device mode*](../enrollment/android-kiosk-enroll.md).
 >
 > On Android Enterprise dedicated devices that are enrolled without Azure AD shared device mode, users of the device will be unable to sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Azure AD documentation.
 
@@ -64,7 +64,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **High**
 
 > [!NOTE]
-> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
+> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
 
 ### Device Health
 

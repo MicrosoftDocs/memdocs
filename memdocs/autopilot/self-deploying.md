@@ -1,5 +1,5 @@
 ---
-title: Windows Autopilot Self-Deploying mode
+title: Windows Autopilot Self-Deploying mode (Public Preview)
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows 10 as a kiosk, digital signage device, or a shared device.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: greglin
@@ -18,7 +18,7 @@ ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-# Windows Autopilot Self-Deploying mode
+# Windows Autopilot Self-Deploying mode (Public Preview)
 
 **Applies to**
 
@@ -42,6 +42,7 @@ Self-deploying mode provides all the following:
 > Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
 
 Self-deploying mode lets you deploy a Windows 10 device as a kiosk, digital signage device, or a shared device.
+Autopilot now has a kiosk mode that supports Kiosk Browser, any UWP app and specific versions of Edge. 
 
 You can use the [Kiosk Browser](https://www.microsoft.com/p/kiosk-browser/9ngb5s5xg2kp?rtc=1&activetab=pivot:overviewtab) when setting up a kiosk device. This app is built on Microsoft Edge and can be used to create a tailored, MDM-managed browsing experience.
 

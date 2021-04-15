@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/14/2020
+ms.date: 04/06/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,8 +47,10 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 ## Supported device compliance partners
 
-The following partners are supported as generally available:
+The following compliance partners are supported as generally available:
 
+- Citrix Workspace device compliance
+- IBM MaaS360
 - JAMF Pro
 - MobileIron Device Compliance On-prem
 - VMware Workspace ONE UEM (formerly AirWatch)
@@ -78,7 +80,7 @@ Enable support for a device compliance partner to use compliance state data from
 
    - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
 
-   Next, select the drop-down for **Platform**, and select the platform. macOS is not supported.
+   Next, select the drop-down for **Platform**, and select the platform. macOS isn't supported.
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 

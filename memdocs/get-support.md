@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 03/12/2021
 ms.topic: how-to
 ms.service: mem
 ms.subservice: fundamentals
@@ -101,7 +101,7 @@ After you select a support scenario, the admin center presents the Help and Supp
 Above the *Need Help?* title are three icons that you can select to open different panes of the *Need Help?* window. The pane your viewing is identified by the underline.
 
 > [!TIP]  
-> Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-customers) for support.If you've a Premier or Unified support contract, you'll see a banner thats similar to the following image:
+> Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-customers) for support. If you've a Premier or Unified support contract, you'll see a banner thats similar to the following image:
 >
 > ![Premier banner](./media/get-support/premier-banner.png)
 

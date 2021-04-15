@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/05/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,6 +31,8 @@ ms.collection: M365-identity-device-management
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
 For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
+
+ Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../protect/certificates-scep-configure.md#pin-requirement-for-android-enterprise).
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
@@ -79,7 +81,12 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
      > [!NOTE]
-     > On macOS, certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
+     > Storage of certifictes provisoned by SCEP:
+     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
+     >
+     > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
+     >
+     >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store. 
 
    - **Subject name format**:
 
@@ -112,7 +119,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
        - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-          To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+         To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
 
        All device variables listed in the following *Device certificate type* section can also be used in user certificate subject names.
 
@@ -120,7 +127,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
        That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
-       For Android Fully Managed, Dedicated, and Corporate-Owned Work Profile profiles, the **CN={{UserPrincipalName}}** setting won't work. Android Fully Managed, Dedicated, and Corporate-Owned Work Profile profiles can be used for devices without a User. Without a User, this profile can't get the user principal name of the user. If you need this option for devices with users, you can use a workaround like this: **CN={{UserName}}\@contoso.com** It will provide the User Name and the domain you added manually, such as janedoe@contoso.com
+       User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
 
      - **Device certificate type**
 
@@ -197,7 +204,7 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
      - **Enroll to Trusted Platform Module (TPM) KSP if present, otherwise Software KSP**
      - **Enroll to Trusted Platform Module (TPM) KSP, otherwise fail**
-     - **Enroll to Passport, otherwise fail (Windows 10 and later)**
+     - **Enroll to Windows Hello for Business, otherwise fail (Windows 10 and later)**
      - **Enroll to Software KSP**
 
    - **Key usage**:

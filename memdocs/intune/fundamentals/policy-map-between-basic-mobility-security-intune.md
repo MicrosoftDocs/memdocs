@@ -38,7 +38,7 @@ If you choose to migrate your MDM from Basic Mobility and Security to Intune, yo
 Depending on the Basic Mobility and Security policy settings, different Intune and Azure AD policies may be needed to duplicate the behavior. Because Intune offers more flexibility, each source policy can translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same effect. Each device security policy can require up to three compliance policies, six configuration profiles, and five global conditional access policies.
 
 ## Basic Mobility and Security policies in Office 365 Security and Compliance portal
-Basic Mobility and Security uses the Office 365 Security and Compliance portal to manage [device security policies](https://docs.microsoft.com/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies).
+Basic Mobility and Security uses the Office 365 Security and Compliance portal to manage [device security policies](/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies).
 
 ## Intune policies in the Microsoft Endpoint Manager admin center
 Intune uses the Microsoft Endpoint Manager admin center to manage the following policies to achieve similar results as the Office device security policies:
@@ -57,8 +57,3 @@ Intune and Azure AD policies are more powerful than Office MDM policies and have
 - [Access requirements policy mapping from Basic Mobility and Security to Intune](policy-map-access-requirements.md)
 - [Configurations policy mapping from Basic Mobility and Security to Intune](policy-map-configurations.md)
 - [Miscellaneous policy mapping from Basic Mobility and Security to Intune](policy-map-miscellaneous.md)
-
-
-
-
-

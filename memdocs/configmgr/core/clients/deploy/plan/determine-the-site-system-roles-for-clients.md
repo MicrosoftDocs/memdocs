@@ -2,7 +2,7 @@
 title: Site system roles for clients
 titleSuffix: Configuration Manager
 description: Determine site system roles for clients in Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Determine the site system roles for Configuration Manager clients
@@ -79,16 +77,6 @@ Configuration Manager requires the enrollment point and the enrollment proxy poi
 - You plan to manage mobile devices by using the Exchange Server connector
 - You install the mobile device legacy client, for example, for Windows CE
 - You request and install the client certificate on Mac computers independently from Configuration Manager
-
-## Application catalog
-
-> [!Important]  
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 ## Cloud management gateway connector point
 

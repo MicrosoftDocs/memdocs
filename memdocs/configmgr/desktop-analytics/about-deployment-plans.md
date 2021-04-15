@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 07/28/2020
+ms.date: 04/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -123,8 +123,8 @@ After creating a deployment plan, use Configuration Manager to deploy the produc
 
 ## Next steps
 
-- [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps  
+- [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps
 
-- [Learn about security and feature updates](about-updates.md)  
+- [Learn about feature updates](about-updates.md)
 
 - [Create a deployment plan](create-deployment-plans.md)

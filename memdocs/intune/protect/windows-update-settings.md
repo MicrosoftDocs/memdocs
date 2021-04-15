@@ -78,7 +78,7 @@ Update settings control what bits a device will download, and when. For more inf
   **Default**: 0  
   Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
-  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when the policy is received by the device.  
+  Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.  
 
   Quality Updates are typically fixes and improvements to existing Windows functionality.  
 
@@ -86,7 +86,7 @@ Update settings control what bits a device will download, and when. For more inf
   **Default**: 0  
   Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
-  Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when the policy is received by the device.  
+  Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
 
   Supported deferral period:  
 
@@ -142,7 +142,7 @@ User experience settings control the end-user experience for device restart and 
       **Default**: 5 PM  
       Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
-  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on uses can delay countdown and restart.   
+  - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.   
   Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
     This option supports additional settings.  

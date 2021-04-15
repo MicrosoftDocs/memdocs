@@ -3,7 +3,7 @@
 
 title: Microsoft Intune Tenant Status page
 titleSuffix: Microsoft Intune
-description: Use the Intune Tenant Status page to view important tenant details without leaving the Intune portal
+description: Use the Intune Tenant Status page to view important tenant details
 keywords:
 author: brenduns
 ms.author: brenduns

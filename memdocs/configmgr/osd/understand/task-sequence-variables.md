@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -136,7 +136,7 @@ Stores the return code from the last action that was run. This variable can be u
 ### <a name="SMSTSLastContentDownloadLocation"></a> _SMSTSLastContentDownloadLocation
 
 <!-- 2840337 -->
-Starting in version 1906, this variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs for this content location.
+This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs for this content location.
 
 ### <a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
@@ -474,6 +474,7 @@ Options for NetBIOS over TCP/IP. Possible values are as follows:
 - `1`: Enable NetBIOS over TCP/IP  
 - `2`: Disable NetBIOS over TCP/IP  
 
+<!--
 #### OSDAdapter0EnableWINS
 
 Set to `true` to use WINS for name resolution.
@@ -481,6 +482,7 @@ Set to `true` to use WINS for name resolution.
 #### OSDAdapter0WINSServerList
 
 Comma-delimited list of WINS server IP addresses. This property is ignored unless **EnableWINS** is set to `true`.
+-->
 
 #### OSDAdapter0MacAddress
 
@@ -586,7 +588,7 @@ Specify the PIN for BitLocker encryption. This variable is only valid if the Bit
 *Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
 
 <!-- 4512937 -->
-Starting in version 1906, use this variable to set the number of restarts after which to resume protection.
+Use this variable to set the number of restarts after which to resume protection.
 
 #### Valid values
 
@@ -597,7 +599,7 @@ An integer from `1` to `15`.
 *Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
 
 <!-- 4512937 -->
-Starting in version 1906, set this value to override the count set by the step or the [OSDBitLockerRebootCount](#OSDBitLockerRebootCount) variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis.
+Set this value to override the count set by the step or the [OSDBitLockerRebootCount](#OSDBitLockerRebootCount) variable. While the other methods only accept values 1 to 15, if you set this variable to 0, BitLocker remains disabled indefinitely. This variable is useful when the task sequence sets one value, but you want to set a separate value on a per-device or per-collection basis.
 
 #### Valid values
 
@@ -685,6 +687,8 @@ Specifies the index value of the image that's applied to the destination compute
 
 Specifies the physical disk number to be partitioned.
 
+In version 2010 and earlier, this number can't be larger than 99. In version 2103 and later, the maximum number is 10,000. This change helps support storage area network (SAN) scenarios.<!-- 9528541 -->
+
 ### <a name="OSDDNSDomain"></a> OSDDNSDomain
 
 *Applies to the [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings) step.*
@@ -724,16 +728,13 @@ Specifies the RFC 1779 format name of the organizational unit (OU) that the dest
 ### <a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
-*Applies to the [Install Package](task-sequence-steps.md#BKMK_InstallPackage) step.*
-
-*Starting in version 1902*  
-*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
+_Applies to the [Install Package](task-sequence-steps.md#BKMK_InstallPackage) and [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) steps._
 
 (input)
 
 To prevent potentially sensitive data from being displayed or logged, set this variable to `TRUE`. This variable masks the program name in the **smsts.log** during an **Install Package** step.
 
-Starting in version 1902, when you set this variable to `TRUE`, it also hides the command line from the **Run Command Line** step in the log file.<!--3654172-->
+When you set this variable to `TRUE`, it also hides the command line from the **Run Command Line** step in the log file.<!--3654172-->
 
 ### <a name="OSDEnableTCPIPFiltering"></a> OSDEnableTCPIPFiltering
 
@@ -908,8 +909,7 @@ Specifies the local Administrator account password. If you enable the option to 
 ### <a name="OSDLogPowerShellParameters"></a> OSDLogPowerShellParameters
 
 <!--3556028-->
-*Starting in version 1902*  
-*Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.*
+_Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step._
 
 (input)
 
@@ -921,7 +921,7 @@ To prevent potentially sensitive data from being logged, the **Run PowerShell Sc
 
 (input)
 
-Specifies whether the task sequence captures the network adapter information. This information includes configuration settings for TCP/IP, DNS, and WINS.
+Specifies whether the task sequence captures the network adapter information. This information includes configuration settings for TCP/IP and DNS.
 
 #### Valid values
 
@@ -1396,7 +1396,7 @@ Specify either this variable or the [OSDDomainName](#OSDDomainName) variable. Th
 
 <!-- 4680263 -->
 
-Starting in version 1910, use this variable to address timing issues with the Window 10 in-place upgrade task sequence on high performance devices when Windows setup is complete. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
+Use this variable to address timing issues with the Window 10 in-place upgrade task sequence on high performance devices when Windows setup is complete. When you assign a value in seconds to this variable, the Windows setup process delays that amount of time before it starts the task sequence. This timeout provides the Configuration Manager client additional time to initialize.
 
 The following log entries are common examples of this issue that you can remediate with this variable:
 
@@ -1671,7 +1671,7 @@ Specifies how many seconds to wait before the computer restarts. If this variabl
 ### <a name="SMSTSRebootDelayNext"></a> SMSTSRebootDelayNext
 
 <!--4447680-->
-Starting in version 1906, use this variable with the existing [SMSTSRebootDelay](task-sequence-variables.md#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds.
+Use this variable with the existing [SMSTSRebootDelay](task-sequence-variables.md#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds.
 
 #### Example
 
@@ -1695,7 +1695,7 @@ Indicates that a restart is requested after the current task sequence step is co
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
-Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also set the [SMSTSRebootRequested](#SMSTSRebootRequested) variable to `true`. After the computer is restarted, the task sequence manager reruns the same task sequence step.
+Requests a retry after the current task sequence step is completed. If this task sequence variable is set, also configure the [SMSTSRebootRequested](#SMSTSRebootRequested) variable. After the computer is restarted, the task sequence manager reruns the same task sequence step.
 
 ### <a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
@@ -1716,7 +1716,7 @@ Configure `SMSTSRunCommandLineAsUser` with one of the following values:
 
 (input)
 
-Specifies the account by which the command line is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunCommandLineUserPassword](#SMSTSRunCommandLineUserPassword) variable.
+Specifies the account by which the command line is run. The value is a string of the form username for a local account or domain\username for a domain one. Specify the account password with the [SMSTSRunCommandLineUserPassword](#SMSTSRunCommandLineUserPassword) variable.
 
 > [!NOTE]
 > Starting in version 2002, use the [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser) variable with this variable to configure the user context for this step.
@@ -1787,7 +1787,7 @@ Specifies the primary users of the destination computer by using the following f
 
 (input)
 
-Starting in version 1910, use this variable to control the timeout period for the task sequence to wait for the SMS Agent Host service (ccmexec) to completely start. Specify this value in seconds. The default timeout period is 30 minutes, or 1800 seconds.
+Use this variable to control the timeout period for the task sequence to wait for the SMS Agent Host service (ccmexec) to completely start. Specify this value in seconds. The default timeout period is 30 minutes, or 1800 seconds.
 
 #### Examples of SMSTSWaitCcmexecOperationalTimeout
 
@@ -1812,14 +1812,14 @@ For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pau
 ### <a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
-Starting in version 1906, set this variable to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
+Set this variable to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
 For more information, see [Debug a task sequence](../deploy-use/debug-task-sequence.md).
 
 ### <a name="TSDebugOnError"></a> TSDebugOnError
 
 <!-- 5012536 -->
-Starting in version 1910, set this variable to `TRUE` to automatically start the [task sequence debugger](../deploy-use/debug-task-sequence.md) when the task sequence returns an error.
+Set this variable to `TRUE` to automatically start the [task sequence debugger](../deploy-use/debug-task-sequence.md) when the task sequence returns an error.
 
 Set this variable using:
 

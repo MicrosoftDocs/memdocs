@@ -1,21 +1,22 @@
 ---
-title: "SMS_TaskSequence_CaptureNetworkSettingsAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_CaptureNetworkSettingsAction class
+titleSuffix: Configuration Manager
+description: Details of the SMS_TaskSequence_CaptureNetworkSettingsAction server WMI class
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7180bd80-e003-4258-b21f-bf4d6964ac9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_CaptureNetworkSettingsAction Server WMI Class
-The `SMS_TaskSequence_CaptureNetworkSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that captures network settings from the target computer.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_CaptureNetworkSettingsAction server WMI class
+
+The `SMS_TaskSequence_CaptureNetworkSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that captures network settings from the target computer.
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
@@ -81,7 +82,7 @@ Class SMS_TaskSequence_CaptureNetworkSettingsAction : SMS_TaskSequence_Action
 
  Qualifiers: [not_null, VariableName("OSDMigrateAdapterSettings")]  
 
- `true` (default) to migrate TCP/IP, DNS, and WINS settings for network adapters.  
+ `true` (default) to migrate TCP/IP and DNS settings for network adapters.  
 
  The task sequence variable associated with this property is OSDMigrateAdapterSettings. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDMigrateAdapterSettings).  
 

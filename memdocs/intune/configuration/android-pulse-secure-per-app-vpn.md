@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Use a Microsoft Intune custom profile to create a per-app VPN profile for Android devices
 
-You can create a per-app VPN profile for Android 5.0 and later devices that are managed by Intune. First, create a VPN profile that uses either the Pulse Secure or Citrix connection type. Then, create a custom configuration policy that associates the VPN profile with specific apps.
+You can create a per-app VPN profile for Android 6.0 and later devices that are managed by Intune. First, create a VPN profile that uses either the Pulse Secure or Citrix connection type. Then, create a custom configuration policy that associates the VPN profile with specific apps.
 
 This feature applies to:
 

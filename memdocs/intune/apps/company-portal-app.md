@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/05/2021
+ms.date: 03/11/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -182,11 +182,14 @@ Upon selecting the Company Portal, the user will be directed to the correspondin
 - `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
 - *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
 
-If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal. 
+
+> [!NOTE]
+> To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
-Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
+Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
@@ -269,6 +272,10 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
+
+## Company Portal app notifications
+
+The Company Portal app can store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
 
 ## Next steps
 

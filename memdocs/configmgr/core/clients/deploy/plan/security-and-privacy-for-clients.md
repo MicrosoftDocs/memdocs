@@ -2,7 +2,7 @@
 title: Client security and privacy
 titleSuffix: Configuration Manager
 description: Learn about security and privacy for Configuration Manager clients.
-ms.date: 07/07/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -34,6 +34,9 @@ The Configuration Manager site accepts data from devices that run the Configurat
 Mobile device clients and some internet-based clients require these certificates. Microsoft recommends these certificates for all client connections on the intranet.  
 
 For more information about the PKI certificate requirements and how they're used to help protect Configuration Manager, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ### Automatically approve client computers from trusted domains and manually check and approve other computers  
 
@@ -125,18 +128,16 @@ To avoid the risk of a new client downloading the trusted root key from a rogue 
 
 For more information about the trusted root key, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
+<!-- 9460840
 ### Install client computers with the CCMSetup Client.msi option SMSDIRECTORYLOOKUP=NoWINS  
 
-The most secure service location method for clients to find sites and management points is to use Active Directory Domain Services. Sometimes this method isn't possible for some environments. For example, because you can't extend the Active Directory schema for Configuration Manager, or because clients are in an untrusted forest or a workgroup. If this method isn't possible, use DNS publishing as an alternative service location method. If both these methods fail, and when the management point isn't configured for HTTPS client connections, clients can fall back to using WINS.  
+The most secure service location method for clients to find sites and management points is to use Active Directory Domain Services. Sometimes this method isn't possible for some environments. For example, because you can't extend the Active Directory schema for Configuration Manager, or because clients are in an untrusted forest or a workgroup. If this method isn't possible, use DNS publishing as an alternative service location method. If both these methods fail, and when the management point isn't configured for HTTPS client connections, clients can fall back to using WINS.
 
-Publishing to WINS is less secure than the other publishing methods. Configure client computers to not fall back to using WINS by specifying **SMSDIRECTORYLOOKUP=NoWINS**. If you must use WINS for service location, use **SMSDIRECTORYLOOKUP=WINSSECURE**. This setting is the default. It uses the Configuration Manager trusted root key to validate the self-signed certificate of the management point.  
+> [!IMPORTANT]
+> WINS is a deprecated service. For more information, see [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top).
 
-> [!NOTE]  
-> When you configure the client for **SMSDIRECTORYLOOKUP=WINSSECURE** and it finds a management point from WINS, the client checks its copy of the Configuration Manager trusted root key that's in WMI.  
->
-> If the signature on the management point certificate matches the client's copy of the trusted root key, the certificate is validated. After validating the certificate, the client starts communicates with the management point that it found by using WINS.  
->
-> If the signature on the management point certificate doesn't match the client's copy of the trusted root key, the certificate isn't valid. In this scenario, the client doesn't communicate with the management point that it found by using WINS.  
+Publishing to WINS is less secure than the other publishing methods. Configure client computers to not fall back to using WINS by specifying **SMSDIRECTORYLOOKUP=NoWINS**.
+-->
 
 ### Make sure that maintenance windows are large enough to deploy critical software updates  
 

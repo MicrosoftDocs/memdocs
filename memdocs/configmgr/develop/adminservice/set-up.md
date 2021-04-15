@@ -72,7 +72,7 @@ When the site creates a certificate for the SMS Provider, clients won't trust it
 1. Distribute and import the root certificate to the Trusted Root Certification Authorities store on any computer that you want to access the administration service.
 
     - Manually import the certificate where you need it. See the steps above for the Certificate Import Wizard.
-    - Use Configuration Manager to distribute and install the certificate using a custom script. For example, use the [Import-Certificate](/powershell/module/pkiclient/import-certificate) PowerShell cmdlet.
+    - Use Configuration Manager to distribute and install the certificate using a custom script. For example, use the [Import-Certificate](/powershell/module/pki/import-certificate) PowerShell cmdlet.
     - Use the following Active Directory group policy: **Computer Configuration\Policies\Windows Settings\Security Settings\Public Key Policies\Trusted Root Certification Authorities**
 
 ### Use a server authentication certificate

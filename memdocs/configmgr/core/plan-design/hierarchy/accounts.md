@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 02/18/2021
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -80,7 +80,6 @@ Use the following information to identify the Windows groups, accounts, and SQL 
   - [smsdbrole_siteprovider](#smsdbrole_siteprovider)
   - [smsdbrole_siteserver](#smsdbrole_siteserver)
   - [smsdbrole_SUP](#smsdbrole_sup)
-  - [smsdbrole_WebPortal](#smsdbrole_webportal)
   - [smsschm_users](#smsschm_users)
 
 ## <a name="bkmk_groups"></a> Windows groups that Configuration Manager creates and uses  
@@ -381,10 +380,8 @@ A Configuration Manager client first tries to use its computer account to downlo
 
 If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
-> [!Note]  
+> [!NOTE]
 > If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
->  
-> Upgrade clients to at least version 1806 before enabling this functionality. If you only allow **Enhanced HTTP** connections, older clients can't authenticate using this method, so can't download the client upgrade package from a distribution point. <!--vso2841213-->   
 
 #### Permissions
 
@@ -724,10 +721,6 @@ Site Server. Configuration Manager grants this permission to the computer accoun
 ### smsdbrole_SUP
 
 Software Update Point. Configuration Manager grants this permission to the computer account that host the Software Update Point for working with Third party updates.
-
-### smsdbrole_WebPortal
-
-Application Catalog Web Site Point. Configuration Manager grants permission to the computer account that host the Application Catalog Web Site Point to provide user based application deployment.
 
 ### smsschm_users
 

@@ -76,7 +76,7 @@ When you deploy an upgrade task sequence, use the following settings:
 
 <!--6209223-->
 
-Starting in version 2006, [bootable media](create-task-sequence-media.md#BKMK_PlanBootableMedia) can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
+Starting in version 2010, [bootable media](create-task-sequence-media.md#BKMK_PlanBootableMedia) can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
 
 > [!NOTE]
 > The device still needs an intranet connection to the management point.
@@ -91,7 +91,7 @@ When the task sequence runs, it downloads content from the cloud-based sources. 
 
   - Associate the content-enabled CMG or cloud distribution point site systems. For more information, see [Configure a boundary group](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_config).
 
-  - Enable the following option: **Prefer cloud based sources over on-premise sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+  - Enable the following option: **Prefer cloud based sources over on-premises sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 - Distribute the content referenced by the task sequence to the content-enabled CMG or cloud distribution point.
 
@@ -135,7 +135,7 @@ Start the create task sequence media wizard for bootable media. For more informa
 
 - On the **Security** page, set a strong password to protect this media.
 
-- On the **Boot Image** page, select the **Cloud management gateway** for this boot media to use.
+- On the **Boot Image** page, under **Management point** select the **Cloud management gateway** from the **Add Management Points** dialog.
 
 When you boot an internet-connected device using this media, it communicates with the specified CMG. The boot media downloads the policy for the task sequence deployment via the CMG. As the task sequence runs, it downloads any additional content and policies over the internet.
 

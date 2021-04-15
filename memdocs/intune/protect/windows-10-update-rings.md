@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2021
+ms.date: 04/07/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,6 +42,9 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
   - Have Telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
   
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10 or later. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Basic**. Values of **Enhanced** or **Full** are also supported.
+
+  > [!NOTE]
+  > Although not required to configure Windows Update for Business, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
 - Update rings are supported for the following Windows 10 editions:  
   - Windows 10 Pro
@@ -163,6 +166,10 @@ Consider the following when you use Uninstall:
 - Using uninstall for feature or quality updates triggers a policy to restore the previous update on your Windows 10 machines.
 
 - On a Windows 10 device, after a quality update is successfully rolled back, device users continue to see the update listed in **Windows settings** > **Updates** > **Update History**.
+
+- When you initiate an uninstall of feature or quality updates on an Update Ring, Intune also pauses updates of the same type on that Update Ring.
+
+- Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they are still applicable.
 
 - For feature updates specifically, the time you can uninstall the update is limited from 2-60 days. This period is configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the update has been installed for longer than the configured uninstall period.
 
