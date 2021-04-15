@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 4/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -39,9 +39,9 @@ This article shows you how to view all your devices, and their properties in the
 ## View the device details
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **All devices** > select one of your listed devices to open its details:
+2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device:
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device (depending on the device platform):
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
       - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
@@ -62,18 +62,19 @@ This article shows you how to view all your devices, and their properties in the
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
    - **Device compliance** lists all assigned compliance policies, and if the device is compliant or not compliant.
    - **Device configuration** shows all device configuration policies assigned to the device, and if the policy succeeded or failed.
-   - **App configuration** 
+   - **App configuration**
    - **Endpoint security configuration**
    - **Recovery keys** shows available BitLocker keys found for the device
-   - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device. 
+   - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device.
 
 ## Hardware device details
+
 Depending on the carrier used by the devices, not all details might be collected
 
 > [!Note]  
 > Hardware and Software inventory is refreshed in the Intune service every 7 days.
 
-|Detail|Description|Platform| 
+|Detail|Description|Platform|
 |--------------|----------------------|----|  
 |Name|The name of the device.|Windows, iOS, Android|
 |Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, iOS, Android|
@@ -117,4 +118,5 @@ Depending on the carrier used by the devices, not all details might be collected
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
+
 See what else you can do to [manage your devices](device-management.md) with Intune.
