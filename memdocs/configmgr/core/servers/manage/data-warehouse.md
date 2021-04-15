@@ -63,7 +63,7 @@ When the site system role installs, it installs and configures the data warehous
 
 - If you use [distributed views](../../plan-design/hierarchy/database-replication.md#bkmk_distviews), install the data warehouse service point on the same server that hosts the CAS's database.
 
-For more information on SQL Server licensing, see the [product and licensing FAQ](../../understand/product-and-licensing-faq.md).<!-- sms500967 -->
+For more information on SQL Server licensing, see the [product and licensing FAQ](../../understand/product-and-licensing-faq.yml).<!-- sms500967 -->
 
 Size the data warehouse database the same as your site database. While the data warehouse is smaller at first, it will grow over time. <!--SCCMDocs issue 756-->
 

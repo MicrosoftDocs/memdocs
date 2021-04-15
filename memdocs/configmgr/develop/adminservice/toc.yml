@@ -11,6 +11,6 @@
 - name: Reference
   items:
   - name: Frequently asked questions
-    href: faq.md
+    href: faq.yml
   - name: Release notes
     href: release-notes.md

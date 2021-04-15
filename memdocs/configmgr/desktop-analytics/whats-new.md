@@ -53,7 +53,7 @@ In the Desktop Analytics portal, the **Security updates** tile on the home page 
 
 In the Desktop Analytics portal, when you monitor feature updates, you'll now see Windows 10, version 20H2. When you create a deployment plan, you can select Windows 10, version 20H2, as the target version.
 
-For more information, see the FAQ [Why aren't new Windows releases available immediately in Desktop Analytics?](faq.md#why-arent-new-windows-releases-available-immediately-in-desktop-analytics)
+For more information, see the FAQ [Why aren't new Windows releases available immediately in Desktop Analytics?](faq.yml#why-arent-new-windows-releases-available-immediately-in-desktop-analytics)
 
 ## August 2020
 
