@@ -7,7 +7,7 @@ metadata:
   ms.author: aaroncz
   ms.reviewer: crosorio
   manager: dougeby
-  ms.date: 04/14/2021
+  ms.date: 04/15/2021
   ms.topic: reference
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
@@ -22,13 +22,29 @@ sections:
   - name: Planning
     questions:
       - question: |
-          I want to enable co-management, what's the effect to users?
+          I want to enable co-management, what's the effect?
         answer: |
-          Yes, at least one, and possibly others depending upon your design.
+          When you enable co-management, Configuration Manager is still the management authority for all workloads. So you continue to manage your devices the same way. If you don't switch any workload to Intune, all of the Configuration Manager settings and apps continue to work the same as before you enabled co-management.
+          
+          Enabling co-management is completely transparent to the end user. There's no reboot, no agent installation, no interruption, and no user notification.
+
+          As an administrator, you can see co-managed devices in the Microsoft Endpoint Manager admin center. You can do remote actions from the admin center, and can benefit from insights with [Endpoint analytics](../../analytics/overview.md).
+
+          Co-managed devices could be transformed to Autopilot-provisioned devices next time the device is reset.
+
+          Consider using the Company Portal. It's the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices. Your users should get familiar with Company Portal as it will provide the integrated experience going forward. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).
+
       - question: |
           Should I use co-management or tenant attach?
         answer: |
-          lorem
+          Both! You can use them independently, but they work great together.
+          
+          _Co-management_ enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. You can enable co-management and not use tenant attach to upload devices to the Microsoft Endpoint Manager admin center.
+
+          _Tenant attach_ sets up synchronization between your Configuration Manager site and your Intune tenant. Then you can see Configuration Manager devices in the Microsoft Endpoint Manager admin center. This connection provides you with a single view for all devices that you manage with Microsoft Endpoint Manager. This web-based console may be beneficial in some scenarios that don't want to use the full Configuration Manager console, such as with help desk staff. You can also benefit from insights in [Endpoint analytics](../../analytics/overview.md). You can configure the site to upload devices to the Microsoft Endpoint Manager admin center and not enable co-management. However, those devices are still managed by ConfigMgr until you enable co-management.
+
+          For more information on tenant attach and how to configure it, see [Microsoft Endpoint Manager tenant attach](../tenant-attach/device-sync-actions.md).
+
   - name: Authentication
     questions:
       - question: |
@@ -36,18 +52,20 @@ sections:
         answer: |
           No. Hybrid Azure AD join and co-management are two different things:
 
-          - Hybrid Azure AD join is a device identity state where the device is joined to an on-premises Active Directory domain and registered in Azure Active Directory (Azure AD).
+          - _Hybrid Azure AD join_ is a device identity state where the device is joined to an on-premises Active Directory domain and registered in Azure Active Directory (Azure AD).
 
-          - Co-management enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either hybrid Azure AD join or Azure AD join only.
+          - _Co-management_ enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either hybrid Azure AD join or Azure AD join only.
 
           For an existing Configuration Manager client that's already joined to Active Directory, it needs to be hybrid joined before you enable co-management.
 
           For new devices that are only cloud domain-joined with Azure AD, you can enable co-management right away. There's no requirement for hybrid Azure AD join for new co-managed devices.
 
+          For more information, see [Use Azure AD for co-management](quickstart-hybrid-aad.md).
+
       - question: |
           Does co-management support Azure AD-joined devices?
         answer: |
-          Yes. Co-management supports both Azure AD-joined devices and hybrid Azure AD-joined devices.
+          Yes. Co-management supports both Azure AD-joined devices and hybrid Azure AD-joined devices. For more information, see [Co-management prerequisites](overview.md#azure-ad).
 
       - question: |
           My environment has too many group policy objects and legacy authenticated apps. Do I have to use hybrid Azure AD?
@@ -65,7 +83,7 @@ sections:
       - question: |
           Does a user need to be signed in for automatic enrollment to happen?
         answer: |
-          No, a device token is used to enroll the device to Intune. There's no need for a user to sign in to Windows for the setting to apply.
+          No. A device token is used to enroll the device to Intune. There's no need for a user to sign in to Windows for the setting to apply.
 
           When you set up co-management, enable autoenrollment of devices currently managed by Configuration Manager. If needed, you can scope autoenrollment only for a pilot collection.
 
