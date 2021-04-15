@@ -37,6 +37,9 @@ When choosing your settings, be sure to review and categorize usage scenarios. T
 
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
+> [!Note]
+> Due to the limited number of settings available for device compliance, there is no enhanced security (level 2) offering.
+
 ## Basic security (Level 1)
 
 Level 1 is the recommended minimum security configuration for iOS/iPadOS devices where users access work or school data. This configuration is applicable to most mobile users accessing work or school data on a device.
@@ -67,7 +70,7 @@ Level 1 is the recommended minimum security configuration for iOS/iPadOS devices
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries. Therefore, they merit the additional constraints and controls listed below.
+- Specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
 
 This configuration expands upon Level 1 by:
 
