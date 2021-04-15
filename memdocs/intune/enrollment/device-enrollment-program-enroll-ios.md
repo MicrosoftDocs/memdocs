@@ -160,7 +160,7 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 
     Select **Next**.
 
-3. On the **Review + create** tab, select **Create**.
+4. On the **Review + create** tab, select **Create**.
 
 With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policies to enrolled mobile devices. Intune automatically synchronizes with Apple to access your enrollment program account.
 
@@ -170,14 +170,13 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 > [!NOTE]
 > Devices will be blocked if there aren't enough Company Portal licenses for a VPP token or if the token is expired. Intune will display an alert when a token is about to expire or licenses are running low.
- 
 
 1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
 2. Select a token, and then select **Profiles** > **Create profile** > **iOS/iPadOS**:
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image04.png" alt-text="Screenshot that shows how to create an iOS and iPadOS enrollment profile in Microsoft Endpoint Manager admin center.":::
 
-3. On the **Basics** tab, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details. 
+3. On the **Basics** tab, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image05.png" alt-text="Screenshot that shows the Name and Description boxes in Microsoft Endpoint Manager admin center.":::
 
@@ -186,8 +185,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 5. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
-    
-      In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). 
+
+      In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
 
 6. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
 
@@ -200,13 +199,13 @@ Now that you've installed your token, you can create an enrollment profile for A
     - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
     - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running iOS/iPadOS 13.0 and later can use this method. This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs. If you also use the **Install Company Portal with VPP** option below, the Company Portal will be installed without user interaction. During the Setup Assistant process on their device, the user must authenticate using their Azure AD credentials. After completing all the Setup Assistant screens, the end user lands on the home page and then must authenticate with Azure AD credentials in the Company Portal before getting access to corporate resources. If a conditional access policy that requires multi-factor authentication (MFA) applies at enrollment or enrollment and Company Portal signin, then MFA is required.
 
-7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**). 
- 
-   To ensure that user interaction isn't required, you'll probably want to make Company Portal an iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for Company Portal. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID. 
+7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**).
+
+   To ensure that user interaction isn't required, you'll probably want to make Company Portal an iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for Company Portal. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID.
 
     > [!NOTE]
     > If you set the authentication method to **Company Portal**, make sure that the device enrollment process is completed within the first 24 hours of the Company Portal download to the ADE device. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
-    
+
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png" alt-text="Screenshot that shows the options for installing the Company Portal app with VPP.":::
 
 8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
@@ -233,7 +232,7 @@ Now that you've installed your token, you can create an enrollment profile for A
      > [!NOTE]
      > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](http://help.apple.com/configurator/mac/2.3).
 
-11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. To use this option, the device must have the **Supervised** management option set to **Yes**. 
+11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. To use this option, the device must have the **Supervised** management option set to **Yes**.
 
     > [!NOTE]
     > If a device is enrolled with locked enrollment, the user won't be able to use **Remove Device** or **Factory Reset** in the Company Portal app. The options will be unavailable to the user. Also, the user won't be able to remove the device on the [Company Portal website](https://portal.manage.microsoft.com).
@@ -245,25 +244,25 @@ Now that you've installed your token, you can create an enrollment profile for A
     If you configured your devices as Apple Shared iPad for Business devices, you need to set **Maximum cached users**. Set this value to the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users might not have enough disk space.  
 
     > [!NOTE]
-    > If you want to set up Apple Shared iPad for Business, configure these settings: 
+    > If you want to set up Apple Shared iPad for Business, configure these settings:
     > - In the **User Affinity** list, select **Enroll without User Affinity**.
-    > - In the **Supervised** list, select **Yes**. 
+    > - In the **Supervised** list, select **Yes**.
     > - In the **Shared iPad** list, select **Yes**.
     >
     > Temporary sessions are enabled by default and allow your users to sign in to a shared iPad without a Managed Apple ID account. You can disable temporary sessions on shared iPads by configuring iOS/iPadOS Shared iPad [device restriction settings](../configuration/device-restrictions-ios.md).  
 
-13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**. 
+13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**.
 
      > [!NOTE]
      > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
-    >      
+    >
     >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
 14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.
 
-15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. 
+15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch.
 
-1. Select **Next: Setup Assistant Customization**.
+16. Select **Next: Setup Assistant Customization**.
 
 17. On the **Setup Assistant Customization** tab, configure the following profile settings:
 
