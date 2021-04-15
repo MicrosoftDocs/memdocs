@@ -33,7 +33,7 @@ sections:
           The LTSB is a production-ready build of Configuration Manager. It's intended for customers who allow Software Assurance or equivalent subscription rights to expire. When compared to the current branch, the LTSB has [reduced functionality](introduction-to-the-ltsb.md#features-that-arent-available). Customers who allow Software Assurance or equivalent subscription rights to expire must uninstall the current branch of Configuration Manager. Customers who have perpetual license rights to Configuration Manager may then install and use the LTSB build of the Configuration Manager version that's current at the time of expiration.
           
       - question: |
-          What do the acronyms *SA* and *L&SA* mean in regard to Configuration Manager?
+          What do the acronyms 'SA' and 'L&SA' mean in regard to Configuration Manager?
         answer: |
           Both **Software Assurance** (SA) and **License and Software Assurance** (L&SA) are license options that grant rights to use Configuration Manager. SA is an option for a customer that's renewing SA coverage from a prior agreement. L&SA is an option for a customer buying a new license and SA coverage.
           
