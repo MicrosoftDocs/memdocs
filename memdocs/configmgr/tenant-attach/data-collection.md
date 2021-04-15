@@ -71,7 +71,7 @@ For each device:
 - **DomainNames**: Any domain names for the device
 - **SKU**
 
-## Windows Defender Advanced Threat Protection (ATP)
+## Windows Defender for Endpoint
 <!-- 6505652 -->
 
 For any collection that you select for ATP policy deployment:

@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender Advanced Threat Protection
+title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
-description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
+description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
 ms.date: 10/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -13,17 +13,17 @@ manager: dougeby
 
 
 ---
-# Microsoft Defender Advanced Threat Protection
+# Microsoft Defender for Endpoint
 
 *Applies to: Configuration Manager (current branch)*
 
-Endpoint Protection can help manage and monitor [Microsoft Defender Advanced Threat Protection (ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly known as Windows Defender ATP). Microsoft Defender ATP helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 clients.
+Endpoint Protection can help manage and monitor [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly known as Windows Defender ATP). Microsoft Defender ATP helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 clients.
 
 Microsoft Defender ATP is a service in the [Microsoft Defender Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender ATP agent health. Microsoft Defender ATP is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](/intune/protect/advanced-threat-protection).
 
 ## Prerequisites
 
-- Subscription to the Microsoft Defender Advanced Threat Protection online service  
+- Subscription to the Microsoft Defender for Endpoint online service  
 - Clients computers running the Configuration Manager client
 - Clients using an OS listed in the [Supported client operating systems](#bkmk_os) section below.
 
@@ -150,7 +150,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.  
 
-1. Review the Microsoft Defender Advanced Threat Protection dashboard.  
+1. Review the Microsoft Defender for Endpoint dashboard.  
 
     - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
 
@@ -187,6 +187,6 @@ Select **Deploy** to target the Microsoft Defender ATP policy to clients.
 
 ## Next steps
 
-- [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Troubleshoot Microsoft Defender Advanced Threat Protection onboarding issues](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

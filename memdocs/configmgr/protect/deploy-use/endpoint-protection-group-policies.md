@@ -17,7 +17,7 @@ manager: dougeby
 
 **Applies to:**
 
-- [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 - System Center Endpoint Protection on the following down-level devices:
     - Windows Server 2012 R2
     - Windows 8.1

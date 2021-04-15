@@ -23,7 +23,7 @@ Endpoint Protection manages antimalware policies and Windows Defender Firewall s
 
  When you use Endpoint Protection with Configuration Manager, you have the following benefits:  
 
--   Configure antimalware policies, Windows Defender Firewall settings, and manage Microsoft Defender Advanced Threat Protection to selected groups of computers  
+-   Configure antimalware policies, Windows Defender Firewall settings, and manage Microsoft Defender for Endpoint to selected groups of computers  
 -   Use Configuration Manager software updates to download the latest antimalware definition files to keep client computers up-to-date  
 -   Send email notifications, use in-console monitoring, and view reports. These actions inform administrative users when malware is detected on client computers.  
 
@@ -75,7 +75,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
 
 ## Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint manages and monitors Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. The Microsoft Defender for Endpoint service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender Advanced Threat Protection](defender-advanced-threat-protection.md).
+Microsoft Defender for Endpoint manages and monitors Microsoft Defender for Endpoint, formerly known as Windows Defender ATP. The Microsoft Defender for Endpoint service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender for Endpoints](defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
