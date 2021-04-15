@@ -123,11 +123,16 @@ Now that you've installed your token, you can create an enrollment profile for d
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-6. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
+7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
 
-7. Select **Next** to go to the **Setup Assistant** page.
+    - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
+    - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running macOS 10.15 and later can use this method. This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs. If you also use the **Install Company Portal with VPP** option below, the Company Portal will be installed without user interaction. During the Setup Assistant process on their device, the user must authenticate using their Azure AD credentials. After completing all the Setup Assistant screens, the end user lands on the home page and then must authenticate with Azure AD credentials in the Company Portal before getting access to corporate resources. If a conditional access policy that requires multi-factor authentication applies at enrollment or enrollment and Company Portal signin, then MFA is required.
 
-8. On the **Setup Assistant** page, configure the following profile settings:
+8. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
+
+9. Select **Next** to go to the **Setup Assistant** page.
+
+10. On the **Setup Assistant** page, configure the following profile settings:
 
     | Department settings | Description |
     |---|---|
@@ -157,10 +162,10 @@ Now that you've installed your token, you can create an enrollment profile for d
     | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
     | <strong>Accessibility</strong> | Display the Accessibility screen to the user. If this screen is hidden, the user won't be able to automatically hear voice over. Voice over is only supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have the serial number appear in Apple School Manager or Apple Business Manager. |
-    
-9. Select **Next** to go to the **Review + create** page.
 
-10. To save the profile, choose **Create**.
+11. Select **Next** to go to the **Review + create** page.
+
+12. To save the profile, choose **Create**.
 
 ## Sync managed devices
 
