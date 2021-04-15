@@ -2,7 +2,7 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 02/18/2021
+ms.date: 04/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -19,14 +19,17 @@ Configuration Manager uses signing and encryption to help protect the management
 
 The primary hashing algorithm that Configuration Manager uses for signing is **SHA-256**. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm that Configuration Manager uses is **3DES**. The site uses this algorithm to store data in the site database and for client HTTP communication. When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. For more information on these maximums, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
 
+For transport security, anything that uses TLS supports AES. This support includes when you configure the site for [enhanced HTTP](../hierarchy/enhanced-http.md) or HTTPS. For on-premises site systems, you can control the TLS cipher suites. For cloud-based roles like the cloud management gateway (CMG), if you enable TLS 1.2, Configuration Manager configures the cipher suites.
+
+For message security, Configuration Manager primarily uses 3DES. For example, when the client uploads inventory or state data, or downloads secret policies from the management point.
+
 For most cryptographic operations with Windows-based operating systems, Configuration Manager uses the following algorithms from the Windows CryptoAPI library rsaenh.dll:
 
 - SHA-2
 - 3DES and AES
 - RSA
 
-> [!IMPORTANT]
-> For more information about recommended configurations, see [About SSL Vulnerabilities](#about-ssl-vulnerabilities).
+For more information about specific functionality, see [Site operations](#site-operations).
 
 ## Site operations
 
@@ -64,7 +67,7 @@ When a client sends hardware or software inventory to a management point, it alw
 
 ### State migration encryption
 
-When a client stores data on a state migration point for OS deployment, it always encrypts the data. By default, the task sequence runs the User State Migration Tool (USMT) with the **3DES** encryption algorithm.
+When a task sequence captures data from a client for OS deployment, it always encrypts the data. In version 2010 and earlier, the task sequence runs the User State Migration Tool (USMT) with the **3DES** encryption algorithm. In version 2103 and later, it uses **AES 256**.<!--9171505-->
 
 ### Encryption for multicast packages
 
