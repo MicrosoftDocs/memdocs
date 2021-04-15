@@ -20,7 +20,7 @@ This article describes how to deploy Configuration Manager using options that ma
 
 The following Configuration Manager options support high availability:
 
-- Configure any standalone primary site with an additional site server in passive mode.  
+- Configure any central administration or primary site with an additional site server in passive mode.  
 
 - Configure a SQL Server Always On availability group for the site database at primary sites and the central administration site.
 
@@ -63,7 +63,7 @@ For example, Configuration Manager clients typically operate autonomously by usi
 
 ### Use a site server in passive mode
 
-Install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](site-server-high-availability.md).  
+Install an additional site server in *passive* mode for a central administration or primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](site-server-high-availability.md).  
 
 ### Use a remote content library
 

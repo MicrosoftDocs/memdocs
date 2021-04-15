@@ -4,8 +4,8 @@
 title: Intune Graph API - Reports and properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
 keywords: 
-ms.author: erikre
 author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 03/16/2021
 ms.topic: conceptual

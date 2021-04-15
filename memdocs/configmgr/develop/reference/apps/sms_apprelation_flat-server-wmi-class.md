@@ -1,6 +1,7 @@
 ---
 title: "SMS_AppRelation_Flat Class"
 titleSuffix: "Configuration Manager"
+description: Details of the SMS_AppRelation_Flat WMI class
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,9 +10,8 @@ ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # SMS_AppRelation_Flat Server WMI Class
 The `SMS_AppRelation_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the flattened application relation. This includes direct and indirect relations.  
 
@@ -73,12 +73,30 @@ Class SMS_AppRelation_Flat : SMS_BaseClass
 
 |Value|Relationship|  
 |-|-|  
-|1|Bundled|  
-|2|Required|  
-|3|Prohibited|  
-|4|Optional|  
-|5|Derived|  
-|6|Superseded|  
+|1|Bundled|
+|2|Required|
+|3|Prohibited|
+|4|Optional|
+|5|Derived|
+|6|Superseded|
+|7|Self|
+|8|Reference|
+|9|AppToDTReference|
+|10|AppDependence|
+|11|Intention|
+|12|Platform|
+|13|GlobalConditionReference|
+|15|ApplicationSuperSeded|
+|16|ApplicationType|
+|17|ApplicationHost|
+|18|ApplicationInstaller|
+|19|SupersedOrDependent|
+|20|VirtualEnvironmentReference|
+|21|AppDCMReference|
+|22|DeploymentTypeToPolicyTemplateReference|
+|23|CIInheritanceRelation|
+|24|AppConfigTemplateReference| 
+|25|AppGroupItemReference|
 
  `ToApplicationCIID`  
  Data type: `UInt32`  

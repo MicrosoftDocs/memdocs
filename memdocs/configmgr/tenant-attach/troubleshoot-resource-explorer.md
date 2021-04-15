@@ -90,6 +90,16 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ## Known issues
 
+### <a name="bkmk_import"></a> Newly imported inventory classes fail to load
+<!--9391319, -->
+**Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Endpoint Manager admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
+
+**Workaround:** The current workaround is to restart the `SMS_Executive` service on the provider machine for which the [administration service](../develop/adminservice/overview.md) handles service requests. You can determine where your administration service is by reviewing the **CMGatewayNotification.log** and looking for your server in the URL.
+
+```log
+Sending AdminService request with URL: https://CMsite.contoso.com/AdminService/v1.0/ ...
+```
+
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## Next steps
