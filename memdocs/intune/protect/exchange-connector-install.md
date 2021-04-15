@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/05/2020
+ms.date: 04/15/2021
 
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -125,6 +125,9 @@ Create an Active Directory user account for the Intune Exchange connector. The a
 
 ## Download the installation package
 
+*Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).*
+
+<!-- 
 On a Windows server that can support the Intune Exchange connector:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  Use an account that's an administrator in the on-premises Exchange server and that has a license to use Exchange Server.
@@ -197,16 +200,21 @@ After the Exchange connector sets up the connection, mobile devices that are ass
 
 > [!NOTE]
 > If you install the Intune Exchange connector and later need to delete the Exchange connection, you must uninstall the connector from the computer where it was installed.
+-->
 
 ## Install connectors for multiple Exchange organizations
 
+*Support for new installations of the Exchange connector was deprecated in July of 2020. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). The information in the following sections is provided to support customers who might still use the on-premises Intune Exchange connector.*
+
+<!--
 Intune supports multiple Intune Exchange connectors per subscription. For a tenant that has multiple Exchange organizations, you can set up only one connector for each Exchange organization.
 
 To install connectors to connect to multiple Exchange organizations, download the .zip folder one time. Reuse that same download for each connector you install. For each additional connector, follow the steps in the previous section to extract and run the setup program on a server in the Exchange organization.
 
 Each Exchange organization that connects to Intune supports high availability, monitoring, and manual sync. The following sections describe these features.
 
-## On-premises Intune Exchange connector high availability support  
+-->
+### On-premises Intune Exchange connector high availability support
 
 For the on-premises connector, high availability means that if the Exchange CAS that the connector uses becomes unavailable, the connector can switch to a different CAS for that Exchange organization. The Exchange connector itself doesn't support high availability. If the connector fails, there's no automatic failover and you must [install a new connector](#reinstall-the-intune-exchange-connector) to replace the failed connector.
 
@@ -220,7 +228,7 @@ By default, discovery of additional CASs is enabled. If you need to turn off fai
 
 3. Change **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** to **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>**.
 
-## Performance-tune the Exchange connector (optional)
+### Performance-tune the Exchange connector (optional)
 
 When Exchange ActiveSync supports 5,000 or more devices, you can configure an optional setting to improve the performance of the connector. You improve performance by enabling Exchange to use multiple instances of a PowerShell command run space.
 
@@ -240,7 +248,9 @@ To improve the Exchange connector performance:
 
 4. Save the file, and then restart the Microsoft Intune Exchange connector service.
 
-## Reinstall the Intune Exchange connector
+#### Reinstall the Intune Exchange connector
+
+*Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). The following information is provided to support customers who might still use the on-premises Intune Exchange connector.*
 
 You might need to reinstall an Intune Exchange connector. Because only a single connector can connect to each Exchange organization, if you install a second connector for the organization, the new connector you install replaces the original connector.
 
@@ -254,7 +264,7 @@ You might need to reinstall an Intune Exchange connector. Because only a single 
 4. In the final window, select **Close** to complete the installation.
    ![Complete setup](./media/exchange-connector-install/successful-reinstall.png)
 
-## Monitor an Exchange connector
+### Monitor an Exchange connector
 
 After you successfully configure the Exchange connector, you can view the status of the connections and the last successful synchronization attempt:
 
@@ -269,6 +279,8 @@ After you successfully configure the Exchange connector, you can view the status
 In addition to the in-console status, you can use the [System Center Operations Manager management pack for Exchange connector and Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). The management pack offers different ways to monitor the Exchange connector when you need to troubleshoot issues.
 
 ## Manually force a quick sync or full sync
+
+*Support for new installations of the Exchange connector was deprecated in July of 2020. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). The information in the following sections is provided to support customers who might still use the on-premises Intune Exchange connector.*
 
 An Intune Exchange connector automatically synchronizes EAS and Intune device records regularly. If the compliance status of a device changes, the automatic sync process regularly updates records so that device access can be blocked or allowed.
 
