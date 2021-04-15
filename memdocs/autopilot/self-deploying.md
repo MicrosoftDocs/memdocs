@@ -18,7 +18,7 @@ ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
 
-# Windows Autopilot Self-Deploying mode
+# Windows Autopilot Self-Deploying mode (Public Preview)
 
 **Applies to**
 

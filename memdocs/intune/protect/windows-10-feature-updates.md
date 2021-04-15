@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/07/2021
+ms.date: 04/09/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,6 +57,7 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
   - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
   - Windows Virtual Desktop Access E3 or E5
+  - Microsoft 365 Business Premium
 
 - Devices must:  
   - Run Windows 10 version 1709 or later.
@@ -84,6 +85,11 @@ Intune’s Windows 10 feature updates requires the following prerequisites:
 - When you deploy a *Windows 10 feature updates* policy to a device that also receives a *Windows 10 update ring* policy, review the update ring for the following configurations:
   - The **Feature update deferral period (days)** must be set to **0**.
   - Feature updates for the update ring must be *running*. They must not be paused.
+
+  > [!TIP]
+  > If you’re using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
+  >
+  > For more information see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
 - Windows 10 feature updates policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
