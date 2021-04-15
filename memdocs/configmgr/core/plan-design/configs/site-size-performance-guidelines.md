@@ -46,7 +46,7 @@ Tests should also run on greater than standard *average day* loads, by doing sim
 
 Run testing on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Current server operating systems tend to have performance that's equal to or better than earlier OS versions. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL Server produce even better performance.
 
-The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL Server should I run?](../../understand/site-size-performance-faq.yml#what-version-of-sql-server-should-i-run).
+The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL Server should I run?](../../understand/site-size-performance-faq.yml#what-version-of-sql-server-should-i-run-).
 
 ## Key performance determinants
 

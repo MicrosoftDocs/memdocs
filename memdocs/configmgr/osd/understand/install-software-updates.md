@@ -196,7 +196,7 @@ Use the following resources and additional information to help you troubleshoot 
 
   - Remove unnecessary classifications, products, and languages. For more information, see [Configure classifications and products to synchronize](../../sum/get-started/configure-classifications-and-products.md).
 
-  - Reindex the site database and rebuild statistics. For more information, see the [FAQ for site sizing and performance](../../core/understand/site-size-performance-faq.yml#should-i-implement-any-additional-sql-server-indexing-tasks).
+  - Reindex the site database and rebuild statistics. For more information, see the [FAQ for site sizing and performance](../../core/understand/site-size-performance-faq.yml#should-i-implement-any-additional-sql-server-indexing-tasks-).
 
   - Decline unnecessary updates, for example:
 
