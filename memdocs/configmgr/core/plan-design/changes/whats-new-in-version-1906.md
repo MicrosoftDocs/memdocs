@@ -163,7 +163,7 @@ For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standal
 
 <!--4683130-->
 
-The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](../../understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role:
+The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](../../understand/fundamentals-of-role-based-administration.md#security-roles) role:
 
 - Read on SMS Script
 - Run CMPivot on Collection

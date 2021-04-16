@@ -153,7 +153,7 @@ To work around this issue, create a custom security role. Copy an existing secur
 - Modify  
 - Read  
 
-For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#BKMK_CreateSecRole)
+For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
 
 ## Desktop Analytics
 

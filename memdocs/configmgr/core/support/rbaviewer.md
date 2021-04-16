@@ -56,7 +56,7 @@ Use the following procedure to model permissions for a new role that you want to
     > [!Note]  
     > To see whether there's an existing security role that meets your requirements, switch to the **Similarity** tab.  
 
-4. Click **Export** to save the role as an XML file. Then import it to the Configuration Manager console. For more information, see [Create custom security roles](../servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole).
+4. Click **Export** to save the role as an XML file. Then import it to the Configuration Manager console. For more information, see [Create custom security roles](../servers/deploy/configure/configure-role-based-administration.md#create-custom-security-roles).
 
 
 ### Audit existing security scopes

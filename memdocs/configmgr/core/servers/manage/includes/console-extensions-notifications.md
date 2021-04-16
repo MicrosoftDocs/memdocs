@@ -7,7 +7,7 @@ ms.date: 04/05/2021
 ---
 <!--This file is shared by the admin-console-extensions.md, and admin-console-notifications.md files. Some headings may be context driven by the article-->
 
-Users are notified when console extensions are approved for installation. These notifications occur for users when console extensions are approved and notifications are enabled from **Administration** > **Overview** > **Updates and Servicing** > **Console Extensions**. When notifications are enabled, users within the [security scope](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension receive the following prompts:
+Users are notified when console extensions are approved for installation. These notifications occur for users when console extensions are approved and notifications are enabled from **Administration** > **Overview** > **Updates and Servicing** > **Console Extensions**. When notifications are enabled, users within the [security scope](../../../understand/fundamentals-of-role-based-administration.md#security-scopes) for the extension receive the following prompts:
 
 1. In the upper-right corner of the console, select the bell icon to display Configuration Manager console notifications.
 
