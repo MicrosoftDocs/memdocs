@@ -103,7 +103,7 @@ sections:
 
   - name: Existing Windows Analytics customers
     questions:
-       - question: |
+      - question: |
           Can I use Update Compliance together with Desktop Analytics?
         answer: |
           Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. Devices can only send diagnostic data to one workspace. Reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance. For the best experience, use Configuration Manager. Configuration Manager provides an integrated experience for managing and deploying these settings to clients.
