@@ -105,7 +105,7 @@ For more information on how to add a scope for a user, see [Modify the administr
 
 1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Security Scope**.
 
-1. In the Create Security Scope window, specify a **Security scope name**. THe maximum length is 256 characters.
+1. In the Create Security Scope window, specify a **Security scope name**. The maximum length is 256 characters.
 
 1. Optional but recommended, specify a **Description** to summarize the purpose of this custom security scope. The maximum length is 512 characters.
 
