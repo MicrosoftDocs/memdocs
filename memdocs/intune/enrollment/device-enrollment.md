@@ -72,12 +72,14 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 ## Android enrollment methods
 
+### Personal enrollment methods
+
 | **Personal** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](../user-help/enroll-device-android-company-portal.md)|
 |**Android Enterprise personally-owned with Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
 
-&nbsp;
+### Corporate enrollment methods
 
 | **Corporate** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
