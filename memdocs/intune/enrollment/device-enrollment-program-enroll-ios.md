@@ -275,7 +275,6 @@ Now that you've installed your token, you can create an enrollment profile for A
     - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
 
-
     | Setup Assistant Screens setting | If you select Show, during setup the device will... |
     |------------------------------------------|------------------------------------------|
     | **Passcode** | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
@@ -284,27 +283,27 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **iCloud and Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
     | **Terms and conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | **Touch ID** | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
-    | <strong>Apple Pay</strong> | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
-    | <strong>Zoom</strong> | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
-    | <strong>Siri</strong> | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
-    | <strong>Diagnostics Data</strong> | Display the **Diagnostics** screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | <strong>Restore Completed</strong> | Display the **Restore Completed** screen after a backup and restore is performed on the device. If this screen isn't shown, the user can't see whether a restore from backup was completed during Setup Assistant. |
-    | <strong>Software Update Completed</strong> | Display the **Software Update Completed** screen if a software update is performed during Setup Assistant. If this screen isn't shown, the user can’t see whether a software update is performed during Setup Assistant.|
-    | <strong>Display Tone</strong> | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
-    | <strong>Privacy</strong> | Display the **Privacy** screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
-    | <strong>Android Migration</strong> | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
-    | <strong>iMessage & FaceTime</strong> | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |
-    | <strong>Onboarding</strong> | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |
-    | <strong>Watch Migration</strong> | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
-    | <strong>Screen Time</strong> | Display the **Screen Time** screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
-    | <strong>Software Update</strong> | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |
-    | <strong>SIM Setup</strong> | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
-    | <strong>Appearance</strong> | Display the **Appearance** screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
-    | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. |
-    | <strong>Registration</strong> | Display the registration screen. For macOS 10.9 and later. |
-    | <strong>FileVault</strong> | Display the FileVault 2 encryption screen. For macOS 10.10 and later. |
-    | <strong>iCloud diagnostics</strong> | Display the **iCloud Analytics** screen. For macOS 10.12.4 and later. |
-    | <strong>iCloud Storage</strong> | Display the **iCloud Documents and Desktop** screen. For macOS 10.13.4 and later. |
+    | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
+    | **Zoom** | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
+    | **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
+    | **Diagnostics Data** | Display the **Diagnostics** screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | **Restore Completed** | Display the **Restore Completed** screen after a backup and restore is performed on the device. If this screen isn't shown, the user can't see whether a restore from backup was completed during Setup Assistant. |
+    | **Software Update Completed** | Display the **Software Update Completed** screen if a software update is performed during Setup Assistant. If this screen isn't shown, the user can’t see whether a software update is performed during Setup Assistant.|
+    | **Display Tone** | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
+    | **Privacy** | Display the **Privacy** screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
+    | **Android Migration** | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
+    | **iMessage & FaceTime** | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |
+    | **Onboarding** | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |
+    | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
+    | **Screen Time** | Display the **Screen Time** screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
+    | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |
+    | **SIM Setup** | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
+    | **Appearance** | Display the **Appearance** screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
+    | **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. |
+    | **Registration** | Display the registration screen. For macOS 10.9 and later. |
+    | **FileVault** | Display the FileVault 2 encryption screen. For macOS 10.10 and later. |
+    | **iCloud diagnostics** | Display the **iCloud Analytics** screen. For macOS 10.12.4 and later. |
+    | **iCloud Storage** | Display the **iCloud Documents and Desktop** screen. For macOS 10.13.4 and later. |
 
 18. Select **Next** to go to the **Review + create** tab.
 
