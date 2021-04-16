@@ -3,7 +3,7 @@ metadata:
   title: Product and licensing FAQ
   titleSuffix: Configuration Manager
   description: Find answers for common product and license questions for Configuration Manager.
-  ms.date: 07/07/2020
+  ms.date: 04/16/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: conceptual
@@ -195,7 +195,4 @@ sections:
       - question: |
           Does on-premises mobile device management (MDM) require an Intune subscription?
         answer: |
-          In versions 1806 and earlier, to start using on-premises MDM, you need a Microsoft Intune subscription. The subscription is only required to track licensing of the devices and isn't used to manage or store management information for the devices. All management data is stored in your organization using the on-premises Configuration Manager infrastructure.  
-          
-          Starting in version 1810, an Intune connection is no longer required for new on-premises MDM deployments.<!--3607730, fka 1359124--> Your organization still requires Intune licenses to use this feature. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
-          
+          No. An Intune connection isn't required for new on-premises MDM deployments.<!--3607730, fka 1359124--> Your organization still requires Intune licenses to use this feature. For more information, see the [Intune support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
