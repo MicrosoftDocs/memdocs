@@ -175,29 +175,29 @@ sections:
         answer: |
           Hard to say since every environment is different. The best thing to do is to cost your environment using the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-additionalContent: |
+  - name: Additional resources
+    questions:
+      - question: Where I can learn more?
+        answer: |
+          #### Fundamentals
+          - [What is Azure](https://azure.microsoft.com/overview/what-is-azure/)
 
-## Additional Resources
+          #### Azure VM machine types
+          - [Azure machine sizes](/azure/virtual-machines/sizes)
+          - [VM pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows/)
+          - [Storage pricing](https://azure.microsoft.com/pricing/details/storage/)
 
-Fundamentals
-- [What is Azure](https://azure.microsoft.com/overview/what-is-azure/)
+          #### Disk performance considerations
+          - [Premium storage](/azure/virtual-machines/premium-storage-performance)
+          - [Select a disk type of IaaS VMs](/azure/virtual-machines/disks-types#premium-ssd)
+          - [Scalability and performance targets for standard storage accounts](/azure/storage/common/scalability-targets-standard-account)
+          - [Blog post on how premium storage works](https://azure.microsoft.com/blog/azure-premium-storage-now-generally-available-2/)
 
-Azure VM machine types
-- [Azure machine sizes](/azure/virtual-machines/sizes)
-- [VM pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows/)
-- [Storage pricing](https://azure.microsoft.com/pricing/details/storage/)
+          #### Availability
+          - [Azure service level agreement (SLA) for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/)
+          - [Availability options for Azure Virtual Machines](/azure/virtual-machines/availability)
 
-Disk performance considerations
-- [Premium storage](/azure/virtual-machines/premium-storage-performance)
-- [Select a disk type of IaaS VMs](/azure/virtual-machines/disks-types#premium-ssd)
-- [Scalability and performance targets for standard storage accounts](/azure/storage/common/scalability-targets-standard-account)
-- [Blog post on how premium storage works](https://azure.microsoft.com/blog/azure-premium-storage-now-generally-available-2/)
-
-Availability
-- [Azure service level agreement (SLA) for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/)
-- [Availability options for Azure Virtual Machines](/azure/virtual-machines/availability)
-
-Connectivity
-- [ExpressRoute or Azure VPN](https://azure.microsoft.com/blog/expressroute-or-virtual-network-vpn-whats-right-for-me/)
-- [Azure ExpressRoute pricing](https://azure.microsoft.com/pricing/details/expressroute/)
-- [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
+          #### Connectivity
+          - [ExpressRoute or Azure VPN](https://azure.microsoft.com/blog/expressroute-or-virtual-network-vpn-whats-right-for-me/)
+          - [Azure ExpressRoute pricing](https://azure.microsoft.com/pricing/details/expressroute/)
+          - [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
