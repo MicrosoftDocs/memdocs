@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Support third-party device compliance partners in Intune
 
-Microsoft Intune can add compliance state data to Azure Active Directory (Azure AD) for the devices you manage with one or more third-party device compliance partners. With this configuration, compliance data from those devices can be [used with your conditional access policies](../intune/protect/device-compliance-get-started.md#integrate-with-conditional-access).
+Microsoft Intune can add compliance state data to Azure Active Directory (Azure AD) for the devices you manage with one or more third-party device compliance partners. With this configuration, compliance data from those devices can be [used with your conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access).
 
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Azure AD and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through an Azure AD user group.
 

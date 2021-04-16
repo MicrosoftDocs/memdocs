@@ -107,7 +107,7 @@ The native **Mail** application on Windows 8.1 and later (when enrolled into MDM
 
 ## Configure Exchange on-premises access
 
-*Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). The following instructions are maintained for the use of [reinstalling the connector](#reinstall-the-intune-exchange-connector).*
+*Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
