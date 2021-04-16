@@ -536,7 +536,7 @@ For more information, see [Create and deploy Windows Defender Application Guard 
 
 You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
-For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#how-to-configure-security-scopes-for-an-object).
 
 ### Add SMBIOS GUID column to device and device collection nodes
 
