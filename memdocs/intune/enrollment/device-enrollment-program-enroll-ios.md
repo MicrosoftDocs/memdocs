@@ -190,6 +190,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 6. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
 
+   ![Screenshot of authentication method options.](./media/device-enrollment-program-enroll-ios/authentication-method.png)
+
     - **Company Portal**: Authenticate with the Company Portal app if you want to:
         - Use multifactor authentication.
         - Prompt users to change their passwords when they first sign in.
