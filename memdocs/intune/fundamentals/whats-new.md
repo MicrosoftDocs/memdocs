@@ -78,7 +78,7 @@ This method has the following options for installing the Company Portal:
 
 For information on how to use this authentication method on iOS/iPadOS devices, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-For information on how to use this authentication method on macOS devices, see [](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
+For information on how to use this authentication method on macOS devices, see [Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
 !-- ########################## -->
 ## Week of March 29, 2021 (Service release 2103)
