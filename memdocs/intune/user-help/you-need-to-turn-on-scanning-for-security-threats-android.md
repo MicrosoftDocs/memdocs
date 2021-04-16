@@ -34,11 +34,11 @@ ms.collection:
 Some apps contain harmful behavior and can compromise the data on your device. To prevent these types of apps from harming your device, we recommend that you: 
 
 * Only download apps from verified sources, such as the Google Play Store.  
-* Turn on Google Play Protect. Play Protect checks your apps for security threats.  
+* Turn on Google Play Protect. Play Protect checks the apps on your device and alerts you to security threats.  
 
 Complete the following steps to turn on Play Protect.  
 
-1. Go to the **Settings** app and tap > **Biometrics and security*.
+1. Go to the **Settings** app and tap > **Biometrics and security**.
 2. Tap **Google Play Protect**.
 3. Tap **Turn on**. 
 
