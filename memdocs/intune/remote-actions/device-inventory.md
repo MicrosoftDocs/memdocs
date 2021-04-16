@@ -103,6 +103,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
+|EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
