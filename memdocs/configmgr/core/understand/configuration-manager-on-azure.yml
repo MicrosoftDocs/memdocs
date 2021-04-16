@@ -179,25 +179,25 @@ additionalContent: |
 
 ## Additional Resources
 
-**Fundamentals**
+<b>Fundamentals</b>
 - [What is Azure](https://azure.microsoft.com/overview/what-is-azure/)
 
-**Azure VM machine types**
+<b>Azure VM machine types</b>
 - [Azure machine sizes](/azure/virtual-machines/sizes)
 - [VM pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows/)
 - [Storage pricing](https://azure.microsoft.com/pricing/details/storage/)
 
-**Disk performance considerations**
+<b>Disk performance considerations</b>
 - [Premium storage](/azure/virtual-machines/premium-storage-performance)
 - [Select a disk type of IaaS VMs](/azure/virtual-machines/disks-types#premium-ssd)
 - [Scalability and performance targets for standard storage accounts](/azure/storage/common/scalability-targets-standard-account)
 - [Blog post on how premium storage works](https://azure.microsoft.com/blog/azure-premium-storage-now-generally-available-2/)
 
-**Availability:**
+<b>Availability</b>
 - [Azure service level agreement (SLA) for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/)
 - [Availability options for Azure Virtual Machines](/azure/virtual-machines/availability)
 
-**Connectivity:**
+<b>Connectivity</b>
 - [ExpressRoute or Azure VPN](https://azure.microsoft.com/blog/expressroute-or-virtual-network-vpn-whats-right-for-me/)
 - [Azure ExpressRoute pricing](https://azure.microsoft.com/pricing/details/expressroute/)
 - [What is Azure ExpressRoute?](/azure/expressroute/expressroute-introduction)
