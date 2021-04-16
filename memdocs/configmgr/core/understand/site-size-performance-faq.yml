@@ -85,7 +85,7 @@ sections:
       - question: |
           Are there any suggestions for Configuration Manager environments in Microsoft Azure?
         answer: |
-          Start by reading the [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md).
+          Start by reading the [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.yml).
           
           Azure infrastructure as a service (IaaS) VMs that leverage Premium Storage-based disks can have high IOPS. On these VMs, configure additional disks for anticipated disk space needs, rather than for additional IOPS.
           
@@ -262,4 +262,4 @@ additionalContent: |
 
   ##  See also
   - [Site sizing and performance guidelines](../plan-design/configs/site-size-performance-guidelines.md)
-  - [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.md)
+  - [Configuration Manager on Azure frequently asked questions](configuration-manager-on-azure.yml)

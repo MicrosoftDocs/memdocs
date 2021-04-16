@@ -49,7 +49,7 @@ Products and product versions that aren't listed in these articles aren't suppor
 
 - [Support for virtualization environments](support-for-virtualization-environments.md): Learn more about how to use supported virtual machine technologies.
 
-- [FAQ for Configuration Manager on Azure](../../understand/configuration-manager-on-azure.md): Answers to common questions about using Configuration Manager on an Azure environment.
+- [FAQ for Configuration Manager on Azure](../../understand/configuration-manager-on-azure.yml): Answers to common questions about using Configuration Manager on an Azure environment.
 
 Use the following articles to understand Configuration Manager size, scale, and performance:
 

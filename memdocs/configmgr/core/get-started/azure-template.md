@@ -23,7 +23,7 @@ This guide describes how to build a Configuration Manager lab environment in Mic
 - Configuration Manager technical preview Azure template installs the latest version of the Configuration Manager technical preview branch.
 - Configuration Manager current branch Azure template installs the evaluation of the latest version of Configuration Manager current branch. 
 
-For more information, see [Configuration Manager on Azure](../understand/configuration-manager-on-azure.md).
+For more information, see [Configuration Manager on Azure](../understand/configuration-manager-on-azure.yml).
 
 
 
