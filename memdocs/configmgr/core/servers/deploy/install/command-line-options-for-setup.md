@@ -466,7 +466,7 @@ Use the following details to install a CAS by using an unattended setup script f
 
         - `1` = Software Assurance is active
 
-    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.md).
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.yml).
 
 - **Key name:** CurrentBranch
 
@@ -830,7 +830,7 @@ Use the following details to install a primary site by using an unattended setup
 
         - `1` = Software Assurance is active
 
-    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.md).
+    - **Details:** Specify if you have active Software Assurance. For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.yml).
 
 - **Key name:** CurrentBranch
 
