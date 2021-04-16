@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage devices with endpoint security in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to view devices and act to manage them in Microsoft Endpoint Manager. 
+description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Endpoint Manager. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/15/2020
+ms.date: 04/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,12 @@ ms.reviewer: mattsha
 
 # Manage devices with endpoint security in Microsoft Intune
 
-As a security administrator, use the *All devices* view in the Microsoft Endpoint Manager admin center to review and act to manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD). This includes devices that are managed by Intune, Configuration Manager, and through [co-management](/configmgr/comanage/overview) by both Intune and Configuration Manager. Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
+As a security administrator, use the *All devices* view in the Microsoft Endpoint Manager admin center to review and manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD), including devices managed by:
+- Intune
+- Configuration Manager
+- [Co-management](/configmgr/comanage/overview) *(by both Intune and Configuration Manager)*
+
+Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
 
  To find the view, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
 
@@ -70,9 +75,9 @@ Consider the following fields:
 
     With co-management, you [choose different co-management workloads](/configmgr/comanage/how-to-switch-workloads) to determine which aspects are managed by Configuration Manager or by Intune. These choices affect which policies the device applies, and how compliance data is reported to the admin center.
 
-    For example, you can use Intune to configure policies for Antivirus, Firewall, and Encryption. These are all considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
+    For example, you can use Intune to configure policies for Antivirus, Firewall, and Encryption. These policies are all considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
 
-- **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to either Intune or Pilot Intune.  
+- **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to *Intune* or to *Pilot Intune*.  
 
   After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant. That information can help you investigate and help you bring the device into compliance.
 
