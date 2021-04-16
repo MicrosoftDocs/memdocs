@@ -14,6 +14,8 @@
   items:
   - name: Configure security
     href: ../core/plan-design/security/configure-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+  - name: Configure role-based administration
+    href: ../core/servers/deploy/configure/configure-role-based-administration.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
   - name: Enable TLS 1.2
     items:
     - name: About enabling TLS 1.2 
