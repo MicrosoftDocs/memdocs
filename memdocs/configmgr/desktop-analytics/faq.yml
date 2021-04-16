@@ -100,13 +100,10 @@ sections:
           Where is my organization's data stored?
         answer: |
           Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Microsoft provides the analysis of the Desktop Analytics-related data to you through the Desktop Analytics solution in the Azure portal. Desktop Analytics is supported in most regions where [Log Analytics is available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all). If you select an international Azure region, your diagnostic data is still sent to and processed in Microsoft's secure data centers in the United States.
-          
-          ## Existing Windows Analytics customers
-          > [!Important]  
-          > The Windows Analytics service is retired as of January 31, 2020.
-          >
-          > For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](/lifecycle/announcements/windows-analytics-retirement).
-      - question: |
+
+  - name: Existing Windows Analytics customers
+    questions:
+       - question: |
           Can I use Update Compliance together with Desktop Analytics?
         answer: |
           Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. Devices can only send diagnostic data to one workspace. Reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance. For the best experience, use Configuration Manager. Configuration Manager provides an integrated experience for managing and deploying these settings to clients.
