@@ -112,7 +112,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
-Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.md) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
+Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
 
 For more information, see [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
@@ -130,7 +130,7 @@ Helpful information:
 - [What is co-management?](../../configmgr/comanage/overview.md)
 - [Co-management workloads](../../configmgr/comanage/workloads.md)
 - [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md)
-- [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.md)
+- [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.yml)
 
 ### Option 3: Move from Configuration Manager to Intune
 

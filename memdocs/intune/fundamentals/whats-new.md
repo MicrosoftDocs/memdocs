@@ -80,7 +80,7 @@ For information on how to use this authentication method on iOS/iPadOS devices, 
 
 For information on how to use this authentication method on macOS devices, see [Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
-!-- ########################## -->
+<!-- ########################## -->
 ## Week of March 29, 2021 (Service release 2103)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

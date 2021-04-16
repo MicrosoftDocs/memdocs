@@ -158,4 +158,4 @@ Use the following minimum hardware recommendations for lab and test deployments 
 
 [Site size and performance guidelines](site-size-performance-guidelines.md)
 
-[Site size and performance FAQ](../../understand/site-size-performance-faq.md)
+[Site size and performance FAQ](../../understand/site-size-performance-faq.yml)
