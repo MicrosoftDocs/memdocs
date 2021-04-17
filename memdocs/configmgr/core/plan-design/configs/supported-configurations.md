@@ -59,4 +59,4 @@ Use the following articles to understand Configuration Manager size, scale, and 
 
 - [Site size and performance guidelines](site-size-performance-guidelines.md): Site size-related performance test results, methodology, and guidance.
 
-- [Site size and performance FAQ](../../understand/site-size-performance-faq.md): Answers to common Configuration Manager questions about site sizing and performance.
+- [Site size and performance FAQ](../../understand/site-size-performance-faq.yml): Answers to common Configuration Manager questions about site sizing and performance.

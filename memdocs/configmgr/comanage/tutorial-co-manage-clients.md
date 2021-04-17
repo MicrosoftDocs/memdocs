@@ -48,7 +48,7 @@ If not already present in your environment, during this tutorial you'll:
 - Configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
 
 > [!TIP]
-> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
 
 ### On-premises infrastructure
 

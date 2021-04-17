@@ -84,7 +84,7 @@ Co-management has these prerequisites in the following areas:
     > [!Tip]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".
     >
-    > You may not need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+    > You may not need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
 
 ### Configuration Manager
 
