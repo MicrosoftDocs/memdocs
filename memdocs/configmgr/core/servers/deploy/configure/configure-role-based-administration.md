@@ -25,6 +25,13 @@ Use the information in this article to create and configure role-based administr
 > [!NOTE]
 > The procedures in this article assume that your administrative user is in a security role with the required permissions. For example, the **Full Administrator** or **Security administrator** roles.
 
+> [!TIP]
+> Use the [Role-based administration and auditing tool](../../../support/rbaviewer.md) to help with the following actions:
+>
+> - Model permissions for a new role that you want to create.
+> - Audit all existing administrative users, collections, and security scopes.
+> - Audit a specific user
+
 ## Create custom security roles
 
 Configuration Manager provides several [built-in security roles](../../../understand/fundamentals-of-role-based-administration.md#security-roles). You can't change the permissions of the built-in roles. If you require other roles, create a custom one. You might create a custom role to grant administrative users other permissions that they require and aren't included in a built-in role. By using a custom security role, you can assign them the least required permissions. A custom role can help you avoid assigning a security role that grants more permissions than they require.
@@ -276,5 +283,7 @@ Use the following procedure to modify an administrative user that has the secura
     > When a security role grants administrative users the collection deployment permission, those administrative users can distribute objects from any security scope for which they have object **read** permissions, even if that security scope is associated with a different security role.  
 
 ## Next steps
+
+[Role-based administration and auditing tool](../../../support/rbaviewer.md)
 
 [Accounts used in Configuration Manager](../../../plan-design/hierarchy/accounts.md)
