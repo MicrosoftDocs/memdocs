@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/05/2021
+ms.date: 04/19/2021
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -134,11 +134,6 @@ For example, you have a primary site in forest A with two software update points
 ###  <a name="BKMK_WSUSSyncSource"></a> Use an existing WSUS server as the synchronization source at the top-level site  
 
 Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your organizational security policy doesn't allow the top-level site to access to the internet, configure the synchronization source for the top-level site to use an existing WSUS server. This WSUS server isn't in your Configuration Manager hierarchy. For example, you have a WSUS server in an internet-connected network (DMZ), but your top-level site is in an internal network without internet access. Configure the WSUS server in the DMZ as your synchronization source for software updates metadata. Configure the WSUS server in the DMZ to synchronize software updates with the same criteria that you need in Configuration Manager. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS server connection account. This account needs access to the WSUS server in the DMZ. Also confirm that the firewall permits traffic for the appropriate ports. For more information, see the [ports used by the software update point to the synchronization source](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
-
-> [!IMPORTANT]  
->  **Note about using WSUS Shared database scenario:**  
-If you are sharing the database of WSUS server on the top site which is talking to Microsoft for updates with other WSUS servers, You will need to make sure all the [internet requirements](https://docs.microsoft.com/en-us/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_ConfigureFirewalls) are met for every single WSUS server you are sharing the database with. This is because during sync ConfigMgr randomly chooses the WSUS server amongst the shared ones to sync against Microsoft updates. Our recommendation is to share database amongst the downstream servers and keep the top level servers use its own database for simplicity and avoiding opening more ports and firewall rules than you have to. 
->      
 
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
 
@@ -318,6 +313,8 @@ The synchronization source settings for the software update point specify the lo
 
 -   **WSUS reporting events:** The Windows Update Agent on client computers can create event messages for WSUS reporting. These events aren't used by Configuration Manager. Thus, the option, **Do not create WSUS reporting events**, is selected by default. When these events aren't created, the only time that the client should connect to the WSUS server is during software update evaluation and compliance scans. If these events are needed for reporting outside of Configuration Manager, modify this setting to create WSUS reporting events.  
 
+> [!IMPORTANT]
+> If you're sharing the WSUS database (SUSDB) across multiple software update points for the top-level site, make sure that each of those WSUS servers meets the [internet access requirements](../../core/plan-design/network/internet-endpoints.md#software-updates) for software updates. When the database is shared the top-level site, Configuration Manager can select any one of those WSUS servers to sync with Microsoft Update.
 
 ###  <a name="BKMK_SyncSchedule"></a> Synchronization schedule  
 
