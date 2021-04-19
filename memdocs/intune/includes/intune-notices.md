@@ -31,7 +31,7 @@ We will not uninstall these Company portal versions mentioned above, but we will
 
 #### What do I need to do?
 
-In the Microsoft Endpoint Manager admin center, use the [Discovered apps](../intune/apps/app-discovered-apps.md) feature to find apps with these versions. On a user’s device, the Company Portal version is shown in the **Settings** page of the company portal. Update to a supported Windows/Company Portal version.
+In the Microsoft Endpoint Manager admin center, use the [Discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user’s device, the Company Portal version is shown in the **Settings** page of the company portal. Update to a supported Windows/Company Portal version.
 
 ### Plan for Change: Intune moving to support Android 6.0 and higher in April 2021
 
