@@ -2,7 +2,7 @@
 title: What's new in version 2103
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2103 of Configuration Manager current branch.
-ms.date: 04/05/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -456,9 +456,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2103 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2103.md#early-update-ring).
+<!-- At this time, version 2103 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2103.md#early-update-ring). -->
 
-<!-- As of December 11, 2020, version 2103 is globally available for all customers to install. -->
+As of April 19, 2021, version 2103 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2103](../../servers/manage/checklist-for-installing-update-2103.md).
 
