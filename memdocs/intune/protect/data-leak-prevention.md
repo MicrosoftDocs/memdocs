@@ -4,7 +4,7 @@
 title: Prevent data leaks on non-managed devices
 titleSuffix: Microsoft Intune
 description: Allow access to corporate data on devices and protect data from data leaks using Microsoft Intune. 
-keywords: data protection prevent leaks device O365 Office 365
+keywords: data protection prevent leaks device M365 Microsoft 365
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 ---
 # Prevent data leaks on non-managed devices using Microsoft Intune
 
-If you allow access to company data hosted by Office 365, you can control how users share and save data without risking intentional or accidental data leaks. Microsoft Intune provides app protection policies that you set to secure you company data on user-owned devices. The devices do not need to be enrolled in the Intune service. 
+If you allow access to company data hosted by Microsoft 365, you can control how users share and save data without risking intentional or accidental data leaks. Microsoft Intune provides app protection policies that you set to secure you company data on user-owned devices. The devices do not need to be enrolled in the Intune service. 
 
 App protection policies set up with Intune also work on devices managed with a non-Microsoft device management solution. The personal data on the devices is not touched; only company data is managed by the IT department. 
 
@@ -43,7 +43,7 @@ Intune app protection policies are independent of device management. App protect
 The following action plan can be used when you meet the following requirements:
 
 * Your company is ready to transition securely to the cloud.
-* Your company uses Office 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
+* Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
 * Your company has licenses for Microsoft 365, Enterprise Mobility + Security (EMS), or Azure Information Protection.
 * Your company allows users to access company data from company-owned or personally-owned Windows, iOS/iPadOS, or Android devices.
 * Your company does not want to require enrollment of personally-owned devices in a device management service.
@@ -58,7 +58,7 @@ For iOS/iPadOS and Android devices:
 
 For Windows 10 devices:
 
-1. Learn [how Windows Information Protection (WIP) works](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
+1. Learn [how Windows Information Protection (WIP) works](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
 2. Get ready to configure [app protection policies for Windows 10](../apps/app-protection-policies-configure-windows-10.md).
 3. [Create and deploy WIP app protection policies with Intune](../apps/windows-information-protection-policy-create.md).
 
@@ -71,4 +71,4 @@ As appropriate, share the following links to provide additional information:
 
 ## Next steps
 
-Want help enabling this or other EMS or Office 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Want help enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

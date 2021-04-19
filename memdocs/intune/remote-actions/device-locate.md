@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -47,9 +47,9 @@ This feature is not supported for the following systems:
 ## Locate a lost or stolen device
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices**, and then select **All devices**.
-4. From the list of devices you manage, choose an iOS/iPadOS device, and choose **...More**. Then choose the **Locate device** remote action.
-5. After the device is located, its location is shown in **Locate device**.
+2. Select **Devices**, and then select **All devices**.
+3. From the list of devices you manage, choose an iOS/iPadOS device, and choose **...**. Then choose the **Locate device** remote action.
+4. After the device is located, its location is shown in **Locate device**.
     ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
 
 

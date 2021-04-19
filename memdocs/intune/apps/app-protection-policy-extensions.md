@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/25/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -43,10 +43,10 @@ If you want to stop your end users from accessing and installing Outlook add-ins
 - To prevent users from side loading add-ins, remove the My Custom Apps role from them.
 - To prevent users from installing all add-ins, remove both, My Custom Apps and My Marketplace roles from them.
 
-These instructions apply to Office 365, Exchange 2016, Exchange 2013 across Outlook on the web, Windows, Mac, and mobile.
+These instructions apply to Microsoft 365, Exchange 2016, Exchange 2013 across Outlook on the web, Windows, Mac, and mobile.
 
-- Learn more about [add-ins for Outlook](https://technet.microsoft.com/library/jj943753(v=exchg.150).aspx).
-- Learn more about [how to specify the administrators and users who can install and manage add-ins for Outlook app](https://technet.microsoft.com/library/jj943754(v=exchg.150).aspx).
+- Learn more about [add-ins for Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
+- Learn more about [how to specify the administrators and users who can install and manage add-ins for Outlook app](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins).
 
 ## LinkedIn account connections for Microsoft apps
 
@@ -55,9 +55,9 @@ LinkedIn account connections allow users to see public LinkedIn profile informat
 > [!NOTE]
 > LinkedIn integration is currently unavailable for United States Government customers and for organizations with Exchange Online mailboxes hosted in Australia, Canada, China, France, Germany, India, South Korea, United Kingdom, Japan, and South Africa.
 
-The Intune SDK and Intune app protection policies don't include support for managing LinkedIn account connections, but there are other ways to manage them. You can disable LinkedIn account connections for your entire organization, or you can enable LinkedIn account connections for selected user groups in your organization. These settings affect LinkedIn connections across Office 365 apps on all platforms (web, mobile, and desktop). You can:
+The Intune SDK and Intune app protection policies don't include support for managing LinkedIn account connections, but there are other ways to manage them. You can disable LinkedIn account connections for your entire organization, or you can enable LinkedIn account connections for selected user groups in your organization. These settings affect LinkedIn connections across Microsoft 365 apps on all platforms (web, mobile, and desktop). You can:
 
-- Enable or disable LinkedIn account connections for your tenant in the Azure portal. 
+- Enable or disable LinkedIn account connections for your tenant in the portal. 
 - Enable or disable LinkedIn account connections for your organization's Office 2016 apps using Group Policy.
 
 If LinkedIn integration is enabled for your tenant, when users in your organization connect their LinkedIn and Microsoft work or school accounts, they have two options: 
@@ -70,16 +70,16 @@ If a user consents to sharing data between accounts, as with Office add-ins, Lin
 
 |Microsoft Graph permissions  |Description  |
 |---------|---------|
-|Read permissions for [People](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Allows the app to read a scored list of people relevant to the signed-in user. The list can include local contacts, contacts from social networking or your organization's directory, and people from recent communications (such as email and Skype).         |
-|Read permissions for [Calendars](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Allows the app to read events in user calendars. Includes the meetings in signed-in user calendars, their times, locations, and attendees.         |
-|Read permissions for [User Profile](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Allows users to sign in to the app, and allows the app to read the profile of signed-in users. It also allows the app to read basic company information for signed-in users.         |
-|Subscriptions     |This scope isn't available and not yet in use. It includes subscriptions provided by the user's organization to Microsoft apps and services, such as Office 365.         |
+|Read permissions for [People](/graph/permissions-reference#people-permissions)     |Allows the app to read a scored list of people relevant to the signed-in user. The list can include local contacts, contacts from social networking or your organization's directory, and people from recent communications (such as email and Skype).         |
+|Read permissions for [Calendars](/graph/permissions-reference#calendars-permissions)     |Allows the app to read events in user calendars. Includes the meetings in signed-in user calendars, their times, locations, and attendees.         |
+|Read permissions for [User Profile](/graph/permissions-reference#user-permissions)     |Allows users to sign in to the app, and allows the app to read the profile of signed-in users. It also allows the app to read basic company information for signed-in users.         |
+|Subscriptions     |This scope isn't available and not yet in use. It includes subscriptions provided by the user's organization to Microsoft apps and services, such as Microsoft 365.         |
 |Insights     |This scope isn't available and not yet in use. It includes the interests associated with the signed-in user's account based on their use of Microsoft services.         |
 
 ### Learn more
 
 - Learn about [LinkedIn information and features in your Microsoft apps](https://go.microsoft.com/fwlink/?linkid=850740).
-- Learn about LinkedIn account connections release on the [Office 365 Roadmap page](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Learn about [Configuring LinkedIn account connections](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
-- For more information about data that is shared between users’ LinkedIn and Microsoft work or school accounts, see [LinkedIn in Microsoft applications at your work or school](https://www.linkedin.com/help/linkedin/answer/84077).
+- Learn about LinkedIn account connections release on the [Microsoft 365 Roadmap page](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
+- Learn about [Configuring LinkedIn account connections](/azure/active-directory/linkedin-integration).
+- For more information about data that is shared between users' LinkedIn and Microsoft work or school accounts, see [LinkedIn in Microsoft applications at your work or school](https://www.linkedin.com/help/linkedin/answer/84077).
 

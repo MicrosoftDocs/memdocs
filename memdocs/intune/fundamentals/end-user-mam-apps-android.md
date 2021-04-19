@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 10/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,14 +75,14 @@ Download this app from the Google Play store.
 
 The following file types are supported:
 
-* **Audio:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (enhanced AAC+), AAC ELD (enhanced low delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Ogg Vorbis, PCM/WAVE
+* **Audio:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (enhanced AAC+), AAC ELD (enhanced low delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Ogg Vorbis
 * **Video:** H.263, H.264 AVC, MPEG-4 SP, VP8
 * **Image:** .jpg, .pjpg, .png, .ppng, .bmp, .pbmp, .gif, .pgif, .jpeg, .pjpeg
 * **Documents:** PDF, PPDF
 
 |**pfile**|
 |----|
-|Pfile is a generic “wrapper” format for protected files that encapsulates the encrypted content and the Azure Information Protection licenses. It can be used to protect any file type.|
+|Pfile is a generic "wrapper" format for protected files that encapsulates the encrypted content and the Azure Information Protection licenses. It can be used to protect any file type.|
 
 ## Next steps
 [What to expect when your iOS/iPadOS app is managed by app protection policies](end-user-mam-apps-ios.md)

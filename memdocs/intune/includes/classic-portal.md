@@ -12,6 +12,6 @@ ms.collection: M365-identity-device-management
 **Applies to: Intune in the classic portal**
 
 > [!Important]
-> Legacy PC management is going out of support on October 15, 2020. Upgrade devices to Windows 10 and reenroll them as MDM devices to keep them managed by Intune.
+> Legacy PC management is no longer supported starting on October 16, 2020. Upgrade devices to Windows 10 and reenroll them as Intune MDM devices to keep them managed by Intune. PCs managed with the PC software client will stop receiving security updates and apps, and you will no longer be able to configure them.
 >
 > [Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)

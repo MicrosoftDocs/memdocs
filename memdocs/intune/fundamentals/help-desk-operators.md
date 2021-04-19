@@ -297,7 +297,7 @@ When you choose a failure row, more details are provided.
 Use the following resources to help collect device data when troubleshooting user's device issues:
 - [Send iOS/iPadOS enrollment errors to your IT administrator](../user-help/send-errors-to-your-it-admin-ios.md)
 - [Help your company support fix device issues with verbose logging](../user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Send Android logs to your company support using a USB cable](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Send Android logs to your company support using a USB cable](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 - [Send Android diagnostic data logs to your IT administrator using email](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 - [Send Android enrollment errors to your IT administrator](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 
@@ -307,4 +307,4 @@ You can learn more about Role-based administration control (RBAC) to define role
 
 Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
-Learn how to create a support ticket a get help when you need it. [Get support](get-support.md).
+Learn how to create a support ticket a get help when you need it. [Get support](../../get-support.md).

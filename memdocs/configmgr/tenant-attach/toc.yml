@@ -1,0 +1,59 @@
+- name: Tenant attach documentation
+  href: index.yml
+- name: Deploy and use
+  items:
+  - name: Enable tenant attach
+    href: device-sync-actions.md
+  - name: Client details (preview)
+    href: client-details.md
+  - name: Install applications (preview)
+    href: applications.md
+  - name: Device timeline (preview)
+    href: timeline.md
+  - name: Resource explorer (preview)
+    href: resource-explorer.md
+  - name: Run scripts (preview)
+    href: scripts.md
+- name: CMPivot for tenant attached devices (preview)
+  items:
+  - name: Launch CMPivot (preview)
+    href: cmpivot-start.md
+  - name: CMPivot usage overview
+    href: cmpivot-overview-attached.md
+  - name: CMPivot sample scripts
+    href: cmpivot-samples-attached.md
+- name: Endpoint security for tenant attached devices (preview)
+  items:
+  - name: Enable endpoint detection and response
+    href: atp-onboard.md
+  - name: Create and deploy endpoint security policy
+    href: deploy-antivirus-policy.md
+  - name: Microsoft Defender Antivirus policy settings
+    href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Windows Security experience Antivirus policy settings
+    href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Firewall policy settings
+    href: ../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json    
+- name: Reference
+  items:
+  - name: Tenant attach data collection
+    href: data-collection.md
+- name: Troubleshoot
+  items:
+  - name: Tenant attach and device actions
+    href: troubleshoot.md
+  - name: Client details (preview)
+    href: troubleshoot-client-details.md
+  - name: Application installation (preview)
+    href: troubleshoot-applications.md
+  - name: Common error codes for application installation
+    href: app-install-error-reference.md
+  - name: Timeline (preview)
+    href: troubleshoot-timeline.md
+  - name: Resource explorer (preview)
+    href: troubleshoot-resource-explorer.md
+  - name: Run scripts (preview)
+    href: troubleshoot-scripts.md
+  - name: CMPivot (preview)
+    href: troubleshoot-cmpivot.md
+

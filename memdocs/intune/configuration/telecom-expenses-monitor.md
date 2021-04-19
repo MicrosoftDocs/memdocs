@@ -6,8 +6,8 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
-ms.topic: conceptual
+ms.date: 06/08/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -49,9 +49,6 @@ To use the Datalert service with Intune, there are some configuration settings i
 ## Supported platforms
 
 - Android device administrator 4.4 and newer devices that are Knox capable (Samsung)
-
-  [Android versions that support Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (opens Samsung's web site) lists the Knox supported versions.
-
 - iOS 8.0 and newer
 - iPadOS 13.0 and newer
 
@@ -89,7 +86,7 @@ Intune integrates with the following telecom expense management provider:
     The following image shows the green check marks when the connection succeeds:
 
       > [!div class="mx-imgBorder"]
-      > ![Datalert page showing successful connection](./media/telecom-expenses-monitor/tem-datalert-connection.png)
+      > ![Datalert page showing Intune / Datalert on successful connection.](./media/telecom-expenses-monitor/tem-datalert-connection.png)
 
 7. In **Datalert App / ADAL Consent**, set the switch to **On**. On the Microsoft authentication page, select **Accept**.
 
@@ -98,7 +95,7 @@ Intune integrates with the following telecom expense management provider:
     The following image shows the green check marks when the connection succeeds:
 
       > [!div class="mx-imgBorder"]
-      > ![Datalert page showing successful connection](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
+      > ![Datalert page showing Datalert App / ADAL Consent on successful connection.](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
 
 8. In **MDM Profiles management (optional)**, set the switch to **On**. This setting allows Datalert to read the available profiles in Intune to help you set up policies. 
 
@@ -109,7 +106,7 @@ Intune integrates with the following telecom expense management provider:
     The following image shows the green check marks when the connection succeeds:
 
     > [!div class="mx-imgBorder"]
-    > ![Datalert page showing successful connection](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
+    > ![Datalert page showing M D M Profiles management on successful connection.](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
 
 ### Step 2: Confirm telecom expense management is active in Intune
 
@@ -140,7 +137,7 @@ To create device categories in Intune, see [map devices to groups](../enrollment
 These categories are shown to users during enrollment ([enroll Android devices](../enrollment/android-enroll.md)). Depending on the category users choose, the enrolled device is moved to the corresponding device group.
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of the Add a policy pane](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
+> ![Screenshot of the Corporate device group Dynamic membership rules page.](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
 
 #### Add the Datalert app to Intune
 
@@ -182,7 +179,7 @@ Intune and Datalert services are now configured to communicate with each other. 
 To set these items, go to the [Datalert setup for Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (opens Datalert's web site). Under the **Settings** tab, follow the steps in the setup wizard.
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of the Add a policy pane](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
+> ![Screenshot of the wizard for Datalert setup.](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
 
 The Datalert service is now active. It starts monitoring data usage, and disabling cellular and roaming data on devices that exceed the configured usage limits.
 
@@ -190,8 +187,8 @@ The Datalert service is now active. It starts monitoring data usage, and disabli
 
 For the end-user experience, the following articles may help:
 
-- [Enroll your iOS/iPadOS device in telecom expense management](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [Enroll your Android device in telecom expense management](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [Enroll your iOS/iPadOS device in telecom expense management](../user-help/enroll-your-device-with-telecom-expense-management-ios.md)
+- [Enroll your Android device in telecom expense management](../user-help/enroll-your-device-with-telecom-expense-management-android.md)
 
 ## Turn off the Datalert service
 

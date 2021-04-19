@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -55,7 +55,7 @@ When you try to connect to an unrecognized or unapproved network, you may receiv
 |------------------------|-----------------------------------|--------------------------|
 | **Device is not connected to an approved network – Connect to an approved wireless network.** | You're connected to a network that is not approved for work access. As long as you are connected to this network, you will be unable to access work email, apps, and other protected corporate resources. | Connect to a company-approved network. Then tap **Resolve** to retry. |
 
-## Restrictions couldn’t be enforced  
+## Restrictions couldn't be enforced  
 
 | Company Portal message | What this message means | What you should do                                                                      
 |------------------------|-----------------------------------|--------------------------|

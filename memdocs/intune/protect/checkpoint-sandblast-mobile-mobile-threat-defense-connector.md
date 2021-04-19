@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up Check Point SandBlast MTD
+title: Set up Check Point SandBlast MTD connector with Intune
 titleSuffix: Microsoft Intune
 description: Learn about integrating Intune with Check Point SandBlast Mobile Threat Defense to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -109,7 +109,7 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD SharePoint Online access granted](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
 
-<!-- ### Control access on unenrolled devices based on threats from malicious apps
+### Control access on unenrolled devices based on threats from malicious apps
 
 When the Check Point Sandblast Mobile Threat Defense solution considers a device to be infected:
 > [!div class="mx-imgBorder"]
@@ -119,7 +119,6 @@ Access is granted on remediation:
 
 > [!div class="mx-imgBorder"]
 > ![Access is granted on remediation for App protection policy](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/sandblast-app-policy-remediated.png)
--->
 
 ## Next steps
 

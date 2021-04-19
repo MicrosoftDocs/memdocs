@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Installing the Company Portal app for Windows | Microsoft Docs
-description:
+title: About Windows device enrollment - Microsoft Intune  | Microsoft Docs
+description: Describes what happens to your device and access after you've enrolled your device in Intune. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
-ms.topic: article
+ms.date: 01/04/2021
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,55 +30,66 @@ ms.collection:
 ---
 
 
-# What happens if you install the Company Portal app and enroll your Windows device in Intune?
+# About Windows device enrollment with Intune Company Portal  
 
-When you install the Company Portal app and then use it to enroll a Windows or Windows Phone device, you are letting your company support manage your device to help keep company or school data secure. This topic describes what happens for devices earlier than Windows 10. For Windows 10 devices, see the [related topic](about-cp-app-for-windows-10.md).  
+By enrolling your device in Intune, you get secure access to work or school apps on your mobile device, and access to apps in Intune Company Portal. The Company Portal app also monitors your device settings to make sure they meet your organization's requirements and syncs things (like apps, policies, and updates) from your organization to your device. 
 
-## What happens to all Windows devices after enrollment
-Enrolling your Windows or Windows Phone device in Intune lets you:
+This article describes what else to expect once you've enrolled your device. 
 
-- Access the company’s network, and your email and work files.
+## What happens on all devices after enrollment  
+After you enroll any Windows device (mobile or desktop) in Intune:  
 
-- Get company apps from the Company Portal website. (__Note__: for Windows 7 and Windows Vista, you can only get company apps from the Company Portal website.)
+- You can access your org's network, email, and work files.  
 
-- Automatically set up your company or school email account.
+- You can install work or school apps from the Company Portal website and app. (__Note__: for Windows 7 and Windows Vista, you can only get these apps from the Company Portal website.)
 
-- Reset your phone to factory settings if it is lost or stolen.
+- Your work or school email is automatically set up.  
 
-When you enroll your device, you are giving your company support permission to do things like:
+- You can reset your phone to factory settings if it's lost or stolen.  
 
-- Reset your device back to the manufacturer’s default settings. This is helpful if the device is lost or stolen.
 
-- Remove only company-related files and business apps. *Your personal data and settings aren’t removed.*
+### What happens on Windows PCs after enrollment   
+In addition to everything under [What happens on all devices after enrollment](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md#what-happens-on-all-devices-after-enrollment), after you enroll a Windows PC in Intune:   
 
-- Your company support can see the software installed on the device, including software you have personally installed.
+- Software is installed on the computer so that IT support can manage the computer. IT support can automatically update this software.  
 
-- Set requirements on your device, like requiring you to have a device password or PIN to help protect company data. Your company support might also limit how many times you can enter an incorrect password, and might lock you out of the device if you try too many times.
+- Intune Endpoint Protection might be installed on your computer. This software checks for viruses and malware.
+
+- IT support can collect or delete data from your computer's hard drive.
+
+- IT support can install apps and updates on your computer.
+
+## IT support permissions   
+When you enroll your device, you are giving IT support permission to:  
+
+- Reset your device back to the manufacturer's default settings. This is helpful if the device is lost or stolen.
+
+- Remove work-related files and business apps. Personal data and settings aren't removed.  
+
+- See the software installed on the device, including software you've personally installed.  
+
+- Set requirements on your device, like requiring you to have a device password or PIN. Your org might also limit how many times you can enter an incorrect password, and might lock you out of the device if you try too many times.
 
 - Require you to encrypt the data on your device to help protect company data, in case your device is lost or stolen.
 
 - Require you to accept terms and conditions.
 
-- Prevent you from taking pictures of company-related data.
+- Block you from using the device camera or screenshot feature. This restriction limits the sharing of work-related data.  
 
-## What happens to all Windows PCs after enrollment
 
-- Software will be installed on your computer to let your company support manage the computer, and to let you access company resources like apps and support information. Your company support might automatically update this software.
+## Device syncing for updates  
 
-- Intune Endpoint Protection might be installed on your computer. This software checks for viruses and malware.
+Every eight hours, enrolled devices will sync with Intune to get the latest updates and policies from your org. During check-in the device can:
 
-- Your company support can collect or delete data from your computer’s hard drive.
+- Download policy or app updates.  
 
-- Your company support can install apps and updates on your computer.
+- Receive hardware inventory updates.  
 
-## What happens every eight hours after device enrollment
+- Receive app inventory updates.  
 
-About every eight hours, enrolled devices will:
 
-- Download any policy or app updates that your company support has made available.
+## Next steps  
 
-- Send any hardware inventory updates.
+* When you're ready to install Company Portal and enroll your device, see [Enroll Windows 10 device](enroll-windows-10-device.md) or [Enroll Windows 8.1 or Windows RT 8.1 device](enroll-your-w81-or-rt81-windows.md). 
 
-- Send any company app inventory updates.
-
-If you have questions, contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+* Need additional support? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

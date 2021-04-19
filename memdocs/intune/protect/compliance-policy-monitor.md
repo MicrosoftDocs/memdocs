@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
-ms.topic: conceptual
+ms.date: 04/15/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 ---
 # Monitor Intune Device compliance policies
 
-Compliance reports help you review device compliance, and troubleshoot compliance-related issues in your organization. Using these reports, you can view information on:
+Compliance reports help you review device compliance and troubleshoot compliance-related issues in your organization. Using these reports, you can view information on:
 
 - The overall compliance states of devices
 - The compliance status for an individual setting
@@ -71,7 +71,7 @@ Descriptions of the different device compliance policy states:
 
 - **Compliant**: The device successfully applied one or more device compliance policy settings.
 
-- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn’t applied the policies yet. This means the device is not-compliant, but it’s in the grace-period defined by the admin.
+- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace-period defined by the admin.
 
   - Learn more about [Actions for noncompliant devices](actions-for-noncompliance.md).
 
@@ -84,7 +84,7 @@ Descriptions of the different device compliance policy states:
     - Android kiosk or Android Enterprise dedicated devices
   - Devices enrolled with a device enrollment manager (DEM) account
 
-- **Not-compliant:** The device failed to apply one or more device compliance policy settings. Or, the user hasn’t complied with the policies.
+- **Not-compliant:** The device failed to apply one or more device compliance policy settings. Or, the user hasn't complied with the policies.
 
 - **Device not synced:** The device failed to report its device compliance policy status because one of the following reasons:
 
@@ -101,10 +101,22 @@ In the **Device compliance status** chart, select a status. For example, select 
 
 ![Choose the not compliant status](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-That action opens the **Device compliance** window, and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
+That action opens the **Device compliance** window and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
 ![Dashboard image shows more details on the device in that specific state](./media/compliance-policy-monitor/drill-down-details.png)
 
-If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user’s e-mail.
+If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user's e-mail.
+
+> [!TIP]
+> If no user is signed in to the device, the device with the targeted device compliance policy will send a compliance report back to Intune showing **System Account** as the user principal name. This happens because a device compliance policy was targeted to either a group of users or devices, and no user was signed into the device at the time the compliance policy was evaluated.
+>
+> Additionally, if there are multiple users signed into the same device, and coincidentally the device is targeted with a compliance policy that is scoped to cover all users that are currently signed in the device, the compliance report might show the same device multiple times as every user signed into the device has to evaluate the device compliance policy and report it back to Intune.
+
+
+> [!NOTE]
+> Be aware that when assigning a compliance policy to a device group, when a user is signed in it will cause two compliance evaluations: one for the user and the one for the System account. In this scenario, the **System Account** evaluation could fail, causing the device to be **"Not compliant"**. To prevent this behavior:
+>
+> - For devices with a user signed in - assign the compliance policy to a User group.
+> - For devices without a user signed in - assign the compliance policy to a Device group.
 
 #### Filter and columns
 
@@ -134,9 +146,7 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 - With the **Mark devices with no compliance policy assigned as** security setting, it's important to identify devices without a compliance policy. Then you can assign at least one compliance policy to them.
 
-  The security setting is configurable in the Intune portal. To to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
-
-  Read more about this [security enhancement in the Intune service](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
+  The security setting is configurable in the Microsoft Endpoint Manager admin center. Go to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
 
 - Users who are assigned a compliance policy of any type aren't shown in the report, regardless of device platform. For example, if you've assigned a Windows compliance policy to a user with an Android device, the device doesn't show up in the report. However, Intune considers that Android device not compliant. To avoid issues, we recommend that you create policies for each device platform and deploy them to all users.
 
@@ -165,6 +175,7 @@ In addition to using the charts on *Compliance status*, you can go to **Reports*
    - Devices without compliance policy
    - Setting compliance
    - Policy compliance
+   - Noncompliant policies (preview)
    - Windows health attestation report
    - Threat agent status
 
@@ -182,7 +193,7 @@ This feature is included in the device status reporting:
     - **Succeeded**: Policy is applied
     - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
     - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
-    - **Pending**: The device hasn’t checked in with Intune to receive the policy yet.
+    - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
     - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10.
 
 3. To see details on the devices using this policy, select one of the statuses. For example, select **Succeeded**. In the next window, specific device details, including the device name and deployment status are listed.
@@ -198,3 +209,6 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 ## Next steps
 
 [Compliance policies overview](device-compliance-get-started.md)
+
+
+

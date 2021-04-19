@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 02/16/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 app deployment by using Microsoft Intune 
 
-Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows 10 scenarios, and also covers key details to note when you're deploying apps to Windows. 
+Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows 10 scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
 
 Line-of-business (LOB) apps and Microsoft Store for Business apps are the app types supported on Windows 10 devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.  
 
@@ -73,7 +73,7 @@ You can sign and upload Windows 10 LOB apps to the Intune admin console. These c
 
 ## Microsoft Store for Business apps
 
-Microsoft Store for Business apps are modern apps, purchased from the Microsoft Store for Business admin portal. They are then synced over to Microsoft Intune for management. The apps can either be online licensed or offline licensed. The Microsoft Store directly manages updates, with no additional action required by the admin. You can also prevent updates to specific apps by using a custom Uniform Resource Identifier (URI). For more information, see [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). The user can also disable updates for all Microsoft Store for Business apps on the device. 
+Microsoft Store for Business apps are modern apps, purchased from the Microsoft Store for Business admin portal. They are then synced over to Microsoft Intune for management. The apps can either be online licensed or offline licensed. The Microsoft Store directly manages updates, with no additional action required by the admin. You can also prevent updates to specific apps by using a custom Uniform Resource Identifier (URI). For more information, see [Enterprise app management - Prevent app from automatic updates](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). The user can also disable updates for all Microsoft Store for Business apps on the device. 
 
 ### Categorize Microsoft Store for Business apps 
 To categorize Microsoft Store for Business apps: 
@@ -96,19 +96,21 @@ Depending on the app type, you can install the app on a Windows 10 device in one
 > [!NOTE]
 > For Win32 apps built as Dual Mode apps, the admin must choose if the app will function as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
 
-Apps can only be installed in the device context when supported by the device and the Intune app type. You can install the following app types in the device context and assign these apps to a device group:
+Apps can only be installed in the device context when supported by the device and the Intune app type. Device context installs are supported on Windows 10 desktops and Teams devices, such as the Surface Hub. They aren't supported on devices running Windows Holographic for Business, such as the Microsoft HoloLens.
+
+You can install the following app types in the device context and assign these apps to a device group:
 
 - Win32 apps
 - Offline licensed Microsoft Store for Business apps
 - LOB apps (MSI, APPX and MSIX)
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 
-Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you’ve selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
+Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you've selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
   - Status: Failed.
-  - Error: A user can’t be targeted with a device context install.
+  - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
-> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
+> When used in combination with an Autopilot pre-provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context. 

@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Manage and use different device management features on Windows Holographic and HoloLens devices with Intune
 
-Microsoft Intune includes many features to help manage devices that run Windows Holographic for Business, such as the [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Using Intune, you can confirm that devices are compliant with your organization's rules, and you can customize the device by adding a VPN or WiFi profile. Another key feature is to use the device as a Kiosk, and run a specific app, or a specific set of apps.
+Microsoft Intune includes many features to help manage devices that run Windows Holographic for Business, such as the [Microsoft HoloLens](/hololens/). Using Intune, you can confirm that devices are compliant with your organization's rules, and you can customize the device by adding a VPN or WiFi profile. Another key feature is to use the device as a Kiosk, and run a specific app, or a specific set of apps.
 
 The tasks in this article help you manage, customize, and secure your devices running Windows Holographic for Business, including software updates and using Windows Hello for Business.
 
@@ -37,9 +37,9 @@ To use Windows Holographic devices with Intune, create an Edition Upgrade profil
 
 Azure Active Directory (AD) is a great resource to help manage and control your devices running Windows Holographic for Business. Using Intune and Azure AD, you can: 
 
-- **[Join devices to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
+- **[Join devices to Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
 
-  [Device management in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) provides more details.
+  [Device management in Azure AD](/azure/active-directory/devices/overview) provides more details.
 
 - **[Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md)**: You can join large numbers of new Windows devices to Azure Active Directory (AD) and Intune. This feature is called bulk enrollment, and uses provisioning packages. These packages join the devices running Windows Holographic for Business to your Azure AD tenant, and enrolls them in Intune.
 
@@ -118,6 +118,8 @@ In your profiles, you can use OMA-URI to customize some settings, create device 
 ### [Custom device settings](../configuration/custom-settings-windows-holographic.md)
 
 To configure OMA-URI (Open Mobile Alliance Uniform Resource Identifier) settings, you can create a custom profile in Intune. Use the OMA-URI settings to control different features on your Windows Holographic for Business devices, such as enabling VPN, or checking for updates on Microsoft Update.
+
+See an [example](../configuration/custom-profile-hololens.md) that uses the [Windows Defender Application Control (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp) to allow or block apps from opening on HoloLens 2 devices.
 
 ### [Configure kiosk mode](../configuration/kiosk-settings-holographic.md)
 

@@ -8,8 +8,8 @@
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "sccm/**"          
         ]
       }
     ],
@@ -18,13 +18,14 @@
         "files": [
           "**/media/**",
           "**/*.png",
+          "**/*.jpg",
           "**/*.gif",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "sccm/**"
         ]
       }
     ],
@@ -34,19 +35,94 @@
       "breadcrumb_path": "/mem/breadcrumb/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
-      "feedback_product_url": "",  
-      "brand": "Intune",
-      "searchScope": ["Intune"]
+      "brand": "Microsoft Endpoint Manager",
+      "searchScope": ["Intune"],     
+      "contributors_to_exclude": [
+        "PRMerger9",
+        "PRMerger17",
+        "PRMerger5",
+        "PRMerger4",
+        "PRMerger3",
+        "PRMerger-2",
+        "hexiaokai",
+        "openpublishingbuild",
+        "tysonn",
+        "v-anpasi",
+        "kiwhit",
+        "ShawnJackson",
+        "PRmerger",
+        "DuncanmaMSFT",
+        "Saisang",
+        "Ja-Dunn",
+        "jomolnar",
+        "KatieCumming",
+        "rjagiewich",
+        "deneha",
+        "ktoliver",
+        "itechedit",
+        "MattGLaBelle",
+        "Lisaco88",
+        "GitHubber17",
+        "v-shils",
+        "rmca14",
+        "trishamc",
+        "Jak-MS",
+        "garycentric",
+        "jborsecnik",
+        "Kellylorenebaker",
+        "ShannonLeavitt",
+        "v-albemi",
+        "v-dansch",
+        "chbain",
+        "atookey",
+        "tfosmark",
+        "sdwheeler",
+        "meganbradley"
+      ]          
     },
     "fileMetadata": {
+      "feedback_product_url": {
+        "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
+        "intune/**/*.md": "https://microsoftintune.uservoice.com/"     
+      },
+      "ms.date": {
+        "autopilot/**/*.md": "12/16/2020"
+      }, 
+      "searchScope": {
+        "configmgr/**/*.md": ["ConfigMgr"],
+        "configmgr/core/**/*.md": ["ConfigMgr"],
+        "analytics/**/*.md": ["Analytics"],
+        "autopilot/**/*.md": ["Autopilot"]
+      },
       "featureFlags": {
         "*.md" : [
           "show_binary_rating"
         ]
+      },
+      "feedback_system": {
+        "configmgr/core/misc/**/*": "None"
       }
     },
     "template": [],
-    "dest": "intune-azure",
-    "markdownEngineName": "markdig"
+    "dest": "memdocs",
+    "markdownEngineName": "markdig",
+    "rules": {
+        "docs-link-absolute": {
+            "exclude": [
+                "memdocs/configmgr/core/misc/in-console-documentation.md"
+            ]
+        },
+      "sensitive-language-bl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      },
+       "sensitive-language-wl":{
+        "exclude": [
+          "intune/configuration/android-pulse-secure-per-app-vpn.md"
+          ]
+      } 
+      
+    }
   }
 }

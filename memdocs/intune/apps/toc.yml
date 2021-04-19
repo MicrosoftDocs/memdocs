@@ -26,10 +26,11 @@
   - name: App protection policies and work profiles (Android)
     href: android-deployment-scenarios-app-protection-work-profiles.md
     displayName: app-we; without; without enrollment
-  - name: Use Intune without GMS
+  - name: Use Intune without Google Mobile Services
     href: manage-without-gms.md      
   - name: MAM FAQ
-    href: mam-faq.md
+    href: mam-faq.yml
+    displayName: MAM
 - name: How-to guides
   items:
     - name: Add apps 
@@ -53,11 +54,11 @@
           href: windows-store-for-business.md
         - name: Managed Google Play apps
           href: apps-add-android-for-work.md
-      - name: Office 365 Suite
+      - name: Microsoft 365 Suite
         items:
-        - name: Office 365 apps for Windows 10
+        - name: Microsoft 365 apps for Windows 10
           href: apps-add-office365.md
-        - name: Office 365 apps for macOS
+        - name: Microsoft 365 apps for macOS
           href: apps-add-office365-macos.md
       - name: Android Enterprise system apps
         href: apps-ae-system.md
@@ -79,22 +80,34 @@
         - name: Sideload Windows LOB apps
           href: app-sideload-windows.md
         - name: macOS LOB apps
-          href: lob-apps-macos.md     
+          href: lob-apps-macos.md
         - name: Win32 app management
-          href: apps-win32-app-management.md
-        - name: Win32 app S mode devices
-          href: apps-win32-s-mode.md
+          items:
+          - name: Win32 app management overview
+            href: apps-win32-app-management.md
+          - name: Prepare a Win32 app
+            href: apps-win32-prepare.md
+          - name: Add a Win32 app
+            href: apps-win32-add.md
+          - name: Win32 app supersedence
+            href: apps-win32-supersedence.md
+          - name: Troubleshoot a Win32 app
+            href: apps-win32-troubleshoot.md
+          - name: Win32 app S mode devices
+            href: apps-win32-s-mode.md
       - name: Add specific apps
         items:
         - name: Company Portal app - Autopilot
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
           href: store-apps-company-portal-app.md
+        - name: Company Portal app - macOS
+          href: apps-company-portal-macos.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
           href: apps-edge-macos.md   
-        - name: Microsoft Defender ATP for macOS
+        - name: Microsoft Defender for Endpoint for macOS
           href: apps-advanced-threat-protection-macos.md
       - name: PowerShell scripts
         href: intune-management-extension.md
@@ -120,7 +133,7 @@
       items:
       - name: App configuration policies
         href: app-configuration-policies-overview.md
-        displayName: App configuration policy; configuration policy
+        displayName: App configuration policy; configuration policy; AFW
       - name: iOS managed devices
         href: app-configuration-policies-use-ios.md
       - name: Android managed devices
@@ -135,16 +148,20 @@
           href: app-configuration-managed-home-screen-app.md
         - name: Configure the Company Portal
           href: company-portal-app.md
-        - name: Configure the Managed Browser
-          href: app-configuration-managed-browser.md
         - name: Configure Microsoft Launcher
           href: configure-microsoft-launcher.md
         - name: Configure Microsoft Edge
           href: manage-microsoft-edge.md
+        - name: Configure Office
+          href: manage-microsoft-office.md
         - name: Configure Outlook
           href: app-configuration-policies-outlook.md
+        - name: Configure Microsoft Teams
+          href: manage-microsoft-teams.md
         - name: Configure Google Chrome for Android
           href: apps-configure-chrome-android.md
+        - name: VPN and per-app VPN on Android Enterprise
+          href: app-configuration-vpn-ae.md          
       - name: Volume-purchased apps and books
         items:
         - name: Volume-purchased overview
@@ -165,7 +182,7 @@
         - name: App protection policies overview
           href: app-protection-policy.md
           displayName: app; protection; policy
-        - name: Data protection framework using APP
+        - name: Data protection framework using app protection policies
           href: app-protection-framework.md
         - name: Create app protection policies
           items:
@@ -195,17 +212,23 @@
         - name: Manage data transfer between iOS apps
           href: data-transfer-between-apps-manage-ios.md
       - name: Review app protection logs
-        href: app-protection-policy-settings-log.md          
+        href: app-protection-policy-settings-log.md
+    - name: Policies for Office apps
+      href: app-office-policies.md        
     - name: Troubleshoot
       items:
       - name: Help users troubleshoot problems
         href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
-        href: troubleshoot-app-install.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-install
       - name: App installation error reference
-        href: app-install-error-codes.md
+        href: /troubleshoot/mem/intune/app-install-error-codes
       - name: Troubleshoot mobile application management
-        href: troubleshoot-mam.md
+        href: /troubleshoot/mem/intune/troubleshoot-mam
+      - name: Review app protection logs
+        href: app-protection-policy-settings-log.md
+      - name: Troubleshooting app protection policy deployment
+        href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 02/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,19 +36,22 @@ The tool is a macOS command-line application that creates a wrapper around an ap
 
 To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) on GitHub.
 
+> [!NOTE]
+> If you have issues with using the Intune App Wrapping Tool with your apps, submit a [request for assistance](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/issues) on GitHub.
+
 ## General prerequisites for the App Wrapping Tool
 
 Before you run the App Wrapping Tool, you need to fulfill some general prerequisites:
 
 * Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) from GitHub.
 
-* A macOS computer that runs OS X 10.8.5 or later and has the Xcode toolset version 9 or later installed.
+* A macOS computer that has the Xcode toolset version 11 or later installed.
 
 * The input iOS app must be developed and signed by your company or an independent software vendor (ISV).
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 11 or later.
+  * The input app must be compiled for iOS 12.2 or later.
 
   * The input app cannot be encrypted.
 
@@ -174,6 +177,9 @@ You will need the following to distribute apps wrapped by Intune:
 
 ## Run the App Wrapping Tool
 
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
+
 ### Use terminal
 
 Open the macOS Terminal and run the following command:
@@ -202,14 +208,14 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Shows detailed usage information about the available command line properties for the App Wrapping Tool. |
-|**-aa**|(Optional) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` i.e `login.windows.net/common` |
-|**-ac**|(Optional) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` This is the guid in the Client ID field is from your app's listing in the App Registration blade. |
-|**-ar**|(Optional) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
+|**-aa**|(Optional) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
+|**-ac**|(Optional) `<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the guid in the Client ID field from your app's listing in the App Registration blade. |
+|**-ar**|(Optional) `<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-v**| (Optional) Outputs verbose messages to the console. It is recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
 |**-x**| (Optional) `<An array of paths to extension provisioning profiles>`. Use this if your app needs extension provisioning profiles.|
-|**-b**|(Optional) Use -b without an argument if you want the wrapped output app to have the same bundle version as the input app (not recommended). <br/><br/> Use `-b <custom bundle version>` if you want the wrapped app to have a custom CFBundleVersion. If you choose to specify a custom CFBundleVersion, it's a good idea to increment the native app’s CFBundleVersion by the least significant component, like 1.0.0 -> 1.0.1. |
+|**-b**|(Optional) Use -b without an argument if you want the wrapped output app to have the same bundle version as the input app (not recommended). <br/><br/> Use `-b <custom bundle version>` if you want the wrapped app to have a custom CFBundleVersion. If you choose to specify a custom CFBundleVersion, it's a good idea to increment the native app's CFBundleVersion by the least significant component, like 1.0.0 -> 1.0.1. |
 |**-citrix**|(Optional) Include the Citrix XenMobile App SDK (network-only variant). You must have the [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) installed to use this option. |
 |**-f**|(Optional) `<Path to a plist file specifying arguments.>` Use this flag in front of the [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file if you choose to use the plist template to specify the rest of the IntuneMAMPackager properties like -i, -o, and -p. See Use a plist to input arguments. |
 
@@ -229,7 +235,7 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | ADAL Client ID |String|empty| Same as -ac|
 | ADAL Reply URI |String|empty| Same as -ar|
 | Verbose Enabled |Boolean|false| Same as -v|
-| Remove Missing Entitlements |Boolean|false| Same as -c|
+| Remove Missing Entitlements |Boolean|false| Same as -e|
 | Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
 | Build String Override |String|empty| The custom CFBundleVersion of the wrapped output app|
 | Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Same as -citrix|
@@ -259,7 +265,7 @@ The main scenarios in which you would need to rewrap your applications are as fo
 * The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune console.
 * The Intune App Wrapping Tool for iOS has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens after 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-For iOS/iPadOS, while it is possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app are not included in the new provisioning profile, wrapping will fail. Using the “-e” command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
+For iOS/iPadOS, while it is possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app are not included in the new provisioning profile, wrapping will fail. Using the "-e" command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
 
 Some best practices for rewrapping include:
 
@@ -283,7 +289,7 @@ If the app wrapping tool fails to finish successfully, one of the following erro
 |The input provisioning profile file you specified was not found. Specify a valid input provisioning profile file.|Make sure that the path to the input provisioning file is valid and that the file you specified exists.|
 |The output application folder you specified was not found. Specify a valid path to the output application.|Make sure that the output path you specified is valid and exists.|
 |Output app does not have **.ipa** extension.|Only apps with the **.app** and **.ipa** extensions are accepted by the App Wrapping Tool. Make sure your output file has a valid extension.|
-|An invalid signing certificate was specified. Specify a valid Apple signing certificate.|Make sure you’ve downloaded the correct signing certificate from the Apple developer portal. Your certificate might be expired or might be missing a public or private key. If your Apple certificate and provisioning profile can be used to correctly sign an app within Xcode, then they are valid for the App Wrapping Tool.|
+|An invalid signing certificate was specified. Specify a valid Apple signing certificate.|Make sure you've downloaded the correct signing certificate from the Apple developer portal. Your certificate might be expired or might be missing a public or private key. If your Apple certificate and provisioning profile can be used to correctly sign an app within Xcode, then they are valid for the App Wrapping Tool.|
 |The input application you specified is invalid. Specify a valid application.|Make sure you have a valid iOS application that has been compiled as an .app or .ipa file.|
 |The input application you specified is encrypted. Specify a valid unencrypted application.|The App Wrapping Tool does not support encrypted apps. Provide an unencrypted app.|
 |The input application you specified is not in a Position Independent Executable (PIE) format. Specify a valid application in PIE format.|Position Independent Executable (PIE) apps can be loaded at a random memory address when run. This can have security benefits. For more about security benefits, see your Apple Developer documentation.|
@@ -297,10 +303,11 @@ If the app wrapping tool fails to finish successfully, one of the following erro
 Use the following steps to get logs for your wrapped applications during troubleshooting.
 
 1. Go to the iOS Settings app on your device and select your LOB app.
-2. Toggle the **Diagnostics Console** to **On**.
-3. Launch your LOB application.
-4. Click on the "Get Started" link.
-5. You can now share logs through email or copying them to a OneDrive location.
+2. Select **Microsoft Intune**.
+3. Toggle the **Display Diagnostics Console** setting to **On**.
+4. Launch your LOB application.
+5. Click on the "Get Started" link.
+6. You can now share logs through email or copying them to a OneDrive location.
 
 > [!NOTE]
 > The logging functionality is enabled for apps that have wrapped with the Intune App Wrapping Tool version 7.1.13 or above.
@@ -327,7 +334,7 @@ The App Wrapping Tool for iOS has some requirements that must be met in order to
 
 ## Setting app entitlements
 
-Before wrapping your app, you can grant *entitlements* to give the app additional permissions and capabilities that exceed what an app can typically do. An *entitlement file* is used during code signing to specify special permissions within your app (for example, access to a shared keychain). Specific app services called *capabilities* are enabled within Xcode during app development. Once enabled, the capabilities are reflected in your entitlements file. For more information about entitlements and capabilities, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library. For a complete list of supported capabilities, see [Supported capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Before wrapping your app, you can grant *[entitlements](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* to give the app additional permissions and capabilities that exceed what an app can typically do. An *entitlement file* is used during code signing to specify special permissions within your app (for example, access to a shared keychain). Specific app services called *capabilities* are enabled within Xcode during app development. Once enabled, the capabilities are reflected in your entitlements file. For more information about entitlements and capabilities, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library. For a complete list of supported capabilities, see [Supported capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### Supported capabilities for the App Wrapping Tool for iOS
 
@@ -339,14 +346,14 @@ Before wrapping your app, you can grant *entitlements* to give the app additiona
 |In-app purchase|In-app purchase embeds a store directly into your app by enabling you to connect to the store and securely process payments from the user. You can use in-app purchase to collect payment for enhanced functionality or for additional content usable by your app.||
 |Keychain sharing|Enabling keychain sharing lets your app share passwords in the keychain with other apps developed by your team.|When using keychain sharing, use reverse DNS notation:<br /><br />*com.companyName.KeychainGroup*|
 |Personal VPN|Enable personal VPN to allow your app to create and control a custom system VPN configuration using the Network Extension framework.||
-|Push notifications|Apple Push Notification service (APNs) lets an app that isn’t running in the foreground notify the user that it has information for the user.|For push notifications to work, you need to use an app-specific provisioning profile.<br /><br />Follow the steps in the [Apple developer documentation](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html).|
+|Push notifications|Apple Push Notification service (APNs) lets an app that isn't running in the foreground notify the user that it has information for the user.|For push notifications to work, you need to use an app-specific provisioning profile.<br /><br />Follow the steps in the [Apple developer documentation](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html).|
 |Wireless accessory configuration|Enabling wireless accessory configuration adds the External Accessory framework to your project and lets your app set up MFi Wi-Fi accessories.||
 
 ### Steps to enable entitlements
 
 1. Enable capabilities in your app:
 
-    a.  In Xcode, go to your app’s target, and click **Capabilities**.
+    a.  In Xcode, go to your app's target, and click **Capabilities**.
 
     b.  Turn on the appropriate capabilities. For detailed information about each capability and how to determine the correct values, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library.
 

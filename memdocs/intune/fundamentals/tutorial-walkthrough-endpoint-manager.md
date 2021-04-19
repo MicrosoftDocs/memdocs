@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2019
+ms.date: 04/12/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Tutorial: Walkthrough Intune in Microsoft Endpoint Manager
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contains over 100 services to assist you with a variety of cloud computing scenarios and possibilities. Microsoft Intune is one of several services available in Azure. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
+Microsoft Intune, which is a part of Microsoft Endpoint Manager, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
 
 > [!NOTE]
 > Microsoft Endpoint Manager is a single, integrated endpoint management platform for managing all your endpoints. This Microsoft Endpoint Manager admin center integrates ConfigMgr and Microsoft Intune.
@@ -64,7 +64,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     ![Screenshot of the Microsoft Endpoint Manager admin center - Home page](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-01.png)
 
-    When you open the Microsoft Endpoint Manager or any other service in Azure, the service is displayed in a pane. Some of the first workloads you may use in Intune include **Devices**, **Apps**, **Users**, and **Groups**. A workload is simply a sub-area of a service. When you select the workload, it opens that pane as a full page. Other panes slide out from the right side of the pane when they open, and close to reveal the previous pane. 
+    When you open the Microsoft Endpoint Manager, the service is displayed in a pane of your browser. Some of the first workloads you may use in Intune include **Devices**, **Apps**, **Users**, and **Groups**. A workload is simply a sub-area of a service. When you select the workload, it opens that pane as a full page. Other panes slide out from the right side of the pane when they open, and close to reveal the previous pane. 
 
     By default, when you open the Microsoft Endpoint Manager you'll see the **Home page** pane. This pane provides an overall visual snapshot of tenant status and compliance status, as well as other helpful related links.
 
@@ -214,7 +214,7 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
     To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
-    For more information, see [How to get support for Microsoft Intune](get-support.md).
+    For more information, see [How to get support in Microsoft Endpoint Manager](../../get-support.md).
 
 15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
 
@@ -228,13 +228,13 @@ Follow the steps below to better understand Intune in the Microsoft Endpoint Man
 
 ## Configure the Microsoft Endpoint Manager admin center
 
-Azure allows you to customize and configure the view of the portal.
+Microsoft Endpoint Manager admin center allows you to customize and configure the view of the portal.
 
 ### Change the Dashboard
 
 The **Dashboard** to display overall details about the devices and client apps in your Intune tenant. Dashboards provide a way for you to create a focused and organized view in the Microsoft Endpoint Manager admin center. Use dashboards as a workspace where you can quickly launch tasks for day-to-day operations and monitor resources. Build custom dashboards based on projects, tasks, or user roles, for example. The Microsoft Endpoint Manager admin center provides a default dashboard as a starting point. You can edit the default dashboard, create and customize additional dashboards, and publish and share dashboards to make them available to other users. 
 
-   ![Screenshot of the Microsoft Endpoint Manager admin center - Dashboard](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png)
+   ![Screenshot of the Dashboard in Microsoft Endpoint Manager admin center](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png)
 
 To modify your current dashboard, select **Edit**. If you don't want to change your default dashboard, you can also create a **New dashboard**. Creating a new dashboard gives you an empty, private dashboard with the **Tile Gallery**, which lets you add or rearrange tiles. You can find tiles by category or resource type. You can also search for particular tiles. Select **My Dashboard** to select any of your existing custom dashboards.
 

@@ -2,13 +2,13 @@
 # required metadata
 
 title: Enroll Android device with Intune Company Portal | Microsoft Docs
-description: Describes how to enroll an Android device with Intune Company Portal
+description: Describes how to enroll an Android device in Intune with the Company Portal app. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: article
+ms.date: 01/11/2021
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -23,7 +23,7 @@ ROBOTS:
 #audience:
 
 ms.reviewer: esmich
-ms.suite: ems
+ms.suite: ems  
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
@@ -36,11 +36,20 @@ Enroll your personal or corporate-owned Android device to get secure access to c
 
 > [!NOTE]
 > Samsung Knox is a type of security that certain Samsung devices use for additional 
-> protection outside of what native Android provides. To check if you have a Samsung Knox device,> go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.
+> protection outside of what native Android provides. To check if you have a Samsung Knox device,> go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
+
+## Install Company Portal app  
+Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
+
+1. Tap **Home** > **Play Store**.
+
+2. Search for and install **Intune Company Portal**.  
+
+    ![android-search-company-portal](./media/android-search-company-portal-2101.png)  
+
+3. When prompted about app permissions, tap **ACCEPT**.  
 
 ## Enroll device  
-Make sure to install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in mainland China](install-company-portal-android-china.md) for a list of stores that offer the app in mainland China.    
-
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
 
 1. Open the Company Portal app and sign in with your work or school account.  

@@ -13,7 +13,7 @@ metadata:
   author: erikre
   ms.author: erikre
   ms.manager: dougeby
-  ms.date: 09/25/2019  
+  ms.date: 04/14/2021  
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -51,7 +51,7 @@ landingContent:
         url: store-apps-android.md
       - text: Line-of-business apps
         url: lob-apps-android.md
-      - text: Win32 app management for Intune standalone
+      - text: Win32 app management
         url: apps-win32-app-management.md
       - text: Use PowerShell scripts on Windows 10 devices
         url: intune-management-extension.md
@@ -86,7 +86,7 @@ landingContent:
       - text: Managed apps without device enrollment
         url: app-configuration-policies-managed-app.md
       - text: Configure the Managed Browser
-        url: app-configuration-managed-browser.md
+        url: ./manage-microsoft-edge.md
       - text: Manage VPP apps and books
         url: vpp-apps.md
 
@@ -99,6 +99,8 @@ landingContent:
         url: app-protection-policy.md
     - linkListType: how-to-guide
       links:
+      - text: Data protection framework
+        url: app-protection-framework.md
       - text: Create and assign app protection policies
         url: app-protection-policies.md
       - text: Validate app protection policies
@@ -116,8 +118,8 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Troubleshoot app installation problems
-        url: troubleshoot-app-install.md
+        url: /troubleshoot/mem/intune/troubleshoot-app-install
       - text: Troubleshoot mobile application management
-        url: troubleshoot-mam.md
+        url: /troubleshoot/mem/intune/troubleshoot-mam
       - text: Review app protection logs
         url: app-protection-policy-settings-log.md

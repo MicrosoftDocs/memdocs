@@ -2,12 +2,12 @@
 # required metadata
 
 title: Windows 8.1 compliance settings in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of all the settings you can use when setting compliance for your Windows 8.1 and Windows Phone 8.1 devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, enable encryption on data storage, and more.
+description: See a list of all the settings you can use when setting compliance for your Windows 8.1 in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, enable encryption on data storage, and more.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,31 +26,24 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 8.1 settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for Windows 8.1 in Intune
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 This article lists and describes the different compliance settings you can configure on Windows 8.1 devices in Intune. As part of your mobile device management (MDM) solution, use these settings to block simple passwords, set a minimum and maximum OS version, and more.
 
 This feature applies to:
 
-- Windows Phone 8.1
 - Windows 8.1 and later
 
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 ## Before you begin
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows Phone 8.1** or **Windows 8.1 and later**.
+[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows 8.1 and later**.
 
 ## Device Properties
 
 ### Operating System Version
-
-**Windows phone 8.1 and later**
-- **Minimum OS version for mobile devices**:  
-  Enter the minimum allowed version. When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The device user can choose to upgrade their device, and then get access to company resources.
-
-- **Maximum OS version for mobile devices**:  
-  Enter the maximum allowed version. When a device is using an OS version later than the version entered in the rule, access to organization resources is blocked. The device user is asked to contact their IT administrator. The device can't access organizational resources until a rule changes to allow the OS version.
 
 **Windows 8.1 and later**
 - **Minimum OS version**:  

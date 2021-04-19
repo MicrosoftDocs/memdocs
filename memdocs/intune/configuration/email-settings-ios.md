@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,20 +30,22 @@ ms.collection: M365-identity-device-management
 
 In Microsoft Intune, you can create and configure email to connect to an email server, choose how users authenticate, use S/MIME for encryption, and more.
 
-This article lists and describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
+This article describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
 
 ## Before you begin
 
-[Create a device configuration profile](email-settings-configure.md).
+Create an [iOS/iPadOS e-mail device configuration profile](email-settings-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+>
+> These settings use the [Apple ExchangeActiveSync payload](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (opens Apple's web site).
 
 ## Exchange ActiveSync account settings
 
 - **Email server**: Enter the host name of your Exchange server.
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (AAD). Intune dynamically generates the username that's used by this profile. Your options:
+- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory. Intune dynamically generates the username that's used by this profile. Your options:
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`
   - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
@@ -68,18 +70,19 @@ This article lists and describes all the email settings available for devices ru
 - **SSL**: **Enable** uses Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.
 - **OAuth**: **Enable** uses Open Authorization (OAuth) communication when sending emails, receiving emails, and communicating with Exchange. If your OAuth server uses certificate authentication, choose **Certificate** as the **Authentication method**, and include the certificate with the profile. Otherwise, choose **Username and password** as the **Authentication method**. When using OAuth, be sure to:
 
-  - Confirm your email solution supports OAuth before targeting this profile to your users. Office 365 Exchange online support OAuth. On-premises Exchange and other partner or third-party solutions may not support OAuth. On-premises Exchange can be configured for Modern Authentication (see the [Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) blog post).
+  - Confirm your email solution supports OAuth before targeting this profile to your users. Microsoft 365 Exchange Online supports OAuth. On-premises Exchange and other partner or third-party solutions may not support OAuth. On-premises Exchange can be configured for Modern Authentication. For more information, see [Hybrid modern authentication overview and prerequisites for on-premises Skype for Business and Exchange servers](/office365/enterprise/hybrid-modern-auth-overview).
 
     If the email profile uses Oauth, and the email service doesn't support it, then the **Re-Enter password** option appears broken. For example, nothing happens when the user selects **Re-Enter password** in Apple's device settings.
 
   - When OAuth is enabled, end users have a different "Modern Authentication" email sign-in experience that supports multi-factor authentication (MFA). 
 
-  - Some organizations disable the end user's ability to do [self-service application access](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the "iOS Accounts" enterprise app, and grant users access to the app in Azure AD.
+  - Some organizations disable the end user's ability to do [self-service application access](/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the "iOS Accounts" enterprise app, and grant users access to the app in Azure AD.
 
-    The default action is to add an application using the [Application Access Panel](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Add App** feature **without business approval**. For more information, see [assign users to applications](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    The default action is to add an application using the [Application Access Panel](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Add App** feature **without business approval**. For more information, see [assign users to applications](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
-  > When you enable OAuth, the following happens:  
+  > When you enable OAuth, the following happens:
+  >
   > 1. Devices that are already targeted are issued a new profile.
   > 2. End users are prompted to enter their credentials again.
 
@@ -161,9 +164,16 @@ This article lists and describes all the email settings available for devices ru
 - **Allow messages to be moved to other email accounts**: **Enable** (default) allows users to move email messages between different accounts the users configured on their devices.
 - **Allow email to be sent from third-party applications**: **Enable** (default) allows users to select this profile as the default account for sending email. It allows third-party applications to open email in the native email app, such as attaching files to email.
 - **Synchronize recently used email addresses**: **Enable** (default) allows users to synchronize the list of email addresses that have been recently used on the device with the server.
+- **VPN profile for per account VPN**: Starting in iOS/iPadOS 14, email traffic for the native Mail app can be routed through a VPN based on the account the user is using. When set to **None**, Intune doesn't enable per-account VPN for this e-mail profile.
+
+  Per-app VPN connections you create are shown in this list. If you select a VPN profile from the list, any email that's sent to and from this account in the Mail app uses the VPN tunnel. The per-app VPN connection automatically turns on when users use their organization account in the Mail app.
+
+  This feature applies to:  
+  - iOS 14 and newer
+  - iPadOS 14 and newer
 
 ## Next steps
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md), and [Windows Phone 8.1](email-settings-windows-phone-8-1.md) devices.
+Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows 10](email-settings-windows-10.md) devices.

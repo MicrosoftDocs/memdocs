@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 10/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -83,6 +83,7 @@ When you configure features on iOS/iPadOS devices, you can also add the built-in
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Watch        | Apple     |
 | com.apple.weather           | Weather      | Apple     |
+| com.apple.barcodesupport.qrcode| QR Code Reader | Apple |
 
 ## Next steps
 

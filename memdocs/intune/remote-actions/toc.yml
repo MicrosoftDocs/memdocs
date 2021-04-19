@@ -57,12 +57,14 @@
       href: device-sync.md
     - name: Examine device inventory
       href: device-inventory.md
+    - name: Collect diagnostics
+      href: collect-diagnostics.md
   - name: Bulk device actions
     href: bulk-device-actions.md
   - name: Troubleshooting
     items:
     - name: Troubleshoot device actions
-      href: troubleshoot-device-actions.md    
+      href: /troubleshoot/mem/intune/troubleshoot-device-actions
 
 - name: Resources
   items:

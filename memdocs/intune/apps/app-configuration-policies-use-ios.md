@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
-ms.topic: conceptual
+ms.date: 04/12/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -57,8 +57,8 @@ Once you have selected the included groups for your application configuration po
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the Microsoft Endpoint Manager admin center.
+    - **Description** - The description of the profile that appears in the Microsoft Endpoint Manager admin center.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **iOS/iPadOS** as the **Platform**.
 5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
@@ -110,7 +110,7 @@ The \{\{ and \}\} characters are used by token types only and must not be used f
 
 ### Allow only configured organization accounts in multi-identity apps 
 
-As the Microsoft Intune administrator, you can control which user accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs:
+As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
 | **Key** | **Values** |
 |----|----|
@@ -120,8 +120,12 @@ As the Microsoft Intune administrator, you can control which user accounts are a
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
    > - Edge for iOS (44.8.7 and later)
+   > - Office, Word, Excel, PowerPoint for iOS (2.41 and later)
    > - OneDrive for iOS (10.34 and later)
-   > - Outlook for (iOS 2.99.0 or later)
+   > - OneNote for iOS (2.41 and later)
+   > - Outlook for iOS (2.99.0 and later)
+   > - Teams for iOS (2.0.15 and later)
+   
 
 ## Enter XML data
 
@@ -161,6 +165,8 @@ When you create an app configuration file, you can specify one or more of the fo
   <string>{{udidlast4digits}}</string>
   <key>aaddeviceid</key>
   <string>{{aaddeviceid}}</string>
+  <key>IsSupervised</key>
+  <string>{{IsSupervised}}</string>
 </dict>
 ```
 
@@ -188,36 +194,53 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
 - \{\{aaddeviceid\}\}—for example, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
+- \{\{issupervised\}\}—for example, **True** (for iOS/iPadOS devices)
 
-## Configure the Company Portal app to support iOS and iPadOS DEP devices
+## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
-DEP (Apple's Device Enrollment Program) enrollments are not compatible with the app store version of the Company Portal app. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices using the following steps.
+Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices even when users have downloaded the Company Portal from the App Store by using the following steps.
 
-1. In Intune, add the Intune Company Portal app if necessary, by going to **Intune** > **Apps** > **All apps** > **Add**.
+1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Use the Company Portal on a DEP device enrolled with user affinity:**
 
-3. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already DEP enrolled.
-4. Tell end users to sign into the Company Portal app when it is automatically installed.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Use the Company Portal on a DEP device enrolled without user affinity (also known as Device Staging)**:
+
+        > [!NOTE]
+        > The user signing in to Company Portal is set as the primary user of the device.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```    
+
+4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already DEP enrolled.
+5. Tell end users to sign into the Company Portal app when it is automatically installed.
+
+> [!NOTE]
+> When you add an app configuration to allow the Company Portal app on DEP devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation does not apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
 
 ## Monitor iOS/iPadOS  app configuration status per device 
-Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the Azure portal, select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
+Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
 
 ## Additional information
 
-- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps
 

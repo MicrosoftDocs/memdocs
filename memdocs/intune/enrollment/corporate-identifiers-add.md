@@ -8,8 +8,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: conceptual
+ms.date: 10/23/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -39,7 +39,7 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
 - Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS only)
 - [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS and Android)
-- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](https://docs.microsoft.com/azure/active-directory/devices/overview) will be marked as personal.
+- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 
 After enrollment, you can [change the ownership setting](#change-device-ownership) between **Personal** and **Corporate**.
@@ -52,10 +52,13 @@ This feature is supported for the following platforms:
 
 | Platform | IMEI numbers | Serial numbers |
 |---|---|---|
-| Windows | Supported (Windows Phone) | Not supported |
-| iOS/macOS | Not supported | Supported |
+| Windows | Not supported | Not supported |
+| iOS/macOS | Not supported (see Important below)  | Supported |
 | Device admin managed Android OS v10 | Not supported | Not supported |
-| Other Android | Not supported | Supported |
+| Android Enterprise personally-owned work profile | Not supported | Supported |
+| Android Enterprise corporate-owned work profile | Not supported | Not Supported |
+| Android Enterprise fully managed | Not supported | Not Supported |
+| Android Enterprise dedicated devices | Not supported | Not supported |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -66,11 +69,6 @@ This feature is supported for the following platforms:
 To create the list, create a two-column, comma-separated value (.csv) list without a header. Add the 14-digit IMEI or serial numbers in the left column, and the details in the right column. Only one type of ID, IMEI or serial number, can be imported in a single .csv file. Details are limited to 128 characters and are for administrative use only. Details aren't displayed on the device. The current limit is 5,000 rows per .csv file.
 
 **Upload a .csv file that has serial numbers** – Create a two-column, comma-separated value (.csv) list without a header, and limit the list to 5,000 devices or 5 MB per .csv file.
-
-|||
-|-|-|
-|&lt;ID #1&gt;|&lt;Device #1 Details&gt;|
-|&lt;ID #2&gt;|&lt;Device #2 Details&gt;|
 
 This .csv file when viewed in a text editor appears as:
 
@@ -132,3 +130,9 @@ Devices properties display **Ownership** for each device records in Intune. As a
 3. Specify **Device ownership** as **Personal** or **Corporate**.
 
    ![Device properties showing Device category and Device ownership options](./media/corporate-identifiers-add/device-properties.png)
+
+You can configure a push notification to send to both your Android and iOS Company Portal users when their device ownership type has been changed from **Personal** to **Corporate** as a privacy courtesy. 
+
+When a device's ownership type is changed from Corporate to Personal, Intune deletes all app information previously collected from that device within 7 days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
+
+This setting can be found in the Microsoft Endpoint Manager by selecting **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).

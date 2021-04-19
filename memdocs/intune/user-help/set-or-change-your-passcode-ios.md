@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Set or change your passcode | Microsoft Docs
-description: Set or change your passcode
+title: Set or change your device passcode | Intune Company Portal | Microsoft Docs
+description: Set or change the passcode on your iOS device to meet your organizations security requirements.
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
-ms.topic: article
+ms.date: 08/27/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -26,30 +26,29 @@ ROBOTS:
 #ms.reviewer: esmich
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser
+ms.custom: intune-enduser 
 ms.collection: 
 ---
 
-# Set or change your passcode
+# Set a device passcode on iOS device  
 
-Create a new passcode or change an existing one to meet your organization's requirements. The passcode will prevent unauthorized people from unlocking and using your device. 
+> [!TIP]
+> For the most up-to-date steps, see the [Apple documentation](https://support.apple.com/HT204060). 
 
-Your organization can set more than one passcode requirement. For a list of common password requirements, see [Device password requirements for enrolled devices](password-does-not-meet-it-administrator-requirements.md).  
-
-If you have trouble creating or changing your passcode, contact your IT support person.  
-
-
-## Set your passcode
+Create a new or more secure passcode on your iOS device.  
 
 1. Tap **Settings** > **Touch ID & Passcode**.
 2. On the **Touch ID & Passcode** menu, tap **Turn Passcode On**.
-3. Enter a new passcode that meets your company support's requirements, and then enter it again to verify it.
+3. Enter a new passcode and then enter it again to confirm.  
 
-## Change your passcode
+To change your device passcode: 
 
 1. Tap **Settings** > **Touch ID & Passcode**.
-2. Enter your passcode. The **Touch ID & Passcode** menu opens.
-2. Tap **Change Passcode** and enter your old passcode.
-3. Enter a new passcode that meets your company support's requirements, and then enter it again to verify it.
+2. Enter your current passcode. 
+3. The **Touch ID & Passcode** menu opens. Tap **Change Passcode** and enter your current (soon-to-be old) passcode again.  
+4. Enter a new passcode and then enter it again to confirm.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## Next steps  
+
+Still need help or having trouble accessing your org's network? Contact your IT support person. To find their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

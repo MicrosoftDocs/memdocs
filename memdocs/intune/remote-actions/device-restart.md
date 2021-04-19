@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -38,14 +38,15 @@ The **Restart** device action causes the device you choose to be restarted (with
 ## Supported platforms
 
 - Windows - Supported on Windows 8.1 and later
-- Windows Phone - Supported on Windows Phone 8.1 and later
-- Android kiosk devices - Supported on Android 7.0 and later
+- Android Enterprise dedicated devices - Supported on Android 7.0 and later
+- Android Enterprise fully managed devices - Supported on Android 6.0 and later
+- Android Enterprise corporate-owned with work profile devices - Supported on Android 8.0 and later
 - iOS/iPadOS - Supported
 
     > [!Note]  
     > This command requires a supervised device and the **Device Lock** access right. The device restarts immediately. Passcode-locked iOS/iPadOS devices don't rejoin a Wi-Fi network after restart. After restart, the device might not be able to communicate with the server.
 - macOS - Not supported
-- Android and Android work profile devices - Not supported
+- Android and Android Enterprise personally-owned work profile devices - Not supported
 
 ## Restart a device
 

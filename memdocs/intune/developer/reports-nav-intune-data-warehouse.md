@@ -7,8 +7,8 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
-ms.topic: reference
+ms.date: 04/13/2021
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -68,9 +68,9 @@ OData defines an abstract data model and a protocol that let any client access i
 
 ## Next steps
 
-Learn more about working with Azure AD by reading the [Authentication Scenarios for Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+Learn more about working with Azure AD by reading the [Authentication Scenarios for Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 Find OData resources at [odata.org](https://www.odata.org).
   
 Review the OData Version 4.0 standard at [OData Version 4.0]
-(https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+(https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)

@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 02/25/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Using Intune app protection policies, you can configure settings to block end users from accessing a corporate app or account. These settings target data relocation and access requirements set by your organization for things like jail-broken devices and minimum OS versions.
  
-You can explicitly choose to wipe your company’s corporate data from the end user’s device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
+You can explicitly choose to wipe your company's corporate data from the end user's device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
 
 ## Create an app protection policy using conditional launch actions
 
@@ -62,6 +62,7 @@ For iOS/iPadOS, you will be able to configure actions for the following settings
 - Min SDK version
 - Device model(s)
 - Max allowed device threat level
+- Disabled account
 
 To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values are not case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier in this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
 Example input: *iPhone5,2;iPhone5,3*
@@ -81,6 +82,7 @@ For Android, you will be able to configure actions for the following settings us
 - Offline grace period
 - Jailbroken/rooted devices
 - Min OS version
+- Max OS version
 - Min app version
 - Min patch version
 - Device manufacturer(s)
@@ -88,6 +90,8 @@ For Android, you will be able to configure actions for the following settings us
 - Require threat scan on apps
 - Min Company Portal version
 - Max allowed device threat level
+- Disabled account
+- Require device lock
 
 By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value is not met. The possible formats for this value follow the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates, but this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and thereby downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they will likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
 
@@ -113,7 +117,7 @@ To configure a setting, select a setting from the dropdown under the **Setting**
 
 The following list provides the common list of actions:
 - **Block access** – Block the end user from accessing the corporate app.
-- **Wipe data** – Wipe the corporate data from the end user’s device.
+- **Wipe data** – Wipe the corporate data from the end user's device.
 - **Warn** – Provide dialog to end user as a warning message.
 
 In some cases, such as the **Min OS version** setting, you can configure the setting to perform all applicable actions based on different version numbers. 

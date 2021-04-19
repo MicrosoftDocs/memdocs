@@ -6,15 +6,15 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
-ms.topic: conceptual
+ms.date: 03/25/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 29329f86-1aa5-434f-9925-8dc28bf35348
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -34,7 +34,7 @@ To add a line-of-business app intended for a GCC High or DoD environment using I
 
 ## Distribute Offline Apps from the Store for Business using Intune  
 
-If you need to [download an offline-licensed app](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) from the Microsoft Store for Business, follow these steps to download the application: 
+If you need to [download an offline-licensed app](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) from the Microsoft Store for Business, follow these steps to download the application: 
 
 1. Sign in to the [Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** > **Settings**.
@@ -44,7 +44,7 @@ When shopping for apps, if an offline version is available, you can choose to ch
 
 ## Syncing Intune to the Store for Business 
 
-In a commercial (non-government) environment, an admin can sync Intune to the Microsoft Store for Business. This is not an available feature on the government environments. For details about differences between Intune in commercial environments and Intune for government environments, see [Enterprise Mobility + Security for US Government Service Description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).  
+In a commercial (non-government) environment, an admin can sync Intune to the Microsoft Store for Business. This is not an available feature on the government environments. For details about differences between Intune in commercial environments and Intune for government environments, see [Enterprise Mobility + Security for US Government Service Description](/enterprise-mobility-security/solutions/ems-govt-service-description).  
 
 To sync Intune to your Store for Business account, see [How to manage apps you purchased from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).  
 
@@ -56,4 +56,3 @@ Review the privacy and compliance statements of apps and compare them to the com
 
 To learn more about deploying and assigning apps, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
- 

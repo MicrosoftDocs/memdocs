@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: How to turn off Microsoft data collection for iOS devices | Microsoft Docs
-description:
+title: Share Company Portal usage data with Microsoft Intune | Microsoft Docs
+description: Learn how to turn off Microsoft data collection in Intune Company Portal for iOS to prevent usage and diagnostic data from automatically being shared with Intune. 
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2017
-ms.topic: article
+ms.date: 12/08/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,10 +31,27 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How to turn off Microsoft data collection
+# Share Company Portal usage data with Microsoft     
 
-Microsoft automatically collects certain data about our products and services. We do this to improve the reliability and performance of our products, including the Company Portal app. Even though this data is anonymized, some users may not feel comfortable with this collection. Your company support does not have control over the collection of this data, and they cannot change your selection for the setting.
+When turned on, the Company Portal usage data feature shares your in-app performance and usage data with Microsoft. Sharing your Company Portal usage data helps to improve the reliability and performance of Microsoft products like Intune. 
 
-If you wish to turn off the collection of usage data on your iOS device, open **Settings**, tap **Company Portal**, and then turn off **Usage Data**. For macOS devices, open the **Company Portal** menu > **Preferences**, then uncheck **Allow Microsoft to collect usage data**.
+You can turn this feature on or off from the Settings app. Your organization can't change your usage data preference, and doesn't have any control over the collection of your data. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+If you turn off Company Portal usage data:    
+
+* All optional telemetry and diagnostic data that's normally collected and sent to Intune will stop being sent.
+* Proactive troubleshooting will no longer be possible, so you'll need to manually upload your logs to Intune if you have a problem with the device.  
+
+The usage data setting doesn't control the data that's required to run the Intune service. That data will continue to be sent to Intune but doesn't contain any personal information.  
+
+## Edit usage data preferences
+Change your usage data preferences to turn usage data collection on or off.  
+
+1. Open the **Settings** app.  
+2. Tap **Company Portal**.  
+3. Switch the **Usage Data** toggle to the off position (to stop usage and diagnostic data from being sent to Intune), or to the on position (to allow usage and diagnostic data to be sent to Intune).   
+
+## Next steps  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+

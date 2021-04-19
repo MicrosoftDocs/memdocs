@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -50,7 +50,7 @@ Complete the following step to remove a device from the Company Portal **Device 
      ![Example screenshot of the Company Portal app for Windows, Device details page, Rename popup field.](./media/1808_RenameApp_Popup.png)  
 
 ## Rename device from device context menu  
-Complete the following step to remove a device through the [context menu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) actions.  
+Complete the following step to remove a device through the [context menu](/windows/uwp/design/controls-and-patterns/menus) actions.  
 
 1. On the **Home** page of the Company Portal app, go to **My Devices**.
 
@@ -64,4 +64,3 @@ Complete the following step to remove a device through the [context menu](https:
      ![Example screenshot of the Company Portal app for Windows, Home page. Rename popup field appears over device where user can type in new name and click Rename or Cancel.](./media/1808_RenameApp_Popup.png)  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
-

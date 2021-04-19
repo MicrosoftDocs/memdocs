@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,7 +16,7 @@ ms.technology:
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX
 #audience:
 
 ms.suite: ems
@@ -27,6 +27,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Add VPN settings on Windows Phone 8.1 devices in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 This article shows you the Intune settings you can use to configure VPN connections on devices running Windows Phone 8.1. 
 
@@ -41,7 +43,6 @@ Depending on the settings you choose, not all values in the following list are c
 
 ## Base VPN settings
 
-- **Apply all settings to Windows Phone 8.1 only**: Configure this setting in the Intune classic portal. In the Microsoft Endpoint Manager admin center, this setting can't be changed. When set to **Configured**, any settings are only applied to Windows Phone 8.1 devices. When set to **Not Configured**, these settings also apply to Windows 10 Mobile devices.
 - **Connection name**: Enter a name for this connection. Users see this name when they browse their device for the list of available VPN connections.
 - **Authentication method**: Choose how devices authenticate to the VPN server from:
   - **Certificates**: Under **Authentication certificate**, Choose a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, see [How to configure certificates](../protect/certificates-configure.md).
@@ -110,6 +111,6 @@ Depending on the settings you choose, not all values in the following list are c
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10](vpn-settings-windows-10.md) devices.

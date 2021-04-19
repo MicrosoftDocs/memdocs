@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
-ms.topic: conceptual
+ms.date: 04/01/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer: davidra
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -59,7 +59,7 @@ The Sophos Mobile app authorization process follows:
 
 ## To set up Sophos Mobile integration  
 
-1. Sign in to the [Azure portal]( https://portal.azure.com/), go **Intune** > **Device compliance** > **Mobile Threat Defense** > and select **Add**.  
+1. Sign in to the [Microsoft Endpoint Manager admin center portal](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > and select **Add**.  
 2. On the **Add Connector** page, use the dropdown and select **Sophos**. And then select **Create**.  
 3. Select the link *Open the Sophos admin console*.  
 4. Sign in to the [Sophos admin console](https://central.sophos.com/) with your Sophos credentials.  

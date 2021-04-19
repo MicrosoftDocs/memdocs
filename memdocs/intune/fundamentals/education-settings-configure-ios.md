@@ -50,7 +50,7 @@ To set up Classroom on your device, you will need to create and configure an Int
 Consider the following before you begin to configure these settings:
 
 - Both teachers and student iPads must be enrolled in Intune.
-- Ensure that you have installed the [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) app on the teacher’s device. You can either install the app manually, or use [Intune app management](../apps/app-management.md).
+- Ensure that you have installed the [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) app on the teacher's device. You can either install the app manually, or use [Intune app management](../apps/app-management.md).
 - You must configure certificates to authenticate connections between teacher and student devices (see Step 2, Create and assign an iOS/iPadOS Education profile in Intune).
 - Teacher and student iPads must be on the same Wi-Fi network, and also have Bluetooth enabled.
 - The Classroom app runs on supervised iPads running iOS/iPadOS 9.3 or later.
@@ -72,9 +72,9 @@ You can import information into SDS by using one of the following methods:
 
 ### Find out more
 
-- [Find out more about the full experience of syncing on-premises school data to Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Find out more about the full experience of syncing on-premises school data to Azure AD](/azure/active-directory/connect/active-directory-aadconnect)
 - [Find out more about Microsoft School Data Sync](https://sds.microsoft.com/)
-- [Find out more about licensing in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Find out more about licensing in Azure Active Directory](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 ## Step 2 - Create and assign an iOS/iPadOS Education profile in Intune
 

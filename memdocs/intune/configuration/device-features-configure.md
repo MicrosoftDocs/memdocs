@@ -2,13 +2,13 @@
 # required metadata
 
 title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
+description: Add or create an iOS, iPadOS, or macOS device profile. Configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: conceptual
+ms.date: 03/02/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -40,10 +40,49 @@ Intune includes many features and settings that help administrators control iOS,
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you then push or deploy the profile to iOS/iPadOS and macOS devices in your organization.
 
+This feature applies to:
+
+- iOS/iPadOS
+- macOS
+
 This article describes the different features you can configure, and shows you how to create a device configuration profile. You can also see all the available settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
+## Create the profile
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
+3. Enter the following properties:
+
+    - **Platform**: Choose your platform:
+
+        - **iOS/iPadOS**
+        - **macOS**
+
+    - **Profile**: Select **Device features**. Or, select **Templates** > **Device features**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Configures login screen**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
+
+    - [iOS/iPadOS](ios-device-features-settings.md)
+    - [macOS](macos-device-features-settings.md)
+
+8. Select **Next**.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Airprint
 
@@ -61,7 +100,7 @@ Applies to:
 
 ## App notifications
 
-Choose how apps on your iOS and iPadOS devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
+Choose how apps on your iOS and iPadOS devices receive notifications. For example, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
 For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
@@ -91,10 +130,10 @@ Applies to:
 
 ## Home screen layout
 
-These settings configure the app layout and folders on the dock and home screens on iOS and iPadOS devices. You can:
+These settings configure the app layout and folders on the home screen and dock. You can also see in real time how most apps and their icons look. Specifically:
 
-- Use the **Dock** settings to add apps or folders to the screen. For example, show Safari and the Mail app on the device dock.
-- Add **Pages** you want shown on the home screen, and the apps you want shown on each page. For example, add a **Contoso** page, and add the Settings app on this page.
+- Use the **Home screen** settings to add apps and folders to the home screen on devices.
+- Use the **Dock** settings to add apps or folders to the dock on the screen. For example, show Safari and the Mail app on the device dock.
 
 For a list of the settings you can configure in Intune, see [Home screen layout on iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 
@@ -138,14 +177,14 @@ Applies to:
 
 ## Single sign-on
 
-Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires the user to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
+Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
+
+The single sign-on profile is based on Kerberos. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
 
 To use single sign-on, be sure you have:
 
 - An app that's coded to look for the user credential store in single sign-on on the device.
 - Intune configured for iOS/iPadOS device single sign-on.
-
-![Single Sign On pane](./media/device-features-configure/sso-blade.png)
 
 For a list of the settings you can configure in Intune, see [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
@@ -160,8 +199,14 @@ These settings configure an app extension that enables single sign-on (SSO) for 
 
 In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect-type is designed for modern authentication protocols, such as OAuth and SAML2. Microsoft has an iOS/iPadOS Azure AD redirect-type SSO app extension that can be enabled with the single sign-on app extension settings.
-- The credential-type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, or a generic credential extension.
+- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+
+  > [!IMPORTANT]
+  > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
+
+- The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
+
+  The Azure AD macOS SSO app extension should work with any third party or partner MDM. The extension must be deployed as a kerberos SSO extension, or deployed as a custom configuration profile with all the required properties configured.
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
 
@@ -209,43 +254,6 @@ Applies to:
 
 - iOS 7.0 and newer
 - iPadOS 13.0 and newer
-
-## Create the profile
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter the following properties:
-
-    - **Platform**: Choose the platform of your devices. Your options:  
-
-        - **iOS/iPadOS**
-        - **macOS**
-
-    - **Profile**: Select **Device features**.
-
-4. Select **Create**.
-5. In **Basics**, enter the following properties:
-
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Configures login screen**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
-
-6. Select **Next**.
-
-7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
-
-    - [iOS/iPadOS](ios-device-features-settings.md)
-    - [macOS](macos-device-features-settings.md)
-
-8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-    Select **Next**.
-
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
-
-    Select **Next**.
-
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Next steps
 

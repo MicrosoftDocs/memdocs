@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2020
-ms.topic: conceptual
+ms.date: 03/25/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 #ROBOTS:
 #audience:
 
-ms.reviewer: joglocke
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,11 +56,11 @@ You must understand a few concepts when adding a WIP policy:
 You must configure the MAM provider before you can create a WIP policy. Learn more about [how to configure your MAM provider with Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP does not support multi-identity, only one managed identity can exist at a time. For more information about the capabilities and limitations of WIP, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+> WIP does not support multi-identity, only one managed identity can exist at a time. For more information about the capabilities and limitations of WIP, see [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Additionally, you need to have the following license and update:
 
-- [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) license
+- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -72,7 +72,7 @@ Additionally, you need to have the following license and update:
 After you set up Intune in your organization, you can create a WIP-specific policy.
 
 > [!TIP]  
-> For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the Azure portal for Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
+> For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the portal for Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -127,7 +127,7 @@ After you add the apps you want to protect with WIP, you need to apply a protect
 
 ### Before you begin
 
-WIP Learning is a report that allows you to monitor your WIP-enabled apps and WIP-unknown apps. The unknown apps are the ones not deployed by your organization’s IT department. You can export these apps from the report and add them to your WIP policies to avoid productivity disruption before they enforce WIP in “Block” mode.
+WIP Learning is a report that allows you to monitor your WIP-enabled apps and WIP-unknown apps. The unknown apps are the ones not deployed by your organization's IT department. You can export these apps from the report and add them to your WIP policies to avoid productivity disruption before they enforce WIP in "Block" mode.
 
 <!-- 1631908 -->
 In addition to viewing information about WIP-enabled apps, you can view a summary of the devices that have shared work data with websites. With this information, you can determine which websites should be added to group and user WIP policies. The summary shows which website URLs are accessed by WIP-enabled apps.
@@ -148,7 +148,7 @@ WIP runs silently, logging inappropriate data sharing, without blocking anything
 #### Off (not recommended)
 WIP is turned off and doesn't help to protect or audit your data.
 
-After you turn off WIP, an attempt is made to decrypt any WIP-tagged files on the locally attached drives. Note that previous decryption and policy info isn’t automatically reapplied if you turn WIP protection back on.
+After you turn off WIP, an attempt is made to decrypt any WIP-tagged files on the locally attached drives. Note that previous decryption and policy info isn't automatically reapplied if you turn WIP protection back on.
 
 ### Add a protection mode
 
@@ -157,16 +157,6 @@ After you turn off WIP, an attempt is made to decrypt any WIP-tagged files on th
     ![Screenshot of the Learning Mode pane](./media/windows-information-protection-policy-create/learning-mode-sc1.png)
 
 1. Select a setting and then choose **Save**.
-
-### Use WIP Learning
-
-1. Open the [Azure portal](https://portal.azure.com). Choose **All services**. Type **Intune** in the text box filter.
-
-3. Choose **Intune** > **Apps**.
-
-4. Choose **App protection status** > **Reports** > **Windows Information Protection learning**.  
-
-    Once you have the apps showing up in the WIP Learning logging report, you can add them to your app protection policies.
 
 ## Allow Windows Search Indexer to search encrypted items
 Allows or disallows the indexing of items. This switch is for the Windows Search Indexer, which controls whether it indexes items that are encrypted, such as the Windows Information Protection (WIP) protected files.
@@ -186,8 +176,6 @@ In addition to setting the **Allow Windows Search Indexer to search encrypted it
 > [!IMPORTANT]
 > This information applies for WIP without device enrollment.
 
-<!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
-
 After you created your WIP app protection policy, you need to deploy it to your organization using MAM.
 
 1. On the **App policy** pane, choose your newly created app protection policy, choose **User groups** > **Add user group**.
@@ -198,4 +186,4 @@ After you created your WIP app protection policy, you need to deploy it to your 
 
 ## Next steps
 
-Learn more about Windows Information Protection, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Learn more about Windows Information Protection, see [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

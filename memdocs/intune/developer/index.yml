@@ -13,7 +13,7 @@ metadata:
   author: erikre
   ms.author: erikre
   ms.manager: dougeby
-  ms.date: 09/23/2019  
+  ms.date: 04/14/2021  
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -82,4 +82,4 @@ landingContent:
       - linkListType: reference
         links:  
           - text: Intune Graph API reference
-            url: https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta
+            url: /graph/api/resources/intune-graph-overview?view=graph-rest-beta

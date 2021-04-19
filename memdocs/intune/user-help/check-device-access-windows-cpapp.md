@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
@@ -71,14 +71,14 @@ Complete the steps in this article to check access from the Company Portal app f
 
     ![Example screenshot of the Company Portal app for Windows, Home page, highlighting the My Devices section.](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Right-click or press and hold a device to open its [context menu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Right-click or press and hold a device to open its [context menu](/windows/uwp/design/controls-and-patterns/menus).  
 
     ![Example screenshot of the Company Portal app for Windows, Home page. Device context menu is visible in the **My Devices** section of the page and shows "Rename", "Remove", and "Check access" actions.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Select **Check access**. The app syncs your device with your organization's current requirements and checks to make sure your device matches. This check can take a few minutes.  
  
 4. A message appears under the device to let you know that the device **Can access company resources** or **Can't access company resources**. 
 
-    ![Example screenshot of the Company Portal app for Windows, Device details page, highlighting the Status section.](./media/1809_CheckAccess_Context_Menu_Alert2.png) 
+    ![Screenshot shows My Devices with a phone highlighted.](./media/1809_CheckAccess_Context_Menu_Alert2.png) 
 
 5. If your device can't access resources, select the device.  
 6. On the **Device details** page, go the alert at the top of the page. Click **More** to expand its details. Click **Less** to collapse them.  

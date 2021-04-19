@@ -7,8 +7,8 @@ keywords:
 ms.author: dougeby
 author: dougeby
 manager: dougeby
-ms.date: 03/18/2019
-ms.topic: troubleshooting
+ms.date: 02/04/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
@@ -53,26 +53,26 @@ You can review audit logs in the monitoring group for each Intune workload:
     - **Category**: such as **Compliance**, **Device**, and **Role**.
     - **Activity**: the options listed here are restricted by the option chosen under **Category**.
     - **Date range**: you can choose logs for the previous month, week, or day.
-4. Choose **Apply**.
-4. Select an item in the list to see the activity details.
+4. Select **Apply**.
+5. Select an item in the list to see the activity details.
 
 ## Route logs to Azure Monitor
 
-Audit logs and operational logs can also be routed to Azure Monitor. In **Audit logs**, select **Export Data Settings**:
+Audit logs and operational logs can also be routed to Azure Monitor. In **Tenant administration** > **Audit logs**, select **Export**:
 
-![Export log data to Azure monitor by selecting Export data settings in Intune](./media/monitor-audit-logs/audit-logs-export-data-settings.png)
-
-> [!NOTE]
-> For more information about this feature and to review the prerequisites to use it, see [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
+:::image type="content" source="./media/monitor-audit-logs/audit-logs-export-data-settings.png" alt-text="Export log data to Azure monitor by selecting Export data settings in Microsoft Intune and Endpoint Manager admin center.":::
 
 > [!NOTE]
-> **Initiated by (actor)** includes information on who ran the task, and where it was run. For example, if you run the activity in Intune in the Azure portal, then **Application** always lists **Microsoft Intune portal extension** and the **Application ID** always uses the same GUID.
 >
-> The **Target(s)** section lists multiple targets and the properties that were changed.  
+> - For more information about this feature, and to review the prerequisites to use it, see [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
+> - **Initiated by (actor)** includes information on who ran the task, and where it was run.
+>
+>   For example, if you run the activity in Intune in the Azure portal, then **Application** always lists **Microsoft Intune portal extension**, and the **Application ID** always uses the same GUID.
+> - The **Target(s)** section lists multiple targets and the properties that were changed.  
 
 ## Use Graph API to retrieve audit events
 
-For details on using the graph API to get up to one year of audit events, see [List auditEvents](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
 
 ## Next steps
 

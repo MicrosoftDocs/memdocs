@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 07/25/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

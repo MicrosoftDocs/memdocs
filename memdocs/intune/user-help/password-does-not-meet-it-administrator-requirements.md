@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Password requirements for devices in Intune Company Portal | Microsoft Docs
-description: This article describes common password requirements that your organization might enforce.  
+title: Password requirements for Intune-enrolled devices | Microsoft Docs
+description: This article describes how to meet your organization's password requirements so that you can access their network.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
-ms.topic: article
+ms.date: 08/27/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -26,21 +26,33 @@ ROBOTS:
 #ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperf-fy21q1
 ms.collection: 
 ---
+ 
+# Device password requirements  
 
-# Device password requirements for enrolled devices
+You'll receive a message from Company Portal if your device password doesn't meet your organization's security requirements. Password requirements are put in place to protect you and your org's data from unauthorized access. Until you create a more secure password, you may be blocked from accessing your org's network.  
 
-Your organization can require you to create a more secure password before allowing you access to work or school resources. This article describes common password requirements for Windows 10, iOS, macOS, and Android devices. Your organization might not enforce all of these requirements.  
+Company Portal sends one message per password requirement, so you may receive more than one message at a time. Tap any message to see more details (if provided).  
 
+This article lists all of the password-related messages you could receive, and provides additional details about each requirement, by OS platform.     
 
-When a password or passcode no longer meets a requirement, you'll receive a message from Company Portal. It will describe the changes you need to make. If no details are provided in the message, use this article as a reference to compare to your current password.  
+## Change password, passcode, PIN  
+
+Generally, to access password settings, you can open the settings app on your device and search for *lock screen* or *security settings*.  
+
+The following articles describe how to update the device password, by OS platform. To get the most up-to-date instructions for your specific device, refer to the help documentation from the device manufacturer.  
+
+- [Set Windows 10 device password](set-or-change-your-password-windows.md)  
+- [Set iOS device passcode](set-or-change-your-passcode-ios.md)  
+- [Set Android device PIN or password](set-your-pin-or-password-android.md)  
+
 
 > [!IMPORTANT]
 > If you've changed your password to meet the requirements but are still receiving notifications, restart your device.  
 
-For additional help or to find out your organization's specific requirements, contact your IT support person. Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.  
+For specific questions about your org's password requirements, contact your IT support person.  
 
 ## Windows 10 password requirements
 
@@ -61,7 +73,7 @@ For additional help or to find out your organization's specific requirements, co
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Passcode is required.| Set a passcode. Your organization requires that you enter a passcode to unlock your device. |
 | Passcode is too simple. |  Make sure that your passcode doesn't contain sequential or repeating numbers, such as 1234 or 1111. |
-| Passcode is too short. | Update or set a passcode with more characters. Your organization requires that your passcode is a certain length. What they actually choose will vary, but the minimum length they can require is 4 characters, and the maximum is 14. When you change your passcode, you might see a prompt from Apple telling you to enter 6 or more characters; this message is an Apple system recommendation. If your organization only requires a passcode that's 4 or 5 characters, you do not have to enter a 6 digit passcode.|  
+| Passcode is too short. | Update or set a passcode with more characters. Your organization requires that your passcode is a certain length. What they actually choose will vary, but the minimum length they can require is 4 characters, and the maximum is 14. When you change your passcode, you might see a prompt from Apple telling you to enter 6 or more characters; this message is only an Apple system recommendation. If your organization only requires a passcode that's 4 or 5 characters, you don't have to enter a 6-digit passcode.|  
 | Passcode must only contain numbers. | Set a passcode that only contains numbers.|
 | Passcode must only contain alphanumeric characters.| Set a passcode that contains a mix of numbers and letters.|
 | Passcode must contain non-alphanumeric characters. | Add special characters such as `&`, `!`, `$`, `%`, and `#`. Your organization requires a mix of letters, numbers, and non-alphanumeric characters to make it harder for others to guess the passcode.|
@@ -96,13 +108,8 @@ For additional help or to find out your organization's specific requirements, co
 | Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
 
 ## Next steps
+If after you update your password you still receive password-related messages, try restarting your device. 
 
-See the following articles to create or change your device password, passcode, or PIN.  
-
-- [Set Windows 10 device password](set-or-change-your-password-windows.md)  
-- [Set iOS device passcode](set-or-change-your-passcode-ios.md)  
-- [Set Android device PIN or password](set-your-pin-or-password-android.md)  
-
-Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

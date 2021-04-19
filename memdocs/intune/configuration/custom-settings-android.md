@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,6 +31,10 @@ ms.collection: M365-identity-device-management
 
 Using Microsoft Intune, you can add or create custom settings for your Android devices using a "custom profile". Custom profiles are a feature in Intune. They are designed to add device settings and features that aren't built in to Intune.
 
+This feature applies to:
+
+- Android device administrator (DA)
+
 Android custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to configure different features on Android devices. These settings are typically used by mobile device manufacturers to control these features.
 
 Using a custom profile, you can configure and assign the following Android settings. The following settings aren't built in to Intune:
@@ -38,6 +42,7 @@ Using a custom profile, you can configure and assign the following Android setti
 - [Create a Wi-Fi profile with a pre-shared key](/intune/wi-fi-profile-shared-key)
 - [Create a per-app VPN profile](/intune/android-pulse-secure-per-app-vpn)
 - [Allow and block apps for Samsung Knox Standard devices](/intune/samsung-knox-apps-allow-block)
+- [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > Only the settings listed can be configured by in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure. If you'd like to see more settings, then vote for more settings at the [Intune Uservoice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
@@ -50,12 +55,17 @@ This article shows you how to create a custom profile for Android devices.
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android custom profile**.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Android**.
-    - **Profile type**: Select **Custom**.
+    - **Platform**: Select **Android device administrator**.
+    - **Profile**: Select **Custom**.
 
-4. In **Custom OMA-URI Settings**, select **Add**. Enter the following settings:
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android DA custom profile**.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. Select **Next**.
+7. In **Configuration settings** > **OMA-URI Settings**, select **Add**. Enter the following settings:
 
     - **Name**: Enter a unique name for the OMA-URI setting so you can easily find it.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details.
@@ -72,13 +82,23 @@ This article shows you how to create a custom profile for Android devices.
 
     - **Value**: Enter the data value you want to associate with the OMA-URI you entered. The value depends on the data type you selected. For example, if you select **Date and time**, select the value from a date picker.
 
-    After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
+8. Select **Save** to save your changes. Continue to add more settings as needed. After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
 
-5. Select **OK** to save your changes. Continue to add more settings as needed.
-6. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
+    Select **Next**.
+
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, when you're done, choose **Create**. The profile is created, and shown in the list.
+
+    You can also [monitor its status](device-profile-monitor.md).
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-
-Create a [custom profile on Android Enterprise devices](custom-settings-android-for-work.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- Create a [custom profile on Android Enterprise devices](custom-settings-android-for-work.md).

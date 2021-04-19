@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2020
-ms.topic: conceptual
+ms.date: 03/25/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 #ROBOTS:
 #audience:
 
-ms.reviewer: joglocke
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,20 +37,30 @@ Learn how to create and assign Microsoft Intune app protection policies (APP) fo
 
 ## Before you begin
 
-App protection policies can apply to apps running on devices that may or may not be managed by Intune. For a more detailed description of how app protection policies work and the scenarios that are supported by Intune app protection policies, see [What are Microsoft Intune app protection policies?](app-protection-policy.md)
+App protection policies can apply to apps running on devices that may or may not be managed by Intune. For a more detailed description of how app protection policies work and the scenarios that are supported by Intune app protection policies, see [App protection policies overview](app-protection-policy.md).
 
-If you're looking for a list of MAM supported apps, see [MAM apps list](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+The choices available in app protection policies (APP) enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+
+The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+
+- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
+- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
+
+If you're looking for a list of apps that have integrated the Intune SDK, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 
 For information about adding your organization's line-of-business (LOB) apps to Microsoft Intune to prepare for app protection policies, see [Add apps to Microsoft Intune](apps-add.md).
 
 ## App protection policies for iOS/iPadOS and Android apps
 
-When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy.
+When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy. For information about creating app protection policies for Windows apps, see [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
 
 ### Create an iOS/iPadOS or Android app protection policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In Intune portal, choose **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
+2. Select **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
 
@@ -69,9 +79,9 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     | Value/Option | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state) |
+    | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
     |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
-    | Public apps | Click **Select public apps** to choose the apps to target. |
+    | Public apps | Click **Select public apps** to choose the apps to target.    |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
     The app(s) you have selected will appear in the public and custom apps list.
@@ -97,7 +107,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](app-protection-policy-settings-android.md#conditional-launch).
 
 9. Click **Next** to display the **Assignments** page.<br>
-   The **Assignments** page allows you to assign the app protection policy to groups of users.
+   The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
 
@@ -105,6 +115,9 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     > [!TIP]
     > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file.
+
+    > [!IMPORTANT]
+    > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
@@ -129,7 +142,7 @@ To see the effect of the changes immediately, the end user must sign out of the 
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. Additional app configuration may be required for this setting. For more information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
     |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
-    | Public apps | Click **Select public apps** to choose the apps to target. |
+    | Public apps | Click **Select public apps** to choose the apps to target.  |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
     The app(s) you have selected will appear in the public and custom apps list.
@@ -177,14 +190,14 @@ To create these policies, browse to **Apps** > **App protection policies** in th
 
 ### Device types
 
-- **Unmanaged**: Unmanaged devices are devices where Intune MDM management has not been detected. This includes devices managed by third-party MDM vendors.
+- **Unmanaged**: For iOS/iPadOS devices, unmanaged devices are any devices where either Intune MDM management or a 3rd party MDM/EMM solution does not pass the `IntuneMAMUPN` key. For Android devices, unmanaged devices are devices where Intune MDM management has not been detected. This includes devices managed by third-party MDM vendors.
 - **Intune managed devices**: Managed devices are managed by Intune MDM.
 - **Android device administrator**: Intune-managed devices using the Android Device Administration API.
 - **Android Enterprise**: Intune-managed devices using Android Enterprise Work Profiles or Android Enterprise Full Device Management.
 
 On Android, Android devices will prompt to install the Intune Company Portal app regardless of which Device type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 
-For iOS/iPadOS, for the 'Device type' selection to be enforced to 'unmanaged' devices, additional app configuration settings are required. These configurations will communicate to the APP service that a particular app is managed - and that APP settings will not apply:
+For iOS/iPadOS, for the 'Device type' selection to be enforced to Intune managed devices, additional app configuration settings are required. These configurations will communicate to the APP service that a particular app is managed - and that APP settings will not apply:
 
 - **IntuneMAMUPN** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).

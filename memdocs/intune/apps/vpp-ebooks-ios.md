@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
-ms.topic: conceptual
+ms.date: 04/12/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -20,7 +20,7 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 
 #ROBOTS:
 #audience:
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,16 +40,16 @@ Microsoft Intune helps you synchronize, manage, and assign books that you purcha
 The procedures to manage books are similar to [managing VPP apps](vpp-apps-ios.md).
 
 ## Manage volume-purchased books for iOS devices
-You buy multiple licenses for iOS/iPadOS books through the [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) or the [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). This process involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP token to Intune.  You can then synchronize your volume purchase information with Intune and track your volume-purchased book use.
+You acquire multiple licenses for iOS/iPadOS books through the [Apple Business Manager](https://business.apple.com/) or the [Apple School Manager](https://school.apple.com/). This process involves setting up an Apple Business Manager account from the Apple website and uploading the location token to Intune.  You can then synchronize your volume purchase information with Intune and track your volume-purchased book use.
 
 ## Before you start
 Before you start, get a VPP token from Apple and upload it to your Intune account. Additionally:
 
 * If you previously used a VPP token with a different product, you must generate a new one to use with Intune.
 * Each token is valid for one year.
-* By default, Intune syncs with the Apple VPP service twice a day. You can start a manual sync at any time.
+* By default, Intune syncs with the Apple Business Manager service twice a day. You can start a manual sync at any time.
 * After you have imported the VPP token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
-* Before you start to use iOS/iPadOS books with Intune, remove any existing VPP user accounts created with other mobile device management (MDM) vendors. Intune does not synchronize those user accounts into Intune as a security measure. Intune synchronizes only data from the Apple VPP service that Intune created.
+* Before you start to use iOS/iPadOS books with Intune, remove any existing VPP user accounts created with other mobile device management (MDM) vendors. Intune does not synchronize those user accounts into Intune as a security measure. Intune synchronizes only data from the Apple Business Manager service that Intune created.
 * When you assign a book to a device, that device must have the built-in iBooks app installed. If it is not, the end user must reinstall the app before they can read the book. You cannot currently use Intune to restore removed built-in apps.
 * You can only assign books from the Apple Volume Purchase Program site. You cannot upload, then assign books you created in-house.
 * You cannot currently assign books to end-user categories in the same way as you do apps.
@@ -58,13 +58,13 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 * Devices must be enrolled with user affinity as e-books can only be assigned to user groups.   
 
 
-## To get and upload an Apple VPP token
+## To get and upload an Apple Business Manager location token
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, click **Create**.
 5. On the **New VPP Token** pane, specify the following information:
-    - **VPP token file** - Ensure you have signed for the Volume Purchase Program for Business or the Volume Purchase Program for Education. Then, download the Apple VPP token for your account and select it here.
+    - **VPP token file** - Ensure you have signed in to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). Note these services were previously known as Apple's volume purchase program for business or the Apple volume purchase program for education. Then, download the Apple location/VPP token for your account and select it in Endpoint Manager.
     - **Apple ID** - Enter the Apple ID of the account associated with the volume-purchase program.
     - **Type of VPP account** - Choose from **Business** or **Education**.
 5. When you are done, click **Create**.

@@ -7,8 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
-ms.topic: article
+ms.date: 08/20/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,9 +37,7 @@ Remote lock is supported on devices running:
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (if the device already had a passcode set)
-* Windows Phone 8.1 (if the device already had a passcode set) 
+* macOS  
   
 ## Remote lock device
 Complete the following steps to lock your device from the Company app.  
@@ -57,5 +55,7 @@ Complete the following steps to lock your device from the Company app.
    ![Screenshot of Company Portal app, Device details page, Remote lock confirmation prompt.](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Should you find your device, enter your passcode to unlock it.  
+
+## Next steps
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

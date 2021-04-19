@@ -6,9 +6,10 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 
@@ -47,7 +48,7 @@ You can use App protection policies to prevent users from saving work files in u
 - Data relocation policies like **Save copies of org data**, and **Restrict cut, copy, and paste**.
 - Access policy settings to require simple PIN for access, and block managed apps from running on jailbroken or rooted devices.
 
-App-based conditional access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Office 365 services.
+App-based conditional access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
 
 You can block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don't have Intune app protection policies applied from accessing SharePoint Online.
 

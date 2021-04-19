@@ -72,7 +72,6 @@ Read the following list of tips to make your organization's Intune deployment ea
   * [How your Android users get their apps](end-user-apps-android.md)
 
 * **iOS**
-  * [Using an iOS/iPadOS device with Intune](../user-help/using-your-ios-device-with-intune.md)
   * [How your iOS/iPadOS users get their apps](end-user-apps-ios.md)
 
 * **Windows**
@@ -82,6 +81,11 @@ Read the following list of tips to make your organization's Intune deployment ea
 * __Be forthcoming.__ Be clear about what you're going to manage on user devices. Tell users what kind of data you're collecting and why you're collecting it. Inform them of how you're planning to use all data. [Microsoft believes that you have a right to as much information as possible about how we handle your customer data in the cloud](https://www.microsoft.com/trustcenter/about/transparency), and believes that this philosophy can greatly increase user satisfaction with Intune.
 
 > [!Note]
-> Transparency, wherever possible, is fundamental to the success of your deployment.
+> Transparency, wherever possible, is fundamental to the success of your deployment.  
 
-It's important to combine trust with well-crafted compliance policies. Users should know that even if you *could* look at certain types of personal data, that you don't *want* to. Help them understand that there is liability that you could incur for invading their privacy. Creating a statement with your legal and HR departments may further alleviate employee concerns about privacy.
+## Next steps  
+
+Creating a statement with your legal and HR departments may further alleviate employee concerns about privacy.  It's important to combine trust with well-crafted compliance policies. Users should know that even if you *could* look at certain types of personal data, that you don't *want* to. Help them understand that there is liability that you could incur for invading their privacy. 
+
+
+

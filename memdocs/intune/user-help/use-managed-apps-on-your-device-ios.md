@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use managed apps on your iOS device | Microsoft Docs
-description:
+title: Get work or school apps for iOS- Microsoft Intune | Microsoft Docs
+description: Learn how to get Intune-managed apps for iOS, which protect your data while also helping you stay productive at school or work.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
-ms.topic: article
+ms.date: 09/25/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,24 +29,30 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Use managed apps on your iOS device
+# Work or school apps for iOS
+Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These types of restrictions prevent proprietary information from being shared outside of the app or org. 
 
-Managed apps are apps that your company support can set up to help protect company data that you can access in that app. When you access company data in a managed app on your iOS device, you may notice that the app works a little differently than what you expect. For example, you might not be able to copy and paste protected company data, or you might not be able to save that data to certain locations.
+To maximize data protection, your organization might configure several of these apps to work together. For example:  
+1. You connect to your organization's network in a managed browser app, such as Microsoft Edge.  
+2. You click a link to open a peer's presentation file.  
+3. An appropriate managed app, such as Microsoft PowerPoint, opens the file.  
 
-Different managed apps can also work together on your device to allow you to do your daily tasks, while keeping corporate data protected. For example, if you open a company file in one managed app, and another managed app is required to view that file, the managed app that allows you to view the file opens automatically. If a required app is not available, certain actions, like opening a document or accessing a web link from within a managed document, might not be available.
+Your org can require you to use a specific app to do something like opening a work file, or accessing a web link. If you don't have the app, you might not be able to do these things. 
 
-When you access company data in a managed app, you see a message like the one below, which lets you know that the app you are opening is managed.
+## How do I know I'm using a managed app?  
+When you sign in or try to access work or school data in a managed app, you'll receive an on-screen message that the app is protected by your organization.   
 
-![managed-apps-message-ios](./media/managed-apps-message.png)
+![managed-apps-message-ios](./media/managed-apps-message.png)  
 
-## How do I get managed apps?  
-You get managed apps in a couple of different ways:
+## How do I get work or school apps?  
 
-- When your device is enrolled in Microsoft Intune, you either install the app from your Company Portal app or Company Portal website, or your company support might install it on your device. To learn about enrolling, see [Enroll your iOS device in Intune](enroll-your-device-in-intune-ios.md) or [Enroll your macOS device in Intune](enroll-your-device-in-intune-macos-cp.md).
+There are four ways to get these apps:   
+* Your organization automatically installs apps to your device at time of enrollment.  
+* You install an app from the iOS App Store, and then sign in to the app with your work or school account.    
+* Your organization makes managed apps available to you in Company Portal. Go to the Company Portal app or website to search, view, and install available apps. For more information about these apps, see the next section, [Available apps](#available-apps).  
 
-- You install an app from the App Store, and then sign in with your corporate user account that is managed by Intune.
-
-Your company support might sometimes purchase multiple licenses for an app you install. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you can accept it. If you don't accept it, you won't be able to install the app.
+### Apple Volume Purchase Program agreement  
+Organizations often purchase iOS app licenses in bulk to accommodate the number of students or employees they have. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you should accept it. If you don't accept it, you won't be able to install the app.  
 
 ## Available apps   
  Your organization selects apps that are appropriate and useful for you at work or school. These apps are the only ones you'll find in the Company Portal.   
@@ -54,11 +60,11 @@ Your company support might sometimes purchase multiple licenses for an app you i
  Apps are also made available to you based on your device type. For example, if you're using the Company Portal app for iOS, you'll have access to iOS apps, but not Android apps.   
 
 ## Request an app for work or school   
- If there's an app you need, but don't see in Company Portal, you can request it. Find contact details for your **Helpdesk** in the Company Portal app's **Support** tab. You'll find the same contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ If there's an app you need, but don't see in Company Portal, you can request it. You'll find contact details for your IT support person in the Company Portal **Support** tab. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
  
 
-## What can my company support manage in an app?  
-Here are some examples of options that your company support can manage in an app, and that can affect your interactions with company data on your device:
+## What can my org manage in an app?  
+The following list describes the settings your IT support person can control within an app. These settings affect how you view, access, and otherwise use work or school data on your device:  
 
 - Access to specific websites
 
@@ -78,4 +84,11 @@ Here are some examples of options that your company support can manage in an app
 
 - Data encryption requirements
 
-Contact your company support for more information about the managed apps on your device. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## Next steps  
+
+* Contact your IT support person for more information about any apps on your device. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+* For information about using work or school apps on an Android device, see [Get work or school apps for Android](use-managed-apps-on-your-device-android.md).  
+
+* Learn how to [update your iOS device](update-device-outlook-iOS.md) so that you can install Microsoft Outlook.  

@@ -7,8 +7,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 04/14/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -35,10 +35,10 @@ These set-up steps help you enable mobile device management (MDM) by using Intun
 
 Some steps, such as setting up an Intune subscription and setting the MDM authority, are required for most scenarios. Other steps, such as configuring a custom domain or adding apps, are optional depending upon your company's needs.
 
-If you're currently using Microsoft Endpoint Configuration Manager to manage computers and servers, you can [cloud-attach Configuration Manager with co-management](https://docs.microsoft.com/configmgr/comanage/overview).
+If you're currently using Microsoft Endpoint Configuration Manager to manage computers and servers, you can [cloud-attach Configuration Manager with co-management](/configmgr/comanage/overview).
 
 >[!TIP]
->If you purchase at least 150 licenses for Intune in an eligible plan, you can use the *FastTrack Center Benefit*. With this service, Microsoft specialists work with you to get your environment ready for Intune. See [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+>If you purchase at least 150 licenses for Intune in an eligible plan, you can use the *FastTrack Center Benefit*. With this service, Microsoft specialists work with you to get your environment ready for Intune. See [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 | Steps | Status  |
 |---|---|
@@ -51,5 +51,5 @@ If you're currently using Microsoft Endpoint Configuration Manager to manage com
 |   7   | [Add apps](../apps/apps-add.md) - Apps can be assigned to groups and automatically or optionally installed. |
 |   8   | [Configure devices](../configuration/device-profiles.md) - Set up profiles that manage device settings. Device profiles can preconfigure settings for email, VPN, Wi-Fi, and device features. They can also restrict devices to help protect both devices and data. |
 |   9   |  [Customize Company Portal](../apps/company-portal-app.md) - Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.       |
-|  10   | [Enable device enrollment](mdm-authority-set.md) - Enable Intune management of iOS/iPadOS, Windows, Android, and Mac devices by setting the MDM authority and enabling specific platforms. |
+|  10   | [Enable device enrollment](../enrollment/device-enrollment.md) - Enable Intune management of iOS/iPadOS, Windows, Android, and Mac devices by setting the MDM authority and enabling specific platforms. |
 |  11   |  [Configure app policies](../apps/app-protection-policy.md) - Supply specific settings based on app protection policies in Microsoft Intune. |

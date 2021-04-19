@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Effects of iOS device reset in Intune Company Portal  | Microsoft Docs
-description: Describes what happens to the data on your iOS device after you reset it in the Intune Company Portal. 
+title: Factory reset a device in Intune Company Portal  | Microsoft Docs
+description: Describes what happens after you reset a device in the Intune Company Portal app for iOS and includes the steps for how to do it. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,22 +30,30 @@ ms.collection:
 ---
 
 
-# Effects of Company Portal iOS device reset 
+# Reset device in Company Portal app for iOS  
 
-Resetting your iPhone or iPad through Company Portal might delete some apps and settings, including personal data. This behavior depends on how your device was enrolled or set up in your organization. The following information describes what happens after a device reset.  
+Use the Company Portal app for iOS to reset a used, lost, or stolen device back to factory settings. All apps, settings, and personal data on the device will be deleted and the device will no longer appear in Company Portal.  
 
-If your organization manages your device, and you can access work and school emails, apps, and Wi-Fi:
+If your device was only set up to access work or school email, your email account will be deleted. Unsaved emails will also be deleted.   
 
-- Your device won’t appear in the Company Portal anymore.  
+## Availability of factory reset option 
 
-- Your device will be reset to the manufacturer’s factory default settings. Your personal data, apps, and settings will be removed.
+The factory reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/devices-wipe).  
 
-If your device is only set up to access work or school email:
+## Factory reset device  
+To reset a device to its original, out-of-box settings:   
 
-- Your device won’t appear in the Company Portal anymore.  
+1. Open the Company Portal app on any managed device and sign in with your work or school account.
+2. Select **DEVICES**. 
+3. Select the device you want to reset.
+4. Next to **Rename**, select the ellipses button > **Factory reset**.  
+5. Select **Reset** to start wiping the device.   
 
-- Your work or school email account will be deleted. Unsaved emails will be deleted.   
 
-The device reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](https://docs.microsoft.com/intune/devices-wipe).  
+## Next steps  
 
-If you have questions, contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+* You can also [reset a device from the Company Portal website](reset-device-company-portal-website.md).  
+
+* If you want to unenroll your device from Company Portal so that it's no longer managed by your organization, see [Remove iOS device from Intune](unenroll-your-device-from-intune-ios.md). Removing the device effectively removes it from Intune and may cause you to lose access to the work-related content on your device. 
+
+* Need additional help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

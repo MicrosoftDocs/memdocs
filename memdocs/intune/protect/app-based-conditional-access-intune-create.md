@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -36,7 +36,7 @@ Set up app-based Conditional Access policies for apps that are part of the list 
 Before you can use app-based Conditional Access policies, you need to have [Intune app protection policies](../apps/app-protection-policies.md) applied to your apps.
 
 > [!IMPORTANT]
-> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)
+> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access)
 
 ## Create app-based Conditional Access policies
 
@@ -76,4 +76,4 @@ Before you can create Conditional Access policies from the Microsoft Endpoint Ma
 ## See also
 
 [Protect app data with app protection policies](../apps/app-protection-policies.md)
-[Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)

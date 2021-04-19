@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
-ms.topic: conceptual
+ms.date: 03/25/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -92,7 +92,12 @@ To assign an app to groups by using the include and exclude assignment:
 
 When you make group assignments, groups that have already been assigned aren't available to be modified. If you want to select a group that currently isn't available, first remove the app from the app's assigned list.
 
-To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**. To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
+To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**. 
+
+> [!NOTE]
+> Removing a group assignment does not remove the related app. The installed app will remain on the device.  
+
+To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
 
 ![Intune app assignments - Complete](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

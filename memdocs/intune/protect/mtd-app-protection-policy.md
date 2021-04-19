@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 01/29/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -38,8 +38,12 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
 > - Better Mobile (Android, iOS/iPadOS)
+> - Check Point Sandblast (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS)
+> - MVISION Mobile (Android, iOS/iPadOS)
+> - Symantec Endpoint Security (Android, iOS/iPadOS)
+> - Wandera (Android, iOS/iPadOS)
 > - Zimperium (Android, iOS/iPadOS)
-> - Lookout for Work (Android, iOS/iPadOS).
 
 ## Before you begin
 
@@ -69,6 +73,9 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
   - **Wipe data**
 
 - **Assignments**: Assign the policy to groups of users.  The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
+
+> [!IMPORTANT]
+> If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don’t meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
 
 ## Next steps
 

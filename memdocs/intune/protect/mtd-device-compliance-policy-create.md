@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Create MTD device compliance policy with Microsoft Intune
+title: Create a Mobile Threat Defense (MTD) device compliance policy with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Create an Intune device compliance policy that uses your MTD partner threat levels to determine if a mobile device can access company resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
-ms.topic: conceptual
+ms.date: 07/28/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -38,7 +38,7 @@ Intune with MTD helps you detect threats and assess risk on mobile devices. You 
 
 ## Before you begin
 
-As part of the MTD setup, in the MTD partner console, you created a policy that classifies various threats as high, medium, and low. You now need to set the Mobile Threat Defense level in the Intune device compliance policy.
+As part of the MTD setup, in the MTD partner console, you created a policy that classifies various threats as high, medium, and low. Next you'll set the Mobile Threat Defense level in the Intune device compliance policy.
 
 Prerequisites for device compliance policy with MTD:
 
@@ -48,39 +48,45 @@ Prerequisites for device compliance policy with MTD:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Device** > **Compliance policies** > **Create policy**.
+2. Select **Endpoint security** > **Device Compliance** > **Create Policy**.
 
-3. Specify a device compliance policy **Name**, **Description**, select the **Platform**, then select **Configure** under the **Settings** section.
+3. Select the **Platform**, and then **Create**.
 
-4. On the **compliance policy** pane, choose **Device Health**.
+4. On **Basics**, specify  a device compliance policy **Name**, and **Description** (optional). Select **Next** to continue.
 
-5. On the **Device Health** pane, choose the Mobile Threat Level from the drop-down list for **Require the device to be at or under the Device Threat Level**.
+5. On **Compliance settings**, expand and configure **Device Health**. Choose the Mobile Threat Level from the drop-down list for **Require the device to be at or under the Device Threat Level**.
 
-   - **Secured**: This level is the most secure. The device cannot have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
+   - **Secured**: This level is the most secure. The device can't have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
 
    - **Low**: The device is compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
 
    - **Medium**: The device is compliant if the threats found on the device are low or medium level. If high-level threats are detected, the device is determined as noncompliant.
 
-   - **High**: This level is the least secure. This allows all threat levels, and uses Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
+   - **High**: This threat level is the least secure as it allows all threat levels and uses Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
 
-6. Select **OK** twice, then select **Create** to create the policy.
+6. Select **Next** to advance through to **Assignments**. Select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   Select **Next**.
+
+7. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 > [!IMPORTANT]
-> If you create Conditional Access policies for Office 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device.
+> If you create Conditional Access policies for Microsoft 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device and reported to Intune via the chosen MTD vendor.
 
 ## To assign an MTD device compliance policy
 
-To assign a device compliance policy to users:
+To assign, or change the assignment of a device compliance policy to users:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Device** > **Compliance policies**.
+2. Select **Endpoint security** > **Device compliance**.
 
-3. Select the policy you want to assign to users, and then select **Assignments**. Use the available options to *Include* and *Exclude* groups to receive this policy.  
+3. Select the policy you want to assign to users, and then select **Properties**.
 
-4. Select Save to complete the assignment. When you save the assignment, the policy deploys to your selected users and their devices are evaluated for compliance.
+4. Select **Edit** for Assignments, and then use the available options to *Include* and *Exclude* groups to receive this policy.  
+
+5. Select **Review + save** to complete the assignment. When you save the assignment, the policy deploys to your selected users and their devices are evaluated for compliance.
 
 ## Next steps
 
-[Enable MTD with Intune](mtd-connector-enable.md)
+* [Enable MTD with Intune](mtd-connector-enable.md)

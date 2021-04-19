@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Registered device limit has been reached | Microsoft Docs
+title: Registered iOS device limit has been reached
 titlesuffix: Intune Company Portal
 description:
 keywords:
@@ -9,7 +9,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/18/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# The limit of devices you can register has been reached
+# The limit of iOS devices you can register has been reached
 
 Every company sets a limit to the number of devices that each person can use to access company resources. This helps keep company information safe, and makes sure that each user is authorized to access it from specific devices and locations. There are three things that you can do if you see a message that tells you that you **Couldn't register your device** because you've reached the limit of the number of devices:
 

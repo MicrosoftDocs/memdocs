@@ -6,8 +6,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 5/21/2018
-ms.topic: conceptual
+ms.date: 11/24/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -30,16 +30,19 @@ ms.collection: M365-identity-device-management
 
 As an administrator, you can join large numbers of new Windows devices to Azure Active Directory and Intune. To bulk enroll devices for your Azure AD tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Azure AD tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Azure AD users to sign in.
 
+> [!NOTE]
+> Creating a provisioning package does not require any administrator roles in your Azure AD tenant.
+
 Azure AD users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
 ## Prerequisites for Windows devices bulk enrollment
 
-- Devices running Windows 10 Creator update (build 1703) or later
+- Devices running Windows 10 Creator update (build 1709) or later
 - [Windows automatic enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## Create a provisioning package
 
-1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) from the Microsoft Store.
+1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
    ![Screenshot of the Windows Configuration Designer app Store](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
@@ -64,7 +67,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. In the **Use this account everywhere on this device** page, select **This app only**.
+8. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
 9. Click **Next** when **Bulk Token** is fetched successfully.
 
@@ -77,14 +80,14 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 1. Access the provisioning package in the location specified in **Project folder** specified in the app.
 
-2. Choose how you’re going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
-   - Place the provisioning package on a USB drive, insert the USB drive into the device you’d like to bulk enroll, and apply it during initial setup
+2. Choose how you're going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
+   - Place the provisioning package on a USB drive, insert the USB drive into the device you'd like to bulk enroll, and apply it during initial setup
    - Place the provisioning package on a network folder, and apply it after initial setup
 
-   For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
+   For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. After you apply the package, the device will automatically restart in one minute.
-   ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
+   ![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
 
 4. When the device restarts, it connects to the Azure Active Directory and enrolls in Microsoft Intune.
 
@@ -103,4 +106,5 @@ You can check for success/failure of the settings in your package in the **Provi
 When not using an open network, you must use [device-level certificates](../protect/certificates-configure.md) to initiate connections. Bulk enrolled devices are unable to use to user-targeted certificates for network access. 
 
 ### Conditional Access
-Conditional Access is not available for Windows devices enrolled using bulk enrollment.
+
+Conditional Access is available for Windows 10 1803+ devices enrolled using bulk enrollment.

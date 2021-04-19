@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How do I find the serial number on my iOS device? | Microsoft Docs
+title: How do I find the serial number on my iOS device?
 description:
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/16/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How do I find the serial number on my device?
+# How do I find the serial number on my iOS device?
 
 The serial number for your device uniquely identifies it, and can help your company support with certain tasks, like replacing your device with a new one. To locate the serial number:
 

@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 In this Intune quickstart, you'll create a custom role with specific permissions for a security operations department. Then you'll assign the role to a group of such operators. There are several default roles that you can use right away. But by creating custom roles like this one, you have precise access control to all parts of your mobile device management system.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 ## Prerequisites
 
@@ -44,11 +44,11 @@ Sign in to [Intune](https://aka.ms/intuneportal) as a Global Administrator or an
 When you create a custom role, you can set permissions for a wide range of actions. For the security operations role, we'll set a few Read permissions so that the operator can review a device's configurations and policies.
 
 1. In Intune, choose **Roles** > **All roles** > **Add**.
-![Browser](./media/quickstart-create-custom-role/add-custom-role.png)
+![Adding a role in the Intune roles All roles pane.](./media/quickstart-create-custom-role/add-custom-role.png)
 2. Under **Add custom role**, in the **Name** box, enter *Security operations*.
 3. In the **Description** box, enter *This role lets a security operator monitor device configuration and compliance information.*
 4. Choose **Configure** > **Corporate device identifiers** > **Yes** next to **Read** > **OK**.
-![Browser](./media/quickstart-create-custom-role/corp-device-id-read.png)
+![Set Read value for Corporate device identifiers.](./media/quickstart-create-custom-role/corp-device-id-read.png)
 5. Choose **Device compliance policies** > **Yes** next to **Read** > **OK**.
 6. Choose **Device configurations** > **Yes** next to **Read** > **OK**.
 7. Choose **Organization** > **Yes** next to **Read** > **OK**.

@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/11/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -57,12 +57,10 @@ Install apps on your device from the Company Portal app for Windows.
 > [!IMPORTANT]
 > If a required app fails to install and your organization makes it available for you to manually install, select **Retry**. It could take up to ten minutes to see the updated status. If you select **Retry** again during this time and get an error, that's okay. Continue to wait the ten minutes for an updated status.   
 
-Depending on the size of your company, you might see multiple versions of Office available to download from Company Portal. For specific information about the Office suite for Windows devices, see [Installing Office 365 on your Windows device](./install-office-windows.md).
-
 ## Share apps  
 Share and recommend apps to your work or school contacts. The following steps describe how to share a link directly from Company Portal.
 
-1. In Company Portal, right-click or press and hold on any app to open its [context menu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+1. In Company Portal, right-click or press and hold on any app to open its [context menu](/windows/uwp/design/controls-and-patterns/menus).  
 
     ![The Company Portal app for Windows 10, front page, showing a list of Apps and devices. The clickable "Share" context menu is visible on top of the example app's icon. ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -93,7 +91,7 @@ View a list of all apps installed on your device. The **Installed apps** page li
 * Name: The name of the app. Optional apps include a link to the **App details** page.
 * Assignment type: How the app is assigned and made available to you. 
 * Publisher: The name of the developer or company that distributed the app. A publisher is typically a software vendor or your organization.  
-* Date Published: The date that the app was made available to download. Publish date could show an app’s initial release or an app’s most recent update.
+* Date Published: The date that the app was made available to download. Publish date could show an app's initial release or an app's most recent update.
 * Status: The current installation status of the app on your device. Apps can show as installing, installed, and install failed. Required apps could take up to 10 minutes to show an up-to-date status. See the note under [Install apps](#install-apps) for important details about installing a required app. 
 
 To get to this page, go to the navigation menu and select **Installed apps**.  
@@ -101,4 +99,13 @@ To get to this page, go to the navigation menu and select **Installed apps**.
 
 Use **Sort by** to rearrange the apps assignment type, publisher, alphabetically by name, or chronologically by publish date. Use **Filter by** to limit the apps you see by installation status.  If no apps are available, you'll see a message that no company apps were installed.  
 
-Need additional help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## Installing Microsoft Office  
+Depending on the size of your company, there could be multiple versions of Office available for download from the Company Portal. If you're not sure which version is best for your role, contact your IT support person for guidance.  
+
+![The Company Portal app for Windows 10 showing 2 versions of Office side by side.](./media/multiple-office-installs-cp-win10.png)
+
+You should only install one version of Office. If you try to install an additional one, the first one will be uninstalled.  
+
+## Next steps  
+
+Need additional help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

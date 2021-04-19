@@ -6,7 +6,7 @@ keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 02/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -80,25 +80,25 @@ Integrating the library into your products includes the following steps. These s
 5. Include the library in the project that builds your SCEP server
 6. Complete the following tasks on the SCEP Server:
 
-    - Allow the admin to configure the [Azure Application Identifier, Azure Application Key, and Tenant ID](#onboard-scep-server-in-azure) (in this article) that the library uses for authentication. Administrators should be allowed to update the Azure Application Key.
-    - Identify SCEP requests that include an Intune-generated SCEP password
-    - Use the **Validate Request API** library to validate Intune-generated SCEP passwords
-    - Use the library notification APIs to notify Intune about certificates issued for SCEP requests that have the Intune-generated SCEP passwords. Also notify Intune about errors that can occur when processing these SCEP requests.
-    - Confirm that the server logs enough information to help admins troubleshoot issues
+   - Allow the admin to configure the [Azure Application Identifier, Azure Application Key, and Tenant ID](#onboard-scep-server-in-azure) (in this article) that the library uses for authentication. Administrators should be allowed to update the Azure Application Key.
+   - Identify SCEP requests that include an Intune-generated SCEP password
+   - Use the **Validate Request API** library to validate Intune-generated SCEP passwords
+   - Use the library notification APIs to notify Intune about certificates issued for SCEP requests that have the Intune-generated SCEP passwords. Also notify Intune about errors that can occur when processing these SCEP requests.
+   - Confirm that the server logs enough information to help admins troubleshoot issues
 
 7. Complete [integration testing](#integration-testing) (in this article), and address any issues
 8. Give written guidance to the customer that explains:
 
-    - How the SCEP Server needs to be onboarded in the Azure portal
-    - How to get the Azure Application Identifier and Azure Application Key needed to configure the library
+   - How the SCEP Server needs to be onboarded in the Microsoft Endpoint Manager admin center
+   - How to get the Azure Application Identifier and Azure Application Key needed to configure the library
 
 ### Onboard SCEP server in Azure
 
 To authenticate to Intune, the SCEP server requires an Azure Application ID, an Azure Application Key, and a Tenant ID. The SCEP Server also needs authorized to access the Intune API.
 
-To get this data, the SCEP server administrator signs in to the Azure portal, registers the application, gives the application the **Microsoft Intune API\SCEP challenge validation** permission, creates a key for the application, and then downloads the application ID, its key, and the tenant ID.
+To get this data, the SCEP server administrator signs in to the Azure portal, registers the application, gives the application both the **Microsoft Intune API\SCEP challenge validation** permission and the **Application.Read.All** permission, creates a key for the application, and then downloads the application ID, its key, and the tenant ID.
 
-For guidance on registering an application, and getting the IDs and keys, see [Use portal to create an AAD application and service principal to access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+For guidance on registering an application, and getting the IDs and keys, see [Use portal to create an AAD application and service principal to access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ### Java Library API
 
@@ -110,38 +110,38 @@ The `IntuneScepServiceClient` class includes the methods used by the SCEP servic
 
 ##### IntuneScepServiceClient constructor
 
-Signature:
+**Signature**:
 
 ```java
 IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-Description:
+**Description**:
 
 Instantiates and configures an `IntuneScepServiceClient` object.
 
-Parameters:
+**Parameters**:
 
-    - configProperties    Properties object containing client configuration information
+- **configProperties** - Properties object containing client configuration information
 
 The configuration must include following properties:
 
-    - AAD_APP_ID="The Azure Application Id obtained during the onboarding process"
-    - AAD_APP_KEY="The Azure Application Key obtained during the onboarding process"
-    - TENANT="The Tenant Id obtained during the onboarding process"
-    - PROVIDER_NAME_AND_VERSION="Information used to identify your product and its version"
-    
+- AAD_APP_ID="The Azure Application Id obtained during the onboarding process"
+- AAD_APP_KEY="The Azure Application Key obtained during the onboarding process"
+- TENANT="The Tenant Id obtained during the onboarding process"
+- PROVIDER_NAME_AND_VERSION="Information used to identify your product and its version"
+
 If your solution requires a proxy either with authentication or without authentication, then you can add the following properties:
 
-    - PROXY_HOST="The host the proxy is hosted on."
-    - PROXY_PORT="The port the proxy is listening on."
-    - PROXY_USER="The username to use if proxy uses basic authentication."
-    - PROXY_PASS="The password to use if proxy uses basic authentication."
+- PROXY_HOST="The host the proxy is hosted on."
+- PROXY_PORT="The port the proxy is listening on."
+- PROXY_USER="The username to use if proxy uses basic authentication."
+- PROXY_PASS="The password to use if proxy uses basic authentication."
 
-Throws:
+**Throws**:
 
-    - IllegalArgumentException    Thrown if the constructor is executed without a proper property object.
+- **IllegalArgumentException** - Thrown if the constructor is executed without a proper property object.
 
 > [!IMPORTANT]
 > It's best to instantiate an instance of this class, and use it to process multiple SCEP requests. Doing so reduces overhead, as it caches authentication tokens and service location information.
@@ -151,7 +151,7 @@ The SCEP server implementer must protect the data entered in the configuration p
 
 ##### ValidateRequest method
 
-Signature:
+**Signature**:
 
 ```java
 void ValidateRequest(
@@ -159,32 +159,32 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-Description:
+**Description**:
 
 Validates a SCEP certificate request.
 
-Parameters:
+**Parameters**:
 
-    - transactionId         The SCEP Transaction Id
-    - certificateRequest    DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
+- **transactionId** - The SCEP Transaction ID
+- **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
 
-Throws:
+**Throws**:
 
-    - IllegalArgumentException      Thrown if called with a parameter that is not valid
-    - IntuneScepServiceException    Thrown if it is found that the certificate request is not valid
-    - Exception                     Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid
+- **IntuneScepServiceException** - Thrown if it is found that the certificate request is not valid
+- **Exception** - Thrown if an un-expected error is encountered
 
 > [!IMPORTANT]
 > Exceptions thrown by this method should be logged by the server. Note that the `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
 
-**Security notes**  
+**Security notes**:
 
 - If this method throws an exception, the SCEP server **must not** issue a certificate to the client.
 - SCEP certificate request validation failures may indicate a problem in the Intune infrastructure. Or, they could indicate that an attacker is trying to get a certificate.
 
 ##### SendSuccessNotification method
 
-Signature:
+**Signature**:
 
 ```java
 void SendSuccessNotification(
@@ -196,36 +196,36 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-Description:
+**Description**:
 
 Notifies Intune that a certificate is created as part of processing a SCEP request.
 
-Parameters:
+**Parameters**:
 
-    - transactionId           The SCEP Transaction Id
-    - certificateRequest      DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
-    - certThumprint           SHA1 hash of the thumbprint of the provisioned certificate
-    - certSerialNumber        Serial number of the provisioned certificate
-    - certExpirationDate      Expiration date of the provisioned certificate. The date time string should be formatted as web UTC time (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601.
-    - certIssuingAuthority    Name of the authority that issued the certificate
+- **transactionId** - The SCEP Transaction ID
+- **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
+- **certThumprint** - SHA1 hash of the thumbprint of the provisioned certificate
+- **certSerialNumber** - Serial number of the provisioned certificate
+- **certExpirationDate** - Expiration date of the provisioned certificate. The date time string should be formatted as web UTC time (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601.
+- **certIssuingAuthority** - Name of the authority that issued the certificate
 
-Throws:
+**Throws**:
 
-    - IllegalArgumentException      Thrown if called with a parameter that is not valid
-    - IntuneScepServiceException    Thrown if it is found that the certificate request is not valid
-    - Exception                     Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid
+- **IntuneScepServiceException** - Thrown if it is found that the certificate request is not valid
+- **Exception** - Thrown if an un-expected error is encountered
 
 > [!IMPORTANT]
 > Exceptions thrown by this method should be logged by the server. Note that the `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
 
-**Security notes**
+**Security notes**:
 
 - If this method throws an exception, the SCEP server **must not** issue a certificate to the client.
 - SCEP certificate request validation failures may indicate a problem in the Intune infrastructure. Or, they could indicate that an attacker is trying to get a certificate.
 
 ##### SendFailureNotification method
 
-Signature:
+**Signature**:
 
 ```java
 void SendFailureNotification(
@@ -235,51 +235,51 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-Description:
+**Description**:
 
 Notifies Intune that an error occurred while processing a SCEP request. This method shouldn't be invoked for exceptions thrown by the methods of this class.
 
-Parameters:
+**Parameters**:
 
-    - transactionId         The SCEP Transaction Id
-    - certificateRequest    DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
-    - hResult               Win32 error code that best describes the error that was encountered. See [Win32 Error Codes](https://msdn.microsoft.com/library/cc231199.aspx)
-    - errorDescription      Description of the error encountered
+- **transactionId** - The SCEP Transaction ID
+- **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
+- **hResult** - Win32 error code that best describes the error that was encountered. See [Win32 Error Codes](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)
+- **errorDescription** - Description of the error encountered
 
-Throws:
+**Throws**:
 
-    - IllegalArgumentException      Thrown if called with a parameter that is not valid
-    - IntuneScepServiceException    Thrown if it is found that the certificate request is not valid
-    - Exception                     Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid
+- **IntuneScepServiceException** - Thrown if it is found that the certificate request is not valid
+- **Exception** - Thrown if an un-expected error is encountered
 
 > [!IMPORTANT]
 > Exceptions thrown by this method should be logged by the server. Note that the `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
 
-**Security notes**
+**Security notes**:
 
 - If this method throws an exception, the SCEP server **must not** issue a certificate to the client.
 - SCEP certificate request validation failures may indicate a problem in the Intune infrastructure. Or, they could indicate that an attacker is trying to get a certificate.
 
 ##### SetSslSocketFactory method
 
-Signature:
+**Signature**:
 
 ```java
 void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-Description:
+**Description**:
 
 Use this method to inform the client that it must use the specified SSL socket factory (instead of the default) when communicating with Intune.
 
-Parameters:
+**Parameters**:
 
-    - factory    The SSL socket factory that the client should use for HTTPS requests
+- **factory** - The SSL socket factory that the client should use for HTTPS requests
 
-Throws:
+**Throws**:
 
-    - IllegalArgumentException    Thrown if called with a parameter that is not valid
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid
 
 > [!NOTE]
 > The SSL Socket factory must be set if required prior to executing the other methods of this class.

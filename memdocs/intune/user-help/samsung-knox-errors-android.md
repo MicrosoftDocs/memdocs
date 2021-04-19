@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -55,6 +55,6 @@ The message you see might look like:
 
 |Error message|What you should try|
 |---|---|
-|**Samsung Knox activation error** - The Samsung KNOX license could not be activated. It might be because power-saving mode is turned on. Turn off power-saving mode in device settings and try again. |Your device may not have the right power settings to work with your company resources. To learn more about this setting see [power saving mode](https://go.microsoft.com/fwlink/?linkid=2077422&clcid=0x409).|  
+|**Samsung Knox activation error** - The Samsung KNOX license could not be activated. It might be because power-saving mode is turned on. Turn off power-saving mode in device settings and try again. |Your device may not have the right power settings to work with your company resources. To learn more about this setting see [power saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq).|  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

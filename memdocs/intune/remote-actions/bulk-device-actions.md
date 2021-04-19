@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 3/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -32,13 +32,14 @@ ms.collection: M365-identity-device-management
 # Use bulk device actions
 
 You can use bulk device actions for the following remote actions:
-- [Autopilot reset](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+- [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
 - [Custom notifications](custom-notifications.md#send-a-custom-notification-to-a-single-device)
 - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
 - [Rename](device-rename.md)
 - [Restart](device-restart.md)
 - [Sync](device-sync.md)
 - [Wipe](devices-wipe.md#wipe)
+- Retire 
 
 ## Use a bulk device action
 

@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["^master$" "^release..*"]
- :allowed-filename-matches ["memdocs"]}
+ :allowed-filename-matches ["(?i)memdocs/(?:(?!configmgr/mdt/use-the-mdt.md))"]}

@@ -8,8 +8,8 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
-ms.topic: article
+ms.date: 01/12/2021
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -35,14 +35,11 @@ ms.collection:
 
 Remotely lock a lost or stolen device from the Company Portal website. If supported on your device, this setting locks your device's screen, no matter where the device is. A person must enter the correct passcode before the device can be unlocked and used again.   
 
-The remote lock setting works for:
+You can remote lock the following types of devices from Company Portal:
 
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (if the device already had a passcode set)
-* Windows Phone 8.1 (if the device already had a passcode set)  
 
 1. On the [Company Portal website](https://portal.manage.microsoft.com), select the __Menu__ button > __Devices__.  
 
@@ -58,7 +55,9 @@ The remote lock setting works for:
 
 4. A message appears to warn you that you are about to lock your device. Tap **Remote lock** to confirm.
 
-After the confirmation, the Company Portal attempts to lock your device. A “Remote lock pending” message appears during this time. When your device is locked, the status appears as “Remote lock successful.”  
+## Check the status of remote lock
+
+After the confirmation, the Company Portal attempts to lock your device. A "Remote lock pending" message appears during this time. When your device is locked, the status appears as "Remote lock successful."  
 
 The Remote Lock status displays in three places:
 
@@ -67,8 +66,10 @@ The Remote Lock status displays in three places:
 * The tile that shows the device name on the **Devices** section of the page.  
 
 > [!Note]
-> If you see a notification that the remote lock failed, wait a few minutes. Then try to lock your device again. The status will change back to “Remote lock pending." If the retry doesn't work, contact your company support for help.
+> If you see a notification that the remote lock failed, wait a few minutes. Then try to lock your device again. The status will change back to "Remote lock pending." If the retry doesn't work, contact your company support for help.
 
 If you find your device and want to unlock it after using Remote Lock, just enter your passcode.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Next steps
+
+Have questions or need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

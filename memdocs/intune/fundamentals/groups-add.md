@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 #ROBOTS:
 #audience:
 
-ms.reviewer: altsou
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -58,7 +58,7 @@ Use the following steps to create a new group.
         >
         > If your primary role is device management, we recommend you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: Provides collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. For more information, see [Learn about Office 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Microsoft 365**: Provides collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. For more information, see [Learn about Microsoft 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Enter a **Group name** and **Group description** for the new group. Be specific and include information so others know what the group is for.
 
@@ -74,8 +74,8 @@ Use the following steps to create a new group.
 
     For more information on these membership types, and creating dynamic expressions, see:
 
-    - [Create a basic group and add members using Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Dynamic membership rules for groups in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Create a basic group and add members using Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > In this admin center, when you create users or groups, you might not see the **Azure Active Directory** branding. But, that's what you're using.
@@ -95,7 +95,7 @@ Use the following steps to create a new group.
 
 ## Groups and policies
 
-Access to your organization’s resources are controlled by users and groups you create.
+Access to your organization's resources are controlled by users and groups you create.
 
 When you create groups, consider how you'll apply [compliance policies](../protect/device-compliance-get-started.md) and [configuration profiles](../configuration/device-profiles.md). For example, you might have:
 
@@ -110,4 +110,5 @@ For configuration profile recommendations and guidance, see [Assign policies to 
 ## See also
 
 - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
-- [Manage access to resources with Azure AD groups](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Manage access to resources with Azure AD groups](/azure/active-directory/active-directory-manage-groups)
+- [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md)

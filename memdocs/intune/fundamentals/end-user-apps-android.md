@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,12 +38,12 @@ This article helps you understand how and where your Android device administrato
 | App type | Line-of-business (LOB) apps | Play Store apps  |
 | ------------- |-------------| -----|
 | Available apps      | Users tap **install** in the Company Portal. A notification appears, which users then tap to start the installation. After the installation is successful, the notification disappears. | Users tap the app in the Company Portal, and are taken to an app page in the Play Store. This is where they start the installation.|
-| Required apps      | **On devices running Android 9.0 and earlier**, users are shown a notification, which they can't dismiss, indicating that they need to download an app. Users tap the notification to start the download and installation. After the installation is successful, the notification disappears. **On devices running Android 10 and later**, users are shown a notification, which they can't dismiss, indicating that they need to download an app. Users tap the notification to start the download and then get a notification to start the installation of the app. After the installation is successful, the notification disappears.| Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification and are taken to an app page in the Play Store. This is where they start the installation. After the installation is successful, the notification disappears. |
+| Required apps      | Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification to start the installation. After the installation is successful, the notification disappears.    | Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification and are taken to an app page in the Play Store. This is where they start the installation. After the installation is successful, the notification disappears. |
 
-Your end users need to allow installation from unknown sources to install [LOB apps](../apps/lob-apps-android.md). This setting is normally found in two different places:
+Your end users need to allow installation from unknown sources to install [LOB apps](../apps/lob-apps-android.md). This setting is normally found in two different places, depending on the version of Android:
 
-* **Android 7.1.2 and lower**: **Settings** > **Security** > **Unknown sources**
-* **Android 8.0 and above**: **Settings** > **Apps & notifications** > **Special app access** > **Install unknown apps** > **Company Portal** > **Allow from this source**
+* Android 7.1.2 and lower: **Settings** > **Security** > **Unknown sources**
+* Android 8.0 and above: **Settings** > **Apps & notifications** > **Special app access** > **Install unknown apps** > **Company Portal** > **Allow from this source**
 
 If this occurs, the Company Portal app will inform and directly guide the end user to the appropriate setting. 
 
@@ -52,13 +52,13 @@ If this occurs, the Company Portal app will inform and directly guide the end us
 | App type | Line-of-business (LOB) apps | Play Store apps  |
 | ------------- |-------------| -----|
 | Available apps      | Users tap **install** in the Company Portal. The app installs without further user intervention. | Users tap the app in the Company Portal and are taken to an app page in the Play Store. This is where they start the installation.|
-| Required apps      | **On devices running Android 9.0 and earlier**, the app is installed without any user intervention. **On devices running Android 10 and later**, users are shown a notification, which they can't dismiss, indicating that they need to download an app. Users tap the notification to start the installation. After the installation is successful, the notification disappears. | Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification and are taken to an app page in the Play Store. This is where they start the installation. After the installation is successful, the notification disappears. |
+| Required apps      | The app is installed without any user intervention.    | Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification and are taken to an app page in the Play Store. This is where they start the installation. After the installation is successful, the notification disappears. |
 
 Apps can be managed or unmanaged, as described below. The process of making apps managed is the same for all types of Android devices.
 
-**Managed apps** - These apps are managed through policies. They've been "wrapped" by Intune or built with the Intune App SDK. These apps can be managed by Intune, and application policies can be applied to them.
+* Managed apps: These apps are managed through policies. They've been "wrapped" by Intune or built with the Intune App SDK. These apps can be managed by Intune, and application policies can be applied to them.
 
-**Unmanaged apps** - These apps aren't managed through policies. They have not been wrapped by Intune or don't incorporate the Intune App SDK. Application policies can't be applied to these apps.
+* Unmanaged apps: These apps aren't managed through policies. They have not been wrapped by Intune or don't incorporate the Intune App SDK. Application policies can't be applied to these apps.
 
 ## Zebra devices with Zebra Mobility Extensions
 

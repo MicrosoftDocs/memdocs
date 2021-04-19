@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: You need to enable Code Integrity | Microsoft Docs
-description:
+title: Enable code integrity - Microsoft Intune | Microsoft Docs
+description: Learn how to make your device compliant again when code integrity is disabled. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
-ms.topic: article
+ms.date: 09/23/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,16 +31,19 @@ ms.collection:
 
 # Enable code integrity
 
-Your organization might require your PC to be enabled with a threat protection feature called *code integrity*. Code integrity checks the drivers and system files on your device for signs of corruption or malicious software. For code integrity to work on your device, another security feature called [*Secure Boot*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) must also be enabled.
+If you receive a message that you need to enable code integrity, contact your IT support person. Your support person will help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
 
-If your PC isn't compliant because code integrity is disabled, contact your organization's IT support person. Your support person will help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
+If you're using a PC and consider yourself an advanced user, you can enable Secure Boot through the PC BIOS menu. For instructions, see [Re-enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  
 
-If you identify yourself as an advanced device user and want to try the steps on your own, see [Re-enable Secure Boot](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
-## Additional resources for IT administrators
+## What is code integrity? 
+Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For code integrity to work on your device, another security feature called Secure Boot must be enabled.  
 
-If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add a device compliance policy for Windows 10 devices in Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+
+## IT pro support  
+
+If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add a device compliance policy for Windows 10 devices in Intune](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## Next steps
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

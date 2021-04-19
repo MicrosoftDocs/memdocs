@@ -7,8 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2017
-ms.topic: article
+ms.date: 08/07/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -32,28 +32,46 @@ ms.collection:
 
 # Turn on Windows Defender to access company resources
 
-Your work or school wants to ensure that devices accessing their resources are secured. There are a few ways that they can use [Windows Defender](https://www.microsoft.com/safety/pc-security/windows-defender.aspx), Windows' built-in protection for malicious software.
+Organizations want to ensure that devices accessing their resources are secured so they may require you to use [Windows Defender](https://www.microsoft.com/safety/pc-security/windows-defender.aspx). Windows Defender is an antivirus software that's included in Windows and can help protect your device from viruses and other malware and threats. 
 
-There are a few settings you may need to change on your Windows Defender to fix any access issues. These steps may require you to go to a couple of different places on your computer.
+This article describe how to update your device settings to meet your organization's antivirus requirements and resolve access problems. 
 
 ## Turn on Windows Defender
+Complete the following steps to turn on Windows Defender on your device. 
 
-1. In **Start**, open **Control Panel**.
-2. Open **Administrative Tools** > **Edit group policy**. This will open the **Local Group Policy Editor** in a new window.
-3. Open **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Defender Antivirus**. The setting **Turn off Windows Defender Antivirus** is underneath the folders of other settings. 
-4. Open **Turn off Windows Defender Antivirus** and make sure it's set to **Disabled** or **Not configured**.
+1. Select the **Start** menu.
+2. In the search bar, type **group policy**. Then select **Edit group policy** from the listed results. The Local Group Policy Editor will open.
+4. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Defender Antivirus**. 
+5. Scroll to the bottom of the list and select **Turn off Windows Defender Antivirus**.  
+6. Select **Disabled** or **Not configured**. It might feel counter-intuitive to select these options because the names suggest that you're turning Windows Defender off. Don't worry, these options actually ensure that it's turned on. 
+7. Select **Apply** > **OK**.  
 
-## Turn on Real-time Protection
 
-Check to make sure that Real-time Protection is turned on by going to **Start** and searching for **Windows Defender Security Center**. Select **Virus and threat protection settings** and confirm that both **Real-time protection** and **Cloud-delivered protection** are switched to **On**. If these options aren't appearing, do the following to enable them:
+## Turn on real-time and cloud-delivered protection
 
-1. In **Start**, open **Control Panel**.
-2. Open **Administrative Tools** > **Edit group policy**. This will open the **Local Group Policy Editor** in a new window.
-3. Open **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Defender Security Center** > **Virus and threat protection**.
-4. Open the setting **Virus and threat protection area** and set it to **Disabled**.
+Complete the following steps to turn on real-time and cloud-delivered protection. Together, these antivirus features protect you against spyware and can deliver fixes for malware issues via the cloud. 
+
+1. Select the **Start** menu.
+2. In the search bar, type **Windows Security**. Select the matching result. 
+3. Select **Virus & threat protection**.
+4. Under **Virus & threat protection settings**, select **Manage settings**.
+5. Flip each switch under **Real-time protection** and **Cloud-delivered protection** to turn them on. 
+
+If you don't see these options on your screen, they may be hidden. Complete the following steps to make them visible.  
+
+1. Select the **Start** menu.  
+2. In the search bar, type **group policy**. Then select **Edit group policy** from the listed results. The Local Group Policy Editor will open.
+3. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Security** > **Virus and threat protection**.
+4. Select **Hide the Virus and threat protection area**.
+5. Select **Disabled** > **Apply** > **OK**.  
 
 ## Update your antivirus definitions
+Complete the following steps to update your antivirus definitions.  
+1. Select the **Start** menu.
+2. In the search bar, type **Windows Security**. Select the matching result. 
+3. Select **Virus & threat protection**.
+4. Under **Virus & threat protection updates**, select **Check for updates**. If you don't see this option on your screen, complete the first set of steps in [Turn on Real-time Protection](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection). Then try checking for updates again. 
 
-Check to make sure that your antivirus definitions are up-to-date by going to **Start** and searching for **Windows Defender Security Center**. Select **Protection updates** and **Check for updates** to make sure that your device has current protection against viruses. If this option doesn't appear, follow the steps in [Turn on Real-time Protection](turn-on-defender-windows.md#turn-on-real-time-protection)
+## Next steps  
 
 Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

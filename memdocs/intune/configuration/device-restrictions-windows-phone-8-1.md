@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,9 +17,10 @@ ms.technology:
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX
 #audience:
 
+ms.reviwer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,7 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Intune Windows Phone 8.1 device restriction settings
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+
 This article shows you the Microsoft Intune device restrictions settings that you can configure for devices running Windows Phone 8.1.
+
+## Before you begin
+
+[Create a Windows Phone 8.1 device restrictions profile](device-restrictions-configure.md).
 
 ## General
 

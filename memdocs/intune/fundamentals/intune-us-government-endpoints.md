@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/30/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: 5f6682cb-5fcd-4018-b7f7-71768ad3152e
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: srink
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # US government endpoints for Microsoft Intune
 
-This page lists the US government endpoints needed for proxy settings in your Intune deployments.
+This page lists the US Government, US Government Community (GCC) High, and Department of Defense (DoD) endpoints needed for proxy settings in your Intune deployments.
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
@@ -53,34 +53,21 @@ The following tables list the ports and services that the Intune client accesses
 
 ## US Government customer designated endpoints:
 - Azure portal: https:\//portal.azure.us/ 
-- Office 365: https:\//portal.office365.us/ 
+- Microsoft 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
 - Microsoft Endpoint Manager admin center: https:\//endpoint.microsoft.us/
 
 ## Partner service endpoints that Intune depends on:
-- AAD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Azure AD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
 - Evo STS: https:\//login.microsoftonline.us
 - Directory Proxy: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph: https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
+- Azure AD Graph: https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 
-## Windows Push Notification Services
-On Intune-managed devices managed by using Mobile Device Management (MDM), Windows Push Notification Services (WNS) is required for device actions and other immediate activities. For more information, see [Enterprise Firewall and Proxy Configurations to Support WNS Traffic](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
 
-## Apple device network information
-
-|**Used for**|**Hostname (IP address/subnet)**|**Protocol**|**Port**|
-|------------|-----------|------------|-----------|
-|Retrieving and displaying content from Apple servers|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
-|Communication with APNS servers|#-courier.push.apple.com<br>'#' is a random number from 0 to 50.|TCP|5223 and 443|
-|Various functions including accessing the internet, iTunes store, macOS app store, iCloud, messaging, etc.|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 or 443|
-
-For more information, see:
-
-- [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
-- [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
-- [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
+[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
 ## Next steps
 [Network endpoints for Microsoft Intune](intune-endpoints.md)

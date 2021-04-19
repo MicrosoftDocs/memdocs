@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,6 +29,11 @@ ms.collection: M365-identity-device-management
 
 # Use custom settings for macOS devices in Microsoft Intune
 
+> [!IMPORTANT]
+> Custom configuration profiles shouldn't be used for sensitive information, such as WiFi connections or authenticating apps, sites, and more. Instead, use the built-in profiles for sensitive information, as they're designed and configured to handle sensitive information.
+> 
+> For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../protect/certificates-configure.md) for authentication.
+
 Using Microsoft Intune, you can add or create custom settings for your macOS devices using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 When using macOS devices, there are two ways to get custom settings into Intune:
@@ -42,7 +47,7 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Before you begin
 
-[Create the profile](custom-settings-configure.md).
+Create a [macOS custom device configuration profile](custom-settings-configure.md).
 
 ## What you need to know
 
@@ -60,8 +65,8 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Custom configuration profile settings
 
-- **Custom configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.
-- **Configuration profile file**: Browse to the configuration profile you created using the Apple Configurator or Apple Profile Manager. The file you imported is shown in the **File contents** area.
+- **Configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.
+- **Configuration profile file**: Browse to the `.xml` or `.mobileconfig` file you created using the Apple Configurator or Apple Profile Manager. The max file size is 1000000 bytes (just under 1 MB). The file you import is shown. You can also **Remove** a file after it's been added.
 
   You can also add device tokens to your `.mobileconfig` files. Device tokens are used to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
 
@@ -70,6 +75,6 @@ This article provides some guidance on using Apple Configurator and Apple Profil
 
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 Create a [custom profile on iOS/iPadOS devices](custom-settings-ios.md).

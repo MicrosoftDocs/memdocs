@@ -21,7 +21,7 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 #ROBOTS:
 #audience:
 
-#ms.reviewer: altsou
+#ms.reviewer: scottduf
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -53,9 +53,9 @@ Some of the Intune groups capabilities you previously might have used are not av
 ## How to get started?
 
 - Read the following topics to learn about Azure AD security groups and how they work:
-  - [Managing access to resources with Azure Active Directory groups](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Managing groups in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+  - [Managing access to resources with Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups).
+  - [Managing groups in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+  - [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 - Ensure that admins who need to create groups are added to the **Intune Service Administrator** Azure AD role. The Azure AD Service Admin role does not have **Manage Group** permissions.
 - If your Intune groups used the **Exclude specific members**  option, decide whether you can redesign these groups without exclusions, or if you need advanced rules to meet business needs.
 
@@ -88,7 +88,7 @@ Attributes are device properties that may be used in defining groups. This table
 |Manager attribute for user groups|Advanced Rule for *manager* attribute in dynamic groups|
 |All users from the parent user group|Static group with that group as a member|
 |All mobile devices from the parent device group|Static group with that group as a member|
-|All mobile devices managed by Intune|Management Type attribute with ‘MDM’ as value for dynamic group|
+|All mobile devices managed by Intune|Management Type attribute with 'MDM' as value for dynamic group|
 |Nested groups within static groups |Nested groups within static groups|
 |Nested groups within dynamic groups|Dynamic group with one level of nesting|
 

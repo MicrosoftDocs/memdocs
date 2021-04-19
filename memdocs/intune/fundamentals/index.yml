@@ -13,7 +13,7 @@ metadata:
   author: dougeby
   ms.author: erikre
   ms.manager: dougeby
-  ms.date: 12/05/2019  
+  ms.date: 04/14/2021  
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -36,7 +36,7 @@ landingContent:
       - text: Walkthrough Intune in Microsoft Endpoint Manager
         url: tutorial-walkthrough-endpoint-manager.md 
       - text: Walkthrough Intune in the Azure portal
-        url: tutorial-walkthrough-intune-portal.md       
+        url: ./tutorial-walkthrough-endpoint-manager.md
     - linkListType: concept
       links:
         - text: What is device management?
@@ -53,12 +53,12 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Plan communications
-        url: migration-guide-communication-plan.md
-      - text: Planning guide
-        url: planning-guide.md
-      - text: Migration guide
+      - text: Deploy or move to Intune
         url: migration-guide.md
+      - text: Planning guide
+        url: intune-planning-guide.md
+      - text: Enrollment deployment guide
+        url: deployment-guide-enrollment.md
       - text: Intune Adoption Kit
         url: https://www.microsoft.com/download/details.aspx?id=58348
 

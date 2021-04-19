@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 03/17/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -79,7 +79,7 @@ The **appType** entity lists the installation source of an app.
 | 3 |iOS store app | An iOS store app. |
 | 4 |iOS LOB app | An iOS line-of-business app. |
 | 5 |Managed iOS store app (MAM?) | An iOSstore app that is management enabled. |
-| 6 |O365 Pro Plus Suite | The Office 365 Pro Plus Suite for Windows 10. |
+| 6 |Microsoft 365 Apps for enterprise | The Microsoft 365 Apps for Windows 10. |
 | 7 |Web app | A web app. |
 | 8 |Windows Phone 8.1 store app | A Windows phone 8.1 store app. |
 | 9 |Windows store app | A Windows store app. |
@@ -111,6 +111,9 @@ The **vppProgramType** entity lists possible VPP program types for an app.
 ## applicationInventories
 
 The **applicationInventory** entity lists the applications found on the device at the time of inventory collection.
+
+> [!NOTE]
+> This entity is in the process of being deprecated.
 
 | Property  | Description |
 |---------|------------|

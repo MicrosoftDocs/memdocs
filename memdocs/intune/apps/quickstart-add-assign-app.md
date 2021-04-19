@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Quickstart - Add and assign a client app
+title: Quickstart - Add and assign an app
 titleSuffix: Microsoft Intune
-description: In this quickstart you will use Microsoft Intune to add and assign a client app.
+description: In this quickstart, you will use Microsoft Intune to add and assign an app.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 03/25/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: mancheen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,9 +29,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Quickstart: Add and assign a client app
+# Quickstart: Add and assign a app
 
-In this quickstart, you will use Intune to add and assign a client app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
+In this quickstart, you will use Intune to add and assign a app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
@@ -41,31 +41,26 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to [Intune](https://aka.ms/intuneportal) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
-## Add the client app to Intune
+## Add the app to Intune
 
 An app can be included so that Intune can manage aspects of the app. 
 
 Use the following steps to add an app to Intune:
 
-1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps** > **Add**. 
-2. Select **Windows 10** in the **Office 365 Suite** section of the **Select app type** pane.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. 
+2. In the **App type** drop-down box, select **Windows 10**.
 3. Click **Select**. The **Add app** steps are displayed.
-4. Confirm the default details in the **App suite information** page.
-5. Click **Next** to display the **Configure app suite** page.
-6. Next to **Update Channel** select **Monthly** from the dropdown box.
-7. Confirm the remaining default details in the ***Configure app suite** page.
-8. Click **Next** to display the **Scope tags** page.
-9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
-10. Click **Next** to display the **Assignments** page.
-11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
-12. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
+4. Confirm the default details in the **App suite information** step and click **Next**.
+5. Confirm the default settings in the **App settings** step and click **Next**.
+6. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+7. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 13. When you are done, click **Create** to add the app to Intune.
 
 ## Assign the app to a group
 
-After you've added an app to Microsoft Intune, you can assign the app to groups of users or devices.
+After you've added an app to Microsoft Intune, you can assign the app to additional groups of users or devices.
 
 > [!NOTE]
 > This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
@@ -74,12 +69,12 @@ Use the following steps to assign an app to a group:
 
 1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps**. 
 2. Select the app that you want to assign to a group.
-3. Click **Assignments** > **Add group** to display the **Add group** pane.
-4. Select **Available for enrolled devices** in the **Assignment type** dropdown box. 
-5. Click **Included Groups** > **Select groups to include** > **Contoso Testers**.
-6. Click **Select** > **OK** > **OK** > **Save** to assign the group.
+3. Click **Properties**. Next to **Assignments** click **Edit**. 
+5. Click **Add Group** under the **Required** section. The **Select group** pane is displayed.
+6. Find the group that you need to added and click **Select** at the bottom of the pane. 
+1. Click **Review + save** > **Save** to assign the group.
 
-You now have assigned the app to the **Contoso Testers** group.
+You now have assigned the app to an additional group.
 
 ## Install the app on the enrolled device
 
@@ -92,7 +87,7 @@ You must install and use the Company Portal app to install the **Contoso's To-Do
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
-4. Click the app that you added using Intune. In this quickstart you added the **Microsoft Office 365 app suite** app.
+4. Click the app that you added using Intune. In this quickstart you added the **Microsoft 365 Apps** suite.
 
     > [!NOTE]
     > If you did not successfully assign any apps to the Intune user, you will see the following message:

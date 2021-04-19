@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,15 +28,17 @@ ms.collection: M365-identity-device-management
 
 # Android device settings to configure email, authentication, and synchronization in Intune
 
-This article lists and describes the different email settings you can control on Android Samsung Knox devices in Intune. As part of your mobile device management (MDM) solution, use these settings to configure an email server, use SSL to encrypt emails, and more.
+This article describes the different email settings you can control on Android Samsung Knox devices in Intune. As part of your mobile device management (MDM) solution, use these settings to configure an email server, use SSL to encrypt emails, and more.
 
-As an Intune administrator, you can create and assign email settings to Android Samsung Knox Standard devices.
+This feature applies to:
 
-To learn more about email profiles in Intune, see [configure email settings](email-settings-configure.md).
+- Android device administrator (DA)
+
+As an Intune administrator, you can create and assign email settings to Android Samsung Knox Standard devices. To learn more about email profiles in Intune, see [configure email settings](email-settings-configure.md).
 
 ## Before you begin
 
-[Create a device configuration profile](email-settings-configure.md).
+Create an [Android device administrator Email device configuration profile](email-settings-configure.md).
 
 ## Android (Samsung Knox)
 
@@ -85,4 +87,4 @@ To learn more about email profiles in Intune, see [configure email settings](ema
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create email profiles for [Android Enterprise - work profile](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), [Windows 10 and later](email-settings-windows-10.md), and [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
+You can also create email profiles for [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10 and later](email-settings-windows-10.md).

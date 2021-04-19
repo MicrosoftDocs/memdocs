@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: How to enable User Account Control | Microsoft Docs
-description: Learn how to enable UAC to access company resources.
+title: Change User Access Control setting | Microsoft Docs
+description: Learn how to change the User Access Control protection level to get access to work resources.
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
-ms.topic: article
+ms.date: 12/11/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,14 +30,27 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How to enable User Access Control
+# Change User Access Control setting  
 
-Your work or school wants to ensure that devices accessing their resources are secured. One way they've chosen to make sure that your device is set up to access those resources is to keep unauthorized software from being installed on your device.
+The User Access Control settings help prevent potentially harmful programs and software from making changes to your device. If you've received a message about adjusting these controls, it means that your organization requires your device to have more protection from User Access Control.
 
-Here's how you can change the settings for User Access Control:
+## Adjust protection level    
 
 1. Go to **Start** and open **Control Panel**.
-2. Open **Security and Maintenance** > **Change User Account Control settings**.
-3. On the **Choose when to be notified about changes to your computer** page, move the slider to one of the top two notches closest to **Always notify**.
+2. Select **System and Security**.
+3. Under **Security and Maintenance**, select **Change User Account Control settings**.
+3. Move the slider to one of the following levels: 
+   * **Notify me when apps try to make changes to my computer**
+   * **Always notify**  
+4. Select **OK** to save your changes. 
+5. Select **Yes** when prompted to confirm the changes.  
 
-Still need help? Contact your company support. For contact information, see the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Check device settings  
+After you make changes to User Account Control, return to Company Portal and sync your device. 
+
+1. Open Company Portal for Windows.
+2. Select **Settings**.
+3. Select **Sync**. 
+
+## Next steps  
+Still need help? Contact your IT support person. For contact information, see the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

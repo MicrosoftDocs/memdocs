@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/25/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: ec111319-7e02-434f-946b-88647726bf1a
 #ROBOTS:
 #audience:
 
-ms.reviewer: joglocke
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,7 +40,7 @@ Application protection policy delivery depends on the license state and Intune s
 |    User State    |    App Protection behavior     |    Retry Interval  (see note)    |    Why does this happen?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |    Tenant Not   Onboarded    |    Wait for   next retry interval.  App Protection is   not active for the user.    |    24   hours    |    Occurs   when you have not setup your tenant for Intune.    |
-|    User Not   Licensed     |    Wait for next   retry interval.  App Protection is not active   for the user.     |    12 hours - However, on Android devices this interval requires Intune APP SDK version 5.6.0 or later. Otherwise for Andriod devices, the interval is 24 hours.   |    Occurs when you   have not licensed the user for Intune.    |
+|    User Not   Licensed     |    Wait for next   retry interval.  App Protection is not active   for the user.     |    12 hours - However, on Android devices this interval requires Intune APP SDK version 5.6.0 or later. Otherwise for Android devices, the interval is 24 hours.   |    Occurs when you   have not licensed the user for Intune.    |
 |    User Not   Assigned App Protection Policies    |    Wait for   next retry interval.  App Protection is   not active for the user.    |    12 hours        |    Occurs when you   have not assigned APP settings to the user.    |
 |    User Assigned App Protection Policies but app is not defined in the App Protection Policies   |    Wait for   next retry interval.  App Protection is   not active for the user.    |    12 hours        |    Occurs when you   have not added the app to APP.    |
 |    User   Successfully Registered for Intune MAM    |    App   Protection is applied per policy settings.    Updates occur based on retry interval    |    Intune   Service defined based on user load.    Typically 30 mins.     |    Occurs when   the user has successfully registered with the Intune service for MAM   configuration.    |

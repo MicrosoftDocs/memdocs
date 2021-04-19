@@ -8,7 +8,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,16 +70,16 @@ This is one approach among many. You may choose a simpler process that defers al
 
 Choose one of the following options:
 
-- [Configure Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Configure Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Install on-premises Exchange connector with Intune](../protect/exchange-connector-install.md)
+- [Configure Hybrid Modern Authentication](/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Set up app-based Conditional Access policies for Exchange Online](../protect/app-based-conditional-access-intune-create.md)
 
 - [Set up app-based Conditional Access policies for SharePoint Online](../protect/app-based-conditional-access-intune-create.md)
 
-- [Block apps that do not use modern authentication (ADAL)](../protect/app-modern-authentication-block.md)
+- [Block apps that do not use modern authentication (ADAL or MSAL)](../protect/app-modern-authentication-block.md) 
 
 ## Next steps
 
-Learn about the [typical migration cycle](migration-guide-cycle.md).
+Be sure to [create a rollout plan](intune-planning-guide.md).

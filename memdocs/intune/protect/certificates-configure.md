@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create certificates profile in Microsoft Intune - Azure | Microsoft Docs
+title: Learn about certificate types and profiles you use with Microsoft Intune - Azure | Microsoft Docs
 description: Learn about using Simple Certificate Enrollment Protocol (SCEP) or Public Key Cryptography Standards (PKCS) certificates and certificate profiles with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 01/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,6 +32,54 @@ ms.collection: M365-identity-device-management
 
 Use certificates with Intune to authenticate your users to applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users won't need to enter usernames and passwords, which can make their access seamless. Certificates are also used for signing and encryption of email using S/MIME.
 
+## Introduction to certificates with Intune
+
+Certificates provide authenticated access without delay through the following two phases:
+
+- Authentication phase: The user’s authenticity is checked to confirm the user is who they claim to be.
+- Authorization phase: The user is subjected to conditions for which a determination is made on whether the user should be given access.
+
+Typical use scenarios for certificates include:
+
+- Network authentication (for example, 802.1x) with device or user certs
+- Authenticating with VPN servers using device or user certs
+- Signing e-mail based on user certs
+
+Intune supports Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS), and imported PKCS certificates as methods to provision certificates on devices. The different provisioning methods have different requirements, and results. For example:
+
+- SCEP provisions certificates that are unique to each request for the certificate.
+- PKCS provisions each device with a unique certificate.
+- With Imported PKCS, you can deploy the same certificate that you’ve exported from a source, like an email server, to multiple recipients. This shared certificate is useful to ensure all your users or devices can then decrypt emails that were encrypted by that certificate.
+
+To provision a user or device with a specific type of certificate, Intune uses a certificate profile.
+
+In addition to the three certificate types and provisioning methods, you’ll need a trusted root certificate from a trusted Certification Authority (CA). The CA can be an on-premises Microsoft Certification Authority, or a [third-party Certification Authority](certificate-authority-add-scep-overview.md). The trusted root certificate establishes a trust from the device to your root or intermediate (issuing) CA from which the other certificates are issued. To deploy this certificate, you use the *trusted certificate* profile, and deploy it to the same devices and users that will receive the certificate profiles for SCEP, PKCS, and imported PKCS.
+
+> [!TIP]  
+> Intune also supports use of [Derived credentials](derived-credentials.md) for environments that require use of smartcards.
+
+### What’s required to use certificates
+
+- **A Certification Authority**. Your CA is the source of trust that the certificates reference for authentication. You can use a Microsoft CA or a third-party CA.
+- **On-premises infrastructure**. The infrastructure you’ll require depends on the certificate types you’ll use:
+  - [SCEP](certificates-scep-configure.md)
+  - [PKCS](certificates-pfx-configure.md)
+  - [Imported PKCS](certificates-imported-pfx-configure.md)
+- **A trusted root certificate**. Before you deploy SCEP or PKCS certificate profiles, deploy the trusted root certificate from your CA using a *trusted certificate* profile. This profile helps establish the trust from the device back to the CA and is required by the other certificate profiles.
+
+With a trusted root certificate deployed, you’ll then be ready to deploy certificate profiles to provision users and devices with certificates for authentication.
+
+### Which certificate profile to use
+
+The following comparisons aren’t comprehensive but intended to help distinguish the use of the different certificate profile types.
+
+| Profile type               | Details       |
+|----------------------------|---------------|
+| Trusted certificate        | Use to deploy the public key (certificate) from a root CA or intermediary CA to users and devices to establish a trust back to the source CA. Other certificate profiles require the trusted certificate profile and its root certificate.    |
+| SCEP certificate           | Deploys a template for a certificate request to users and devices. Each certificate that’s provisioned using SCEP is unique and tied to the user or device that requests the certificate. <br><br>With SCEP, you can deploy certificates to devices that lack a user affinity, including use of SCEP to provision a certificate on KIOSK or user-less device.   |
+| PKCS certificate           | Deploys a template for a certificate request that specifies a certificate type of either user or device. <br><br> - Requests for a certificate type of user always require user affinity.  When deployed to a user, each of the user’s devices receives a unique certificate. When deployed to a device with a user, that user is associated with the certificate for that device. When deployed to a userless device, no certificate is provisioned. <br> - Templates with a certificate type of device don’t require user affinity to provision a certificate. Deployment to a device provisions the device. Deployment to a user provisions the device the user is signed into with a certificate.   |
+| PKCS imported certificate  | Deploys a single certificate to multiple devices and users, which supports scenarios like S/MIME signing and encryption. For example, by deploying the same certificate to each device, each device can decrypt email received from that same email server. <br><br>Other certificate deployment methods are insufficient for this scenario, as SCEP creates a unique certificate for each request, and PKCS associates a different certificate for each user, with different users receiving different certificates.    |
+
 ## Intune supported certificates and usage
 
 | Type              | Authentication | S/MIME Signing | S/MIME encryption  |
@@ -48,17 +96,19 @@ Each individual certificate profile you create supports a single platform. For e
 
 When you use a Microsoft Certification Authority (CA):
 
-- To use SCEP certificate profiles, you must [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-- To use the following certificate profile types, you must [install the Microsoft Intune Certificate Connector](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - SCEP certification profile
-  - PKCS certificate profile
+- To use SCEP certificate profiles:
+  - [setup a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
+  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
+- To use PKCS certificate profiles:
+  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-pfx-configure.md).
+  
 - To use PKCS imported certificates:
   - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
   - Export certificates from the certification authority and then import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 - Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+  - [Trusted certificate profiles](certificates-trusted-root.md) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
   - SCEP certificate profiles
   - PKCS certificate profiles
   - PKCS imported certificate profiles
@@ -68,13 +118,13 @@ When you use a Microsoft Certification Authority (CA):
 When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 - To use SCEP certificate profiles:
-  - Set up integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Set up includes following the instructions from the third-party CA to complete integration of their CA with Intune.
+  - Configure integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
   - [Create an application in Azure AD](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
 
 - PKCS imported certificates require you to [install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
 
 - Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+  - [Trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
   - SCEP certificate profiles
   - PKCS certificate profiles *(only supported with the [Digicert PKI Platform](certificates-digicert-configure.md))*
   - PKCS imported certificate profiles
@@ -83,86 +133,28 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 | Platform              | Trusted certificate profile | PKCS certificate profile | SCEP certificate profile | PKCS imported certificate profile  |
 |--|--|--|--|---|
-| Android device administrator | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) |   | ![Supported](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  |   | ![Supported](./media/certificates-configure/green-check.png)  |   |
-| Android Enterprise <br> - Work Profile    | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
+| Android device administrator | ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 1**)*| ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
+| Android Enterprise <br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)|
+| Android Enterprise <br> - Corporate-Owned Work Profile   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Personally-Owned Work Profile    | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
-| Windows Phone 8.1     |![Supported](./media/certificates-configure/green-check.png)  |  | ![Supported](./media/certificates-configure/green-check.png)| ![Supported](./media/certificates-configure/green-check.png) |
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
 | Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 
-## Export the trusted root CA certificate
-
-To use PKCS,  SCEP, and PKCS imported certificates, devices must trust your root Certification Authority. To establish trust, export the Trusted Root CA certificate, and any intermediate or issuing Certification Authority certificates, as a public certificate (.cer). You can get these certificates from the issuing CA, or from any device that trusts your issuing CA.
-
-To export the certificate, refer to the documentation for your Certification Authority. You'll need to export the public certificate as a .cer file.  Don't export the private key, a .pfx file.
-
-You'll use this .cer file when you [create trusted certificate profiles](#create-trusted-certificate-profiles) to deploy that certificate to your devices.
-
-## Create trusted certificate profiles
-
-Create a trusted certificate profile before you can create a SCEP, PKCS, or PKCS imported certificate profile. Deploying a trusted certificate profile ensures each device recognizes the legitimacy of your CA. SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don't directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn't trust the root CA, the SCEP or PKCS certificate profile policy will fail.
-
-Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
-
-### To create a trusted certificate profile
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
-
-   ![Navigate to Intune and create a new profile for a trusted certificate](./media/certificates-configure/certificates-configure-profile-new.png)
-
-3. Enter the following properties:
-   - **Platform**: Choose the platform of the devices that will receive this profile.
-   - **Profile**: Select **Trusted certificate**
-  
-4. Select **Create**.
-
-5. In **Basics**, enter the following properties:
-   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is *Trusted certificate profile for entire company*.
-   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-
-6. Select **Next**.
-
-7. In **Configuration settings**, specify the .cer file for the trusted Root CA Certificate you previously exported. 
-
-   For Windows 8.1 and Windows 10 devices only, select the **Destination Store** for the trusted certificate from:
-
-   - **Computer certificate store - Root**
-   - **Computer certificate store - Intermediate**
-   - **User certificate store - Intermediate**
-
-   ![Create a profile and upload a trusted certificate](./media/certificates-configure/certificates-configure-profile-fill.png)
-
-8. Select **Next**.
-
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-   Select **Next**.
-
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    Select **Next**.
-
-11. (*Applies to Windows 10 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
-
-  For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
-
-12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+- ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
 ## Additional resources
 
-- [Assign device profiles](../configuration/device-profile-assign.md)  
 - [Use S/MIME to sign and encrypt emails](certificates-s-mime-encryption-sign.md)  
 - [Use third-party certification authority](certificate-authority-add-scep-overview.md)  
 
 ## Next steps
-
-Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you want to use. To continue, see the following articles:
-
+Create certificate profiles:  
+- [Configure a trusted certificate profile](certificates-trusted-root.md)
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  
-- [Configure and manage PKCS certificates with Intune](certficates-pfx-configure.md)  
+- [Configure and manage PKCS certificates with Intune](certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+Learn about [Certificate connectors](certificate-connectors.md)

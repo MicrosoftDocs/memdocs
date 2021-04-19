@@ -4,11 +4,11 @@
 title: Data security and sharing in Intune
 titleSuffix: Microsoft Intune
 description: Learn how personal data is secured and shared in Intune.
-keywords:
+keywords: privacy, data
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,30 +40,22 @@ Microsoft Intune follows the same technical and organizational measures that the
 
 For more information, see the [Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp).
 
-Intune uses data minimization techniques, like
-
-- aggregation
-- optional data collection for some features
-- data made less precise or sensitive
-
-Intune also uses techniques such as RBAC and JiT security for support incidents to ensure Data Protection by Default. 
-
 ### Data breach reporting
 
-When a Customer-Reportable Security Incident (CRSI) is identified, customers are notified. This process includes working with the Microsoft O365 team to communicate breach notification for any Microsoft O365 customers using Intune.
+When a Customer-Reportable Security Incident (CRSI) is identified, customers are notified. This process includes working with the Microsoft 365 team to communicate breach notification for any Microsoft 365 customers using Intune.
 
 ## Data sharing
 
 When tenant admins turn on certain functionality (like the Apple Device Enrollment Program), Microsoft Intune obtains admin consent for sharing data with the appropriate third parties. In such cases, Intune may share personal data with:
 
-- Third parties acting as Microsoft’s agents.
-- Third parties not acting as Microsoft’s agents, but only when tenant admins explicitly grant Intune permission to do so.
+- Third parties acting as Microsoft's agents.
+- Third parties not acting as Microsoft's agents, but only when tenant admins explicitly grant Intune permission to do so.
 
-All third-parties acting as Microsoft agents are included in the [Online Services Subcontractor list](https://aka.ms/Online_Serv_Subcontractor_List).
+All third parties acting as Microsoft agents are included in the [Online Services Subcontractor list](https://aka.ms/Online_Serv_Subcontractor_List).
 
 Sharing data with such entities is done to aid customer and technical support, service maintenance, and other operations.
 
-A tenant’s contract with the third party governs the Intune personal data held in the third party’s service. It also grants Intune the permission to transmit data to the third party service.  
+A tenant's contract with the third party governs the Intune personal data held in the third party's service. It also grants Intune the permission to transmit data to the third party service.  
 
 For information about data shared with certain third parties, see the following articles:
 - [Data Intune sends to Apple](data-intune-sends-to-apple.md)
@@ -76,7 +68,7 @@ For information about data shared with certain third parties, see the following 
 
 Microsoft Intune does not share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
 
-To learn more, see [Diagnostics and usage data for Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+To learn more, see [Diagnostics and usage data for Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## Next steps

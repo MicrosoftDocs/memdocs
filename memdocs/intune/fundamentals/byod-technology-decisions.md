@@ -30,14 +30,14 @@ ms.collection: M365-identity-device-management
 
 As you develop your strategy to enable employees to work remotely on their own devices (BYOD), you need to make key decisions in the scenarios to enable BYOD and how to protect your corporate data. Fortunately, EMS offers all of the capabilities you need in a comprehensive set of solutions.  
 
-In this topic, we examine the simple use case of enabling BYOD access to corporate email. We’ll focus on whether or not you need to manage the entire device or just the applications, both of which are completely valid choices.
+In this topic, we examine the simple use case of enabling BYOD access to corporate email. We'll focus on whether or not you need to manage the entire device or just the applications, both of which are completely valid choices.
 
 ## Assumptions
 * You have basic knowledge of Azure Active Directory and Microsoft Intune
 * Your email accounts are hosted in Exchange Online
 
 ## Common reasons to manage the device (MDM)
-You can easily drive users to enroll their devices into device management by deploying a [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) policy on Exchange Online. Here are the reasons you might want to manage personal devices:
+You can easily drive users to enroll their devices into device management by deploying a [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) policy on Exchange Online. Here are the reasons you might want to manage personal devices:
 
 **WiFi/VPN** – If your users need a corporate connectivity profile to be productive, this can be seamlessly configured.
 
@@ -64,7 +64,7 @@ As already mentioned, Conditional Access can drive a user to enroll their device
 * Sign-in risk level
 * Device platform
 
-Still, many organizations often have specific risks they’re concerned about.  The table below lists the common concerns and MDM vs MAM response to that concern.
+Still, many organizations often have specific risks they're concerned about.  The table below lists the common concerns and MDM vs MAM response to that concern.
 
 | Concern   |   MDM  |   MAM  |
 |------------|--------|--------|
@@ -76,16 +76,16 @@ Still, many organizations often have specific risks they’re concerned about.  
 |Compromised user account | Block high risk users | Block high risk users |
 |Compromised user account | Device PIN | App PIN |
 | | | |
-| Compromised device or app | Require a compliant device | Jailbreak check on app launch |
+| Compromised device or app | Require a compliant device | Jailbreak/root check on app launch |
 | Compromised device or app | Encrypt device data | Encrypt app data |
 | | | |
 |Lost or stolen device | Remove all device data | Remove all app data|
 | | | |
-| Accidental data sharing or saving to unsecured locations | Restrict device data backups | Restrict cut/copy/paste|
+| Accidental data sharing or saving to unsecured locations | Restrict device data backups | Restrict backups of org data |
 | Accidental data sharing or saving to unsecured locations | Restrict save-as | Restrict save-as |
-|Accidental data sharing or saving to unsecured locations | Disable printing | n/a|
+|Accidental data sharing or saving to unsecured locations | Disable printing | Disable printing of org data |
 
 ## Next steps
-Now it’s time to decide if you are going to enable BYOD in your organization by focusing on device management, app management, or a combination of the two. The implementation choice is yours, where you can rest assured that the identity and security features available with Azure AD will be available regardless.  
+Now it's time to decide if you are going to enable BYOD in your organization by focusing on device management, app management, or a combination of the two. The implementation choice is yours, where you can rest assured that the identity and security features available with Azure AD will be available regardless.  
 
-Use the Intune [Planning Guide](planning-guide.md) to map out your next level of planning.
+Use the Intune [Planning Guide](intune-planning-guide.md) to map out your next level of planning.

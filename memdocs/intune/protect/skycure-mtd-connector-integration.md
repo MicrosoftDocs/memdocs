@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up Symantec integration with Microsoft Intune
+title: Set up Symantec Endpoint Protection Mobile integration with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: How to set up the Symantec Endpoint Protection Mobile solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: 359448d9-2384-42ac-a21c-a25148c20a7b
 #ROBOTS:
 #audience:
 
-ms.reviewer: heenamac
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,11 +40,11 @@ Complete the following steps to integrate the Symantec Endpoint Protection Mobil
 
 ### Azure AD account used to integrate Intune and SEP Mobile
 
-- Make sure you have the Azure AD account properly configured in the [Symantec Endpoint Protection Mobile Management console](https://aad.skycure.com) before starting the SEP Mobile Basic setup process.
+- Make sure you have the Azure AD account properly configured in the [Symantec Endpoint Protection Mobile Management console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html) before starting the SEP Mobile Basic setup process.
 - The Azure AD account must be a global administrator account to perform the integration.
 ### Network Setup
 
-You can make sure your network is properly configured for integration with SEP Mobile setup by referring to the Symantec article [Configuring SEP Manager after installation](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html).
+You can make sure your network is properly configured for integration with SEP Mobile setup by referring to the Symantec article [Configuring SEP Manager after installation](https://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/installing-v16194271-d23e1332/configuring-after-installation-v18374552-d23e1454.html).
 
 ### Full integration vs. Read-only
 
@@ -69,7 +69,7 @@ SEP Mobile supports two modes of integration with Intune:
 > [!IMPORTANT]
 > The SEP Mobile admin credentials must consist of an e-mail account that belongs to a valid user in the Azure Active Directory, otherwise the login will fail. SEP Mobile uses Azure Active Directory to authenticate its admin using Single Sign On (SSO).
 
-1. Go to [Symantec Endpoint Protection Mobile Management Console](https://aad.skycure.com).
+1. Go to [Symantec Endpoint Protection Mobile Management Console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html).
 
 2. Enter your **SEP Mobile admin credentials**, and then choose **Continue**.
 
@@ -126,7 +126,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 ### Set up the integration between Symantec Endpoint Protection Mobile and Intune
 
-1. Go to [Symantec Endpoint Protection Mobile Management Console](https://aad.skycure.com).
+1. Go to [Symantec Endpoint Protection Mobile Management Console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html).
 
 2. Enter your **SEP Mobile admin credentials**, then choose **Continue**.
 
@@ -142,7 +142,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
     ![Image showing adding the iOS/iPadOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. Sign in using the Azure Active Directory credentials for the Office 365 account that manages the directory.
+7. Sign in using the Azure Active Directory credentials for the Microsoft 365 account that manages the directory.
 
 8. Choose the **Accept** button to add the SEP Mobile iOS/iPadOS app to Azure Active Directory.
 

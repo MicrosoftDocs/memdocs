@@ -1,19 +1,19 @@
 ---
 # required metadata
 
-title: Send iOS logs to Microsoft developers | Microsoft Docs
-description:
+title: Send iOS logs to Microsoft - Microsoft Intune | Microsoft Docs
+description: Learn how to report a Company Portal problem to Microsoft by uploading app logs.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/02/2018
-ms.topic: article
+ms.date: 12/02/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
-ms.assetid: 733a590e-836f-4941-bfd9-6ae53ba25e06
+ms.assetid: 
 searchScope:
  - User help
 
@@ -22,23 +22,36 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: esmich
+ms.reviewer: annovich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Send logs to the Company Portal developers for iOS devices
+# Send iOS app logs to Microsoft developers 
 
-Sometimes the Company Portal app may close unexpectedly. This is an issue that the app developers want to hear about, as it can help us make it work better for you and prevent this kind of thing from happening in the future. This information is kept on your device in a special document called a _diagnostic log_.
+If Company Portal behaves unexpectedly, you can report the problem to Microsoft by uploading app logs. The app logs live on your device and contain details about the unexpected events that occur in apps such as Company Portal. Microsoft uses the Company Portal-specific logs to learn from and improve upon future products. 
 
-If this is happening to you, the Company Portal team needs some information to try and diagnose the root cause. Here’s what we need you to do:
+> [!Tip]
+> To make it easier for your support person and app developers to figure out a problem, turn on _verbose logging_. Verbose logging records all details about an error and includes these details in the report. For more information, see [Configure logging settings](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md). 
 
-1. Attempt to make the issue happen again. It’s ok if you can’t, but it might make the next step easier if you can.
-2. Go to __Settings__ > __Privacy__ > __Analytics__ > __Analytics Data__. This is a list of app activities that have happened, ranging from crashes to general usage patterns, and it does not contain any personal information. This list is organized from most recent to oldest. If you were able to reproduce the issue, this should be the first item that appears on the list of app activity on this page. If you were unable to reproduce the issue, scroll down until you find the first item that begins with “Company Portal”, then tap it to open it.
-3. Press and hold, then drag the little blue dots up and down until all of the text in the report has been selected. Tap __Copy__ in the popup menu.
-4. Open your email app, and paste that content into the body of the email. Send that email to
-<a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
+## Upload logs    
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+1. Open the Company Portal app.
+2. Try to reproduce the event you experienced. This step is optional but ensures that the Company Portal details appear at the top of the logs when uploaded. 
+
+3. Use one of the following methods to initiate the upload:  
+    * When you receive an error message, tap **Report**.   
+    * Tap **More** > **Get Help**. 
+    * Shake your device. Then tap **Send Diagnostic Report**. 
+
+5. Wait while Company Portal uploads the logs.   
+
+6. Save the incident ID for your records.  
+
+
+## Next steps  
+After you upload the logs, select **Email details** to report the problem to your IT support person. In the body of the email, explain what you experienced and include your incident ID. Your support person may use the incident ID to enlist help about your case from Microsoft.  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -1,16 +1,17 @@
 ---
 # required metadata
 
-title: Enroll iOS or iPadOS device with Intune Company Portal and Entrust Datacard  
-description: Enroll an iOS or iPadOS device and set up derived credential authentication with Entrust Datacard.
+title: Enroll iOS or iPadOS device with Intune Company Portal and Entrust  
+description: Enroll an iOS or iPadOS device and set up derived credential authentication with Entrust.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
-ms.topic: article
+ms.date: 07/08/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology:
 ms.assetid: 
 searchScope:
@@ -29,7 +30,7 @@ ms.collection:
 ---
 
 
-# Set up iOS or iPadOS device with Company Portal and Entrust Datacard
+# Set up iOS or iPadOS device with Company Portal and Entrust
 
 Enroll your device with the Intune Company Portal app to gain secure, mobile access to your organization's email, files, and apps. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune.  
 
@@ -43,10 +44,10 @@ You likely need to set up a derived credential if you use a smart card to:
 In this article, you will:  
 
    * Enroll a mobile iOS or iPadOS device with Intune Company Portal.  
-   * Get a derived credential from your organization's derived credential provider, [Entrust Datacard](https://www.entrustdatacard.com/).  
+   * Get a derived credential from your organization's derived credential provider, [Entrust](https://www.entrust.com/).  
 
 ### What are derived credentials?  
-A derived credential is a certificate that’s derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
+A derived credential is a certificate that's derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
 
 Derived credentials are used to: 
 * Authenticate students and employees who sign in to school or work apps, Wi-Fi, and VPN
@@ -65,7 +66,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 
 ## Enroll device  
-1. Open the Company Portal app for iOS/iPadOS on your mobile device and sign in with your work account.  
+1. Open the Company Portal app for iOS/iPadOS on your mobile device and select the option to sign in from another device.  
 
 2. Write down the onscreen code.  
 

@@ -12,7 +12,8 @@ metadata:
   ms.collection: collection
   author: brenduns
   ms.author: brenduns
-  ms.date: 08/20/2019  
+  ms.date: 08/20/2019 
+  ms.custom: has-adal-ref
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -78,7 +79,7 @@ landingContent:
             url: mobile-threat-defense.md
       - linkListType: how-to-guide
         links:
-          - text: Microsoft Defender ATP
+          - text: Microsoft Defender for Endpoint
             url: advanced-threat-protection.md
           - text: Mobile Threat Defense partners
             url: mtd-apps-ios-app-configuration-policy-add-assign.md
@@ -103,7 +104,7 @@ landingContent:
           - text: SCEP certificate profiles
             url: certificates-scep-configure.md
           - text: PKCS certificate profiles
-            url: certficates-pfx-configure.md
+            url: certificates-pfx-configure.md
           - text: Imported PFX Certificates
             url: certificates-imported-pfx-configure.md
 #         - text: Derived Credentials (TBD or 1910)
@@ -151,4 +152,4 @@ landingContent:
           - text: Common ways to use Conditional Access
             url: conditional-access-intune-common-ways-use.md
           - text: Jamf Pro for macOS 
-            url: conditional-access-integrate-jamf.md
+            url: conditional-access-jamf-cloud-connector.md

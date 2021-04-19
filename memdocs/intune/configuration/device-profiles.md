@@ -2,14 +2,14 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune - Azure | Microsoft Docs
-description: Overview of the different Microsoft Intune device profiles. Get info on features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 04/15/2021
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -33,7 +33,9 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
-As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
+As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Intune has many templates that include groups of settings that are specific to a feature, such as certificates, VPN, email, and more.
+
+Some profile examples include:
 
 - On Windows 10 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
 - On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
@@ -44,15 +46,15 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates
+## Administrative templates and Group policy
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, OneDrive, remote desktop, Word, Excel, and other Office programs.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
 
-These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 10 and newer
 
 ## Certificates
 
@@ -64,9 +66,8 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
-- Windows 10 and later
+- Windows 10 and newer
 
 ## Custom profile
 
@@ -78,7 +79,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- Windows 10 and later
 
 ## Delivery optimization
 
@@ -88,7 +89,7 @@ Use these settings to control how software updates are downloaded to devices in 
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 10 and newer
 
 ## Derived credential
 
@@ -114,7 +115,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 1809 and later on supported firmware
+- Windows 10 1809 and newer on supported firmware
 
 ## Device restrictions
 
@@ -126,7 +127,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and later
+- Windows 10 and newer
 - Windows 10 Team
 
 ## Domain join
@@ -135,19 +136,19 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 10 and newer
 
-## Edition upgrade
+## Edition upgrade and mode switch
 
 [Windows 10 edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows 10 to a newer edition.
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 10 and newer
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
@@ -160,19 +161,18 @@ This feature supports:
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
-- Windows 10 and later
+- Windows 10 and newer
 
 ## Endpoint protection
 
-[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
+[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
-To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 
 - macOS
-- Windows 10 and later
+- Windows 10 and newer
 
 ## eSIM cellular - Public preview
 
@@ -180,11 +180,11 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 Fall Creators Update and later
+- Windows 10 Fall Creators Update and newer
 
 ## Extensions
 
-[Kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs at the kernel-level on macOS devices. Configure these settings to trust all extensions from a specific developer or partner, or allow specific kernel extensions.
+[macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
 This feature supports:
 
@@ -192,11 +192,11 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 and Windows 10 Mobile devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 
-- Windows 10 and later
+- Windows 10 and newer
 - Windows Holographic for Business  
 
 ## Kiosk
@@ -205,21 +205,37 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 10 and newer
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
-## Microsoft Defender ATP
+## MX profile (Zebra)
 
-[Microsoft Defender advanced threat protection (ATP)](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
+[Mobility extensions (MX)](android-zebra-mx-overview.md) expand on the built-in Intune settings to customize or add more settings specific to Zebra devices. Zebra devices are commonly used on factory floors, and retail environments. If you have hundreds or thousands of Zebra devices, you can use Intune to configure and manage these devices.
 
 This feature supports:
 
-- Windows 10 and later
+- Android device administrator
+
+## Microsoft Defender for Endpoint
+
+[Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
+
+This feature supports:
+
+- Windows 10 and newer
+
+## Network boundary
+
+[Network boundary](network-boundary-windows.md) creates a list of sites that are trusted by your organization. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
+
+This feature supports:
+
+- Windows 10 and newer
 
 ## OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) is a standard that allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way on Android Enterprise devices. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, allows Intune administrators to configure the settings in the schema.
+On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard. It allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
 
 This feature supports:
 
@@ -227,12 +243,11 @@ This feature supports:
 
 ## PowerShell scripts
 
-[PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md) uses the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 
 - Windows 10 and later
-- Windows Holographic for Business
 
 ## Preference file
 
@@ -242,15 +257,28 @@ This feature supports:
 
 - macOS
 
-## Shared multi-user device
+## Settings catalog
 
-[Windows 10](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users, also known as shared devices or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
+The [settings catalog](settings-catalog.md) lists the settings you can configure. It's not template, or a logical grouping of settings.
 
-These shared multi-user device settings allow an administrator to control some of the device features, and manage these shared devices using Intune.
+On Windows, there are thousands of settings available, including many settings not found in the templates. When you want a complete list of all the settings, use the settings catalog to create your policy. If you want to use a logical grouping of settings, then continue to use the templates.
+
+On macOS, you can configure Microsoft Edge version 77 and newer using the settings catalog. In your policy, you configure individual settings. It doesn't require a preference file.
 
 This feature supports:
 
-- Windows 10 and later
+- macOS
+- Windows 10 and newer
+
+## Shared multi-user device
+
+[Windows 10](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
+
+These shared multi-user device settings allow administrators to control some of the device features, and manage these shared devices using Intune.
+
+This feature supports:
+
+- Windows 10 and newer
 - Windows Holographic for Business
 
 ## Update policies
@@ -275,22 +303,39 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
-- Windows 10 and later
+- Windows 10 and newer
 
 ## Wi-Fi
 
 [Wi-Fi settings](wi-fi-settings-configure.md) assigns wireless network settings to users and devices. When you assign a WiFi profile, users get access to your corporate WiFi without having to configure it themselves. 
 
-This feature supports: 
+This feature supports:
 
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (import only)
-- Windows 10 and later
+- Windows 10 and newer
+
+## Windows health monitoring
+
+[Windows health monitoring](windows-health-monitoring.md) lets your data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+
+This feature supports:
+
+- Windows 10 and newer
+
+## Wired networks
+
+[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+
+When you assign the profile, macOS desktop users get access to your corporate wired network without having to configure it themselves.
+
+This feature supports:
+
+- macOS
 
 ## Zebra Mobility Extensions (MX)
 
@@ -306,4 +351,4 @@ This feature supports:
 
 ## Next steps
 
-Choose your platform, and get started.
+Choose a profile, and get started.

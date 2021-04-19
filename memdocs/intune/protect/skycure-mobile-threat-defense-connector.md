@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Symantec connector with Microsoft Intune
+title: Use Symantec Endpoint Protection Mobile connector with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn about integrating Intune with Symantec Endpoint Protection Mobile to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: heenamac
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -122,7 +122,6 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 ![Access granted on remediation for Sharepoint example](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 
-<!-- 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Symantec Endpoint Protection Mobile Threat Defense solution considers a device to be infected:
@@ -131,7 +130,6 @@ When the Symantec Endpoint Protection Mobile Threat Defense solution considers a
 Access is granted on remediation:
 
 ![Access is granted on remediation for App protection policy](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-remediated.png)
--->
 
 ## Next steps
 

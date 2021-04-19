@@ -2,14 +2,14 @@
 # required metadata
 
 title: Remove your iOS device from Intune | Microsoft Docs
-description: "Describes how to remove an iOS device from Intune"
+description: Describes how to remove an iOS device from Intune and how to delete stored data.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 
-ms.date: 04/02/2018
-ms.topic: article
+ms.date: 01/07/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,46 +31,35 @@ ms.collection:
 ---
 
 
-# Remove your iOS device from Intune
+# Remove device from Company Portal for iOS app
 
-When you remove your iOS device from Intune, your device will no longer be able to access company resources and will no longer be managed by Intune.
+You can use the Company Portal app for iOS to remove an Intune-enrolled device so that it's no longer managed by your organization. After you remove the device:
 
+- The device is removed from Company Portal.    
+- You lose access to internal file shares and websites from your device.  
+- You lose access to school or work apps from your device.    
+- You might br blocked from connecting to your org's network via Wi-Fi or virtual private network (VPN).  
+- Work or school email profiles are removed from the device.  
+- You can't install apps for the device from the Company Portal anymore.   
+- Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.   
 
-## Removing the device from My Devices
+## Remove a device   
 
-To remove your device from Intune, use these steps or watch this video:
-
-
-1. In the Company Portal app, tap **Devices.** and select the device you want to unenroll. If you only have one device, when you tap **Devices**, you will go directly to the device details screen.
-
-2. Next to **RENAME** tap the ellipses button > **Remove Device** > **Remove**.  
-
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/cp_ios_unenroll_after_1804_001.png)|
-
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)|
+Follow these steps to remove a device you no longer need for work or school from Intune.   
 
 
-    When you unenroll your device from Intune, here's what happens:
+1. Sign in to the Company Portal app and select **Devices**.
 
-    - Your device won't appear in the Company Portal anymore.
+2. Select the device you want to remove. If you only have one device, you won't need to select a device so skip to step 3. 
 
-    - You can't install apps from the Company Portal anymore.
+3. Next to **RENAME**, select the ellipses menu > **Remove Device** > **Remove**.  
 
-    - Any settings that were changed on your device when you added it (for example, disabling the camera, or requiring a certain password length) will no longer apply.
+    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/cp_ios_unenroll_after_1804_001.png) 
 
-    - You might not have access to some company resources, such as file shares or internal web sites, on your device anymore.
+    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)  
 
-    - You can't use company apps and company data on your device anymore.
 
-    - You might not be able to connect to your company network using Wi-Fi or a virtual private network (VPN) anymore.
-
-    - Company email profiles are removed from the device.
-
-    - Devices that are configured for email only won't appear in the Company Portal app or website anymore.
-
-    - Apps are uninstalled. Company app data is removed.
-
-## Removing data collected by the Company Portal app
+## Remove data collected by the Company Portal app
 
 There are three places the Company Portal stores local data on your device.
 
@@ -81,4 +70,6 @@ There are three places the Company Portal stores local data on your device.
 - **Keychain**: your device stores your passwords and other information used for sign-ins in your Keychain. Microsoft apps share your sign-in information across any Microsoft-developed apps that you have on your device, including Microsoft Outlook and Microsoft Authenticator. Like Apple analytics, this information can only be removed by resetting your device back to factory settings. This will erase all personal information on your device. To do this, open **Settings** > **General** > **Reset** > **Erase All Content and Settings**.
 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+##  Next steps 
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

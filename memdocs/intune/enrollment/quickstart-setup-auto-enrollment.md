@@ -10,7 +10,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 01/17/2020
+ms.date: 09/22/2020
 ms.author: erikje
 
 # optional metadata
@@ -39,7 +39,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune in the Microsoft Endpoint Manager
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Set up Windows 10 automatic enrollment
 
@@ -72,7 +72,7 @@ For this example, you'll use MDM enrollment so that both corporate and bring-you
 
 6. Select **Some** from the **MAM Users scope** to manage data on your workforce's devices.
 
-    ![Select the group to enroll](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
+    ![Select the MAM Users scope](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 
 7. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group. 
 8. Use the default values for the remaining configuration values.

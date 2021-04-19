@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 12/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -37,12 +37,16 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
 > - Better Mobile (Android,iOS/iPadOS)
+> - Check Point Sandblast (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS)
+> - MVISION Mobile (Android,iOS/iPadOS)
+> - Symantec Endpoint Security (Android, iOS/iPadOS)
+> - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
-> - Lookout for Work (Android,iOS/iPadOS)
 
 ## Classic conditional access policies for MTD apps
 
-When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Defender ATP](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
+When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
 
 If the classic policy is deleted, you'll need to delete the connection to Intune that was responsible for its creation, and then set it up again. This process recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 

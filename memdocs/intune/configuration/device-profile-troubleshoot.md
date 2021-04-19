@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 04/15/2021
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,25 +28,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune
+# Common questions and answers with device policies and profiles in Microsoft Intune
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
-
-## Why doesn't a user get a new profile when changing a password or passphrase on an existing Wi-Fi profile?
-
-You create a corporate Wi-Fi profile, deploy the profile to a group, change the password, and save the profile. When the profile changes, some users may not get the new profile.
-
-To mitigate this issue, set up guest Wi-Fi. If the corporate Wi-Fi fails, users can connect to the guest Wi-Fi. Be sure to enable any automatically connect settings. Deploy the guest Wi-Fi profile to all users.
-
-Some additional recommendations:  
-
-- If the Wi-Fi network you're connecting to uses a password or passphrase, make sure you can connect to the Wi-Fi router directly. You can test with an iOS/iPadOS device.
-- After you successfully connect to the Wi-Fi endpoint (Wi-Fi router), note the SSID and the credential used (this value is the password or passphrase).
-- Enter the SSID and credential (password or passphrase) in the Pre-Shared Key field. 
-- Deploy to a test group that has limited number of users, preferably only the IT team. 
-- Sync your iOS/iPadOS device to Intune. Enroll if you haven’t already enrolled. 
-- Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
-- Roll out to larger groups and eventually to all expected users in your organization. 
 
 ## How long does it take for devices to get a policy, profile, or app after they are assigned?
 
@@ -65,7 +49,7 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | Windows Phone | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
-If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently, which is **estimated** at:
+If devices recently enroll, then the compliance, non-compliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
 
 | Platform | Frequency |
 | --- | --- |
@@ -80,17 +64,17 @@ At any time, users can open the Company Portal app, **Settings** > **Sync** to i
 
 ## What actions cause Intune to immediately send a notification to a device?
 
-There are different actions that trigger a notification, such as when a policy, profile, or app is assigned (or unassigned), updated, deleted, and so on. These action times vary between platforms.
+There are different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, and so on. These action times vary between platforms.
 
-Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, such as lock, passcode reset, app, profile or policy assignment, then Intune immediately notifies the device to check in to receive these updates.
+Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, when a lock, passcode reset, app, or policy assignment action runs.
 
 Other changes, such as revising the contact information in the Company Portal app, don't cause an immediate notification to devices.
 
-The settings in the policy or profile are applied at every check-in. The [Windows 10 MDM policy refresh blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
+The settings in the policy or profile are applied at every check-in. A [Windows 10 MDM policy refresh customer blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
 
 ## If multiple policies are assigned to the same user or device, how do I know which settings gets applied?
 
-When two or more policies are assigned to the same user or device, then the setting that applies happens at the individual setting level:
+When two or more policies are assigned to the same user or device, then the setting that's applied happens at the individual setting level:
 
 - Compliance policy settings always have precedence over configuration profile settings.
 
@@ -114,63 +98,35 @@ When you assign a custom policy, confirm that the configured settings don't conf
 
 ## What happens when a profile is deleted or no longer applicable?
 
-When you delete a profile, or you remove a device from a group that has the profile, then the profile and settings are removed from the device as described:
+When you delete a profile, or remove a device from a group that's assigned the profile, then the profile and settings are removed from the device as described:
 
 - Wi-Fi, VPN, certificate, and email profiles: These profiles are removed from all supported enrolled devices.
-- All other profile types:  
+- All other profile types:
 
-  - **Windows and Android devices**: Settings aren't removed from the device
-  - **Windows Phone 8.1 devices**: The following settings are removed:  
-  
-    - Require a password to unlock mobile devices
-    - Allow simple passwords
-    - Minimum password length
-    - Required password type
-    - Password expiration (days)
-    - Remember password history
-    - Number of repeated sign-in failures to allow before the device is wiped
-    - Minutes of inactivity before password is required
-    - Required password type – minimum number of character sets
-    - Allow camera
-    - Require encryption on mobile device
-    - Allow removable storage
-    - Allow web browser
-    - Allow application store
-    - Allow screen capture
-    - Allow geolocation
-    - Allow Microsoft account
-    - Allow copy and paste
-    - Allow Wi-Fi tethering
-    - Allow automatic connection to free Wi-Fi hotspots
-    - Allow Wi-Fi hotspot reporting
-    - Allow wipe
-    - Allow Bluetooth
-    - Allow NFC
-    - Allow Wi-Fi
-
+  - **Android devices**: Settings aren't removed from the device
   - **iOS/iPadOS**: All settings are removed, except:
-  
+
     - Allow voice roaming
     - Allow data roaming
     - Allow automatic synchronization while roaming
 
+  - **Windows devices**: Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
+
+- A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours + the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article).
+
 ## I changed a device restriction profile, but the changes haven't taken effect
 
-Once set, Windows Phone devices don't allow security policies set using MDM or EAS to be reduced in security. For example, you set a **Minimum number of character password** to 8. You try to reduce it to 4. The more restrictive profile is already applied to the device.
-
-To change the profile to a less secure value, then reset security policies. For example, in Windows 8.1, on the desktop, swipe in from right > select **Settings** > **Control Panel**. Select the **User Accounts** applet. In the left-hand navigation menu, there's a **Reset Security Policies** link (toward the bottom). Select it, and then choose **Reset Policies**.
-
-Other MDM devices, such as Android, Windows Phone 8.1 and later, iOS/iPadOS, and Windows 10 may need to be retired, and re-enrolled in to Intune to apply a less restrictive profile.
+To apply a less restrictive profile, some devices, such as Android, iOS/iPadOS, and Windows 10, may need to be retired and re-enrolled in to Intune.
 
 ## Some settings in a Windows 10 profile return "Not Applicable"
 
-Some settings on Windows 10 devices may show as "Not Applicable". When this happens, that specific setting isn't supported on the version or edition of Windows running on the device. This message can occur for the following reasons:
+Some settings on Windows 10 devices may show as "Not Applicable". When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
 
 - The setting is only available for newer versions of Windows, and not the current operating system (OS) version on the device.
 - The setting is only available for specific Windows editions or specific SKUs, such as Home, Professional, Enterprise, and Education.
 
-To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## Next steps
 
-Need extra help? See [How to get support for Microsoft Intune](../fundamentals/get-support.md).
+Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).

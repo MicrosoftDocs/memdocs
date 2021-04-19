@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to turn off Microsoft data collection for Windows | Microsoft Docs
-description:
-keywords:
+title: Turn off Microsoft data collection for Windows 10 - Microsoft Intune | Microsoft Docs
+description: Learn how to turn off Microsoft data collection in the Microsoft Intune and Company Portal apps for Windows 10. 
+keywords: privacy
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
-ms.topic: article
+ms.date: 09/23/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -30,10 +30,19 @@ ms.collection:
 ---
 
 
-# How to turn off Microsoft data collection
+# Turn off Microsoft data collection on Windows 10 device  
 
-Microsoft automatically collects certain data about our products and services. We do this to improve the reliability and performance of our products, including the Company Portal app. Even though this data is anonymized, some users may not feel comfortable with this collection. Your company support does not have control over the collection of this data, and they cannot change your selection for the setting.
+This article describes how to prevent Microsoft from collecting data about your Intune Company Portal usage. To turn off data collection in Company Portal:  
 
-If you wish to turn off the collection of usage data on your Windows device, find the **Usage Data** setting in the Company Portal app.
+1. Open the Company Portal app.  
+2. Select **Settings**.
+3. Under **Usage data**, switch the toggle to **No**.  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Allowing Microsoft data collection   
+
+When set to **Yes**, your in-app performance and usage data is automatically collected and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. If you disable the usage data collection, your organization cannot change your preferences.    
+
+## Next steps  
+
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+

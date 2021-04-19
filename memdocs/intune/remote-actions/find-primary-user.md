@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -50,10 +50,11 @@ The primary user of a device can be updated for devices Windows 10 devices that 
 
 After the primary user is updated, it will also be updated in Intune and Azure AD device blades.
 >[!NOTE]
->1. Updates to the primary user across Endpoint Manager and and Azure AD can take up to 10 minutes to be reflected.
->2. The primary user currently can't be changed on co-managed Windows 10 devices. 
->3. Changing the primary user of the device does not make any changes to local group membership such as adding or removing users from the "Administrators" local group
->4. Changing the primary user does not change the "Enrolled by" user. 
+>1. Updates to the primary user across Endpoint Manager and Azure AD can take up to 10 minutes to be reflected.
+>2. Changing the primary user of the device does not make any changes to local group membership such as adding or removing users from the "Administrators" local group
+>3. Changing the primary user does not change the "Enrolled by" user. 
+>4. To change or remove the Primary user of a device requires the permission **Managed devices/Set primary user**.
+
 
 
 ## What is the primary user?
@@ -95,6 +96,8 @@ Intune automatically adds primary user to devices during or soon after enrollmen
 
 ## Primary user and Azure AD device owner
 In some cases, the Intune primary user may be different from the Azure AD Device's **Owner** property (viewable under **Devices** > **Azure AD Devices**). The Azure AD Device owner is added during a device's registration into Azure Active Directory.
+
+For newly-enrolled Azure AD devices, the Azure AD **Owner** property is automatically set at the same time that the Intune primary user is set.
 
 ## Next steps
 [Manage your Intune devices.](device-management.md)

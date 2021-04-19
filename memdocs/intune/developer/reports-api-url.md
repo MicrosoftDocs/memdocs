@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 04/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,7 +36,7 @@ You can use the Intune Data Warehouse API with an account with specific role-bas
 
 Azure Active Directory (Azure AD) uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Azure AD tenant. This guide is language independent, and describes how to send and receive HTTP messages without using any open-source libraries. The OAuth 2.0 authorization code flow is described in [section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) of the OAuth 2.0 specification.
 
-For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 ## API URL structure
 
@@ -52,7 +52,7 @@ The URL contains the following elements:
 
 | Element | Example | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
-| location | msua06 | The base URL can be found by viewing the Data Warehouse API blade in the Azure portal. |
+| location | msua06 | The base URL can be found by viewing the Data Warehouse API blade in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). |
 | entity-collection | devicePropertyHistories | The name of the OData entity collection. For more information on collections and entities in the data model, see [Data Model](reports-ref-data-model.md). |
 | api-version | beta | Version is the version of the API to access. For more information, see [Version](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Optional) The maximum number of days of history to retrieve. This parameter can be supplied to any collection, but will only take effect for collections that include `dateKey` as a part of their key property. See [DateKey Range Filters](reports-api-url.md#datekey-range-filters) for more information. |
@@ -80,7 +80,7 @@ The current version supports the following OData query parameters: `$filter`, `$
 > The filter examples assume today is 2/21/2019.
 
 |                             Filter                             |           Performance Optimization           |                                          Description                                          |
-|:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+|----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |    `maxhistorydays=7`                                            |    Full                                      |    Return data with `DateKey` between 20180214 and 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Full                                      |    Return data with `DateKey` equal to 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Full                                      |    Return data with `DateKey` between 20180214 and 20180220.                                     |

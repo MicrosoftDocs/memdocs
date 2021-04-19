@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use Intune to remediate vulnerabilities found by Microsoft Defender ATP - Azure | Microsoft Docs
-description: See how to manage security tasks from  and Threat & vulnerability Management, part of Microsoft Defender Advanced Threat Protection (ATP) from within the Intune console.
+title: Use Intune to remediate vulnerabilities found by Microsoft Defender for Endpoint - Azure | Microsoft Docs
+description: See how to manage security tasks from  and Threat & vulnerability Management, part of Microsoft Defender for Endpoint from within the Intune console.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.date: 03/16/2021
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -27,59 +27,70 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use Intune to remediate vulnerabilities identified by Microsoft Defender ATP
+# Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint
 
-When you integrate Intune with Microsoft Defender Advanced Threat Protection (ATP), you can take advantage of ATPs Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM. This integration brings a risk-based approach to the discovery and prioritization of vulnerabilities that can improve remediation response time across your environment.
+When you integrate Intune with Microsoft Defender for Endpoint, you can take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability. This integration brings a risk-based approach to the discovery and prioritization of vulnerabilities that can improve remediation response time across your environment.
 
-[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender for Endpoint](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## How integration works
 
-After you connect Intune to Microsoft Defender Advanced Threat Protection, ATP receives threat and vulnerability details from managed devices.
+After you connect Intune to Microsoft Defender for Endpoint, Defender for Endpoint receives threat and vulnerability details from managed devices. 
 
-In the Microsoft Defender Security Center console, ATP security admins review data about endpoint vulnerabilities. The admins then use a single-click to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Intune console where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
+- Vulnerabilities that are discovered are not based on configurations from Intune. They are based on Microsoft Defender for Endpoint configurations and scan details.
+- Only issues that can be remediated by Intune are raised as security tasks for Intune.
+
+In the Microsoft Defender Security Center console, Defender for Endpoint security admins review data about endpoint vulnerabilities. The admins then use a single-click to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Intune console where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
 
 When a task is accepted, the Intune admin then acts to remediate the vulnerability though Intune, using the guidance provided as part of the security task.
 
+Each task is identified by a *Remediation Type*:
+
+- **Application** – An application is identified that has a vulnerability or issue you can mitigate with Intune. For example, Microsoft Defender for Endpoint identifies a vulnerability for an app named *Contoso Media Player v4*, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune, and there could be a security update or newer version of an application that resolves the issue.
+- **Configuration** – Vulnerabilities or risks in your environment can be mitigated through use of Intune endpoint security policies. For example, Microsoft Defender for Endpoint identifies that devices lack protection from *Potentially Unwanted Applications* (PUA). An admin creates a security task for this, which identifies a mitigation of configuring the setting **Action to take on potentially unwanted apps** as part of the Microsoft Defender Antivirus profile for Antivirus policy. 
+
+  For configuration issues, when there isn’t a plausible remediation that Intune can provide, then Microsoft Defender for Endpoint won’t create a security task for it.
+
 Common actions for remediation include:
 
-- **Block** an application from being run
+- **Block** an application from being run.
 - **Deploy** an operating system update to mitigate the vulnerability.
+- **Deploy** endpoint security policy to mitigate the vulnerability.
 - **Modify** a registry value.
 - **Disable** or **Enable** a configuration to affect the vulnerability.
 - **Require Attention** alerts the admin to the threat when there's no suitable recommendation to provide.
 
-An example workflow:
+Following is an example workflow for an application. This same general workflow applies for configuration issues:
 
-- Within Microsoft Defender ATP, a vulnerability for an app named Contoso Media Player v4 is discovered and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune.
+- A Microsoft Defender for Endpoint scan identifies a vulnerability for an app named Contoso Media Player v4, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune.
 
   This security task appears in the Intune console with a status of Pending:
 
   ![View the list of security tasks in the Intune console](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
 
-- The Intune admin selects the security task to view details about the task.  The admin then selects **Accept**, which updates the status in Intune, and in ATP to be *Accepted*.
+- The Intune admin selects the security task to view details about the task.  The admin then selects **Accept**, which updates the status in Intune, and in Defender for Endpoint to be *Accepted*.
 
   ![Accept or reject a security task](./media/atp-manage-vulnerabilities/temp-accept-task.png)
 
-- The admin then remediates the task based on the guidance provided. The guidance varies depending on the type of remediation that’s needed. When available, remediation guidance includes links that open relevant panes for configurations in Intune.
+- The admin then remediates the task based on the guidance provided. The guidance varies depending on the type of remediation that's needed. When available, remediation guidance includes links that open relevant panes for configurations in Intune.
 
   Because the media player in this example isn't a managed app, Intune can only provide text instructions. If the app was managed, Intune could provide instructions to download an updated version, and provide a link to open the deployment for the app so that the updated files can be added to the deployment.
 
-- After the completing the remediation, the Intune admin opens the security task and selects **Complete Task**.  The remediation status is updated for Intune and in ATP, where security admins confirm the revised status for the vulnerability.
+- After the completing the remediation, the Intune admin opens the security task and selects **Complete Task**.  The remediation status is updated for Intune and in Defender for Endpoint, where security admins confirm the revised status for the vulnerability.
 
 ## Prerequisites  
 
 **Subscriptions**:
 
 - Microsoft Intune  
-- Microsoft Defender Advanced Threat Protection ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
+- Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
-**Intune configurations for ATP**:
+**Intune configurations for Defender for Endpoint**:
 
-- Configure a service to service connection with Microsoft Defender ATP.
-- Deploy a device configuration policy with a profile type of **Microsoft Defender ATP (Windows 10 Desktop)** to devices that will have risk assessed by ATP.
+- Configure a service to service connection with Microsoft Defender for Endpoint.
+- Deploy a device configuration policy with a profile type of **Microsoft Defender for Endpoint (Windows 10 Desktop)** to devices that will have risk assessed by Defender for Endpoint.
 
-  For information about how to set up Intune to work with ATP, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  For information about how to set up Intune to work with Defender for Endpoint, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune).
 
 ## Work with security tasks
 
@@ -91,24 +102,25 @@ An example workflow:
 
    While viewing the security task resource window, you can select additional links:
 
-   - MANAGED APPS - View the app that is vulnerable. When the vulnerability applies to multiple apps, you’ll see a filtered list of apps.
+   - MANAGED APPS - View the app that is vulnerable. When the vulnerability applies to multiple apps, you'll see a filtered list of apps.
    - DEVICES - View a list of the *Vulnerable devices*, from which you can link through to an entry with more details for the vulnerability on that device.
    - REQUESTOR - Use the link to send mail to the admin who submitted this security task.
    - NOTES - Read custom messages submitted by the requestor when opening the security task.
 
-4. Select **Accept** or **Reject** to send notification to ATP for your planned action. When you accept or reject a task, you can submit notes, which are sent to ATP.
+4. Select **Accept** or **Reject** to send notification to Defender for Endpoint for your planned action. When you accept or reject a task, you can submit notes, which are sent to Defender for Endpoint.
 
-5. After accepting a task, reopen the security task (if it closed), and follow the REMEDIATION details to remediate the vulnerability. The instructions provided by ATP in the security task details vary depending on the vulnerability involved.
+5. After accepting a task, reopen the security task (if it closed), and follow the REMEDIATION details to remediate the vulnerability. The instructions provided by Defender for Endpoint in the security task details vary depending on the vulnerability involved.
 
-   When it’s possible to do so, the remediation instructions include links that open the relevant configuration objects in the Intune console.
+   When it's possible to do so, the remediation instructions include links that open the relevant configuration objects in the Intune console.
 
-6. After completing the remediation steps, open the security task and select **Complete Task**.  This action updates the security task status in both Intune and ATP.
+6. After completing the remediation steps, open the security task and select **Complete Task**.  This action updates the security task status in both Intune and Defender for Endpoint.
 
-After remediation is successful, the risk exposure score in ATP can drop, based on new information from the remediated devices.
+After remediation is successful, the risk exposure score in Microsoft Defender for Endpoint can drop, based on new information from the remediated devices.
 
 ## Next Steps
-Learn more about Intune and [Microsoft Defender ATP](advanced-threat-protection.md).
+
+Learn more about Intune and [Microsoft Defender for Endpoint](advanced-threat-protection.md).
 
 Review Intune [Mobile Threat Defense](mobile-threat-defense.md).
 
-Review the [Threat & Vulnerability Management dashboard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.
+Review the [Threat & Vulnerability Management dashboard](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender for Endpoint.

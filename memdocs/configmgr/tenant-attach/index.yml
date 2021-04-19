@@ -1,0 +1,60 @@
+### YamlMime:Landing
+
+title: Tenant attach documentation
+summary: Upload your Configuration Manager devices to the cloud service and take actions on them.
+ 
+
+metadata:
+  title: Tenant attach documentation
+  titleSuffix: Configuration Manager
+  description: Upload your Configuration Manager devices to the cloud service and take actions on them.
+  ms.product: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 04/01/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About tenant attach
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Enable tenant attach
+            url: device-sync-actions.md
+      - linkListType: reference
+        links:
+          - text: Troubleshoot tenant attach and device actions
+            url: troubleshoot.md
+          - text: Troubleshoot ConfigMgr client details (preview)
+            url: troubleshoot-client-details.md
+ # Card
+  - title: Get information about uploaded devices
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: View ConfigMgr client details (preview)
+            url: client-details.md
+          - text: Device timeline (preview)
+            url: timeline.md
+          - text: Resource explorer (preview)
+            url: resource-explorer.md
+ # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run scripts
+            url: scripts.md
+          - text: Install applications
+            url: applications.md
+          - text: Launch CMPivot
+            url: cmpivot-start.md
+      - linkListType: concept
+        links:
+          - text: CMPivot usage overview
+            url: cmpivot-overview-attached.md
+          - text: CMPivot sample scripts
+            url: cmpivot-samples-attached.md

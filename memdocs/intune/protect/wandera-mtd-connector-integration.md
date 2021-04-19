@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
-ms.topic: conceptual
+ms.date: 07/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer: davidra
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,99 +33,112 @@ ms.collection: M365-identity-device-management
 
 Complete the following steps to integrate the Wandera Mobile Threat Defense solution with Intune.  
 
-> [!NOTE]
-> This Mobile Threat Defense vendor is not supported for unenrolled devices.
-
 ## Before you begin  
 
 Before you start the process to integrate Wandera with Intune, make sure you have the following prerequisites in place:
-- Microsoft Intune subscription  
-- Azure Active Directory admin credentials to grant the following permissions:  
-  - Sign in and read user profile  
-  - Access the directory as the signed-in user  
-  - Read directory data  
-  - Send device information to Intune  
 
-- Wandera subscription:
-  - One or more Wandera accounts that are licensed for EMM Connect  
-  - An account with Super administrator privileges in Wandera  
+- Intune subscription
+- Azure Active Directory administrator credentials and assigned role that is able to grant the following permissions:
+
+    - Sign in and read user profile
+    - Access the directory as the signed-in user
+    - Read directory data
+    - Send device risk information to Intune
  
-### Wandera Mobile Threat Defense app authorization  
+- A valid Wandera subscription
+    - An administrator account with super admin privileges
 
-The Wandera Mobile Threat Defense app authorization process:  
-- Allow the Wandera Mobile Threat Defense service to communicate information related to device health state back to Intune.  
-- Wandera syncs with Azure AD Enrollment Group membership to populate its device's database.  
-- Allow the Wandera RADAR admin portal to use Azure AD Single Sign On (SSO).  
-- Allow the Wandera Mobile Threat Defense app to sign in using Azure AD SSO.  
+## Integration overview
 
+Enabling Mobile Threat Defense integration between Wandera and Intune entails:
 
-## Set up Wandera Mobile Threat Defense integration  
-Setup of *EMM Connect* for Wandera requires a one-time configuration process that you complete in both the Intune and Wandera consoles. The configuration process takes about 15 minutes. You can complete the configuration without coordination with your Wandera technical account or support representative.  
+- Enabling Wandera’s UEM Connect service to synchronize information with Azure and Intune. This includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
+- Create Activation Profiles in Wandera to define device enrollment behavior.
+- Deploy Wandera over-the-air to managed iOS and Android devices.
+- Configure Wandera for end user self-service using MAM-WE on unmanaged iOS and Android devices.
+
+## Set up Wandera Mobile Threat Defense integration
+
+Setting up integration between Wandera and Intune does not require any support from Wandera staff and can be easily accomplished in a matter of minutes.
 
 ### Enable support for Wandera in Intune
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
 3. On the **Add Connector** page, use the dropdown and select **Wandera**. And then select **Create**.  
-4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the *Edit connector* pane. Select **Open the Wandera admin console** to open [RADAR](https://radar.wandera.com/login), the Wandera admin console, and sign in. 
-5. In the Wandera console, go to **Settings** > **EMM Integration**, and select the **EMM Connect** tab. Use the *EMM Vendor* drop-down and select *Microsoft Intune*.
-
-   ![Select Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
-
-6. Select **Grant permissions** to open a connection to the Intune portal. Sign in using your Intune admin credentials, select the checkbox and then **Accept** the permissions request.  
-
-   ![Accept permissions](./media/wandera-mtd-connector-integration/permissions.png) 
-
-7. Wandera completes the connection and returns you to the RADAR admin console. Repeat the process to **Grant** access for additional configurations, as needed.  
+4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Wandera admin console** to open [RADAR](https://radar.wandera.com/login), the Wandera admin console, and sign in. 
+5. In the Wandera RADAR console, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
+6. You will be presented with a screen similar to the below, indicating the permission grants required to complete the integration:
 
    ![Integrations and permissions](./media/wandera-mtd-connector-integration/integrations-and-permissions.png) 
 
-8. While in the RADAR console, copy the name of the **SyncOnly** group that appears below **EMM Label**. You'll use this name to configure a group in Intune for synchronization with Wandera.
+7. Next to Intune User and Device Sync, click the Grant button to start the process to provide consent for Wandera to perform Life Cycle Management (LCM) functions with Azure and Intune.
+8. When prompted, select or enter your Azure admin credentials. Review the requested permissions, then select the checkbox to Consent on behalf of your organization. Finally, click Accept to authorize the LCM integration.
 
-   ![Synchronization group](./media/wandera-mtd-connector-integration/sync-group-name.png) 
+   ![Accept permissions](./media/wandera-mtd-connector-integration/permissions.png)
 
-9. Return to the [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) console, and edit the Wandera MTD Connector. Set the available toggles to **On**, and the **Save** the configuration.  
+9. You will be automatically returned back to the RADAR admin console.  If the authorization was successful, you will see a green tick mark next to the Grant button.
+10. Repeat the consent process for the remaining listed integrations by clicking on their corresponding Grant buttons until you have green tick marks next to each.
 
-   ![Enable Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png) 
+11.	Return to the Intune console, and resume editing the Wandera MTD Connector. Set all of the available toggles to On, and then Save the configuration.
 
-Intune and Wandera are now connected.  
+    ![Enable Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
-## Configure the Wandera applications and synchronization group  
-To deploy Wandera, you will add the Wandera mobile apps for the platforms you use (iOS and Android) to Intune, and assign them to a specific group for synchronization; the *SyncOnly* group. 
+Intune and Wandera are now connected.
 
-The following sections and procedures will guide you through this process.
+## Create Activation Profiles in Wandera
 
-For more information about this process from Wandera, sign in to Wandera [RADAR](https://radar.wandera.com/login). Go to **Settings** > **EMM Integration**, select the **App Push** tab, and then select **Microsoft Intune**. The App Push tab updates with instructions that are specific to Intune.  
+Intune-based deployments are facilitated using Wandera Activation Profiles defined in RADAR.  Each Activation Profile defines specific configuration options like authentication requirements, service capabilities, and initial group membership.
 
-### Add the Wandera apps  
-Create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps.  
+After creating an Activation Profile in Wandera, you “assign” it to users and devices in Intune.  While an Activation Profile is universal across device platforms and management strategies, the steps below define how to configure Intune based upon these differences.
 
-After you create the apps, return here to create the synchronization group and assign the apps.
+The steps from here assume you have created an Activation Profile in Wandera that you would like to deploy via Intune to your target devices. Please see the [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) for more details on creating and using Wandera Activation Profiles.
 
-### Create the synchronization group and assign the apps
+> [!NOTE]
+> When creating Activation Profiles for deployment via Intune or MAM-WE, be sure to set Associated User to the Authenticated by Identity Provider > Azure Active Directory option for maximum security, cross-platform compatibility, and a streamlined end user experience.
 
-1. Get the name of the **SyncOnly** group that appears below **EMM Label** from within the Wandera RADAR console. You might have saved this name during step 7 while [enabling support for Wandera in Intune](#enable-support-for-wandera-in-intune). Use this name as the name of the group in Intune for Wandera synchronization.  
+## Deploying Wandera Over-the-Air to MDM-Managed Devices
 
-2. In the Endpoint Manager admin center, go to **Groups** and select **New group**. Specify the following to configure the synchronization group for use by Wandera:
-   - **Group type**: **Security**
-   - **Group name**: Specify the **SyncOnly** name you retrieved from the Wandera RADAR admin console.
+For iOS and Android devices that are managed by Intune, Wandera can be deployed over-the-air for rapid push-based activations. Be sure you have already created the Activation Profile(s) you need before proceeding with this section. Deploying Wandera to managed devices involves:
+- Adding Wandera configuration profiles to Intune and assigning to target devices.
+- Adding the Wandera app and respective app configurations to Intune and assigning to target devices.
 
-   ![configure the synchronization group](./media/wandera-mtd-connector-integration/configure-sync-group.png)
+### Configure and deploy iOS Configuration Profiles 
 
-3. Select **Members** and assign groups that include the Android and iOS/iPadOS devices you want to use with Wandera.
+In this section, you will download **required** iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices.
 
-4. Select **Create** to save the group.
+1. In **RADAR**, navigate to the Activation Profile you want to deploy (Devices > Activations), then click the **Deployment Strategies tab > Managed Devices > Microsoft Endpoint Manager**.
+2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
+3. Download the provided configuration profile(s) and prepare to upload them in a following step.
+4. Open **Microsoft Intune admin console** and navigate to **Devices > iOS/iPadOS > Configuration profiles**.  Click **Create profile**.
+5. In the panel that appears, choose **iOS/iPadOS** under **Platform**, then **Custom** under Profile. Then click **Create**.
+6. In the **Name** field, provide a descriptive title for the configuration, ideally matching what you named the Activation Profile in RADAR. This will help ease cross referencing in the future. Alternatively, provide the Activation Profile code if desired. We recommend indicating if the configuration is for Supervised or Unsupervised devices by suffixing the name as such.
+7. Optionally provide a **Description** providing more details for other administrators about the purpose/use of the configuration. Click **Next**.
+8. Click **Select a file** and locate the downloaded configuration profile that corresponds to the appropriate Activation Profile downloaded in step 3. Take care to select the appropriate Supervised or Unsupervised profile if you downloaded both. Click **Next**.
+   <!-- image placeholder - ending future availability -->
+9.	Define **Scope tags** as required by your Intune RBAC practices.  Click **Next**.
+10.	**Assign** the configuration profile to groups of users or devices that should have Wandera installed.  We recommend starting with a test group then expanding after validating activations work correctly. Click **Next**.
+11.	Review the configuration for correctness editing as needed, the click **Create** to create and deploy the configuration profile.
 
-For more information, see [Deploy apps](../apps/apps-deploy.md)
+> [!NOTE]
+> Wandera offers an enhanced deployment profile for supervised iOS devices. If you have a mixed fleet of supervised and unsupervised devices, repeat the above steps for the other profile type as needed. These same steps need to be followed for any future Activation Profiles that are to be deployed via Intune. Please contact Wandera support if you have a mixed fleet of supervised and unsupervised iOS devices and need assistance with supervised mode-based policy assignments. 
 
-### Assign the Wandera apps to the synchronization group  
-Repeat the following procedure for the Wandera app you created for iOS/iPadOS and for Android.
+## Deploying Wandera to MAM-WE Devices
+For devices that are not managed by Intune, and are (MAM-WE) devices, Wandera utilizes an integrated authentication-based onboarding experience to activate and protect company data within MAM-enabled apps. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps** and select the Wandera app.
-3. Select **Assignments** and then **Add group**.  
-4. On the *Add group* pane, for *Assignment type* select **Required**.
-5. Select **Included groups**, and then **Select groups to include**. Specify the group you created for Wandera synchronization, and then click **Select** > **OK** > **OK**. Select **Save** to complete the group assignment. 
+The following sections describe how to configure Wandera and Intune to enable end users to seamlessly activate Wandera before being able to access company data. 
 
-## Next Steps  
-Now that you have configured the Integration, you can start configuring policies, set up advanced conditional access, and view reports in the Wandera admin console. To learn more about managing and configuring Wandera, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation. 
+### Configure Azure Device Provisioning in a Wandera Activation Profile
+Activation Profiles to be used with MAM-WE must have Associated User set to the Authenticated by Identity Provider > Azure Active Directory option.
+1. In the **Wandera RADAR** portal, select an existing, or create a new, Activation Profile that MAM-WE devices will use during enrollment in Devices > Activations. 
+2. Click the **Deployment Strategies tab then Unmanaged Devices** then scroll to the **Azure Device Provisioning** section.
+3. Enter your **Azure AD Tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, click the **Get my Tenant ID** link to open Azure AD in a new tab where you can easily copy this value to your clipboard.
+4. (Optional) Specify **Group ID(s)** to limit user activations to specific groups.
+   - If one or more **Group IDs** are defined, a user activating MAM-WE must be a member of at least one of the specified groups to activate using this Activation Profile.
+   - You can set up multiple Activation Profiles configured with the same Azure Tenant ID but with different Group IDs. This allows you to enroll devices into Wandera based upon Azure group membership, enabling differentiated capabilities by group at activation time.
+   - You may configure a single “default” Activation Profile that doesn’t specify any Group IDs.  This group will serve as a catch-all for all activations in which the authenticated user isn’t a member of a group with an association to another Activation Profile.
+5. Click **Save** in the upper-right corner of the page.
+
+## Next Steps
+- With your Wandera Activation Profiles loaded in RADAR, create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. The Wandera app config provides essential functionality to compliment the pushed Device configuration profile(s) and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps. 
+- Now that you have Wandera integrated with Endpoint Manager, you can now tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation.

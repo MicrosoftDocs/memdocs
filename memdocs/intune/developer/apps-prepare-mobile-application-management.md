@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 02/18/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -20,7 +20,7 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,6 +41,9 @@ You don't need the source code to use the tool, but you do need signing credenti
 The App Wrapping Tool does **not** support apps in the Apple App Store or Google Play Store. It also doesn't support certain features that require developer integration (see the following feature comparison table).
 
 For more information about the App Wrapping Tool for app protection policies on devices that are not enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../apps/apps-add.md).
+
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Reasons to use the App Wrapping Tool
 
@@ -108,10 +111,10 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Support for MAM without device enrollment|X|X|
 |Full Wipe of app data|X|X|
 |Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS/iPadOS, when the management profile is removed, the app is also removed.|X||
-|Prevent “Save as”|X||
+|Prevent "Save as"|X||
 |Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
-|Customizable Style |X|||
+|Customizable Style |X||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
 |Disable contact sync|X|X|
 |Disable printing|X|X|
@@ -125,7 +128,6 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Configure app notification content for organization accounts|X|X|
 |Require use of approved keyboards (Android only)|X|X|
 |Require app protection policy (Conditional Access)|X||
-|Require approved client app (Conditional Access)|X||
 
 ## Next steps
 

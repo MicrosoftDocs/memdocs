@@ -6,8 +6,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/13/2019
-ms.topic: article
+ms.date: 02/01/2021
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -65,7 +65,6 @@ You can enroll the following devices with Company Portal:
 - Windows devices
   - Windows 10 Mobile
   - Windows 10 Desktop
-  - Windows Phone 8.1
   - Windows 8.1
 - Apple devices
     - iOS
@@ -92,17 +91,12 @@ To see a device in Company Portal, it must first be enrolled. If after enrollmen
 In the Microsoft Intune app, you only see the device you're currently using. Other enrolled devices will not be visible to you in the app.  
 
 ## Where else can I go for help?  
-To troubleshoot common problems, check out these platform-specific docs:  
 
-- [Fix common issues with your Android device](check-compliance-on-your-device-android.md)  
-- [Fix common issues with your iOS device](troubleshoot-your-device-ios.md)
-- [Fix common issues with your macOS device](troubleshoot-your-device-macos.md)
-- [Fix common issues with your Windows device](troubleshoot-your-device-windows.md)
+Refer to the articles in this doc set for step-by-step help and explanations. In the table of contents, select from the Android, iOS, Windows, or macOS device management categories. Then select **Update device settings** to see a list of how-to articles that address common messages in Company Portal.    
 
-You can also contact to your IT support person. The Company Portal and Microsoft Intune app offer help and support pages that list contact information and ways to report a problem. Contact information is also available on your org's [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+You can also contact your IT support person. The Company Portal and Microsoft Intune apps offer help and support pages with contact information and ways to report a problem. Contact information is also available on your org's [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## Next steps  
-
 If you're ready to access your work or school account, follow your organization's instructions to enroll your device. You can also find step-by-step enrollment guidance in the following articles.
 
 * [Enroll your Windows 10 device](enroll-windows-10-device.md)

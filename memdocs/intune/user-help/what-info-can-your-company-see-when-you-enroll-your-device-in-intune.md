@@ -7,8 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
-ms.topic: article
+ms.date: 06/11/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -33,7 +33,7 @@ ms.collection:
 
 Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the corporate data on the device.
 
-**What your organization can never see:**
+**What your organization does not see:**
 
 - Calling and web browsing history
 - Email and text messages
@@ -42,22 +42,33 @@ Your organization cannot see your personal information when you enroll a device 
 - Passwords
 - Pictures, including what's in the photos app or camera roll
 - Files
+- For corporate-owned devices with a work profile, the applications and data in your personal profile. 
 
 **What your organization can always see:**
 
 - Device model, like Google Pixel
 - Device manufacturer, like Microsoft
 - Operating system and version, like iOS 12.0.1
-- App inventory and app names, like Microsoft Word. On personal devices, your organization can only see your managed app inventory. On corporate-owned devices, your organization can see all of your app inventory.
+- App inventory and app names, like Microsoft Word. On personal devices, your organization can only see your managed app inventory. For corporate-owned fully managed and dedicated devices, your organization can see all of your app inventory. For corporate-owned devices with a work profile, your organization can only see the app inventory in your work profile.
 - Device owner
 - Device name
 - Device serial number
 - IMEI
 
+ > [!NOTE]
+ > For Android Enterprise fully managed and dedicated devices, you will not be able see all app inventory.
+ 
+ > [!NOTE]
+ > An app is considered **managed app** when installed in one of the following ways:
+ > 1. A user installs it from Company Portal app after it is published as **available** by an Intune admin.
+ > 2. The app is published as **required** by an Intune admin and is installed on the device. 
+ >
+ > If you are an IT administrator or support person at your organization and want more information about app management in Intune, see [Understanding the capabilities of unmanaged apps, managed apps, and MAM apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
+    
 **What your organization might be able to see:**
 
 - Phone number: For corporate-owned devices, your full phone number can be seen. For personal-owned devices, just the last four digits of your phone number are visible to your organization. You can see the ownership type for each individual device on its **Device Details** page.
 - Device storage space: If you can't install a required app, your organization might look at your device's storage space to figure out if space is too low.  
-- Location: Your organization can never see your device's location, unless you need to recover a lost, supervised iOS device. Visit the [Apple iOS documentation](https://go.microsoft.com/fwlink/?linkid=853816) to learn more about supervised devices.  
-- App inventory details: If your organization uses Mobile Threat Defense, they will be able to view details about the apps that are on your iOS device. Find out more about [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). If you have a personal device, your organization can only see your managed app inventory. If you have a corporate-owned device, your organization can see all of your app inventory.
+- Location: For corporate-owned devices, your organization can see the location of a lost device. For personal-owned devices, your organization does not see the device location, unless they're trying to find a lost, supervised iOS device. Visit the [Apple iOS documentation](https://go.microsoft.com/fwlink/?linkid=853816) to learn more about supervised devices.  
+- App inventory details: If your organization uses Mobile Threat Defense, they will be able to view details about the apps that are on your iOS device. Find out more about [Mobile Threat Defense](set-up-mobile-threat-defense.md). Otherwise, for personal-owned devices, your organization can only see your managed app inventory. For corporate-owned devices, your organization can see all of your app inventory.
 - Network information: Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected. 

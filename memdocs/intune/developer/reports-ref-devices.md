@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 04/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -67,7 +67,7 @@ The **deviceTypes** entity represents the device type referenced by other data w
 | 10 |IPod |iPod device |
 | 11 |Android |Android device-managed using Device Administrator |
 | 12 |ISocConsumer |iSoc Consumer device |
-| 14 |MacMDM |Mac OS X device managed with the built-in MDM agent |
+| 14 |MacMDM |OS X device managed with the built-in MDM agent |
 | 15 |HoloLens |HoloLens device |
 | 16 |SurfaceHub |Surface Hub device |
 | 17 |AndroidForWork |Android device-managed using Android Profile Owner |
@@ -157,7 +157,7 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | AuthenticationRequirementNotMet  | Intune enrollment service failed to authorize this request.                                                                                                                                            |
 | UnsupportedDeviceType            | This device does not meet minimum requirements for Intune enrollment.                                                                                                                                  |
 | EnrollmentCriteriaNotMet         | This device failed to enroll due to a configured enrollment restriction rule.                                                                                                                          |
-| BulkDeviceNotPreregistered       | This device’s international mobile equipment identifier (IMEI) or serial number wasn’t found.  Without this identifier, devices are recognized as personal-owned devices which are currently blocked.  |
+| BulkDeviceNotPreregistered       | This device's international mobile equipment identifier (IMEI) or serial number wasn't found.  Without this identifier, devices are recognized as personal-owned devices which are currently blocked.  |
 | FeatureNotSupported              | The user was attempting to access a feature that is not yet released for all customers or is not compatible with your Intune configuration.                                                            |
 | UserAbandonment                  | Enrollment was abandoned by end user. (End user started onboarding but failed to complete it in timely manner)                                                                                           |
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
@@ -172,7 +172,7 @@ The **enrollmentType** entity indicates whether a device is corporate, personall
 | ownerTypeName |Represents the owner type of the devices:  <br>Corporate - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Corporate Personal Unknown |
 
 > [!Note]  
-> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## managementStates
 
@@ -228,7 +228,7 @@ The **ManagementAgentType** entity represents the agents used to manage a device
 The **devices** entity lists all enrolled devices under management and their corresponding properties.
 
 |          Property          |                                                                                       Description                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Unique   identifier of the device in the data warehouse - surrogate key.                                                                                                               |
 | deviceId                   | Unique   identifier of the device.                                                                                                                                                     |
 | deviceName                 | Name   of the device on platforms that allow naming a device. On other platforms,   Intune creates a name from other properties. This attribute cannot be   available for all devices. |
@@ -265,13 +265,19 @@ The **devices** entity lists all enrolled devices under management and their cor
 | cellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | Integrated Circuit Card Identifier                                                                                                                                                     |
+| windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
+| ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
+| model                      | The device model.                                                                                                                                                                      |
+| office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
+| SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
+| IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
 ## devicePropertyHistories
 
 The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 90 days. The DateKey column indicates the day for each row.
 
 |          Property          |                                                                                      Description                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Reference to date table indicating the day.                                                                                                                                          |
 | deviceKey                  | Unique identifier of the device in the data warehouse -  surrogate key. This is a reference to the Device table that contains the   Intune device ID.                               |
 | deviceName                 | Name of the device on platforms that allow naming a   device. On other platforms, Intune creates a name from other properties. This   attribute cannot be available for all devices. |
@@ -283,4 +289,5 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | deviceCategoryKey          | Key of device category attribute for this device. 
-
+| physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
