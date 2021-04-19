@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 04/22/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,13 +119,16 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2103
+### Technical preview version 2104
 
-- [Community hub support for configuration baselines](2021/technical-preview-2103.md#bkmk_hub) <!--7983121-->
-- [Tenant attach: Antivirus policy supports exclusions merge](2021/technical-preview-2103.md#bkmk_av) <!--9089764-->
-- [Cloud attach during site upgrade](2021/technical-preview-2103.md#bkmk_setup) <!--7958749-->
-- [New CMG deployments use TLS 1.2](2021/technical-preview-2103.md#bkmk_cmgtls) <!--9408265-->
-- [PowerShell release notes preview](2021/technical-preview-2103.md#bkmk_powershell) <!--9302248-->
+- [5170229](2021/technical-preview-2104.md) <!--5170229-->
+- [6979225](2021/technical-preview-2104.md) <!--6979225-->
+- [8272488](2021/technical-preview-2104.md) <!--8272488-->
+- [9012080](2021/technical-preview-2104.md) <!--9012080-->
+- [9546584](2021/technical-preview-2104.md) <!--9546584-->
+- [9573789](2021/technical-preview-2104.md) <!--9573789-->
+- [9607363](2021/technical-preview-2104.md) <!--9607363-->
+- [9735002](2021/technical-preview-2104.md) <!--9735002-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -143,7 +146,13 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2102 -->
+### Technical preview version 2103
+
+- [Community hub support for configuration baselines](2021/technical-preview-2103.md#bkmk_hub) <!--7983121-->
+- [Tenant attach: Antivirus policy supports exclusions merge](2021/technical-preview-2103.md#bkmk_av) <!--9089764-->
+- [Cloud attach during site upgrade](2021/technical-preview-2103.md#bkmk_setup) <!--7958749-->
+- [New CMG deployments use TLS 1.2](2021/technical-preview-2103.md#bkmk_cmgtls) <!--9408265-->
+- [PowerShell release notes preview](2021/technical-preview-2103.md#bkmk_powershell) <!--9302248-->
 
 ## Features in previous technical previews
 
