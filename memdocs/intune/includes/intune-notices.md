@@ -23,7 +23,7 @@ Given that Microsoft no longer supports these OSs, this may not affect you; you 
 - Windows 10, Version 1511, Company portal version 10.1.1731.0
 - Windows 10, Version 1607, Company portal version 10.3.5601.0
 - Windows 10, Version 1703, Company portal version 10.3.5601.0
-- Windows 10, Version 1709, Company portal version 11.0.11201.0
+- Windows 10, Version 1709, any Company portal version
 
 We will not uninstall these Company portal versions mentioned above, but we will remove them from the Microsoft Store and stop testing our service releases with them.
 
