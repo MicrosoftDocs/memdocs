@@ -178,7 +178,7 @@ For more information, see [Optimize Windows 10 update delivery](../deploy-use/op
 #### Clients download content from the internet
 When you deploy software updates to clients, configure the deployment for clients to download content from the Microsoft Update cloud service. When clients aren't able to download content from another content source, they can still download the content from the internet. 
 
-Starting in version 1806, you don't have to create a deployment package when deploying software updates. When you select the **No deployment package** option, clients can still download content from local sources if available, but typically download from the Microsoft Update service.<!--1357933-->
+You don't have to create a deployment package when deploying software updates. When you select the **No deployment package** option, clients can still download content from local sources if available, but typically download from the Microsoft Update service.<!--1357933-->
 
 Internet-based clients always download content from the Microsoft Update cloud service. Don't distribute software update deployment packages to a cloud distribution point. You're charged for storage with the cloud distribution point, but clients won't download these packages. 
 
@@ -192,12 +192,12 @@ Use a supersedence relationship with the application management feature in Confi
 For more information, see [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md).
 
 #### Third-party software updates
-Starting in version 1806, use the **Third-Party Software Update Catalogs** node in the Configuration Manager console to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients.<!--1352101-->
+You can use the **Third-Party Software Update Catalogs** node in the Configuration Manager console to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients.<!--1352101-->
 
 For more information, see [Third-party software updates](../deploy-use/third-party-software-updates.md).
 
 #### System Center Updates Publisher
-System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles.
+System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles. SCUP can also be used for third-party update catalogs that aren't available directly in the console. 
 
 For more information, see [System Center Updates Publisher](../tools/updates-publisher.md).
 
@@ -243,15 +243,6 @@ When you install WSUS, you'll need to provide a content directory path. The WSUS
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
 When you install WSUS, you have the option to use the existing IIS Default website, or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website. Otherwise it shares the same website that's used by the other Configuration Manager site systems or applications. This configuration is especially necessary when you install the software update point role on the site server. When you run WSUS in Windows Server 2012 or later, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS. Specify these ports when you create the software update point at a site.  
 
-
-####  <a name="BKMK_WSUSInfrastructure"></a> Use an existing WSUS infrastructure  
-Select a WSUS server that was active in your environment before you installed Configuration Manager as a software update point. When the software update point is configured, specify the synchronization settings. Configuration Manager connects to the WSUS server that runs on the software update point server and configures WSUS with the same settings. 
-
-Before you configure the server as a software update point, compare its configuration for products and classifications with your Configuration Manager settings. If you synchronized the existing WSUS server before configuring it as a software update point, and the lists of products and classifications are different, it syncs all of the software updates metadata regardless of the configured settings. This behavior results in unexpected software updates metadata in the site database. 
-
-You experience the same behavior when you add products or classifications directly in the WSUS Administration console, and then immediately initiate a synchronization. By default, every hour Configuration Manager connects to WSUS and resets any settings that were modified outside of Configuration Manager. The software updates that don't meet the products and classifications that you specify in synchronization settings are set to expired. Then they are removed from the site database.  
-
-When a WSUS server is configured as a software update point, you're no longer able to use it as a standalone WSUS server. If you need a separate standalone WSUS server that isn't managed by Configuration Manager, configure it on a different server.  
 
 ####  <a name="BKMK_WSUSAsReplica"></a> Configure WSUS as a replica server  
 When you add the software update point role on a primary site server, you can't use a WSUS server that's configured as a replica. When the WSUS server is configured as a replica, Configuration Manager fails to configure the WSUS server, and the WSUS synchronization fails. The first software update point that you install at a primary site is the default software update point. Additional software update points at the site are configured as replicas of the default software update point.  
@@ -385,9 +376,7 @@ Consider the following scenarios in which you might need to deploy a superseded 
 
 -   If a superseding software update wasn't approved for deployment in your production environment.  
 
-    > [!NOTE]  
-    > - Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](../deploy-use/software-updates-maintenance.md).
-    > - Starting in Configuration Manager version 1810, you can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**.
+- You can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**.
 
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
 
@@ -422,7 +411,7 @@ Configure the summary details settings only on the top-level site. The summary d
 <!--3734426-->
 *(Introduced in version 1906)*
 
-Starting in version 1906, you can specify the maximum amount of time a software update installation has to complete. You can specify the maximum run time for the following:
+You can specify the maximum amount of time a software update installation has to complete. You can specify the maximum run time for the following:
 
 - **Maximum run time for Windows feature updates (minutes)**
   - **Feature updates** - An update that is in one of these three classifications:
@@ -449,7 +438,7 @@ Starting in version 1906, you can specify the maximum amount of time a software 
 
 Add a maintenance window dedicated for software updates installation. This action lets you configure a general maintenance window and a different maintenance window for software updates. When you configure both a general maintenance window and software updates maintenance window, clients install software updates only during the software updates maintenance window. 
 
-Starting with Configuration Manager version 1810, you can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](../../core/clients/deploy/about-client-settings.md#bkmk_SUMMaint).
+You can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](../../core/clients/deploy/about-client-settings.md#bkmk_SUMMaint).
 
 For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
