@@ -227,7 +227,7 @@ The following table lists the specific devices used in this example. This inform
 
 ### Azure machine and disk performance
 
-Azure disk performance depends on several factors, such as the size of the Azure VM, and the number and type of disks it uses. Azure is also constantly adding new machine types and disk speeds that are different from the following chart. For more information about Configuration Manager running on Azure, and additional information on understanding disk I/O on Azure, see [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md).
+Azure disk performance depends on several factors, such as the size of the Azure VM, and the number and type of disks it uses. Azure is also constantly adding new machine types and disk speeds that are different from the following chart. For more information about Configuration Manager running on Azure, and additional information on understanding disk I/O on Azure, see [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.yml).
 
 All disks are formatted NTFS 64k cluster size, and rows with more than one disk are configured as striped volumes via the Windows Disk Management utility.
 
@@ -265,6 +265,6 @@ For more information on the currently available disks, see [Select a disk type f
 ## See also
 
 - [Site sizing and performance FAQ](../../understand/site-size-performance-faq.yml)
-- [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md)
+- [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.yml)
 - [Size and scale numbers](size-and-scale-numbers.md)
 - [Recommended hardware](recommended-hardware.md)

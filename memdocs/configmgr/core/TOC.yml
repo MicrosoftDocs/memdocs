@@ -53,7 +53,7 @@
     - name: Cloud services overview
       href: understand/use-cloud-services.md
     - name: Configuration Manager on Azure
-      href: understand/configuration-manager-on-azure.md
+      href: understand/configuration-manager-on-azure.yml
   - name: FAQ for product and licensing
     href: understand/product-and-licensing-faq.yml
   - name: Which branch of Configuration Manager should I use?
