@@ -11,6 +11,18 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Intune ending support for stand-alone client apps on Microsoft Tunnel<!-- 9370486   -->
+
+The Defender for Endpoint app on Android now supports Microsoft Tunnel functionality and will be the official client app for Android Enterprise customers. We will be removing the Microsoft Tunnel client from the Google Play store at the end of June.
+
+#### How this change will affect your organization
+
+If you use the Microsoft Tunnel app for Android, you'll need to move to the Defender for Endpoint app before the June Intune (2106) service release to ensure users can still access the Tunnel Gateway configuration.
+
+#### What you need to do to prepare
+
+For your devices that run Android Enterprise and currently use the Microsoft Tunnel app, plan to [replace the stand-alone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Defender for Endpoint app.
+
 ### Plan for Change: Intune moving to support Android 6.0 and higher in April 2021
 
 As mentioned in MC234534, Intune will be moving to support Android 6.0 (Marshmallow) and higher in the April (2104) service release.
