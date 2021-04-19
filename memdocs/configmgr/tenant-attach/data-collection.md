@@ -71,10 +71,10 @@ For each device:
 - **DomainNames**: Any domain names for the device
 - **SKU**
 
-## Windows Defender for Endpoint
+## Microsoft Defender for Endpoint
 <!-- 6505652 -->
 
-For any collection that you select for ATP policy deployment:
+For any collection that you select for Endpoint policy deployment:
 
 - **CollectionId**: The unique identifier of the collection. For example, `ABC00014`
 - **CollectionName**: The name of the collection. For example, `All Windows servers`
