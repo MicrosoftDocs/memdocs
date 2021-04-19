@@ -1,0 +1,6 @@
+- name: Hotfix documentation
+  href: index.yml
+- name: Version 2103
+  items:
+  - name: KB 9210721 Summary of changes in 2103
+    href: hotfix/2103/KB9210721.md
