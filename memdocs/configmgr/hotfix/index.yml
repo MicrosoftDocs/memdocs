@@ -17,7 +17,7 @@ metadata:
 landingContent:
   - title: Configuration Manager 2103
     linkLists:
-      - linkListType: 2103
+      - linkListType: overview
         links:
           - text: KB 9210721 Summary of changes in 2103
             url: 2103/KB9210721.md
