@@ -240,6 +240,10 @@ See the following examples.
     ```
     - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package that was created earlier.
 
+     > [!IMPORTANT]
+     > TThe AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
+
+
 17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.
 18. Select the **Autopilot for existing devices config** package created earlier and click **OK**. An example is displayed at the end of this section.
 19. Under the **Setup Operating System** group, click the **Setup Windows and Configuration Manager** task.
