@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/05/2021
+ms.date: 04/19/2021
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -135,7 +135,6 @@ For example, you have a primary site in forest A with two software update points
 
 Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your organizational security policy doesn't allow the top-level site to access to the internet, configure the synchronization source for the top-level site to use an existing WSUS server. This WSUS server isn't in your Configuration Manager hierarchy. For example, you have a WSUS server in an internet-connected network (DMZ), but your top-level site is in an internal network without internet access. Configure the WSUS server in the DMZ as your synchronization source for software updates metadata. Configure the WSUS server in the DMZ to synchronize software updates with the same criteria that you need in Configuration Manager. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS server connection account. This account needs access to the WSUS server in the DMZ. Also confirm that the firewall permits traffic for the appropriate ports. For more information, see the [ports used by the software update point to the synchronization source](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
-
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
 
 The software update point is optional on a secondary site. Install only one software update point at a secondary site. When a software update point isn't installed at the secondary site, devices within the boundaries of a secondary site use a software update point at their assigned primary site. You typically install a software update point at a secondary site when there's limited network bandwidth between the devices in the secondary site and the software update points at the parent primary site. You may also use this configuration when the software update point at the primary site approaches the capacity limit. After you successfully install and configure a software update point at the secondary site, a site-wide policy is updated for clients, and they start to use the new software update point.  
@@ -212,6 +211,8 @@ This section includes the following subtopics:
 
 
 This section provides information about the steps to take to successfully plan and prepare for the software update point installation. Before you create a site system role for the software update point in Configuration Manager, there are several requirements to consider. The specific requirements depend on your Configuration Manager infrastructure. When you configure the software update point to communicate by using HTTPS, this section is especially important to review. HTTPS-enabled servers require additional steps to work properly.  
+
+
 
 ###  <a name="BKMK_SUPSystemRequirements"></a> Requirements for the software update point  
 
@@ -312,6 +313,8 @@ The synchronization source settings for the software update point specify the lo
 
 -   **WSUS reporting events:** The Windows Update Agent on client computers can create event messages for WSUS reporting. These events aren't used by Configuration Manager. Thus, the option, **Do not create WSUS reporting events**, is selected by default. When these events aren't created, the only time that the client should connect to the WSUS server is during software update evaluation and compliance scans. If these events are needed for reporting outside of Configuration Manager, modify this setting to create WSUS reporting events.  
 
+> [!IMPORTANT]
+> If you're sharing the WSUS database (SUSDB) across multiple software update points for the top-level site, make sure that each of those WSUS servers meets the [internet access requirements](../../core/plan-design/network/internet-endpoints.md#software-updates) for software updates. When the database is shared the top-level site, Configuration Manager can select any one of those WSUS servers to sync with Microsoft Update.
 
 ###  <a name="BKMK_SyncSchedule"></a> Synchronization schedule  
 
