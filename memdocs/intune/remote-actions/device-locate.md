@@ -34,11 +34,9 @@ ms.collection: M365-identity-device-management
 
 To get the location of a lost or stolen Windows or iOS/iPadOS device on a map, use the **Locate device** action.
 
-For iOS/iPadOS, devices must be in supervised mode. Before you use this action, be sure the device is in [lost mode](device-lost-mode.md).
-
 ## Supported platforms
 
-- iOS/iPadOS 9.3 and later
+- iOS/iPadOS 9.3 and later (These devices must be in supervised mode. Before you use this action, be sure the device is in [lost mode](device-lost-mode.md).)
 - Windows 10 version 20H2 (10.0.19042.789) or later
 - Windows 10 version 2004 (10.0.19041.789) or later
 - Windows 10 version 1909 (10.0.18363.1350) or later
