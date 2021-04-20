@@ -210,9 +210,8 @@ A more recent update is deployed when the following conditions are met:
 
 - The Windows build revision of a device is less than the Windows build version of the update specified in the policy.
 
-- Before the device completes the install of an expedited update by restarting, the device runs a scan that identifies a newer update is applicable. To qualify, the newer update must include the updates that were provided by the update you specified in your policy.
+- During the expedite process, a device might run a subsequent scan which can detect a newer update. This can occur due to the timing of:
 
-  This can occur due to the timing of:
   - When the device restarts to complete installation
   - When it runs its daily scan
   - When a new update becomes available
@@ -294,7 +293,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 2. Select **Devices** > **Monitor**.
 
-3. In the list of monitoring reports, scroll to the Software updates section and select **Expedited update failures**.
+3. In the list of monitoring reports, scroll to the Software updates section and select **Quality update failures**.
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
  
