@@ -45,6 +45,8 @@
       href: find-primary-user.md
   - name: Other actions
     items:
+    - name: Locate device
+      href: device-locate.md
     - name: Rename device
       href: device-rename.md
     - name: Send notifications
