@@ -293,7 +293,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 2. Select **Devices** > **Monitor**.
 
-3. In the list of monitoring reports, scroll to the Software updates section and select **Quality update failures**.
+3. In the list of monitoring reports, scroll to the Software updates section and select **Expedited update failures**.
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
  
