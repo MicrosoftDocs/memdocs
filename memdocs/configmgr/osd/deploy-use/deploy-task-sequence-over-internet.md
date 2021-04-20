@@ -2,7 +2,7 @@
 title: Deploy a task sequence over the internet
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to remote computers.
-ms.date: 12/11/2020
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -125,7 +125,9 @@ Starting in version 2010, you can use boot media to reimage internet-based devic
 
 - Make sure the device has a constant internet connection while the task sequence runs. Windows PE doesn't support wireless networks, so the device needs a wired network connection.
 
-- For version 2010 early update ring, if you use a PKI-based certificate for the boot media, configure it for SHA256 with the Microsoft Enhanced RSA and AES provider.<!-- 8837546 --> For later releases, including globally available version 2010, this certificate configuration is recommended but not required. The certificate can be a v3 (CNG) certificate.<!-- MEMDocs#1095 -->
+- If you use a PKI-based certificate for the boot media, configure it for SHA256 with the Microsoft Enhanced RSA and AES provider.<!-- 8837546 --> This certificate configuration is recommended but not required. The certificate can be a v3 (CNG) certificate.<!-- MEMDocs#1095 -->
+
+- In versions 2010 and 2103, if you configure the management point to **Allow internet-only connections**, then you can't use boot media over a CMG.<!-- 9760052 --> To work around this issue, configure the management point to **Allow intranet and internet connections**.
 
 ### Create boot media to use a CMG
 

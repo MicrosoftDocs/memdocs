@@ -2,7 +2,7 @@
 title: Manage boot images
 titleSuffix: Configuration Manager
 description: In Configuration Manager, learn to manage the Windows PE boot images that you use during an OS deployment.
-ms.date: 04/05/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -88,9 +88,7 @@ During site installation, Configuration Manager automatically adds boot images t
 
   - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup>
 
-  - Windows PE 5
-
-For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
+For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 3.1, customize it from a different computer using the version of DISM from the Windows AIK for Windows 7. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
 
 - [Customize boot images](customize-boot-images.md)
 - [Support for Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
@@ -102,6 +100,8 @@ For example, use the Configuration Manager console to customize boot images base
 > **Note 1: Support for Windows PE 3.1**
 >
 > Only add a boot image to Configuration Manager based on Windows PE *version 3.1*. Upgrade the Windows AIK for Windows 7 (based on Windows PE 3.0) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
+
+Use the following process to add a boot image in Configuration Manager:
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.  
 
@@ -307,4 +307,6 @@ Use the following procedure to set the WinPE language for PXE or media-initiated
 
 ## Next steps
 
-[Customize boot images](customize-boot-images.md)
+[Customize boot images for Windows PE 3.1](customize-boot-images.md)
+
+[Manage OS images](manage-operating-system-images.md)
