@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/02/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -172,19 +172,19 @@ When you set up Desktop Analytics, you consent on behalf of your organization. T
 
 If there's a problem with this process during setup, use the following process to manually add this permission:
 
-1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.
 
-2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
+1. In the workspace menu, select **Access control (IAM)**, select **Add**, and then select **Add role assignment**.
 
-3. In the **Add permissions** panel, configure the following settings:  
+1. In the **Add role assignment** panel, configure the following settings:
 
-    - **Role**: **Reader**  
+    - **Role**: **Reader**
 
-    - **Assign access to**: **Azure AD user, group, or application**  
+    - **Assign access to**: **User, group, or service principal**
 
-    - **Select**: **MALogAnalyticsReader**  
+    - **Select**: **MALogAnalyticsReader**
 
-4. Select **Save**.
+1. Select **Save**.
 
 The portal shows a notification that it added the role assignment.
 
