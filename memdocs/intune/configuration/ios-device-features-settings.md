@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 04/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -314,7 +314,7 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types
 
-- **SSO app extension type**: Choose the type of SSO app extension. After successfuly logging into the Authenticator app, the user will not be prompted to login to other apps that are using the SSO extension. However, the user will still need to select which account they are logged into at the first launch of other managed appes on the enrolled device. Your options:
+- **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
   - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
@@ -322,7 +322,7 @@ This feature applies to:
     > [!IMPORTANT]
     > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
 
-    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that used the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). 
+    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). 
 
     > [!IMPORTANT]
     > To achieve SSO with the Microsoft Azure AD SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -333,6 +333,8 @@ This feature applies to:
 
   > [!TIP]
   > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
+
+After users successfully sign in to the Authenticator app, they aren't prompted to sign in to other apps that use the SSO extension. The first time users open managed apps that don't use the SSO extension, they're prompted to select the account that's signed in.
 
 - **Shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
