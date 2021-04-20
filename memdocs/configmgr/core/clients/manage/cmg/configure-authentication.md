@@ -2,7 +2,7 @@
 title: Configure CMG client authentication
 titleSuffix: Configuration Manager
 description: Select an authentication method for clients to use a cloud management gateway (CMG).
-ms.date: 09/28/2020
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -23,7 +23,7 @@ The next step in the setup of a cloud management gateway (CMG) is to configure h
 | **ConfigMgr version** | All supported | All supported | 2002 or later |
 | **Windows client version** | Windows 10 | All supported | All supported |
 | **Scenario support** | User and device | Device-only | Device-only |
-| **Management point** | E-HTTP or HTTPS | E-HTTP or HTTPS | HTTP, E-HTTP, or HTTPS |
+| **Management point** | E-HTTP or HTTPS | E-HTTP or HTTPS | E-HTTP, or HTTPS |
 
 Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD modern authentication with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
 
@@ -138,14 +138,10 @@ For more information, or to create a bulk registration token, see [Token-based a
 
 ## <a name="bkmk_mphttps"></a> Enable management point for HTTPS
 
-Depending upon how you configure the site, and which client authentication method you choose, you may need to reconfigure your internet-enabled management points.
-
-If you use Azure AD or PKI certificates for client authentication, there are two options:
+Depending upon how you configure the site, and which client authentication method you choose, you may need to reconfigure your internet-enabled management points. There are two options:
 
 - Configure the site for Enhanced HTTP, and configure the management point for HTTP
 - Configure the management point for HTTPS
-
-If you use Configuration Manager token-based authentication, you don't need to reconfigure the management points. It works with any of the supported modes.
 
 ### Configure the site for Enhanced HTTP
 
@@ -182,6 +178,9 @@ These tables summarize whether the management point requires HTTP or HTTPS, depe
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**.
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**.
 - *E-HTTP*: On the site properties, **Communication Security** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, and the HTTP management point is ready for both HTTP and HTTPS communication.
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ##### For internet-based clients communicating with the CMG
 

@@ -208,7 +208,7 @@ For more information, see [How to manage collections](../../clients/manage/colle
 <!--7033501-->
 An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
 
-For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ## OS deployment
 
@@ -301,7 +301,7 @@ For more information, see [Community hub](../../servers/manage/community-hub.md#
 <!--3555940, 8625943, 8717639 -->
 You can now display the Community hub on Windows Server operating systems. The Configuration Manager console will notify you to install the console extension to enable Windows Server 2012 and later to load the Community hub.
 
-For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_hub_os).
+For more information, see [Community hub](../../servers/manage/community-hub.md#bkmk_webview2).
 
 ### Product feedback
 
@@ -371,6 +371,11 @@ For more information, see the [Content library cleanup tool](../hierarchy/conten
 You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
+
+> [!WARNING]
+> Because of a change in how the updateable content is structured and published with the release of version 2103, don't use **Update-Help** on a version 2010 site. Update the site to version 2103, and then update the local help content.<!-- 8617455 -->
+>
+> For more information, see [PowerShell version 2103 release notes](/powershell/sccm/2103-release-notes#known-issue-with-updateable-powershell-help).
 
 ### Support for PowerShell version 7
 

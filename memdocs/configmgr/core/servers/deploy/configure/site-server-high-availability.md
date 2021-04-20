@@ -52,7 +52,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
     > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
-    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
+    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.yml)  
 
 - Both site servers must be joined to the same Active Directory domain.
 

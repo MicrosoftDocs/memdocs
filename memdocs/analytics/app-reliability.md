@@ -1,7 +1,7 @@
 ---
 title: Application reliability (preview) in endpoint analytics
-titleSuffix: Configuration Manager
 description: Get details about application reliability in endpoint analytics
+titleSuffix: Microsoft Endpoint Manager
 ms.date: 03/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -95,9 +95,9 @@ Selecting a device name opens the **Application reliability (preview)** tab for 
 > [!NOTE]
 > This issue affects the data upload process rather than the device itself. This means that application reliability data from a particular device may fail to upload on one day, but data from the same device is able to upload successfully the next day.
 
-**Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Devices enrolled in Endpoint analytics via both Configuration Manager and Intune can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
+**Impacted devices**: This issue affects a small subset of daily application reliability data uploads from devices with a large amount of application usage. Only devices enrolled in Endpoint analytics via Configuration Manager version 2010 or older can be impacted. This issue primarily occurs when a device has greater than 20 distinct applications with active focus time during a 24 hour period, though this number can vary based on which applications are used and total usage duration.
 
-**Mitigation**: We are releasing a client-side mitigation which will limit the size of the application reliability data package being uploaded. The mitigation will be included in an update rollup for Configuration Manager version 2010 to be released in March 2021. It will be available automatically for Intune-enrolled devices starting the week of March 1st, 2021. For more about how Intune deploys updates, see [What's new in Microsoft Intune](../intune/fundamentals/whats-new.md).
+**Mitigation**: This issue requires a client-side mitigation which is available as part of an update rollup for Configuration Manager version 2010. For more information, see [KB4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95).
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 

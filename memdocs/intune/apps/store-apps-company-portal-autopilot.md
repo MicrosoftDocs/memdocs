@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -60,7 +60,7 @@ You can choose to install the **Company Portal (Offline)** app using the steps b
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.
-5. From the **Language** drop-down list, choose the language in which apps from the Microsoft Store for Business are displayed in the Azure portal. Regardless of the language in which they are displayed, they are installed in the end user's language when available.
+5. From the **Language** drop-down list, choose the language in which apps from the Microsoft Store for Business are displayed in the portal. Regardless of the language in which they are displayed, they are installed in the end user's language when available.
 6. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.
 
 ## Assign the Company Portal app

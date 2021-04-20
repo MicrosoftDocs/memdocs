@@ -30,7 +30,7 @@ The following table describes known issues that can often be resolved by configu
 <th>Issue<th>More information
 
 <tr><td>Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP.</td>
-<td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. In the future, it will be possible to instead target the ESP profile to device groups to avoid this issue.</tr>
+<td>The services responsible for determining the list of apps that should be blocking during device ESP aren't able to determine the correct ESP profile containing the list of apps because they don't know the user identity. As a workaround, enable the default ESP profile (which targets all users and devices) and place the blocking app list there. To avoid this issue, target the ESP profile to <a href="enrollment-autopilot.md">device groups</a>.</tr>
 
 <tr><td>That username looks like it belongs to another organization. Try signing in again or start over with a different account.</td>
  <td>Confirm that all of your information is correct at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot. For more information, see <a href="troubleshoot-oobe.md#windows-10-version-1709-and-above">Troubleshoot OOBE issues</a>.</td></tr>

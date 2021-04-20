@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2021
+ms.date: 03/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

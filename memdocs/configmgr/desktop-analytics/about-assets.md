@@ -97,6 +97,6 @@ In a deployment plan, you can also set the **Upgrade decision**. For more inform
 
 - [Learn about Desktop Analytics deployment plans](about-deployment-plans.md)  
 
-- [Learn about security and feature updates](about-updates.md)  
+- [Learn about feature updates](about-updates.md)  
 
 - [Compatibility assessment in Desktop Analytics](compat-assessment.md)  

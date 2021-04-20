@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2021
+ms.date: 04/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -298,6 +298,9 @@ Click **Select scope tags** to optionally add scope tags for the app. Then selec
 ## Step 7: Assignments
 
 You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+
+> [!IMPORTANT]
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device does not have, the app will fail to install.
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.

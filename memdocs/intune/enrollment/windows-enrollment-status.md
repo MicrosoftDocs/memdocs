@@ -136,6 +136,11 @@ The Enrollment Status Page tracks the following device setup items:
   - LoB store apps with installation context = Device.
   - Offline store and LoB store apps with installation context = Device.
   - Win32 applications (Windows 10 version 1903 and newer only) 
+
+  > [!NOTE]
+  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
+  > 
+
 - Connectivity profiles
   - VPN or Wi-Fi profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices
 - Certificate profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices

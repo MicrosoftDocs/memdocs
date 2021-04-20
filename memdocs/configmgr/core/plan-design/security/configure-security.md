@@ -25,7 +25,8 @@ Use the information in this article to help you set up security-related options 
 - [Configure Azure Active Directory](#bkmk_azuread)  
 - [Configure SMS Provider authentication](#bkmk_auth)  
 
-
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ##  <a name="BKMK_ConfigureClientPKI"></a> Configure settings for client PKI certificates  
 

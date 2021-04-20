@@ -3,11 +3,11 @@
 
 title: Configure Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
 description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
-keywords:
+keywords: configure, manage, capabilities, attack surface reduction, next-generation protection, security controls, endpoint detection and response, auto investigation and remediation, security controls, controls, microsoft defender for endpoint, mde
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2021
+ms.date: 04/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -137,9 +137,11 @@ In addition to device configuration policy, you can onboard devices using:
 
 ### Onboard macOS devices
 
-After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard macOS devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about devices risk level.
+After you establish the service-to-service connection between Intune and Microsoft Defender for Endpoint, you can onboard macOS devices to Microsoft Defender for Endpoint. Onboarding configures devices to communicate with Microsoft Defender Endpoint, which then collects data about devices risk level.
 
-For macOS, there are some configuration packages for onboarding for devices. For more information, see [Microsoft Intune-based deployment for macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-install-with-intune).
+For configuration guidance for Intune, see [Microsoft Defender for Endpoint for macOS](../apps/apps-advanced-threat-protection-macos.md).
+
+For additional information about Microsoft Defender for Endpoint for Mac, including what's new in the latest release, see [Microsoft Defender for Endpoint for Mac](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac?view=o365-worldwide&preserve-view=true) in the Microsoft 365 security documentation.
 
 ### Onboard Android devices
 

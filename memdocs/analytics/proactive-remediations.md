@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Proactive remediations
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user 
 ms.date: 11/19/2020
 ms.prod: configuration-manager

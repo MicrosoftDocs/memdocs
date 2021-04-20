@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2021
+ms.date: 03/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -69,13 +69,19 @@ This article lists the steps to create a policy, and shows how to search and fil
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
-    For example, if you chose **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
+    For example, choose **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="In Settings Catalog, select Windows and select Authentication in Microsoft Intune and Endpoint Manager admin center.":::
 
-    For example, if you chose **macOS**, then select **Microsoft Edge - Startup, home page and new tab page** to see all the settings in this category:
+    For example, choose **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure, including any new settings. The other categories include settings that are obsolete, or settings that apply to older versions:
 
-    :::image type="content" source="./media/settings-catalog/settings-picker-macos-edge.png" alt-text="In Settings Catalog, select macOS, and select a feature or category in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="In Settings Catalog, select macOS, and select a feature or category in Microsoft Intune and Endpoint Manager admin center.":::
+
+    > [!TIP]
+    >
+    > - On macOS, the categories are temporarily removed. To find a specific setting, use the **Microsoft Edge - All** category, or search for the setting name. For a list of the setting names, go to [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+    > 
+    > - Use the **Learn more** link in the tooltip to see if a setting is obsolete, and to see the supported versions.
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
 

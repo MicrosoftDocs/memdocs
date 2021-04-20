@@ -40,8 +40,8 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
   By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.** Turns off the Microsoft Active Protection Service.
-  - **Allowed.**  Turns on the Microsoft Active Protection Service.
+  - **Not allowed** Turns off the Microsoft Active Protection Service.
+  - **Allowed**  Turns on the Microsoft Active Protection Service.
 
 - **Cloud-delivered protection level**  
   CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
@@ -83,8 +83,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
   Require Defender on Windows 10 desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
-  - **Not allowed.** Turns off the real-time monitoring service.
-  - **Allowed.** Turns on and runs the real-time monitoring service.
+  - **Not allowed** Turns off the real-time monitoring service.
+  - **Allowed** Turns on and runs the real-time monitoring service.
 
 - **Enable on access protection**  
   CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
@@ -92,16 +92,16 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure virus protection that's continuously active, as opposed to on demand.
 
   - **Not Configured** (*default*) - This policy doesn't alter the state of this setting on a device. The existing state on the device remains unchanged.
-  - **Not allowed.** Turns off the real-time monitoring service.
-  - **Allowed.**
+  - **Not allowed** Turns off the real-time monitoring service.
+  - **Allowed**
 
 - **Monitoring for incoming and outgoing files**  
   CSP: [Defender/RealTimeScanDirection](/windows/client-management/mdm/policy-csp-defender)
 
   Configure this setting to determine which NTFS file and program activity is monitored.
-  - **Monitor all files (bi-directional).** (*default*)
-  - **Monitor incoming files.**
-  - **Monitor outgoing files.**
+  - **Monitor all files (bi-directional)** (*default*)
+  - **Monitor incoming files**
+  - **Monitor outgoing files**
 
 - **Turn on behavior monitoring**  
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
@@ -109,13 +109,17 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   By default, Defender on Windows 10 desktop devices uses the Behavior Monitoring functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.** Turns off behavior monitoring.
-  - **Allowed.** Turns on real-time behavior monitoring.
+  - **Not allowed** Turns off behavior monitoring.
+  - **Allowed** Turns on real-time behavior monitoring.
 
 - **Allow Intrusion Prevention System**  
+  CSP: [AllowIntrusionPreventionSystem](/windows/client-management/mdm/policy-csp-defender#defender-allowintrusionpreventionsystem)
+
+  Configure Defender to allow or disallow Intrusion Prevention functionality.
+
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.**
-  - **Allowed.**
+  - **No** - Intrusion Prevention Systme is not allowed.
+  - **Yes** - Intrusion Prevention System is allowed.
 
 - **Scan all downloaded files and attachments**  
   CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
@@ -123,8 +127,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to scan all downloaded files and attachments.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.**
-  - **Allowed.**
+  - **Not allowed**
+  - **Allowed**
 
 - **Scan scripts that are used in Microsoft browsers**  
   CSP: [AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender)
@@ -132,8 +136,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to scan scripts.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.**
-  - **Allowed.**
+  - **Not allowed**
+  - **Allowed**
 
 - **Scan network files**  
   CSP: [AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
@@ -141,8 +145,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to scan network files.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.** Turns off scanning of network files.
-  - **Allowed.** Scans network files.
+  - **Not allowed** Turns off scanning of network files.
+  - **Allowed** Scans network files.
 
 - **Scan emails**  
   CSP: [AllowEmailScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
@@ -150,8 +154,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to scan incoming email.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed.** Turns off email scanning.
-  - **Allowed.** Turns on email scanning.
+  - **Not allowed** Turns off email scanning.
+  - **Allowed** Turns on email scanning.
 
 ## Remediation
 
@@ -163,10 +167,10 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Submit samples consent**  
 
   - **Not configured** (*default*)
-  - **Always prompt.**
-  - **Send safe samples automatically.**
-  - **Never send.**
-  - **Send all samples automatically.**
+  - **Always prompt**
+  - **Send safe samples automatically**
+  - **Never send**
+  - **Send all samples automatically**
 
 - **Action to take on potentially unwanted apps**  
   CSP: [PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
@@ -174,9 +178,9 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
 
   - **Not configured** (*default*) - The setting is restored to the system default, which is PUA Protection OFF.
-  - **PUA Protection off.** Windows Defender will not protect against potentially unwanted applications.
-  - **PUA Protection on.** Detected items are blocked. They will show in history along with other threats.
-  - **Audit mode.** Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
+  - **PUA Protection off** - Windows Defender will not protect against potentially unwanted applications.
+  - **PUA Protection on** - Detected items are blocked. They will show in history along with other threats.
+  - **Audit mode** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Create a system restore point before computers are cleaned**  
   - **Yes** (*default*)
@@ -214,7 +218,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Not configured** (*default*) - The setting returns to the client default, which is to scan archived files, however the user may disable the scan.
 Learn more
   - **Not allowed** Turns off scanning on archived files.
-  - **Allowed.** Scans the archive files.
+  - **Allowed** Scans the archive files.
 
 - **Enable low CPU priority for scheduled scans**  
   CSP: [EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)
@@ -253,8 +257,8 @@ Learn more
   Configure Defender to scan mapped network drives.
 
   - **Not configured** (*default*) - The setting is restored to the system default, which disables scanning on mapped network drives.
-  - **Not allowed.** Disables scanning on mapped network drives.
-  - **Allowed.** Scans mapped network drives.
+  - **Not allowed** Disables scanning on mapped network drives.
+  - **Allowed** Scans mapped network drives.
 
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
@@ -289,8 +293,8 @@ Learn more
 
 - **Scan removable drives during full scan**
   - **Not Configured** (*default*)
-  - **Not allowed.** Turns off scanning on removable drives.
-  - **Allowed.** Scans removable drives.
+  - **Not allowed** Turns off scanning on removable drives.
+  - **Allowed** Scans removable drives.
 
 ## Updates
 
@@ -309,8 +313,8 @@ Learn more
 
 - **Block user access to Microsoft Defender app**  
   - **Not Configured** (*default*)
-  - **Not allowed.** Prevents users from accessing UI.
-  - **Allowed.** Lets users access UI.
+  - **Not allowed** Prevents users from accessing UI.
+  - **Allowed** Lets users access UI.
 
 - **Show notifications messages on the client computer when the user needs to run a full scan, update security intelligence, or run Windows Defender Offline**  
   - **Not Configured** (*default*)

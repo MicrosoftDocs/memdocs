@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 4/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -39,9 +39,9 @@ This article shows you how to view all your devices, and their properties in the
 ## View the device details
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **All devices** > select one of your listed devices to open its details:
+2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device:
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device (depending on the device platform):
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
       - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
@@ -62,18 +62,19 @@ This article shows you how to view all your devices, and their properties in the
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
    - **Device compliance** lists all assigned compliance policies, and if the device is compliant or not compliant.
    - **Device configuration** shows all device configuration policies assigned to the device, and if the policy succeeded or failed.
-   - **App configuration** 
+   - **App configuration**
    - **Endpoint security configuration**
    - **Recovery keys** shows available BitLocker keys found for the device
-   - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device. 
+   - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device.
 
 ## Hardware device details
+
 Depending on the carrier used by the devices, not all details might be collected
 
 > [!Note]  
 > Hardware and Software inventory is refreshed in the Intune service every 7 days.
 
-|Detail|Description|Platform| 
+|Detail|Description|Platform|
 |--------------|----------------------|----|  
 |Name|The name of the device.|Windows, iOS, Android|
 |Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, iOS, Android|
@@ -97,11 +98,12 @@ Depending on the carrier used by the devices, not all details might be collected
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, iOS/iPadOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/>Phone number isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android|
 |Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, iOS/iPadOS, Android|
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
+|EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
@@ -117,4 +119,5 @@ Depending on the carrier used by the devices, not all details might be collected
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
 
 ## Next steps
+
 See what else you can do to [manage your devices](device-management.md) with Intune.

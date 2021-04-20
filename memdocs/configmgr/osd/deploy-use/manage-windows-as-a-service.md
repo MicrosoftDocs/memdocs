@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 11/30/2020
+ms.date: 03/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -48,7 +48,29 @@ For more information about Windows 10 servicing options, see  [Overview of Windo
   - [Specify thread priority for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)
   - [Enable Dynamic Update for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_du)<!--4062619-->
 
-## Windows 10 servicing dashboard
+
+## <a name="bkmk_2103-dashboard"></a> Windows 10 servicing dashboard in version 2103 or later
+<!--3555940-->
+(*Introduced in version 2103*)
+
+Starting in version 2103, the **Windows 10 Servicing** dashboard was simplified to make it more relevant. Servicing plan and Windows 10 ring information were removed from the dashboard. The following charts are displayed for the selected **Collection**:
+
+**Feature Update Versions**: Displays the distribution of Windows 10 major releases. This chart as previously called **Windows 10 Usage**.
+
+**Quality Update Versions**: This chart displays the top five revisions of Windows 10 across your devices.
+
+**Latest Feature Update**: This chart shows the number of devices that installed the latest feature update.
+
+**Collection Errors**: This tile shows the number of devices that failed with the specified error code. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
+
+**Errors Timeline**: Displays the top errors and the number of devices with each error over the course of time for the chosen collection.
+
+:::image type="content" source="./media/3555940-servicing-dashboard.png" alt-text="The Windows 10 Servicing dashboard in Configuration Manager" lightbox="./media/3555940-servicing-dashboard.png":::
+
+> [!IMPORTANT]
+> - The information shown in the Windows 10 servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
+> - For more detailed information about Windows 10 builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
+## Windows 10 servicing dashboard in version 2010 and earlier
 
 The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, servicing plans, and compliance information. The data in the Windows 10 servicing dashboard is dependent on the service connection point. The dashboard has the following tiles:
 
@@ -183,8 +205,7 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
 
             > [!NOTE]
             > The actual installation deadline time is the displayed deadline interval plus a random amount of time up to 2 hours. This randomization reduces the potential impact of all clients in the collection installing the upgrade at the same time.
-            >
-            > To disable the installation randomization delay for required updates, configure the **Computer Agent** client setting **Disable deadline randomization**. For more information, see [About client settings: Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).
+
 
         - **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](../../core/clients/deploy/about-client-settings.md#grace-period-for-enforcement-after-deployment-deadline-hours).
 
@@ -289,11 +310,12 @@ With the release of Windows 10, version 2004, the [SetupDiag](/windows/deploymen
 
 Starting in version 2010, Configuration Manager gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
 
-The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console now includes a tile for **Collection Errors**:
+The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console includes a tile for **Collection Errors**. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 
-:::image type="content" source="media/4385028-collection-errors-tile.jpg" alt-text="Collection Errors tile in Windows 10 Servicing dashboard":::
 
-You can scope the tile to a specific collection. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
+:::image type="content" source="media/4385028-collection-errors-tile.png" alt-text="Collection Errors tile in Windows 10 Servicing dashboard":::
+
+Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 
 ## Next steps
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/28/2021
+ms.date: 04/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -61,7 +61,7 @@ To manage devices and install apps, your users can install the Company Portal ap
     This action must be completed for x86, x64, and ARM architectures:<br> 
     *There are 9 Required Framework Packages when selecting 1507 as the minimum OS Version, 12 packages when selecting 1511, and 15 packages when selecting 1607.*
 
-8. In Microsoft Intune in the Azure portal, upload the Company Portal app as a new app. You add the application by selecting Line-of-business app as the **App type** in the **Select app type** pane. You then select the app package file (extension .AppxBundle).
+8. In Microsoft Intune in the portal, upload the Company Portal app as a new app. You add the application by selecting Line-of-business app as the **App type** in the **Select app type** pane. You then select the app package file (extension .AppxBundle).
 
 9. Under **Select dependency app files** select all the dependencies you downloaded in step 7 by using shift-click, and verify that the **Added** column displays **Yes** for the architectures you need.
 

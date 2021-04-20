@@ -1,6 +1,6 @@
 ---
 title: Endpoint analytics data collection
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Data collection information for Endpoint analytics.
 ms.date: 09/22/2020
 ms.prod: configuration-manager

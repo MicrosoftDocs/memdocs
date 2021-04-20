@@ -59,7 +59,7 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
   > [!NOTE]
   > All connectors need to have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
   >
-  > Any instance of this connector can retrive pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
+  > Any instance of this connector can retrieve pending PKCS requests from the Intune Service queue, as such it's not possible to define which connector handles each request.
   >
   > The same applies to certificate revocation.
   >

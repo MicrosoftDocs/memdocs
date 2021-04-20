@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 12/01/2020
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -52,6 +52,9 @@ Deployment and operation of the CMG includes the following components:
   - Configuration Manager site-issued tokens
 
 - A content-enabled CMG or a [**cloud distribution point**](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) provides content to internet-based clients, as needed. Using a content-enabled CMG reduces the required certificates and Azure costs.
+
+> [!NOTE]
+> When you deploy a CMG, it also creates an Azure storage account. The CMG uses this storage account for its standard operations, and for content distribution if you enable it. This storage account doesn't support customizations, such as virtual network restrictions.
 
 ### Azure Resource Manager
 
@@ -137,7 +140,7 @@ Many organizations have separate environments for production, test, development,
 
 Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
 
-For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](cloud-management-gateway-faq.md#bkmk_tenant)
+For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](/cloud-management-gateway-faq.yml#bkmk_tenant)
 
 ## Requirements
 

@@ -145,7 +145,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 > 2. On the server that hosts the connector, add or edit the following registry key to match teh following:
 >    `HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector\MbaseManagementAddress`
 >    - If *MbaseManagementAddress* isn't present, add it as a child key below *PFXCertificateConnector*.
->    - Set the *String Value* for *MbaseManagementAddress* to **https://manage.microsoft.us**
+>    - Set the *String Value* for *MbaseManagementAddress* to `https://manage.microsoft.us`
 
 ## Import PFX Certificates to Intune
 
@@ -221,7 +221,7 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 #### To import the PFX certificate  
 
-1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
+1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](http://web.archive.org/web/20200319074455/https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
 
 2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module *IntunePfxImport.psd1*.
 

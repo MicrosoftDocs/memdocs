@@ -88,6 +88,8 @@ On the server, review the following logs:
 
 ### Known issues
 
+_Applies to version 2002_
+
 You can't create a bulk registration token on a site that has a site server in passive mode.<!-- 6399087 -->
 
 ### Bulk registration token tool usage

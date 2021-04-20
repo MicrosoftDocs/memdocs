@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/02/2021
+ms.date: 03/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
  
-ms.reviewer: lacranda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-Configuration of the Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process that requires the use of the Microsoft Endpoint Manager admin center and running a script that installs the tunnel software on a Linux server. While this article walks you through the steps to configure the Microsoft Tunnel for use, you must already have the Linux server with Docker installed. Installation of Docker and Linux is beyond the scope of this article.
+Configuration of the Microsoft Tunnel VPN gateway for Microsoft Intune is a multi-step process. The process includes use of the Microsoft Endpoint Manager admin center, and running a script to install the tunnel software on a Linux server, which must run Docker. While this article walks you through the steps to configure the Microsoft Tunnel for use, configuration of Linux and Docker is beyond the scope of this content.
 
 *Microsoft Tunnel is in public preview*.
 
@@ -99,6 +99,9 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](#microsoft-tunnel-updates) of Microsoft Tunnel.
 
+   > [!IMPORTANT]
+   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
+
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.
 
@@ -141,7 +144,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    This authentication registers Tunnel Gateway with Microsoft Endpoint Manager and your Intune tenant.
 
-   1. From a web browser. navigate to https://Microsoft.com/devicelogin and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
+   1. Open a web browser to https://Microsoft.com/devicelogin and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
 
    2. After Microsoft Tunnel Gateway registers with Intune, the script gets information about your Sites and Server configurations from Intune. The script then prompts you to enter the GUID of the tunnel Site you want this server to join. The script presents you with a list of your available sites.
 
@@ -189,7 +192,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel app
    - **Per-app VPN**:  
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - On Android, launching an app won't launch the per-app VPN. However, when the VPN has *Always-on VPN* set to *Enable*, the VPN will already be connected and app traffic will use the active VPN. If the VPN isn't set to be *Always-on*, the user must manually start the VPN before it can be used.
-     - To enable a per-app VPN, select **Add** and then browse to apps you’ve imported to Intune. These can be custom or public apps.
+     - To enable a per-app VPN, select **Add** and then browse to custom or public apps you’ve imported to Intune.
 
    - **Always-on VPN**:  
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If *Per-app VPN* is set to *Enable*, only the traffic from apps you select go through the tunnel.
@@ -234,13 +237,13 @@ When there are [updates for Microsoft Tunnel](#microsoft-tunnel-updates), upgrad
 
 - Intune upgrades the Microsoft Tunnel servers in a Site one server at a time. During upgrade, the Microsoft Tunnel on the server isn't available for use.
 
-- Intune starts updating the first server in a Site as soon as 10 minutes after the release becomes available, or after the server turns on if it has been off.
+- Intune begins to update the first server in a Site as soon as 10 minutes after the release becomes available. If the server was off, it begins after the server turns on.
 
 - After a successful upgrade of a server, Intune waits a short period of time before starting the upgrade of the next server.
 
 - This process continues until all servers in a Site have updated to the new version.
 
-Because the tunnel update is automatic, but also updates only a single server per Site at a time, consider assigning two or more servers to each Microsoft Tunnel Site to mitigate the tunnel being unavailable during the update.
+The tunnel update is automatic, but updates only a single server per Site at a time. To avoid down-time while a server updates, consider assigning two or more servers to each Microsoft Tunnel Site.
 
 ## Update the TLS certificate on the Linux server
 
@@ -257,19 +260,31 @@ To uninstall the product, run **./mst-cli uninstall** from the Linux server as r
 
 ## Microsoft Tunnel updates
 
-Updates for the Microsoft Tunnel are released periodically. When we update the tunnel version, you can read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version is released, you should automatically benefit from the new version.
+Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here. Because Microsoft Tunnel [automatically updates](#upgrade-microsoft-tunnel) when a new version releases, you'll automatically benefit from each new version.
 
 After an update releases, it rolls out to tenants over the following days. This means your tunnel servers might not start the process to update for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
-### January 19, 2021
+### March 29, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7ff81ebec9d129558cf07ba1d044d4051dbfaf9eb75cc91500a11f4ef0cb447e
+
+- **serverImageDigest**: sha256:56dc303c67735bad243b2dc8644cc3d1e5318aa963be05a9a685ec6bcbb41c4e
+
+Changes in this release:
+
+- Minor bug fixes and enhancements
+
+- ### January 19, 2021
 
 Image hash values:
 
 - **agentImageDigest**: sha256:227557e71b197c5c26baeed7633e5f89b476bbb8eb23fc82dec260890d5145f1
 
-- **serverImageDigest**:  sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
+- **serverImageDigest**: sha256:70026dc3585db871f419d25066e655902af732286b0537512d53e1f0897cc423
 
 Changes in this release:
 
@@ -282,7 +297,7 @@ Image hash values:
 
 - **agentImageDigest**: sha256:ba48de2c746a68286d15985f807702c60004131368a4a6a50ceab0f04653031a
 
-- **serverImageDigest**:  sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
+- **serverImageDigest**: sha256:a60d778664f7f3ba28d363ec783014d9fc2eda6cc5f6057a1eab8635928e7b07
 
 Changes in this release:
 
@@ -295,7 +310,7 @@ Image hash values:
 
 - **agentImageDigest**: sha256:d168e416591d94d6a02b64e5dde8709e2d5a44261d67036caafcb55b12912ca5
 
-- **serverImageDigest**:  sha256:8b50257a94b9825915cb6a77ed49cfb3e5c6f68da9ae0272cdf8e49cff3d342e
+- **serverImageDigest**: sha256:8b50257a94b9825915cb6a77ed49cfb3e5c6f68da9ae0272cdf8e49cff3d342e
 
 Changes in this release:
 
@@ -306,6 +321,8 @@ Changes in this release:
 
 The initial public preview release of Microsoft Tunnel.
 
+<!-- Archive of past releases
+-->
 ## Next steps
 
 [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  

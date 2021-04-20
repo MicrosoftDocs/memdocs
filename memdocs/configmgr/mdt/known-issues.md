@@ -35,4 +35,4 @@ To mitigate this issue, protect the network connection with IPsec or SMB signing
 
 [Release notes](release-notes.md)
 
-[Frequently asked questions](faq.md)
+[Frequently asked questions](faq.yml)

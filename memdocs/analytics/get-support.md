@@ -1,6 +1,6 @@
 ---
 title: Get support for Endpoint analytics
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Get online and telephone support for Endpoint analytics
 ms.date: 09/22/2020
 ms.prod: configuration-manager

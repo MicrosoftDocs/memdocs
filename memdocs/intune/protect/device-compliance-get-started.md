@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 04/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -123,7 +123,7 @@ The following subjects link to dedicated articles for different aspects of devic
 
   View the device compliance settings for the different device platforms:
 
-  - [Android](compliance-policy-create-android.md)
+  - [Android device administrator](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)

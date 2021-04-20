@@ -2402,9 +2402,8 @@ __interface IDataNodes : IUnknown
 
 ### Table 42. HRESULT GetProperty  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|The property was retrieved.|  
 |**E_INVALIDARG**|The index is past the end of the array.|  
 
@@ -2768,9 +2767,8 @@ __interface IStringProperties : IUnknown
 
 ### Table 48. IHRESULT Get Property Value Results  
 
-|||  
-|-|-|  
 |**HRESULT**|**Description**|  
+|-|-|  
 |**S_OK**|Property value is retrieved.|  
 |**E_INVALIDARG**|There is no property with the name you provided.|  
 

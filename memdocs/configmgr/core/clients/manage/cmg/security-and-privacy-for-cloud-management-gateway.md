@@ -5,7 +5,7 @@ description: Learn about guidance and recommendations for security and privacy w
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 04/13/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -78,7 +78,7 @@ Publish your PKI's certificate revocation list (CRL) for internet-based clients 
 
 This CMG option verifies the client authentication certificate.
 
-- If the client is using Azure AD authentication, the CRL doesn't matter.
+- If the client is using Azure AD or Configuration Manager token-based authentication, the CRL doesn't matter.
 
 - If you use PKI, and externally publish the CRL, then enable this option (recommended).
 

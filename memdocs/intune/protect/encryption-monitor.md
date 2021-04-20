@@ -2,7 +2,7 @@
 # required metadata
 title: Encryption report for encrypted devices in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: View a report on your iOS/iPadOS or Windows device encryption status, and access FileVault and BitLocker recovery keys from within the Microsoft Intune portal.
+description: View a report on your iOS/iPadOS or Windows device encryption status, and access FileVault and BitLocker recovery keys from within the Microsoft Endpoint Manager admin center.
 keywords:
 author: brenduns
 ms.author: brenduns

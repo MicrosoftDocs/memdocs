@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,7 +38,7 @@ For help installing Intune on your device, see [using managed devices to get wor
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
-> Intune requires Android 6.x or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported. 
+> Intune requires Android 6.x or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.
 
 ## Intune supported operating systems
 
@@ -105,7 +105,6 @@ Different administrative tasks require that you use one of the following adminis
 The following browsers are supported for these portals:
 
 - Microsoft Edge (latest version)
-- Microsoft Internet Explorer 11
 - Safari (latest version, Mac only)
 - Chrome (latest version)
 - Firefox (latest version)

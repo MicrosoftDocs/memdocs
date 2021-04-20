@@ -2,7 +2,7 @@
 title: How to use task sequence variables
 titleSuffix: Configuration Manager
 description: Learn about how to use the variables in a Configuration Manager task sequence.
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -237,7 +237,7 @@ For more information, see [Prestart commands for task sequence media](prestart-c
 
 ### <a name="bkmk_set-tswiz"></a> Task Sequence Wizard
 
-Starting in version 1906, after you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 -->
+After you select a task sequence in the Task Sequence Wizard window, the page to edit task sequence variables includes an **Edit** button. You can use accessible keyboard shortcuts to edit the variables. This change helps in cases where a mouse isn't available.<!-- 4668846 -->
 
 ### <a name="bkmk_set-media"></a> Task Sequence Media Wizard
 
@@ -288,7 +288,18 @@ To add a condition that evaluates a variable value, do the following steps:
 
     - **Variable**: The name of the variable. For example, `_SMSTSInWinPE`.  
 
-    - **Condition**: The condition to evaluate the variable value. For example, **equals**.  
+    - **Condition**: The condition to evaluate the variable value. The following conditions are available:
+
+      - Exists
+      - Not exists
+      - Equals
+      - Not equals
+      - Greater than
+      - Greater than or equals
+      - Less than
+      - Less than or equals
+      - Like
+      - Not like (version 2103 or later)<!--8764365-->
 
     - **Value**: The value of the variable to check. For example, `false`.  
 
