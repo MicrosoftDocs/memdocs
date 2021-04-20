@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 04/14/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -89,6 +89,7 @@ Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscri
 - It doesn't support Azure US Government Cloud environments.
 - Users may experience a delay of up to three seconds for actions in Software Center.
 - Configuration Manager currently creates the Azure storage container based on the name of the resource group. Azure has different naming requirements for resource groups and storage containers. Make sure the name of the resource group for this service only has lowercase letters, numbers, and hyphens. If you have an existing resource group that doesn't work, rename it in the Azure portal, or create a new resource group.<!-- 8888841 -->
+- In versions 2010 and 2103, if you have more than one HTTPS management point, then you can't install the Configuration Manager client on devices over the internet. If you need to [Install off-premises clients using a CMG](configure-clients.md#install-off-premises-clients-using-a-cmg), then you can only have one HTTPS management point. You also need to enable the CMG for content.<!-- 9760068 -->
 
 ### Hierarchy design
 

@@ -23,7 +23,7 @@ The **Pre-provision BitLocker** task sequence step in Configuration Manager allo
 - Restart the computer in Windows PE  
 
   > [!IMPORTANT]  
-  >  You must use a boot image with Windows PE 4 or later to pre-provision BitLocker. For more information about supported Windows PE versions in Configuration Manager, see [Dependencies External to Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies).  
+  >  You must use a boot image with Windows PE 4 or later to pre-provision BitLocker. For more information about supported Windows PE versions in Configuration Manager, see [Dependencies External to Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#dependencies-external-to-configuration-manager).  
 
 - Partition and format the hard drive  
 
