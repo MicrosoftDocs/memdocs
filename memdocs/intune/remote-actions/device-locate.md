@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 
 # Locate lost or stolen iOS/iPadOS or Windows devices with Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 To get the location of a lost or stolen Windows or iOS/iPadOS device on a map, use the **Locate device** action.
 
 ## Supported platforms
