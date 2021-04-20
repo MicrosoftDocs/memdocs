@@ -67,7 +67,7 @@ The following OS versions are supported for deployment with this build of MDT:
 > [!NOTE]
 > MDT doesn't support Windows 10 ARM64 devices.
 
-FAQ: [Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?](/mem/configmgr/mdt/faq.yml#what-s-the-mdt-support-life-cycle-)
+FAQ: [Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?](/mem/configmgr/mdt/faq#what-s-the-mdt-support-life-cycle-)
 
 ## Prerequisites
 
