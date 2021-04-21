@@ -1,0 +1,23 @@
+### YamlMime:Landing
+
+title: Configuration Manager hotfixes and update rollups
+summary: Knowledge Base articles for Microsoft Endpoint Configuration Manager hotfixes, update rollups, and change list articles for new releases. 
+
+metadata:
+  title: Configuration Manager hotfixes
+  titleSuffix: Configuration Manager
+  description: Knowledge Base articles for Microsoft Endpoint Configuration Manager hotfixes, update rollups, and change list articles for new releases.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: bhuney
+  ms.author: brianhun
+  ms.date: 04/19/2021
+
+landingContent:
+  - title: Configuration Manager 2103
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 9210721 Summary of changes in 2103
+            url: 2103/KB9210721.md
