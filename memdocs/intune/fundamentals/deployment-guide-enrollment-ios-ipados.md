@@ -119,7 +119,7 @@ This task list provides an overview. For more specific information, see [Apple B
   >   After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete. At this point, the device is considered "userless".
   > 
   >   After the Company Portal app installs, which takes some time, users open the Company Portal app, and sign with their organization Azure AD account (`user@contoso.com`) again. During this second login, any conditional access policies are evaluated, and user affinity is established. Users can install and use organizational resources, including LOB apps.
-  > - If you don't want to use the device before the Company Portal app installs, then use the **Company Portal** app. The **Company Portal** app option locks the device until the Company Portal app installs. Then, users open the Company Portal app, and sign in with their Azure AD organization account (`user@contoso.com`). Then, users can use the device.
+  > - If you don't want to use the device before the Company Portal app installs, then use the **Company Portal** app option. The **Company Portal** app option locks the device until the Company Portal app installs. When the install completes, the Company Portal app opens automatically. Users sign in with their Azure AD organization account (`user@contoso.com`), and can use the device.
 
 - If you use the Company Portal app, then decide how the Company Portal app will be installed on the devices. Make this decision before you create the enrollment profile.
 
@@ -128,7 +128,7 @@ This task list provides an overview. For more specific information, see [Apple B
 
   Don't install the Company Portal app from the app store directly on ADE-enrolled devices. Instead, install the Company Portal app using the following options:
 
-  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**. No additional steps are needed.
+  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**. No other steps are needed.
 
     This option:
 
@@ -190,8 +190,8 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
-  3. The Company Portal app automatically installs, which takes some time. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`) again. They'll see your apps and policies on the device.
+  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
+  3. The Company Portal app automatically installs, which takes some time. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`) again.
 
 - **Enroll with user affinity + Setup Assistant with modern authentication - Company Portal app**:
 
@@ -199,7 +199,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
+  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
   3. The Company Portal app automatically installs. Users don't need to open the Company Portal app, or sign in to the app. If they don't sign in, then there isn't any user affinity. Any resources depending on conditional access aren't available.
 
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
@@ -372,7 +372,7 @@ This task list provides an overview. For more specific information, see [Set up 
 
     - When devices are enrolled using user enrollment, you can't switch to device enrollment. With user enrollment, you can't move an app from unmanaged to managed. Users must unenroll from user enrollment, and then re-enroll to device enrollment.
 
-    - Apps installed before the user enrollment profile is applied aren't protected or managed by the user enrollment profile.
+    - If you install apps before the user enrollment profile is applied, then these apps aren't protected or managed by the user enrollment profile.
 
       For example, a user downloads the Outlook app from the Apple app store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When configuring their organization email, they're blocked by conditional access, and asked to enroll. They enroll, and a user enrollment profile deploys.
 

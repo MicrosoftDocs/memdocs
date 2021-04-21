@@ -186,9 +186,9 @@ For more specific information on the end user steps, see [Enroll your macOS devi
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
+  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
 
-  3. Users open the Company Portal app [you installed](../apps/apps-company-portal-macos.md), and sign in with their organization credentials (`user@contoso.com`) again. They'll see your apps and policies on the device.
+  3. Users open the Company Portal app [you installed](../apps/apps-company-portal-macos.md), and sign in with their organization credentials (`user@contoso.com`) again.
 
 - **Enroll without user affinity**: No actions. Be sure your users don't install the Company Portal app.
 
