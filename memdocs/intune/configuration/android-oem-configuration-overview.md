@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -150,8 +150,18 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
 The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
 
-> [!NOTE]
-> Intune currently shows the status of an OEMConfig policy based on OEMConfig app install status. For example, a **Success** status on an OEMConfig profile means that the corresponding OEMConfig app for that profile was successfully installed on the device.
+## Reporting and deployment status
+
+After your profile is deployed, you can check its status:
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**. A list of all your profiles is shown.
+2. Select your OEMConfig profile. You can get more information on your profile, including successful and failed deployments:
+
+    - **Overview**: Shows the profile assignment statuses. For more information on what the statuses mean, see [Monitor device profiles in Microsoft Intune](device-profile-monitor.md).
+    - **Properties**: Shows the settings you configured when you created the profile. You can change the profile name, or update any existing settings.
+    - **Device status**: The devices assigned to the profile are listed, and it shows if the profile successfully deployed. You can select a specific device to get more details.
+    - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get more details.
+    - **Per-setting status**: Filters the output by showing the individual settings within the profile, and shows if the setting successfully applied.
 
 ## Supported OEMConfig apps
 
