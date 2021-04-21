@@ -101,6 +101,10 @@
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
+      - name: Device platform deployment
+        items:
+        - name: iOS/iPadOS devices 
+          href: deployment-guide-platform-ios-ipados.md    
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection
