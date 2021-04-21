@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -208,17 +208,14 @@ Installing the most recent quality update reduces disruptions to the device and 
 
 A more recent update is deployed when the following conditions are met:
 
-- The Windows build revision of a device is less than the Windows build version of the update specified in the policy.
+- The device isn't targeted with a deferral policy that blocks installation of a more recent update. In this case, the most recently available update that isn't deferred is the update that might install.
 
-- During the expedite process, a device might run a subsequent scan which can detect a newer update. This can occur due to the timing of:
-
+- During the process to expedite an update, the device runs a new scan that detects the newer update. This can occur due to the timing of:
   - When the device restarts to complete installation
-  - When it runs its daily scan
+  - When the device runs its daily scan
   - When a new update becomes available
 
-  In this event, Windows Update attempts to stop installation of the original update, cancel the restart, and then starts the download and installation of the more recent update.
-
-- The device isn't targeted with a deferral policy that blocks installation of a more recent update. In this case, the most recently available update that isn't deferred is the update that installs.
+  When a scan identifies a newer update, Windows Update attempts to stop installation of the original update, cancel the restart, and then starts the download and installation of the more recent update.
 
 While expedite update policies will override an update deferral for the update version that’s specified in the policy, they don’t override deferrals that are in place for any other update version.
 
