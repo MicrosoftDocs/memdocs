@@ -138,7 +138,7 @@ This task list provides an overview. For more specific information, see [Automat
 
       To install the Company Portal app on devices, see [add the Company Portal app](../apps/apps-company-portal-macos.md). Set the Company Portal app as a required app.
 
-      Once installed, users open the Company Portal app, and sign in with their organization Azure AD account (`user@contoso.com`). When they sign-in, they're authenticated, and ready to receive your policies and profiles.
+      Once installed, users open the Company Portal app, and sign in with their organization Azure AD account (`user@contoso.com`). When they sign in, they're authenticated, and ready to receive your policies and profiles.
 
   - Select the **Setup Assistant with modern authentication** when:
 
