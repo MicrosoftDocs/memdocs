@@ -44,6 +44,9 @@ Intune provides several ways to monitor the properties of apps that you manage a
 >
 > For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune. 
 
+> [!NOTE]
+> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps. For more information about the Company Portal, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
 ## App overview pane
 
 In the app pane, you can review details about the status of an app in your environment.
