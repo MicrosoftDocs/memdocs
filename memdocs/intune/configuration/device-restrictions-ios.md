@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 04/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -274,6 +274,12 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   This feature applies to:  
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
+
+- **Disable near-field communication (NFC)**: **Yes** disables NFC, and prevents devices from pairing with other NFC-enabled devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users might be allowed to use NFC, and connect to other NFC-enabled devices. 
+
+  This feature applies to:  
+  - iOS 14.2 and newer
+  - iPadOS 14.2 and newer
 
 ## Domains
 
