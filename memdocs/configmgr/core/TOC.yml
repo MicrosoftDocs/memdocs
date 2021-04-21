@@ -5,7 +5,7 @@
   - name: What is Configuration Manager?
     href: understand/introduction.md
   - name: Microsoft Endpoint Configuration Manager FAQ
-    href: understand/microsoft-endpoint-manager-faq.md
+    href: understand/microsoft-endpoint-manager-faq.yml
   - name: What happened to SCCM?
     href: understand/what-happened-to-sccm.md
   - name: Introduction
@@ -53,9 +53,9 @@
     - name: Cloud services overview
       href: understand/use-cloud-services.md
     - name: Configuration Manager on Azure
-      href: understand/configuration-manager-on-azure.md
+      href: understand/configuration-manager-on-azure.yml
   - name: FAQ for product and licensing
-    href: understand/product-and-licensing-faq.md
+    href: understand/product-and-licensing-faq.yml
   - name: Which branch of Configuration Manager should I use?
     href: understand/which-branch-should-i-use.md
   - name: Licensing and branches
@@ -137,7 +137,7 @@
       - name: Site size and performance guidelines
         href: plan-design/configs/site-size-performance-guidelines.md
       - name: FAQ for site sizing and performance
-        href: understand/site-size-performance-faq.md
+        href: understand/site-size-performance-faq.yml
   - name: Choose a device management solution
     href: plan-design/choose-a-device-management-solution.md
   - name: Design a hierarchy of sites
@@ -233,7 +233,7 @@
         - name: Data for version 1910
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
     - name: Frequently asked questions (FAQ)
-      href: plan-design/diagnostics/frequently-asked-questions.md
+      href: plan-design/diagnostics/frequently-asked-questions.yml
   - name: Security and privacy for Configuration Manager
     items:
     - name: Plan for security
@@ -895,7 +895,7 @@
       - name: Security and privacy for CMG
         href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
       - name: FAQ for CMG
-        href: clients/manage/cmg/cloud-management-gateway-faq.md
+        href: clients/manage/cmg/cloud-management-gateway-faq.yml
       - name: Ports and data flow
         href: clients/manage/cmg/data-flow.md
   - name: Plan for internet-based client management

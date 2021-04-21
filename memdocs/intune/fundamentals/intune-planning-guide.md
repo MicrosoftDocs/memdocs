@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/04/2021
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -332,7 +332,7 @@ The next task is to plan how and when your users and devices receive your polici
   | Production rollout phase 2 |  |  | Retail (1000 users) |  |
   | Production rollout phase 3 |  |  |  | HR (50 users), Finance (40 users), Executives (30 users) |
 
-  This template is also available to download at [Intune deployment planning, design, and implementation - Table templates](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2).
+  This template is also available to download at [Intune deployment planning, design, and implementation - Table templates](https://www.microsoft.com/download/details.aspx?id=103005).
 
 - Choose how users will enroll their personal and organization-owned devices. There are different enrollment approaches you can use, including:
 
