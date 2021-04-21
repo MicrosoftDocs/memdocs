@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/20/2021
+ms.date: 04/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -62,13 +62,13 @@ Use for personal or bring your own devices (BYOD). Not a traditional "enrollment
 | Feature | Use this enrollment option when |
 | --- | --- |
 | Devices are personal or BYOD. | ✔️ |
-| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | You use the device enrollment manager (DEM) account. | ✔️ <br/><br/> Be aware of impact and any limitations using DEM account. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
-| Devices are owned by the organization or school. | ❌ <br/><br/> Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. <br/><br/> You can add the MacBook serial numbers to the corporate device identifiers to mark the devices as corporate. But, by default, devices are marked personal. |
-| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> These devices are organization-owned. User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are owned by the organization or school. | ❌ <br/><br/> Not recommended for organization-owned devices. Organization-owned devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article) or Apple Configurator. <br/><br/> You can add the MacBook serial numbers to the corporate device identifiers to mark the devices as corporate. But, by default, devices are marked personal. |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> These devices are organization-owned. User-less devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article) or Apple Configurator. |
 
 ---
 
@@ -106,11 +106,11 @@ For more specific information on this enrollment type, see [Automatically enroll
 | --- | --- |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new devices. | ✔️ |
-| You have existing devices. | ✔️ <br/><br/> To enroll existing devices, see [Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#enroll-your-macos-device-registered-in-abmasm-with-automated-device-enrollment-after-setup-assistant) . |
-| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| You have existing devices. | ✔️ <br/><br/> To enroll existing devices, see [Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#enroll-your-macos-device-registered-in-abmasm-with-automated-device-enrollment-after-setup-assistant) (opens another Microsoft article). |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
-| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using Device enrollment. |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [Device enrollment](#byod-device-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use Device enrollment to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -126,7 +126,7 @@ This task list provides an overview. For more specific information, see [Automat
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll macOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - Decide how users will authenticate on their devices: **Setup Assistant (legacy)** or **Setup Assistant with modern authentication** ([public preview](public-preview.md)). Make this decision before you create the enrollment profile. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 
-  For all organization-owned macOS devices, **Setup Assistant** is always and automatically used, even if you don't see "Setup Assistant" text in Endpoint Manager. Setup Assistant (legacy) authenticates the user, and enrolls the device.
+  For all organization-owned macOS devices, **Setup Assistant (legacy)** is always and automatically used, even if you don't see "Setup Assistant" text in Endpoint Manager. Setup Assistant (legacy) authenticates the user, and enrolls the device.
 
   - Select the **Setup Assistant (legacy)** when:
 

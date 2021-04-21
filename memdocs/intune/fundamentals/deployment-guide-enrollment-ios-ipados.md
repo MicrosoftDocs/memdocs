@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/20/2021
+ms.date: 04/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -62,8 +62,8 @@ For more specific information on this enrollment type, see:
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
-| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using MAM-WE, or User and Device enrollment. |
-| You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using Apple Configurator. |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [MAM-WE](deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
+| You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using [Apple Configurator](#apple-configurator-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -166,10 +166,10 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
 - **Enroll with user affinity + Company Portal app**:
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from your profile. It can take some time for the Company Portal app to auto-install.
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from your enrollment profile. It can take some time for the Company Portal app to auto-install.
   2. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When they sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
-  Users may have to enter more information. For more specific steps, see [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
+  Users may have to enter more information. For more specific end user steps, see [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
 
 - **Enroll with user affinity + Setup Assistant (legacy) + Company Portal app**:
 
@@ -190,7 +190,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
+  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
   3. The Company Portal app automatically installs, which takes some time. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`) again. They'll see your apps and policies on the device.
 
 - **Enroll with user affinity + Setup Assistant with modern authentication - Company Portal app**:
@@ -199,7 +199,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
+  2. The Setup Assistant prompts the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete.
   3. The Company Portal app automatically installs. Users don't need to open the Company Portal app, or sign in to the app. If they don't sign in, then there isn't any user affinity. Any resources depending on conditional access aren't available.
 
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
@@ -223,7 +223,7 @@ For more specific information on this enrollment type, see [Apple Configurator e
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
-| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using MAM-WE, or User and Device enrollment. |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [MAM-WE](deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -334,8 +334,8 @@ For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS
 | Devices are associated with a single user. | ✔️ |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> When a device enrolls, MDM providers install certificates and other files. These files must be removed. The quickest way may be to unenroll, or factory reset the devices. If you don't want to factory reset, then contact the MDM provider. |
 | You use the device enrollment manager (DEM) account. | ✔️ |
-| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
-| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended. Organization-owned devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article) or [Apple Configurator](#apple-configurator-enrollment) (in this article). |
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article) or [Apple Configurator](#apple-configurator-enrollment) (in this article). |
 
 ---
 
