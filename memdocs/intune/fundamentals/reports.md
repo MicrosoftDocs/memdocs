@@ -272,7 +272,7 @@ For related information, see [What is co-management?](../../configmgr/comanage/o
 
 ## App Install Status report (Organizational)
 
-The new **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
+The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
 
 To see a generated report of device state, you can use the following steps:
 
