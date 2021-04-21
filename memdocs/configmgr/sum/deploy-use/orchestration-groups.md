@@ -48,7 +48,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 - Members of an orchestration group should be assigned to the same site.
 - Devices can't be in more than one orchestration group.
-   - Devices already in an orchestration group won't' be available to select when adding new members.
+   - Devices already in an orchestration group won't be available to select when adding new members.
 
 
 ## Limitations
