@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Your Android device is rooted and can't connect 
+title: Your Android device is rooted and can't connect - Microsoft Intune
 description: Find out why you're receiving a message that your device is rooted and how to regain access. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 04/20/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
