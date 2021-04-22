@@ -83,7 +83,7 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
       - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
-      - **Certificates**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.​
 
@@ -103,7 +103,7 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
-      - **Certificates**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
@@ -120,7 +120,7 @@ Select this option if you're deploying to an Android Enterprise dedicated or ful
           - **None**
           - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
-      - **Certificates**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
