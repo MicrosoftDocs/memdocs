@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Microsoft 365 Apps client updat
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/26/2021
+ms.date: 04/22/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -267,7 +267,7 @@ For update packages released on and after June 9, the title will begin with "Mic
 |Monthly Enterprise Channel|NA|
 |Current Channel|Monthly Channel|
 |Current Channel (Preview)|Monthly Channel (Targeted)|
-|Beta Channel|Insider|
+|Beta Channel </br> </br> Beta Channel needs to be updated from the Office CDN on the internet instead of having Configuration Manager manage the update process. For more information, see [Use Configuration Manager to install Office Insider builds](https://insider.office.com/business/deploy/windows/configuration-manager).|Insider|
 
 For more information about how to modify your ADRs, see [Automatically deploy software updates](automatically-deploy-software-updates.md). For more information about the name change, see [Name change for Office 365 ProPlus](/deployoffice/name-change).
 
