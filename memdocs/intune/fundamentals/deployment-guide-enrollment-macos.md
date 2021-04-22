@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2021
+ms.date: 04/22/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -151,9 +151,9 @@ This task list provides an overview. For more specific information, see [Automat
     > [!NOTE]
     > During the Setup Assistant, users must enter their organization Azure AD credentials (`user@contoso.com`). When they enter their credentials, the enrollment starts. If you want, users can also enter their Apple ID to access Apple specific features, such as Apple Pay.
     > 
-    > After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete. At this point, the device is considered "userless".
+    > After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Azure AD, and doesn't show in a user's device list in Azure AD.
     > 
-    > If users need access to resources protected by conditional access, then [install the Company Portal app](../apps/apps-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Azure AD account (`user@contoso.com`). During this second login, any conditional access policies are evaluated, and user affinity is established. Users can install and use organizational resources, including LOB apps.
+    > If users need access to resources protected by conditional access or should be fully registered with Azure AD, then [install the Company Portal app](../apps/apps-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Azure AD account (`user@contoso.com`). During this second login, any conditional access policies are evaluated, and Azure AD registration is complete. Users can install and use organizational resources, including LOB apps.
 
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
 
@@ -186,7 +186,7 @@ For more specific information on the end user steps, see [Enroll your macOS devi
 
       When users enter their Azure AD credentials, the enrollment starts.
 
-  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete. Users will see your apps and policies on the device.
+  2. The Setup Assistant may prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete and user device affinity is established. Users will see your apps and policies on the device.
 
   3. Users open the Company Portal app [you installed](../apps/apps-company-portal-macos.md), and sign in with their organization credentials (`user@contoso.com`) again.
 
