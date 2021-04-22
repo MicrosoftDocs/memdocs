@@ -56,7 +56,7 @@ For previous Configuration Manager versions, you must take the following steps t
 - Cloud distribution points don't support content for Microsoft 365 Apps updates. <!--7366753-->
 
 ### Deploy Microsoft 365 Apps using Configuration Manager version 1806 or higher: 
-Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149-->
+Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->
 
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
 2. Select **Office 365 Installer** in the upper-right pane. The installation wizard opens.
@@ -67,25 +67,7 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 7. Confirm the settings on the **Summary** page. 
 8. Select **Next** then **Close** once the wizard completes. 
 
-### Deploy Microsoft 365 Apps using Configuration Manager version 1802 and prior:
-
-1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
-2. Choose **Office 365 Installer** in the upper-right pane. The installation wizard opens.
-3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then choose **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
-4. On the **Import Client Settings** page, choose whether to import the Microsoft 365 Apps client settings from an existing XML configuration file or to manually specify the settings. Select **Next** when you're done.  
-
-    When you have an existing configuration file, enter the location for the file and skip to step 7. You must specify the location in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
-    > [!IMPORTANT]    
-    > The XML configuration file must contain only [languages supported by Office 2016](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
-
-5. On the **Client Products** page, select the Microsoft 365 Apps suite that you use. Select the applications that you want to include. Select any additional products that should be included, and then select **Next**.
-6. On the **Client Settings** page, choose the settings to include, and then select **Next**.
-7. On the **Deployment** page, choose whether to deploy the application, and then select **Next**. <br/>If you choose not to deploy the package in the wizard, skip to step 9.
-8. Configure the rest of the wizard pages as you would for a typical application deployment. For details, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md).
-9. Complete the wizard.
-10. You can deploy or edit the application from **Software Library** > **Overview** > **Application Management** > **Applications**.
-
-After you create and deploy Microsoft 365 Apps using the installer, Configuration Manager won't manage the Microsoft 365 Apps updates by default. To enable Microsoft 365 Apps clients to receive updates from Configuration Manager, see [Deploy Microsoft 365 Apps updates with Configuration Manager](#bkmk_update).
+After you create and deploy Microsoft 365 Apps using the installer, Configuration Manager may not manage the Microsoft 365 Apps updates by default. To enable Microsoft 365 Apps clients to receive updates from Configuration Manager, see [Deploy Microsoft 365 Apps updates with Configuration Manager](#bkmk_update).
 
 After you deploy Microsoft 365 Apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Microsoft 365 Apps, select **Create an ADR** from the [Office 365 Client Management dashboard](office-365-dashboard.md). Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](automatically-deploy-software-updates.md).
 
@@ -125,35 +107,13 @@ Use the following steps to deploy Microsoft 365 Apps updates with Configuration 
 
 4. [Deploy the Microsoft 365 Apps updates](deploy-software-updates.md) to clients.
 
-> [!NOTE]  
->
-> If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable.
->
-> If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#bkmk_ts).
+If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable. 
+
+If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#bkmk_ts).
 
 ## Restart behavior and client notifications for Microsoft 365 Apps updates
-When you deploy an update to a Microsoft 365 Apps client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives a Microsoft 365 Apps update:
 
-|Configuration Manager version |End-user experience|  
-|----------------|---------------------|
-|1706, 1710|The client receives pop-up and in-app notifications, as well as a countdown dialog, prior to installing the update.|
-|1802| The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. </br>If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart <!--510006-->|
-
-
-> [!Important]
->
->In Configuration Manager version 1706, note the following details:
->
->- A notification icon displays in the notification area on the task bar for required apps where the deadline is within 48 hours in the future and the update content has been downloaded. 
->- A countdown dialog displays for required apps where the deadline is within 7.5 hours in the future and the update has been downloaded. The user can postpone the countdown dialog up to three times before the deadline. When postponed, the countdown displays again after two hours. If not postponed, there is a 30-minute countdown and update gets installed when the countdown expires.
->- A pop-up notification might not display until the user clicks the icon in the notification area. In addition, if the notification area has minimal space, the notification icon might not be visible unless the user opens or expands the notification area. 
->- The notification and countdown dialog could start while the user is not actively working on the device. For example, when the device is locked overnight it's possible Microsoft 365 Apps running on the device could be forced to close to install the update. Before closing the app, Office saves app data to prevent data loss. 
->- If the deadline is in the past or configured to start as soon as possible, running Microsoft 365 Apps might be forced to close without notifications. 
->- If the user installs a Microsoft 365 Apps update before the deadline, Configuration Manager verifies that the update is installed when the deadline is reached. If the update is not detected on the device, the update is installed. 
->- The in-app notification bar does not display on an app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays only for newly opened apps.
->- For Microsoft 365 Apps updates triggered by a service window or scheduled for non-business hours, it's possible that running Office apps might be forced to close to install the update without notifications. 
->- For more information, see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps)
-
+The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 363 Apps see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
 
 ## <a name="bkmk_o365_lang"></a> Add languages for Microsoft 365 Apps update downloads
 You can add support for Configuration Manager to download updates for any languages that are supported by Microsoft 365 Apps.
