@@ -4,7 +4,7 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/6/2021
+ms.date: 04/19/2021
 ms.author: erikje
 ms.custom: include file
 ---
@@ -22,6 +22,27 @@ If you use the Microsoft Tunnel app for Android, you'll need to move to the Defe
 #### What you need to do to prepare
 
 For your devices that run Android Enterprise and currently use the Microsoft Tunnel app, plan to [replace the stand-alone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Defender for Endpoint app.
+### Plan for Change: Intune ending company portal support for unsupported versions of Windows
+
+Intune follows Windows 10 lifecycle for supported Windows 10 versions. We’re now removing support for the associated Windows 10 Company Portals for those Windows versions that are out of the Modern Support policy.
+
+#### How does this affect me?
+
+Given that Microsoft no longer supports these OSs, this may not affect you; you have likely already upgraded your OS or devices. This will only affect you if you are still managing unsupported Windows 10 versions. Windows and Company portal versions this affects include:
+
+- Windows 10, Version 1507, Company portal version 10.1.721.0
+- Windows 10, Version 1511, Company portal version 10.1.1731.0
+- Windows 10, Version 1607, Company portal version 10.3.5601.0
+- Windows 10, Version 1703, Company portal version 10.3.5601.0
+- Windows 10, Version 1709, any Company portal version
+
+We will not uninstall these Company portal versions mentioned above, but we will remove them from the Microsoft Store and stop testing our service releases with them.
+
+**User Impact:** If you continue to use an unsupported version of Window 10, your users won't get the latest security updates, new features, bug fixes, latency improvements, accessibility improvements, and performance investments. The user will not be able to be co-managed with System Center Configuration Manager and Intune.
+
+#### What do I need to do?
+
+In the Microsoft Endpoint Manager admin center, use the [Discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user’s device, the Company Portal version is shown in the **Settings** page of the company portal. Update to a supported Windows/Company Portal version.
 
 ### Plan for Change: Intune moving to support Android 6.0 and higher in April 2021
 
