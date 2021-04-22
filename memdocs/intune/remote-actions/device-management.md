@@ -65,11 +65,12 @@ The available actions depend on the device platform and the device configuration
 - [View device inventory](device-inventory.md): To see a full inventory of all the devices, select **Devices** > **All devices**.
 - To run - [bulk device actions](bulk-device-actions.md) on multiple devices at the same time, select **Devices** > **All devices** > **Bulk Device Actions**.
 - To run remote actions on a single device, select the device from the **All devices** page and then select the specific remote action at the top of the individual device page. Not all actions are available for all devices.
-  - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows Only)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
   - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
+  - [Erase](https://docs.microsoft.com/en-us/mem/intune/remote-actions/device-erase) (macOS Only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 only)
   - [Locate device](device-locate.md) (iOS only)
