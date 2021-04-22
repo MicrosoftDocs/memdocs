@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2021
+ms.date: 04/22/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,7 +50,7 @@ Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-Select this option if you're deploying to an Android Enterprise dedicated or fully managed device. Android Enterprise dedicated and fully managed devices currently support SCEP certificate deployment, but not PKCS.
+Select this option if you're deploying to an Android Enterprise dedicated or fully managed device. Android Enterprise dedicated and fully managed devices currently support SCEP and PKCS certificate deployments.
 
 ### Basic
 
