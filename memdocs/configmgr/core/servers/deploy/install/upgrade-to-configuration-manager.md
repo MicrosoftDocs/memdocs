@@ -32,7 +32,7 @@ You can upgrade the following products to a *fully licensed*, baseline version o
 - System Center 2012 Configuration Manager with Service Pack 2
 - System Center 2012 R2 Configuration Manager with Service Pack 1
 
-For more information, see [Frequently asked questions for Configuration Manager branches and licensing](../../../understand/product-and-licensing-faq.md).
+For more information, see [Frequently asked questions for Configuration Manager branches and licensing](../../../understand/product-and-licensing-faq.yml).
 
 > [!TIP]
 > When you upgrade from a System Center 2012 Configuration Manager version to current branch, you might be able to streamline your upgrade process. For more information, see the following:

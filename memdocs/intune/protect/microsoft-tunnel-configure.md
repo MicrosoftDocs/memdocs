@@ -73,7 +73,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 2. On the **Create a site** pane, specify the following properties:
 
    - **Name**: Enter a name for this Site.
-   
+
    - **Description** *(optional)*
 
    - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address can be an individual server or the IP or FQDN of a load-balancing server. The IP address must be publicly routable and the FQDN must be resolvable in public DNS.
@@ -117,7 +117,10 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
    > [!IMPORTANT]
-   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
+   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following comands to add *intune_env=FXP* to the command line:
+   >
+   > 1. Run `sudo chmod +x ./mstunnel-setup`
+   > 2. Run `sudo intune_env=FXP ./mstunnel-setup`
 
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.

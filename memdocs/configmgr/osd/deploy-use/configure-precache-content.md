@@ -2,7 +2,7 @@
 title: Configure pre-cache content
 titleSuffix: Configuration Manager
 description: Learn how clients can download OS deployment content before a user installs the task sequence.
-ms.date: 04/05/2021
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -116,7 +116,7 @@ For example, the following **Upgrade OS** step uses the English version:
 
 - When the client makes the deployment available to users, a notification displays to inform users about the new deployment. Now the task sequence is visible in Software Center. The user can go to Software Center and select **Install** to start the installation.
 
-- If the client hasn't fully pre-cached the content when the user installs the task sequence, then the client uses the settings that you specify on the **Deployment Option** tab of the deployment.
+- If the client hasn't fully pre-cached the content when the user installs the task sequence, then the client uses the settings that you specify for the **Deployment options** on the **Distribution Points** tab of the deployment.
 
 ## See also
 

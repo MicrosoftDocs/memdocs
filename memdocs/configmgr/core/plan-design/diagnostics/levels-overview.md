@@ -67,4 +67,4 @@ The following articles detail the specific data that Configuration Manager colle
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Frequently asked questions](frequently-asked-questions.md)
+> [Frequently asked questions](frequently-asked-questions.yml)

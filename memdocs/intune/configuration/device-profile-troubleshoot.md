@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/03/2021
+ms.date: 04/15/2021
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,7 @@ Devices check in with Intune when they receive a notification to check in, or du
 
 Other changes, such as revising the contact information in the Company Portal app, don't cause an immediate notification to devices.
 
-The settings in the policy or profile are applied at every check-in. The [Windows 10 MDM policy refresh blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
+The settings in the policy or profile are applied at every check-in. A [Windows 10 MDM policy refresh customer blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
 
 ## If multiple policies are assigned to the same user or device, how do I know which settings gets applied?
 

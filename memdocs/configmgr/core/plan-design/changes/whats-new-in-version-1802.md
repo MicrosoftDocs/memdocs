@@ -124,7 +124,7 @@ When creating an instance of the [cloud management gateway](../../clients/manage
     - [Plan for the cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Cloud management gateway size and scale numbers](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Security and privacy for cloud management gateway](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
-    - [Frequently asked questions about the cloud management gateway](../../clients/manage/cmg/cloud-management-gateway-faq.md)
+    - [Frequently asked questions about the cloud management gateway](../../clients/manage/cmg/cloud-management-gateway-faq.yml)
     - [Set up cloud management gateway](../../clients/manage/cmg/setup-cloud-management-gateway.md)  
 
 
