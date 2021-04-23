@@ -4,6 +4,8 @@
   items:
   - name: What is co-management?
     href: overview.md
+  - name: Frequently asked questions
+    href: faq.yml
 - name: Quickstarts
   items:
   - name: Quickstart overview

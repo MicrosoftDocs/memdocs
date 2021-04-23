@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 04/21/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -322,7 +322,7 @@ This feature applies to:
     > [!IMPORTANT]
     > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
 
-    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that used the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
+    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). 
 
     > [!IMPORTANT]
     > To achieve SSO with the Microsoft Azure AD SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -333,6 +333,8 @@ This feature applies to:
 
   > [!TIP]
   > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
+
+  After users successfully sign in to the Authenticator app, they aren't prompted to sign in to other apps that use the SSO extension. The first time users open managed apps that don't use the SSO extension, they're prompted to select the account that's signed in.
 
 - **Shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
@@ -423,7 +425,8 @@ You can experience unexpected behavior when a profile with no image is assigned 
 - **Wallpaper Image**: Upload an existing .png, .jpg, or .jpeg image you want to use. Be sure the file size is less than 750 KB. You can also **remove** an image that you added.
 
 > [!TIP]
-> To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
+> - When configuring a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-ios.md#general) setting. This setting prevents users from changing the wallpaper. 
+> - To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
 
 ## Next steps
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2021
+ms.date: 04/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,7 +100,10 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](#microsoft-tunnel-updates) of Microsoft Tunnel.
 
    > [!IMPORTANT]
-   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so add *intune_env=FXP* to the command line. For example: `sudo chmod +x intune_env=FXP ./mstunnel-setup`
+   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following comands to add *intune_env=FXP* to the command line:
+   >
+   > 1. Run `sudo chmod +x ./mstunnel-setup`
+   > 2. Run `sudo intune_env=FXP ./mstunnel-setup`
 
    > [!TIP]  
    > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.

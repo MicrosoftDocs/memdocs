@@ -408,7 +408,7 @@ Moves the selected task sequence to another folder in the **Task Sequences** nod
 
 ### Set Security Scopes
 
-Select the security scopes for the selected task sequence. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
+Select the security scopes for the selected task sequence. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#security-scopes).
 
 ### Properties
 

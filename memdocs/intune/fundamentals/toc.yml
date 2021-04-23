@@ -24,7 +24,7 @@
   items:
   - name: Try Intune for free
     href: free-trial-sign-up.md    
-    displayName: tenant; trial; get started, start; help
+    displayName: tenant; trial; get started, start; help; MDM
   - name: Create a user
     href: quickstart-create-user.md
   - name: Create a group
@@ -63,6 +63,7 @@
     href: common-scenarios.md
   - name: Technology decisions for BYOD with EMS
     href: byod-technology-decisions.md    
+    displayName: MDM
   - name: Manage operating system versions
     href: manage-os-versions.md
   - name: Manage Windows Holographic
@@ -93,12 +94,17 @@
           href: deployment-guide-enrollment-mamwe.md
         - name: Android, Android Enterprise
           href: deployment-guide-enrollment-android.md
+          displayName: COBO
         - name: iOS, iPadOS
           href: deployment-guide-enrollment-ios-ipados.md
         - name: macOS
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
+      - name: Device platform deployment
+        items:
+        - name: iOS/iPadOS devices 
+          href: deployment-guide-platform-ios-ipados.md    
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection

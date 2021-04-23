@@ -20,7 +20,7 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 #ROBOTS:
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -1468,6 +1468,30 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 
 > [!NOTE]
 > The notification receiver must be registered before calling `remediateCompliance()` to avoid a race condition that could result in the notification being missed.
+
+### Declaring support for App CA
+Once your app is ready to handle App CA remediation, you can tell Microsoft Identity your app is App CA ready.  To do this in your MSAL application, build your Public Client using the Client Capabilities of “protapp”
+
+```java
+{
+	  "client_id" : "4b0db8c2-9f26-4417-8bde-3f0e3656f8e0",
+	  "authorization_user_agent" : "DEFAULT",
+	  "redirect_uri" : "msauth://com.microsoft.identity.client.sample.local/1wIqXSqBj7w%2Bh11ZifsnqwgyKrY%3D",
+	  "multiple_clouds_supported":true,
+	  "broker_redirect_uri_registered": true,
+	  "account_mode": "MULTIPLE",
+	  "client_capabilities": "protapp",
+	  "authorities" : [
+	    {
+	      "type": "AAD",
+	      "audience": {
+	        "type": "AzureADandPersonalMicrosoftAccount"
+	      }
+	    }
+	  ]
+	}
+```
+
 
 ### Implementation Notes
 

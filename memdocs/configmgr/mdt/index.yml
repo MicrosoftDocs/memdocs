@@ -25,7 +25,7 @@ landingContent:
           - text: Known issues
             url: known-issues.md
           - text: FAQ
-            url: faq.md
+            url: faq.yml
       - linkListType: how-to-guide
         links:
           - text: How to use MDT
