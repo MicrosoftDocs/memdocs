@@ -189,18 +189,18 @@ After your Autopilot devices are enrolled, their names become the hostname of th
 Here is a list of VPN clients that are known to be tested and validated:
 
 **Supported clients:**
-In-box Windows VPN client
-Cisco AnyConnect (Win32 client)
-Pulse Secure (Win32 client)
-GlobalProtect (Win32 client)
-Checkpoint (Win32 client)
-Citrix NetScaler (Win32 client)
-SonicWall (Win32 client)
+- In-box Windows VPN client
+- Cisco AnyConnect (Win32 client)
+- Pulse Secure (Win32 client)
+- GlobalProtect (Win32 client)
+- Checkpoint (Win32 client)
+- Citrix NetScaler (Win32 client)
+- SonicWall (Win32 client)
 
 **Not supported clients:**
-UWP-based VPN plug-ins
-Anything that requires a user cert
-DirectAccess
+- UWP-based VPN plug-ins
+- Anything that requires a user cert
+- DirectAccess
  
 
 
