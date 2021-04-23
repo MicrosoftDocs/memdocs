@@ -274,10 +274,30 @@ For related information, see [What is co-management?](../../configmgr/comanage/o
 
 The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
 
-To see a generated report of device state, you can use the following steps:
+To see a generated report, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
+
+## User Install Status for apps report (Organizational)
+
+Based on a selected app, the **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Installations**, **Failures**, **Install Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
+
+## Device Install Status report for apps (Organizational)
+
+Based on a selected app, the **Device Install Status** report provides a list of devices and status information related to the specific app. App installation details related to the device includes **UPN**, **Platform**, **Version**, **Status**, **Status details**, and **Last check-in**. You have the ability to sort, filter, and search this report as well.
+
+To see a generated report of device state, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **Device Install Status** > **Select an app**.
+3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Device compliance trend report (Historical)
 
