@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/22/2021
+ms.date: 04/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,14 +121,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2104
 
-- [5170229](2021/technical-preview-2104.md) <!--5170229-->
-- [6979225](2021/technical-preview-2104.md) <!--6979225-->
-- [8272488](2021/technical-preview-2104.md) <!--8272488-->
-- [9012080](2021/technical-preview-2104.md) <!--9012080-->
-- [9546584](2021/technical-preview-2104.md) <!--9546584-->
-- [9573789](2021/technical-preview-2104.md) <!--9573789-->
-- [9607363](2021/technical-preview-2104.md) <!--9607363-->
-- [9735002](2021/technical-preview-2104.md) <!--9735002-->
+- [Tenant attach: BitLocker recovery keys](2021/technical-preview-2104.md#bkmk_bitlocker) <!--6979225-->
+- [Tenant attach: Historical inventory data in resource explorer](2021/technical-preview-2104.md#bkmk_dex) <!--9546584-->
+- [Tenant attach: Offboarding](2021/technical-preview-2104.md#bkmk_offboard) <!--7043245-->
+- [Support layered keyboard driver during OS deployment](2021/technical-preview-2104.md#bkmk_keyboard) <!--9735002-->
+- [Improvements to Support Center](2021/technical-preview-2104.md#bkmk_supctr) <!--8272488-->
+- [Run software updates evaluation from deployment status](2021/technical-preview-2104.md#bkmk_evaluate) <!--9012080-->
+- [Improvements to CMTrace](2021/technical-preview-2104.md#bkmk_cmtrace) <!--9607363-->
+- [PowerShell release notes preview](2021/technical-preview-2104.md#bkmk_powershell) <!--9363902-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
