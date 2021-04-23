@@ -2,7 +2,7 @@
 title: Technical preview 2104
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2104.
-ms.date: 04/22/2021
+ms.date: 04/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -23,15 +23,14 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2104/1234567.md)] -->
 
-[!INCLUDE [5170229](includes/2104/5170229.md)]
-[!INCLUDE [6979225](includes/2104/6979225.md)]
-[!INCLUDE [8272488](includes/2104/8272488.md)]
-[!INCLUDE [9012080](includes/2104/9012080.md)]
-[!INCLUDE [9546584](includes/2104/9546584.md)]
-[!INCLUDE [7043245](includes/2104/7043245.md)]
-[!INCLUDE [9607363](includes/2104/9607363.md)]
-[!INCLUDE [9735002](includes/2104/9735002.md)]
-[!INCLUDE [9363902](includes/2104/9363902.md)]
+[!INCLUDE [Tenant attach: BitLocker recovery keys](includes/2104/6979225.md)]
+[!INCLUDE [Tenant attach: Historical inventory data in resource explorer](includes/2104/9546584.md)]
+[!INCLUDE [Tenant attach: Offboarding](includes/2104/7043245.md)]
+[!INCLUDE [Support layered keyboard driver during OS deployment](includes/2104/9735002.md)]
+[!INCLUDE [Improvements to Support Center](includes/2104/8272488.md)]
+[!INCLUDE [Run software updates evaluation from deployment status](includes/2104/9012080.md)]
+[!INCLUDE [Improvements to CMTrace](includes/2104/9607363.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2104/9363902.md)]
 
 <!--
 ## General known issues
