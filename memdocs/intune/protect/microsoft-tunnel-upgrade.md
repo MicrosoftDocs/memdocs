@@ -27,18 +27,19 @@ ms.collection: M365-identity-device-management
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
 
-Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically receives [software upgrades](#microsoft-tunnel-update-history) which must install on the tunnel servers to keep them in support. To stay in support, servers must run the most recent release, or at most be one version behind. The information in this article explains the upgrade process, upgrade controls, and status reports you can use to understand the software version of tunnel servers, when upgrades are available, and how to control when upgrades happen.
+Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically receives [software upgrades](#microsoft-tunnel-update-history), which must install on the tunnel servers to keep them in support. To stay in support, servers must run the most recent release, or at most be one version behind. The information in this article explains the upgrade process, upgrade controls, and status reports you use to understand the software version of tunnel servers, when upgrades are available, and how to control when upgrades happen.
 
-Intune handles the upgrade of all servers assigned to each tunnel site for you, upgrading all servers in the site one at a time. This is referred to as an upgrade cycle for the site. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. By upgrading a single server at a time at each site, disruptions to users are minimized when a site includes multiple servers.
+Intune handles the upgrade of servers assigned to each tunnel site for you. When upgrades for  site begin, all servers in the site will upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.  
+
 During an upgrade cycle:
 
-- Intune begins by upgrading one server in the site. This can start as soon as 10 minutes after the release becomes available.
+- Intune begins by upgrading one server in the site. The upgrade can start as soon as 10 minutes after the release becomes available.
 - If a server was off, upgrade begins after the server turns on.
-- After a successful upgrade of one server at a site, Intune waits a short period of time before starting the upgrade of the next server.
+- After a successful upgrade of one server at a site, Intune waits a short time before it starts the upgrade of the next server.
 
 ## Use upgrade controls
 
-To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure these when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
+To help control when Intune begins the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
 
 - **Automatically upgrade servers at this site**
 - **Limit server upgrades to maintenance window**
@@ -49,18 +50,18 @@ This setting determines if an upgrade cycle for the site can begin automatically
 
 - **Yes** *(default)* – When set to *Yes*, the site automatically upgrade servers as soon as possible after a new tunnel version becomes available. Upgrades begin without admin intervention.
 
-  If you set a maintenance window for the site, the upgrade cycle begins between the windows start and end time. If no maintenance window is set, the upgrade cycle starts as soon as possible.
+  If you set a maintenance window for the site, the upgrade cycle begins between the windows start and end time. When no maintenance window is set, the upgrade cycle starts as soon as possible.
 
 - **No** – When set to *No*, Intune won’t upgrade servers until an admin explicitly chooses to begin the upgrade cycle.
 
-  After upgrade is approved for a site with a maintenance window, the upgrade cycle begins between the windows start and end time. If there is no maintenance window, the upgrade cycle starts as soon as possible.
+  After upgrade is approved for a site with a maintenance window, the upgrade cycle begins between the windows start and end time. If there's no maintenance window, the upgrade cycle starts as soon as possible.
 
   > [!IMPORTANT]  
   > When you configure site for manual upgrades, periodically review the [Health check](#view-tunnel-server-status) tab to understand when newer versions of Microsoft Tunnel are available to install. The report also identifies when the current tunnel version at the site is out of support.
 
 ### Limit server upgrades to maintenance window
 
-Ues this setting to define a maintenance window for the site.
+Use this setting to define a maintenance window for the site.
 
 When configured for site, the server upgrade cycle can begin only during the configured period. However, once begun, the cycle continues to update servers one-by-one until all servers assigned to the site complete the upgrade.
 
@@ -72,7 +73,7 @@ When configured for site, the server upgrade cycle can begin only during the con
 
   When set to *Yes*, configure the following options:
 
-  - **Time zone** – The time zone you select determines when the maintenance window starts and ends on all servers in the site, regardless of the time zone of individual servers.
+  - **Time zone** – The time zone you select determines when the maintenance window starts and ends on all servers in the site. The time zone of individual servers isn't used.
   - **Start time** – Specify the earliest time that the upgrade cycle can start, based on the time zone you selected.
   - **End time** - Specify the latest time that upgrade cycle can start, based on the time zone you selected. Upgrade cycles that start before this time will continue to run and can complete after this time.
 
@@ -80,11 +81,11 @@ When configured for site, the server upgrade cycle can begin only during the con
 
 You can view information about the status of Microsoft Tunnel servers, including the version of Microsoft Tunnel on a server.
 
-For sites that do not support automatic upgrade, you can also view when upgrades to a new version are available.
+For sites that don't support automatic upgrade, you can also view when upgrades to a new version are available.
 
 Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.  Select a server and then open the **Health check** tab to view the following information about it:
 
-- **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version.
+- **Server version** - The status of the Tunnel Gateway Server software, in the context of the most recent version available.
 
   - **Healthy** - Up to date with the most recent software version. 
   - **Warning** - One version behind.
@@ -139,7 +140,7 @@ After you choose to upgrade servers, Intune starts the process to do so, which c
 
 Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here.
 
-After an update releases, it rolls out to tenants over the following days. This means new updates might not be available for your tunnel servers for a few days.
+After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
