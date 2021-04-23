@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2021
+ms.date: 04/26/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,9 +31,9 @@ After installation of Microsoft Tunnel, you can view the server configuration an
 
 ## Use the admin center UI
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to *Tenant administration* > *Microsoft Tunnel Gateway*, and select the **Health check** tab.
+Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
-Select a server to view the following information about it:
+Select a server and then open the **Health check** tab to view the following information about it:
 
 - **Last check-in** – When the Tunnel Gateway server last checked in with Intune.
   - *Healthy* – The last check-in was within the last five minutes.
@@ -49,7 +49,6 @@ Select a server to view the following information about it:
   - *Healthy* - 95% or less
   - *Warning* - 96% to 99%
   - *Unhealthy* - 100% use
-  
 
 - **Memory usage** – The average memory use by the Tunnel Gateway server every 5 minutes.
   - *Healthy* - 95% or less
@@ -65,6 +64,13 @@ Select a server to view the following information about it:
   - *Healthy* - More than 30 days
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
+
+- **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version.
+  - **Healthy** - Up to date with the most recent software version
+  - **Warning** - One version behind
+  - **Unhealthy** - Two or more versions behind, and out of support
+
+  When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
 
 ## Use mst-cli command-line tool
 
