@@ -177,11 +177,11 @@ The **Operating System Deployment Manager** security role is a built-in role tha
 
 - **Task Sequence Package**: Create, Create Task Sequence Media, Delete, Modify, Modify Folder, Modify Report, Move Object, Read, Run Report, Set Security Scope
 
-For more information, see [Create custom security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole).
+For more information, see [Create custom security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#create-custom-security-roles).
 
 ### Security scopes for OS deployments
 
-Use security scopes to provide administrative users with access to the securable objects used in OS deployments, such as OS and boot images, driver packages, and task sequence packages. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
+Use security scopes to provide administrative users with access to the securable objects used in OS deployments, such as OS and boot images, driver packages, and task sequence packages. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#security-scopes).
 
 ## PXE provider options
 

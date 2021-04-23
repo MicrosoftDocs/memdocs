@@ -129,7 +129,7 @@ If a site system isn't uninstalled properly, or stops functioning and can't be r
 
 To remove the peer trust that was originally established with the site system and site system roles, manually remove the Configuration Manager certificates for the failed server in the **Trusted People** certificate store on other site system servers. This action is important if you reuse the server without reformatting it.  
 
-For more information, see [Cryptographic controls for server communication](../security/cryptographic-controls-technical-reference.md#cryptographic-controls-for-server-communication).  
+For more information, see [Cryptographic controls for server communication](../security/cryptographic-controls-technical-reference.md#server-communication).  
 
 ### Don't configure internet-based site systems to bridge the perimeter network
 

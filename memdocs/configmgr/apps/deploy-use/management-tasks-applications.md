@@ -143,7 +143,7 @@ Move the selected application to another folder in the **Applications** node.
 
 ### Set security scopes
 
-Select the security scopes for the selected application. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
+Select the security scopes for the selected application. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#security-scopes).
 
 ### Categorize
 
