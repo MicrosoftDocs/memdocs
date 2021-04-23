@@ -46,7 +46,7 @@ Tests should also run on greater than standard *average day* loads, by doing sim
 
 Run testing on a range of physical, Hyper-V, and Azure hardware, with a mixture of supported operating systems and SQL Server versions. Always validate the worst cases for the supported configuration. In general, Hyper-V and Azure return comparable performance results to equivalent physical hardware when configured similarly. Current server operating systems tend to have performance that's equal to or better than earlier OS versions. While all supported platforms meet the minimum requirements, usually the latest versions of supporting products like Windows and SQL Server produce even better performance.
 
-The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL Server should I run?](../../understand/site-size-performance-faq.md#what-version-of-sql-server-should-i-run).
+The largest variation comes from the SQL Server versions in use. For more information about SQL Server versions, see [What version of SQL Server should I run?](../../understand/site-size-performance-faq.yml#what-version-of-sql-server-should-i-run-).
 
 ## Key performance determinants
 
@@ -137,7 +137,7 @@ Don't configure the minimum and maximum values the same. This guidance is specif
 
 #### <a name="bkmk_note3"></a> Note 3: IOPS: Inboxes and IOPS: SQL
 
-These values refer to the IOPS needs for the Configuration Manager and SQL Server logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive with the Configuration Manager inbox directories. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL Server files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL Server disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md).
+These values refer to the IOPS needs for the Configuration Manager and SQL Server logical drives. The **IOPS: Inboxes** column shows the IOPS requirements for the logical drive with the Configuration Manager inbox directories. The **IOPS: SQL** column shows the total IOPS needs for the logical drive(s) that various SQL Server files use. These columns are different because the two drives should have different formatting. For more information and examples on suggested SQL Server disk configurations and file best practices, including details on splitting files across multiple volumes, see the [Site sizing and performance FAQ](../../understand/site-size-performance-faq.yml).
 
 Both of these IOPS columns use data from the industry-standard tool, **Diskspd**. See [How to measure disk performance](#how-to-measure-disk-performance) for instructions on duplicating these measurements. In general, once you meet basic CPU and memory requirements, the storage subsystem has the largest affect on site performance, and improvements here will give the most payback on investment.
 
@@ -227,7 +227,7 @@ The following table lists the specific devices used in this example. This inform
 
 ### Azure machine and disk performance
 
-Azure disk performance depends on several factors, such as the size of the Azure VM, and the number and type of disks it uses. Azure is also constantly adding new machine types and disk speeds that are different from the following chart. For more information about Configuration Manager running on Azure, and additional information on understanding disk I/O on Azure, see [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md).
+Azure disk performance depends on several factors, such as the size of the Azure VM, and the number and type of disks it uses. Azure is also constantly adding new machine types and disk speeds that are different from the following chart. For more information about Configuration Manager running on Azure, and additional information on understanding disk I/O on Azure, see [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.yml).
 
 All disks are formatted NTFS 64k cluster size, and rows with more than one disk are configured as striped volumes via the Windows Disk Management utility.
 
@@ -264,7 +264,7 @@ For more information on the currently available disks, see [Select a disk type f
 
 ## See also
 
-- [Site sizing and performance FAQ](../../understand/site-size-performance-faq.md)
-- [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.md)
+- [Site sizing and performance FAQ](../../understand/site-size-performance-faq.yml)
+- [Configuration Manager on Azure frequently asked questions](../../understand/configuration-manager-on-azure.yml)
 - [Size and scale numbers](size-and-scale-numbers.md)
 - [Recommended hardware](recommended-hardware.md)

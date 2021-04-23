@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/07/2020
+ms.date: 04/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,7 +40,7 @@ Microsoft doesn't operate the service itself. 21Vianet operates, provides, and m
 
 Because the China services are operated by a partner from inside China, there are some feature differences with Intune. 
 
-- Intune operated by 21Vianet only supports standalone deployments. Support for co-management with System Center Configuration Manager is currently in development.
+- Intune operated by 21Vianet only supports standalone deployments. Customers can use co-management to attach their existing Configuration Manager deployment to the Microsoft Intune cloud.
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
 - The tenant attach feature (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
 - Derived Credentials are not supported with Intune operated by 21Vianet.

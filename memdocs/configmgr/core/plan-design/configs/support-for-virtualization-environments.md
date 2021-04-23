@@ -58,7 +58,7 @@ Configuration Manager can run on VMs in Azure just as it runs on-premises within
 
 The same Configuration Manager requirements for networks, supported configurations, and hardware requirements also apply to Azure VMs.
 
-For more information, see [Configuration Manager on Azure](../../understand/configuration-manager-on-azure.md).
+For more information, see [Configuration Manager on Azure](../../understand/configuration-manager-on-azure.yml).
 
 > [!IMPORTANT]
 > Configuration Manager sites and clients that run on Azure VMs are subject to the same license requirements as on-premises installations.

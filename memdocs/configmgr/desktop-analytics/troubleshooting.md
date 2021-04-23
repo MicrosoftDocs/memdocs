@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/02/2021
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -172,19 +172,19 @@ When you set up Desktop Analytics, you consent on behalf of your organization. T
 
 If there's a problem with this process during setup, use the following process to manually add this permission:
 
-1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.  
+1. Go to the [Azure portal](https://portal.azure.com), and select **All resources**. Select the workspace of type **Log Analytics**.
 
-2. In the workspace menu, select **Access control (IAM)**, then select **Add**.  
+1. In the workspace menu, select **Access control (IAM)**, select **Add**, and then select **Add role assignment**.
 
-3. In the **Add permissions** panel, configure the following settings:  
+1. In the **Add role assignment** panel, configure the following settings:
 
-    - **Role**: **Reader**  
+    - **Role**: **Reader**
 
-    - **Assign access to**: **Azure AD user, group, or application**  
+    - **Assign access to**: **User, group, or service principal**
 
-    - **Select**: **MALogAnalyticsReader**  
+    - **Select**: **MALogAnalyticsReader**
 
-4. Select **Save**.
+1. Select **Save**.
 
 The portal shows a notification that it added the role assignment.
 
@@ -218,7 +218,7 @@ Then select **Apply changes**:
 
 ![Screenshot of expanded data currency flyout in Desktop Analytics portal](media/data-currency-flyout-expand.png)
 
-This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data. This option isn't available during service deployments. For more information, see the [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+This process generally takes between 15-60 minutes. The timing depends on the size of your workspace and the scope of the changes that need processes. When you request an on-demand data refresh, it doesn't result in any changes to diagnostic data. This option isn't available during service deployments. For more information, see the [Desktop Analytics FAQ](faq.yml#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal-).
 
 If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
 
