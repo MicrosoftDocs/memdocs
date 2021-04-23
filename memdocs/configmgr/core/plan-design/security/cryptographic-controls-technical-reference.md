@@ -28,7 +28,7 @@ The primary encryption algorithm that Configuration Manager uses is **3DES**. En
 > [!NOTE]
 > If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with 3DES, then the HTTPS transport is encrypted with AES.
 
-When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. When using CNG v3 certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md) and [CNG v3 certificates overview](../network/cng-certificates-overview).
+When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. When using CNG v3 certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md) and [CNG v3 certificates overview](../network/cng-certificates-overview.md).
 
 For transport security, anything that uses TLS supports AES. This support includes when you configure the site for [enhanced HTTP](../hierarchy/enhanced-http.md) or HTTPS. For on-premises site systems, you can control the TLS cipher suites. For cloud-based roles like the cloud management gateway (CMG), if you enable TLS 1.2, Configuration Manager configures the cipher suites.
 
