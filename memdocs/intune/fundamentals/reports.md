@@ -279,6 +279,38 @@ To see a generated report of device state, you can use the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
 
+The **App Install Status** report includes the following columns, filters, search methods, and export parameter.
+
+**Columns:**
+- App name
+- Publisher
+- Platform
+- Version
+- Install failure % 
+- Device failures 
+- User failures 
+- Device installs 
+- User installs 
+- Device install pending 
+- User install pending 
+- Device not applicable 
+- User not applicable 
+- Not installed on device
+- Not installed by user
+- App ID 
+
+**Filter by:**
+- Platform 
+- Failure % 
+
+**Search by:**
+- App name
+- App ID 
+- Publisher
+
+**Export ReportName Parameter:**
+- AppInstallStatusAggregate
+
 ## Device compliance trend report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
