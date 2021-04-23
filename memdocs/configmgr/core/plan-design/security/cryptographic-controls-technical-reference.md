@@ -2,7 +2,7 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 04/15/2021
+ms.date: 04/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -17,17 +17,22 @@ manager: dougeby
 
 Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.
 
-The primary hashing algorithm that Configuration Manager uses for signing is **SHA-256**. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256. The primary encryption algorithm that Configuration Manager uses is **3DES**. The site uses this algorithm to store data in the site database and for client HTTP communication. When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. For more information on these maximums, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
+The primary hashing algorithm that Configuration Manager uses for signing is **SHA-256**. When two Configuration Manager sites communicate with each other, they sign their communications with SHA-256.
+
+The primary encryption algorithm that Configuration Manager uses is **3DES**. Encryption mainly happens in the following two areas:
+
+- If you enable the site to **Use encryption**, the client encrypts its inventory data and state messages that it sends to the management point.
+
+- When the client downloads secret policies, the management point always encrypts these policies. For example, an OS deployment task sequence that includes passwords.
+
+> [!NOTE]
+> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with 3DES, then the HTTPS transport is encrypted with AES.
+
+When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. When using CNG v3 certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md) and [CNG v3 certificates overview](../network/cng-certificates-overview).
 
 For transport security, anything that uses TLS supports AES. This support includes when you configure the site for [enhanced HTTP](../hierarchy/enhanced-http.md) or HTTPS. For on-premises site systems, you can control the TLS cipher suites. For cloud-based roles like the cloud management gateway (CMG), if you enable TLS 1.2, Configuration Manager configures the cipher suites.
 
-For message security, Configuration Manager primarily uses 3DES. For example, when the client uploads inventory or state data, or downloads secret policies from the management point.
-
-For most cryptographic operations with Windows-based operating systems, Configuration Manager uses the following algorithms from the Windows CryptoAPI library rsaenh.dll:
-
-- SHA-2
-- 3DES and AES
-- RSA
+For most cryptographic operations with Windows-based operating systems, Configuration Manager uses these algorithms from the Windows CryptoAPI library rsaenh.dll.
 
 For more information about specific functionality, see [Site operations](#site-operations).
 
