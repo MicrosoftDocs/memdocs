@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/09/2021
+ms.date: 04/21/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -184,6 +184,8 @@ Intune will automatically reinstall, update, or remove a required app based on t
 
 > [!NOTE]
 > Using the Windows Company Portal, end users can restart an app installation if the progress seems to have stalled or is frozen. This functionality is allowed if the app installation progress has not changed in two hours.
+> 
+> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps.
 
 ## Uninstall an app
 
