@@ -280,6 +280,24 @@ To see a generated report of device state, you can use the following steps:
 2. Select **Reports** > **Install Status** > **User Install Status** > **Select an app**.
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
+The **User Install Status for apps** report includes the following columns, search methods, and export parameter.
+
+**Columns:**
+- Name
+- UPN
+- Failures 
+- Installs 
+- Pending 
+- Not installed 
+- Not applicable 
+
+**Search by:**
+- Name 
+- UPN 
+
+**Export ReportName Parameter:**
+- UserInstallStatusAggregateByApp
+
 ## Device compliance trend report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
