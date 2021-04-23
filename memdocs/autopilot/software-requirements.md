@@ -51,7 +51,7 @@ Windows Autopilot depends on specific features available in Windows 10, Azure Ac
 
 ### Protocols
 
-- Azure Active Directory (AAD) required both WS-Trust and WS-Federation protocol.
+- Azure Active Directory (AAD) requires both WS-Trust and WS-Federation protocols.
 
 >[!NOTE]
 >Procedures for deploying Windows Autopilot might refer to specific products and versions. The inclusion of these products in this content doesn't imply an extension of support for a version that is beyond its support lifecycle. Windows Autopilot does not support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](/lifecycle/).
