@@ -88,7 +88,7 @@
     - name: Support information  
       items: 
         - name: FAQ
-          href: autopilot-faq.md
+          href: autopilot-faq.yml
         - name: Contacts
           href: autopilot-support.md
         - name: Registration authorization

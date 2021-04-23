@@ -62,7 +62,7 @@ landingContent:
     - linkListType: reference
       links:
       - text: Frequenty asked questions
-        url: autopilot-faq.md
+        url: autopilot-faq.yml
       - text: Support contacts
         url: autopilot-support.md
       - text: Registration authorization
