@@ -280,29 +280,6 @@ To see a generated report of device state, you can use the following steps:
 2. Select **Reports** > **Install Status** > **Device Install Status** > **Select an app**.
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
-The **Device Install Status report for apps** report includes columns, filters, search methods, and export parameter.
-
-**Columns:**
-- Device Name 
-- UPN 
-- Device Platform
-- App Version 
-- Status 
-- Status Details 
-- Intune device ID 
-- Last modified time
-
-**Filter by:**
-- Status (All, Installed, Failed, Not Installed, Not applicable, Install Pending, Uninstall Failed, Install Status Unknown) 
-- Error hex code (admin can filter based on the error hex codes that exist in their app deployment)
-
-**Search by: **
-- Device Name
-- UPN
-
-**Export ReportName Parameter:**
-- DeviceInstallStatusByApp
-
 ## Device compliance trend report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
