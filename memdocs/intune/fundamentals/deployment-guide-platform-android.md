@@ -44,6 +44,40 @@ Before you begin, complete these prerequisites to enable iOS device management i
 
 The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios and requirements, create rollout and communication plans, support, testing, and validation plans.  
 
+## Leverage the Android Enterprise security configuration framework 
+
+**Lanewsad: Adapted from iOS version. Can you please check to make sure it's accurate? Especially the part that explains basic, enhanced, and high levels b/c I couldn't find that information for Android in our docs.**  
+
+The Android Enterprise security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
+
+Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows 10. It applies to devices that are fully managed and ones that are personally-owned with work profile. The framework includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last. 
+
+The security levels for personally-owned devices with work profile are:  
+
+* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for personal devices from which users access work or school data. This configuration enforces password policies, defines device lock characteristics, and disables certain device functions (such as untrusted certificates). 
+
+* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. This configuration enacts data sharing controls. It's applicable to most mobile users accessing work or school data on a device.  
+
+* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enacts stronger password policies than the previous levels, disables more device functions, and enforces additional data transfer restrictions. 
+
+The security levels for fully managed devices are:  
+
+* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for supervised devices where users access work or school data. This level is achieved by enforcing password policies, defining device lock characteristics, and disabling certain device functions (such as untrusted certificates). 
+
+* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. This configuration enacts data sharing controls and blocks access to USB devices. It's applicable to most mobile users accessing work or school data on a device. 
+
+* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk.  For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enacts stronger password policies, disables more device functions, enforces additional data transfer restrictions, and requires apps to be installed through the Apple volume purchase program (VPP). 
+
+For more information about the security framework, see the articles listed in the following table. 
+
+| Task | Detail | 
+| ---- | ------ | 
+| [Learn about the Android Enterprise framework deployment methodology](../enrollment/framework-deployment-methodologyy.md)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |      
+| [Disallow personal accounts for Microsoft apps on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Configure an app policy that prevents users from signing into a personal account on a work or school device. |  
+| [Configure device enrollment restrictions for personally-owned work profile devices](../enrollment/ios-ipados-device-compliance-security-configurations.md)|Apply these security settings to configure a basic or high security level on personally owned work profile devices. | 
+|[Configure security settings for personally owned devices ](../enrollment/ios-ipados-personal-device-security-configurations.md)  | Apply these settings to configure a basic or high security level on personally owned devices. | 
+|[Configure security settings for fully managed devices ](../enrollment/ios-ipados-supervised-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on corporate-owned, fully managed devices. | 
+
 ## Create compliance rules  
 
 Use compliance policies to define the rules and conditions that users and devices should meet to access your organization's protected resources. If you use Conditional Access, your Conditional Access policies can use your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  **Lanewsad: Do all of these tasks work for both Android Enterprise and Android device admin?**
