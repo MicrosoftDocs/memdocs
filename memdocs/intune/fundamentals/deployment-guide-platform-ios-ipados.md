@@ -88,7 +88,7 @@ Use compliance policies to define the rules and conditions that users and device
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |  
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |  
+|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of. For example, things like meeting room calendar kiosks use basic authentication.  |  
 
 ## Configure endpoint security  
 
@@ -136,15 +136,15 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 
 ## Deploy apps  
 
-As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people do, the type of apps they need to complete those tasks, and who needs them. You can use Intune to manage the whole device (including apps) or use Intune to manage apps only.  
+As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people need to do, the type of apps they need to complete those tasks, and finally, the groups who need those apps. You can use Intune to manage the whole device (including apps) or use Intune to manage the apps only.   
 
 | Task | Detail | 
 | ---- | ------ | 
 |[Add store apps](../apps/store-apps-ios.md) | Add iOS/iPadOS apps from the App Store to Intune, and assign to groups.  | 
-|[Add web apps](../apps/web-app.md) | Add web apps to Intune, and assign to groups. | 
-|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune, and assign to groups. | 
+|[Add web apps](../apps/web-app.md) | Add web apps to Intune and assign to groups. | 
+|[Add built-in apps](../apps/apps-add-built-in.md) | Add built-in apps to Intune and assign to groups. | 
 |[Add line-of-business apps ](../apps/lob-apps-ios.md)|Add iOS/iPadOS line-of-business (LOB) apps to Intune, and assign to groups.| 
-|[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.| 
+|[Assign apps to groups ](../apps/apps-deploy.md)|Assign apps to users and devices.| 
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.| 
 |[Manage iOS/iPadOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)|Synchronize, manage, and assign apps purchased through Apple Business Manager.| 
 |[Manage iOS/iPadOS eBooks purchased through Apple Business Manager ](../apps/vpp-ebooks-ios.md)| Synchronize, manage, and assign books purchased through Apple Business Manager. | 
@@ -153,7 +153,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Create an app configuration policy](../apps/app-configuration-policies-use-ios.md)  | Apply custom configuration settings to iOS/iPadOS apps on enrolled devices. You can also apply these types of policies [to managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md). | 
 |[Configure Microsoft Edge](../apps/manage-microsoft-edge.md) | Use Intune app protection and configuration policies with Edge for iOS/iPadOS to ensure corporate websites are accessed with safeguards in place. | 
 | [Configure Microsoft Office apps](../apps/manage-microsoft-office.md)| Use Intune app protection and configuration policies with Office apps to ensure that corporate files are accessed with safeguards in place. | 
-|[Configure Microsoft Teams](../apps/manage-microsoft-teams.md) |Use Intune app protection and configuration policies with Teams to ensure that collaborative team experiences are  accessed with safeguards in place. | 
+|[Configure Microsoft Teams](../apps/manage-microsoft-teams.md) |Use Intune app protection and configuration policies with Teams to ensure that collaborative team experiences are accessed with safeguards in place. | 
 |[Configure Microsoft Outlook](../apps/app-configuration-policies-outlook.md) | Use Intune app protection and configuration policies with Outlook to ensure corporate email and calendars are accessed with safeguards in place.   
 
 ## Enroll devices  
@@ -177,7 +177,7 @@ For information about each enrollment method and how to choose one that's right 
 
 ## Run remote actions  
 
-After devices are set up, you can use remote actions in Intune to manage and troubleshoot iOS/iPadOS devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported on iOS/iPadOS.  
+After devices are set up, you can use remote actions in Intune to manage and troubleshoot devices from a distance. Availability varies by device platform. If an action is absent or disabled in the portal, then it isn't supported on the device.  
 
 | Task | Detail | 
 | ---- | ------ | 
@@ -193,5 +193,7 @@ Check out these enrollment tutorials to learn how to do some of the top tasks in
 * [Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
 * [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md)
 * [Configure Slack to use Intune for EMM and app configuration](../apps/tutorial-configure-slack-enterprise-grid.md) 
+
+
 
 
