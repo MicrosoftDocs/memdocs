@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 04/21/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -269,6 +269,15 @@ To see a generated report of device state, you can use the following steps:
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
+
+## App Install Status report (Organizational)
+
+The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
+
+To see a generated report, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Install Status** > **App Install Status** to view the current data.
 
 ## User Install Status for apps report (Organizational)
 
