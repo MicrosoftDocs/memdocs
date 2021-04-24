@@ -30,7 +30,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 **Classify** group:
 
-- **Set Security Scopes**: Set the [security scopes](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) to secure the object and limit access.
+- **Set Security Scopes**: Set the [security scopes](../../../understand/fundamentals-of-role-based-administration.md#security-scopes) to secure the object and limit access.
 
 **Local Extension** group:
 
@@ -42,7 +42,7 @@ The **Console Extensions** node is located under **Administration** > **Overview
 
 ## <a name="bkmk_local_install"></a> Install and test an extension on a local console
 
-1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope) for the extension. Changing the security scope is recommended for initial testing of an extension.
+1. Change the [security scope](../../../understand/fundamentals-of-role-based-administration.md#security-scopes) for the extension. Changing the security scope is recommended for initial testing of an extension.
    1. Go to the **Console Extensions** node under **Administration** > **Overview** > **Updates and Servicing**.
    1. Select the extension, then select **Set Security Scopes** from the ribbon.
    1. Remove the **Default** security scope and add a scope that only contains one or two admins for initial testing.

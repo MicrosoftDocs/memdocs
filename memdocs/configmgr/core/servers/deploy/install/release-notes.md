@@ -93,7 +93,7 @@ To work around this issue, manually back up and restore the site's configuration
 <!--6306759-->
 *Applies to version 1910*
 
-After upgrade to version 1910, [security scopes for folders](../configure/configure-role-based-administration.md#bkmk_config-folder) in user collections and device collections don't get replicated from the CAS to primary sites.
+After upgrade to version 1910, [security scopes for folders](../configure/configure-role-based-administration.md#how-to-configure-security-scopes-for-an-object) in user collections and device collections don't get replicated from the CAS to primary sites.
 
 ## Application management
 
@@ -153,7 +153,7 @@ To work around this issue, create a custom security role. Copy an existing secur
 - Modify  
 - Read  
 
-For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#BKMK_CreateSecRole)
+For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
 
 ## Desktop Analytics
 

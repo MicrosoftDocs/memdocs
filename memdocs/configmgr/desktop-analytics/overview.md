@@ -81,7 +81,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - A supported version of Configuration Manager.
 
-  - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role in Configuration Manager
+  - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#security-roles) role in Configuration Manager
 
   > [!NOTE]
   > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
