@@ -24,7 +24,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 ## Prerequisites
 
 - Access to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
-- An E5 license for [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- An E5 license for [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
 - A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
    - Upgrade the target devices to the latest version of the Configuration Manager client.

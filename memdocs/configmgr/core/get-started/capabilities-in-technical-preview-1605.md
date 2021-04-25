@@ -360,13 +360,13 @@ In this technical preview, if the Company Portal is open for more than 15 minute
   4.  Download the compressed archive (.zip) file and extract the contents.  
 
 
-##### Onboard devices for Microsoft Defender ATP  
+##### Onboard devices for Microsoft Defender for Endpoint  
 
-1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender for Endpoint Policy Wizard opens.  
 
-2. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**. Click Next.  
+2. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**. Click Next.  
 
-3. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant. Click **Next**.  
+3. **Browse** to the Configuration file provided by your organization's Microsoft Defender for Endpoint cloud service tenant. Click **Next**.  
 
 4. Specify the file samples that are collected and shared from managed devices for analysis.  
 
