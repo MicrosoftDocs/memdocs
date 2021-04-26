@@ -421,13 +421,14 @@ You can delete an enrollment profile token from Intune as long as:
 
 - No devices are assigned to the token.
 - No devices are assigned to the default profile.
+- There are no enrollment profiles under that token. 
 
 To delete an enrollment profile token:
 
 1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/macOS** > **iOS/macOS enrollment** > **Enrollment Program Tokens**. Select the token, and then select **Devices**.
 2. Delete all the devices assigned to the token.
 3. Go to **Devices** > **iOS/macOS** > **iOS/macOS enrollment** > **Enrollment Program Tokens**. Select the token, and then select **Profiles**.
-4. If there's a default profile, delete it.
+4. If there's a default profile or any other enrollment profile, they must all be deleted. 
 5. Go to **Devices** > **iOS/macOS** > **iOS/macOS enrollment** > **Enrollment Program Tokens**. Select the token, and then select **Delete**.
 
 ## Next steps
