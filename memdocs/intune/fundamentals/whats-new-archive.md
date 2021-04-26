@@ -373,7 +373,7 @@ For more information, go to [Overview](migration-guide.md).
 
 #### Update for Microsoft Tunnel<!-- 8629678  -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway, which includes the following changes:
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway, which includes the following changes:
 
 - Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the *journalctl -t mstunnel_monitor* command line on the tunnel server.
 - Additional bug fixes.
@@ -461,7 +461,7 @@ To understand what's changed between versions, see [Compare baseline versions](.
 
 #### New Microsoft Tunnel version<!-- 8504252 -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway. The following changes are included in the new version:
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway. The following changes are included in the new version:
 
 - Microsoft Tunnel now logs operational and monitoring details to Linux server logs in the *syslog* format. You can [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) when you run the `journalctl -t` command line on the tunnel server.
 - Various bug fixes.
