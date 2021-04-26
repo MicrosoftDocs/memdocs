@@ -197,7 +197,7 @@ Starting in version 2010, you can view dependency relationships between collecti
 
 :::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
 
-If you want to change or delete collections, view the relationships to understand the affect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
+If you want to change or delete collections, view the relationships to understand the effect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
 
 When you select the **View Relationships** action on a device or user collection:
 

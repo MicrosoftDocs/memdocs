@@ -209,5 +209,5 @@ You can now enable Health Attestation services monitoring for Windows 10 PCs by 
 
 For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
-## Remote Control
+## Remote control
 Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.

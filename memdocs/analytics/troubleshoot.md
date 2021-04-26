@@ -60,7 +60,7 @@ Rollback transaction: XXXX
 
 **Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently leveraged by Endpoint analytics and isn't transmitted to Microsoft.
 
-### Script requirements for Proactive remediations
+### Script requirements for proactive remediations
 
 If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
@@ -124,7 +124,7 @@ This approach supports the following scenarios:
 
 - Headless devices, where no user signs in, or users of the device don't have internet access
 
-- Authenticated proxies that don't use Windows Integrated Authentication
+- Authenticated proxies that don't use Windows-Integrated Authentication
 
 - If you also use Microsoft Defender for Endpoint
 

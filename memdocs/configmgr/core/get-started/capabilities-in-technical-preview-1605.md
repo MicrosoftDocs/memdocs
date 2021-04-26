@@ -37,7 +37,7 @@ This article introduces the features that are available in the Technical Preview
 
 -   A Windows 10 VPN profile that has been deployed to at least one device  
 
-##  <a name="BKMK_InstallSU"></a> Improvements to the Install software updates task sequence  
+##  <a name="BKMK_InstallSU"></a> Improvements to the Install Software Updates task sequence  
  The following improvements have been made to the Install Software Updates task sequence:  
 
 -   A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, is available to give you the ability to control the timeout on the software updates scan during the Install software updates task sequence step. The default value is 30 minutes.  
@@ -264,7 +264,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 -   The **Applications** tab has been split into three separate tabs for **Updates**, **Operating systems** (which were both previously found in the **Filters** list), and **Applications**.  
 
-##  <a name="BKMK_ServerGroups"></a> Service a  server group  
+##  <a name="BKMK_ServerGroups"></a> Service a server group  
  Technical Preview for Configuration Manager, version 1511, included the ability to create a collection where all devices in the collection make up a server group. Then, you could configure the server group settings to use when you deploy software updates to the server group, control the percentage of computers that are updated at any given time, and configure pre-deployment and post-deployment PowerShell scripts to run custom actions.  
 
  Technical Preview for Configuration Manager, version 1605, adds the ability to update the computers in the server group in a specified order that you define, adds enhanced monitoring to view the status for the computers in the server group, and provides the ability to clear the deployment locks that is useful when clients have failed to install the software updates and are preventing other clients from installing their software updates.  
@@ -359,7 +359,6 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
   4.  Download the compressed archive (.zip) file and extract the contents.  
 
-
 ##### Onboard devices for Microsoft Defender for Endpoint  
 
 1. In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Microsoft Defender for Endpoint Policy Wizard opens.  
@@ -378,17 +377,17 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 5. Review the summary and complete the wizard.  
 
-6. You can now deploy the Microsoft Defender ATP policy to managed client computers by clicking **Deploy**.  
+6. You can now deploy the Microsoft Defender for Endpoint policy to managed client computers by clicking **Deploy**.  
 
-##### Monitor Microsoft Defender ATP  
+##### Monitor Microsoft Defender for Endpoint  
 
-1.  In the Configuration Manager console, navigate **Monitoring** > **Overview** > **Security** and then click **Windows Defender ATP**.  
+1.  In the Configuration Manager console, navigate **Monitoring** > **Overview** > **Security** and then click **Windows Defender for Endpoint**.  
 
 2.  Review the Microsoft Defender for Endpoint dashboard.  
 
-    -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
+    -   **Windows Defender Agent Deployment Status** – The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded  
 
-    -   **Windows Defender ATP Agent Health** – Percentage of computer clients reporting status for their Microsoft Defender ATP agent  
+    -   **Windows Defender ATP Agent Health** – Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent  
 
         -   **Healthy** - Working properly  
 
