@@ -161,7 +161,12 @@ After your profile is deployed, you can check its status:
     - **Properties**: Shows the settings you configured when you created the profile. You can change the profile name, or update any existing settings.
     - **Device status**: The devices assigned to the profile are listed, and it shows if the profile successfully deployed. You can select a specific device to get more details.
     - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get more details.
-    - **Per-setting status**: Filters the output by showing the individual settings within the profile, and shows if the setting successfully applied.
+ 
+ 3. You can also see whether individual settings in a profile sccessfully applied. To view per-setting status of an OEMConfig profile, select **Devices** > **All devices** and choose an indvidual device from the list. Then,navigate to **App configuration** and select your OEMConfig profile. You can get more information about individual setting statuses by clicking on them. 
+
+> [!NOTE]
+> For Zebra devices, only a single setting row is shown. Selecting the row will show details for all settings in the policy.
+
 
 ## Supported OEMConfig apps
 
