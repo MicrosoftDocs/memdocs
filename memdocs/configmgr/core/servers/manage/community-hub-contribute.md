@@ -114,7 +114,6 @@ When you contribute a [configuration baseline](../../../compliance/deploy-use/cr
 1. If the configuration item already exists in the Community hub, verify the contributor is the author. If the contributor isn't the author, a new configuration item is created in Community hub.
 1. If the contributor is the author, check for local updates to the configuration item. If the configuration item changed, update the item in the Community hub.
 
-YOu can have up to 50 child configuration items and go 
 ## Next steps
 
 Learn more about creating and using the following objects:
