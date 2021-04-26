@@ -43,7 +43,7 @@ MFA works by requiring any two or more of the following verification methods:
 
 MFA is supported for iOS/iPadOS, Android, and Windows 8.1 or later devices.
 
-When you enable MFA, end users must supply two forms of credentials to enroll a device.
+When you enable MFA, end users needs a second device and must supply two forms of credentials to enroll a device.
 
 ## Configure Intune to require multi-factor authentication at device enrollment
 
