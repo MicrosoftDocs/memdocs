@@ -209,11 +209,11 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their AD credentials, the device:
 
-            - Won’t be fully registered with Azure AD.
-            - Won’t show up in the user’s device list in the Azure AD portal.
-            - Won’t have access to resources protected by conditional access.
-            - Won’t be evaluated for device compliance.
-            - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.
+        - Won’t be fully registered with Azure AD.
+        - Won’t show up in the user’s device list in the Azure AD portal.
+        - Won’t have access to resources protected by conditional access.
+        - Won’t be evaluated for device compliance.
+        - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.
 
 7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**).
 
