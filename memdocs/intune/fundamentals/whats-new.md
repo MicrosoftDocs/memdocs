@@ -93,7 +93,7 @@ When you deploy shell scripts or custom attributes for macOS devices from Micros
 
 #### Update for Microsoft Tunnel<!-- 9574820 -->
 
-We’ve released a [new version](../protect/microsoft-tunnel-configure.md#microsoft-tunnel-updates) of the Microsoft Tunnel Gateway, which includes the following changes:
+We’ve released a [new version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of the Microsoft Tunnel Gateway, which includes the following changes:
 
 - Various bug fixes and enhancements.
 
