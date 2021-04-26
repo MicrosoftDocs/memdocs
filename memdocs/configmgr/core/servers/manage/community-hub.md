@@ -154,6 +154,12 @@ If you're signed in as a user with lower rights and choose **Run as** a differen
 <!--7851305-->
 If you delete a downloaded report from the **Monitoring** > **Reports** node, the report isn't deleted from the **Community hub** > **Your downloads** page and you're unable to download the report again.
 
+### Unable to download baseline that contains a previously downloaded configuration item
+<!--9528524-->
+ If you previously downloaded a configuration item from Community hub using Configuration Manager 2010, you may receive an error when downloading a baseline after upgrading to Configuration Manager version 2103. A download error can occur when the baseline contains an updated version of the configuration item you previously downloaded with Configuration Manager 2010.
+
+**Workaround**: To work around this issue, delete the configuration item you previously downloaded, then download the baseline with the new version of the configuration item.
+
 ## Next steps
 
 [Contribute to the Configuration Manager Community hub](community-hub-contribute.md)
