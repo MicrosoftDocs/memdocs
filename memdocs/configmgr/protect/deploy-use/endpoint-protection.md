@@ -75,7 +75,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender 
 
 ## Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint manages and monitors Microsoft Defender for Endpoint, formerly known as Windows Defender ATP. The Microsoft Defender for Endpoint service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender for Endpoints](defender-advanced-threat-protection.md).
+Microsoft Defender for Endpoint manages and monitors Microsoft Defender for Endpoint, formerly known as Windows Defender for Endpoint. The Microsoft Defender for Endpoint service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender for Endpoints](defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
