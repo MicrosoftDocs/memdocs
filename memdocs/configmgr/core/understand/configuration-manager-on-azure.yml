@@ -1,9 +1,9 @@
 ### YamlMime:FAQ
 metadata:
-  title: Configuration Manager on Azure
+  title: Configuration Manager on Azure FAQ
   titleSuffix: Configuration Manager
-  description: Information about using Configuration Manager on an Azure environment.
-  ms.date: 03/27/2017
+  description: Frequently asked questions about using Configuration Manager on an Azure environment.
+  ms.date: 04/26/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: conceptual
@@ -13,171 +13,204 @@ metadata:
   manager: dougeby
   
     
-title: Configuration Manager on Azure - Frequently Asked Questions
+title: Configuration Manager on Azure FAQ
 summary: |
   *Applies to: Configuration Manager (current branch)*
   
-  The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.
-  
+  These frequently asked questions (FAQ) about Configuration Manager on Microsoft Azure can help you understand when to use it and how to configure it.
 
 sections:
-  - name: General Questions
+  - name: General questions
     questions:
-      - question: My company is trying to move as many physical servers as possible to Microsoft Azure, can I move Configuration Manager servers to Azure?
+      - question: Can I move on-premises Configuration Manager servers to Azure?
         answer: |
-          Certainly, this is a supported scenario.  See [Support for Virtualization Environments for Configuration Manager](../plan-design/configs/support-for-virtualization-environments.md).
+          Yes, this scenario is supported. For more information, see [Support for virtualization environments](../plan-design/configs/support-for-virtualization-environments.md#bkmk_Azure).
           
-      - question: Great! My environment requires multiple sites. Should all child primary sites be in Azure with the central administration site or on-premises? What about secondary sites?
+      - question: Should all child primary sites be in Azure with the central administration site or on-premises? What about secondary sites?
         answer: |
-          Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option.
+          [File-based and database replication](../plan-design/hierarchy/data-transfers-between-sites.md) for site-to-site communications benefit from the proximity of being hosted in Azure. However, all client-related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option.
           
-          However, if you use a metered data plan and available bandwidth or cost is a concern, or the network connection between Azure and your intranet is not fast or can be unreliable, then consider placing specific sites (and site systems) on-premises and then use the bandwidth controls built into Configuration Manager.
+          If you use a metered data plan and available bandwidth or cost is a concern, then consider placing specific sites and site systems on-premises. Then use the bandwidth controls built into Configuration Manager. Also consider this configuration when the network connection between Azure and your intranet isn't fast or can be unreliable.
           
-      - question: Is having Configuration Manager in Azure a SaaS scenario (Software as a Service)?
-        answer: No, it is an IaaS (Infrastructure as a Service) because you host your Configuration Manager infrastructure servers in Azure virtual machines.
+      - question: Is Configuration Manager in Azure considered software as a service (SaaS)?
+        answer: No, it's infrastructure as a service (IaaS). You host your Configuration Manager infrastructure servers in Azure virtual machines.
 
-      - question: What areas should I pay attention to when considering a move of my Configuration Manager infrastructure to Azure?
+      - question: What factors are most important when considering to move Configuration Manager to Azure?
         answer: |
-          Great question, here are the areas that are most important when making this decision, each is explored in a separate section of this topic:
           1. Networking
           2. Availability
           3. Performance
           4. Cost
           5. User Experience
-          
+
+          For more information on these factors, see the other questions below.
+
   - name: Networking
     questions:
-      - question: What about networking requirements, should I use ExpressRoute or an Azure VPN Gateway?
+      - question: Should I use ExpressRoute or an Azure VPN Gateway?
         answer: |
-          Networking is a very important decision. Network speeds and latency can affect functionality between the site server and remote site systems and any client communication to the site systems. Our recommendation is to use ExpressRoute. But there is no Configuration Manager limitation to stop you from using Azure VPN Gateway. You should carefully review your requirements (performance, patching, software distribution, operation system deployment) from this infrastructure and then make your decision. Some things to consider for each solution include:
+          Microsoft recommends using ExpressRoute. Network speeds and latency can affect functionality between the site server and remote site systems and between any client communication to the site systems.
           
-          - **ExpressRoute** (recommended)
-            - Natural extension to your datacenter (can tie together multiple datacenters)
-            - Private connections between Azure datacenters and your infrastructure
-            - Doesn't go over the public internet
-            - Offers reliability, fast speeds, lower latency, high security
-            - Offers up to 10gbps speeds and Unlimited Data plan options
-          - **VPN Gateway**
-            - Site-to-site/point-to-site VPNs
-            - Traffic goes over the public internet
-            - Uses Internet Protocol Security (IPsec) and Internet Key Exchange (IKE)
+          There's no limitation in Configuration Manager for using Azure VPN Gateway. You should carefully review the following requirements from this infrastructure and then make your decision:
           
-      - question: ExpressRoute has many different options like unlimited vs. metered, different speed options, and premium add-on. Which should I choose?
+          - Performance
+          - Patching
+          - Software distribution
+          - OS deployment
+
+          Consider the following aspects for each solution:
+          
+          #### ExpressRoute (recommended)
+
+          - Natural extension to your datacenter and can link together multiple datacenters
+          - Private connections between Azure datacenters and your infrastructure
+          - Doesn't go over the public internet
+          - Offers reliability, fast speeds, lower latency, high security
+          - Offers up to 10 Gbps speeds and unlimited data plan options
+
+          #### VPN Gateway
+
+          - Site-to-site or point-to-site VPNs
+          - Traffic goes over the public internet
+          - Uses Internet Protocol Security (IPsec) and Internet Key Exchange (IKE)
+          
+          For more information, see [ExpressRoute or Azure VPN](https://azure.microsoft.com/blog/expressroute-or-virtual-network-vpn-whats-right-for-me/).
+
+      - question: Which ExpressRoute options should I choose?
         answer: |
-          The options you select depend on the scenario you are implementing and how much data you plan to distribute. The transfer of Configuration Manager data can be controlled between site servers and distribution points, but site server-to-site server communication can't be controlled.   When you use a metered data plan, placing specific sites (and site systems) on-premises and using [Configuration Manager's built-in bandwidth controls](../plan-design/hierarchy/fundamental-concepts-for-content-management.md) can help control the cost of using Azure.
+          It depends. ExpressRoute has many different options like unlimited or metered, different speed options, and premium add-ons. The options you select depend on the Configuration Manager functionality you're using and how much data you plan to distribute. You can control the transfer of Configuration Manager data between site servers and distribution points, but you can't control site server-to-site server communication. When you use a metered data plan, if you place specific sites and site systems on-premises, and use [Configuration Manager's built-in bandwidth controls](../plan-design/hierarchy/fundamental-concepts-for-content-management.md), you can help control the cost of using Azure.
           
-      - question: What about installation requirements like Active Directory domains? Do I still need to join my site servers to an Active Directory domain?
+      - question: Do I still need to join my site servers to an Active Directory domain?
         answer: |
           Yes. When you move to Azure, the [supported configurations](../plan-design/configs/supported-configurations.md) remain the same, including Active Directory requirements for installing Configuration Manager.
           
-      - question: I understand the need to join my site servers to an Active Directory domain, but can I use Azure Active Directory?
+      - question: Can I use Azure Active Directory?
         answer: |
-          No, Azure Active Directory is not supported at this time. Your site servers still must be members of a [Windows Active Directory domain](../plan-design/configs/support-for-active-directory-domains.md).
-          
-          
-          
+          No. Azure Active Directory isn't currently supported. Your site servers still need to be members of a [Active Directory domain](../plan-design/configs/support-for-active-directory-domains.md).
+
   - name: Availability
     questions:
-      - question: One of the reasons I am moving infrastructure to Azure is the promise of high availability. Can I take advantage of high availability options like Azure VM Availability sets for VMs that I will use for Configuration Manager?
+      - question: Can I use high availability options like Azure VM availability sets with Configuration Manager?
         answer: |
-          Yes! Azure VM Availability sets can be used for redundant site system roles like distribution points or management points.
+          Yes. You can use Azure VM availability sets for redundant site system roles like distribution points or management points.
           
-          You can also use them for the Configuration Manager site servers. For example, central administration sites and primary sites can all be in the same availability set which can help you ensure that they are not rebooted at the same time.
+          You can also use them for the Configuration Manager site servers. For example, central administration sites and primary sites can all be in the same availability set. This configuration can help you make sure that they're not rebooted at the same time.
           
-      - question: How can I make my database highly available? Can I use an Azure SQL Server database? Or do I have to use SQL Server in a VM?
+          For more information, see [Availability options for Azure Virtual Machines](/azure/virtual-machines/availability) and [High availability options for Configuration Manager](../servers/deploy/configure/high-availability-options.md).
+
+      - question: Can I use an Azure SQL Server database?
         answer: |
-          You need to use SQL Server in a VM. Configuration Manager doesn't support Azure SQL Server at this time. But you can use functionalities like SQL Server Always On availability groups. [Availability groups](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) are recommended and officially supported with Configuration Manager.
+          No. You need to use SQL Server in a VM. Configuration Manager doesn't currently support Azure SQL Server.
           
-      - question: Can I use Azure load balancers with site system roles like management points  or software update points?
+          For high availability of the site database server, use SQL Server Always On availability groups. For more information, see [Prepare to use a SQL Server Always On availability group with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+          
+      - question: Can I use Azure load balancers with site system roles like management points or software update points?
         answer: |
-          While Configuration Manager is not tested with Azure load balancers, if the functionality is transparent to the application, it should not have any adverse effects on normal operations.
-          
-          
+          Configuration Manager isn't tested with [Azure load balancers](/azure/load-balancer/load-balancer-overview). If the functionality is transparent to the application, it shouldn't have any adverse effects on normal operations.
+
   - name: Performance
     questions:
       - question: What factors affect performance in this scenario?
         answer: |
-          [Azure VM size and type](/azure/virtual-machines/sizes), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
-          
-      - question: So, tell me more about Azure virtual machines; what size VMs should I use?
-        answer: |
-          In general, your compute power (CPU and Memory) need to meet the [recommended hardware for Configuration Manager](../plan-design/configs/recommended-hardware.md). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
-          - For production deployments of any significant size we recommend "**S**" class Azure VMs. This is because they can leverage Premium Storage disks.  Non "S" class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
-          - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
-          - We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 in a striped volume instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
-          
-          
-          
-          The following tables list the initial suggested disk counts to utilize at primary and central administration sites for various size installations:
-          
-          **Co-located site database** - Primary or central administration site with the site database on the site server:
-          
-          | Desktop Clients    |Recommended VM size|Recommended Disks|
-          |--------------------|-------------------|-----------------|
-          |**Up to 25k**       |   DS4_V2          |2xP30 (striped)  |
-          |**25k to 50k**      |   DS13_V2         |2xP30 (striped)  |
-          |**50k to 100k**     |   DS14_V2         |3xP30 (striped)  |
-          
-          
-          **Remote site database** - Primary or central administration site with the site database on a remote server:
-          
-          | Desktop Clients    |Recommended VM size|Recommended Disks |
-          |--------------------|-------------------|------------------|
-          |**Up to 25k**       | Site server: F4S </br>Database server: DS12_V2 | Site server: 1xP30 </br>Database server: 2xP30 (striped)  |
-          |**25k to 50k**      | Site server: F4S </br>Database server: DS13_V2 | Site server: 1xP30 </br>Database server: 2xP30 (striped)   |
-          |**50k to 100k**     | Site server: F8S </br>Database server: DS14_V2 | Site server: 2xP30 (striped)   </br>Database server: 3xP30 (striped)   |
-          
-          The following shows an example configuration for 50k to 100k clients on DS14_V2 with 3xP30 disks in a striped volume with separate logical volumes for the Configuration Manager install and database files:
-           ![VM)disks](media/vm_disks.png)  
-          
-          
-          
-  - name: User Experience
-    questions:
-      - question: You mention that user experience is one of the main areas of importance, why is that?
-        answer: The decisions you make for networking, availability, performance, and where you place your Configuration Manager site servers can affect your users directly. We believe a move to Azure should be transparent to your users so that they don't experience a change in their day-to-day interactions with Configuration Manager.
+          The following factors are the most important to Configuration Manager performance on Azure:
 
-      - question: Ok, I get it. I plan to install a single stand-alone primary site on an Azure virtual machine and I want to make sure my costs are low. Should I place (remote) site systems (like management points, distribution points, and software update points) on Azure virtual machines as well or on-premises?
+          - [Azure VM size and type](/azure/virtual-machines/sizes)
+          - Azure VM disks: premium storage is recommended, especially for SQL Server
+          - Network latency and speed
+          
+      - question: What size VMs should I use?
         answer: |
-          Except for communication from the site server to a distribution point, these server-to-server communications in a site can occur at any time and do not use mechanisms to control the use of network bandwidth. Because you cannot control the communication between site systems, any costs associated with these communications should be considered.
+          In general, your compute power (CPU and memory) need to meet the [recommended hardware for Configuration Manager](../plan-design/configs/recommended-hardware.md). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use. The VM size you use depends on the size of your environment.
           
-          Network speeds and latency are other factors to consider as well. Slow or unreliable networks could impact functionality between the site server and remote site systems as well any client communication to the site systems. The number of managed clients that use a given site system as well as the features you actively use should also be considered.
-          In general, you can leverage the normal guidance as it relates to WAN links and site systems as a starting point. Ideally, the network throughput that you select and receive between Azure and your intranet will be consistent with a WAN that is well-connected with a fast network.
+          The following list includes some general recommendations for VM size:
+
+          - For production deployments of any significant size, use **S** class Azure VMs. These VMs can use premium storage disks. Non **S** class VMs use blob storage and in general won't meet the performance requirements necessary for an acceptable production experience.
+          - Use multiple premium storage disks for higher scale, and striped in the Windows Disk Management console for maximum IOPS.
+          - Use better or multiple premium disks during your initial site deployment. For example, **P30** instead of **P20**, and two **P30** disks in a striped volume, instead of a single **P30**. If your site later needs to increase VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You'll also already have disks in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
+
+          The following tables list the initial suggested disk counts to use at primary and central administration sites for various size installations:
+
+          #### Co-located site database
+
+          A primary or central administration site with the site database on the site server:
           
-      - question: What about content distribution and content management? Should standard distribution points be in Azure or on-premises, and should I use BranchCache or pull-distribution points on-premises? Or should I make exclusive use of Cloud Distribution Points?
+          | Desktop clients    |Recommended VM size|Recommended disks|
+          |--------------------|-------------------|-----------------|
+          | < 25,000           |   DS4_V2          | 2xP30 (striped) |
+          | 25,000 to 50,000   |   DS13_V2         | 2xP30 (striped) |
+          | 50,000 to 100,000  |   DS14_V2         | 3xP30 (striped) |
+
+          #### Remote site database
+
+          A primary or central administration site with the site database on a remote server:
+          
+          | Desktop clients    |Recommended VM size|Recommended disks |
+          |--------------------|-------------------|------------------|
+          | < 25,000           | Site server: F4S </br>Database server: DS12_V2 | Site server: 1xP30 </br>Database server: 2xP30 (striped) |
+          | 25,000 to 50,000   | Site server: F4S </br>Database server: DS13_V2 | Site server: 1xP30 </br>Database server: 2xP30 (striped) |
+          | 50,000 to 100,000  | Site server: F8S </br>Database server: DS14_V2 | Site server: 2xP30 (striped) </br>Database server: 3xP30 (striped) |
+          
+          #### Example
+
+          This image shows an example disk configuration for the following VM:
+          
+          - A DS14_V2 size VM for a site that manages 50,000 to 100,000 clients
+          - Three P30 disks in a striped volume
+          - Separate logical volumes for the Configuration Manager install and database files
+
+          :::image type="content" source="media/vm_disks.png" alt-text="Example disk management configuration for a site on an Azure VM":::
+
+  - name: User experience
+    questions:
+      - question: Why is user experience a main area of importance?
+        answer: The decisions you make for networking, availability, performance, and site server location can directly affect your users. Moving a site to Azure should be transparent to your users so that they don't experience a change in their day-to-day interactions with Configuration Manager.
+
+      - question: To keep costs low for a single primary site, should remote site systems be in Azure on on-premises?
+        answer: |
+          Except for communication from the site server to a distribution point, these server-to-server communications in a site can occur at any time and don't use mechanisms to control the use of network bandwidth. Because you can't control the communication between site systems like management points and software update points, make sure to consider any costs associated with these communications.
+          
+          Network speeds and latency are other factors to consider as well. Slow or unreliable networks could impact functionality between the site server and remote site systems, and client communication to the site systems. Factor in the number of managed clients that use a given site system and the features you actively use.
+
+          As a starting point, you can use the standard guidance for site systems across WAN links. Ideally, the network throughput that you select and receive between Azure and your intranet will be consistent with a WAN that is well-connected with a fast network.
+
+      - question: What about content distribution and content management?
         answer: |
           The approach for content management is much the same as for site servers and site systems.
+
           - If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting standard distribution points in Azure could be an option.
-          - If you use a metered data plan and bandwidth cost is a concern or the network connection between Azure and your intranet is not fast or can be unreliable, then you might consider other approaches. These include locating standard or pull distribution points on-premises as well as using BranchCache. The use of cloud-based distribution points is also an option but there are some limits on the content types supported (for example, no support for software updates packages).
+
+          - If any of the following factors apply:
+
+            - You use a metered data plan
+            - Bandwidth cost is a concern
+            - The network connection between Azure and your intranet isn't fast or can be unreliable
+            
+            Then you might consider the following other approaches:
+
+            - Use standard or pull distribution points on-premises.
+            - Enable Windows BranchCache on distribution points or other [peer caching technologies](../plan-design/hierarchy/fundamental-concepts-for-content-management.md#peer-caching-technologies).
+            - Use a [cloud-based distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) (CDP). Note that CDPs and content-enabled cloud management gateways don't support software update packages for Microsoft updates. You need to have an alternate location, or software update deployment need to allow clients to get update content from the internet.
           
           > [!NOTE]
-          >  If PXE or multicast support is required, you must use on-premises distribution points (standard or pull) to respond to boot requests.
-          
-          
-      - question: While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my internet-based clients. Do I have any other options?
+          > If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.
+
+      - question: To support internet-based clients, what can I do instead of using an internet-facing management point?
         answer: |
-          Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](../clients/manage/manage-clients-internet.md#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](../get-started/capabilities-in-technical-preview-1606.md#cloud_proxy)).
-          
-          The **Cloud Management Gateway** provides a simple way to manage Configuration Manager clients on the internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the internet.
-          
-          You can start using the cloud management gateway in your environment and give us feedback to make this better. For information about pre-release features, see [Use pre-release features from updates](../servers/manage/install-in-console-updates.md#bkmk_prerelease).
-          
-      - question: I also heard that you have another new feature called Peer Cache introduced as a pre-release feature in version 1610. Is that different than BranchCache? Which one should I choose?
+          Use a [cloud management gateway](../clients/manage/cmg/overview.md) (CMG). The CMG provides a simple way to manage Configuration Manager clients on the internet. You deploy the service to an Azure subscription, and it connects to your on-premises infrastructure through the cloud management gateway connector point. Clients can then access on-premises site system roles whether they're connected to the internal network or on the internet.
+
+      - question: Which peer caching technology should I use?
         answer: |
-          Yes, totally different. [Peer Cache](../plan-design/hierarchy/client-peer-cache.md) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
-          
-          You can configure any client to be a Peer Cache source. Then, when management points provide  clients information about content source locations, they provide details about both the distribution points and any Peer Cache sources that have the content that client requires.
-          
-          
+          [Peer cache](../plan-design/hierarchy/client-peer-cache.md) is a 100% native Configuration Manager technology. [BranchCache](../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache) and [Delivery Optimization](../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) are Windows features. They can all be useful depending upon your requirements. For more information, including a table to compare features, see [Content management fundamentals - Peer caching technologies](../plan-design/hierarchy/fundamental-concepts-for-content-management.md#peer-caching-technologies).
+
   - name: Cost
     questions:
-      - question: OK tell me a bit about the cost. Will this be a cost-effective solution for me?
+      - question: Will moving Configuration Manager to Azure be a cost-effective solution for my organization?
         answer: |
-          Hard to say since every environment is different. The best thing to do is to cost your environment using the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
+          It's hard to say since every environment is different. To estimate the cost for your environment, use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-  - name: Additional resources
+  - name: More information
     questions:
-      - question: Where I can learn more?
+      - question: Where I can learn more about these Azure technologies?
         answer: |
           #### Fundamentals
           - [What is Azure](https://azure.microsoft.com/overview/what-is-azure/)

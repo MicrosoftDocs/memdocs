@@ -52,7 +52,7 @@
     items:
     - name: Cloud services overview
       href: understand/use-cloud-services.md
-    - name: Configuration Manager on Azure
+    - name: Configuration Manager on Azure FAQ
       href: understand/configuration-manager-on-azure.yml
   - name: FAQ for product and licensing
     href: understand/product-and-licensing-faq.yml
