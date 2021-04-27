@@ -2,7 +2,7 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 04/13/2021
+ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -506,9 +506,9 @@ Use this task to rebuild the Configuration Manager database indexes. An index is
 
 To improve performance, the Configuration Manager database indexes are frequently updated to remain synchronized with the constantly changing data that's stored in the database. This task:
 
-- Creates indexes on database columns that are at least 50 percent unique
-- Drops indexes on columns that are less than 50 percent unique
-- Rebuilds all existing indexes that meet the data uniqueness criteria
+- Rebuilds indexes when they are more than 10% fragmented
+   - For indexes that are less than 30% fragmented, the index is reorganized
+   - For indexes that are greater than 30% fragmented, the index is rebuilt
 
 | Site type | Status |
 | --------- | ------ |
