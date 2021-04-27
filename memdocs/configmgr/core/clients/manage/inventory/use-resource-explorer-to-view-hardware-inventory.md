@@ -65,6 +65,4 @@ For a property with a value that doesn't change, like total disk size, you may n
 
 ## See also
 
-For information about how to view hardware inventory from clients that run Linux and UNIX, see [How to monitor clients for Linux and UNIX servers](../monitor-clients-for-linux-and-unix-servers.md).  
-
 Resource Explorer also shows Software Inventory. For more information, see [How to use Resource Explorer to view software inventory](use-resource-explorer-to-view-software-inventory.md).

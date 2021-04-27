@@ -83,16 +83,6 @@ Starting with version 1606 of Configuration Manager (current branch), Endpoint P
 
  ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)
 
-## Endpoint Protection Client for Mac Computers and Linux Servers  
- System Center includes an Endpoint Protection client for Linux and for Mac computers. These clients are not supplied with Configuration Manager; instead, you must download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).  
-
-> [!IMPORTANT]  
->  You must be a Microsoft Volume License customer to download the Endpoint Protection installation files for Linux and the Mac.  
-
- These products cannot be managed from the Configuration Manager console. However, a System Center Operations Manager management pack is supplied with the installation files, which allows you to manage the client for Linux by using Operations Manager.  
-
- For more information about how to install and manage the Endpoint Protection clients for Linux and Mac computers, use the documentation that accompanies these products, which is located in the **Documentation** folder.
-
 ## Best Practices for Endpoint Protection in Configuration Manager  
  Use the following best practices for Endpoint Protection in System Center 2012 Configuration Manager.  
 

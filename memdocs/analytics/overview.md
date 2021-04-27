@@ -1,6 +1,6 @@
 ---
 title: What is Endpoint analytics?
-titleSuffix: Configuration Manager
+titleSuffix: Microsoft Endpoint Manager
 description: Overview for Endpoint analytics.
 ms.date: 10/28/2020
 ms.prod: configuration-manager
@@ -15,7 +15,7 @@ manager: dougeby
 
 # <a name="bkmk_overview"></a> What is Endpoint analytics?
 
-Endpoint analytics is part of the [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score). These analytics give you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and proactively make changes without disrupting end users or generating a help desk ticket. For more information on the Microsoft Productivity Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/en-us/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).<!-- see MEMDocs#955, this link requires "en-us" locale -->
+Endpoint analytics is part of the [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score). These analytics give you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket. For more information on the Microsoft Productivity Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/en-us/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).<!-- see MEMDocs#955, this link requires "en-us" locale -->
 
 ## Endpoint analytics overview
 
@@ -47,7 +47,6 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
-   - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 ### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager requires:

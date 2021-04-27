@@ -2,7 +2,7 @@
 title: CNG v3 certificates overview
 titleSuffix: Configuration Manager
 description: Learn about support for Cryptography Next Generation (CNG) v3 certificates for Configuration Manager clients and servers.
-ms.date: 10/09/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -15,7 +15,10 @@ manager: dougeby
 # CNG v3 certificates overview
 <!-- 1356191 -->
 
-Configuration Manager has limited support for Cryptography: Next Generation (CNG) v3 certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates.
+Configuration Manager has limited support for Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use a PKI client authentication certificate with the private key generated and stored in a CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private keys, such as TPM KSP for PKI client authentication certificates.
+
+> [!NOTE]
+> When using CNG certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. <!-- 7836017 -->
 
 ## Supported scenarios
 
@@ -44,8 +47,6 @@ The following scenarios currently aren't supported:
 
 - The following server roles aren't operational when installed in HTTPS mode with a CNG v3 certificate bound to the web site in Internet Information Services (IIS):
 
-  - Application catalog web service
-  - Application catalog website
   - Enrollment point  
   - Enrollment proxy point  
 
@@ -64,6 +65,8 @@ To use CNG v3 certificates, your certification authority (CA) needs to provide C
 - **Cryptography** tab
 
   - **Provider Category** must be **Key Storage Provider**. (required)
+ 
+  - **Algorithm name** must be **RSA**. (required) <!-- 7836017 -->
 
   - **Request must use one of the following providers:** must be **Microsoft Software Key Storage Provider**.
 

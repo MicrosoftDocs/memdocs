@@ -42,7 +42,7 @@ Because the task sequence isn't on the media, you can change the task sequence o
 
 The packages on bootable media aren't encrypted. To make sure that the package contents are secured from unauthorized users, take appropriate security measures. For example, add a password to the media.
 
-Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Support for cloud-based content](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## Prerequisites
 

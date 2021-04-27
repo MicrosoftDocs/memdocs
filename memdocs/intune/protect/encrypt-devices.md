@@ -2,12 +2,12 @@
 # required metadata
 title: Encrypt Windows 10 devices with BitLocker in Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices from within the Intune portal.
+description: Encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices from within the Microsoft Endpoint Manager admin center.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2020
+ms.date: 03/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,7 +42,7 @@ Use one of the following policy types to configure BitLocker on your managed dev
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles form device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
 > [!TIP]
-> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and retrieve BitLocker recovery keys when you view the encryption report.
+> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 >
 > You can also access important information for BitLocker from your devices, as found in Azure Active Directory (Azure AD).
 [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
@@ -100,21 +100,21 @@ Use one of the following procedures to create the policy type you prefer.
 
    ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
-4. Select **Settings** > **Windows Encryption**.
+4. On the **Configuration settings** page, expand **Windows Encryption**.
 
-   ![BitLocker settings](./media/encrypt-devices/bitlocker-settings.png)
+   :::image type="content" source="./media/encrypt-devices/bitlocker-settings.png" alt-text="Select Windows encryption settings":::
 
 5. Configure settings for BitLocker to meet your business needs.
 
    If you want to enable BitLocker silently, see [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices), in this article for additional prerequisites and the specific setting configurations you must use.
 
-6. Select **OK**.
+6. Select **Next** to continue.
 
 7. Complete configuration of additional settings, and then save the profile.
 
 ## Manage BitLocker
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). You can also view and retrieve BitLocker recovery keys when you view the encryption report.
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). 
 
 ### Silently enable BitLocker on devices
 
@@ -126,7 +126,7 @@ A device must meet the following conditions to be eligible for silently enabling
 
 - If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
 - If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
-- The device must be Azure AD Joined
+- The device must be Azure AD Joined or Hybrid Azure AD Joined.
 - Device must contain TPM (Trusted Platform Module) 2.0
 - The BIOS mode must be set to Native UEFI only. 
 
@@ -145,7 +145,7 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Intune portal. To be accessible, the device must have its keys escrowed to Azure AD.
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Microsoft Endpoint Manager admin center. To be accessible, the device must have its keys escrowed to Azure AD.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -164,7 +164,9 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 
-For more information on Audit Log entries, see [Azure Portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/devices/bitLockerRecoveryKeys/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference). 
+
+All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### Rotate BitLocker recovery keys
 
@@ -196,6 +198,7 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 ## Next steps
 
-[Manage FileVault policy](../protect/encrypt-devices-filevault.md)
-
-[Monitor disk encryption](../protect/encryption-monitor.md)
+- [Manage FileVault policy](../protect/encrypt-devices-filevault.md)  
+- [Monitor disk encryption](../protect/encryption-monitor.md)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

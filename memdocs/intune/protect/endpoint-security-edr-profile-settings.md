@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 12/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,9 +43,9 @@ Supported platforms and profiles:
 
 **Endpoint detection and response**:
 
-- **Microsoft Defender ATP client configuration package type**
+- **Microsoft Defender for Endpoint client configuration package type**
 
-  Upload a signed configuration package that will be used to onboard the Microsoft Defender ATP client.
+  Upload a signed configuration package that will be used to onboard the Microsoft Defender for Endpoint client.
 
   - **Not configured** (*default*)
   - **Onboarding blob**  
@@ -53,24 +53,25 @@ Supported platforms and profiles:
 
   When set to *Onboarding blob*, you can configure the following settings:
 
-  - **Advanced threat protection onboarding blob**  
+  - **Defender for Endpoint onboarding blob**  
     Click **Select onboarding file** to open the *Select onboarding File* pane, where you specify a `.onboarding` file.
 
   When set to *Offboarding blob*, you can configure the following settings:
   
-  - **Advanced threat protection offboarding blob**  
+  - **Defender for Endpoint offboarding blob**  
      Click **Select offboarding file** to open the *Select offboarding File* pane, where you specify a `.offboarding` file.
 
 - **Sample sharing for all files**  
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
+  Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.  Sample Sharing sends a file to Microsoft for deep analysis. Organizations can disable sample sharing on specific devices that are considered too sensitive.
+
   - **Not configured**   (*default*)
   - **Yes**
 
 - **Expedite telemetry reporting frequency**
 
   - **Not configured**   (*default*)
-  - **Yes** - Increase the Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
+  - **Yes** - Increase the Microsoft Defender for Endpoint telemetry reporting frequency.
 
 ## Endpoint detection and response (ConfigMgr)
 
@@ -78,14 +79,14 @@ Supported platforms and profiles:
 
 - **Sample sharing for all files**  
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
+  Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.  
   - **Not configured**   (*default*)
   - **Yes**
 
 - **Expedite telemetry reporting frequency**
 
   - **Not configured**   (*default*)
-  - **Yes** - Increase the Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
+  - **Yes** - Increase the Microsoft Defender for Endpoint telemetry reporting frequency.
 
 ## Next steps
 

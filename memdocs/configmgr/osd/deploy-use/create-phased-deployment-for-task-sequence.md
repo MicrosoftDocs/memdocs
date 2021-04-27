@@ -30,7 +30,7 @@ Create phased deployments for the following objects:
 
 ### Security scope
 
-Deployments created by phased deployments aren't viewable to any administrative user that doesn't have the **All** security scope. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
+Deployments created by phased deployments aren't viewable to any administrative user that doesn't have the **All** security scope. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#security-scopes).
 
 ### Distribute content
 

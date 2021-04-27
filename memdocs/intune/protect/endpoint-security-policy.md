@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Endpoint Manager. 
+description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Endpoint Manager. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 04/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Manage device security with endpoint security policies in Microsoft Intune
 
-As a security admin, use the security policies from the *Endpoint security* of Intune to configure device security without the overhead of navigating the larger body and range of settings found in device configuration profiles and security baselines.
+As a security admin, use the security policies found in the *Endpoint security* node of Intune to configure device security. By using these security-focused policies, you avoid the overhead of navigating through a larger body of diverse settings found in device configuration profiles and security baselines.
 
 Each policy type supports one or more profiles. Profiles are where you configure settings and can group settings for different platforms, or for different areas of focus in the larger policy area.
 
@@ -40,13 +40,13 @@ You'll find these policies under *Manage* in the **Endpoint security** node of t
 
 Following are brief descriptions of each endpoint security policy type. To learn more about them, including the available profiles for each, follow the links to content dedicated to each policy type:
 
-- [Antivirus](../protect/endpoint-security-antivirus-policy.md) - Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) as a Mobile Threat Defense solution.
+- [Antivirus](../protect/endpoint-security-antivirus-policy.md) - Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender for Endpoint as a Mobile Threat Defense solution.
 
 - [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
 
 - [Firewall](../protect/endpoint-security-firewall-policy.md) - Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10. 
 
-- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Microsoft Defender ATP with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender ATP.
+- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Microsoft Defender for Endpoint with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 
 - [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows 10 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
@@ -126,7 +126,7 @@ After creating the new policy, review and edit the policy to make changes to its
 
 ## Manage conflicts
 
-Many of the device settings that you can manage with Endpoint security policies (security policies) you can manage through other policy types in Intune. These other policy types include *device configuration* policy and *security baselines*. Because you can manage a setting with several different policy types or multiple instances of the same policy type, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
+Many of the device settings that you can manage with Endpoint security policies (security policies) are also available through other policy types in Intune. These other policy types include *device configuration* policy and *security baselines*. Because settings can be managed through several different policy types or by multiple instances of the same policy type, be prepared to identify and resolve policy conflicts for devices that don't adhere to the configurations you expect.
 
 - Security baselines can set a non-default value for a setting to comply with the recommended configuration that baseline addresses.
 - Other policy types, including the endpoint security policies, set a value of *Not configured* by default. These other policy types require you to explicitly configure settings in the policy.
@@ -135,7 +135,7 @@ Regardless of the policy method, managing the same setting on the same device th
 
 The information at the following links can help you identify and resolve conflicts:
 
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Next steps

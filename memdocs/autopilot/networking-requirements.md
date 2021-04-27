@@ -13,6 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ms.custom: 
@@ -23,7 +24,10 @@ ms.custom:
 
 # Windows Autopilot networking requirements
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 10
+- Windows Holographic, version 2004 or later
 
 Windows Autopilot depends on a variety of internet-based services. Access to these services must be provided for Autopilot to function properly. In the simplest case, enabling proper functionality can be achieved by ensuring the following conditions:
 

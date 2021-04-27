@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 04/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -245,30 +245,9 @@ The PKCS certificates you'll deploy for Intune managed devices must be chained w
 
    d. Select **Download root certificate** to download the trusted root certificate.
 
-2. Create a trusted certificate profile in the Intune portal:
+2. Create a trusted certificate profile in the Microsoft Endpoint Manager admin center portal. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
 
-   a. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-   b. Select **Devices** > **Configuration profiles** > **Create profile**.
-
-   c. Enter the following properties:
-
-      - **Name** for the profile
-      - Optionally set a **Description**
-      - **Platform** to deploy the profile to
-      - Set **Profile type** to **Trusted certificate**
-
-   d. Select **Settings**, and then browse to the trusted root CA certificate .cer file you exported for use with this certificate profile, and then select **OK**.
-
-   e. For Windows 8.1 and Windows 10 devices only, select the **Destination Store** for the trusted certificate from:
-      - **Computer certificate store - Root**
-      - **Computer certificate store - Intermediate**
-      - **User certificate store - Intermediate**
-
-   f. When you're done, select **OK**, go back to the **Create profile** pane, and select **Create**.  
-
-  The profile appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.  Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
-
+   After you create the profile, it appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.  
 
 ## Get the certificate profile OID  
 
@@ -292,12 +271,17 @@ The certificate profile OID is associated with a certificate profile template in
 
 3. Enter the following properties:
 
-   - **Name** for the profile
-   - Optionally set a **Description**
-   - **Platform** to deploy the profile to
-   - Set **Profile type** to **PKCS certificate**
+   - **Platform**: Choose the platform of your devices.
+   - **Profile**: Select **PKCS certificate**. Or, select **Templates** > **PKCS certificate**.
 
-4. In the **PKCS Certificate** pane, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through Intune Certificate Connector.
+4. Select **Create**.
+
+5. In **Basics**, enter the following properties:
+
+   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. In **Configuration settings**, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through Intune Certificate Connector.
 
    |PKCS certificate parameter | Value | Description |
    | --- | --- | --- |
@@ -310,10 +294,10 @@ The certificate profile OID is associated with a certificate profile template in
    > [!NOTE]
    > The PKCS certificate profile for Windows platforms doesn't need to associate with a trusted certificate profile. But it is required for non-Windows platform profiles such as Android.
 
-5. Complete the configuration of the profile to meet your business needs, and then select **Create** to save the profile.
+7. Complete the configuration of the profile to meet your business needs, and then select **Create** to save the profile.
 
-6. On the *Overview* page of the new profile, select **Assignments** and configure an appropriate group that will receive this profile. At least one user or device must be part of the assigned group.
- 
+8. On the *Overview* page of the new profile, select **Assignments** and configure an appropriate group that will receive this profile. At least one user or device must be part of the assigned group.
+
 After you complete the previous steps, Intune Certificate Connector will issue PKCS certificates from the DigiCert CA to Intune-managed devices in the assigned group. These certificates will be available in the **Personal** store of the **Current User** certificate store on the Intune-managed device.
 
 ### Supported attributes for the PKCS certificate profile
@@ -339,7 +323,8 @@ Intune Certificate Connector service logs are available in **%ProgramFiles%\Micr
 | DigiCert Provider - Policy verification failed. <br><br> The attribute doesn't fall under the DigiCert supported certificate template attributes list. | The DigiCert CA shows this message when there's a discrepancy between the DigiCert certificate profile template and the Intune certificate profile. This issue likely happened due to attribute mismatch in **SubjectName** or **SubjectAltName**. <br><br> To resolve this issue, select Intune supported attributes for **SubjectName** and **SubjectAltName** in the DigiCert certificate profile template. For more information, see the Intune supported attributes in the **Certificate Parameters** section. |
 | Some user devices are not receiving PKCS certificates from the DigiCert CA. | This issue happens when the user UPN contains special characters like an underscore (example: `global_admin@intune.onmicrosoft.com`). <br><br> The DigiCert CA doesn't support special characters in **mail_firstname** and **mail_lastname**. <br><br> The following steps help resolve this issue: <br><br> 1. Sign in to the DigiCert CA admin portal. <br> 2. Go to **Manage Certificate Profiles**. <br> 3. Select the certificate profile used for Intune. <br> 4. Select the **Customize options** link. <br> 5. Select the **Advanced options** button. <br> 6. Under **Certificate fields – Subject DN**, add a **Common Name (CN)** field and delete the existing **Common Name (CN)** field. Add and delete operations must be performed together. <br> 7. Select **Save**. <br><br> With the preceding change, the DigiCert certificate profile requests **"CN=<upn>"** instead of **mail_firstname** and **mail_lastname**. |
 | User manually deleted already deployed certificate from the device. | Intune redeploys the same certificate during the next check-in or policy enforcement. In this case, NDES Connector doesn't receive a PKCS certificate request. |
+| Digicert profile shows error for a device that was previously working and the certificate is not currently present on the device | Digicert may not issue a duplicate certificate to a specific host name. If the certificate is no longer on the device revoke the previously issued certificate in the Digicert admin console. This includes if the certificate was removed from the device and if the device was factory reset. On the next check-in or policy enforcement the device will receive a new certificate from Digicert. 
 
 ## Next steps
 
-Use the information in this article in addition to the information in [What are Microsoft Intune device profiles?](../configuration/device-profiles.md) to manage your organization's devices and the certificates on them.
+Use the information in this article with the information in [What are Microsoft Intune device profiles?](../configuration/device-profiles.md) to manage your organization's devices and the certificates on them.

@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 04/12/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -269,7 +269,8 @@ The **devices** entity lists all enrolled devices under management and their cor
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
 | office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
-
+| SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
+| IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
 ## devicePropertyHistories
 

@@ -12,6 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -19,7 +20,9 @@ ms.topic: how-to
 
 # Windows Autopilot user-driven mode
 
-**Applies to: Windows 10, version 1809 or later**
+**Applies to**
+
+- Windows 10, version 1809 or later
 
 Windows Autopilot user-driven mode lets you configure new Windows 10 devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 
@@ -98,6 +101,9 @@ In addition to the core requirements for user driven Hybrid Azure AD Join mentio
 
 - The device must be running Windows 10, version 1809 or later. 
 - The device must have access to an Active Directory domain controller. It must be connected to the organization's network. It must be able to resolve the DNS records for the AD domain and the AD domain controller. It must be able to communicate with the domain controller to authenticate the user.
+
+>[!Tip]
+>As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (AD) joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201) This blog aims to clarify Hybrid Azure AD Join and co-management, how they work together but are not the same thing.
 
 ## User-driven mode for hybrid Azure Active Directory join with VPN support
 

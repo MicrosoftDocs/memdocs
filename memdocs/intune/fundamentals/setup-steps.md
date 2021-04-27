@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 04/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,5 +51,5 @@ If you're currently using Microsoft Endpoint Configuration Manager to manage com
 |   7   | [Add apps](../apps/apps-add.md) - Apps can be assigned to groups and automatically or optionally installed. |
 |   8   | [Configure devices](../configuration/device-profiles.md) - Set up profiles that manage device settings. Device profiles can preconfigure settings for email, VPN, Wi-Fi, and device features. They can also restrict devices to help protect both devices and data. |
 |   9   |  [Customize Company Portal](../apps/company-portal-app.md) - Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.       |
-|  10   | [Enable device enrollment](mdm-authority-set.md) - Enable Intune management of iOS/iPadOS, Windows, Android, and Mac devices by setting the MDM authority and enabling specific platforms. |
+|  10   | [Enable device enrollment](../enrollment/device-enrollment.md) - Enable Intune management of iOS/iPadOS, Windows, Android, and Mac devices by setting the MDM authority and enabling specific platforms. |
 |  11   |  [Configure app policies](../apps/app-protection-policy.md) - Supply specific settings based on app protection policies in Microsoft Intune. |

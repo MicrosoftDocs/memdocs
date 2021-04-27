@@ -30,7 +30,7 @@ Assessing client health is a top priority. System Center 2012 Configuration Mana
 
 With co-management, Intune can report on the client health state. It provides timestamp information for the validity of the data. This information tells you if your devices are healthy, able to connect, able to install apps, or can update to the required OS builds. 
 
-For a detailed overview of this feature, see this video from the [What's New in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/64591) session at Ignite 2018.
+For a detailed overview of this feature, see this video from the [What's New in Configuration Manager](https://myignite.microsoft.com/archives/IG18-BRK3035) session at Ignite 2018.
 
 > [!VIDEO https://www.youtube.com/embed/UAW2KBUq7DM?start=518]
 

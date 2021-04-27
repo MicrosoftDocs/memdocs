@@ -5,7 +5,7 @@ description: Learn about guidance and recommendations for security and privacy w
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/28/2020
+ms.date: 04/13/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -50,6 +50,8 @@ The CMG connection point uses the following methods:
 
 - Reports traffic per endpoint every five minutes.
 
+Starting in version 2010, Configuration Manager rotates the storage account key for the CMG. This process happens automatically every 180 days.<!-- 8613077 -->
+
 ### Configuration Manager client-facing roles
 
 The management point and software update point host endpoints in IIS to service client requests. The CMG doesn't expose all internal endpoints. Every endpoint published to the CMG has a URL mapping.
@@ -76,7 +78,7 @@ Publish your PKI's certificate revocation list (CRL) for internet-based clients 
 
 This CMG option verifies the client authentication certificate.
 
-- If the client is using Azure AD authentication, the CRL doesn't matter.
+- If the client is using Azure AD or Configuration Manager token-based authentication, the CRL doesn't matter.
 
 - If you use PKI, and externally publish the CRL, then enable this option (recommended).
 
@@ -91,9 +93,6 @@ This CMG option verifies the client authentication certificate.
 <!--503739-->
 Each Configuration Manager site includes a list of trusted root certification authorities, the certificate trust list (CTL). View and modify the list by going to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Select a site, and then select **Properties** in the ribbon. Switch to the **Communication Security** tab, and then select **Set** under Trusted Root Certification Authorities.
 
-> [!Note]
-> In version 1902 and earlier, this tab is called **Client Computer Communication**.<!-- SCCMDocs#1645 -->
-
 Use a more restrictive CTL for a site with a CMG using PKI client authentication. Otherwise, clients with client authentication certificates issued by any trusted root that already exists on the management point are automatically accepted for client registration.
 
 This subset provides administrators with more control over security. The CTL restricts the server to only accept client certificates that are issued from the certification authorities in the CTL. For example, Windows ships with a number of well-known third-party certification authority (CA) certificates, such as VeriSign and Thawte. By default, the computer running IIS trusts certificates that chain to these well-known CAs. Without configuring IIS with a CTL, any computer that has a client certificate issued from these CAs are accepted as a valid Configuration Manager client. If you configure IIS with a CTL that didn't include these CAs, client connections are refused if the certificate chained to these CAs.
@@ -102,7 +101,7 @@ This subset provides administrators with more control over security. The CTL res
 
 <!-- SCCMDocs-pr#4021 -->
 
-Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
+Use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 
 ### Use token-based authentication
 

@@ -55,7 +55,7 @@ Configuration Manager provides built-in monitoring from within the Configuration
 
 ### Alerts
 
-For more information, see [Monitor alerts](use-alerts-and-the-status-system.md#BKMK_MonitorAlerts).  
+For more information, see [Monitor alerts](configure-alerts.md#monitor-alerts).  
 
 ### Compliance settings
 

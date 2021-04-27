@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2020
+ms.date: 12/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,11 +31,11 @@ ms.reviewer: mattsha
 
 # Endpoint detection and response policy for endpoint security in Intune
 
-When you integrate Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Intune, you can use endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender ATP.
+When you integrate Microsoft Defender for Endpoint with Intune, you can use endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 
-The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
+The capabilities of Microsoft Defender for Endpoint endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
-EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Microsoft Defender ATP. Onboarding packages are how devices are configured to work with Microsoft Defender ATP. After a device onboards, you can start to use threat data from that device.
+EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Microsoft Defender for Endpoint. Onboarding packages are how devices are configured to work with Microsoft Defender for Endpoint. After a device onboards, you can start to use threat data from that device.
 
 EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
 
@@ -47,7 +47,7 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 **General**:
 
-- **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 
 **Support for Configuration Manager clients**:
 
@@ -82,9 +82,9 @@ The following sections cover the required tasks:
 2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
 
 > [!TIP]
-> To learn more about using Microsoft Defender ATP with Configuration Manager, see the following articles in the Configuration Manager content:
+> To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
 >
-> - [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
 > - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Install the update for Configuration Manager
@@ -126,16 +126,16 @@ The following are supported for devices you manage with Intune:
 
 ## Create and deploy EDR policies
 
-When you integrate your Microsoft Defender ATP subscription with Intune, you can create and deploy EDR policies. There are two distinct types of EDR policy you can create. One policy type for devices you manage with Intune through MDM. The second type is for devices you manage with Configuration Manager.
+When you integrate your Microsoft Defender for Endpoint subscription with Intune, you can create and deploy EDR policies. There are two distinct types of EDR policy you can create. One policy type for devices you manage with Intune through MDM. The second type is for devices you manage with Configuration Manager.
 
 You choose the type of policy to create while configuring a new EDR policy, by choosing a platform for the policy.
 
 Before you can deploy policy to devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Endpoint Manager admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 > [!TIP]
-> In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender ATP. However, device configuration policies don't support tenant attached devices.
+> In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
-> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender ATP), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+> When using multiple polices or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
 ### Create EDR policies
 
@@ -170,7 +170,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 8. On the **Assignments** page, select the groups or collections that will receive this policy. The choice depends on the platform and profile you selected:
 
    - For Intune, you’ll select groups from Azure AD.
-   - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Endpoint Manager admin center and enabled for Microsoft Defender ATP policy.
+   - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Endpoint Manager admin center and enabled for Microsoft Defender for Endpoint policy.
 
    You can choose not to assign groups or collections at this time, and later edit the policy to add an assignment.
 
@@ -186,7 +186,7 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 
 - For policies that target the **Windows 10 and later** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
-  The chart for **Devices with ATP sensor** displays only devices that successfully onboard to Microsoft Defender ATP through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender ATP by external means, like Group Policy or PowerShell, are counted as **Devices without the ATP sensor**.
+  The chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
 
 - For policies that target the **Windows 10 and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
@@ -195,4 +195,4 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 ## Next steps
 
 - [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
+- Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender for Endpoint documentation.

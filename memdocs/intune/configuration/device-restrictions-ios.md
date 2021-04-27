@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2020
+ms.date: 04/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
 
-This article lists and describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
+This article describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your iOS/iPadOS devices.
 
@@ -54,7 +54,7 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
   > [!NOTE]
   > When this setting is blocked (set to **Yes**), third party keyboards installed from the App Store are also blocked.
 
-  - **Allow unmanaged apps to read from managed contacts accounts**: **Yes** lets unmanaged apps, such as the built-in iOS/iPadOS Contacts app, to read and access contact information from managed apps, including the Outlook mobile app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent reading, including removing duplicates, from the built-in Contacts app on devices.  
+  - **Allow unmanaged apps to read from managed contacts accounts**: **Yes** lets unmanaged apps, such as the built-in iOS/iPadOS Contacts app, to read and access contact information from managed apps, including the Outlook mobile app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent reading from the built-in Contacts app on devices.  
   
     This setting allows or prevents reading contact information. It doesn't control syncing contacts between the apps.
   
@@ -275,6 +275,12 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
 
+- **Disable near-field communication (NFC)**: **Yes** disables NFC, and prevents devices from pairing with other NFC-enabled devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users might be allowed to use NFC, and connect to other NFC-enabled devices. 
+
+  This feature applies to:  
+  - iOS 14.2 and newer
+  - iPadOS 14.2 and newer
+
 ## Domains
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
@@ -316,6 +322,14 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
+- **Limit Apple personalized advertising**: **Yes** limits Apple's personalized advertising in the App Store, Apple News, and Stocks apps. On the device, the **Settings** > **Privacy** > **Apple Advertising** is toggled off. This setting only impacts personalized ads in these apps. It doesn't impact non-personalized ads, and may not reduce ads. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on personalized ads.
+
+  For more information on Apple's policy, see [Apple Advertising & Privacy](https://support.apple.com/HT205223) (opens Apple's web site).
+
+  This feature applies to:  
+  - iOS 14.0 and newer
+  - iPadOS 14.0 and newer
+
 ### Settings apply to: Automated device enrollment (supervised)
 
 - **Block modification of diagnostics settings**: **Yes** prevents users from changing the diagnostic submission and app analytics settings in **Diagnostics and Usage** (device Settings). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change these device settings.
@@ -351,7 +365,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 12.0 and newer: **Yes** prevents users from setting their own **Screen Time** in the device settings (Settings > General > Screen Time), including content and privacy restrictions. Devices upgraded to iOS 12.0 won't see the restrictions tab in the device settings anymore (Settings > General > Device Management > Management Profile > Restrictions). These settings are in **Screen Time**.
   
 - **Block use of erase all content and settings**: **Yes** prevents using the erase all content and settings option on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might give users access to these settings.
-- **Block modification of device name**: **Yes** prevents changing the device name. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the name of devices.
+- **Block modification of device name**: **Yes** prevents changing the device name locally. When set to **Yes**, you can remotely rename a device with a remote device action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the name of devices.
 - **Block modification of notifications settings**: **Yes** prevents changing the notification settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the device notification settings.
 - **Block modification of Wallpaper**: **Yes** prevents the wallpaper from being changed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the wallpaper on devices.
 - **Block configuration profile changes**: **Yes** prevents configuration profile changes on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to install configuration profiles.
@@ -469,7 +483,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 ### Settings apply to: All enrollment types
 
 - **Block Control Center access in lock screen**: **Yes** prevents access to the Control Center app while device is locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the Control Center app when devices are locked.
-- **Block Notifications access in lock screen**: **Yes** prevents access to notifications when devices are locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to notifications without unlocking devices.
+- **Block Notifications Center access in lock screen**: **Yes** prevents access to notifications when devices are locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to notifications without unlocking devices.
 - **Block Today view in lock screen**: **Yes** prevents access to the Today view when devices are locked. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to see the Today view when devices are locked.
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
@@ -493,11 +507,11 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 > - Simple passwords, such as `1111` or `1234`, aren't allowed.
 > - A 6 digit pin is enforced.
 
-- **Simple passwords**: **Yes** blocks simple passwords, and requires more complex passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow simple passwords, such as `0000` and `1234`.
+- **Block simple passwords**: **Yes** blocks simple passwords, and requires more complex passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow simple passwords, such as `0000` and `1234`.
 
 - **Required password type**: Enter the required password complexity level your organization requires. Your options:
   - **Device default**
-  - **Numeric**: Password must only be numbers, such as 123456789.
+  - **Numeric**: Can be alphabetic characters, such as abcdefg, and numeric characters, such as 123456789.
   - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
 
   > [!NOTE]
@@ -548,7 +562,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Password expiration (days)**: Enter the number of days before the device password must be changed, from 1-65535.
 - **Prevent reuse of previous passwords**: Restrict users from creating previous passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Touch ID and Face ID unlock**: **Yes** prevents using a fingerprint or face to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock devices using biometrics.
+- **Block Touch ID and Face ID unlock**: **Yes** prevents using a fingerprint or face to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock devices using biometrics.
 
   Setting to **Yes** also prevents using FaceID authentication to unlock devices.
 
@@ -617,7 +631,7 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and users aren't required to enter a Managed Apple ID or password.
+- **Block Shared iPad temporary sessions**: Temporary sessions allow users to sign in as Guest, and users aren't required to enter a Managed Apple ID or password.
 
   When set to **Yes**:
 

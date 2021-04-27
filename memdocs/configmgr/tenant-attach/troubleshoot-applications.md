@@ -2,7 +2,7 @@
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
 description: "Troubleshooting application installation for Configuration Manager tenant attach"
-ms.date: 08/11/2020
+ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -25,11 +25,11 @@ Use the following to troubleshoot Configuration Manager applications in the Micr
 
 When viewing or installing applications from the Microsoft Endpoint Manager admin center, you may run across one of these errors.  
 
-### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
+### <a name="bkmk_intune"></a> You don’t have access to view this information
+<!--7980141-->
+**Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Error message:** The necessary configuration is missing in Azure Active Directory. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Azure AD.
-
-**Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
+**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 
 ### <a name="bkmk_noinfo"></a> Unable to get application information
 

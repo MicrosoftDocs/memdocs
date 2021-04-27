@@ -32,7 +32,7 @@ Complete the steps in one of the OS deployment scenarios, and then use the secti
 > [!WARNING]
 > If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. [Deployment verification](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
-Starting in version 2006, PXE-based task sequences can download cloud-based content. The PXE-enabled distribution point still requires the boot image, and the device needs an intranet connection to the management point. It can then get additional content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Support for cloud-based content](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+Starting in version 2006, PXE-based task sequences can download cloud-based content. The PXE-enabled distribution point still requires the boot image, and the device needs an intranet connection to the management point. It can then get additional content from a content-enabled cloud management gateway (CMG) or cloud distribution point.<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## <a name="BKMK_Configure"></a> Configure distribution points for PXE
 
@@ -111,7 +111,7 @@ Deploy the OS to a target collection. For more information, see [Deploy a task s
 
 - **Available deployment**: Available deployments require that the user is present at the destination computer. A user must press the **F12** key to continue the PXE boot process. If a user isn't present to press **F12**, the computer boots into the current OS, or from the next available boot device.
 
-You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) or [Manage collections](../../core/clients/manage/collections/manage-collections.md#bkmk_device). This action resets the status of that deployment and reinstalls the most recent required deployments.
+You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) or [Manage collections](../../core/clients/manage/collections/manage-collections.md). This action resets the status of that deployment and reinstalls the most recent required deployments.
 
 > [!IMPORTANT]
 > The PXE protocol isn't secure. Make sure that the PXE server and the PXE client are located on a physically secure network, such as in a data center, to prevent unauthorized access to your site.

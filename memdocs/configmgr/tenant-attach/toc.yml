@@ -24,14 +24,16 @@
     href: cmpivot-samples-attached.md
 - name: Endpoint security for tenant attached devices (preview)
   items:
-  - name: Enable endpoint security
+  - name: Enable endpoint detection and response
     href: atp-onboard.md
   - name: Create and deploy endpoint security policy
     href: deploy-antivirus-policy.md
-  - name: Settings for Microsoft Defender Antivirus policy
+  - name: Microsoft Defender Antivirus policy settings
     href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
-  - name: Settings for Windows Security experience Antivirus policy
+  - name: Windows Security experience Antivirus policy settings
     href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Firewall policy settings
+    href: ../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json    
 - name: Reference
   items:
   - name: Tenant attach data collection
@@ -44,6 +46,8 @@
     href: troubleshoot-client-details.md
   - name: Application installation (preview)
     href: troubleshoot-applications.md
+  - name: Common error codes for application installation
+    href: app-install-error-reference.md
   - name: Timeline (preview)
     href: troubleshoot-timeline.md
   - name: Resource explorer (preview)

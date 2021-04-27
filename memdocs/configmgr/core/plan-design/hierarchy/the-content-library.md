@@ -117,6 +117,9 @@ A remote content library is a prerequisite for [site server high availability](.
 
      See the **distmgr.log** for details. For more information, see [Site server and site system server logs](log-files.md#BKMK_SiteSiteServerLog).  
 
+     > [!NOTE]  
+     > Starting in version 2010, you can enable verbose logging to troubleshoot content library move process by setting the following registry key on the site server: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP, LibraryMoveVerboseLog = 1 (REG_DWORD)`.  
+
 For more information on this process, see [Flowchart - Manage content library](manage-content-library-flowchart.md).
 
 The site actually *copies* the content library files to the remote location. This process doesn't delete the content library files at the original location on the site server. To free up space, an administrator must manually delete these original files.

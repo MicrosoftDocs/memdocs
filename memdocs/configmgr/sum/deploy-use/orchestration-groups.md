@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 07/07/2020
+ms.date: 03/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -48,14 +48,15 @@ Members of an orchestration group can be any Configuration Manager client, not j
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 - Members of an orchestration group should be assigned to the same site.
 - Devices can't be in more than one orchestration group.
-   - Devices already in an orchestration group won't' be available to select when adding new members.
+   - Devices already in an orchestration group won't be available to select when adding new members.
 
 
 ## Limitations
 
 - You can have up to 1000 orchestration group members.
-- Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#bkmk_mixed). <!--6389000-->
+- Orchestration groups don't work in interoperability mode. For more information, see [Interoperability between different versions of Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#limitations-in-a-mixed-version-hierarchy). <!--6389000-->
 - If updates are initiated by users from Software Center, orchestration will be bypassed. <!--6362887-->
+- Starting in Configuration Manager version 2103, updates in the **Definition** [classification](../get-started/configure-classifications-and-products.md) don't require orchestration and will always bypass orchestration group rules. <!--7706596-->
 
 ## Server groups are automatically updated to orchestration groups
 
@@ -82,9 +83,19 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
 
    - **Specify the maintenance sequence**, then sort the selected resources in the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
+1. Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart.
 
-1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
+   1. For Configuration Manager 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
+      - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
+        - **Open**: Open a specific `.ps1` file
+        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list
+        - **Clear**: Clears the current script in the script pane
+      - **Edit**: Edit the currently selected script
+      - **Delete**: Removes the current script
+      - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
+   1. For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages.
+      1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs.
+      1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
 
 1. Complete the wizard.
 
@@ -97,43 +108,52 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 
 ## Edit or delete an orchestration group
 
-To delete the orchestration group, select it then click **Delete** in the ribbon or from the right-click menu. To edit an orchestration group, select it then click **Properties** in the ribbon or from the right-click menu. Change the settings from the following tabs:
+To delete the orchestration group, select it then select **Delete** in the ribbon or from the right-click menu. To edit an orchestration group, select it then select **Properties** in the ribbon or from the right-click menu. Change the settings from the following tabs:
 
-   - **General**: 
-      - **Name**: The name of your orchestration group
-      - **Description**: Orchestration group description (optional)
-      - **Orchestration Group timeout (in minutes)**: Time limit for all group members to complete update installation.
-      - **Orchestration Group member timeout (in minutes)**: Time limit for a single device in the group to complete the update installation.
+- **General**: 
+   - **Name**: The name of your orchestration group
+   - **Description**: Orchestration group description (optional)
+   - **Orchestration Group timeout (in minutes)**: Time limit for all group members to complete update installation.
+   - **Orchestration Group member timeout (in minutes)**: Time limit for a single device in the group to complete the update installation.
 
-  - **Member Selection**:
-     - **Site Code**: Site code for the orchestration group.
-     - **Members**: Click **Add** to select additional devices for the orchestration group. Click **Remove** to remove the selected device.
+- **Member Selection**:
+   - **Site Code**: Site code for the orchestration group.
+   - **Members**: Select **Add** to select more devices for the orchestration group. Choose **Remove** to remove the selected device.
 
-   - **Rules Selection**:
-      - **Allow a percentage of the machines to be updated at the same time**, then select or enter a number for this percentage. Use this setting to allow for future flexibility of the size of the orchestration group. For example, your orchestration group contains 50 devices, and you set this value to 10. During a software update deployment, Configuration Manager allows five devices to simultaneously run the deployment. If you later increase the size of the orchestration group to 100 devices, then 10 devices update at once.
-      - **Allow a number of the machines to be updated at the same time**, then select or enter a number for this specific count. Use this setting to always limit to a specific number of devices, whatever the overall size of the orchestration group.
-      - **Specify the maintenance sequence**: Sort the selected resources to the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
+- **Rules Selection**:
+   - **Allow a percentage of the machines to be updated at the same time**, then select or enter a number for this percentage. Use this setting to allow for future flexibility of the size of the orchestration group. For example, your orchestration group contains 50 devices, and you set this value to 10. During a software update deployment, Configuration Manager allows five devices to simultaneously run the deployment. If you later increase the size of the orchestration group to 100 devices, then 10 devices update at once.
+   - **Allow a number of the machines to be updated at the same time**, then select or enter a number for this specific count. Use this setting to always limit to a specific number of devices, whatever the overall size of the orchestration group.
+   - **Specify the maintenance sequence**: Sort the selected resources to the proper order. Use this setting to explicitly define the order in which devices run the software update deployment.
 
-   - **Pre-Script**: 
-       - Enter a PowerShell script that runs on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
-       
-   - **Post-Script**:
-      - Enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The script should return a value of `0` for success, or `3010` for success with restart.
-  
-   > [!WARNING]
-   > Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
+- Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success, or `3010` for success with restart.
 
-
+   - For Configuration Manager version 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
+      - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
+        - **Open**: Open a specific `.ps1` file
+        - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list
+        - **Clear**: Clears the current script in the script pane
+      - **Edit**: Edit the currently selected script
+      - **Delete**: Removes the current script
+      - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
+      
+   - For Configuration Manager version 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs.
+      - On the **Pre-Script** tab, enter a PowerShell script to run on each device *before* the deployment runs.
+     - On the **Post-Script** tab, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
+     > [!WARNING]
+     > For Configuration Manager version 2010 and earlier, ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
+ 
 ## Start orchestration
 
 1. [Deploy software updates](deploy-software-updates.md) to a collection that contains the members of the orchestration group.
 
 1. Orchestration starts when any client in the group tries to install any software update at deadline or during a maintenance window. It starts for the entire group, and makes sure that the devices update by following the orchestration group rules.
 1. You can manually start orchestration by selecting it from the **Orchestration Group** node, then choosing **Start Orchestration** from the ribbon or right-click menu.
+1. If needed, select **Ignore all applicable windows for the members** to start the installation immediately and bypass maintenance windows. <!--8031298-->
+   - This option was introduced in Configuration Manager version 2103
 1. If an orchestration group is in a *Failed* state:
    1. Determine why the orchestration failed and resolve any issues.
    1. [Reset the orchestration state for group members](#bkmk_reset).
-   1. From the **Orchestration Group** node, click the **Start Orchestration** button to restart orchestration.
+   1. From the **Orchestration Group** node, choose the **Start Orchestration** button to restart orchestration.
    [![Start Orchestration ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 
@@ -191,7 +211,7 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
 
 ## <a name="bkmk_reset"></a> Reset the orchestration state for a group member
 
-If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also click **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
+If you want to rerun orchestration on a group member, you can clear its state such as *Complete* or *Failed*. To clear the state, right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. You can also select **Reset Orchestration Group Member** from the ribbon. Before resetting the state, you should check the client to see why it failed and correct any issues found.
    [![Reset Orchestration Group Member](./media/3098816-reset-group-member.png)](./media/3098816-reset-group-member.png#lightbox)
 
 ## Log files

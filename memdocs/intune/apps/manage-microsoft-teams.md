@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 01/21/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -76,9 +76,12 @@ App configuration can be delivered either through the mobile device management (
 - Only allow work or school accounts
 
 > [!IMPORTANT]
-> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Teams for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Teams for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
+
+> [!IMPORTANT]
+> App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes affect.
 
 > [!NOTE]
 > With Microsoft Endpoint Manager, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.

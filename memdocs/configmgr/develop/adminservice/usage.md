@@ -19,7 +19,7 @@ manager: dougeby
 Configuration Manager uses the administration service REST API in several native [scenarios](overview.md#scenarios). You can also use the administration service for your own custom scenarios.
 
 > [!NOTE]
-> The examples in this article all use the FQDN of the server that hosts the SMS Provider role. If you access the administration service remotely through a CMG, use the CMG endpoint instead of the SMS Provider FQDN. For more information, see [Enable internet access](set-up.md#bkmk_cmg).
+> The examples in this article all use the FQDN of the server that hosts the SMS Provider role. If you access the administration service remotely through a CMG, use the CMG endpoint instead of the SMS Provider FQDN. For more information, see [Enable internet access](set-up.md#enable-internet-access).
 
 ## Direct query
 

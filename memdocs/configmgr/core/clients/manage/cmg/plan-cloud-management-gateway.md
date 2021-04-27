@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 09/28/2020
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ---
 
 # Plan for the cloud management gateway in Configuration Manager
@@ -53,13 +53,43 @@ Deployment and operation of the CMG includes the following components:
 
 - A content-enabled CMG or a [**cloud distribution point**](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) provides content to internet-based clients, as needed. Using a content-enabled CMG reduces the required certificates and Azure costs.
 
+> [!NOTE]
+> When you deploy a CMG, it also creates an Azure storage account. The CMG uses this storage account for its standard operations, and for content distribution if you enable it. This storage account doesn't support customizations, such as virtual network restrictions.
+
 ### Azure Resource Manager
 
 <!-- 1324735 -->
 You create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When you deploy CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
 
 > [!NOTE]
-> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).
+> CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
+
+### Virtual machine scale sets
+
+> [!NOTE]
+> In this version of Configuration Manager, a CMG with a virtual machine scale set is a pre-release feature. To enable it, see [Pre-release features](../../../servers/manage/pre-release-features.md).
+
+<!--3601040-->
+Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. This support is only if they don't currently have a CMG deployed using classic cloud services to another subscription. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
+
+- Additional [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
+
+- Different deployment names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. For more information, see [CMG server authentication certificate](server-auth-cert.md).
+
+- The CMG connection point only communicates with the virtual machine scale set in Azure over HTTPS. It doesn't require TCP-TLS ports. For more information, see [Ports and data flow](data-flow.md).
+
+> [!IMPORTANT]
+> If you've already deployed a CMG, you don't need to make any change at this time.
+
+#### Current limitations for a CMG with a virtual machine scale set
+
+- If you require more than one CMG instance, they all have to use the same deployment method.
+- The supported number of concurrent client connections is 2,000 per VM instance. For more information, see [Performance and scale](#performance-and-scale).
+- It's only supported with a standalone primary site.
+- It doesn't support Azure US Government Cloud environments.
+- Users may experience a delay of up to three seconds for actions in Software Center.
+- Configuration Manager currently creates the Azure storage container based on the name of the resource group. Azure has different naming requirements for resource groups and storage containers. Make sure the name of the resource group for this service only has lowercase letters, numbers, and hyphens. If you have an existing resource group that doesn't work, rename it in the Azure portal, or create a new resource group.<!-- 8888841 -->
+- In versions 2010 and 2103, if you have more than one HTTPS management point, then you can't install the Configuration Manager client on devices over the internet. If you need to [Install off-premises clients using a CMG](configure-clients.md#install-off-premises-clients-using-a-cmg), then you can only have one HTTPS management point. You also need to enable the CMG for content.<!-- 9760068 -->
 
 ### Hierarchy design
 
@@ -111,7 +141,7 @@ Many organizations have separate environments for production, test, development,
 
 Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
 
-For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](cloud-management-gateway-faq.md#bkmk_tenant)
+For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](/mem/configmgr/core/clients/manage/cmg/cloud-management-gateway-faq#do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service-)
 
 ## Requirements
 
@@ -124,7 +154,9 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 - An **Azure subscription** to host the CMG.
 
     > [!IMPORTANT]
-    > CMG doesn't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 -->
+    > CMG deployments with the **cloud service (classic)** method don't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 --> In version 2006 and earlier, this deployment method is the only option.
+    >
+    > Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](#virtual-machine-scale-sets).
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
@@ -145,8 +177,6 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [Configure client authentication](configure-authentication.md).
 
 - Clients must use **IPv4**.
-
-- Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
 
 ## Performance and scale
 

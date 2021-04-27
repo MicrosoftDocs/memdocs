@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Education profiles in Intune are designed for students to take a test or exam on devices. This feature includes the **Take a Test** app and settings to add a test URL, choose how end-users sign in to the test, and more. This feature supports the following platform:
 
-- Windows 10 and later
+- Windows 10 and newer
 
 When the user signs in, the Take a Test app automatically opens with the test you entered. No other apps can run on the device while the test is in progress. [Take tests in Windows 10](/education/windows/take-tests-in-windows-10) provides more details on the Take a Test app.
 
@@ -45,7 +45,7 @@ This article lists the steps to create a device configuration profile  in Micros
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Secure assessment (Education)**.
+    - **Profile**: Select **Templates** > **Secure assessment (Education)**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -56,7 +56,7 @@ This article lists the steps to create a device configuration profile  in Micros
 6. Select **Next**.
 7. In **Configuration settings**, enter the settings you want to configure:
 
-    - [Windows 10 and later](education-settings-windows.md)
+    - [Windows 10 and newer](education-settings-windows.md)
 
 8. Select **Next**.
 

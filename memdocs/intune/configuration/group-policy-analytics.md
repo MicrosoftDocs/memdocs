@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 04/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -66,7 +66,7 @@ Be sure the file is less than 1 MB and has a proper unicode encoding. If the exp
 
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
-    - **MDM Support**: Shows the percentage of group policy settings in the GPO that has the same setting in Intune.
+    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
 
@@ -86,7 +86,7 @@ Be sure the file is less than 1 MB and has a proper unicode encoding. If the exp
 
       **No** means there isn't a matching setting available to MDM providers, including Intune.
 
-      For more information on device configuration profiles, see [Apply features and settings on your devices using device profiles](device-profiles.md).      
+      For more information on device configuration profiles, see [Apply features and settings on your devices using device profiles](device-profiles.md).
 
     - **Value**: Shows the value imported from the GPO. It shows different values, such `true`, `900`, `Enabled`, `false`, and so on.
     - **Scope**: Shows if the imported GPO targets users or targets devices.
@@ -130,7 +130,7 @@ Group Policy analytics can parse the following CSPs:
     - See the list of settings in your GPO.
     - Use the search bar to find specific settings.
     - Get a time stamp of when the report was last generated. 
-    
+
     > [!NOTE]
     > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
 
@@ -139,9 +139,9 @@ Group Policy analytics can parse the following CSPs:
 
 You can provide feedback on Group Policy Analytics when you select **Got feedback**. Examples of feedback areas:
 
-* You received errors during GPO omport or analytics that you need more information.
-* How easy is it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
-* Will this tool help you move some workloads to Endpoint Manager? If yes, what workloads are you considering?
+- You received errors during GPO import or analytics, and you need more specific information.
+- How easy is it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
+- Will this tool help you move some workloads to Endpoint Manager? If yes, what workloads are you considering?
 
 To get information on the customer experience, the feedback is aggregated, and sent to Microsoft. Entering an email is optional, and may be used to get more information.
 

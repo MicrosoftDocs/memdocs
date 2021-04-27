@@ -10,8 +10,7 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1906 of Configuration Manager current branch
@@ -158,13 +157,13 @@ You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-relea
 
 You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone) and [Pre-release features](../../servers/manage/pre-release-features.md#bkmk_table).
+For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone) and [Pre-release features](../../servers/manage/pre-release-features.md#list-of-pre-release-features).
 
 ### Added permissions to the Security Administrator role
 
 <!--4683130-->
 
-The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](../../understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role:
+The following permissions have been added to Configuration Manager's built-in [**Security Administrator**](../../understand/fundamentals-of-role-based-administration.md#security-roles) role:
 
 - Read on SMS Script
 - Run CMPivot on Collection
@@ -425,7 +424,7 @@ For more information, see [Device restart notifications](../../clients/deploy/de
 
 <!--4655176-->
 
-You can now provide users with a direct link to a [custom tab](../../clients/deploy/about-client-settings.md#software-center-tab-visibility) in Software Center.
+You can now provide users with a direct link to a [custom tab](../../clients/deploy/about-client-settings.md#software-center-customization---tabs) in Software Center.
 
 Use the following URL format to open Software Center to a particular tab:
 
@@ -446,7 +445,7 @@ You can also use this syntax to open default tabs in Software Center:
 |`Compliance`|Device compliance|
 |`Options`|Options|
 
-For more information, see [Software Center tab visibility](../../clients/deploy/about-client-settings.md#software-center-tab-visibility).
+For more information, see [Software Center tab visibility](../../clients/deploy/about-client-settings.md#software-center-customization---tabs).
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -537,7 +536,7 @@ For more information, see [Create and deploy Windows Defender Application Guard 
 
 You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
-For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#how-to-configure-security-scopes-for-an-object).
 
 ### Add SMBIOS GUID column to device and device collection nodes
 

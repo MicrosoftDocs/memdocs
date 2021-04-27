@@ -2,12 +2,12 @@
 # required metadata
 
 title: Windows Hello for Business settings in Microsoft Intune - Azure | Microsoft Docs
-description: See a list of all the PIN, biometric, and anti-spoofing settings in an identity protection profile to use and configure Windows Hello for Business on Windows 10 devices in Microsoft Intune.
+description: View details for Windows Hello for Business settings you configure in an Intune identity protection profile for device groups in Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 03/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,20 +28,23 @@ ms.reviewer: shpate
 
 ---
 
-# Windows 10 device settings to enable Windows Hello for Business in Intune
+# Identity protection profile settings in Intune for Windows Hello for Business 
 
-This article lists and describes the Windows Hello for Business settings you can control on Windows 10 devices in Intune. As an Intune administrator, you can configure and assign these settings to Windows 10 devices as part of your mobile device management (MDM) solution. 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+This article describes Windows Hello for Business settings you can configure in an Identity protection profile. Identity protection profiles are part of device configuration policy in Microsoft Intune. With an Identity protection profile, you can configure settings on discrete groups of Windows 10 devices. To configure Windows Hello for Business tenant-wide, as part of *device enrollment*, see the section [Create a Windows Hello for Business policy](../protect/windows-hello.md#create-a-windows-hello-for-business-policy) in *Integrate Windows Hello for Business with Microsoft Intune*. This section not only describes how to create a tenant-wide configuration policy, but also describes the settings for the enrollment policy. 
 
 You can find additional information about these settings in [Configure Windows Hello for Business Policy settings](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), in the Windows Hello documentation.
 
-
-To learn more about Windows Hello for Business profiles in Intune, see [configure identity protection](identity-protection-configure.md).
+To learn more about identity protection profiles in Intune, see [configure identity protection](identity-protection-configure.md).
 
 ## Before you begin
 
 [Create a configuration profile](identity-protection-configure.md#create-the-device-profile).
 
 ## Windows Hello for Business
+
 - **Configure Windows Hello for Business**:
   - **Not configured** - Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows 10 devices is not changed. All other settings on the pane are unavailable.
 
@@ -108,7 +111,7 @@ To learn more about Windows Hello for Business profiles in Intune, see [configur
     A TPM chip provides an additional layer of data security.  
 
     - **Enabled** - Only devices with an accessible TPM can provision Windows Hello for Business.
-    - **Not configured** - Devices first attempt to use a TPM. If this is not available, they can use software encryption.
+    - **Not configured** - Devices first attempt to use a TPM. If a TPM isn't available, they can use software encryption.
     
     **Default**: Not configured
 

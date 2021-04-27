@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 12/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# iOS/iPadOS settings to mark devices as compliant or not compliant using Intune
+# Device Compliance settings for iOS/iPadOS in Intune
 
 This article lists and describes the different compliance settings you can configure on iOS/iPadOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require an email, mark rooted (jailbroken) devices as not compliant, set an allowed threat level, set passwords to expire, and more.
 
@@ -92,7 +92,7 @@ For details about email profiles, see [configure access to organization email us
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device.
 
-- **Maximum OS build version*  
+- **Maximum OS build version**  
   *Supported for iOS 8.0 and later*
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device.

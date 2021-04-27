@@ -5,13 +5,11 @@ description: Configure security-related options for Configuration Manager.
 ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Configure security in Configuration Manager
@@ -19,14 +17,16 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 Use the information in this article to help you set up security-related options for Configuration Manager. It covers the following security options:
-- [Client computer communication](#BKMK_ConfigureClientPKI) for client PKI certificates  
+
+- [Client computer communication](#BKMK_ConfigureClientPKI) for client PKI certificates
 - [Signing and encryption](#BKMK_ConfigureSigningEncryption)  
 - [Role-based administration](#BKMK_ConfigureRBA)  
 - [Manage accounts](#BKMK_ManageAccounts)  
 - [Configure Azure Active Directory](#bkmk_azuread)  
 - [Configure SMS Provider authentication](#bkmk_auth)  
 
-
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 ##  <a name="BKMK_ConfigureClientPKI"></a> Configure settings for client PKI certificates  
 
@@ -36,10 +36,7 @@ If you want to use public key infrastructure (PKI) certificates for client conne
 
 1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select the primary site to configure.  
 
-2.  In the ribbon, choose **Properties**. Then switch to the **Client Computer Communication** tab.  
-
-    > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+2.  In the ribbon, choose **Properties**. Then switch to the **Communication Security** tab.  
 
 3.  Select the settings for site systems that use IIS.  
 

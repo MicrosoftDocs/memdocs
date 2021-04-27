@@ -2,10 +2,10 @@
 title: Operations and maintenance for reporting
 titleSuffix: Configuration Manager
 description: Learn the details of managing reports and report subscriptions in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
@@ -16,16 +16,16 @@ ms.author: aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-After the infrastructure is in place for reporting in Configuration Manager, there are a number of operations that you typically do to manage reports and report subscriptions.
+After the infrastructure is in place for reporting in Configuration Manager, there are many operations that you typically do to manage reports and subscriptions.
 
 > [!NOTE]
-> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).
+> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).  
 
 ## Run a report from Reporting Services
 
 Configuration Manager stores its reports in SQL Server Reporting Services. The report retrieves data from the Configuration Manager site database. You can access reports in the Configuration Manager console or by using Report Manager via a web browser. Open reports from a web browser on any computer that can access the reporting services point, and the user has sufficient rights to view the reports. To run reports, you need **Read** rights for the **Site** permission and the **Run Report** permission for specific objects.
 
-When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#-languages-for-reports).
+When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#bkmk_languages).
 
 > [!NOTE]  
 > Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
@@ -322,3 +322,38 @@ Use the following procedure to create a report subscription to deliver a report 
 1. Complete the wizard.
 
 1. Verify that Configuration Manager successfully created the report subscription. Select the **Subscriptions** node to view and modify report subscriptions.
+
+## Favorites
+
+<!--8034298-->
+
+Configuration Manager ships with several hundred reports by default, and you may have added more to that list. Instead of continually searching for reports you commonly use, starting in version 2103, you can make a report a favorite. This action allows you to quickly access it from the new **Favorites** node.
+
+The list of favorites is per user, not per site or hierarchy.
+
+### Prerequisites for report favorites
+
+The version of SQL Server Reporting Services on the site's reporting service point needs to be SQL Server 2017 or later.
+
+> [!NOTE]
+> All instances of SQL Server Reporting Services on the server need to be version 2017 or later.<!-- 9413706 -->
+
+### Add a favorite
+
+1. In the Configuration Manager console, go to the **Monitoring** workspace. Expand the **Reporting** node, and select either the **Reports** or **Power BI Reports** node.
+
+1. Select a report that you frequently use. Then in the ribbon, select **Add to Favorites**. The report's icon changes to a yellow star, which indicates that it's a favorite.
+
+    :::image type="content" source="media/8034298-add-report-favorite.png" alt-text="Screenshot of the Add to Favorites action on a Power BI report":::
+
+    > [!TIP]
+    > You can select more than one report to add them all as favorites.
+
+    To remove a report from the list of favorites, select it, and then select **Remove from Favorites**. When you remove a favorite, Configuration Manager doesn't delete the report.
+
+1. Under the **Reporting** node, expand the new **Favorites** node. To view your list of favorites, select either the **Reports** or **Power BI Reports** node.
+
+    > [!TIP]
+    > You can directly connect to your favorite reports in your browser. For example, `https://rsp.contoso.com/Reports/favorites`.
+
+    You can manage the reports the same from the list of favorites.

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 02/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 app deployment by using Microsoft Intune 
 
-Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows 10 scenarios, and also covers key details to note when you're deploying apps to Windows. 
+Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows 10 scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
 
 Line-of-business (LOB) apps and Microsoft Store for Business apps are the app types supported on Windows 10 devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.  
 
@@ -110,7 +110,7 @@ Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business a
   - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
-> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](/windows/deployment/windows-autopilot/white-glove).
+> When used in combination with an Autopilot pre-provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context. 

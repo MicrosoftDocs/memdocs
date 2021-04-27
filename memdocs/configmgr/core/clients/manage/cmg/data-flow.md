@@ -2,7 +2,7 @@
 title: Data flow for cloud management gateway
 titleSuffix: Configuration Manager
 description: Understand how data flows between components of the cloud management gateway (CMG), including network ports and internet endpoints.
-ms.date: 09/28/2020
+ms.date: 04/14/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -54,7 +54,7 @@ This table lists the required network ports and protocols. The *Client* is the d
 | Client | HTTPS | 443 | CMG | General client communication |
 | Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
-| CMG connection point | HTTPS or HTTP | 443 or 80 | Software update point | On-premises traffic, port depends upon software update point configuration |
+| CMG connection point | HTTPS or HTTP | 443 or 80 / 8530 or 8531 | Software update point | On-premises traffic, port depends upon software update point configuration |
 
 When you allow the CMG to function as a cloud distribution point and serve content from Azure storage, some additional requirements apply. For more information, see [Use a cloud distribution point: Ports and data flow](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).
 
@@ -62,11 +62,15 @@ When you allow the CMG to function as a cloud distribution point and serve conte
 
 #### <a name="bkmk_port-note1"></a> Note 1: CMG connection point TCP-TLS ports
 
+These ports only apply when you deploy the CMG as a **cloud service (classic)**, which was the only method available in version 2006 and earlier.
+
 The CMG connection point first tries to establish a long-lived TCP-TLS connection with each CMG VM instance. It connects to the first VM instance on port 10140. The second VM instance uses port 10141, up to the 16th on port 10155. A TCP-TLS connection has the best performance, but it doesn't support internet proxy. If the CMG connection point can't connect via TCP-TLS, then it falls back to HTTPS<sup>[Note 2](#bkmk_port-note2)</sup>.
 
 #### <a name="bkmk_port-note2"></a> Note 2: CMG connection point HTTPS ports for one VM
 
 If the CMG connection point can't connect to the CMG via TCP-TLS<sup>[Note 1](#bkmk_port-note1)</sup>, it connects to the Azure network load balancer over HTTPS 443 only for one VM instance.  
+
+Starting in version 2010, if you deploy the CMG in a **virtual machine scale set**, the CMG connection point only communicates with the service in Azure over HTTPS. It doesn't require TCP-TLS ports to build the CMG communication channel.
 
 #### <a name="bkmk_port-note3"></a> Note 3: CMG connection point HTTPS ports for two or more VMs
 
@@ -76,6 +80,26 @@ If there are two or more VM instances, the CMG connection point uses HTTPS 10124
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the CMG connection point and service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_cloud).
+For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#cloud-services).
 
 [!INCLUDE [Internet endpoints for cloud services](../../../plan-design/network/includes/internet-endpoints-cloud-services.md)]
+
+## HTTP headers and verbs
+
+Any networking device that manages communication between the client, the CMG, and the on-premises site systems has to allow the following HTTP headers and verbs. If these items are blocked, it will affect client communication through the CMG.<!-- MEMDocs#1309 -->
+
+### HTTP headers
+
+- Range:
+- CCMClientID:
+- CCMClientIDSignature:
+- CCMClientTimestamp:
+- CCMClientTimestampsSignature:
+
+### HTTP verbs
+
+- HEAD
+- CCM_POST
+- BITS_POST
+- GET
+- PROPFIND

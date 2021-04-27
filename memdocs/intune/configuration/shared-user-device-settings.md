@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,7 +52,7 @@ When the profile is created in Intune, you deploy or assign the profile to devic
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Shared multi-user device**.
+   - **Profile**: Select **Templates** > **Shared multi-user device**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -63,7 +63,7 @@ When the profile is created in Intune, you deploy or assign the profile to devic
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Windows 10 and later](shared-user-device-settings-windows.md)
+    - [Windows 10 and newer](shared-user-device-settings-windows.md)
     - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
 8. Select **Next**.

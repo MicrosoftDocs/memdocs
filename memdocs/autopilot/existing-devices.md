@@ -13,6 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 01/05/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -239,6 +240,10 @@ See the following examples.
     ```
     - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package that was created earlier.
 
+     > [!IMPORTANT]
+     > TThe AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
+
+
 17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.
 18. Select the **Autopilot for existing devices config** package created earlier and click **OK**. An example is displayed at the end of this section.
 19. Under the **Setup Operating System** group, click the **Setup Windows and Configuration Manager** task.
@@ -323,7 +328,7 @@ After the task sequence has completed, the device will boot into OOBE and provid
 ### Register the device for Windows Autopilot
 
 Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot. 
-After updating to Windows 10, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+After updating to Windows 10, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 

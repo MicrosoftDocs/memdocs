@@ -6,7 +6,7 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger 
 ms.author: mandia 
 manager: dougeby 
-ms.date: 06/24/2020
+ms.date: 04/14/2021
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Device management overview
 
-A key task of any Administrator is to protect and secure an organization’s resources and data on user devices in their organization. This task is **device management**. Users receive and send email from personal accounts, browse websites from home and from restaurants, and install apps and games. These users are also employees and students. On their devices, they want to access work and school resources, such as email and OneNote, and access them quickly. As an administrator, your goal is to protect these resources, and provide easy access for users across their many devices, all at the same time.
+A key task of any Administrator is to protect and secure an organization’s resources and data on devices in their organization. This task is **device management**. Users receive and send email from personal accounts, browse websites from home and from restaurants, and install apps and games. These users are also employees and students. On their devices, they want to access work and school resources, such as email and OneNote, and access them quickly. As an administrator, your goal is to protect these resources, and provide easy access for users across their many devices, all at the same time.
 
 Device management enables organizations to protect and secure their resources and data, and from different devices.
 
@@ -47,7 +47,7 @@ Intune is included with Microsoft Azure, Microsoft 365, and integrates with Azur
 
 ## Microsoft Intune
 
-Many organizations, such as Microsoft, use Intune to secure proprietary data that users access from their company-owned and personal mobile devices. Intune includes device and app configuration policies, software update policies, and installation statuses (charts, tables, and reports) to help you secure and monitor data access.
+Many organizations, including Microsoft, use Intune to secure proprietary data that users access from their company-owned and personally owned devices. Intune includes device and app configuration policies, software update policies, and installation statuses (charts, tables, and reports). These resources help you secure and monitor data access.
 
 It's common for people to have multiple devices that use different platforms. For example, an employee might use Surface Pro for work, and an Android mobile device in their personal life. And, it's common for a person to access organizational resources, such as Microsoft Outlook and SharePoint, from these multiple devices.
 
@@ -61,15 +61,15 @@ With Intune, you can manage multiple devices per person, and the different platf
 
 For more information about Intune, see [What is Intune](what-is-intune.md).
 
-## Co-management
+## Co-management and tenant attach
 
 Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](../../configmgr/comanage/quickstart-conditional-access.md), [running remote actions](../../configmgr/comanage/quickstart-remote-actions.md), [using Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md), and more.
 
 [Microsoft Endpoint Manager](../../endpoint-manager-overview.md) is a solution platform that unifies several services. It includes [Microsoft Intune](what-is-intune.md) for cloud-based device management, and [Configuration Manager + Intune](../../configmgr/comanage/overview.md) for cloud-attach device management.
 
-If you use Configuration Manager, and you're ready to move some tasks to the cloud, then co-management is your answer.
+If you use Configuration Manager, and you're ready to move some tasks to the cloud, then co-management is your answer. For more information about cloud-attaching your Configuration Manager, see [What is co-management](../../configmgr/comanage/overview.md).
 
-For more information about cloud-attaching your Configuration Manager, see [What is co-management](../../configmgr/comanage/overview.md).
+Endpoint Manager tenant attach is also an option. You upload your devices to the Endpoint Manager admin center, without enabling automatic enrollment for co-management or switching workloads to Intune. You can see your devices, and run actions on Configuration Manager managed devices. For more information, see [Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
 ## Integration with secure-and-protect services
 
@@ -82,7 +82,7 @@ A key task of any device management solution is to provide security and protecti
 - **Windows Defender** includes many security features to help protect Windows 10 devices. For example, using Intune and Windows Defender together, you can:
 
   - Enable [Windows Defender SmartScreen](../protect/endpoint-protection-windows-10.md) to look for suspicious activity in files and apps on mobile devices.
-  - Use [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) to help prevent security breaches on mobile devices. And, help limit the impact of a security breach by blocking a user from corporate resources.
+  - Use [Microsoft Defender for Endpoint)](../protect/advanced-threat-protection.md) to help prevent security breaches on mobile devices. And, help limit the impact of a security breach by blocking a user from corporate resources.
 
 - **Conditional Access** is a feature of Azure Active Directory, and integrates nicely with Intune. Using [Conditional Access](../protect/conditional-access.md), make sure only compliant devices are allowed access to email, SharePoint, and other apps.
 
@@ -90,15 +90,13 @@ A key task of any device management solution is to provide security and protecti
 
 There are a couple of ways to approach device management. First, you can manage different aspects of devices using the features built in to Intune. This approach is called **Mobile device management (MDM)**. Users "enroll" their devices, and use certificates to communicate with Intune. As an IT administrator, you push apps on devices, restrict devices to a specific operating system, block personal devices, and more. If a device is ever lost or stolen, you can also remove all data from the device.
 
-In the second approach, you manage apps on devices. This approach is called **Mobile application management (MAM)**. Users can use their personal devices to access organizational resources. When opening an app, such as email or SharePoint, users are prompted for additional authentication. If a device is ever lost or stolen, you can remove all organization data from the Intune Managed applications.
+In the second approach, you manage apps on devices. This approach is called **Mobile application management (MAM)**. Users can use their personal devices to access organizational resources. When opening an app, such as email or SharePoint, users can be prompted to authenticate. If a device is ever lost or stolen, you can remove all organization data from the Intune managed applications.
 
 You can also use a combination of [MDM and MAM](byod-technology-decisions.md) together.
 
-When you set up Intune, you also choose to work solely in the Azure portal to manage devices, or use Intune and Microsoft 365 together to manage devices. [Migrating mobile device management to Intune in the Azure portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) is a Microsoft IT case study. In this case study, see how Microsoft IT chose a modern device management approach, and read the lessons learned.
-
 ## Simplify IT tasks using the Device Management admin center
 
-The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is a one-stop shop to manage and complete tasks for your mobile devices. This workspace includes the services used for device management, including Intune and Azure Active Directory, and to also manage client apps.
+The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is a one-stop shop to manage and complete tasks for your mobile devices. This admin center includes the services used for device management, including Intune and Azure Active Directory, and to also manage client apps.
 
 On the Device Management admin center, you can:
 
@@ -119,4 +117,6 @@ On the Device Management admin center, you can:
 
 ## Next steps
 
-When you're ready to get started with an MDM or MAM solution, walk through the different steps to set up Intune, enroll devices, and start creating policies. [Mobile device management for Microsoft 365](/microsoft-365/enterprise/mobility-infrastructure) is also a great resource.
+When you're ready to get started with an MDM or MAM solution, walk through the different steps to set up Intune, enroll devices, and start creating policies. The [Microsoft Intune planning guide](intune-planning-guide.md) is a good resource.
+
+Microsoft IT case study: [Migrating mobile device management to Intune in the Azure portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal)

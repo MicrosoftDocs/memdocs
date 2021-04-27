@@ -197,7 +197,7 @@ You can use the task sequence to deploy a Windows 10 in-place upgrade via the cl
 
 Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
 
-For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
 
 ### Improvements to OS deployment
 

@@ -10,6 +10,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.reviewer: 
 manager: laurawi
 ms.collection: M365-modern-desktop
@@ -22,7 +23,7 @@ ms.topic: troubleshooting
 
 The following table displays support information for the Windows Autopilot program.  
 
-Before contacting the resources listed below for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.md).
+Before contacting the resources listed below for Windows Autopilot-related issues, check the [Windows Autopilot FAQ](autopilot-faq.yml).
 
 | Audience   |   Support contact     |
 |------------|---------------------------------------|
@@ -32,6 +33,6 @@ Before contacting the resources listed below for Windows Autopilot-related issue
 | End-user | Contact your IT administrator. |
 | Microsoft Partner Center (MPC) users | Use the [help resources](https://partner.microsoft.com/support) available in MPC. |
 | Microsoft Store for Business (MSfB) users | Use the help resources available in MSfB. |
-| Intune users | From the Microsoft Azure portal, click [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview). |
+| Intune users | From the Microsoft Endpoint Manager admin center, click [Help and support](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/TenantAdminMenu/helpSupport). |
 | Microsoft 365 Business Premium | Support is accessible directly through the Microsoft 365 Business Premium portal when logged in:  https://support.microsoft.com/en-us. |
 | Queries relating to MDA testing | Contact MDAHelp@microsoft.com. |

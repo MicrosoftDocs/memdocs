@@ -29,7 +29,8 @@
   - name: Use Intune without Google Mobile Services
     href: manage-without-gms.md      
   - name: MAM FAQ
-    href: mam-faq.md
+    href: mam-faq.yml
+    displayName: MAM
 - name: How-to guides
   items:
     - name: Add apps 
@@ -88,6 +89,8 @@
             href: apps-win32-prepare.md
           - name: Add a Win32 app
             href: apps-win32-add.md
+          - name: Win32 app supersedence
+            href: apps-win32-supersedence.md
           - name: Troubleshoot a Win32 app
             href: apps-win32-troubleshoot.md
           - name: Win32 app S mode devices
@@ -104,7 +107,7 @@
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
           href: apps-edge-macos.md   
-        - name: Microsoft Defender ATP for macOS
+        - name: Microsoft Defender for Endpoint for macOS
           href: apps-advanced-threat-protection-macos.md
       - name: PowerShell scripts
         href: intune-management-extension.md
@@ -130,7 +133,7 @@
       items:
       - name: App configuration policies
         href: app-configuration-policies-overview.md
-        displayName: App configuration policy; configuration policy
+        displayName: App configuration policy; configuration policy; AFW
       - name: iOS managed devices
         href: app-configuration-policies-use-ios.md
       - name: Android managed devices
@@ -217,15 +220,15 @@
       - name: Help users troubleshoot problems
         href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
       - name: Troubleshoot app installation problems
-        href: troubleshoot-app-install.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-install
       - name: App installation error reference
-        href: app-install-error-codes.md
+        href: /troubleshoot/mem/intune/app-install-error-codes
       - name: Troubleshoot mobile application management
-        href: troubleshoot-mam.md
+        href: /troubleshoot/mem/intune/troubleshoot-mam
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
       - name: Troubleshooting app protection policy deployment
-        href: troubleshoot-app-protection-policy-deployment.md
+        href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK

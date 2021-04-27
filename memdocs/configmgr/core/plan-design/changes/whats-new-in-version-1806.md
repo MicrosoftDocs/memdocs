@@ -345,7 +345,7 @@ For more information, see [Phase settings](../../../osd/deploy-use/create-phased
 <!--1358500-->
 The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
 
-For more information, see [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
+For more information, see [In-place upgrade recommendations](../../../osd/understand/in-place-upgrade-recommendations.md#run-actions-on-failure).
 
 
 ### Improvements to PXE-enabled distribution points
@@ -571,7 +571,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) and [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) and [Product feedback](../../understand/product-feedback.md).
 
 
 

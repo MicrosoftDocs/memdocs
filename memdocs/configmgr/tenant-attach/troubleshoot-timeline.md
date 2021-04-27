@@ -2,13 +2,13 @@
 title: Troubleshooting the device timeline
 titleSuffix: Configuration Manager
 description: "Troubleshooting the device timeline for Configuration Manager tenant attach"
-ms.date: 09/8/2020
+ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
-author: mestew
+author: mestew 
 ms.author: mstewart
 ---
 
@@ -33,7 +33,7 @@ When viewing or synching the timeline from the Microsoft Endpoint Manager admin 
 **Possible causes:**
 
 - Make sure [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) are configured and the user account accessing tenant attach features from the Microsoft Endpoint Manager admin center is discovered by both.
-- The user account might be missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
+- The user account might need an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. <!--7980141-->
 
 ### <a name="bkmk_403"></a> Unable to get timeline information
 
@@ -70,6 +70,13 @@ Verify the account has the following permissions:
 
 ## Known issues
 
+### Time out error
+<!--9114968, 9102454-->
+You will receive a time out error if the following condition applies:
+
+- You're opening **Timeline** for the very first time after restarting SMSExecutive on the service connection point's on-premises server. 
+
+To workaround the issue, reload the **Timeline** page.
 ### Boundary group ID is used rather than the name
 
 **Scenario:** If you are running Configuration Manager version 2002 and a device changes boundary groups, you may see the event message shows the boundary group ID rather than the name.

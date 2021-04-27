@@ -2,7 +2,7 @@
 title: Monitor connection health
 titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 01/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -221,13 +221,13 @@ For more information, review M365AHandler.log on the client.
 ### Minimum compatibility update
 
 <!--18,19,32-->
-The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics, 10.0.17763.
+The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics, 10.0.17673.
 
 Install the latest compatibility update. For more information, see [Compatibility updates](enroll-devices.md#update-devices).
 
 ### Appraiser version
 
-This property displays the current version of the Appraiser component on the device. It shows the file version on `%windir%\System32\appraiser.dll`, without the decimal points. For example, file version 10.0.17763 displays as 10017763.
+This property displays the current version of the Appraiser component on the device. It shows the file version on `%windir%\System32\appraiser.dll`, without the decimal points. For example, file version 10.0.17673 displays as 10017673.
 
 ### Last successful full run of Appraiser
 
@@ -376,7 +376,7 @@ There's a different ID for the device. This registry key is used by group policy
 :::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal" lightbox="media/commercial-id.png":::
 
 > [!Important]  
-> Only **Get new ID key** when you can't use the current one. If you regenerate the commercial ID, [re-enroll your devices with the new Id](enroll-devices.md#device-enrollment). This process might result in loss of diagnostic data during the transition.  
+> Only use the option to **Get new ID key** when you can't use the current one. You can't undo the action to regenerate your commercial ID. Until devices receive the new commercial ID, this action results in temporary functionality and data loss for all solutions and devices that have the current commercial ID. If you regenerate the commercial ID, [re-enroll your devices with the new ID](enroll-devices.md#device-enrollment). If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), confirm that it has the new commercial ID in the settings page. If necessary, re-enroll devices.<!--9053615-->
 
 ### Windows commercial data opt-in
 
@@ -463,6 +463,10 @@ This property checks that Windows is properly configured to allow diagnostic dat
 Check the permissions on these registry keys. Make sure that the local System account can access these keys for the Configuration Manager client to set. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](enroll-devices.md#windows-settings).  
 
 For more information, review M365AHandler.log on the client.  
+
+## Connected Services
+
+On the Desktop Analytics portal, under **Connected services** in the Global Settings group, the number of Enrolled devices sending data is the sum of [Properly enrolled](#properly-enrolled) devices and devices [Missing data](#missing-data).
 
 ## See also
 

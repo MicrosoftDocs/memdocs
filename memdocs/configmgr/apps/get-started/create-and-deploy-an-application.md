@@ -21,14 +21,12 @@ In this topic, you'll jump right in and create an application with Configuration
 
  This procedure is designed to give you an overview of how to create and deploy Configuration Manager applications. However, it does not cover all the configuration options, or how to create and deploy applications for other platforms.  
 
- For specific details that are relevant to each platform, see one of the following topics:  
+ For specific details that are relevant to each platform, see one of the following articles:  
 
 - [Create Windows applications](creating-windows-applications.md)
 - [Create Windows Phone applications](../../mdm/deploy-use/management-tasks-applications.md#bkmk_winphone)
 - [Create Mac computer applications](creating-mac-computer-applications.md)
-- [Create Linux and UNIX server applications](creating-linux-and-unix-server-applications.md)
 - [Create Windows Embedded applications](creating-windows-embedded-applications.md)
-
 
 If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [Create applications](../../apps/deploy-use/create-applications.md) to learn about all the options that are available when you create and deploy applications.  
 

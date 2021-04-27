@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 01/28/2020
+  ms.date: 12/23/2020
 
 landingContent:
   - title: Get MDT
@@ -22,6 +22,10 @@ landingContent:
             url: https://aka.ms/mdtdownload
           - text: Release notes
             url: release-notes.md
+          - text: Known issues
+            url: known-issues.md
+          - text: FAQ
+            url: faq.yml
       - linkListType: how-to-guide
         links:
           - text: How to use MDT
@@ -47,6 +51,6 @@ landingContent:
           - text: Toolkit reference
             url: toolkit-reference.md
           - text: Troubleshoot MDT
-            url: troubleshooting-reference.md
+            url: /troubleshoot/mem/configmgr/troubleshooting-reference
           - text: UDI developer's guide
             url: user-driven-installation-developers-guide.md

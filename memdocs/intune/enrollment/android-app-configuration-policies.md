@@ -3,7 +3,7 @@
 
 title: Android Enterprise security configuration policies
 titleSuffix: Microsoft Intune
-description: Learn the restrictions and settings suggested for Android Enterprise device basic and high security.
+description: Learn the restrictions and settings for Android Enterprise device basic and high security.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), you must properly set app configuration policies for Android Enterprise devices.
 
-Android Enterprise work profile devices are designed to isolate work and personal data from one another. Android Enterprise fully managed devices are designed work or school data only. So, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
+Android Enterprise personally-owned/corporate-owned work profile devices are designed to isolate work and personal data from one another. Android Enterprise fully managed devices are designed work or school data only. So, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
 
 ## Disallow personal accounts for Microsoft apps on Android Enterprise devices
 
@@ -47,4 +47,4 @@ Android Enterprise work profile devices are designed to isolate work and persona
 
 
 ## Next steps
-Apply [Android Enterprise work profile security settings](android-work-profile-security-settings.md) or [Android Enterprise fully managed security settings](android-fully-managed-security-settings.md).
+Apply [Android Enterprise personally-owned/corporate-owned work profile security settings](android-work-profile-security-settings.md) or [Android Enterprise fully managed security settings](android-fully-managed-security-settings.md).

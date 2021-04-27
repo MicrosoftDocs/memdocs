@@ -1,29 +1,28 @@
 ---
 title: Managing Surface driver updates
-titleSuffix: "Configuration Manager"
-description: "Configuration Manager synchronizes Surface driver updates for deployment to Surface devices."
+titleSuffix: Configuration Manager
+description: Configuration Manager synchronizes Surface driver updates for deployment to Surface devices.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 04/15/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-
 ---
 
 # Manage Surface drivers with Configuration Manager
 
-*Applies to: System Center Configuration Manager (Current Branch)*
+*Applies to: Configuration Manager (current branch)*
 
-System Center Configuration Manager allows you to synchronize drivers for Surface devices and deploy them like a software update. This functionality allows you to ensure that your Surface devices are running the latest available drivers. This synchronization was first introduced in version 1706 as a pre-release feature and it became a feature in 1710. <!--3684621, 3608197, 1098490-->
+Configuration Manager allows you to synchronize drivers for Surface devices and deploy them like a software update. This functionality allows you to ensure that your Surface devices are running the latest available drivers. This synchronization was first introduced in version 1706 as a pre-release feature and it became a feature in 1710. <!--3684621, 3608197, 1098490-->
 
 ## Prerequisites for synchronizing Surface drivers
 
 - An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
-- Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
+- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 ## Enable sync for Surface drivers
 
@@ -85,23 +84,26 @@ The following table contains the Surface models and versions of Windows 10 on wh
 
 </br>
 
-|Surface Model|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
-|----|----|----|----|----|----|
-|Surface Pro 3|Yes| Yes| Yes |Yes|Yes|
-|Surface Pro 4|Yes| Yes| Yes |Yes|Yes|
-|Surface Pro 6|N/A| Yes| Yes |Yes|Yes|
-|Surface Pro 7|N/A| N/A| N/A |Yes|Yes|
-|Surface Pro X|N/A| N/A| N/A |Yes|Yes|
-|Surface Book|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 2|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 3|N/A| N/A| N/A |Yes|Yes|
-|Surface Laptop|Yes, with the product "Windows 10 S version 1709 and later Servicing drivers" selected| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Laptop 2|N/A| Yes |Yes|Yes|Yes|
-|Surface Laptop 3|N/A| N/A|N/A|Yes |Yes|
-|Surface Go|N/A| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Go 2|N/A| N/A| Yes |Yes|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Studio|Yes| Yes| Yes |Yes|Yes|
-|Surface Studio 2|N/A| Yes| Yes |Yes|Yes|
+|Surface model|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|Windows 10 2004| Windows 10 20H2|
+|----|----|----|----|----|----|----|----|
+|Surface Pro 3|Yes| Yes| Yes |Yes|Yes|Yes|Yes|
+|Surface Pro 4|Yes| Yes| Yes |Yes|Yes|Yes|Yes|
+|Surface Pro 6|N/A| Yes| Yes |Yes|Yes|Yes|Yes|
+|Surface Pro 7|N/A| N/A| N/A |Yes|Yes|Yes|Yes|
+|Surface Pro 7+ |N/A| N/A| N/A |N/A|N/A|N/A|Yes|
+|Surface Pro X|N/A| N/A| N/A |Yes|Yes|Yes|Yes|
+|Surface Pro X with SQ2 chip|N/A| N/A| N/A | N/A| N/A | Yes |Yes|
+|Surface Book|Yes| Yes| Yes |Yes|Yes|Yes|Yes|
+|Surface Book 2|Yes| Yes| Yes |Yes|Yes|Yes|Yes|
+|Surface Book 3|N/A| N/A| N/A |Yes|Yes|Yes|Yes|
+|Surface Laptop|Yes, with the product "Windows 10 S version 1709 and later Servicing drivers" selected| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Laptop 2|N/A| Yes |Yes|Yes|Yes|Yes|Yes|
+|Surface Laptop 3|N/A| N/A|N/A|Yes |Yes|Yes|Yes|
+|Surface Go|N/A| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Go 2|N/A| N/A| Yes |Yes|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Laptop Go |N/A| N/A| N/A | N/A| N/A | Yes |Yes|
+|Surface Studio|Yes| Yes| Yes |Yes|Yes|Yes|Yes|
+|Surface Studio 2|N/A| Yes| Yes |Yes|Yes|Yes|Yes|
 
 ## Verify the configuration
 
@@ -153,10 +155,15 @@ No. Even if the update is imported into WSUS, the update won't be imported into 
 
 For information about how to deploy Surface driver and firmware updates through alternative channels, see [Manage Surface driver and firmware updates](/surface/manage-surface-driver-and-firmware-updates). If you want to download the .msi or .exe file, and then deploy through traditional software deployment channels, see [Keeping Surface Firmware Updated with Configuration Manager](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
+### My Surface drivers are expired or no longer visible after removing my CAS. What should I do?
+<!-- 5728727,8734926, 8763769-->
+
+If you recently removed a central administration site from your hierarchy, you may notice that the option to **Include Microsoft Surface drivers and firmware updates** is no longer enabled. You may also see that the driver updates are expired in your Configuration Manager console. When you remove a CAS, you'll need to re-enable synchronization of Surface drivers and reconfigure this feature. For more information about post-setup tasks for CAS removal, see [Removing the central administration site (CAS)](../../core/servers/deploy/install/remove-central-administration-site.md).<!-- 5728727 -->
+
 ## Next steps
 
 For more information about Surface drivers, see the following articles:
 
-- [Considerations for Surface and System Center Configuration Manager](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
+- [Considerations for Surface and Configuration Manager](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Surface Update History](https://support.microsoft.com/help/4036283/surface-surface-update-history)
 - [Download the latest firmware and drivers for Surface devices](/surface/manage-surface-driver-and-firmware-updates)

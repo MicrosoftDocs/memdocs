@@ -13,6 +13,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -82,7 +83,7 @@ You can set the policy using one of these methods:
    - **Platform** = **Windows 10 or later**
    - **Profile type** = **Device restrictions**
    - **Category** = **General**
-   - **Automatic Redeployment** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.
+   - **Autopilot Reset** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.
  - If you're using an MDM provider other than Intune, check your MDM provider documentation on how to set this policy. 
 
 - Windows Configuration Designer

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,7 +66,7 @@ This article shows you how to create a per-app VPN and VPN app configuration pol
 
 - The Configuration designer and JSON data can successfully use certificate-based authentication. If VPN authentication requires client certificates, then create the certificate profiles before you create the VPN policy. The VPN app configuration policies use the values from the certificate profiles.
 
-  Android Enterprise work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+  Android Enterprise personally-owned work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Per-app VPN overview
 
@@ -111,9 +111,9 @@ If you’re not familiar with creating app configuration policies, see [Add app 
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
     - **Platform**: Select **Android Enterprise**.
     - **Profile type**: Your options:
-      - **All profile types**: This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
-      - **Fully Managed, Dedicated, and Corporate-Owned work profile only**: This option supports certificate-based authentication, and username and password authentication.
-      - **Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
+      - **All Profile Types**: This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
+      - **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
+      - **Personally-Owned Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
     - **Targeted app**: Select the VPN client app you previously added. In the following example, the Cisco AnyConnect VPN client app is used:
 
       :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png" alt-text="Create an app configuration policy to configure VPN or per-app VPN in Microsoft Intune":::
@@ -169,7 +169,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 
     - **Name**: Enter any name. This policy is temporary, and won't be saved.
     - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Work Profile Only**.
+    - **Profile type**: Select **Personally-Owned Work Profile Only**.
     - **Targeted app**: Select the VPN client app you previously added.
 
 3. Select **Next**.
@@ -204,7 +204,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
     - **Profile type**: Your options:
       - **All profile types**: This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
       - **Fully Managed, Dedicated, and Corporate-Owned work profile only**: This option supports certificate-based authentication, and username and password authentication.
-      - **Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
+      - **Personally-Owned Work Profile Only**: This option supports certificate-based authentication, and username and password authentication.
     - **Targeted app**: Select the VPN client app you previously added. 
 
 3. Select **Next**.

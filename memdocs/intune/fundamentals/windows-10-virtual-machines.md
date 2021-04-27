@@ -38,7 +38,7 @@ Intune supports managing virtual machines running Windows 10 Enterprise with cer
 - Windows Autopilot Self-deploying and pre-provisioning deployment types aren't supported because they require a physical Trusted Platform Module (TPM). 
 - Out of Box Experience (OOBE) enrollment isn't supported on VMs that can only be accessed by using RDP (such as VMs that are hosted on Azure). This restriction means:
     - Windows Autopilot and Commercial OOBE aren't supported.
-    - Enrollment Status Page options for device-context policies aren't supported.
+    - Enrollment Status Page isn't supported.
 
 
 ## Configuration

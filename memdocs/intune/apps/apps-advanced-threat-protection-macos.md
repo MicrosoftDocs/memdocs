@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add Microsoft Defender ATP to macOS devices using Microsoft Intune
+title: Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
 titleSuffix:
-description: Learn about adding Microsoft Defender ATP to macOS devices using Microsoft Intune.
+description: Learn about adding Microsoft Defender for Endpoint to macOS devices using Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kellieei
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,9 +29,9 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Add Microsoft Defender ATP to macOS devices using Microsoft Intune
+# Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
 
-Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Defender Advanced Threat Protection (ATP). By selecting this app type in Intune, you can assign and install Microsoft Defender ATP to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Defender ATP to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
+Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Defender for Endpoint. By selecting this app type in Intune, you can assign and install Microsoft Defender for Endpoint to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Defender for Endpoint to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 
 ## Prerequisites
 - The macOS device must be running macOS 10.13 or later.
@@ -39,14 +39,14 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 - Deploy kernel extension in Intune. See more information, see [Add macOS kernel extensions in Intune](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> The kernel extension can be automatically approved only if it is present on the device before the Microsoft Defender ATP app is installed. Else, users will see "System extension blocked" message on Macs and must approve the extension by going to **Security Preferences** or **System Preferences** > **Security & Privacy** and then selecting **Allow**. For more information, see [Troubleshoot kernel extension issues in Microsoft Defender ATP for Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> The kernel extension can be automatically approved only if it is present on the device before the Microsoft DDefender for Endpoint app is installed. Else, users will see "System extension blocked" message on Macs and must approve the extension by going to **Security Preferences** or **System Preferences** > **Security & Privacy** and then selecting **Allow**. For more information, see [Troubleshoot kernel extension issues in Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
-## Add Microsoft Defender ATP to Intune
-You can add Microsoft Defender ATP to Intune using the following steps:
+## Add Microsoft Defender for Endpoint to Intune
+You can add Microsoft Defender for Endpoint to Intune using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **App type** list under the **Microsoft Defender ATP**, select **macOS**.
+3. In the **App type** list under the **Microsoft Defender for Endpoint**, select **macOS**.
 
 ## Configure app information
 In this step, you provide information about this app deployment. This information helps you identify the app in Intune, and it helps users find the app in the company portal.
@@ -78,7 +78,7 @@ When you've completed configuring, select **Add** from the **App app** pane.
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 
 > [!NOTE]
-> Currently, Apple does not provide a way for Intune to uninstall Microsoft Defender ATP on macOS devices.
+> Currently, Apple does not provide a way for Intune to uninstall Microsoft Defender for Endpoint on macOS devices.
 
 ## Next steps
 - To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../protect/endpoint-security-antivirus-policy.md) 

@@ -8,7 +8,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 03/08/2018
+ms.date: 12/17/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -21,7 +21,7 @@ ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+#ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -66,25 +66,23 @@ To learn more, see:
 
 To register an app to use Microsoft Graph API:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) using administrative credentials.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using administrative credentials.
 
     As appropriate, you may use:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications** setting enabled.
 
-2. From the menu, choose **Azure Active Directory** &gt; **App Registrations**.
+2. Select **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **App registrations**.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
-3. Either choose **New application registration** to create a new application or choose an existing application.  (If you choose an existing application, skip the next step.)
+3. Either choose **New registration** to create a new application or choose an existing application.  (If you choose an existing application, skip the next step.)
 
-4. On the **Create** blade, specify the following:
+4. In the **Register an application** pane, specify the following:
 
-    1. A **Name** for the application (displayed when users sign in).
-
-    2. The **Application type** and **Redirect URI** values.
-
-        These vary according to your requirements. For example, if you're using an Azure AD [Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), set **Application Type** to `Native` and **Redirect URI** to `urn:ietf:wg:oauth:2.0:oob`.
+    - A **Name** for the application (displayed when users sign in).
+    - The **Supported account type**.
+    - A **Redirect URI** value. *This value is option.*
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -94,43 +92,33 @@ To register an app to use Microsoft Graph API:
 
         To learn more, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-5. From the application blade:
+5. From the application pane:
 
-    1. Note the **Application ID** value.
+    1. Note the **Application (client) ID** value.
 
-    2. Choose **Settings** &gt; **API access** &gt; **Required permissions**.
+    2. Select **API permissions**.
 
-    <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
-
-6. From the **Required Permissions** blade, choose **Add** &gt; **Add API access** &gt; **Select an API**.
-
-    <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
-
-7. From the **Select an API** blade, choose **Microsoft Graph** &gt; **Select**.  The **Enable access** blade opens and lists permission scopes available to your application.
-
-    <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
+6. From the **API permissions** pane, choose **Add a permission** > **Microsoft APIs** >  **Microsoft Graph**. Then, select the type of permissions your application requires. 
 
     Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 
     For best results, choose the fewest roles needed to implement your application.
 
-    When finished, choose **Select** and **Done** to save you changes.
+    When finished, choose **Add permissions** to save you changes.
 
 At this point, you may also:
 
 - Choose to grant permission for all tenant accounts to use the app without providing credentials.  
 
-    To do so, choose **Grant permissions** and accept the confirmation prompt.
+    To do so, you can grant permissions and accept the confirmation prompt.
 
     When you run the application for the first time, you're prompted to grant the app permission to perform the selected roles.
-
-    <img src="../media/azure-ad-grant-perm.png" width="351" height="162" alt="The Grant permissions button" />
 
 - Make the app available to users outside your tenant.  (This is typically only required for partners supporting multiple tenants/organizations.)  
 
     To do so:
 
-  1. Choose **Manifest** from the application blade, which opens the **Edit Manifest** blade.
+  1. Choose **Manifest** from the application pane.
 
      <img src="../media/azure-ad-edit-mft.png" width="295" height="114" alt="The Edit manifest blade" />
 
@@ -149,7 +137,7 @@ To learn more:
 - [Application permission scopes](/azure/active-directory/develop/active-directory-v2-scopes)
 
 When you grant permission to Microsoft Graph, you can specify the following scopes to control access to Intune features:
-The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the Azure portal and the second column provides the permission scope name.
+The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the second column provides the permission scope name.
 
 _Enable Access_ setting | Scope name
 :--|---
@@ -165,7 +153,7 @@ __Read Microsoft Intune Device Configuration and Policies__ | [DeviceManagementC
 __Read and write Microsoft Intune configuration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
 __Read Microsoft Intune configuration__ | DeviceManagementServiceConfig.Read.All
 
-The table lists the settings as they appear in the Azure portal. The following sections describe the scopes in alphabetical order.
+The table lists the settings as they appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The following sections describe the scopes in alphabetical order.
 
 At this time, all Intune permission scopes require administrator access.  This means you need corresponding credentials when running apps or scripts that access Intune API resources.
 

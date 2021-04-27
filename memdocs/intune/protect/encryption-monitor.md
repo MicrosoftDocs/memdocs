@@ -2,12 +2,12 @@
 # required metadata
 title: Encryption report for encrypted devices in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: View a report on your iOS/iPadOS or Windows device encryption status, and access FileVault and BitLocker recovery keys from within the Microsoft Intune portal.
+description: View a report on your iOS/iPadOS or Windows device encryption status, and access FileVault and BitLocker recovery keys from within the Microsoft Endpoint Manager admin center.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 03/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,10 @@ The Encryption report pane displays a list of the devices you manage with high
 - **Device name** - The name of the device.
 - **OS** – The device platform, such as Windows or macOS.
 - **OS version** – The version of Windows or macOS on the device.
-- **TPM version** *(Applies to Windows 10 only)* – The version of the Trusted Platform Module (TPM) chip on the Windows 10 device.
+- **TPM version** *(applies to Windows 10 only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows 10 device.
+
+  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
+
 - **Encryption readiness** – An evaluation of the devices readiness to support an applicable encryption technology, like BitLocker or FileVault encryption. Devices are identified as:
   - **Ready**: The device can be encrypted by using MDM policy, which requires the device meet the following requirements:
 
@@ -62,12 +65,12 @@ The Encryption report pane displays a list of the devices you manage with high
     - Version 1709 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
     - The device must have a TPM chip
 
-    For more information, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
+    For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
-  - **Not ready**: The device doesn't have full encryption capabilities, but still supports encryption. For example, a Windows device might be encrypted manually by a user, or through Group Policy that can be set to allow encrypting without a TPM.
+  - **Not ready**: The device doesn't have full encryption capabilities, but may still support encryption.
   - **Not applicable**: There isn't enough information to classify this device.
 
-- **Encryption status** – Whether the OS drive is encrypted.
+- **Encryption status** – Whether the OS drive is encrypted. 
 
 - **User Principal Name** - The primary user of the device.
 
@@ -77,13 +80,15 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 - **Device name** – The name of the device you're viewing.
 
-- **Encryption readiness** - An evaluation of the devices readiness to support encryption through the MDM policy.
+- **Encryption readiness** - An evaluation of the device's readiness to support encryption through the MDM policy based on an activated TPM.
 
-  For example: When a Windows 10 device has a readiness of *Not ready*, it might still support encryption. To have the *Ready* designation, the Windows 10 device must have a TPM chip. TPM chips aren't required to support encryption. (For more information, see *Encryption readiness* in the preceding section.)
+  When a Windows 10 device has a readiness of *Not ready*, it might still support encryption. To have the *Ready* designation, the Windows 10 device must have a TPM chip activated. However, TPM chips aren't required to support encryption, as the device can still be manually encrypted. or through a MDM/Group Policy setting that can be set to allow encrypting without a TPM.
 
 - **Encryption status** - Whether the OS drive is encrypted. It can take up to 24 hours for Intune to report on a device's encryption status or a change to that status. This time includes time for the OS to encrypt, plus time for the device to report back to Intune.
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
+  
+  For Windows devices, this field does not look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).  
 
 - **Profiles** – A list of the *Device configuration* profiles that apply to this device and are configured with the following values:
 
@@ -102,9 +107,6 @@ When you select a device from the Encryption report, Intune displays the **Devic
   To view more details of a status, go to **Intune** > **Device configuration** > **Profiles**, and select the profile. Optionally, select **Device status** and then select a device.
 
 - **Status details** – Advanced details about the device's encryption state.
-
-  > [!IMPORTANT]
-  > For Windows 10 devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later.
 
   This field displays information for each applicable error that can be detected. You can use this information to understand why a device might not be encryption ready.
 
@@ -132,8 +134,11 @@ When you select a device from the Encryption report, Intune displays the **Devic
     *Consider: One possible cause for an unknown status is that the device is locked and Intune can't start the escrow or encryption process. After the device is unlocked, progress can continue*.
 
   **Windows 10**:
-  - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
+  
+  For Windows 10 devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
 
+  - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
+      
   - The encryption method of the OS volume doesn't match the BitLocker policy.
 
   - The policy BitLocker requires a TPM protector to protect the OS volume, but a TPM isn't used.
@@ -145,25 +150,37 @@ When you select a device from the Encryption report, Intune displays the **Devic
   - The BitLocker policy requires TPM+startup key protection for the OS volume, but a TPM+startup key protector isn't used.
 
   - The BitLocker policy requires TPM+PIN+startup key protection for the OS volume, but a TPM+PIN+startup key protector isn't used.
-
+  
   - The OS volume is unprotected.
+    
+    *Consider: A BitLocker policy to encrypt OS drives was applied on the machine but encryption was suspended or did not complete for the OS drive.*
 
   - Recovery key backup failed.
 
+    *Consider: Check the Event log on device to see why the recovery key backup failed. You may need to run the **manage-bde** command to manually escrow recovery keys.*
+
   - A fixed drive is unprotected.
+
+    *Consider: A BitLocker policy to encrypt fixed drives was applied on the machine but encryption was suspended or did not complete for the fixed drive.*
 
   - The encryption method of the fixed drive doesn't match the BitLocker policy.
 
   - To encrypt drives, the BitLocker policy requires either the user to sign in as an Administrator or, if the device is joined to Azure AD, the AllowStandardUserEncryption policy must be set to 1.
 
   - Windows Recovery Environment (WinRE) isn't configured.
+  
+    *Consider: Need to run command line to configure the WinRE on separate partition; as that was not detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
 
   - A TPM isn't available for BitLocker, either because it isn't present, it's been made unavailable in the Registry, or the OS is on a removable drive.
+ 
+    *Consider: The BitLocker policy applied to this device requires a TPM, but on this device, the BitLocker CSP has detected that the TPM may be disabled at the BIOS level.*
 
   - The TPM isn't ready for BitLocker.
+ 
+    *Consider: The BitLocker CSP sees that this device has an available TPM, but the TPM may need to be initialized. Consider running **intialize-tpm** on the machine to initialize the TPM.*
 
   - The network isn't available, which is required for recovery key backup.
-
+  
 ## Export report details
 
 While viewing the Encryption report pane, you can select **Export** to create a *.csv* file download of the report details. This report includes the high-level details from the *Encryption report* pane and *Device encryption status* details for each device you manage.
@@ -186,6 +203,7 @@ Windows 10 BitLocker:
 
 ## Next steps
 
-[Manage BitLocker policy](../protect/encrypt-devices.md)
-
-[Manage FileVault policy](encrypt-devices-filevault.md)
+- [Manage BitLocker policy](../protect/encrypt-devices.md)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Manage FileVault policy](encrypt-devices-filevault.md)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

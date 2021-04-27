@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -153,6 +153,13 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
   - **Collections with no query rules and schedule full evaluation selected**<!-- 8A401207-5A7C-4200-A1DB-990A197458FA -->
 
+> [!NOTE]
+> For more information on managing collections and collection evaluation, see the following articles:<!-- MEMDocs#967 -->
+>
+> - [Best practices for collections](../../clients/manage/collections/best-practices-for-collections.md)
+> - [Collection evaluation](../../clients/manage/collections/collection-evaluation.md)
+> - [How to view collection evaluation](../../clients/manage/collections/collection-evaluation-view.md)
+
 ### Configuration Manager Assessment
 
 <!--3607758-->
@@ -194,7 +201,7 @@ Starting in version 2006, the following management insights help you manage the 
 
 - **Total policy size for task sequences exceeds policy limit**: Clients can't process the policy for these task sequences because it's too large. Reduce the size of the task sequence policy to allow the deployment to run on clients.<!-- 6568F6A3-D1D8-4E63-940B-FE44F8349802 -->
 
-For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
 
 In version 2006, the following insight moved to this group from the **Proactive Maintenance** group:
 
@@ -236,15 +243,17 @@ The insights in this group highlight potential configuration issues to avoid thr
 
 Insights for improving the security of your infrastructure and devices.
 
-- **NTLM fallback is enabled**:<!--4572953--> Starting in version 1906, this insight detects if you enabled the less secure NTLM authentication fallback method for the site. When using the client push method of installing the Configuration Manager client, the site can require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).<!-- C16C6826-8209-47A9-BA71-14A8C83E4C35 -->
+- **NTLM fallback is enabled**:<!--4572953--> This insight detects if you enabled the less secure NTLM authentication fallback method for the site. When using the client push method of installing the Configuration Manager client, the site can require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).<!-- C16C6826-8209-47A9-BA71-14A8C83E4C35 -->
 
 - **Unsupported antimalware client versions**: More than 10% of clients are running versions of System Center Endpoint Protection that aren't supported. For more information, see [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).<!-- ACD63321-CF15-4CDD-B1A3-69005887C633 -->
+
+- **Update clients running Windows 7 and Windows Server 2008**: <!--7520646--> The rule shows clients running Windows 7, Windows Server 2008 (non-Azure), and Windows Server 2008 R2 (non-Azure) that are no longer receiving security updates. For more information about updates for these operating systems, see [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates).<!--A22E3D36-5A90-43A5-B6C6-D7D0B7DCF073-->
 
 ### Simplified management
 
 Insights that help you simplify the day-to-day management of your environment.
 
-- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This insight makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#bkmk_scp-updates).<!-- AC662C91-54DF-4B43-B09A-B19D2766144B -->
+- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This insight makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#updates-and-servicing).<!-- AC662C91-54DF-4B43-B09A-B19D2766144B -->
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md).<!-- 450090EA-DF71-428C-AB49-6DEBB85A004C -->
 
@@ -254,7 +263,7 @@ Insights that help you simplify the day-to-day management of your environment.
 
 Insights for managing Software Center.
 
-- **Direct users to Software Center instead of Application Catalog**: Check if users have installed or requested applications from the application catalog in the last 14 days. The primary functionality of application catalog is now included in Software Center. Support ends for the application catalog roles with version 1910. For more information, see [Deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).<!-- DB9E65CF-C59C-4B76-B6A0-ADB95D809246 -->
+- **Direct users to Software Center instead of Application Catalog**: Check if users have installed or requested applications from the application catalog in the last 14 days. The primary functionality of application catalog is now included in Software Center. Support for the application catalog roles ended with version 1910. For more information, see [Deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).<!-- DB9E65CF-C59C-4B76-B6A0-ADB95D809246 -->
 
 - **Use the new version of Software Center**: The previous version of Software Center is no longer supported. Set up clients to use the new Software Center by enabling the client setting **Use new Software Center** in the **Computer Agent** group. For more information, see [About client settings](../../clients/deploy/about-client-settings.md#use-new-software-center).<!-- A9BCA10D-834F-4F39-89F5-CDCCE8F80C56 -->
 

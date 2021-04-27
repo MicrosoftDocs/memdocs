@@ -2,7 +2,7 @@
 title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
-ms.date: 10/13/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -37,12 +37,6 @@ Dynamically update the membership of a collection based on a query that Configur
 
 For example queries that you can use to build collections, see [How to create queries](../../../servers/manage/create-queries.md).
 
-### Device category rule
-
-You can make management of your devices easier by associating device categories with the device collections.
-
-For more information, see [Automatically categorize devices into collections](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
-
 ### Include collection rule
 
 Include the members of another collection in a Configuration Manager collection. If the included collection changes, Configuration Manager updates the membership of the current collection on a schedule.
@@ -73,7 +67,6 @@ You create a collection that has one include collection rule and one exclude col
 
     - [Direct rule](#bkmk-direct)
     - [Query rule](#bkmk-query)
-    - [Device category rule](#bkmk-category)
     - [Include collection rule](#bkmk-include)
     - [Exclude collection rule](#bkmk-exclude)
 
@@ -113,7 +106,7 @@ You create a collection that has one include collection rule and one exclude col
 > [!NOTE]  
 > To see new collection members, refresh or reload the Configuration Manager console. They don't appear in the collection until after the first scheduled update. You can also manually select **Update Membership** for the collection. It might take a few minutes for a collection update to complete.
 
-### <a name="bkmk-direct"></a> Configure a direct rule
+## <a name="bkmk-direct"></a> Configure a direct rule for a collection
 
 1. On the **Search for Resources** page of the **Create Direct Membership Rule Wizard**, specify the following information:
 
@@ -142,7 +135,7 @@ You create a collection that has one include collection rule and one exclude col
 
 1. On the **Select Resources** page, select the resources that you want to add to the collection in the **Resources** list, and then select **Next**.
 
-### <a name="bkmk-query"></a> Configure a query rule  
+## <a name="bkmk-query"></a> Configure a query rule for a collection
 
 In the **Query Rule Properties** dialog box, specify the following information.
 
@@ -152,29 +145,42 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Resource class**: Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** to search for inventory data returned from client computers or from **Unknown Computer** to select from values returned by unknown computers.
 
-- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
+- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in less rows returned but potentially quicker results. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
 
-    > [!TIP]  
-    > On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in less rows returned but potentially quicker results.
+   - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. For more information, see the [Preview collection queries](#bkmk-preview) section.
 
-### <a name="bkmk-category"></a> Device category rule
-
-The following actions are available in the **Select Device Categories** window.
-
-- **Create**: Specify a name to create a new category.
-- **Rename**: Rename the selected category.
-- **Delete**: Select one or more categories, and use this action to remove them from the list.
-
-For more information, see [Automatically categorize devices into collections](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
-
-### <a name="bkmk-include"></a> Configure an include collection rule
+## <a name="bkmk-include"></a> Configure an include collection rule
 
 In the **Select Collections** dialog box, select the collections you want to include in the new collection, and then select **OK**.
 
-### <a name="bkmk-exclude"></a> Configure an exclude collection rule
+## <a name="bkmk-exclude"></a> Configure an exclude collection rule
 
 In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, and then select **OK**.
 
+## <a name="bkmk-preview"></a> Preview collection queries
+
+*(Introduced in 2010)*
+
+Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. In the **Query Statement Properties**, select the green triangle to show the **Query Results Preview** window. Select **Stop** if you want to stop a long running query. <!--7380401-->
+:::image type="content" source="./media/7380401-preview-collection-query.png" alt-text="Client data sources dashboard" lightbox="./media/7380401-preview-collection-query.png":::
+
+### <a name="bkmk_query"></a> Improvements to query preview
+<!--8680235-->
+*(Introduced in 2103)*
+
+Starting in Configuration Manager version 2103, you have more options when using the collection query preview. The following improvements have been made to previewing collection queries:
+- Limit the number of rows returned
+   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows. 
+- Omit duplicate rows from the result set
+  - If the **Omit duplicate rows** option isn't selected, the original query statement will be executed as is, even if the query contains the word **distinct**.
+  - When the **Omit duplicate rows** option is selected, if the query already contains the word **distinct**, then the query runs as it is. When the query doesn't contain the word **distinct**, it's added to the query for the preview (mean override).
+- Review statistics for the query preview such as number of rows returned and elapsed time.
+
+:::image type="content" source="./media/8680235-limited-query-preview.png" alt-text="Limiting rows returned and omitting duplicate rows when previewing a quiery" lightbox="./media/8680235-limited-query-preview.png":::
+
+> [!NOTE]
+> - Elapsed times shown for the query preview may not be the same as actual execution of the target query.
+> - **Query execution elapsed time** and **Displaying results elapsed time** shouldn't be added for a total elapsed time since these processes run in parallel.
 ## <a name="bkmk_import"></a> Import a collection
 
 When you export a collection from a site, Configuration Manager saves it as a Managed Object Format (MOF) file. Use this procedure to import that file into your site database. To complete this procedure, you need **Create** permissions on the collections class.
@@ -212,9 +218,26 @@ You can use PowerShell to create and import collections. For more information, s
 > [!TIP]
 > This feature was first introduced in version 1906 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.
 
-You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device or user collections. Only resources with an Azure AD record are reflected in the Azure AD group. Both hybrid Azure AD-joined and Azure AD-joined devices are supported.
+You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device or user collections. Only resources with an Azure AD record are reflected in the Azure AD group. Both hybrid Azure AD-joined and Azure AD-joined devices are supported. The synchronization of collection memberships is a one-way process from Configuration Manager to Azure AD. Ideally, Configuration Manager should be the authority for managing the membership for the target Azure AD groups.
 
-The Azure AD synchronization happens every five minutes. It's a one-way process from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
+Synchronizations can either be full or incremental and they have slightly different behaviors: <!--9718854-->
+
+- Full synchronization: Occurs on the first synchronization after enabling it. You can force a full synchronization by selecting the collection, and then choosing **Synchronize Membership** from the ribbon. A full synchronization will overwrite members of the Azure AD group.
+
+- Incremental synchronization: Occurs every 5 minutes. Changes made in Azure AD aren't reflected in Configuration Manager collections, but they aren't overwritten by Configuration Manager. <!--For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after an incremental synchronization, the Azure AD group has five devices.-->
+
+Example synchronization scenario:
+1. From Azure AD, create a group called `Group1` and add `DeviceA`, `DeviceB`, and `DeviceC`.
+   - Ideally, objects wouldn't be added from Azure AD since Configuration Manager should manage the group membership. 
+1. From Configuration Manager, create a collection called `Collection1` then add `DeviceB`, and `DeviceC`.
+1. [Enable synchronization](#enable-the-collection-to-synchronize) for `Collection1` to `Group1`.
+1. The first synchronization is a full synchronization so, `Group1` now contains `DeviceB`, and `DeviceC`. `DeviceA` was removed from the group during the full synchronization.
+1. Remove `DeviceC` from `Collection1` and wait for an incremental synchronization.
+1. `Group1` now contains only `DeviceB`.
+1. From Azure AD, add `DeviceD` to `Group1` and wait for an incremental synchronization.
+1. `Group1` now contains `DeviceB` and `DeviceD`.
+1. From Configuration Manager, select `Collection1`, and choose **Synchronize Membership** from the ribbon to force a full synchronization.
+1. `Group1` now contains only `DeviceB`
 
 ### Prerequisites for Azure AD synchronization
 

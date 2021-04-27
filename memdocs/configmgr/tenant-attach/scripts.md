@@ -2,7 +2,7 @@
 title: Tenant attach - Run Scripts (preview) from the admin center
 titleSuffix: Configuration Manager
 description: "Run scripts for Configuration Manager devices from the admin center."
-ms.date: 09/18/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -44,8 +44,7 @@ The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission for the device's **Collection** in Configuration Manager.
-- The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
-  - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
+- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 - To use scripts, you must be a member of the appropriate Configuration Manager security role. For more information, see [Security scopes for run scripts](../apps/deploy-use/create-deploy-scripts.md#bkmk_ScriptRoles).
 - To run scripts, the account must have **Run Script** permissions for **Collections**.
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 02/08/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Android Enterprise settings to mark devices as compliant or not compliant using Intune
+# Device compliance settings for Android Enterprise in Intune
 
 This article lists and describes the different compliance settings you can configure on Android Enterprise devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
@@ -39,7 +39,11 @@ This feature applies to:
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 > [!IMPORTANT]
-> Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.
+> To apply to Android Enterprise dedicated devices, compliance policy must target devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign-in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Azure AD shared device mode*](../enrollment/android-kiosk-enroll.md).
+>
+> On Android Enterprise dedicated devices that are enrolled without Azure AD shared device mode, users of the device will be unable to sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Azure AD documentation.
+
+<!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
 ## Before you begin
 
@@ -48,16 +52,19 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-### Microsoft Defender ATP
+### Microsoft Defender for Endpoint
 
 - **Require the device to be at or under the machine risk score**  
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
   - **Medium**
   - **High**
+
+> [!NOTE]
+> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
 
 ### Device Health
 
@@ -160,19 +167,19 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-## Work profile
+## Personally-Owned Work Profile
 
-### Microsoft Defender ATP - *for work profile*
+### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
 
 - **Require the device to be at or under the machine risk score**  
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices which exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
   - **Medium**
   - **High**
 
-### Device Health - *for work profile*
+### Device Health - *for Personally-Owned Work Profile*
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -186,7 +193,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
-#### Google Play Protect - *for work profile*
+#### Google Play Protect - *for Personally-Owned Work Profile*
 
 - **Google Play Services is configured**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -205,9 +212,9 @@ As an Intune administrator, use these compliance settings to help protect your o
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
-### Device Properties - *for work profile*
+### Device Properties - *for Personally-Owned Work Profile*
 
-#### Operating System Version - *for work profile*
+#### Operating System Version - *for Personally-Owned Work Profile*
 
 - **Minimum OS version**  
 When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
@@ -219,13 +226,13 @@ When a device is using an OS version later than the version in the rule, access 
 
   *By default, no version is configured*.
 
-### System security - *for work profile*
+### System security - *for Personally-Owned Work Profile*
 
 - **Require a password to unlock mobile devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Users must enter a password before they can access their device.  
 
-  This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
+  This setting applies at the device level. If you only need to require a password at the Personally-Owned Work Profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
@@ -251,7 +258,7 @@ When a device is using an OS version later than the version in the rule, access 
   - **Number of previous passwords to prevent reuse**  
     Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
 
-#### Encryption - *for work profile*
+#### Encryption - *for Personally-Owned Work Profile*
 
 - **Encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -259,7 +266,7 @@ When a device is using an OS version later than the version in the rule, access 
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-#### Device Security - *for work profile*
+#### Device Security - *for Personally-Owned Work Profile*
 
 - **Block apps from unknown sources**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.

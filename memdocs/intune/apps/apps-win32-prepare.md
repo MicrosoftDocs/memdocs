@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure

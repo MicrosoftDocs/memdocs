@@ -64,6 +64,50 @@ Use the following checklist to make sure you have the necessary information and 
 
 You'll set up other prerequisite components during the next steps in the process.
 
+## Automate with PowerShell
+
+<!--6978300-->
+Optionally, you can automate aspects of the CMG set up using PowerShell. While some cmdlets were available in earlier versions, version 2010 includes new cmdlets and significant improvements to existing cmdlets.
+
+For example, an Azure administrator first creates the two required apps in Azure Active Directory (Azure AD). Then you write a script that uses the following cmdlets to deploy a CMG:
+
+1. **Import-CMAADServerApplication**: Create the Azure AD server app definition in Configuration Manager.
+1. **Import-CMAADClientApplication**: Create the Azure AD client app definition in Configuration Manager.
+1. Use **Get-CMAADApplication** to get the app objects, and then pass to **New-CMCloudManagementAzureService** to create the Azure service connection in Configuration Manager.
+1. **New-CMCloudManagementGateway**: Create the CMG service in Azure.
+1. **Add-CMCloudManagementGatewayConnectionPoint**: Create the CMG connection point site system.
+
+You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Azure Active Directory (Azure AD) requirements.
+
+Azure AD app definitions in Configuration Manager:
+
+- [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication)
+- [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication)
+- [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication)
+
+The **Cloud Management** Azure service in Configuration Manager:
+
+- [New-CMCloudManagementAzureService](/powershell/module/configurationmanager/New-CMCloudManagementAzureService)
+- [Set-CMCloudManagementAzureService](/powershell/module/configurationmanager/Set-CMCloudManagementAzureService)
+- [Get-CMAzureService](/powershell/module/configurationmanager/Get-CMAzureService)
+- [Remove-CMAzureService](/powershell/module/configurationmanager/Remove-CMAzureService)
+
+The cloud management gateway service in Configuration Manager:
+
+- [Get-CMCloudManagementGateway](/powershell/module/configurationmanager/Get-CMCloudManagementGateway)
+- [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway)
+- [Remove-CMCloudManagementGateway](/powershell/module/configurationmanager/Remove-CMCloudManagementGateway)
+- [Set-CMCloudManagementGateway](/powershell/module/configurationmanager/Set-CMCloudManagementGateway)
+- [Start-CMCloudManagementGateway](/powershell/module/configurationmanager/Start-CMCloudManagementGateway)
+- [Stop-CMCloudManagementGateway](/powershell/module/configurationmanager/Stop-CMCloudManagementGateway)
+
+The CMG connection point site system role:
+
+- [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint)
+- [Get-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Get-CMCloudManagementGatewayConnectionPoint)
+- [Remove-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Remove-CMCloudManagementGatewayConnectionPoint)
+- [Set-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Set-CMCloudManagementGatewayConnectionPoint)
+
 ## Next steps
 
 Get started with your CMG setup by getting a server authentication certificate:

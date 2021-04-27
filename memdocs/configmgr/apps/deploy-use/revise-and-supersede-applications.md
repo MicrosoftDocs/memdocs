@@ -1,122 +1,133 @@
 ---
-title: "Revise and supersede applications"
-titleSuffix: "Configuration Manager"
-description: "Learn how to work with Configuration Manager application versions and supersede applications."
-ms.date: 05/11/2020
+title: Revise and supersede applications
+titleSuffix: Configuration Manager
+description: Learn how to work with Configuration Manager application versions and supersede applications.
+ms.date: 11/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
 ---
+
 # Revise and supersede applications in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-In this topic, you'll learn how to work with Configuration Manager application versions and how to supersede applications with a new version.  
+Learn how to work with Configuration Manager application versions and how to supersede applications with a new version.
 
-##  Application revisions  
- When you make revisions to an application or to a deployment type that is contained in an application, Configuration Manager creates a new revision of the application. You can display the history of each application revision. You can also view its properties, restore a previous revision of an application, or delete an old revision.  
+## Revisions
 
-### To display an application revision history  
+When you make revisions to an application or a deployment type, Configuration Manager creates a new revision of the application. You can display the history of each application revision. You can also view its properties, restore a previous revision of an application, or delete an old revision.
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**, and then choose the application that you want.  
+### Display the history of application revisions
 
-3.  On the **Home** tab, in the **Application** group, choose **Revision History** to open the **Application Revision History** dialog box.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. Then choose the application that you want.
 
-### To view an application revision  
+1. On the **Home** tab of the ribbon, in the **Application** group, select **Revision History**. This action opens the **Application Revision History** window.
 
-1.  In the **Application Revision History** dialog box, select an application revision, and then choose **View**.  
+### View an application revision
 
-2.  In the **Properties** dialog box, examine the properties of the selected application.  
+1. In the **Application Revision History** window, select an application revision, and then select **View**.
 
-    > [!NOTE]  
-    >  The application properties that are displayed are read-only.  
+1. In the **Properties** dialog box, examine the properties of the selected application.
 
-3.  Close the **Properties** dialog box.  
+    > [!NOTE]
+    > This view of application properties is read-only.
 
-### To restore an application revision  
+### Restore an application revision
 
-1.  In the **Application Revision History** dialog box, select an application revision, and then choose **Restore**.  
+1. In the **Application Revision History** window, select an application revision, and then select **Restore**.
 
-2.  In the **Confirm Revision Restore** dialog box, choose **Yes** to restore the selected application revision.  
+1. Select **Yes** to restore the selected application revision.
 
-### To delete an application revision  
+### Delete an application revision
 
-1.  In the **Application Revision History** dialog box, select an application revision, and then choose **Delete**.  
+1. In the **Application Revision History** window, select an application revision, and then select **Delete**.
 
-2.  In the **Delete Application Revision** dialog box, choose **Yes**.  
+1. Select **Yes** to confirm.
 
-> [!IMPORTANT]  
->  You can only delete the current application revision if the application is retired and has no references.  
+> [!IMPORTANT]
+> You can only delete the current application revision after you retire the application and it has no references.
 
-##  Application supersedence  
- Application management in Configuration Manager lets you upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also decide whether to upgrade or uninstall the superseded application before the superseding application is installed. Generally speaking, we recommend limiting supersedence chains to five levels deep at maximum.
- 
-> [!IMPORTANT]  
->  When the option to uninstall the superseded deployment type is selected, a deployment type cannot be superseded by a deployment type that was deployed to a different collection type.  For example, a deployment type that was deployed to a device collection cannot be superseded by a deployment type that was deployed to a user collection if the option to uninstall the superseded deployment type is selected.  
+## Supersedence
 
-### Decide whether to upgrade or replace an application  
- You specify whether to replace or upgrade an app in the **Specify Supersedence Relationship** dialog box of the application properties dialog box. The type of supersedence depends on whether you check the **Uninstall** option in this dialog box:  
+Application management in Configuration Manager lets you upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you specify a new deployment type to replace the deployment type of the superseded application. You can also decide whether to upgrade or uninstall the superseded application before the client installs the superseding application. It's best to limit supersedence chains to five levels deep at a maximum.
 
--   If you want to update to a newer version of the same application (with the same application ID), **do not** check **Uninstall**.  
+> [!IMPORTANT]
+> When you choose the option to uninstall the superseded deployment type, a deployment type can't be superseded by a deployment type that was deployed to a different type of collection. For example, a deployment type that was deployed to a device collection can't be superseded by a deployment type that was deployed to a user collection.
 
--   If you want to change to a different application (with a different application ID), check **Uninstall**. You need to remove the superseded version of the application.  
+### Decide whether to upgrade or replace an application
 
-### Supersede dependent applications  
- In this example, **master application** refers to the app that you are deploying that has the dependencies.  
+The type of supersedence depends on whether you select the **Uninstall** option:
 
- You can create a supersedence relationship that updates the dependent application to a new version.  
+- If you want to update to a newer version of the same application with the same application ID, _don't_ select **Uninstall**.
 
-1. Ensure that the new dependent application and the original dependent application are in the same dependency group of the master application.  
+- If you want to change to a different application with a different application ID, select **Uninstall**. You need to remove the superseded version of the application.
 
-2. Create a supersedence relationship that supersedes the original dependent application with the new dependent application.  
+### Supersede dependent applications
 
-   During new installations of the master application, the new dependent application is installed. Existing installations of the master application are updated with the new dependent application.  
+In this example, _main application_ refers to the app that you're deploying that has the dependencies.
 
-   The end result is that all deployments of the master application use the new dependent application.  
+You can create a supersedence relationship that updates the dependent application to a new version.
 
-### Further considerations  
+1. Make sure that the new dependent application and the original dependent application are in the same dependency group of the main application.
 
--   You can specify multiple supersedence relationships for dependent applications. The highest dependent application in the supersedence chain gets installed.  
+1. Create a supersedence relationship that supersedes the original dependent application with the new dependent application.
 
--   Dependent applications must be deployed to the device where the master application is installed or the dependent application won't get installed.  
+During new installations of the main application, the client installs the new dependent application. Configuration Manager updates existing installations of the main application with the new dependent application.
 
--   For new installations of the master application, when you have multiple dependencies, the dependency order determines which version of the dependent application gets installed.  
+The end result is that all deployments of the main application use the new dependent application.
 
-### To specify a supersedence relationship  
+### Further considerations
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**, and then choose the application that supersedes another application.  
+- You can specify multiple supersedence relationships for dependent applications. Configuration Manager installs the highest dependent application in the supersedence chain.
 
-3.  On the **Home** tab, in the **Properties** group, choose **Properties** to open the application name **Properties** dialog box.  
+- Deploy dependent applications to the device where the main application is installed. Otherwise Configuration Manager won't install the dependent application.
 
-4.  On the **Supersedence** tab of the *<Application Name\>* **Properties** dialog box, choose **Add**.  
+- For new installations of the main application, when you have multiple dependencies, the dependency order determines which version of the dependent application gets installed.
 
-5.  In the **Specify Supersedence Relationship** dialog box, click **Browse**.  
+### Specify a supersedence relationship
 
-6.  In the **Choose Application** dialog box, choose the application that you want to supersede, and then choose **OK**.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. Then choose the application that supersedes another application.
 
-7.  In the **Specify Supersedence Relationship** dialog box, select the deployment type that replaces the deployment type of the superseded application.  
+1. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
 
-    > [!NOTE]  
-    >  By default, the new deployment type doesn't uninstall the deployment type of the superseded application. This scenario is commonly used when you want to deploy an upgrade to an existing application. Select **Uninstall** to remove the existing deployment type before the new deployment type is installed. If you decide to upgrade an application, make sure that you test this in a lab environment first.  
+1. Switch to the **Supersedence** tab, and select **Add**.
 
-8.  Choose **OK** to close the **Specify Supersedence Relationship** dialog box.  
+1. For the **Superseded Application**, select **Browse**.
 
-9. Choose **OK** to close the *<Application Name\>* **Properties** dialog box.  
+1. Choose the application that you want to supersede, and then select **OK**.
 
-### To display applications that supersede the current application  
+1. In the **Specify Supersedence Relationship** window, select the deployment type that replaces the deployment type of the superseded application.
 
-1.  In the Configuration Manager console, choose **Software Library**.  
+    > [!NOTE]
+    > By default, the new deployment type doesn't uninstall the deployment type of the superseded application. This scenario is commonly used when you want to deploy an upgrade to an existing application. To remove the existing deployment type before the new deployment type is installed, select **Uninstall**. If you decide to upgrade an application, make sure that you test this in a lab environment first.
 
-2.  In the **Software Library** workspace, expand **Application Management**, choose **Applications**, and then choose the application that you want.  
+1. If you want users to still see in Software Center deployments for both applications, select the option to **Allow users to see deployments for this application and all applications that it supersedes in Software Center.**. With this option, you give users the choice to still install an older version of the app if needed. By default, this option isn't selected, so only the superseding application displays in Software Center. This option is only for available deployments to user collections.<!-- MEMDocs#977 -->
 
-3.  On the **Home** tab, in the **Properties** group, choose **Properties** to open the *<Application Name\>* **Properties** dialog box.  
+1. Select **OK** to save your changes and close the windows.
 
-4.  On the **References** tab of the *<Application Name\>* **Properties** dialog box, choose **Applications that supersede this application** from the **Relationship type** drop-down list.  
+### Display applications that supersede the current application
 
-5.  Review the list of applications that supersede the selected application, and then choose **OK** to close the *<Application Name\>* **Properties** dialog box.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. Then choose the application that you want.
+
+1. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
+
+1. Switch to the **References** tab.
+
+1. For the **Relationship type**, choose **Applications that supersede this application**.
+
+### View supersedence relationships
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node. Then choose the application that you want.
+
+1. On the **Home** tab of the ribbon, in the **Relationships** group, select **View relationships**, and then select **Supersedence**.
+
+This action shows a graphical diagram of the relationships of the selected application to other applications. For the supersedence relationships, it shows applications that the selected application supersedes, and applications that the selected application is superseded by.
+
+## Next steps
+
+[Uninstall applications](uninstall-applications.md)

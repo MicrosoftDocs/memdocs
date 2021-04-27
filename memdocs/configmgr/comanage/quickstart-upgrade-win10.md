@@ -39,9 +39,9 @@ Here are some tips we've learned from helping thousands of customers get current
 
 - Use pre-caching to reduce user wait times. For more information, see [Configure pre-cache content](../osd/deploy-use/configure-precache-content.md).  
 
-- Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-for-post-processing).  
+- Use the default in-place upgrade task sequence template. Then configure your steps for pre- and post-upgrade, and any failure actions. For more information, see [Recommended task sequence steps for post-processing](../osd/understand/in-place-upgrade-recommendations.md#post-processing).
 
-- If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [Deploy Windows 10 in-place upgrade via CMG](../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg).  
+- If your environment has a highly mobile workforce, Configuration Manager supports in-place upgrade over the cloud management gateway (CMG). This feature allows you to upgrade your Windows 10 clients when they're internet-based. For more information on the CMG, see [Deploy Windows 10 in-place upgrade via CMG](../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).  
 
 - Offer an opt-in to co-management for users who want to be early adopters. This approach accelerates initial adoption. By identifying these people in advance, you can make sure good coverage in the early days of a rollout. You also receive validation and feedback from users that are happy for change and interested in more frequent releases. Early adopter programs generate interest in the new technologies and grow in size over time.  
 

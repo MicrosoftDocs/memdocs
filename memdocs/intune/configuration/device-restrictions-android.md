@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,11 @@ ms.collection: M365-identity-device-management
 
 # Android and Samsung Knox Standard device restriction settings lists in Intune
 
-This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android.
+This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password requirements, control security, and more.
+
+This feature applies to:
+
+- Android device administrator (DA)
 
 >[!TIP]
 >If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).

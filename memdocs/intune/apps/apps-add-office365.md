@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,6 +37,8 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 > 
 > You must use Microsoft 365 Apps licenses to activate Microsoft 365 Apps apps deployed through Microsoft Intune. Microsoft 365 Apps for business edition is supported by Intune, however you must configure the app suite of the Microsoft 365 Apps for business edition using XML data. For more information, see [Configure app suite using XML data](apps-add-office365.md#step-2---option-2-configure-app-suite-using-xml-data).
+>
+> Deploying OneDrive through Intune after removal of the native OneDrive client is not supported. If the native OneDrive client is removed, Intune is not able to redeploy OneDrive. Deployment of OneDrive through Intune is not supported.
 
 ## Before you start
 
@@ -115,7 +117,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
     - **Use shared computer activation**: Select this option when multiple users share a computer. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Automatically accept the app end user license agreement**: Select this option if you don't require end users to accept the license agreement. Intune then automatically accepts the agreement.
     - **Languages**: Office is automatically installed in any of the supported languages that are installed with Windows on the end-user's device. Select this option if you want to install additional languages with the app suite. <p></p>
-        You can deploy additional languages for Microsoft 365 Apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Microsoft 365 Apps**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        You can deploy additional languages for Microsoft 365 Apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Microsoft 365 Apps**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - (**Option 2**) Configure app suite using XML data 
@@ -168,7 +170,10 @@ Under the *Microsoft Office 15* directory, the Office Click-to-Run installation 
 The installation will be in silent mode if the assignment of Microsoft 365 is configured as required. The downloaded installation files will be deleted once the installation succeeded. If the assignment is configured as **Available**, the Office applications will appear in the Company Portal application so that end-users can trigger the installation manually.
 
 ## Troubleshooting
-Intune uses the [Office Deployment Tool](/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Office 365 ProPlus to your client computers using the [Office 365 CDN](/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Office 365 endpoints](/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
+Intune uses the [Office Deployment Tool](/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Microsoft 365 Apps to your client computers using the [Office 365 CDN](/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Office 365 endpoints](/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
+
+> [!IMPORTANT]
+> For custom Office Deployment Tool XML installs, the install status only reflects the result of the installation attempt. The install status does not reflect whether the app is currently installed on the machine.
 
 Run the [Microsoft Support and Recovery Assistant for Microsoft 365](https://diagnostics.office.com) on a targeted device if you encounter installation or run-time issues.
 
@@ -194,7 +199,7 @@ Once you can conclude that both Intune and the network infrastructure work as ex
 - Existing MSI versions of Office have been properly removed from the device. Intune utilizes Office Click-to-Run which is not compatible with Office MSI. This behavior is further mentioned in this document:<br>
   [Office installed with Click-to-Run and Windows Installer on same computer isn't supported](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
 - The sign-in user should have permission to install applications on the device.
-- Confirm there are no issues based on the Windows Event Viewer log **Windows Logs** -> **Applications**.
+- Confirm there are no issues based on the Windows Event Viewer log **Windows Logs** > **Applications**.
 - Capture Office installation verbose logs during the installation. To do this, follow these steps:<br>
     1. Activate verbose logging for Office installation on the target machines. To do this, run the following command to modify the registry:<br>
         `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>

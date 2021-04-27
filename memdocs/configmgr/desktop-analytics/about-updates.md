@@ -1,8 +1,8 @@
 ---
 title: Updates in Desktop Analytics
 titleSuffix: Configuration Manager
-description: Learn about security and feature updates in Desktop Analytics.
-ms.date: 04/23/2020
+description: Learn about feature updates in Desktop Analytics.
+ms.date: 04/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -15,51 +15,12 @@ ms.reviewer: acabello
 
 # Updates in Desktop Analytics
 
-In the Desktop Analytics portal, view the status of security and feature updates. Select these nodes in the Monitor group of the Desktop Analytics main menu. These nodes give you insights into the status of these updates in your environment.
+In the Desktop Analytics portal, view the status of feature updates. Select these nodes in the Monitor group of the Desktop Analytics main menu. These nodes give you insights into the status of these updates in your environment.
 
 <!--7362999-->
 
 > [!IMPORTANT]
-> Desktop Analytics displays the security and feature update status for devices with the commercial ID associated with your Desktop Analytics workspace. This behavior happens whether or not you enrolled the devices with Configuration Manager. The number of total devices on these tiles may not match the number of enrolled devices in [**Connected Services**](monitor-connection-health.md#commercial-id-configuration).
-
-## Security updates
-
-To review the current status of security updates, select **Security updates** in the **Monitor** section of Desktop Analytics:
-
-:::image type="content" source="media/security-updates.png" alt-text="Security updates node of Desktop Analytics" lightbox="media/security-updates.png":::
-
-This view summarizes *security* updates for devices that are running Windows 10. Devices in the bar chart are categorized by the following labels:
-
-#### Latest
-
-Devices are running the latest security update for that version and channel.
-
-#### Latest-1
-
-Devices are running a security update one version older than the latest available update on that channel.
-
-#### Older
-
-Devices are running a security update older than Latest-1.
-
-#### Not measured
-
-Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.  
-
-To see the adoption trends for security updates, select **View More** for a specific version of Windows. The stacked area chart categorizes devices by the security update they've installed over time.
-
-To review the deployment status for security updates, select **See all**. This view lists devices in the following categories:
-
-- Not started
-- In progress
-- Completed
-- Needs attention - Devices (sorted by device name)
-- Needs attention - Issues (sorted by issue type)
-
-To show devices with new information that the service is still processing, select **View recent data**. Desktop Analytics will show this information after its next full data refresh.
-
-  > [!IMPORTANT]
-  > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+> Desktop Analytics displays the feature update status for devices with the commercial ID associated with your Desktop Analytics workspace. This behavior happens whether or not you enrolled the devices with Configuration Manager. The number of total devices on these tiles may not match the number of enrolled devices in [**Connected Services**](monitor-connection-health.md#commercial-id-configuration).
 
 ## Feature updates
 
@@ -70,6 +31,8 @@ To review the current status of feature updates, select **Feature updates** in t
 This view summarizes *feature* updates for devices that are running Windows 10.
 
 For more information on service periods, see [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).  
+
+### Categories
 
 Devices in the bar chart are categorized by the following labels:
 
@@ -96,3 +59,6 @@ Select the tile to see the adoption trends for feature updates. The stacked area
 - [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps  
 
 - [Learn about deployment plans](about-deployment-plans.md)  
+
+> [!IMPORTANT]
+> Starting in March 2021, Desktop Analytics doesn't report on security updates.<!-- 8099536,9614078 --> To monitor your devices' Windows updates and Microsoft Defender status, use [Update Compliance](/windows/deployment/update/update-compliance-get-started).

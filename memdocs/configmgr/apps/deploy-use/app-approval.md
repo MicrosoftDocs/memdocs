@@ -102,7 +102,7 @@ With these prerequisites, recipients receive an email with notification of the r
 
 - Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
 
-- Configure [email notification for alerts](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
+- Configure [email notification for alerts](../../core/servers/manage/configure-alerts.md#configure-email-notification-for-alerts).  
 
     > [!NOTE]
     > The administrative user that deploys the application needs permission to create an alert and subscription. If this user doesn't have these permissions, they'll see an error at the end of the **Deploy Software Wizard**: "You do not have security rights to perform this operation."<!-- 2810283 -->

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Microsoft Defender Advanced Threat Protection 
+title: Intune security baselines settings for Microsoft Defender for Endpoint 
 titleSuffix: Microsoft Intune
-description: Security baseline settings supported by Intune for managing Microsoft Defender Advanced Threat Protection
+description: Security baseline settings supported by Intune for managing Microsoft Defender for Endpoint
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,21 +32,16 @@ zone_pivot_groups: atp-baseline-versions
 
 <!-- Pivots in use: 
 
+December 2020 v6
+::: zone pivot="atp-december-2020"
+::: zone-end
+
 September 2020 v5
 ::: zone pivot="atp-sept-2020"
 ::: zone-end
 
-::: zone pivot="atp-april-2020,atp-sept-2020"
-::: zone-end
-
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
-::: zone-end
-
 April 2020 v4
 ::: zone pivot="atp-april-2020"
-::: zone-end
-
-::: zone pivot="atp-march-2020,atp-april-2020"
 ::: zone-end
 
 March 2020 v3
@@ -55,30 +50,30 @@ March 2020 v3
 
 -->
 
-# Microsoft Defender Advanced Threat Protection baseline settings for Intune
+# Microsoft Defender for Endpoint baseline settings for Intune
 
-View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
+View the Microsoft Defender for Endpoint baseline settings that are supported by Microsoft Intune. The Microsoft Defender for Endpoint baseline defaults represent the recommended configuration for Defender for Endpoint, and might not match baseline defaults for other security baselines.
 
+::: zone pivot="atp-december-2020"
+
+**Microsoft Defender for Endpoint baseline for December 2020 - version 6**  
+
+::: zone-end
 ::: zone pivot="atp-sept-2020"
 
-**Microsoft Defender ATP baseline for September 2020 - version 5**  
-This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
-
-- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
-
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
-
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
+**Microsoft Defender for Endpoint baseline for September 2020 - version 5**  
 
 ::: zone-end
 ::: zone pivot="atp-april-2020"
 
-**Microsoft Defender ATP baseline for April 2020 - version 4**  
+**Microsoft Defender for Endpoint baseline for April 2020 - version 4**  
+
+::: zone-end
+::: zone pivot="atp-april-2020,atp-sept-2020,atp-december-2020"
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
 
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
@@ -87,7 +82,7 @@ To update a security baseline profile to the latest version of that baseline, se
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
-**Microsoft Defender ATP baseline for March 2020 - version 3**  
+**Microsoft Defender for Endpoint baseline for March 2020 - version 3**  
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 
@@ -99,16 +94,34 @@ To understand what's changed with this version of the baseline from previous ver
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
+The Microsoft Defender for Endpoint  baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites).
 
-This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 ::: zone-end
-::: zone pivot="atp-sept-2020"
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 ## Attack Surface Reduction Rules
+
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
+
+**Merge behavior for Attack surface reduction rules in Intune**:
+
+  Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that are not in conflict are merged, while those that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
+
+  Attack surface reduction rule merge behavior is as follows:
+  - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
+    - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
+    - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
+    - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
+  - Settings that do not have conflicts are added to a superset of policy for the device.
+  - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
+  - Only the configurations for conflicting settings are held back.
+
+**Settings in this profile**:
+
 
 - **Block Office communication apps from creating child processes**  
   ASR rule: [26190899-1602-49e8-8b27-eb1d0a1ce869](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -244,7 +257,7 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
     Select **Add** and specify domains, IP address ranges, and network boundaries. By default, *securitycenter.windows.com* is configured.
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## BitLocker
 
@@ -264,7 +277,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
 ::: zone-end
-::: zone pivot="atp-sept-2020"
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Standby states when sleeping while on battery**
   CSP: [Power/StandbyTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)
@@ -283,7 +296,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   - **Not configured** - Same behavior as *Enabled*.
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 - **Enable full disk encryption for OS and fixed data drives**  
   CSP: [RequireDeviceEncryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
@@ -304,7 +317,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   When set to *Configure*, you can then configure the following settings:
 
 ::: zone-end
-::: zone pivot="atp-sept-2020"
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Startup authentication required**  
   CSP: [SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
@@ -338,7 +351,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
       - **Not configured**
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
   - **Configure encryption method for Operating System drives**  
     CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)  
@@ -440,7 +453,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   - **Not configured**
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Device Guard  
 
@@ -508,6 +521,27 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
     Select **Add**, and then specify the hardware device identifier you want to block.
 
+::: zone-end
+::: zone pivot="atp-december-2020"
+
+- **Block hardware device installation by setup classes**:  
+  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.  
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclassess)
+
+  **Default**: Yes
+  
+  When *Yes* is selected, the following settings are available.
+
+  - **Remove matching hardware devices**:  
+    This setting is available only when *Block hardware device installation by setup classes* is set to *Yes*.
+
+    **Default**: Yes
+
+  - **Block list**
+    Manage a list of device setup class globally unique identifiers that for device drivers that Windows is prevented from installing. 
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 ## DMA Guard
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
@@ -518,7 +552,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   This policy only takes effect when Kernel DMA Protection is supported and enabled by the system firmware. Kernel DMA Protection is a platform feature that must be supported by the system at the time of manufacturing. To check if the system supports Kernel DMA Protection, check the Kernel DMA Protection field in the Summary page of MSINFO32.exe.
 
 ::: zone-end
-::: zone pivot="atp-sept-2020"
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
   - **Not configured**  
   - **Block all** *(defulat)*
@@ -538,7 +572,7 @@ For more information about the following settings, see [WindowsAdvancedThreatPro
 - **Sample sharing for all files**  
   CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.
+  Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
   
   - **Yes** (*default*)
   - **Not configured**
@@ -546,13 +580,13 @@ For more information about the following settings, see [WindowsAdvancedThreatPro
 - **Expedite telemetry reporting frequency**  
   CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-  Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.  
+  Expedite Microsoft Defender for Endpoint telemetry reporting frequency.  
 
   - **Yes** (*default*)
   - **Not configured**
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Firewall
 
@@ -681,7 +715,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 - **Firewall profile public**  
   [2.2.2 FW_PROFILE_TYPE](/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc)
@@ -762,7 +796,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 - **Firewall profile domain**  
   CSP: [2.2.2 FW_PROFILE_TYPE](/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc)
@@ -817,12 +851,12 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Microsoft Defender
 
 ::: zone-end
-::: zone pivot="atp-sept-2020"
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
@@ -848,6 +882,22 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Disabled**
   - **Quick scan** (*default*)
   - **Full scan**
+
+::: zone-end
+::: zone pivot="atp-december-2020"
+
+- **Defender schedule scan day**:  
+  Defender schedule scan day.
+
+  **Default**: Everyday
+
+- **Defender scan start time**:  
+  Defender schedule scan time.
+
+  **Default**: Not configured
+
+::: zone-end
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Defender sample submission consent**  
   CSP: [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
@@ -1172,12 +1222,12 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Not configured** - Local users can make changes in the exploit protection settings area.
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Smart Screen
 
 ::: zone-end
-::: zone pivot="atp-sept-2020"
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
@@ -1298,4 +1348,4 @@ For more information, see [PassportForWork CSP](/windows/client-management/mdm/p
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

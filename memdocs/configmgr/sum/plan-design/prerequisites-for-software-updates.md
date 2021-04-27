@@ -5,7 +5,7 @@ description: "Learn about prerequisites for software updates in Configuration Ma
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -69,7 +69,10 @@ Software updates are enabled for clients by default. There are other available s
 
 - [Client settings for software updates](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
-- [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)  
+- [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)
+
+> [!Important]
+> Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md).
 
 ### Reporting services points  
  The reporting services point site system role can display reports for software updates. This role is optional but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md).  
@@ -123,7 +126,7 @@ KB 3148812 was initially released in April 2016 to enable WSUS to natively decry
 1. From an elevated command prompt run `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
 1. Restart the WSUS service on all of the WSUS servers.
 
-If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrade for Windows 10 1607 before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively. When a client downloaded the upgrade file, it would get a [**0xC1800118** error code](https://support.microsoft.com/help/3194588/0xc1800118-error-when-you-push-windows-10-version-1607-by-using-wsus).
+If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrade for Windows 10 1607 before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively. When a client downloaded the upgrade file, it would get a **0xC1800118** error code.
 
 Because the resolution steps are similar to the resolution for synchronizing upgrades before KB 3095113 installation, we've combined both sets of steps into a single resolution in the next section.
  

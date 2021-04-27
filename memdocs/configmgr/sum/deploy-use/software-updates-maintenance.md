@@ -47,7 +47,7 @@ Before Configuration Manager version 1806, the WSUS cleanup option runs the foll
 - A cleanup for software update configuration items in the Configuration Manager database occurs every seven days and removes unneeded updates from the console.
   - This cleanup won't remove expired updates from the Configuration Manager console if they're currently deployed.
 
-Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+Additional maintenance is still needed on the top-level WSUS database and all other WSUS databases in the environment. For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup behavior starting in version 1806
 
@@ -71,7 +71,7 @@ All WSUS maintenance needs to be run manually on secondary site WSUS databases. 
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup behavior starting in version 1810
 
@@ -94,7 +94,7 @@ The following **WSUS Server Cleanup Wizard** options aren't run on the CAS, prim
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 ## WSUS cleanup starting in version 1906
 <!--41101009-->
@@ -162,7 +162,7 @@ Starting in version 1906, the following **WSUS Server Cleanup Wizard** options a
 - Computers not contacting the server
 - Unneeded update files
 
-  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/) blog post.
+  For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 
 ### Known issues for version 1906

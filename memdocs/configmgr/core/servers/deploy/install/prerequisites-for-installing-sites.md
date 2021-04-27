@@ -2,7 +2,7 @@
 title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
-ms.date: 10/13/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -130,6 +130,7 @@ After you expand the site, you need to reconfigure the following Azure services 
 - [Log Analytics](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context)
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 - [Cloud management gateway](../../../clients/manage/cmg/overview.md)
+- [Tenant attach](../../../../tenant-attach/device-sync-actions.md)
 
 The easiest method is to renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 

@@ -2,7 +2,7 @@
 title: Link users and devices with user device affinity
 titleSuffix: Configuration Manager
 description: Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user.
-ms.date: 07/26/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,10 +10,7 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-
 # Link users and devices with user device affinity in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -62,12 +59,9 @@ To configure these settings, use Windows Group Policy.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.  
 
-1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**.
+1. To modify the default client settings, select **Default Client Settings**. On the **Home** tab in the ribbon, in the **Properties** group, choose **Properties**. If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
-    To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
-
-    > [!NOTE]  
-    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
+   - To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
 
 1. In the **User and Device Affinity** group, set the following settings:  
 
@@ -77,11 +71,12 @@ To configure these settings, use Windows Group Policy.
 
     - **Automatically configure user device affinity from usage data**: Select **True** to let the site automatically create user device affinities. If you select **False**, you need to manually approve all user device affinity assignments.  
 
-    > [!TIP]  
-    > For example, if you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
+As an example, if you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
 
 After Configuration Manager creates an automatic user device affinity, it continues to monitor the user device affinity thresholds. If the user's activity for the device falls below the thresholds you've set, the site removes the user device affinity. Set **User device affinity threshold (days)** to a value of at least seven days. This configuration avoids situations in which an automatically configured user device affinity might be lost while the user isn't signed in, for example, during the weekend.  
 
+> [!Note]
+> Starting in Configuration Manager version 2010, the troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned user device affinity automatically based on usage are returned when searching for a user. For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../tenant-attach/client-details.md#bkmk_list).
 
 ## Import user device affinities from a file
 
@@ -121,26 +116,11 @@ Set up a user to create their own user device affinity in Software Center.
 
 ### Set up a user device affinity in Software Center
 
-Starting in version 1902, use Software Center to set affinity.
+Users can use Software Center to set affinity.
 
 1. In Software Center, go to the **Options** tab.
 
 1. In the **Work information** section, select the option **I regularly use this computer to do my work**.
-
-### Set up a user device affinity in the application catalog
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-1. In the application catalog, choose **My Systems**.  
-
-1. Select the option **I regularly use this computer to do my work**.  
-
 
 ## Manage user device affinity requests from users
 
@@ -155,7 +135,6 @@ When you disable the client setting to **Automatically configure user device aff
 1. On the **Home** tab in the ribbon, in the **Collection** group, choose **Manage Affinity Requests**.  
 
 1. In the **Manage User Device Affinity Requests** dialog box, select an affinity request, and then choose **Approve** or **Reject**.  
-
 
 ## Next steps
 

@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: srink
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,7 +48,7 @@ The following tables list the ports and services that the Intune client accesses
 
 |**Endpoint**|**IP address**|
 |---------------------|-----------|
-|*.manage.microsoft.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 |
+|*.manage.microsoftonline.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 |
 
 
 ## Intune customer designated endpoints in China

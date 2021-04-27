@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,11 +20,11 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 #ROBOTS:
 #audience:
 
-ms.reviewer: altsou
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, contperfq1
+ms.custom: intune-azure, contperf-fy21q1
 ms.collection: M365-identity-device-management
 ---
 
@@ -126,6 +126,15 @@ When you assign your profiles, use the following table when including and exclud
   For example, you assign a device profile to the **All Users** user group, but exclude an **All personal devices** device group. In this mixed group profile assignment, **All users** get the profile. The exclusion does not apply.
 
   As a result, it's not recommended to assign profiles to mixed groups.
+
+> [!NOTE]
+> Use caution when excluding dynamic device groups from any policy assignment. Consider the latency associated with an Azure AD dynamic device group calculation.  
+> 
+> For example, you have a device policy that's assigned to **All devices**. Later, you have a requirement that new marketing devices don't receive this policy. So, you create a dynamic device group called **Marketing devices** based on the `enrollmentProfilename` property (`device.enrollmentProfileName -eq "Marketing_devices"`). In the policy, you add the **Marketing devices** dynamic group as an excluded group.
+> 
+> A new marketing device enrolls in Intune for the first time, and a new Azure AD device object is created. The dynamic grouping process puts the device into the **Marketing device**s group with a possible delayed calculation. In parallel, the device enrolls into Intune, and starts receiving all applicable policies. The Intune policy may be deployed before the device is put in the exclusion group. This behavior results in an unwanted policy (or app) being deployed to the **Marketing devices** group.
+> 
+> As a result, it's not recommended to use dynamic device groups for exclusions in latency sensitive scenarios.
 
 ## Next steps
 

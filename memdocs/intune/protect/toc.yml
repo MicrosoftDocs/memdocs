@@ -95,15 +95,15 @@
           href: endpoint-security-asr-policy.md
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
-    - name: Microsoft Defender ATP
+    - name: Microsoft Defender for Endpoint
       items:
-      - name: Microsoft Defender ATP
+      - name: Microsoft Defender for Endpoint
         href: advanced-threat-protection.md  
-      - name: Configure Defender ATP
+      - name: Configure Defender for Endpoint
         href: advanced-threat-protection-configure.md
       - name: Android web protection
         href: advanced-threat-protection-manage-android.md
-      - name: Monitor Defender ATP
+      - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
@@ -121,10 +121,18 @@
     items:
     - name: Microsoft Tunnel overview
       href: microsoft-tunnel-overview.md
+    - name: Microsoft Tunnel prerequisites
+      href: microsoft-tunnel-prerequisites.md
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
+    - name: Upgrade Microsoft Tunnel
+      href: microsoft-tunnel-upgrade.md
+    - name: Microsoft Tunnel with Conditional Access
+      href: microsoft-tunnel-conditional-access.md
+    - name: Migrate to the Defender for Endpoint app
+      href: microsoft-tunnel-migrate-app.md
   - name: Identity protection
     items:
     - name: Windows Hello
@@ -144,8 +152,6 @@
       href: conditional-access-exchange-create.md
     - name: Device-based Conditional Access policy
       href: create-conditional-access-intune.md
-    - name: Reassign Conditional Access policies from Intune classic portal
-      href: conditional-access-intune-reassign.md
     - name: App-based Conditional Access
       href: app-based-conditional-access-intune.md
     - name: Set up app-based Conditional Access
@@ -160,6 +166,7 @@
     href: endpoint-protection-configure.md
   - name: Mobile Threat Defense partners
     href: mobile-threat-defense.md
+    displayName: MTD
     items:
     - name: MTD on unenrolled devices
       items:
@@ -195,6 +202,11 @@
         items:
         - name: Lookout and Intune integration
           href: lookout-mtd-connector-integration.md
+      - name: Set up MVISION Mobile
+        href: mcafee-mobile-threat-defense-connector.md
+        items:
+        - name: MVISION Mobile and Intune integration
+          href: mcafee-mtd-connector-integration.md 
       - name: Set up Pradeo
         href: pradeo-mobile-threat-defense-connector.md
         items:
@@ -260,8 +272,12 @@
     items:
     - name: Windows updates
       items:
-      - name: Windows Update for Business settings
-        href: windows-update-for-business-configure.md    
+      - name: Use Windows Update for Business
+        href: windows-update-for-business-configure.md
+      - name: Update rings policy
+        href: windows-10-update-rings.md
+      - name: Feature updates policy
+        href: windows-10-feature-updates.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
@@ -269,56 +285,56 @@
   - name: Troubleshoot
     items:
     - name: Troubleshoot policies and profiles
-      href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?toc=/intune/protect/toc.json&bc=/protect/breadcrumb/toc.json
+      href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?bc=%2fprotect%2fbreadcrumb%2ftoc.json&toc=%2fintune%2fprotect%2ftoc.json
     - name: Troubleshoot Conditional Access
-      href: troubleshoot-conditional-access.md
+      href: /troubleshoot/mem/intune/troubleshoot-conditional-access
     - name: Troubleshoot certificate connector
-      href: troubleshoot-certificate-connector-events.md
+      href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events
     - name: Troubleshoot SCEP certificate profiles
       items:
       - name: Troubleshoot SCEP certificate profiles
-        href: troubleshoot-scep-certificate-profiles.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles
       - name: Profile deployment to devices
-        href: troubleshoot-scep-certificate-profile-deployment.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment
       - name: Device to NDES communication
-        href: troubleshoot-scep-certificate-device-to-ndes.md	
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes
       - name: NDES operations
-        href: troubleshoot-scep-certificate-ndes-policy-module.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module
       - name: Certificate delivery to devices
-        href: troubleshoot-scep-certificate-delivery.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery
       - name: Reporting for certificate deployment
-        href: troubleshoot-scep-certificate-reporting.md
+        href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting
     - name: Troubleshoot PKCS certificate profiles
-      href: troubleshoot-pkcs-certificate-profiles.md
+      href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles
     - name: Troubleshoot Exchange connectors
       items:
       - name: Troubleshoot Exchange connectors
-        href: troubleshoot-exchange-connector.md
+        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
       - name: Common problems 
-        href: troubleshoot-exchange-connector-common-problems.md
+        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems
       - name: Common errors   
-        href: troubleshoot-exchange-connector-common-errors.md
+        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
     - name: Troubleshoot BitLocker policies
-      href: troubleshoot-bitlocker-policies.md
+      href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
     - name: Troubleshoot Jamf Pro integration
-      href: troubleshoot-jamf.md
+      href: /troubleshoot/mem/intune/troubleshoot-jamf
 - name: Reference
   items:
   - name: API to add third-party certificate authority
     href: scep-libraries-apis.md
   - name: Compliance policy settings
     items:
-    - name: Compliance policy settings - Android
+    - name: Compliance settings - Android device administrator
       href: compliance-policy-create-android.md
-    - name: Compliance policy settings - Android Enterprise
+    - name: Compliance settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md
-    - name: Compliance policy settings - iOS
+    - name: Compliance settings - iOS
       href: compliance-policy-create-ios.md
-    - name: Compliance policy settings - macOS
+    - name: Compliance settings - macOS
       href: compliance-policy-create-mac-os.md
-    - name: Compliance policy settings - Windows 10
+    - name: Compliance settings - Windows 10
       href: compliance-policy-create-windows.md
-    - name: Compliance policy settings - Windows 8.1
+    - name: Compliance settings - Windows 8.1
       href: compliance-policy-create-windows-8-1.md
   - name: Endpoint security policy settings
     items:
@@ -336,6 +352,7 @@
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings
       href: endpoint-security-disk-encryption-profile-settings.md
+      displayName: AWA; Add Work Account
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
     - name: Tenant attach Firewall settings    
@@ -350,7 +367,7 @@
     items: 
     - name: Windows 10 MDM baseline settings
       href: security-baseline-settings-mdm-all.md
-    - name: Microsoft Defender ATP baseline settings 
+    - name: Microsoft Defender for Endpoint baseline settings 
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
@@ -369,4 +386,4 @@
   - name: Prevent unauthorized access
     href: data-outside-protect.md
   - name: Prevent data leaks on non-managed devices
-    href: data-leak-prevention.md  
+    href: data-leak-prevention.md

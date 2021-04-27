@@ -340,7 +340,7 @@ This capability allows customers to manage both Intune MDM and Configuration Man
 
 - In Configuration Manager current branch version 1910, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md).
+    Starting in this version, the HTTPS requirement is for the IIS website that hosts the recovery service, not the entire management point role. This change relaxes the certificate requirements, and still encrypts the recovery keys in transit.<!-- 5925660 --> For more information, see [Encrypt recovery data over the network](../../../protect/deploy-use/bitlocker/encrypt-recovery-data-transit.md).
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -375,7 +375,7 @@ When you Send a smile or Send a frown, a status message is created when the feed
 
 A status message with an ID of 53900 is a successful submission and 53901 is a failed submission.
 
-For more information, see [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Product feedback](../../understand/product-feedback.md).
 
 ### Search all subfolders for configuration items and configuration baselines
 
@@ -411,7 +411,7 @@ For more information, see [Support Center OneTrace](../../support/support-center
 <!--5665775, 6307931-->
 The tool to extend and migrate on-premises site to Microsoft Azure now supports provisioning multiple site system roles on a single Azure virtual machine. You can add site system roles after the initial Azure virtual machine deployment has completed.
 
-For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#bkmk_add_role).
+For more information, see [Extend and migrate on-premises site to Microsoft Azure](../../support/azure-migration-tool.md#add-site-roles-to-an-existing-vm).
 
 ## Other updates
 
@@ -440,6 +440,7 @@ The following additional hotfixes are available to address specific issues:
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | July 24, 2020 | No |
 | [4576782](https://support.microsoft.com/help/4576782) | Application blade times out in Microsoft Endpoint Manager admin center | August 11, 2020 | No |
 | [4578123](https://support.microsoft.com/help/4578123) | CMPivot queries return unexpected results in Configuration Manager, version 2002 | August 24, 2020 | No |
+| [4575783](https://support.microsoft.com/help/4575783) | Office updates fail to download in Configuration Manager current branch, version 2002 | November 11, 2020 | Yes |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

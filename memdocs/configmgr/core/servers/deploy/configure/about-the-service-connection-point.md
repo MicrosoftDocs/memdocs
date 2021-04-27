@@ -2,7 +2,7 @@
 title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
-ms.date: 01/08/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # About the service connection point in Configuration Manager
@@ -63,17 +61,59 @@ To use the Configuration Manager Service Manager to restart the SMS_DMP_DOWNLOAD
 
 ## Remote site system requirements
 
-When you install the service connection point on a site system server that's remote from the site server, configure the following requirements:
+When you install the service connection point on a site system server that's remote from the site server, configure one of the following requirements:
 
 - The computer account of the site server must be a local admin on the computer that hosts a remote service connection point.
 
+  or<!-- MEMDocs#1479 -->
+
 - Set up the site system server that hosts this role with a [site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account). The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
 
-## <a name="bkmk_urls"></a> Internet access requirements
+## Internet access requirements
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_scp).
+For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md). Other Configuration Manager features may require additional endpoints from the service connection point.
+
+[!INCLUDE [Internet endpoints for service connection point](../../../plan-design/network/includes/internet-endpoints-service-connection-point.md)]
+
+## Validate internet access
+
+<!--8565578-->
+
+If you use Desktop Analytics or tenant attach, starting in version 2010, the service connection point now checks important internet endpoints. These checks help make sure that the cloud-connected services are available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem.
+
+For the list of internet endpoints, see the following sections of the **Internet access requirements** article:
+
+- [Desktop Analytics](../../../plan-design/network/internet-endpoints.md#desktop-analytics)
+- [Tenant attach](../../../plan-design/network/internet-endpoints.md#tenant-attach)
+
+For more details, review the **EndpointConnectivityCheckWorker.log** file on the service connection point.
+
+A failure isn't always determined by the HTTP status code, but if there's network connectivity to an endpoint. The following scenarios can cause a check to fail:
+
+- Network connection timeout
+- SSL/TLS failure
+- Unexpected status code:
+
+  | Status code | Description | Possible reason |
+  |---------|---------|---------|
+  | 407 | Proxy authentication required | May indicate a proxy issue |
+  | 408 | Request timeout | May indicate a proxy issue |
+  | 426 | Upgrade required | May indicate a TLS misconfiguration |
+  | 451 | Unavailable for legal reasons | May indicate a proxy issue |
+  | 502 | Bad gateway | May indicate a proxy issue |
+  | 511 | Network authentication required | May indicate a proxy issue |
+  | 598 | Network read timeout error | Not RFC compliant, but used by some proxy servers to indicate a network timeout |
+  | 599 | Network connection timeout error | Not RFC compliant, but used by some proxy servers to indicate a network timeout |
+
+There are also the following status messages for the **SMS_SERVICE_CONNECTOR** component:
+
+| Message ID | Severity | Notes |
+|---------|---------|---------|
+| 11410 | Informational | All checks are successful |
+| 11411 | Warning | One or more non-critical failures occurred |
+| 11412 | Error | One or more critical failures occurred |
 
 ## Install
 

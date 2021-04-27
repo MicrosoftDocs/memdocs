@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add an iOS line-of-business app to Microsoft Intune
+title: Add an iOS/iPadOS line-of-business app to Microsoft Intune
 titleSuffix:
-description: Learn about how to add an iOS line-of-business (LOB) app to Microsoft Intune.
+description: Learn about how to add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 04/12/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,21 +29,20 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add an iOS line-of-business app to Microsoft Intune
+# Add an iOS/iPadOS line-of-business app to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Use the information in this article to help you add an iOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You will first need to join the iOS Developer Enterprise Program. For more information about how to do this see [Apple's website](https://developer.apple.com/programs/ios/enterprise/).
+Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You will first need to join the iOS Developer Enterprise Program. For more information about how to do this see [Apple's website](https://developer.apple.com/programs/ios/enterprise/).
 
 > [!NOTE]
-> Users of iOS devices can remove some of the built-in iOS apps, like Stocks and Maps. You cannot use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
+> Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You cannot use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
 >
-> iOS LOB apps have a maximum size limit of 2 GB per app.
->
-> Apple Shared iPads do not support LOB apps.
-
-> [!NOTE]
+> iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
+> 
 > Bundle identifiers (for example, *com.contoso.app*) are meant to be unique identifiers of an app. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
+
+You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. 
 
 ## Select the app type
 
@@ -57,7 +56,7 @@ Use the information in this article to help you add an iOS line-of-business (LOB
 ### Select the app package file
 
 1. In the **Add app** pane, click **Select app package file**. 
-2. In the **App package file** pane, select the browse button. Then, select an iOS installation file with the extension **.ipa**.
+2. In the **App package file** pane, select the browse button. Then, select an iOS/iPadOS installation file with the extension **.ipa**.
    The app details will be displayed.
 3. When you're finished, select **OK** on the **App package file** pane to add the app.
 
@@ -99,7 +98,7 @@ You can use scope tags to determine who can see client app information in Intune
 The app that you created now appears in the list of apps. From the list, you can assign the apps to groups that you choose. For help, see [How to assign apps to groups](apps-deploy.md).
 
 > [!NOTE]
-> Provisioning profiles for iOS LOB apps have a 30 day notice before they will expire.
+> Provisioning profiles for iOS/iPadOS LOB apps have a 30 day notice before they will expire.
 
 ## Step 5: Update a line-of-business app
 

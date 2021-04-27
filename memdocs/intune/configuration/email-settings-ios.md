@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 In Microsoft Intune, you can create and configure email to connect to an email server, choose how users authenticate, use S/MIME for encryption, and more.
 
-This article lists and describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
+This article describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
 
 ## Before you begin
 

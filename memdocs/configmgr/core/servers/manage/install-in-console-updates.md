@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -91,13 +91,15 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2103](checklist-for-installing-update-2103.md)
+
+- [Checklist for installing update 2010](checklist-for-installing-update-2010.md)
+
 - [Checklist for installing update 2006](checklist-for-installing-update-2006.md)
 
 - [Checklist for installing update 2002](checklist-for-installing-update-2002.md)
 
 - [Checklist for installing update 1910](checklist-for-installing-update-1910.md)  
-
-- [Checklist for installing update 1906](checklist-for-installing-update-1906.md)  
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -198,7 +200,7 @@ Use the following steps to monitor progress:
 - View the **CMUpdate.log** file in `<ConfigMgr_Installation_Directory>\Logs` on the site server.  
 
 >[!NOTE]
-> Starting in version 1906, you can see the state of the **Upgrade ConfigMgr database** task during the **Installation** phase.
+> During the **Installation** phase, you can see the state of the **Upgrade ConfigMgr database** task.
 >
 > - If the database upgrade is blocked, then you'll be given the warning **In progress, needs attention**.
 >   - The cmupdate.log will log the program name and sessionid from SQL Server that is blocking the database upgrade.
@@ -351,19 +353,40 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 - **Retry**: When you **Retry** from **Site Servicing Status**, you restart the installation of the update at only that site. Unlike running **Retry** from the **Updates and Servicing** node, this retry doesn't ignore prerequisite warnings.  
 
-- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.  
+- **Ignore prerequisite warnings**: If the update install stops because of a warning, you can then select **Ignore prerequisite warnings**. This action allows the installation of the update to continue after a few minutes, and uses the option to ignore prerequisite warnings.
+
+## <a name="bkmk_report"></a> Report setup and upgrade failures to Microsoft
+<!--5622909-->
+Starting in Configuration Manager version 2010, if the setup or update process fails to complete successfully, you can report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. When running [setup from the media](../../servers/deploy/install/use-the-setup-wizard-to-install-sites.md) rather than the console, you'll also be given the **Report update error to Microsoft** option if setup fails.
+
+> [!IMPORTANT]
+> Contact [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request for business impacting issues. Reporting setup and upgrade failures from the console is for providing product feedback on setup errors you may have encountered. Reporting an error doesn't generate a support request.
+
+To report upgrade failures to Microsoft:
+
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Updates and Servicing**.
+1. Select an update then select **Report update error to Microsoft** in the ribbon.
+   :::image type="content" source="./media/5622909-report-error.png" alt-text="Report update error to Microsoft button in the ribbon" lightbox="./media/5622909-report-error.png":::
+1. Before you submit the feedback, you'll be given options to:
+   - Attach additional files
+   - Provide your email address if you're willing to be contacted about the error.
+1. When you submit feedback, you'll be given a transaction ID for the feedback. A status message is also generated with this information.
+   - Message ID 53900 is a successful submission.
+   - Message ID 53901 is a failed submission.
 
 ## <a name="bkmk_after"></a> After a site installs an update  
 
 After the site updates, review the post-update checklist for the applicable version:  
+
+- [Post-update checklist for version 2103](checklist-for-installing-update-2103.md#post-update-checklist)
+
+- [Post-update checklist for version 2010](checklist-for-installing-update-2010.md#post-update-checklist)
 
 - [Post-update checklist for version 2006](checklist-for-installing-update-2006.md#post-update-checklist)
 
 - [Post-update checklist for version 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Post-update checklist for version 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
-
-- [Post-update checklist for version 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
@@ -391,25 +414,17 @@ The following features are optional in the latest version of Configuration Manag
 
 -->
 
-- [Community hub](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
 - [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
+- [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 -->
 - [BitLocker management](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
-- [Synchronize collection membership results to Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
-- [Azure Active Directory user group discovery](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Task sequence debugger](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
-- [Package conversion manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Third-party software updates](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Approve application requests for users per device](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
-- [Create and run scripts](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
-- [Surface driver updates](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
-- [Cloud management gateway](../../clients/manage/cmg/overview.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [PFX create](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
 - [Azure Log Analytics connector](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender Exploit Guard policy](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [VPN for Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
-- [Servicing a cluster-aware collection (Server groups)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](../../../protect/deploy-use/windows-hello-for-business-settings.md) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
 > [!TIP]
@@ -432,3 +447,7 @@ If you can't find a specific update in your console after a successful sync with
     If you think you have the required configurations and prerequisites for a missing update, confirm the service connection point is in online mode. Then, use the **Check for Updates** option in the **Updates and Servicing** node to force a check. If your service connection point is in offline mode, use the service connection tool to manually sync with the cloud service.  
 
 - Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console. For more information, see [Permissions to manage updates](#assign-permissions-to-view-and-manage-updates-and-features).
+
+### Why did the current branch name change with version 2103?
+
+To better align with other releases within Microsoft Endpoint Manager, starting in the year 2021 the current branch version names will be 2103, 2107, and 2111. They will still release every four months, and release at the same time of the year.

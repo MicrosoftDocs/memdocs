@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to customize the Intune Company Portal apps, Company Portal website, and Intune app
+title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
 titleSuffix: Microsoft Intune
-description: Learn how you can apply company-specific branding to the Intune Company Portal apps, Company Portal website, and Intune app.
+description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 04/20/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,7 +29,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# How to customize the Intune Company Portal apps, Company Portal website, and Intune app
+# How to configure the Intune Company Portal apps, Company Portal website, and Intune app
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department). Additionally, they allow users to securely access company resources. The end-user experience provides several different pages, such as Home, Apps, App details, Devices, and Device details. To quickly find apps within the Company Portal, you can filter the apps on the Apps page.
 
@@ -158,7 +158,7 @@ The following table provides app source specific configuration details:
 > [!NOTE]
 > The display of apps from other Microsoft services is only supported in the Windows Company Portal and the Company Portal website.
 
-You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.azure.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
+You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
 ### Customizing user self-service actions for the Company Portal
 
@@ -182,11 +182,20 @@ Upon selecting the Company Portal, the user will be directed to the correspondin
 - `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
 - *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
 
-If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal. 
+
+> [!NOTE]
+> To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
+
+## Company Portal and Apple Setup Assistant for iOS/iPadOS
+
+For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication (preview)**.  This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
+
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Azure AD login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed. 
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
-Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
+Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
 > [!NOTE]
 > The user will see instructions about derived credentials based on the link that you have specified via Intune.
@@ -269,6 +278,10 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
+
+## Company Portal app notifications
+
+The Company Portal app can store, as well as display, push notifications sent to your users' iOS/iPadOS devices from the Microsoft Endpoint Manager console. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
 
 ## Next steps
 

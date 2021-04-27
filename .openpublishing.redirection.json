@@ -2,6 +2,15 @@
     "redirections": [
 
         {
+            "source_path": "memdocs/intune/user-help/send-logs-to-your-it-admin-using-cable-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/tutorial-walkthrough-intune-portal.md",
+            "redirect_url": "/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager",
+            "redirect_document_id": false
+        },          {
             "source_path": "memdocs/intune/fundamentals/migration-guide-communication-plan.md",
             "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
             "redirect_document_id": false
@@ -267,6 +276,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/autopilot/autopilot-update.md",
+            "redirect_url": "/mem/autopilot/index",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/core/misc/whats-new-endpoint-analytics.md",
             "redirect_url": "/mem/analytics/whats-new",
             "redirect_document_id": false
@@ -442,8 +456,258 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/configmgr/apps/get-started/creating-linux-and-unix-server-applications.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/deploy/linux-and-unix-clients-technical-reference.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/monitor-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/manage-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/analytics/whats-new.md",
             "redirect_url": "/mem/analytics/overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/apps/deploy-use/troubleshoot-application-deployment.md",
+            "redirect_url": "/troubleshoot/mem/configmgr/troubleshoot-application-deployment",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration.md",
+            "redirect_url": "/troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/mdt/troubleshooting-reference.md",
+            "redirect_url": "/troubleshoot/mem/configmgr/troubleshooting-reference/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/troubleshoot-app-install.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-app-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/troubleshoot-app-protection-policy-deployment.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/troubleshoot-mam.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/troubleshoot-email-profiles-in-microsoft-intune.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/troubleshoot-policies-in-microsoft-intune.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/troubleshoot-wi-fi-profiles.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-android-enrollment.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-android-enrollment",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-device-enrollment-in-intune.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-ios-enrollment-errors.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-windows-enrollment-errors.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/troubleshoot-windows-auto-enrollment.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment",
+            "redirect_document_id": false
+        },        
+        {
+            "source_path": "memdocs/intune/fundamentals/troubleshoot-company-resource-access-problems.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-company-resource-access-problems",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/troubleshoot-endpoint-protection-in-microsoft-intune.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/troubleshoot-software-updates-in-microsoft-intune.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/remote-actions/troubleshoot-device-actions.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-device-actions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/app-install-error-codes.md",
+            "redirect_url": "/troubleshoot/mem/intune/app-install-error-codes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-bitlocker-policies.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-bitlocker-policies",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-certificate-connector-events.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-certificate-connector-events",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-conditional-access.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-conditional-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-exchange-connector.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-exchange-connector-common-errors.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-exchange-connector-common-problems.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-jamf.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-jamf",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-pkcs-certificate-profiles.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-delivery.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-device-to-ndes.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-ndes-policy-module.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-profile-deployment.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-profiles.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/troubleshoot-scep-certificate-reporting.md",
+            "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/manage/use-alerts-and-the-status-system.md",
+            "redirect_url": "/mem/configmgr/core/servers/manage/use-status-system",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
+            "redirect_url": "/mem/configmgr/mdm/understand/what-happened-to-hybrid",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/security-best-practices-and-privacy-information.md",
+            "redirect_url": "/mem/configmgr/security/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/security-and-privacy.md",
+            "redirect_url": "/mem/configmgr/security/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/securing-configuration-manager-applications.md",
+            "redirect_url": "/mem/configmgr/develop/core/servers/configure/role-based-administration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/conditional-access-intune-reassign.md",
+            "redirect_url": "/mem/intune/protect/conditional-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/hierarchy/content-source-location-scenarios.md",
+            "redirect_url": "/mem/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md",
+            "redirect_url": "/mem/configmgr/core/servers/deploy/configure/boundary-groups",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/enrollment-autopilot.md#add-devices",
+            "redirect_url": "/mem/autopilot/add-devices#add-devices",
             "redirect_document_id": false
         }
     ]

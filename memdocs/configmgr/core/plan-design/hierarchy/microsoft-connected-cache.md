@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 09/10/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,16 +18,16 @@ manager: dougeby
 
 <!--3555764-->
 
-Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature that can help to protect WAN links.
+You can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature that can help to protect WAN links.
 
 > [!NOTE]
-> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
+> This feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
 
 This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
 
 This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately.
 
-> [!Note]  
+> [!NOTE]
 > The Connected Cache server is an application installed on Windows Server. This application is still in development.
 
 ## How it works
@@ -61,6 +61,8 @@ When you configure clients to use the Connected Cache server, they no longer req
   - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
 
   - Starting in version 2002, the Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
+
+  - Don't use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
 
 - Clients running Windows 10 version 1709 or later
 
@@ -141,7 +143,10 @@ For more detailed information, see [Troubleshoot Microsoft Connected Cache in Co
 
 <!--5032900-->
 
-Starting in version 1910, when you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
+When you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
+
+> [!TIP]
+> All other content that Intune-managed devices download from Microsoft with Delivery Optimization can also be cached on Microsoft Connected Cache. This content includes software updates for Windows, Microsoft 365 apps, and Microsoft Edge.
 
 ### Prerequisites
 
@@ -158,14 +163,14 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 - Enable Connected Cache on a distribution point. For more information, see [Microsoft Connected Cache](microsoft-connected-cache.md).
 
-- The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
+- The client and the Connected Cache-enabled distribution point need to be in the same boundary group. If a client isn't in a boundary group with a Connected Cache-enabled distribution point, it won't download content from a Connected Cache-enabled distribution point in a neighbor or site default boundary group.
+
+  - Enable **Allow peer downloads in this boundary group** option for the Boundary Group which contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 - Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
 
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**
   - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
-
-- Enable the pre-release feature **Client apps for co-managed devices**. For more information, see [Pre-release features](../../servers/manage/pre-release-features.md).
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
@@ -181,10 +186,15 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
   - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Intune Win32 app management](/intune/apps/apps-win32-app-management).
 
-  - The app needs to be at least 100 MB in size.
-  
-    > [!TIP]
-    > Use the following group policy setting: Computer Configuration > Administrative Templates > Windows Components > Delivery Optimization > **Minimum Peer Caching Content File Size (in MB)**.
+## Support for cloud-managed devices
+
+<!-- 8827227 -->
+
+When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. For example, a device that's managed by Intune, but connects to the on-premises network. As long as the device can communicate with the server, the cache is available to deliver content to these devices.
+
+To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost). To use Intune to configure this policy, use the **Cache server host names** setting. For more information, see [Delivery Optimization settings for Windows 10 devices in Intune](../../../../intune/configuration/delivery-optimization-settings.md#local-server-caching).
+
+When you enable this policy for cloud-managed devices, either type of device can request the server to cache content, and either can download the content. If multiple devices request the same content, no matter their management authority, they download supported and available content from the Microsoft Connected Cache.
 
 ## See also
 

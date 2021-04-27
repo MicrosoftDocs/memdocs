@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 02/12/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: 57019B11-DF9B-4D8A-95FE-254C75398DDE
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,14 +38,14 @@ Use the Intune Data Warehouse to build reports that provide insight into your en
 
 ## Data Warehouse benefits
 
-The Data Warehouse provides you access to more information about your mobile environment than the Azure portal. With the Intune Data Warehouse you can access:
+The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With the Intune Data Warehouse you can access:
 
 - Historical Intune data
 - Data refreshed on a daily cadence
 - A data model using the OData standard
 
 > [!Note]
-> If you are a using co-managed mobile device management (MDM) with Microsoft Endpoint Configuration Manager and Microsoft Intune, you need to retrieve your data from Configuration Manager. The Intune Data Warehouse only contains Intune data. You can use a Configuration Manager Power BI dashboard for your custom reports. For more information, see "[Announcing the Power BI solution template for Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)" and "[Power BI content for Dynamics 365](/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)."
+> If you are a using co-managed mobile device management (MDM) with Microsoft Endpoint Configuration Manager and Microsoft Intune, you need to retrieve your data from Configuration Manager. The Intune Data Warehouse only contains Intune data. You can use a Configuration Manager Power BI dashboard for your custom reports. For related information, see [Power BI Desktop](/configmgr/develop/adminservice/usage#power-bi-desktop).
 
 > [!Important]  
 > You can now use the v1.0 version of the Intune Data Warehouse by setting the query parameter `api-version=v1.0`. Updates to collections in the Data Warehouse are additive in nature and do not break existing scenarios.<br><br>

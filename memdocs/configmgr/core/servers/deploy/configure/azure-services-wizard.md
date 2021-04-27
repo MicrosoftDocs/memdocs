@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 08/11/2020
+ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -161,6 +161,9 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
+    > [!NOTE]
+    > You may see an option for **Never**, but Azure AD no longer supports it. If you previously selected this option, the expiration date is now set for 99 years from the date you created it.<!-- MEMDocs#1530 -->
+
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
 
 Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. This action returns to the [Server app dialog](#server-app-dialog).
@@ -213,7 +216,7 @@ Select **OK** to create the native app in Azure AD and close the Create Client A
 
 ## Configuration or Discovery
 
-After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
+After specifying the web and native apps on the **Apps** page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
 
 - **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
@@ -222,6 +225,16 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 - **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
+
+## <a name="bkmk_SRVAppSettings"></a> Update application settings
+
+To allow your Configuration Manager clients to request an **Azure AD device token** and to enable the **Reading directory data** permissions, you need to update the web server application settings.
+### Update Application Settings
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tenants** node.
+1. Select the Azure AD tenant for the application you want to update.
+1. In the **Applications** section, select your Azure AD web server application, then select **Update Application Settings** from the ribbon.
+1. When prompted for confirmation, select **Yes** to confirm you want to update the application with the latest settings.
 
 ## <a name="bkmk_renew"></a> Renew secret key
 
@@ -250,6 +263,31 @@ If you imported the Azure app in Configuration Manager, use the Azure portal to 
 
 > [!NOTE]
 > Save the secret key before closing the Azure application properties **Key** page. This information is removed when you close the page.
+
+## Disable authentication
+
+<!--8537319-->
+
+Starting in version 2010, you can disable Azure AD authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Azure AD, it allows the site and clients to use modern authentication. Currently, Azure AD device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Azure AD authentication.
+
+1. In the Configuration Manager console, go to the **Administration** workspace.
+
+1. Expand **Cloud Services** and select the **Azure Services** node.
+
+1. Select the target connection of type **Cloud Management**. In the ribbon, select **Properties**.
+
+1. Switch to the **Applications** tab.
+
+1. Select the option to **Disable Azure Active Directory authentication for this tenant**.
+
+1. Select **OK** to save and close the connection properties.
+
+> [!TIP]
+> It can take up to 25 hours for this change to take effect on clients.<!-- 8717813 --> For purposes of testing to speed up this change in behavior, use the following steps:
+>
+> 1. Restart the **sms_executive** service on the site server.
+> 1. Restart the **ccmexec** service on the client.
+> 1. Trigger the client schedule to refresh the default management point. For example, use the [send schedule tool](../../../support/send-schedule-tool.md): `SendSchedule {00000000-0000-0000-0000-000000000023}`
 
 ## View the configuration of an Azure service
 

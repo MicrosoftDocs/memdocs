@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/1/2020
+ms.date: 12/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
 > [!NOTE]
-> This article is about 3rd party Mobile Threat Defense vendors, for more information on Microsoft Defender, see [Microsoft Defender ATP](../protect/advanced-threat-protection.md).
+> This article is about 3rd party Mobile Threat Defense vendors, for more information on Microsoft Defender, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
@@ -98,12 +98,13 @@ Access is granted when the device is remediated:<br>
 
 Learn how to protect access to company resource based on device, network, and application risk with:
 
-- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
-- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
-- [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
-- [Zimperium](zimperium-mobile-threat-defense-connector.md)
-- [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Better Mobile](better-mobile-threat-defense-connector.md)
+- [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
+- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
+- [MVISION Mobile](mcafee-mobile-threat-defense-connector.md)
+- [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
+- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
-- [Microsoft Defender](../protect/advanced-threat-protection.md)
+- [Zimperium](zimperium-mobile-threat-defense-connector.md)

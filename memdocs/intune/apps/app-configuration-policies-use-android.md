@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,11 +39,21 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 > [!NOTE]  
 > Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
 
+## Email apps
+
+Android Enterprise has several enrollment methods. The enrollment type depends on how email is configured on the device:
+
+- On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use an app configuration policy and the steps in this article. App configuration policies support Gmail and Nine Work email apps.
+- On Android Enterprise personally owned devices with a work profile, create an [Android Enterprise email device configuration profile](../configuration/email-settings-android-enterprise.md). When you create the profile, you can configure settings for email clients that support app configuration policies. When using the configuration designer, Intune includes email settings specific to Gmail and Nine Work apps.
+- On Android device administrator, create an [Android device administrator email device configuration profile](../configuration/email-settings-android.md) for Samsung Knox devices. When you create the profile, you can configure Exchange email settings, such as `outlook.office365.com`.
+
+## Create an app configuration policy
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the portal.
+    - **Description** - The description of the profile that appears in the portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **Android Enterprise** as the **Platform**.
 5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
@@ -51,11 +61,13 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 7. Click **Next** to display the **Settings** page.
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
-10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md).
+10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.  
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
-    - **Enter JSON data**<br><br>
+    - **Enter JSON data**
+
     For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
+
 12. Click **Next** to display the **Assignments** page.
 13. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
 
@@ -83,7 +95,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 1. Select **Add**. Choose the list of configuration settings that you want to enter for the app.
 
-    If you're using GMail or Nine Work for your email app, see [Android Enterprise device settings to configure email](../configuration/email-settings-android-enterprise.md) for more information on these settings.
+    If you're using Gmail or Nine Work email apps, [Android Enterprise device settings to configure email](../configuration/email-settings-android-enterprise.md) has more information on these specific settings.
 
 2. For each key and value in the configuration, set:
 
@@ -143,13 +155,12 @@ For example, an app uses the device's microphone. The user is prompted to grant 
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** >  **Add** > **Managed devices**.
 2. Add the following properties:
-
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android Enterprise prompt permissions app policy for entire company**.
     - **Description**. Enter a description for the profile. This setting is optional, but recommended.
     - **Device enrollment type**: This setting is set to **Managed devices**.
-    - **Platform**: Select **Android**.
-
-3. Select **Associated App**. Choose the app you want to define a configuration policy. Select from the list of Android work profile apps that you've approved and synchronized with Intune.
+    - **Platform**: Select **Android Enterprise**.
+3. Select **Profile Type**:
+3. Select **Targeted App**. Choose the app that you want to associate a configuration policy with. Select from the list of Android Enterprise fully managed work profile apps that you've approved and synchronized with Intune.
 4. Select **Permissions** > **Add**. From the list, select the available app permissions > **OK**.
 5. Select an option for each permission to grant with this policy:
     - **Prompt**. Prompt the user to accept or deny.
@@ -160,7 +171,7 @@ For example, an app uses the device's microphone. The user is prompted to grant 
 
 ## Additional information
 
-- [Assigning a Managed Google Play app to Android Enterprise devices](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
+- [Assign a Managed Google Play app to Android Enterprise personally-owned and corporate-owned work profile devices](apps-add-android-for-work.md#assign-a-managed-google-play-app-to-android-enterprise-personally-owned-and-corporate-owned-work-profile-devices)
 - [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps

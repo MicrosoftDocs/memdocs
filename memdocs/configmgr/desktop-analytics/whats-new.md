@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 08/21/2020
+ms.date: 01/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -22,6 +22,38 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## January 2021
+
+### Change to required permissions for administrator role
+
+<!-- 9049337 -->
+
+By the end of March 2021, the [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator-permissions) role in Azure Active Directory will no longer require the following permissions:
+
+- `microsoft.office365.webPortal/allEntities/basic/read`
+- `microsoft.office365.serviceHealth/allEntities/allTasks`
+- `microsoft.office365.supportTickets/allEntities/allTasks`
+
+These permissions aren't currently used by this role.
+
+There's no action required at this time, this notice is a deprecation announcement.
+
+## December 2020
+
+### Security updates are deprecated in Desktop Analytics
+
+<!-- 8099536 -->
+
+In the Desktop Analytics portal, the **Security updates** tile on the home page and the **Security updates** page are deprecated. They'll be retired in March 2021. To monitor your devices' Windows updates and Microsoft Defender status, use [Update Compliance](/windows/deployment/update/update-compliance-get-started).
+
+### Windows 10, version 20H2, now available in Desktop Analytics
+
+<!-- 8630465 -->
+
+In the Desktop Analytics portal, when you monitor feature updates, you'll now see Windows 10, version 20H2. When you create a deployment plan, you can select Windows 10, version 20H2, as the target version.
+
+For more information, see the FAQ [Why aren't new Windows releases available immediately in Desktop Analytics?](faq.yml#why-aren-t-new-windows-releases-available-immediately-in-desktop-analytics-)
 
 ## August 2020
 
@@ -47,7 +79,7 @@ Microsoft improved how they collect and process Windows diagnostic data from dev
 
 <!-- 7370207 -->
 
-In the Desktop Analytics portal, when you monitor security and feature updates, you'll now see Windows 10, version 2004. When you create a deployment plan, you can select Windows 10, version 2004, as the target version.
+In the Desktop Analytics portal, when you monitor feature updates, you'll now see Windows 10, version 2004. When you create a deployment plan, you can select Windows 10, version 2004, as the target version.
 
 ### Improved support for viewing the portal from any device
 
@@ -164,15 +196,11 @@ To help reduce your efforts in annotating noteworthy apps, certain types of apps
 
 - Apps managed and updated from the Microsoft Store
 
-For more information, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp).
+For more information, see [Automatic upgrade decision of system and store apps](about-assets.md#automatic-upgrade-decision-of-system-and-store-apps).
 
 ## What's new in Configuration Manager
 
-The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see the following articles:
-
-<!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
-
-- [What's new in version 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see [What's new in Configuration Manager incremental versions](../core/plan-design/changes/whats-new-incremental-versions.md).
 
 ## Deprecated features
 

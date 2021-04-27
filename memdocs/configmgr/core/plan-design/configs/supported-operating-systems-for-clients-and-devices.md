@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 08/11/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -67,7 +67,6 @@ For more information, see the following articles:
 ### Supported server OS versions
 
 - **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
-    (Starting with Configuration Manager version 1806.)
 
 - **Windows Server 2016**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
 
@@ -122,8 +121,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
   - RAM File-Based Write Filters (FBWF)
 
   - Unified Write Filters (UWF)  
-
-- The application catalog isn't supported for any Windows Embedded device.  
 
 ### Supported OS versions  
 
@@ -189,6 +186,9 @@ Products that are beyond their support lifecycle aren't supported for use with C
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
+> [!Tip]
+> Starting in Configuration Manager 2010, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates. For more information, see [Console notifications](../../servers/manage/admin-console-notifications.md#bkmk_2010). This information is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update or license compliance. Be sure to verify the accuracy of the information provided to you.
+
 ## Mac computers  
 
 Manage Apple Mac computers with the Configuration Manager client for macOS.  
@@ -208,116 +208,6 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 - **macOS Mojave (10.14)**
 
 - **macOS High Sierra (10.13)**
-
-## Linux and UNIX servers  
-
-> [!Important]  
-> Configuration Manager version 1902 drops support for Linux and UNIX as a client. Deprecation was announced with [version 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
-
-The Linux and UNIX client installation packages aren't supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). In addition to client installation packages, the client download includes the script that manages the installation of the client on each computer.  
-
-### Requirements and limitations
-
-- To review OS file dependencies for the client for Linux and UNIX, see [Prerequisites for client deployment to Linux and UNIX servers](../../clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
-
-- For an overview of supported management capabilities for Linux or UNIX, see [How to deploy clients to UNIX and Linux servers](../../clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
-
-- For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, CentOS version 6 includes  CentOS 6.3. Similarly, support for an OS that uses service packs (such as SUSE Linux Enterprise Server 11 SP1) includes subsequent service packs for that OS version.  
-
-- For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers](../../clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
-
-### Supported versions
-
-The following versions are supported by using the indicated .tar file.  
-
-#### AIX  
-
-|Version|TAR file|  
-|-|-|  
-|Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
-|Version 7.1 (Power)|ccm-Aix71ppc.&lt;build\>.tar|  
-
-#### CentOS  
-
-|Version|TAR file|  
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-#### Debian  
-
-|Version|TAR file|  
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 8 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 8 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-#### HP-UX  
-
-|Version|TAR file|  
-|-|-|  
-|Version 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;build\>.tar|  
-
-#### Oracle Linux  
-
-|Version|TAR file|  
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-#### Red Hat Enterprise Linux (RHEL)  
-
-|Version|TAR file|  
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-#### Solaris  
-
-|Version|TAR file|  
-|-|-|  
-|Version 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
-|Version 10 SPARC|ccm-Sol10sparc.&lt;build\>.tar|  
-|Version 11 x86|ccm-Sol11x86.&lt;build\>.tar|  
-|Version 11 SPARC|ccm-Sol11sparc.&lt;build\>.tar|  
-
-#### SUSE Linux Enterprise Server (SLES)  
-
-|Version|TAR file|  
-|-|-|  
-|Version 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 10 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 11 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 11 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 12 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-#### Ubuntu  
-
-|Version|TAR file|  
-|-|-|  
-|Version 10.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 10.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 12.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 12.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 16.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 16.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 

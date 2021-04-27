@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 #ROBOTS:
 #audience:
 
-ms.reviewer: mghadial
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -59,7 +59,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
 
         > [!NOTE]
-        > If you change the name of the app through the Intune azure portal after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
+        > If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
 
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of this app.
@@ -78,7 +78,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     The **Overview** blade of the app you've created is displayed.
 
 > [!Note]
-> Currently, deployment of Intune web apps to iOS/iPadOS devices is associated with the management profile and cannot be removed manually. You can change the deployment type to **Uninstall** in the Intune portal, at which point the web app can be removed automatically. However, if you remove the deployment before changing the app assignment intent to **Uninstall**, the web app will be permanently in place on the device until the device is un-enrolled from Intune.
+> Currently, deployment of Intune web apps to iOS/iPadOS devices is associated with the management profile and cannot be removed manually. You can change the deployment type to **Uninstall** in Intune, at which point the web app can be removed automatically. However, if you remove the deployment before changing the app assignment intent to **Uninstall**, the web app will be permanently in place on the device until the device is un-enrolled from Intune.
 
 End-users can launch web apps directly from the Windows Company Portal app by selecting the web app and then choosing the option **Open in browser**. The published web URL is opened directly in the web browser. 
 

@@ -3,7 +3,7 @@
 
 title: Manage Android Enterprise work profile devices in Microsoft Intune
 titleSuffix: 
-description: Microsoft Intune manages Android Enterprise work profile devices to provide additional management capabilities and privacy when people use their personal Android devices for work.
+description: Microsoft Intune manages Android Enterprise personally-owned and corporate-owned work profile devices to provide additional management capabilities and privacy when people use their personal Android devices for work.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -29,9 +29,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Manage Android work profile devices with Intune
+# Manage Android personally-owned/corporate-owned work profile devices with Intune
 
-Android Enterprise offers a set of enrollment options that provide users with the most up-to-date and secure features. Enrolling with Android Enterprise work profile allows a set of features and services that separate personal apps and data from work apps and data. It also provides additional management capabilities and privacy when people use their personal Android devices for work. 
+Android Enterprise offers a set of enrollment options that provide users with the most up-to-date and secure features. Enrolling with an Android Enterprise personally-owned/corporate-owned work profile allows a set of features and services that separate personal apps and data from work apps and data. It also provides additional management capabilities and privacy when people use their personal Android devices for work. 
 
 ## Supported devices
 
@@ -39,17 +39,17 @@ Android Enterprise management capabilities rely upon features that are part of m
 
 ## Onboarding
 
-Before enrolling Android Enterprise work profile devices, you must complete some onboarding steps. These steps establish a connection between your Intune tenant and Managed Google Play. For more information, see [Enable enrollment of Android Enterprise work profile devices](android-work-profile-enroll.md).
+Before enrolling Android Enterprise work profile devices, you must complete some onboarding steps. These steps establish a connection between your Intune tenant and Managed Google Play. For more information, see [Enable enrollment of Android Enterprise personally-owned work profile devices](android-work-profile-enroll.md) or [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](android-corporate-owned-work-profile-enroll.md).
 
 ## Work profile management
 
-When you manage an Android Enterprise work profile device with Intune, you don't manage the entire device. Management capabilities only affect the work profile that is created on the device during enrollment. Any apps deployed to the device with Intune get installed in the work profile. App icons in the work profile are differentiated from personal apps on the device. All Android apps and data outside the Android enterprise portion of the device remain personal and under the control of the end user. Users can install any app they choose to the personal side of the device. Administrators can manage and monitor apps and actions scoped to the work profile.
+When you manage an Android Enterprise personally-owned or corporate-owned work profile device with Intune, you don't manage the entire device. Management capabilities only affect the work profile that is created on the device during enrollment. Any apps deployed to the device with Intune get installed in the work profile. App icons in the work profile are differentiated from personal apps on the device. All Android apps and data outside the Android enterprise portion of the device remain personal and under the control of the end user. Users can install any app they choose to the personal side of the device. Administrators can manage and monitor apps and actions scoped to the work profile.
 
-Intune supplies a range of built-in general settings that you can configure on Android work profile devices. For more information, see [Android work profile device policy settings](../protect/compliance-policy-create-android-for-work.md).
+Intune supplies a range of built-in general settings that you can configure on Android work personally-owned and corporate-owned profile devices. For more information, see [Android work profile device policy settings](../protect/compliance-policy-create-android-for-work.md).
 
 ## App publishing and distribution
 
-Managed Google Play is an integral part of Android Enterprise app distribution and management. All apps deployed to Android Enterprise work profile devices in the work profile come from the Managed Google Play service. To manage and deploy apps in the Play Store, you sign in to the Google Play website with your company's administrator credentials for Google management. You can approve apps for Android Enterprise deployment to have them appear in devices' work profiles. These apps then sync to the Intune console where they can then be deployed and managed using Intune. Line of business (LOB) apps developed by your organization must be published to Managed Google Play using Google's Android app publishing console. Line-of-business apps must be configured in the Android app publishing console to restrict access to your organization.
+Managed Google Play is an integral part of Android Enterprise app distribution and management. All apps deployed to Android Enterprise personally-owned and corporate-owned work profile devices in the work profile come from the Managed Google Play service. To manage and deploy apps in the Play Store, you sign in to the Google Play website with your company's administrator credentials for Google management. You can approve apps for Android Enterprise deployment to have them appear in devices' work profiles. These apps then sync to the Intune console where they can then be deployed and managed using Intune. Line of business (LOB) apps developed by your organization must be published to Managed Google Play using Google's Android app publishing console. Line-of-business apps must be configured in the Android app publishing console to restrict access to your organization.
 
 Apps can be installed without user interaction and without requiring that the user allow **Installation from Unknown Sources**. To browse and install optional or available apps, the user can browse the Play for Work store on their device. For more information, see [Assign apps to Android Enterprise work profile devices with Intune](../apps/apps-add-android-for-work.md).
 
@@ -63,17 +63,17 @@ Android Enterprise doesn't provide a default email app or native email profile o
 
 Intune provides configuration templates for Gmail and Nine Work apps when managed as work apps. Other email apps that support app configuration profiles can be configured with mobile app configuration policies.
 
-If you are using Exchange ActiveSync Conditional Access for an Android Enterprise work profile device, consider using either the Gmail or Nine Work email app. The Microsoft Outlook for Android app, or any other email app that uses modern authentication via ADAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md).
+If you are using Exchange ActiveSync Conditional Access for an Android Enterprise personally-owned or corporate-owned work profile device, consider using either the Gmail or Nine Work email app. The Microsoft Outlook for Android app, or any other email app that uses modern authentication via ADAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md).
 
 ## App protection policies
 
-App protection policies applied are fully supported in the work profile and in the personal profile. You can publish line-of-business apps in the Android app publishing console at https://play.google.com/apps/publish. This console includes an option to make apps private to your organization. For more information, see [Add a device compliance policy for Android Enterprise work profile devices in Intune](../protect/compliance-policy-create-android-for-work.md). For general information about app protection policies, see [What are app protection policies?](../apps/app-protection-policy.md)
+App protection policies applied are fully supported in the personally-owned/corporate-owned work profile and in the personal profile. You can publish line-of-business apps in the Android app publishing console at https://play.google.com/apps/publish. This console includes an option to make apps private to your organization. For more information, see [Add a device compliance policy for Android Enterprise work profile devices in Intune](../protect/compliance-policy-create-android-for-work.md). For general information about app protection policies, see [What are app protection policies?](../apps/app-protection-policy.md)
 
 ## VPN profiles
 
 VPN support is similar to Android VPN profiles. The same VPN providers and basic configuration options are available for Android Enterprise management with two differences:
 
-- **Work profile-scoped VPN** – VPN connections are limited to just the apps deployed to the work profile. Only Android Enterpise-managed apps can use the VPN connection. Personal apps on the device cannot use a managed VPN connection. For more information, see [Android Enterprise VPN settings](../configuration/vpn-settings-android-enterprise.md).
+- **Work profile-scoped VPN** – VPN connections are limited to just the apps deployed to the personally-owned or corporate-owned work profile. Only Android Enterpise-managed apps can use the VPN connection. Personal apps on the device cannot use a managed VPN connection. For more information, see [Android Enterprise VPN settings](../configuration/vpn-settings-android-enterprise.md).
 
 - **App-specific VPN** – App-specific VPN can be configured in Intune if the VPN provider supports:
   - configuration for app-specific VPN
@@ -82,7 +82,7 @@ VPN support is similar to Android VPN profiles. The same VPN providers and basic
 
 ## Certificate profiles
 
-The same certificate profile configuration options that are available to Android management are available on Android Enterprise work profile devices. Android Enterprise provides enhanced certificate management APIs. Enhanced certificate management provides the following functionality:
+The same certificate profile configuration options that are available to Android management are available on Android Enterprise personally-owned and corporate-owned work profile devices. Android Enterprise provides enhanced certificate management APIs. Enhanced certificate management provides the following functionality:
 
 - Ensures that cert deployment is silent and seamless for the user.
 - Ensures that deployed certs are removed when a device is retired from Intune and the work profile is removed.

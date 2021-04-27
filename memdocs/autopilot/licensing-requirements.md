@@ -12,6 +12,7 @@ ms.pagetype: deploy
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ms.custom: 
@@ -22,7 +23,10 @@ ms.custom:
 
 # Windows Autopilot licensing requirements
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 10
+- Windows Holographic, version 2004 or later
 
 Windows Autopilot depends on specific capabilities available in Windows 10 and Azure Active Directory. It also requires an MDM service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs:
 

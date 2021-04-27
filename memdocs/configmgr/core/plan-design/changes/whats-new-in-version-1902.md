@@ -10,8 +10,7 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
@@ -93,7 +92,7 @@ When you install or update to version 1902, Configuration Manager setup now incl
 <!--3735092-->
 Configuration Manager can now stop a cloud management gateway (CMG) service when the total data transfer goes over your limit. The CMG has always had alerts to trigger notifications when the usage reached warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this new option turns off the cloud service.
 
-For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#bkmk_stop).
+For more information, see [Stop CMG when it exceeds threshold](../../clients/manage/cmg/monitor-clients-cloud-management-gateway.md#stop-cmg-when-it-exceeds-threshold).
 
 ### Use Azure Resource Manager for cloud services
 
@@ -299,7 +298,7 @@ Sometimes users don't see the Windows toast notification about a restart or requ
 
 Now when deployments need a restart or software changes are required, you have the option of using a more intrusive dialog window.
 
-For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)
+For more information, see [User notifications](../../../apps/plan-design/user-notifications.md#replace-toast-notifications-with-dialog-window)
 
 ### Configure user device affinity in Software Center
 
@@ -325,7 +324,7 @@ This version of Configuration Manager further iterates on how you can customize 
 
 Specify these settings in the **Software Center** group of client settings.
 
-For more information, see [About client settings](../../clients/deploy/about-client-settings.md#bkmk_swctr_defaults).
+For more information, see [About client settings](../../clients/deploy/about-client-settings.md#software-center-customization---defaults).
 
 
 ## <a name="bkmk_sum"></a> Software updates
@@ -428,9 +427,9 @@ For more information, see [Configuration Manager console notifications](../../se
 ### Confirmation of console feedback
 
 <!--3556010-->
-When you send [feedback](../../understand/find-help.md#product-feedback) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
+When you send [feedback](../../understand/product-feedback.md) in the Configuration Manager console, it now shows a confirmation message. This message includes a **Feedback ID**, which you can give to Microsoft as a tracking identifier.
 
-For more information, see [Product feedback](../../understand/find-help.md#bkmk_feedbackid).
+For more information, see [Product feedback](../../understand/product-feedback.md#confirmation-of-console-feedback).
 
 ### View recently connected consoles
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 title: Upgrade to Windows Holographic for Business in Microsoft Intune - Azure | Microsoft Docs
-description: Upgrade to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
+description: Upgrade HoloLens (1st gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 01/28/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,11 +25,18 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Upgrade devices running Windows Holographic to Windows Holographic for Business
+# Upgrade HoloLens (1st gen) devices running Windows Holographic to Windows Holographic for Business
 
-Microsoft Intune includes many settings to help manage and protect your devices. This article lists and describes the settings to upgrade Windows Holographic devices to Windows Holographic for Business.
+Microsoft Intune includes many settings to help manage and protect your devices. This article lists and describes the settings to upgrade HoloLens (1st gen) devices running Windows Holographic to Windows Holographic for Business.
 
-As part of your mobile device management (MDM) solution, use these settings to upgrade your Windows Holographic devices. For the Microsoft HoloLens, you can purchase the Commercial Suite to get the required license for the upgrade. For more information, see [Unlock Windows Holographic for Business features](/hololens/hololens1-upgrade-enterprise).
+This article applies to:
+
+- Microsoft HoloLens (1st gen) devices
+
+> [!IMPORTANT]
+> HoloLens (1st gen) devices can run Windows Holographic and Windows Holographic for Business. All HoloLens 2 devices use Windows Holographic for Business. You don't need to update the edition of any HoloLens 2 device, regardless of the device SKU.
+
+As part of your mobile device management (MDM) solution, use these settings to upgrade your HoloLens (1st gen) Windows Holographic devices. For the Microsoft HoloLens (1st gen), you can purchase the Commercial Suite to get the required license for the upgrade. For more information, see [Unlock Windows Holographic for Business features](/hololens/hololens1-upgrade-enterprise).
 
 As an Intune administrator, you can create and assign these settings to your devices.
 

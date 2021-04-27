@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: davidra
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,7 +39,7 @@ You can configure Conditional Access policies based on Sophos Mobile risk assess
 
 ## Supported platforms
 
-- Android 5.0 and later
+- Android 6.0 and later
 - iOS 11.0 and later
 
 ## Prerequisites

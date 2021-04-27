@@ -2,16 +2,14 @@
 title: Import and export applications
 titleSuffix: Configuration Manager
 description: Learn how to import and export applications in Configuration Manager to share between separate hierarchies.
-ms.date: 05/29/2019
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: dba00e54-9d5b-4f6b-916d-ead48c66e288
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Import and export applications
@@ -23,9 +21,13 @@ Use Configuration Manager to import and export applications between two hierarch
 ## Export
 
 1. In the Configuration Manager console, select the **Applications** node. In the Create group of the ribbon, choose **Export Application**.
-1. On the **General** screen, enter a path to a new ZIP file to export into. Optionally, specify whether to export *dependencies, supersedence relationships, conditions, and virtual environments*, as well as *content for the selected applications and dependencies*.  Enter any administrator comments, if desired, and select **Next**.
+
+1. On the **General** screen, enter a path to a new ZIP file to export into. Optionally, specify whether to export *dependencies, supersedence relationships, conditions, and virtual environments*, and *content for the selected applications and dependencies*. Enter any necessary administrator comments, and select **Next**.
+
 1. Verify the application and any dependencies are listed on the **Related Objects** page and select **Next**.
+
 1. On the Summary page, select **Next**.
+
 1. Once the process completes, it creates the ZIP file, and you can close the wizard.
 
 > [!IMPORTANT]
@@ -37,14 +39,26 @@ Use Configuration Manager to import and export applications between two hierarch
 > You can only import applications from UNC paths, you can't directly import from your local disk.
 
 1. In the Configuration Manager console, select the **Applications** node. In the Create group of the ribbon, choose **Import Application**.
+
 1. Choose the ZIP file that you'd like to import and select **Next**.
+
 1. The File Content window shows what happens when you import the application. Select **Next**.
+
 1. Review the summary screen and select **Next**.
+
 1. Close the wizard. The application is now available in the site.
 
-## See also
- 
-Automate the import and export of applications using PowerShell.
+> [!TIP]
+> Starting in version 2010, when you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node.<!--6601203-->
 
-* [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication)
-* [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication)
+## Automation
+
+If you want to automate the import and export of applications, use the following PowerShell cmdlets:
+
+- [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication)
+
+- [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication)
+
+## Next steps
+
+[Deploy applications](deploy-applications.md)

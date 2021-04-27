@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 4/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,10 +31,11 @@ ms.collection:
 
 # Intune enrollment methods for Windows devices
 
-To manage devices in Intune, devices must first be enrolled in the Intune service. Both personally owned and corporate-owned devices can be enrolled for Intune management. 
+To manage devices in Intune, devices must first be enrolled in the Intune service. Both personally owned and corporate-owned devices can be enrolled for Intune management.
 
 There are two ways to get devices enrolled in Intune:
-- Users can self-enroll their Windows PCs 
+
+- Users can self-enroll their Windows PCs
 - Admins can configure policies to force automatic enrollment without any user involvement
 
 ## User self-enrollment in Intune
@@ -55,8 +56,8 @@ Administrators can set up the following methods of enrollment that require no us
 
 - [Hybrid Azure AD Join](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) lets administrators configure Active Directory group policy to automatically enroll devices that are hybrid Azure AD joined.
 - [Configuration Manager Co-management](/configmgr/comanage/overview) lets administrators enroll their existing Configuration Manager managed devices into Intune to get the dual benefits of Intune and Configuration Manager.
-- [Device enrollment manager](device-enrollment-manager-enroll.md) (DEM) is a special service account. DEM accounts have permissions that let authorized users enroll and manage multiple corporate-owned devices. These types of devices are good for point-of-sale or utility apps, for example, but not for users who need to access email or company resources. This method does not allow the use of features such as Conditional Access. 
-- [Bulk enroll](windows-bulk-enroll.md) lets an authorized user join large numbers of new corporate-owned devices to Azure Active Directory and Intune. You create a provisioning package with the Windows Configuration Designer (WCD) app. Then, using USB media during initial Windows OOBE experience or from existing Windows PC, you install the provisioning package to automatically enroll the devices into Intune. This method does not allow the use of Conditional Access.
+- [Device enrollment manager](device-enrollment-manager-enroll.md) (DEM) is a special service account. DEM accounts have permissions that let authorized users enroll and manage multiple corporate-owned devices. These types of devices are good for point-of-sale or utility apps, for example, but not for users who need to access email or company resources. Be aware that there are some limitations with DEM accounts as documented [here](./device-enrollment-manager-enroll.md#limitations-of-devices-that-are-enrolled-with-a-dem-account).
+- [Bulk enroll](windows-bulk-enroll.md) lets an authorized user join large numbers of new corporate-owned devices to Azure Active Directory and Intune. You create a provisioning package with the Windows Configuration Designer (WCD) app. Then, using USB media during initial Windows OOBE experience or from existing Windows PC, you install the provisioning package to automatically enroll the devices into Intune.
 - [Enrolling Windows IoT Core devices](/windows/iot-core/manage-your-device/intunedeviceenrollment) is accomplished by using the Windows IoT Core Dashboard to prepare the device, and then using Windows Configuration Designer to create a provisioning package. Then, using SD Card media during initial boot up, it installs the provisioning package to automatically enroll the devices into Intune.
 
 ## Next steps

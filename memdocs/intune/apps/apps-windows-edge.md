@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: kellieei
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

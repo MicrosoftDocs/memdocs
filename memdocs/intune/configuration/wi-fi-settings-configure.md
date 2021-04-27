@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: maholdaa
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -51,7 +51,7 @@ Wi-Fi profiles support the following device platforms:
 - Windows 10 and newer, and Windows Holographic for Business
 
 > [!NOTE]
-> For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device.
+> For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device. For more information, see [Import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
 
 ## Create the profile
 
@@ -68,7 +68,7 @@ Wi-Fi profiles support the following device platforms:
       - **Windows 10 and later**
       - **Windows 8.1 and later**
 
-    - **Profile**: Select **Wi-Fi**.
+    - **Profile**: Select **Wi-Fi**. Or, select **Templates** > **Wi-Fi**.
 
       > [!TIP]
       >
@@ -107,6 +107,6 @@ Wi-Fi profiles support the following device platforms:
 
 ## Next steps
 
-The profile is created, but may not be doing anything. Next, [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
+The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status.](device-profile-monitor.md).
 
-[Troubles Wi-Fi profiles in Intune](troubleshoot-wi-fi-profiles.md).
+[Troubles Wi-Fi profiles in Intune](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).

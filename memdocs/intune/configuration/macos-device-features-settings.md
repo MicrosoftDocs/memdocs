@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 03/02/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ Intune includes built-in settings to customize features on your macOS devices. F
 
 Use these features to control macOS devices as part of your mobile device management (MDM) solution.
 
-This article lists these settings, and describes what each setting does. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
+This article describes these settings. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
 
 > [!NOTE]
 > The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.

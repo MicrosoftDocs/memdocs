@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 03/25/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,7 +57,7 @@ LinkedIn account connections allow users to see public LinkedIn profile informat
 
 The Intune SDK and Intune app protection policies don't include support for managing LinkedIn account connections, but there are other ways to manage them. You can disable LinkedIn account connections for your entire organization, or you can enable LinkedIn account connections for selected user groups in your organization. These settings affect LinkedIn connections across Microsoft 365 apps on all platforms (web, mobile, and desktop). You can:
 
-- Enable or disable LinkedIn account connections for your tenant in the Azure portal. 
+- Enable or disable LinkedIn account connections for your tenant in the portal. 
 - Enable or disable LinkedIn account connections for your organization's Office 2016 apps using Group Policy.
 
 If LinkedIn integration is enabled for your tenant, when users in your organization connect their LinkedIn and Microsoft work or school accounts, they have two options: 

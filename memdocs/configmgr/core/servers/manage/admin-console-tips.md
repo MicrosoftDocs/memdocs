@@ -1,8 +1,8 @@
 ---
-title: Configuration Manager console changes and tips
+title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 08/11/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -20,7 +20,67 @@ Use the information below to find out about changes to the Configuration Manager
 
 ## General tips
 
-### <a name="bkmk_search"></a> Improvements to console search
+### <a name="bkmk_syntax"></a> Syntax highlighting for scripting languages
+<!--7964912-->
+*(Introduced in version 2010)*
+
+To assist you when creating scripts and queries in the Configuration Manager console, you'll now see syntax highlighting and code folding, where available.
+
+:::image type="content" source="./media/7964912-syntax-highlighting.png" alt-text="Syntax highlighting in console" lightbox="./media/7964912-syntax-highlighting.png":::
+
+#### Supported scripting languages for syntax highlighting
+
+Supported languages for syntax highlighting include PowerShell, JavaScript/JScript, VBScript, and SQL/WQL. The below chart shows which languages are supported for syntax highlighting in each area of the console:
+
+|Console area|PowerShell|VBScript|JavaScript/JScript|SQL/WQL|
+|---|---|---|---|---|
+|Application scripts| Yes| Yes|Yes|-|
+|Collection query|-|-|-|Yes|
+|Configuration item scripts|Yes|Yes|Yes|Yes|
+|Task sequence scripts|Yes|-|-|-|
+|Create scripts|Yes| -| -| -|
+
+### Fixed-width font now used in some console areas
+
+<!--7632637-->
+*(Introduced in version 2010)*
+
+Various areas in the Configuration Manager console now use the fixed-width font Consolas. This font provides consistent spacing and makes it easier to read. You'll see the Consolas font in the following places:
+
+- Application scripts
+- Configuration item scripts
+- WMI-based collection membership queries
+- CMPivot queries
+- Scripts
+- Run PowerShell Script
+- Run Command Line
+
+:::image type="content" source="media/7632637-script-editor.png" alt-text="Script editor example with fixed-width Consolas font" lightbox="media/7632637-script-editor.png":::
+
+### Shortcuts to status messages
+
+<!--8232705-->
+*(Introduced in version 2010)*
+
+You now have an easier way to view status messages for the following objects:
+
+- Devices
+- Users
+- Content
+- Deployments
+  - Monitoring workspace
+    - Phased deployments (select **Show Deployments** from the Phased Deployments node)
+  - Deployments tab in the details pane for:
+    - Packages
+    - Task sequences
+
+Select one of these objects in the Configuration Manager console, and then select **Show Status Messages** from the ribbon. Set the viewing period, and then the status message viewer opens. The viewer filters the results to the object you selected.
+
+Your user account needs at least **Read** permission to these objects.
+
+For more information, see [Use the status system](use-status-system.md).
+
+### Improvements to console search
 <!--4640570-->
 *(Introduced in version 1910)*
 
@@ -39,15 +99,13 @@ Use the information below to find out about changes to the Configuration Manager
     >
     > The in-console setting corresponds to the **QueryResultCountLimit** value in the same key. An administrator can configure these values in the HKLM hive for all users of the device. The HKCU value overrides the HKLM setting.
 
-### Role based administration for folders
+### Role-based administration for folders
 <!--3600867-->
 *(Introduced in version 1906)*
 
 You can set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
 ### Views sort by integer values
-
-*(Introduced in version 1902)*
 
 We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
 
@@ -59,8 +117,6 @@ We've made improvements to how various views sort data. For example, in the **De
 
 ### Move the warning for a large number of results
 
-*(Introduced in version 1902)*
-
 When you select a node in the console that returns more than 1,000 results, Configuration Manager displays the following warning:
 
 > Configuration Manager returned a large number of results. You can narrow your results by using search. Or, click here to view a maximum of 100000 results.
@@ -69,7 +125,6 @@ There's now additional blank space in between this warning and the search field.
 
 ### Send feedback
 
-*(Introduced in version 1806)*
 <!--1357542-->
 
 Submit product feedback from the console.  
@@ -80,10 +135,32 @@ Submit product feedback from the console.
 
 - **Send a suggestion**: Takes you to UserVoice to share your idea  
 
-For more information, see [Product Feedback](../../understand/find-help.md#BKMK_1806Feedback).
-
+For more information, see [Product Feedback](../../understand/product-feedback.md).
 
 ## Assets and Compliance workspace
+
+### Copy discovery data from the console
+
+<!--6890051-->
+*(Introduced in version 2010)*
+
+Copy discovery data from devices and users in the console. Copy the details to the clipboard, or export them all to a file. These actions make it easier for you to quickly get this data from the console. For example, copy the MAC address of a device before you reimage it.
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Open the properties for a user or device.
+
+1. On the **General** tab, in the **Discovery data** list, select one or more properties.
+
+1. Right-click the selection, and choose one of the following actions:
+
+    - **Copy value**: Copies just the value. You can also use the keyboard shortcut **Ctrl** + **C**.
+
+    - **Copy property and value**: Copies both the property name and the corresponding value. You can also use the keyboard shortcut **Ctrl** + **Shift** + **C**.
+
+    - **Select all**: Selects all properties and values. You can also use the keyboard shortcut **Ctrl** + **A**.
+
+    - **Save results as**: Saves all properties and values to a comma-separated values (CSV) file that you specify.
+
+:::image type="content" source="media/6890051-copy-discovery-data.png" alt-text="Screenshot of device properties to copy discovery data" lightbox="media/6890051-copy-discovery-data.png":::
 
 ### Real-time actions from device lists
 <!--4616810-->
@@ -99,17 +176,16 @@ There are various ways to display a list of devices under the **Devices** node i
 
   - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
 
-
 ### Collections tab in devices node
 <!--4616810-->
 *(Introduced in version 1906)*
 
-In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device. 
+In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device.
 
-> [!Note]  
-> - This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
-> - This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309--> <!--5107309-->
-
+> [!NOTE]
+> This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
+>
+> This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309--> <!--5107309-->
 
 ### Add SMBIOS GUID column to device and device collection nodes
 
@@ -121,13 +197,12 @@ In both the **Devices** and **Device Collections** nodes, you can now add a new 
 ### Search device views using MAC address
 
 <!--3600878-->
-*(Introduced in version 1902)*
 
 You can search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
 
 ### View users for a device
 
-Starting in version 1806, the following columns are available in the **Devices** node:  
+The following columns are available in the **Devices** node:  
 
 - **Primary user(s)** <!--1357280-->  
 
@@ -141,7 +216,7 @@ For more information on how to show a non-default column, see [How to use the ad
 ### Improvement to device search performance
 
 <!-- 3614690 -->
-Starting in version 1806, when searching in a device collection, it doesn't search the keyword against all object properties. When you're not specific about what to search, it searches across the following four properties:
+When searching in a device collection, it doesn't search the keyword against all object properties. When you're not specific about what to search, it searches across the following four properties:
 
 - Name
 - Primary user(s)
@@ -150,8 +225,21 @@ Starting in version 1806, when searching in a device collection, it doesn't sear
 
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
-
 ## Software Library workspace
+
+### Import objects to current folder
+
+<!--6601203-->
+*(Introduced in version 2010)*
+
+When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#export-and-import).
+
+### See task sequence size in the console
+
+<!--7645732-->
+*(Introduced in version 2010)*
+
+When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems. For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
 
 ### Order by program name in task sequence
 <!--4616810-->
@@ -186,7 +274,6 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 ### Maximize the browse registry window
 
 <!--3594151 includes all MMS 1902 console changes-->
-*(Introduced in version 1902)*
 
 1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method.
@@ -196,19 +283,14 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 
 ### Edit a task sequence by default
 
-*(Introduced in version 1902)*
-
 In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
 
 ### Go to the collection from an application deployment
-
-*(Introduced in version 1902)*
 
 1. In the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 1. Select an application. In the details pane, switch to the **Deployments** tab.
 1. Select a deployment, and then choose the new **Collection** option in the ribbon on the Deployment tab. This action switches the view to the collection that's the target of the deployment.
    - This action is also available from the right-click context menu on the deployment in this view.
-
 
 ## Monitoring workspace
 
@@ -222,11 +304,9 @@ In the **Monitoring** workspace, select **Client Operations**. The operation to 
 <!--4616810-->
 *(Introduced in version 1906)*
 
-In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** in addition to the ID.
+In the **Monitoring** workspace, select the **Script Status** node. It now lists the **Collection Name** and the ID.
 
 ### Remove content from monitoring status
-
-*(Introduced in version 1902)*
 
 1. In the **Monitoring** workspace, expand **Distribution Status**, and select **Content Status**.
 1. Select an item in the list, and choose the **View Status** option in the ribbon.
@@ -234,7 +314,6 @@ In the **Monitoring** workspace, select the **Script Status** node. It now lists
 
 ### Copy details in monitoring views
 
-*(Introduced in version 1806)*
 <!--1357856-->
 Copy information from the **Asset Details** pane for the following monitoring nodes:  
 
@@ -247,7 +326,7 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ## Administration workspace
 
 <!--4223683-->
-Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#bkmk_console).
+Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#enable-console-usage).
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: Troubleshooting resource explorer
 titleSuffix: Configuration Manager
 description: "Troubleshooting resource explorer for Configuration Manager tenant attach"
-ms.date: 09/08/2020
+ms.date: 12/03/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -23,12 +23,11 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ## Common errors from the Microsoft Endpoint Manager admin center
 
-### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
+### <a name="bkmk_intune"></a> You don’t have access to view this information
+<!--7980141-->
+**Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Error message:** The necessary configuration is missing in Azure Active Directory. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Azure AD.
-
-**Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
-
+**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 ### <a name="bkmk_noinfo"></a> Unable to get resource information
 
 **Error message 1:** Unable to get resource information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
@@ -90,6 +89,16 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
 ## Known issues
+
+### <a name="bkmk_import"></a> Newly imported inventory classes fail to load
+<!--9391319, -->
+**Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Endpoint Manager admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
+
+**Workaround:** The current workaround is to restart the `SMS_Executive` service on the provider machine for which the [administration service](../develop/adminservice/overview.md) handles service requests. You can determine where your administration service is by reviewing the **CMGatewayNotification.log** and looking for your server in the URL.
+
+```log
+Sending AdminService request with URL: https://CMsite.contoso.com/AdminService/v1.0/ ...
+```
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 

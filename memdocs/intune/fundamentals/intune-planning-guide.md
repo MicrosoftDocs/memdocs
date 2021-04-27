@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,9 +69,9 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 **Task**: Determine how you want to secure your devices, and minimize the impact of malicious activity. Some considerations:
 
-- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) and Intune together.
+- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) and Intune together.
 
-  [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
+  [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
 
 - If a device is compromised, you'll want to limit the impact using [conditional access](../protect/conditional-access.md). For example:
 
@@ -79,7 +79,7 @@ When data is stored on mobile devices, it should be protected from malicious act
 
   - Conditional access helps protect your network and resources from devices, even devices that aren't enrolled with Intune.
 
-    For example, Intune integrates with Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP scans a device, and determines if it's compromised. Then, conditional access can automatically block access on this device from organization resources, including email.
+    For example, Intune integrates with Microsoft Defender for Endpoint. Microsoft Defender for Endpoint scans a device, and determines if it's compromised. Then, conditional access can automatically block access on this device from organization resources, including email.
 
 - Updates to the device, the operating system, and apps also help keep your data secure. Create a plan on how and when updates are installed. There are policies in Intune that help you manage updates, including updates to store apps.
 
@@ -92,6 +92,8 @@ When data is stored on mobile devices, it should be protected from malicious act
   - Use multi-factor authentication (MFA) when you need an extra layer of authentication on organization-owned devices. Or, use MFA to authenticate apps on personal devices. Biometrics, such as face recognition and fingerprints, can also be used.
 
     If you'll use biometrics for authentication, be sure your devices support biometrics. Most modern devices do.
+
+  - Implement a Zero Trust deployment. With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses passwordless authentication, and more. For more information, see the [Zero Trust Deployment Center](/security/zero-trust/).
 
 ### Objective: Distribute IT
 
@@ -173,7 +175,9 @@ As an organization and as an admin, you decide if you'll allow personal devices.
 
 - You want every device to be fully managed. In this scenario, give users all the devices they need, including mobile phones. Invest in a hardware refresh plan so users continue to be productive and effective. Enroll these organization-owned devices in Intune, and manage them using policies.
 
-  This option prevents personal devices. As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place.
+  This option prevents personal devices. 
+
+As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place. For more information, see the [Zero Trust Deployment Center](/security/zero-trust/).
 
 ### Manage desktop computers
 
@@ -210,7 +214,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Office 365** includes the apps that users rely on, including Outlook, Word, SharePoint, Teams, OneDrive, and more. You can deploy these apps to devices using Intune.
 
-- **Microsoft Defender Advanced Threat Protection** (ATP) helps monitor and scan your Windows 10 devices for malicious activity. You can also set an acceptable threat level. When combined with conditional access, you can block access to organization resources if the threat level is exceeded.
+- **Microsoft Defender for Endpoint** helps monitor and scan your Windows 10 devices for malicious activity. You can also set an acceptable threat level. When combined with conditional access, you can block access to organization resources if the threat level is exceeded.
 
 - **Azure Information Protection** classifies and protects documents and emails by applying labels. On Office apps, you can use this service to [prevent unauthorized access to organization data](../protect/data-outside-protect.md), including apps on personal devices.
 
@@ -328,7 +332,7 @@ The next task is to plan how and when your users and devices receive your polici
   | Production rollout phase 2 |  |  | Retail (1000 users) |  |
   | Production rollout phase 3 |  |  |  | HR (50 users), Finance (40 users), Executives (30 users) |
 
-  This template is also available to download at [Intune deployment planning, design, and implementation - Table templates](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2).
+  This template is also available to download at [Intune deployment planning, design, and implementation - Table templates](https://www.microsoft.com/download/details.aspx?id=103005).
 
 - Choose how users will enroll their personal and organization-owned devices. There are different enrollment approaches you can use, including:
 

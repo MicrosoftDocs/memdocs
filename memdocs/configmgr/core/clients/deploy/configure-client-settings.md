@@ -1,76 +1,115 @@
 ---
-title: "Configure client settings"
-titleSuffix: "Configuration Manager"
-description: "Select client settings in Configuration Manager."
-ms.date: 12/29/2017
+title: Configure client settings
+titleSuffix: Configuration Manager
+description: Learn how to configure client settings in Configuration Manager.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # How to configure client settings in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You manage all client settings in Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy to collections.  
+You manage all client settings in Configuration Manager from  the **Client Settings** node of the **Administration** workspace in the console. When you want to configure settings for all users and devices in the hierarchy, modify the default settings. If you want to apply different settings to just some users or devices, create custom settings and deploy to collections. Custom client settings override the default settings.
 
-For information about each client setting, see [About client settings](../../../core/clients/deploy/about-client-settings.md).
+For information about each client setting, see [About client settings](about-client-settings.md).
 
-> [!NOTE]  
->  You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance with Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
+> [!NOTE]
+> You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance](../../../compliance/understand/ensure-device-compliance.md).
 
-##  Configure the default client settings    
+## Configure default client settings
 
-1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.
 
-2. On the **Home** tab, choose **Properties**.  
+1. Select **Default Client Settings**. On the **Home** tab of the ribbon, select **Properties**.
 
-3. View and configure the client settings for each group of settings in the navigation pane.  
+1. View and configure the client settings for each group of settings in the navigation pane.
 
-   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients](../../../core/clients/manage/manage-clients.md).  
+> [!TIP]
+> Configuration Manager configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).
 
-##  Create and deploy custom client settings  
-When you deploy these custom settings, they override the default client settings. Before you begin this procedure, ensure that you have a collection that contains the users or devices that require these custom client settings.  
+## Create and deploy custom client settings
 
-1. In the Configuration Manager console, choose **Administration** > **Client Settings**.  
+When you deploy these custom settings, they override the default client settings. Before you begin this procedure, make sure that you have a collection the deployment. The collection should contain the users or devices that require these custom client settings.
 
-2. On the **Home** tab, in the **Create** group, choose **Create Custom Client Settings**, and then choose either:  
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Client Settings** node.
 
-   -   **Create Custom Client Device Settings**  
+1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Custom Client Settings**. Then choose either **Create Custom Client Device Settings** or **Create Custom Client User Settings**.
 
-   -   **Create Custom Client User Settings**  
+    1. Specify a unique name and optional description.
 
-3. Specify a unique name and option description.  
+    1. Select one or more of the settings groups.
 
-4. Select one or more of the check boxes that display a group of settings.  
+    1. Select each group of settings from the navigation pane, configure the available settings, and then select **OK** to save the settings.
 
-5. Choose each group of  settings from the navigation pane, and configure the available settings, then click **OK**.   
+1. Select the custom client setting that you created. On the **Home** tab of the ribbon, in the **Client Settings** group, choose **Deploy**.
 
-6. Select the custom client setting that you created. On the **Home** tab, in the **Client Settings** group, choose **Deploy**.  
+1. In the **Select Collection** window, select the appropriate collection, and then choose **OK**. To verify the targeted collection, switch to the **Deployments** tab in the details pane of the **Client Settings** node.
 
-7. In the **Select Collection** dialog box, select the appropriate collection, and then choose **OK**. You can verify the selected collection if you click the **Deployments** tab in the details pane.  
+1. View the order of the custom client setting that you created. When you have multiple custom client settings, they're applied according to their order number. If there are any conflicts between settings, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab of the ribbon, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.
 
-8. View the order of the custom client setting that you created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
+> [!TIP]
+> Configuration Manage configures clients with these settings when they next download policy. To start policy retrieval for a single client, see [Start policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).
 
-   Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients](../../../core/clients/manage/manage-clients.md).  
+## View client settings
 
+When you deploy multiple client settings to the same device, user, or user group, the prioritization and combination of settings is complex.
 
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select either the **Devices** or **Users** node.
 
-##  View client settings  
- When you deploy multiple client settings to the same device, user, or user group, the prioritization and combination of settings is complex. To view the client settings:  
+1. Select a device or user, and in the **Client Settings** group of the ribbon, select **Resultant Client Settings**.
 
-1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices** > **Users** or **User Collections**.  
+1. Select a client setting from the left pane, and it displays the settings. In this view, the settings are read-only.
 
-3.  Select a device, user, or user group and in the **Client Settings** group, select **Resultant Client Settings**.  
+    > [!NOTE]
+    > To view the client settings, your account needs **Read** access to client settings.
 
-4.  Select a client setting from the left pane, and the settings are displayed. In this view, the settings are read-only. 
+## Automate with PowerShell
 
-    > [!NOTE]  
-    >  To view the client settings, you must have read access to Client Settings.  
+Optionally, you can use the Configuration Manager PowerShell cmdlets to automate client settings. For more information, see the following articles in the PowerShell documentation:
 
-    
+- [Get-CMClientSetting](/powershell/module/configurationmanager/Get-CMClientSetting): Get an existing client settings object.
+
+- [New-CMClientSetting](/powershell/module/configurationmanager/New-CMClientSetting): Create a new client settings object.
+
+- [Remove-CMClientSetting](/powershell/module/configurationmanager/Remove-CMClientSetting): Remove a client settings object.
+
+Use the following cmdlets to configure client settings for the specific group:
+
+- [Set-CMClientSettingBackgroundIntelligentTransfer](/powershell/module/configurationmanager/Set-CMClientSettingBackgroundIntelligentTransfer)
+- [Set-CMClientSettingClientCache](/powershell/module/configurationmanager/Set-CMClientSettingClientCache)
+- [Set-CMClientSettingClientPolicy](/powershell/module/configurationmanager/Set-CMClientSettingClientPolicy)
+- [Set-CMClientSettingCloudService](/powershell/module/configurationmanager/Set-CMClientSettingCloudService)
+- [Set-CMClientSettingComplianceSetting](/powershell/module/configurationmanager/Set-CMClientSettingComplianceSetting)
+- [Set-CMClientSettingComputerAgent](/powershell/module/configurationmanager/Set-CMClientSettingComputerAgent)
+- [Set-CMClientSettingComputerRestart](/powershell/module/configurationmanager/Set-CMClientSettingComputerRestart)
+- [Set-CMClientSettingDeliveryOptimization](/powershell/module/configurationmanager/Set-CMClientSettingDeliveryOptimization)
+- [Set-CMClientSettingEndpointProtection](/powershell/module/configurationmanager/Set-CMClientSettingEndpointProtection)
+- [Set-CMClientSettingEnrollment](/powershell/module/configurationmanager/Set-CMClientSettingEnrollment)
+- [Set-CMClientSettingGeneral](/powershell/module/configurationmanager/Set-CMClientSettingGeneral)
+- [Set-CMClientSettingHardwareInventory](/powershell/module/configurationmanager/Set-CMClientSettingHardwareInventory)
+- [Set-CMClientSettingMeteredInternetConnection](/powershell/module/configurationmanager/Set-CMClientSettingMeteredInternetConnection)
+- [Set-CMClientSettingPowerManagement](/powershell/module/configurationmanager/Set-CMClientSettingPowerManagement)
+- [Set-CMClientSettingRemoteTool](/powershell/module/configurationmanager/Set-CMClientSettingRemoteTool)
+- [Set-CMClientSettingSoftwareCenter](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareCenter)
+- [Set-CMClientSettingSoftwareDeployment](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareDeployment)
+- [Set-CMClientSettingSoftwareInventory](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareInventory)
+- [Set-CMClientSettingSoftwareMetering](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareMetering)
+- [Set-CMClientSettingSoftwareUpdate](/powershell/module/configurationmanager/Set-CMClientSettingSoftwareUpdate)
+- [Set-CMClientSettingStateMessaging](/powershell/module/configurationmanager/Set-CMClientSettingStateMessaging)
+- [Set-CMClientSettingUserAndDeviceAffinity](/powershell/module/configurationmanager/Set-CMClientSettingUserAndDeviceAffinity)
+
+Use the following cmdlets to manage deployments of custom client settings:
+
+- [New-CMClientSettingDeployment](/powershell/module/configurationmanager/New-CMClientSettingDeployment)
+- [Remove-CMClientSettingDeployment](/powershell/module/configurationmanager/Start-CMClientSettingDeployment)
+
+## Next steps
+
+[About client settings](about-client-settings.md)

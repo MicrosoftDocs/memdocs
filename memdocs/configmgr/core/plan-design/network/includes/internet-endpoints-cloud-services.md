@@ -4,7 +4,7 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
-ms.date: 09/23/2020
+ms.date: 04/14/2021
 ---
 
 This section covers the following features:
@@ -22,6 +22,8 @@ The following sections list the endpoints by role. Some endpoints refer to a ser
 > - CMG _service name_: The common name (CN) of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.contoso.com` or `GraniteFalls.cloudapp.net`.
 >
 > - CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.cloudapp.net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure. The deployment name is always in an Azure domain.
+>
+> Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, the deployment name is different. With a virtual machine scale set, the service name uses the **cloudapp.azure.com** domain along with the region. For example, `GraniteFalls.EastUS.CloudApp.Azure.Com` for a deployment in the **East US** Azure region. Note that difference as you read this article and configure internet access for a virtual machine scale set deployment.
 
 ### Service connection point for cloud services
 
@@ -39,13 +41,15 @@ For Configuration Manager to deploy the CMG or CDP services in Azure, the servic
 
 The CMG connection point needs access to the following service endpoints:
 
-- Deployment name (for CMG or CDP):
+- _Service_ name (for CMG or CDP):
   - `<name>.cloudapp.net` (Azure public cloud)
   - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 
-- Storage endpoint (for content-enabled CMG or CDP): <!-- does CMGCP need to access this? -->
+- Storage endpoint (for content-enabled CMG or CDP):
   - `<name>.blob.core.windows.net` (Azure public cloud)
   - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
+  - `<name>.table.core.windows.net` (Azure public cloud)
+  - `<name>.table.core.usgovcloudapi.net` (Azure US Government cloud)
 
 The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](../proxy-server-support.md#configure-the-proxy-for-a-site-system-server).
 
@@ -53,7 +57,7 @@ The CMG connection point only needs to connect to the CMG service endpoints. It 
 
 ### Configuration Manager client
 
-- Deployment name (for CMG or CDP):
+- _Deployment_ name (for CMG or CDP):
   - `<name>.cloudapp.net` (Azure public cloud)
   - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 

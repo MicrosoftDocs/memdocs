@@ -1,8 +1,8 @@
 ---
-title: "Client deployment best practices"
-titleSuffix: "Configuration Manager"
-description: "Get best practices for client deployment in Configuration Manager."
-ms.date: 04/23/2017
+title: Client deployment recommendations
+titleSuffix: Configuration Manager
+description: Understand product recommendation for client deployment.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,63 +10,109 @@ ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# Best practices for client deployment in Configuration Manager
+
+# Recommendations for client deployment in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
+## Planning
 
-## Use software update-based client installation for Active Directory computers  
- This client deployment method uses existing Windows technologies, integrates with your Active Directory infrastructure, requires the least configuration in Configuration Manager, is the easiest to configure for firewalls, and is the most secure. By using security groups and WMI filtering for the Group Policy configuration, you also have a lot of flexibility to control which computers install the Configuration Manager client.  
+### Use a phased rollout to manage CPU usage
 
- For more information, see [How to Install Configuration Manager Clients by Using Software Update-Based Installation](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP).  
+To minimize the effect of the CPU processing requirements on the site server, use a phased rollout of clients. Deploy clients outside of business hours. This practice allows other services to have more available bandwidth during the day. It also doesn't disrupt user productivity if their computer slows down or requires a restart.
 
-## Extend the Active Directory schema and publish the site so that you can run CCMSetup without command-line options  
- When you extend the Active Directory schema for Configuration Manager and the site is published to Active Directory Domain Services, many client installation properties are published to Active Directory Domain Services. If a computer can locate these client installation properties, it can use them during Configuration Manager client deployment. Because this information is automatically generated, the risk of human error associated with manually entering installation properties is eliminated.  
+### Prepare required PKI certificates in advance
 
- For more information, see [About client installation properties published to Active Directory Domain Services](../../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
+PKI certificates enable the following scenarios:
 
-## Use a phased rollout to manage CPU usage  
- Minimize the effect of the CPU processing requirements on the site server by using a phased rollout of clients. Deploy clients outside business hours so that other services have more available bandwidth during the day and users are not disrupted if their computer slows down or requires a restart.  
+- HTTPS-enabled client communication
+- Manage devices on the internet
+- Enroll mobile devices for on-premises MDM
+- Enroll macOS devices
 
-## Enable automatic upgrade after your main client deployment has finished  
- [Automatic client upgrades](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) are useful when you want to upgrade a small number of client computers that might have been missed by your main client installation method, perhaps because they were offline. 
+You need certificates on certain site systems and the client devices. The most common site systems are management points and distribution points. On production networks, you might require change management approval to use new certificates or restart site system servers. Users may also need to sign out of Windows to get new group membership. Make sure to allow sufficient time for replication of security permissions and new certificate templates.
 
-> [!NOTE]  
->  Performance improvements in Configuration Manager can allow you to use automatic upgrades as a primary client upgrade method. However, performance will depend on your hierarchy infrastructure, such as the number of clients.  
+For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).
 
+## Before you begin
 
-## Use SMSMP and FSP if you install the client with client.msi properties  
- The SMSMP property specifies the initial management point for the client to communicate with and removes the dependency on service location solutions such as Active Directory Domain Services, DNS, and WINS.  
+### Extend the Active Directory schema and publish the site so that you can run CCMSetup without command-line options
 
- Use the FSP property and install a fallback status point so that you can monitor client installation and assignment, and identify any communication problems.  
+When you extend the Active Directory schema for Configuration Manager, and publish the site to Active Directory Domain Services, the site publishes many client installation properties to Active Directory. If a computer can locate these client installation properties, it can use them during Configuration Manager client deployment. Because the site automatically generates this information, it eliminates the risk of human error associated with manually entering installation properties.
 
- For more information about these options, see [About client installation properties](../../../../core/clients/deploy/about-client-installation-properties.md).  
+For more information, see [About client installation properties published to Active Directory Domain Services](../about-client-installation-properties-published-to-active-directory-domain-services.md).
 
-## Install client language packs before you install the clients  
-We recommend that you install client language packs before deploying the client. If you install [client language packs](../../../../core/servers/deploy/install/language-packs.md) (to enable additional languages) on a site after you install clients, you must reinstall the clients before they can use those languages. For mobile device clients, you must wipe the mobile device and enroll it again.  
+### Install client language packs
 
-## Prepare required PKI certificates in advance  
- To manage devices on the Internet, enrolled mobile devices, and Mac computers, you must have PKI certificates on site systems (management points and distribution points) and the client devices. On production networks, you might require change management approval to use new certificates, restart site system servers, or users might have to logoff and logon for new group membership. In addition, you might have to allow sufficient time for replication of security permissions and for any new certificate templates.  
+Before you deploy the client, install any necessary client language packs to enable other languages. If you install client language packs on a site after you install clients, you need to reinstall the clients before they can use the new languages.
 
- For more information about required PKI certificates, see [PKI certificate requirements for Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
+For more information, see [Language packs](../../../servers/deploy/install/language-packs.md).
 
-## Before you install clients, configure any required client settings and maintenance windows  
- Although you can [configure client settings](../../../../core/clients/deploy/configure-client-settings.md) and maintenance windows before or after clients are installed, it's better to configure required settings before you install clients so that they are used as soon as the client is installed. 
+### Configure any required client settings and maintenance windows
 
- Configure maintenance windows for servers and for Windows Embedded devices to ensure business continuity for critical devices. Maintenance windows will ensure that required software updates and antimalware software do not restart the computer during business hours.  
+Although you can configure client settings and maintenance windows before or after you install clients, it's better to configure required settings before you install clients. Then the client can use them as soon as it installs. For more information about settings download during the client assignment process, see [How to assign clients to a site](../assign-clients-to-a-site.md#download-client-settings).
 
-> [!IMPORTANT]  
->  For Windows 10 computers that you plan to protect with Unified Write Filter (UWF), you must configure the device  for UWF before you install the client. This enables Configuration Manager to install the client with a custom credential provider that locks out low-rights users from logging in to the device during maintenance mode.  
+Configure maintenance windows for servers and for Windows Embedded devices to support business continuity on critical devices. Maintenance windows make sure that required software updates and antimalware software don't restart the computer during business hours.
 
-## Plan your user enrollment experience for Mac computers and mobile devices   
- If users will enroll their own Mac computers and mobile devices with Configuration Manager, plan the user experience. For example, you might script the installation and enrollment process by using a web page so users enter the minimum amount of information necessary, and send  instructions with a link by email.  
+For more information, see [Configure client settings](../configure-client-settings.md) and [How to use maintenance windows](../../manage/collections/use-maintenance-windows.md).
 
-## Use File-Based Write Filters for Windows Embedded devices 
- Embedded devices that use Enhanced Write Filters (EWF) are likely to experience state message resynchronizations. If you have just a few embedded devices that use Enhanced Write Filters, you might not notice this. However, when you have a lot of embedded devices that resynchronize their information, such as sending full inventory rather than delta inventory, this can generate a noticeable increase in network packets and higher CPU processing on the site server.  
+## Installation
 
- When you have a choice of which type of write filter to enable, choose File-Based Write Filters and configure exceptions to persist client state and inventory data between device restarts for network and CPU efficiency on the Configuration Manager client. For more information about write filters, see   [Planning for client deployment to Windows Embedded devices](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
+### If you install the client with client.msi properties, use SMSMP and FSP
 
- For more information about the maximum number of Windows Embedded clients that a primary site can support, see [Supported operating sysetms for clients and devices](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).  
+The **SMSMP** property specifies the initial management point for the client. It removes the dependency on service location solutions such as Active Directory Domain Services and DNS.
+
+Use the FSP property and install a fallback status point. It allows you to better monitor client installation and assignment, and identify any communication problems.
+
+For more information about these options, see [About client installation properties](../about-client-installation-properties.md).
+
+### Use software update-based client installation for Active Directory computers
+
+This client deployment method has the following benefits:
+
+- Uses existing Windows technologies
+- Integrates with your Active Directory infrastructure
+- Requires the least configuration in Configuration Manager
+- Is the easiest to configure for firewalls
+- Is the most secure
+
+By using security groups and WMI filtering for the group policy configuration, you also have flexibility to control which computers install the Configuration Manager client.
+
+For more information, see [How to install Configuration Manager clients by using software update-based installation](../deploy-clients-to-windows-computers.md#BKMK_ClientSUP).  
+
+### Enable automatic upgrade after your main client deployment finishes
+
+Performance improvements in Configuration Manager can allow you to use automatic upgrades as a primary client upgrade method. However, performance will depend on your hierarchy infrastructure, such as the number of clients.  
+
+If you use another client installation method as the primary upgrade method, use automatic client upgrade to catch computers that it missed. For example, devices that were offline during the main deployment.
+
+For more information, see [Automatic client upgrades](../../manage/upgrade/upgrade-clients-for-windows-computers.md).
+
+### Assign site systems as clients to the same site
+
+<!-- 9606023 -->
+If you install the Configuration Manager client on site systems, assign them to the same site. Roles like the management point and distribution point have shared binary files between the role and the client. These collocated clients should always be the same version as the site system role.
+
+For example, for a management point in site XYZ, assign the client installed on this site system server to site XYZ.
+
+## Other device types
+
+### Plan your user enrollment experience for Mac computers and mobile devices
+
+If users will enroll their own macOS computers and mobile devices with Configuration Manager, plan the user experience. For example, you might script the installation and enrollment process by using a web page. Then users only enter the minimum amount of information necessary. You can also send instructions with a link by email.
+
+### Write filters for Windows Embedded devices
+
+Embedded devices that use enhanced write filters (EWF) are likely to experience state message resynchronization. For example, they send full inventory rather than delta inventory. If you have just a few embedded devices that use Enhanced Write Filters, you might not notice anything. However, when you have many embedded devices that resynchronize their information, this behavior can generate a noticeable increase in network packets and higher CPU processing on the site server.
+
+When you have a choice of which type of write filter to enable, choose file-based write filters (FBWF) or unified write filters (UWF). Configure exceptions to persist client state and inventory data between device restarts. These exceptions improve network and CPU efficiency on the Configuration Manager client. For more information, see [Plan for client deployment to Windows Embedded devices](planning-for-client-deployment-to-windows-embedded-devices.md).
+
+For more information about the maximum number of Windows Embedded clients that a primary site can support, see [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+
+> [!IMPORTANT]
+> For Windows 10 computers that you plan to protect with a unified write filter (UWF), configure the device for UWF before you install the client. This configuration enables Configuration Manager to install the client with a custom credential provider that locks out low-rights users from signing in to the device during maintenance mode.
+
+## Next steps
+
+[How to deploy clients to Windows computers](../deploy-clients-to-windows-computers.md)

@@ -2,10 +2,10 @@
 title: Pre-release features
 titleSuffix: Configuration Manager
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
-ms.date: 04/01/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: mestew
 ms.author: mstewart
@@ -49,36 +49,31 @@ In the Updates and Servicing Wizard, pre-release features are visible but you ca
 
 When you enable a pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before using the feature.
 
-## <a name="bkmk_table"></a> List of pre-release features
+## List of pre-release features
 
 <!--Note/tip for target article
 
-> [!Note]  
-> In this version of Configuration Manager, <feature name> is a pre-release feature. To enable it, see [Pre-release features](pre-release-features.md).  
+> [!NOTE]
+> In this version of Configuration Manager, <feature name> is a pre-release feature. To enable it, see [Pre-release features](pre-release-features.md).
 
-> [!Tip]  
-> This feature was first introduced in version 1702 as a [pre-release feature](pre-release-features.md). Beginning with version 1906, it's no longer a pre-release feature.  
+> [!TIP]
+> This feature was first introduced in version 1702 as a [pre-release feature](pre-release-features.md). Beginning with version 1906, it's no longer a pre-release feature.
 
 -->
 
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
-| [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816--> | Version 2002 | ![Not yet](media/red_x.png) |
-| [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953--> | Version 2002 | ![Not yet](media/red_x.png) |
-| [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 --> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040--> | Version 2010 | ![Not yet](media/red_x.png) |
+| [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953,CB0CDFFB-9C6F-4B18-8954-A43A387302A2--> | Version 2002 | ![Not yet](media/red_x.png) |
+| [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 --> | Version 2002 | Version 2103 |
 | [Task sequence debugger](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Application groups](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D--> | Version 1906 | ![Not yet](media/red_x.png) |
 | [Azure Active Directory user group discovery](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->| Version 1906 | Version 2002 |
 | [Synchronize collection membership results to Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->| Version 1906| Version 2002 |
 | [CMPivot standalone](cmpivot.md#bkmk_standalone) <!--3555890/4692885,no GUID--> | Version 1906 | Version 2002 |
-| [SMS Provider administration service](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service) <!--1359052--> | Version 1810 | Version 1906 |
-| [Enhanced HTTP site system](../../plan-design/hierarchy/enhanced-http.md) <!--1356889,1358228--> | Version 1806 | Version 1810 |
 | [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) <br/> (previously known as *Mobile apps for co-managed devices*) <!--1357892/3600959,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C--> | Version 1806 | Version 2002 |
-| [Package conversion manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861--> | Version 1806 | Version 1810 |
-| [Phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md) <!--1356837--> | Version 1802 | Version 1806 |
-| [Windows Defender Application Control management](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md) <!--3600958 (fka 1355092 & 1319346)--> | Version 1702 | Version 1906 |
-| [Servicing a cluster-aware collection (Server groups)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 1602 | ![Not yet](media/red_x.png) |
 
 <!--Image used = ![Not yet](media/red_x.png) -->
 

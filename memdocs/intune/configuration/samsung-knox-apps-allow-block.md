@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2020
+ms.date: 11/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,6 +34,10 @@ Use the steps in this article to create a Microsoft Intune custom policy that cr
 
 - A list of apps that are blocked from running on the device. Apps in this list are blocked from being run, even if they were already installed when the policy was applied.
 - A list of apps that users of the device are allowed to install from the Google Play store. Only the apps you list can be installed. No other apps can be installed from the store.
+
+This feature applies to:
+
+- Android device administrator (DA)
 
 These settings can only be used by devices that run Samsung Knox Standard.
 

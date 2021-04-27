@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 04/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -83,7 +83,7 @@ Compliance policy settings include the following settings:
   - The Company Portal app opens
   - The device physically moves a significant distance, which is approximately 500 meters or more. Intune can’t guarantee that each significant location change results in a jailbreak detection check, as the check depends on a device's network connection at the time.
 
-  On iOS 13 and up, this feature requires users to select *Always Allow* whenever the device prompts them to continue allowing Company Portal to use their location in the background. If users don’t always allow location access and have a policy with this setting configured, their device is marked noncompliant.
+  On iOS 13 and higher, this feature requires users to select *Always Allow* whenever the device prompts them to continue allowing Company Portal to use their location in the background. If enabled, this will allow more frequent jailbreak detection checks.
 
 - **Compliance status validity period (days)**
 
@@ -123,7 +123,7 @@ The following subjects link to dedicated articles for different aspects of devic
 
   View the device compliance settings for the different device platforms:
 
-  - [Android](compliance-policy-create-android.md)
+  - [Android device administrator](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)

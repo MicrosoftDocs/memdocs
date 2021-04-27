@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 
-ms.date: 10/05/2020
+ms.date: 01/07/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,30 +31,32 @@ ms.collection:
 ---
 
 
-# Remove your iOS device from Intune
+# Remove device from Company Portal for iOS app
 
-Remove an enrolled iOS device so that it's no longer managed by your organization. After you remove the device:
+You can use the Company Portal app for iOS to remove an Intune-enrolled device so that it's no longer managed by your organization. After you remove the device:
 
 - The device is removed from Company Portal.    
 - You lose access to internal file shares and websites from your device.  
 - You lose access to school or work apps from your device.    
-- You might not be able to connect to your org's network via Wi-Fi or virtual private network (VPN).  
+- You might br blocked from connecting to your org's network via Wi-Fi or virtual private network (VPN).  
 - Work or school email profiles are removed from the device.  
-- You can't install apps from the Company Portal anymore.   
+- You can't install apps for the device from the Company Portal anymore.   
 - Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.   
 
-## Remove device via Company Portal  
+## Remove a device   
 
-You can remove, or unenroll, your device from Intune via the Company Portal.   
+Follow these steps to remove a device you no longer need for work or school from Intune.   
 
 
-1. In the Company Portal app, tap **Devices** and select the device you want to unenroll. If you only have one device, when you tap **Devices**, you will go directly to the device details screen.
+1. Sign in to the Company Portal app and select **Devices**.
 
-2. Next to **RENAME** tap the ellipses button > **Remove Device** > **Remove**.  
+2. Select the device you want to remove. If you only have one device, you won't need to select a device so skip to step 3. 
 
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/cp_ios_unenroll_after_1804_001.png)|
+3. Next to **RENAME**, select the ellipses menu > **Remove Device** > **Remove**.  
 
-    |![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)|
+    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/cp_ios_unenroll_after_1804_001.png) 
+
+    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/cp_ios_unenroll_after_1804_002.png)  
 
 
 ## Remove data collected by the Company Portal app
@@ -70,5 +72,4 @@ There are three places the Company Portal stores local data on your device.
 
 ##  Next steps 
 
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

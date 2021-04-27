@@ -65,15 +65,15 @@ When your company is successfully registered, you can create your MDM profile fo
 - To create an Android MDM profile, select **Device Admin** as the profile type in the Knox Portal. 
 - To create an Android Enterprise MDM profile, select **Device Owner** as the profile type in the Knox Portal.  
 
-### For Android Enterprise
+### For Android device administrator
 
 | MDM Profile Fields| Required? | Values | 
 |-------------------|-----------|-------| 
 |Profile Name       | Yes       |Enter a profile name of your choice. |
 |Description        | No        |Enter text describing the Profile. |
 |MDM Information     | Yes        |Choose **Server URI not required for my MDM**.| 
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner| 
-|Custom JSON        | Yes*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [dedicated devices](android-kiosk-enroll.md) and [fully managed devices](android-fully-managed-enroll.md). |
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme| 
+|Custom JSON        | Yes*        |Leave this blank. |
 |Skip Setup wizard  | No        |Choose this option to skip standard device setup prompts for the end user.|
 |Allow End User to Cancel Enrollment | No | Choose this option to allow users to cancel KME.|
 | Privacy Policy, EULAs and Terms of Service | No | Leave this blank. |
@@ -82,7 +82,7 @@ When your company is successfully registered, you can create your MDM profile fo
 
 \* This field is not required to complete profile creation in the Knox portal. However, Intune does require this field to be filled in so that the profile can successfully enroll the device in Intune.
 
-### For Android device administrator 
+### For Android Enterprise
 
 For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) instructions.
 
@@ -91,9 +91,9 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 |Profile Name       | Yes       |Enter a profile name of your choice.|
 |Description        | No        |Enter text describing the Profile.|
 |Pick your MDM | Yes | Choose Microsoft Intune. |
-|MDM Agent APK      | Yes       |https://aka.ms/intune_kme|
+|MDM Agent APK      | Yes       |https://aka.ms/intune_kme_deviceowner|
 |MDM Server URI     | No        |Leave this blank.|
-|Custom JSON Data        | No        |Leave this blank.|
+|Custom JSON Data        | No        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Learn how to create an enrollment token for [dedicated devices](android-kiosk-enroll.md) and [fully managed devices](android-fully-managed-enroll.md). |
 |Dual DAR | No | Leave this blank.|
 |QR code for enrollment | No | You can add a QR code to speed enrollment.|
 |System applications | Yes | Choose the **Leave all system apps enabled** option to ensure all apps are enabled and available to the profile. If this option isn't selected, only a limited set of system apps displays in the device's apps tray. Apps such as the Email app remain hidden. |
@@ -134,7 +134,7 @@ Still need help? Check out the complete [KME User Guide](https://docs.samsungkno
 
 - **Device Owner support:** - **Device Owner support:** Intune supports enrolling Dedicated and Fully Managed devices by using the KME portal. Other Android enterprise device owner modes will be supported as they become available in Intune.
 
-- **No work profile support:** KME is a corporate device enrollment method and devices enrolled in Android work profile ensure work and personal data are separate on personal devices. So, device enrollment to work profile using KME isn't a supported scenario in Intune.
+- **No work profile support:** KME is a corporate device enrollment method and devices enrolled in Android personally-owned work profile ensure work and personal data are separate on personal devices. So, device enrollment to personally-owned work profile using KME isn't a supported scenario in Intune.
 
 - **Factory reset to enroll to Android enterprise:** If repurposing devices that have already been set up, devices need to be factory reset when enrolling to Android enterprise.
 

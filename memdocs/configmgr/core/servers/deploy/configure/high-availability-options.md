@@ -2,7 +2,7 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 11/29/2019
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # High availability options for Configuration Manager
@@ -22,7 +20,7 @@ This article describes how to deploy Configuration Manager using options that ma
 
 The following Configuration Manager options support high availability:
 
-- Configure any standalone primary site with an additional site server in passive mode.  
+- Configure any central administration or primary site with an additional site server in passive mode.  
 
 - Configure a SQL Server Always On availability group for the site database at primary sites and the central administration site.
 
@@ -65,7 +63,7 @@ For example, Configuration Manager clients typically operate autonomously by usi
 
 ### Use a site server in passive mode
 
-Install an additional site server in *passive* mode for a standalone primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](site-server-high-availability.md).  
+Install an additional site server in *passive* mode for a central administration or primary site. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](site-server-high-availability.md).  
 
 ### Use a remote content library
 
@@ -108,10 +106,6 @@ At each site, you deploy site system roles to provide the services that you want
 
 ### Redundancy for important site system roles
 
-- Application catalog web service point  
-
-- Application catalog website point  
-
 - Distribution point  
 
 - Management point  
@@ -122,7 +116,7 @@ At each site, you deploy site system roles to provide the services that you want
 
 To provide redundancy for reporting on sites and clients, install multiple instances of the reporting services point.
 
-For failover support with the software update point, use Windows PowerShell to install this role on a Windows network load balancing (NLB) cluster.  
+Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features). To provide redundancy for software update points, use software update point switching. This allows clients to connect to a new software update point server if one fails or becomes unavailable. For more information, see [Sofware update point switching](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching)  
 
 ### Built-in site backup
 
@@ -160,23 +154,6 @@ Secondary sites only support installation of one management point, which must be
 ### Distribution point
 
 Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](boundary-groups.md).  
-
-### Application catalog web service point and application catalog website point
-
-> [!Important]
-> The application catalog's Silverlight user experience isn't supported as of current branch version 1806. Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles. Support ends for the application catalog roles with version 1910.  
->
-> For more information, see the following articles:
->
-> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
-> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
-
-Install more than one instance of each site system role. For best performance, deploy one of each on the same site system server.  
-
-Each application catalog site system role provides the same information as other instances of that role regardless of its location in the hierarchy. When a client makes a request for the application catalog, and you've configured clients to automatically detect the default application catalog website point, the client is directed to an available instance. Clients prefer local application catalog instances, based on the current network location of the client.  
-
-For more information about this client setting and how automatic detection works, see the [Computer Agent](../../../clients/deploy/about-client-settings.md#computer-agent) client settings.  
-
 
 ## <a name="bkmk_client"></a> High availability for clients  
 
@@ -290,4 +267,4 @@ While this site system role is critical for keeping Configuration Manager curren
 
 - [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md)  
 
-- [Site failure impacts](../../manage/site-failure-impacts.md)  
+- [Site failure impacts](../../manage/site-failure-impacts.md)

@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/27/2020
+ms.date: 04/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -19,7 +19,7 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -52,7 +52,7 @@ The URL contains the following elements:
 
 | Element | Example | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
-| location | msua06 | The base URL can be found by viewing the Data Warehouse API blade in the Azure portal. |
+| location | msua06 | The base URL can be found by viewing the Data Warehouse API blade in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). |
 | entity-collection | devicePropertyHistories | The name of the OData entity collection. For more information on collections and entities in the data model, see [Data Model](reports-ref-data-model.md). |
 | api-version | beta | Version is the version of the API to access. For more information, see [Version](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Optional) The maximum number of days of history to retrieve. This parameter can be supplied to any collection, but will only take effect for collections that include `dateKey` as a part of their key property. See [DateKey Range Filters](reports-api-url.md#datekey-range-filters) for more information. |

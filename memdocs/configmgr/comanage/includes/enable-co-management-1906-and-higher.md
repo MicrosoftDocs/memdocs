@@ -29,6 +29,8 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
 
       - **Pilot** - Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled to Intune.
       - **All** - Enable automatic enrollment for all Windows 10, version 1709 or later, clients.
+      - **None** - Disable automatic enrollment for all clients.
+
 
    - **Intune Auto Enrollment** - This collection should contain all of the clients you want to onboard into co-management. It's essentially a superset of all the other staging collections.
 

@@ -91,7 +91,7 @@ Before you can view or manage reports in the Configuration Manager console, you 
 
 - When you install a reporting services point, specify a [Reporting services point account](../../plan-design/hierarchy/accounts.md#reporting-services-point-account). For users from a different domain to run a report, create a two-way trust between domains. Otherwise the report fails to run.
 
-### <a name="bkmk_install" /> Install the reporting services point on a site system  
+### <a name="bkmk_install"></a> Install the reporting services point on a site system  
 
 For more information about configuring site systems, see [Install site system roles](../deploy/configure/install-site-system-roles.md).  
 
@@ -139,7 +139,7 @@ After the wizard completes, Configuration Manager creates the report folders in 
 > [!TIP]  
 > To list only site systems that host the reporting services point site role, right-click **Servers and Site System Roles**, and select **Reporting services point**.  
 
-### <a name="bkmk_languages" /> Languages for reports
+### <a name="bkmk_languages"></a> Languages for reports
 
 <!-- SCCMDocs#1067 -->
 

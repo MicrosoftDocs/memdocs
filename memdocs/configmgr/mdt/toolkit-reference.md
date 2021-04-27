@@ -137,7 +137,7 @@ manager: dougeby
 |None|None|  
 
 #### Configure ADDS  
- This task sequence step configures the target computer as an Active Directory&reg; Domain Services (AD DS) domain controller. For more information about the settings listed in the following tables and which this task sequence step can configure, see the Microsoft Help and Support article, [Unattended promotion and demotion of Windows 2000 and Windows Server 2003 domain controllers](https://support.microsoft.com/kb/223757).  
+ This task sequence step configures the target computer as an Active Directory&reg; Domain Services (AD DS) domain controller. For more information about the settings listed in the following tables and which this task sequence step can configure, see the Microsoft Help and Support article, [How to use unattended mode to install and remove Active Directory Domain Services on Windows Server 2008-based domain controllers](/troubleshoot/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds).  
 
  The unique properties and settings for the **Configure ADDS** task sequence step type are:  
 
@@ -3476,7 +3476,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] DNSZones0FileName=MyNewZone.dns`|  
 
 ####  <a name="DNSZonesxMasterIP"></a> DNSZonesxMasterIP  
- A comma delimited list of IP addresses of the master servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.  
+ A comma delimited list of IP addresses of the main servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.  
 
 > [!NOTE]
 >  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.  
@@ -3489,7 +3489,7 @@ cscript.exe LiteTouch.vbs /debug:true
 
 |**Value**|**Description**|  
 |-|-|
-|*IP1,IP2*|A comma-delimited list of IP addresses of the master servers|  
+|*IP1,IP2*|A comma-delimited list of IP addresses of the main servers|  
 
 |**Example**|  
 |-|   
@@ -9491,7 +9491,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ###  <a name="ZTIAuthorizeDHCP.wsf"></a> ZTIAuthorizeDHCP.wsf  
  This script uses the Netsh tool to configure the target computer so that it is an authorized DHCP server in AD DS.  
 
- For more information about authorizing DHCP servers, see [How to Use Netsh.exe to Authorize, Unauthorize and List DHCP Servers in Active Directory](https://support.microsoft.com/kb/303351).  
+ For more information about authorizing DHCP servers, see [Netsh commands for DHCP](/previous-versions/windows/it-pro/windows-server-2003/cc787375(v=ws.10)).
 
 |**Value**|**Description**|  
 |-|-|

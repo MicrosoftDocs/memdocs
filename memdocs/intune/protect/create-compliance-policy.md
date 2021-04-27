@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create device compliance policies in Microsoft Intune - Azure | Microsoft Docs
-description: Create device compliance policies, overview of status and severity levels, using the InGracePeriod status, working with Conditional Access, handling devices without an assigned policy, and the differences in compliance in the Azure portal and classic portal in Microsoft Intune
+description: Create device compliance policies for Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -77,8 +77,10 @@ To use device compliance policies, be sure you:
    - *Windows 10 and later*
 
     For *Android Enterprise*, you also select a **Policy type**:
-     - *Android fully managed, dedicated, and corporate-owned work profile policy*
-     - *Android work profile compliance policy*
+     - *Fully Managed*
+     - *Dedicated*
+     - *Corporate-Owned Work Profile*
+     - *Personally-Owned Work Profile*
 
     Then, select **Create** to open the **Create policy** configuration window.
 

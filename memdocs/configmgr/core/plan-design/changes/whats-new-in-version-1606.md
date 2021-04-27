@@ -199,8 +199,6 @@ For details, see [Microsoft Defender Advanced Threat Protection](../../../protec
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.
 
-For details, see [How to automatically categorize devices into collections with Configuration Manager](../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md).
-
 ### Predeclare devices with IMEI or iOS serial numbers
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers, or you can manually enter device information. Imported information sets the ownership of the devices that enroll as "Corporate" in lists of devices. An Intune license is still required for each user who accesses the service.

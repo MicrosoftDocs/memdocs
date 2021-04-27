@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -175,19 +175,19 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](../.
 
 - Be sure your devices are running Windows 10 and newer. For a complete list, see [software requirements](../../autopilot/software-requirements.md).
 
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Intune Autopilot. This step joins the devices to Azure AD. For more specific information, see [register devices](../../autopilot/add-devices.md) and [Add devices](../../autopilot/enrollment-autopilot.md#add-devices).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Azure AD. For more specific information, see [Windows Autopilot registration overview](../../autopilot/registration-overview.md) and [Manual registration overview](../../autopilot/manual-registration.md).
 
-- Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+- Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](../../autopilot/profiles.md#create-an-autopilot-deployment-profile).
 
   When you create the profile, you also:
 
-  - Configure the out-of-box deployment user experience, including [user driven](../../autopilot/user-driven.md), [pre-provision](../../autopilot/pre-provision.md), and more. For more specific information, see [Enroll Windows devices in Intune by using Windows Autopilot](../../autopilot/enrollment-autopilot.md).
+  - Configure the out-of-box deployment user experience, including [user driven](../../autopilot/user-driven.md), [pre-provision](../../autopilot/pre-provision.md), and more. For more specific information, see [Configure Autopilot profiles](../../autopilot/profiles.md).
 
-  - Configure startup behaviors, such as disabling the local administrator, and skipping the EULA. For more specific information, see [Configure Autopilot profiles](../../autopilot/profiles.md).
+  - Configure startup behaviors, such as disabling the local administrator, and skipping the EULA. 
 
-- Assign the Autopilot deployment profile to your Azure AD security groups. You can also exclude security groups. For more information, see [Create an Autopilot deployment profile](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+  - Assign the Autopilot deployment profile to your Azure AD security groups. You can also exclude security groups.
 
-- For hybrid Azure AD joined devices, you register the devices, create the deployment profile, and assign the profile. You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Azure AD.
+  - For hybrid Azure AD joined devices, you register the devices, create the deployment profile, and assign the profile. You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Azure AD.
 
   For more specific information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 

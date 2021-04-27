@@ -2,7 +2,7 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 08/11/2020
+ms.date: 01/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -212,6 +212,7 @@ The Configuration Manager console has the following command-line options:
 |`/sms:ResetSettings`|The console ignores user-persisted connection and view states. The window size isn't reset.|  
 |`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|  
 |`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
+|`/server=[ServerName]`|Connect to a CAS or Primary site server by specifying the fully qualified domain name (FQDN) or server name for that site.|  
 
 
 ## Next steps

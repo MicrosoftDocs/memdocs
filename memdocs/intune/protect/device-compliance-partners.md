@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/01/2020
+ms.date: 04/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Support third-party device compliance partners in Intune
 
-Microsoft Intune can add compliance state data to Azure Active Directory (Azure AD) for the devices you manage with one or more third-party device compliance partners. With this configuration, compliance data from those devices can be used with your conditional access policies.
+Microsoft Intune can add compliance state data to Azure Active Directory (Azure AD) for the devices you manage with one or more third-party device compliance partners. With this configuration, compliance data from those devices can be [used with your conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access).
 
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Azure AD and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through an Azure AD user group.
 
@@ -47,10 +47,13 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 ## Supported device compliance partners
 
-In public preview:
+The following compliance partners are supported as generally available:
 
-- VMware Workspace ONE UEM (formerly AirWatch)
+- Citrix Workspace device compliance
+- IBM MaaS360
 - JAMF Pro
+- MobileIron Device Compliance On-prem
+- VMware Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites
 
@@ -77,7 +80,7 @@ Enable support for a device compliance partner to use compliance state data from
 
    - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
 
-   Next, select the drop-down for **Platform**, and select the platform. macOS is not supported with this preview.
+   Next, select the drop-down for **Platform**, and select the platform. macOS isn't supported.
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 
@@ -106,7 +109,7 @@ Your configuration now appears on the Partner compliance management page.
    To manually sync from Azure Services:
    1. Sign in to your VMware Workspace ONE UEM console.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
-   3. For *Sync Azure Services*, click **SYNC**.
+   3. For *Sync Azure Services*, select **SYNC**.
 
       All the changes you’ve made since the initial configuration or the last manual synchronization are synchronized from Azure Services to UEM.  
 

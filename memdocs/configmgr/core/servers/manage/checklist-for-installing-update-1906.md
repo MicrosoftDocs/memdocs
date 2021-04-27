@@ -10,8 +10,7 @@ ms.assetid: e6837956-1f1e-4104-a348-ac2266199f60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # Checklist for installing update 1906 for Configuration Manager
@@ -137,7 +136,7 @@ A site update can fail because of existing operational problems. Before you upda
 - The site database server  
 - Remote site system roles on other servers
 
-For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
+For more information, see [Use the status system](use-status-system.md).
 
 ### Review file and data replication between sites
 

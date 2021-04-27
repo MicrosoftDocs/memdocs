@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,6 +30,14 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune includes many built-in settings to control different features on a device. You can also create custom profiles, which are created similar to built-in profiles. Custom profiles are great when you want to use device settings and features that aren't built in to Intune. These profiles include features and settings for you to control on devices in your organization. For example, you can create a custom profile that sets the same feature for every iOS/iPadOS device.
 
+This feature applies to:
+
+- Android device administrator
+- Android Enterprise personally-owned devices with a work profile
+- iOS/iPadOS
+- macOS
+- Windows 10 and newer
+
 Custom settings are configured differently for each platform. For example, to control features on Android and Windows devices, you can enter Open Mobile Alliance Uniform Resource Identifier (OMA-URI) values. For Apple devices, you can import a file you created with the [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) or [Apple Profile Manager](https://support.apple.com/profile-manager).
 
 For more information on configuration profiles, see [What are Microsoft Intune device profiles?](device-profiles.md).
@@ -50,7 +58,7 @@ This article shows you how to create a custom profile for Android device adminis
         - **macOS**
         - **Windows 10 and later**
 
-    - **Profile**: Select **Custom**.
+    - **Profile**: Select **Custom**. Or, select **Templates** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

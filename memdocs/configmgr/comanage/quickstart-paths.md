@@ -2,7 +2,7 @@
 title: Paths to co-management
 titleSuffix: Configuration Manager
 description: Understand the prerequisites for the two primary ways for you to setup co-management.
-ms.date: 06/27/2019
+ms.date: 01/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Paths to co-management
 
-There are two primary ways for you to set up co-management. It's important to understand the prerequisites for each path. They each require some combination of Azure Active Directory (Azure AD), Configuration Manager, Microsoft Intune, and Windows 10. 
+There are two primary ways for you to set up co-management. It's important to understand the prerequisites for each path. They each require some combination of Azure Active Directory (Azure AD), Configuration Manager, Microsoft Intune, and Windows 10.
 
 1. [Auto-enroll existing Configuration Manager-managed devices into Intune](#bkmk_path1)  
+
 2. [Bootstrap the Configuration Manager client with modern provisioning](#bkmk_path2)  
 
-![Diagram of co-management paths](media/co-management-paths.png)
+>[!Tip]
+> As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (AD) joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog aims to clarify Hybrid Azure AD Join and co-management, how they work together but are not the same thing.
 
 
 
@@ -45,8 +45,6 @@ Here's what you need to set it up:
 - Enable co-management in Configuration Manager
 
 For a tutorial on this path, see [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md).
-
-
 
 ## <a name="bkmk_path2"></a> Path 2: Bootstrap with modern provisioning
 

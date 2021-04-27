@@ -15,8 +15,10 @@
     href: tutorial-walkthrough-administrative-templates.md
 - name: How-to guides
   items:
-  - name: Profile overview
+  - name: Profiles - Get started
     href: device-profile-create.md
+  - name: Settings catalog
+    href: settings-catalog.md
   - name: Custom settings
     displayName: oma-uri, csp
     items:
@@ -32,7 +34,7 @@
     - name: Configure email
       href: email-settings-configure.md
     - name: Issues and resolutions 
-      href: troubleshoot-email-profiles-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune
   - name: VPN
     items:
     - name: Configure VPN
@@ -46,11 +48,13 @@
     - name: Configure Wi-Fi
       href: wi-fi-settings-configure.md
       displayName: wifi, wireless
+    - name: Import Wi-Fi settings
+      href: wi-fi-settings-import-windows-8-1.md
     - name: Wi-Fi with a pre-shared key
       href: wi-fi-profile-shared-key.md
       displayName: psk, oma-uri, eap
     - name: Troubleshoot Wi-Fi
-      href: troubleshoot-wi-fi-profiles.md
+      href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
   - name: Group policy and Administrative templates
     displayName: admx, gpo
     items:
@@ -60,6 +64,8 @@
       href: administrative-templates-windows.md
     - name: Update Office using administrative templates
       href: administrative-templates-update-office.md
+    - name: Create Microsoft Edge policy
+      href: administrative-templates-configure-edge.md
   - name: BIOS settings on Windows
     href: device-firmware-configuration-interface-windows.md
     displayName: dfci, firmware
@@ -103,6 +109,12 @@
   - name: Shared multi-user devices
     href: shared-user-device-settings.md
     displayName: shared pc, education
+  - name: Network boundary on Windows
+    href: network-boundary-windows.md
+    displayName: trusted sites
+  - name: Windows health monitoring
+    href: windows-health-monitoring.md
+    displayName: endpoint analytics, microsoft productivity score 
   - name: Education Take a Test app
     href: education-settings-configure.md
   - name: eSIM cellular on Windows
@@ -121,7 +133,7 @@
   - name: Troubleshoot
     items:
     - name: Troubleshoot policies and profiles
-      href: troubleshoot-policies-in-microsoft-intune.md
+      href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
     - name: Common questions and answers
       href: device-profile-troubleshoot.md
 - name: Reference
@@ -236,8 +248,6 @@
         href: device-restrictions-windows-8-1.md
       - name: VPN
         href: vpn-settings-windows-8-1.md
-      - name: Wi-Fi import
-        href: wi-fi-settings-import-windows-8-1.md
     - name: Windows Phone 8.1
       items:
       - name: Custom

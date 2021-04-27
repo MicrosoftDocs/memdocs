@@ -13,6 +13,7 @@ ms.sitesec: library
 audience: itpro
 author: greg-lindsay
 ms.author: greglin
+ms.date: 12/16/2020
 ms.topic: conceptual
 ---
 
@@ -22,6 +23,9 @@ ms.topic: conceptual
 -   Windows 10
 
 Windows Autopilot deployment processes are summarized in the poster below. The poster is two pages in portrait mode (11x17). Click the image below to view a PDF in your browser.
+
+> [!NOTE]
+> The Windows Autopilot white glove feature has been renamed to Windows Autopilot for pre-provisioned deployment. All references to white glove refer to the [pre-provisioning](pre-provision.md) scenario. The term white glove will be replaced soon in the process diagrams on this page. 
 
 [![Deploy Windows 10 with Autopilot](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 

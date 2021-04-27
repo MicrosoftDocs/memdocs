@@ -2,12 +2,12 @@
 # required metadata
 
 title: Install Intune Company Portal app in People's Republic of China  | Microsoft Docs
-description:
+description: Lists the app stores where you can install Company Portal in the People's Republic of China.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 01/11/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -45,11 +45,13 @@ Company Portal is also available from the [Baidu App Store](https://go.microsoft
  
    1. Go to the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565).  
    2. Search for the Company Portal app by entering **公司门户** in the search bar.  
-   3. Select the listing with the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2006.png) icon.  
+   3. Select the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2101.png) listing.  
 
 
 ## Next steps  
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
 
+> [!Note]
+> Google Mobile Services (GMS) and Android Enterprise are not available in China. In regions or countries where GMS is not available, use device administrator to enroll devices in Intune. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).   
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

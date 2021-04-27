@@ -2,7 +2,7 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 02/07/2020
+ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -52,9 +52,11 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
     > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
-    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
+    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.yml)  
 
-- Both site servers must be joined to the same Active Directory domain.  
+- Both site servers must be joined to the same Active Directory domain.
+
+- Both site servers must be have **Full Control** permissions to Active Directory's **System - System Management** container and all descendant objects. 
 
 - Configuration Manager supports site servers in passive mode in a hierarchy. The central administration site and child primary sites can have an additional site server in passive mode.<!-- 3607755 -->  
 
@@ -248,3 +250,17 @@ When you have a site server in passive mode, monitor it daily. Make sure its Sta
 
 > [!NOTE]
 > When you update the site to a new version of Configuration Manager, it also updates the site server in passive mode. <!-- SCCMDocs-pr#4293 -->
+
+## Remove a site server in passive mode
+
+<!-- 8918311 -->
+
+The process to remote a site server in passive mode is the same as any site system role. Remove the **Site server** role from the server in passive mode. For more information, see [Procedure to remove a site system role](../install/uninstall-sites-and-hierarchies.md#procedure-to-remove-a-site-system-role).
+
+When you remove any other site system role, the site component manager (sitecomp) processes the request. When you remove a site server in passive mode, the failover manager processes the request. For status, monitor the **SMS_FAILOVER_MANAGER** component.
+
+## Next steps
+
+[Flowchart - Set up a site server in passive mode](passive-site-server-flowchart.md)
+[Flowchart - Promote site server (planned)](promote-site-server-flowchart.md)
+[Flowchart - Promote site server (unplanned)](promote-site-server-unplanned-flowchart.md)

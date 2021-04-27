@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/25/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,7 +35,7 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
 ## Prerequisites
 
-- The user's Android Enterprise device must be enrolled in Intune. For more information, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
+- The user's Android Enterprise device must be enrolled in Intune. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md).
 - Google Chrome is added as a Managed Google Play app. For more information about Managed Google Play, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 ## Add the Google Chrome app to Intune
@@ -54,8 +54,8 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
 1. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Set the following details:
-    - **Name** - The name of the profile that appears in the Azure portal.
-    - **Description** - The description of the profile that appears in the Azure portal.
+    - **Name** - The name of the profile that appears in the portal.
+    - **Description** - The description of the profile that appears in the portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
     - **Platform** - Select **Android**.
 
@@ -93,7 +93,7 @@ Once the Android device is enrolled with Android Enterprise, the managed Google 
 Launch Google Chrome and you will find the settings applied.
 
    Bookmarks:<br>
-   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="View bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    Blocked URL:<br>
    <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
@@ -106,7 +106,7 @@ Launch Google Chrome and you will find the settings applied.
 
 ## Troubleshooting
 
-1. Check the Intune portal to monitor the policy deployment status.
+1. Check Intune to monitor the policy deployment status.
 
     ![Monitor the policy deployment status](./media/apps-configure-chrome-android/monitor-status.png)
 

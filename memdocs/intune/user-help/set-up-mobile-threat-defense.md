@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 10/12/2020
+ms.date: 12/18/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -25,7 +25,7 @@ ROBOTS:
 #ms.reviewer: aanavath  
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser, contperfq1
+ms.custom: intune-enduser, contperf-fy21q1
 ms.collection: 
 ---  
 
@@ -42,7 +42,7 @@ If you don't have the required MTD app, you'll be blocked from signing in to pro
 The following MTD apps are commonly used on iOS devices. Select an app to open its listing in the App Store.   
 
 * [ActiveShield](https://go.microsoft.com/fwlink/?linkid=2143345)
-* [Microsoft Defender ATP](https://go.microsoft.com/fwlink/?linkid=2145949)
+* [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2145949)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143272)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
@@ -56,7 +56,7 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
 * [Active Shield Enterprise](https://go.microsoft.com/fwlink/?linkid=2143507) 
-* [Microsoft Defender ATP (Enterprise)](https://go.microsoft.com/fwlink/?linkid=2144546)
+* [Microsoft Defender for Endpoint (Enterprise)](https://go.microsoft.com/fwlink/?linkid=2144546)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143413)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)

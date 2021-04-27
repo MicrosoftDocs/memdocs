@@ -1,8 +1,8 @@
 ---
-title: Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems
+title: Enable TLS 1.2 on servers
 titleSuffix: Configuration Manager
-description: Information about how to enable TLS 1.2 for Configuration Manager site servers.
-ms.date: 12/13/2019
+description: Information about how to enable Transport Layer Security (TLS) 1.2 for Configuration Manager site servers and remote site systems.
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -23,7 +23,7 @@ When enabling TLS 1.2 for your Configuration Manager environment, start with [en
 - Update SQL Server and client components
 - Update Windows Server Update Services (WSUS)
 
-For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](enable-tls-1-2.md). 
+For more information about dependencies for specific Configuration Manager features and scenarios, see [About enabling TLS 1.2](enable-tls-1-2.md).
 
 ## <a name="bkmk_protocol"></a> Ensure that TLS 1.2 is enabled as a protocol for SChannel at the operating system level
 
@@ -45,7 +45,7 @@ Secondary site servers need to use at least SQL Server 2016 Express with Service
 > [!NOTE]
 > [KB 3135244](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) also describes requirements for SQL Server client components.
 
-Make sure to also update the SQL Server Native Client to at least version SQL Server 2012 SP4 (11.*.7001.0). Starting in version 1810, this requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
+Make sure to also update the SQL Server Native Client to at least version SQL Server 2012 SP4 (11.*.7001.0). This requirement is a [prerequisite check (warning)](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:
 
@@ -59,7 +59,6 @@ Configuration Manager uses SQL Server Native Client on the following site system
 - Multicast-enabled distribution point
 - Asset Intelligence update service point
 - Reporting services point
-- Application catalog web service
 - Enrollment point
 - Endpoint Protection point
 - Service connection point

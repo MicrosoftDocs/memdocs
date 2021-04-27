@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2020
+ms.date: 04/14/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -90,7 +90,7 @@ Depending on the platform, a factory reset may be required before enrolling in I
 -----
 | Platform | Factory reset required? |
 | --- | --- |
-| Android Enterprise personally-owned work profile (BYOD) | No |
+| Android Enterprise personally owned devices with a work profile (BYOD) | No |
 | Android Enterprise corporate-owned work profile (COPE) | Yes |
 | Android Enterprise fully managed (COBO) | Yes |
 | Android Enterprise dedicated devices (COSU) | Yes |
@@ -122,7 +122,7 @@ For more information and suggestions, see the [Planning guide: Task 5: Create a 
 ## Reporting and troubleshooting
 
 - [Incomplete user enrollments](../enrollment/enrollment-report-company-portal-abandon.md)
-- [Troubleshoot device enrollment](../enrollment/troubleshoot-device-enrollment-in-intune.md)
+- [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)
 
 ## Next steps
 

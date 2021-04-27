@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,13 +35,13 @@ DFCI [enables Windows](/windows/client-management/mdm/uefi-csp) to pass manageme
 
 In Intune, use this feature to control BIOS settings. Typically, firmware is more resilient to malicious attacks. It limits end users control over the BIOS, which is good in a compromised situation.
 
-For example, you use Windows 10 devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
-
-When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
-
 This feature applies to:
 
 - Windows 10 RS5 (1809) and later on supported UEFI
+
+For example, you use Windows 10 devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
+
+When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
 
 ## Before you begin
 
@@ -49,11 +49,11 @@ This feature applies to:
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 
-  Devices manually registered for Autopilot, such as [imported from a csv file](../../autopilot/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
+  Devices manually registered for Autopilot, such as [imported from a csv file](../../autopilot/add-devices.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
 
   Once your device is registered, its serial number is shown in the list of Windows Autopilot devices.
 
-  For more information on Autopilot, including any requirements, see [Enroll Windows devices in Intune by using the Windows Autopilot](../../autopilot/enrollment-autopilot.md).
+  For more information on Autopilot, including any requirements, see [Windows Autopilot registration overview](../../autopilot/registration-overview.md).
 
 ## Create your Azure AD security groups
 
@@ -70,7 +70,7 @@ To use DFCI, create the following profiles, and assign them to your group.
 
 ### Create an Autopilot deployment profile
 
-This profile sets up and pre-configures new devices. [Autopilot deployment profile](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) lists the steps to create the profile.
+This profile sets up and pre-configures new devices. [Autopilot deployment profile](../../autopilot/profiles.md) lists the steps to create the profile.
 
 ### Create an Enrollment State Page profile
 
@@ -85,7 +85,7 @@ This profile includes the DFCI settings you configure.
 3. Enter the following properties:
 
     - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Select **Device Firmware Configuration Interface**.
+    - **Profile**: Select **Templates** > **Device Firmware Configuration Interface**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -185,6 +185,9 @@ When you're ready to retire the device and release it from management, update th
 These steps unlock the device's UEFI (BIOS) menus. The values remain the same as the profile (**Enabled** or **Disabled**), and aren't set back to any default OS values.
 
 You're now ready to wipe the device. Once the device is wiped, delete the Autopilot record. Deleting the record prevents the device from automatically re-enrolling when it reboots.
+
+> [!TIP]
+> To remove Surface devices from DFCI enrollment, see [removing DFCI management](/surface/surface-manage-dfci-guide#removing-dfci-management).
 
 ### Recover
 

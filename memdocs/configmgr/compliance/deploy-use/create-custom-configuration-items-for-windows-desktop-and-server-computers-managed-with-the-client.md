@@ -2,7 +2,7 @@
 title: Create custom configuration items
 titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
-ms.date: 04/14/2020
+ms.date: 01/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -32,9 +32,7 @@ Use the Configuration Manager **custom Windows Desktops and Servers** configurat
 3. On the **General** page of the **Create Configuration Item Wizard**, specify a name, and optional description for the configuration item.  
 
 4. Under **Specify the type of configuration item that you want to create**, select **Windows Desktops and Servers (custom)**.  
-
-    > [!TIP]  
-    > If you want to supply detection method settings that check for the existence of an application, select **This configuration file contains application settings**.  
+   - If you want to supply detection method settings that check for the existence of an application, select **This configuration file contains application settings**.  
 
 5. To help you search and filter configuration items in the Configuration Manager console, select **Categories** to create and assign categories.  
 
@@ -70,6 +68,8 @@ A detection method in Configuration Manager contains rules that are used to dete
 
 ### To detect an application installation by using a custom script  
 
+When a Windows PowerShell script runs as a detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762--> 
+ 
 1. On the **Detection Methods** page of the **Create Configuration Item Wizard**, select the option to **Use a custom script to detect this application**.  
 
 2. In the list, select the language of the script. Choose from the following formats:  
@@ -80,12 +80,10 @@ A detection method in Configuration Manager contains rules that are used to dete
 
     - **PowerShell**  
 
-        > [!Note]  
-        > Starting in version 1810, when a Windows PowerShell script runs as a detection method, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
-
-3. Select **Open**, browse to the script that you want to use, and then select **Open**.  
-
-
+3. Select **Open**, browse to the script that you want to use, and then select **Open**. 
+   
+   > [!IMPORTANT]
+   > When using a signed PowerShell script, ensure you select **Open**.  You can't use copy and paste for a signed script. <!--8538617-->
 
 ## Specify supported platforms  
 
@@ -169,29 +167,23 @@ An assembly is a piece of code that can be shared between applications. Assembli
 - **Type**: In the list, select whether you want to search for a **File** or a **Folder**.  
 
 - **Path**: Specify the path of the specified file or folder on client computers. You can specify system environment variables and the `%USERPROFILE%` environment variable in the path.  
-
-    > [!NOTE]  
-    > If you use the `%USERPROFILE%` environment variable in the **Path** or **File or folder name** boxes, the Configuration Manager client searches all user profiles on the client computer. This behavior could result in it finding multiple instances of the file or folder.  
-    >   
-    > If compliance settings don't have access to the specified path, a discovery error is generated. Additionally, if the file you are searching for is currently in use, a discovery error is generated.  
+ 
+   - The **File system** setting type doesn't support specifying a UNC path to a network share in the **Path** box.
+   -  If you use the `%USERPROFILE%` environment variable in the **Path** or **File or folder name** boxes, the Configuration Manager client searches all user profiles on the client computer. This behavior could result in it finding multiple instances of the file or folder.  
+   - If compliance settings don't have access to the specified path, a discovery error is generated. Additionally, if the file you are searching for is currently in use, a discovery error is generated.  
 
     > [!Tip]  
-    > Select **Browse** to configure the setting from values on a reference computer.   
+    > Select **Browse** to configure the setting from values on a reference computer.
 
 - **File or folder name**: Specify the name of the file or folder object to search for. You can specify system environment variables and the `%USERPROFILE%` environment variable in the file or folder name. You can also use the wildcards `*` and `?` in the file name.  
-
-    > [!NOTE]  
-    > If you specify a file or folder name and use wildcards, this combination might produce a high number of results. It could also result in high resource use on the client computer, and high network traffic when reporting results to Configuration Manager.  
+  -  If you specify a file or folder name and use wildcards, this combination might produce a high number of results. It could also result in high resource use on the client computer, and high network traffic when reporting results to Configuration Manager.  
 
 - **Include subfolders**: Also search any subfolders under the specified path.  
 
 - **This file or folder is associated with a 64-bit application**: If enabled, only search 64-bit file locations such as `%ProgramFiles%` on 64-bit computers. If this option isn't enabled, search both 64-bit locations and 32-bit locations such as `%ProgramFiles(x86)%`.  
+   - If the same file or folder exists in both the 64-bit and 32-bit system file locations on the same 64-bit computer, multiple files are discovered by the global condition.  
 
-    > [!NOTE]  
-    > If the same file or folder exists in both the 64-bit and 32-bit system file locations on the same 64-bit computer, multiple files are discovered by the global condition.  
-
-    The **File system** setting type doesn't support specifying a UNC path to a network share in the **Path** box.  
-
+    
 
 ### <a name="bkmk_iis"></a> IIS metabase
 
@@ -203,38 +195,30 @@ An assembly is a piece of code that can be shared between applications. Assembli
 ### <a name="bkmk_regkey"></a> Registry key
 
 - **Hive**: Select the registry hive that you want to search
-
-    > [!Tip]  
-    > Select **Browse** to configure the setting from values on a reference computer. To browse to a registry key on a remote computer, enable the **Remote Registry** service on the remote computer.  
+  -  Select **Browse** to configure the setting from values on a reference computer. To browse to a registry key on a remote computer, enable the **Remote Registry** service on the remote computer.  
 
 - **Key**: Specify the registry key name that you want to search for. Use the format `key\subkey`.  
 
 - **This registry key is associated with a 64-bit application**: Search 64-bit registry keys in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
-
-    > [!NOTE]  
-    > If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
+   - If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
 
 
 ### <a name="bkmk_regval"></a> Registry value
 
 - **Hive**: Select the registry hive to search.  
-
-    > [!Tip]  
-    > Select **Browse** to configure the setting from values on a reference computer. To browse to a registry value on a remote computer, enable the **Remote Registry** service on the remote computer. You also need administrator permissions to access the remote computer.  
+  - Select **Browse** to configure the setting from values on a reference computer. To browse to a registry value on a remote computer, enable the **Remote Registry** service on the remote computer. You also need administrator permissions to access the remote computer.  
 
 - **Key**: Specify the registry key name to search for. Use the format `key\subkey`.  
 
 - **Value**: Specify the value that must be contained within the specified registry key.  
 
 - **This registry key is associated with a 64-bit application**: Search the 64-bit registry keys in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
-
-    > [!NOTE]  
-    > If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
+  - If the same registry key exists in both the 64-bit and 32-bit registry locations on the same 64-bit computer, both registry keys are discovered by the global condition.  
 
 
 ### <a name="bkmk_script"></a> Script
 
-The value returned by the script is used to assess the compliance of the global condition. For example, when using VBScript, you could use the command **WScript.Echo Result** to return the *Result* variable value to the global condition.  
+The value returned by the script is used to assess the compliance of the global condition. For example, when using VBScript, you could use the command **WScript.Echo Result** to return the *Result* variable value to the global condition. When you use Windows PowerShell as a discovery or remediation script, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
 
 - **Discovery script**: Select **Add Script**, and enter or browse to a script. This script is used to find the value. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
 
@@ -242,16 +226,13 @@ The value returned by the script is used to assess the compliance of the global 
 
 - **Run scripts by using the logged on user credentials**: If you enable this option, the script runs on client computers that use the credentials of the signed-in user.  
 
-> [!Note]  
-> Starting in version 1810, when you use Windows PowerShell as a discovery or remediation script, the Configuration Manager client calls PowerShell with the `-NoProfile` parameter. This option starts PowerShell without profiles. A PowerShell profile is a script that runs when PowerShell starts. <!--3607762-->  
+> [!IMPORTANT]
+> When using a signed PowerShell script, ensure you select **Open**.  You can't use copy and paste for a signed script. <!--8538617-->
 
 
 ### <a name="bkmk_sql"></a> SQL query
 
-- **SQL Server instance**: Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
-
-    > [!NOTE]  
-    > The instance name must refer to a local instance of SQL Server. To refer to a SQL Server Always On failover cluster instance or availability group, use a script setting.  
+- **SQL Server instance**: Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name. The instance name must refer to a local instance of SQL Server. To refer to a SQL Server Always On failover cluster instance or availability group, use a script setting.  
 
 - **Database**: Specify the name of the Microsoft SQL Server database against which you want to run the SQL query.  
 

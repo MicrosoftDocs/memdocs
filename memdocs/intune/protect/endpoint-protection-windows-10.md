@@ -6,12 +6,10 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/10/2020
+ms.date: 01/29/2021
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
 ms.technology:
+ms.service: microsoft-intune
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 
 # optional metadata
@@ -29,7 +27,10 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 (and later) settings to protect devices using Intune
 
-Microsoft Intune includes many settings to help protect your devices. This article describes all the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
+Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
 
 To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
 
@@ -41,7 +42,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 ## Microsoft Defender Application Guard  
 
-While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration.  
+While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
 Application Guard is only available for Windows 10 (64-bit) devices. Using this profile installs a Win32 component to activate Application Guard.  
 
@@ -220,14 +221,15 @@ The following settings are each listed in this article a single time, but all ap
 
   - **Not configured**  
   - **Block** - IPSec secured packets do not receive exemptions.  
-  - **Allow** - Enable exemptions. The firewall's stealth mode MUST NOT prevent the host computer from responding to unsolicited network traffic that is secured by IPsec.  
+  - **Allow** - Enable exemptions. The firewall's stealth mode MUST NOT prevent the host computer from responding to unsolicited network traffic that is secured by IPsec.
 
 - **Shielded**  
   **Default**: Not configured  
   Firewall CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)  
-    - **Not configured**  
-    - **Block** - When the Microsoft Defender Firewall is on and this setting is set to *Block*, all incoming traffic is blocked, regardless of other policy settings. 
-    - **Allow** - When set to *Allow*, this setting is turned off - and incoming traffic is allowed based on other policy settings.
+
+  - **Not configured**
+  - **Block** - When the Microsoft Defender Firewall is on and this setting is set to *Block*, all incoming traffic is blocked, regardless of other policy settings.
+  - **Allow** - When set to *Allow*, this setting is turned off - and incoming traffic is allowed based on other policy settings.
 
 - **Unicast responses to multicast broadcasts**  
   **Default**: Not configured  
@@ -407,7 +409,8 @@ Specify the local and remote ports to which this rule applies.
     - **Remote ports** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **Custom** – Specify a custom **protocol** number from 0 to 255.  
 
-#### Advanced configuration  
+#### Advanced configuration
+
 - **Interface types**  
   **Default**: 0 selected  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)  
@@ -423,10 +426,9 @@ Specify the local and remote ports to which this rule applies.
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if this rule applies to a Windows service.  
 
+## Microsoft Defender SmartScreen settings
 
-## Microsoft Defender SmartScreen settings  
- 
-Microsoft Edge must be installed on the device.  
+Microsoft Edge must be installed on the device.
 
 - **SmartScreen for apps and files**  
   **Default**: Not configured  
@@ -443,7 +445,7 @@ Microsoft Edge must be installed on the device.
   - **Block** - Prevent end users from running files that haven't been verified by Windows SmartScreen.  
 
 ## Windows Encryption  
- 
+
 ### Windows Settings  
 
 - **Encrypt devices**  
@@ -489,8 +491,8 @@ Base settings are universal BitLocker settings for all types of data drives. The
     **Default**: Not configured  
     BitLocker CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
-     - **Allow** - Standard users (non-administrators) can enable BitLocker encryption when signed in.  
-     - **Not configured** only Administrators can enable BitLocker encryption on the device.  
+    - **Allow** - Standard users (non-administrators) can enable BitLocker encryption when signed in.  
+    - **Not configured** only Administrators can enable BitLocker encryption on the device.  
 
   > [!TIP]  
   > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
@@ -595,11 +597,11 @@ These settings apply specifically to operating system data drives.
     > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Minimum PIN Length**  
-    **Default**: Not configured  
-    BitLocker CSP: [SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)   
+  **Default**: Not configured  
+  BitLocker CSP: [SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)   
 
-    - **Enable** Configure a minimum length for the TPM startup PIN.  
-    - **Not configured** - Users can configure a startup PIN of any length between 6 and 20 digits.  
+  - **Enable** Configure a minimum length for the TPM startup PIN.  
+  - **Not configured** - Users can configure a startup PIN of any length between 6 and 20 digits.  
 
   When set to *Enable*, you can configure the following setting:  
 
@@ -620,7 +622,7 @@ These settings apply specifically to operating system data drives.
 
   - **Certificate-based data recovery agent**  
     **Default**: Not configured  
-     
+
     - **Block** - Prevent use of data recovery agent with BitLocker-protected OS drives.  
     - **Not configured** - Allow data recovery agents to be used with BitLocker-protected operating system drives.  
 
@@ -645,7 +647,7 @@ These settings apply specifically to operating system data drives.
 
     - **Block** - Users can't see and change the recovery options. When set to 
     - **Not configured** - Users can see and change the recovery options when they turn on BitLocker. 
- 
+
   - **Save BitLocker recovery information to Azure Active Directory**  
     **Default**: Not configured  
 
@@ -662,7 +664,7 @@ These settings apply specifically to operating system data drives.
   - **Client-driven recovery password rotation**  
     **Default**: Key rotation enabled for Azure AD-joined devices  
     BitLocker CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
-    
+
     This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).  
 
     - Not configured  
@@ -672,8 +674,8 @@ These settings apply specifically to operating system data drives.
 
   - **Store recovery information in Azure Active Directory before enabling BitLocker**  
     **Default**: Not configured  
- 
-     Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Azure Active Directory.  
+
+    Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Azure Active Directory.  
 
     - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Azure AD.  
     - **Not configured** - Users can turn on BitLocker, even if recovery information isn't successfully stored in Azure AD.  
@@ -688,7 +690,7 @@ These settings apply specifically to operating system data drives.
   When set to *Enable*, you can configure the following setting:  
   - **Pre-boot recovery message**  
     **Default**: Use default recovery message and URL   
- 
+
     Configure how the pre-boot recovery message displays to users. Choose from:  
     - **Use default recovery message and URL**  
     - **Use empty recovery message and URL**  
@@ -717,7 +719,7 @@ These settings apply specifically to fixed data drives.
 
   - **Data recovery agent**  
     **Default**: Not configured  
- 
+
     - **Block** - Prevent use of the data recovery agent with BitLocker-protected fixed drives Policy Editor. 
     - **Not configured** - Enables use of data recovery agents with BitLocker-protected fixed drives.  
 
@@ -742,7 +744,7 @@ These settings apply specifically to fixed data drives.
 
     - **Block** - Users can't see and change the recovery options. When set to 
     - **Not configured** - Users can see and change the recovery options when they turn on BitLocker.
- 
+
   - **Save BitLocker recovery information to Azure Active Directory**  
     **Default**: Not configured  
 
@@ -758,7 +760,7 @@ These settings apply specifically to fixed data drives.
 
   - **Store recovery information in Azure Active Directory before enabling BitLocker**  
     **Default**: Not configured  
- 
+
     Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Azure Active Directory.  
 
     - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Azure AD.  
@@ -792,6 +794,24 @@ Use [exploit protection](/windows/security/threat-protection/microsoft-defender-
 Attack surface reduction rules help prevent behaviors malware often uses to infect computers with malicious code.  
 
 #### Attack Surface Reduction rules  
+
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
+
+**Merge behavior for Attack surface reduction rules in Intune**:
+
+Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that are not in conflict are merged, while those that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
+
+Attack surface reduction rule merge behavior is as follows:
+
+- Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
+  - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
+  - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
+  - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
+- Settings that do not have conflicts are added to a superset of policy for the device.
+- When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
+- Only the configurations for conflicting settings are held back.
+
+**Settings in this profile**:
 
 - **Flag credential stealing from the Windows local security authority subsystem**  
   **Default**: Not configured  
@@ -881,7 +901,6 @@ Block the following to help prevent against script threats:
 
   - **Not configured**  
   - **Block** - Block process creations originating from PSExec and WMI commands.  
-  
   - **Audit only**  
 
 - **Untrusted and unsigned processes that run from USB**  
@@ -894,7 +913,7 @@ Block the following to help prevent against script threats:
   
 - **Executables that don't meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
-  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   - **Not configured**  
   - **Block** - Block executable files from running unless they meet a prevalence, age, or trusted list criteria.  
@@ -941,7 +960,6 @@ Block the following to help prevent email threats:
 > *C:\windows\IMECache*  
 >
 > For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
-
 
 ### Controlled folder access  
 
@@ -1001,14 +1019,12 @@ Block outbound connections from any app to IP addresses or domains with low repu
   **Default**: Not configured  
   ExploitGuard CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard)  
 
-
   - **Block** -  Upload an XML file that allows you to configure memory, control flow, and policy restrictions. The settings in the XML file can be used to block an application from exploits.  
   - **Not configured** - No custom configuration is used.  
 
 ## Microsoft Defender Application Control  
 
 Choose additional apps that either need to be audited by, or can be trusted to run by Microsoft Defender Application Control. Windows components and all apps from Windows store are automatically trusted to run.  
-
 
 - **Application control code integrity policies**  
   **Default**: Not configured  
@@ -1166,7 +1182,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 - **Tamper Protection**  
   **Default**: Not configured
 
-  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender Advanced Threat Protection with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
+  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
   - **Disabled** - Tamper Protection is turned off and restrictions are not enforced.
@@ -1176,7 +1192,6 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 Provide IT contact information to appear in the Microsoft Defender Security Center app and the app notifications.  
 
 You can choose to **Display in app and in notifications**, **Display only in app**, **Display only in notifications**, or **Don't display**. Enter the **IT organization name**, and at least one of the following contact options:  
-
 
 - **IT contact information**  
   **Default**: Don't display  
@@ -1217,7 +1232,6 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Accounts_BlockMicrosoftAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Block** Prevent users from adding new Microsoft accounts to the device.  
   - **Not configured** - Users can use Microsoft accounts on the device.  
 
@@ -1225,9 +1239,8 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
-   - **Block** - Allow only local accounts with blank passwords to sign in using the device's keyboard.  
-   - **Not configured** - Allow local accounts with blank passwords to sign in from locations other than the physical device.  
+  - **Block** - Allow only local accounts with blank passwords to sign in using the device's keyboard.  
+  - **Not configured** - Allow local accounts with blank passwords to sign in from locations other than the physical device.  
 
 #### Admin  
 
@@ -1235,18 +1248,16 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Block** Prevent use of a local admin account.  
   - **Not configured**  
 
 - **Rename admin account**  
   **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [Accounts_RenameAdministratorAccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
- 
 
   Define a different account name to be associated with the security identifier (SID) for the account "Administrator".  
 
- #### Guest  
+#### Guest  
 
 - **Guest account**  
   **Default**: Not configured  
@@ -1274,7 +1285,6 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**:  Not configured  
   LocalPoliciesSecurityOptions CSP: [Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Enabled** - Any user can install a printer driver as part of connecting to a shared printer.  
   - **Not configured** - Only Administrators can install a printer driver as part of connecting to a shared printer.  
 
@@ -1282,14 +1292,12 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**:  Not configured  
   CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Enabled** - Only the interactively logged-on user can use the CD-ROM media. If this policy is enabled, and no one is logged on interactively, then the CD-ROM is accessed over the network.  
   - **Not configured** - Anyone has access to the CD-ROM.  
 
 - **Format and eject removable media**  
   **Default**: Administrators  
   CSP: [Devices_AllowedToFormatAndEjectRemovableMedia](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
- 
 
   Define who is allowed to format and eject removable NTFS media:  
   - **Not configured**  
@@ -1303,13 +1311,11 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   Enter the maximum minutes of inactivity until the screensaver activates. (**0** - **99999**)  
 
 - **Require CTRL+ALT+DEL to log on**  
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
-
 
   - **Enable** -  Require users to press CTRL+ALT+DEL before logging on to Windows.
   - **Not configured** - Pressing CTRL+ALT+DEL isn't required for users to sign in.
@@ -1317,7 +1323,7 @@ Use these options to configure the local security settings on Windows 10 devices
 - **Smart card removal behavior**  
   **Default**: Lock workstation   
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_SmartCardRemovalBehavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
-    
+
   Determines what happens when the smart card for a logged-on user is removed from the smart card reader. Your options:  
 
   - **Lock Workstation** - The workstation is locked when the smart card is removed. This option allows users to leave the area, take their smart card with them, and still maintain a protected session.​  
@@ -1341,7 +1347,6 @@ Use these options to configure the local security settings on Windows 10 devices
 - **Hide last signed-in user**  
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayLastSignedIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
-  
   
   - **Enable** - Hide the username.  
   - **Not configured** - Show the last username.  
@@ -1537,8 +1542,8 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-   - **Enabled** - Application installation packages aren't detected or prompted for elevation.
-   - **Not configured** - Users are prompted for an administrative user name and password when an application installation package requires elevated privileges.
+  - **Enabled** - Application installation packages aren't detected or prompted for elevation.
+  - **Not configured** - Users are prompted for an administrative user name and password when an application installation package requires elevated privileges.
 
 - **UIA elevation prompt without secure desktop**  
   **Default**: Not Configured  

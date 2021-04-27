@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ---
+
 # Collection evaluation in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. 
+Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type.
 
 It's important to understand collection evaluation behavior so you can make appropriate collection design decisions. For collection evaluation guidance and recommendations, see [Best practices for collections](best-practices-for-collections.md).
 
@@ -30,17 +31,20 @@ At a high level, each individual collection evaluation and update follows these 
 1. Execute the collection query.
 1. Add any systems that are direct members.
 1. Evaluate all *include* collections.
-   
+
    If the include collections also have query rules, or have include or exclude collections, evaluate them also. If the include collections themselves are limiting collections, evaluate any collections below them. After fully evaluating the tree, return the results to the calling collection.
-   
+
 1. Perform a logical `AND` between the returned results and the limiting collection.
 1. Evaluate the *exclude* collections.
-   
+
    If the exclude collections also have query rules, or have include or exclude collections, evaluate them also. If these collections themselves are limiting collections, evaluate any collections below them. After fully evaluating the tree, return the results to the calling collection.
-   
+
 1. Compare the result set from evaluating the direct members and include collections with the results of evaluating the exclude collections.
 1. Write the changes to the database and perform updates.
 1. Trigger any dependent collections to update as well. Dependent collections are collections that the current collection limits, or that refer to the current collection using include or exclude rules.
+
+> [!TIP]
+> You can use management insights in the Configuration Manager console to help you manage your collections. There's a group of insights specific to [Collections](../../../servers/manage/management-insights.md#collections). There are also several insights in the [Configuration Manager Assessment](../../../servers/manage/management-insights.md#configuration-manager-assessment) group for collections.<!-- MEMDocs#967 -->
 
 ## Collection evaluation types and triggers
 
@@ -51,7 +55,7 @@ These types of threads handle collection evaluation, depending on evaluation typ
 - **Single** to manually update collections with no dependent collections
 - **Express** for incremental collection updates
 
-The following table describes collection evaluation triggers and their corresponding evaluation types. 
+The following table describes collection evaluation triggers and their corresponding evaluation types.
 
 | Trigger | Evaluation Type | Description |
 |---------|-----------------|-------------|
@@ -76,7 +80,7 @@ When table data changes, a SQL Server trigger inserts a row in the **CollectionN
 
 Incremental collection evaluation executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes.
 
-An incremental collection evaluation graph maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection. 
+An incremental collection evaluation graph maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection.
 
 For example, the following diagram shows newly discovered resources that are applicable to all collections. However, collection evaluation only updates the **All Servers** and **All Domain Controllers** collections. The collection evaluator doesn't evaluate the other collections, because the **All Member Servers** collection isn't enabled for incremental evaluation.
 
@@ -90,14 +94,16 @@ The following diagram shows how a scheduled or manual collection update request 
 
 ![Full collection evaluation graph example 1](media/full-collection-evaluation-graph-1.png)
 
-A full evaluation doesn't always evaluate all collections. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the current referenced collection. If an incrementally updated collection updates during scheduled incremental evaluations, referencing collections that aren't enabled for incremental updates may not update. A full evaluation doesn't update the collection, ending the collection evaluation graph and any referencing collection evaluations for that cycle. 
+A full evaluation doesn't always evaluate all collections. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the current referenced collection. If an incrementally updated collection updates during scheduled incremental evaluations, referencing collections that aren't enabled for incremental updates may not update. A full evaluation doesn't update the collection, ending the collection evaluation graph and any referencing collection evaluations for that cycle.
 
 In the following example, installing DNS on the existing server makes it a member of the **DNS Servers** collection, but because there's no update to its limiting **All Member Servers** collection, the full evaluation doesn't evaluate the **DNS Servers** collection. The next incremental evaluation cycle will evaluate the **DNS Servers** collection, because it's an incremental collection.
 
 ![Full collection evaluation graph example 2](media/full-collection-evaluation-graph-2.png)
 
 ## Next steps
+
 - [How to create collections](create-collections.md)
 - [Best practices for collections](best-practices-for-collections.md)
+- [View collection evaluation (starting in version 2010)](collection-evaluation-view.md)
 - [Collection Evaluation Viewer](../../../support/ceviewer.md)
 - [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) session at TechEd Australia

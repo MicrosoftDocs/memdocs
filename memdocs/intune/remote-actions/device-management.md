@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 12/17/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -36,34 +36,38 @@ As an IT admin, you must ensure that managed devices are providing the resources
 
 The **Devices** workload gives you insights into the devices you manage, and lets you activate remote tasks on those devices.
 
+Not all device actions are available for every platform or device. Available actions are shown on the device's overview page (**Devices** > **All devices** > choose a device).
+
 ## Get to your devices
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
+2. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
-   - **Overview** shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
-   - **All devices** shows a list of the enrolled devices you manage.
+   - **Overview**: The Overview page shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
+   - **All devices**: The All devices page shows a list of the enrolled devices you manage.
 
      Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, and more.
+     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
 
-   - **Azure AD devices** shows a list of the devices registered or joined with Azure Active Directory (Azure AD). Learn more about [Azure AD device management](/azure/active-directory/device-management-introduction).
-   - **Device actions** includes a history of the remote actions ran on different devices, including the action, its status, who started the action, and the time.
-
-     ![Screenshot of monitor device actions](./media/device-management/monitor-device-actions.png)
-
-   - **Audit logs** is a record of activities that generate a change in Intune. [Audit logs](../fundamentals/monitor-audit-logs.md) provides more details.
-   - **TeamViewer Connector** is a service that allows users of Intune-managed Android devices to get remote assistance from their IT administrator. Learn more about [TeamViewer](teamviewer-support.md).
+   - **By platform**: The items under By platform let you view lists of devices by the specific platform.
+   - **Device enrollment**: This option takes you to the enrollment page.
+   - **Policy**: These options let you set various policies for your organization's devices.
+   - **Other**:
+       - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-portal).
+       - **Device categories**: This option lets you create [device categories](../enrollment/device-group-mapping.md).
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
 
 ## Available device actions
-The actions available depend on the device platform, and the configuration of the device.
 
-- [View device inventory](device-inventory.md)
-- Run the remote device actions:
+The available actions depend on the device platform and the device configuration. The following list includes some common device actions. For a complete list of what can be done on your devices, select **All devices**, and select a specific device. The available actions are shown at the top.
+
+- [View device inventory](device-inventory.md): To see a full inventory of all the devices, select **Devices** > **All devices**.
+- To run - [bulk device actions](bulk-device-actions.md) on multiple devices at the same time, select **Devices** > **All devices** > **Bulk Device Actions**.
+- To run remote actions on a single device, select the device from the **All devices** page and then select the specific remote action at the top of the individual device page. Not all actions are available for all devices.
   - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
+  - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
@@ -82,9 +86,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Wipe](devices-wipe.md#wipe)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
-- [Bulk device actions](bulk-device-actions.md)
 
 ## Next steps
 
-- In **All devices**, select a device to view more details about that specific device.
-- Choose **Device actions** to see the status of actions taken on devices you manage.
+[Remotely run device actions with Intune](./index.yml)

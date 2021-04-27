@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 04/13/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -21,7 +21,7 @@ ms.assetid: d7166563-6bb5-4624-b8c8-6b300a997c3a
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -46,48 +46,43 @@ The following process uses a private method to process and convert an app key. T
 
 In this section, you provide details about the Web app you would like to point to at Intune. A web app is a client-server application. The server provides the web app, which includes the UI, content, and functionality. This type of app is separately maintained on the Web. You use Intune to grant a web app access to Intune. The data flow is initiated by the web app. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Using **Search resources, services and docs** field near the top of the Azure portal, search for **Azure Active Directory**.
-3. In the dropdown menu, select **Azure Active Directory** under **Services**.
-4. Select **App registrations**.
-5. Click **New application registration** to display the **Create** blade.
-6. In the **Create** blade, add your app details:
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select  **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **App registrations**.
+3. Click **New registration** to display the **Register an application** pane.
+4. In the **Register an application** pane, add your app details:
 
     - An app name, such as *Intune App-Only Auth*.
-    - The **Application type**. Choose **Web app / API** to add an app that represents a web application, a web API, or both.
-    - The **Sign-on URL** of the application. This is the location users automatically navigate to during the authentication process. They are required to prove that they are who they say they are. For more information, see [What is application access and single sign-on with Azure Active Directory?](/azure/active-directory/active-directory-appssoaccess-whatis)
+    - The **Supported account type**. 
+    - The **Redirect URI** of the application. This is the location users automatically navigate to during the authentication process. They are required to prove that they are who they say they are. For more information, see [What is application access and single sign-on with Azure Active Directory?](/azure/active-directory/active-directory-appssoaccess-whatis)
 
-7. Click **Create** at the bottom of the **Create** blade.
+5. Click **Register**.
 
     >[!NOTE] 
-    > Copy the **Application ID** from the **Registered app** blade to use later.
+    > Copy the **Application (client) ID** from the app pane to use later.
 
-## Create a key
+## Create a key (password)
 
 In this section, Azure AD generates a key value for your app.
 
-1. On the **App registrations** blade, select your newly created app to display the app blade.
-2. Select **Settings** near the top of the blade to display the **Settings** blade.
-3. Select **Keys** on the **Settings** blade.
-4. Add the key **Description**, an **Expires** duration, and **Value** for the key.
-5. Click **Save** to save and update the application's keys.
+1. On the **App registrations** pane, select your newly created app to display the app pane.
+2. Select **Certificates & secrets** near the top of the pane to display the **Certificates & secrets** pane.
+3. Select **Client secrets** on the **Certificates & secrets** pane.
+4. Add the key **Description** and an **Expires** duration for the key.
+5. Click **Add** to save and update the application's keys.
 6. You must copy the generated key value (base64 encoded).
 
     >[!NOTE] 
-    > The key value disappears after you leave the **keys** blade. You cannot retrieve the key from this blade later. Copy it to use later.
+    > The key value disappears after you leave the **Certificates & secrets** pane. You cannot retrieve the key from this pane later. Copy it to use later.
 
 ## Grant application permissions
 
 In this section, you grant permissions to the applications.
 
-1. Select **Required permissions** on the **Settings** blade.
-2. Click **Add**.
-3. Select **Add an API** to display the **Select an API** blade.
-4. Select **Microsoft Intune API (MicrosoftIntuneAPI)** and then click **Select** from the **Select an API** blade. The **Select permissions** step is selected and the **Enable Access** blade is displayed.
-5. Choose the **Get data warehouse information from Microsoft Intune** option from the **Application Permissions** section.
-6. Click **Select** from the **Enable Access** blade.
-7. Click **Done** from the **Add API access** blade.
-8. Click **Grant Permissions** from the **Required permissions** blade and click **Yes** when promoted to update any existing permissions this application already has.
+1. Select **API permissions** > **Add a permission** > **Intune** > **Application permissions**. 
+5. Choose the **get_data_warehouse** option (*Get data warehouse information from Microsoft Intune*).
+6. Click **Add permissions**.
+7. Click **Done** from the **Add API access** pane.
+8. Click **Grant admin consent** from the **API permissions** pane and click **Yes** when promoted to update any existing permissions this application already has.
 
 ## Generate token
 

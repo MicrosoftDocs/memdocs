@@ -2,7 +2,7 @@
 title: Introduction to app management
 titleSuffix: Configuration Manager
 description: Discover the basic information you'll need to manage and deploy applications in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -90,7 +90,7 @@ When you make *revisions* to an application or a deployment type, Configuration 
 - Restore a previous version of an application
 - Delete an old version
 
-For more information, see [Revise applications](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
+For more information, see [Revise applications](../deploy-use/revise-and-supersede-applications.md#revisions).  
 
 ### Detection method
 
@@ -108,7 +108,7 @@ For more information, see [Deployment type Dependencies](../deploy-use/create-ap
 
 Configuration Manager lets you upgrade or replace existing applications by using a *supersedence* relationship. When you supersede an application, you specify a new deployment type to replace the deployment type of the superseded application. You can also decide whether to upgrade or uninstall the superseded application before the client installs the superseding application.
 
-For more information, see [Application supersedence](../deploy-use/revise-and-supersede-applications.md#application-supersedence).  
+For more information, see [Application supersedence](../deploy-use/revise-and-supersede-applications.md#supersedence).  
 
 ### User-centric management
 
@@ -118,7 +118,7 @@ For more information, see [Link users and devices with user device affinity](../
 
 ### Application group
 
-Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
+Create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
 For more information, see [Create application groups](../deploy-use/create-app-groups.md).
 
@@ -183,9 +183,6 @@ For more information, see the following articles:
 - [Plan for and configure application management](../plan-design/plan-for-and-configure-application-management.md)
 - [Plan for Software Center](../plan-design/plan-for-software-center.md)
 - [Software Center user guide](../../core/understand/software-center.md)
-
-> [!Note]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 ## Packages and programs  
 

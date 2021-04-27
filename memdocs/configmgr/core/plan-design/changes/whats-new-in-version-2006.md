@@ -197,7 +197,7 @@ For more information, see [device restart notifications](../../clients/deploy/de
 <!--6935376-->
 This release fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
 
-For more information, see [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
+For more information, see [Prerequisites to deploy user-available apps](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ### Microsoft 365 Apps for enterprise
 <!--6298093-->
@@ -220,7 +220,7 @@ Task sequence media can now download cloud-based content. For example, you send 
 > [!NOTE]
 > The device still needs an intranet connection to the management point.
 
-For more information, see [Use bootable media to deploy Windows over the network](../../../osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+For more information, see [Bootable media support for cloud-based content](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ### Improvements to task sequences via CMG
 
@@ -357,7 +357,9 @@ For more information on changes to the administration service REST API, see [Adm
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830).
 
-The following update rollup (4578605) is available in the console starting on November 4, 2020: [Update Rollup for Microsoft Endpoint Configuration Manager version 2006](https://support.microsoft.com/help/4578605).
+The following revised update rollup (4575789) is available in the console starting on November 30, 2020: [Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789). 
+
+Note this revision supersedes the original release of KB 4578605 [Update rollup for Microsoft Endpoint Configuration Manager version 2006](https://support.microsoft.com/help/4578605).
 
 ### Hotfixes
 
@@ -367,6 +369,10 @@ The following additional hotfixes are available to address specific issues:
 |---------|---------|---------|---------|
 | [4580678](https://support.microsoft.com/help/4580678) | Tenant attach rollup for Configuration Manager current branch, version 2006 | September 18, 2020 | Yes |
 | [4584759](https://support.microsoft.com/help/4584759) | Clients report Desktop Analytics configuration errors in Configuration Manager, version 2006 | October 2, 2020 | Yes |
+| [4575786](https://support.microsoft.com/help/4575786) | Configuration Manager console terminates unexpectedly on Configuration Manager current branch, version 2006 | November 12, 2020 | Yes |
+| [4575787](https://support.microsoft.com/help/4575787) | Co-management enrollment takes longer than expected for Configuration Manager clients | November 12, 2020 | No |
+| [4575785](https://support.microsoft.com/help/4575785) | November 2020 Update for Asset Intelligence authentication certificate in Configuration Manager | November 18, 2020 | No |
+| [4575790](https://support.microsoft.com/help/4575790) | Client setup is unable to download contents from a cloud distribution point in Configuration Manager current branch, version 2006 | November 20, 2020 | Yes |
 
 ## Next steps
 

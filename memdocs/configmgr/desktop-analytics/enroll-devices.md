@@ -2,10 +2,10 @@
 title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 04/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
@@ -31,14 +31,25 @@ The following table lists the updates for each component on supported OS version
 
 | OS version | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
+| Windows 10 20H2 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4581839) |
 | Windows 10 2004 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4555932) |
 | Windows 10 1909 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4498140) |
 | Windows 10 1809 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
 | Windows 10 1803 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Note 2](#bkmk_note2)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Note 3](#bkmk_note3)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009469) |
+
+Starting in version 2010, you can use Configuration Manager to enroll Windows 10 Enterprise long-term servicing channel (LTSC) devices to Desktop Analytics.<!--6107649-->
+
+> [!NOTE]
+> Desktop Analytics only supports the Windows 10 Enterprise LTSC 2019, which is equivalent to Windows 10, version 1809. It doesn't support Windows 10 Enterprise 2015 LTSB (version 1507) or Windows 10 Enterprise 2016 LTSB (version 1607).
+
+| OS version | Equivalent version | DiagTrack |
+|---------|---------|---------|
+| Windows 10 Enterprise LTSC 2019 | Windows 10, version 1809 | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
+
+<!--| Windows 10 Enterprise 2016 LTSB | Windows 10, Version 1607 | [Latest cumulative update](https://support.microsoft.com/help/4000825) |
+| Windows 10 Enterprise 2015 LTSB | Windows 10, Version 1507 | [Latest cumulative update](https://support.microsoft.com/help/4000823) |-->
 
 > [!TIP]
 > Use Configuration Manager to automatically install these updates. For more information, see [Deploy software updates](../sum/deploy-use/deploy-software-updates.md).
@@ -64,16 +75,14 @@ If your organization doesn't apply "Monthly Quality Rollup" updates to Windows 7
 
 ## Device enrollment
 
-The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. These settings control to which Desktop Analytics instance the device should send its data, and other configuration options.
+The Desktop Analytics service has no agents to install. Device enrollment requires configuring settings on the devices you want it to monitor. Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager.
 
-> [!Note]  
-> If you previously used Windows Analytics, use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Windows Analytics.
+> [!NOTE]
+> If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance.
 >
-> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
+> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.
 
-Configuration Manager provides an integrated experience for managing and deploying these settings to clients. For the best experience, use Configuration Manager.
-
-When you connect Configuration Manager to Desktop Analytics, you configure the settings to enroll devices. For more information, see [How to connect Configuration Manager with Desktop Analytics](connect-configmgr.md#bkmk_connect).
+When you [connect Configuration Manager to Desktop Analytics](connect-configmgr.md#bkmk_connect), you configure the settings to enroll devices. These settings include which Desktop Analytics instance the device should send its data, and other configuration options.
 
 To change these settings, use the following procedure:
 
@@ -97,7 +106,7 @@ To change these settings, use the following procedure:
 
     - **Devices in the target collection use a user-authenticated proxy for outbound communication**: By default, this value is **No**. If needed in your environment, set to **Yes**. For more information, see [Proxy server authentication](enable-data-sharing.md#proxy-server-authentication).
 
-    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include additional collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->
+    - **Select specific collections to synchronize with Desktop Analytics**: Select **Add** to include other collections from your **Target collection** hierarchy. These collections are available in the Desktop Analytics portal for grouping with deployment plans. Make sure to include pilot and pilot exclusion collections.  <!-- 4097528 -->
 
         > [!IMPORTANT]
         > These collections continue to sync as their membership changes. For example, your deployment plan uses a collection with a Windows 7 membership rule. As those devices upgrade to Windows 10, and Configuration Manager evaluates the collection membership, those devices drop out of the collection and deployment plan.
@@ -117,14 +126,6 @@ If you don't send the device name, it appears in Desktop Analytics as "Unknown":
 ![Desktop Analytics device list showing "unknown" names](media/unknown-device-name.png)
 
 There's an option in the Configuration Manager settings for Desktop Analytics to configure this option: **Allow Device Name in diagnostic data**. This Configuration Manager setting controls the [Windows policy setting](group-policy-settings.md), **AllowDeviceNameInTelemetry**.
-
-### Conflict resolution
-
-In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](../core/clients/manage/collections/create-collections.md).
-
-Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](group-policy-settings.md). Settings targeted by group policy take precedence over Configuration Manager settings. Devices targeted by group policy may not accurately reflect status in the [Connection health](monitor-connection-health.md) dashboard.
-
-When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, **Configure telemetry opt-in setting user interface**. For more information, see [Group policy settings for Desktop Analytics](group-policy-settings.md).
 
 ### Proxy settings
 

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll Android Enterprise work profile devices in Intune
+title: Enroll Android Enterprise personally-owned work profile devices in Intune
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Android Enterprise work profile devices in Intune.
+description: Learn how to enroll Android Enterprise personally-owned work profile devices in Intune.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 5/13/2019
+ms.date: 2/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -29,34 +29,33 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Set up enrollment of Android Enterprise work profile devices
+# Set up enrollment of Android Enterprise personally-owned work profile devices
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Intune helps you deploy apps and settings to Android Enterprise personally-owned work profile devices to make sure work and personal information are separate. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
-Intune helps you deploy apps and settings to Android Enterprise work profile devices to make sure work and personal information are separate. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
-
-To set up Android Enterprise work profile management, follow these steps:
+To set up Android Enterprise personally-owned work profile management, follow these steps:
 
 1. [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
-2. Specify Android Enterprise work profile enrollment settings. Android Enterprise work profiles are [supported on only certain Android devices](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Any device that supports Android Enterprise work profiles also supports Android device administrator management. Intune lets you specify how devices that support Android Enterprise work profiles should be managed from within [Enrollment Restrictions](enrollment-restrictions-set.md).
-    - **Block**:  All Android devices, including devices that support Android Enterprise work profiles, will be enrolled as Android device administrator devices, unless Android device administrator enrollment is also blocked. 
-    - **Allow (set by default)**: All devices that support Android Enterprise work profiles are enrolled as Android Enterprise work profile devices. Any Android device that does not support Android Enterprise work profiles is enrolled as an Android device administrator device, unless Android device administrator enrollment is blocked. 
+2. Specify Android Enterprise work profile enrollment settings. Android Enterprise personally-owned work profiles are [supported on only certain Android devices](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Any device that supports Android Enterprise personally-owned work profiles also supports Android device administrator management. Intune lets you specify how devices that support work profiles should be managed from within [Enrollment Restrictions](enrollment-restrictions-set.md).
+    - **Block**:  All Android devices will be enrolled as Android device administrator devices, unless device administrator enrollment is also blocked. This behavior includes devices that support Android Enterprise personally-owned work profiles.
+    - **Allow (set by default)**: All devices that support Android Enterprise personally-owned work profiles are enrolled as personally-owned work profile devices. Any Android device that doesn't support personally-owned work profiles is enrolled as an Android device administrator device, unless device administrator enrollment is blocked. 
 > [!NOTE]
-> The default set to **Allow** is true for new tenants as of July 2019. All previous tenants will experience no change to their Enrollment Restrictions, and will see whatever policies they have set in Enrollment Restrictions. For previous tenants that never had Enrollment Restrictions changes, **Block** will still be the default for Android Enterprise work profiles.
+> The default set to **Allow** is true for new tenants as of July 2019. All previous tenants will experience no change to their Enrollment Restrictions, and will see whatever policies they have set in Enrollment Restrictions. For previous tenants that never had Enrollment Restrictions changes, **Block** will still be the default for personally-owned work profiles.
 
-3. [Tell your users how to enroll their devices](../user-help/enroll-device-android-work-profile.md).  
+3. [Tell your users how to enroll their devices](../user-help/enroll-device-android-work-profile.md). To enroll, users must be using the primary user account on their device. Enrolling with a secondary user account is not supported.     
 
-If you want to enroll devices using Android Enterprise work profiles, but those devices were already enrolled with Android device administrator, those devices must first unenroll and then re-enroll.
+Devices previously enrolled with Android device administrator can be re-enrolled using personally-owned work profiles. You'll first need to unenroll the device administrator devices. Then you can re-enroll them with personally-owned work profiles.
+
 > [!NOTE]
 > As an administrator, you can accomplish this remotely using the **Retire** function. This function can be found in the actions menu after selecting the device from the **All Devices** blade.
 
-If you're enrolling Android Enterprise work profile devices by using a [Device Enrollment Manager](device-enrollment-manager-enroll.md) account, there is a limit of 10 devices that can be enrolled per account.
+If you're enrolling personally-owned work profile devices by using a [Device Enrollment Manager](device-enrollment-manager-enroll.md) account, there's a limit of 10 devices that can be enrolled per account.
 
 For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).
 
-## Next steps for Android Enterprise work profiles
-- [Deploy Android Enterprise work profile apps](../apps/apps-add-android-for-work.md)
-- [Add Android Enterprise work profile configuration policies](../configuration/device-profiles.md)
+## Next steps
+- [Deploy Android Enterprise apps](../apps/apps-add-android-for-work.md)
+- [Add Android Enterprise configuration policies](../configuration/device-profiles.md)
 
 ## See also
 

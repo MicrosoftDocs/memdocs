@@ -65,6 +65,9 @@ The ApplicationID is the ModelName property of the SMS_Application instance. Thi
 - `Comments` - Comments for the approved request to be displayed in the Software Center. By default, it specifies an empty string.
 - `AutoInstall` - Install the application immediately after the request is approved. By default, this parameter is true.
 
+    > [!NOTE]
+    > In version 2006 and earlier, you could only call this method once for a specific app. Starting in version 2010, you can call this method more than once. If the **AutoInstall** parameter is `$true`, the client tries to install the app again.<!-- 7353824 -->
+
 The following code sample is a Windows PowerShell script that shows how to invoke the WMI method for a specific user, machine, and application:
 
 ```powershell
@@ -181,7 +184,7 @@ Administrators can configure email notifications for application approval reques
 
 1. The server with the SMS Provider role must have .NET version 4.5.2 or higher installed.
 1. Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
-1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Client Computer Communication** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
+1. If PKI certificate infrastructure isn't set up, Configuration Manager-generated certificates feature should be enabled. Select the primary site under **Administration** > **Site Configuration** > **Sites**. Open the properties dialog and choose the **Communication Security** tab. Enable the **Use Configuration Manager-generated certificates for HTTP client systems** checkbox.
 
    > [!NOTE]
    > This checkbox is per primary site but if the checkbox is enabled on **any** of the primary sites, then Configuration Manager-generated certificates will be used on all providers, including the CAS and other primary sites.

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 1/15/2018
+ms.date: 11/9/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Set up Intune enrollment of Android Enterprise fully managed devices 
 
-Android Enterprise fully managed devices are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Admins can manage the entire device and enforce policy controls unavailable to work profiles, such as:
+Android Enterprise fully managed devices are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Admins can manage the entire device and enforce policy controls unavailable to personally-owned/corporate-owned work profiles, such as:
 - Allow app installation only from Managed Google Play.
 - Block uninstallation of managed apps.
 - Prevent users from factory resetting devices, and so on.

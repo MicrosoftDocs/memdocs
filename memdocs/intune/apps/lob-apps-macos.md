@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/12/2020
+ms.date: 02/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 #ROBOTS:
 #audience:
 
-ms.reviewer: aiwang
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -97,6 +97,7 @@ You must download an external tool, mark the downloaded tool as an executable, a
     - **Description**: Enter the description of the app. The description appears in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
     - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it will not be installed.
+    - **Ignore app version**: Select **Yes** to install the app if the app is not already installed on the device. Select **No** to only install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device.
     - **Install as managed**: Select **Yes** to install the Mac LOB app as a managed app on  supported devices (macOS 11 and higher). A macOS LOB app can only be installed as managed when the app distributable contains a single app without any nested packages and installs to the */Applications* directory. Managed line-of-business apps will be able to be removed using the **uninstall** assignment type on supported devices (macOS 11 and higher). In addition, removing the MDM profile removes all managed apps from the device. The default value is **No**.
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
     - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,19 +29,19 @@ ms.reviewer: shpate
 
 # Integrate Windows Hello for Business with Microsoft Intune  
 
-You can integrate Windows Hello for Business (formerly Microsoft Passport for Work) with Microsoft Intune, during device enrollment.
+You can integrate Windows Hello for Business with Microsoft Intune, during device enrollment.
 
 Hello for Business is an alternative sign-in method that uses Active Directory or an Azure Active Directory account to replace a password, smart card, or a virtual smart card. It lets you use a *user gesture* to sign in, instead of a password. A user gesture might be a PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.
 
 Intune integrates with Hello for Business in two ways:
 
-- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
+- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutopPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
 - **Discrete groups**: For devices that have previously enrolled with Intune, use a device configuration [**Identity protection**](../protect/identity-protection-configure.md) profile to configure devices for Windows Hello for Business. Identity protection profiles can target assigned users or devices, and apply during check-in.
 
 In addition, Intune supports the following types of policy to manage some settings for Windows Hello for Business:
 
 - [**Security baselines**](../protect/security-baselines.md). The following baselines include settings for Windows Hello for Business:
-  - [Microsoft Defender Advanced Threat Protection baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Microsoft Defender for Endpoint baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
   - [Windows MDM security baseline settings](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
 - Endpoint security [**Account protection**](../protect/endpoint-security-account-protection-policy.md) policy. View the [Account protection settings](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
 

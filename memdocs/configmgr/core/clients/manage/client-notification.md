@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 10/19/2020
+ms.date: 11/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -153,9 +153,6 @@ For more information about these settings, see [About log files](../../plan-desi
 
 Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
-> [!Tip]
-> Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. There's no defined limit to the number of versions. The [Delete Aged Collected Files](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) site maintenance task deletes the files on a schedule, which by default is every 90 days.
-
 ### Prerequisites - Client diagnostics
 
 - Update the target client to the latest version.
@@ -169,6 +166,13 @@ Track the status of the task in the **diagnostics.log** on the client. When clie
 
   Add this permission to any custom roles that need to use client notification actions.
 
+### Cleanup aged client diagnostic files
+<!--6503308-->
+Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. There's no defined limit to the number of versions. The maintenance task to delete aged diagnostic files varies depending on you Configuration Manager version.
+  - Configuration Manager 2010 and later uses the **Delete Aged Collected Diagnostic Files** site maintenance task to delete diagnostic files
+  - Configuration Manager 2006 and earlier uses the **Delete Aged Collected Files** site maintenance task to delete diagnostic files
+
+For more information, see [Reference for maintenance tasks in Configuration Manager](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files).
 
 ## Endpoint Protection
 

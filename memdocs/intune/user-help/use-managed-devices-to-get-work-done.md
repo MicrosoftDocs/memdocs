@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/13/2019
+ms.date: 02/01/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -65,7 +65,6 @@ You can enroll the following devices with Company Portal:
 - Windows devices
   - Windows 10 Mobile
   - Windows 10 Desktop
-  - Windows Phone 8.1
   - Windows 8.1
 - Apple devices
     - iOS
